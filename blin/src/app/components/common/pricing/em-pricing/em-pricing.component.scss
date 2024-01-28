@@ -1,0 +1,314 @@
+.pricing-info {
+    padding: 13px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #ebecf4;
+
+    h3 {
+        font-size: 20px;
+    }
+}
+::ng-deep {
+    .pricing-info {
+        .mat-mdc-form-field {
+            text-align: start;
+            display: inline-block;
+            font: {
+                size: 15px;
+                weight: 500;
+                family: var(--syneFontFamily);
+            };
+            .mat-mdc-form-field-subscript-wrapper {
+                display: none;
+            }
+            .mdc-line-ripple {
+                display: none;
+            }
+            &.mat-focused {
+                .mat-mdc-select-arrow {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+        .mat-mdc-form-field-infix {
+            width: 235px;
+            min-height: unset;
+        }
+        .mdc-text-field--no-label {
+            &:not(.mdc-text-field--outlined) {
+                &:not(.mdc-text-field--textarea) {
+                    .mat-mdc-form-field-infix {
+                        padding: {
+                            top: 0;
+                            bottom: 0;
+                        };
+                    }
+                }
+            }
+        }
+        .mdc-text-field--filled {
+            &:not(.mdc-text-field--disabled) {
+                border-radius: 10px;
+                background-color: #ebecf4;
+                padding: {
+                    left: 0;
+                    right: 0;
+                };
+            }
+        }
+        .mat-mdc-select {
+            padding: 15px 20px;
+        }
+    }
+}
+.single-pricing-box {
+    padding: 50px 40px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color: #eef3de;
+
+    .sub-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: var(--primaryColor);
+    }
+    h4 {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+    .price {
+        font-size: 40px;
+        margin-bottom: 30px;
+
+        span {
+            font-size: 24px;
+        }
+    }
+    .default-btn {
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    .features-list {
+        margin-top: 30px;
+
+        li {
+            margin-bottom: 12px;
+
+            span {
+                font-size: 15px;
+                border-radius: 20px;
+                padding: 11px 30px 11px 44px;
+                background-color: var(--whiteColor);
+
+                i {
+                    top: 50%;
+                    left: 14px;
+                    width: 20px;
+                    height: 20px;
+                    line-height: 22px;
+                    text-align: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    color: var(--whiteColor);
+                    transform: translateY(-50%);
+                    transition: var(--transition);
+                    background-color: var(--primaryColor);
+                }
+                &:hover {
+                    i {
+                        color: var(--whiteColor);
+                        background-color: var(--neonOrangeColor);
+                    }
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .popular {
+        top: 15px;
+        right: 15px;
+        position: absolute;
+        border-radius: 15px;
+        padding: 14px 27px 7px;
+        background-color: var(--whiteColor);
+    }
+}
+.col-lg-4 {
+    &:nth-child(2) {
+        .single-pricing-box {
+            background-color: #ede8f1;
+        }
+    }
+    &:nth-child(3) {
+        .single-pricing-box {
+            background-color: #dbe3e7;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .pricing-info {
+        padding: 15px 20px;
+        margin-bottom: 30px;
+    
+        h3 {
+            font-size: 16px;
+        }
+    }
+    ::ng-deep {
+        .pricing-info {
+            .mat-mdc-form-field {
+                margin-top: 12px;
+            }
+            .mat-mdc-form-field-infix {
+                width: 200px;
+            }
+            .mat-mdc-select {
+                padding: 13px 15px;
+            }
+        }
+    }
+    .single-pricing-box {
+        padding: 25px 20px;
+        border-radius: 10px;
+    
+        .sub-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .price {
+            font-size: 24px;
+            margin-bottom: 20px;
+    
+            span {
+                font-size: 18px;
+            }
+        }
+        .features-list {
+            margin-top: 20px;
+    
+            li {
+                span {
+                    font-size: 14px;
+                    padding: 10px 20px 10px 38px;
+    
+                    i {
+                        left: 10px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+        .popular {
+            top: 10px;
+            right: 10px;
+            border-radius: 10px;
+            padding: 9px 20px 5px;
+            
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .pricing-info {
+        margin-bottom: 25px;
+    
+        h3 {
+            font-size: 18px;
+        }
+    }
+    ::ng-deep {
+        .pricing-info {
+            .mat-mdc-form-field-infix {
+                width: 200px;
+            }
+        }
+    }
+    .single-pricing-box {
+        padding: 35px 25px;
+    
+        .sub-title {
+            font-size: 15px;
+        }
+        h4 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .price {
+            font-size: 28px;
+            margin-bottom: 25px;
+    
+            span {
+                font-size: 20px;
+            }
+        }
+        .features-list {
+            margin-top: 25px;
+        }
+        .popular {
+            border-radius: 15px;
+            padding: 11px 25px 4px;
+            
+            img {
+                width: 60px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .single-pricing-box {
+        padding: 35px 25px;
+    
+        h4 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .price {
+            font-size: 32px;
+            margin-bottom: 20px;
+    
+            span {
+                font-size: 22px;
+            }
+        }
+        .features-list {
+            margin-top: 25px;
+        }
+        .popular {
+            padding: 12px 25px 5px;
+
+            img {
+                width: 60px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {}

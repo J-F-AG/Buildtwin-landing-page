@@ -1,0 +1,964 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$blin-primary: mat.define-palette(mat.$indigo-palette);
+$blin-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$blin-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$blin-theme: mat.define-light-theme((
+    color: (
+        primary: $blin-primary,
+        accent: $blin-accent,
+        warn: $blin-warn,
+    )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($blin-theme);
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --fontFamily: 'Darker Grotesque', sans-serif;
+    --archivoFontFamily: 'Archivo', sans-serif;
+    --poppinsFontFamily: 'Poppins', sans-serif;
+    --mulishFontFamily: 'Mulish', sans-serif;
+    --syneFontFamily: 'Syne', sans-serif;
+    --neonOrangeColor: #f46f49;
+    --transition: all ease 0.5s;
+    --paragraphColor: #454552;
+    --neonGreenColor: #c1ff00;
+    --tealBlueColor: #608594;
+    --primaryColor: #5754ff;
+    --yellowColor: #f8d472;
+    --orangeColor: #ec764b;
+    --blackColor: #0e0e28;
+    --whiteColor: #ffffff;
+    --fontSize: 20px;
+}
+
+// Utilities CSS
+@import "./utilities";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--blackColor);
+    font: {
+        size: var(--fontSize);
+        family: var(--fontFamily);
+    };
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: var(--blackColor);
+    margin: {
+        top: 0;
+        bottom: 10px;
+    };
+    font: {
+        weight: 700;
+        family: var(--syneFontFamily);
+    };
+}
+p {
+    color: var(--paragraphColor);
+    line-height: 28px;
+    font-weight: 500;
+    margin: {
+        top: 0;
+        bottom: 15px;
+    };
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+a {
+    font-weight: 500;
+    outline: 0 !important;
+    text-decoration: none;
+    color: var(--blackColor);
+    transition: var(--transition);
+
+    &:hover {
+        text-decoration: none;
+        color: var(--primaryColor);
+    }
+}
+:focus {
+    outline: 0 !important;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+
+    &-cell {
+        vertical-align: middle;
+    }
+}
+.ptb-100 {
+    padding: {
+        top: 100px;
+        bottom: 100px;
+    };
+}
+.pt-100 {
+    padding-top: 100px;
+}
+.pb-100 {
+    padding-bottom: 100px;
+}
+.ptb-75 {
+    padding: {
+        top: 75px;
+        bottom: 75px;
+    };
+}
+.pt-75 {
+    padding-top: 75px;
+}
+.pb-75 {
+    padding-bottom: 75px;
+}
+
+// Font Family
+.font-syne {
+    font-family: var(--syneFontFamily) !important;
+}
+.font-mulish {
+    font-family: var(--mulishFontFamily) !important;
+}
+.font-archivo {
+    font-family: var(--archivoFontFamily) !important;
+}
+.font-poppins {
+    font-family: var(--poppinsFontFamily) !important;
+}
+.font-darker-grotesque {
+    font-family: var(--fontFamily) !important;
+}
+
+// Keyframes
+@keyframes movetopbounce {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    } 
+}
+@keyframes movebottombounce {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    } 
+}
+@keyframes rotateme {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes moveleftbounce {
+    0% {
+        transform: translateX(0); 
+    }
+    50% {
+        transform: translateX(10px); 
+    }
+    100% {
+        transform: translateX(0); 
+    } 
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-100%,0)
+    } to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+// Default Btn
+.default-btn {
+    &.mdc-button {
+        height: auto;
+        border-radius: 10px;
+        display: inline-block;
+        padding: 15.5px 30.1px;
+        transition: var(--transition);
+        color: var(--whiteColor) !important;
+        background-color: var(--primaryColor);
+        font: {
+            family: var(--syneFontFamily);
+            weight: 500;
+            size: 16px;
+        };
+        &:hover {
+            background-color: var(--neonOrangeColor);
+            color: var(--whiteColor) !important;
+        }
+    }
+}
+
+// EM Section Title
+.em-section-title {
+    margin-bottom: 40px;
+    max-width: 700px;
+
+    .sub-title {
+        color: var(--primaryColor);
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        margin-top: 12px;
+        letter-spacing: 0.4px;
+    }
+}
+
+// TT Section Title
+.tt-section-title {
+    max-width: 715px;
+    margin: {
+        bottom: 40px;
+        top: -8px;
+    };
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        letter-spacing: 0.4px;
+        margin-top: 10px;
+        max-width: 540px;
+    }
+}
+
+// OM Section Title
+.om-section-title {
+    max-width: 710px;
+    margin: {
+        top: -7px;
+        bottom: 45px;
+    };
+    h2 {
+        font-size: 40px;
+        line-height: 1.25;
+    }
+    p {
+        letter-spacing: 0.4px;
+        margin-top: 5px;
+    }
+}
+
+// HD Section Title
+.hd-section-title {
+    max-width: 800px;
+    margin: {
+        top: -5px;
+        bottom: 45px;
+    };
+    h2 {
+        font-size: 46px;
+        line-height: 1.25;
+    }
+    p {
+        letter-spacing: 0.4px;
+        max-width: 700px;
+        margin-top: 15px;
+    }
+}
+
+// FS Section Title
+.fs-section-title {
+    max-width: 730px;
+    margin: {
+        top: -15px;
+        bottom: 45px;
+    };
+    h2 {
+        font-size: 60px;
+        line-height: 1;
+    }
+    p {
+        margin-top: 12px;
+    }
+}
+
+// Mat Select
+.mat-mdc-select-panel {
+    &.mat-primary {
+        .mat-pseudo-checkbox-checked, .mat-pseudo-checkbox-indeterminate {
+            &.mat-pseudo-checkbox-minimal {
+                &::after {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+    }
+    .mat-mdc-option {
+        min-height: auto;
+        color: var(--blackColor);
+        padding: {
+            top: 12px;
+            left: 20px;
+            right: 20px;
+            bottom: 12px;
+        };
+        font: {
+            size: 15px;
+            weight: 500;
+            family: var(--syneFontFamily);
+        };
+        .mdc-list-item--selected {
+            &:not(.mdc-list-item--disabled) {
+                .mdc-list-item__primary-text {
+                    color: var(--primaryColor);
+                }
+            }
+        }
+    }
+}
+
+// Page Title Area
+.page-title-area {
+    background: linear-gradient(134deg, #F4F3FB 0%, #D4D4F3 100%);
+    padding: {
+        top: 230px;
+        bottom: 118px;
+    };
+    .pt-shape1 {
+        left: 17.7%;
+        bottom: 30%;
+
+        img {
+            animation: {
+                duration: 40s;
+                name: rotateme;
+                timing-function: linear;
+                iteration-count: infinite;
+            };
+        }
+    }
+    .pt-shape2 {
+        right: 0;
+        bottom: 0;
+
+        img {
+            margin-bottom: -6px;
+        }
+    }
+}
+.page-title-content {
+    ul {
+        margin-bottom: 10px;
+
+        li {
+            font-size: 15px;
+            color: var(--paragraphColor);
+            margin: {
+                left: 13px;
+                right: 13px;
+            };
+            a {
+                color: var(--primaryColor);
+
+                &:hover {
+                    color: var(--blackColor);
+                }
+            }
+            &::before {
+                top: 50%;
+                width: 8px;
+                left: -17px;
+                height: 1px;
+                content: '';
+                margin-top: .5px;
+                position: absolute;
+                transform: translateY(-50%);
+                background-color: var(--primaryColor);
+            }
+            &:first-child {
+                margin-left: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    h1 {
+        max-width: 1080px;
+        font-size: 50px;
+    }
+}
+
+// ngx-scrolltop
+.scrolltop-button {
+    right: 30px !important;
+    z-index: 99 !important;
+    width: 47px !important;
+    bottom: 30px !important;
+    height: 47px !important;
+    display: block !important;
+    transition: var(--transition) !important;
+    background-color: var(--whiteColor) !important;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+
+    .symbol-container {
+        color: var(--blackColor) !important;
+        transition: var(--transition);
+        position: relative;
+
+        &::before {
+            left: 0;
+            right: 0;
+            top: 50%;
+            line-height: 1;
+            content: "\ea62";
+            margin-top: -.5px;
+            position: absolute;
+            color: var(--blackColor);
+            transform: translateY(-50%);
+            transition: var(--transition);
+            font: {
+                size: 25px;
+                family: 'tabler-icons';
+            };
+        }
+    }
+    svg {
+        display: none !important;
+    }
+    &:hover {
+        background-color: var(--primaryColor) !important;
+
+        .symbol-container {
+            color: var(--whiteColor) !important;
+
+            &::before {
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    body {
+        font-size: 18px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .ptb-100 {
+        padding: {
+            top: 60px;
+            bottom: 60px;
+        };
+    }
+    .pt-100 {
+        padding-top: 60px;
+    }
+    .pb-100 {
+        padding-bottom: 60px;
+    }
+    .ptb-75 {
+        padding: {
+            top: 35px;
+            bottom: 35px;
+        };
+    }
+    .pt-75 {
+        padding-top: 35px;
+    }
+    .pb-75 {
+        padding-bottom: 35px;
+    }
+
+    // Default Btn
+    .default-btn {
+        &.mdc-button {
+            border-radius: 5px;
+            padding: 14px 30px;
+            font-size: 15px;
+        }
+    }
+
+    // EM Section Title
+    .em-section-title {
+        margin-bottom: 30px;
+        max-width: 100%;
+    
+        .sub-title {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    // TT Section Title
+    .tt-section-title {
+        max-width: 100%;
+        margin: {
+            bottom: 30px;
+            top: -4px;
+        };
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-top: 8px;
+            max-width: 100%;
+        }
+    }
+
+    // OM Section Title
+    .om-section-title {
+        max-width: 100%;
+        margin: {
+            top: -4px;
+            bottom: 25px;
+        };
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    // HD Section Title
+    .hd-section-title {
+        max-width: 100%;
+        margin: {
+            top: -4px;
+            bottom: 25px;
+        };
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-top: 12px;
+            max-width: 100%;
+        }
+    }
+
+    // FS Section Title
+    .fs-section-title {
+        max-width: 100%;
+        margin: {
+            top: -10px;
+            bottom: 30px;
+        };
+        h2 {
+            font-size: 35px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    // Mat Select
+    .mat-mdc-select-panel {
+        .mat-mdc-option {
+            padding: {
+                top: 11px;
+                left: 15px;
+                right: 15px;
+                bottom: 11px;
+            };
+        }
+    }
+
+    // Page Title Area
+    .page-title-area {
+        padding: {
+            top: 140px;
+            bottom: 60px;
+        };
+        .pt-shape1, .pt-shape2 {
+            display: none;
+        }
+    }
+    .page-title-content {
+        ul {
+            margin-bottom: 8px;
+
+            li {
+                font-size: 14px;
+            }
+        }
+        h1 {
+            max-width: 100%;
+            font-size: 30px;
+        }
+    }
+
+    // ngx-scrolltop
+    .scrolltop-button {
+        right: 20px !important;
+        width: 42px !important;
+        bottom: 20px !important;
+        height: 42px !important;
+    
+        .symbol-container {
+            &::before {
+                font-size: 23px;
+                margin-top: -1px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    body {
+        font-size: 19px;
+    }
+    p {
+        line-height: 27px;
+        font-size: 19px;
+    }
+    .ptb-100 {
+        padding: {
+            top: 80px;
+            bottom: 80px;
+        };
+    }
+    .pt-100 {
+        padding-top: 80px;
+    }
+    .pb-100 {
+        padding-bottom: 80px;
+    }
+    .ptb-75 {
+        padding: {
+            top: 55px;
+            bottom: 55px;
+        };
+    }
+    .pt-75 {
+        padding-top: 55px;
+    }
+    .pb-75 {
+        padding-bottom: 55px;
+    }
+
+    // Default Btn
+    .default-btn {
+        &.mdc-button {
+            padding: 14.5px 30px;
+            font-size: 15px;
+        }
+    }
+
+    // EM Section Title
+    .em-section-title {
+        margin-bottom: 35px;
+        max-width: 540px;
+    
+        .sub-title {
+            margin-bottom: 11px;
+            font-size: 15px;
+        }
+        h2 {
+            font-size: 29px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    // TT Section Title
+    .tt-section-title {
+        max-width: 550px;
+        margin: {
+            bottom: 35px;
+            top: -5px;
+        };
+        h2 {
+            font-size: 29px;
+        }
+        p {
+            margin-top: 8px;
+            max-width: 100%;
+        }
+    }
+
+    // OM Section Title
+    .om-section-title {
+        max-width: 500px;
+        margin: {
+            top: -4px;
+            bottom: 30px;
+        };
+        h2 {
+            font-size: 29px;
+        }
+    }
+
+    // HD Section Title
+    .hd-section-title {
+        max-width: 520px;
+        margin: {
+            top: -4px;
+            bottom: 30px;
+        };
+        h2 {
+            font-size: 29px;
+        }
+        p {
+            margin-top: 12px;
+            max-width: 100%;
+        }
+    }
+
+    // FS Section Title
+    .fs-section-title {
+        max-width: 100%;
+        margin: {
+            top: -10px;
+            bottom: 35px;
+        };
+        h2 {
+            font-size: 45px;
+        }
+    }
+
+    // Page Title Area
+    .page-title-area {
+        padding: {
+            top: 180px;
+            bottom: 80px;
+        };
+        .pt-shape1 {
+            display: none;
+        }
+    }
+    .page-title-content {
+        h1 {
+            font-size: 35px;
+            max-width: 100%;
+        }
+    }
+
+    // ngx-scrolltop
+    .scrolltop-button {
+        right: 25px !important;
+        width: 45px !important;
+        bottom: 25px !important;
+        height: 45px !important;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    // Default Btn
+    .default-btn {
+        &.mdc-button {
+            padding: 15px 30px;
+        }
+    }
+
+    // EM Section Title
+    .em-section-title {
+        margin-bottom: 40px;
+        max-width: 610px;
+    
+        .sub-title {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        h2 {
+            font-size: 35px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    // TT Section Title
+    .tt-section-title {
+        max-width: 600px;
+        margin-top: -6px;
+
+        h2 {
+            font-size: 35px;
+            max-width: 100%;
+        }
+    }
+
+    // OM Section Title
+    .om-section-title {
+        max-width: 600px;
+        margin: {
+            top: -5px;
+            bottom: 40px;
+        };
+        h2 {
+            font-size: 35px;
+        }
+    }
+
+    // HD Section Title
+    .hd-section-title {
+        max-width: 650px;
+        margin: {
+            top: -5px;
+            bottom: 40px;
+        };
+        h2 {
+            font-size: 35px;
+        }
+        p {
+            margin-top: 12px;
+            max-width: 500px;
+        }
+    }
+
+    // FS Section Title
+    .fs-section-title {
+        margin: {
+            top: -13px;
+            bottom: 40px;
+        };
+        h2 {
+            font-size: 50px;
+        }
+    }
+
+    // Page Title Area
+    .page-title-area {
+        padding: {
+            top: 220px;
+            bottom: 100px;
+        };
+        .pt-shape1 {
+            left: 4%;
+
+            img {
+                max-width: 30px;
+            }
+        }
+    }
+    .page-title-content {
+        h1 {
+            font-size: 42px;
+            max-width: 835px;
+        }
+    }
+
+    // ngx-scrolltop
+    .scrolltop-button {
+        right: 25px !important;
+        width: 45px !important;
+        bottom: 25px !important;
+        height: 45px !important;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    // FS Section Title
+    .fs-section-title {
+        max-width: 675px;
+
+        h2 {
+            font-size: 55px;
+        }
+    }
+
+    // Page Title Area
+    .page-title-area {
+        padding-bottom: 100px;
+
+        .pt-shape1 {
+            left: 7%;
+
+            img {
+                max-width: 35px;
+            }
+        }
+    }
+    .page-title-content {
+        h1 {
+            font-size: 48px;
+            max-width: 930px;
+        }
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    // FS Section Title
+    .fs-section-title {
+        max-width: 700px;
+
+        h2 {
+            font-size: 57px;
+        }
+    }
+
+    // Page Title Area
+    .page-title-area {
+        .pt-shape1 {
+            left: 8%;
+        }
+    }
+
+}

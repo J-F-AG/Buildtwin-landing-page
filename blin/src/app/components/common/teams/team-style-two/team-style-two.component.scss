@@ -1,0 +1,199 @@
+.team-area {
+    padding-bottom: 50px;
+}
+.single-team-member {
+    margin-bottom: 50px;
+
+    .image {
+        img {
+            margin-bottom: -6px;
+            border-radius: 18px;
+        }
+        .socials {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            backdrop-filter: blur(65px);
+            border-radius: 0 0 18px 18px;
+            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.20);
+            padding: {
+                bottom: 5px;
+                top: 12px;
+            };
+            a {
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background-color: var(--whiteColor);
+                margin: {
+                    left: 6px;
+                    right: 6px;
+                };
+                svg {
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    z-index: 1;
+                    position: absolute;
+                    transform: translateY(-50%);
+                    margin: {
+                        left: auto;
+                        right: auto;
+                    };
+                }
+                &:hover {
+                    border-radius: 0;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .content {
+        margin-top: 24px;
+        padding-left: 10px;
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        span {
+            color: var(--paragraphColor);
+        }
+    }
+    &:hover {
+        .image {
+            .socials {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .team-area {
+        padding-bottom: 35px;
+    }
+    .single-team-member {
+        margin-bottom: 25px;
+    
+        .image {
+            img {
+                border-radius: 10px;
+            }
+            .socials {
+                opacity: 1;
+                bottom: -1px;
+                visibility: visible;
+                border-radius: 0 0 10px 10px;
+
+                a {
+                    width: 32px;
+                    height: 32px;
+                    margin: {
+                        left: 5px;
+                        right: 5px;
+                    };
+                    svg {
+                        width: 15px;
+                        margin-top: 1px;
+                    }
+                }
+            }
+        }
+        .content {
+            margin-top: 17px;
+            padding-left: 0;
+    
+            h3 {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .team-area {
+        padding-bottom: 55px;
+    }
+    .single-team-member {
+        margin-bottom: 25px;
+    
+        .image {
+            img {
+                border-radius: 15px;
+            }
+            .socials {
+                opacity: 1;
+                visibility: visible;
+                border-radius: 0 0 15px 15px;
+                
+                a {
+                    width: 34px;
+                    height: 34px;
+                    margin: {
+                        left: 5px;
+                        right: 5px;
+                    };
+                    svg {
+                        width: 17px;
+                    }
+                }
+            }
+        }
+        .content {
+            margin-top: 18px;
+            padding-left: 0;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .team-area {
+        padding-bottom: 70px;
+    }
+    .single-team-member {
+        margin-bottom: 30px;
+    
+        .content {
+            margin-top: 22px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .team-area {
+        padding-bottom: 60px;
+    }
+    .single-team-member {
+        margin-bottom: 40px;
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {}

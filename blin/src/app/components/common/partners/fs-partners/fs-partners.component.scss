@@ -1,0 +1,105 @@
+.title {
+    margin-bottom: 50px;
+    font-size: 27px;
+    line-height: 1;
+}
+.partners-slider {
+    overflow: hidden;
+    height: 36px;
+
+    .slider {
+        top: 0;
+        position: absolute;
+        white-space: nowrap;
+
+        img {
+            margin-right: 165px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .title {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+    .partners-slider {
+        height: 35px;
+    
+        .slider {
+            img {
+                margin-right: 40px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .title {
+        margin-bottom: 40px;
+        font-size: 23px;
+    }
+    .partners-slider {
+        .slider {
+            img {
+                margin-right: 60px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .title {
+        margin-bottom: 40px;
+        font-size: 25px;
+    }
+    .partners-slider {
+        .slider {
+            img {
+                margin-right: 65px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .partners-slider {
+        .slider {
+            img {
+                margin-right: 85px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .partners-slider {
+        .slider {
+            img {
+                margin-right: 125px;
+            }
+        }
+    }
+
+}

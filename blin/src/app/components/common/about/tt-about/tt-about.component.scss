@@ -1,0 +1,200 @@
+.about-image {
+    padding: {
+        left: 72px;
+        right: 82px;
+    };
+}
+.about-content {
+    padding-left: 60px;
+    
+    h2 {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+    p {
+        letter-spacing: 0.4px;
+        max-width: 592px;
+    }
+    .features-list {
+        margin-top: 35px;
+
+        li {
+            margin-bottom: 30px;
+            padding-left: 35px;
+
+            i {
+                left: 0;
+                top: 2px;
+                width: 22px;
+                height: 22px;
+                font-size: 14px;
+                line-height: 22px;
+                text-align: center;
+                border-radius: 50%;
+                position: absolute;
+                display: inline-block;
+                color: var(--whiteColor);
+                transition: var(--transition);
+                background-color: var(--primaryColor);
+            }
+            h5 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            &:hover {
+                i {
+                    background-color: var(--neonOrangeColor);
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .about-image {
+        margin-bottom: 25px;
+        padding: {
+            left: 0;
+            right: 0;
+        };
+    }
+    .about-content {
+        padding-left: 0;
+        
+        h2 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        p {
+            max-width: 100%;
+        }
+        .features-list {
+            margin-top: 20px;
+    
+            li {
+                margin-bottom: 20px;
+                padding-left: 30px;
+    
+                i {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                h5 {
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .about-image {
+        margin-bottom: 25px;
+        padding: {
+            left: 0;
+            right: 0;
+        };
+    }
+    .about-content {
+        padding-left: 0;
+        
+        h2 {
+            font-size: 29px;
+            margin-bottom: 10px;
+        }
+        p {
+            max-width: 100%;
+        }
+        .features-list {
+            margin-top: 25px;
+    
+            li {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .about-image {
+        padding: {
+            left: 0;
+            right: 0;
+        };
+    }
+    .about-content {
+        padding-left: 0;
+        
+        h2 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+        p {
+            max-width: 100%;
+        }
+        .features-list {
+            margin-top: 25px;
+    
+            li {
+                margin-bottom: 25px;
+                padding-left: 35px;
+    
+                h5 {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .about-image {
+        padding: {
+            left: 0;
+            right: 0;
+        };
+    }
+    .about-content {
+        padding-left: 15px;
+        
+        p {
+            max-width: 100%;
+        }
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .about-image {
+        padding: {
+            left: 0;
+            right: 25px;
+        };
+    }
+    .about-content {
+        padding-left: 25px;
+    }
+
+}

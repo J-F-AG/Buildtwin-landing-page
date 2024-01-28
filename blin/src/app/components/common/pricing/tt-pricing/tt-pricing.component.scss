@@ -1,0 +1,447 @@
+.pricing-box {
+    padding: 40px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background-color: var(--whiteColor);
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.05);
+
+    h4 {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+    .price {
+        line-height: 1;
+        font-size: 40px;
+        margin: {
+            top: 26px;
+            bottom: 35px;
+        };
+        span {
+            font-size: 24px;
+            margin-left: -5px;
+        }
+    }
+    .default-btn {
+        text-align: center;
+        display: block;
+        width: 100%;
+        font: {
+            weight: 600;
+            family: var(--mulishFontFamily);
+        };
+    }
+    .sub-title {
+        color: var(--paragraphColor);
+        margin: {
+            top: 29px;
+            bottom: 24px;
+        };
+    }
+    .features-list {
+        li {
+            font-size: 15px;
+            padding-left: 30px;
+            margin-bottom: 20px;
+
+            i {
+                left: 0;
+                top: 50%;
+                width: 20px;
+                height: 20px;
+                font-size: 15px;
+                line-height: 22px;
+                text-align: center;
+                border-radius: 50%;
+                position: absolute;
+                color: var(--whiteColor);
+                transform: translateY(-50%);
+                transition: var(--transition);
+                background-color: var(--primaryColor);
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .popular {
+        background-color: var(--neonOrangeColor);
+        text-transform: uppercase;
+        color: var(--whiteColor);
+        letter-spacing: 1.8px;
+        border-radius: 30px;
+        position: absolute;
+        padding: 7px 15px;
+        font-size: 12px;
+        right: 15px;
+        top: 15px;
+    }
+    &.popular {
+        background-color: var(--yellowColor);
+
+        .default-btn {
+            background-color: var(--whiteColor);
+            color: var(--primaryColor) !important;
+        }
+        .features-list {
+            li {
+                i {
+                    color: var(--whiteColor);
+                    background-color: var(--neonOrangeColor);
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .pricing-tabs {
+        .mat-mdc-tab-label-container {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+        .mdc-tab-indicator {
+            display: none;
+        }
+        .mdc-tab {
+            padding: 0;
+            display: inline-block;
+            margin: {
+                left: 48px;
+                right: 48px;
+            };
+            &:not(.mdc-tab--stacked) {
+                height: auto;
+            }
+            &:first-child {
+                margin-left: 0;
+
+                .mdc-tab__text-label {
+                    &::before, &::after {
+                        display: none;
+                    }
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+                
+                &.mdc-tab--active {
+                    .mdc-tab__text-label {
+                        &::after {
+                            left: -48px;
+                        }
+                    }
+                }
+            }
+        }
+        .mat-mdc-tab {
+            .mdc-tab__text-label {
+                color: #a99b95;
+                position: relative;
+                padding: {
+                    top: 8px;
+                    bottom: 8px;
+                };
+                font: {
+                    size: 20px;
+                    weight: 700;
+                    family: var(--mulishFontFamily);
+                };
+                &::before {
+                    top: 0;
+                    left: -80px;
+                    width: 64px;
+                    content: '';
+                    height: 36px;
+                    position: absolute;
+                    border-radius: 30px;
+                    pointer-events: none;
+                    background: #54b58b;
+                }
+                &::after {
+                    top: 4px;
+                    left: -76px;
+                    width: 28px;
+                    content: '';
+                    height: 28px;
+                    transition: .4s;
+                    border-radius: 50%;
+                    position: absolute;
+                    pointer-events: none;
+                    background: var(--whiteColor);
+                }
+            }
+            &.mdc-tab--active, &:hover {
+                .mdc-tab__text-label {
+                    color: var(--blackColor);
+                }
+                &:focus {
+                    .mdc-tab__text-label {
+                        color: var(--blackColor);
+                    }
+                }
+            }
+        }
+        .mat-mdc-tab-labels {
+            display: block;
+        }
+        .mat-mdc-tab-group, .mat-mdc-tab-nav-bar {
+            --mdc-tab-indicator-active-indicator-color: var(--primaryColor);
+            --mat-tab-header-active-label-text-color: var(--primaryColor);
+            --mat-tab-header-active-ripple-color: var(--primaryColor);
+            --mat-tab-header-inactive-ripple-color: var(--primaryColor);
+            --mat-tab-header-active-focus-label-text-color: var(--primaryColor);
+            --mat-tab-header-active-hover-label-text-color: var(--primaryColor);
+            --mat-tab-header-active-focus-indicator-color: var(--primaryColor);
+            --mat-tab-header-active-hover-indicator-color: var(--primaryColor);
+        }
+        .mat-mdc-tab-body-wrapper {
+            overflow: unset;
+        }
+        .mat-mdc-tab-body {
+            &.mat-mdc-tab-body-active {
+                overflow: unset;
+            }
+        }
+        .mat-mdc-tab-body-content {
+            overflow: unset;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .pricing-box {
+        padding: 25px 20px;
+        border-radius: 10px;
+    
+        h4 {
+            font-size: 18px;
+        }
+        .price {
+            font-size: 26px;
+            margin: {
+                top: 15px;
+                bottom: 18px;
+            };
+            span {
+                font-size: 17px;
+            }
+        }
+        .sub-title {
+            margin: {
+                top: 15px;
+                bottom: 16px;
+            };
+        }
+        .features-list {
+            li {
+                margin-bottom: 14px;
+            }
+        }
+        .popular {
+            letter-spacing: 1px;
+            padding: 5px 15px;
+            font-size: 11px;
+        }
+    }
+    ::ng-deep {
+        .pricing-tabs {
+            .mat-mdc-tab-label-container {
+                margin-bottom: 30px;
+            }
+            .mdc-tab {
+                margin: {
+                    left: 45px;
+                    right: 45px;
+                };
+                &:last-child {
+                    &.mdc-tab--active {
+                        .mdc-tab__text-label {
+                            &::after {
+                                left: -42px;
+                            }
+                        }
+                    }
+                }
+            }
+            .mat-mdc-tab {
+                .mdc-tab__text-label {
+                    font-size: 16px;
+                    padding: {
+                        top: 7px;
+                        bottom: 7px;
+                    };
+                    &::before {
+                        width: 64px;
+                        height: 30px;
+                    }
+                    &::after {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .pricing-box {
+        padding: 30px 25px;
+    
+        h4 {
+            font-size: 20px;
+        }
+        .price {
+            font-size: 28px;
+            margin: {
+                top: 20px;
+                bottom: 20px;
+            };
+            span {
+                font-size: 20px;
+            }
+        }
+        .sub-title {
+            margin: {
+                top: 18px;
+                bottom: 18px;
+            };
+        }
+        .features-list {
+            li {
+                margin-bottom: 18px;
+            }
+        }
+    }
+    ::ng-deep {
+        .pricing-tabs {
+            .mat-mdc-tab-label-container {
+                margin-bottom: 35px;
+            }
+            .mdc-tab {
+                &:last-child {
+                    &.mdc-tab--active {
+                        .mdc-tab__text-label {
+                            &::after {
+                                left: -45px;
+                            }
+                        }
+                    }
+                }
+            }
+            .mat-mdc-tab {
+                .mdc-tab__text-label {
+                    font-size: 17px;
+                    padding: {
+                        top: 8px;
+                        bottom: 8px;
+                    };
+                    &::before {
+                        height: 33px;
+                    }
+                    &::after {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .pricing-box {
+        padding: 40px 30px;
+    
+        h4 {
+            font-size: 22px;
+        }
+        .price {
+            font-size: 35px;
+            margin: {
+                top: 20px;
+                bottom: 25px;
+            };
+            span {
+                font-size: 22px;
+            }
+        }
+        .sub-title {
+            margin: {
+                top: 18px;
+                bottom: 20px;
+            };
+        }
+        .features-list {
+            li {
+                margin-bottom: 18px;
+            }
+        }
+    }
+    ::ng-deep {
+        .pricing-tabs {
+            .mat-mdc-tab-label-container {
+                margin-bottom: 40px;
+            }
+            .mdc-tab {
+                &:last-child {
+                    &.mdc-tab--active {
+                        .mdc-tab__text-label {
+                            &::after {
+                                left: -46px;
+                            }
+                        }
+                    }
+                }
+            }
+            .mat-mdc-tab {
+                .mdc-tab__text-label {
+                    font-size: 18px;
+            
+                    &::before {
+                        height: 34px;
+                    }
+                    &::after {
+                        width: 26px;
+                        height: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .pricing-box {
+        padding: 40px 30px;
+    
+        .features-list {
+            li {
+                margin-bottom: 18px;
+            }
+        }
+    }
+    
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .pricing-box {
+        padding: 40px 30px;
+    }
+
+}

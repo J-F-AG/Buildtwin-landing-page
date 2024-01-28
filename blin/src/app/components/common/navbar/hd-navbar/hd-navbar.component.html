@@ -1,0 +1,243 @@
+<div
+    class="navbar-area"
+    [ngClass]="{'sticky': isSticky}"
+>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg" [class.active]="classApplied">
+            <a class="navbar-brand" routerLink="/help-desk">
+                <img src="assets/images/logo2.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" (click)="toggleClass()">
+                <span class="burger-menu">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav font-poppins">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                            Solution for
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+
+
+
+                            <li class="nav-item">
+                                <a routerLink="/features" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Freelancer / small teams 
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/technical-team" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Technical Teams 
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/feature-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Enterprise
+                                </a>
+                            </li>
+
+
+
+
+
+                            <br>
+
+
+
+
+
+                            <li class="nav-item">
+                                <a routerLink="/features" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Features
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/services" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Enterprise
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/feature-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Client View
+                                </a>
+                            </li>
+
+                            <br>
+
+                            <li class="nav-item">
+                                <a routerLink="/feature-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Feature Details
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a routerLink="/service-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Service Details
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/time-tracking" class="nav-link">
+                            Marketplace
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="fintech-saas" class="nav-link">
+                            Training
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                            Why BuildTwin
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            
+                            <li class="nav-item">
+                                <a routerLink="/e-mail-marketing" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Good reasons
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/about" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    About BuildTwin
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a routerLink="/blog" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Use Cases
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a routerLink="/testimonials" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Testimonials
+                                </a>
+                            </li>
+
+                           
+                            <li class="nav-item">
+                                <a routerLink="/integrations" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Integrations
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a routerLink="/faq" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    FAQ
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a routerLink="/faq" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    <br><br>
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a routerLink="/blog-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Blog Details
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                            <a routerLink="/contact" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                Contact Us
+                            </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a routerLink="/team" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Team
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/pricing" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Pricing
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    Careers
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a routerLink="/careers" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                            Careers
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a routerLink="/job-details" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                            Job Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                                    My Account
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a routerLink="/login" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                            Login
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a routerLink="/register" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                            Register
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a routerLink="/forgot-password" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                            Forgot Password
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/privacy-policy" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/terms-conditions" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a routerLink="/not-found" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    404 Error Page
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+ 
+                </ul>
+                <div class="other-options d-flex align-items-center">
+                    <a mat-button routerLink="/register" class="default-btn">
+                        Get started
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

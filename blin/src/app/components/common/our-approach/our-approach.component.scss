@@ -1,0 +1,236 @@
+.approach-content {
+    .sub-title {
+        font-size: 16px;
+        margin-bottom: 12px;
+        color: var(--primaryColor);
+    }
+    h2 {
+        margin-bottom: 13px;
+        line-height: 1.3;
+        max-width: 605px;
+        font-size: 40px;
+    }
+    p {
+        max-width: 568px;
+    }
+    .default-btn {
+        margin-top: 13px;
+    }
+}
+.approach-image {
+    padding: {
+        left: 48px;
+        bottom: 39px;
+    };
+    img {
+        border-radius: 10px;
+        margin-bottom: -6px;
+    }
+    .col-6 {
+        &:nth-child(1) {
+            img {
+                margin: {
+                    top: 100px;
+                    left: -42px;
+                };
+            }
+        }
+    }
+    .shape {
+        box-shadow: 0px 4px 24px 0px rgba(105, 85, 137, 0.06);
+        animation: moveleftbounce 2s linear infinite;
+        position: absolute;
+        right: 129px;
+        bottom: 0;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+    
+    .approach-content {
+        .sub-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-bottom: 8px;
+            max-width: 100%;
+            font-size: 25px;
+
+            br {
+                display: none;
+            }
+        }
+        p {
+            max-width: 100%;
+        }
+        .default-btn {
+            margin-top: 3px;
+        }
+    }
+    .approach-image {
+        margin-top: 25px;
+        padding: {
+            left: 0;
+            bottom: 39px;
+        };
+        .col-6 {
+            &:nth-child(1) {
+                img {
+                    margin: {
+                        top: 0;
+                        left: 0;
+                    };
+                }
+            }
+        }
+        .shape {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .approach-content {
+        .sub-title {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            font-size: 29px;
+            max-width: 100%;
+
+            br {
+                display: none;
+            }
+        }
+        p {
+            max-width: 100%;
+        }
+        .default-btn {
+            margin-top: 5px;
+        }
+    }
+    .approach-image {
+        padding-left: 0;
+        margin-top: 25px;
+
+        .col-6 {
+            &:nth-child(1) {
+                img {
+                    margin: {
+                        top: 50px;
+                        left: 0;
+                    };
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .approach-content {
+        .sub-title {
+            font-size: 15px;
+            margin-bottom: 11px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            max-width: 100%;
+            font-size: 34px;
+
+            br {
+                display: none;
+            }
+        }
+        p {
+            max-width: 100%;
+        }
+        .default-btn {
+            margin-top: 10px;
+        }
+    }
+    .approach-image {
+        padding: {
+            left: 0;
+            bottom: 30px;
+        };
+        .col-6 {
+            &:nth-child(1) {
+                img {
+                    margin: {
+                        top: 100px;
+                        left: 0;
+                    };
+                }
+            }
+        }
+        .shape {
+            width: 200px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .approach-content {
+        h2 {
+            max-width: 100%;
+
+            br {
+                display: none;
+            }
+        }
+        p {
+            max-width: 100%;
+        }
+    }
+    .approach-image {
+        padding-left: 30px;
+
+        .col-6 {
+            &:nth-child(1) {
+                img {
+                    margin: {
+                        top: 100px;
+                        left: 0;
+                    };
+                }
+            }
+        }
+        .shape {
+            width: 250px;
+        }
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .approach-image {
+        padding-left: 25px;
+
+        .col-6 {
+            &:nth-child(1) {
+                img {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+}
