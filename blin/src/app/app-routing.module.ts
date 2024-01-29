@@ -26,6 +26,7 @@ import { PrivacyPolicyPageComponent } from './components/pages/privacy-policy-pa
 import { TermsConditionsPageComponent } from './components/pages/terms-conditions-page/terms-conditions-page.component';
 import { ServicesPageComponent } from './components/pages/services-page/services-page.component';
 import { ServiceDetailsPageComponent } from './components/pages/service-details-page/service-details-page.component';
+import { FreelancerPageComponent } from './components/pages/freelancer-page/freelancer-page.component';
 
 const routes: Routes = [
     {path: '', component: HelpDeskHomeComponent},
@@ -54,7 +55,7 @@ const routes: Routes = [
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
     {path: 'contact', component: ContactPageComponent},
-    {path: 'freelancer', component: OnlineMeetingHomeComponent},
+    {path: 'freelancer', component: FreelancerPageComponent},
     {path: 'technical-team', component: OnlineMeetingHomeComponent},
 
 
