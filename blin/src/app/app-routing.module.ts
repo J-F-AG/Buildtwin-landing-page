@@ -55,8 +55,9 @@ const routes: Routes = [
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
     {path: 'contact', component: ContactPageComponent},
-    {path: 'freelancer', component: OnlineMeetingHomeFreelanceComponent},
+    {path: 'freelancer', component: OnlineMeetingHomeComponent},
     {path: 'technical-team', component: OnlineMeetingHomeComponent},
+    {path: 'freelancer-new', component: OnlineMeetingHomeFreelanceComponent},
 
 
     // Here add new pages component
