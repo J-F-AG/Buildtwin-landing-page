@@ -27,6 +27,7 @@ import { TermsConditionsPageComponent } from './components/pages/terms-condition
 import { ServicesPageComponent } from './components/pages/services-page/services-page.component';
 import { ServiceDetailsPageComponent } from './components/pages/service-details-page/service-details-page.component';
 import { OnlineMeetingHomeFreelanceComponent } from './components/pages/online-meeting-home-freelance/online-meeting-home-freelance.component';
+import { EnterprisePageComponent } from './components/pages/enterprise-page/enterprise-page.component';
 
 const routes: Routes = [
     {path: '', component: HelpDeskHomeComponent},
@@ -58,6 +59,7 @@ const routes: Routes = [
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
     {path: 'technical-team', component: OnlineMeetingHomeComponent},
     {path: 'freelancer-new', component: OnlineMeetingHomeFreelanceComponent},
+    {path: 'enterprise', component: EnterprisePageComponent},
 
 
     // Here add new pages component
