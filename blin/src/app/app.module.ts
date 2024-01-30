@@ -128,6 +128,21 @@ import { PrivacyPolicyPageComponent } from './components/pages/privacy-policy-pa
 import { ServicesPageComponent } from './components/pages/services-page/services-page.component';
 import { ServiceDetailsPageComponent } from './components/pages/service-details-page/service-details-page.component';
 import { OtherServicesComponent } from './components/pages/service-details-page/other-services/other-services.component';
+import { OnlineMeetingHomeFreelanceComponent } from './components/pages/online-meeting-home-freelance/online-meeting-home-freelance.component';
+import { OmBannerFreelanceComponent } from './components/pages/online-meeting-home-freelance/om-banner-freelance/om-banner-freelance.component';
+import { OmServicesFreelanceComponent } from './components/common/services/om-services-freelance/om-services-freelance.component';
+import { OmWhyChooseUsFreelanceComponent } from './components/common/why-choose-us/om-why-choose-us-freelance/om-why-choose-us-freelance.component';
+import { VideoCallMadeEasyFreelanceComponent } from './components/common/video-call-made-easy-freelance/video-call-made-easy-freelance.component';
+import { OmPartnersFreelanceComponent } from './components/common/partners/om-partners-freelance/om-partners-freelance.component';
+import { OmFeaturesFreelanceComponent } from './components/common/features/om-features-freelance/om-features-freelance.component';
+import { OmIntegrationsFreelanceComponent } from './components/common/integrations/om-integrations-freelance/om-integrations-freelance.component';
+import { OmHowItWorksFreelanceComponent } from './components/common/how-it-works/om-how-it-works-freelance/om-how-it-works-freelance.component';
+import { OmFunfactsFreelanceComponent } from './components/common/funfacts/om-funfacts-freelance/om-funfacts-freelance.component';
+import { OmAboutFreelanceComponent } from './components/common/about/om-about-freelance/om-about-freelance.component';
+import { OmTestimonialsFreelanceComponent } from './components/common/testimonials/om-testimonials-freelance/om-testimonials-freelance.component';
+import { OmPricingFreelanceComponent } from './components/common/pricing/om-pricing-freelance/om-pricing-freelance.component';
+import { OmBlogFreelanceComponent } from './components/common/blogs/om-blog-freelance/om-blog-freelance.component';
+import { OmFooterFreelanceComponent } from './components/common/footer/om-footer-freelance/om-footer-freelance.component';
 
 @NgModule({
   declarations: [
@@ -245,6 +260,23 @@ import { OtherServicesComponent } from './components/pages/service-details-page/
     ServicesPageComponent,
     ServiceDetailsPageComponent,
     OtherServicesComponent,
+
+    //freelance import
+    OnlineMeetingHomeFreelanceComponent,
+    OmBannerFreelanceComponent,
+    OmServicesFreelanceComponent,
+    OmWhyChooseUsFreelanceComponent,
+    VideoCallMadeEasyFreelanceComponent,
+    OmPartnersFreelanceComponent,
+    OmFeaturesFreelanceComponent,
+    OmIntegrationsFreelanceComponent,
+    OmHowItWorksFreelanceComponent,
+    OmFunfactsFreelanceComponent,
+    OmAboutFreelanceComponent,
+    OmTestimonialsFreelanceComponent,
+    OmPricingFreelanceComponent,
+    OmBlogFreelanceComponent,
+    OmFooterFreelanceComponent
   ],
   imports: [
     BrowserModule,
