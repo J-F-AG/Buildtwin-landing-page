@@ -143,6 +143,21 @@ import { OmTestimonialsFreelanceComponent } from './components/common/testimonia
 import { OmPricingFreelanceComponent } from './components/common/pricing/om-pricing-freelance/om-pricing-freelance.component';
 import { OmBlogFreelanceComponent } from './components/common/blogs/om-blog-freelance/om-blog-freelance.component';
 import { OmFooterFreelanceComponent } from './components/common/footer/om-footer-freelance/om-footer-freelance.component';
+import { EnterprisePageComponent } from './components/pages/enterprise-page/enterprise-page.component';
+import { EnterpriseBannerComponent } from './components/pages/enterprise-page/enterprise-banner/enterprise-banner.component';
+import { EnterpriseServicesComponent } from './components/common/services/enterprise-services/enterprise-services.component';
+import { EnterpriseWhyChooseUsComponent } from './components/common/why-choose-us/enterprise-why-choose-us/enterprise-why-choose-us.component';
+import { VideoCallMadeEasyEnterpriseComponent } from './components/common/video-call-made-easy-enterprise/video-call-made-easy-enterprise.component';
+import { EnterprisePartnersComponent } from './components/common/partners/enterprise-partners/enterprise-partners.component';
+import { EnterpriseFeaturesComponent } from './components/common/features/enterprise-features/enterprise-features.component';
+import { EnterpriseIntegrationsComponent } from './components/common/integrations/enterprise-integrations/enterprise-integrations.component';
+import { EnterpriseHowItWorksComponent } from './components/common/how-it-works/enterprise-how-it-works/enterprise-how-it-works.component';
+import { EnterpriseFunfactsComponent } from './components/common/funfacts/enterprise-funfacts/enterprise-funfacts.component';
+import { EnterpriseAboutComponent } from './components/common/about/enterprise-about/enterprise-about.component';
+import { EnterpriseTestimonialsComponent } from './components/common/testimonials/enterprise-testimonials/enterprise-testimonials.component';
+import { EnterprisePricingComponent } from './components/common/pricing/enterprise-pricing/enterprise-pricing.component';
+import { EnterpriseBlogComponent } from './components/common/blogs/enterprise-blog/enterprise-blog.component';
+import { EnterpriseFooterComponent } from './components/common/footer/enterprise-footer/enterprise-footer.component';
 
 @NgModule({
   declarations: [
@@ -276,7 +291,24 @@ import { OmFooterFreelanceComponent } from './components/common/footer/om-footer
     OmTestimonialsFreelanceComponent,
     OmPricingFreelanceComponent,
     OmBlogFreelanceComponent,
-    OmFooterFreelanceComponent
+    OmFooterFreelanceComponent,
+
+    //enterprise import
+    EnterprisePageComponent,
+    EnterpriseBannerComponent,
+    EnterpriseServicesComponent,
+    EnterpriseWhyChooseUsComponent,
+    VideoCallMadeEasyEnterpriseComponent,
+    EnterprisePartnersComponent,
+    EnterpriseFeaturesComponent,
+    EnterpriseIntegrationsComponent,
+    EnterpriseHowItWorksComponent,
+    EnterpriseFunfactsComponent,
+    EnterpriseAboutComponent,
+    EnterpriseTestimonialsComponent,
+    EnterprisePricingComponent,
+    EnterpriseBlogComponent,
+    EnterpriseFooterComponent
   ],
   imports: [
     BrowserModule,
