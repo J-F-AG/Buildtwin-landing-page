@@ -64,7 +64,7 @@
 .single-pricing-box {
     padding: 50px 40px;
     margin-bottom: 25px;
-    border-radius: 20px;
+    border-radius: 8px;//updated-from-20-8;
     background-color: #eef3de;
 
     .sub-title {
@@ -97,7 +97,7 @@
 
             span {
                 font-size: 15px;
-                border-radius: 20px;
+                border-radius: 8px;//updated-from-20-8;
                 padding: 11px 30px 11px 44px;
                 background-color: var(--whiteColor);
 
@@ -118,7 +118,7 @@
                 &:hover {
                     i {
                         color: var(--whiteColor);
-                        background-color: var(--neonOrangeColor);
+                        background-color: var(--themeColor);
                     }
                 }
             }

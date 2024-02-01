@@ -52,7 +52,7 @@
 
 // Blog Item
 .blog-item {
-    border-radius: 20px;
+    border-radius: 8px;//updated-from-20-8;
     margin-bottom: 25px;
     padding: 10px 10px 50px;
     background-color: var(--whiteColor);
@@ -61,10 +61,10 @@
     .image {
         overflow: hidden;
         margin-bottom: 25px;
-        border-radius: 20px;
+        border-radius: 8px;//updated-from-20-8;
 
         img {
-            border-radius: 20px;
+            border-radius: 8px;//updated-from-20-8;
             margin-bottom: -7px;
             transition: var(--transition);
         }
@@ -110,7 +110,7 @@
                 transform: translateY(-50%);
             }
             &:hover {
-                color: var(--neonOrangeColor);
+                color: var(--themeColor);
             }
         }
     }
@@ -127,7 +127,7 @@
 .blogs-list {
     padding: 40px 30px;
     margin-bottom: 25px;
-    border-radius: 20px;
+    border-radius: 8px;//updated-from-20-8;
     background-color: var(--whiteColor);
     box-shadow: 0px 4px 40px 0px rgba(118, 87, 167, 0.12);
 
@@ -137,10 +137,10 @@
         .image {
             overflow: hidden;
             padding-right: 20px;
-            border-radius: 20px;
+            border-radius: 8px;//updated-from-20-8;
     
             img {
-                border-radius: 20px;
+                border-radius: 8px;//updated-from-20-8;
                 margin-bottom: -7px;
                 transition: var(--transition);
             }
@@ -586,7 +586,7 @@
             bottom: 50px;
         };
         .item {
-            margin-bottom: 45px;
+            margin-bottom: 25px;
     
             .content {
                 h3 {

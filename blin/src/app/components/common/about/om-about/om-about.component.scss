@@ -25,7 +25,7 @@
         li {
             font-size: 15px;
             margin-right: 10px;
-            border-radius: 20px;
+            border-radius: 8px;//updated-from-20-8;
             display: inline-block;
             background-color: #eff0f4;
             padding: 11px 30px 11px 44px;
@@ -47,7 +47,7 @@
             &:hover {
                 i {
                     color: var(--whiteColor);
-                    background-color: var(--neonOrangeColor);
+                    background-color: var(--themeColor);
                 }
             }
             &:last-child {
@@ -56,7 +56,7 @@
         }
     }
     .default-btn {
-        background-color: var(--neonOrangeColor);
+        background-color: var(--themeColor);
         font-family: var(--archivoFontFamily);
         box-shadow: 4px 4px #160e0b;
         margin-top: 5px;

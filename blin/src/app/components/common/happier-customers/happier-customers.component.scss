@@ -11,9 +11,9 @@
         content: '';
         z-index: -1;
         position: absolute;
-        border-radius: 20px;
+        border-radius: 8px;//updated-from-20-8;
         margin-bottom: 31px;
-        background: #eae3e1;
+        background: var(--backgroundColor);
     }
     .hd-section-title {
         margin-bottom: 55px;
@@ -24,9 +24,9 @@
 
     ul {
         li {
-            font-size: 15px;
+            font-size: 12px;
             border-radius: 30px;
-            padding: 8.5px 42px 8.5px 22px;
+            padding: 8px 42px 8px 16px;
             background-color: var(--whiteColor);
             margin: {
                 right: 20px;
@@ -38,7 +38,7 @@
                 transform: translateY(-50%);
             }
             &:nth-child(3) {
-                margin-left: 280px;
+                // margin-left: 280px;
             }
             &:last-child {
                 margin-right: 0;
@@ -78,7 +78,7 @@
         height: 514px;
         position: absolute;
         border-radius: 50%;
-        background-color: var(--orangeColor);
+        background-color: var(--themeColor);
         margin: {
             left: auto;
             right: auto;

@@ -35,22 +35,28 @@ $blin-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --fontFamily: 'Darker Grotesque', sans-serif;
-    --archivoFontFamily: 'Archivo', sans-serif;
-    --poppinsFontFamily: 'Poppins', sans-serif;
-    --mulishFontFamily: 'Mulish', sans-serif;
-    --syneFontFamily: 'Syne', sans-serif;
+    --fontFamily: 'Alliance No1', sans-serif;
+    --archivoFontFamily: 'Alliance No1', sans-serif;
+    --poppinsFontFamily: 'Alliance No1', sans-serif;
+    --mulishFontFamily: 'Alliance No1', sans-serif;
+    --syneFontFamily: 'Alliance No1', sans-serif;
     --neonOrangeColor: #f46f49;
     --transition: all ease 0.5s;
-    --paragraphColor: #454552;
+    --paragraphColor: #808080;
     --neonGreenColor: #c1ff00;
     --tealBlueColor: #608594;
     --primaryColor: #5754ff;
     --yellowColor: #f8d472;
     --orangeColor: #ec764b;
+    --themeColor: #886DE0;
+    --themeColorOpposite: #fff;
     --blackColor: #0e0e28;
+    --lightColor: #808080;
     --whiteColor: #ffffff;
-    --fontSize: 20px;
+    --borderColor: #ececec;
+    --backgroundColor: #f9f9f9;
+    --fontSize: 14px;
+    --fontSizeSmall: 12px;
 }
 
 // Utilities CSS
@@ -60,6 +66,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--blackColor);
+    line-height: 1.4;
     font: {
         size: var(--fontSize);
         family: var(--fontFamily);
@@ -75,13 +82,21 @@ body {
         bottom: 10px;
     };
     font: {
-        weight: 700;
+        size: 20px;
+        weight: 600;
         family: var(--syneFontFamily);
     };
 }
+h2 + h4 {
+    font-weight: 400;
+    color: var(--lightColor);
+    font-size: 14px;
+    margin-top: 10px;
+
+}
 p {
     color: var(--paragraphColor);
-    line-height: 28px;
+    line-height: 1.4;
     font-weight: 500;
     margin: {
         top: 0;
@@ -216,19 +231,20 @@ img {
 .default-btn {
     &.mdc-button {
         height: auto;
-        border-radius: 10px;
+        border-radius: 4px;
         display: inline-block;
         padding: 15.5px 30.1px;
         transition: var(--transition);
         color: var(--whiteColor) !important;
         background-color: var(--primaryColor);
+        line-height: 1.29;
         font: {
             family: var(--syneFontFamily);
             weight: 500;
-            size: 16px;
+            size: 14px;
         };
         &:hover {
-            background-color: var(--neonOrangeColor);
+            background-color: var(--themeColor);
             color: var(--whiteColor) !important;
         }
     }
@@ -275,7 +291,7 @@ img {
     max-width: 710px;
     margin: {
         top: -7px;
-        bottom: 45px;
+        bottom: 25px;
     };
     h2 {
         font-size: 40px;
@@ -292,10 +308,10 @@ img {
     max-width: 800px;
     margin: {
         top: -5px;
-        bottom: 45px;
+        bottom: 25px;
     };
     h2 {
-        font-size: 46px;
+        font-size: 24px;
         line-height: 1.25;
     }
     p {
@@ -310,7 +326,7 @@ img {
     max-width: 730px;
     margin: {
         top: -15px;
-        bottom: 45px;
+        bottom: 25px;
     };
     h2 {
         font-size: 60px;

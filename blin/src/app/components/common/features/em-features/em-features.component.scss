@@ -2,7 +2,7 @@
     margin-bottom: 100px;
 
     &::before {
-        border-radius: 20px 0 0 20px;
+        border-radius: 8px;//updated-from-20-8 0 0 20px;
         background-color: #eef3de;
         position: absolute;
         width: 49.4%;
@@ -68,7 +68,7 @@
                     color: var(--blackColor) !important;
 
                     &:hover {
-                        background-color: var(--neonOrangeColor);
+                        background-color: var(--themeColor);
                         color: var(--whiteColor) !important;
                     }
                 }
@@ -197,7 +197,7 @@
 
     .features-area {
         margin-bottom: 50px;
-        padding-bottom: 45px;
+        padding-bottom: 25px;
         border-bottom: 1px solid #f2f1f9;
 
         &::before {

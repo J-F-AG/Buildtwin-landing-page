@@ -7,7 +7,7 @@
         content: '';
         height: 63.5%;
         position: absolute;
-        border-radius: 20px;
+        border-radius: 8px;//updated-from-20-8;
         background: #e9ebf1;
         margin: {
             left: 50px;
@@ -18,8 +18,8 @@
 .service-box {
     padding: 40px;
     margin-bottom: 25px;
-    border-radius: 20px;
-    border: 1px solid #ecefe4;
+    border-radius: 8px;//updated-from-20-8;
+    border: 1px solid #f9f9f9;
     transition: var(--transition);
     background-color: var(--whiteColor);
 

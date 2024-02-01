@@ -1,6 +1,6 @@
 .testimonials-area {
     &::before {
-        background: rgba(193, 255, 0, 0.50);
+        background: #F6F3FF;
         filter: blur(200px);
         border-radius: 50%;
         position: absolute;
@@ -18,7 +18,7 @@
         bottom: 20px;
     };
     img {
-        border-radius: 20px;
+        border-radius: 8px;//updated-from-20-8;
     }
     .shape1 {
         right: 160px;
@@ -48,7 +48,7 @@
     padding-left: 67px;
 
     h2 {
-        font-size: 46px;
+        font-size: 24px;
         max-width: 675px;
         line-height: 1.25;
     }
@@ -64,12 +64,12 @@
         i {
             margin-right: 3px;
             color: #ffd62c;
-            font-size: 18px;
+            font-size: 14px;
             line-height: 1;
         }
         span {
             top: -1px;
-            font-size: 16px;
+            font-size: 12px;
             margin-left: 5px;
             position: relative;
 
@@ -82,7 +82,8 @@
     }
     p {
         line-height: 1.6;
-        font-size: 18px;
+        font-size: 14px;
+        color: black;
         margin: {
             top: 30px;
             bottom: 20px;
@@ -97,6 +98,7 @@
     .name {
         color: var(--paragraphColor);
         margin-left: 10px;
+        font-size: 12px;
     }
 }
 ::ng-deep {
@@ -127,7 +129,7 @@
                         margin-right: 0;
                     }
                     &:hover {
-                        color: var(--orangeColor);
+                        color: var(--themeColor);
                     }
                 }
             }
@@ -157,7 +159,7 @@
                     }
                     &:hover, &.active {
                         span {
-                            background: var(--orangeColor);
+                            background: var(--themeColor);
                         }
                     }
                 }
