@@ -57,7 +57,7 @@
                         bottom: 25px;
                     };
                     &:hover, &.active {
-                        color: var(--neonOrangeColor);
+                        color: var(--themeColor);
                     }
                 }
                 .dropdown-toggle {
@@ -88,7 +88,7 @@
                 }
                 &:hover, &.active {
                     .nav-link {
-                        color: var(--neonOrangeColor);
+                        color: var(--themeColor);
                     }
                 }
                 .dropdown-menu {
@@ -126,7 +126,7 @@
                                 }
                             }
                             &.active, &:hover {
-                                color: var(--neonOrangeColor);
+                                color: var(--themeColor);
                             }
                         }
                         .dropdown-menu {
@@ -142,7 +142,7 @@
                                     color: var(--blackColor);
     
                                     &.active, &:hover {
-                                        color: var(--neonOrangeColor);
+                                        color: var(--themeColor);
                                     }
                                 }
                                 .dropdown-menu {
@@ -157,7 +157,7 @@
                                             color: var(--blackColor);
         
                                             &.active, &:hover {
-                                                color: var(--neonOrangeColor);
+                                                color: var(--themeColor);
                                             }
                                         }
                                         .dropdown-menu {
@@ -172,12 +172,12 @@
                                                     color: var(--blackColor);
                 
                                                     &.active, &:hover {
-                                                        color: var(--neonOrangeColor);
+                                                        color: var(--themeColor);
                                                     }
                                                 }
                                                 &.active {
                                                     .nav-link {
-                                                        color: var(--neonOrangeColor);
+                                                        color: var(--themeColor);
                                                     }
                                                 }
                                                 &:hover {
@@ -190,7 +190,7 @@
                                         }
                                         &.active {
                                             .nav-link {
-                                                color: var(--neonOrangeColor);
+                                                color: var(--themeColor);
                                             }
                                         }
                                         &:hover {
@@ -204,7 +204,7 @@
                                 }
                                 &.active {
                                     .nav-link {
-                                        color: var(--neonOrangeColor);
+                                        color: var(--themeColor);
                                     }
                                 }
                                 &:hover {
@@ -218,7 +218,7 @@
                         }
                         &.active {
                             .nav-link {
-                                color: var(--neonOrangeColor);
+                                color: var(--themeColor);
                             }
                         }
                         &:hover {
@@ -254,12 +254,12 @@
                     weight: 500;
                 };
                 &:hover {
-                    color: var(--neonOrangeColor) !important;
+                    color: var(--themeColor) !important;
                 }
             }
             .default-btn {
                 &.mdc-button {
-                    background-color: var(--neonOrangeColor);
+                    background-color: var(--themeColor);
                     font-family: var(--archivoFontFamily);
                     box-shadow: 4px 4px #160e0b;
                     
@@ -366,7 +366,7 @@
                             left: 0 !important;
                         };
                         &.active, &:hover {
-                            color: var(--neonOrangeColor);
+                            color: var(--themeColor);
                         }
                     }
                     .dropdown-toggle {
@@ -382,7 +382,7 @@
                     }
                     &:hover, &.active {
                         a {
-                            color: var(--neonOrangeColor);
+                            color: var(--themeColor);
                         }
                     }
                     .dropdown-menu {
@@ -423,7 +423,7 @@
                                     }
                                 }
                                 &.active, &:hover {
-                                    color: var(--neonOrangeColor);
+                                    color: var(--themeColor);
                                 }
                             }
                             .dropdown-menu {
@@ -523,7 +523,7 @@
                             left: 0 !important;
                         };
                         &.active, &:hover {
-                            color: var(--neonOrangeColor);
+                            color: var(--themeColor);
                         }
                     }
                     .dropdown-toggle {
@@ -539,7 +539,7 @@
                     }
                     &:hover, &.active {
                         a {
-                            color: var(--neonOrangeColor);
+                            color: var(--themeColor);
                         }
                     }
                     .dropdown-menu {
@@ -580,7 +580,7 @@
                                     }
                                 }
                                 &.active, &:hover {
-                                    color: var(--neonOrangeColor);
+                                    color: var(--themeColor);
                                 }
                             }
                             .dropdown-menu {

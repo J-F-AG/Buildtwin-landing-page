@@ -1,6 +1,6 @@
 .single-service-box {
     padding: 50px 35px;
-    border-radius: 20px;
+    border-radius: 8px;//updated-from-20-8;
     margin-bottom: 25px;
     transition: var(--transition);
     background-color: var(--whiteColor);
@@ -29,7 +29,7 @@
         position: absolute;
         border-radius: 0 0 20px 20px;
         transition: var(--transition);
-        background: var(--neonOrangeColor);
+        background: var(--themeColor);
     }
     &:hover {
         transform: translateY(-10px);

@@ -13,7 +13,7 @@
 }
 .cta-inner-box {
     padding: 50px 70px;
-    border-radius: 20px;
+    border-radius: 8px;//updated-from-20-8;
     background: linear-gradient(134deg, #E7DCD9 0%, #E5744C 100%);
     background: {
         position: center center;
@@ -203,7 +203,7 @@
                     font-weight: 500;
 
                     &:hover {
-                        color: var(--neonOrangeColor);
+                        color: var(--themeColor);
                     }
                 }
                 &:last-child {
@@ -224,7 +224,7 @@
                     color: #a1a1aa;
 
                     &:hover {
-                        color: var(--neonOrangeColor);
+                        color: var(--themeColor);
                     }
                 }
                 &:last-child {

@@ -32,7 +32,7 @@
         position: absolute;
         border-radius: 50%;
         filter: blur(200px);
-        background: #c1ff00;
+        background: #F6F3FF;
     }
     &::before {
         top: 28%;
@@ -44,7 +44,7 @@
         position: absolute;
         border-radius: 50%;
         filter: blur(200px);
-        background: #c1ff00;
+        background: #F6F3FF;
     }
     .overlay {
         left: 0;
@@ -58,7 +58,7 @@
     max-width: 925px;
 
     h1 {
-        font-size: 60px;
+        font-size: 40px;
         line-height: 1.25;
         margin-bottom: 18px;
     }
@@ -71,7 +71,7 @@
 
         .default-btn {
             font-family: var(--poppinsFontFamily);
-            background-color: var(--orangeColor);
+            background-color: var(--themeColor);
             position: relative;
             z-index: 1;
             margin: {
@@ -105,12 +105,17 @@
             &.mdc-button {
                 &:nth-child(2) {
                     background-color: transparent;
-                    color: var(--blackColor) !important;
-
+                    color: var(--themeColor) !important;
+                    border-color: var(--borderColor);
+                    &:hover {
+                        &::before {
+                            border-color: var(--themeColor);
+                        }
+                    }
                     &::before {
                         opacity: 1;
                         visibility: visible;
-                        border-color: var(--blackColor);
+                        border-color: var(--borderColor);
                     }
                 }
             }
@@ -133,7 +138,7 @@
                     margin-top: 1px;
                     position: absolute;
                     transform: translateY(-50%);
-                    color: var(--neonOrangeColor);
+                    color: var(--themeColor);
                 }
             }
             &:last-child {
@@ -143,11 +148,11 @@
     }
 }
 .banner-image {
-    border-radius: 20px;
+    border-radius: 8px;//updated-from-20-8;
     margin-top: 65px;
 
     img {
-        border-radius: 20px;
+        border-radius: 8px;//updated-from-20-8;
         margin-bottom: -6px;
     }
 }

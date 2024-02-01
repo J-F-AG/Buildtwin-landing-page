@@ -11,7 +11,7 @@
         z-index: -1;
         height: 65%;
         position: absolute;
-        border-radius: 20px;
+        border-radius: 8px;//updated-from-20-8;
         background-color: #ebe7ef;
     }
     .shape1 {
@@ -99,7 +99,7 @@
             max-width: 880px;
 
             img {
-                border-radius: 20px;
+                border-radius: 8px;//updated-from-20-8;
                 box-shadow: 0px 4px 30px 0px rgba(32, 31, 103, 0.10);
             }
         }

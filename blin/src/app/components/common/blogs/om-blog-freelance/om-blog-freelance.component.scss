@@ -1,5 +1,5 @@
 .blog-item {
-    border-radius: 20px;
+    border-radius: 8px;//updated-from-20-8;
     margin-bottom: 25px;
     padding: 10px 10px 50px;
     transition: var(--transition);
@@ -8,10 +8,10 @@
     .image {
         overflow: hidden;
         margin-bottom: 25px;
-        border-radius: 20px;
+        border-radius: 8px;//updated-from-20-8;
 
         img {
-            border-radius: 20px;
+            border-radius: 8px;//updated-from-20-8;
             margin-bottom: -7px;
             transition: var(--transition);
         }
@@ -55,7 +55,7 @@
                 transform: translateY(-50%);
             }
             &:hover {
-                color: var(--neonOrangeColor);
+                color: var(--themeColor);
             }
         }
     }
@@ -85,7 +85,7 @@
             transform: translateY(-50%);
         }
         &:hover {
-            color: var(--neonOrangeColor);
+            color: var(--themeColor);
         }
     }
 }

@@ -9,8 +9,8 @@
         margin-bottom: 20px;
     }
     p {
-        color: #a1a1aa;
-        font-size: 16px;
+        color: var(--paragraphColor);
+        font-size: 12px;
     }
     .socials-link {
         margin-top: 25px;
@@ -30,8 +30,8 @@
         }
     }
     h3 {
-        font-size: 18px;
-        margin-bottom: 25px;
+        font-size: 12px;
+        margin-bottom: 24px;
         color: var(--whiteColor);
     }
     .custom-links {
@@ -39,11 +39,12 @@
             margin-bottom: 14px;
 
             a {
-                color: #a1a1aa;
-                font-weight: 500;
+                color: var(--lightColor);
+                font-weight: 400;
+                font-size: 12px;
 
                 &:hover {
-                    color: var(--orangeColor);
+                    color: var(--lightColor);
                 }
             }
             &:last-child {
@@ -63,17 +64,17 @@
         bottom: 25px;
     };
     p {
-        font-size: 16px;
-        color: #cdd3e1;
+        font-size: 12px;
+        color: var(--lightColor);
 
         span {
-            color: var(--whiteColor);
+            // color: var(--whiteColor);
         }
         a {
             color: var(--whiteColor);
 
             &:hover {
-                color: var(--orangeColor);
+                color: var(--themeColor);
             }
         }
     }

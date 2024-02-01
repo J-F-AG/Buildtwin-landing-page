@@ -7,8 +7,8 @@
         z-index: -1;
         content: '';
         position: absolute;
-        border-radius: 20px;
-        background: #f5f3f0;
+        border-radius: 8px;
+        background: #f9f9f9;
         margin: {
             left: 50px;
             right: 50px;
@@ -34,21 +34,22 @@
 
     .price {
         line-height: 1;
-        font-size: 40px;
-        padding: 20px 26px 30px;
-        border-radius: 0 0 55px 55px;
-        background-color: var(--yellowColor);
+        font-size: 20px;
+        padding: 15px 22px 25px;
+        border-radius: 0 0 50px 50px;
+        background-color: var(--themeColor);
+        color: var(--themeColorOpposite);
 
         span {
-            font-size: 18px;
+            font-size: 12px;
             margin-top: 5px;
         }
     }
     .title {
-        line-height: 1;
-        font-size: 20px;
+        line-height: 1.4;
+        font-size: 16px;
         margin-bottom: 15px;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
     }
     .features-list {
         margin-top: 35px;
@@ -73,7 +74,7 @@
                     position: absolute;
                     color: var(--whiteColor);
                     transform: translateY(-50%);
-                    background-color: var(--orangeColor);
+                    background-color: var(--themeColor);
                 }
             }
             &:last-child {
@@ -83,7 +84,7 @@
     }
     .default-btn {
         font-family: var(--poppinsFontFamily);
-        background-color: #043e36;
+        background-color: var(--themeColor);
         text-align: center;
         margin-top: 40px;
         display: block;
@@ -93,7 +94,7 @@
             bottom: 13px;
         };
         &:hover {
-            background-color: var(--orangeColor);
+            background-color: var(--themeColor);
         }
     }
 }
@@ -101,7 +102,7 @@
     &:nth-child(3) {
         .pricing-box {
             .price {
-                background-color: var(--orangeColor);
+                background-color: var(--themeColor);
                 color: var(--whiteColor);
             }
         }
@@ -126,7 +127,7 @@
                     margin-top: 1px;
                     position: absolute;
                     transform: translateY(-50%);
-                    color: var(--neonOrangeColor);
+                    color: var(--themeColor);
                 }
             }
             a {
@@ -134,7 +135,7 @@
                 font-weight: 700;
 
                 &:hover {
-                    color: var(--orangeColor);
+                    color: var(--themeColor);
                 }
             }
             &:first-child {

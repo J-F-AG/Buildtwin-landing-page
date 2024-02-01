@@ -10,14 +10,16 @@
     }
 }
 .info-box {
-    padding: 30px;
-    border-radius: 20px;
+    padding: 24px;
+    border-radius: 8px;//updated-from-20-8;
     background: var(--whiteColor);
+    border: 1px solid var(--borderColor);
 
     .number {
         padding-right: 25px;
         margin-bottom: 8px;
-        font-size: 30px;
+        font-size: 16px;
+        font-weight: 500;
         line-height: 1;
 
         svg {
@@ -30,6 +32,7 @@
     }
     p {
         letter-spacing: 0.4px;
+        font-size: 12px;
     }
     .info {
         margin-top: 20px;
