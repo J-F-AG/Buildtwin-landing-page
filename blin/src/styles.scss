@@ -97,7 +97,6 @@ h2 + h4 {
 p {
     color: var(--paragraphColor);
     line-height: 1.4;
-    font-weight: 500;
     margin: {
         top: 0;
         bottom: 15px;
@@ -265,7 +264,7 @@ img {
     }
     p {
         margin-top: 12px;
-        letter-spacing: 0.4px;
+        //letter-spacing: 0.4px;
     }
 }
 
@@ -280,7 +279,7 @@ img {
         font-size: 40px;
     }
     p {
-        letter-spacing: 0.4px;
+        //letter-spacing: 0.4px;
         margin-top: 10px;
         max-width: 540px;
     }
@@ -298,7 +297,7 @@ img {
         line-height: 1.25;
     }
     p {
-        letter-spacing: 0.4px;
+        //letter-spacing: 0.4px;
         margin-top: 5px;
     }
 }
@@ -315,7 +314,7 @@ img {
         line-height: 1.25;
     }
     p {
-        letter-spacing: 0.4px;
+        //letter-spacing: 0.4px;
         max-width: 700px;
         margin-top: 15px;
     }
