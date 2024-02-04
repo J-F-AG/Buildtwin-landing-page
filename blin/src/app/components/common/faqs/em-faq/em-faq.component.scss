@@ -2,11 +2,11 @@
     .sub-title {
         font-size: 16px;
         margin-bottom: 12px;
-        color: var(--primaryColor);
+        color: var(--whiteColor);
     }
     h2 {
         margin-bottom: 15px;
-        font-size: 40px;
+        font-size: 24px;
     }
     .image {
         margin-top: 48px;
@@ -33,7 +33,7 @@
     .mat-accordion {
         .mat-expansion-panel {
             margin-bottom: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             color: var(--blackColor);
             background: var(--whiteColor);
             transition: var(--transition);
@@ -56,7 +56,7 @@
                 color: var(--blackColor);
                 transition: var(--transition);
                 font: {
-                    size: 18px;
+                    size: 16px;
                     weight: 500;
                     family: var(--syneFontFamily);
                 };
@@ -88,10 +88,10 @@
                 box-shadow: unset;
 
                 .mat-expansion-panel-header {
-                    background: #f3f3fb;
+                    background: var(--backgroundColor);
                 }
                 .mat-expansion-panel-header-title {
-                    color: var(--primaryColor);
+                    color: var(--themeColor);
 
                     &::before {
                         transform: translateY(-50%) rotate(180deg);

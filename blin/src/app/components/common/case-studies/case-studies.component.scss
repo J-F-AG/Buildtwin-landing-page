@@ -8,24 +8,24 @@
     h3 {
         font-size: 20px;
         margin-bottom: 18px;
-        color: var(--themeColor);
+        color: var(--blackColor);
 
         span {
-            font-weight: 1000;
+            font-weight: 700;
         }
     }
     p {
         padding-right: 15px;
     }
     .link-btn {
-        font-size: 18px;
+        font-size: 14px;
         margin-top: 5px;
         padding-right: 15px;
 
         i {
             top: 50%;
             right: -5px;
-            margin-top: 2.7px;
+            margin-top: -1px;
             position: absolute;
             transform: translateY(-50%);
         }

@@ -2,13 +2,13 @@
     padding-right: 30px;
 
     h2 {
-        font-size: 40px;
+        font-size: 24px;
         margin-bottom: 40px;
     }
     .mat-accordion {
         .mat-expansion-panel {
             margin-bottom: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             color: var(--blackColor);
             background: var(--whiteColor);
             transition: var(--transition);
@@ -31,7 +31,7 @@
                 color: var(--blackColor);
                 transition: var(--transition);
                 font: {
-                    size: 18px;
+                    size: 16px;
                     weight: 500;
                     family: var(--syneFontFamily);
                 };
@@ -63,10 +63,10 @@
                 box-shadow: unset;
 
                 .mat-expansion-panel-header {
-                    background: #ebe7ef;
+                    background: #f8f8f8;
                 }
                 .mat-expansion-panel-header-title {
-                    color: var(--primaryColor);
+                    color: var(--themeColor);
 
                     &::before {
                         transform: translateY(-50%) rotate(180deg);

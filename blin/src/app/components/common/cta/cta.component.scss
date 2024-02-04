@@ -1,13 +1,13 @@
 .cta-inner-box {
     border-radius: 8px;//updated-from-20-8;
     padding: 80px 80px 55px;
-    background-color: #f8f0e2;
+    background-color: #f8f8f8;
 
     .content {
         margin-top: -5px;
 
         h2 {
-            font-size: 30px;
+            font-size: 24px;
             margin-bottom: 11px;
         }
     }
@@ -19,9 +19,12 @@
         };
     }
     .default-btn {
+        background-color: var(--themeColor);
+        padding-top: 13px;
+        padding-bottom: 13px;
         &.mdc-button {
             font: {
-                weight: 600;
+                weight: 500;
                 family: var(--mulishFontFamily);
             };
         }

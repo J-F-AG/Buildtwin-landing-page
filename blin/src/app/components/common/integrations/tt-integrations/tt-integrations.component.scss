@@ -81,7 +81,7 @@
                 &::before {
                     opacity: 1;
                     visibility: visible;
-                    border-color: var(--primaryColor);
+                    border-color: var(--themeColor);
                 }
             }
         }
@@ -109,7 +109,7 @@
     padding-left: 110px;
 
     h2 {
-        font-size: 40px;
+        font-size: 24px;
         max-width: 585px;
         margin-bottom: 15px;
     }
@@ -119,12 +119,12 @@
     .link-btn {
         margin-top: 5px;
         padding-right: 15px;
-        color: var(--primaryColor);
+        color: var(--themeColor);
 
         i {
             top: 50%;
             right: -5px;
-            margin-top: 2.7px;
+            margin-top: -1px;
             position: absolute;
             transform: translateY(-50%);
         }
