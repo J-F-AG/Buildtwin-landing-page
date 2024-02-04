@@ -1,6 +1,6 @@
 .blog-area {
-    border-radius: 80px 80px 0 0;
-    background-color: #f9f8f7;
+    border-radius: 60px 60px 0 0;
+    background-color: #f8f8f8;
 }
 .blog-item {
     border-radius: 8px;//updated-from-20-8;
@@ -28,11 +28,11 @@
             font-size: 13px;
             padding: 8px 15px;
             border-radius: 40px;
-            background-color: var(--yellowColor);
+            background-color: var(--themeColor);
+            color: var(--whiteColor);
 
             &:hover {
-                color: var(--whiteColor);
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
         }
         .date {
@@ -47,13 +47,13 @@
             };
         }
         .link-btn {
-            font-size: 18px;
+            font-size: 14px;
             padding-right: 15px;
     
             i {
                 top: 50%;
                 right: -5px;
-                margin-top: 2.7px;
+                margin-top: 0px;
                 position: absolute;
                 transform: translateY(-50%);
             }
@@ -74,14 +74,14 @@
     margin-top: 15px;
     
     .link-btn {
-        font-size: 18px;
+        font-size: 16px;
         padding-right: 15px;
-        color: var(--primaryColor);
+        color: var(--themeColor);
 
         i {
             top: 50%;
             right: -5px;
-            margin-top: 2.6px;
+            margin-top: .6px;
             position: absolute;
             transform: translateY(-50%);
         }

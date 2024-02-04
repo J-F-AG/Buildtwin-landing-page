@@ -3,10 +3,10 @@
         max-width: 645px;
 
         li {
-            font-size: 18px;
-            border-radius: 6px;
+            font-size: 16px;
+            border-radius: 8px;
             margin-bottom: 20px;
-            background-color: #eff0f4;
+            background-color: #f8f8f8;
             padding: 24px 30px 24px 62px;
 
             i {
@@ -22,7 +22,7 @@
                 color: var(--whiteColor);
                 transform: translateY(-50%);
                 transition: var(--transition);
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
             &:hover {
                 i {
@@ -108,7 +108,7 @@
     h2 {
         line-height: 1.25;
         max-width: 490px;
-        font-size: 40px;
+        font-size: 24px;
         margin: {
             bottom: 15px;
             top: -5px;
@@ -120,9 +120,9 @@
     }
     .default-btn {
         font-family: var(--archivoFontFamily);
-        background-color: var(--yellowColor);
-        color: var(--blackColor) !important;
-        box-shadow: 4px 4px #160e0b;
+        background-color: var(--themeColor);
+        padding-top: 13px;
+        padding-bottom: 13px;
         margin-top: 10px;
     }
 }

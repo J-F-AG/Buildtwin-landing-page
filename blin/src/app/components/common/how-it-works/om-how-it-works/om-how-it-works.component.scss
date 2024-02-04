@@ -32,7 +32,7 @@
     h2 {
         line-height: 1.25;
         max-width: 539px;
-        font-size: 40px;
+        font-size: 24px;
         margin: {
             bottom: 15px;
             top: -5px;
@@ -44,9 +44,9 @@
     }
     .default-btn {
         font-family: var(--archivoFontFamily);
-        background-color: var(--yellowColor);
-        color: var(--blackColor) !important;
-        box-shadow: 4px 4px #160e0b;
+        background-color: var(--themeColor);
+        padding-top: 13px;
+        padding-bottom: 13px;
         margin-top: 10px;
     }
 }

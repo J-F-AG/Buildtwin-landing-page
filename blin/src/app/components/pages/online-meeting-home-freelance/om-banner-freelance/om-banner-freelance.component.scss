@@ -37,13 +37,14 @@
     top: -65px;
     
     .sub-title {
-        color: var(--primaryColor);
+        color: var(--themeColor);
         letter-spacing: 2.8px;
         margin-bottom: 20px;
         font-size: 14px;
     }
     h1 {
-        font-size: 60px;
+        font-size: 40px;
+        line-height: 1.25;
         margin-bottom: 18px;
     }
     p {
@@ -55,7 +56,9 @@
 
         .default-btn {
             font-family: var(--archivoFontFamily);
-            box-shadow: 4px 4px #160e0b;
+            background-color: var(--themeColor);
+            padding-top: 13px;
+            padding-bottom: 13px;
             margin-right: 20px;
             position: relative;
             z-index: 1;
@@ -103,7 +106,7 @@
             i {
                 left: 0;
                 top: 50%;
-                margin-top: 1px;
+                margin-top: -1px;
                 position: absolute;
                 transform: translateY(-50%);
                 color: var(--themeColor);
@@ -452,7 +455,7 @@
         top: -35px;
         
         h1 {
-            font-size: 57px;
+            font-size: 40px;
         }
     }
     .banner-image {

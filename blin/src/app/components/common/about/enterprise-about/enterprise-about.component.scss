@@ -3,7 +3,7 @@
 
     h2 {
         line-height: 1.25;
-        font-size: 40px;
+        font-size: 24px;
         margin: {
             bottom: 15px;
             top: -5px;
@@ -23,11 +23,12 @@
         margin-bottom: 25px;
 
         li {
-            font-size: 15px;
+            font-size: 14px;
             margin-right: 10px;
+            margin-bottom: 10px;
             border-radius: 8px;//updated-from-20-8;
             display: inline-block;
-            background-color: #eff0f4;
+            background-color: var(--backgroundColor);
             padding: 11px 30px 11px 44px;
 
             i {
@@ -42,7 +43,7 @@
                 color: var(--whiteColor);
                 transform: translateY(-50%);
                 transition: var(--transition);
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
             &:hover {
                 i {
@@ -58,7 +59,8 @@
     .default-btn {
         background-color: var(--themeColor);
         font-family: var(--archivoFontFamily);
-        box-shadow: 4px 4px #160e0b;
+        padding-top: 13px;
+        padding-bottom: 13px;
         margin-top: 5px;
     }
 }

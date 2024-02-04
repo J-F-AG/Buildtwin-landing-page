@@ -1,3 +1,8 @@
+h2 ~ h3 {
+    font-size: var(--fontSize);
+    color: var(--lightColor);
+}
+
 .single-service-box {
     padding: 50px 35px;
     border-radius: 8px;//updated-from-20-8;

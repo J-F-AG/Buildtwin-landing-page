@@ -13,7 +13,7 @@
         position: absolute;
         border-radius: 8px;//updated-from-20-8;
         margin-bottom: 100px;
-        background-color: #ebe7ef;
+        background-color: #f8f8f8;
     }
     .shape {
         bottom: 9.3%;
@@ -27,9 +27,9 @@
 ::ng-deep {
     .task-management-tabs {
         .mat-mdc-tab-label-container {
-            border-radius: 10px;
+            border-radius: 8px;
             margin-bottom: 50px;
-            border: 1px solid var(--blackColor);
+            border: 1px solid var(--borderColor);
             background-color: var(--whiteColor);
         }
         .mdc-tab-indicator {
@@ -46,8 +46,8 @@
             .mdc-tab__text-label {
                 color: #949494;
                 font: {
-                    size: 20px;
-                    weight: 700;
+                    size: 16px;
+                    weight: 600;
                     family: var(--mulishFontFamily);
                 };
             }
@@ -95,8 +95,11 @@
             }
             .default-btn {
                 margin-top: 9px;
+                background-color: var(--themeColor);
+                padding-top: 13px;
+                padding-bottom: 13px;
                 font: {
-                    weight: 600;
+                    weight: 500;
                     family: var(--mulishFontFamily);
                 };
             }
