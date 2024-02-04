@@ -3,7 +3,7 @@
 
     &::before {
         border-radius: 8px;//updated-from-20-8 0 0 20px;
-        background-color: #eef3de;
+        background-color: #f8f8f8;
         position: absolute;
         width: 49.4%;
         z-index: -1;
@@ -47,11 +47,11 @@
     .sub-title {
         font-size: 16px;
         margin-bottom: 14px;
-        color: var(--primaryColor);
+        color: var(--themeColor);
     }
     h2 {
         margin-bottom: 12px;
-        font-size: 40px;
+        font-size: 24px;
     }
     .btn-box {
         margin-top: 25px;
@@ -64,7 +64,7 @@
             }
             &.mdc-button {
                 &:nth-child(2) {
-                    background-color: var(--neonGreenColor);
+                    background-color: var(--themeColor);
                     color: var(--blackColor) !important;
 
                     &:hover {
@@ -133,15 +133,15 @@
     }
 }
 .em-single-feature-box {
-    border-radius: 10px;
-    background-color: #e1e9eb;
+    border-radius: 8px;
+    background-color: #f8f8f8;
     padding: 65px 45px 65px 50px;
 
     .content {
         margin-top: 15px;
 
         h2 {
-            font-size: 40px;
+            font-size: 24px;
             margin-bottom: 25px;
         }
         p {
@@ -150,10 +150,12 @@
         }
         .default-btn {
             margin-top: 20px;
-            background-color: var(--blackColor);
+            background-color: var(--themeColor);
+            padding-top: 13px;
+            padding-bottom: 13px;
     
             &:hover {
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
         }
     }
@@ -161,21 +163,20 @@
         margin-left: -4px;
     }
     &:nth-child(2) {
-        background-color: #e8ebf5;
         padding-right: 35px;
     }
 }
 .em-single-feature-item {
     margin-top: 25px;
-    border-radius: 10px;
-    background-color: #f8f2e9;
+    border-radius: 8px;
+    background-color: #f8f8f8;
     padding: 50px 23px 75px 50px;
 
     .content {
         padding-right: 100px;
 
         h2 {
-            font-size: 40px;
+            font-size: 24px;
             margin-bottom: 20px;
         }
         p {
@@ -183,10 +184,12 @@
         }
         .default-btn {
             margin-top: 20px;
-            background-color: var(--blackColor);
+            background-color: var(--themeColor);
+            padding-top: 13px;
+            padding-bottom: 13px;
     
             &:hover {
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
         }
     }

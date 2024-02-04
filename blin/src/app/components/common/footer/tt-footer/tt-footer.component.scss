@@ -27,7 +27,7 @@
         max-width: 575px;
 
         h2 {
-            font-size: 40px;
+            font-size: 24px;
             margin: {
                 bottom: 10px;
                 top: -5px;
@@ -37,11 +37,14 @@
             margin-top: 25px;
     
             .default-btn {
+                background-color: var(--themeColor);
                 margin-right: 20px;
                 position: relative;
                 z-index: 1;
+                padding-top: 13px;
+                padding-bottom: 13px;
                 font: {
-                    weight: 600;
+                    weight: 500;
                     family: var(--mulishFontFamily);
                 };
                 &::before {
@@ -54,7 +57,7 @@
                     content: '';
                     visibility: hidden;
                     position: absolute;
-                    border-radius: 10px;
+                    border-radius: 4px;
                     transition: var(--transition);
                     border: 1px solid var(--whiteColor);
                 }
@@ -94,8 +97,8 @@
         margin-bottom: 20px;
     }
     p {
-        color: #a1a1aa;
-        font-size: 16px;
+        color: var(--lightColor);
+        font-size: 12px;
     }
     .socials-link {
         margin-top: 55px;
@@ -123,16 +126,16 @@
         bottom: 100px;
     };
     h2 {
-        font-size: 30px;
-        line-height: 1.3;
+        font-size: 24px;
+        line-height: 1.25;
         color: var(--whiteColor);
     }
     .subscribe-form {
         margin-left: 35px;
     }
     .info {
-        color: #a1a1aa;
-        font-size: 16px;
+        color: var(--lightColor);
+        font-size: 14px;
         margin: {
             left: 35px;
             top: 18px;
@@ -145,7 +148,7 @@
             display: block;
 
             .mdc-text-field--filled {
-                border-radius: 10px;
+                border-radius: 8px;
                 background-color: #3b3b4e;
                 padding: {
                     left: 20px;
@@ -157,7 +160,7 @@
                     .mat-mdc-floating-label {
                         color: #91939b;
                         font: {
-                            size: 18px;
+                            size: 14px;
                             weight: 500;
                             family: var(--fontFamily);
                         };
@@ -165,7 +168,7 @@
                     .mdc-text-field__input {
                         color: var(--whiteColor);
                         font: {
-                            size: 18px;
+                            size: 14px;
                             weight: 500;
                             family: var(--fontFamily);
                         };
@@ -201,25 +204,25 @@
             height: auto;
             min-width: unset;
             position: absolute;
-            border-radius: 10px;
+            border-radius: 8px;
             display: inline-block;
-            padding: 11px 30px 12px;
+            padding: 12px 40px;
             color: var(--whiteColor) !important;
-            background-color: var(--primaryColor);
+            background-color: var(--themeColor);
             font: {
-                size: 16px;
-                weight: 600;
+                size: 14px;
+                weight: 500;
                 family: var(--mulishFontFamily);
             };
             .mdc-button__ripple {
-                border-radius: 10px;
+                border-radius: 8px;
             }
             .mat-mdc-button-touch-target {
                 height: 100%;
-                border-radius: 10px;
+                border-radius: 8px;
             }
             .mat-mdc-focus-indicator {
-                border-radius: 10px;
+                border-radius: 8px;
             }
         }
     }
@@ -231,8 +234,8 @@
         margin-bottom: 25px;
 
         h3 {
-            font-size: 18px;
-            margin-bottom: 25px;
+            font-size: var(--fontSizeSmall);
+            margin-bottom: 24px;
             color: var(--whiteColor);
         }
         .custom-links {
@@ -240,11 +243,12 @@
                 margin-bottom: 14px;
 
                 a {
-                    color: #a1a1aa;
+                    font-size: var(--fontSizeSmall);
+                    color: var(--lightColor);
                     font-weight: 500;
 
                     &:hover {
-                        color: var(--themeColor);
+                        color: var(--lightColor);
                     }
                 }
                 &:last-child {
@@ -262,8 +266,8 @@
         bottom: 25px;
     };
     p {
-        font-size: 16px;
-        color: #cdd3e1;
+        font-size: 14px;
+        color: var(--lightColor);
 
         span {
             color: var(--whiteColor);
@@ -272,7 +276,7 @@
             color: var(--whiteColor);
 
             &:hover {
-                color: var(--primaryColor);
+                color: var(--lightColor);
             }
         }
     }

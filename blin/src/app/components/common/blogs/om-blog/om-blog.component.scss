@@ -3,7 +3,7 @@
     margin-bottom: 25px;
     padding: 10px 10px 50px;
     transition: var(--transition);
-    border: 2px solid var(--blackColor);
+    border: 2px solid var(--borderColor);
 
     .image {
         overflow: hidden;
@@ -25,11 +25,11 @@
             font-size: 13px;
             padding: 8px 15px;
             border-radius: 40px;
-            background-color: var(--yellowColor);
+            background-color: var(--themeColor);
+            color: var(--whiteColor);
 
             &:hover {
-                color: var(--whiteColor);
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
         }
         .date {
@@ -44,13 +44,13 @@
             };
         }
         .link-btn {
-            font-size: 18px;
+            font-size: 14px;
             padding-right: 15px;
     
             i {
                 top: 50%;
                 right: -5px;
-                margin-top: 2.8px;
+                margin-top: 0px;
                 position: absolute;
                 transform: translateY(-50%);
             }
@@ -60,7 +60,7 @@
         }
     }
     &:hover {
-        border-color: var(--primaryColor);
+        border-color: var(--themeColor);
 
         .image {
             img {
@@ -73,14 +73,14 @@
     margin-top: 15px;
     
     .link-btn {
-        font-size: 18px;
+        font-size: 16px;
         padding-right: 15px;
-        color: var(--primaryColor);
+        color: var(--themeColor);
 
         i {
             top: 50%;
             right: -5px;
-            margin-top: 2.6px;
+            margin-top: .6px;
             position: absolute;
             transform: translateY(-50%);
         }

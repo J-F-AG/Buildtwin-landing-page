@@ -7,7 +7,8 @@
     h2 {
         margin-bottom: 13px;
         max-width: 565px;
-        font-size: 40px;
+        font-size: 24px;
+        line-height: 1.25;
     }
     p {
         max-width: 592px;
@@ -26,11 +27,12 @@
             top: 0;
         };
         li {
-            font-size: 15px;
+            font-size: 14px;
             margin-right: 10px;
+            margin-bottom: 18px;
             border-radius: 8px;//updated-from-20-8;
             display: inline-block;
-            background-color: #eff0f4;
+            background-color: var(--backgroundColor);
             padding: 11px 30px 11px 44px;
 
             i {
@@ -45,7 +47,7 @@
                 color: var(--whiteColor);
                 transform: translateY(-50%);
                 transition: var(--transition);
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
             &:hover {
                 i {

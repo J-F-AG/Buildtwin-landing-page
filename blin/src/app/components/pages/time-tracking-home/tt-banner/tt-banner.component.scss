@@ -12,7 +12,7 @@
         content: '';
         position: absolute;
         border-radius: 50px;
-        background: #f7f5f1;
+        background: #f8f8f8;
         margin: {
             left: 50px;
             right: 50px;
@@ -60,12 +60,12 @@
     top: -12px;
 
     .sub-title {
-        color: var(--primaryColor);
+        color: var(--themeColor);
         margin-bottom: 10px;
     }
     h1 {
-        font-size: 60px;
-        line-height: 1.16;
+        font-size: 40px;
+        line-height: 1.25;
         margin-bottom: 8px;
     }
     p {
@@ -84,7 +84,7 @@
             i {
                 left: 0;
                 top: 50%;
-                margin-top: 1px;
+                margin-top: -1px;
                 position: absolute;
                 transform: translateY(-50%);
                 color: var(--themeColor);
@@ -119,7 +119,7 @@
             display: block;
 
             .mdc-text-field--filled {
-                border-radius: 10px;
+                border-radius: 8px;
                 background-color: var(--whiteColor);
                 padding: {
                     left: 52px;
@@ -135,7 +135,7 @@
                         color: #706f74;
                         top: 24px;
                         font: {
-                            size: 18px;
+                            size: 14px;
                             weight: 500;
                             family: var(--fontFamily);
                         };
@@ -143,7 +143,7 @@
                     .mdc-text-field__input {
                         color: var(--blackColor);
                         font: {
-                            size: 17px;
+                            size: 14px;
                             weight: 500;
                             family: var(--mulishFontFamily);
                         };
@@ -179,13 +179,13 @@
             height: auto;
             min-width: unset;
             position: absolute;
-            border-radius: 10px;
+            border-radius: 8px;
             display: inline-block;
-            padding: 11px 30px 12px;
+            padding: 12px 40px;
             color: var(--whiteColor) !important;
-            background-color: var(--primaryColor);
+            background-color: var(--themeColor);
             font: {
-                size: 16px;
+                size: 14px;
                 weight: 500;
                 family: var(--mulishFontFamily);
             };

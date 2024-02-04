@@ -13,13 +13,13 @@
 .service-box {
     padding: 9px;
     margin-bottom: 25px;
-    border-radius: 30px;
+    border-radius: 8px;
     transition: var(--transition);
-    border: 2px solid var(--blackColor);
+    border: 2px solid var(--borderColor);
     background-color: var(--whiteColor);
 
     img {
-        border-radius: 30px;
+        border-radius: 8px;
     }
     .content {
         margin-top: 30px;
@@ -29,12 +29,12 @@
             bottom: 30px;
         };
         h3 {
-            font-size: 24px;
+            font-size: 20px;
             margin-bottom: 13px;
         }
     }
     &:hover {
-        box-shadow: 5px 5px #160e0b;
+        box-shadow: 5px 5px #ececec;
     }
 }
 

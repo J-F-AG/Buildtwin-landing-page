@@ -115,7 +115,7 @@ a {
 
     &:hover {
         text-decoration: none;
-        color: var(--primaryColor);
+        color: var(--themeColor);
     }
 }
 :focus {
@@ -256,12 +256,12 @@ img {
     max-width: 700px;
 
     .sub-title {
-        color: var(--primaryColor);
+        color: var(--themeColor);
         margin-bottom: 15px;
         font-size: 16px;
     }
     h2 {
-        font-size: 40px;
+        font-size: 24px;
     }
     p {
         margin-top: 12px;
@@ -277,7 +277,7 @@ img {
         top: -8px;
     };
     h2 {
-        font-size: 40px;
+        font-size: 24px;
     }
     p {
         letter-spacing: 0.4px;
@@ -294,7 +294,7 @@ img {
         bottom: 25px;
     };
     h2 {
-        font-size: 40px;
+        font-size: 24px;
         line-height: 1.25;
     }
     p {
@@ -374,7 +374,8 @@ img {
 
 // Page Title Area
 .page-title-area {
-    background: linear-gradient(134deg, #F4F3FB 0%, #D4D4F3 100%);
+    // background: linear-gradient(134deg, #F4F3FB 0%, #D4D4F3 100%);
+    background-color: var(--backgroundColor);
     padding: {
         top: 230px;
         bottom: 118px;
@@ -413,7 +414,7 @@ img {
                 right: 13px;
             };
             a {
-                color: var(--primaryColor);
+                color: var(--themeColor);
 
                 &:hover {
                     color: var(--blackColor);
@@ -428,7 +429,7 @@ img {
                 margin-top: .5px;
                 position: absolute;
                 transform: translateY(-50%);
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
             &:first-child {
                 margin-left: 0;
@@ -444,7 +445,8 @@ img {
     }
     h1 {
         max-width: 1080px;
-        font-size: 50px;
+        font-size: 40px;
+        line-height: 1.25;
     }
 }
 

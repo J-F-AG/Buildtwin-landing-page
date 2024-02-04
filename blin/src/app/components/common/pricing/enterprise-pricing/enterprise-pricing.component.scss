@@ -7,12 +7,12 @@
         content: '';
         height: 50%;
         position: absolute;
-        background: #e1ece8;
+        background-color: var(--backgroundColor);
     }
 }
 .pricing-inner-box {
     border-radius: 8px;//updated-from-20-8;
-    background-color: #f8f2e9;
+    background-color: #f8f8f8;
     padding: {
         left: 130px;
         right: 130px;
@@ -20,57 +20,37 @@
     .om-section-title {
         max-width: 495px;
     }
-    .col-lg-4 {
-        &:nth-child(2) {
-            .pricing-box {
-                .pricing-header {
-                    .title {
-                        background-color: #62907f;
-                    }
-                }
-            }
-        }
-        &:nth-child(3) {
-            .pricing-box {
-                .pricing-header {
-                    .title {
-                        background-color: #b57a83;
-                    }
-                }
-            }
-        }
-    }
 }
 .pricing-box {
-    padding: 40px 40px 0;
+    padding: 30px 24px 0;
     margin-bottom: 25px;
 
     .pricing-header {
-        padding-bottom: 35px;
-        border-bottom: 2px dashed #ebe7ef;
+        padding-bottom: 30px;
+        border-bottom: 2px dashed var(--borderColor);
 
         .title {
             padding: 8px 24px;
             border-radius: 4px;
             color: var(--whiteColor);
-            background-color: var(--primaryColor);
+            background-color: var(--themeColor);
         }
         .price {
             line-height: 1;
-            font-size: 40px;
+            font-size: 24px;
             
             span {
-                font-size: 24px;
+                font-size: 16px;
                 margin-left: -2px;
             }
         }
     }
     .features-list {
-        border-bottom: 2px dashed #ebe7ef;
-        padding-bottom: 35px;
+        border-bottom: 2px dashed var(--borderColor);
+        padding-bottom: 30px;
         margin: {
-            top: 35px;
-            bottom: 35px;
+            top: 30px;
+            bottom: 30px;
         };
         li {
             padding-left: 32px;
@@ -98,9 +78,9 @@
     }
     .default-btn {
         font-family: var(--archivoFontFamily);
-        background-color: var(--yellowColor);
-        color: var(--blackColor) !important;
-        box-shadow: 4px 4px #160e0b;
+        background-color: var(--themeColor);
+        padding-top: 13px;
+        padding-bottom: 13px;
     }
     &::before {
         top: 0;

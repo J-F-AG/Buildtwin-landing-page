@@ -4,7 +4,7 @@
     h2 {
         line-height: 1.25;
         max-width: 539px;
-        font-size: 40px;
+        font-size: 24px;
         margin: {
             bottom: 15px;
             top: -5px;
@@ -16,7 +16,9 @@
     }
     .default-btn {
         font-family: var(--archivoFontFamily);
-        box-shadow: 4px 4px #160e0b;
+        background-color: var(--themeColor);
+        padding-top: 13px;
+        padding-bottom: 13px;
         margin-top: 10px;
     }
 }
@@ -25,18 +27,17 @@
     text-align: center;
     border-radius: 8px;//updated-from-20-8;
     margin-bottom: 55px;
-    background-color: #f5f7fb;
+    background-color: var(--backgroundColor);
 }
 .funfacts-box {
-    padding: 70px 48px;
+    padding: 24px;
     margin-bottom: 25px;
-    border-radius: 30px;
-    background-color: #e1e9eb;
-    border: 2px solid var(--blackColor);
+    border-radius: 8px;
+    background-color: var(--backgroundColor);
 
     h3 {
         line-height: 1;
-        font-size: 50px;
+        font-size: 20px;
         margin-bottom: 18px;
     }
     p {
@@ -44,23 +45,7 @@
         max-width: 220px;
     }
 }
-.col-lg-3 {
-    &:nth-child(2) {
-        .funfacts-box {
-            background-color: #f0dde0;
-        }
-    }
-    &:nth-child(3) {
-        .funfacts-box {
-            background-color: #e6e1ef;
-        }
-    }
-    &:nth-child(4) {
-        .funfacts-box {
-            background-color: #f8f2e9;
-        }
-    }
-}
+
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {

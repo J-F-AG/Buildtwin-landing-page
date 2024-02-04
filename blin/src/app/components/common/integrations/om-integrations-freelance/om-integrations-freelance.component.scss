@@ -12,7 +12,7 @@
         content: '';
         position: absolute;
         border-radius: 8px;//updated-from-20-8;
-        background: linear-gradient(134deg, #F4F3FB 0%, #D4D4F3 100%);
+        background: #f8f8f8;
         margin: {
             left: 105px;
             right: 105px;
@@ -22,7 +22,7 @@
 .integration-box {
     padding: 40px 25px;
     margin-bottom: 25px;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: var(--whiteColor);
     box-shadow: 0px 4px 44px 0px rgba(87, 84, 255, 0.10);
 }

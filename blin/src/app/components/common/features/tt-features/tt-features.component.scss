@@ -20,7 +20,7 @@
     padding-right: 50px;
 
     h2 {
-        font-size: 40px;
+        font-size: 24px;
         margin-bottom: 15px;
     }
     p {
@@ -47,7 +47,7 @@
             display: inline-block;
             color: var(--whiteColor);
             transition: var(--transition);
-            background-color: var(--primaryColor);
+            background-color: var(--themeColor);
         }
         h4 {
             font-size: 20px;
