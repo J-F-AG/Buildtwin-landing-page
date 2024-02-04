@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'Jeff Script';
+    src: url('../fonts/JeffScript.woff2') format('woff2'),
+        url('../fonts/JeffScript.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
     font-family: 'Alliance No1';
     src: url('../fonts/AllianceNo1-Bold.woff2') format('woff2'),
         url('../fonts/AllianceNo1-Bold.woff') format('woff');
