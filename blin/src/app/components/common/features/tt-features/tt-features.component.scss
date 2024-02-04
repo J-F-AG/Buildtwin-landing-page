@@ -1,6 +1,6 @@
 .features-area {
     .border-bottom {
-        border-bottom: 2px dashed #e8e2d7;
+        border-bottom: 2px dashed var(borderColor);
     }
     .shape {
         top: 15%;
@@ -31,7 +31,7 @@
     .feature-box {
         margin-top: 25px;
         border-radius: 8px;//updated-from-20-8;
-        background-color: #f7f4f9;
+        background-color: var(--backgroundColor);
         padding: 30px 30px 30px 65px;
 
         i {
@@ -59,23 +59,6 @@
         &:hover {
             i {
                 background-color: var(--themeColor);
-            }
-        }
-    }
-    .col-lg-6 {
-        &:nth-child(2) {
-            .feature-box {
-                background-color: #f1f4e6;
-            }
-        }
-        &:nth-child(3) {
-            .feature-box {
-                background-color: #efe2dd;
-            }
-        }
-        &:nth-child(4) {
-            .feature-box {
-                background-color: #e9eff2;
             }
         }
     }
