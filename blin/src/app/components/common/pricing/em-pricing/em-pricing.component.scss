@@ -1,8 +1,8 @@
 .pricing-info {
     padding: 13px 20px;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-bottom: 40px;
-    border: 1px solid #ebecf4;
+    border: 1px solid var(--borderColor);
 
     h3 {
         font-size: 20px;
@@ -26,7 +26,7 @@
             }
             &.mat-focused {
                 .mat-mdc-select-arrow {
-                    color: var(--primaryColor);
+                    color: var(--themeColor);
                 }
             }
         }
@@ -48,8 +48,8 @@
         }
         .mdc-text-field--filled {
             &:not(.mdc-text-field--disabled) {
-                border-radius: 10px;
-                background-color: #ebecf4;
+                border-radius: 8px;
+                background-color: var(--backgroundColor);
                 padding: {
                     left: 0;
                     right: 0;
@@ -65,28 +65,31 @@
     padding: 50px 40px;
     margin-bottom: 25px;
     border-radius: 8px;//updated-from-20-8;
-    background-color: #eef3de;
+    background-color: #f8f8f8;
 
     .sub-title {
         font-size: 16px;
         margin-bottom: 10px;
-        color: var(--primaryColor);
+        color: var(--themeColor);
     }
     h4 {
-        font-size: 25px;
+        font-size: 24px;
         margin-bottom: 5px;
     }
     .price {
-        font-size: 40px;
+        font-size: 32px;
         margin-bottom: 30px;
 
         span {
-            font-size: 24px;
+            font-size: 16px;
         }
     }
     .default-btn {
+        background-color: var(--themeColor);
         text-align: center;
         display: block;
+        padding-top: 13px;
+        padding-bottom: 13px;
         width: 100%;
     }
     .features-list {
@@ -113,7 +116,7 @@
                     color: var(--whiteColor);
                     transform: translateY(-50%);
                     transition: var(--transition);
-                    background-color: var(--primaryColor);
+                    background-color: var(--themeColor);
                 }
                 &:hover {
                     i {
@@ -131,21 +134,9 @@
         top: 15px;
         right: 15px;
         position: absolute;
-        border-radius: 15px;
+        border-radius: 8px;
         padding: 14px 27px 7px;
         background-color: var(--whiteColor);
-    }
-}
-.col-lg-4 {
-    &:nth-child(2) {
-        .single-pricing-box {
-            background-color: #ede8f1;
-        }
-    }
-    &:nth-child(3) {
-        .single-pricing-box {
-            background-color: #dbe3e7;
-        }
     }
 }
 

@@ -1,5 +1,5 @@
 .about-area {
-    border-bottom: 1px solid #d5dce0;
+    border-bottom: 1px solid var(--borderColor);
 }
 .about-title {
     span {
@@ -15,8 +15,8 @@
     padding-left: 36px;
 
     h2 {
-        line-height: 1;
-        font-size: 60px;
+        line-height: 1.3;
+        font-size: 45px;
         max-width: 920px;
         margin-bottom: 22px;
     }
@@ -26,10 +26,12 @@
     }
     .default-btn {
         margin-top: 12px;
-        background-color: var(--tealBlueColor);
+        background-color: var(--themeColor);
+        padding-top: 13px;
+        padding-bottom: 13px;
 
         &:hover {
-            background-color: var(--blackColor);
+            background-color: var(--themeColor);
         }
     }
 }
@@ -45,8 +47,8 @@
     .col-md-5 {
         .image {
             img {
-                border-radius: 25px;
-                border: 4px solid var(--blackColor);
+                border-radius: 8px;
+                border: 2px solid var(--borderColor);
             }
         }
     }
@@ -55,8 +57,8 @@
             margin-right: -15px;
 
             img {
-                border-radius: 25px;
-                border: 4px solid var(--blackColor);
+                border-radius: 8px;
+                border: 2px solid var(--borderColor);
             }
         }
     }
@@ -66,11 +68,11 @@
             text-align: start;
 
             img {
-                border-radius: 25px;
+                border-radius: 8px;
 
                 &:nth-child(2) {
                     margin-top: 25px;
-                    border: 4px solid var(--blackColor);
+                    border: 2px solid var(--borderColor);
                 }
             }
         }
@@ -80,9 +82,9 @@
         bottom: 0;
         width: 1px;
         content: '';
-        height: 140%;
+        height: 122%;
         position: absolute;
-        background: #d5dce0;
+        background: var(--borderColor);
         margin-bottom: -100px;
     }
 }

@@ -1,11 +1,11 @@
 // Blog Search
 .blog-search-box {
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 55px 130px;
-    background-color: #f7f5f1;
+    background-color: #f8f8f8;
 
     h3 {
-        font-size: 20px;
+        font-size: 24px;
         margin-bottom: 20px;
     }
     form {
@@ -13,7 +13,7 @@
             border: 0;
             width: 100%;
             height: 70px;
-            border-radius: 10px;
+            border-radius: 8px;
             color: var(--blackColor);
             background-color: var(--whiteColor);
             padding: {
@@ -76,15 +76,16 @@
         };
         .tag {
             border-radius: 40px;
-            padding: 3px 15px 6px;
-            background-color: var(--yellowColor);
+            padding: 8px 15px;
+            background-color: var(--themeColor);
+            color: var(--whiteColor);
             font: {
-                size: 16px;
-                weight: 600;
+                size: 13px;
+                weight: 500;
             };
             &:hover {
                 color: var(--whiteColor);
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
         }
         .date {
@@ -99,13 +100,13 @@
             };
         }
         .link-btn {
-            font-size: 18px;
+            font-size: 14px;
             padding-right: 15px;
     
             i {
                 top: 50%;
                 right: -5px;
-                margin-top: 2.7px;
+                margin-top: -1px;
                 position: absolute;
                 transform: translateY(-50%);
             }
@@ -150,22 +151,23 @@
     
             .tag {
                 border-radius: 40px;
-                padding: 3px 15px 6px;
-                background-color: var(--yellowColor);
+                padding: 8px 15px;
+                background-color: var(--themeColor);
+                color: var(--whiteColor);
                 font: {
-                    size: 16px;
-                    weight: 600;
+                    size: 13px;
+                    weight: 500;
                 };
                 &:hover {
                     color: var(--whiteColor);
-                    background-color: var(--primaryColor);
+                    background-color: var(--themeColor);
                 }
             }
             .date {
                 color: var(--paragraphColor);
             }
             h3 {
-                font-size: 19px;
+                font-size: 18px;
                 line-height: 1.4;
                 margin-top: 18px;
             }
@@ -200,7 +202,7 @@
             background-color: #dddfee;
         }
         i {
-            color: var(--primaryColor);
+            color: var(--themeColor);
             position: relative;
             top: 3px;
         }
@@ -216,15 +218,16 @@
 // Features
 .em-single-feature-item {
     margin-top: 25px;
-    border-radius: 10px;
-    background-color: #e1e9eb;
+    border-radius: 8px;
+    background-color: var(--backgroundColor);
     padding: 50px 23px 75px 50px;
 
     .content {
         padding-right: 100px;
 
         h2 {
-            font-size: 40px;
+            font-size: 32px;
+            line-height: 1.3;
             margin-bottom: 20px;
         }
         p {
@@ -232,10 +235,12 @@
         }
         .default-btn {
             margin-top: 20px;
-            background-color: var(--blackColor);
+            background-color: var(--themeColor);
+            padding-top: 13px;
+            padding-bottom: 13px;
     
             &:hover {
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
         }
     }
@@ -555,7 +560,7 @@
             padding-right: 50px;
     
             h2 {
-                font-size: 35px;
+                font-size: 32px;
                 margin-bottom: 15px;
             }
             .default-btn {

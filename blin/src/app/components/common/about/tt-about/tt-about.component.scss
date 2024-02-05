@@ -8,8 +8,14 @@
     padding-left: 60px;
     
     h2 {
-        font-size: 24px;
+        font-size: 32px;
+        line-height: 1.7;
         margin-bottom: 12px;
+        span {
+            font-size: 60px;
+            line-height: 1.2;
+            display: block;
+        }
     }
     p {
         //letter-spacing: 0.4px;

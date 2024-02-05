@@ -1,13 +1,13 @@
 .funfacts-box {
-    padding: 40px;
+    padding: 24px;
     margin-bottom: 25px;
-    border-radius: 30px;
-    border: 2px solid #b8c7ce;
+    border-radius: 8px;
+    border: 2px solid var(--borderColor);
 
     .number {
         line-height: 1;
         margin-bottom: 70px;
-        color: var(--tealBlueColor);
+        color: var(--themeColor);
         transition: var(--transition);
         margin: {
             top: -10px;
@@ -15,14 +15,14 @@
         };
     }
     p {
-        font-size: 18px;
+        font-size: 14px;
         letter-spacing: 1.8px;
+        color: var(--lightColor);
     }
     h3 {
-        line-height: .8;
+        line-height: 1.25;
         font: {
-            size: 70px;
-            weight: 900;
+            size: 20px;
         };
     }
     &:hover {
@@ -37,8 +37,8 @@
 @media only screen and (max-width : 767px) {
 
     .funfacts-box {
-        padding: 25px 20px;
-        border-radius: 10px;
+        padding: 24px;
+        border-radius: 8px;
     
         .number {
             margin-bottom: 15px;
@@ -48,13 +48,13 @@
             };
         }
         p {
-            font-size: 16px;
+            font-size: 14px;
             margin-bottom: 10px;
             letter-spacing: 1.2px;
         }
         h3 {
-            line-height: .8;
-            font-size: 40px;
+            line-height: 1.25;
+            font-size: 20px;
         }
     }
 
@@ -67,7 +67,7 @@
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
     .funfacts-box {
-        padding: 30px 25px;
+        padding: 24px;
         border-radius: 8px;//updated-from-20-8;
     
         .number {
@@ -78,12 +78,12 @@
             };
         }
         p {
-            font-size: 17px;
+            font-size: 14px;
             margin-bottom: 12px;
             letter-spacing: 1.5px;
         }
         h3 {
-            font-size: 50px;
+            font-size: 20px;
         }
     }
 
@@ -93,7 +93,7 @@
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
     .funfacts-box {
-        padding: 40px 30px;
+        padding: 24px;
     
         .number {
             margin-bottom: 30px;
@@ -103,12 +103,12 @@
             };
         }
         p {
-            font-size: 17px;
+            font-size: 14px;
             margin-bottom: 10px;
             letter-spacing: 1.5px;
         }
         h3 {
-            font-size: 55px;
+            font-size: 20px;
         }
     }
 
@@ -118,7 +118,7 @@
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
     .funfacts-box {
-        padding: 40px 30px;
+        padding: 24px;
     
         .number {
             margin-bottom: 50px;
@@ -128,7 +128,7 @@
             };
         }
         h3 {
-            font-size: 60px;
+            font-size: 20px;
         }
     }
 
@@ -138,13 +138,13 @@
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {
 
     .funfacts-box {
-        padding: 40px 30px;
+        padding: 24px;
 
         .number {
             margin-right: -2px;
         }
         h3 {
-            font-size: 60px;
+            font-size: 20px;
         }
     }
 

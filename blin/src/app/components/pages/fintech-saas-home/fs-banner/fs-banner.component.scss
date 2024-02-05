@@ -11,7 +11,7 @@
         position: absolute;
         border-radius: 8px;//updated-from-20-8;
         box-shadow: 0px 4px 15px 0px rgba(177, 188, 236, 0.10);
-        background: linear-gradient(135deg, #EEF1F2 0%, #AFC0C8 100%, #93AFB7 100%);
+        background: var(--backgroundColor);
         margin: {
             top: 20px;
             left: 20px;
@@ -43,7 +43,6 @@
         margin-bottom: 27px;
         font: {
             size: 130px;
-            weight: 900;
         };
     }
     p {
@@ -52,10 +51,12 @@
     }
     .default-btn {
         margin-top: 13px;
-        background-color: var(--tealBlueColor);
+        background-color: var(--themeColor);
+        padding-top: 13px;
+        padding-bottom: 13px;
 
         &:hover {
-            background-color: var(--blackColor);
+            background-color: var(--themeColor);
         }
     }
 }
@@ -64,8 +65,8 @@
 }
 .text-slider-area {
     padding: {
-        left: 20px;
-        right: 20px;
+        left: 40px;
+        right: 40px;
     };
     .container-fluid {
         white-space: nowrap;
@@ -80,16 +81,17 @@
     }
     .item {
         margin-right: 20px;
-        border-radius: 8px;//updated-from-20-8;
-        padding: 4.3px 40px 8.7px 20px;
-        background: rgba(255, 255, 255, 0.40);
+        border-radius: 4px;//updated-from-20-8;
+        padding: 6px 40px 6px 20px;
+        background: var(--whiteColor);
 
         i {
             transform: translateY(-50%);
-            color: var(--tealBlueColor);
+            color: var(--themeColor);
             position: absolute;
             right: 10px;
             top: 50%;
+            margin-top: -1px;
         }
         &:last-child {
             margin-right: 0;

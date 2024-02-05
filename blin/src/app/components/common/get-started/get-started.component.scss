@@ -1,24 +1,31 @@
 .get-started-inner {
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 55px 100px;
-    background-color: #e9ebf1;
+    background-color: var(--backgroundColor);
 
     .get-started-content {
         h2 {
             max-width: 580px;
-            font-size: 60px;
-            line-height: 1;
+            font-size: 32px;
+            line-height: 1.7;
             margin: {
                 top: -15px;
                 bottom: 15px;
             };
+            span {
+                display: block;
+                font-size: 60px;
+                line-height: 1.2;
+            }
         }
         .default-btn {
             margin-top: 20px;
-            background-color: var(--tealBlueColor);
+            background-color: var(--themeColor);
+            padding-top: 13px;
+            padding-bottom: 13px;
 
             &:hover {
-                background-color: var(--blackColor);
+                background-color: var(--themeColor);
             }
         }
     }
@@ -38,8 +45,8 @@
         .get-started-content {
             h2 {
                 max-width: 100%;
-                font-size: 35px;
-                line-height: 1;
+                font-size: 24px;
+                line-height: 1.25;
                 margin: {
                     top: -10px;
                     bottom: 15px;
@@ -71,7 +78,7 @@
         .get-started-content {
             h2 {
                 max-width: 100%;
-                font-size: 45px;
+                font-size: 24px;
                 margin: {
                     top: -10px;
                     bottom: 15px;
@@ -100,7 +107,7 @@
         .get-started-content {
             h2 {
                 max-width: 100%;
-                font-size: 50px;
+                font-size: 32px;
                 margin: {
                     top: -13px;
                     bottom: 15px;
@@ -138,7 +145,7 @@
     .get-started-inner {
         .get-started-content {
             h2 {
-                font-size: 57px;
+                font-size: 32px;
             }
         }
         .get-started-image {

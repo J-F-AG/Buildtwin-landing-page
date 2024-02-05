@@ -11,12 +11,12 @@
     .sub-title {
         font-size: 16px;
         margin-bottom: 10px;
-        color: var(--primaryColor);
+        color: var(--themeColor);
     }
     h2 {
         margin-bottom: 13px;
         line-height: 1.3;
-        font-size: 40px;
+        font-size: 32px;
     }
     p {
         max-width: 610px;
@@ -26,17 +26,17 @@
         max-width: 565px;
 
         li {
-            font-size: 16px;
-            line-height: 1.7;
-            padding-left: 42px;
+            font-size: 15px;
+            line-height: 1.6;
+            padding-left: 40px;
             margin-bottom: 25px;
             color: var(--paragraphColor);
 
             i {
                 left: 0;
                 top: 50%;
-                font-size: 32px;
-                margin-top: -3px;
+                font-size: 30px;
+                margin-top: -1px;
                 position: absolute;
                 transform: translateY(-50%);
                 color: var(--themeColor);
@@ -53,12 +53,12 @@
     .sub-title {
         font-size: 16px;
         margin-bottom: 10px;
-        color: var(--primaryColor);
+        color: var(--themeColor);
     }
     h2 {
         margin-bottom: 13px;
         line-height: 1.3;
-        font-size: 40px;
+        font-size: 32px;
     }
     p {
         max-width: 610px;
@@ -74,9 +74,10 @@
         li {
             font-size: 15px;
             margin-right: 10px;
+            margin-bottom: 10px;
             border-radius: 8px;//updated-from-20-8;
             display: inline-block;
-            background-color: #eff0f4;
+            background-color: var(--backgroundColor);
             padding: 11px 30px 11px 44px;
 
             i {
@@ -91,7 +92,7 @@
                 color: var(--whiteColor);
                 transform: translateY(-50%);
                 transition: var(--transition);
-                background-color: var(--primaryColor);
+                background-color: var(--themeColor);
             }
             &:hover {
                 i {
@@ -260,7 +261,7 @@
         }
         h2 {
             margin-bottom: 10px;
-            font-size: 35px;
+            font-size: 32px;
         }
         p {
             max-width: 100%;
@@ -289,7 +290,7 @@
         }
         h2 {
             margin-bottom: 10px;
-            font-size: 35px;
+            font-size: 32px;
         }
         p {
             max-width: 100%;

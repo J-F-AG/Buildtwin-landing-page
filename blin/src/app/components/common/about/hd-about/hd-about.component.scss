@@ -2,10 +2,18 @@
     max-width: 638px;
 
     h2 {
-        font-size: 24px;
+        font-size: 32px;
         max-width: 606px;
-        line-height: 1.25;
+        line-height: 1.7;
         margin-bottom: 17px;
+        span {
+            font-size: 60px;
+            line-height: 1.2;
+            display: block;
+        }
+        i {
+            font-size: 37px;
+        }
     }
     p {
         max-width: 523px;

@@ -48,7 +48,7 @@
     padding-left: 67px;
 
     h2 {
-        font-size: 24px;
+        font-size: 32px;
         max-width: 675px;
         line-height: 1.25;
     }
@@ -63,12 +63,12 @@
 
         i {
             margin-right: 3px;
-            color: #ffd62c;
+            color: var(--themeColor);
             font-size: 14px;
             line-height: 1;
         }
         span {
-            top: -1px;
+            top: 2px;
             font-size: 12px;
             margin-left: 5px;
             position: relative;
