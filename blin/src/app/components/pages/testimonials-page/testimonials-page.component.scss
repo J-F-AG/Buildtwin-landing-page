@@ -31,8 +31,8 @@
             div {
                 i {
                     line-height: 1;
-                    font-size: 18px;
-                    color: #ffd62c;
+                    font-size: 15px;
+                    color: var(--themeColor);
                     margin-right: 2px;
 
                     &:last-child {
@@ -44,16 +44,18 @@
                 top: -.8px;
                 margin-left: 7px;
                 position: relative;
+                font-size: 12px;
     
                 span {
                     top: 0;
                     margin-left: 0;
-                    color: #878790;
+                    color: var(--lightColor);
                 }
             }
         }
         .name {
             letter-spacing: 1.8px;
+            font-size: 12px;
         }
     }
     &::before {
@@ -66,7 +68,7 @@
         margin-top: 35px;
         position: absolute;
         border-radius: 8px;//updated-from-20-8;
-        background-color: #f7f5f1;
+        background-color: #f8f8f8;
     }
 }
 
@@ -87,7 +89,7 @@
             background-color: #dddfee;
         }
         i {
-            color: var(--primaryColor);
+            color: var(--themeColor);
             position: relative;
             top: 3px;
         }

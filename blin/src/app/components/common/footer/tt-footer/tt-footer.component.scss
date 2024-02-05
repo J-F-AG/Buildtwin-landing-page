@@ -27,7 +27,8 @@
         max-width: 575px;
 
         h2 {
-            font-size: 24px;
+            font-size: 32px;
+            line-height: 1.4;
             margin: {
                 bottom: 10px;
                 top: -5px;
@@ -266,17 +267,14 @@
         bottom: 25px;
     };
     p {
-        font-size: 14px;
-        color: var(--lightColor);
-
         span {
-            color: var(--whiteColor);
+            color: var(--blackColor);
         }
         a {
-            color: var(--whiteColor);
+            color: var(--blackColor);
 
             &:hover {
-                color: var(--lightColor);
+                color: var(--tealBlueColor);
             }
         }
     }

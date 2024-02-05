@@ -1,7 +1,7 @@
 .testimonials-area {
     background: {
         size: cover;
-        color: #f2f0f8;
+        color: #f8f8f8;
         repeat: no-repeat;
         position: center center;
     };
@@ -22,8 +22,8 @@
         border-radius: 50%;
     }
     p {
-        line-height: 1.25;
-        font-size: 25px;
+        line-height: 1.35;
+        font-size: 14px;
         margin: {
             bottom: 25px;
             top: 20px;
@@ -31,7 +31,7 @@
     }
     .info {
         padding-top: 25px;
-        border-top: 1px solid #f2f0f8;
+        border-top: 1px solid var(--borderColor);
 
         .rating {
             svg {
@@ -43,8 +43,8 @@
             div {
                 i {
                     line-height: 1;
-                    font-size: 18px;
-                    color: #ffd62c;
+                    font-size: 15px;
+                    color: var(--themeColor);
                     margin-right: 2px;
 
                     &:last-child {
@@ -56,6 +56,7 @@
                 top: -.8px;
                 margin-left: 7px;
                 position: relative;
+                font-size: var(--fontSizeSmall);
     
                 span {
                     top: 0;
@@ -65,6 +66,7 @@
             }
         }
         .name {
+            font-size: var(--fontSizeSmall);
             letter-spacing: 1.8px;
         }
     }
@@ -101,8 +103,8 @@
             height: 80px;
         }
         p {
-            line-height: 1.25;
-            font-size: 20px;
+            line-height: 1.35;
+            font-size: 14px;
             margin: {
                 bottom: 18px;
                 top: 10px;
@@ -148,7 +150,7 @@
             height: 90px;
         }
         p {
-            font-size: 22px;
+            font-size: 14px;
             margin: {
                 bottom: 20px;
                 top: 15px;
@@ -181,7 +183,7 @@
             bottom: 25px;
         };
         p {
-            font-size: 23px;
+            font-size: 14px;
             margin: {
                 bottom: 20px;
                 top: 15px;

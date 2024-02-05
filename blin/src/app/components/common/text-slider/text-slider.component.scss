@@ -9,7 +9,7 @@
 
         div {
             letter-spacing: -1px;
-            color: #d6dee2;
+            color: #f8f8f8;
             line-height: 1.2;
             margin: {
                 right: 20px;
@@ -21,7 +21,7 @@
             };
             &:nth-child(2) {
                 color: transparent;
-                -webkit-text-stroke: 1px var(--tealBlueColor);
+                -webkit-text-stroke: 1px var(--themeColor);
             }
             &:last-child {
                 margin-right: 0;

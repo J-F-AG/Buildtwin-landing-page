@@ -1,8 +1,8 @@
 .funfacts-box {
-    padding: 40px;
+    padding: 24px;
     margin-bottom: 25px;
-    border-radius: 30px;
-    border: 2px solid #e4e9eb;
+    border-radius: 8px;
+    border: 2px solid var(--borderColor);
 
     .number {
         line-height: 1;
@@ -15,17 +15,19 @@
         };
     }
     p {
-        font-size: 18px;
+        font-size: 14px;
         margin-bottom: 22px;
         letter-spacing: 1.8px;
+        color: var(--lightColor);
     }
     h3 {
         line-height: 1;
-        font-size: 60px;
+        font-size: 32px;
+        font-weight: 600;
     }
     &:hover {
         .number {
-            color: var(--primaryColor);
+            color: var(--themeColor);
             transform: translateX(-10px);
         }
     }
@@ -35,8 +37,8 @@
 @media only screen and (max-width : 767px) {
 
     .funfacts-box {
-        padding: 25px 20px;
-        border-radius: 10px;
+        padding: 24px;
+        border-radius: 8px;
     
         .number {
             margin-bottom: 15px;
@@ -64,7 +66,7 @@
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
     .funfacts-box {
-        padding: 30px 25px;
+        padding: 24px;
         border-radius: 8px;//updated-from-20-8;
     
         .number {
@@ -80,7 +82,7 @@
             letter-spacing: 1.5px;
         }
         h3 {
-            font-size: 40px;
+            font-size: 20px;
         }
     }
 
@@ -90,7 +92,7 @@
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
     .funfacts-box {
-        padding: 40px 30px;
+        padding: 24px;
 
         .number {
             margin-right: -5px;
@@ -99,7 +101,7 @@
             margin-bottom: 15px;
         }
         h3 {
-            font-size: 50px;
+            font-size: 20px;
         }
     }
 
@@ -109,7 +111,7 @@
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
     .funfacts-box {
-        padding: 40px 30px;
+        padding: 24;
     
         .number {
             margin: {
@@ -121,7 +123,7 @@
             margin-bottom: 15px;
         }
         h3 {
-            font-size: 50px;
+            font-size: 32px;
         }
     }
 
@@ -131,7 +133,7 @@
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {
 
     .funfacts-box {
-        padding: 40px 30px;
+        padding: 24px;
     
         .number {
             margin-right: -5px;
@@ -140,7 +142,7 @@
             margin-bottom: 15px;
         }
         h3 {
-            font-size: 55px;
+            font-size: 32px;
         }
     }
 

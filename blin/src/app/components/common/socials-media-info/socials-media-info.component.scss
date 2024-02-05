@@ -1,6 +1,23 @@
 .socials-media-info-area {
     background-color: #f8f8f8;
 
+    h2 {
+        font-size: 32px;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        span {
+            display: block;
+            font-size: 60px;
+            line-height: 1;
+        }
+
+        +span {
+            display: block;
+            font-size: 17px;
+            color: var(--lightColor);
+        }
+    }
+
     .container-fluid {
         max-width: 1920px;
         padding: {

@@ -1,5 +1,5 @@
 .banner-area {
-    background: linear-gradient(134deg, #F4F3FB 0%, #D4D4F3 100%);
+    background: var(--backgroundColor);
     padding-top: 225px;
 
     &::before {
@@ -16,10 +16,10 @@
 .banner-content {
     .sub-title {
         margin-bottom: 14px;
-        color: var(--primaryColor);
+        color: var(--themeColor);
     }
     h1 {
-        font-size: 60px;
+        font-size: 45px;
         max-width: 1145px;
         margin-bottom: 12px;
     }
@@ -136,6 +136,7 @@
         background-color: var(--whiteColor);
         animation: movetopbounce 2s linear infinite;
         box-shadow: 0px 4px 34px 0px rgba(124, 124, 193, 0.20);
+        z-index: 2;
 
         img {
             top: 50%;
@@ -144,12 +145,12 @@
             transform: translateY(-50%);
         }
         h3 {
-            font-size: 36px;
+            font-size: 32px;
             margin-bottom: 5px;
         }
         span {
             font-size: 14px;
-            color: #6f6e8b;
+            color: var(--lightColor);
             letter-spacing: 4.2px;
         }
     }

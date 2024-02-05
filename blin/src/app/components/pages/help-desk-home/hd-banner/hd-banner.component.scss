@@ -58,13 +58,19 @@
     max-width: 925px;
 
     h1 {
-        font-size: 40px;
-        line-height: 1.25;
+        font-size: 45px;
+        font-weight: 400;
+        line-height: 1.334;
         margin-bottom: 18px;
+        span {
+            font-size: 55px;
+        }
     }
     p {
-        //letter-spacing: 0.4px;
-        max-width: 700px;
+        font-size: 17px;
+        line-height: 1.530;
+        color: var(--lightColor);
+        max-width: 725px;
     }
     .btn-box {
         margin-top: 25px;
