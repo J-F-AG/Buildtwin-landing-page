@@ -255,7 +255,7 @@ img {
         height: auto;
         border-radius: 4px;
         display: inline-block;
-        padding: 15.5px 30.1px;
+        padding: 13px 30.1px;
         transition: var(--transition);
         color: var(--whiteColor) !important;
         line-height: 1.29;
@@ -468,7 +468,8 @@ img {
 // Page Title Area
 .page-title-area {
     // background: linear-gradient(134deg, #F4F3FB 0%, #D4D4F3 100%);
-    background-color: var(--backgroundColor);
+    // background-color: var(--backgroundColor);
+    background: var(--backgroundColor) url(assets/images/bgLeft-MNJKEAAO.png) 0 0 repeat;
     padding: {
         top: 230px;
         bottom: 118px;

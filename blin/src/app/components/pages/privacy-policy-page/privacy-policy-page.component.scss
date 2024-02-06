@@ -1,4 +1,5 @@
 .privacy-policy-content {
+    padding-bottom: 40px;
     .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
         margin-bottom: 15px;
 
@@ -6,32 +7,52 @@
             margin-top: 30px;
         }
     }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
     strong {
         color: var(--blackColor);
     }
+    address {
+        font-style: normal;
+    }
     p {
+        line-height: 1.4;
         a {
-            color: var(--primaryColor);
+            font-weight: 400;
+            text-decoration: underline;
 
             &:hover {
-                text-decoration: underline;
+                color: var(--themeColor);
+                
             }
         }
         strong {
             color: var(--blackColor);
         }
+
+        span.label {
+            display: inline-block;
+            vertical-align: top;
+            width: 72px;
+        }
     }
     ul, ol {
+        list-style: none;
+        padding: 0 0 25px;
+        margin: 0;
         li {
             color: var(--paragraphColor);
-            margin-bottom: 12px;
-            font-weight: 500;
+            margin-bottom: 10px;
+            font-weight: 400;
 
             a {
-                color: var(--primaryColor);
+                text-decoration: underline;
     
                 &:hover {
-                    text-decoration: underline;
+                    color: var(--themeColor);
                 }
             }
             strong {
@@ -39,6 +60,20 @@
             }
             &:last-child {
                 margin-bottom: 0;
+            }
+        }
+    }
+
+    .bullet-list {
+        padding-left: 30px;
+        li {
+            position: relative;
+            padding-left: 15px;
+            i {
+                font-style: normal;
+                position: absolute;
+                left: 0;
+                top: 0;
             }
         }
     }
