@@ -42,11 +42,7 @@
         background-color: var(--whiteColor);
 
         h3 {
-            padding: 20px;
-            font-size: 12px;
-            border-radius: 4px;
-            letter-spacing: 4px;
-            background-color: #F6F3ff;
+            padding: 20px 20px 0;
         }
         .list {
             margin: {
@@ -82,7 +78,7 @@
                 }
                 &:last-child {
                     margin-right: 0;
-                    background-color: #e1e9eb;
+                    // background-color: #e1e9eb;
                 }
             }
         }
@@ -266,7 +262,7 @@
 @media only screen and (max-width : 767px) {
 
     .free-trial-inner {
-        border-radius: 10px;
+        border-radius: 4px;
         padding: {
             left: 15px;
             right: 15px;
@@ -295,15 +291,9 @@
         }
         .free-trial-area-form {
             margin-left: 0;
-            border-radius: 10px;
+            border-radius: 4px;
             padding: 5px 5px 15px;
     
-            h3 {
-                font-size: 15px;
-                padding: 12px 15px;
-                border-radius: 10px;
-                letter-spacing: 2px;
-            }
             .list {
                 margin: {
                     top: 15px;
@@ -407,11 +397,6 @@
             margin-left: 0;
             padding: 10px 10px 27px;
     
-            h3 {
-                padding: 16px;
-                font-size: 17px;
-                letter-spacing: 3px;
-            }
             .info {
                 padding: {
                     left: 20px;
@@ -471,11 +456,6 @@
             margin-left: 0;
             padding: 10px 10px 21px;
     
-            h3 {
-                font-size: 17px;
-                padding: 15px 18px;
-                letter-spacing: 3px;
-            }
             .list {
                 margin-bottom: 8px;
                 

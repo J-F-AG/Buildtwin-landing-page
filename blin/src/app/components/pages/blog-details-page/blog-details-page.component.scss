@@ -101,11 +101,11 @@
             bottom: 40px;
         };
         img {
-            border-radius: 10px;
+            border-radius: 4px;
         }
     }
     blockquote, .blockquote {
-        border-radius: 10px;
+        border-radius: 4px;
         background-color: #e1e9eb;
         padding: 50px 50px 50px 145px;
         margin: {
@@ -133,12 +133,12 @@
             bottom: 40px;
         };
         img {
-            border-radius: 10px;
+            border-radius: 4px;
         }
     }
     .meta-tags {
         padding: 20px 30px;
-        border-radius: 10px;
+        border-radius: 4px;
         border: 1px solid #ebecf4;
         margin: {
             top: 50px;
@@ -195,7 +195,7 @@
                     border: 1px solid #e4e0d9;
         
                     .mdc-text-field--filled {
-                        border-radius: 10px;
+                        border-radius: 4px;
                         background-color: var(--whiteColor);
                         padding: {
                             left: 52px;
@@ -312,7 +312,7 @@
                 border: 0;
                 width: 100%;
                 height: 70px;
-                border-radius: 10px;
+                border-radius: 4px;
                 color: var(--blackColor);
                 background-color: var(--whiteColor);
                 padding: {
@@ -407,7 +407,7 @@
     }
     .tags-box {
         padding: 45px 50px;
-        border-radius: 10px;
+        border-radius: 4px;
         background-color: #f7f5f1;
 
         h3 {
@@ -601,7 +601,7 @@
     
         .search-box {
             padding: 25px 20px;
-            border-radius: 10px;
+            border-radius: 4px;
             margin-bottom: 25px;
     
             h3 {
@@ -625,7 +625,7 @@
         }
         .blogs-list {
             padding: 25px 20px;
-            border-radius: 10px;
+            border-radius: 4px;
             margin-bottom: 25px;
         
             .item {
@@ -633,10 +633,10 @@
         
                 .image {
                     margin-right: 0;
-                    border-radius: 10px;
+                    border-radius: 4px;
             
                     img {
-                        border-radius: 10px;
+                        border-radius: 4px;
                     }
                 }
                 .content {

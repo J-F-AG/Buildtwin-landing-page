@@ -37,7 +37,7 @@
             width: 74px;
             height: 74px;
             margin-right: 20px;
-            border-radius: 10px;
+            border-radius: 4px;
             background-color: var(--whiteColor);
 
             svg {
@@ -59,7 +59,7 @@
 @media only screen and (max-width : 767px) {
 
     .cta-inner-box {
-        border-radius: 10px;
+        border-radius: 4px;
         padding: 60px 20px 35px;
     
         .content {

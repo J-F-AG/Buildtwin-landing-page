@@ -80,7 +80,7 @@
         width: 46px;
         height: 46px;
         line-height: 43px;
-        border-radius: 10px;
+        border-radius: 4px;
         color: var(--blackColor);
         transition: var(--transition);
 
@@ -135,7 +135,7 @@
         }
         &::before {
             margin-top: 25px;
-            border-radius: 10px;
+            border-radius: 4px;
         }
     }
 

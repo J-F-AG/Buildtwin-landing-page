@@ -100,7 +100,7 @@
 @media only screen and (max-width : 767px) {
 
     .pricing-inner-box {
-        border-radius: 10px;
+        border-radius: 4px;
         padding: {
             left: 15px;
             right: 15px;
@@ -145,7 +145,7 @@
             }
         }
         &::before {
-            border-radius: 10px;
+            border-radius: 4px;
         }
     }
 

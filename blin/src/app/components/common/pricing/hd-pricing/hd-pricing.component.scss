@@ -1,3 +1,13 @@
+.list-hd-price {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0;
+    .numberList {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
 .pricing-area {
     &::before {
         top: 0;
@@ -23,14 +33,14 @@
         }
         p {
             line-height: 1.4;
-            max-width: 540px;
+            max-width: 580px;
             margin-top: 0;
         }
     }
 }
 .pricing-box {
     margin-bottom: 25px;
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 0 40px 40px;
     background-color: var(--whiteColor);
 
@@ -51,7 +61,7 @@
         line-height: 1.4;
         font-size: 16px;
         margin-bottom: 15px;
-        letter-spacing: 2px;
+        letter-spacing: 0;
     }
     .features-list {
         margin-top: 35px;
@@ -66,7 +76,7 @@
 
                 i {
                     left: 0;
-                    top: 50%;
+                    top: 0;
                     width: 20px;
                     height: 20px;
                     font-size: 15px;
@@ -75,7 +85,7 @@
                     border-radius: 50%;
                     position: absolute;
                     color: var(--whiteColor);
-                    transform: translateY(-50%);
+                    transform: none;
                     background-color: var(--themeColor);
                 }
             }
@@ -121,15 +131,16 @@
                 right: 10px;
             };
             span {
-                padding-left: 28px;
+                padding-left: 23px;
 
                 i {
                     left: 0;
                     top: 50%;
-                    margin-top: 1px;
+                    margin-top: 0;
                     position: absolute;
                     transform: translateY(-50%);
                     color: var(--themeColor);
+                    font-size: 18px;
                 }
             }
             a {
@@ -336,8 +347,8 @@
     .pricing-area {
         &::before {
             margin: {
-                left: 25px;
-                right: 25px;
+                left: 0;
+                right: 0;
             };
         }
     }

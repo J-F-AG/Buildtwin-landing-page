@@ -98,7 +98,7 @@
         margin-bottom: 20px;
     }
     p {
-        color: var(--lightColor);
+        color: var(--extraLightColor);
         font-size: 12px;
     }
     .socials-link {
@@ -135,7 +135,7 @@
         margin-left: 35px;
     }
     .info {
-        color: var(--lightColor);
+        color: var(--extraLightColor);
         font-size: 14px;
         margin: {
             left: 35px;
@@ -245,11 +245,11 @@
 
                 a {
                     font-size: var(--fontSizeSmall);
-                    color: var(--lightColor);
+                    color: var(--extraLightColor);
                     font-weight: 500;
 
                     &:hover {
-                        color: var(--lightColor);
+                        color: var(--extraLightColor);
                     }
                 }
                 &:last-child {
@@ -286,7 +286,7 @@
     // CTA
     .cta-inner-box {
         padding: 60px 20px;
-        border-radius: 10px;
+        border-radius: 4px;
         
         .content {
             margin-bottom: 25px;
