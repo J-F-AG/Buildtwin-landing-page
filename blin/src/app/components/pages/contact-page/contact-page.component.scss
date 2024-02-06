@@ -1,9 +1,9 @@
 // Contact Info
 .contact-info-box {
-    padding: 40px 35px;
+    padding: 24px;
     margin-bottom: 25px;
-    border-radius: 30px;
-    border: 2px solid #e4e9eb;
+    border-radius: 8px;
+    border: 2px solid var(--borderColor);
 
     .number {
         line-height: 1;
@@ -16,13 +16,13 @@
         };
     }
     .sub-title {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 20px;
         letter-spacing: 1.8px;
     }
     .info {
         display: flex;
-        font-size: 30px;
+        font-size: 24px;
         min-height: 117px;
         flex-direction: column;
 
@@ -44,7 +44,7 @@
     }
     &:hover {
         .number {
-            color: var(--primaryColor);
+            color: var(--themeColor);
             transform: translateX(-10px);
         }
     }
@@ -55,7 +55,8 @@
     padding-right: 60px;
 
     h2 {
-        font-size: 40px;
+        font-size: 32px;
+        line-height: 1.3;
         margin-bottom: 30px;
     }
 }
@@ -66,6 +67,7 @@
                 margin-bottom: 25px;
     
                 i {
+                    font-size: 20px;
                     top: 16px;
                     left: 20px;
                     z-index: 1;
@@ -73,11 +75,11 @@
                 }
                 .mat-mdc-form-field {
                     display: block;
-                    border-radius: 5px;
-                    border: 1px solid #e4e0d9;
+                    border-radius: 4px;
+                    border: 1px solid var(--borderColor);
         
                     .mdc-text-field--filled {
-                        border-radius: 10px;
+                        border-radius: 4px;
                         background-color: var(--whiteColor);
                         padding: {
                             left: 52px;
@@ -90,11 +92,11 @@
                             width: 100%;
         
                             .mat-mdc-floating-label {
-                                color: #706f74;
+                                color: var(--lightColor);
                                 top: 24px;
                                 font: {
-                                    size: 18px;
-                                    weight: 600;
+                                    size: 15px;
+                                    weight: 500;
                                     family: var(--fontFamily);
                                 };
                             }
@@ -143,11 +145,11 @@
             }
             .mat-mdc-checkbox {
                 label {
-                    color: #706f74;
+                    color: var(--lightColor);
                     padding-left: 0;
                     font: {
                         family: var(--poppinsFontFamily);
-                        size: 14px;
+                        size: 13px;
                     };
                 }
                 .mdc-checkbox {
@@ -165,6 +167,9 @@
                 }
             }
             .default-btn {
+                background-color: var(--themeColor);
+                padding-top: 13px;
+                padding-bottom: 13px;
                 margin-top: 20px;
                 padding: {
                     left: 50px;
@@ -349,7 +354,7 @@
         padding-right: 0;
     
         h2 {
-            font-size: 34px;
+            font-size: 32px;
             margin-bottom: 25px;
         }
     }
@@ -374,7 +379,7 @@
             margin-bottom: 15px;
         }
         .info {
-            font-size: 22px;
+            font-size: 24px;
             min-height: 86px;
 
             .socials {
@@ -406,7 +411,7 @@
             };
         }
         .info {
-            font-size: 26px;
+            font-size: 24px;
             min-height: 102px;
 
             .socials {

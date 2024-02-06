@@ -1,11 +1,11 @@
 .jobs-search-box {
     margin-bottom: 40px;
-    border-radius: 10px;
-    border: 1px solid #ebecf4;
+    border-radius: 8px;
+    border: 1px solid var(--borderColor);
     padding: 12px 12px 12px 30px;
 
     h3 {
-        font-size: 20px;
+        font-size: 24px;
     }
 }
 ::ng-deep {
@@ -16,8 +16,8 @@
             display: block;
 
             .mdc-text-field--filled {
-                border-radius: 10px;
-                background-color: #ebecf4;
+                border-radius: 8px;
+                background-color: #f8f8f8;
                 padding: {
                     left: 20px;
                     right: 20px;
@@ -28,7 +28,7 @@
                     .mat-mdc-floating-label {
                         color: var(--paragraphColor);
                         font: {
-                            size: 18px;
+                            size: 15px;
                             weight: 500;
                             family: var(--fontFamily);
                         };
@@ -36,7 +36,7 @@
                     .mdc-text-field__input {
                         color: var(--blackColor);
                         font: {
-                            size: 18px;
+                            size: 15px;
                             weight: 500;
                             family: var(--fontFamily);
                         };
@@ -88,19 +88,19 @@
     }
 }
 .job-box {
-    border-radius: 10px;
-    background-color: #e9ebf1;
-    padding: 30px 190px 30px 30px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    padding: 24px 190px 24px 24px;
 
     .sub-title {
-        font-size: 15px;
+        font-size: 14px;
         padding: 8px 20px;
-        border-radius: 8px;//updated-from-20-8;
+        border-radius: 4px;//updated-from-20-8;
         margin-bottom: 20px;
         background-color: var(--whiteColor);
     }
     h4 {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 7px;
     }
     .info {
@@ -133,10 +133,12 @@
         right: 30px;
         position: absolute;
         transform: translateY(-50%);
-        background-color: var(--tealBlueColor);
+        background-color: var(--themeColor);
+        padding-top: 13px;
+        padding-bottom: 13px;
 
         &:hover {
-            background-color: var(--primaryColor);
+            background-color: var(--themeColor);
         }
     }
 }
@@ -162,7 +164,7 @@
         padding: 20px;
     
         .sub-title {
-            font-size: 14px;
+            font-size: 13px;
             padding: 7px 20px;
             margin-bottom: 15px;
         }
@@ -207,7 +209,7 @@
             margin-bottom: 18px;
         }
         h4 {
-            font-size: 20px;
+            font-size: 18px;
         }
         .default-btn {
             right: 25px;
@@ -226,7 +228,7 @@
             margin-bottom: 18px;
         }
         h4 {
-            font-size: 22px;
+            font-size: 18px;
         }
         .info {
             li {
