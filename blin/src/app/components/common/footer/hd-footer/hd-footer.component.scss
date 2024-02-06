@@ -39,12 +39,12 @@
             margin-bottom: 14px;
 
             a {
-                color: var(--lightColor);
+                color: var(--extraLightColor);
                 font-weight: 400;
                 font-size: 12px;
 
                 &:hover {
-                    color: var(--lightColor);
+                    color: var(--extraLightColor);
                 }
             }
             &:last-child {
@@ -65,7 +65,7 @@
     };
     p {
         font-size: 12px;
-        color: var(--lightColor);
+        color: var(--extraLightColor);
 
         span {
             // color: var(--whiteColor);

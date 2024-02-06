@@ -10,7 +10,7 @@
         margin-bottom: 20px;
     }
     p {
-        color: var(--lightColor);
+        color: var(--extraLightColor);
         font-size: 12px;
     }
     .socials-link {
@@ -47,7 +47,7 @@
         margin-left: 35px;
     }
     .info {
-        color: var(--lightColor);
+        color: var(--extraLightColor);
         font-size: 14px;
         margin: {
             left: 35px;
@@ -157,11 +157,11 @@
 
                 a {
                     font-size: var(--fontSizeSmall);
-                    color: var(--lightColor);
+                    color: var(--extraLightColor);
                     font-weight: 500;
 
                     &:hover {
-                        color: var(--lightColor);
+                        color: var(--extraLightColor);
                     }
                 }
                 &:last-child {
@@ -180,7 +180,7 @@
     };
     p {
         font-size: 14px;
-        color: var(--lightColor);
+        color: var(--extraLightColor);
 
         span {
             color: var(--whiteColor);
@@ -189,7 +189,7 @@
             color: var(--whiteColor);
 
             &:hover {
-                color: var(--lightColor);
+                color: var(--extraLightColor);
             }
         }
     }

@@ -193,7 +193,7 @@
         width: 46px;
         height: 46px;
         line-height: 43px;
-        border-radius: 10px;
+        border-radius: 4px;
         color: var(--blackColor);
         transition: var(--transition);
 
@@ -275,15 +275,15 @@
 
     // Blog Item
     .blog-item {
-        border-radius: 10px;
+        border-radius: 4px;
         padding: 5px 5px 20px;
     
         .image {
             margin-bottom: 20px;
-            border-radius: 10px;
+            border-radius: 4px;
     
             img {
-                border-radius: 10px;
+                border-radius: 4px;
             }
         }
         .content {
@@ -317,7 +317,7 @@
     // Blogs List
     .blogs-list {
         padding: 0;
-        border-radius: 10px;
+        border-radius: 4px;
     
         .item {
             padding: 20px;
@@ -326,10 +326,10 @@
     
             .image {
                 padding-right: 0;
-                border-radius: 10px;
+                border-radius: 4px;
         
                 img {
-                    border-radius: 10px;
+                    border-radius: 4px;
                 }
             }
             .content {
