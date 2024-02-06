@@ -24,30 +24,30 @@
     background-color: var(--whiteColor);
 
     .icon {
-        width: 36px;
-        height: 36px;
+        width: 60px;
+        // height: 60px;
         position: relative;
         text-align: center;
-        border-radius: 4px;
+        // border-radius: 4px;
         margin-bottom: 24px;
-        background-color: var(--backgroundColor);
-        transition: var(--transition);
+        // background-color: var(--backgroundColor);
+        // transition: var(--transition);
 
-        svg {
-            width: 20px;
-            left: 0;
-            right: 0;
-            top: 50%;
-            position: absolute;
-            transform: translateY(-50%);
-            margin: {
-                left: auto;
-                right: auto;
-            };
-            path {
-                transition: var(--transition);
-            }
-        }
+        // svg {
+        //     width: 20px;
+        //     left: 0;
+        //     right: 0;
+        //     top: 50%;
+        //     position: absolute;
+        //     transform: translateY(-50%);
+        //     margin: {
+        //         left: auto;
+        //         right: auto;
+        //     };
+        //     path {
+        //         transition: var(--transition);
+        //     }
+        // }
     }
     h3 {
         font-size: 16px;
@@ -96,15 +96,15 @@
     &:hover {
         transform: translateY(-10px);
 
-        .icon {
-            background-color: var(--themeColor) !important;
+        // .icon {
+        //     background-color: var(--themeColor) !important;
 
-            svg {
-                path {
-                    fill: var(--whiteColor);
-                }
-            }
-        }
+        //     svg {
+        //         path {
+        //             fill: var(--whiteColor);
+        //         }
+        //     }
+        // }
     }
 }
 

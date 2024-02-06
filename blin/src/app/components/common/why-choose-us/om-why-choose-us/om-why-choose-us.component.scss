@@ -59,14 +59,14 @@
         }
     }
     .icon1 {
-        background-color: #b3d4c8;
+        background-color: #F6F3FF;
         border-radius: 50%;
         position: absolute;
         text-align: center;
-        height: 108px;
+        height: 60px;
         bottom: 105px;
         right: 181px;
-        width: 108px;
+        width: 60px;
 
         svg {
             left: 0;
@@ -82,12 +82,12 @@
     }
     .icon2 {
         transition: var(--transition);
-        background-color: #f09980;
+        background-color: #F6F3FF;
         border-radius: 50%;
         position: absolute;
         text-align: center;
-        height: 86px;
-        width: 86px;
+        height: 60px;
+        width: 60px;
         right: 62px;
         top: 0;
 
@@ -398,17 +398,17 @@
         }
         .icon1 {
             bottom: 177px;
-            height: 68px;
+            height: 60px;
             right: 40px;
-            width: 68px;
+            width: 60px;
 
             svg {
                 width: 40px;
             }
         }
         .icon2 {
-            height: 68px;
-            width: 68px;
+            height: 60px;
+            width: 60px;
             right: 15px;
         }
     }
@@ -459,14 +459,14 @@
         }
         .icon1 {
             right: 50px;
-            width: 85px;
-            height: 85px;
+            width: 60px;
+            height: 60px;
             bottom: 100px;
         }
         .icon2 {
             right: 50px;
-            width: 68px;
-            height: 68px;
+            width: 60px;
+            height: 60px;
         }
     }
 

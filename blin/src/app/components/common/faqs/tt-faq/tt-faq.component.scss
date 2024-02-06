@@ -7,46 +7,30 @@
     }
     .mat-accordion {
         .mat-expansion-panel {
+            box-shadow: unset;
             margin-bottom: 20px;
-            border-radius: 8px;
             color: var(--blackColor);
             background: var(--whiteColor);
             transition: var(--transition);
-            box-shadow: 0px 4px 40px 0px rgba(87, 84, 255, 0.08);
+            border-radius: 0 4px 4px 4px;
+            border: 2px solid var(--borderColor);
 
             .mat-expansion-panel-header {
+                padding: 20px 25px;
+                border-radius: 0;
                 display: block;
                 height: auto;
-                padding: {
-                    top: 24px;
-                    left: 30px;
-                    right: 45px;
-                    bottom: 24px;
-                };
             }
             .mat-expansion-panel-header-title {
                 display: block;
                 margin-right: 0;
-                position: relative;
                 color: var(--blackColor);
                 transition: var(--transition);
                 font: {
                     size: 17px;
                     weight: 500;
-                    family: var(--syneFontFamily);
+                    family: var(--poppinsFontFamily);
                 };
-                &::before {
-                    top: 50%;
-                    right: -20px;
-                    color: #8a8c9d;
-                    content: "\ea5f";
-                    position: absolute;
-                    transform: translateY(-50%);
-                    transition: var(--transition);
-                    font: {
-                        family: "tabler-icons";
-                    };
-                }
             }
             &:not(.mat-expanded) {
                 .mat-expansion-panel-header {
@@ -63,14 +47,7 @@
                 box-shadow: unset;
 
                 .mat-expansion-panel-header {
-                    background: #f8f8f8;
-                }
-                .mat-expansion-panel-header-title {
-                    color: var(--themeColor);
-
-                    &::before {
-                        transform: translateY(-50%) rotate(180deg);
-                    }
+                    background: #f9f9f9;
                 }
             }
             &:last-child {
@@ -91,8 +68,10 @@
                     display: block;
                 }
                 .mat-expansion-panel-body {
-                    padding: 20px 30px 15px 30px;
+                    padding: 17px 25px 22px;
+
                     p {
+                        //letter-spacing: 0.4px;
                         font-size: var(--fontSize);
                         color: var(--lightColor);
                     }
@@ -117,23 +96,13 @@
         }
         .mat-accordion {
             .mat-expansion-panel {
-                margin-bottom: 15px;
+                border-width: 1px;
     
                 .mat-expansion-panel-header {
-                    padding: {
-                        top: 14px;
-                        left: 15px;
-                        right: 30px;
-                        bottom: 14px;
-                    };
+                    padding: 15px;
                 }
                 .mat-expansion-panel-header-title {
-                    font-size: 15px;
-                    line-height: 1.5;
-                    
-                    &::before {
-                        right: -15px;
-                    }
+                    font-size: 16px;
                 }
             }
         }
@@ -143,7 +112,7 @@
             .mat-accordion {
                 .mat-expansion-panel {
                     .mat-expansion-panel-body {
-                        padding: 15px 0 5px 0;
+                        padding: 15px;
                     }
                 }
             }
@@ -172,19 +141,10 @@
         .mat-accordion {
             .mat-expansion-panel {
                 .mat-expansion-panel-header {
-                    padding: {
-                        top: 22px;
-                        left: 20px;
-                        right: 35px;
-                        bottom: 22px;
-                    };
+                    padding: 18px 20px;
                 }
                 .mat-expansion-panel-header-title {
                     font-size: 17px;
-
-                    &::before {
-                        right: -10px;
-                    }
                 }
             }
         }
@@ -194,7 +154,7 @@
             .mat-accordion {
                 .mat-expansion-panel {
                     .mat-expansion-panel-body {
-                        padding: 15px 20px 5px 20px;
+                        padding: 18px 20px;
                     }
                 }
             }
@@ -219,22 +179,11 @@
         }
         .mat-accordion {
             .mat-expansion-panel {
-                margin-bottom: 15px;
-    
                 .mat-expansion-panel-header {
-                    padding: {
-                        top: 18px;
-                        left: 25px;
-                        right: 40px;
-                        bottom: 18px;
-                    };
+                    padding: 20px;
                 }
                 .mat-expansion-panel-header-title {
                     font-size: 17px;
-
-                    &::before {
-                        right: -15px;
-                    }
                 }
             }
         }
@@ -244,7 +193,7 @@
             .mat-accordion {
                 .mat-expansion-panel {
                     .mat-expansion-panel-body {
-                        padding: 15px 25px 5px 25px;
+                        padding: 20px;
                     }
                 }
             }
@@ -261,32 +210,8 @@
 
     .faq-accordion {
         padding-right: 0;
-    
-        .mat-accordion {
-            .mat-expansion-panel {
-                .mat-expansion-panel-header {
-                    padding: {
-                        top: 20px;
-                        bottom: 20px;
-                    };
-                }
-                .mat-expansion-panel-header-title {
-                    font-size: 17px;
-                }
-            }
-        }
     }
-    ::ng-deep {
-        .faq-accordion {
-            .mat-accordion {
-                .mat-expansion-panel {
-                    .mat-expansion-panel-body {
-                        padding: 15px 30px 5px 30px;
-                    }
-                }
-            }
-        }
-    }
+
     .faq-image {
         padding-left: 30px;
     }
