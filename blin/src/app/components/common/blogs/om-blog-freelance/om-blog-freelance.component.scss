@@ -60,7 +60,7 @@
         }
     }
     &:hover {
-        border-color: var(--themeColor);
+        box-shadow: 5px 5px var(--borderColor);
 
         .image {
             img {
