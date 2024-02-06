@@ -16,7 +16,7 @@
         background: var(--backgroundColor);
     }
     .hd-section-title {
-        margin-bottom: 55px;
+        margin-bottom: 24px;
     }
 }
 .happier-customers-content {
@@ -57,14 +57,14 @@
             left: 8px;
             top: 186px;
             position: absolute;
-            border-radius: 10px;
+            border-radius: 4px;
             animation: movetopbounce 2s linear infinite;
         }
         &:nth-child(3) {
             right: -8px;
             bottom: 120px;
             position: absolute;
-            border-radius: 10px;
+            border-radius: 4px;
             animation: movebottombounce 2s linear infinite;
         }
     }
@@ -95,7 +95,7 @@
             right: 20px;
         };
         &::before {
-            border-radius: 10px;
+            border-radius: 4px;
             margin-bottom: 30px;
         }
         .hd-section-title {

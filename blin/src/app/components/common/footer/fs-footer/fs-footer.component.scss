@@ -5,7 +5,7 @@
         margin-bottom: 20px;
     }
     p {
-        color: var(--lightColor);
+        color: var(--extraLightColor);
         font-size: 12px;
     }
     .socials-link {
@@ -36,11 +36,11 @@
 
             a {
                 font-size: var(--fontSizeSmall);
-                color: var(--lightColor);
+                color: var(--extraLightColor);
                 font-weight: 500;
 
                 &:hover {
-                    color: var(--lightColor);
+                    color: var(--extraLightColor);
                 }
             }
             &:last-child {

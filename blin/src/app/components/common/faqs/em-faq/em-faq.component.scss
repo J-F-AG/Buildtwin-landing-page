@@ -118,6 +118,10 @@
                 }
                 .mat-expansion-panel-body {
                     padding: 20px 30px 15px 30px;
+                    p {
+                        font-size: var(--fontSize);
+                    color: var(--lightColor);
+                    }
                 }
             }
         }
@@ -145,7 +149,7 @@
             };
             img {
                 &:nth-child(1) {
-                    border-radius: 10px;
+                    border-radius: 4px;
                 }
                 &:nth-child(2) {
                     display: none;
@@ -236,7 +240,7 @@
                     };
                 }
                 .mat-expansion-panel-header-title {
-                    font-size: 16px;
+                    font-size: 17px;
 
                     &::before {
                         right: -10px;

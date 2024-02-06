@@ -27,7 +27,7 @@
 ::ng-deep {
     .task-management-tabs {
         .mat-mdc-tab-label-container {
-            border-radius: 8px;
+            border-radius: 70px;
             margin-bottom: 50px;
             border: 1px solid var(--borderColor);
             background-color: var(--whiteColor);
@@ -124,7 +124,7 @@
             right: 20px;
         };
         &::before {
-            border-radius: 10px;
+            border-radius: 4px;
             margin-bottom: 60px;
         }
         .shape {
@@ -186,7 +186,7 @@
                 margin-top: 25px;
     
                 img {
-                    border-radius: 10px;
+                    border-radius: 4px;
                 }
             }
         }

@@ -37,7 +37,7 @@
             display: block;
 
             .mdc-text-field--filled {
-                border-radius: 10px;
+                border-radius: 4px;
                 background-color: var(--whiteColor);
                 padding: {
                     left: 30px;
@@ -93,7 +93,7 @@
             height: auto;
             min-width: unset;
             position: absolute;
-            border-radius: 10px;
+            border-radius: 4px;
             display: inline-block;
             padding: 11px 30px 12px;
             color: var(--whiteColor) !important;
@@ -104,14 +104,14 @@
                 family: var(--syneFontFamily);
             };
             .mdc-button__ripple {
-                border-radius: 10px;
+                border-radius: 4px;
             }
             .mat-mdc-button-touch-target {
                 height: 100%;
-                border-radius: 10px;
+                border-radius: 4px;
             }
             .mat-mdc-focus-indicator {
-                border-radius: 10px;
+                border-radius: 4px;
             }
         }
     }
@@ -131,7 +131,7 @@
         top: 57.8%;
         right: 58px;
         position: absolute;
-        border-radius: 10px;
+        border-radius: 4px;
         padding: 40px 35px 40px 120px;
         background-color: var(--whiteColor);
         animation: movetopbounce 2s linear infinite;

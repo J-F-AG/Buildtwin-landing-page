@@ -53,6 +53,7 @@ $blin-theme: mat.define-light-theme((
     --themeColorOpposite: #fff;
     --blackColor: #0e0e28;
     --lightColor: #808080;
+    --extraLightColor: #D0D0D0;
     --whiteColor: #ffffff;
     --borderColor: #ececec;
     --backgroundColor: #f9f9f9;
@@ -288,6 +289,10 @@ img {
             display: block;
             font-size: 60px;
             line-height: 1.2;
+            &.jeffStyle {
+                display: inline;
+                font-size: 1.2em;
+            }
         }
 
         i {
@@ -314,6 +319,10 @@ img {
             display: block;
             font-size: 60px;
             line-height: 1.2;
+            &.jeffStyle {
+                display: inline;
+                font-size: 1.2em;
+            }
         }
 
         i {
@@ -341,6 +350,10 @@ img {
             display: block;
             font-size: 60px;
             line-height: 1.2;
+            &.jeffStyle {
+                display: inline;
+                font-size: 1.2em;
+            }
         }
 
         i {
@@ -367,6 +380,10 @@ img {
             display: block;
             font-size: 60px;
             line-height: 1.2;
+            &.jeffStyle {
+                display: inline;
+                font-size: 1.2em;
+            }
         }
 
         i {
@@ -394,6 +411,10 @@ img {
             display: block;
             font-size: 60px;
             line-height: 1.2;
+            &.jeffStyle {
+                display: inline;
+                font-size: 1.2em;
+            }
         }
 
         i {
