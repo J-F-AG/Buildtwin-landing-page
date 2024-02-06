@@ -464,7 +464,8 @@ img {
 // Page Title Area
 .page-title-area {
     // background: linear-gradient(134deg, #F4F3FB 0%, #D4D4F3 100%);
-    background-color: var(--backgroundColor);
+    // background-color: var(--backgroundColor);
+    background: var(--backgroundColor) url(assets/images/bgLeft-MNJKEAAO.png) 0 0 repeat;
     padding: {
         top: 230px;
         bottom: 118px;
