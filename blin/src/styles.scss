@@ -258,8 +258,12 @@ img {
         padding: 13px 30.1px;
         transition: var(--transition);
         color: var(--whiteColor) !important;
-        background-color: var(--themeColor);
         line-height: 1.29;
+        font-family: var(--poppinsFontFamily);
+        background-color: var(--themeColor);
+        margin-top: 10px;
+        padding-top: 13px;
+        padding-bottom: 13px;
         font: {
             family: var(--syneFontFamily);
             weight: 500;
