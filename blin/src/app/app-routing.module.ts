@@ -31,11 +31,11 @@ import { EnterprisePageComponent } from './components/pages/enterprise-page/ente
 
 const routes: Routes = [
     {path: '', component: HelpDeskHomeComponent},
-    {path: 'e-mail-marketing', component: EmailMarketingHomeComponent},
-    {path: 'time-tracking', component: TimeTrackingHomeComponent},
+    {path: 'good-reason', component: EmailMarketingHomeComponent},
+    {path: 'marketplace', component: TimeTrackingHomeComponent},
     {path: 'online-meeting', component: OnlineMeetingHomeComponent},
     {path: 'help-desk', component: HelpDeskHomeComponent},
-    {path: 'fintech-saas', component: FintechSaasHomeComponent},
+    {path: 'training', component: FintechSaasHomeComponent},
     {path: 'about', component: AboutPageComponent},
     {path: 'team', component: TeamPageComponent},
     {path: 'careers', component: CareersPageComponent},
@@ -51,14 +51,14 @@ const routes: Routes = [
     {path: 'login', component: LoginPageComponent},
     {path: 'register', component: RegisterPageComponent},
     {path: 'forgot-password', component: ForgotPasswordPageComponent},
-    {path: 'blog', component: BlogPageComponent},
+    {path: 'use-cases', component: BlogPageComponent},
     {path: 'blog-details', component: BlogDetailsPageComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
     {path: 'contact', component: ContactPageComponent},
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
     {path: 'technical-team', component: OnlineMeetingHomeComponent},
-    {path: 'freelancer-new', component: OnlineMeetingHomeFreelanceComponent},
+    {path: 'freelancer', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
 
 
