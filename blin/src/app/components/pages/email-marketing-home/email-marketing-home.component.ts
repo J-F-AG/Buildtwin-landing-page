@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class EmailMarketingHomeComponent {
 
-    title = 'Blin - Angular 17 Material Design SaaS Startup Template';
+    title = 'BuildTwin - good reasons';
  
     constructor(private titleService:Title) {}
     

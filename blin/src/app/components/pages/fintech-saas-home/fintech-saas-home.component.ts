@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class FintechSaasHomeComponent {
 
-    title = 'Fintech SaaS Home - Blin';
+    title = 'BuildTwin - Online Professional Courses for Engineers';
  
     constructor(private titleService:Title) {}
     

@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class OnlineMeetingHomeFreelanceComponent {
 
-    title = 'Online Meeting Home - Blin';
+    title = 'BuildTwin - Software for Freelancer / small Teams';
  
     constructor(private titleService:Title) {}
     
