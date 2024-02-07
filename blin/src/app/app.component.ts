@@ -18,7 +18,7 @@ declare let $: any;
 })
 export class AppComponent {
 
-    title = 'Blin - Angular 17 Material Design SaaS Startup Template';
+    title = 'BuildTwin - the hub for engineering AI software, projects and training';
     
     location: any;
     routerSubscription: any;

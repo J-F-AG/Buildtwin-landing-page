@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class BlogDetailsPageComponent {
 
-    title = 'Blin sweeps up at the G2 2024 Winter leader awards - Blin';
+    title = 'Buildtwin sweeps up at the G2 2024 Winter leader awards - Buildtwin';
  
     constructor(private titleService:Title) {}
     

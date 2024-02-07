@@ -10,7 +10,7 @@ export class RegisterPageComponent {
 
     hide = true;
 
-    title = 'Register - Blin';
+    title = 'Register - Buildtwin';
  
     constructor(private titleService:Title) {}
     

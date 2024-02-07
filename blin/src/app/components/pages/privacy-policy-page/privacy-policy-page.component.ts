@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class PrivacyPolicyPageComponent {
 
-    title = 'Privacy Policy - Blin';
+    title = 'Privacy Policy - Buildtwin';
  
     constructor(private titleService:Title) {}
     

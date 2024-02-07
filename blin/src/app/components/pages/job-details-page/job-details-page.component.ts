@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class JobDetailsPageComponent {
 
-    title = 'Senior DevOps Engineer - Blin';
+    title = 'Senior DevOps Engineer - Buildtwin';
  
     constructor(private titleService:Title) {}
     
