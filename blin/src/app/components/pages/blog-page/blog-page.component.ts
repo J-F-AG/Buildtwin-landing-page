@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class BlogPageComponent {
 
-    title = 'Blog - Blin';
+    title = 'BuildTwin - use cases';
  
     constructor(private titleService:Title) {}
     

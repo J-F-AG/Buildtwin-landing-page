@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class TimeTrackingHomeComponent {
 
-    title = 'Time Tracking Home - Blin';
+    title = 'BuildTwin - Marketplace for global engineering projects';
  
     constructor(private titleService:Title) {}
     

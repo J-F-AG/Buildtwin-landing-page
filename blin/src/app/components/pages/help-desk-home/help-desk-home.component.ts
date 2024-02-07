@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class HelpDeskHomeComponent {
 
-    title = 'Help Desk Home - Blin';
+    title = 'BuildTwin - the hub for engineering AI software, projects and training';
  
     constructor(private titleService:Title) {}
     
