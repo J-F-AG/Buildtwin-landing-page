@@ -26,17 +26,20 @@
 }
 ::ng-deep {
     .task-management-tabs {
+        max-width: 800px;
+        margin: 0 auto;
         .mat-mdc-tab-label-container {
             border-radius: 70px;
             margin-bottom: 50px;
             border: 1px solid var(--borderColor);
             background-color: var(--whiteColor);
+            padding: 4px;
         }
         .mdc-tab-indicator {
             display: none;
         }
         .mdc-tab {
-            padding: 24px 15px;
+            padding: 12px 15px;
 
             &:not(.mdc-tab--stacked) {
                 height: auto;
@@ -46,18 +49,45 @@
             .mdc-tab__text-label {
                 color: #949494;
                 font: {
-                    size: 16px;
-                    weight: 600;
+                    size: 15px;
+                    weight: 500;
                     family: var(--mulishFontFamily);
                 };
             }
-            &.mdc-tab--active {
-                .mdc-tab__text-label {
-                    color: var(--blackColor);
+            .mdc-tab__ripple {
+                &:before {
+                    border-radius: 4px;
                 }
-                &:focus {
+            }
+            .mat-mdc-tab-ripple {
+                border-radius: 4px;
+            }
+            &:first-child {
+                .mat-mdc-tab-ripple,
+                .mdc-tab__ripple:before {
+                    border-radius: 20px 4px 4px 20px;
+                }
+            }
+            &:last-child {
+                .mat-mdc-tab-ripple,
+                .mdc-tab__ripple:before {
+                    border-radius: 4px 20px 20px 4px;
+                }
+            }
+            &.mdc-tab--active {
+                .mat-mdc-tab-ripple {
+                    background-color: var(--themeColor);
+                }
+                .mdc-tab__text-label {
+                    color: var(--whiteColor);
+                }
+                &:focus,
+                &:hover {
+                    .mat-mdc-tab-ripple {
+                        background-color: var(--themeColor);
+                    }
                     .mdc-tab__text-label {
-                        color: var(--blackColor);
+                        color: var(--whiteColor);
                     }
                 }
             }
@@ -84,14 +114,14 @@
             --mat-tab-header-active-hover-indicator-color: var(--primaryColor);
         }
         .content {
-            margin-top: 50px;
-            
+            text-align: center;
+            padding-bottom: 35px;
             h3 {
-                font-size: 20px;
-                margin-bottom: 13px;
+                font-size: 24px;
+                margin-bottom: 10px;
             }
             p {
-                max-width: 400px;
+                color: var(--lightColor);
             }
             .default-btn {
                 margin-top: 9px;
@@ -105,7 +135,8 @@
             }
         }
         .image {
-            padding-left: 26px;
+            max-width: 675px;
+            margin: 0 auto;
 
             img {
                 border-radius: 8px;//updated-from-20-8;
@@ -360,7 +391,7 @@
     ::ng-deep {
         .task-management-tabs {
             .image {
-                padding-left: 15px;
+                // padding-left: 15px;
             }
         }
     }

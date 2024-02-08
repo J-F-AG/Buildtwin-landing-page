@@ -57,8 +57,7 @@ const routes: Routes = [
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
     {path: 'contact', component: ContactPageComponent},
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
-    {path: 'technical-team', component: OnlineMeetingHomeComponent},
-    {path: 'freelancer', component: OnlineMeetingHomeFreelanceComponent},
+    {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
 
 
