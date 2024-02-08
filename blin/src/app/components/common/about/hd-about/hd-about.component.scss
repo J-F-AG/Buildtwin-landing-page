@@ -33,6 +33,7 @@
     }
 }
 .about-image {
+    margin: 0 -130px 0 -80px;
     .main-image {
         display: none;
     }
@@ -132,7 +133,7 @@
         }
     }
     .about-image {
-        margin-top: 25px;
+        margin: 25px 0 0;
 
         .main-image {
             display: inline-block;
@@ -183,7 +184,7 @@
         }
     }
     .about-image {
-        margin-top: 25px;
+        margin: 25px 0 0;
 
         .main-image {
             display: inline-block;
@@ -227,6 +228,7 @@
         }
     }
     .about-image {
+        margin: 0;
         .main-image {
             display: inline-block;
         }
@@ -266,6 +268,7 @@
         }
     }
     .about-image {
+        margin: 0;
         .main-image {
             display: inline-block;
         }
