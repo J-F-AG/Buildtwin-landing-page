@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class ServiceDetailsPageComponent {
 
-    title = 'Service Details - Blin';
+    title = 'Service Details - Buildtwin';
  
     constructor(private titleService:Title) {}
     

@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class ForgotPasswordPageComponent {
 
-    title = 'Forgot Password - Blin';
+    title = 'Forgot Password - Buildtwin';
  
     constructor(private titleService:Title) {}
     

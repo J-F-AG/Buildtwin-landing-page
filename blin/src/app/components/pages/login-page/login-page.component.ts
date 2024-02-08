@@ -10,7 +10,7 @@ export class LoginPageComponent {
 
     hide = true;
 
-    title = 'Login - Blin';
+    title = 'Login - Buildtwin';
  
     constructor(private titleService:Title) {}
     
