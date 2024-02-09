@@ -47,7 +47,7 @@
         }
         .mat-mdc-tab {
             .mdc-tab__text-label {
-                color: #949494;
+                color: var(--lightColor);
                 font: {
                     size: 15px;
                     weight: 500;

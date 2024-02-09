@@ -1,3 +1,10 @@
+.serviceRow {
+    display: flex;
+    > div {
+        margin-bottom: 25px;
+    }
+}
+
 .services-area {
     padding: {
         top: 115px;
@@ -12,11 +19,11 @@
 }
 .service-box {
     padding: 9px;
-    margin-bottom: 25px;
     border-radius: 8px;
     transition: var(--transition);
     border: 2px solid var(--borderColor);
     background-color: var(--whiteColor);
+    height: 100%;
 
     img {
         border-radius: 8px;
@@ -40,6 +47,9 @@
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
+    .serviceRow {
+        display: block;
+    }
 
     .services-area {
         background-image: unset !important;

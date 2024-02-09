@@ -1,24 +1,11 @@
-.title {
-    margin-bottom: 50px;
-    font-size: 32px;
-    line-height: 1.4;
+.mb-25 {
+    margin-bottom: 25px;
 }
-.partners-slider {
-    overflow: hidden;
-    height: 36px;
-
-    .slider {
-        top: 0;
-        position: absolute;
-        white-space: nowrap;
-
-        img {
-            margin-right: 165px;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+.title {
+    margin-bottom: 25px;
+    h2 {
+        font-size: 32px;
+        line-height: 1.2;
     }
 }
 
@@ -26,17 +13,9 @@
 @media only screen and (max-width : 767px) {
 
     .title {
-        margin-bottom: 30px;
-        font-size: 20px;
-    }
-    .partners-slider {
-        height: 35px;
-    
-        .slider {
-            img {
-                margin-right: 40px;
-            }
-        }
+        font-size: 16px;
+        line-height: 1.4;
+        margin-bottom: 25px;
     }
 
 }
@@ -48,15 +27,8 @@
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
     .title {
-        margin-bottom: 40px;
-        font-size: 23px;
-    }
-    .partners-slider {
-        .slider {
-            img {
-                margin-right: 60px;
-            }
-        }
+        font-size: 17px;
+        margin-bottom: 30px;
     }
 
 }
@@ -65,15 +37,7 @@
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
     .title {
-        margin-bottom: 40px;
-        font-size: 25px;
-    }
-    .partners-slider {
-        .slider {
-            img {
-                margin-right: 65px;
-            }
-        }
+        margin-bottom: 35px;
     }
 
 }
@@ -81,25 +45,11 @@
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
-    .partners-slider {
-        .slider {
-            img {
-                margin-right: 85px;
-            }
-        }
+    .title {
+        margin-bottom: 40px;
     }
 
 }
 
 /* Min width 1400px to Max width 1699px */
-@media only screen and (min-width: 1400px) and (max-width: 1699px) {
-
-    .partners-slider {
-        .slider {
-            img {
-                margin-right: 125px;
-            }
-        }
-    }
-
-}
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {}

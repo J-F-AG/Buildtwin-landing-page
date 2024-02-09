@@ -81,11 +81,12 @@
         };
         img {
             &:nth-child(1) {
-                border-radius: 4px;
-                border: 7px solid var(--whiteColor);
+                border-radius: 8px;
                 box-shadow: 0px 4px 44px 0px rgba(137, 123, 163, 0.20);
             }
             &:nth-child(2) {
+                border: 1px solid var(--borderColor);
+                border-radius: 8px;
                 top: 50%;
                 left: -100px;
                 margin-top: 20px;

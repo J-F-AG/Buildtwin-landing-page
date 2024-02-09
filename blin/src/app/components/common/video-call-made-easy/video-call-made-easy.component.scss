@@ -35,6 +35,9 @@
             };
         }
     }
+    h2 + p {
+        font-size: 17px;
+    }
 }
 ::ng-deep {
     .task-management-tabs {
@@ -43,12 +46,13 @@
             margin-bottom: 50px;
             border: 2px solid var(--borderColor);
             background-color: var(--whiteColor);
+            padding: 4px;
         }
         .mdc-tab-indicator {
             display: none;
         }
         .mdc-tab {
-            padding: 24px 15px;
+            padding: 12px 15px;
 
             &:not(.mdc-tab--stacked) {
                 height: auto;
@@ -56,20 +60,47 @@
         }
         .mat-mdc-tab {
             .mdc-tab__text-label {
-                color: #949494;
+                color: var(--lightColor);
                 font: {
-                    size: 16px;
-                    weight: 600;
+                    size: 15px;
+                    weight: 500;
                     family: var(--mulishFontFamily);
                 };
             }
-            &.mdc-tab--active {
-                .mdc-tab__text-label {
-                    color: var(--blackColor);
+            .mdc-tab__ripple {
+                &:before {
+                    border-radius: 4px;
                 }
-                &:focus {
+            }
+            .mat-mdc-tab-ripple {
+                border-radius: 4px;
+            }
+            &:first-child {
+                .mat-mdc-tab-ripple,
+                .mdc-tab__ripple:before {
+                    border-radius: 20px 4px 4px 20px;
+                }
+            }
+            &:last-child {
+                .mat-mdc-tab-ripple,
+                .mdc-tab__ripple:before {
+                    border-radius: 4px 20px 20px 4px;
+                }
+            }
+            &.mdc-tab--active {
+                .mat-mdc-tab-ripple {
+                    background-color: var(--themeColor);
+                }
+                .mdc-tab__text-label {
+                    color: var(--whiteColor);
+                }
+                &:focus,
+                &:hover {
+                    .mat-mdc-tab-ripple {
+                        background-color: var(--themeColor);
+                    }
                     .mdc-tab__text-label {
-                        color: var(--blackColor);
+                        color: var(--whiteColor);
                     }
                 }
             }
@@ -109,10 +140,11 @@
             max-width: 880px;
             
             h3 {
-                font-size: 20px;
+                font-size: 24px;
                 margin-bottom: 13px;
             }
             p {
+                font-size: 17px;
                 max-width: 560px;
                 margin-bottom: 0;
             }

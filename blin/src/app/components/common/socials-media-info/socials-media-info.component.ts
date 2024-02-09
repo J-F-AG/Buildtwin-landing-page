@@ -13,7 +13,6 @@ export class SocialsMediaInfoComponent {
 		margin: 25,
 		loop: true,
 		dots: false,
-        center: true,
 		autoplay: true,
 		autoplayHoverPause: true,
 		navText: [

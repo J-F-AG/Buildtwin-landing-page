@@ -58,7 +58,7 @@
 }
 :host ::ng-deep .owl-theme .owl-nav [class*=owl-]:hover {
     opacity: .92;
-    background-color: var(--primaryColor) ;
+    background-color: var(--themeColor) ;
     &::before{
         color: var(--whiteColor);
     }

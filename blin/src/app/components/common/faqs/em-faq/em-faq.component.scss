@@ -12,12 +12,12 @@
     .image {
         margin-top: 48px;
         padding: {
-            right: 128px;
+            right: 0;
             bottom: 60px;
         };
         img {
             &:nth-child(1) {
-                border-radius: 15px;
+                border-radius: 8px;
             }
             &:nth-child(2) {
                 bottom: 0;
@@ -306,7 +306,7 @@
         .image {
             margin-top: 40px;
             padding: {
-                right: 40px;
+                right: 0;
                 bottom: 40px;
             };
             img {

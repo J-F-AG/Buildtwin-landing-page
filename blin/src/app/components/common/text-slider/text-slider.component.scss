@@ -1,15 +1,16 @@
 .text-slider-area {
     overflow: hidden;
-    height: 92px;
+    height: 110px;
 
     .slider {
         white-space: nowrap;
         position: absolute;
-        top: 0;
+        top: 20px;
 
         div {
             letter-spacing: -1px;
             color: #f8f8f8;
+            -webkit-text-stroke: 1px var(--themeColor);
             line-height: 1.2;
             margin: {
                 right: 20px;
@@ -19,10 +20,6 @@
                 size: 110px;
                 weight: 900;
             };
-            &:nth-child(2) {
-                color: transparent;
-                -webkit-text-stroke: 1px var(--themeColor);
-            }
             &:last-child {
                 margin-right: 0;
             }

@@ -1,5 +1,7 @@
 .about-content {
     max-width: 638px;
+    position: relative;
+    z-index: 3;
 
     h2 {
         font-size: 32px;
@@ -33,7 +35,7 @@
     }
 }
 .about-image {
-    margin: 0 -130px 0 -80px;
+    margin: 0 -70px 0 -140px;
     .main-image {
         display: none;
     }
