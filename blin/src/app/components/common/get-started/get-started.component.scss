@@ -1,22 +1,25 @@
 .get-started-inner {
     border-radius: 8px;
     padding: 55px 100px;
-    background-color: var(--backgroundColor);
+    background: linear-gradient(90deg, rgba(136, 109, 224, 0) 28.47%, #886DE0 74.34%);
+    background-image: url(../../../../assets/images/cta-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
 
     .get-started-content {
         h2 {
             max-width: 580px;
             font-size: 32px;
-            line-height: 1.7;
-            margin: {
-                top: -15px;
-                bottom: 15px;
-            };
-            span {
-                display: block;
-                font-size: 60px;
-                line-height: 1.2;
-            }
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        h2 + span {
+            font-size: 17px;
+            display: block;
+            margin-bottom: 10px;
         }
         .default-btn {
             margin-top: 20px;
@@ -141,16 +144,5 @@
 
 /* Min width 1400px to Max width 1699px */
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {
-
-    .get-started-inner {
-        .get-started-content {
-            h2 {
-                font-size: 32px;
-            }
-        }
-        .get-started-image {
-            padding-left: 40px;
-        }
-    }
 
 }

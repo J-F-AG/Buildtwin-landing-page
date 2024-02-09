@@ -1,5 +1,5 @@
 .footer-area {
-    background-color: #160e0b;
+    background-color: var(--blackColor);
     padding-top: 100px;
 }
 .single-footer-widget {
@@ -9,7 +9,7 @@
         margin-bottom: 20px;
     }
     p {
-        color: var(--paragraphColor);
+        color: var(--whiteColor);
         font-size: 12px;
     }
     .socials-link {

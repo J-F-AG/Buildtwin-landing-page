@@ -1,13 +1,3 @@
-.list-hd-price {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 0;
-    .numberList {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-}
 .pricing-area {
     &::before {
         top: 0;
@@ -31,10 +21,16 @@
             line-height: 1.7;
             max-width: 610px;
         }
+
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
         p {
-            line-height: 1.4;
-            max-width: 580px;
+            line-height: 1.6;
             margin-top: 0;
+            margin-bottom: 6px;
         }
     }
 }

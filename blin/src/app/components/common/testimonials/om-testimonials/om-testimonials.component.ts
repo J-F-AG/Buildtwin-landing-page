@@ -28,13 +28,13 @@ export class OmTestimonialsComponent {
 				items: 1
 			},
 			768: {
-				items: 2
+				items: 3
 			},
 			1400: {
 				items: 3
 			},
 			1905: {
-				items: 4
+				items: 3
 			}
 		}
     }

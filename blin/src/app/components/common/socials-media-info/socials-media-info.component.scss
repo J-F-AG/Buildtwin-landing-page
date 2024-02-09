@@ -27,7 +27,7 @@
     }
 }
 .info-box {
-    padding: 24px;
+    padding: 20px;
     border-radius: 8px;//updated-from-20-8;
     background: var(--whiteColor);
     border: 1px solid var(--borderColor);
@@ -124,7 +124,7 @@
 }
 :host ::ng-deep .owl-theme .owl-nav [class*=owl-]:hover {
     opacity: .92;
-    background-color: var(--primaryColor) ;
+    background-color: var(--themeColor) ;
     &::before{
         color: var(--whiteColor);
     }

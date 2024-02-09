@@ -1,5 +1,7 @@
 .about-content {
     max-width: 638px;
+    position: relative;
+    z-index: 3;
 
     h2 {
         font-size: 32px;
@@ -33,6 +35,7 @@
     }
 }
 .about-image {
+    margin: 0 -70px 0 -140px;
     .main-image {
         display: none;
     }
@@ -132,7 +135,7 @@
         }
     }
     .about-image {
-        margin-top: 25px;
+        margin: 25px 0 0;
 
         .main-image {
             display: inline-block;
@@ -183,7 +186,7 @@
         }
     }
     .about-image {
-        margin-top: 25px;
+        margin: 25px 0 0;
 
         .main-image {
             display: inline-block;
@@ -227,6 +230,7 @@
         }
     }
     .about-image {
+        margin: 0;
         .main-image {
             display: inline-block;
         }
@@ -266,6 +270,7 @@
         }
     }
     .about-image {
+        margin: 0;
         .main-image {
             display: inline-block;
         }

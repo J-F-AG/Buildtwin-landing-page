@@ -132,12 +132,17 @@ a {
     line-height: 1;
 }
 
-.numberList {
-    color: var(--themeColor);
+.checkList {
+    background-color: var(--themeColor);
+    color: var(--whiteColor);
+    border-radius: 50%;
     font-style: normal;
     display: inline-block;
-    vertical-align: top;
+    font-size: 14px;
     width: 15px;
+    height: 15px;
+    text-align: center;
+    margin-right: 8px;
 }
 
 :focus {

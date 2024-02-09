@@ -1,20 +1,24 @@
+.happier-customers-area {
+    background: var(--backgroundColor);
+}
+
 .happier-customers-inner {
-    padding: {
-        left: 210px;
-        right: 210px;
-    };
-    &::before {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        z-index: -1;
-        position: absolute;
-        border-radius: 8px;//updated-from-20-8;
-        margin-bottom: 31px;
-        background: var(--backgroundColor);
-    }
+    // padding: {
+    //     left: 210px;
+    //     right: 210px;
+    // };
+    // &::before {
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     content: '';
+    //     z-index: -1;
+    //     position: absolute;
+    //     border-radius: 8px;//updated-from-20-8;
+    //     margin-bottom: 31px;
+    //     background: var(--backgroundColor);
+    // }
     .hd-section-title {
         margin-bottom: 24px;
     }
@@ -24,7 +28,7 @@
 
     ul {
         li {
-            font-size: 12px;
+            font-size: 13px;
             border-radius: 30px;
             padding: 8px 42px 8px 16px;
             background-color: var(--whiteColor);
@@ -47,57 +51,60 @@
     }
 }
 .happier-customers-image {
-    max-width: 1070px;
-
     img {
-        &:nth-child(1) {
-            margin-bottom: -5px;
-        }
-        &:nth-child(2) {
-            left: 8px;
-            top: 186px;
-            position: absolute;
-            border-radius: 4px;
-            animation: movetopbounce 2s linear infinite;
-        }
-        &:nth-child(3) {
-            right: -8px;
-            bottom: 120px;
-            position: absolute;
-            border-radius: 4px;
-            animation: movebottombounce 2s linear infinite;
-        }
+        border-radius: 8px;
     }
-    &::before {
-        left: 0;
-        right: 0;
-        top: 78px;
-        content: '';
-        z-index: -1;
-        width: 514px;
-        height: 514px;
-        position: absolute;
-        border-radius: 50%;
-        background-color: var(--themeColor);
-        margin: {
-            left: auto;
-            right: auto;
-        };
-    }
+    // max-width: 1070px;
+
+    // img {
+    //     &:nth-child(1) {
+    //         margin-bottom: -5px;
+    //     }
+    //     &:nth-child(2) {
+    //         left: 8px;
+    //         top: 186px;
+    //         position: absolute;
+    //         border-radius: 4px;
+    //         animation: movetopbounce 2s linear infinite;
+    //     }
+    //     &:nth-child(3) {
+    //         right: -8px;
+    //         bottom: 120px;
+    //         position: absolute;
+    //         border-radius: 4px;
+    //         animation: movebottombounce 2s linear infinite;
+    //     }
+    // }
+    // &::before {
+    //     left: 0;
+    //     right: 0;
+    //     top: 78px;
+    //     content: '';
+    //     z-index: -1;
+    //     width: 514px;
+    //     height: 514px;
+    //     position: absolute;
+    //     border-radius: 50%;
+    //     background-color: var(--themeColor);
+    //     margin: {
+    //         left: auto;
+    //         right: auto;
+    //     };
+    // }
 }
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
     .happier-customers-inner {
-        padding: {
-            left: 20px;
-            right: 20px;
-        };
-        &::before {
-            border-radius: 4px;
-            margin-bottom: 30px;
-        }
+        // padding: {
+        //     left: 20px;
+        //     right: 20px;
+        // };
+        // &::before {
+        //     border-radius: 4px;
+        //     margin-bottom: 30px;
+        // }
         .hd-section-title {
             margin-bottom: 30px;
         }
@@ -119,21 +126,21 @@
             }
         }
     }
-    .happier-customers-image {
-        max-width: 100%;
+    // .happier-customers-image {
+    //     max-width: 100%;
     
-        img {
-            &:nth-child(2) {
-                display: none;
-            }
-            &:nth-child(3) {
-                display: none;
-            }
-        }
-        &::before {
-            display: none;
-        }
-    }
+    //     img {
+    //         &:nth-child(2) {
+    //             display: none;
+    //         }
+    //         &:nth-child(3) {
+    //             display: none;
+    //         }
+    //     }
+    //     &::before {
+    //         display: none;
+    //     }
+    // }
 
 }
 
@@ -144,10 +151,10 @@
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
     .happier-customers-inner {
-        padding: {
-            left: 50px;
-            right: 50px;
-        };
+        // padding: {
+        //     left: 50px;
+        //     right: 50px;
+        // };
         .hd-section-title {
             margin-bottom: 35px;
         }
@@ -168,19 +175,19 @@
             }
         }
     }
-    .happier-customers-image {
-        max-width: 100%;
+    // .happier-customers-image {
+    //     max-width: 100%;
     
-        img {
-            &:nth-child(2) {
-                width: 200px;
-                left: 0;
-            }
-            &:nth-child(3) {
-                width: 200px;
-            }
-        }
-    }
+    //     img {
+    //         &:nth-child(2) {
+    //             width: 200px;
+    //             left: 0;
+    //         }
+    //         &:nth-child(3) {
+    //             width: 200px;
+    //         }
+    //     }
+    // }
 
 }
 
@@ -188,10 +195,10 @@
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
     .happier-customers-inner {
-        padding: {
-            left: 50px;
-            right: 50px;
-        };
+        // padding: {
+        //     left: 50px;
+        //     right: 50px;
+        // };
         .hd-section-title {
             margin-bottom: 40px;
         }
@@ -207,18 +214,18 @@
             }
         }
     }
-    .happier-customers-image {
-        max-width: 100%;
+    // .happier-customers-image {
+    //     max-width: 100%;
     
-        img {
-            &:nth-child(2) {
-                width: 250px;
-            }
-            &:nth-child(3) {
-                width: 250px;
-            }
-        }
-    }
+    //     img {
+    //         &:nth-child(2) {
+    //             width: 250px;
+    //         }
+    //         &:nth-child(3) {
+    //             width: 250px;
+    //         }
+    //     }
+    // }
 
 }
 
@@ -226,10 +233,10 @@
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
 
     .happier-customers-inner {
-        padding: {
-            left: 70px;
-            right: 70px;
-        };
+        // padding: {
+        //     left: 70px;
+        //     right: 70px;
+        // };
         .hd-section-title {
             margin-bottom: 50px;
         }
@@ -251,11 +258,11 @@
 /* Min width 1400px to Max width 1699px */
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {
 
-    .happier-customers-inner {
-        padding: {
-            left: 110px;
-            right: 110px;
-        };
-    }
+    // .happier-customers-inner {
+    //     padding: {
+    //         left: 110px;
+    //         right: 110px;
+    //     };
+    // }
 
 }

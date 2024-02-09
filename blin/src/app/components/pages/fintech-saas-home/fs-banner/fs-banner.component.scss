@@ -14,10 +14,70 @@
         color: var(--lightColor);
         margin-bottom: 26px;
     }
+}
 
-    .banner-image {
-        max-width: 882px;
-        margin: 37px auto 0;
+.cardSlider {
+    max-width: 880px;
+    margin: 37px auto 0;
+
+    .cardInfo {
+        img {
+            border-radius: 8px 8px 0 0;
+            display: block;
+        }
+    }
+}
+
+.cardName {
+    background-color: var(--whiteColor);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    font-family: var(--fontFamily);
+    line-height: 1.6;
+    text-align: center;
+
+    strong {
+        display: block;
+        font-weight: 600;
+    }
+
+    span {
+        display: block;
+        color: var(--lightColor);
+    }
+}
+
+::ng-deep {
+    .cardSlider {
+        .owl-carousel {
+            .owl-stage-outer {
+                padding-bottom: 20px;
+            }
+            .owl-item {
+                transform: scale(0.8);
+                transition: all .5s ease;
+                visibility: hidden;
+                opacity: 0;
+                &.active {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(0.8);
+                    + .active {
+                        transform: scale(0.9)
+                    }
+                }
+                &.active.center {
+                    transform: scale(1); 
+                    + .active {
+                        z-index: 3;
+                        + .active {
+                            transform: scale(0.8);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -35,9 +95,9 @@
         margin-right: 10px;
         margin-bottom: 10px;
         border-radius: 4px;//updated-from-20-8;
-        padding: 10px 16px 10px 40px;
+        padding: 10px 16px 10px 44px;
         background: var(--backgroundColor);
-        font-size: 12px;
+        font-size: 13px;
 
         i {
             background: var(--themeColor);
@@ -46,9 +106,9 @@
             color: var(--whiteColor);
             position: absolute;
             text-align: center;
-            width: 16px;
-            height: 16px;
-            line-height: 16px;
+            width: 18px;
+            height: 18px;
+            line-height: 18px;
             left: 16px;
             top: 50%;
             margin-top: 0;
@@ -73,6 +133,11 @@
                 display: none;
             }
         }
+    }
+
+    .cardName {
+        font-size: 13px;
+        line-height: 1.3;
     }
 
 }
