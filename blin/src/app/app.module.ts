@@ -158,6 +158,10 @@ import { EnterpriseTestimonialsComponent } from './components/common/testimonial
 import { EnterprisePricingComponent } from './components/common/pricing/enterprise-pricing/enterprise-pricing.component';
 import { EnterpriseBlogComponent } from './components/common/blogs/enterprise-blog/enterprise-blog.component';
 import { EnterpriseFooterComponent } from './components/common/footer/enterprise-footer/enterprise-footer.component';
+import { BlogDetailsPage5Component } from './components/pages/blog-details-page5/blog-details-page.component';
+import { BlogDetailsPage4Component } from './components/pages/blog-details-page4/blog-details-page.component';
+import { BlogDetailsPage3Component } from './components/pages/blog-details-page3/blog-details-page.component';
+import { BlogDetailsPage2Component } from './components/pages/blog-details-page2/blog-details-page.component';
 
 @NgModule({
   declarations: [
@@ -270,6 +274,10 @@ import { EnterpriseFooterComponent } from './components/common/footer/enterprise
     ForgotPasswordPageComponent,
     BlogPageComponent,
     BlogDetailsPageComponent,
+    BlogDetailsPage2Component,
+    BlogDetailsPage3Component,
+    BlogDetailsPage4Component,
+    BlogDetailsPage5Component,
     TermsConditionsPageComponent,
     PrivacyPolicyPageComponent,
     ServicesPageComponent,
