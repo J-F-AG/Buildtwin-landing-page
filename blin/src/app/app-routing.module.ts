@@ -28,6 +28,10 @@ import { ServicesPageComponent } from './components/pages/services-page/services
 import { ServiceDetailsPageComponent } from './components/pages/service-details-page/service-details-page.component';
 import { OnlineMeetingHomeFreelanceComponent } from './components/pages/online-meeting-home-freelance/online-meeting-home-freelance.component';
 import { EnterprisePageComponent } from './components/pages/enterprise-page/enterprise-page.component';
+import { BlogDetailsPage5Component } from './components/pages/blog-details-page5/blog-details-page.component';
+import { BlogDetailsPage4Component } from './components/pages/blog-details-page4/blog-details-page.component';
+import { BlogDetailsPage3Component } from './components/pages/blog-details-page3/blog-details-page.component';
+import { BlogDetailsPage2Component } from './components/pages/blog-details-page2/blog-details-page.component';
 
 const routes: Routes = [
     {path: '', component: HelpDeskHomeComponent},
@@ -53,6 +57,10 @@ const routes: Routes = [
     {path: 'forgot-password', component: ForgotPasswordPageComponent},
     {path: 'use-cases', component: BlogPageComponent},
     {path: 'blog-details', component: BlogDetailsPageComponent},
+    {path: 'blog-details2', component: BlogDetailsPage2Component},
+    {path: 'blog-details3', component: BlogDetailsPage3Component},
+    {path: 'blog-details4', component: BlogDetailsPage4Component},
+    {path: 'blog-details5', component: BlogDetailsPage5Component},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
     {path: 'contact', component: ContactPageComponent},
