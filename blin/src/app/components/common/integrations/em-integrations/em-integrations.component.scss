@@ -25,6 +25,15 @@
     border-radius: 8px;
     background-color: var(--whiteColor);
     box-shadow: 0px 4px 44px 0px rgba(87, 84, 255, 0.10);
+   
+}
+::ng-deep {
+    .integrations-area-list {
+        .owl-stage-outer {
+            margin: -30px -25px;
+            padding: 30px 25px;
+        }
+    }
 }
 
 /* Max width 767px */
