@@ -67,10 +67,12 @@
             }
             &.mdc-button {
                 &:nth-child(2) {
-                    background-color: var(--themeColor);
+                    background-color: var(--whiteColor);
+                    border: 1px solid var(--themeColor);
+                    color: var(--themeColor) !important;
 
                     &:hover {
-                        background-color: var(--themeColor);
+                        color: var(--themeColor) !important;
                     }
                 }
             }

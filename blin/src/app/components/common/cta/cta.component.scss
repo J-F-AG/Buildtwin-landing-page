@@ -11,6 +11,10 @@
             line-height: 1.4;
             margin-bottom: 11px;
         }
+
+        p {
+            font-size: var(--paraFontSize);
+        }
     }
     .border {
         border-bottom: 2px dashed var(--whiteColor);

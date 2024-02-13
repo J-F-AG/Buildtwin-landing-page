@@ -74,6 +74,7 @@
         }
     }
     p {
+        font-size: var(--paraFontSize);
         max-width: 592px;
         //letter-spacing: 0.4px;
     }
@@ -81,7 +82,7 @@
         margin-top: 25px;
 
         li {
-            padding-left: 28px;
+            padding-left: 23px;
             margin-bottom: 10px;
             //letter-spacing: 0.4px;
             color: var(--paragraphColor);
@@ -89,10 +90,11 @@
             i {
                 left: 0;
                 top: 50%;
-                margin-top: -1px;
+                margin-top: 1px;
                 position: absolute;
                 transform: translateY(-50%);
                 color: var(--themeColor);
+                font-size: 18px;
             }
             a {
                 color: var(--blackColor);

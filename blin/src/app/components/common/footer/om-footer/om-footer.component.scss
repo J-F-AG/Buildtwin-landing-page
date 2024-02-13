@@ -31,6 +31,9 @@
                 top: -5px;
             };
         }
+        p {
+            font-size: var(--paraFontSize);
+        }
         .default-btn {
             font-family: var(--archivoFontFamily);
             background-color: var(--themeColor);

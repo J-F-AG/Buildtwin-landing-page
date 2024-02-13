@@ -39,7 +39,7 @@
             animation: movetopbounce 2s linear infinite;
             border-radius: 4px;
             position: absolute;
-            top: 200px;
+            top: 150px;
             left: 19px;
         }
         &:nth-child(3) {
@@ -227,8 +227,8 @@
     .payments-products-image {
         img {
             &:nth-child(2) {
-                max-width: 220px;
-                top: 230px;
+                max-width: 182px;
+                top: 150px;
                 left: 10px;
             }
             &:nth-child(3) {

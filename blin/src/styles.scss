@@ -59,6 +59,7 @@ $buildtwin-theme: mat.define-light-theme((
     --backgroundColor: #f9f9f9;
     --fontSize: 15px;
     --fontSizeSmall: 12px;
+    --paraFontSize: 17px;
 }
 
 // Utilities CSS
@@ -344,7 +345,7 @@ img {
     p {
         //letter-spacing: 0.4px;
         margin-top: 10px;
-        max-width: 540px;
+        max-width: 580px;
     }
 }
 
@@ -380,7 +381,7 @@ img {
 
 // HD Section Title
 .hd-section-title {
-    max-width: 800px;
+    max-width: 900px;
     margin: {
         top: -5px;
         bottom: 25px;

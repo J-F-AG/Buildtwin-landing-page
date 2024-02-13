@@ -12,7 +12,7 @@ export class FsAboutComponent {
     nav: true,
     margin: 0,
     dots: true,
-    loop: true,
+    loop: false,
     autoplay: true,
     autoplayHoverPause: true,
     navText: [
