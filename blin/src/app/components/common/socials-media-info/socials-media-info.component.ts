@@ -11,9 +11,9 @@ export class SocialsMediaInfoComponent {
     socialsMediaInfoSlides: OwlOptions = {
 		nav: false,
 		margin: 25,
-		loop: true,
+		loop: false,
 		dots: false,
-		autoplay: true,
+		autoplay: false,
 		autoplayHoverPause: true,
 		navText: [
 			"<i class='ti ti-chevron-left'></i>",
@@ -27,16 +27,13 @@ export class SocialsMediaInfoComponent {
 				items: 2
 			},
 			768: {
-				items: 3
+				items: 2
 			},
 			990: {
+				items: 3
+			},
+			1200: {
 				items: 4
-			},
-			1400: {
-				items: 5
-			},
-			1905: {
-				items: 6
 			}
 		}
     }

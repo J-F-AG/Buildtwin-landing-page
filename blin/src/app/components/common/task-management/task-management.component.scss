@@ -23,6 +23,12 @@
             animation: moveleftbounce 2s linear infinite;
         }
     }
+
+    .tt-section-title {
+        p {
+            font-size: var(--paraFontSize);
+        }
+    }
 }
 ::ng-deep {
     .task-management-tabs {

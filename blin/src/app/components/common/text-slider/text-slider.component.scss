@@ -1,11 +1,11 @@
 .text-slider-area {
     overflow: hidden;
-    height: 110px;
+    height: 130px;
 
     .slider {
         white-space: nowrap;
         position: absolute;
-        top: 20px;
+        top: 0;
 
         div {
             letter-spacing: -1px;
@@ -14,10 +14,10 @@
             line-height: 1.2;
             margin: {
                 right: 20px;
-                top: -40px;
+                top: 0;
             };
             font: {
-                size: 110px;
+                size: 4.73vw;
                 weight: 900;
             };
             &:last-child {

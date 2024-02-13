@@ -9,7 +9,7 @@
         right: 0;
         content: '';
         z-index: -1;
-        height: 65%;
+        height: 75%;
         position: absolute;
         border-radius: 8px;//updated-from-20-8;
         background-color: #f8f8f8;
@@ -36,7 +36,7 @@
         }
     }
     h2 + p {
-        font-size: 17px;
+        font-size: var(--paraFontSize);
     }
 }
 ::ng-deep {
@@ -135,24 +135,19 @@
             }
         }
         .content {
-            padding-right: 155px;
-            margin-top: 40px;
             max-width: 880px;
+            padding-bottom: 35px;
             
             h3 {
                 font-size: 24px;
-                margin-bottom: 13px;
+                margin-bottom: 10px;
             }
             p {
-                font-size: 17px;
                 max-width: 560px;
-                margin-bottom: 0;
+                margin: 0 auto 14px;
+                color: var(--lightColor);
             }
             .default-btn {
-                top: 50%;
-                right: 0;
-                position: absolute;
-                transform: translateY(-50%);
                 font-family: var(--archivoFontFamily);
                 background-color: var(--themeColor);
                 padding-top: 13px;

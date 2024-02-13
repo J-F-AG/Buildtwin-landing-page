@@ -1,4 +1,5 @@
 .pricing-area {
+    padding: 64px 0;
     &::before {
         top: 0;
         left: 0;
@@ -14,75 +15,100 @@
             right: 50px;
         };
     }
-    .hd-section-title {
-        max-width: 100%;
-
+    .pricing-head {
+        padding-bottom: 40px;
         h2 {
-            line-height: 1.7;
-            max-width: 610px;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            span {
+                color: var(--themeColor);
+            }
         }
 
-        h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
         p {
-            line-height: 1.6;
-            margin-top: 0;
+            font-size: var(--paraFontSize);
+            color: var(--lightColor);
             margin-bottom: 6px;
         }
     }
 }
-.pricing-box {
-    margin-bottom: 25px;
-    border-radius: 4px;
-    padding: 0 40px 40px;
-    background-color: var(--whiteColor);
-
-    .price {
-        line-height: 1;
-        font-size: 20px;
-        padding: 15px 22px 25px;
-        border-radius: 0 0 50px 50px;
-        background-color: var(--themeColor);
-        color: var(--themeColorOpposite);
-
-        span {
-            font-size: 12px;
-            margin-top: 5px;
-        }
+.pricing-box-group {
+    display: flex;
+    > div {
+        margin-bottom: 25px;
     }
+}
+.pricing-box {
+    border-radius: 4px;
+    padding: 24px;
+    background-color: var(--whiteColor);
+    transition: var(--transition);
+    font-family: var(--fontFamily);
+    height: 100%;
+
     .title {
-        line-height: 1.4;
-        font-size: 16px;
-        margin-bottom: 15px;
+        line-height: 1.278;
+        font-size: 18px;
+        margin-bottom: 11px;
         letter-spacing: 0;
     }
+
+    h3 + span {
+        display: block;
+        font-size: 14px;
+        line-height: 1.429;
+        color: var(--lightColor);
+        margin-bottom: 20px;
+        transition: var(--transition);
+    }
+
+    .price {
+        line-height: 1.25;
+        padding-bottom: 24px;
+        strong {
+            font-size: 32px;
+            font-weight: 600;
+        }
+        span {
+            font-size: 14px;
+            color: var(--lightColor);
+            vertical-align: super;
+            padding-left: 5px;
+            transition: var(--transition);
+        }
+    }
+
     .features-list {
-        margin-top: 35px;
+        margin-top: 32px;
 
         li {
             margin-bottom: 12px;
-            //letter-spacing: 0.4px;
             color: var(--paragraphColor);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            padding: 6px 0;
+            transition: var(--transition);
 
             span {
-                padding-left: 31px;
+                padding-left: 48px;
 
                 i {
                     left: 0;
-                    top: 0;
-                    width: 20px;
-                    height: 20px;
+                    top: 50%;
+                    width: 31px;
+                    height: 31px;
                     font-size: 15px;
-                    line-height: 22px;
+                    line-height: 30px;
                     text-align: center;
                     border-radius: 50%;
                     position: absolute;
-                    color: var(--whiteColor);
-                    transform: none;
-                    background-color: var(--themeColor);
+                    color: var(--themeColor);
+                    transform: translateY(-50%);
+                    background-color: #F6F3FF;
+                    transition: var(--transition);
                 }
             }
             &:last-child {
@@ -92,30 +118,45 @@
     }
     .default-btn {
         font-family: var(--poppinsFontFamily);
-        background-color: var(--themeColor);
+        background-color: var(--whiteColor);
+        border: 1px solid var(--themeColor);
+        color: var(--themeColor) !important;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 0px;
         display: block;
         width: 100%;
+        transition: var(--transition);
         padding: {
-            top: 13px;
-            bottom: 13px;
+            top: 12px;
+            bottom: 12px;
         };
         &:hover {
-            background-color: var(--themeColor);
+            background-color: var(--whiteColor);
         }
     }
-}
-.col-xl-3 {
-    &:nth-child(3) {
-        .pricing-box {
-            .price {
-                background-color: var(--themeColor);
+    &:hover {
+        background-color: var(--themeColor);
+        color: var(--whiteColor);
+
+        .title,
+        h3 + span {
+            color: var(--whiteColor);
+        }
+
+        .price {
+            span {
+                color: var(--whiteColor);
+            }
+        }
+
+        .features-list {
+            li {
                 color: var(--whiteColor);
             }
         }
     }
 }
+
 .info {
     ul {
         li {
@@ -127,6 +168,7 @@
                 right: 10px;
             };
             span {
+                font-weight: 600;
                 padding-left: 23px;
 
                 i {
@@ -168,29 +210,14 @@
                 right: 0;
             };
         }
-        .hd-section-title {
-            text-align: center;
-    
-            h2 {
-                max-width: 100%;
-            }
-            p {
-                max-width: 100%;
-                margin-top: 8px;
-            }
-        }
+    }
+    .pricing-box-group {
+        display: block;
     }
     .pricing-box {
-        padding: 0 20px 20px;
+        padding: 20px;
+        height: auto;
     
-        .price {
-            font-size: 30px;
-            padding: 15px 20px 25px;
-    
-            span {
-                font-size: 15px;
-            }
-        }
         .title {
             font-size: 18px;
             letter-spacing: 3px;
@@ -238,29 +265,9 @@
                 right: 0;
             };
         }
-        .hd-section-title {
-            text-align: center;
-    
-            h2 {
-                max-width: 100%;
-            }
-            p {
-                max-width: 100%;
-                margin-top: 10px;
-            }
-        }
     }
     .pricing-box {
-        padding: 0 25px 25px;
-    
-        .price {
-            font-size: 35px;
-            padding: 20px 20px 30px;
-    
-            span {
-                font-size: 16px;
-            }
-        }
+        padding: 24px;
         .features-list {
             margin-top: 20px;
     
@@ -305,11 +312,7 @@
         }
     }
     .pricing-box {
-        padding: 0 30px 30px;
-    
-        .price {
-            padding: 20px 20px 30px;
-        }
+        padding: 24px;
         .features-list {
             margin-top: 25px;
         }
@@ -332,7 +335,7 @@
         }
     }
     .pricing-box {
-        padding: 0 30px 30px;
+        padding: 24px;
     }
 
 }
@@ -349,7 +352,7 @@
         }
     }
     .pricing-box {
-        padding: 0 35px 40px;
+        padding: 24px;
     }
 
 }

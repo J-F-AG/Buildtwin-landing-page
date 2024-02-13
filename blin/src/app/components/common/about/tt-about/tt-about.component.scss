@@ -17,6 +17,9 @@
             display: block;
         }
     }
+    > p {
+        font-size: var(--paraFontSize);
+    }
     p {
         //letter-spacing: 0.4px;
         max-width: 592px;

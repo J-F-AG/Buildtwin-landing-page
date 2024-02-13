@@ -27,6 +27,9 @@
             line-height: 1;
         }
     }
+    > p {
+        font-size: var(--paraFontSize);
+    }
     p {
         //letter-spacing: 0.4px;
         margin-bottom: 0;
