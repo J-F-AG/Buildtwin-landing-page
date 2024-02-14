@@ -22,8 +22,8 @@
                             Home
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                    <li class="nav-item" routerLinkActive="active">
+                        <a href="javascript:void(0)" class="dropdown-toggle nav-link"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                             Solution for
                         </a>
 
@@ -52,17 +52,17 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="/marketplace" class="nav-link">
+                    <li class="nav-item" >
+                        <a routerLink="/marketplace" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                             Marketplace
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/training" class="nav-link">
+                        <a routerLink="/training" class="nav-link" routerLinkActive="active">
                             Training
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" routerLinkActive="active">
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">
                             Why BuildTwin
                         </a>

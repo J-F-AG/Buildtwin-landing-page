@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { GlobalService } from 'src/app/services/GlobalService';
 
 @Component({
     selector: 'app-em-testimonials',
@@ -7,7 +8,13 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
     styleUrls: ['./em-testimonials.component.scss']
 })
 export class EmTestimonialsComponent {
-
+	constructor(private globalService: GlobalService) { }
+	getGlobalValue(): string {
+	  return this.globalService.getGlobalValue();
+	}
+	setGlobalValue(newValue: string): void {
+	  this.globalService.setGlobalValue(newValue);
+	}
     testimonialsSlides: OwlOptions = {
 		nav: true,
 		margin: 25,

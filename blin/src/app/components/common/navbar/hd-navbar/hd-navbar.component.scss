@@ -81,6 +81,12 @@
                     &:hover, &.active {
                         color: var(--themeColor);
                         font-weight: 600;
+                        &.dropdown-toggle {
+            
+                            &::before {
+                                color: var(--themeColor);
+                            }
+                        }
                     }
                 }
                 .dropdown-toggle {
@@ -112,7 +118,11 @@
                 &:hover, &.active {
                     .nav-link {
                         color: var(--themeColor);
+                        &::before {
+                            color: var(--themeColor);
+                        }
                     }
+
                 }
                 .dropdown-menu {
                     left: 0;
