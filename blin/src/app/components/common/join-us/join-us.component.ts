@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GlobalService } from 'src/app/services/GlobalService';
+import { GlobalService } from 'src/app/services/GlobalService'; 
 
 @Component({
   selector: 'app-join-us',
