@@ -381,7 +381,7 @@
         position: relative;
         border-radius: 8px;
         border: 1px solid var(--grey-dark, #ECECEC);
-        width: 395px;
+        min-width: 395px;
         height: 100%;
         background: #fff;
         padding: 22px 24px;
@@ -396,7 +396,11 @@
         height: 63px px;
     }
 }
-
+@media (max-width:1439px){
+    .solutionGroup{
+        transform: scale(0.8);
+    }
+}
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
