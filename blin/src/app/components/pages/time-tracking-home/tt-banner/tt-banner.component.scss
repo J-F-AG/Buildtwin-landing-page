@@ -12,11 +12,11 @@
         content: '';
         position: absolute;
         border-radius: 50px;
-        background: #f8f8f8;
-        margin: {
-            left: 50px;
-            right: 50px;
-        };
+        background: url(../../../../../assets/images/banners/marketPlaceBanner.png);
+        width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0;
     }
     .shape1 {
         left: 17px;
