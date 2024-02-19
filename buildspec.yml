@@ -12,7 +12,7 @@ env:
 phases:
   install:
     runtime-versions:
-      nodejs: 18.13
+      nodejs: 18
   pre_build:
     commands:
       - cd blin
