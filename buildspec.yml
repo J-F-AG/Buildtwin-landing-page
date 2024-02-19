@@ -11,15 +11,14 @@ env:
 
 phases:
   install:
-    commands:
-      - sudo apt install nodejs
-      - node -v
+    runtime-versions:
+      nodejs: 18.13
+
   pre_build:
     commands:
       - cd blin
-      - echo "Installing dependencies..."
-      - npm install -g @angular/cli
-      - npm install
+      - echo install process started
+      - npm install && npm install -g @angular/cli
 
   build:
     commands:
