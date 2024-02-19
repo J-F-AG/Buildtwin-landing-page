@@ -20,6 +20,7 @@ phases:
       - rm -rf package-lock.json
   pre_build:
     commands:
+      - cd blin
       - echo installing dependencies...
       - npm install -g @angular/cli
       - npm install
