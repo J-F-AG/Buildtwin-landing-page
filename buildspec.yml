@@ -12,8 +12,7 @@ env:
 phases:
   install:
     commands:
-      - apk add nodejs npm
-      - apk add nodejs-current
+      - apt install nodejs
       - node -v
   pre_build:
     commands:
