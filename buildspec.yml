@@ -12,14 +12,9 @@ env:
 phases:
   install:
     commands:
-      - echo "Adding Yarn GPG Key"
-      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-      - echo "Installing the latest Node.js version..."
-      # Use the NodeSource setup script for the latest version or modify "setup_x.x" to target a specific version.
-      - curl -fsSL https://deb.nodesource.com/setup_18.13 | sudo -E bash -
-      - sudo apt-get install -y nodejs
+      - apk add nodejs npm
+      - apk add nodejs-current
       - node -v
-      - rm -rf package-lock.json
   pre_build:
     commands:
       - cd blin
@@ -30,9 +25,6 @@ phases:
   build:
     commands:
        - echo testing...
-       - curl -fsSL https://deb.nodesource.com/setup_18.13 | sudo -E bash -
-       - sudo apt-get install -y nodejs
-       - node -v
        - ng build --configuration production --build-optimizer --aot
        - ls
        - pwd
