@@ -12,7 +12,7 @@ env:
 phases:
   install:
     commands:
-      - apt install nodejs
+      - sudo apt install nodejs
       - node -v
   pre_build:
     commands:
