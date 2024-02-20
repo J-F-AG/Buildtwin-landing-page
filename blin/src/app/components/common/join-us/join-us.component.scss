@@ -328,3 +328,9 @@
     background-size: cover;
     background-image: url(../../../../assets/images/cta-bg.jpg);
 }
+
+@media (max-width:767px){
+    .ctaInner{
+        padding: 92px 20px;
+    }
+}

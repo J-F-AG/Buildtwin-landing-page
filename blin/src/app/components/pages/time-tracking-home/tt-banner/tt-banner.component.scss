@@ -221,10 +221,11 @@
 
     .banner-area {
         padding: {
-            top: 60px;
+            top: 97px;
             bottom: 60px;
         };
         &::before {
+            display: none;
             border-radius: 0;
             margin: {
                 left: 0;

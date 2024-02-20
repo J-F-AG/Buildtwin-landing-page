@@ -142,7 +142,7 @@
 
     .funfacts-content {
         margin-bottom: 40px;
-    
+   
         h2 {
             max-width: 100%;
             font-size: 35px;
@@ -195,3 +195,9 @@
 
 /* Min width 1400px to Max width 1699px */
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {}
+
+@media (max-width:767px){
+    br{
+        display: none;
+    }
+}
