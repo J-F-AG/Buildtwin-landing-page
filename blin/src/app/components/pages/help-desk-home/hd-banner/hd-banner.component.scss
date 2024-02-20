@@ -472,6 +472,7 @@
     .solutionGroup {
         flex-direction: column;
         flex-wrap: wrap;
+        transform: none;
 
         .arrow-thumb {
             display: none;
@@ -655,4 +656,14 @@
         }
     }
 
+}
+
+@media(max-width:767px){
+    .solutionGroup > div {
+        min-width: unset;
+        width: 100%;
+}
+.allSolution .why-choose-content .benefits li {
+    white-space: unset;
+}
 }
