@@ -46,8 +46,9 @@ const routes: Routes = [
     {path: 'job-details', component: JobDetailsPageComponent},
     {path: 'features', component: FeaturesPageComponent},
     {path: 'feature-details', component: FeatureDetailsPageComponent},
-    {path: 'services', component: ServicesPageComponent},
-    {path: 'service-details', component: ServiceDetailsPageComponent},
+    
+    // {path: 'services', component: ServicesPageComponent},
+    // {path: 'service-details', component: ServiceDetailsPageComponent},
     {path: 'pricing', component: PricingPageComponent},
     {path: 'integrations', component: IntegrationsPageComponent},
     {path: 'faq', component: FaqPageComponent},
