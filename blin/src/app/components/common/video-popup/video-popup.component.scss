@@ -1,0 +1,63 @@
+.videoPopup {
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-opacity: 0;
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
+    opacity: 0;
+    transition: all .5s ease 0s;
+}
+.videoPopup.open {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    opacity: 1;
+    visibility: visible;
+}
+.closePopup {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 25px;
+    top: 25px;
+    cursor: pointer;
+}
+.closePopup:before, .closePopup:after {
+    content: "";
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    width: 36px;
+    height: 2px;
+    left: -3px;
+    top: 14px;
+    -khtml-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.closePopup:after {
+    transform: rotate(-45deg);
+}
+.videoPopup > div {
+    width: 88%;
+}
+.videoPopup iframe {
+    width: 100%;
+    height: 91vh;
+    display: block;
+}

@@ -37,17 +37,23 @@
                     </h2>
                 </div>
                 <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <form class="subscribe-form position-relative">
-                        <mat-form-field>
-                            <mat-label>
-                                Enter your email
-                            </mat-label>
-                            <input matInput>
-                        </mat-form-field>
-                        <button type="submit" mat-button>
+                    <form class="subscribe-form position-relative emailFOrmData" [formGroup]="getFormData" (ngSubmit)="free_trial()">
+                          <mat-form-field>
+                                    <mat-label>
+                                        Enter your email
+                                    </mat-label>
+                                    <input matInput formControlName="email" >
+                                </mat-form-field>
+                        <button  [disabled]="getFormData.invalid" type="submit" mat-button>
                             Subscribe Now
                         </button>
                     </form>
+                    <span *ngIf="sucessMessage" class="info font-syne d-block">
+                       Form submitted.
+                    </span>
+                    <span *ngIf="error" class="info font-syne d-block">
+                        Some internal server error
+                     </span>
                     <span class="info font-syne d-block">
                         We won’t send any spam to you.
                     </span>

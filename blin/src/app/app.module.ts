@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatSelectModule } from '@angular/material/select';
@@ -162,6 +162,10 @@ import { BlogDetailsPage5Component } from './components/pages/blog-details-page5
 import { BlogDetailsPage4Component } from './components/pages/blog-details-page4/blog-details-page.component';
 import { BlogDetailsPage3Component } from './components/pages/blog-details-page3/blog-details-page.component';
 import { BlogDetailsPage2Component } from './components/pages/blog-details-page2/blog-details-page.component';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { VideoPopupModule } from './components/common/video-popup/video-popup.module';
 
 @NgModule({
   declarations: [
@@ -332,7 +336,10 @@ import { BlogDetailsPage2Component } from './components/pages/blog-details-page2
     NgxScrollTopModule,
     MatTabsModule,
     MatCheckboxModule,
-    MatTooltipModule
+    MatTooltipModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    VideoPopupModule
   ],
   providers: [
     Title

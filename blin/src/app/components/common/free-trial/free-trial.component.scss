@@ -176,7 +176,7 @@
                         width: 100%;
     
                         .mat-mdc-floating-label {
-                            color: var(--lightColor);
+                            color: var(--lightColor) !important;
                             top: 24px;
                             font: {
                                 size: 12px;
@@ -187,10 +187,13 @@
                         .mdc-text-field__input {
                             color: var(--blackColor);
                             font: {
-                                size: 15px;
+                                size: 13px;
                                 weight: 500;
                                 family: var(--poppinsFontFamily);
+                              
                             };
+                            position: relative;
+                            top: 5px;
                         }
                     }
                     &:not(.mdc-text-field--outlined) {
@@ -567,4 +570,27 @@
         }
     }
 
+}
+
+.emailFOrmData {
+    .ng-invalid.ng-touched{
+        border-color: red  !important;
+    }
+}
+.free-trial-area-form .default-btn:disabled{
+    opacity: 0.5;
+}
+.formHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    strong.sucessMessage {
+        padding: 20px 20px 0;
+        color: #886de0;
+        font-weight: 400;
+    }
+}
+
+.error {
+    color: red !important;
 }

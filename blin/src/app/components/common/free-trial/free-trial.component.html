@@ -27,9 +27,17 @@
                 </div>
                 <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                     <div class="free-trial-area-form">
+                        <div class="formHead">
                         <h3 class="font-poppins mb-0 fw-medium">
                             Start Free Trial
                         </h3>
+                        <strong class="sucessMessage" *ngIf="sucessMessage" >
+                                Form submitted
+                        </strong>
+                        <strong class="sucessMessage error" *ngIf="error" >
+                               Some internal server error
+                        </strong>
+                    </div>
                         <ul class="ps-0 text-center fw-medium list-unstyled list">
                             <li class="d-inline-block position-relative">
                                 <i class="ti ti-check"></i>
@@ -40,14 +48,14 @@
                                 No Credit Card required
                             </li>
                         </ul>
-                        <form>
+                        <form class="emailFOrmData" [formGroup]="getFormData" (ngSubmit)="free_trial()">
                             <div class="form-group position-relative">
                                 <i class="ti ti-user"></i>
-                                <mat-form-field>
+                                <mat-form-field >
                                     <mat-label>
                                         Full name
                                     </mat-label>
-                                    <input matInput>
+                                    <input matInput  formControlName="full_name">
                                 </mat-form-field>
                             </div>
                             <div class="form-group position-relative">
@@ -56,7 +64,7 @@
                                     <mat-label>
                                         Enter your email
                                     </mat-label>
-                                    <input matInput>
+                                    <input matInput formControlName="email" >
                                 </mat-form-field>
                             </div>
                             <div class="form-group position-relative">
@@ -65,19 +73,20 @@
                                     <mat-label>
                                         Company name
                                     </mat-label>
-                                    <input matInput>
+                                    <input matInput   formControlName="company_name" >
                                 </mat-form-field>
                             </div>
-                            <mat-checkbox>
+                            <mat-checkbox  formControlName="promotional">
                                 Send me product updates & promotional offers.
                             </mat-checkbox>
-                            <button type="submit" mat-button class="default-btn">
+                            <button [disabled]="getFormData.invalid" type="submit" mat-button class="default-btn" >
                                 Create Account For Free
                             </button>
                         </form>
                         <p class="info">
                             By signing up you agree to our <a class="fw-bold" routerLink="/terms-conditions">Terms</a> & <a class="fw-bold" routerLink="/privacy-policy">Privacy Policy</a>.
                         </p>
+                        
                     </div>
                 </div>
             </div>
