@@ -63,9 +63,39 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a routerLink="/training" class="nav-link" routerLinkActive="active">
+                        <a routerLink="/training" class="nav-link" routerLinkActive="active" class="dropdown-toggle nav-link">
                             Training
                         </a>
+                        <ul class="dropdown-menu">
+
+                            
+                            <li class="nav-item">
+                                <a routerLink="/traininghomepage" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Training
+                                </a>
+                                <a routerLink="/success-story" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Concept
+                                </a>
+                                <a routerLink="/courses" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Courses
+                                </a>
+                                <a routerLink="/teacher" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Expert Mentors
+                                </a>
+                                <a routerLink="/training-faq" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    FAQ
+                                </a>
+                                <a routerLink="/events" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Events
+                                </a>
+                                <a routerLink="/single-courses" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Course Detail
+                                </a>
+                                <a routerLink="/single-events" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                                    Event Details
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item" routerLinkActive="active">
                         <a href="javascript:void(0)" class="dropdown-toggle nav-link">

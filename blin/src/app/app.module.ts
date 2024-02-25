@@ -185,6 +185,10 @@ import { SubscribeComponent } from './components/common/subscribe/subscribe.comp
 import { UpcomingEventsComponent } from './components/common/upcoming-events/upcoming-events.component';
 import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
 import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
+import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
+import { EmFaqTrainingComponent } from './components/common/faqs-training/em-faq/em-faq.component';
+import { HdFaqTrainingComponent } from './components/common/faqs-training/hd-faq/hd-faq.component';
+import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq/tt-faq.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -368,7 +372,12 @@ import { EventsDetailsComponent } from './components/pages/events-details/events
 
     CoursesDetailsStyleOneComponent,
 
-    EventsDetailsComponent
+    EventsDetailsComponent,
+
+    FaqPageTrainingComponent,
+    EmFaqTrainingComponent,
+    HdFaqTrainingComponent,
+    TtFaqTrainingComponent
   ],
   imports: [
     BrowserModule,

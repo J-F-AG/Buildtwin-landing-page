@@ -1,0 +1,268 @@
+.faq-area {
+    h4 {
+        font-size: var(--paraFontSize);
+    }
+}
+
+
+.faq-accordion {
+    padding-right: 80px;
+
+    .mat-accordion {
+        .mat-expansion-panel {
+            box-shadow: unset;
+            margin-bottom: 20px;
+            color: var(--blackColor);
+            background: var(--whiteColor);
+            transition: var(--transition);
+            border-radius: 0 4px 4px 4px;
+            border: 2px solid var(--borderColor);
+
+            .mat-expansion-panel-header {
+                padding: 20px 25px;
+                border-radius: 0;
+                display: block;
+                height: auto;
+            }
+            .mat-expansion-panel-header-title {
+                display: block;
+                margin-right: 0;
+                color: var(--blackColor);
+                transition: var(--transition);
+                font: {
+                    size: 17px;
+                    weight: 500;
+                    family: var(--poppinsFontFamily);
+                };
+            }
+            &:not(.mat-expanded) {
+                .mat-expansion-panel-header {
+                    &:not([aria-disabled=true]) {
+                        transition: var(--transition);
+
+                        &:hover {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+            &.mat-expanded {
+                box-shadow: unset;
+
+                .mat-expansion-panel-header {
+                    background: #f9f9f9;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+::ng-deep {
+    .faq-accordion {
+        .mat-accordion {
+            .mat-expansion-panel {
+                .mat-expansion-indicator {
+                    display: none;
+                }
+                .mat-content {
+                    overflow: unset;
+                    display: block;
+                }
+                .mat-expansion-panel-body {
+                    padding: 17px 25px 22px;
+
+                    p {
+                        //letter-spacing: 0.4px;
+                        font-size: var(--fontSize);
+                        color: var(--lightColor);
+                    }
+                }
+            }
+        }
+    }
+}
+.faq-image {
+    padding: {
+        top: 32px;
+        left: 17px;
+        right: 105px;
+    };
+    img {
+        &:nth-child(2) {
+            top: 0;
+            right: 0;
+            position: absolute;
+            border-radius: 4px;
+            animation: moveleftbounce 2s linear infinite;
+            box-shadow: 0px 4px 24px 0px rgba(105, 85, 137, 0.06);
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .faq-accordion {
+        padding-right: 0;
+    
+        .mat-accordion {
+            .mat-expansion-panel {
+                border-width: 1px;
+    
+                .mat-expansion-panel-header {
+                    padding: 15px;
+                }
+                .mat-expansion-panel-header-title {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .faq-accordion {
+            .mat-accordion {
+                .mat-expansion-panel {
+                    .mat-expansion-panel-body {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .faq-image {
+        margin-top: 25px;
+        padding: {
+            top: 0;
+            left: 0;
+            right: 0;
+        };
+        img {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .faq-accordion {
+        padding-right: 0;
+    
+        .mat-accordion {
+            .mat-expansion-panel {
+                .mat-expansion-panel-header {
+                    padding: 18px 20px;
+                }
+                .mat-expansion-panel-header-title {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .faq-accordion {
+            .mat-accordion {
+                .mat-expansion-panel {
+                    .mat-expansion-panel-body {
+                        padding: 18px 20px;
+                    }
+                }
+            }
+        }
+    }
+    .faq-image {
+        margin-top: 25px;
+        padding: {
+            left: 0;
+            right: 0;
+            top: 35px;
+        };
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .faq-accordion {
+        padding-right: 15px;
+    
+        .mat-accordion {
+            .mat-expansion-panel {
+                .mat-expansion-panel-header {
+                    padding: 20px;
+                }
+                .mat-expansion-panel-header-title {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .faq-accordion {
+            .mat-accordion {
+                .mat-expansion-panel {
+                    .mat-expansion-panel-body {
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .faq-image {
+        padding: {
+            left: 0;
+            right: 0;
+            top: 30px;
+        };
+        img {
+            &:nth-child(2) {
+                width: 150px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .faq-accordion {
+        padding-right: 30px;
+    }
+    .faq-image {
+        padding: {
+            left: 0;
+            right: 0;
+        };
+        img {
+            &:nth-child(2) {
+                width: 230px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .faq-accordion {
+        padding-right: 60px;
+    }
+    .faq-image {
+        padding: {
+            left: 0;
+            right: 80px;
+        };
+    }
+
+}

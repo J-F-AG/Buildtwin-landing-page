@@ -39,6 +39,7 @@ import { TeacherComponent } from './components/pages/teacher/teacher.component';
 import { EventsComponent } from './components/pages/events/events.component';
 import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
 import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
+import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
 
 const routes: Routes = [
     {path: '', component: HelpDeskHomeComponent},
@@ -78,13 +79,14 @@ const routes: Routes = [
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
     {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
-    {path: 'trainingdetail', component: ElearningSchoolComponent},
+    {path: 'traininghomepage', component: ElearningSchoolComponent},
     {path: 'success-story', component: SuccessStoryComponent},
-    {path: 'courses-1', component: CoursesStyleOneComponent},
+    {path: 'courses', component: CoursesStyleOneComponent},
     {path: 'teacher', component: TeacherComponent},
     {path: 'events', component: EventsComponent},
-    {path: 'single-courses-1', component: CoursesDetailsStyleOneComponent},
+    {path: 'single-courses', component: CoursesDetailsStyleOneComponent},
     {path: 'single-events', component: EventsDetailsComponent},
+    {path: 'training-faq', component: FaqPageTrainingComponent},
 
     // Here add new pages component
 
