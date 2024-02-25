@@ -162,33 +162,7 @@ import { BlogDetailsPage5Component } from './components/pages/blog-details-page5
 import { BlogDetailsPage4Component } from './components/pages/blog-details-page4/blog-details-page.component';
 import { BlogDetailsPage3Component } from './components/pages/blog-details-page3/blog-details-page.component';
 import { BlogDetailsPage2Component } from './components/pages/blog-details-page2/blog-details-page.component';
-import { ElearningSchoolComponent } from './components/pages/elearning-school/elearning-school.component';
-import { ElearningBannerComponent } from './components/pages/elearning-school/elearning-banner/elearning-banner.component';
-import { ElearningAboutComponent } from './components/pages/elearning-school/elearning-about/elearning-about.component';
-import { FeaturesStyleOneComponent } from './components/common/features-style-one/features-style-one.component';
-import { PartnerComponent } from './components/common/partner/partner.component';
-import { CoursesComponent } from './components/common/courses/courses.component';
-import { FunfactsFeedbackComponent } from './components/common/funfacts-feedback/funfacts-feedback.component';
-import { ViewAllCoursesComponent } from './components/common/view-all-courses/view-all-courses.component';
-import { PremiumAccessComponent } from './components/common/premium-access/premium-access.component';
-import { CountUpModule } from 'ngx-countup';
-import { VideoComponent } from './components/common/video/video.component';
-import { LightgalleryModule } from 'lightgallery/angular';
-import { TestimonialsComponent } from './components/common/testimonials-v2/testimonials.component';
-import { SuccessPeopleComponent } from './components/common/success-people/success-people.component';
-import { SuccessStoryComponent } from './components/pages/success-story/success-story.component';
-import { OurStoryComponent } from './components/pages/success-story/our-story/our-story.component';
-import { CoursesStyleOneComponent } from './components/pages/courses-style-one/courses-style-one.component';
-import { TeacherComponent } from './components/pages/teacher/teacher.component';
-import { EventsComponent } from './components/pages/events/events.component';
-import { SubscribeComponent } from './components/common/subscribe/subscribe.component';
-import { UpcomingEventsComponent } from './components/common/upcoming-events/upcoming-events.component';
-import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
-import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
-import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
-import { EmFaqTrainingComponent } from './components/common/faqs-training/em-faq/em-faq.component';
-import { HdFaqTrainingComponent } from './components/common/faqs-training/hd-faq/hd-faq.component';
-import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq/tt-faq.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -342,42 +316,7 @@ import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq
     EnterpriseTestimonialsComponent,
     EnterprisePricingComponent,
     EnterpriseBlogComponent,
-    EnterpriseFooterComponent,
-
-
-    //TrainingPageComponent
-    ElearningSchoolComponent,
-    ElearningBannerComponent,
-    ElearningAboutComponent,
-    FeaturesStyleOneComponent,
-    PartnerComponent,
-    CoursesComponent,
-    FunfactsFeedbackComponent,
-    ViewAllCoursesComponent,
-    PremiumAccessComponent,
-    VideoComponent,
-    TestimonialsComponent,
-
-    SuccessStoryComponent,
-    OurStoryComponent,
-    SuccessPeopleComponent,
-
-    CoursesStyleOneComponent,
-
-    TeacherComponent,
-
-    EventsComponent,
-    SubscribeComponent,
-    UpcomingEventsComponent,
-
-    CoursesDetailsStyleOneComponent,
-
-    EventsDetailsComponent,
-
-    FaqPageTrainingComponent,
-    EmFaqTrainingComponent,
-    HdFaqTrainingComponent,
-    TtFaqTrainingComponent
+    EnterpriseFooterComponent
   ],
   imports: [
     BrowserModule,
@@ -393,9 +332,7 @@ import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq
     NgxScrollTopModule,
     MatTabsModule,
     MatCheckboxModule,
-    MatTooltipModule,
-    CountUpModule,
-    LightgalleryModule
+    MatTooltipModule
   ],
   providers: [
     Title
