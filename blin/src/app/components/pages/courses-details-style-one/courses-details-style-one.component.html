@@ -42,7 +42,7 @@
                         </li>
                         <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
                             <span (click)="switchTab($event, 'tab3')">
-                                Instructor
+                                Course Director
                             </span>
                         </li>
                         <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab4'}">
@@ -65,60 +65,185 @@
                         </div>
                         <div class="pane" id="tab2" *ngIf="currentTab === 'tab2'">
                             <div class="courses-curriculum">
-                                <h3>Python Introduction</h3>
+                                <h3>Building Code</h3>
                                 <ul>
                                     <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="popup-youtube d-flex justify-content-between align-items-center">
-                                        <span class="courses-name">Python Introduction</span>
+                                        <span class="courses-name">Building Code Intro</span>
+                                        <div class="courses-meta">
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+
+                                        </div>
+                                    </a></li>
+
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Learning to read Structural Reports</span>
                                         <div class="courses-meta">
                                             <span class="questions">5 questions</span>
                                             <span class="duration">01 Hour</span>
                                             <span class="status">Preview</span>
                                         </div>
                                     </a></li>
+
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Understanding Input and work Checklists</span>
+                                        <div class="courses-meta">
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
                                 </ul>
-                                <h3>Stepping into the World of Python</h3>
+
+
+                                <h3>Software Basic</h3>
                                 <ul>
                                     <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
-                                        <span class="courses-name">NumPy Introduction</span>
+                                        <span class="courses-name">Introduce about the course and Allplan</span>
                                         <div class="courses-meta">
                                             <span class="duration">15 Min</span>
                                             <span class="status locked"><i class="flaticon-password"></i></span>
                                         </div>
                                     </a></li>
                                     <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
-                                        <span class="courses-name">NumPy Getting Started</span>
+                                        <span class="courses-name">Introduce Allplan Building Structure</span>
                                         <div class="courses-meta">
                                             <span class="duration">30 Min</span>
                                             <span class="status locked"><i class="flaticon-password"></i></span>
                                         </div>
                                     </a></li>
                                     <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
-                                        <span class="courses-name">NumPy Creating Arrays</span>
+                                        <span class="courses-name">Introduce Allplan Floor Manager</span>
                                         <div class="courses-meta">
                                             <span class="duration">45 Min</span>
                                             <span class="status locked"><i class="flaticon-password"></i></span>
                                         </div>
                                     </a></li>
+                                </ul>
+
+
+
+                                <h3>Software 3D Modeling</h3>
+
+                                <ul>
                                     <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
-                                        <span class="courses-name">NumPy Array Indexing</span>
+                                        <span class="courses-name">3D Modeling Foundations</span>
                                         <div class="courses-meta">
-                                            <span class="questions">4 questions</span>
-                                            <span class="duration">1 Hour</span>
+                                            <span class="duration">15 Min</span>
                                             <span class="status locked"><i class="flaticon-password"></i></span>
                                         </div>
                                     </a></li>
                                     <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
-                                        <span class="courses-name">NumPy Array Slicing</span>
+                                        <span class="courses-name">3D Modeling Foundations</span>
                                         <div class="courses-meta">
-                                            <span class="duration">1.5 Hour</span>
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">3D Modeling Foundations</span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">3D Modeling Columns</span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">3D Modeling Downstand Beam</span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">3D Modeling Slab and Slab jump
+                                        </span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Modeling Staircase
+                                        </span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Copy to upper floor and modify each floor
+                                        </span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Modeling Beam and Rooftop System
+                                        </span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
                                             <span class="status locked"><i class="flaticon-password"></i></span>
                                         </div>
                                     </a></li>
                                 </ul>
-                                <h3>Python MySQL</h3>
+
+
+
+
+
+                                <h3>Software 3D</h3>
+
                                 <ul>
                                     <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
-                                        <span class="courses-name">Python MySQL</span>
+                                        <span class="courses-name">Create 3D rebar for Foundations</span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Create 3D rebar for Columns</span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Create 3D rebar for Slabs</span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Create 3D rebar for Beams</span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Create 3D rebar for Staircase</span>
+                                        <div class="courses-meta">
+                                            <span class="duration">15 Min</span>
+                                            <span class="status locked"><i class="flaticon-password"></i></span>
+                                        </div>
+                                    </a></li>
+                                </ul>
+
+
+
+
+
+                                <h3>Reports</h3>
+                                <ul>
+                                    <li><a href="https://www.youtube.com/watch?v=PWvPbGWVRrU" class="locked popup-youtube d-flex justify-content-between align-items-center">
+                                        <span class="courses-name">Create reports and quantity take-offs (incl. bending schedules, etc.)</span>
                                         <div class="courses-meta">
                                             <span class="duration">01 Hour</span>
                                             <span class="status locked"><i class="flaticon-password"></i></span>
@@ -153,9 +278,19 @@
                                         </div>
                                         <div class="col-lg-8 col-md-8">
                                             <div class="advisor-content">
-                                                <h3>Sarah Taylor</h3>
-                                                <span class="sub-title">Agile Project Expert</span>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                <h3>Lorenz Betge </h3>
+                                                <span class="sub-title">CTO J&F Germany</span>
+                                                <p>Mr. Lorenz Betge is an experienced technical manager with over 10 years of hands-on experience 
+                                                    in working on structurally complex projects in Germany. He oversees a team of more than 
+                                                    100+ structural engineers, primarily focused on civil structures.
+
+                                                    
+                                    
+
+
+
+
+                                                </p>
                                                 <ul class="social-link">
                                                     <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-facebook'></i></a></li>
                                                     <li><a href="#" class="d-block" target="_blank"><i class='bx bxl-twitter'></i></a></li>
@@ -251,10 +386,18 @@
                                             <i class='bx bxs-star checked'></i>
                                             <i class='bx bxs-star checked'></i>
                                         </div>
-                                        <span class="d-inline-block">James Anderson</span>
+                                        <span class="d-inline-block">Arjun Patel</span>
                                     </div>
-                                    <span class="d-block sub-comment">Excellent</span>
-                                    <p>Very well built theme, couldn't be happier with it. Can't wait for future updates to see what else they add in.</p>
+                                    <span class="d-block sub-comment">Transformative Learning Experience</span>
+                                    <p>
+                                        The BuildTwin program exceeded my expectations, guiding me from novice to project-ready 
+                                        in under 100 days. The curriculum's focus on German market requirements, combined with 
+                                        practical training in ALLPLAN software, provided a solid foundation for my engineering 
+                                        career. 
+                                        
+                                        The hands-on learning approach ensured I could apply knowledge effectively 
+                                        in real-world scenarios. An essential course for engineers eyeing the German sector.
+                                    </p>
                                 </div>
                                 <div class="user-review">
                                     <img src="assets/images/training/user2.jpg" alt="image">
@@ -266,10 +409,14 @@
                                             <i class='bx bxs-star'></i>
                                             <i class='bx bxs-star'></i>
                                         </div>
-                                        <span class="d-inline-block">Sarah Taylor</span>
+                                        <span class="d-inline-block">Priya Singh</span>
                                     </div>
-                                    <span class="d-block sub-comment">Video Quality!</span>
-                                    <p>Was really easy to implement and they quickly answer my additional questions!</p>
+                                    <span class="d-block sub-comment">Exceptional Coverage and Depth</span>
+                                    <p>I was amazed by the BuildTwin program's comprehensive content, especially the detailed sessions 
+                                        on ALLPLAN and managing construction sites. It's a unique blend of theory and practice, preparing 
+                                        engineers for the demands of the German engineering landscape. The course's practical insights 
+                                        into technical solution implementation are invaluable. Highly recommended for those seeking 
+                                        to deepen their engineering expertise.</p>
                                 </div>
                                 <div class="user-review">
                                     <img src="assets/images/training/user3.jpg" alt="image">
@@ -281,10 +428,15 @@
                                             <i class='bx bxs-star checked'></i>
                                             <i class='bx bxs-star checked'></i>
                                         </div>
-                                        <span class="d-inline-block">David Warner</span>
+                                        <span class="d-inline-block">Practical and Industry-Relevant</span>
                                     </div>
                                     <span class="d-block sub-comment">Perfect Coding!</span>
-                                    <p>Stunning design, very dedicated crew who welcome new ideas suggested by customers, nice support.</p>
+                                    <p>BuildTwin bridges the gap between theoretical studies and practical application 
+                                        beautifully. The course's focus on the German market's planning foundation and 
+                                        the ALLPLAN software has significantly enhanced my project handling confidence. 
+                                        
+                                        It’s an excellent investment for engineers aiming to navigate the complexities 
+                                        of the German construction industry successfully.</p>
                                 </div>
                                 <div class="user-review">
                                     <img src="assets/images/training/user4.jpg" alt="image">
@@ -296,10 +448,15 @@
                                             <i class='bx bxs-star checked'></i>
                                             <i class='bx bxs-star'></i>
                                         </div>
-                                        <span class="d-inline-block">King Kong</span>
+                                        <span class="d-inline-block">Anjali Kumar</span>
                                     </div>
-                                    <span class="d-block sub-comment">Perfect Video!</span>
-                                    <p>Stunning design, very dedicated crew who welcome new ideas suggested by customers, nice support.</p>
+                                    <span class="d-block sub-comment">A Stepping Stone to Success</span>
+                                    <p>
+                                        This course is a vital resource for mastering the German engineering sector's intricacies. From 
+                                        planning codes to ALLPLAN software mastery, the BuildTwin program is all-encompassing. The sections 
+                                        on precast yard and construction site management were particularly enlightening. The curriculum 
+                                        is streamlined, making it accessible and practical for aspiring engineers.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -333,7 +490,7 @@
                         </li>
                         <li>
                             <div class="d-flex justify-content-between align-items-center">
-                                <span><i class="flaticon-teacher"></i> Lead Instructor</span>
+                                <span><i class="flaticon-teacher"></i> Course Director</span>
                                 Lorenz Betge
                             </div>
                         </li>
