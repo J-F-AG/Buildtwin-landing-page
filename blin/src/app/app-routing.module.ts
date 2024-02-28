@@ -84,7 +84,7 @@ const routes: Routes = [
     {path: 'courses', component: CoursesStyleOneComponent},
     {path: 'teacher', component: TeacherComponent},
     {path: 'events', component: EventsComponent},
-    {path: 'single-courses', component: CoursesDetailsStyleOneComponent},
+    {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
     {path: 'single-events', component: EventsDetailsComponent},
     {path: 'training-faq', component: FaqPageTrainingComponent},
 
