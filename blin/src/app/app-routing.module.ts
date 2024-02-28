@@ -32,6 +32,14 @@ import { BlogDetailsPage5Component } from './components/pages/blog-details-page5
 import { BlogDetailsPage4Component } from './components/pages/blog-details-page4/blog-details-page.component';
 import { BlogDetailsPage3Component } from './components/pages/blog-details-page3/blog-details-page.component';
 import { BlogDetailsPage2Component } from './components/pages/blog-details-page2/blog-details-page.component';
+import { ElearningSchoolComponent } from './components/pages/elearning-school/elearning-school.component';
+import { SuccessStoryComponent } from './components/pages/success-story/success-story.component';
+import { CoursesStyleOneComponent } from './components/pages/courses-style-one/courses-style-one.component';
+import { TeacherComponent } from './components/pages/teacher/teacher.component';
+import { EventsComponent } from './components/pages/events/events.component';
+import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
+import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
+import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
 
 const routes: Routes = [
     {path: '', component: HelpDeskHomeComponent},
@@ -44,10 +52,14 @@ const routes: Routes = [
     {path: 'team', component: TeamPageComponent},
     {path: 'careers', component: CareersPageComponent},
     {path: 'job-details', component: JobDetailsPageComponent},
-    {path: 'features', component: FeaturesPageComponent},
-    {path: 'feature-details', component: FeatureDetailsPageComponent},
-    {path: 'services', component: ServicesPageComponent},
-    {path: 'service-details', component: ServiceDetailsPageComponent},
+
+    
+    // {path: 'features', component: FeaturesPageComponent},
+    // {path: 'feature-details', component: FeatureDetailsPageComponent},
+    // {path: 'services', component: ServicesPageComponent},
+    // {path: 'service-details', component: ServiceDetailsPageComponent},
+   
+   
     {path: 'pricing', component: PricingPageComponent},
     {path: 'integrations', component: IntegrationsPageComponent},
     {path: 'faq', component: FaqPageComponent},
@@ -67,6 +79,14 @@ const routes: Routes = [
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
     {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
+    {path: 'traininghomepage', component: ElearningSchoolComponent},
+    {path: 'success-story', component: SuccessStoryComponent},
+    {path: 'courses', component: CoursesStyleOneComponent},
+    {path: 'teacher', component: TeacherComponent},
+    {path: 'events', component: EventsComponent},
+    {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
+    {path: 'single-events', component: EventsDetailsComponent},
+    {path: 'training-faq', component: FaqPageTrainingComponent},
 
     // Here add new pages component
 
