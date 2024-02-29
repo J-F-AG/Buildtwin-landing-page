@@ -117,7 +117,7 @@
             .mat-mdc-text-field-wrapper {
                 .mat-mdc-form-field-infix {
                     .mat-mdc-floating-label {
-                        color: #91939b;
+                        color: #91939b !important;
                         font: {
                             size: 14px;
                             weight: 500;
@@ -691,4 +691,16 @@
         padding-left: 60px;
     }
 
+}
+.emailFOrmData {
+    .ng-invalid.ng-touched{
+        border-color: red  !important;
+    }
+}
+
+.subscribe-form .mat-mdc-button:disabled{
+    opacity: 0.5;
+}
+.error {
+    color: red !important;
 }

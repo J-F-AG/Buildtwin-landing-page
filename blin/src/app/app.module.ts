@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MatSelectModule } from '@angular/material/select';
@@ -189,6 +189,11 @@ import { FaqPageTrainingComponent } from './components/pages/faq-page-training/f
 import { EmFaqTrainingComponent } from './components/common/faqs-training/em-faq/em-faq.component';
 import { HdFaqTrainingComponent } from './components/common/faqs-training/hd-faq/hd-faq.component';
 import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq/tt-faq.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { VideoPopupModule } from './components/common/video-popup/video-popup.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -395,7 +400,10 @@ import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq
     MatCheckboxModule,
     MatTooltipModule,
     CountUpModule,
-    LightgalleryModule
+    LightgalleryModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    VideoPopupModule
   ],
   providers: [
     Title

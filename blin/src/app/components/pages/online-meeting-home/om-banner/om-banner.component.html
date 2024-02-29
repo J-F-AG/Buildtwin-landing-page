@@ -27,11 +27,19 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12">
-                <div class="banner-image">
-                    <img src="assets/images/banners/freelance-banner.jpg" alt="freelance-banner">
+            <div class="">
+                <div class="banner-image videoCover" #videoCover (mouseenter)="playVideo()" (mouseleave)="pauseVideo()">
+                    <img src="assets/video/placeholder-sw.png" width="761" height="418" alt="">
+                    <video id="video1" [muted]="true" [controls]="false" loop poster="assets/video/placeholder-sw.png" playsinline>
+                        <source src="assets/video/video.mp4" type="video/mp4">
+                    </video>
+                   
+                    <a class="hoverPopup" (click)="youTubeOpen()"><i></i></a>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<app-video-popup [ytsrc]="ytsrc" *ngIf="youTubePopup" (callClose)="videoClose()"></app-video-popup>
