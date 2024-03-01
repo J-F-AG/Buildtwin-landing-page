@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
     styleUrls: ['./hd-navbar.component.scss']
 })
 export class HdNavbarComponent {
+    togglePopup: boolean = false;
 
     constructor(
         public router: Router
@@ -28,5 +29,9 @@ export class HdNavbarComponent {
             this.isSticky = false;
         }
     }
+
+    loginPopup() {
+        this.togglePopup = !this.togglePopup;
+      }
 
 }
