@@ -361,9 +361,67 @@
                     </li>
                 </ul>
                 <div class="other-options d-flex align-items-center">
-                    <a mat-button routerLink="/register" class="default-btn">
+                    <a mat-button href="javascript:void(0)" class="default-btn" (click)="loginPopup()">
                         Get Started
                     </a>
+
+                    <div class="loginPopup" *ngIf="togglePopup">
+                        <div class="loginOverlay" (click)="loginPopup()"></div>
+                        <div class="loginContent">
+                            <div class="loginGroupData">
+                                <div class="v-center-flex">
+                                    <div class="img">
+                                        <picture>
+                                            <img src="assets/images/login/bewerben.png"
+                                                srcset="assets/images/login/bewerben@2x.png 2x" width="196" height="107"
+                                                alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="content">
+                                        <strong>Online bewerben</strong>
+                                        <span>Werden Sie Teil von J&F.</span>
+                                    </div>
+                                    <a routerLink=""></a>
+                                </div>
+                                <div class="v-center-flex">
+                                    <div class="img">
+                                        <picture>
+                                            <img src="assets/images/login/anfragen.png"
+                                                srcset="assets/images/login/anfragen@2x.png 2x" width="196" height="107"
+                                                alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="content">
+                                        <strong>Angebot anfragen</strong>
+                                        <span>Jetzt Ihr Projekt in nur 3 Minuten anfragen.</span>
+                                    </div>
+                                    <a href="mailto:contact@jf.ag"></a>
+                                </div>
+                            </div>
+                            <div class="loginForm">
+                                <form  id="loginForm" class="loginForm"  class="component">
+                                    <strong>Sind Sie bereits J&F Kunde?</strong>
+                                    <div class="fieldWithIcon">
+                                        <i class="ti ti-mail"></i>
+                                        <input type="text" placeholder="E-Mail*" formControlName="username" required>
+                                    </div>
+                                    <div class="fieldWithIcon">
+                                        <i class="ti ti-lock-off"></i>
+                                        <input type="password" placeholder="Passwort*" formControlName="password" required>
+                                        <button type="submit" ><i></i></button>
+                                       
+                                    </div>
+                                </form>
+                               
+                                <div  class="reset"><span >Ich habe mein Passwort vergessen</span></div>
+                          
+                               
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
         </nav>

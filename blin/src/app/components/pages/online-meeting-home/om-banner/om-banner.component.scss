@@ -338,3 +338,125 @@
     }
 }
 
+
+// Banner setion ui 
+.content-container {
+    display: flex;
+    max-width: 545px;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-top: 59px;
+}
+
+
+
+.highlight, .highlight-emphasis {
+    color: #0E0E28;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 48px */
+}
+
+.highlight-emphasis {
+    font-family: 'Jeff Script';
+    display: inline;
+    margin: 0 13px;
+    font-weight: 400;
+    color: #886de0;
+}
+
+.highlights-container {
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+ 
+}
+
+.cta-container {
+    display: flex;
+    margin-top: 32px;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    flex-wrap: wrap;
+}
+
+.other-options{
+    gap: 16px;
+    display: flex;
+    margin-top: 19px;
+}
+.partnerWrap{
+    width: 100%;
+height: 128px;
+flex-shrink: 0;
+background: #FFF;
+box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+position: absolute;
+bottom: 0;
+}
+.partner{
+    display: flex;
+    list-style: none;
+    gap: 71px;
+    align-items: center;
+    justify-content: center;
+}
+.animation_img img {
+    margin-top: -108px;
+}
+.btnNew{
+    border-radius: 8px;
+background: #886DE0;
+display: flex;
+padding: 4px 8px 4px 20px;
+gap: 13px;
+color: #FFF;
+
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+height: 48px;
+align-items: center;
+
+i{
+    color: #fff;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+}
+
+.btnNew.vidBtn{
+border: 1px solid #E9E9E9;
+background: #fff;
+color: #886DE0;
+}
+i.ti.ti-player-play{
+    background: #886DE0;
+    border-radius: 100px;
+    padding: 3px;
+    font-size: 9px;
+}
+em.coming {
+    border-radius: 40px;
+    border: 1px solid #886DE0;
+    background: #F6F3FF;
+    color: #886DE0;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    margin-bottom: 32px;max-width: 218px;
+}

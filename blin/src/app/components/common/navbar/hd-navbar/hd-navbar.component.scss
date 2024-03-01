@@ -24,7 +24,6 @@
             span {
                 background: #886de0;
                 font-size: 10px;
-                font-family: var(--poppinsFontFamily);
                 color: #fff;
                 padding: 5px 8px 3px;
                 text-transform: uppercase;
@@ -340,7 +339,6 @@
             .default-btn {
                 &.mdc-button {
                     background-color: var(--themeColor);
-                    font-family: var(--poppinsFontFamily);
 
                     padding: {
                         top: 9px;
@@ -1061,3 +1059,224 @@ span.comingManage {
     align-items: center;
     gap: 25px;
 }
+
+a.flex-grow.flex-column.active    em{
+    color: var(--themeColor) !important;
+}
+a.flex-grow.flex-column.active em svg path{
+    fill: var(--themeColor);
+}
+
+.loginPopup {
+    position: absolute;
+    width: 500px;
+    right: 0;
+    top: 97px;
+
+    .loginOverlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 89;
+    }
+
+    .loginContent {
+        background: #fff;
+        -ms-box-shadow: 2px 3px 30px rgba(0, 0, 0, .12);
+        -o-box-shadow: 2px 3px 30px rgba(0, 0, 0, .12);
+        box-shadow: 2px 3px 30px #0000001f;
+        padding: 40px;
+        position: relative;
+        z-index: 99;
+
+        &:before {
+            content: "";
+            background: #fff;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 8px;
+            top: -15px;
+            -khtml-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    .loginGroupData {
+        border-bottom: 1px #f0f0f0 solid;
+        padding-bottom: 12px;
+
+        >div {
+            margin-bottom: 28px;
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            >a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+        }
+
+        .img {
+            flex: 0 0 auto;
+            width: 196px;
+        }
+
+        .content {
+            font-size: 14px;
+            padding-left: 20px;
+
+            strong,
+            span {
+                display: block;
+            }
+
+            strong {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .loginForm {
+        padding-top: 28px;
+    }
+
+    .reset {
+        span {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 12px;
+            text-decoration: underline;
+            color: #8e8e8e;
+            cursor: pointer;
+        }
+    }
+
+   
+
+}
+
+form {
+    strong {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 14px;
+    }
+
+    .fieldWithIcon {
+        position: relative;
+        margin-bottom: 12px;
+        .spin {
+          position: absolute;
+          right: 16px;
+          top: 14px;
+      }
+        >i {
+            width: 20px;
+            height: 20px;
+            left: 18px;
+            position: absolute;
+            top: 50%;
+            -khtml-transform: translateY(-50%);
+            transform: translateY(-50%);
+            font-size: 20px;
+    color: #000;
+        }
+        input {
+            outline: none;
+    -khtml-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: #f8f8f8;
+    border-radius: 0;
+    border: 1px #f8f8f8 solid;
+    font-size: 15px;
+    padding: 5px 45px;
+
+    color: #000;
+    width: 100%;
+    height: 48px;
+        }
+        button {
+    text-align: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease 0s;
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            right: 0;
+            top: 0;
+            i {
+                background: #262424;
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    -khtml-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+                &:after {
+                    content: "";
+                    position: absolute;
+                    border-top: 2px #262424 solid;
+                    border-right: 2px #262424 solid;
+                    width: 6px;
+                    height: 6px;
+                    right: 0;
+                    top: -2px;
+                    -khtml-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:990px){
+    .loginPopup {
+        width: 88%;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+        .loginOverlay {
+            background: rgba(0, 0, 0, .6);
+        }
+        .loginPopup .loginContent {
+            padding: 30px 20px;
+            width: 100%;
+        }
+        .loginPopup .loginGroupData {
+            padding-bottom: 25px;
+        }
+        .loginPopup .loginGroupData > div {
+            flex-direction: row;
+            margin-bottom: 10px;
+        }
+        .loginPopup .loginGroupData .img {
+            width: 125px;
+        }
+        .loginPopup .loginGroupData .content {
+            font-size: 13px;
+            line-height: 1.3;
+            width: 100%;
+            padding-left: 15px;
+        }
+       
+    
+
+}
+   
