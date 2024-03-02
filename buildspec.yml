@@ -8,6 +8,8 @@ env:
     NEW_SECRET_KEY: "codepipeline:NEW_SECRET_KEY"
     AOA_ACCESS_KEY: "codepipeline:AOA_ACCESS_KEY"
     AOA_SECRET_KEY: "codepipeline:AOA_SECRET_KEY"
+    5762_ACCESS_KEY: "codepipeline:5762_ACCESS_KEY"
+    5762_SECRET_KEY: "codepipeline:5762_SECRET_KEY"
 
 phases:
   install:
@@ -30,7 +32,6 @@ phases:
        
   post_build:
     commands:
-       - aws configure set aws_access_key_id $AOA_ACCESS_KEY
-       - aws configure set aws_secret_access_key $AOA_SECRET_KEY
-       - aws s3 sync dist/ s3://$S3_BUCKET_BUILDTWIN/ --region eu-central-1 --acl public-read
-       - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
+       - aws configure set aws_access_key_id $5762_ACCESS_KEY
+       - aws configure set aws_secret_access_key $5762_SECRET_KEY
+       - aws s3 sync dist/ s3://buildtwin-multitenant-dev/ --region ap-south-1 --acl public-read
