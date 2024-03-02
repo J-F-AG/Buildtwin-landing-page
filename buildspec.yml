@@ -34,4 +34,4 @@ phases:
     commands:
        - aws configure set aws_access_key_id $NEW_ACCESS_KEY
        - aws configure set aws_secret_access_key $NEW_SECRET_KEY
-       - aws s3 sync dist/ s3://buildtwin.dev/ --region ap-south-1 --acl public-read
+       - aws s3 sync dist/ s3://buildtwin.dev/
