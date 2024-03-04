@@ -898,12 +898,11 @@
     margin: auto;
     width: 897px;
     position: absolute;
-    left: -83%;
+    left: -30%;
     top: 102px;
     z-index: 99;
     background: #fff;
-    transition: all 0.2s ease-in-out;
-    transform: translate3d(19%, -2px, 5px);
+    transition: all 0.5s ease-in-out;
     opacity: 0;
     visibility: hidden;
 }
