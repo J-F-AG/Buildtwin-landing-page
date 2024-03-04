@@ -131,7 +131,7 @@
                             size: 15px;
                         }
 
-                        ;
+                        transition: all ease 0.5s;
                     }
                 }
 
@@ -150,6 +150,7 @@
 
                         &::before {
                             color: var(--themeColor);
+                            transform: rotate(180deg);
                         }
                     }
 
@@ -339,7 +340,7 @@
             .default-btn {
                 &.mdc-button {
                     background-color: var(--themeColor);
-
+                    border: 2px solid var(--themeColor);
                     padding: {
                         top: 9px;
                         bottom: 9px;
@@ -348,7 +349,9 @@
                     ;
 
                     &:hover {
-                        background-color: var(--themeColor);
+                        background-color: #fff;
+                        border: 2px solid var(--themeColor);
+                        color: #000 !important;
                     }
                 }
             }
