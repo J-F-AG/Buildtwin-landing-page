@@ -603,3 +603,8 @@
     /* background: #e0dada; */
     transform: rotate(180deg);
 }
+@media only screen and (min-width: 768px) and (max-width: 991px){
+.frame-frame3 > div {
+  flex-basis: 107px;
+}
+}
