@@ -400,6 +400,10 @@
 
 ::ng-deep {
     .navbar-area {
+        padding: {
+            top: 7px;
+            bottom: 7px;
+        }
         .navbar {
             .other-options {
                 .link-btn {
@@ -493,9 +497,9 @@
 
                     &:hover,
                     &.active {
-                        a {
-                            color: var(--themeColor);
-                        }
+                        // a {
+                        //     color: var(--themeColor);
+                        // }
                     }
 
                     .dropdown-menu {
@@ -563,12 +567,9 @@
             }
 
             .other-options {
-                margin: {
-                    left: 0;
-                    top: 15px;
-                }
-
-                ;
+                   margin-left: 0;
+    margin-top: 7px;
+    justify-content: space-around;
 
                 .link-btn {
                     margin-right: 20px;
@@ -690,9 +691,9 @@
 
                     &:hover,
                     &.active {
-                        a {
-                            color: var(--themeColor);
-                        }
+                        // a {
+                        //     color: var(--themeColor);
+                        // }
                     }
 
                     .dropdown-menu {
@@ -1280,5 +1281,73 @@ form {
        
     
 
+}
+
+
+@media (max-width:991px){
+    .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
+       
+        position: static;
+        margin-left: -15px;
+        background: transparent;
+        width: 100%;
+        box-shadow: none;
+        display: block;
+
+        .flex-column {
+            width: 100% !important;
+    margin-bottom: 12px;
+        }
+    }
+    .menu_copilot .flex-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        flex-direction: column !important;
+    }
+
+.menu_copilot .text-primary {
+
+    display: none;
+}
+.margin-top-7.height-1.background-secondary{
+    display: none;
+}
+.menu_copilot .flex-grow {
+    flex-basis: 100%;
+}
+.navbar-expand-lg.active{
+ 
+    height: 100vh;
+    overflow: auto;
+}
+.navbar-area .navbar .navbar-nav {
+   max-height: unset;
+    height: calc(100vh - 157px);
+    overflow: auto;
+    overflow-x: hidden;
+    margin-top: 0;
+}
+.menu_copilot{
+    display: none;
+}
+.menu_copilot .text-secondary {
+    display: none;
+}
+a.flex-grow.flex-column em {
+    display: flex;
+    flex-direction: row !important;
+    gap: 10px;
+    align-items: center;
+}
+.navbar-area .navbar {
+    // align-items: baseline;
+}
+em.coming {
+    display: none !important;
+}
+.menu_copilot .font-bold {
+    font-size: 12px;
+}
 }
    

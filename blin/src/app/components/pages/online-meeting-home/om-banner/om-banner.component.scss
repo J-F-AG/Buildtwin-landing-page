@@ -1,12 +1,12 @@
 .banner-area {
     padding: {
-        top: 140px;
-        bottom: 100px;
+        top: 99px;
+        bottom: 84px;
     }
 
     ;
-    overflow: hidden;
-    height: 100vh;
+    // overflow: hidden;
+    // height: 100vh;
 }
 
 .banner-content {
@@ -331,11 +331,11 @@
 }
 
 .videoCover {
-    width: 65.015%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
+    position: relative;
+    height: calc(100vh - 223px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 
     &:hover {
         .hoverPopup {
@@ -354,13 +354,14 @@
 }
 
 .hoverPopup {
-    background: rgba(255, 255, 255, 0.5);
+
     position: absolute;
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
+    width: 100%;
+    height: 100%;
     left: 3px;
     top: 3px;
     transition: all .5s ease 0s;
+
 
     i {
         border-radius: 50%;
@@ -391,12 +392,10 @@
 // Banner setion ui 
 .content-container {
     display: flex;
-    max-width: 545px;
     flex-direction: column;
     font-size: 40px;
     font-weight: 600;
     line-height: 120%;
-    margin-top: 59px;
 }
 
 
@@ -626,21 +625,159 @@ em.coming {
     margin: auto 0;
 }
 
-@media (max-width:767px){
+
+
+// new auto pailot section markup
+
+
+.iteration-6-inner {
+    position: absolute;
+    top: 781px;
+    left: calc(50% - 648px);
+    border-radius: 12px;
+    background-color: var(--lightest-grey);
+    width: 1296px;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding-5xl);
+    box-sizing: border-box;
+    font-size: var(--font-size-5xl);
+    color: var(--color-gray-100);
+}
+
+.cdeSection {
+    border-radius: 12px;
+    background: #F9F9F9;
+    padding: 24px;
+    display: flex;
+    padding: 24px;
+    align-items: center;
+    gap: 24px;
+    margin-top: 37px;
+}
+
+.cde_col {
+    border-radius: 8px;
+    border: 1px solid #F9F9F9;
+    background: #FFF;
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex: 1 0 0;
+    align-self: stretch;
+    position: relative;
+
+    p {
+        color: #0E0E28;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        /* 19.6px */
+        margin-bottom: 0;
+    }
+}
+
+.headPart {
+    h2 {
+        color: #0E0E28;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        /* 31.2px */
+        text-align: center;
+
+    }
+
+    span {
+
+        color: #808080;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        /* 20.8px */
+    }
+}
+
+i.icon1 {
+    position: absolute;
+    right: -29px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.other-options{
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.other-options input {
+    display: flex;
+    width: 322px;
+    height: 48px;
+    padding: 12px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #ECECEC;
+
+    background: #FFF;
+}
+
+.rating{
+    .d-flex{
+        gap:2px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 20px;
+        margin-bottom: 4px;
+    }
+    span{
+        color: #000;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 25.6px */
+    }
+}
+
+
+@media (max-width:767px) {
     .videoCover {
         position: relative;
         top: 0;
         width: 100%;
     }
+
     .containerBottom {
         position: static;
         border-bottom: none;
     }
+
     .banner-area {
         height: auto;
         padding-bottom: 0;
+        padding-top: 83px;
     }
-    .containerBottom{
+
+    .containerBottom {
         padding: 20px;
+    }
+    .other-options {
+        margin-bottom: 24px;
+        flex-direction: column;
+        align-items: baseline !important;
+    }
+    .cdeSection {
+        flex-direction: column;
+        margin: 0;
+    }
+    i.icon1{
+        display: none;
     }
 }

@@ -613,6 +613,10 @@ img {
 
     body {
         font-size: 18px;
+
+    }
+    body.mat-typography.menuToggle {
+        overflow: hidden;
     }
     p {
         font-size: 18px;
