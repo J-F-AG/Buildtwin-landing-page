@@ -1347,7 +1347,20 @@ em.coming {
     display: none !important;
 }
 .menu_copilot .font-bold {
-    font-size: 12px;
+    font-size: 14px;
+}
+aside.flex-column section.padding-24.background-white {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0 !important;
+    h2{
+        margin-bottom: 0;
+    }
+    a.cta-button {
+        margin-top: 0 !important;
+        padding: 6px 10px !important;
+    }
 }
 }
    
