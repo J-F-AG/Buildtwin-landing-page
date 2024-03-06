@@ -16,6 +16,8 @@ export class HdNavbarComponent {
     classApplied = false;
     toggleClass() {
         this.classApplied = !this.classApplied;
+
+        document.getElementsByTagName('body')[0].classList.toggle('menuToggle')
     }
 
     // Navbar Sticky
@@ -32,6 +34,12 @@ export class HdNavbarComponent {
 
     loginPopup() {
         this.togglePopup = !this.togglePopup;
+      }
+      manageToggle(event:any){
+        
+        document.getElementsByTagName('body')[0].classList.remove('menuToggle')
+
+
       }
 
 }
