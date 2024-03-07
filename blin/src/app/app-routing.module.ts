@@ -42,6 +42,8 @@ import { EventsDetailsComponent } from './components/pages/events-details/events
 import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
 
 const routes: Routes = [
+
+    
     {path: '', component: HelpDeskHomeComponent},
     {path: 'good-reason', component: EmailMarketingHomeComponent},
     {path: 'marketplace', component: TimeTrackingHomeComponent},
@@ -52,13 +54,6 @@ const routes: Routes = [
     {path: 'team', component: TeamPageComponent},
     {path: 'careers', component: CareersPageComponent},
     {path: 'job-details', component: JobDetailsPageComponent},
-
-    
-    // {path: 'features', component: FeaturesPageComponent},
-    // {path: 'feature-details', component: FeatureDetailsPageComponent},
-    // {path: 'services', component: ServicesPageComponent},
-    // {path: 'service-details', component: ServiceDetailsPageComponent},
-   
    
     {path: 'pricing', component: PricingPageComponent},
     {path: 'integrations', component: IntegrationsPageComponent},
@@ -88,7 +83,18 @@ const routes: Routes = [
     {path: 'single-events', component: EventsDetailsComponent},
     {path: 'training-faq', component: FaqPageTrainingComponent},
 
-    // Here add new pages component
+
+
+
+    // Old pages 
+
+    // {path: 'features', component: FeaturesPageComponent},
+    // {path: 'feature-details', component: FeatureDetailsPageComponent},
+    // {path: 'services', component: ServicesPageComponent},
+    // {path: 'service-details', component: ServiceDetailsPageComponent},
+
+
+
 
     {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list
 ];
