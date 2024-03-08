@@ -192,6 +192,7 @@ import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq
 
 import { HttpClientModule } from '@angular/common/http';
 import { VideoPopupModule } from './components/common/video-popup/video-popup.module';
+import { ThreeColMarketComponent } from './components/new-com/three-col-market/three-col-market.component';
 
 
 @NgModule({
@@ -382,7 +383,9 @@ import { VideoPopupModule } from './components/common/video-popup/video-popup.mo
     FaqPageTrainingComponent,
     EmFaqTrainingComponent,
     HdFaqTrainingComponent,
-    TtFaqTrainingComponent
+    TtFaqTrainingComponent,
+    ThreeColMarketComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -30,10 +30,11 @@
 }
 
 .line {
+    position: relative;
     span{
         position: relative;
     }
-    width: 603px;
+    width: 635px;
     height: 8px;
     background: #ECECEC;
     margin: 0 auto;
@@ -57,6 +58,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 2;
     }
 
     em {
@@ -75,11 +77,27 @@
         position: relative;
     }
 }
+.line span.active strong {
+    background: #886DE0;
+    color: #fff;
+}
 
+.line span.active em {
+ color:  #886DE0;
+}
+.line span:nth-child(2) em{
+    left: -54px;
+}
+.line span:nth-child(3) em{
+    left: -18px;
+}
+.line span:nth-child(4) em{
+    left: -66px;
+}
 .tabContent {
     text-align: center;
     margin: 0 auto;
-    margin-top: 88px;
+    margin-top: 75px;
 
     span {
         color: #0E0E28;
@@ -103,5 +121,32 @@
     }
     img{
         margin-top: 25px;
+    }
+}
+
+
+.svgFlex {
+    position: absolute;
+    width: 100%;
+    bottom: -5px;
+    left: 24px;
+}
+.svgFlex img{
+    opacity: 0;
+}
+img.lineSvg.active {
+    opacity: 1 !important;
+}
+
+@media (max-width:767px){
+    .line {
+        position: relative;
+        width: 100%;
+    }
+    .line em{
+        display: none;
+    }
+    .svgFlex{
+        display: none;
     }
 }
