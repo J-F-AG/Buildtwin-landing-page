@@ -1,394 +1,160 @@
-.testimonials-area {
-    &::before {
-        background: #F6F3FF;
-        filter: blur(200px);
-        border-radius: 50%;
-        position: absolute;
-        height: 373px;
-        bottom: 200px;
-        right: 150px;
-        width: 373px;
-        z-index: -1;
-        content: '';
-    }
+.testimonial-container {
+    width: 100%;
+    margin-top: 140px;
+    text-align: center;
+  }
+
+  .testimonial-title {
+    color: #0E0E28;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 48px */
+  }
+
+  
+
+  .testimonial-text {
+    color: var(--grey, #808080);
+    text-align: center;
+    margin-top: 8px;
+    width: 100%;
+  }
+
+
+
+.partnerWrap{
+    width: 100%;
+height: 128px;
+flex-shrink: 0;
+background: #FFF;
+
 }
-.testimonials-image {
-    padding: {
-        right: 71px;
-        bottom: 20px;
-    };
-    img {
-        border-radius: 8px;//updated-from-20-8;
-    }
-    .shape1 {
-        right: 160px;
-        bottom: 0;
-
-        img {
-            border-radius: 0;
-            animation: {
-                duration: 30s;
-                name: rotateme;
-                timing-function: linear;
-                iteration-count: infinite;
-            };
-        }
-    }
-    .shape2 {
-        right: 38px;
-        top: 95px;
-
-        img {
-            border-radius: 0;
-            animation: movetopbounce 2s linear infinite;
-        }
-    }
+ul.partner li {
+    display: flex;
+    align-items: center;
 }
-.testimonials-content {
-    padding-left: 67px;
-
-    h2 {
-        font-size: 32px;
-        max-width: 675px;
-        line-height: 1.25;
-    }
-}
-.testimonial-item {
-    .logo {
-        width: auto !important;
-        display: inline-block !important;
-    }
-    .rating {
-        // margin-left: 10px;
-
-        i {
-            margin-right: 3px;
-            color: var(--themeColor);
-            font-size: 14px;
-            line-height: 1;
-        }
-        span {
-            top: 2px;
-            font-size: 12px;
-            margin-left: 5px;
-            position: relative;
-
-            span {
-                top: 0;
-                margin-left: 0;
-                color: #878790;
-            }
-        }
-    }
-    p {
-        font-size: 17px;
-        line-height: 1.5;
-        color: black;
-        margin: {
-            top: 30px;
-            bottom: 20px;
-        };
-    }
-    .user {
-        display: inline-block !important;
-        width: 36px !important;
-        border-radius: 50%;
-        height: 36px;
-    }
-    .name {
-        color: var(--paragraphColor);
-        margin-left: 10px;
-        font-size: 14px;
-    }
-}
-::ng-deep {
-    .testimonials-slides {
-        margin-top: 60px;
-        max-width: 682px;
-
-        .owl-theme {
-            .owl-nav {
-                right: 0;
-                bottom: -2px;
-                margin-top: 0;
-                position: absolute;
-
-                [class*=owl-] {
-                    padding: 0;
-                    margin: 0 3px;
-                    font-size: 20px;
-                    border-radius: 0;
-                    background: transparent;
-                    color: var(--blackColor);
-                    transition: var(--transition);
-
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                    &:hover {
-                        color: var(--themeColor);
-                    }
-                }
-            }
-            .owl-dots {
-                text-align: end;
-                margin-top: 25px;
-                padding-right: 60px;
-
-                .owl-dot {
-                    span {
-                        width: 10px;
-                        height: 10px;
-                        margin: 0 5px;
-                        border-radius: 50%;
-                        background: #f0f0f0;
-                        transition: var(--transition);
-                    }
-                    &:first-child {
-                        span {
-                            margin-left: 0;
-                        }
-                    }
-                    &:last-child {
-                        span {
-                            margin-right: 0;
-                        }
-                    }
-                    &:hover, &.active {
-                        span {
-                            background: var(--themeColor);
-                        }
-                    }
-                }
-            }
-        }
-    }
+.partner{
+    display: flex;
+    list-style: none;
+    gap: 71px;
+    justify-content: center;
+    margin: 44px 0;
 }
 
-/* Max width 767px */
-@media only screen and (max-width : 767px) {
-
-    .testimonials-area {
-        &::before {
-            display: none;
-        }
-    }
-    .testimonials-image {
-        margin-bottom: 20px;
-        padding: {
-            right: 0;
-            bottom: 0;
-        };
-        img {
-            border-radius: 4px;
-        }
-        .shape1, .shape2 {
-            display: none;
-        }
-    }
-    .testimonials-content {
-        padding-left: 0;
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
-        h2 {
-            line-height: 1.35;
-            font-size: 25px;
-            max-width: 100%;
-        }
-    }
-    .testimonial-item {
-        .rating {
-            margin: {
-                left: 0;
-                top: 10px;
-            };
-            i {
-                font-size: 17px;
-            }
-            span {
-                font-size: 15px;
-            }
-        }
-        p {
-            line-height: 1.8;
-            font-size: 15px;
-            margin: {
-                top: 15px;
-                bottom: 15px;
-            };
-        }
-        .icon {
-            display: none;
-        }
-    }
-    ::ng-deep {
-        .testimonials-slides {
-            margin-top: 25px;
-            max-width: 100%;
-    
-            .owl-theme {
-                .owl-nav {
-                    bottom: 1px;
-                }
-                .owl-dots {
-                    display: none;
-                }
-            }
-        }
-    }
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+    margin-bottom: 16px;
+  }
 
+  .profile-info {
+    display: flex;
+    gap: 8px;
+    line-height: 140%;
+  }
+
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .profile-name,
+  .profile-company {
+    white-space: nowrap;
+  }
+
+  .profile-name {
+    color: var(--Black, #000);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    margin-bottom: 0;
+  }
+
+  .profile-company {
+    color: var(--grey, var(--grey, #808080));
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 16.8px */
+  }
+
+  .profile-description {
+    margin-top: 16px;
+    color: #0e0e28;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .colWrapper{
+    display: flex;
+    gap:16px;
+    .col{
+        flex-basis: 416px;
+    }
+}
+.videoWrap{
+    margin-top: 16px;
 }
 
-/* Min width 576px to Max width 767px */
-@media only screen and (min-width : 576px) and (max-width : 767px) {}
 
-/* Min width 768px to Max width 991px */
-@media only screen and (min-width : 768px) and (max-width : 991px) {
-
-    .testimonials-area {
-        &::before {
-            right: 0;
-            width: 300px;
-            height: 300px;
-        }
+@media (max-width: 991px) {
+    .testimonial-title {
+      max-width: 100%;
     }
-    .testimonials-image {
-        margin-bottom: 20px;
-        padding-right: 30px;
-        
-        .shape2 {
-            right: 0;
-        }
+  }
+  @media (max-width: 991px) {
+    .testimonial-text {
+      max-width: 100%;
     }
-    .testimonials-content {
-        padding-left: 0;
-    
-        h2 {
-            font-size: 29px;
-        }
+  }
+  @media (max-width: 767px) {
+    .colWrapper {
+        flex-direction: column;
+        gap: 0;
     }
-    .testimonial-item {
-        p {
-            line-height: 1.7;
-            font-size: 16px;
-            margin: {
-                top: 15px;
-                bottom: 10px;
-            };
-        }
-    }
-    ::ng-deep {
-        .testimonials-slides {
-            margin-top: 30px;
-            max-width: 100%;
-        }
+    .partner {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        justify-content: center;
+        margin: 44px 0;
+        flex-wrap: wrap;
+        padding: 0;
     }
 
+ul.partner li {
+   
+    height: 55px;
 }
-
-/* Min width 992px to Max width 1199px */
-@media only screen and (min-width : 992px) and (max-width : 1199px) {
-
-    .testimonials-area {
-        &::before {
-            right: 0;
-        }
-    }
-    .testimonials-image {
-        padding: {
-            right: 0;
-            bottom: 20px;
-        };
-        .shape2 {
-            right: -20px;
-        }
-    }
-    .testimonials-content {
-        padding-left: 20px;
-    
-        h2 {
-            font-size: 35px;
-            max-width: 100%;
-        }
-    }
-    .testimonial-item {
-        p {
-            line-height: 1.7;
-            font-size: 17px;
-            margin: {
-                top: 20px;
-                bottom: 10px;
-            };
-        }
-    }
-    ::ng-deep {
-        .testimonials-slides {
-            margin-top: 30px;
-            max-width: 100%;
-        }
-    }
-
+.partnerWrap {
+    height: auto;
 }
-
-/* Min width 1200px to Max width 1399px */
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-
-    .testimonials-area {
-        &::before {
-            right: 0;
-        }
-    }
-    .testimonials-image {
-        padding-right: 30px;
-
-        .shape2 {
-            right: 0;
-        }
-    }
-    .testimonials-content {
-        padding-left: 25px;
-    
-        h2 {
-            max-width: 100%;
-            font-size: 43px;
-        }
-    }
-    .testimonial-item {
-        p {
-            margin: {
-                top: 20px;
-                bottom: 10px;
-            };
-        }
-    }
-    ::ng-deep {
-        .testimonials-slides {
-            margin-top: 30px;
-            max-width: 100%;
-        }
-    }
-
-}
-
-/* Min width 1400px to Max width 1699px */
-@media only screen and (min-width: 1400px) and (max-width: 1699px) {
-
-    .testimonials-area {
-        &::before {
-            right: 100px;
-        }
-    }
-    .testimonials-image {
-        padding-right: 55px;
-
-        .shape2 {
-            right: 20px;
-        }
-    }
-    .testimonials-content {
-        padding-left: 35px;
-    }
-
-}
+  }

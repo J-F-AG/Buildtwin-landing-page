@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./task-management.component.scss']
 })
 export class TaskManagementComponent {
+ activeState:number = 1
 
+ tabinbg(state:any){
+  this.activeState = state
+ }
 }
