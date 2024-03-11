@@ -1,0 +1,104 @@
+:host ::ng-deep .buildtwinHelps {
+    margin: 50px 0;
+    .headSection {
+        h2{
+        color: #0E0E28;
+
+        text-align: center;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        /* 56px */
+    }
+    margin-bottom: 64px;
+}
+
+    .tabContent {
+        display: flex;
+
+        .tabLeft {
+            min-width: 350px;
+            li {
+                display: flex;
+                gap: 12px;
+                margin-bottom: 45px;
+                position: relative;
+
+                i {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100px;
+                    border: 1px solid #886DE0;
+                }
+                color: #0E0E28;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                /* 25.2px */
+          &.active{
+            font-weight: 600;
+           
+
+          }
+          &.active i{
+background: #886DE0;
+          }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 47px;
+                    background: #ECECEC;
+                    top: 24px;
+                    left: 12px;
+
+                }
+                &:last-child:after{
+                    display: none;
+                }
+            }
+        }
+
+        .tabRIght {
+            border-radius: 8px;
+            background: #F6F3FF;
+            padding: 32px 38px;
+            padding-bottom: 0;
+            overflow: hidden;
+.flex{
+    gap: 50px;
+    align-items: center;
+}
+            .imgWrap {
+                    min-width: 343px;
+                    display: flex;
+    align-items: flex-end;
+    position: relative;
+    top: 37px;
+            }
+
+            .contentWrap {
+                h3 {
+                    color: #0E0E28;
+
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                    /* 28px */
+                }
+
+                p {
+                    color: var(--grey, var(--grey, #808080));
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    /* 22.4px */
+                }
+            }
+        }
+    }
+}

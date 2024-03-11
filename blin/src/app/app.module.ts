@@ -193,6 +193,10 @@ import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq
 import { HttpClientModule } from '@angular/common/http';
 import { VideoPopupModule } from './components/common/video-popup/video-popup.module';
 import { ThreeColMarketComponent } from './components/new-com/three-col-market/three-col-market.component';
+import { AiDrivenServicesComponent } from './components/new-com/ai-driven-services/ai-driven-services.component';
+import { HowBuildtwinHelpsComponent } from './components/new-com/how-buildtwin-helps/how-buildtwin-helps.component';
+import { TraningReviewComponent } from './components/new-com/traning-review/traning-review.component';
+import { HowProcessComponent } from './components/new-com/how-process/how-process.component';
 
 
 @NgModule({
@@ -385,6 +389,10 @@ import { ThreeColMarketComponent } from './components/new-com/three-col-market/t
     HdFaqTrainingComponent,
     TtFaqTrainingComponent,
     ThreeColMarketComponent,
+    AiDrivenServicesComponent,
+    HowBuildtwinHelpsComponent,
+    TraningReviewComponent,
+    HowProcessComponent
 
   ],
   imports: [
@@ -406,7 +414,7 @@ import { ThreeColMarketComponent } from './components/new-com/three-col-market/t
     LightgalleryModule,
     ReactiveFormsModule,
     HttpClientModule,
-    VideoPopupModule
+    VideoPopupModule,
   ],
   providers: [
     Title
