@@ -1,4 +1,4 @@
-.cdeSection {
+:host ::ng-deep .cdeSection {
     border-radius: 12px;
     background: #F9F9F9;
     padding: 24px;
@@ -6,8 +6,13 @@
     padding: 0;
     align-items: center;
     gap: 32px;
-
     margin-top: 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 65px;
+    padding: 24px;
+
+
 
     .cde_col {
         border-radius: 8px;
@@ -122,30 +127,39 @@
         top: 113px;
         transform: rotate(-90deg);
     }
+
+
+ 
 }
 
 
-@media(max-width:767px) {
-    .solutionGroup>div {
-        min-width: unset;
-        width: 100%;
-    }
 
-    .allSolution .why-choose-content .benefits li {
-        white-space: unset;
-    }
-    .cdeSection {
+@media(max-width:767px) {
+
+
+    .cdeSection{
         flex-direction: column;
         margin: 0;
         margin-bottom: 50px;
+        .solutionGroup>div {
+            min-width: unset;
+            width: 100%;
+        }
+
+        .allSolution .why-choose-content .benefits li {
+            white-space: unset;
+        }
+        .benefits-list {
+            flex-direction: column;
+        }
+        i.icon1{
+            display: none;
+        }
+        .benefit-item, .cdeSection .benefit-final {
+            text-align: left;
+        }
     }
-    i.icon1{
-        display: none;
-    }
-    .cdeSection .benefits-list {
-        flex-direction: column;
-    }
-    .cdeSection .benefit-item, .cdeSection .benefit-final {
-        text-align: left;
-    }
+   
+
+
 }
