@@ -4,18 +4,22 @@
         padding: 63px 30px;
         align-items: flex-end;
         gap: 30px;
-.flex_item{
-    display: flex;
-    gap: 30px;
-}
+
+        .flex_item {
+            display: flex;
+            gap: 30px;
+        }
+
         .itemWrap {
             flex-basis: 306px;
-            img{
+
+            img {
                 width: 100%;
             }
+
             .contentWrap {
                 display: flex;
-           
+
                 padding: 24px 20px;
                 justify-content: center;
                 align-items: center;
@@ -42,6 +46,17 @@
                     line-height: 140%;
                     /* 22.4px */
                 }
+            }
+        }
+        @media (max-width:950px) {
+            .itemWrap .contentWrap{
+                padding: 10px 0;
+            }
+        }
+        @media (max-width:767px) {
+            .flex_item {
+                flex-direction: column;
+                gap: 0;
             }
         }
     }
