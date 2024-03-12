@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./features-style-one.component.scss']
 })
 export class FeaturesStyleOneComponent implements OnInit {
-
+  activeState:number = 1
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  tabbing(tabList:any){
+    console.log(tabList);
+    
+    this.activeState = tabList
+  }
 }

@@ -1,50 +1,112 @@
 <div class="container">
-    <div class="section-title">
-        <span class="sub-title">End-to-End Training</span>
-        <h2>Co-Developed with BuildTwin Clients​</h2>
-        <p>Online certification courses that set you up for success. Gain industry-relevant skills with cohort-based learning.
-        </p>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 col-sm-6 col-md-6">
-            <div class="single-features-box">
-                <div class="icon">
-                    <i class="flaticon-brain-process"></i>
+  
+    <app-how-buildtwin-helps>
+        <div class="buildtwinHelps forTraning">
+
+            
+            <div class="container">
+                <div class="headSection">
+                    <span class="sub-title">End-to-End Training</span>
+                    <h2>Co-developed with BuildTwin Clients
+                    </h2>
+                    <p>
+                        Online certification courses that set you up for success. Gain industry-relevant skills with <br>cohort-based learning.
+                    </p>
                 </div>
-                <h3>Co-developed with BuildTwin Clients</h3>
-                <p>Learning top skills can bring an extra-ordinary outcome in a career.</p>
-                <a routerLink="/profile-authentication" class="link-btn">Start Now!</a>
+                <div class="tabContent">
+                    <div class="tabLeft">
+                        <ul>
+                            <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing(1)" [ngClass]="{'active':activeState === 1}">
+                                <i></i> Co-Developed with<br> BuildTwin Clients
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="500"  (click)="tabbing(2)" [ngClass]="{'active':activeState === 2}">
+                                <i></i> Building code training
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing(3)" [ngClass]="{'active':activeState === 3}">
+                                <i></i>Software Training
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing(4)" [ngClass]="{'active':activeState === 4}">
+                                <i></i> Technical Highlights
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="tabRIght">
+                        <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState === 1">
+                            <div class="flex ">
+                                <div class="imgWrap">
+                                    <img src="assets/images/ui/whytraning1.png" alt="" title="">
+                                </div>
+                                <div class="contentWrap">
+                                    <h3>
+                                        Co-Developed with BuildTwin Clients
+
+                                    </h3>
+                                    <p>
+                                        Learning top skills can bring an extra-ordinary outcome in a career.
+                                    </p>
+                                    <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg"> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState === 2">
+                            <div class="flex">
+                                <div class="imgWrap">
+                                    <img src="assets/images/ui/whytraning2.png" alt="" title="">
+                                </div>
+                                <div class="contentWrap">
+                                    <h3>
+                                        Building code training
+
+                                    </h3>
+                                    <p>
+                                        Everyone prefers to enjoy learning at their own pace & that gives a great
+                                        result.
+
+                                    </p>
+                                    <a routerLink="" class="newBtn">Start Now<img src="assets/images/ui/arrow.svg"> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState === 3">
+                            <div class="flex ">
+                                <div class="imgWrap">
+                                    <img src="assets/images/ui/whytraning3.png" alt="" title="">
+                                </div>
+                                <div class="contentWrap">
+                                    <h3>
+                                        Software Training
+                                    </h3>
+                                    <p>
+                                        Experienced teachers can assist in learning faster with their best approaches!
+                                    </p>
+                                    <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg"> </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState === 4">
+                            <div class="flex ">
+                                <div class="imgWrap">
+                                    <img src="assets/images/ui/whytraning4.png" alt="" title="">
+                                </div>
+                                <div class="contentWrap">
+                                    <h3>
+                                        Technical Highlights
+                                    </h3>
+                                    <p>
+                                        We are delighted to give you options to enjoy learning from anywhere in the
+                                        world.
+                                    </p>
+                                    <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg"> </a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-3 col-sm-6 col-md-6">
-            <div class="single-features-box">
-                <div class="icon">
-                    <i class="flaticon-computer"></i>
-                </div>
-                <h3>Building code training</h3>
-                <p>Everyone prefers to enjoy learning at their own pace & that gives a great result.</p>
-                <a routerLink="/profile-authentication" class="link-btn">Start Now!</a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-md-6">
-            <div class="single-features-box">
-                <div class="icon">
-                    <i class="flaticon-shield-1"></i>
-                </div>
-                <h3>Software Training</h3>
-                <p>Experienced teachers can assist in learning faster with their best approaches!</p>
-                <a routerLink="/profile-authentication" class="link-btn">Start Now!</a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6 col-md-6">
-            <div class="single-features-box">
-                <div class="icon">
-                    <i class="flaticon-world"></i>
-                </div>
-                <h3>Technical Highlights</h3>
-                <p>We are delighted to give you options to enjoy learning from anywhere in the world.</p>
-                <a routerLink="/profile-authentication" class="link-btn">Start Now!</a>
-            </div>
-        </div>
-    </div>
-</div>
+    </app-how-buildtwin-helps>

@@ -197,6 +197,7 @@ import { AiDrivenServicesComponent } from './components/new-com/ai-driven-servic
 import { HowBuildtwinHelpsComponent } from './components/new-com/how-buildtwin-helps/how-buildtwin-helps.component';
 import { TraningReviewComponent } from './components/new-com/traning-review/traning-review.component';
 import { HowProcessComponent } from './components/new-com/how-process/how-process.component';
+import { BuildtwinServicesComponent } from './components/new-com/buildtwin-services/buildtwin-services.component';
 
 
 @NgModule({
@@ -392,7 +393,8 @@ import { HowProcessComponent } from './components/new-com/how-process/how-proces
     AiDrivenServicesComponent,
     HowBuildtwinHelpsComponent,
     TraningReviewComponent,
-    HowProcessComponent
+    HowProcessComponent,
+    BuildtwinServicesComponent
 
   ],
   imports: [
