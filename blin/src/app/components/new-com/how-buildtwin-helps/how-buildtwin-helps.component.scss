@@ -1,7 +1,8 @@
 :host ::ng-deep .buildtwinHelps {
-    margin: 50px 0;
-
+    margin: 100px 0;
+    position: relative;
     .headSection {
+        padding-top: 50px;
         h2 {
             color: #0E0E28;
 
@@ -73,52 +74,60 @@
             }
         }
 
-        .tabRIght {
-            border-radius: 8px;
-            background: #F6F3FF;
-            padding: 32px 38px;
-            padding-bottom: 0;
-            overflow: hidden;
+       
+    }
+    .tabRIght {
+        border-radius: 8px;
+        // background: #F6F3FF;
+        // padding: 32px 38px;
+        padding-bottom: 0;
+        overflow: hidden;
+        margin-left: 350px;
 
-            .flex {
-                gap: 50px;
-                align-items: center;
+        .flex {
+            gap: 50px;
+            align-items: center;
+        }
+
+        .imgWrap {
+            min-width: 432px;
+    display: flex;
+    align-items: flex-end;
+    /* height: 400px; */
+    max-width: 432px;
+
+        }
+
+        .imgWrap.bottomALign {
+            position: relative;
+            top: 37px;
+        }
+
+        .contentWrap {
+            padding-right: 57px;
+            
+            h3 {
+                color: #0E0E28;
+
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%;
+                /* 28px */
             }
 
-            .imgWrap {
-                min-width: 343px;
-                display: flex;
-                align-items: flex-end;
-
-            }
-
-            .imgWrap.bottomALign {
-                position: relative;
-                top: 37px;
-            }
-
-            .contentWrap {
-                h3 {
-                    color: #0E0E28;
-
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 140%;
-                    /* 28px */
-                }
-
-                p {
-                    color: var(--grey, var(--grey, #808080));
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 160%;
-                    /* 22.4px */
-                }
+            p {
+                color: var(--grey, var(--grey, #808080));
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                /* 22.4px */
             }
         }
     }
+
+ 
 }
 
 :host ::ng-deep .forTraning {
@@ -169,7 +178,8 @@
     }
     .headSection{
         text-align: center;
-        margin-bottom: 42px;
+        padding-bottom: 42px;
+        padding-top: 50px;
     }
     .headSection p {
         color: var(--grey, var(--grey, #808080));
@@ -198,5 +208,60 @@
     }
   .tabContent .tabRIght .contentWrap p {
         margin-bottom: 10px;
+    }
+
+    .staticData {
+        padding-top: 318px;
+    }
+
+}
+
+// animation
+
+
+
+
+:host ::ng-deep {
+    .fixed{
+        div#onScrollAnimation{
+            position: fixed;
+            top: 100px;
+            z-index: 99;
+            .headSection{
+                background: linear-gradient(1turn, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0) 0, #fff 40%, #fff 90%, #fff 95%, transparent);
+            }
+    
+        } 
+    
+    }
+    
+    .tabRIght > div {
+        margin-bottom: 100px;
+        background: #F6F3FF;
+        opacity: 0.3;
+        display: flex;
+        // padding: 32px 38px;
+        transform: translateY(40%);
+        transition: all ease 0.5s;
+    }
+    .tabRIght > div.active{
+        opacity: 1;
+        transform: translateY(8%);
+    }
+    
+    
+    
+    div#onScrollAnimation {
+        position: absolute;
+        top: 0;
+        max-width: 1320px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+    .staticData {
+        padding-top: 173px;
+        max-width: 1320px;
+        margin: 0 auto;
     }
 }
