@@ -1,5 +1,6 @@
 :host ::ng-deep .servicesWrap {
     padding-bottom: 61px;
+    padding: 0 75px;
     .headPart {
         text-align: center;
         margin-bottom: 50px;
@@ -15,7 +16,7 @@
         }
 
         p {
-            color: #808080;
+            color: #000;
             text-align: center;
             font-size: 16px;
             font-style: normal;
@@ -31,9 +32,15 @@
 
     .itemFlex {
         display: flex;
-        gap: 59px;
+        gap: 40px;
       flex-wrap: wrap;
-      padding: 0 100px;
+      .imgWrap {
+        padding: 40px 53px 0px 53px;
+
+        img{
+            transition: all .3s ease;
+        }
+    }
         .item {
             border-radius: 24px;
             border: 2px solid #ECECEC;
@@ -48,7 +55,7 @@
             /* flex-shrink: 0; */
             flex-basis: 46%;
             overflow: hidden;
-
+     cursor: pointer;
             .bottom-content{
                 border-radius: 0px 0px 24px 24px;
 background: #FFF;
@@ -58,12 +65,12 @@ width: 100%;
 padding: 32px;
 flex-direction: column;
 align-items: flex-start;
-gap: 24px;
+gap: 12px;
 
 span{
     color: #0E0E28;
 
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -71,11 +78,15 @@ span{
 p{
     color: var(--grey, #808080);
 
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 140%; /* 22.4px */
 }
+            }
+
+            &:hover .imgWrap img{
+                transform: scale(1.1);
             }
         }
     }
