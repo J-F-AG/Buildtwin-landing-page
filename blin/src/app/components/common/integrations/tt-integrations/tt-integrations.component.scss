@@ -109,13 +109,17 @@
     padding-left: 110px;
 
     h2 {
-        font-size: 32px;
+        font-size: 40px; font-weight: 600;
         line-height: 1.4;
         max-width: 585px;
         margin-bottom: 15px;
     }
     p {
         max-width: 530px;
+        strong{
+            font-weight: 400;
+            font-size: 16px;
+        }
     }
     .link-btn {
         margin-top: 5px;

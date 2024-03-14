@@ -2,19 +2,19 @@
     background-color: #f8f8f8;
 
     h2 {
-        font-size: 32px;
+        font-size: 40px; font-weight: 600;
         line-height: 1.7;
         margin-bottom: 15px;
         span {
             display: block;
-            font-size: 60px;
+            font-size: 40px; font-weight: 600;
             line-height: 1;
         }
 
         +span {
             display: block;
-            font-size: 17px;
-            color: var(--lightColor);
+            font-size: 16px;
+            color: #000;
         }
     }
 
@@ -61,7 +61,7 @@
         i {
             top: 50%;
             right: -5px;
-            font-size: 17px;
+            font-size: 16px;
             margin-top: .5px;
             position: absolute;
             transform: translateY(-50%);

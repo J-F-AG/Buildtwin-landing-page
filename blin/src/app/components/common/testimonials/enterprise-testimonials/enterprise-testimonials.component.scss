@@ -2,9 +2,21 @@
     border-radius: 60px 60px 0 0;
     background-color: var(--backgroundColor);
     padding-top: 100px;
-
+h2{
+    font-size: 40px;
+    font-weight: 600;
+}
     .om-section-title {
         max-width: 402px;
+    }
+    .sub-title{
+        font-size: 16px;
+        margin-bottom: 14px;
+        color: var(--themeColor);
+    }
+
+    .sub-heading{
+        font-size: 16px;
     }
     .container-fluid {
         max-width: 1920px;
@@ -141,7 +153,7 @@
                 top: 15px;
             };
             i {
-                font-size: 17px;
+                font-size: 16px;
             }
             span {
                 font-size: 15px;
@@ -223,7 +235,7 @@
         padding: 35px;
         
         p {
-            font-size: 17px;
+            font-size: 16px;
             margin: {
                 top: 20px;
                 bottom: 20px;
