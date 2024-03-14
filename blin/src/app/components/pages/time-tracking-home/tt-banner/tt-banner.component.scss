@@ -66,12 +66,12 @@
         margin-bottom: 10px;
     }
     h1 {
-        font-size: 32px;
+        font-size: 40px; font-weight: 600;
         line-height: 1.3;
         margin-bottom: 20px;
         span {
             display: block;
-            font-size: 60px;
+            font-size: 40px; font-weight: 600;
             line-height: 1.2;
         }
     }
@@ -285,7 +285,7 @@
                     .mat-mdc-form-field-infix {
                         .mat-mdc-floating-label {
                             top: 24px;
-                            font-size: 17px;
+                            font-size: 16px;
                         }
                         .mdc-text-field__input {
                             font-size: 16px;
@@ -383,7 +383,7 @@
                 .mat-mdc-text-field-wrapper {
                     .mat-mdc-form-field-infix {
                         .mat-mdc-floating-label {
-                            font-size: 17px;
+                            font-size: 16px;
                         }
                         .mdc-text-field__input {
                             font-size: 16px;
@@ -433,7 +433,7 @@
     
         .sub-title {
             margin-bottom: 10px;
-            font-size: 17px;
+            font-size: 16px;
         }
         h1 {
             font-size: 43px;
@@ -574,7 +574,7 @@
     display: flex;
     max-width: 545px;
     flex-direction: column;
-    font-size: 40px;
+    font-size: 40px; font-weight: 600;
     font-weight: 600;
     line-height: 120%;
     margin-top: 136px;
@@ -584,7 +584,7 @@
 
 .highlight, .highlight-emphasis {
     color: #0E0E28;
-    font-size: 40px;
+    font-size: 40px; font-weight: 600;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 48px */

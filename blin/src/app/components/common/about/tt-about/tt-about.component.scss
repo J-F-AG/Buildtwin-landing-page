@@ -8,11 +8,11 @@
     padding-left: 60px;
     
     h2 {
-        font-size: 32px;
+        font-size: 40px; font-weight: 600;
         line-height: 1.7;
         margin-bottom: 12px;
         span {
-            font-size: 60px;
+            font-size: 40px; font-weight: 600;
             line-height: 1.2;
             display: block;
         }
@@ -23,6 +23,7 @@
     p {
         //letter-spacing: 0.4px;
         max-width: 592px;
+        font-size: 16px;
     }
     .features-list {
         margin-top: 35px;

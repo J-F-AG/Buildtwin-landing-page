@@ -145,7 +145,7 @@
             p {
                 max-width: 560px;
                 margin: 0 auto 14px;
-                color: var(--lightColor);
+                color: #000;
             }
             .default-btn {
                 font-family: var(--archivoFontFamily);
@@ -311,7 +311,7 @@
             }
             .mat-mdc-tab {
                 .mdc-tab__text-label {
-                    font-size: 17px;
+                    font-size: 16px;
                 }
             }
             .image {
