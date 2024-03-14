@@ -7,7 +7,7 @@
             color: #0E0E28;
 
             text-align: center;
-            font-size: 40px;
+            font-size: 40px; font-weight: 600;
             font-style: normal;
             font-weight: 600;
             line-height: 140%;
@@ -178,11 +178,11 @@
     }
     .headSection{
         text-align: center;
-        padding-bottom: 42px;
+        padding-bottom: 0;
         padding-top: 50px;
     }
     .headSection p {
-        color: var(--grey, var(--grey, #808080));
+        color: #000;
         text-align: center;
         font-size: 16px;
         font-style: normal;
@@ -238,7 +238,7 @@
     .tabRIght > div {
         margin-bottom: 100px;
         background: #F6F3FF;
-        opacity: 0.3;
+        opacity: 0;
         display: flex;
         // padding: 32px 38px;
         transform: translateY(40%);
@@ -254,7 +254,7 @@
     div#onScrollAnimation {
         position: absolute;
         top: 0;
-        max-width: 1320px;
+        // max-width: 1320px;
         margin: 0 auto;
         left: 0;
         right: 0;
@@ -263,5 +263,11 @@
         padding-top: 173px;
         max-width: 1320px;
         margin: 0 auto;
+    }
+}
+
+@media (min-width: 1700px){
+    :host ::ng-deep .staticData {
+        max-width: 1520px;
     }
 }

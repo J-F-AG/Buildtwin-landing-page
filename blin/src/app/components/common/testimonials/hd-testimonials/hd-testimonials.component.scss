@@ -6,7 +6,7 @@
 
   .testimonial-title {
     color: #0E0E28;
-    font-size: 40px;
+    font-size: 40px; font-weight: 600;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 48px */
@@ -15,10 +15,11 @@
   
 
   .testimonial-text {
-    color: var(--grey, #808080);
+    color: #000;
     text-align: center;
     margin-top: 8px;
     width: 100%;
+    font-size: 16px;
   }
 
 
@@ -116,12 +117,15 @@ ul.partner li {
   .colWrapper{
     display: flex;
     gap:16px;
+    justify-content: center;
     .col{
-        flex-basis: 416px;
+        // flex-basis: 416px;
     }
 }
 .videoWrap{
     margin-top: 16px;
+    height: 256px;
+    overflow: hidden;
 }
 
 
