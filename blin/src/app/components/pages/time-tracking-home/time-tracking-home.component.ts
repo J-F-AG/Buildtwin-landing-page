@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-time-tracking-home',
@@ -22,16 +23,24 @@ export class TimeTrackingHomeComponent {
 
 
  
-    constructor(private titleService:Title) {}
-    
-    ngOnInit() {
-        this.titleService.setTitle(this.title);
+    constructor(private titleService: Title,private router: Router) { 
 
+      router.events.subscribe((val) => {
         this.scrollActivated = document.getElementById('scrollActivated');
         setTimeout(() => {
           this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
           this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          
         }, 2000);
+    });
+    
+    }
+    
+    ngOnInit() {
+        this.titleService.setTitle(this.title);
+
+        
 
     }
     @HostListener('window:scroll', ['$event'])
@@ -40,7 +49,7 @@ export class TimeTrackingHomeComponent {
       this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
       let topscroll = this.scrollDivOffsettop - this.FixedDiv
       let winH = window.innerHeight
-      let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - winH
+      let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
       this.fixedElement = document.getElementById('scrollActivated');
   
       // inside active 

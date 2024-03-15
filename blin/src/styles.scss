@@ -623,7 +623,7 @@ img {
         overflow: hidden;
     }
     p {
-        font-size: 18px;
+        font-size: 16px !important;
         line-height: 26px;
     }
     .ptb-100 {
@@ -1099,4 +1099,16 @@ img {
 
 .curserDefault{
     cursor: default !important;
+}
+
+@media (max-width:1200px){
+    h2{
+        font-size: 30px !important;
+    }
+}
+
+@media (max-width:767px){
+    h2{
+        font-size: 24px !important;
+    }
 }

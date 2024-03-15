@@ -1,0 +1,53 @@
+.course_schedule {
+    border-radius: 8px;
+    border: 1px solid var(--gradient, #886DE0);
+    background: #F6F3FF;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 37px;
+    max-width: 1296px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+
+    .text {
+        h2 {
+            color: #000;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 8px;
+        }
+
+        span {
+            color: var(--black-700-black, #121212);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+    .btn {
+        border-radius: 6.242px;
+        background: #886DE0;
+        display: inline-flex;
+        padding: 14px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        color: var(--color-green-button, #FFF);
+        font-size: 21.847px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 140%;
+        min-width: 253px;
+        cursor: pointer;
+        /* 30.585px */
+
+    }
+
+}

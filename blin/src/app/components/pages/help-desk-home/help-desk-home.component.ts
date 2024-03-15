@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-help-desk-home',
@@ -21,16 +22,25 @@ export class HelpDeskHomeComponent {
   scrolledDivHeight: any
   fixedElement: any
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title,private router: Router) { 
+
+    router.events.subscribe((val) => {
+      this.scrollActivated = document.getElementById('scrollActivated');
+      setTimeout(() => {
+        this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+        this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+        console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+        
+      }, 2000);
+  });
+  
+  }
 
   ngOnInit() {
+  
     this.titleService.setTitle(this.title);
 
-    this.scrollActivated = document.getElementById('scrollActivated');
-    setTimeout(() => {
-      this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-      this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-    }, 2000);
+  
   }
 
 
@@ -42,7 +52,9 @@ export class HelpDeskHomeComponent {
     this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
     let topscroll = this.scrollDivOffsettop - this.FixedDiv
     let winH = window.innerHeight
-    let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - winH
+    console.log(winH);
+    
+    let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
     this.fixedElement = document.getElementById('scrollActivated');
 
     // inside active 

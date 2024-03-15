@@ -133,32 +133,49 @@
 
 
 
-@media(max-width:767px) {
 
 
-    .cdeSection{
-        flex-direction: column;
-        margin: 0;
-        margin-bottom: 50px;
-        .solutionGroup>div {
-            min-width: unset;
-            width: 100%;
+@media (max-width:1200px){
+    :host ::ng-deep .cdeSection {
+        .cde_col {
+            width: 33.3%;
         }
-
-        .allSolution .why-choose-content .benefits li {
-            white-space: unset;
-        }
-        .benefits-list {
+        .benefits-list{
             flex-direction: column;
-        }
-        i.icon1{
-            display: none;
-        }
-        .benefit-item, .cdeSection .benefit-final {
-            text-align: left;
+            margin-bottom: 10px;
         }
     }
-   
-
-
 }
+
+@media (max-width:767px) {
+
+
+    :host ::ng-deep .cdeSection{
+         flex-direction: column;
+         margin: 0;
+         margin-bottom: 50px;
+         .solutionGroup>div {
+             min-width: unset;
+             width: 100%;
+         }
+ 
+         .allSolution .why-choose-content .benefits li {
+             white-space: unset;
+         }
+         .benefits-list {
+             flex-direction: column;
+         }
+         i.icon1{
+             display: none;
+         }
+         .benefit-item, .cdeSection .benefit-final {
+             text-align: left;
+         }
+         .cde_col{
+width: 100%;
+         }
+     }
+    
+ 
+ 
+ }

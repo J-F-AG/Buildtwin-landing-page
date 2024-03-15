@@ -48,16 +48,31 @@
                 }
             }
         }
+
         @media (max-width:950px) {
-            .itemWrap .contentWrap{
+            .itemWrap .contentWrap {
                 padding: 10px 0;
             }
         }
+
         @media (max-width:767px) {
             .flex_item {
                 flex-direction: column;
                 gap: 0;
             }
+        }
+    }
+}
+
+@media (max-width:767px) {
+  :host ::ng-deep   .process {
+        display: flex;
+        padding: 0;
+
+        .itemWrap .contentWrap strong {
+   
+            font-size: 20px;
+            margin-bottom: 5px;
         }
     }
 }

@@ -712,7 +712,12 @@ line-height: 160%; /* 25.6px */
     }
 }
 
-
+@media (max-width: 1200px){
+    .other-options input{
+        width: 50%;
+  
+    }
+}
 @media (max-width:767px) {
     .videoCover {
         position: relative;
@@ -742,6 +747,13 @@ line-height: 160%; /* 25.6px */
   
     i.icon1{
         display: none;
+    }
+    .other-options input{
+        width: 100%;
+  
+    }
+    .content-container{
+        padding-top: 40px;
     }
    
 }
