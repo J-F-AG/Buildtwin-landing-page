@@ -238,7 +238,7 @@
     .tabRIght > div {
         margin-bottom: 100px;
         background: #F6F3FF;
-        opacity: 0;
+        opacity: 0.2;
         display: flex;
         // padding: 32px 38px;
         transform: translateY(40%);
@@ -270,4 +270,38 @@
     :host ::ng-deep .staticData {
         max-width: 1520px;
     }
+}
+
+@media (max-width: 1200px){
+    :host ::ng-deep .buildtwinHelps {
+      .tabRIght .imgWrap{
+        min-width: 300px;
+        max-width: 300px;
+      }
+ 
+
+    .tabContent .tabLeft {
+        min-width: 249px;
+    }
+  .tabRIght {
+      padding-right: 0;
+        margin-left: 317px;
+
+        .flex{
+            flex-direction: column;
+            padding: 20px;
+        }
+    }
+    .tabRIght > div{
+        margin-right: 10px;
+    }
+}
+}
+
+
+@media (max-width:767px){
+    :host ::ng-deep .buildtwinHelps {
+        margin: 35px 0;
+    }
+
 }

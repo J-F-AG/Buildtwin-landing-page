@@ -1464,3 +1464,50 @@ form {
         }
     }
 }
+
+@media (max-width:767px){
+    aside.flex-column section.padding-24.background-white h2 {
+        font-size: 16px !important;
+    }
+    .makrketPlaceMenu .flex-column.makrketPlaceMenuInner {
+        flex-direction: column !important;
+    }
+    .makrketPlaceMenuInner section.padding-24.background-white {
+        opacity: 1;
+        margin-top: 8px;
+        padding: 11px 16px;
+    }
+    .mainHeading {
+        font-size: 13px;
+    }
+    .menu_copilot .margin-top-24 {
+        margin-top: 13px;
+    }
+    .menu_copilot .font-bold {
+        font-size: 13px;
+    }
+    .callbtn {
+        width: 100%;
+        padding: 11px;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
+        margin-left: 0;
+    }
+    span.text {
+        line-height: 1;
+    }
+    .text em {
+        display: block;
+    line-height: 1.4;
+    margin-top: 9px;
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    }
+    .menu_copilot .padding-24 {
+        padding: 0;
+    }
+    .navbar-area .navbar .other-options {
+        margin-bottom: 5px;
+    }
+}
