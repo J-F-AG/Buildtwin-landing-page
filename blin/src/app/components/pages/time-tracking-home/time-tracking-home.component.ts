@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-
+import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
     selector: 'app-time-tracking-home',
     templateUrl: './time-tracking-home.component.html',
@@ -22,7 +22,20 @@ export class TimeTrackingHomeComponent {
     fixedElement: any
 
 
- 
+    reviewsSlides: OwlOptions = {
+      items: 5,
+  nav: true,
+  margin: 0,
+  dots: false,
+  loop: true,
+  autoplay: false,
+  autoplayHoverPause: false,
+  navText: [
+    "<i class='ti ti-chevron-left'></i>",
+    "<i class='ti ti-chevron-right'></i>",
+  ]
+  }
+
     constructor(private titleService: Title,private router: Router) { 
 
       router.events.subscribe((val) => {
