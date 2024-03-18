@@ -7,6 +7,108 @@
     <!-- Hero Section-->
     <app-elearning-banner></app-elearning-banner>
 
+    <div class="banner-area position-relative z-1">
+        
+    <app-three-col-market>
+        <div class="cdeSection">
+            <div class="cde_col">
+              <div class="headPart">
+              <h2>Future-forward curriculum</h2>
+              <span>Procure technical teams with ease</span>
+            </div>
+              <img src="assets/auto/email4.png">
+            
+              <p>100s of pre-qualified technical teams readily available to meet your needs</p>
+                <i class="icon1">
+                  <svg width="32" height="228" viewBox="0 0 32 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 1V1C23.1634 1 16 8.16345 16 17V211C16 219.837 8.83656 227 0 227V227" stroke="#886DE0" stroke-dasharray="2"/>
+                    <path d="M8 89L16 99L24 89" stroke="#A692E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>procure</span>
+                </i>
+            </div>
+            <div class="cde_col">
+              <div class="headPart">
+              <h2>Offline Innovation Bootcamp</h2>
+              <span>Plug & Play into your workflow</span>
+              </div>
+              <img src="assets/auto/email5.png">
+              <section class="benefits-container">
+               <p>Your Benefits</p>
+                <div class="benefits-list">
+                  <div class="benefit-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/02e6fde1d4d9f269bf6f1e361b9453b57f8cc74ff2c67cb798f03e8dd81e5482?apiKey=36850388eee14aa189272e3e1adf474e&" alt="Less manual work icon" class="benefit-image" loading="lazy" />
+                    <div class="benefit-description">Less manual work</div>
+                  </div>
+                  <div class="benefit-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a28bafbb622c1160dc030f1d472174f6bce6fa75ffae9a215263317b7432645e?apiKey=36850388eee14aa189272e3e1adf474e&" alt="Always up to date icon" class="benefit-image" loading="lazy" />
+                    <div class="benefit-description">Always up to date</div>
+                  </div>
+                </div>
+                <div class="benefit-final">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f88922541ff5cf2f0ceec2b346208ad4d115fbcb151032d8b08397aac80654a?apiKey=36850388eee14aa189272e3e1adf474e&" class="benefit-image" alt="Automated reporting and documentation tools icon" loading="lazy" />
+                  <div class="benefit-description">Automated reporting and documentation tools</div>
+                </div>
+              </section>
+              <i class="icon1">
+                <svg width="32" height="228" viewBox="0 0 32 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M-7.3346e-07 1V1C8.83655 1 16 8.16345 16 17V211C16 219.837 23.1634 227 32 227V227" stroke="#886DE0" stroke-dasharray="2"/>
+                  <path d="M24 89L16 99L8 89" stroke="#A692E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>qualify</span>
+              </i>
+            </div>
+      
+            <div class="cde_col">
+              <div class="headPart">
+              <h2>Career Growth </h2>
+              <span>Qualify technical teams</span>
+              </div>
+              <img src="assets/auto/email6.png">
+              <p>Co-develop trainig with BuildTwin and qualify 1000s of teams & talents on demand</p>
+            </div>
+          </div>
+
+     </app-three-col-market>
+     </div>
+
+
+
+     <div class="container">
+     
+ 
+         <div class="expert">
+             <h2>
+                 Curriculum Crafted and Vetted by Global Experts
+             </h2>
+             <p>
+                 BuildTwin AI collects what you have learned into a central space - and incorporates your learnings into smart checkpoints, suggested RFIs and composes messages and e-mails based on your collected experience with BuildTwin.
+ 
+             </p>
+             <div class="expertFlex">
+                 <div class="item">
+                     <strong>80%
+                     </strong>
+                     <span>Foundationale BuildTwin Skills</span>
+                 </div>
+                 <div class="item">
+                     <strong>30%
+                     </strong>
+                     <span>Collaborative Skills</span>
+                 </div>
+                 <div class="item">
+                     <strong>20%
+                     </strong>
+                     <span>Future-Proof Skills</span>
+                 </div>
+                 <div class="item">
+                     <strong>10%
+                     </strong>
+                     <span>Soft Skills</span>
+                 </div>
+             </div>
+         </div>
+
     <!-- Co-Developed with Clients -->
     <app-how-buildtwin-helps>
         <div class="buildtwinHelps forTraning" id="scrollActivated">
@@ -35,6 +137,9 @@
                             </li>
                             <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 4}">
                                 <i></i> Technical Highlights
+                            </li>
+                            <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 5}">
+                                <i></i> Innovation Campus
                             </li>
 
                         </ul>
@@ -116,34 +221,78 @@
 
                             </div>
                         </div>
-
-
                     </div>
+                    <div id="section5"    data-ele="five">
+                        <div class="flex ">
+                            <div class="imgWrap">
+                                <img src="assets/images/ui/whytraning4.png" alt="" title="">
+                            </div>
+                            <div class="contentWrap">
+                                <h3>
+                                    Innovation campus
+                                </h3>
+                                <p>
+                                    We are delighted to give you options to enjoy learning from anywhere in the
+                                    world.
+                                </p>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg"> </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
     </app-how-buildtwin-helps>
 
 
-    <!-- Partner -->
-    <div class="container">
-        <app-partner></app-partner>
+
+    <img src="assets/images/training/training_companies.png">
+    
+  
+
+    <!-- Learn to plan for different partners -->
+    <div class="course_schedule">
+        <img src="assets/images/ui/call_icon.svg">
+        <div class="text">
+            <h2>Learn to plan for different countries</h2>
+       <span>Germany. UK. AUS. US. India. France. </span>
+        </div>
+    
+        <a href="#" class="btn">Get curriculum</a>
     </div>
+
 
     <!-- German Course -->
     <div class="courses-area ptb-100">
         <app-courses></app-courses>
     </div>
 
-    
-<br><br>
+    <!-- Partner -->
+      <div class="container">
+        <app-partner></app-partner>
+    </div>
 
-<!-- Training specifically for you -->
-<app-elearning-about></app-elearning-about>
 
-<!-- Learning at your own pace -->
+   
 
+
+
+
+    <br><br>
+
+
+<!-- 
 <app-funfacts-feedback></app-funfacts-feedback>
+-->
+
+
+<!-- Training specifically for you 
+<app-elearning-about></app-elearning-about>
+-->
 
 
 <!-- 
@@ -151,21 +300,6 @@
     <app-blog></app-blog>
 </div>
 -->
-
-
-<!-- CTA -->
-<app-view-all-courses></app-view-all-courses>
-
-<div class="course_schedule">
-    <img src="assets/images/ui/call_icon.svg">
-    <div class="text">
-        <h2>Full course struture & learning outcomes of our BuildTwin Architecture Course</h2>
-   <span>Get detailed breakdowns and learn about the advantages of learning with BuildTwin.</span>
-    </div>
-
-    <a href="#" class="btn">Schedule a Call</a>
- </div>
-
 
 
 <div class="premium-access-area ptb-100">
@@ -176,6 +310,9 @@
 </div>
 
 
+
+<!-- Testimmonial -->
+<app-elearning-about></app-elearning-about>
 
 
 

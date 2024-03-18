@@ -50,7 +50,10 @@ const routes: Routes = [
     {path: 'marketplace', component: TimeTrackingHomeComponent},
     {path: 'online-meeting', component: OnlineMeetingHomeComponent},
     {path: 'help-desk', component: HelpDeskHomeComponent},
-    {path: 'training', component: FintechSaasHomeComponent},
+    {path: 'training', component: ElearningSchoolComponent},
+
+
+
     {path: 'pricing', component: PricingPageComponent},
     
 
@@ -59,7 +62,6 @@ const routes: Routes = [
     {path: 'enterprise', component: EnterprisePageComponent},
 
 
-    {path: 'traininghomepage', component: ElearningSchoolComponent},
     {path: 'success-story', component: SuccessStoryComponent},
     {path: 'courses', component: CoursesStyleOneComponent},
     {path: 'teacher', component: TeacherComponent},
