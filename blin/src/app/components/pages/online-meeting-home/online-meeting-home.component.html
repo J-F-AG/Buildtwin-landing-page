@@ -1,18 +1,137 @@
 <app-hd-navbar></app-hd-navbar>
 
 
-<app-om-banner></app-om-banner>
-
 <!-- 3 Features -->
 
-<!-- <app-om-services></app-om-services> -->
+<app-om-banner></app-om-banner>
 
 
 <!-- Testimmonials -->
 
-<!-- <app-enterprise-testimonials></app-enterprise-testimonials> -->
 <app-em-testimonials></app-em-testimonials>
-<!-- Good reasons -->
+
+
+
+<!-- All in One Collaboration Tool -->
+
+<app-om-about></app-om-about>
+
+
+<!-- <app-om-services></app-om-services> -->
+
+<!-- <app-enterprise-testimonials></app-enterprise-testimonials> -->
+
+
+<!-- Integration -->
+
+<app-om-integrations></app-om-integrations>
+
+<!-- Collaborate with AI-->
+<app-buildtwin-services>
+    <div class="buildtwinService forTraning ptb-100">
+
+
+        <div class="container">
+            <div class="headSection">
+                <h2>Collaborate with your team. And <span>A.I.</span>
+                </h2>
+                <p>
+                    Use A.I. to make your day-to-day tasks easier, faster and more streamlined.
+                </p>
+            </div>
+            <div class="tabContent">
+                <div class="tabLeft">
+                    <ul>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(10)"
+                            [ngClass]="{'active':activeState2 === 10}">
+                            <div class="flex-center">
+                                <i>1</i> Process your E-Mails
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    No extra work required. Connect BuildTwin to your email account and get an AI to
+                                    process your emails and extract what needs to be done, compose emails, and document
+                                    everything into an operable cockpit. Such as what deliverables need to be delivered
+                                    by when or what RFIs are still open.
+                                </p>
+                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                            </div>
+
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(11)"
+                            [ngClass]="{'active':activeState2 === 11}">
+                            <div class="flex-center">
+                                <i>2</i> Digital Self Management
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    The DSM system helps you to stay on top of things and provides meaningful insight into project performance and how it can be improved. With our anonymized (opt-in) benchmark feature, you also get insight into how you perform against peers.
+                                </p>
+                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                            </div>
+
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(12)"
+                            [ngClass]="{'active':activeState2 === 12}">
+                            <div class="flex-center">
+                                <i>3</i> Manage the Deliverables
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    We manage files for you, between your team and your client. By uploading the deliverables in the right name convention to CDE and internally tracking each revision.It is as easy as saving your file locally.
+                                </p>
+                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                            </div>
+
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(13)"
+                            [ngClass]="{'active':activeState2 === 13}">
+                            <div class="flex-center">
+                                <i>4</i> Track all RFIs
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    BuildTwin tracks all RFIs across all channels and shows the discussion and result of each discussion in an easy-to-understand overview.Coming soon: Based on building code, technical standards, and trained data on constructability, BuildTwin AI will provide suggested answers to technical questions.
+                                </p>
+                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabRIght">
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">
+                        <img src="assets/images/ui/service1.png" alt="" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 11">
+                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 12">
+                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 13">
+                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</app-buildtwin-services>
+
+
+<!-- Reporting -->
+<app-om-how-it-works></app-om-how-it-works>
+
+
+<!-- Use Cases -->
 
 <app-om-why-choose-us>
     <div class="co-pilot-details">
@@ -167,129 +286,10 @@
     </div>
 </app-om-why-choose-us>
 
-<!-- Features -->
-
-<!-- <app-video-call-made-easy></app-video-call-made-easy> -->
-<app-buildtwin-services>
-    <div class="buildtwinService forTraning ptb-100">
-
-
-        <div class="container">
-            <div class="headSection">
-                <h2>Collaborate with your team. And <span>A.I.</span>
-                </h2>
-                <p>
-                    Use A.I. to make your day-to-day tasks easier, faster and more streamlined.
-                </p>
-            </div>
-            <div class="tabContent">
-                <div class="tabLeft">
-                    <ul>
-                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(10)"
-                            [ngClass]="{'active':activeState2 === 10}">
-                            <div class="flex-center">
-                                <i>1</i> Process your E-Mails
-                            </div>
-                            <div class="content">
-
-                                <p>
-                                    No extra work required. Connect BuildTwin to your email account and get an AI to
-                                    process your emails and extract what needs to be done, compose emails, and document
-                                    everything into an operable cockpit. Such as what deliverables need to be delivered
-                                    by when or what RFIs are still open.
-                                </p>
-                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
-                            </div>
-
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(11)"
-                            [ngClass]="{'active':activeState2 === 11}">
-                            <div class="flex-center">
-                                <i>2</i> Digital Self Management
-                            </div>
-                            <div class="content">
-
-                                <p>
-                                    The DSM system helps you to stay on top of things and provides meaningful insight into project performance and how it can be improved. With our anonymized (opt-in) benchmark feature, you also get insight into how you perform against peers.
-                                </p>
-                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
-                            </div>
-
-                        </li>
-                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(12)"
-                            [ngClass]="{'active':activeState2 === 12}">
-                            <div class="flex-center">
-                                <i>3</i> Manage the Deliverables
-                            </div>
-                            <div class="content">
-
-                                <p>
-                                    We manage files for you, between your team and your client. By uploading the deliverables in the right name convention to CDE and internally tracking each revision.It is as easy as saving your file locally.
-                                </p>
-                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
-                            </div>
-
-                        </li>
-                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(13)"
-                            [ngClass]="{'active':activeState2 === 13}">
-                            <div class="flex-center">
-                                <i>4</i> Track all RFIs
-                            </div>
-                            <div class="content">
-
-                                <p>
-                                    BuildTwin tracks all RFIs across all channels and shows the discussion and result of each discussion in an easy-to-understand overview.Coming soon: Based on building code, technical standards, and trained data on constructability, BuildTwin AI will provide suggested answers to technical questions.
-                                </p>
-                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-                <div class="tabRIght">
-                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">
-                        <img src="assets/images/ui/service1.png" alt="" width="" height="">
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 11">
-                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 12">
-                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 13">
-                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</app-buildtwin-services>
-
-
-<!-- Integration -->
-
-<app-om-integrations></app-om-integrations>
-
-
-<!-- All in One Collaboration Tool -->
-
-<app-om-about></app-om-about>
-
-
 
 <!-- trusted by marketplace -->
 <app-om-partners></app-om-partners>
 
-
-
-
-<!-- Continous Improvement  -->
-
-<app-om-funfacts></app-om-funfacts>
 
 <!-- Plug & Play WorkFlow -->
 
@@ -298,7 +298,7 @@
         <div class=""id="onScrollAnimation">
         <div class="container">
             <div class="headSection">
-                <h2>How BuildTwin helps you to get projects done in <br>Time, Quality and across 100+ solution providers
+                <h2>Why BuildTwin for technical teams
                 </h2>
             </div>
             <div class="tabContent">
@@ -438,11 +438,10 @@
 
 <!-- <app-om-features></app-om-features> !-->
 
-<!-- Reporting -->
 
 
 
-<app-om-how-it-works></app-om-how-it-works>
+
 
 
 <!-- FAQ-->

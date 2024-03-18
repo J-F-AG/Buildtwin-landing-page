@@ -45,35 +45,20 @@ const routes: Routes = [
 
     
     {path: '', component: HelpDeskHomeComponent},
-    {path: 'good-reason', component: EmailMarketingHomeComponent},
+
+
     {path: 'marketplace', component: TimeTrackingHomeComponent},
     {path: 'online-meeting', component: OnlineMeetingHomeComponent},
     {path: 'help-desk', component: HelpDeskHomeComponent},
     {path: 'training', component: FintechSaasHomeComponent},
-    {path: 'about', component: AboutPageComponent},
-    {path: 'team', component: TeamPageComponent},
-    {path: 'careers', component: CareersPageComponent},
-    {path: 'job-details', component: JobDetailsPageComponent},
-   
     {path: 'pricing', component: PricingPageComponent},
-    {path: 'integrations', component: IntegrationsPageComponent},
-    {path: 'faq', component: FaqPageComponent},
-    {path: 'testimonials', component: TestimonialsPageComponent},
-    {path: 'login', component: LoginPageComponent},
-    {path: 'register', component: RegisterPageComponent},
-    {path: 'forgot-password', component: ForgotPasswordPageComponent},
-    {path: 'use-cases', component: BlogPageComponent},
-    {path: 'blog-details', component: BlogDetailsPageComponent},
-    {path: 'blog-details2', component: BlogDetailsPage2Component},
-    {path: 'blog-details3', component: BlogDetailsPage3Component},
-    {path: 'blog-details4', component: BlogDetailsPage4Component},
-    {path: 'blog-details5', component: BlogDetailsPage5Component},
-    {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
-    {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    {path: 'contact', component: ContactPageComponent},
+    
+
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
     {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
+
+
     {path: 'traininghomepage', component: ElearningSchoolComponent},
     {path: 'success-story', component: SuccessStoryComponent},
     {path: 'courses', component: CoursesStyleOneComponent},
@@ -84,7 +69,29 @@ const routes: Routes = [
     {path: 'training-faq', component: FaqPageTrainingComponent},
 
 
+    {path: 'use-cases', component: BlogPageComponent},
+    {path: 'blog-details', component: BlogDetailsPageComponent},
+    {path: 'blog-details2', component: BlogDetailsPage2Component},
+    {path: 'blog-details3', component: BlogDetailsPage3Component},
+    {path: 'blog-details4', component: BlogDetailsPage4Component},
+    {path: 'blog-details5', component: BlogDetailsPage5Component},
+    {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
+    {path: 'terms-conditions', component: TermsConditionsPageComponent},
+    
+    
 
+    {path: 'about', component: AboutPageComponent},
+    {path: 'good-reason', component: EmailMarketingHomeComponent},
+    {path: 'team', component: TeamPageComponent},
+    {path: 'careers', component: CareersPageComponent},
+    {path: 'job-details', component: JobDetailsPageComponent},
+    {path: 'faq', component: FaqPageComponent},
+    {path: 'testimonials', component: TestimonialsPageComponent},   
+    {path: 'integrations', component: IntegrationsPageComponent},
+    {path: 'login', component: LoginPageComponent},
+    {path: 'register', component: RegisterPageComponent},
+    {path: 'forgot-password', component: ForgotPasswordPageComponent},
+    {path: 'contact', component: ContactPageComponent},
 
     // Old pages 
 
