@@ -4,6 +4,58 @@
 <!-- Logos -->
 <app-tt-banner></app-tt-banner>
 
+
+<app-global-company>
+    <div class="container">
+    <div class="partnerWrap">
+        <div class="company">
+            <strong>10+</strong>
+            Companies
+        </div>
+
+
+        <owl-carousel-o [options]="reviewsSlides" class="partner">
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/Planworks.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/Mac.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/J&F.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/IndianEngg.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/Durchgeplant.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/BIM.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/Planworks.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/Planworks.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/Planworks.png" width="190" height="80">
+            </ng-template>
+            <ng-template carouselSlide>
+                <img src="assets/images/ui/Planworks.png" width="190" height="80">
+            </ng-template>
+        </owl-carousel-o>
+
+
+
+      
+    </div>
+</div>
+
+
+</app-global-company>
+
 <!-- Testimmonials -->
 <app-tt-testimonials></app-tt-testimonials>
 
@@ -23,43 +75,49 @@
 
 <app-how-buildtwin-helps>
     <div class="buildtwinHelps" id="scrollActivated">
-        <div class=""id="onScrollAnimation">
-        <div class="container">
-            <div class="headSection">
-                <h2>How BuildTwin helps you to get projects done in <br>
-                </h2>
-            </div>
-            <div class="tabContent">
-                <div class="tabLeft">
-                    <ul>
-                        <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 1}">
-                            <i></i> Checklist and Quality
-                        </li>
-                        <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"   [ngClass]="{'active':activeState === 2}">
-                            <i></i> Continuous Learning
-                        </li>
-                        <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 3}">
-                            <i></i> Documenting Everything
-                        </li>
-                        <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 4}">
-                            <i></i> Live Project Progress
-                        </li>
-                        <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 5}">
-                            <i></i> Live RFI Management
-                        </li>
-                        <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 6}">
-                            <i></i> Simulation
-                        </li>
-                    </ul>
+        <div class="" id="onScrollAnimation">
+            <div class="container">
+                <div class="headSection">
+                    <h2>How BuildTwin helps you to get projects done in <br>
+                    </h2>
                 </div>
-               
+                <div class="tabContent">
+                    <div class="tabLeft">
+                        <ul>
+                            <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 1}">
+                                <i></i> Checklist and Quality
+                            </li>
+                            <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 2}">
+                                <i></i> Continuous Learning
+                            </li>
+                            <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 3}">
+                                <i></i> Documenting Everything
+                            </li>
+                            <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 4}">
+                                <i></i> Live Project Progress
+                            </li>
+                            <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 5}">
+                                <i></i> Live RFI Management
+                            </li>
+                            <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 6}">
+                                <i></i> Simulation
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
-        </div>
         </div>
 
         <div class="staticData">
             <div class="tabRIght">
-                <div id="section1" class="active" data-ele="one"  >
+                <div id="section1" class="active" data-ele="one">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild1.png" alt="" title="">
@@ -76,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section2"    data-ele="two">
+                <div id="section2" data-ele="two">
                     <div class="flex">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild2.png" alt="" title="">
@@ -87,13 +145,14 @@
 
                             </h3>
                             <p>
-                                The digital self management portal provides custom feedback, trainings and benchmarks based 
+                                The digital self management portal provides custom feedback, trainings and benchmarks
+                                based
                                 on quality issues, technical queries and general learning materials.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div id="section3" data-ele="three" >
+                <div id="section3" data-ele="three">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild3.png" alt="" title="">
@@ -103,13 +162,13 @@
                                 Documenting Everything
                             </h3>
                             <p>
-                                BuildTwin tracks and documents all activitis across all channels - and presents 
+                                BuildTwin tracks and documents all activitis across all channels - and presents
                                 a easy to use and understand cockpit.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div id="section4" data-ele="four"  >
+                <div id="section4" data-ele="four">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild4.png" alt="" title="">
@@ -121,10 +180,12 @@
 
                             </h3>
                             <p>
-                                The consolidated LIVE view shows you the LIVE project view of your project progress and whether your project is on track or not.                            </div>
+                                The consolidated LIVE view shows you the LIVE project view of your project progress and
+                                whether your project is on track or not.
+                        </div>
                     </div>
                 </div>
-                <div id="section5"  data-ele="five"  >
+                <div id="section5" data-ele="five">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild5.png" alt="" title="">
@@ -135,12 +196,13 @@
 
                             </h3>
                             <p>
-                                The AI RFI manager tracks all RFIs across different channels such as emails, CDE, and technical meetings, presenting them in an easy-to-understand format.
+                                The AI RFI manager tracks all RFIs across different channels such as emails, CDE, and
+                                technical meetings, presenting them in an easy-to-understand format.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div  id="section6" data-ele="six" >
+                <div id="section6" data-ele="six">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild6.png" alt="" title="">
@@ -151,12 +213,13 @@
 
                             </h3>
                             <p>
-                                With our Simulation tool you supercharge your Steering meetings, by analysing different scenarios and adopting new priorities with the click of a button.
+                                With our Simulation tool you supercharge your Steering meetings, by analysing different
+                                scenarios and adopting new priorities with the click of a button.
                             </p>
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
 

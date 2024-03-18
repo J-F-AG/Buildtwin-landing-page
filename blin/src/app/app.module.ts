@@ -198,6 +198,10 @@ import { HowBuildtwinHelpsComponent } from './components/new-com/how-buildtwin-h
 import { TraningReviewComponent } from './components/new-com/traning-review/traning-review.component';
 import { HowProcessComponent } from './components/new-com/how-process/how-process.component';
 import { BuildtwinServicesComponent } from './components/new-com/buildtwin-services/buildtwin-services.component';
+import { AboutLorenzComponent } from './components/new-com/about-lorenz/about-lorenz.component';
+import { SucessStoryComponent } from './components/new-com/sucess-story/sucess-story.component';
+import { TraningCompanyComponent } from './components/new-com/traning-company/traning-company.component';
+import { GlobalCompanyComponent } from './components/new-com/global-company/global-company.component';
 
 
 @NgModule({
@@ -394,7 +398,11 @@ import { BuildtwinServicesComponent } from './components/new-com/buildtwin-servi
     HowBuildtwinHelpsComponent,
     TraningReviewComponent,
     HowProcessComponent,
-    BuildtwinServicesComponent
+    BuildtwinServicesComponent,
+    AboutLorenzComponent,
+    SucessStoryComponent,
+    TraningCompanyComponent,
+    GlobalCompanyComponent
 
   ],
   imports: [

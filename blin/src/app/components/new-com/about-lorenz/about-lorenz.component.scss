@@ -1,0 +1,48 @@
+   :host ::ng-deep .aboutLorenze {
+    margin: 54px 0;
+       .container {
+        max-width: 1296px;
+           .flex {
+               display: flex;
+               gap: 80px;
+               align-items: center;
+
+               .aboutData {
+                   display: flex;
+                   flex-direction: column;
+                   gap: 88px;
+                   max-width: 794px;
+                   padding-right: 45px;
+
+                   p {
+                       color: #0E0E28;
+                       font-size: 35px;
+                       font-style: normal;
+                       font-weight: 400;
+                       line-height: 140%;
+                   }
+
+                   strong {
+                       color: var(--Black, #000);
+                       font-size: 24px;
+                       font-style: normal;
+                       font-weight: 600;
+                       line-height: 140%;
+                       display: block;
+                       margin-bottom: 4px;
+
+                       span {
+                           color: var(--grey, var(--grey, #808080));
+                           font-size: 14px;
+                           font-style: normal;
+                           font-weight: 400;
+                           line-height: 140%;
+                           display: block;
+                       }
+                   }
+               }
+
+               .imgWrap {}
+           }
+       }
+   }

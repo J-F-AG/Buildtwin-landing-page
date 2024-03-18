@@ -14,7 +14,7 @@ export class ElearningBannerComponent implements OnInit {
 
     bgImage = [
         {
-            img: 'assets/images/training/gray-bg.jpg'
+            img: 'assets/images/training/gray-bg.png'
         }
     ]
 
