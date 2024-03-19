@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
     selector: 'app-elearning-school',
@@ -20,6 +21,23 @@ export class ElearningSchoolComponent implements OnInit {
     scrollDivOffsettop: any
     scrolledDivHeight: any
     fixedElement: any
+
+
+    reviewsSlides: OwlOptions = {
+      items: 5,
+  nav: true,
+  margin: 0,
+  dots: false,
+  loop: true,
+  autoplay: false,
+  autoplayHoverPause: false,
+  navText: [
+    "<i class='ti ti-chevron-left'></i>",
+    "<i class='ti ti-chevron-right'></i>",
+  ]
+  }
+
+
     constructor(private titleService: Title,private router: Router) { 
 
       router.events.subscribe((val) => {

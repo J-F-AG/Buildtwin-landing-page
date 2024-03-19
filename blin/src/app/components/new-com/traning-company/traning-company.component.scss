@@ -29,6 +29,19 @@ margin-bottom: 44px;
             }
         }
 
-        .logo_wrap {}
+        .logo_wrap {
+            ul{
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    margin-top: -1px;
+                    margin-left: -1px;
+                    img{
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }

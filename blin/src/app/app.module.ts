@@ -202,6 +202,7 @@ import { AboutLorenzComponent } from './components/new-com/about-lorenz/about-lo
 import { SucessStoryComponent } from './components/new-com/sucess-story/sucess-story.component';
 import { TraningCompanyComponent } from './components/new-com/traning-company/traning-company.component';
 import { GlobalCompanyComponent } from './components/new-com/global-company/global-company.component';
+import { ThreeColTraneeComponent } from './components/new-com/three-col-tranee/three-col-tranee.component';
 
 
 @NgModule({
@@ -402,8 +403,8 @@ import { GlobalCompanyComponent } from './components/new-com/global-company/glob
     AboutLorenzComponent,
     SucessStoryComponent,
     TraningCompanyComponent,
-    GlobalCompanyComponent
-
+    GlobalCompanyComponent,
+    ThreeColTraneeComponent
   ],
   imports: [
     BrowserModule,
