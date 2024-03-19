@@ -6,13 +6,11 @@
     padding-right: 15px;
 }
 .courses-details-info {
-    background-color: #f8f9f8;
+    background-color: #fff;
     border-radius: 5px;
     padding: 12px 12px 50px 12px;
-    margin: {
-        left: 15px;
-        top: -248px;
-    };
+    margin-left: 15px;
+    margin-top: -235px;
     .image {
         text-align: center;
         position: relative;
@@ -1466,4 +1464,9 @@ img.progress {
 
 @media only screen and (min-width: 1200px) and (max-width: 1355px) {
 
+}
+
+ .overflow{
+    overflow: hidden;
+    display: block;
 }
