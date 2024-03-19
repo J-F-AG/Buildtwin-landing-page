@@ -1,0 +1,82 @@
+:host ::ng-deep .buildTwinDemo{
+    display: flex;
+    align-items: center;
+.content{
+    background: url(../../../../assets/images/ui/dot.png);
+    // height: 649px;
+    height: 553px;
+    max-width: 647px;
+    padding-right: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+h2{
+    color: #0E0E28;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%; /* 48px */
+margin-bottom: 14px;
+}
+p{
+    color: #000;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 25.6px */
+margin-bottom: 32px;
+}
+
+    .other-options{
+        gap: 16px;
+        display: flex;
+        margin-top: 19px;
+
+        .btnNew{
+            border-radius: 8px;
+        background: #886DE0;
+        display: flex;
+        padding: 4px 8px 4px 20px;
+        gap: 13px;
+        color: #FFF;
+        
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        height: 48px;
+        align-items: center;
+        
+        i{
+            color: #fff;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+        }
+        
+        .btnNew.vidBtn{
+        border: 1px solid #E9E9E9;
+        background: #fff;
+        color: #886DE0;
+        }
+        i.ti.ti-player-play{
+            background: #886DE0;
+            border-radius: 100px;
+            padding: 3px;
+            font-size: 9px;
+        }
+    }
+}
+.imgWrap {
+ 
+    img{
+        width: 117%;
+        margin-right: -20px;
+        height: unset;
+        max-width: unset;  
+    }
+}
+}
+
+
+

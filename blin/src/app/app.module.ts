@@ -203,6 +203,9 @@ import { SucessStoryComponent } from './components/new-com/sucess-story/sucess-s
 import { TraningCompanyComponent } from './components/new-com/traning-company/traning-company.component';
 import { GlobalCompanyComponent } from './components/new-com/global-company/global-company.component';
 import { ThreeColTraneeComponent } from './components/new-com/three-col-tranee/three-col-tranee.component';
+import { EventsProgramComponent } from './components/new-com/events-program/events-program.component';
+import { CourseDemoComponent } from './components/new-com/course-demo/course-demo.component';
+import { DifferentCountryComponent } from './components/new-com/different-country/different-country.component';
 
 
 @NgModule({
@@ -404,7 +407,10 @@ import { ThreeColTraneeComponent } from './components/new-com/three-col-tranee/t
     SucessStoryComponent,
     TraningCompanyComponent,
     GlobalCompanyComponent,
-    ThreeColTraneeComponent
+    ThreeColTraneeComponent,
+    EventsProgramComponent,
+    CourseDemoComponent,
+    DifferentCountryComponent
   ],
   imports: [
     BrowserModule,
