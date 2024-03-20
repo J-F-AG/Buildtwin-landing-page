@@ -52,7 +52,6 @@ const routes: Routes = [
     {path: 'training', component: ElearningSchoolComponent},
 
 
-
     {path: 'pricing', component: PricingPageComponent},
     
 
