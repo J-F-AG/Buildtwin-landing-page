@@ -206,6 +206,9 @@ import { ThreeColTraneeComponent } from './components/new-com/three-col-tranee/t
 import { EventsProgramComponent } from './components/new-com/events-program/events-program.component';
 import { CourseDemoComponent } from './components/new-com/course-demo/course-demo.component';
 import { DifferentCountryComponent } from './components/new-com/different-country/different-country.component';
+import { PriceCoPilotComponent } from './components/new-com/price-co-pilot/price-co-pilot.component';
+import { PriceMonthlyComponent } from './components/new-com/price-monthly/price-monthly.component';
+import { PriceBasicComponent } from './components/new-com/price-basic/price-basic.component';
 
 
 @NgModule({
@@ -410,7 +413,10 @@ import { DifferentCountryComponent } from './components/new-com/different-countr
     ThreeColTraneeComponent,
     EventsProgramComponent,
     CourseDemoComponent,
-    DifferentCountryComponent
+    DifferentCountryComponent,
+    PriceBasicComponent,
+    PriceMonthlyComponent,
+    PriceCoPilotComponent
   ],
   imports: [
     BrowserModule,

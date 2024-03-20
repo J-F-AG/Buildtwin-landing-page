@@ -1,87 +1,82 @@
-:host ::ng-deep .buildTwinDemo{
+:host ::ng-deep .buildTwinDemo {
     display: flex;
     align-items: center;
-.content{
-    background: url(../../../../assets/images/ui/dot.png);
-    // height: 649px;
-    height: 553px;
-    max-width: 647px;
-    padding-right: 95px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-h2{
-    color: #0E0E28;
-font-size: 40px;
-font-style: normal;
-font-weight: 600;
-line-height: 120%; /* 48px */
-margin-bottom: 14px;
-}
-p{
-    color: #000;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 160%; /* 25.6px */
-margin-bottom: 32px;
-}
 
-    .other-options{
-        gap: 16px;
+    .content {
+        background: url(../../../../assets/images/ui/dot.png);
+        // height: 649px;
+        height: 553px;
+        max-width: 647px;
+        padding-right: 95px;
         display: flex;
-        margin-top: 19px;
+        flex-direction: column;
+        justify-content: center;
 
-        .btnNew{
-            display: flex;
-            height: 48px;
-            padding: 16px 34.5px 15px 34px;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            border-radius: 8px;
-background: #886DE0;
-color: var(--color-green-button, #FFF);
+        h2 {
+            color: #0E0E28;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            /* 48px */
+            margin-bottom: 14px;
+        }
 
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-gap: 10px;
-cursor: pointer;
-        
-        
+        p {
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            /* 25.6px */
+            margin-bottom: 32px;
         }
-        
-        .btnNew.vidBtn{
+
+        .other-options {
+            gap: 16px;
             display: flex;
-            height: 48px;
-            padding: 15px 23.726px 16px 23px;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            border-radius: 8px;
-border: 1px solid #E9E9E9;
-background: var(--color-green-button, #FFF);
-color: var(--primary, #886DE0);
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+            margin-top: 19px;
+
+            .btnNew {
+                display: flex;
+                height: 48px;
+                padding: 16px 34.5px 15px 34px;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                border-radius: 8px;
+                background: #886DE0;
+                color: var(--color-green-button, #FFF);
+            
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                gap: 10px;
+                cursor: pointer;
+                margin-bottom: 10px;
+            
+            
+            }
+            
+            .btnNew.vidBtn {
+                display: flex;
+                padding: 15px 23.726px 16px 23px;
+                border: 1px solid #E9E9E9;
+                background: var(--color-green-button, #FFF);
+                color: var(--primary, #886DE0);
+            }
+
         }
-       
+    }
+
+    .imgWrap {
+
+        img {
+            width: 117%;
+            margin-right: -20px;
+            height: unset;
+            max-width: unset;
+        }
     }
 }
-.imgWrap {
- 
-    img{
-        width: 117%;
-        margin-right: -20px;
-        height: unset;
-        max-width: unset;  
-    }
-}
-}
-
-
-
