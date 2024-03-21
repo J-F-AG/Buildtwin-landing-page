@@ -1,433 +1,336 @@
 <app-hd-navbar></app-hd-navbar>
 <div class="training-wrapper">
     <div class="page-title-area">
-    <div class="container">
-        <div class="page-title-content">
-            <ul>
-            </ul>
-            <h2>BuildTwin Events for Training</h2>
+        <div class="container">
+            <div class="page-title-content">
+                <ul>
+                </ul>
+                <h2>BuildTwin Events for Training</h2>
+            </div>
         </div>
+        <div class="shape9"><img src="assets/images/training/shape8.svg" alt="image"></div>
     </div>
-    <div class="shape9"><img src="assets/images/training/shape8.svg" alt="image"></div>
-</div>
 
-<div class="events-area pt-100 pb-70">
-    <div class="container">
-        <div class="events-tabs">
-            <ul class="nav-tabset">
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab1'}">
-                    <span (click)="switchTab($event, 'tab1')">
-                        All
-                    </span>
-                </li>
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab2'}">
-                    <span (click)="switchTab($event, 'tab2')">
-                        Happening
-                    </span>
-                </li>
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
-                    <span (click)="switchTab($event, 'tab3')">
-                        Upcoming
-                    </span>
-                </li>
-                
-                <!-- 
-                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab4'}">
-                    <span (click)="switchTab($event, 'tab4')">
-                        Expired
-                    </span>
-                </li>
-                -->
-            </ul>
-            <div class="tabs-container">
-                <div class="pane" id="tab1" *ngIf="currentTab === 'tab1'">
-                    <div class="row">
-                        
+    <app-events-program>
+        <div class="eventsManage">
+            <div class="container">
+                <div class="eventFlex">
 
 
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img1.png" alt="image">
-                                    </a>
-                                    <span class="date">Wed, 20 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Malaysia, Kuala Lumpur</span>
-                                </div>
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location3.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>11</strong>
+                                April, 2024
                             </div>
                         </div>
-
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img2.png" alt="image">
-                                    </a>
-                                    <span class="date">Wed, 20 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Vietnam, Ho Chi Minh</span>
-                                </div>
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country3.png" class="event-image" width="18" height="18" />
+                                <span>India</span>
                             </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img3.png" alt="image">
-                                    </a>
-                                    <span class="date">Wed, 20 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Chennai</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img4.png" alt="image">
-                                    </a>
-                                    <span class="date">Tue, 19 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Hyderabad</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img5.png" alt="image">
-                                    </a>
-                                    <span class="date">Mon, 18 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Bangalore</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img6.png" alt="image">
-                                    </a>
-                                    <span class="date">Sun, 17 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Pune</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img4.png" alt="image">
-                                    </a>
-                                    <span class="date">Sun, 17 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Coimbatore</span>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img3.png" alt="image">
-                                    </a>
-                                    <span class="date">Sun, 17 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>New Delhi / Noida</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img2.png" alt="image">
-                                    </a>
-                                    <span class="date">Sun, 17 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Mumabi</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img1.png" alt="image">
-                                    </a>
-                                    <span class="date">Sun, 17 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Meeting the BuildTwin global marketplace in your town</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Nashik</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img5.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Sat, 16 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">International Conference on Educational Administration</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Rome, Italy</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img6.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Fri, 15 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">International Conference on Education and Pedagogy</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Athens, Greece</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img7.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Thu, 14 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Research Conference Aims and Objectives</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Tokyo, Japan</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img8.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Wed, 13 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Conference on Gender Discrimination in Education</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Oslo, Norway</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img9.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Tue, 12 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Quality and Improvement in Education Conference</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Tokyo, Japan</span>
-                                </div>
-                            </div>
+                            <h2>
+                                Chennai
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
                         </div>
                     </div>
-                </div>
-                <div class="pane" id="tab2" *ngIf="currentTab === 'tab2'">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img1.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Wed, 20 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Global Conference on Business Management</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Vancover, Canada</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img3.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Mon, 18 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">International Conference on Special Needs Education</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Istanbul, Turkey</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img8.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Wed, 13 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Conference on Gender Discrimination in Education</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Oslo, Norway</span>
-                                </div>
-                            </div>
-                        </div>
-                    -->
 
+              
+              
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location6.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>18</strong>
+                                April, 2024
+                            </div>
+                        </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country3.png" class="event-image" width="18" height="18" />
+                                <span>India</span>
+                            </div>
+                            <h2>
+                                Banglore
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
                     </div>
 
-                    
-                </div>
-                <div class="pane" id="tab3" *ngIf="currentTab === 'tab3'">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img2.png" alt="image">
-                                    </a>
-                                    <span class="date">Tue, 19 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">International Conference on Teacher Education</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Sydney, Australia</span>
-                                </div>
+
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location6.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>25</strong>
+                                April, 2024
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img5.png" alt="image">
-                                    </a>
-                                    <span class="date">Sat, 16 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">International Conference on Educational Administration</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Rome, Italy</span>
-                                </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country3.png" class="event-image" width="18" height="18" />
+                                <span>India</span>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img6.png" alt="image">
-                                    </a>
-                                    <span class="date">Thu, 14 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Research Conference Aims and Objectives</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Tokyo, Japan</span>
-                                </div>
-                            </div>
+                            <h2>
+                                Coimbatore
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
                         </div>
                     </div>
-                </div>
-                <div class="pane" id="tab3" *ngIf="currentTab === 'tab4'">
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img4.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Sun, 17 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">International Conference on Literacy Teaching</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Athens, Greece</span>
-                                </div>
+
+
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location6.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>02</strong>
+                                May, 2024
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img6.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Fri, 15 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">International Conference on Education and Pedagogy</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Athens, Greece</span>
-                                </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country3.png" class="event-image" width="18" height="18" />
+                                <span>India</span>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 col-md-6">
-                            <div class="single-events-box">
-                                <div class="image">
-                                    <a routerLink="/single-events" class="d-block">
-                                        <img src="assets/images/training/events/img9.jpg" alt="image">
-                                    </a>
-                                    <span class="date">Tue, 12 May, 2024</span>
-                                </div>
-                                <div class="content">
-                                    <h3><a routerLink="/single-events">Quality and Improvement in Education Conference</a></h3>
-                                    <span class="location"><i class="bx bx-map"></i>Tokyo, Japan</span>
-                                </div>
-                            </div>
+                            <h2>
+                                Hydrabad
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
                         </div>
                     </div>
+
+
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location6.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>09</strong>
+                                May, 2024
+                            </div>
+                        </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country3.png" class="event-image" width="18" height="18" />
+                                <span>India</span>
+                            </div>
+                            <h2>
+                                Namakkal
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location6.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>16</strong>
+                                May, 2024
+                            </div>
+                        </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country3.png" class="event-image" width="18" height="18" />
+                                <span>India</span>
+                            </div>
+                            <h2>
+                                Aurangabad
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
+                    </div>
+              
+              
+              
+              
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location1.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>23</strong>
+                                May, 2024
+                            </div>
+                        </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country1.png" class="event-image" width="18" height="18" />
+                                <span>Malaysia</span>
+                            </div>
+                            <h2>
+                                Kuala Lumpur
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location2.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>11</strong>
+                                Juno, 2024
+                            </div>
+                        </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country2.png" class="event-image" width="18" height="18" />
+                                <span>Vietnam</span>
+                            </div>
+                            <h2>
+                                Ho Chi Minh
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location3.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>20</strong>
+                                May, 2024
+                            </div>
+                        </div>
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country3.png" class="event-image" width="18" height="18" />
+                                <span>India</span>
+                            </div>
+                            <h2>
+                                Chennai
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location4.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>11</strong>
+                                Juli, 2024
+                            </div>
+                        </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country4.png" class="event-image" width="18" height="18" />
+                                <span>England</span>
+                            </div>
+                            <h2>
+                                London
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location5.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>23</strong>
+                                Juni, 2024
+                            </div>
+                        </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country5.png" class="event-image" width="18" height="18" />
+                                <span>Germany</span>
+                            </div>
+                            <h2>
+                                Frankfurt
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="event">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/location6.png" class="event-image" width="146" height="128" />
+    
+                            <div class="eventData">
+                                <strong>20</strong>
+                                August, 2024
+                            </div>
+                        </div>
+    
+                        <div class="white_box">
+                            <div class="country">
+                                <img src="assets/images/ui/country3.png" class="event-image" width="18" height="18" />
+                                <span>India</span>
+                            </div>
+                            <h2>
+                                Mumbai
+                            </h2>
+                            <span>
+                                Meeting the BuildTwin global marketplace in your town
+                            </span>
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="subscribe-area bg-f9f9f9 ptb-100">
-    <div class="container">
-        <app-subscribe></app-subscribe>
+
+    </app-events-program>
+
+    <div class="subscribe-area bg-f9f9f9 ptb-100">
+        <div class="container">
+            <app-subscribe></app-subscribe>
+        </div>
+        <div class="shape4"><img src="assets/images/training/shape4.png" alt="image"></div>
+        <div class="shape13"><img src="assets/images/training/shape12.png" alt="image"></div>
+        <div class="shape14"><img src="assets/images/training/shape13.png" alt="image"></div>
+        <div class="shape15"><img src="assets/images/training/shape14.png" alt="image"></div>
     </div>
-    <div class="shape4"><img src="assets/images/training/shape4.png" alt="image"></div>
-    <div class="shape13"><img src="assets/images/training/shape12.png" alt="image"></div>
-    <div class="shape14"><img src="assets/images/training/shape13.png" alt="image"></div>
-    <div class="shape15"><img src="assets/images/training/shape14.png" alt="image"></div>
-</div>
 </div>
 <app-hd-footer></app-hd-footer>

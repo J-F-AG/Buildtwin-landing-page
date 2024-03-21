@@ -40,46 +40,26 @@ import { EventsComponent } from './components/pages/events/events.component';
 import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
 import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
 import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
-
 const routes: Routes = [
+
+    
     {path: '', component: HelpDeskHomeComponent},
-    {path: 'good-reason', component: EmailMarketingHomeComponent},
+
+
     {path: 'marketplace', component: TimeTrackingHomeComponent},
     {path: 'online-meeting', component: OnlineMeetingHomeComponent},
     {path: 'help-desk', component: HelpDeskHomeComponent},
-    {path: 'training', component: FintechSaasHomeComponent},
-    {path: 'about', component: AboutPageComponent},
-    {path: 'team', component: TeamPageComponent},
-    {path: 'careers', component: CareersPageComponent},
-    {path: 'job-details', component: JobDetailsPageComponent},
+    {path: 'training', component: ElearningSchoolComponent},
 
-    
-    // {path: 'features', component: FeaturesPageComponent},
-    // {path: 'feature-details', component: FeatureDetailsPageComponent},
-    // {path: 'services', component: ServicesPageComponent},
-    // {path: 'service-details', component: ServiceDetailsPageComponent},
-   
-   
+
     {path: 'pricing', component: PricingPageComponent},
-    {path: 'integrations', component: IntegrationsPageComponent},
-    {path: 'faq', component: FaqPageComponent},
-    {path: 'testimonials', component: TestimonialsPageComponent},
-    {path: 'login', component: LoginPageComponent},
-    {path: 'register', component: RegisterPageComponent},
-    {path: 'forgot-password', component: ForgotPasswordPageComponent},
-    {path: 'use-cases', component: BlogPageComponent},
-    {path: 'blog-details', component: BlogDetailsPageComponent},
-    {path: 'blog-details2', component: BlogDetailsPage2Component},
-    {path: 'blog-details3', component: BlogDetailsPage3Component},
-    {path: 'blog-details4', component: BlogDetailsPage4Component},
-    {path: 'blog-details5', component: BlogDetailsPage5Component},
-    {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
-    {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    {path: 'contact', component: ContactPageComponent},
+    
+
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
     {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
-    {path: 'traininghomepage', component: ElearningSchoolComponent},
+
+
     {path: 'success-story', component: SuccessStoryComponent},
     {path: 'courses', component: CoursesStyleOneComponent},
     {path: 'teacher', component: TeacherComponent},
@@ -88,7 +68,40 @@ const routes: Routes = [
     {path: 'single-events', component: EventsDetailsComponent},
     {path: 'training-faq', component: FaqPageTrainingComponent},
 
-    // Here add new pages component
+
+    {path: 'use-cases', component: BlogPageComponent},
+    {path: 'blog-details', component: BlogDetailsPageComponent},
+    {path: 'blog-details2', component: BlogDetailsPage2Component},
+    {path: 'blog-details3', component: BlogDetailsPage3Component},
+    {path: 'blog-details4', component: BlogDetailsPage4Component},
+    {path: 'blog-details5', component: BlogDetailsPage5Component},
+    {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
+    {path: 'terms-conditions', component: TermsConditionsPageComponent},
+    
+    
+
+    {path: 'about', component: AboutPageComponent},
+    {path: 'good-reason', component: EmailMarketingHomeComponent},
+    {path: 'team', component: TeamPageComponent},
+    {path: 'careers', component: CareersPageComponent},
+    {path: 'job-details', component: JobDetailsPageComponent},
+    {path: 'faq', component: FaqPageComponent},
+    {path: 'testimonials', component: TestimonialsPageComponent},   
+    {path: 'integrations', component: IntegrationsPageComponent},
+    {path: 'login', component: LoginPageComponent},
+    {path: 'register', component: RegisterPageComponent},
+    {path: 'forgot-password', component: ForgotPasswordPageComponent},
+    {path: 'contact', component: ContactPageComponent},
+
+    // Old pages 
+
+    // {path: 'features', component: FeaturesPageComponent},
+    // {path: 'feature-details', component: FeatureDetailsPageComponent},
+    // {path: 'services', component: ServicesPageComponent},
+    // {path: 'service-details', component: ServiceDetailsPageComponent},
+
+
+
 
     {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list
 ];

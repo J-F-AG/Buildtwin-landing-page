@@ -192,6 +192,23 @@ import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq
 
 import { HttpClientModule } from '@angular/common/http';
 import { VideoPopupModule } from './components/common/video-popup/video-popup.module';
+import { ThreeColMarketComponent } from './components/new-com/three-col-market/three-col-market.component';
+import { AiDrivenServicesComponent } from './components/new-com/ai-driven-services/ai-driven-services.component';
+import { HowBuildtwinHelpsComponent } from './components/new-com/how-buildtwin-helps/how-buildtwin-helps.component';
+import { TraningReviewComponent } from './components/new-com/traning-review/traning-review.component';
+import { HowProcessComponent } from './components/new-com/how-process/how-process.component';
+import { BuildtwinServicesComponent } from './components/new-com/buildtwin-services/buildtwin-services.component';
+import { AboutLorenzComponent } from './components/new-com/about-lorenz/about-lorenz.component';
+import { SucessStoryComponent } from './components/new-com/sucess-story/sucess-story.component';
+import { TraningCompanyComponent } from './components/new-com/traning-company/traning-company.component';
+import { GlobalCompanyComponent } from './components/new-com/global-company/global-company.component';
+import { ThreeColTraneeComponent } from './components/new-com/three-col-tranee/three-col-tranee.component';
+import { EventsProgramComponent } from './components/new-com/events-program/events-program.component';
+import { CourseDemoComponent } from './components/new-com/course-demo/course-demo.component';
+import { DifferentCountryComponent } from './components/new-com/different-country/different-country.component';
+import { PriceCoPilotComponent } from './components/new-com/price-co-pilot/price-co-pilot.component';
+import { PriceMonthlyComponent } from './components/new-com/price-monthly/price-monthly.component';
+import { PriceBasicComponent } from './components/new-com/price-basic/price-basic.component';
 
 
 @NgModule({
@@ -382,7 +399,24 @@ import { VideoPopupModule } from './components/common/video-popup/video-popup.mo
     FaqPageTrainingComponent,
     EmFaqTrainingComponent,
     HdFaqTrainingComponent,
-    TtFaqTrainingComponent
+    TtFaqTrainingComponent,
+    ThreeColMarketComponent,
+    AiDrivenServicesComponent,
+    HowBuildtwinHelpsComponent,
+    TraningReviewComponent,
+    HowProcessComponent,
+    BuildtwinServicesComponent,
+    AboutLorenzComponent,
+    SucessStoryComponent,
+    TraningCompanyComponent,
+    GlobalCompanyComponent,
+    ThreeColTraneeComponent,
+    EventsProgramComponent,
+    CourseDemoComponent,
+    DifferentCountryComponent,
+    PriceBasicComponent,
+    PriceMonthlyComponent,
+    PriceCoPilotComponent
   ],
   imports: [
     BrowserModule,
@@ -403,7 +437,7 @@ import { VideoPopupModule } from './components/common/video-popup/video-popup.mo
     LightgalleryModule,
     ReactiveFormsModule,
     HttpClientModule,
-    VideoPopupModule
+    VideoPopupModule,
   ],
   providers: [
     Title

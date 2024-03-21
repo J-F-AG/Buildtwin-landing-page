@@ -142,20 +142,20 @@
             top: 11px;
             bottom: 11px;
         }
-        span {
-            position: absolute;
-            display: block;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background-color: var(--blackColor);
-            transition:
-                width 0.5s ease-in-out,
-                height 0.5s ease-in-out;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-            border-radius: 5px;
-        }
+        // span {
+        //     position: absolute;
+        //     display: block;
+        //     width: 0;
+        //     height: 0;
+        //     border-radius: 50%;
+        //     background-color: var(--blackColor);
+        //     transition:
+        //         width 0.5s ease-in-out,
+        //         height 0.5s ease-in-out;
+        //     transform: translate(-50%, -50%);
+        //     z-index: -1;
+        //     border-radius: 5px;
+        // }
         i {
             position: absolute;
             left: 30px;
@@ -319,7 +319,7 @@
         }
         .rating {
             text-align: center;
-            font-size: 17px;
+            font-size: 16px;
             margin-top: 20px;
 
             i {
@@ -457,7 +457,7 @@
                     display: inline-block;
 
                     span {
-                        font-size: 17px;
+                        font-size: 16px;
                         color: #cecfd2;
 
                         &.checked {
@@ -1852,7 +1852,7 @@
                     margin: 0;
                     padding: 0;
                     transition: var(--transition);
-                    font-size: 40px;
+                    font-size: 40px; font-weight: 600;
                     color: var(--optionalColor);
                     background-color: transparent !important;
                     line-height: 1;
@@ -5278,7 +5278,7 @@ Responsive CSS
                             top: 2px;
 
                             span {
-                                font-size: 17px;
+                                font-size: 16px;
                             }
                         }
                         .side {
@@ -5356,7 +5356,7 @@ Responsive CSS
                         top: 2px;
 
                         span {
-                            font-size: 17px;
+                            font-size: 16px;
                         }
                     }
                     .side {
@@ -5999,7 +5999,7 @@ Responsive CSS
             .nav-tabset {
                 .nav-tab {
                     span {
-                        font-size: 17px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -6266,7 +6266,7 @@ Responsive CSS
                 .nav-tab {
                     span {
                         padding: 12px 0;
-                        font-size: 17px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -6288,7 +6288,7 @@ Responsive CSS
                                 }
                                 &::before {
                                     top: 15px;
-                                    font-size: 17px;
+                                    font-size: 16px;
                                 }
                             }
                         }

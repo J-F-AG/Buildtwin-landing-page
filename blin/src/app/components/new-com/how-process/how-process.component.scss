@@ -1,0 +1,78 @@
+:host ::ng-deep {
+    .process {
+        display: flex;
+        padding: 63px 30px;
+        align-items: flex-end;
+        gap: 30px;
+
+        .flex_item {
+            display: flex;
+            gap: 30px;
+        }
+
+        .itemWrap {
+            flex-basis: 25%;
+
+            img {
+                width: 100%;
+            }
+
+            .contentWrap {
+                display: flex;
+
+                padding: 24px 20px;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                flex-direction: column;
+
+                strong {
+                    color: #000;
+
+                    text-align: center;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-bottom: 14px;
+                }
+
+                p {
+                    color: var(--Black, #000);
+                    text-align: center;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    /* 22.4px */
+                }
+            }
+        }
+
+        @media (max-width:950px) {
+            .itemWrap .contentWrap {
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width:767px) {
+            .flex_item {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+  :host ::ng-deep   .process {
+        display: flex;
+        padding: 0;
+
+        .itemWrap .contentWrap strong {
+   
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+}

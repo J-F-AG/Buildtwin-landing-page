@@ -4,12 +4,12 @@
     z-index: 3;
 
     h2 {
-        font-size: 32px;
+        font-size: 40px; font-weight: 600;
         max-width: 606px;
-        line-height: 1.7;
+        line-height: 1.1;
         margin-bottom: 17px;
         span {
-            font-size: 60px;
+            font-size: 40px; font-weight: 600;
             line-height: 1.2;
             display: block;
         }
@@ -157,8 +157,6 @@
 
 }
 
-/* Min width 576px to Max width 767px */
-@media only screen and (min-width : 576px) and (max-width : 767px) {}
 
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width : 768px) and (max-width : 991px) {
@@ -315,5 +313,8 @@
 @media (max-width:767px){
     .about-content h2 span {
         font-size: 30px;
+    }
+    .about-area.ptb-100{
+        padding-bottom: 0;
     }
 }

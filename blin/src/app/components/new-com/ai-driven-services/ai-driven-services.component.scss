@@ -1,0 +1,136 @@
+:host ::ng-deep .servicesWrap {
+    padding-bottom: 61px;
+    padding: 0 75px;
+    .headPart {
+        text-align: center;
+        margin-bottom: 50px;
+
+        h2 {
+            color: #0E0E28;
+            text-align: center;
+            font-size: 40px; font-weight: 600;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%;
+            /* 52px */
+        }
+
+        p {
+            color: #000;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+
+            /* 25.6px */
+            strong {
+            font-weight: 700;
+            }
+        }
+    }
+
+    .itemFlex {
+        display: flex;
+        gap: 2%;
+        flex-wrap: wrap;
+      .imgWrap {
+        padding: 40px 53px 0px 53px;
+
+        img{
+            transition: all .3s ease;
+        }
+    }
+        .item {
+            border-radius: 24px;
+            border: 2px solid #ECECEC;
+            background: #F9F9F9;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 24px;
+            flex-basis: 49%;
+            overflow: hidden;
+            margin-bottom: 2%;
+            cursor: pointer;
+            padding-bottom: 146px;
+            position: relative;
+            .bottom-content{
+                border-radius: 0px 0px 24px 24px;
+background: #FFF;
+box-shadow: 0px -6px 64px 0px rgba(0, 0, 0, 0.06);
+display: flex;
+width: 100%;
+padding: 24px 32px 0;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+transition: all ease 0.5s;
+transform: translateY(164px);
+position: absolute;
+bottom: 0;
+span{
+    color: #0E0E28;
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: block;
+    margin-bottom: 10px;
+}
+p{
+    color: var(--grey, #808080);
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8; /* 22.4px */
+    margin-bottom: 24px;
+}
+.border{
+    border-top: 2px solid #ECECEC;
+}
+
+.star{
+    padding: 24px 0;
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        li{
+
+        }
+    }
+}
+            }
+
+            &:hover .bottom-content{
+                transform: translateY(0px);
+            }
+        }
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep{
+        .servicesWrap{
+            padding: 0;
+        }
+        .itemFlex{
+            flex-direction: column;
+            .item {
+      
+                margin-bottom: 7%;
+            }
+
+
+        }
+    }
+
+   
+}

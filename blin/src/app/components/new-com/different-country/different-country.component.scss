@@ -1,0 +1,32 @@
+:host ::ng-deep .countryTraning {
+    margin-bottom: 48px;
+    .head {
+        h2 {
+            color: #000;
+
+            text-align: center;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        span {
+            color: var(--black-700-black, #121212);
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+    }
+
+    .country_traning {
+        display: flex;
+        justify-content: center;
+        img {}
+    }
+}

@@ -1,0 +1,102 @@
+:host ::ng-deep .traning_review {
+    padding: 50px 0;
+    .head {
+        position: relative;
+        margin-bottom: 30px;
+
+        h2 {
+            color: #221638;
+
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #000;
+
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            
+            /* 150% */
+        }
+
+        .svg {
+            position: absolute;
+            right: 7%;
+            top: 0;
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 56px;
+        gap:20px;
+
+        .listInner {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex: 49%;
+            margin-bottom: 46px;
+
+            .number {
+                min-width: 60px;
+                height: 60px;
+                border: 1px dashed #886DE0;
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: #886DE0;
+            }
+
+            .box {
+                border-radius: 8px;
+                border: 1px solid var(--grey-dark, #ECECEC);
+                background: #FAFAFA;
+                display: flex;
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+                max-width: 450px;
+
+                strong {
+                    color: #221638;
+
+                    font-size: 26px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+
+                span {
+                    color: #000;
+
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 24px;
+                    /* 150% */
+                }
+
+                p {
+                    color: var(--grey, #808080);
+
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    /* 150% */
+                }
+
+            }
+        }
+    }
+}

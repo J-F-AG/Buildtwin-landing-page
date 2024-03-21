@@ -71,7 +71,7 @@
     justify-content: center;
 
     h1 {
-        font-size: 60px;
+        font-size: 40px; font-weight: 600;
         font-weight: 600;
         line-height: 1.3;
         margin-bottom: 18px;
@@ -83,9 +83,9 @@
     }
 
     p {
-        font-size: 17px;
+        font-size: 16px;
         line-height: 1.530;
-        color: var(--lightColor);
+        color: #000;
         max-width: 725px;
     }
 
@@ -193,7 +193,7 @@
     padding: 24px;
 
     h2 {
-        font-size: 32px;
+        font-size: 40px; font-weight: 600;
         line-height: 1.3;
         margin-bottom: 24px;
 
@@ -396,152 +396,29 @@
         height: 63px px;
     }
 }
-@media (max-width:1439px){
-    .solutionGroup{
+
+
+
+
+@media (max-width:1439px) {
+    .solutionGroup {
         transform: scale(0.8);
     }
 }
-/* Max width 767px */
-@media only screen and (max-width : 767px) {
 
-    .banner-area {
-        padding-top: 124px;
 
-        .shape1,
-        .shape2 {
-            display: none;
-        }
-
-        &::after,
-        &::before {
-            display: none;
-        }
-
-        .overlay {
-            height: 60px;
-        }
-    }
-
-    .banner-content {
-        max-width: 100%;
-
-        h1 {
-            font-size: 28px;
-            line-height: 1.28;
-            margin-bottom: 8px;
-        }
-
-        p {
-            max-width: 100%;
-        }
-
-        .btn-box {
-            margin-top: 20px;
-
-            .default-btn {
-                font-size: 14px;
-
-                margin: {
-                    bottom: 10px;
-                    right: 5px;
-                    left: 5px;
-                }
-
-                ;
-
-                padding: {
-                    top: 12px;
-                    bottom: 12px;
-                }
-
-                ;
-            }
-        }
-
-        .features-list {
-            margin-top: 20px;
-
-            li {
-                span {
-                    padding-left: 28px;
-                }
-            }
-        }
-    }
-
-    .solutionGroup {
-        flex-direction: column;
-        flex-wrap: wrap;
-        transform: none;
-
-        .arrow-thumb {
-            display: none;
-        }
-    }
-
-}
-
-/* Min width 576px to Max width 767px */
-@media only screen and (min-width : 576px) and (max-width : 767px) {}
-
-/* Min width 768px to Max width 991px */
-@media only screen and (min-width : 768px) and (max-width : 991px) {
-
-    .banner-area {
-        padding-top: 145px;
-
-        .shape1,
-        .shape2 {
-            display: none;
-        }
-
-        &::after,
-        &::before {
-            display: none;
-        }
-
-        .overlay {
-            height: 200px;
-        }
-    }
-
-    .banner-content {
-        max-width: 100%;
-
-        h1 {
-            font-size: 35px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            max-width: 580px;
-        }
-
-        .btn-box {
-            margin-top: 20px;
-
-            .default-btn {
-                font-size: 14.5px;
-            }
-        }
-
-        .features-list {
-            margin-top: 20px;
-        }
-    }
-
-}
 
 .traningPart strong.price {
     margin-bottom: 8px;
     display: block;
 }
 
-.noPadding{
+.noPadding {
     padding: 0 !important;
     border: none !important;
     background: transparent !important;
 }
+
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
@@ -658,12 +535,144 @@
 
 }
 
-@media(max-width:767px){
-    .solutionGroup > div {
-        min-width: unset;
-        width: 100%;
+
+
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .banner-area {
+        padding-top: 145px;
+
+        .shape1,
+        .shape2 {
+            display: none;
+        }
+
+        &::after,
+        &::before {
+            display: none;
+        }
+
+        .overlay {
+            height: 200px;
+        }
+    }
+
+    .banner-content {
+        max-width: 100%;
+
+        h1 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            max-width: 580px;
+        }
+
+        .btn-box {
+            margin-top: 20px;
+
+            .default-btn {
+                font-size: 14.5px;
+            }
+        }
+
+        .features-list {
+            margin-top: 20px;
+        }
+    }
+
 }
-.allSolution .why-choose-content .benefits li {
-    white-space: unset;
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .banner-area {
+        padding-top: 124px;
+
+        .shape1,
+        .shape2 {
+            display: none;
+        }
+
+        &::after,
+        &::before {
+            display: none;
+        }
+
+        .overlay {
+            height: 60px;
+        }
+    }
+
+    .banner-content {
+        max-width: 100%;
+
+        h1 {
+            font-size: 28px;
+            line-height: 1.28;
+            margin-bottom: 8px;
+        }
+
+        p {
+            max-width: 100%;
+        }
+
+        .btn-box {
+            margin-top: 20px;
+
+            .default-btn {
+                font-size: 14px;
+
+                margin: {
+                    bottom: 10px;
+                    right: 5px;
+                    left: 5px;
+                }
+
+                ;
+
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                }
+
+                ;
+            }
+        }
+
+        .features-list {
+            margin-top: 20px;
+
+            li {
+                span {
+                    padding-left: 28px;
+                }
+            }
+        }
+    }
+
+    .solutionGroup {
+        flex-direction: column;
+        flex-wrap: wrap;
+        transform: none;
+
+        .arrow-thumb {
+            display: none;
+        }
+    }
+
+    .banner-content .features-list li:last-child {
+        margin-bottom: 15px;
+    }
+    .banner-content h1 span {
+        font-size: 45px;
+    }
+    .about-image {
+        transform: scale(1.1);
+    }
+    
 }
-}
+

@@ -1,7 +1,8 @@
 h2 ~ h3 {
     font-size: var(--paraFontSize);
     font-weight: 400;
-    color: var(--lightColor);
+    color: #000;
+    font-size: 16px;
 }
 
 .single-service-box {
@@ -17,7 +18,8 @@ h2 ~ h3 {
     }
 
     h4 {
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 600;
         margin: {
             top: 30px;
             bottom: 15px;
@@ -25,6 +27,7 @@ h2 ~ h3 {
     }
     p {
         max-width: 330px;
+        font-size: 14px;
         margin: {
             left: auto;
             right: auto;

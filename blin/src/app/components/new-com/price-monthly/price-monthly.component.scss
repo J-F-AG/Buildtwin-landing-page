@@ -1,0 +1,51 @@
+:host ::ng-deep {
+    .planDetails {
+        border-radius: 4px;
+        background: var(--color-green-button, #FFF);
+        display: flex;
+        max-width: 1296px;
+        padding: 24px;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        .item{
+            text-align: left;
+            max-width: 261px;
+            h4{
+                color: var(--Black, #000);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 11px;
+            }
+            P{
+                color: var(--grey, var(--grey, #808080));
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 19.6px */
+            }
+        }
+        .listCover{
+            display: flex;
+            gap:12px
+        }
+
+        .list{
+            display: flex;
+            gap:14px ;
+            color: var(--Neutral-800, #191D23);
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+align-items: center;
+span{
+    text-align: left;
+    min-width: 183px;
+}
+        }
+    }
+}
