@@ -3,6 +3,8 @@
     position: relative;
     .headSection {
         padding-top: 50px;
+        transition: all ease 0.5s;
+
         h2 {
             color: #0E0E28;
 
@@ -229,6 +231,8 @@
             z-index: 99;
             .headSection{
                 background: linear-gradient(1turn, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0) 0, #fff 40%, #fff 90%, #fff 95%, transparent);
+                transform: translateX(122px);
+                padding-bottom: 54px;
             }
     
         } 
