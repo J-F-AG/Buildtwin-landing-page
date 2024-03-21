@@ -145,7 +145,7 @@
             transform: translateY(-50%);
         }
         h3 {
-            font-size: 32px;
+            font-size: 40px; font-weight: 600;
             margin-bottom: 5px;
         }
         span {
@@ -241,11 +241,11 @@
                 .mat-mdc-text-field-wrapper {
                     .mat-mdc-form-field-infix {
                         .mat-mdc-floating-label {
-                            font-size: 17px;
+                            font-size: 16px;
                             top: 26px;
                         }
                         .mdc-text-field__input {
-                            font-size: 17px;
+                            font-size: 16px;
                         }
                     }
                     &:not(.mdc-text-field--outlined) {
@@ -417,7 +417,7 @@
     .banner-content {
         .sub-title {
             margin-bottom: 13px;
-            font-size: 17px;
+            font-size: 16px;
         }
         h1 {
             font-size: 45px;

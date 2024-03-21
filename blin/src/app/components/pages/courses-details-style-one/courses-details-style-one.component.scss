@@ -6,13 +6,11 @@
     padding-right: 15px;
 }
 .courses-details-info {
-    background-color: #f8f9f8;
+    background-color: #fff;
     border-radius: 5px;
     padding: 12px 12px 50px 12px;
-    margin: {
-        left: 15px;
-        top: -248px;
-    };
+    margin-left: 15px;
+    margin-top: -235px;
     .image {
         text-align: center;
         position: relative;
@@ -253,7 +251,7 @@
 
     .courses-title {
         p {
-            font-size: 17px;
+            font-size: 16px;
         }
     }
     .courses-meta {
@@ -698,7 +696,7 @@
             top: 2px;
             
             span {
-                font-size: 17px;
+                font-size: 16px;
                 color: #cecfd2;
 
                 &.checked {
@@ -1205,7 +1203,7 @@
                 top: 2px;
 
                 span {
-                    font-size: 17px;
+                    font-size: 16px;
                 }
             }
             .side {
@@ -1310,7 +1308,7 @@
         }
         .courses-curriculum {
             h3 {
-                font-size: 17px;
+                font-size: 16px;
             }
         }
         .courses-author {
@@ -1466,4 +1464,39 @@ img.progress {
 
 @media only screen and (min-width: 1200px) and (max-width: 1355px) {
 
+}
+
+ .overflow{
+    overflow: hidden;
+    display: block;
+}
+
+.btnNew {
+    display: flex;
+    height: 48px;
+    padding: 16px 34.5px 15px 34px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #886DE0;
+    color: var(--color-green-button, #FFF);
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    gap: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+
+}
+
+.btnNew.vidBtn {
+    display: flex;
+    padding: 15px 23.726px 16px 23px;
+    border: 1px solid #E9E9E9;
+    background: var(--color-green-button, #FFF);
+    color: var(--primary, #886DE0);
 }

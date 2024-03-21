@@ -4,43 +4,349 @@
 <!-- Logos -->
 <app-tt-banner></app-tt-banner>
 
+
 <!-- Testimmonials -->
 <app-tt-testimonials></app-tt-testimonials>
 
 <!-- 3 Businesslines BuildTwin -->
 <app-tt-services></app-tt-services>
 
+
+<!-- Plug & Play -->
+<app-hd-integrations></app-hd-integrations>
+
+<!-- Services -->
+<app-socials-media-info></app-socials-media-info>
+
+
 <!-- Digital Procurement -->
 <app-task-management></app-task-management>
 
-<!-- Quality Management -->
+<!-- Plug & Play -->
 <app-tt-about></app-tt-about>
 
 
+<app-how-buildtwin-helps>
+    <div class="buildtwinHelps" id="scrollActivated">
+        <div class="" id="onScrollAnimation">
+            <div class="container">
+                <div class="headSection">
+                    <h2>How BuildTwin helps you to get projects DONE.<br>
+                    </h2>
+                </div>
+                <div class="tabContent">
+                    <div class="tabLeft">
+                        <ul>
+                            <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 1}">
+                                <i></i> Quality Management
+                            </li>
+                            <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 2}">
+                                <i></i> Continuous Improvement
+                            </li>
+                            <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 3}">
+                                <i></i> Documenting Everything
+                            </li>
+                            <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 4}">
+                                <i></i> Live Project Progress
+                            </li>
+                            <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 5}">
+                                <i></i> Live RFI Tracking
+                            </li>
+                            <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"
+                                [ngClass]="{'active':activeState === 6}">
+                                <i></i> Simulation
+                            </li>
+                        </ul>
+                    </div>
 
-<app-tt-partners></app-tt-partners>
+                </div>
+            </div>
+        </div>
 
-<app-tt-features></app-tt-features>
+        <div class="staticData">
+            <div class="tabRIght">
+                <div id="section1" class="active" data-ele="one">
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild1.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                AI generated CheckList and Quality Gates
 
-<!--
-<app-case-studies></app-case-studies>
--->
+                            </h3>
+                            <p>
+                                BuildTwin generates Checklists based on the user, deliverables and the discussed
+                                technical decision. The checklist also considers RFIs, Revisions and many other factors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section2" data-ele="two">
+                    <div class="flex">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild2.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Continuous Learning
 
-<app-cta></app-cta>
+                            </h3>
+                            <p>
+                                The digital self management portal provides custom feedback, trainings and benchmarks
+                                based
+                                on quality issues, technical queries and general learning materials.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section3" data-ele="three">
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild3.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Documenting Everything
+                            </h3>
+                            <p>
+                                BuildTwin tracks and documents all activitis across all channels - and presents
+                                a easy to use and understand cockpit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section4" data-ele="four">
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild4.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                LIVE Project Progress
 
+
+                            </h3>
+                            <p>
+                                The consolidated LIVE view shows you the LIVE project view of your project progress and
+                                whether your project is on track or not.
+                        </div>
+                    </div>
+                </div>
+                <div id="section5" data-ele="five">
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild5.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                LIVE RFI Management
+
+                            </h3>
+                            <p>
+                                The AI RFI manager tracks all RFIs across different channels such as emails, CDE, and
+                                technical meetings, presenting them in an easy-to-understand format.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section6" data-ele="six">
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild6.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Simulation
+
+                            </h3>
+                            <p>
+                                With our Simulation tool you supercharge your Steering meetings, by analysing different
+                                scenarios and adopting new priorities with the click of a button.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</app-how-buildtwin-helps>
+
+
+
+<!-- Training -->
 <app-tt-integrations></app-tt-integrations>
 
 
-<!-- 
-    <app-tt-pricing></app-tt-pricing>
--->
+<!-- AI Quality Management  -->
+
+<app-sucess-story>
+    <div class="container">
+        <div class="story">
+            <div class="head">
+                
+                <h2>Peek into BuildTwin Solution Providers</h2>
+                <p>
+                    
+                Meet few selected solution providers, each exemplifying different technical capabilities. 
+                <br>The solution providers bring tailored expertise, cutting-edge solutions, and a commitment 
+                <br>to quality that enhances every project they touch.
+                </p>
+            </div>
+        
+        
+            <div class="listItem">
+                <div class="col">
+                    <div class="imgwRap">
+                        <img src="assets/images/ui/logo1.png" width="145" height="74">
+                    </div>
+                   
+                    <strong>
+                        J&F India
+                    </strong>
+                    <div class="twoFLex">
+                        <img src="assets/images/ui/india.png" width="25" height="25">     <span>3 x in India</span>
+                    </div>
+                    <div class="twoFLex">
+                        <div class="avtar">
+                            <img src="assets/images/ui/avtar1.png" width="25" height="25">
+                            <img class="last" src="assets/images/ui/avtar2.png" width="25" height="25">
+                        </div>
+                        550 Employees
+                    </div>
+                    <div class="twoFLex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                            <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#886DE0"/>
+                            </svg>
+                     <p> <em>  25 years in business </em>services from Structural to MEP</p>
+                    </div>
+                    <div class="twoFLex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                            <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#886DE0"/>
+                            </svg>
+                         <p>   <em> Pre-qualified </em> solution provider</p> 
+                    </div>
+                    <a href="" class="link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_5994_22263)">
+                        <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#886DE0"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_5994_22263">
+                        <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg></a>
+                </div>
+
+                <div class="col">
+                    <div class="imgwRap">
+                        <img src="assets/images/ui/logo2.png" width="234" height="115">
+                    </div>
+                   
+                    <strong>
+                        GBC Engineers
+                    </strong>
+                    <div class="twoFLex">
+                        <img src="assets/images/ui/germany.png" width="25" height="25">     <span>Germany and Vietnam</span>
+                    </div>
+                    <div class="twoFLex">
+                        <div class="avtar">
+                            <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                            <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                        </div>
+                        300 Employees
+                    </div>
+                    <div class="twoFLex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                            <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#886DE0"/>
+                            </svg>
+                     <p> <em>  Design Office</em> in Germany. Experts in automatization</p>
+                    </div>
+                    <div class="twoFLex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                            <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#886DE0"/>
+                            </svg>
+                            <p>   <em> Pre-qualified </em> solution provider</p> 
+                        </div>
+                    <a href="" class="link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_5994_22263)">
+                        <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#886DE0"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_5994_22263">
+                        <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg></a>
+                </div>
+
+                <div class="col">
+                    <div class="imgwRap">
+                        <img src="assets/images/ui/logo3.png" width="200" height="74">
+                    </div>
+                   
+                    <strong>
+                        MAC Engineers
+                    </strong>
+                    <div class="twoFLex">
+                        <img src="assets/images/ui/germany.png" width="25" height="25">     <span>Vietnam, Singapore and Germany</span>
+                    </div>
+                    <div class="twoFLex">
+                        <div class="avtar">
+                            <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                            <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                        </div>
+                        200 Employees
+                    </div>
+                    <div class="twoFLex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                            <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#886DE0"/>
+                            </svg>
+                     <p> <em>  JV</em> with Infra Company and Multi-disciplinary</p>
+                    </div>
+                    <div class="twoFLex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                            <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#886DE0"/>
+                            </svg>
+                            <p>   <em> Pre-qualified </em> solution provider</p> 
+                        </div>
+                    <a href="" class="link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <g clip-path="url(#clip0_5994_22263)">
+                        <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#886DE0"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_5994_22263">
+                        <rect width="20" height="20" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+</app-sucess-story>
+
+
+<!-- Large Tender -->
+<app-cta></app-cta>
+
+
+<br><br><br><br>
+
+
+
+
+<!-- FAQ -->
 <app-tt-faq></app-tt-faq>
 
-<!-- 
-<app-tt-blog></app-tt-blog>
--->
-
-
+<!-- Footer -->
 <app-hd-footer></app-hd-footer>

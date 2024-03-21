@@ -1,0 +1,47 @@
+:host ::ng-deep {
+    .traningCom {
+        .head {
+            text-align: center;
+margin-bottom: 44px;
+            span {
+                color: #886DE0;
+
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 160%;
+                /* 25.6px */
+                text-transform: uppercase;
+                margin-bottom: 28px;
+
+                display: block;
+            }
+
+            h2 {
+                color: #0E0E28;
+
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                /* 48px */
+            }
+        }
+
+        .logo_wrap {
+            ul{
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    margin-top: -1px;
+                    margin-left: -1px;
+                    img{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
