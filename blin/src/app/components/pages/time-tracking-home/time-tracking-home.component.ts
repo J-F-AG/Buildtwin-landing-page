@@ -66,7 +66,7 @@ export class TimeTrackingHomeComponent {
       this.fixedElement = document.getElementById('scrollActivated');
   
       // inside active 
-      if (this.FixedDiv < 200 && totalScroll > topscroll) {
+      if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
         this.fixedElement.classList.add("fixed")
         let activeELe = document.querySelectorAll('[data-ele]');
         activeELe.forEach((item, index) => {
