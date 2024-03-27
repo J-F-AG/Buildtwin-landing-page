@@ -40,6 +40,7 @@ import { EventsComponent } from './components/pages/events/events.component';
 import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
 import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
 import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
+import { ProvideServiceComponent } from './components/new-com/provide-service/provide-service.component';
 const routes: Routes = [
 
     
@@ -56,6 +57,7 @@ const routes: Routes = [
     
 
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
+    {path: 'provide-service', component: ProvideServiceComponent},
     {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
 
