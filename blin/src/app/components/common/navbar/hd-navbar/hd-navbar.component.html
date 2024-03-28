@@ -131,9 +131,8 @@
                                             <div class="text-primary font-medium">Your are providing engineering services?</div>
                                             <div class="margin-top-7 height-1 background-secondary"></div>
                                             <div class="flex-row margin-top-24">
-                                                <a (click)="manageToggle($event)" href="javascript:void(0)"  routerLinkActive="active"
-                                                    [routerLinkActiveOptions]="{exact: true}"
-                                                    class="flex-grow flex-column curserDefault">
+                                                <a (click)="manageToggle($event)" routerLink="/provide-service" routerLinkActive="active"
+                                                [routerLinkActiveOptions]="{exact: true}">
                                                     <em class="flex-row font-bold">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                             <g clip-path="url(#clip0_5453_7308)">
@@ -145,28 +144,11 @@
                                                             </clipPath>
                                                             </defs>
                                                             </svg>
-                                                        <span>Provide engineering services <em class="coming">Coming Soon</em> </span>
+                                                        <span>Provide engineering services</span>
                                                     </em>
                                                     <p class="text-secondary margin-top-8 font-normal">Work with our BidWriter experts and get projects on the friendliest terms</p>
                                                 </a>
-                                                <a (click)="manageToggle($event)" routerLink="/blog-details" routerLinkActive="active"
-                                                    [routerLinkActiveOptions]="{exact: true}"
-                                                    class="flex-grow flex-column ">
-                                                    <em class="flex-row font-bold">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                            <g clip-path="url(#clip0_5453_7319)">
-                                                            <path d="M11.6663 1.66797H4.99967C4.08301 1.66797 3.34134 2.41797 3.34134 3.33464L3.33301 16.668C3.33301 17.5846 4.07467 18.3346 4.99134 18.3346H14.9997C15.9163 18.3346 16.6663 17.5846 16.6663 16.668V6.66797L11.6663 1.66797ZM14.9997 16.668H4.99967V3.33464H10.833V7.5013H14.9997V16.668ZM7.34967 10.8763L6.16634 12.0513L9.11634 15.0013L13.833 10.2846L12.658 9.10963L9.12467 12.643L7.34967 10.8763Z" fill="#0E0E28"/>
-                                                            </g>
-                                                            <defs>
-                                                            <clipPath id="clip0_5453_7319">
-                                                            <rect width="20" height="20" fill="white"/>
-                                                            </clipPath>
-                                                            </defs>
-                                                            </svg>
-                                                        <span >Pre-qualify your company and start tendering</span>
-                                                    </em>
-                                                    <p class="text-secondary margin-top-8 font-normal">List your company and get eligible to tender for 100s of projects across the globe. BuildTwin expert tools and a dedicated customer support helps you to win bids.</p>
-                                                </a>
+                                      
                                                 <a (click)="manageToggle($event)" href="javascript:void(0)" routerLinkActive="active"
                                                 [routerLinkActiveOptions]="{exact: true}"
                                                 class="flex-grow flex-column curserDefault">
