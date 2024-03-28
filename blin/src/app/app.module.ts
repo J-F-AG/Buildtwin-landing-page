@@ -209,6 +209,8 @@ import { DifferentCountryComponent } from './components/new-com/different-countr
 import { PriceCoPilotComponent } from './components/new-com/price-co-pilot/price-co-pilot.component';
 import { PriceMonthlyComponent } from './components/new-com/price-monthly/price-monthly.component';
 import { PriceBasicComponent } from './components/new-com/price-basic/price-basic.component';
+import { ProvideServiceComponent } from './components/new-com/provide-service/provide-service.component';
+import { OmBannerFreelance2Component } from './components/new-com/provide-service/om-banner-freelance2/om-banner-freelance2.component';
 
 
 @NgModule({
@@ -416,7 +418,9 @@ import { PriceBasicComponent } from './components/new-com/price-basic/price-basi
     DifferentCountryComponent,
     PriceBasicComponent,
     PriceMonthlyComponent,
-    PriceCoPilotComponent
+    PriceCoPilotComponent,
+    ProvideServiceComponent,
+    OmBannerFreelance2Component
   ],
   imports: [
     BrowserModule,
