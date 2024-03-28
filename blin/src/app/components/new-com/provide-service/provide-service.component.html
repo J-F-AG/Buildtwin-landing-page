@@ -2,152 +2,1250 @@
 
 <app-om-banner-freelance2></app-om-banner-freelance2>
 
+<app-country-details>
+    <div class="counteryList">
+        <h2>1.000+ handpicked leads in open market</h2>
+        <span>Fitting your technical capabilities</span>
 
-
-
-
-<app-how-buildtwin-helps>
-    <div class="buildtwinHelps" id="scrollActivated">
-        <div class=""id="onScrollAnimation">
         <div class="container">
-            <div class="headSection">
-                <h2>How BuildTwin helps you to get projects done in <br>Time, Quality and across 100+ solution providers
-                </h2>
-            </div>
-            <div class="tabContent">
-                <div class="tabLeft">
-                    <ul>
-                        <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 1}">
-                            <i></i> Checklist and Quality
-                        </li>
-                        <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"   [ngClass]="{'active':activeState === 2}">
-                            <i></i> Continuous Learning
-                        </li>
-                        <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 3}">
-                            <i></i> Documenting Everything
-                        </li>
-                        <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 4}">
-                            <i></i> Live Project Progress
-                        </li>
-                        <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 5}">
-                            <i></i> Live RFI Management
-                        </li>
-                        <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 6}">
-                            <i></i> Simulation
-                        </li>
-                    </ul>
+            <img
+                src="assets/images/ui/service/country.png"
+                alt=""
+                width="1140"
+                height="183"
+            />
+        </div>
+    </div>
+</app-country-details>
+
+<app-service-provide>
+    <div class="serviceProvide">
+        <div class="container">
+            <div class="header">
+                <h2>Provide Service</h2>
+                <div class="inputCover">
+                    <input type="text" placeholder="Search" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                    >
+                        <circle
+                            cx="8.81954"
+                            cy="8.82736"
+                            r="6.74142"
+                            stroke="#878C99"
+                            stroke-width="0.875"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M13.5078 13.8672L16.1508 16.5033"
+                            stroke="#878C99"
+                            stroke-width="0.875"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
                 </div>
-               
+            </div>
+
+            <div class="tabList">
+                <div class="list">Active Projects <i>5</i></div>
+                <div class="list">BuildTwin Recommendations <i>2</i></div>
+                <div class="list active">All Projects <i>8</i></div>
+            </div>
+            <div class="tableCover">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>
+                                <div class="flex">
+                                    Type
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M6.00004 1.33325V10.6666M6.00004 10.6666L10.6667 5.99992M6.00004 10.6666L1.33337 5.99992"
+                                            stroke="#878C99"
+                                            stroke-width="1.33333"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                            </th>
+                            <th>Location</th>
+                            <th>
+                                <div class="flex">
+                                    Starting Date
+
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M6.00004 1.33325V10.6666M6.00004 10.6666L10.6667 5.99992M6.00004 10.6666L1.33337 5.99992"
+                                            stroke="#878C99"
+                                            stroke-width="1.33333"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                            </th>
+                            <th>Project Volume</th>
+                            <th>Likely Services</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="new">NEW</span> Walkaz</td>
+                            <td class="greenText">Marketplace</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/usa.svg"
+                                    />
+                                    USA
+                                </div>
+                            </td>
+                            <td>2 days ago</td>
+                            <td>$2M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label green">Engineering</span>
+                                    <span class="label yellow">Hiring</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10446)">
+                                            <path
+                                                d="M7.9987 1.33594C4.3187 1.33594 1.33203 4.3226 1.33203 8.0026C1.33203 11.6826 4.3187 14.6693 7.9987 14.6693C11.6787 14.6693 14.6654 11.6826 14.6654 8.0026C14.6654 4.3226 11.6787 1.33594 7.9987 1.33594ZM6.66536 11.3359L3.33203 8.0026L4.27203 7.0626L6.66536 9.44927L11.7254 4.38927L12.6654 5.33594L6.66536 11.3359Z"
+                                                fill="#00B507"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10446">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    Match
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightGreen"
+                                    >Start Bidding
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10514)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#64B071"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10514">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs></svg
+                                ></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="new">NEW</span> Martician</td>
+                            <td class="yellowText">Openmarket</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/usa.svg"
+                                    />
+                                    USA
+                                </div>
+                            </td>
+                            <td>3 days ago</td>
+                            <td>$13.7M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label blue"
+                                        >Management Consulting</span
+                                    >
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10451)">
+                                            <path
+                                                d="M7.99772 1.33594C4.31105 1.33594 1.33105 4.31594 1.33105 8.0026C1.33105 11.6893 4.31105 14.6693 7.99772 14.6693C11.6844 14.6693 14.6644 11.6893 14.6644 8.0026C14.6644 4.31594 11.6844 1.33594 7.99772 1.33594ZM11.3311 10.3959L10.3911 11.3359L7.99772 8.9426L5.60439 11.3359L4.66439 10.3959L7.05772 8.0026L4.66439 5.60927L5.60439 4.66927L7.99772 7.0626L10.3911 4.66927L11.3311 5.60927L8.93772 8.0026L11.3311 10.3959Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10451">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    No Match
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightYellow"
+                                    >Reach out to decision maker
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10522)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#A68D0C"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10522">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Slide Education</td>
+                            <td class="greenText">Marketplace</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/uk.svg"
+                                    />
+                                    USA
+                                </div>
+                            </td>
+                            <td>1 week ago</td>
+                            <td>$15.1M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label darkGreen">Design</span>
+                                    <span class="label red">Branding</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10456)">
+                                            <path
+                                                d="M7.99772 1.33594C4.31105 1.33594 1.33105 4.31594 1.33105 8.0026C1.33105 11.6893 4.31105 14.6693 7.99772 14.6693C11.6844 14.6693 14.6644 11.6893 14.6644 8.0026C14.6644 4.31594 11.6844 1.33594 7.99772 1.33594ZM11.3311 10.3959L10.3911 11.3359L7.99772 8.9426L5.60439 11.3359L4.66439 10.3959L7.05772 8.0026L4.66439 5.60927L5.60439 4.66927L7.99772 7.0626L10.3911 4.66927L11.3311 5.60927L8.93772 8.0026L11.3311 10.3959Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10456">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    No Eligibility
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightGreen"
+                                    >Review
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10514)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#64B071"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10514">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs></svg
+                                ></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>RinCar</td>
+                            <td class="greenText">Marketplace</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/germany.svg"
+                                    />
+                                    Germany
+                                </div>
+                            </td>
+                            <td>2 weeks ago</td>
+                            <td>$17.7M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label green">Engineering</span>
+                                    <span class="label red"
+                                        >Digital Marketing</span
+                                    >
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10461)">
+                                            <path
+                                                d="M7.99772 1.33594C4.31105 1.33594 1.33105 4.31594 1.33105 8.0026C1.33105 11.6893 4.31105 14.6693 7.99772 14.6693C11.6844 14.6693 14.6644 11.6893 14.6644 8.0026C14.6644 4.31594 11.6844 1.33594 7.99772 1.33594ZM11.3311 10.3959L10.3911 11.3359L7.99772 8.9426L5.60439 11.3359L4.66439 10.3959L7.05772 8.0026L4.66439 5.60927L5.60439 4.66927L7.99772 7.0626L10.3911 4.66927L11.3311 5.60927L8.93772 8.0026L11.3311 10.3959Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10461">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    No Match
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightGreen"
+                                    >Review
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10514)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#64B071"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10514">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs></svg
+                                ></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Dataqube</td>
+                            <td class="yellowText">Openmarket</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/germany.svg"
+                                    />
+                                    Germany
+                                </div>
+                            </td>
+                            <td>5 days ago</td>
+                            <td>$5.2M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label blue"
+                                        >Strategy Consulting</span
+                                    >
+                                    <span class="label yellow">SEO</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10451)">
+                                            <path
+                                                d="M7.99772 1.33594C4.31105 1.33594 1.33105 4.31594 1.33105 8.0026C1.33105 11.6893 4.31105 14.6693 7.99772 14.6693C11.6844 14.6693 14.6644 11.6893 14.6644 8.0026C14.6644 4.31594 11.6844 1.33594 7.99772 1.33594ZM11.3311 10.3959L10.3911 11.3359L7.99772 8.9426L5.60439 11.3359L4.66439 10.3959L7.05772 8.0026L4.66439 5.60927L5.60439 4.66927L7.99772 7.0626L10.3911 4.66927L11.3311 5.60927L8.93772 8.0026L11.3311 10.3959Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10451">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    No Eligibility
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightYellow"
+                                    >Reach out to decision maker
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10522)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#A68D0C"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10522">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="new">NEW</span> Walkaz</td>
+                            <td class="greenText">Marketplace</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/usa.svg"
+                                    />
+                                    USA
+                                </div>
+                            </td>
+                            <td>2 days ago</td>
+                            <td>$2M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label green">Engineering</span>
+                                    <span class="label yellow">Hiring</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10446)">
+                                            <path
+                                                d="M7.9987 1.33594C4.3187 1.33594 1.33203 4.3226 1.33203 8.0026C1.33203 11.6826 4.3187 14.6693 7.9987 14.6693C11.6787 14.6693 14.6654 11.6826 14.6654 8.0026C14.6654 4.3226 11.6787 1.33594 7.9987 1.33594ZM6.66536 11.3359L3.33203 8.0026L4.27203 7.0626L6.66536 9.44927L11.7254 4.38927L12.6654 5.33594L6.66536 11.3359Z"
+                                                fill="#00B507"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10446">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    Match
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightGreen"
+                                    >Start Bidding
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10514)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#64B071"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10514">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs></svg
+                                ></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="new">NEW</span> Martician</td>
+                            <td class="yellowText">Openmarket</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/usa.svg"
+                                    />
+                                    USA
+                                </div>
+                            </td>
+                            <td>3 days ago</td>
+                            <td>$13.7M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label blue"
+                                        >Management Consulting</span
+                                    >
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10451)">
+                                            <path
+                                                d="M7.99772 1.33594C4.31105 1.33594 1.33105 4.31594 1.33105 8.0026C1.33105 11.6893 4.31105 14.6693 7.99772 14.6693C11.6844 14.6693 14.6644 11.6893 14.6644 8.0026C14.6644 4.31594 11.6844 1.33594 7.99772 1.33594ZM11.3311 10.3959L10.3911 11.3359L7.99772 8.9426L5.60439 11.3359L4.66439 10.3959L7.05772 8.0026L4.66439 5.60927L5.60439 4.66927L7.99772 7.0626L10.3911 4.66927L11.3311 5.60927L8.93772 8.0026L11.3311 10.3959Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10451">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    No Match
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightYellow"
+                                    >Reach out to decision maker
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10522)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#A68D0C"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10522">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Slide Education</td>
+                            <td class="greenText">Marketplace</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/uk.svg"
+                                    />
+                                    USA
+                                </div>
+                            </td>
+                            <td>1 week ago</td>
+                            <td>$15.1M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label darkGreen">Design</span>
+                                    <span class="label red">Branding</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10456)">
+                                            <path
+                                                d="M7.99772 1.33594C4.31105 1.33594 1.33105 4.31594 1.33105 8.0026C1.33105 11.6893 4.31105 14.6693 7.99772 14.6693C11.6844 14.6693 14.6644 11.6893 14.6644 8.0026C14.6644 4.31594 11.6844 1.33594 7.99772 1.33594ZM11.3311 10.3959L10.3911 11.3359L7.99772 8.9426L5.60439 11.3359L4.66439 10.3959L7.05772 8.0026L4.66439 5.60927L5.60439 4.66927L7.99772 7.0626L10.3911 4.66927L11.3311 5.60927L8.93772 8.0026L11.3311 10.3959Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10456">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    No Eligibility
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightGreen"
+                                    >Review
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10514)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#64B071"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10514">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs></svg
+                                ></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>RinCar</td>
+                            <td class="greenText">Marketplace</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/germany.svg"
+                                    />
+                                    Germany
+                                </div>
+                            </td>
+                            <td>2 weeks ago</td>
+                            <td>$17.7M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label green">Engineering</span>
+                                    <span class="label red"
+                                        >Digital Marketing</span
+                                    >
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10461)">
+                                            <path
+                                                d="M7.99772 1.33594C4.31105 1.33594 1.33105 4.31594 1.33105 8.0026C1.33105 11.6893 4.31105 14.6693 7.99772 14.6693C11.6844 14.6693 14.6644 11.6893 14.6644 8.0026C14.6644 4.31594 11.6844 1.33594 7.99772 1.33594ZM11.3311 10.3959L10.3911 11.3359L7.99772 8.9426L5.60439 11.3359L4.66439 10.3959L7.05772 8.0026L4.66439 5.60927L5.60439 4.66927L7.99772 7.0626L10.3911 4.66927L11.3311 5.60927L8.93772 8.0026L11.3311 10.3959Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10461">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    No Match
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightGreen"
+                                    >Review
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10514)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#64B071"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10514">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs></svg
+                                ></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Dataqube</td>
+                            <td class="yellowText">Openmarket</td>
+                            <td>
+                                <div class="flex">
+                                    <img
+                                        src="assets/images/ui/service/germany.svg"
+                                    />
+                                    Germany
+                                </div>
+                            </td>
+                            <td>5 days ago</td>
+                            <td>$5.2M</td>
+                            <td>
+                                <div class="lableCover">
+                                    <span class="label blue"
+                                        >Strategy Consulting</span
+                                    >
+                                    <span class="label yellow">SEO</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="flex">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10451)">
+                                            <path
+                                                d="M7.99772 1.33594C4.31105 1.33594 1.33105 4.31594 1.33105 8.0026C1.33105 11.6893 4.31105 14.6693 7.99772 14.6693C11.6844 14.6693 14.6644 11.6893 14.6644 8.0026C14.6644 4.31594 11.6844 1.33594 7.99772 1.33594ZM11.3311 10.3959L10.3911 11.3359L7.99772 8.9426L5.60439 11.3359L4.66439 10.3959L7.05772 8.0026L4.66439 5.60927L5.60439 4.66927L7.99772 7.0626L10.3911 4.66927L11.3311 5.60927L8.93772 8.0026L11.3311 10.3959Z"
+                                                fill="#AAAAAA"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10451">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    No Eligibility
+                                </div>
+                            </td>
+                            <td>
+                                <a href="" class="biding lightYellow"
+                                    >Reach out to decision maker
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        fill="none"
+                                    >
+                                        <g clip-path="url(#clip0_6110_10522)">
+                                            <path
+                                                d="M2.66634 7.33854H10.7797L7.05301 3.61187L7.99967 2.67188L13.333 8.00521L7.99967 13.3385L7.05967 12.3985L10.7797 8.67188H2.66634V7.33854Z"
+                                                fill="#A68D0C"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6110_10522">
+                                                <rect
+                                                    width="16"
+                                                    height="16"
+                                                    fill="white"
+                                                    transform="matrix(-1 0 0 1 16 0)"
+                                                />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
+    </div>
+</app-service-provide>
+
+<app-open-market-tab-list>
+    <div class="tabCover">
+        <div class="tabHead">
+            <div class="div">
+                <div class="div-2">
+                    <div class="div-3">
+                        <img
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/fbc3a0edd11e0a32a20c62ef2ff19b1085d8df935e4751a57b42f0f6cee84bf1?apiKey=36850388eee14aa189272e3e1adf474e&"
+                            class="img"
+                        />
+                        <div class="div-4">Open Markets</div>
+                    </div>
+                    <div class="div-5">
+                        <img
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/d854ba36ec378e1a47ca08dd51a3af635a824f9e3a36da68047df5dafb74dc1d?apiKey=36850388eee14aa189272e3e1adf474e&"
+                            class="img-2"
+                        />
+                        <div class="div-6">Pre-Qualification</div>
+                    </div>
+                    <div class="div-7">
+                        <img
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/0a5d7a7e6bc5d29d59a7cfd2e81ddb65a4aeae72e4ca87536e7339a4d7831c8c?apiKey=36850388eee14aa189272e3e1adf474e&"
+                            class="img-3"
+                        />
+                        <div class="div-8">Marketplace</div>
+                    </div>
+                </div>
+                <div class="div-9"><div class="div-10"></div></div>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="head">
+                <div class="div">
+                    <div class="div-2">
+                        1,000+ handpicked projects that are
+                        <br />
+                        in need for engineering services.
+                    </div>
+                    <div class="div-3">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s.
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBody">
+                <div class="gap80">
+                    <div class="colData">
+                        <img
+                            src="assets/images/ui/service/market1.png"
+                            width="651"
+                            height="386"
+                        />
+                    </div>
+                    <div class="colData flexVCenter">
+                        <h2>Deep market insights</h2>
+                        <p>
+                            Find projects - which just have been won. These
+                            <br />companies have big needs and even bigger
+                            budgets.
+                        </p>
+                    </div>
+                    <div class="colData flexVCenter">
+                        <h2>Handpicked leads</h2>
+                        <p>
+                            That are handpicked for your engineering
+                            consultancy. You'll find companies that are easy to
+                            reach out to and build relationships with.
+                        </p>
+                    </div>
+                    <div class="colData">
+                        <img
+                            src="assets/images/ui/service/market2.png"
+                            width="651"
+                            height="386"
+                        />
+                    </div>
+               
+                <div class="colData">
+                    <img
+                        src="assets/images/ui/service/market3.png"
+                        width="651"
+                        height="386"
+                    />
+                </div>
+
+                <div class="colData flexVCenter">
+                    <h2>Vetted contact to decision makers</h2>
+                    <p>
+                        We manually collect and verify every single data point
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-open-market-tab-list>
+
+
+<app-experence>
+<div class="experience">
+    <div class="container">
+        <div class="title">We know project acquisition better than anyone</div>
+        <div class="subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="info-container">
+            <div class="info-box">
+                <div class="rating-info">
+                    <div class="rating">Over 25+ years</div>
+                    <div class="rating-text">acquisition experience</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="rating-box">
+                <div class="rating-info">
+                    <div class="rating">1k+</div>
+                    <div class="rating-text">closed Acquisitions</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="rating-box">
+                <div class="rating-info">
+                    <div class="rating">$500M+</div>
+                    <div class="rating-text">in closed deal volume</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="rating-box">
+                <div class="rating-info">
+                    <div class="rating">5.000+</div>
+                    <div class="rating-text">engineers Trust Us</div>
+                </div>
+                <div class="divider"></div>
+            </div>
+            <div class="rating-box">
+                <div class="rating-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="102" height="21" viewBox="0 0 102 21" fill="none">
+                        <mask id="mask0_6126_23145" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="102" height="21">
+                        <rect x="0.5" y="0.890137" width="101" height="20" fill="#836ED9"/>
+                        </mask>
+                        <g mask="url(#mask0_6126_23145)">
+                        <path d="M9.74426 2.86613C9.90959 2.35729 10.6295 2.35729 10.7948 2.86613L12.3907 7.77771C12.4646 8.00527 12.6767 8.15934 12.9159 8.15934H18.0803C18.6153 8.15934 18.8378 8.84399 18.4049 9.15847L14.2269 12.194C14.0333 12.3346 13.9523 12.5839 14.0262 12.8115L15.6221 17.7231C15.7874 18.2319 15.2051 18.655 14.7722 18.3406L10.5942 15.305C10.4006 15.1644 10.1385 15.1644 9.94489 15.305L5.76686 18.3406C5.33401 18.655 4.75162 18.2319 4.91695 17.7231L6.51282 12.8115C6.58676 12.5839 6.50576 12.3346 6.31218 12.194L2.13415 9.15847C1.7013 8.84399 1.92375 8.15934 2.45878 8.15934H7.62312C7.86239 8.15934 8.07445 8.00527 8.14839 7.77771L9.74426 2.86613Z" fill="#886DE0"/>
+                        <path d="M29.7443 2.86613C29.9096 2.35729 30.6295 2.35729 30.7948 2.86613L32.3907 7.77771C32.4646 8.00527 32.6767 8.15934 32.9159 8.15934H38.0803C38.6153 8.15934 38.8378 8.84399 38.4049 9.15847L34.2269 12.194C34.0333 12.3346 33.9523 12.5839 34.0262 12.8115L35.6221 17.7231C35.7874 18.2319 35.2051 18.655 34.7722 18.3406L30.5942 15.305C30.4006 15.1644 30.1385 15.1644 29.9449 15.305L25.7669 18.3406C25.334 18.655 24.7516 18.2319 24.917 17.7231L26.5128 12.8115C26.5868 12.5839 26.5058 12.3346 26.3122 12.194L22.1341 9.15847C21.7013 8.84399 21.9238 8.15934 22.4588 8.15934H27.6231C27.8624 8.15934 28.0745 8.00527 28.1484 7.77771L29.7443 2.86613Z" fill="#886DE0"/>
+                        <path d="M49.7443 2.86613C49.9096 2.35729 50.6295 2.35729 50.7948 2.86613L52.3907 7.77771C52.4646 8.00527 52.6767 8.15934 52.9159 8.15934H58.0803C58.6153 8.15934 58.8378 8.84399 58.4049 9.15847L54.2269 12.194C54.0333 12.3346 53.9523 12.5839 54.0262 12.8115L55.6221 17.7231C55.7874 18.2319 55.2051 18.655 54.7722 18.3406L50.5942 15.305C50.4006 15.1644 50.1385 15.1644 49.9449 15.305L45.7669 18.3406C45.334 18.655 44.7516 18.2319 44.917 17.7231L46.5128 12.8115C46.5868 12.5839 46.5058 12.3346 46.3122 12.194L42.1341 9.15847C41.7013 8.84399 41.9238 8.15934 42.4588 8.15934H47.6231C47.8624 8.15934 48.0745 8.00527 48.1484 7.77771L49.7443 2.86613Z" fill="#886DE0"/>
+                        <path d="M69.7443 2.86613C69.9096 2.35729 70.6295 2.35729 70.7948 2.86613L72.3907 7.77771C72.4646 8.00527 72.6767 8.15934 72.9159 8.15934H78.0803C78.6153 8.15934 78.8378 8.84399 78.4049 9.15847L74.2269 12.194C74.0333 12.3346 73.9523 12.5839 74.0262 12.8115L75.6221 17.7231C75.7874 18.2319 75.2051 18.655 74.7722 18.3406L70.5942 15.305C70.4006 15.1644 70.1385 15.1644 69.9449 15.305L65.7669 18.3406C65.334 18.655 64.7516 18.2319 64.917 17.7231L66.5128 12.8115C66.5868 12.5839 66.5058 12.3346 66.3122 12.194L62.1341 9.15847C61.7013 8.84399 61.9238 8.15934 62.4588 8.15934H67.6231C67.8624 8.15934 68.0745 8.00527 68.1484 7.77771L69.7443 2.86613Z" fill="#886DE0"/>
+                        <path d="M89.7443 2.86613C89.9096 2.35729 90.6295 2.35729 90.7948 2.86613L92.3907 7.77771C92.4646 8.00527 92.6767 8.15934 92.9159 8.15934H98.0803C98.6153 8.15934 98.8378 8.84399 98.4049 9.15847L94.2269 12.194C94.0333 12.3346 93.9523 12.5839 94.0262 12.8115L95.6221 17.7231C95.7874 18.2319 95.2051 18.655 94.7722 18.3406L90.5942 15.305C90.4006 15.1644 90.1385 15.1644 89.9449 15.305L85.7669 18.3406C85.334 18.655 84.7516 18.2319 84.917 17.7231L86.5128 12.8115C86.5868 12.5839 86.5058 12.3346 86.3122 12.194L82.1341 9.15847C81.7013 8.84399 81.9238 8.15934 82.4588 8.15934H87.6231C87.8624 8.15934 88.0745 8.00527 88.1484 7.77771L89.7443 2.86613Z" fill="#886DE0"/>
+                        </g>
+                        </svg>
+                    <div class="rating-text">
+                      <img src="assets/images/ui/service/google.png">
+                        rating
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+</app-experence>
+<app-how-buildtwin-helps>
+    <div class="buildtwinHelps" id="scrollActivated">
+        <div class="" id="onScrollAnimation">
+            <div class="container">
+                <div class="headSection">
+                    <h2>
+                        How BuildTwin helps you to get projects done in
+                        <br />Time, Quality and across 100+ solution providers
+                    </h2>
+                </div>
+                <div class="tabContent">
+                    <div class="tabLeft">
+                        <ul>
+                            <li
+                                (click)="scrollToSection('section1')"
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                                [ngClass]="{ active: activeState === 1 }"
+                            >
+                                <i></i> Checklist and Quality
+                            </li>
+                            <li
+                                (click)="scrollToSection('section2')"
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                                [ngClass]="{ active: activeState === 2 }"
+                            >
+                                <i></i> Continuous Learning
+                            </li>
+                            <li
+                                (click)="scrollToSection('section3')"
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                                [ngClass]="{ active: activeState === 3 }"
+                            >
+                                <i></i> Documenting Everything
+                            </li>
+                            <li
+                                (click)="scrollToSection('section4')"
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                                [ngClass]="{ active: activeState === 4 }"
+                            >
+                                <i></i> Live Project Progress
+                            </li>
+                            <li
+                                (click)="scrollToSection('section5')"
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                                [ngClass]="{ active: activeState === 5 }"
+                            >
+                                <i></i> Live RFI Management
+                            </li>
+                            <li
+                                (click)="scrollToSection('section6')"
+                                data-aos="fade-up"
+                                data-aos-duration="500"
+                                [ngClass]="{ active: activeState === 6 }"
+                            >
+                                <i></i> Simulation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="staticData">
             <div class="tabRIght">
-                <div id="section1" class="active" data-ele="one"  >
-                    <div class="flex ">
-                        <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild1.png" alt="" title="">
-                        </div>
-                        <div class="contentWrap">
-                            <h3>
-                                AI generated CheckList and Quality Gates
-
-                            </h3>
-                            <p>
-                                BuildTwin generates Checklists based on the user, deliverables and the discussed
-                                technical decision. The checklist also considers RFIs, Revisions and many other factors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="section2"    data-ele="two">
+                <div id="section1" class="active" data-ele="one">
                     <div class="flex">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild2.png" alt="" title="">
+                            <img
+                                src="assets/images/ui/whyBuild1.png"
+                                alt=""
+                                title=""
+                            />
                         </div>
                         <div class="contentWrap">
-                            <h3>
-                                Continuous Learning
-
-                            </h3>
+                            <h3>AI generated CheckList and Quality Gates</h3>
                             <p>
-                                BuildTwin generates Checklists based on the user, deliverables and the discussed
-
+                                BuildTwin generates Checklists based on the
+                                user, deliverables and the discussed technical
+                                decision. The checklist also considers RFIs,
+                                Revisions and many other factors.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div id="section3" data-ele="three" >
-                    <div class="flex ">
+                <div id="section2" data-ele="two">
+                    <div class="flex">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild3.png" alt="" title="">
+                            <img
+                                src="assets/images/ui/whyBuild2.png"
+                                alt=""
+                                title=""
+                            />
                         </div>
                         <div class="contentWrap">
-                            <h3>
-                                Documenting Everything
-
-
-                            </h3>
+                            <h3>Continuous Learning</h3>
                             <p>
-                                BuildTwin tracks and documents all activitis across all channels - and presents a easy to use and understand cockpit.
+                                BuildTwin generates Checklists based on the
+                                user, deliverables and the discussed
                             </p>
                         </div>
                     </div>
                 </div>
-                <div id="section4" data-ele="four"  >
-                    <div class="flex ">
+                <div id="section3" data-ele="three">
+                    <div class="flex">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild4.png" alt="" title="">
+                            <img
+                                src="assets/images/ui/whyBuild3.png"
+                                alt=""
+                                title=""
+                            />
                         </div>
                         <div class="contentWrap">
-                            <h3>
-                                LIVE Project Progress
-
-
-                            </h3>
+                            <h3>Documenting Everything</h3>
                             <p>
-                                The consolidated LIVE view shows you the LIVE project view of your project progress and whether your project is on track or not.                            </div>
-                    </div>
-                </div>
-                <div id="section5"  data-ele="five"  >
-                    <div class="flex ">
-                        <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild5.png" alt="" title="">
-                        </div>
-                        <div class="contentWrap">
-                            <h3>
-                                LIVE RFI Management
-
-                            </h3>
-                            <p>
-                                The AI RFI manager tracks all RFIs across different channels such as emails, CDE, and technical meetings, presenting them in an easy-to-understand format.
+                                BuildTwin tracks and documents all activitis
+                                across all channels - and presents a easy to use
+                                and understand cockpit.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div  id="section6" data-ele="six" >
-                    <div class="flex ">
+                <div id="section4" data-ele="four">
+                    <div class="flex">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild6.png" alt="" title="">
+                            <img
+                                src="assets/images/ui/whyBuild4.png"
+                                alt=""
+                                title=""
+                            />
                         </div>
                         <div class="contentWrap">
-                            <h3>
-                                Simulation
-
-                            </h3>
+                            <h3>LIVE Project Progress</h3>
                             <p>
-                                With our Simulation tool you supercharge your Steering meetings, by analysing different scenarios and adopting new priorities with the click of a button.
+                                The consolidated LIVE view shows you the LIVE
+                                project view of your project progress and
+                                whether your project is on track or not.
                             </p>
                         </div>
                     </div>
                 </div>
-               
+                <div id="section5" data-ele="five">
+                    <div class="flex">
+                        <div class="imgWrap">
+                            <img
+                                src="assets/images/ui/whyBuild5.png"
+                                alt=""
+                                title=""
+                            />
+                        </div>
+                        <div class="contentWrap">
+                            <h3>LIVE RFI Management</h3>
+                            <p>
+                                The AI RFI manager tracks all RFIs across
+                                different channels such as emails, CDE, and
+                                technical meetings, presenting them in an
+                                easy-to-understand format.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section6" data-ele="six">
+                    <div class="flex">
+                        <div class="imgWrap">
+                            <img
+                                src="assets/images/ui/whyBuild6.png"
+                                alt=""
+                                title=""
+                            />
+                        </div>
+                        <div class="contentWrap">
+                            <h3>Simulation</h3>
+                            <p>
+                                With our Simulation tool you supercharge your
+                                Steering meetings, by analysing different
+                                scenarios and adopting new priorities with the
+                                click of a button.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 </app-how-buildtwin-helps>
 
-
-<app-hd-footer></app-hd-footer> 
+<app-hd-footer></app-hd-footer>

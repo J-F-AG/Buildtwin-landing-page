@@ -510,23 +510,6 @@ line-height: 160%; /* 25.6px */
 }
 
 
-.winning{
-    text-align: center;
-
-    h2{
-color: #0E0E28;
-text-align: center;
-
-font-size: 40px;
-font-style: normal;
-font-weight: 600;
-line-height: 120%; /* 48px */
-
-span{
-    font-family: 'Jeff Script';
-}
-    }
-}
 @media (max-width: 991px) {
     .info-section {
         max-width: 100%;
@@ -558,4 +541,37 @@ span{
         flex-direction: column;
         align-items: baseline !important;
     }
+}
+
+
+
+.winning{
+    text-align: center;
+    margin: 50px 0;
+
+    h2{
+color: #0E0E28;
+text-align: center;
+
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 48px */
+
+span{
+    font-family: 'Jeff Script';
+    margin: 0;
+}
+    }
+}
+
+:host ::ng-deep .cdeSection .cde_col .headPart span {
+    color: #808080 !important;
+    font-size: 16px !important;
+   
+    text-align: center;
+    display: block;
+}
+:host ::ng-deep .cdeSection .cde_col{
+    border: 1px solid var(--grey-dark, #ECECEC) !important;
 }

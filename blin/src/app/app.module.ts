@@ -211,6 +211,10 @@ import { PriceMonthlyComponent } from './components/new-com/price-monthly/price-
 import { PriceBasicComponent } from './components/new-com/price-basic/price-basic.component';
 import { ProvideServiceComponent } from './components/new-com/provide-service/provide-service.component';
 import { OmBannerFreelance2Component } from './components/new-com/provide-service/om-banner-freelance2/om-banner-freelance2.component';
+import { CountryDetailsComponent } from './components/new-com/country-details/country-details.component';
+import { ServiceProvideComponent } from './components/new-com/service-provide/service-provide.component';
+import { OpenMarketTabListComponent } from './components/new-com/open-market-tab-list/open-market-tab-list.component';
+import { ExperenceComponent } from './components/new-com/experence/experence.component';
 
 
 @NgModule({
@@ -420,7 +424,11 @@ import { OmBannerFreelance2Component } from './components/new-com/provide-servic
     PriceMonthlyComponent,
     PriceCoPilotComponent,
     ProvideServiceComponent,
-    OmBannerFreelance2Component
+    OmBannerFreelance2Component,
+    CountryDetailsComponent,
+    ServiceProvideComponent,
+    OpenMarketTabListComponent,
+    ExperenceComponent
   ],
   imports: [
     BrowserModule,

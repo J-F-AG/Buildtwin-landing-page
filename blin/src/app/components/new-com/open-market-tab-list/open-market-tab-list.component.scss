@@ -1,0 +1,163 @@
+:host ::ng-deep{
+    .tabCover{
+        .tabHead{
+            .div {
+                box-shadow: 0px 4px 15px 0px rgba(177, 188, 236, 0.1);
+                background-color: var(--secondary, #f6f3ff);
+                display: flex;
+                flex-direction: column;
+              }
+              .div-2 {
+                justify-content: space-between;
+                align-self: center;
+                display: flex;
+                width: 863px;
+                max-width: 100%;
+                gap: 20px;
+                font-size: 16px;
+                color: #0e0e28;
+                font-weight: 400;
+                text-align: center;
+                line-height: 140%;
+                padding: 11px 0 11px 22px;
+              }
+              @media (max-width: 991px) {
+                .div-2 {
+                  flex-wrap: wrap;
+                  padding-left: 20px;
+                }
+              }
+              .div-3 {
+                justify-content: center;
+                display: flex;
+                gap: 8px;
+                color: var(--primary, #886de0);
+                font-weight: 600;
+                margin: auto 0;
+                padding: 2px 0;
+              }
+              .img {
+                aspect-ratio: 1;
+                object-fit: auto;
+                object-position: center;
+                width: 19px;
+              }
+              .div-4 {
+                flex-grow: 1;
+                flex-basis: auto;
+                margin: auto 0;
+              }
+              .div-5 {
+                justify-content: center;
+                border: 0px solid #eaecf0;
+                display: flex;
+                gap: 8px;
+                white-space: nowrap;
+                padding: 12px 20px;
+              }
+             
+              .img-2 {
+                aspect-ratio: 1;
+                object-fit: auto;
+                object-position: center;
+                width: 19px;
+                margin: auto 0;
+              }
+              .div-6 {
+              }
+              .div-7 {
+                justify-content: center;
+                border: 0px solid #eaecf0;
+                display: flex;
+                gap: 8px;
+                white-space: nowrap;
+                padding: 12px 20px;
+              }
+              
+              .img-3 {
+                aspect-ratio: 1;
+                object-fit: auto;
+                object-position: center;
+                width: 24px;
+              }
+              .div-8 {
+              }
+              .div-9 {
+                background-color: #ebe4ff;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+              }
+        }
+       
+         .tab-content{
+            .head{
+                .div {
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--color-green-button, #fff);
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 35px 0px 36px;
+                  }
+               
+                  .div-2 {
+                    color: #0e0e28;
+                    margin-top: 25px;
+                    font-weight: 600;
+                    font-size: 40px;
+                    line-height: 48px;
+                  }
+                
+                  .div-3 {
+                    color: var(--grey, #808080);
+                    margin-top: 8px;
+                    width: 864px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 160%;
+                  }
+              
+            }
+            .contentBody{
+                max-width: 1296px;
+                margin: 0 auto;
+                .flexVCenter{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .gap80{
+                    gap: 80px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .colData {
+                        width: 46%;
+                        h2{
+                            color: #0E0E28;
+        
+                            font-size: 40px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 130%; /* 52px */
+                            margin-bottom: 8px;;
+                        }
+                        p{
+                            color: var(--grey, #808080);
+        
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 28.8px */
+                        }
+                    }
+                }
+             
+            }
+         }
+         
+    }
+}
