@@ -215,6 +215,9 @@ import { CountryDetailsComponent } from './components/new-com/country-details/co
 import { ServiceProvideComponent } from './components/new-com/service-provide/service-provide.component';
 import { OpenMarketTabListComponent } from './components/new-com/open-market-tab-list/open-market-tab-list.component';
 import { ExperenceComponent } from './components/new-com/experence/experence.component';
+import { QualifiedComponent } from './components/new-com/qualified/qualified.component';
+import { MarketPlaceComponent } from './components/new-com/market-place/market-place.component';
+import { GetStarted1Component } from './components/new-com/get-started1/get-started1.component';
 
 
 @NgModule({
@@ -428,7 +431,10 @@ import { ExperenceComponent } from './components/new-com/experence/experence.com
     CountryDetailsComponent,
     ServiceProvideComponent,
     OpenMarketTabListComponent,
-    ExperenceComponent
+    ExperenceComponent,
+    QualifiedComponent,
+    MarketPlaceComponent,
+    GetStarted1Component
   ],
   imports: [
     BrowserModule,
