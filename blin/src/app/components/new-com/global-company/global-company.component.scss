@@ -143,3 +143,12 @@
     }
 }
 
+
+:host ::ng-deep .partnerWrap.vender{
+padding-left: 0;
+box-shadow: none;
+background: #f9f9f9;
+.partner{
+    padding: 0;
+}
+}

@@ -1,0 +1,158 @@
+:host ::ng-deep {
+    .capability {
+        background: #f9f9f9;
+        padding-top: 60px;
+        padding-bottom: 45px;
+
+        .head {
+            text-align: center;
+margin-bottom: 40px;;
+            h2 {
+                color: #0E0E28;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                margin-bottom: 8px;
+                line-height: 120%;
+                /* 48px */
+            }
+
+            p {
+                color: var(--Black, #000);
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                /* 25.6px */
+            }
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .left {
+            .containerData {
+                background-color: var(--color-green-button, #fff);
+                display: flex;
+                flex-grow: 1;
+                flex-direction: column;
+                font-size: 16px;
+                color: #221638;
+                font-weight: 500;
+                line-height: 138%;
+                width: 100%;
+                padding: 100px 5px 24px 24px;
+            }
+
+
+
+            .section {
+                display: flex;
+                margin-top: 8px;
+                gap: 4px;
+            }
+
+            .title {
+                border-color: rgba(136, 109, 224, 1);
+                border-style: solid;
+                border-bottom-width: 1px;
+                font-size: 18px;
+                color: var(--primary, #886de0);
+                font-weight: 600;
+                justify-content: space-between;
+                padding: 10px 0;
+            }
+
+            .content {
+                display: flex;
+                gap: 4px;
+            }
+
+            .role,
+            .experience {
+                align-items: start;
+                border-radius: 4px;
+                background-color: var(--secondary, #f6f3ff);
+                justify-content: center;
+                padding: 10px 24px;
+                width: 250px;
+            }
+
+
+
+            .role {
+                white-space: nowrap;
+            }
+
+            .experience {
+                white-space: normal;
+                width: 300px;
+            }
+
+        }
+
+        .headSection {
+            display: flex;
+            border-bottom: 1px solid #886DE0;
+
+            div.common {
+                display: flex;
+                width: 250px;
+                padding: 10px 24px 10px 0px;
+                align-items: center;
+                gap: 10px;
+                color: var(--primary, #886DE0);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+            }
+
+            .col {
+                width: 133px;
+                text-align: center;
+                strong {
+                    color: #221638;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 138.252%;
+                    /* 22.12px */
+                    display: block;
+                    margin-bottom: 10px;;
+                }
+
+                span {
+                    color: var(--grey, var(--grey, #808080));
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 134.546%;
+                    /* 18.836px */
+                    display: block;
+                    margin-bottom: 10px;;
+                }
+            }
+        }
+.last{
+    padding-top: 20px;;
+}
+        .right {
+            .containerData {
+                padding-top: 30px;
+                ;
+                padding-left: 8px;padding-right: 24px;;
+            }
+            .role{
+                width: 135px !important;
+            }
+            .role.dark{
+                background: #886DE0;
+                color: #fff;
+            }
+        }
+
+    }
+}

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetStartedComponent } from './get-started1.component';
+import { AccreditationComponent } from './accreditation.component';
 
-describe('GetStartedComponent', () => {
-  let component: GetStartedComponent;
-  let fixture: ComponentFixture<GetStartedComponent>;
+describe('AccreditationComponent', () => {
+  let component: AccreditationComponent;
+  let fixture: ComponentFixture<AccreditationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GetStartedComponent]
+      imports: [AccreditationComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GetStartedComponent);
+    fixture = TestBed.createComponent(AccreditationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -41,6 +41,8 @@ import { CoursesDetailsStyleOneComponent } from './components/pages/courses-deta
 import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
 import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
 import { ProvideServiceComponent } from './components/new-com/provide-service/provide-service.component';
+import { DataSafetyComponent } from './components/new-com/data-safety/data-safety.component';
+import { VenderDetailsComponent } from './components/new-com/vender-details/vender-details.component';
 const routes: Routes = [
 
     
@@ -58,6 +60,8 @@ const routes: Routes = [
 
     {path: 'freelancer', component: OnlineMeetingHomeComponent},
     {path: 'provide-service', component: ProvideServiceComponent},
+    {path: 'vender-details', component: VenderDetailsComponent},
+    {path: 'data-safety', component: DataSafetyComponent},
     {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
 

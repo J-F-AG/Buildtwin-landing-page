@@ -1,0 +1,192 @@
+:host ::ng-deep {
+    .about {
+
+        background: #f9f9f9;
+        padding-top: 60px;
+        padding-bottom: 45px;
+
+        .head {
+            text-align: center;
+            margin-bottom: 40px;
+            ;
+
+            h2 {
+                color: #0E0E28;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                margin-bottom: 8px;
+                line-height: 120%;
+                /* 48px */
+            }
+
+            p {
+                color: var(--Black, #000);
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                /* 25.6px */
+            }
+        }
+
+        .container {
+            .flexStructure {
+                display: flex;
+                gap: 20px;
+
+                .leftPart {
+                    min-width: 881px;
+
+                    .box {
+                        display: flex;
+                        border-radius: 8px;
+                        background: var(--color-green-button, #FFF);
+                        padding: 30px 24px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        flex-shrink: 0;
+
+                        .rowData {
+                            h3 {
+                                color: var(--primary, #886DE0);
+                                font-size: 18px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;
+                                margin-bottom: 16px;
+                                ;
+                                padding: 0;
+                            }
+
+                            .flex {
+                                display: flex;
+
+                                .founded {
+                                    min-width: 400px;
+                                    margin-bottom: 24px;
+                                }
+
+                                label {
+                                    color: var(--grey, #808080);
+
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 134.546%;
+                                    /* 18.836px */
+                                    display: block;
+                                    margin-bottom: 3px;
+                                }
+
+                                span {
+                                    color: #221638;
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    display: block;
+                                    line-height: 138.252%;
+                                    align-items: center;
+    display: flex;
+    gap: 10px;
+
+                                }
+                            }
+.flexData{
+    display: flex;
+    align-items: center;
+}
+                            ul {
+                                padding: 0;
+                                margin: 0;
+
+                                li {
+                                    display: flex;
+                                    gap: 8px;
+                                    color: var(--Black, #000);
+                                    font-size: 16px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 134.546%;
+                                    /* 21.527px */
+                                    margin-bottom: 16px;
+                                }
+                            }
+
+                            .btnWrap {
+                                margin: 32px 0;
+
+                                a {
+                                    border-radius: 8px;
+                                    background: #886DE0;
+                                    display: flex;
+                                    height: 48px;
+                                    padding: 15px 48px 16px 47px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    color: var(--color-green-button, #FFF);
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .leftPart.rightPart {
+                    flex: 1;
+                    min-width: unset !important;
+
+
+                    .btnNew {
+                        border-radius: 8px;
+                        background: #886DE0;
+                        display: flex;
+                        padding: 4px 8px 4px 20px;
+                        gap: 13px;
+                        color: #FFF;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        height: 48px;
+                        align-items: center;
+                        text-decoration: none;
+                        min-width: 265px;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                    }
+            
+                    .btnNew i {
+                        color: #fff;
+                        /* margin-left: 12px; */
+                        margin-right: 12px;
+                        font-size: 17px;
+                    }
+
+                    .box{
+                        min-width: unset !important;
+                        padding-bottom: 19px;
+                        min-height: 294px;
+                       .rowData .flex .founded {
+                            min-width: auto;
+                            margin-bottom: 10px;
+                            .flexGap{
+                                display: flex;
+                                gap:8px;
+                            }
+                       }
+                       &.last{
+                        margin-top: 30px;;
+                       }
+                    }
+                }
+            }
+        }
+
+    }
+}

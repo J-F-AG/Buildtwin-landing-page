@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetStartedComponent } from './get-started1.component';
+import { CapabilityComponent } from './capability.component';
 
-describe('GetStartedComponent', () => {
-  let component: GetStartedComponent;
-  let fixture: ComponentFixture<GetStartedComponent>;
+describe('CapabilityComponent', () => {
+  let component: CapabilityComponent;
+  let fixture: ComponentFixture<CapabilityComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GetStartedComponent]
+      imports: [CapabilityComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GetStartedComponent);
+    fixture = TestBed.createComponent(CapabilityComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

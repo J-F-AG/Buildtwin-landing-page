@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetStartedComponent } from './get-started1.component';
+import { DataSafetyComponent } from './data-safety.component';
 
-describe('GetStartedComponent', () => {
-  let component: GetStartedComponent;
-  let fixture: ComponentFixture<GetStartedComponent>;
+describe('DataSafetyComponent', () => {
+  let component: DataSafetyComponent;
+  let fixture: ComponentFixture<DataSafetyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GetStartedComponent]
+      imports: [DataSafetyComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GetStartedComponent);
+    fixture = TestBed.createComponent(DataSafetyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
