@@ -215,6 +215,17 @@ import { CountryDetailsComponent } from './components/new-com/country-details/co
 import { ServiceProvideComponent } from './components/new-com/service-provide/service-provide.component';
 import { OpenMarketTabListComponent } from './components/new-com/open-market-tab-list/open-market-tab-list.component';
 import { ExperenceComponent } from './components/new-com/experence/experence.component';
+import { QualifiedComponent } from './components/new-com/qualified/qualified.component';
+import { MarketPlaceComponent } from './components/new-com/market-place/market-place.component';
+import { GetStarted1Component } from './components/new-com/get-started1/get-started1.component';
+import { DataSafetyComponent } from './components/new-com/data-safety/data-safety.component';
+import { VenderDetailsComponent } from './components/new-com/vender-details/vender-details.component';
+import { VenderBannerComponent } from './components/new-com/vender-banner/vender-banner.component';
+import { LatestUpdateComponent } from './components/new-com/latest-update/latest-update.component';
+import { AccreditationComponent } from './components/new-com/accreditation/accreditation.component';
+import { FeatureProjectComponent } from './components/new-com/feature-project/feature-project.component';
+import { CapabilityComponent } from './components/new-com/capability/capability.component';
+import { AbountJfComponent } from './components/new-com/abount-jf/abount-jf.component';
 
 
 @NgModule({
@@ -428,7 +439,18 @@ import { ExperenceComponent } from './components/new-com/experence/experence.com
     CountryDetailsComponent,
     ServiceProvideComponent,
     OpenMarketTabListComponent,
-    ExperenceComponent
+    ExperenceComponent,
+    QualifiedComponent,
+    MarketPlaceComponent,
+    GetStarted1Component,
+    VenderDetailsComponent,
+    DataSafetyComponent,
+    VenderBannerComponent,
+    LatestUpdateComponent,
+    AccreditationComponent,
+    FeatureProjectComponent,
+    CapabilityComponent,
+    AbountJfComponent
   ],
   imports: [
     BrowserModule,
