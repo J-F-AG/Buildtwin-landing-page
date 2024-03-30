@@ -270,6 +270,14 @@
     }
 }
 
+:host ::ng-deep .provideService{
+    background: #f9f9f9;
+
+ .tabRIght {
+        margin-left: 464px;
+    }
+}
+
 @media (min-width: 1700px){
     :host ::ng-deep .staticData {
         max-width: 1520px;
