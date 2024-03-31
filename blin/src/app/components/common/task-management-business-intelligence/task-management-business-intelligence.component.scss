@@ -1,0 +1,152 @@
+.headPart {
+    text-align: center;
+    h2 {
+        color: #0E0E28;
+
+        text-align: center;
+        font-size: 40px; font-weight: 600;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        /* 41.6px */
+        margin-bottom: 8px;
+    }
+
+    span {
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+    }
+
+    margin-bottom: 57px;
+}
+
+.tabbing {
+    margin: 0 auto;
+}
+
+.line {
+    position: relative;
+    span{
+        position: relative;
+    }
+    width: 635px;
+    height: 8px;
+    background: #ECECEC;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    strong {
+        width: 28px;
+        height: 28px;
+        border-radius: 100px;
+        background: #ECECEC;
+        border: 3px solid #fff;
+        color: #808080;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        display: inline-block;
+        top: -11px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+
+    em {
+        color: #808080;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        position: absolute;
+        bottom: -34px;
+        white-space: nowrap;
+        left: -25px;
+    }
+
+    .line span {
+        position: relative;
+    }
+}
+.line span.active strong {
+    background: #886DE0;
+    color: #fff;
+}
+
+.line span.active em {
+ color:  #886DE0;
+}
+.line span:nth-child(2) em{
+    left: -54px;
+}
+.line span:nth-child(3) em{
+    left: -18px;
+}
+.line span:nth-child(4) em{
+    left: -66px;
+}
+.tabContent {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 75px;
+
+    span {
+        color: #0E0E28;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    p {
+        color: var(--grey, var(--grey, #808080));
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.6;
+
+        /* 19.6px */
+    }
+    img{
+        margin-top: 25px;
+    }
+}
+
+
+.svgFlex {
+    position: absolute;
+    width: 100%;
+    bottom: -5px;
+    left: 24px;
+}
+.svgFlex img{
+    opacity: 0;
+}
+img.lineSvg.active {
+    opacity: 1 !important;
+}
+
+@media (max-width:767px){
+    .line {
+        position: relative;
+        width: 100%;
+    }
+    .line em{
+        display: none;
+    }
+    .svgFlex{
+        display: none;
+    }
+}

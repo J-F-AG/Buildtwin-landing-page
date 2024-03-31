@@ -226,6 +226,7 @@ import { AccreditationComponent } from './components/new-com/accreditation/accre
 import { FeatureProjectComponent } from './components/new-com/feature-project/feature-project.component';
 import { CapabilityComponent } from './components/new-com/capability/capability.component';
 import { AbountJfComponent } from './components/new-com/abount-jf/abount-jf.component';
+import { TaskManagementBusinessIntelligenceComponent } from './components/common/task-management-business-intelligence/task-management-business-intelligence.component';
 
 
 @NgModule({
@@ -263,6 +264,7 @@ import { AbountJfComponent } from './components/new-com/abount-jf/abount-jf.comp
     TtServicesComponent,
     TtAboutComponent,
     TaskManagementComponent,
+    TaskManagementBusinessIntelligenceComponent,
     TtPartnersComponent,
     TtFeaturesComponent,
     CaseStudiesComponent,

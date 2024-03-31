@@ -1,0 +1,59 @@
+<div class="container">
+
+<div class="task-management-area ptb-100">
+    <div class="headPart">
+<h2>Digital Procurement</h2>
+<span class="subHeading">
+    Procuring competent technical teams for complex projects, made easy.
+</span>
+</div>
+    <div class="tabbing">
+        <div class="line">
+            <span (click)="tabinbg(1)" [ngClass]="{'active':activeState >= 1}"> <strong>1 </strong><em>Tendering</em></span>
+            <span (click)="tabinbg(2)" [ngClass]="{'active':activeState >= 2}"><strong>2 </strong> <em>Bidding & Matching</em></span>
+            <span (click)="tabinbg(3)" [ngClass]="{'active':activeState >= 3}"><strong>3 </strong> <em>Awarding</em></span>
+            <span (click)="tabinbg(4)" [ngClass]="{'active':activeState >= 4}"><strong>4 </strong> <em>Commercial Contracting</em></span>
+      <div class="svgFlex">
+        <img [ngClass]="{'active':activeState >= 2}" class="lineSvg" src="assets/auto/line.svg">
+        <img [ngClass]="{'active':activeState >= 3}" class="lineSvg" src="assets/auto/line.svg">
+        <img [ngClass]="{'active':activeState >= 4}"  class="lineSvg" src="assets/auto/line.svg">
+      </div>
+        </div>
+     </div>  
+     
+     <div class="tabContent">
+        <div class="tab1"  *ngIf="activeState===1">
+           <span>Tendering</span> 
+
+           <p>
+            BuildTwin assists you in tendering your project with an easy 3-step process. You can tender in private, only <br> invite selected vendors, or tender to the open marketplace with fine granularity in data privacy settings.           </p>
+
+           <img src="assets/auto/tab1.png" alt="" width="" height="">
+        </div>
+        <div class="tab1" *ngIf="activeState===2">
+            <span>Bidding & Matching</span> 
+ 
+            <p>
+                BuildTwin's sophisticated AI system finds the right vendors and enables an easy-to-run <br>bidding process with sampling, verifying information, and running a pre-qualification process.            </p>
+ 
+            <img src="assets/auto/tab2.png" alt="" width="" height="">
+         </div>
+         <div class="tab1" *ngIf="activeState===3">
+            <span>Awarding</span> 
+ 
+            <p>
+                BuildTwin creates an easy-to-review and compare bidding results, allowing you to dive deeper <br>into the different bids and their nuances.            </p>
+ 
+            <img src="assets/auto/tab3.png" alt="" width="" height="">
+         </div>
+         <div class="tab1" *ngIf="activeState===4">
+            <span>Commercial Contracting</span> 
+ 
+            <p>
+                You sign a contract directly with the vendor, while BuildTwin supports a fully digital <br>closing process that meets your compliance standards.            </p>
+ 
+            <img  src="assets/auto/tab4.png" alt="" width="" height="">
+         </div>
+     </div>
+</div>
+</div>
