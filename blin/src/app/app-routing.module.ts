@@ -60,7 +60,7 @@ const routes: Routes = [
     {path: 'provide-service', component: ProvideServiceComponent},
     {path: 'vender-details', component: VenderDetailsComponent},
     {path: 'data-safety', component: DataSafetyComponent},
-    {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
+    {path: 'business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
 
 
