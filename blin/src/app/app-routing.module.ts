@@ -48,12 +48,10 @@ const routes: Routes = [
     
     {path: '', component: HelpDeskHomeComponent},
 
-
     {path: 'marketplace', component: TimeTrackingHomeComponent},
     {path: 'online-meeting', component: OnlineMeetingHomeComponent},
     {path: 'help-desk', component: HelpDeskHomeComponent},
     {path: 'training', component: ElearningSchoolComponent},
-
 
     {path: 'pricing', component: PricingPageComponent},
     
