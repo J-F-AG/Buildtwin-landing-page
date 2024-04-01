@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './provide-service.component.scss'
 })
 export class ProvideServiceComponent {
-  activeState:number = 1
-  activeState2:number = 10 
+  activeState: number = 1
+  activeState2: number = 11
   title = 'BuildTwin - Software for technical Teams';
 
 
@@ -20,76 +20,116 @@ export class ProvideServiceComponent {
   fixedDIvOffsetTop: any
   scrollPosition: any
 
+
+
+
+  FixedDiv2: any
+
   // scrolled div 
 
   scrollActivated: any
   scrollDivOffsettop: any
   scrolledDivHeight: any
   fixedElement: any
+  fixedElement1: any
 
-  constructor(private titleService: Title,private router: Router) { 
+  constructor(private titleService: Title, private router: Router) {
 
     router.events.subscribe((val) => {
       this.scrollActivated = document.getElementById('scrollActivated');
       setTimeout(() => {
         this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
         this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-        console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
-        
+        console.log(this.scrollDivOffsettop, this.scrolledDivHeight);
+
       }, 2000);
-  });
-}
+    });
+  }
 
-ngOnInit() {
-     
-      
-  this.titleService.setTitle(this.title);
+  ngOnInit() {
 
 
-}
-@HostListener('window:scroll', ['$event'])
-handleScroll(event: any) {
-this.FixedDiv = document.getElementById('scrollActivated');
-this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
-let topscroll = this.scrollDivOffsettop - this.FixedDiv
-let winH = window.innerHeight
-let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
-this.fixedElement = document.getElementById('scrollActivated');
+    this.titleService.setTitle(this.title);
 
-// inside active 
-if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
-  this.fixedElement.classList.add("fixed")
-  let activeELe = document.querySelectorAll('[data-ele]');
-  activeELe.forEach((item, index) => {
-    if (item.getBoundingClientRect().top < 500) {
-      this.activeState = index + 1;
-      item.classList.add("active")
+
+  }
+  @HostListener('window:scroll', ['$event'])
+  handleScroll(event: any) {
+    this.FixedDiv = document.getElementById('scrollActivated');
+    this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
+    let topscroll = this.scrollDivOffsettop - this.FixedDiv
+    let winH = window.innerHeight
+    let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
+    this.fixedElement = document.getElementById('scrollActivated');
+
+    // inside active 
+    if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
+      this.fixedElement.classList.add("fixed2")
+      let activeELe = document.querySelectorAll('[data-ele]');
+      activeELe.forEach((item, index) => {
+        if (item.getBoundingClientRect().top < 500) {
+          this.activeState = index + 1;
+          item.classList.add("active")
+        }
+        else {
+          item.classList.remove("active")
+        }
+
+
+
+        // /////////////
+
+
+        if (this.activeState === 2) {
+          this.fixedElement1 = document.getElementById('scrollActivated2');
+          
+          if (this.fixedElement1) {
+            this.fixedElement1.classList.add("fixed");
+          }
+        
+          for (let i = 11; i <= 16; i++) {
+            let activeELe1 = document.querySelectorAll(`[data-ele${i}]`);
+            activeELe1.forEach((item1) => {
+              const topPosition = item1.getBoundingClientRect().top;
+              if (topPosition < 500) {
+                item1.classList.add("active");
+                const dataIndex = item1.getAttribute(`data-ele${i}`);
+                if (dataIndex) {
+                  this.activeState2 = parseInt(dataIndex, 10); // Assuming dataIndex is a number
+                }
+              } else {
+                item1.classList.remove("active");
+              }
+            });
+          }
+        }
+        else {
+          this.fixedElement1 = document.getElementById('scrollActivated2');
+          this.fixedElement1.classList.remove("fixed")
+        }
+
+
+      })
+
     }
     else {
-      item.classList.remove("active")
+      this.fixedElement.classList.remove("fixed2")
+
     }
+  }
 
-  })
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      // Scroll the section into view smoothly
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-}
-else {
-  this.fixedElement.classList.remove("fixed")
-
-}
-}
-
-scrollToSection(sectionId: string) {
-const section = document.getElementById(sectionId);
-if (section) {
-  // Scroll the section into view smoothly
-  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  
-  // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
-  setTimeout(() => {
-    const offsetTop = section.getBoundingClientRect().top;
-    const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
-    window.scrollBy(0, desiredOffset);
-  }, 100); // Adjust the delay if needed
-}
-}
+      // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
+      setTimeout(() => {
+        const offsetTop = section.getBoundingClientRect().top;
+        const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
+        window.scrollBy(0, desiredOffset);
+      }, 100); // Adjust the delay if needed
+    }
+  }
 }
