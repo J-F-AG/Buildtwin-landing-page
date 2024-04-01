@@ -158,14 +158,6 @@
 
 <app-om-integrations-freelance></app-om-integrations-freelance>
 
-
-<app-task-management-business-intelligence></app-task-management-business-intelligence>
-
-
-<!-- trusted by marketplace -->
-<app-om-partners></app-om-partners>
-
-
 <br> 
 
 <app-buildtwin-services>
@@ -176,7 +168,7 @@
                 <h2><span>Actionable</span> Business Insight
                 </h2>
                 <p>
-                    Use A.I. to make your day-to-day tasks easier, faster and more streamlined.
+                    Earn real money with tangible business insights.
                 </p>
             </div>
             <div class="tabContent">
@@ -185,15 +177,14 @@
                         <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(10)"
                             [ngClass]="{'active':activeState2 === 10}">
                             <div class="flex-center">
-                                <i>1</i>Unaccounted hours
+                                <i>1</i>Claims 
                             </div>
                             <div class="content">
 
                                 <p>
-                                    No extra work required. Connect BuildTwin to your email account and get an AI to
-                                    process your emails and extract what needs to be done, compose emails, and document
-                                    everything into an operable cockpit. Such as what deliverables need to be delivered
-                                    by when or what RFIs are still open.
+                                    BuildTwin offers insights into additional work resulting from revisions and change requests 
+                                    from clients, and equips you with an automated assistant to claim extra work. Save time 
+                                    and money by letting AI identify, compose, and document claims at your fingertips.
                                 </p>
                                 <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
                             </div>
@@ -203,12 +194,14 @@
                         <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(11)"
                             [ngClass]="{'active':activeState2 === 11}">
                             <div class="flex-center">
-                                <i>2</i>Claims Management
+                                <i>2</i>Unaccounted hours
                             </div>
                             <div class="content">
 
                                 <p>
-                                    The DSM system helps you to stay on top of things and provides meaningful insight into project performance and how it can be improved. With our anonymized (opt-in) benchmark feature, you also get insight into how you perform against peers.
+                                    Timesheets are effective when submitted accurately. BuildTwin cross-checks timesheets with 
+                                    activities, creating a comprehensive understanding of the time budget for projects, training, and 
+                                    more.
                                 </p>
                                 <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
                             </div>
@@ -217,12 +210,13 @@
                         <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(12)"
                             [ngClass]="{'active':activeState2 === 12}">
                             <div class="flex-center">
-                                <i>3</i>Training Effacancy 
+                                <i>3</i>Automatisation
                             </div>
                             <div class="content">
 
                                 <p>
-                                    We manage files for you, between your team and your client. By uploading the deliverables in the right name convention to CDE and internally tracking each revision.It is as easy as saving your file locally.
+                                    Get deep understanding where to apply automatisation in your engineering projects and use trends to develop 
+                                    your automatisation strategy.
                                 </p>
                                 <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
                             </div>
@@ -231,12 +225,14 @@
                         <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(13)"
                             [ngClass]="{'active':activeState2 === 13}">
                             <div class="flex-center">
-                                <i>4</i> Automate Feedback
+                                <i>4</i> Automated Feedback & Incentives
                             </div>
                             <div class="content">
 
                                 <p>
-                                    BuildTwin tracks all RFIs across all channels and shows the discussion and result of each discussion in an easy-to-understand overview.Coming soon: Based on building code, technical standards, and trained data on constructability, BuildTwin AI will provide suggested answers to technical questions.
+                                    BuildTwin provides a one-of-a-kind Feedback system. Your team gets instant feedback on the performance, where to 
+                                    improve and how to continuously meet business objectives. Develop bonus schemes which bridge the gap between 
+                                    constantly raising salaries and business objectives in the most aligned way.
                                 </p>
                                 <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
                             </div>
@@ -266,168 +262,19 @@
 
 </app-buildtwin-services>
 
+<!-- Digital Self Management -->
+<app-task-management-business-intelligence></app-task-management-business-intelligence>
+
+
+<!-- trusted by marketplace -->
+<app-om-partners></app-om-partners>
+
+
+
+
 
 <br>
 
-<!-- Use Cases -->
-
-<app-om-why-choose-us>
-    <div class="co-pilot-details">
-        <div class="why-choose-us-area  position-relative z-1">
-            <div class="container">
-                <div class="colManage">
-                    <div class="col first">
-                        <div class="why-choose-us-list position-relative font-archivo">
-                            <h3>USE CASES</h3>
-                            <ul class="ps-0 mb-0 mt-0 list-unstyled">
-                                <li (click)="tabbing(1)" [ngClass]="{'active':activeState3 === 1}"
-                                    class="position-relative active" data-aos="fade-up" data-aos-duration="500">
-                                    <div class="imgWrap">
-                                        <img src="assets/images/ui/user1.png" alt="" width="" height="">
-                                    </div>
-                                    <div class="content">
-                                        <strong>“Tracks who processed what and when”</strong>
-                                        <span>Charles Brown</span>
-                                    </div>
-
-
-                                </li>
-                                <li (click)="tabbing(2)" [ngClass]="{'active':activeState3 === 2}"
-                                    class="position-relative" data-aos="fade-up" data-aos-duration="500">
-                                    <div class="imgWrap">
-                                        <img src="assets/images/ui/user2.png" alt="" width="" height="">
-                                    </div>
-                                    <div class="content">
-                                        <strong>“It ensures quality requirements are met”</strong>
-                                        <span>Marquees Lee</span>
-                                    </div>
-
-
-                                </li>
-                                <li (click)="tabbing(3)" [ngClass]="{'active':activeState3 === 3}"
-                                    class="position-relative" data-aos="fade-up" data-aos-duration="500">
-                                    <div class="imgWrap">
-                                        <img src="assets/images/ui/user3.png" alt="" width="" height="">
-                                    </div>
-                                    <div class="content">
-                                        <strong>“Easily and quickly summaries activities into a workable
-                                            cockpit”</strong>
-                                        <span>Katrina Paine</span>
-                                    </div>
-
-                                </li>
-                                <li (click)="tabbing(4)" [ngClass]="{'active':activeState3 === 4}"
-                                    class="position-relative" data-aos="fade-up" data-aos-duration="500">
-                                    <div class="imgWrap">
-                                        <img src="assets/images/ui/user4.png" alt="" width="" height="">
-                                    </div>
-                                    <div class="content">
-                                        <strong>“Provides Automated feedback & learnings for easier
-                                            understanding”</strong>
-                                        <span>Rajdeep Sharma</span>
-                                    </div>
-
-                                </li>
-                                <li (click)="tabbing(5)" [ngClass]="{'active':activeState3 === 5}"
-                                    class="position-relative" data-aos="fade-up" data-aos-duration="500">
-                                    <div class="imgWrap">
-                                        <img src="assets/images/ui/user1.png" alt="" width="" height="">
-                                    </div>
-                                    <div class="content">
-                                        <strong>“One click reports such as for Delays”</strong>
-                                        <span>Owen Weah</span>
-                                    </div>
-
-
-                                </li>
-
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div *ngIf="activeState3 === 1" class="why-choose-us-content" data-aos="fade-up"
-                            data-aos-duration="500">
-                            <h2 class="font-archivo">
-                                Tracks who processed what and when
-                            </h2>
-                            <p>
-                                <img src="assets/auto/testimonial/vid4.png" alt="" width="400" height="400">
-                                <span>Learn what Owen Weah has to say</span>
-                            </p>
-                        </div>
-                        <div *ngIf="activeState3 === 2" class="why-choose-us-content" data-aos="fade-up"
-                            data-aos-duration="500">
-                            <h2 class="font-archivo">
-                                Ensures quality requirements are met
-                            </h2>
-                            <p>
-                                BuildTwin for technical Teams is tailored to significantly improve the workflow of
-                                technical teams. BuildTwin
-                                automates meaningful manual work and enables technical teams to focus on what matters -
-                                technical queries while
-                                BuildTwin helps to manage the project in background.
-                            </p>
-                            <a mat-button routerLink="/contact" class="default-btn">Try BuildTwin Now</a>
-                        </div>
-                        <div *ngIf="activeState3 === 3" class="why-choose-us-content" data-aos="fade-up"
-                            data-aos-duration="500">
-                            <h2 class="font-archivo">
-                                Easily and quickly summaries activities into a workable cockpit
-                            </h2>
-                            <p>
-                                BuildTwin for technical Teams is tailored to significantly improve the workflow of
-                                technical teams. BuildTwin
-                                automates meaningful manual work and enables technical teams to focus on what matters -
-                                technical queries while
-                                BuildTwin helps to manage the project in background.
-                            </p>
-                            <a mat-button routerLink="/contact" class="default-btn">Try BuildTwin Now</a>
-                        </div>
-                        <div *ngIf="activeState3 === 4" class="why-choose-us-content" data-aos="fade-up"
-                            data-aos-duration="500">
-                            <h2 class="font-archivo">
-                                Provides Automated feedback & learnings for easier understanding</h2>
-                            <p>
-                                BuildTwin for technical Teams is tailored to significantly improve the workflow of
-                                technical teams. BuildTwin
-                                automates meaningful manual work and enables technical teams to focus on what matters -
-                                technical queries while
-                                BuildTwin helps to manage the project in background.
-                            </p>
-                            <a mat-button routerLink="/contact" class="default-btn">Try BuildTwin Now</a>
-                        </div>
-                        <div *ngIf="activeState3 === 5" class="why-choose-us-content" data-aos="fade-up"
-                            data-aos-duration="500">
-                            <h2 class="font-archivo">
-                                Generates one click reports such as for delays</h2>
-                            <p>
-                                BuildTwin for technical Teams is tailored to significantly improve the workflow of
-                                technical teams. BuildTwin
-                                automates meaningful manual work and enables technical teams to focus on what matters -
-                                technical queries while
-                                BuildTwin helps to manage the project in background.
-                            </p>
-                            <a mat-button routerLink="/contact" class="default-btn">Try BuildTwin Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</app-om-why-choose-us>
-
-<!-- 
-<app-om-why-choose-us-freelance></app-om-why-choose-us-freelance>
-<app-video-call-made-easy-freelance></app-video-call-made-easy-freelance>
-<app-om-partners-freelance></app-om-partners-freelance>
-<app-om-about-freelance></app-om-about-freelance>
-<app-om-how-it-works-freelance></app-om-how-it-works-freelance>
-<app-om-funfacts-freelance></app-om-funfacts-freelance>
-<app-om-features-freelance></app-om-features-freelance>
-<app-om-blog-freelance></app-om-blog-freelance>
--->
 
 
 
