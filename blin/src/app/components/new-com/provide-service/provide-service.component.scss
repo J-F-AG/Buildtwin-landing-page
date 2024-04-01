@@ -1,0 +1,13 @@
+:host ::ng-deep div#scrollActivated.fixed2 .tabHead {
+    position: fixed;
+    top: 111px;
+    z-index: 999;
+    left: 0;
+    width: 100%;
+}
+
+:host ::ng-deep .fixed div#onScrollAnimation {
+    position: fixed;
+    top: 152px !important;
+
+}
