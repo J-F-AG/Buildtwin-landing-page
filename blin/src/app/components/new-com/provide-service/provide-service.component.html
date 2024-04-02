@@ -1261,7 +1261,7 @@
 
         <div class="staticData">
             <div class="tabRIght">
-                <div id="section1" class="active" data-ele11="12">
+                <div id="section1" class="active" data-ele11="11">
                     <div class="flex">
                         <div class="imgWrap">
                             <img
@@ -1369,7 +1369,7 @@
 
 
 <app-market-place>
-    <div class="marketPlace" data-ele="3">
+    <div class="marketPlace " data-ele="3" id="scrollActivated3">
         <div class="container">
 
       
@@ -1384,19 +1384,19 @@
             <div class="pagination">
                
                     <ul >
-                        <li class="active">
+                        <li class="active"  [ngClass]="{active: activeState3 === 21 }">
                             <i class="cirlce"></i>
                             <span>Access</span>
                         </li>
-                        <li>
+                        <li [ngClass]="{active: activeState3 === 22 }">
                             <i class="cirlce"></i>
                             <span>Bid</span>
                         </li>
-                        <li>
+                        <li [ngClass]="{ active: activeState3 === 23 }">
                             <i class="cirlce"></i>
                             <span>Win</span>
                         </li>
-                        <li>
+                        <li [ngClass]="{ active: activeState3 === 24 }">
                             <i class="cirlce"></i>
                             <span>Setup</span>
                         </li>
@@ -1405,7 +1405,7 @@
             </div>
         </div>
 
-        <div class="slide">
+        <div class="slide" data-element21="21">
             <div class="imgWrap">
                 <img src="assets/images/ui/slide1.png" width="651" height="386">
             </div> 
@@ -1417,7 +1417,7 @@
                 <a href="">Schedule a Call with Our Team</a>
             </div>
         </div>
-        <div class="slide">
+        <div class="slide" data-element22="22">
             <div class="imgWrap">
                 <img src="assets/images/ui/slide2.png" width="651" height="386">
             </div> 
@@ -1428,7 +1428,7 @@
                 <a href="">Schedule a Call with Our Team</a>
             </div>
         </div>
-        <div class="slide">
+        <div class="slide" data-element23="23">
             <div class="imgWrap">
                 <img src="assets/images/ui/slide3.png" width="651" height="386">
             </div> 
@@ -1440,7 +1440,7 @@
                 <a href="">Schedule a Call with Our Team</a>
             </div>
         </div>
-        <div class="slide">
+        <div class="slide" data-element24="24">
             <div class="imgWrap">
                 <img src="assets/images/ui/slide4.png" width="651" height="386">
             </div> 
