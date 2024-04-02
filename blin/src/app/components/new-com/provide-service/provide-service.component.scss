@@ -11,3 +11,12 @@
     top: 152px !important;
 
 }
+
+:host ::ng-deep div#scrollActivated3.fixedData .head {
+    position: sticky;
+    top: 162px;
+    display: block;
+    z-index: 9;
+    background: #886DE0;
+    padding-top: 100px;
+}

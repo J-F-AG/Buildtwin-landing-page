@@ -14,10 +14,12 @@ export class ProvideServiceComponent {
   title = 'BuildTwin - Software for technical Teams';
 
 
-  activeState3: number = 1
+  activeState3: number = 21
   FixedDiv: any
   FixedDivPositionTop: any
   fixedDIvOffsetTop: any
+
+  fixedElement3: any
   scrollPosition: any
 
 
@@ -82,11 +84,11 @@ export class ProvideServiceComponent {
 
         if (this.activeState === 2) {
           this.fixedElement1 = document.getElementById('scrollActivated2');
-          
+
           if (this.fixedElement1) {
             this.fixedElement1.classList.add("fixed");
           }
-        
+
           for (let i = 11; i <= 16; i++) {
             let activeELe1 = document.querySelectorAll(`[data-ele${i}]`);
             activeELe1.forEach((item1) => {
@@ -106,6 +108,40 @@ export class ProvideServiceComponent {
         else {
           this.fixedElement1 = document.getElementById('scrollActivated2');
           this.fixedElement1.classList.remove("fixed")
+        }
+
+
+
+        if (this.activeState === 3) {
+          this.fixedElement3 = document.getElementById('scrollActivated3');
+
+          if (this.fixedElement3) {
+            this.fixedElement3.classList.add("fixedData");
+          }
+
+          for (let j = 21; j <= 24; j++) {
+
+            let activeELe3 = document.querySelectorAll(`[data-element${j}]`);
+            activeELe3.forEach((item3) => {
+
+              const topPosition = item3.getBoundingClientRect().top;
+              if (topPosition < 500) {
+                item3.classList.add("active");
+                const dataIndex = item3.getAttribute(`data-element${j}`);
+                if (dataIndex) {
+                  this.activeState3 = parseInt(dataIndex); // Assuming dataIndex is a number
+                }
+
+                
+              } else {
+                item3.classList.remove("active");
+              }
+            });
+          }
+        }
+        else {
+          this.fixedElement3 = document.getElementById('scrollActivated3');
+          this.fixedElement3.classList.remove("fixedData")
         }
 
 
