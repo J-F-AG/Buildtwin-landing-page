@@ -227,6 +227,7 @@ import { FeatureProjectComponent } from './components/new-com/feature-project/fe
 import { CapabilityComponent } from './components/new-com/capability/capability.component';
 import { AbountJfComponent } from './components/new-com/abount-jf/abount-jf.component';
 import { TaskManagementBusinessIntelligenceComponent } from './components/common/task-management-business-intelligence/task-management-business-intelligence.component';
+import { SignupComponentComponent } from './components/new-com/signup-component/signup-component.component';
 
 
 @NgModule({
@@ -452,7 +453,8 @@ import { TaskManagementBusinessIntelligenceComponent } from './components/common
     AccreditationComponent,
     FeatureProjectComponent,
     CapabilityComponent,
-    AbountJfComponent
+    AbountJfComponent,
+    SignupComponentComponent
   ],
   imports: [
     BrowserModule,

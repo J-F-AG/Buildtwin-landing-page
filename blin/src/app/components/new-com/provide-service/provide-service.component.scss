@@ -1,6 +1,6 @@
 :host ::ng-deep div#scrollActivated.fixed2 .tabHead {
     position: fixed;
-    top: 111px;
+    top: 0;
     z-index: 999;
     left: 0;
     width: 100%;
@@ -8,15 +8,21 @@
 
 :host ::ng-deep .fixed div#onScrollAnimation {
     position: fixed;
-    top: 152px !important;
+    top: 43px !important;
 
 }
 
 :host ::ng-deep div#scrollActivated3.fixedData .head {
     position: sticky;
-    top: 162px;
+    top: 51px;
     display: block;
     z-index: 9;
     background: #886DE0;
     padding-top: 100px;
+}
+
+:host ::ng-deep div#scrollActivated2.fixed .tabLeft {
+    /* position: sticky; */
+    /* top: 200px; */
+    margin-top: -100px;
 }
