@@ -27,6 +27,8 @@ export class ProvideServiceComponent {
   fixedElement: any
   fixedElement1: any
 
+navBar:any
+
   constructor(private titleService: Title, private router: Router) {
     router.events.subscribe((val) => {
       this.scrollActivated = document.getElementById('scrollActivated');
@@ -52,14 +54,19 @@ export class ProvideServiceComponent {
     // inside active 
     if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
       this.fixedElement.classList.add("fixed2")
+      this.navBar = document.getElementById('navBar');
+      this.navBar.classList.add("removeMainNav")
       let activeELe = document.querySelectorAll('[data-ele]');
       activeELe.forEach((item, index) => {
         if (item.getBoundingClientRect().top < 500) {
           this.activeState = index + 1;
           item.classList.add("active")
+
+       
         }
         else {
           item.classList.remove("active")
+         
         }
         // /////////////
         if (this.activeState === 2) {
@@ -120,6 +127,8 @@ export class ProvideServiceComponent {
     }
     else {
       this.fixedElement.classList.remove("fixed2")
+
+      this.navBar.classList.remove("removeMainNav")
 
     }
   }

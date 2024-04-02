@@ -383,13 +383,13 @@
         position: fixed;
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
         animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+        transition: all ease 0.5s;
 
         padding: {
             top: 7px;
             bottom: 7px;
         }
 
-        ;
     }
 }
 
@@ -1575,4 +1575,8 @@ form {
     .navbar-area .navbar .other-options {
         margin-bottom: 5px;
     }
+}
+
+:host ::ng-deep .navbar-area.sticky.removeMainNav {
+   transform: translateY(-100px);
 }
