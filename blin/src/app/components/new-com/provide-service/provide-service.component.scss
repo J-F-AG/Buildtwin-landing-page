@@ -14,9 +14,15 @@
 
 :host ::ng-deep div#scrollActivated3.fixedData .head {
     position: sticky;
-    top: 162px;
+    top: 85px;
     display: block;
     z-index: 9;
     background: #886DE0;
     padding-top: 100px;
+}
+
+:host ::ng-deep div#scrollActivated2.fixed .tabLeft {
+    /* position: sticky; */
+    /* top: 200px; */
+    margin-top: -100px;
 }
