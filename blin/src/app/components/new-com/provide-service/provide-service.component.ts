@@ -28,6 +28,7 @@ export class ProvideServiceComponent {
   fixedElement1: any
 
 navBar:any
+tabHead:any
 
   constructor(private titleService: Title, private router: Router) {
     router.events.subscribe((val) => {
@@ -54,8 +55,7 @@ navBar:any
     // inside active 
     if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
       this.fixedElement.classList.add("fixed2")
-      this.navBar = document.getElementById('navBar');
-      this.navBar.classList.add("removeMainNav")
+
       let activeELe = document.querySelectorAll('[data-ele]');
       activeELe.forEach((item, index) => {
         if (item.getBoundingClientRect().top < 500) {
@@ -98,6 +98,15 @@ navBar:any
         }
 
         if (this.activeState === 3) {
+
+          this.navBar = document.getElementById('navBar');
+          this.navBar.classList.add("removeMainNav")
+          
+
+          this.tabHead = document.getElementById('tabHead');
+          this.tabHead.classList.add("removeMainNav")
+
+
           this.fixedElement3 = document.getElementById('scrollActivated3');
           if (this.fixedElement3) {
             this.fixedElement3.classList.add("fixedData");
@@ -121,6 +130,8 @@ navBar:any
         else {
           this.fixedElement3 = document.getElementById('scrollActivated3');
           this.fixedElement3.classList.remove("fixedData")
+          this.navBar?.classList.remove("removeMainNav")
+          this.tabHead?.classList.remove("removeMainNav")
         }
       })
 
@@ -128,7 +139,7 @@ navBar:any
     else {
       this.fixedElement.classList.remove("fixed2")
 
-      this.navBar.classList.remove("removeMainNav")
+     
 
     }
   }
