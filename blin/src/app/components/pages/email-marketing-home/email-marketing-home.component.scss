@@ -182,3 +182,13 @@ background: #f9f9f9;
       flex-wrap: wrap;
     }
   }
+
+  :host ::ng-deep div#scrollActivated.fixedData .head {
+    position: sticky;
+    top: 111px;
+    display: block;
+    z-index: 9;
+    background: #886DE0;
+    padding-top: 42px;
+}
+
