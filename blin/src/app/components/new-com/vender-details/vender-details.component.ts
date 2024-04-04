@@ -9,7 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class VenderDetailsComponent {
   reviewsSlides: OwlOptions = {
-    items: 5,
+    items: 6,
 nav: true,
 margin: 0,
 dots: false,
