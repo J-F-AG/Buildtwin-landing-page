@@ -230,6 +230,7 @@ import { TaskManagementBusinessIntelligenceComponent } from './components/common
 import { SignupComponentComponent } from './components/new-com/signup-component/signup-component.component';
 import { SimpleRowComponent } from './components/new-com/simple-row/simple-row.component';
 import { EngineersComponent } from './components/new-com/engineers/engineers.component';
+import { HereSectionComponent } from './components/new-com/here-section/here-section.component';
 
 
 @NgModule({
@@ -458,7 +459,8 @@ import { EngineersComponent } from './components/new-com/engineers/engineers.com
     AbountJfComponent,
     SignupComponentComponent,
     SimpleRowComponent,
-    EngineersComponent
+    EngineersComponent,
+    HereSectionComponent
   ],
   imports: [
     BrowserModule,

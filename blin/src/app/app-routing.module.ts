@@ -100,7 +100,7 @@ const routes: Routes = [
     // Old pages 
 
     // {path: 'features', component: FeaturesPageComponent},
-    // {path: 'feature-details', component: FeatureDetailsPageComponent},
+    {path: 'feature-details', component: FeatureDetailsPageComponent},
     // {path: 'services', component: ServicesPageComponent},
     // {path: 'service-details', component: ServiceDetailsPageComponent},
 
