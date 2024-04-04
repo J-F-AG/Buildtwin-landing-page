@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { GlobalService } from 'src/app/services/GlobalService';
 
 @Component({
     selector: 'app-email-marketing-home',
@@ -27,10 +28,17 @@ export class EmailMarketingHomeComponent {
   navBar:any
   tabHead:any
 
+  
     title = 'BuildTwin - good reasons';
  
-    constructor(private titleService:Title) {}
+    constructor(private titleService:Title,private globalService: GlobalService) {}
     
+
+  getGlobalValue(): string {
+    return this.globalService.getGlobalValue();
+  }
+
+
     ngOnInit() {
         this.titleService.setTitle(this.title);
     }
