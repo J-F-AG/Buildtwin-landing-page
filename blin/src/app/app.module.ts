@@ -228,6 +228,8 @@ import { CapabilityComponent } from './components/new-com/capability/capability.
 import { AbountJfComponent } from './components/new-com/abount-jf/abount-jf.component';
 import { TaskManagementBusinessIntelligenceComponent } from './components/common/task-management-business-intelligence/task-management-business-intelligence.component';
 import { SignupComponentComponent } from './components/new-com/signup-component/signup-component.component';
+import { SimpleRowComponent } from './components/new-com/simple-row/simple-row.component';
+import { EngineersComponent } from './components/new-com/engineers/engineers.component';
 
 
 @NgModule({
@@ -454,7 +456,9 @@ import { SignupComponentComponent } from './components/new-com/signup-component/
     FeatureProjectComponent,
     CapabilityComponent,
     AbountJfComponent,
-    SignupComponentComponent
+    SignupComponentComponent,
+    SimpleRowComponent,
+    EngineersComponent
   ],
   imports: [
     BrowserModule,
