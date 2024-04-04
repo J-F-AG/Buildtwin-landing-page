@@ -1,0 +1,132 @@
+:host ::ng-deep {
+    .slider {
+        padding-bottom: 56px;
+        .container {
+            .wrap {
+                .flex {
+                    display: flex;
+
+                    .left {
+                        min-width: 314px;
+
+                        h2 {
+                            color: #0E0E28;
+
+                            font-size: 48px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 120%;
+                            /* 57.6px */
+                            margin-bottom: 19px;
+                        }
+
+                        span {
+                            color: #886DE0;
+
+                            font-family: "Jeff Script";
+                            font-size: 48px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 100%;
+                            /* 48px */
+                        }
+                    }
+
+                    .right {
+                        flex: 1;
+                        display: flex;
+                        gap: 80px;
+                        align-items: center;
+
+                        .imgWrap {
+                            img {}
+                        }
+
+                        .content {
+                            h2 {
+                                color: var(--Black, #000);
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 140%;
+                                /* 44.8px */
+                            }
+
+                            span {
+                                color: var(--grey, var(--grey, #808080));
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                                /* 28px */
+                                display: block;
+                                margin-bottom: 4px;
+                            }
+                            span.position{
+                                font-size: 16px;   
+                                margin-bottom: 28px;      
+                            }
+
+                            p {
+                                color: #0E0E28;
+
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                                /* 22.4px */
+                            }
+
+                            .expert {
+                                margin-top: 45px;
+
+                                h3 {
+                                    color: #0E0E28;
+                                    font-size: 18px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 140%;
+                                    margin-bottom: 8px;
+
+                                    span {
+                                        color: var(--primary, #886DE0);
+                                        font-weight: 400;
+                                        font-size: 20px;
+                                        display: inline-block;
+
+                                    }
+                                  
+
+                                    margin-bottom: 8px;
+                                }
+
+                                ul {
+                                    padding: 0;
+                                    margin: 0;
+                                    li {
+                                        display: flex;
+                                        background: var(--secondary, #F6F3FF);
+                                        flex-shrink: 0;
+                                        width: 184px;
+                                        border-radius: 4px;
+                                        color: #0E0E28;
+                                        font-size: 14px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 130%;
+                                        margin-bottom: 8px;
+                                        padding: 4px 10px;
+
+                                        strong {
+                                            color: var(--primary, #886DE0);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
