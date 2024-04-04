@@ -43,6 +43,7 @@ import { FaqPageTrainingComponent } from './components/pages/faq-page-training/f
 import { ProvideServiceComponent } from './components/new-com/provide-service/provide-service.component';
 import { DataSafetyComponent } from './components/new-com/data-safety/data-safety.component';
 import { VenderDetailsComponent } from './components/new-com/vender-details/vender-details.component';
+import { DataPrivacyComponent } from './components/new-com/data-privacy/data-safety.component';
 const routes: Routes = [
 
     
@@ -60,6 +61,7 @@ const routes: Routes = [
     {path: 'provide-service', component: ProvideServiceComponent},
     {path: 'vender-details', component: VenderDetailsComponent},
     {path: 'data-safety', component: DataSafetyComponent},
+    {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
 
