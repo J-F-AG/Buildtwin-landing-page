@@ -72,7 +72,6 @@ const routes: Routes = [
     {path: 'single-events', component: EventsDetailsComponent},
     {path: 'training-faq', component: FaqPageTrainingComponent},
 
-
     {path: 'use-cases', component: BlogPageComponent},
     {path: 'blog-details', component: BlogDetailsPageComponent},
     {path: 'blog-details2', component: BlogDetailsPage2Component},
@@ -81,7 +80,6 @@ const routes: Routes = [
     {path: 'blog-details5', component: BlogDetailsPage5Component},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    
     
 
     {path: 'about', component: AboutPageComponent},
