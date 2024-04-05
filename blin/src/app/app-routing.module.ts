@@ -40,6 +40,7 @@ import { EventsComponent } from './components/pages/events/events.component';
 import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
 import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
 import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
+import { DataPrivacyComponent } from './components/new-com/data-privacy/data-safety.component';
 const routes: Routes = [
 
     
@@ -67,6 +68,7 @@ const routes: Routes = [
     {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
     {path: 'single-events', component: EventsDetailsComponent},
     {path: 'training-faq', component: FaqPageTrainingComponent},
+    {path: 'terms-of-service', component: DataPrivacyComponent},
 
 
     {path: 'use-cases', component: BlogPageComponent},

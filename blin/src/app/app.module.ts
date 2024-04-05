@@ -209,6 +209,7 @@ import { DifferentCountryComponent } from './components/new-com/different-countr
 import { PriceCoPilotComponent } from './components/new-com/price-co-pilot/price-co-pilot.component';
 import { PriceMonthlyComponent } from './components/new-com/price-monthly/price-monthly.component';
 import { PriceBasicComponent } from './components/new-com/price-basic/price-basic.component';
+import { DataPrivacyComponent } from './components/new-com/data-privacy/data-safety.component';
 
 
 @NgModule({
@@ -416,7 +417,8 @@ import { PriceBasicComponent } from './components/new-com/price-basic/price-basi
     DifferentCountryComponent,
     PriceBasicComponent,
     PriceMonthlyComponent,
-    PriceCoPilotComponent
+    PriceCoPilotComponent,
+    DataPrivacyComponent
   ],
   imports: [
     BrowserModule,
