@@ -56,7 +56,6 @@ const routes: Routes = [
 
     {path: 'pricing', component: PricingPageComponent},
     
-
     {path: 'AI-project-management', component: OnlineMeetingHomeComponent},
     {path: 'provide-service', component: ProvideServiceComponent},
     {path: 'vender-details', component: VenderDetailsComponent},
@@ -103,9 +102,6 @@ const routes: Routes = [
     {path: 'feature-details', component: FeatureDetailsPageComponent},
     // {path: 'services', component: ServicesPageComponent},
     // {path: 'service-details', component: ServiceDetailsPageComponent},
-
-
-
 
     {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list
 ];
