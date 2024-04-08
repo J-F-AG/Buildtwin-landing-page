@@ -22,4 +22,20 @@ navText: [
 ]
 }
 
+
+aboutSlider: OwlOptions = {
+  items: 1,
+  nav: false,
+  margin: 0,
+  dots: true,
+  loop: true,
+  autoplay: true,
+  autoplayHoverPause: false,
+  navText: [
+    "<i class='ti ti-chevron-left'></i>",
+    "<i class='ti ti-chevron-right'></i>",
+  ]
+
+}
+
 }
