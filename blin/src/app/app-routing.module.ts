@@ -56,7 +56,6 @@ const routes: Routes = [
 
     {path: 'pricing', component: PricingPageComponent},
     
-
     {path: 'AI-project-management', component: OnlineMeetingHomeComponent},
     {path: 'provide-service', component: ProvideServiceComponent},
     {path: 'vender-details', component: VenderDetailsComponent},
@@ -74,7 +73,6 @@ const routes: Routes = [
     {path: 'single-events', component: EventsDetailsComponent},
     {path: 'training-faq', component: FaqPageTrainingComponent},
 
-
     {path: 'use-cases', component: BlogPageComponent},
     {path: 'blog-details', component: BlogDetailsPageComponent},
     {path: 'blog-details2', component: BlogDetailsPage2Component},
@@ -83,7 +81,6 @@ const routes: Routes = [
     {path: 'blog-details5', component: BlogDetailsPage5Component},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    
     
 
     {path: 'about', component: AboutPageComponent},
@@ -105,9 +102,6 @@ const routes: Routes = [
     {path: 'feature-details', component: FeatureDetailsPageComponent},
     // {path: 'services', component: ServicesPageComponent},
     // {path: 'service-details', component: ServiceDetailsPageComponent},
-
-
-
 
     {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list
 ];
