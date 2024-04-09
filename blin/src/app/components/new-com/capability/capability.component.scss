@@ -1,19 +1,18 @@
 :host ::ng-deep {
     .capability {
         background: #f9f9f9;
-        padding-top: 105px;
+        padding-top: 60px;
         padding-bottom: 45px;
 
         .head {
-            text-align: center;
             margin-bottom: 40px;
             ;
 
             h2 {
                 color: #0E0E28;
-                font-size: 40px;
+                font-size: 30px;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 700;
                 margin-bottom: 8px;
                 line-height: 120%;
                 /* 48px */
@@ -21,7 +20,6 @@
 
             p {
                 color: var(--Black, #000);
-                text-align: center;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -45,7 +43,7 @@
                 font-weight: 500;
                 line-height: 138%;
                 width: 100%;
-                padding: 100px 5px 24px 24px;
+                padding: 66px 5px 14px 24px;
             }
 
 
@@ -122,10 +120,9 @@
                     font-style: normal;
                     font-weight: 500;
                     line-height: 138.252%;
-                    /* 22.12px */
                     display: block;
                     margin-bottom: 10px;
-                    ;
+                    color: #886DE0;
                 }
 
                 span {
@@ -149,14 +146,22 @@
 
         .right {
             position: relative;
-       
+        strong{
+            color: var(--grey, var(--grey, #808080));
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 134.546%; /* 18.836px */
+margin-bottom: 14px;
+text-align: center;
+        }
             .containerData {
-                padding-top: 30px;
+                padding-top: 15px;
                 ;
                 padding-left: 8px;
                 padding-right: 24px;
                 ;
-                filter: blur(5px);
+                // filter: blur(5px);
             }
 
             .role {
@@ -222,6 +227,17 @@
                 }
             }
         }
-
+&.code{
+  .right .role {
+        width: 163px !important;
+    }
+     .left.data .containerData {
+       
+        padding: 28px 5px 14px 24px;
+    }
+    .headSection .col {
+        width: 163px;
+    }
+}
     }
 }

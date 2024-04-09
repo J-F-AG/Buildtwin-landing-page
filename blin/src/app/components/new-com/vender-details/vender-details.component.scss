@@ -1,10 +1,141 @@
-.container{max-width: 1297px; padding: 0;}
+.container {
+    max-width: 1297px;
+    padding: 0;
+}
 
-.stickyMneu{
+.stickyMneu {
     background: var(--secondary, #F6F3FF);
-box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
-height: 98.39px;
-    .container{
-
+    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: all ease 0.5s;
+   &.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        transform: translateY(0);
     }
+
+    .stcikyTop {
+        
+        border-bottom: 2px solid #EBE4FF;
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 98px;
+        .flex {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                color: var(--primary, #886DE0);
+                text-align: center;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 130%;
+                /* 52px */
+                margin-bottom: 0;
+            }
+        }
+
+        .btnWrap {
+            display: flex;
+            gap: 16px;
+
+            a {
+                border-radius: 4px;
+                border: 1px solid var(--primary, #886DE0);
+                background: var(--color-green-button, #FFF);
+                display: inline-flex;
+                padding: 8.5px 21px 8.5px 20px;
+                justify-content: center;
+                align-items: center;
+                color: var(--primary, #886DE0);
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18.06px;
+                /* 129% */
+
+                &.active {
+                    background: #886DE0;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    }
+
+    .bottom {
+        border-bottom: 2px solid #EBE4FF;
+        ul {
+            display: flex;
+            gap: 91px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding: 0px 0;
+            padding-left: 110px;
+
+            li {
+                padding: 23px 20px;
+                color: #0E0E28;
+
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22.4px;
+                cursor: pointer;
+
+                &.activeSection{
+                    color: #886DE0;
+                }
+                /* 140% */
+            }
+        }
+    }
+}
+
+.footerLinks {
+    position: relative;
+    margin: 41px 0 97px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        gap: 15px;
+        justify-content: end;
+    }
+}
+
+
+
+.stickyMenu {
+    position: fixed;
+    top: -100px; /* Initially hide the menu */
+    transition: top 0.3s;
+    background-color: white;
+    width: 100%;
+    z-index: 1000; /* Ensure the menu is above other content */
+}
+
+.stickyMenu.active {
+    top: 0; /* Show the menu when scrolled 200px */
+}
+
+/* Active section styles */
+.activeSection {
+    color: blue; /* Change color or add any other styles for active section */
 }
