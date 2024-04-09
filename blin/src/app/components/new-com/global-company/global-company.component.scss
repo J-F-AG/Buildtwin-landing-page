@@ -10,22 +10,22 @@
 
     .company {
         min-width: 294px;
-    height: 188px;
-    flex-shrink: 0;
-    background: var(--secondary, #F6F3FF);
-    color: #9278E3;
-    font-size: 30px;
-    font-style: normal;
-    line-height: normal;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    padding-left: 48px;
-    flex: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+        height: 188px;
+        flex-shrink: 0;
+        background: var(--secondary, #F6F3FF);
+        color: #9278E3;
+        font-size: 30px;
+        font-style: normal;
+        line-height: normal;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        padding-left: 48px;
+        flex: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
 
         strong {
             font-weight: 700;
@@ -40,8 +40,8 @@
         gap: 40px;
         align-items: center;
         justify-content: center;
-            height: 188px;
-            padding: 0 70px
+        height: 188px;
+        padding: 0 70px
     }
 
     .animation_img img {
@@ -51,63 +51,89 @@
 }
 
 :host ::ng-deep {
-    .partnerWrap{
-  
+    .partnerWrap {
+
 
 
         .owl-theme {
-            .owl-item img{
-                // min-width: 200px;
+            .owl-item  {
+       
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+             
             }
-         .owl-nav {
-    right: 0;
-    /* bottom: 0; */
-    margin-top: 0;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
 
-    [class*=owl-] {
-        padding: 0;
-        margin: 0 3px;
-        font-size: 20px;
-        border-radius: 0;
-        background: transparent;
-        color: var(--blackColor);
-        transition: var(--transition);
+            .owl-item .exp {
+                border-radius: 10px;
+                background: var(--color-green-button, #FFF);
+                display: flex;
+                width: 170px;
+                padding: 10px 0px;
+                justify-content: center;
+                align-items: center;
+                color: #221638;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 138.252%;
+                /* 19.355px */
+            }
 
-        &:first-child {
-            width: 48px;
-            height: 48px;
-            background: url(../../../../assets/images/ui/prev.svg);
-            box-shadow: 0px 4px 55px rgba(0, 0, 0, .5);
-            border-radius: 100px;
-            margin-left: -31px;
-            i{
-                display: none;
+            .owl-nav {
+                right: 0;
+                /* bottom: 0; */
+                margin-top: 0;
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: space-between;
+
+                [class*=owl-] {
+                    padding: 0;
+                    margin: 0 3px;
+                    font-size: 20px;
+                    border-radius: 0;
+                    background: transparent;
+                    color: var(--blackColor);
+                    transition: var(--transition);
+
+                    &:first-child {
+                        width: 48px;
+                        height: 48px;
+                        background: url(../../../../assets/images/ui/prev.svg);
+                        box-shadow: 0px 4px 55px rgba(0, 0, 0, .5);
+                        border-radius: 100px;
+                        margin-left: -31px;
+
+                        i {
+                            display: none;
+                        }
+
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                        width: 48px;
+                        height: 48px;
+                        background: url(../../../../assets/images/ui/next.svg);
+                        box-shadow: 0px 4px 55px rgba(0, 0, 0, .5);
+                        border-radius: 100px;
+                        margin-right: -31px;
+
+                        i {
+                            display: none;
+                        }
+                    }
+
+                    &:hover {
+                        color: var(--themeColor);
+                    }
+                }
             }
-            
-        }
-        &:last-child {
-            margin-right: 0;
-            width: 48px;
-            height: 48px;
-            background: url(../../../../assets/images/ui/next.svg);
-            box-shadow: 0px 4px 55px rgba(0, 0, 0, .5);
-            border-radius: 100px;
-            margin-right: -31px;
-            i{
-                display: none;
-            }
-        }
-        &:hover {
-            color: var(--themeColor);
-        }
-    }
-}
+
             .owl-dots {
                 text-align: end;
                 margin-top: -22px;
@@ -122,17 +148,21 @@
                         background: #d5d5f4;
                         transition: var(--transition);
                     }
+
                     &:first-child {
                         span {
                             margin-left: 0;
                         }
                     }
+
                     &:last-child {
                         span {
                             margin-right: 0;
                         }
                     }
-                    &:hover, &.active {
+
+                    &:hover,
+                    &.active {
                         span {
                             background: var(--themeColor);
                         }
@@ -144,11 +174,12 @@
 }
 
 
-:host ::ng-deep .partnerWrap.vender{
-padding-left: 0;
-box-shadow: none;
-background: #f9f9f9;
-.partner{
-    padding: 0;
-}
+:host ::ng-deep .partnerWrap.vender {
+    padding-left: 0;
+    box-shadow: none;
+    background: #f9f9f9;
+
+    .partner {
+        padding: 0;
+    }
 }

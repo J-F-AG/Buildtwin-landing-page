@@ -1,12 +1,10 @@
 :host ::ng-deep {
     .about {
 
-        background: #f9f9f9;
-        padding-top: 60px;
-        padding-bottom: 0;
+        padding-top: 51px;
+        padding-bottom: 64px;
 
         .head {
-            text-align: center;
             margin-bottom: 40px;
             ;
 
@@ -15,14 +13,13 @@
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 600;
-                margin-bottom: 8px;
+                margin-bottom: 13px;
                 line-height: 120%;
                 /* 48px */
             }
 
             p {
                 color: var(--Black, #000);
-                text-align: center;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
@@ -33,7 +30,6 @@
 
             h3 {
                 color: var(--primary, #886DE0);
-                text-align: center;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 600;
@@ -43,7 +39,7 @@
         }
 
         .whiteSection {
-            padding: 52px 52px 0;
+            padding: 0;
         }
 
         .container {
@@ -55,16 +51,46 @@
                 display: flex;
                 gap: 20px;
          
-                padding: 52px 0 ;
+                padding: 0;
 
 
                 .leftPart {
+                    .btnNew {
+                        border-radius: 8px;
+                        background: #886DE0;
+                        display: flex;
+                        padding: 14px 32px 14px 31px;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--color-green-button, #FFF);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        position: relative;
+                        top: 0;
+                        gap: 10px;
+                        max-width: 230px;
+                        margin-top: 31px;
+                    }
+    
+                    .btnNew i {
+                        color: #fff;
+                        /* margin-left: 12px; */
+                        margin-right: 12px;
+                        font-size: 17px;
+                    }
+    
                     width: 50%;
+
+                    img.logo{
+                        margin-bottom: 55px;
+                    }
 
                     .box {
                         display: flex;
                         border-radius: 8px;
-                        padding: 0px 24px;
+                        padding: 0;
                         flex-direction: column;
                         align-items: flex-start;
                         flex-shrink: 0;
@@ -72,7 +98,7 @@
                         .grid_cover {
                             display: flex;
                             gap: 32px;
-                            margin-bottom: 75px;
+                            margin-bottom: 34px;
                             .grid {
                                 border-radius: 8px;
                                 background: #FAFAFA;
@@ -118,14 +144,16 @@
                         }
 
                         .rowData {
+                            .manage{
+                                margin-bottom: 30px;
+                            }
                             h3 {
                                 color: var(--primary, #886DE0);
                                 font-size: 18px;
                                 font-style: normal;
                                 font-weight: 600;
                                 line-height: normal;
-                                margin-bottom: 16px;
-                                ;
+                                margin-bottom: 22px;
                                 padding: 0;
                             }
 
@@ -133,14 +161,16 @@
                                 display: flex;
 
                                 .founded {
-                                    min-width: 400px;
                                     margin-bottom: 24px;
+                                    display: flex;
+                                    gap: 10px;
+                                    align-items: center;
                                 }
 
                                 label {
                                     color: var(--grey, #808080);
 
-                                    font-size: 14px;
+                                    font-size: 16px;
                                     font-style: normal;
                                     font-weight: 500;
                                     line-height: 134.546%;
@@ -170,12 +200,12 @@
 
                             ul {
                                 padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -16px;
-    margin-bottom: 15px;
-}
+                                margin: 0;
+                                display: flex;
+                                flex-wrap: wrap;
+                                /* margin-right: -16px; */
+                                margin-bottom: 15px;
+
 
                                 li {
                                     display: flex;
@@ -185,14 +215,14 @@
                                     font-style: normal;
                                     font-weight: 500;
                                     line-height: 134.546%;
-                                    /* 21.527px */
                                     margin-bottom: 20px;
-                                    min-width: 275px;
+                                    width: 44%;
                                     margin-right: 32px;
+                                }
                             }
 
                             .rating{
-                                margin-bottom: 61px;
+                                margin-bottom: 0;
                                 svg{
                                     margin-bottom: 8px;
                                 }
@@ -227,20 +257,60 @@ display: block;
                             }
                         }
                     }
+                    &.pt-50{
+                        padding-top: 48px;
+                    }
                 }
+               
 
                 .leftPart.rightPart {
-                    padding-right: 58px;
+                    padding-right: 0;
+                    padding-left: 74px;
                     flex: 1;
-                    .flexDiv{
-                        display: flex;
-                        justify-content: flex-end;
-                        gap: 26px;
-                        margin-bottom: 26px;
+                    
+
+
+                }
+
+                .selectCover{
+                    display: flex;
+                    gap: 21px;
+                    align-items: center;
+                    select{
+                        height: 40px;
+                        display: inline-flex;
+                        padding: 11px 10px;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 43px;
+                        color: #886DE0;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        border-radius: 8px;
+                        background: var(--secondary, #F6F3FF);
+                        width: 184px;
+                        border: none;
+                        -webkit-appearance: none;
                     }
-                    .imgWrap{
+                    span{
                         display: flex;
-                        justify-content: flex-end;
+                        gap: 8px;
+                        color: var(--Black, #000);
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+                    }
+
+                    .selectData {
+                        position: relative;
+                        svg{
+                            position: absolute;
+                            right: 10px;
+                            top: 11px;
+                        }
                     }
                 }
             }
@@ -269,31 +339,7 @@ line-height: normal;
 
 margin-bottom: 12px;
                 }
-                .btnNew {
-                    border-radius: 8px;
-                    background: #886DE0;
-                    display: flex;
-padding: 14px 32px 14px 31px;
-justify-content: center;
-align-items: center;
-color: var(--color-green-button, #FFF);
-
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-position: relative;
-top: 43px;
-gap: 10px;
-                }
-
-                .btnNew i {
-                    color: #fff;
-                    /* margin-left: 12px; */
-                    margin-right: 12px;
-                    font-size: 17px;
-                }
-
+               
                 .box {
                     min-width: unset !important;
                     padding-bottom: 19px;
