@@ -19,9 +19,9 @@ img {
 }
 
 .topBanner {
-    padding-bottom: 116px;
+    padding-bottom: 130px;
     .content {
-        max-width: 690px;
+        max-width: 670px;
         padding-top: 185px;
         padding-left: 18px;
         h1 {
@@ -35,7 +35,7 @@ img {
     }
 
     .buildtwinSafety {
-        padding: 80px 0 0 12px;
+        padding: 50px 0 0 12px;
         h2 {
             font-size: 40px;
             font-weight: 600;
@@ -61,12 +61,17 @@ img {
             border-radius: 8px;
             font-size: 16px;
             margin-left: -12px;
+            margin-top: 25px;
         }
     }
 
+    .image {
+        padding-top: 98px;
+    }
+
     figure {
-        margin-right: -235px;
-        margin-bottom: -158px;
+        margin-right: -75px;
+        margin-bottom: -255px;
     }
 
     .profileInfo {
@@ -74,7 +79,7 @@ img {
         box-shadow: 0px 14px 20px 0px rgba(44, 44, 44, 0.06);
         border-radius: 8px;
         max-width: 460px;
-        padding: 40px;
+        padding: 30px;
         text-align: center;
         margin-left: 80px;
         position: relative;
@@ -91,7 +96,7 @@ img {
 
         span {
             line-height: 1;
-            padding-bottom: 14px;
+            padding-bottom: 10px;
         }
 
         strong {
@@ -126,8 +131,7 @@ img {
         border-radius: 8px;
         max-width: 340px;
         width: 100%;
-        height: 335px;
-        padding: 0 30px 24px;
+        padding: 0 30px 30px;
 
         i {
             display: inline-block;
@@ -160,17 +164,17 @@ img {
         max-width: 752px;
         width: 100%;
         right: 65px;
-        top: 78px;
+        top: 60px;
         h3 {
             font-size: 30px;
             font-weight: 600;
             line-height: 1.25;
             color: #fff;
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
 
         p {
-            font-size: 24px;
+            font-size: 20px;
             line-height: 1.25;
             color: #fff;
         }
@@ -237,6 +241,7 @@ img {
             box-shadow: 0px 8px 16px 0px rgba(62, 45, 117, 0.1);
             border-radius: 0 0 8px 8px;
             padding: 24px 16px;
+            min-height: 171px;
 
             h6 {
                 font-size: 18px;
@@ -319,7 +324,7 @@ img {
         max-width: 766px;
         width: 100%;
         min-height: 370px;
-        margin-top: 78px;
+        margin-top: 48px;
 
         .item {
             background: #fff;
@@ -328,13 +333,13 @@ img {
                 font-size: 30px;
                 font-weight: 600;
                 line-height: 1.267;
-                margin-bottom: 32px;
+                margin-bottom: 20px;
             }
 
             p {
                 font-size: 16px;
                 line-height: 1.55;
-                margin-bottom: 22px;
+                margin-bottom: 15px;
             }
 
             a {
