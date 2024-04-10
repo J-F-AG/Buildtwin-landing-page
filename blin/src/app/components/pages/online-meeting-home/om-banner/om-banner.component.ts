@@ -1,6 +1,19 @@
 import { Component,ElementRef, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
+interface HbsptForms {
+  create(config: any): void;
+}
+
+interface Hbspt {
+  forms: HbsptForms;
+}
+declare global {
+  interface Window {
+    hbspt: Hbspt;
+  }
+}
+
 @Component({
   selector: 'app-om-banner',
   templateUrl: './om-banner.component.html',
@@ -8,9 +21,14 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class OmBannerComponent {
   ytVideoUrl = "assets/video/video.mp4"
-   
+
   ytsrc: any;
+
+
+  
   constructor(private sanitizer: DomSanitizer,) {
+ 
+
   }
 
   youTubePopup: boolean = false;
@@ -30,9 +48,34 @@ export class OmBannerComponent {
   pauseVideo() {
     let video2 = <HTMLVideoElement>document.getElementById('video1');
     video2.pause();
-  }
-  ngOnInit() {
-    let video2 = <HTMLVideoElement>document.getElementById('video1');
-    video2.pause();
-  }
+  }   
+    ngOnInit(): void {
+    //   let video2 = <HTMLVideoElement>document.getElementById('video1');
+    // video2.pause();
+    // Initialize HubSpot form
+  // Load HubSpot Form Script
+  const script = document.createElement('script');
+  script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+  script.async = true;
+  script.charset = 'utf-8';
+
+  // Append script to the document body
+  document.body.appendChild(script);
+
+  // Initialize HubSpot form after the script is loaded
+  script.onload = () => {
+    this.initHubSpotForm();
+  };
+}
+
+private initHubSpotForm() {
+  // Create the HubSpot form
+  window.hbspt.forms.create({
+    region: "eu1",
+    portalId: "144368007",
+    formId: "bf861728-093c-4dad-a70a-1f04b31eeff5",
+    target: '#hubspotFormContainer'
+  });
+
+    }
 }

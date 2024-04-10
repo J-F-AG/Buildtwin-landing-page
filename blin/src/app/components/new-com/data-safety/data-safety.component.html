@@ -176,26 +176,25 @@
     <div class="audited">
         <div class="container audited-data">
             <div class="thirdPartyAudit">
-                <owl-carousel-o [options]="auditSlide">
-                    <ng-template carouselSlide>
-                        <div class="item">
-                            <h3>Third Party Audited</h3>
-                            <p>
-                                BuildTwin stands for trust and reliability, with a commitment to excellence 
-                                that is continually verified by external experts. Our platform undergoes 
-                                rigorous and frequent audits by top-tier security, infrastructure, and data 
-                                privacy firms, ensuring that we not only meet but exceed industry standards. 
-                                <br><br>
-                                These comprehensive evaluations lead to certifications that reflect our dedication 
-                                to maintaining the highest level of security and privacy for our clients. With BuildTwin, you have 
-                                the assurance that an independent body of experts continually validates the strength 
-                                and resilience of our systems.
+                <div class="item">
+                    <h3>Third Party Audited</h3>
+                    <p>
+                        BuildTwin stands for trust and reliability, with a commitment to excellence 
+                        that is continually verified by external experts. Our platform undergoes 
+                        rigorous and frequent audits by top-tier security, infrastructure, and data 
+                        privacy firms, ensuring that we not only meet but exceed industry standards. 
+                        <br><br>
+                        These comprehensive evaluations lead to certifications that reflect our dedication 
+                        to maintaining the highest level of security and privacy for our clients. With BuildTwin, you have 
+                        the assurance that an independent body of experts continually validates the strength 
+                        and resilience of our systems.
 
-                            </p>
-                            <a mat-button routerLink="/" class="default-btn">Request report</a>
-                        </div>
-                    </ng-template>
-                </owl-carousel-o>
+                    </p>
+                    <div class="reportForm">
+                        <input type="email" placeholder="Enter you email">
+                        <a mat-button routerLink="/" class="default-btn">Request report</a>
+                    </div>
+                </div>
             </div>
             <div class="audited-lock">
                 <picture>
