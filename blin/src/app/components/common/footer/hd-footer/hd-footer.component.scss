@@ -608,3 +608,47 @@
   flex-basis: 107px;
 }
 }
+
+.popUP{
+  display: none;
+  position: fixed;
+  // background: #fff;
+  top: 50%;
+  z-index: 99999;
+  width: 60%;
+  left: 0;
+  height: 68vh;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-45%);
+  // box-shadow: 2px 3px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding-top: 19px;
+  padding-right: 20px;
+  visibility: hidden;
+}
+.popUP.active{
+  display: block;
+  visibility: visible;
+}
+i.closeIcon {
+  position: absolute;
+  right: 17px;
+  width: 30px;
+  background: #fff;
+  box-shadow: 2px 3px 4px rgba(0,0,0,0.1);
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+i.closeIcon svg {
+  width: 25px;
+  height: auto;
+}

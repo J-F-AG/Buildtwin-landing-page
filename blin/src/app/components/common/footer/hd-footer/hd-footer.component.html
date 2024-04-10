@@ -46,9 +46,23 @@
         </div>
       </div>
       <div class="divider-line">
-       
-        <div class="sub-menu-frame">
-          <a routerLink="/contact" class="schedule-call-button">
+        <div class="popUP" [ngClass]="{'active':showPopup}">
+          <i class="closeIcon" (click)="closePopup()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <g clip-path="url(#clip0_2773_11848)">
+              <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_2773_11848">
+              <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+              </clipPath>
+              </defs>
+              </svg>
+          </i>
+        <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/pit-yogeswaran?embed=true"></div>
+      </div>
+        <div class="sub-menu-frame" (click)="call()">
+          <a  class="schedule-call-button">
             <div class="schedule-call">Schedule call</div>
           </a>
           <div class="middle-frame"></div>
@@ -59,7 +73,7 @@
           <div class="item-link3">
             Get pre-qualified for the BuildTwin Marketplace.
           </div>
-          <a routerLink="/get-started/index.html" class="item-link4">Get started today</a>
+          <a href="https://www.buildtwin.com/get-started" class="item-link4">Get started today</a>
         </div>
         <div class="frame-line"></div>
         <div class="frame-frame">

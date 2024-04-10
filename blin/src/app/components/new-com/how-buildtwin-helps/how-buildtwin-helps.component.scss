@@ -2,8 +2,9 @@
     margin: 100px 0;
     position: relative;
     .headSection {
-        padding-top: 50px;
+        padding-top: 19px;
         transition: all ease 0.5s;
+        margin-bottom: 64px;
 
         h2 {
             color: #0E0E28;
@@ -233,10 +234,11 @@
             top: 100px;
             z-index: 99;
             .headSection{
-                background: linear-gradient(1turn, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0) 0, #fff 40%, #fff 90%, #fff 95%, transparent);
+                background: #fff;
                 padding-left: 122px;
                 padding-bottom: 0;
                 text-align: center;
+                padding-bottom: 0;
             }
     
         } 
