@@ -76,7 +76,7 @@ private initHubSpotForm() {
     region: "eu1",
     portalId: "144368007",
     formId: "bf861728-093c-4dad-a70a-1f04b31eeff5",
-    target: '#hubspotFormContainer'
+    target: '#hubspotFormContainer2'
   });
 
     }
