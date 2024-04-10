@@ -74,7 +74,7 @@ export class HdNavbarComponent {
       call(){
         this.showPopup1 =true
         }
-        closePopup(){alert(22)
+        closePopup(){
           this.showPopup1 =false
         
           }
