@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { GlobalService } from 'src/app/services/GlobalService';
 
 @Component({
@@ -13,5 +14,17 @@ export class HdBannerComponent {
   }
   setGlobalValue(newValue: string): void {
     this.globalService.setGlobalValue(newValue);
+  }
+
+
+  aboutSlider: OwlOptions = {
+    items: 1,
+    nav: false,
+    margin: 0,
+    dots: true,
+    loop: false,
+    autoplay: true,
+    autoplayHoverPause: false,
+
   }
 }

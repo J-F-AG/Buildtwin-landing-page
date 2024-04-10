@@ -209,6 +209,30 @@ import { DifferentCountryComponent } from './components/new-com/different-countr
 import { PriceCoPilotComponent } from './components/new-com/price-co-pilot/price-co-pilot.component';
 import { PriceMonthlyComponent } from './components/new-com/price-monthly/price-monthly.component';
 import { PriceBasicComponent } from './components/new-com/price-basic/price-basic.component';
+import { ProvideServiceComponent } from './components/new-com/provide-service/provide-service.component';
+import { OmBannerFreelance2Component } from './components/new-com/provide-service/om-banner-freelance2/om-banner-freelance2.component';
+import { CountryDetailsComponent } from './components/new-com/country-details/country-details.component';
+import { ServiceProvideComponent } from './components/new-com/service-provide/service-provide.component';
+import { OpenMarketTabListComponent } from './components/new-com/open-market-tab-list/open-market-tab-list.component';
+import { ExperenceComponent } from './components/new-com/experence/experence.component';
+import { QualifiedComponent } from './components/new-com/qualified/qualified.component';
+import { MarketPlaceComponent } from './components/new-com/market-place/market-place.component';
+import { GetStarted1Component } from './components/new-com/get-started1/get-started1.component';
+import { DataSafetyComponent } from './components/new-com/data-safety/data-safety.component';
+import { VenderDetailsComponent } from './components/new-com/vender-details/vender-details.component';
+import { VenderBannerComponent } from './components/new-com/vender-banner/vender-banner.component';
+import { LatestUpdateComponent } from './components/new-com/latest-update/latest-update.component';
+import { AccreditationComponent } from './components/new-com/accreditation/accreditation.component';
+import { FeatureProjectComponent } from './components/new-com/feature-project/feature-project.component';
+import { CapabilityComponent } from './components/new-com/capability/capability.component';
+import { AbountJfComponent } from './components/new-com/abount-jf/abount-jf.component';
+import { TaskManagementBusinessIntelligenceComponent } from './components/common/task-management-business-intelligence/task-management-business-intelligence.component';
+import { SignupComponentComponent } from './components/new-com/signup-component/signup-component.component';
+import { SimpleRowComponent } from './components/new-com/simple-row/simple-row.component';
+import { EngineersComponent } from './components/new-com/engineers/engineers.component';
+import { HereSectionComponent } from './components/new-com/here-section/here-section.component';
+import { DataPrivacyComponent } from './components/new-com/data-privacy/data-safety.component';
+import { ComingSoonComponent } from './components/new-com/coming-soon/coming-soon.component';
 
 
 @NgModule({
@@ -246,6 +270,7 @@ import { PriceBasicComponent } from './components/new-com/price-basic/price-basi
     TtServicesComponent,
     TtAboutComponent,
     TaskManagementComponent,
+    TaskManagementBusinessIntelligenceComponent,
     TtPartnersComponent,
     TtFeaturesComponent,
     CaseStudiesComponent,
@@ -416,7 +441,30 @@ import { PriceBasicComponent } from './components/new-com/price-basic/price-basi
     DifferentCountryComponent,
     PriceBasicComponent,
     PriceMonthlyComponent,
-    PriceCoPilotComponent
+    PriceCoPilotComponent,
+    ProvideServiceComponent,
+    OmBannerFreelance2Component,
+    CountryDetailsComponent,
+    ServiceProvideComponent,
+    OpenMarketTabListComponent,
+    ExperenceComponent,
+    QualifiedComponent,
+    MarketPlaceComponent,
+    GetStarted1Component,
+    VenderDetailsComponent,
+    DataSafetyComponent,
+    VenderBannerComponent,
+    LatestUpdateComponent,
+    AccreditationComponent,
+    FeatureProjectComponent,
+    CapabilityComponent,
+    AbountJfComponent,
+    SignupComponentComponent,
+    SimpleRowComponent,
+    EngineersComponent,
+    HereSectionComponent,
+    DataPrivacyComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,

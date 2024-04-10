@@ -1,0 +1,140 @@
+:host ::ng-deep {
+    .latestUpdate {
+        background: #F9F9F9;
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 64px 0;
+        }
+
+        .heading {
+            color: #0e0e28;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 120%;
+            margin-top: 8px;
+        }
+
+        .text {
+            color: var(--Black, #000);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            margin-top: 8px;
+        }
+
+        .testimonial {
+            margin-top: 40px;
+            .flex {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+gap: 5px;
+                .slide {
+                   position: relative;
+                    .overlay {
+                        border-radius: 10px;
+                        background: rgba(0, 0, 0, 0.60);
+                        display: flex;
+                        padding: 6px 12px;
+                        justify-content: center;
+                        align-items: center;
+                        color: var(--color-green-button, #FFF);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        /* 19.6px */
+                        position: absolute;
+                        bottom: 14px;
+                        left: 14px;
+                        max-width: 466px;
+                        width: 90%;
+                        span {
+                            color: var(--color-green-button, #FFF);
+
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+                            a {
+                                color: var(--color-green-button, #FFF);
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%;
+text-decoration-line: underline;
+                            }
+                        }
+                    }
+
+                    .slideOverlay{
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        height: 100%;
+                        padding-left: 46px;
+                        .contentSlide{
+                            span{
+                                color: var(--Black, #000);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 22.4px */
+display: block;
+margin-bottom: 12px;;
+                            }
+                            h2{
+                                color: #000;
+
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 12px;
+                            }
+                            p{
+                                color: var(--Black, #000);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 22.4px */
+margin-bottom: 26px;
+                            }
+                            a{
+width: 190px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .btnNew {
+            border-radius: 8px;
+            background: #886DE0;
+            display: flex;
+            padding: 4px 8px 4px 20px;
+            gap: 13px;
+            color: #FFF;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            height: 48px;
+            align-items: center;
+            margin-top: 32px;
+            text-decoration: none;
+        }
+
+        .btnNew i {
+            color: #fff;
+            /* margin-left: 12px; */
+            margin-right: 12px;
+            font-size: 17px;
+        }
+    }
+}

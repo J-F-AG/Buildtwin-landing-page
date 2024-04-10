@@ -6,13 +6,18 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
   styleUrls: ['./hd-footer.component.scss']
 })
 export class HdFooterComponent {
-  showPopup=false;
   constructor(private elRef: ElementRef, private renderer: Renderer2) { 
 
 
   }
-ngOnInit(): void {
+  showPopup=false;
+  ngOnInit(): void {
     this.loadScript();
+
+
+
+
+
   }
   loadScript() {
     // Create script element
@@ -23,14 +28,17 @@ ngOnInit(): void {
     // Append script element to the body
     this.renderer.appendChild(this.elRef.nativeElement, script);
   }
-
   call(){
-  this.showPopup =true
-  }
-  closePopup(){
-  this.showPopup =false
+    this.showPopup =true
+    }
+    closePopup(){
+      this.showPopup =false
+    
+      }
 
-  }
+
+
+   
 }
 
 

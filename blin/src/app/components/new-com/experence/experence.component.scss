@@ -1,0 +1,88 @@
+:host ::ng-deep {
+    .experience {
+        background-color: var(--secondary, #f6f3ff);
+        padding: 68px 0;
+        margin: 93px 0 50px;
+        .container {
+            
+            display: flex;
+            flex-direction: column;
+          
+            max-width:1296px;
+        }
+
+        .title {
+            color: #0e0e28;
+            text-align: center;
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 130%;
+        }
+
+        .subtitle {
+            color: var(--Black, #000);
+            text-align: center;
+            align-self: center;
+            margin-top: 12px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+        }
+
+        .info-container {
+            display: flex;
+            margin-top: 48px;
+        }
+
+        .info-box {
+            border-radius: 8px 0px 0px 8px;
+            background-color: var(--color-green-button, #fff);
+            display: flex;
+            gap: 12px;
+            padding: 20px;
+            width: 260px;
+            height: 150px;
+            align-items: center;
+        }
+
+        .divider {
+            background: linear-gradient(316deg, #886de0 -0.82%, #e3d9ff 51.4%);
+            width: 1px;
+            height: 62px;
+        }
+
+        .rating-box {
+            justify-content: space-between;
+            background-color: var(--color-green-button, #fff);
+            display: flex;
+            gap: 12px;
+            padding: 20px;
+            width: 260px;
+            height: 150px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .rating-info {
+            display: flex;
+            flex-direction: column;
+            margin: auto 0;
+        }
+
+        .rating {
+            color: var(--primary, #886de0);
+            align-self: center;
+            font-weight: 600;
+            font-size: 27px;
+            line-height: 100%;
+        }
+
+        .rating-text {
+            color: var(--grey, var(--grey, #808080));
+            margin-top: 12px;
+            font-weight: 500;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+}

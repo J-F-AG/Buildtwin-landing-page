@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-
+ 
 @Component({
     selector: 'app-online-meeting-home-freelance',
     templateUrl: './online-meeting-home-freelance.component.html',
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class OnlineMeetingHomeFreelanceComponent {
 
+  activeState3:number = 1
+  activeState2:number = 10 
     title = 'BuildTwin - Software for Freelancer / small Teams';
     activeState: number = 1
     FixedDiv: any
@@ -88,5 +90,14 @@ export class OnlineMeetingHomeFreelanceComponent {
           window.scrollBy(0, desiredOffset);
         }, 100); // Adjust the delay if needed
       }
+    }
+
+    tabbing2(tabList:any){
+      console.log(tabList);
+      this.activeState2 = tabList
+    }
+    tabbing(tabList:any){
+      console.log(tabList);
+      this.activeState3 = tabList
     }
 }

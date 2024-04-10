@@ -1,7 +1,7 @@
 .banner-area {
     padding: {
-        top: 99px;
-        bottom: 84px;
+        top: 0;
+        bottom: 0;
     }
 
     ;
@@ -484,6 +484,7 @@
     line-height: normal;
     height: 48px;
     align-items: center;
+    cursor: pointer;
 
     i {
         color: #fff;
@@ -700,7 +701,6 @@ i.icon1 {
         list-style: none;
         padding: 0;
         margin: 0;
-        height: 20px;
         margin-bottom: 4px;
     }
     span{
@@ -757,3 +757,5 @@ line-height: 160%; /* 25.6px */
     }
    
 }
+
+

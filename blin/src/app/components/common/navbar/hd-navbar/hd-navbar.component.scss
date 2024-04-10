@@ -383,13 +383,13 @@
         position: fixed;
         box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
         animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+        transition: all ease 0.5s;
 
         padding: {
             top: 7px;
             bottom: 7px;
         }
 
-        ;
     }
 }
 
@@ -472,31 +472,39 @@
     line-height: 140%;
     /* 19.6px */
 }
-.mainHeading{
+
+.mainHeading {
     color: var(--primary, #886DE0);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 150%; /* 30px */  
+    line-height: 150%;
+    /* 30px */
 }
+
 .makrketPlaceMenuInner.text-primary {
     color: var(--Black, #000);
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 140%; /* 16.8px */
+    line-height: 140%;
+    /* 16.8px */
 }
-.makrketPlaceMenuInner section.padding-24.background-white.left{
-background: #F6F3FF;
-border-radius: 12px 0 0 12px;
-// opacity: 1;
+
+.makrketPlaceMenuInner section.padding-24.background-white.left {
+    background: #F6F3FF;
+    border-radius: 12px 0 0 12px;
+    // opacity: 1;
 }
-.makrketPlaceMenuInner section.padding-24.background-white{
+
+.makrketPlaceMenuInner section.padding-24.background-white {
     opacity: 0.6;
 }
-.makrketPlaceMenuInner section.padding-24.background-white:hover{
+
+.makrketPlaceMenuInner section.padding-24.background-white:hover {
     opacity: 1;
 }
+
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
@@ -1147,7 +1155,7 @@ a.flex-grow.flex-column.active em svg path {
 
 .loginPopup {
     position: absolute;
-    width: 500px;
+    width: 450px;
     right: 0;
     top: 97px;
 
@@ -1165,7 +1173,7 @@ a.flex-grow.flex-column.active em svg path {
         -ms-box-shadow: 2px 3px 30px rgba(0, 0, 0, .12);
         -o-box-shadow: 2px 3px 30px rgba(0, 0, 0, .12);
         box-shadow: 2px 3px 30px #0000001f;
-        padding: 40px;
+        padding: 31px 37px;
         position: relative;
         z-index: 99;
 
@@ -1185,12 +1193,12 @@ a.flex-grow.flex-column.active em svg path {
     .loginGroupData {
         border-bottom: 1px #f0f0f0 solid;
         padding-bottom: 12px;
+        display: flex;
+        gap: 40px;
 
         >div {
-            margin-bottom: 28px;
+            margin-bottom: 18px;
             position: relative;
-            display: flex;
-            align-items: center;
 
             >a {
                 position: absolute;
@@ -1203,12 +1211,18 @@ a.flex-grow.flex-column.active em svg path {
 
         .img {
             flex: 0 0 auto;
-            width: 196px;
         }
 
         .content {
             font-size: 14px;
-            padding-left: 20px;
+            padding-left: 0;
+            padding-top: 11px;
+
+            span {
+                display: block;
+                font-size: 12px;
+                color: #808080;
+            }
 
             strong,
             span {
@@ -1217,6 +1231,7 @@ a.flex-grow.flex-column.active em svg path {
 
             strong {
                 margin-bottom: 5px;
+                font-weight: 600;
             }
         }
     }
@@ -1226,13 +1241,36 @@ a.flex-grow.flex-column.active em svg path {
     }
 
     .reset {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         span {
-            display: inline-block;
-            vertical-align: top;
+            color: var(--primary, #886DE0);
             font-size: 12px;
-            text-decoration: underline;
-            color: #8e8e8e;
-            cursor: pointer;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+            /* 14.4px */
+            text-decoration-line: underline;
+        }
+
+        button {
+            display: flex;
+            width: 169px;
+            padding: 10.039px 0px 9.961px 0px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            background: #886DE0;
+            color: var(--color-green-button, #FFF);
+
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+            border: none;
+            /* 16.8px */
         }
     }
 
@@ -1245,11 +1283,20 @@ form {
         font-size: 14px;
         display: block;
         margin-bottom: 14px;
+        font-weight: 600;
+        color: #0E0E28;
     }
 
     .fieldWithIcon {
         position: relative;
         margin-bottom: 12px;
+
+        svg {
+            position: absolute;
+            left: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
         .spin {
             position: absolute;
@@ -1274,16 +1321,22 @@ form {
             -khtml-appearance: none;
             -o-appearance: none;
             appearance: none;
-            background: #f8f8f8;
             border-radius: 0;
-            border: 1px #f8f8f8 solid;
             font-size: 15px;
             padding: 5px 45px;
 
             color: #000;
             width: 100%;
             height: 48px;
+            height: 44.888px;
+            padding: 9.188px;
+            align-items: center;
+            border-radius: 3.063px;
+            border: 0.766px solid #ECECEC;
+            background: var(--color-green-button, #FFF);
+            padding-left: 52px;
         }
+
 
         button {
             text-align: center;
@@ -1384,6 +1437,7 @@ form {
         .flex-column {
             width: 100% !important;
             margin-bottom: 12px;
+
         }
     }
 
@@ -1465,49 +1519,72 @@ form {
     }
 }
 
-@media (max-width:767px){
+@media (max-width:767px) {
     aside.flex-column section.padding-24.background-white h2 {
         font-size: 16px !important;
     }
+
     .makrketPlaceMenu .flex-column.makrketPlaceMenuInner {
         flex-direction: column !important;
     }
+
     .makrketPlaceMenuInner section.padding-24.background-white {
         opacity: 1;
         margin-top: 8px;
         padding: 11px 16px;
     }
+
     .mainHeading {
         font-size: 13px;
     }
+
     .menu_copilot .margin-top-24 {
         margin-top: 13px;
     }
+
     .menu_copilot .font-bold {
         font-size: 13px;
     }
+
     .callbtn {
         width: 100%;
         padding: 11px;
     }
+
     .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
         margin-left: 0;
     }
+
     span.text {
         line-height: 1;
     }
+
     .text em {
         display: block;
-    line-height: 1.4;
-    margin-top: 9px;
-    white-space: nowrap;
-    width: 200px;
-    overflow: hidden;
+        line-height: 1.4;
+        margin-top: 9px;
+        white-space: nowrap;
+        width: 200px;
+        overflow: hidden;
     }
+
     .menu_copilot .padding-24 {
         padding: 0;
     }
+
     .navbar-area .navbar .other-options {
         margin-bottom: 5px;
     }
+}
+
+:host ::ng-deep .navbar-area.sticky.removeMainNav {
+   transform: translateY(-100px);
+}
+
+
+.coverPopupData {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    width: 500px;
 }

@@ -3,7 +3,7 @@
     position: relative;
     border-radius: 5px;
     background-color: var(--whiteColor);
-    box-shadow: 0px 8px 16px 0px rgba(146, 184, 255, 0.2);
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
 
     .courses-image {
         border-radius: 5px 5px 0 0;
@@ -885,7 +885,7 @@
 }
 
 .wrap{
-    background: #F9F9F9;
+    // background: #F9F9F9;
     display: block;
     padding: 61px 0 81px;
 }
@@ -894,5 +894,34 @@
     margin-bottom: 75px;
     span{
         margin-bottom: 15px;
+    }
+}
+
+.countryTraning {
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+        h2, span {
+            text-align: left;
+        }
+
+        span {
+            margin-bottom: 0;
+        }
+    }
+
+    .scheduleCall {
+        background: var(--themeColor);
+        border-radius: 6px;
+        font-size: 21px;
+        font-weight: 500;
+        color: var(--whiteColor);
+        padding: 16px 43px 13px;
+
+        &:hover {
+            background: #6e54c7;
+        }
     }
 }
