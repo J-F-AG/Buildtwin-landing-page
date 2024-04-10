@@ -2,8 +2,9 @@
     margin: 100px 0;
     position: relative;
     .headSection {
-        padding-top: 50px;
+        padding-top: 19px;
         transition: all ease 0.5s;
+        margin-bottom: 64px;
 
         h2 {
             color: #0E0E28;
@@ -14,6 +15,13 @@
             font-weight: 600;
             line-height: 140%;
             /* 56px */
+        }
+        span{
+            text-align: center;
+            display: block;
+        }
+        h3{
+            text-align: center;
         }
 
         margin-bottom: 64px;
@@ -230,9 +238,11 @@
             top: 100px;
             z-index: 99;
             .headSection{
-                background: linear-gradient(1turn, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0) 0, #fff 40%, #fff 90%, #fff 95%, transparent);
-                transform: translateX(122px);
-                padding-bottom: 54px;
+                background: #fff;
+                padding-left: 122px;
+                padding-bottom: 0;
+                text-align: center;
+                padding-bottom: 0;
             }
     
         } 
@@ -267,6 +277,14 @@
         padding-top: 173px;
         max-width: 1320px;
         margin: 0 auto;
+    }
+}
+
+:host ::ng-deep .provideService{
+    background: #f9f9f9;
+
+ .tabRIght {
+        margin-left: 464px;
     }
 }
 

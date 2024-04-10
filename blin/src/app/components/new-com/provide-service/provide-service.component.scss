@@ -1,0 +1,51 @@
+:host ::ng-deep div#scrollActivated.fixed2 .tabHead {
+    position: fixed;
+    top: 100px;
+    z-index: 999;
+    left: 0;
+    width: 100%;
+    transition: all ease 0.5s;
+}
+:host ::ng-deep div#scrollActivated.fixed2 .tabHead.removeMainNav {
+top: 0;
+}
+:host ::ng-deep .fixed div#onScrollAnimation {
+    position: fixed;
+    top: 125px !important;
+
+}
+
+:host ::ng-deep div#scrollActivated3.fixedData .head {
+    position: sticky;
+    top: 51px;
+    display: block;
+    z-index: 9;
+    background: #886DE0;
+    padding-top: 34px;
+}
+
+:host ::ng-deep div#scrollActivated2.fixed .tabLeft {
+    /* position: sticky; */
+    /* top: 200px; */
+    margin-top: -100px;
+}
+
+
+.sampleTable{
+    padding: 50px 0;
+    h2{
+        color: #0E0E28;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        margin-bottom: 8px;
+    }
+    p {
+        color: var(--grey, #808080);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+}

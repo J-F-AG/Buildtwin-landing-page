@@ -40,23 +40,29 @@ import { EventsComponent } from './components/pages/events/events.component';
 import { CoursesDetailsStyleOneComponent } from './components/pages/courses-details-style-one/courses-details-style-one.component';
 import { EventsDetailsComponent } from './components/pages/events-details/events-details.component';
 import { FaqPageTrainingComponent } from './components/pages/faq-page-training/faq-page.component';
+import { ProvideServiceComponent } from './components/new-com/provide-service/provide-service.component';
+import { DataSafetyComponent } from './components/new-com/data-safety/data-safety.component';
+import { VenderDetailsComponent } from './components/new-com/vender-details/vender-details.component';
+import { DataPrivacyComponent } from './components/new-com/data-privacy/data-safety.component';
+import { ComingSoonComponent } from './components/new-com/coming-soon/coming-soon.component';
 const routes: Routes = [
 
     
     {path: '', component: HelpDeskHomeComponent},
-
 
     {path: 'marketplace', component: TimeTrackingHomeComponent},
     {path: 'online-meeting', component: OnlineMeetingHomeComponent},
     {path: 'help-desk', component: HelpDeskHomeComponent},
     {path: 'training', component: ElearningSchoolComponent},
 
-
     {path: 'pricing', component: PricingPageComponent},
     
-
-    {path: 'freelancer', component: OnlineMeetingHomeComponent},
-    {path: 'technical-team', component: OnlineMeetingHomeFreelanceComponent},
+    {path: 'AI-project-management', component: OnlineMeetingHomeComponent},
+    {path: 'provide-service', component: ProvideServiceComponent},
+    {path: 'vender-details', component: VenderDetailsComponent},
+    {path: 'data-safety', component: DataSafetyComponent},
+    {path: 'terms-of-service', component: DataPrivacyComponent},
+    {path: 'business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'enterprise', component: EnterprisePageComponent},
 
 
@@ -68,7 +74,6 @@ const routes: Routes = [
     {path: 'single-events', component: EventsDetailsComponent},
     {path: 'training-faq', component: FaqPageTrainingComponent},
 
-
     {path: 'use-cases', component: BlogPageComponent},
     {path: 'blog-details', component: BlogDetailsPageComponent},
     {path: 'blog-details2', component: BlogDetailsPage2Component},
@@ -77,7 +82,6 @@ const routes: Routes = [
     {path: 'blog-details5', component: BlogDetailsPage5Component},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    
     
 
     {path: 'about', component: AboutPageComponent},
@@ -96,12 +100,10 @@ const routes: Routes = [
     // Old pages 
 
     // {path: 'features', component: FeaturesPageComponent},
-    // {path: 'feature-details', component: FeatureDetailsPageComponent},
+    {path: 'feature-details', component: FeatureDetailsPageComponent},
+    {path: 'coming-soon', component: ComingSoonComponent},
     // {path: 'services', component: ServicesPageComponent},
     // {path: 'service-details', component: ServiceDetailsPageComponent},
-
-
-
 
     {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list
 ];

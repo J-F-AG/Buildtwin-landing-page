@@ -1,0 +1,378 @@
+#main {
+    overflow: hidden;
+    padding-bottom: 18px;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1296px;
+    padding: 0;
+}
+
+.topBanner {
+    padding-bottom: 130px;
+    .content {
+        max-width: 670px;
+        padding-top: 185px;
+        padding-left: 18px;
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 1.188;
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .buildtwinSafety {
+        padding: 50px 0 0 12px;
+        h2 {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--themeColor);
+            margin-bottom: 16px;
+            i {
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 4px;
+            }
+        }
+
+        p {
+            font-family: var(--fontFamily);
+            font-size: 16px;
+            line-height: 1.25;
+            color: var(--lightColor);
+            margin-bottom: 6px;
+        }
+
+        a {
+            border-radius: 8px;
+            font-size: 16px;
+            margin-left: -12px;
+            margin-top: 25px;
+        }
+    }
+
+    .image {
+        padding-top: 98px;
+    }
+
+    figure {
+        margin-right: -75px;
+        margin-bottom: -255px;
+    }
+
+    .profileInfo {
+        background: #fff;
+        box-shadow: 0px 14px 20px 0px rgba(44, 44, 44, 0.06);
+        border-radius: 8px;
+        max-width: 460px;
+        padding: 30px;
+        text-align: center;
+        margin-left: 80px;
+        position: relative;
+        h4 {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.708;
+            margin-bottom: 0;
+        }
+        span, strong {
+            font-size: 16px;
+            display: block;
+        }
+
+        span {
+            line-height: 1;
+            padding-bottom: 10px;
+        }
+
+        strong {
+            font-weight: 600;
+            line-height: 1.375;
+        }
+    }
+}
+
+.safetyFramework {
+    text-align: center;
+    padding-bottom: 137px;
+    h2 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.2;
+        span {
+            font-size: 60px;
+            font-weight: 400;
+        }
+    }
+}
+
+.pic-row {
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+    padding-top: 98px;
+
+    .picBox {
+        background: #f6f3ff;
+        border-radius: 8px;
+        max-width: 340px;
+        width: 100%;
+        padding: 0 30px 30px;
+
+        i {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: -59px;
+            margin-bottom: 36px;
+        }
+
+        h4 {
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.4;
+            color: var(--lightColor);
+        }
+    }
+}
+
+.fullyEncryp {
+    position: relative;
+    margin-bottom: 104px;
+
+    .content {
+        position: absolute;
+        max-width: 752px;
+        width: 100%;
+        right: 65px;
+        top: 60px;
+        h3 {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1.25;
+            color: #fff;
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.25;
+            color: #fff;
+        }
+    }
+}
+
+.certificate {
+    text-align: center;
+    padding-bottom: 70px;
+
+    h2 {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 0;
+
+        span {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.563;
+            color: var(--lightColor);
+        }
+    }
+}
+
+
+.certificateSlide ::ng-deep .owl-carousel .owl-stage-outer {
+    padding: 16px 18px 24px;
+    margin: 0px -18px;
+}
+
+.certificateSlide ::ng-deep .owl-carousel .owl-item {
+    opacity: 0;
+}
+
+.certificateSlide ::ng-deep .owl-carousel .owl-item.active {
+    opacity: 1;
+}
+
+.certificateSlide ::ng-deep .owl-nav {
+    right: 0;
+    top: -95px;
+}
+
+.certificateSlide {
+    padding-top: 40px;
+
+    .certificate-item {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.04);
+
+        .icon-box {
+            min-height: 224px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-info {
+            background: #f6f3ff;
+            box-shadow: 0px 8px 16px 0px rgba(62, 45, 117, 0.1);
+            border-radius: 0 0 8px 8px;
+            padding: 24px 16px;
+            min-height: 171px;
+
+            h6 {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.389;
+                margin-bottom: 8px;
+            }
+
+            span {
+                font-size: 14px;
+                display: block;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+:host ::ng-deep .owl-nav {
+    display: flex!important;
+    justify-content: space-between;
+    position: absolute;
+    width: 120px;
+}
+
+
+:host ::ng-deep .owl-theme .owl-nav [class*=owl-] {
+    right: 0 ;
+    z-index: 99 ;
+    width: 48px ;
+    bottom: 0 ;
+    height: 48px ;
+    margin: 0;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition) ;
+    background-color: var(--whiteColor) ;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px ;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+    .ti.ti-chevron-left,
+    .ti.ti-chevron-right {
+        font-size: 28px;
+        color: #000;
+    }
+}
+
+:host ::ng-deep .owl-theme .owl-nav [class*=owl-]:hover {
+    opacity: .92;
+    background-color: var(--themeColor) ;
+    .ti.ti-chevron-left,
+    .ti.ti-chevron-right {
+        color: #fff;
+    }
+}
+
+.audited {
+    background: var(--backgroundColor);
+    min-height: 556px;
+    position: relative;
+
+    .bg-building {
+        position: absolute;
+        width: 418px;
+        right: 0;
+        bottom: 0;
+    }
+
+    .audited-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .thirdPartyAudit {
+        background: #fff;
+        max-width: 766px;
+        width: 100%;
+        min-height: 370px;
+        margin-top: 48px;
+
+        .item {
+            background: #fff;
+            padding: 53px 100px 50px 50px;
+            h3 {
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 1.267;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.55;
+                margin-bottom: 15px;
+            }
+
+            a {
+                border-radius: 8px;
+                margin-top: 0;
+                font-size: 16px;
+            }
+        }
+
+        .reportForm {
+            padding-top: 10px;
+            display: flex;
+            gap: 12px;
+            input {
+                border: 1px var(--borderColor) solid;
+                border-radius: 8px;
+                padding: 10px 15px;
+                width: 300px;
+            }
+        }
+    }
+
+    .audited-lock {
+        margin-right: -18px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.thirdPartyAudit ::ng-deep .owl-nav {
+    right: 50px;
+    top: 52px;
+    margin-top: 0;
+    transform: scale(0.75);
+    transform-origin: right top;
+}
