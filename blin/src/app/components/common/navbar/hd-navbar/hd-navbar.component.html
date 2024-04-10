@@ -77,9 +77,9 @@
                                                         <br>(Plug & Play)
                                                     </p>
                                                 </a>
-                                                <a (click)="manageToggle($event)" routerLink="#" routerLinkActive="active"
+                                                <a (click)="manageToggle($event)" href="javascript:void(0)" routerLinkActive="active"
                                                     [routerLinkActiveOptions]="{exact: true}"
-                                                    class="flex-grow flex-column">
+                                                    class="flex-grow flex-column curserDefault">
                                                     <em class="flex-row font-bold">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                             <g clip-path="url(#clip0_4838_5022)">
@@ -106,7 +106,7 @@
                                             <p class="text-secondary font-normal">BuildTwin AI supercharges your
                                                 performance - by assisting you in each step of your
                                                 workflow.<br><br>Plug & Play into your workflow.</p>
-                                            <a routerLink="/btn" class="cta-button">Start for free</a>
+                                            <a href="https://www.buildtwin.com/get-started" class="cta-button">Start for free</a>
                                         </section>
                                     </aside>
                                 </div>
@@ -256,7 +256,7 @@
                                                 <p class="text-secondary margin-top-8 font-normal">List, compare, benchmark, and procure different service providers based on your requirements.</p>
                                             </a>
 
-                                       <a href="" class="callbtn">
+                                       <a  (click)="call()" class="callbtn">
                                         <strong class="icons">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                                                 <mask id="mask0_5449_20336" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="4" y="4" width="24" height="24">
@@ -272,10 +272,31 @@
                                                 </g>
                                                 </svg>
                                         </strong>
-                                        <span class="text">
+                                        <span class="text" >
                                             <span>Get started?</span>
                                             <em>Schedule a call with our Advisors.</em>
                                         </span>
+
+                                        <div class="popUP" [ngClass]="{'active':showPopup1}">
+                                            <div class="coverPopup">
+                                              <i class="closeIcon" (click)="closePopup()">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                                  <g clip-path="url(#clip0_2773_11848aaa)">
+                                                  <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+                                                  </g>
+                                                  <defs>
+                                                  <clipPath id="clip0_2773_11848">
+                                                  <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+                                                  </clipPath>
+                                                  </defs>
+                                                  </svg>
+                                              </i>
+                                              <div class="coverPopupData">
+                                           
+                                            <div id="hubspotFormContainer"></div>
+                                          </div>
+                                          </div>
+                                        </div>
                                       
                                        </a>
                                             </div>

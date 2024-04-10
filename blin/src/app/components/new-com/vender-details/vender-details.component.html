@@ -24,7 +24,7 @@
                 <li [ngClass]="{'activeSection': activeSection === 'about'}" (click)="scrollToSection('about')">About</li>
                 <li [ngClass]="{'activeSection': activeSection === 'capabilities'}" (click)="scrollToSection('capabilities')">Capabilities</li>
                 <li [ngClass]="{'activeSection': activeSection === 'portfolio'}" (click)="scrollToSection('portfolio')">Portfolio</li>
-                <li [ngClass]="{'activeSection': activeSection === 'certification'}" (click)="scrollToSection('certification')">Certification</li>
+                <!-- <li [ngClass]="{'activeSection': activeSection === 'certification'}" (click)="scrollToSection('certification')">Certification</li> -->
                 <li [ngClass]="{'activeSection': activeSection === 'social'}" (click)="scrollToSection('Social')">Social Feed</li>
             </ul>
     </div>
@@ -141,7 +141,7 @@
                         <strong> Services:</strong> BIM | Structural | MEP |
                         Infra
                     </div>
-                    <a class="btn" routerLink=""
+                    <a class="btn" (click)="scrollToSection('about')"
                         >More about J&F
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -941,7 +941,7 @@
                     />
                     <div class="content">
                         <h2>Construction Volume</h2>
-                        <span>1 million Ђ construction costs electrical | approx. 22,000 mІ</span>
+                        <span>1 million € construction costs electrical | approx. 22,000 m² </span>
                     </div>
                 </div>
                 <div class="item">
@@ -965,7 +965,7 @@
                     />
                     <div class="content">
                         <h2>Construction Volume</h2>
-                        <span>RT1 + RT4 prefabricated part volume approx. 9 million Ђ</span>
+                        <span>RT1 + RT4 prefabricated part volume approx. 9 million €</span>
                     </div>
                 </div>
 
@@ -990,7 +990,7 @@
                     />
                     <div class="content">
                         <h2>Construction Volume</h2>
-                        <span>1.2 million Ђ construction costs electrical | approx. 13,500 mІ</span>
+                        <span>1.2 million € construction costs electrical | approx. 13,500 m² </span>
                     </div>
                 </div>
 
@@ -1016,7 +1016,7 @@
                     />
                     <div class="content">
                         <h2>Construction Volume</h2>
-                        <span>46,000 mІ sales area | 5,000 mІ gastronomy</span>
+                        <span>46,000 m²  sales area | 5,000 m²  gastronomy</span>
                     </div>
                 </div>
 
@@ -1042,7 +1042,7 @@
                     />
                     <div class="content">
                         <h2>Construction Volume</h2>
-                        <span>New construction | Floor area 67,000 mІ and 17 buildings</span>
+                        <span>New construction | Floor area 67,000 m²  and 17 buildings</span>
                     </div>
                 </div>
 
@@ -1068,7 +1068,7 @@
                     />
                     <div class="content">
                         <h2>Construction Volume</h2>
-                        <span>6.5 million Ђ construction costs electrical | 27,000 mІ on 35 floors</span>
+                        <span>6.5 million Ђ construction costs electrical | 27,000 m²  on 35 floors</span>
                     </div>
                 </div>
             </div>
@@ -1243,7 +1243,7 @@
     </div>
 </app-engineers>
 </div>
-<div id="certification" class="scrollSection">
+<!-- <div id="certification" class="scrollSection">
 <app-accreditation>
     <div class="accreditation">
         <div class="container">
@@ -1291,7 +1291,7 @@
         </div>
     </div>
 </app-accreditation>
-</div>
+</div> -->
 <div id="social" class="scrollSection">
 
 <app-latest-update>

@@ -1,6 +1,7 @@
 import { Component,ElementRef, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
+
 interface HbsptForms {
   create(config: any): void;
 }
@@ -25,6 +26,7 @@ export class OmBannerComponent {
   ytsrc: any;
 
 
+showPopup=false;
   
   constructor(private sanitizer: DomSanitizer,) {
  
@@ -78,4 +80,13 @@ private initHubSpotForm() {
   });
 
     }
+
+
+    call(){
+      this.showPopup =true
+      }
+      closePopup(){
+        this.showPopup =false
+      
+        }
 }

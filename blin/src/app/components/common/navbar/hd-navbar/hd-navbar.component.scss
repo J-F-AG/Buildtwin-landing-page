@@ -1580,3 +1580,11 @@ form {
 :host ::ng-deep .navbar-area.sticky.removeMainNav {
    transform: translateY(-100px);
 }
+
+
+.coverPopupData {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    width: 500px;
+}
