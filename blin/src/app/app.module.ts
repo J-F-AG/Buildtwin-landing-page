@@ -232,6 +232,7 @@ import { SimpleRowComponent } from './components/new-com/simple-row/simple-row.c
 import { EngineersComponent } from './components/new-com/engineers/engineers.component';
 import { HereSectionComponent } from './components/new-com/here-section/here-section.component';
 import { DataPrivacyComponent } from './components/new-com/data-privacy/data-safety.component';
+import { ComingSoonComponent } from './components/new-com/coming-soon/coming-soon.component';
 
 
 @NgModule({
@@ -462,7 +463,8 @@ import { DataPrivacyComponent } from './components/new-com/data-privacy/data-saf
     SimpleRowComponent,
     EngineersComponent,
     HereSectionComponent,
-    DataPrivacyComponent
+    DataPrivacyComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,

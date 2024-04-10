@@ -44,6 +44,7 @@ import { ProvideServiceComponent } from './components/new-com/provide-service/pr
 import { DataSafetyComponent } from './components/new-com/data-safety/data-safety.component';
 import { VenderDetailsComponent } from './components/new-com/vender-details/vender-details.component';
 import { DataPrivacyComponent } from './components/new-com/data-privacy/data-safety.component';
+import { ComingSoonComponent } from './components/new-com/coming-soon/coming-soon.component';
 const routes: Routes = [
 
     
@@ -100,6 +101,7 @@ const routes: Routes = [
 
     // {path: 'features', component: FeaturesPageComponent},
     {path: 'feature-details', component: FeatureDetailsPageComponent},
+    {path: 'coming-soon', component: ComingSoonComponent},
     // {path: 'services', component: ServicesPageComponent},
     // {path: 'service-details', component: ServiceDetailsPageComponent},
 
