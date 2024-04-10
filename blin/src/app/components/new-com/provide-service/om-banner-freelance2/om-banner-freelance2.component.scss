@@ -432,6 +432,14 @@ em.coming {
     margin: 0 auto;
 }
 
+.cdeSection .cde_col i {
+    position: absolute;
+    width: 32px;
+    right: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 @media (max-width: 991px) {
     .containerBottom {
         padding: 0 20px;
