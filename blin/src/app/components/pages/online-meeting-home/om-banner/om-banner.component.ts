@@ -26,6 +26,9 @@ export class OmBannerComponent {
   ytsrc: any;
 
 
+
+
+
 showPopup=false;
   
   constructor(private sanitizer: DomSanitizer,) {
@@ -89,4 +92,18 @@ private initHubSpotForm() {
         this.showPopup =false
       
         }
+
+        scrollToFaq() {
+          const hdFaqElement = document.getElementById('hdFaq');
+          if (hdFaqElement) {
+              const topOffset = hdFaqElement.offsetTop;
+              const scrollPosition = topOffset - 100;
+              window.scrollTo({
+                  top: scrollPosition,
+                  behavior: 'smooth' 
+              });
+          } else {
+              console.error('Element with ID "hdFaq" not found.');
+          }
+      }
 }

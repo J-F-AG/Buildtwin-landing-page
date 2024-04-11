@@ -10,24 +10,12 @@ import { GlobalService } from 'src/app/services/GlobalService';
 })
 export class EmailMarketingHomeComponent {
     activeState: number = 1
-    activeState2: number = 11
-    activeState3: number = 21
     FixedDiv: any
-    FixedDivPositionTop: any
-    fixedDIvOffsetTop: any
-    fixedElement3: any
-    scrollPosition: any
-  
-    FixedDiv2: any
-    // scrolled div 
     scrollActivated: any
     scrollDivOffsettop: any
     scrolledDivHeight: any
     fixedElement: any
-    fixedElement1: any
   
-  navBar:any
-  tabHead:any
 
   
     title = 'BuildTwin - good reasons';
@@ -68,7 +56,7 @@ export class EmailMarketingHomeComponent {
         this.fixedElement.classList.add("fixedData")
         let activeELe = document.querySelectorAll('[data-ele]');
         activeELe.forEach((item, index) => {
-          if (item.getBoundingClientRect().top < 500) {
+          if (item.getBoundingClientRect().top < 400) {
             this.activeState = index + 1;
             item.classList.add("active")
           }
