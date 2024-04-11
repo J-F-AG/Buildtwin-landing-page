@@ -13,11 +13,6 @@ export class HdFooterComponent {
   showPopup=false;
   ngOnInit(): void {
     this.loadScript();
-
-
-
-
-
   }
   loadScript() {
     // Create script element

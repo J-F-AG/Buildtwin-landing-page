@@ -915,13 +915,22 @@
     .scheduleCall {
         background: var(--themeColor);
         border-radius: 6px;
-        font-size: 21px;
+        font-size: 15px;
         font-weight: 500;
         color: var(--whiteColor);
-        padding: 16px 43px 13px;
+        padding: 13px 37px 13px;
+        cursor: pointer;
 
         &:hover {
             background: #6e54c7;
         }
     }
+}
+
+
+.coverPopupData {
+    position: relative;
+    height: 637px;
+    overflow: hidden;
+    width: 859px;
 }

@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
     styleUrls: ['./online-meeting-home.component.scss']
 })
 export class OnlineMeetingHomeComponent {
+  @ViewChild('hdFaq') hdFaq!: ElementRef;
+  
     activeState:number = 1
     activeState2:number = 10 
     title = 'BuildTwin - Software for technical Teams';
@@ -39,8 +41,14 @@ export class OnlineMeetingHomeComponent {
           
         }, 2000);
     });
+
+    
+
     
     }
+
+
+   
     
     ngOnInit() {
         this.titleService.setTitle(this.title);
