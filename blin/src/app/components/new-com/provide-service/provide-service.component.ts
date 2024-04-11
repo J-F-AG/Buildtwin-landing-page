@@ -59,6 +59,7 @@ tabHead:any
       let activeELe = document.querySelectorAll('[data-ele]');
       activeELe.forEach((item, index) => {
         if (item.getBoundingClientRect().top < 500) {
+       
           this.activeState = index + 1;
           item.classList.add("active")
 
@@ -80,7 +81,7 @@ tabHead:any
             let activeELe1 = document.querySelectorAll(`[data-ele${i}]`);
             activeELe1.forEach((item1) => {
               const topPosition = item1.getBoundingClientRect().top;
-              if (topPosition < 500) {
+              if (topPosition < 900) {
                 item1.classList.add("active");
                 const dataIndex = item1.getAttribute(`data-ele${i}`);
                 if (dataIndex) {
@@ -173,6 +174,10 @@ tabHead:any
     script.onload = () => {
       this.initHubSpotForm();
     };
+
+
+
+    
   }
 
 
@@ -195,6 +200,8 @@ tabHead:any
       
         }
   
+
+
 
   
 }
