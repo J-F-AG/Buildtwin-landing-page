@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './provide-service.component.scss'
 })
 export class ProvideServiceComponent {
+
+  showPopup1=false;
   activeState: number = 1
   activeState2: number = 11
   title = 'BuildTwin - Software for technical Teams';
@@ -41,9 +43,7 @@ tabHead:any
     });
   }
 
-  ngOnInit() {
-    this.titleService.setTitle(this.title);
-  }
+
   @HostListener('window:scroll', ['$event'])
   handleScroll(event: any) {
     this.FixedDiv = document.getElementById('scrollActivated');
@@ -158,4 +158,43 @@ tabHead:any
       }, 100); // Adjust the delay if needed
     }
   }
+
+  ngOnInit(): void {
+    this.titleService.setTitle(this.title);
+    const script = document.createElement('script');
+    script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+    script.async = true;
+    script.charset = 'utf-8';
+  
+    // Append script to the document body
+    document.body.appendChild(script);
+  
+    // Initialize HubSpot form after the script is loaded
+    script.onload = () => {
+      this.initHubSpotForm();
+    };
+  }
+
+
+    private initHubSpotForm() {
+      // Create the HubSpot form
+      window.hbspt.forms.create({
+        region: "eu1",
+        portalId: "144368007",
+        formId: "4f09f05d-b46d-4497-b49e-4bf67f826066",
+        target: '#hubspotFormContainer21'
+      });
+    
+        }
+
+    call(){
+      this.showPopup1 =true
+      }
+      closePopup1(){
+        this.showPopup1 =false
+      
+        }
+  
+
+  
 }

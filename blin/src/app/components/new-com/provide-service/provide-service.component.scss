@@ -49,3 +49,28 @@ top: 0;
         line-height: 160%;
     }
 }
+
+
+:host ::ng-deep  .fixed div#onScrollAnimation .headSection {
+    background: #fff;
+    padding-left: 122px;
+    padding-bottom: 0;
+    text-align: center;
+    padding-bottom: 50px !important;
+    padding-top: 50px !important;
+}
+
+:host ::ng-deep  div#scrollActivated2.fixed .tabLeft {
+    margin-top: 0;
+}
+
+
+.coverPopupData {
+    position: relative;
+    height: 422px;
+    overflow: hidden;
+    width: 500px;
+}
+.talk{
+    cursor: pointer;
+}
