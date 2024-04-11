@@ -4,7 +4,7 @@
     .headSection {
         padding-top: 19px;
         transition: all ease 0.5s;
-        margin-bottom: 64px;
+        padding-bottom: 64px;
 
         h2 {
             color: #0E0E28;
@@ -239,7 +239,7 @@
             z-index: 99;
             .headSection{
                 background: #fff;
-                padding-left: 122px;
+                padding-left: 0;
                 padding-bottom: 0;
                 text-align: center;
                 padding-bottom: 0;
