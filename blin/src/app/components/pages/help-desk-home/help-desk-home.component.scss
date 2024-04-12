@@ -2,3 +2,9 @@
     margin-bottom: 100px;
     display: block;
   }
+
+  @media (max-width:1200px){
+    .mb-100 {
+      margin-bottom: 50px;
+    }
+  }
