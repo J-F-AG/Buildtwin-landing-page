@@ -7,7 +7,7 @@
                     display: flex;
 
                     .left {
-                        min-width: 314px;
+                        min-width: 452px;
                        
 
                         h2 {
@@ -63,7 +63,7 @@
                                 line-height: 140%;
                                 /* 28px */
                                 display: block;
-                                margin-bottom: 4px;
+                                margin-bottom: 16px;
                             }
                             span.position{
                                 font-size: 16px;   
@@ -89,7 +89,7 @@
                                     font-style: normal;
                                     font-weight: 500;
                                     line-height: 140%;
-                                    margin-bottom: 8px;
+                                    margin-bottom: 0;
 
                                     span {
                                         color: var(--primary, #886DE0);
