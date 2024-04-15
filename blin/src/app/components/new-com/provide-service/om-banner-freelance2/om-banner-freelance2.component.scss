@@ -583,3 +583,10 @@ span{
 :host ::ng-deep .cdeSection .cde_col{
     border: 1px solid var(--grey-dark, #ECECEC) !important;
 }
+
+.coverPopupData {
+    position: relative;
+    height: 422px;
+    overflow: hidden;
+    width: 500px;
+}

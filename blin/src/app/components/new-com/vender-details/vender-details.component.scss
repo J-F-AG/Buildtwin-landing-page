@@ -139,3 +139,17 @@
 .activeSection {
     color: blue; /* Change color or add any other styles for active section */
 }
+
+.coverPopupData {
+    position: relative;
+    height: 637px;
+    overflow: hidden;
+    width: 859px;
+  }
+
+
+::ng-deep .partnerWrap  .owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+    height: 150px;
+}

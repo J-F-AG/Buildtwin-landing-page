@@ -143,3 +143,8 @@ justify-content: center;
         }
     }
 }
+
+a.link.disabled {
+    cursor: default;
+    opacity: 0.5;
+}

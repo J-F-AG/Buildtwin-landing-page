@@ -145,3 +145,10 @@
 
 /* Min width 1400px to Max width 1699px */
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {}
+
+.coverPopupData{
+    position: relative;
+    height: 637px;
+    overflow: hidden;
+    width: 859px;
+}

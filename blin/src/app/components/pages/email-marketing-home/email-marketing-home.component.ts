@@ -1,38 +1,28 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener ,AfterViewInit} from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { GlobalService } from 'src/app/services/GlobalService';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-email-marketing-home',
     templateUrl: './email-marketing-home.component.html',
     styleUrls: ['./email-marketing-home.component.scss']
 })
-export class EmailMarketingHomeComponent {
+export class EmailMarketingHomeComponent  implements AfterViewInit  {
     activeState: number = 1
-    activeState2: number = 11
-    activeState3: number = 21
     FixedDiv: any
-    FixedDivPositionTop: any
-    fixedDIvOffsetTop: any
-    fixedElement3: any
-    scrollPosition: any
-  
-    FixedDiv2: any
-    // scrolled div 
     scrollActivated: any
     scrollDivOffsettop: any
     scrolledDivHeight: any
     fixedElement: any
-    fixedElement1: any
   
-  navBar:any
-  tabHead:any
 
   
     title = 'BuildTwin - good reasons';
  
-    constructor(private titleService:Title,private globalService: GlobalService,private router: Router) {
+    constructor(private titleService:Title,private globalService: GlobalService,private router: Router,private route: ActivatedRoute) {
+
 
       router.events.subscribe((val) => {
         this.scrollActivated = document.getElementById('scrollActivated');
@@ -68,7 +58,7 @@ export class EmailMarketingHomeComponent {
         this.fixedElement.classList.add("fixedData")
         let activeELe = document.querySelectorAll('[data-ele]');
         activeELe.forEach((item, index) => {
-          if (item.getBoundingClientRect().top < 500) {
+          if (item.getBoundingClientRect().top < 400) {
             this.activeState = index + 1;
             item.classList.add("active")
           }
@@ -88,16 +78,27 @@ export class EmailMarketingHomeComponent {
     scrollToSection(sectionId: string) {
       const section = document.getElementById(sectionId);
       if (section) {
-        // Scroll the section into view smoothly
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  
-        // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
         setTimeout(() => {
           const offsetTop = section.getBoundingClientRect().top;
-          const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
+          const desiredOffset = offsetTop - 390; 
           window.scrollBy(0, desiredOffset);
-        }, 100); // Adjust the delay if needed
+        }, 100); 
       }
     }
+
+
+    ngAfterViewInit() {
+      this.route.fragment.subscribe(fragment => {
+          if (fragment) {
+            setTimeout(() => {
+              const element = document.getElementById(fragment);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 2000); 
+          }
+        });
+  }
 
 }

@@ -1,0 +1,158 @@
+<div class="socialWallGroup component" >
+    <div class="flex socialWallFirst" id="socialWallFirst">
+        <div class="socialBlog">
+            <picture>
+               
+                <img
+                    src="assets/images/ui/testimonial1.png"
+                    width="652"
+                    height="418"
+                    alt=""
+                />
+            </picture>
+            <div class="newsBlog">
+                <small>News 06/2022</small>
+                <h3 class="sm">
+                    J&amp;F acquires <br />HOCHTIEF
+                    India
+                </h3>
+                <p>
+                    <span
+                        >A team with 25+ years of experience</span
+                    >
+                    combined <br />with J&amp;F
+                    systems and proprietary technologies
+                </p>
+                <a
+                   
+                    href="https://hochtief-india.com/"
+                    target="_blank"
+                    class="btn after-icon"
+                    >read more</a
+                >
+            </div>
+        </div>
+        <div class="socialBlog">
+            <img
+                src="assets/images/ui/testimonial2.png"
+                width="761"
+                height="418"
+                alt=""
+            />
+            <video
+                id="video1"
+                [muted]="true"
+                [controls]="false"
+                loop
+                poster="assets/images/ui/testimonial2.png"
+                playsinline
+            >
+                <source
+                    src="https://d1hagvemp2ohpi.cloudfront.net/workflow-videos/JF_Event_compr.mp4"
+                    type="video/mp4"
+                />
+            </video>
+            <p>Take a look at our <strong>J&amp;F Meets 2023</strong> event in Chennai.</p>
+            <a class="hoverPopup" (click)="youTubeOpen('9')"><i></i></a>
+        </div>
+    </div>
+    <div class="flex socialWallSecond" id="socialWallSecond">
+        <div class="socialBlog">
+            <img
+                src="assets/images/ui/testimonial3.png"
+                width="378"
+                height="418"
+                alt=""
+            />
+            <video
+                id="video4"
+                [muted]="true"
+                [controls]="false"
+                loop
+                poster="assets/images/ui/testimonial3.png"
+                playsinline
+            >
+                <source
+                    src="https://d1hagvemp2ohpi.cloudfront.net/workflow-videos/how_we_engineer1.mp4"
+                    type="video/mp4"
+                />
+            </video>
+            <p >Time-critical <strong >plan changes</strong> in <br >the current project?</p>
+            <a class="hoverPopup" (click)="youTubeOpen('7')"><i></i></a>
+        </div>
+        <div class="socialBlog">
+            <img src="assets/images/ui/testimonial4.png" width="323" height="418" alt="" />
+            <p >How do we define <strong >remote <br >work</strong> in engineering?</p>
+            <a class="hoverPopup" (click)="youTubeOpen('4')"><i></i></a>
+        </div>
+        <div class="socialBlog" style="width: 54%;">
+            <img
+                src="assets/images/ui/testimonial5.png"
+                width="761"
+                height="418"
+                alt=""
+            />
+            <video
+                id="video2"
+                [muted]="true"
+                [controls]="false"
+                loop
+                poster="assets/images/ui/testimonial5.png"
+                playsinline
+            >
+                <source
+                    src="https://d1hagvemp2ohpi.cloudfront.net/workflow-videos/hr_digital_planning.mp4"
+                    type="video/mp4"
+                />
+            </video>
+            <p >Get to know more about using our <strong >digital and <br >data-driven planning</strong> to make better decisions. <br/>How do we define <strong >remote <br >work</strong> in engineering?</p>
+            <a class="hoverPopup" (click)="youTubeOpen('5')"><i></i></a>
+        </div>
+    </div>
+    <div class="flex socialWallThird" id="socialWallThird">
+        <div class="socialBlog">
+            <img
+                src="assets/images/ui/testimonial6.png"
+                width="652"
+                height="414"
+                alt=""
+            />
+            <video
+                id="video3"
+                [muted]="true"
+                [controls]="false"
+                loop
+                poster="assets/images/ui/testimonial6.png"
+                playsinline
+            >
+                <source
+                    src="https://d1hagvemp2ohpi.cloudfront.net/workflow-videos/how_we_engineer2.mp4"
+                    type="video/mp4"
+                />
+            </video>
+            <p >Get to know more how exactly the <strong >global collaboration</strong> <br >with our Indian office works in our everyday life at J&amp;F.</p>
+            <a class="hoverPopup" (click)="youTubeOpen('8')"><i></i></a>
+        </div>
+        <div class="socialBlog hide-br">
+            <img src="assets/images/ui/testimonial7.png" width="377" height="414" alt="" />
+            <p >Our colleagues at the site of one of our <br >current projects: <strong >FOUR in Frankfurt</strong></p>
+            <a
+                class="hoverPopup"
+                href="https://www.jf.ag/en/projects" target="_blank"
+            ></a>
+        </div>
+        <div class="socialBlog">
+            <img src="assets/images/ui/testimonial8.png" width="377" height="414" alt="" />
+            <p >Take a look into our <br ><strong >J&amp;F Gießen</strong> office.</p>
+            <a
+                class="hoverPopup"
+                href="https://www.jf.ag/en/offices" target="_blank"
+            ></a>
+        </div>
+    </div>
+</div>
+<app-video-popup
+    [ytsrc]="ytsrc"
+    *ngIf="youTubePopup"
+    (callClose)="videoClose()"
+></app-video-popup>

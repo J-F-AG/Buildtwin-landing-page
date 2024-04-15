@@ -1584,7 +1584,22 @@ form {
 
 .coverPopupData {
     position: relative;
-    height: 450px;
+    height: 422px;
     overflow: hidden;
     width: 500px;
 }
+
+
+@media(max-width:1200px){
+    .navbar-area .navbar .navbar-nav .nav-item .nav-link {
+        font-size: 14px;
+    }  
+    .menu_copilot .font-bold {
+        font-size: 16px !important;
+    }  
+}
+
+
+
+
+

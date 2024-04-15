@@ -1096,7 +1096,9 @@ img {
     }
 
 }
-
+.cursor{
+    cursor: pointer !important;
+}
 .curserDefault{
     cursor: default !important;
 }
@@ -1191,4 +1193,15 @@ img {
 }
 .coverPopup{
     position: relative;
+}
+
+
+@media (max-width: 1200px){
+h2 {
+    font-size: 20px !important;
+}
+.container {
+    max-width: 100%;
+}
+
 }

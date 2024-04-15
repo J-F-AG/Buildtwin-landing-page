@@ -1,6 +1,5 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 
-
 @Component({
   selector: 'app-hd-footer',
   templateUrl: './hd-footer.component.html',
@@ -14,11 +13,6 @@ export class HdFooterComponent {
   showPopup=false;
   ngOnInit(): void {
     this.loadScript();
-
-
-
-
-
   }
   loadScript() {
     // Create script element
@@ -41,3 +35,5 @@ export class HdFooterComponent {
 
    
 }
+
+
