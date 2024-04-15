@@ -1,5 +1,6 @@
 version: 0.2
 env:
+
   secrets-manager:
     SECRET_KEY: "codepipeline:SECRET_KEY"
     NEW_ACCESS_KEY: "codepipeline:NEW_ACCESS_KEY"

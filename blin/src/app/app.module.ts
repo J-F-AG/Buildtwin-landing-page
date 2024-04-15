@@ -191,7 +191,6 @@ import { HdFaqTrainingComponent } from './components/common/faqs-training/hd-faq
 import { TtFaqTrainingComponent } from './components/common/faqs-training/tt-faq/tt-faq.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { VideoPopupModule } from './components/common/video-popup/video-popup.module';
 import { ThreeColMarketComponent } from './components/new-com/three-col-market/three-col-market.component';
 import { AiDrivenServicesComponent } from './components/new-com/ai-driven-services/ai-driven-services.component';
 import { HowBuildtwinHelpsComponent } from './components/new-com/how-buildtwin-helps/how-buildtwin-helps.component';
@@ -233,6 +232,8 @@ import { EngineersComponent } from './components/new-com/engineers/engineers.com
 import { HereSectionComponent } from './components/new-com/here-section/here-section.component';
 import { DataPrivacyComponent } from './components/new-com/data-privacy/data-safety.component';
 import { ComingSoonComponent } from './components/new-com/coming-soon/coming-soon.component';
+import { SocialWallComponent } from './components/new-com/social-wall/social-wall.component';
+import { VideoPopupComponent } from './components/common/video-popup/video-popup.component';
 
 
 @NgModule({
@@ -464,7 +465,9 @@ import { ComingSoonComponent } from './components/new-com/coming-soon/coming-soo
     EngineersComponent,
     HereSectionComponent,
     DataPrivacyComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    SocialWallComponent,
+    VideoPopupComponent
   ],
   imports: [
     BrowserModule,
@@ -485,7 +488,6 @@ import { ComingSoonComponent } from './components/new-com/coming-soon/coming-soo
     LightgalleryModule,
     ReactiveFormsModule,
     HttpClientModule,
-    VideoPopupModule,
   ],
   providers: [
     Title

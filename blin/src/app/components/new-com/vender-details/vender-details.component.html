@@ -3,17 +3,18 @@
     <div class="stcikyTop">
         <div class="container">
         <div class="flex">
+            <a href="/">
             <img src="assets/images/ui/buildTwin-logo.png" width="165" height="44">
-           
+        </a>
            <span> x</span>
            <img src="assets/images/ui/jfLogo.png" width="64" height="33">
         </div>
         <div class="btnWrap">
-            <a href="">
+            <!-- <a  (click)="call()" class="cursor">
                 Schedule Interview
-            </a>
-            <a href="" class="active">
-                Schedule Interview
+            </a> -->
+            <a (click)="call()"  class="active cursor">
+                Start Enquiry
             </a>
         </div>
     </div>
@@ -141,7 +142,7 @@
                         <strong> Services:</strong> BIM | Structural | MEP |
                         Infra
                     </div>
-                    <a class="btn" (click)="scrollToSection('about')"
+                    <a class="btn cursor" (click)="scrollToSection('about')"
                         >More about J&F
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -180,24 +181,23 @@
                         /> -->
                             <h2>About J&F</h2>
                             <p>
-                                J&F is an internationally established engineering consultancy.
-                                Founded in Germany, we also have offices in
-                              India, UK, AUS and US*.
+                                J&F is an internationally established engineering consultancy. Founded in Germany, J&F also have offices in India, UK, AUS and US.
                             </p>
                 
                             <p>
-                                Offices in 5 countries. Highly digitalised operation and
-                                experties in large projects across the globel
+                                With offices in 5 countries, J&F is highly digitalised in operations and has expertise in large projects across the globe.
                             </p>
                             <h3>Engineering project for</h3>
                             <img src="assets/images/ui/21.png" width="462" height="55" />
 
                             <div class="btnWrap">
-                                <a href="#" class="btnNew"
+                                <a (click)="call()" class="btnNew cursor"
                                     >Start Enquiry<i
                                         class="ti ti-arrow-narrow-right"
                                     ></i
                                 ></a>
+
+
                             </div>
                         </div>
                      
@@ -489,10 +489,9 @@
     <div class="capability">
         <div class="head">
             <div class="container">
-                <h2>Capability Maatrix</h2>
+                <h2>Capability Matrix</h2>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting
-                    industry.
+                    J&F provides a wide range of services with multidisciplinary teams
                 </p>
             </div>
            
@@ -539,7 +538,7 @@
                     </div>
                 </div>
                 <div class="left right">
-                    <div class="containerData">
+                    <div class="containerData manage">
                         <strong>Particulars</strong>
                         <div class="headSection">
                             <div class="col">
@@ -613,12 +612,12 @@
                         </div>
                     </div>
 
-                    <!-- <div class="overlay">
+                    <div class="overlay">
                         <div class="box">
                             <h2>Login to see Resource Matrix</h2>
                             <a href="">Login Now</a>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -631,97 +630,79 @@
             <owl-carousel-o [options]="reviewsSlides" class="partner">
                 <ng-template carouselSlide>
                     <img
-                        src="assets/images/ui/patnerLogo1.png"
-                        width="250"
+                        src="assets/images/ui/brand1.png"
+                       
                         height="150"
                     />
                     <span class="exp">6 Years of experience</span>
                 </ng-template>
                 <ng-template carouselSlide>
                     <img
-                        src="assets/images/ui/patnerLogo2.png"
-                        width="250"
+                        src="assets/images/ui/brand2.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">6 Years of experience</span>
+                </ng-template>
+                <!-- <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand3.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">6 Years of experience</span>
+                </ng-template> -->
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand4.png"
+                       
+                        height="150"
+                    />
+
+                    <span class="exp">9 Years of experience</span>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand5.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">4 Years of experience</span>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand6.png"
+                       
                         height="150"
                     />
                     <span class="exp">6 Years of experience</span>
                 </ng-template>
                 <ng-template carouselSlide>
                     <img
-                        src="assets/images/ui/patnerLogo3.png"
-                        width="250"
+                        src="assets/images/ui/brand7.png"
+                       
                         height="150"
                     />
-                    <span class="exp">6 Years of experience</span>
+                    <span class="exp">9 Years of experience</span>
                 </ng-template>
                 <ng-template carouselSlide>
                     <img
-                        src="assets/images/ui/patnerLogo4.png"
-                        width="250"
+                        src="assets/images/ui/brand8.png"
+                       
                         height="150"
                     />
+                    <span class="exp">7 Years of experience</span>
                 </ng-template>
                 <ng-template carouselSlide>
                     <img
-                        src="assets/images/ui/patnerLogo1.png"
-                        width="250"
+                        src="assets/images/ui/brand9.png"
+                       
                         height="150"
                     />
-                    <span class="exp">6 Years of experience</span>
+
+                    <span class="exp">8 Years of experience</span>
                 </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/patnerLogo2.png"
-                        width="250"
-                        height="150"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/patnerLogo3.png"
-                        width="250"
-                        height="150"
-                    />
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/patnerLogo4.png"
-                        width="250"
-                        height="150"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/patnerLogo1.png"
-                        width="250"
-                        height="150"
-                    />
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/patnerLogo2.png"
-                        width="250"
-                        height="150"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/patnerLogo3.png"
-                        width="250"
-                        height="150"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/patnerLogo4.png"
-                        width="250"
-                        height="150"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
+               
             </owl-carousel-o>
         </div>
     </div>
@@ -732,7 +713,7 @@
             <div class="container">
                 <h2>Building Codes</h2>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    J&F works with regional building codes to provide the best and most fitting technical solutions.
                 </p>
             </div>
            
@@ -835,8 +816,7 @@
             <div class="head">
                 <h2>Special Tools & Methods</h2>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.
+                    Additionally to a range of engineering software, J&F uses special methods to work more digitally and efficiently.
                 </p>
             </div>
 
@@ -894,8 +874,7 @@
                 <div class="left">
                 <h2>Featured Project</h2>
                 <span
-                    >Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.</span
+                    >From newly constructed skyscrapers to modernising factories, J&F has successfully engineered 1000+ projects worldwide.</span
                 >
             </div>
             <div class="right">
@@ -910,171 +889,34 @@
                             <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                     </div>
-                <select>
-                    <option>Independent</option>
-                    <option>Independent</option>
-                    <option>Independent</option>
-                    <option>Independent</option>
-                </select>
+                    <select (change)="onTypeChange($event)">
+                        <option value="all">All</option>
+                        <option value="MEP">MEP</option>
+                        <option value="Structural">Structural</option>
+                    </select>
             </div>
             </div>
             </div>
             <div class="listItem">
-                <div class="item">
+                <div *ngFor="let project of filteredProjects" class="item">
                     <div class="itemHead">
-                        <span>MEP</span>
-                        <h2>New Logistics Hall Construction</h2>
+                        <span>{{ project.type }}</span>
+                        <h2>{{ project.name }}</h2>
                         <div class="flex">
-                            <img
-                                src="assets/images/ui/country5.png"
-                                width="17"
-                                height="17"
-                            />
-                            <em>HBM Darmstadt</em>
+                            <img src="assets/images/ui/country5.png" width="17" height="17" />
+                            <em>{{ project.location }}</em>
                         </div>
                     </div>
-
-                    <img
-                        src="assets/images/ui/project1.png"
-                        width="416"
-                        height="240"
-                    />
+                    <img [src]="project.image" width="416" height="240" />
                     <div class="content">
                         <h2>Construction Volume</h2>
-                        <span>1 million € construction costs electrical | approx. 22,000 m² </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="itemHead">
-                        <span>Structural </span>
-                        <h2>New High-Rise Buildings</h2>
-                        <div class="flex">
-                            <img
-                                src="assets/images/ui/country5.png"
-                                width="17"
-                                height="17"
-                            />
-                            <em>FOURFrankfurt</em>
-                        </div>
-                    </div>
-
-                    <img
-                        src="assets/images/ui/project2.png"
-                        width="416"
-                        height="240"
-                    />
-                    <div class="content">
-                        <h2>Construction Volume</h2>
-                        <span>RT1 + RT4 prefabricated part volume approx. 9 million €</span>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="itemHead">
-                        <span>MEP </span>
-                        <h2>New Construction Modular Dormitory</h2>
-                        <div class="flex">
-                            <img
-                                src="assets/images/ui/country5.png"
-                                width="17"
-                                height="17"
-                            />
-                            <em>Student Residence, Hamburg</em>
-                        </div>
-                    </div>
-
-                    <img
-                        src="assets/images/ui/project3.png"
-                        width="416"
-                        height="240"
-                    />
-                    <div class="content">
-                        <h2>Construction Volume</h2>
-                        <span>1.2 million € construction costs electrical | approx. 13,500 m² </span>
-                    </div>
-                </div>
-
-
-                <div class="item">
-                    <div class="itemHead">
-                        <span>Structural  </span>
-                        <h2>New Shopping Centre Building</h2>
-                        <div class="flex">
-                            <img
-                                src="assets/images/ui/country5.png"
-                                width="17"
-                                height="17"
-                            />
-                            <em>Mall of Switzerland</em>
-                        </div>
-                    </div>
-
-                    <img
-                        src="assets/images/ui/project4.png"
-                        width="416"
-                        height="240"
-                    />
-                    <div class="content">
-                        <h2>Construction Volume</h2>
-                        <span>46,000 m²  sales area | 5,000 m²  gastronomy</span>
-                    </div>
-                </div>
-
-
-                <div class="item">
-                    <div class="itemHead">
-                        <span>Structural   </span>
-                        <h2>Michelin India Tire Factory</h2>
-                        <div class="flex">
-                            <img
-                                src="assets/images/ui/country5.png"
-                                width="17"
-                                height="17"
-                            />
-                            <em>India</em>
-                        </div>
-                    </div>
-
-                    <img
-                        src="assets/images/ui/project5.png"
-                        width="416"
-                        height="240"
-                    />
-                    <div class="content">
-                        <h2>Construction Volume</h2>
-                        <span>New construction | Floor area 67,000 m²  and 17 buildings</span>
-                    </div>
-                </div>
-
-
-                <div class="item">
-                    <div class="itemHead">
-                        <span>MEP   </span>
-                        <h2>Renovation of a high-rise building</h2>
-                        <div class="flex">
-                            <img
-                                src="assets/images/ui/country5.png"
-                                width="17"
-                                height="17"
-                            />
-                            <em>Rocket Internet, Berlin</em>
-                        </div>
-                    </div>
-
-                    <img
-                        src="assets/images/ui/project6.png"
-                        width="416"
-                        height="240"
-                    />
-                    <div class="content">
-                        <h2>Construction Volume</h2>
-                        <span>6.5 million Ђ construction costs electrical | 27,000 m²  on 35 floors</span>
+                        <span>{{ project.description }}</span>
                     </div>
                 </div>
             </div>
 
             <div class="btnWrap">
-                <a href="#" class="btnNew"
+                <a href="https://www.jf.ag/en/projects" target="_blank" class="btnNew"
                     >View All Projects <i class="ti ti-arrow-narrow-right"></i
                 ></a>
             </div>
@@ -1087,157 +929,37 @@
     <div class="slider">
         <div class="container">
             <owl-carousel-o [options]="aboutSlider">
-                <ng-template carouselSlide>
-            <div class="wrap">
-                <div class="flex">
-                    <div class="left">
-                        <h2>Our <br>engineers</h2>
-
-                        <span class="jeffStyle">
-                            in the<br>
-    spotlight
-                        </span>
-                    </div>
-
-                    <div class="right">
-                       <div class="imgWrap">
-                        <img src="assets/images/ui/max.png" width="422" height="495">
-                       </div>
-                       <div class="content">
-                        <h2>
-                            Maximilan White
-                        </h2>
-                        <span>M.Sc.</span>
-
-                        <span class="position">
-                            Ellectrical Engineer
-                        </span>
-
-                        <p>
-                            Focus on engineering. By making training more useful,<br> automating tedious tasks and giving exposure to a global<br> marketplace. 
-                        </p>
-                        <div class="expert">
-                            <h3><span class="jeffStyle">My</span>  expertise at J&F</h3>
-
-                            <ul>
-                                <li>
-                                   <strong> #</strong>Concept development
-                                </li>
-                                <li>
-                                    <strong> #</strong>Renewable enerigies
-                                 </li>
-                                 <li>
-                                    <strong> #</strong>Lightning Protection
-                                 </li>
-                            </ul>
-                        </div>
-                       </div>
-                    </div>
-                    
-                </div>
-            </div>
-            </ng-template>
-            <ng-template carouselSlide>
-                <div class="wrap">
-                    <div class="flex">
-                        <div class="left">
-                            <h2>Our <br>engineers</h2>
-    
-                            <span class="jeffStyle">
-                                in the<br>
-        spotlight
-                            </span>
-                        </div>
-    
-                        <div class="right">
-                           <div class="imgWrap">
-                            <img src="assets/images/ui/max.png" width="422" height="495">
-                           </div>
-                           <div class="content">
-                            <h2>
-                                Maximilan White
-                            </h2>
-                            <span>M.Sc.</span>
-    
-                            <span class="position">
-                                Ellectrical Engineer
-                            </span>
-    
-                            <p>
-                                Focus on engineering. By making training more useful,<br> automating tedious tasks and giving exposure to a global<br> marketplace. 
-                            </p>
-                            <div class="expert">
-                                <h3><span class="jeffStyle">My</span>  expertise at J&F</h3>
-    
-                                <ul>
-                                    <li>
-                                       <strong> #</strong>Concept development
-                                    </li>
-                                    <li>
-                                        <strong> #</strong>Renewable enerigies
-                                     </li>
-                                     <li>
-                                        <strong> #</strong>Lightning Protection
-                                     </li>
-                                </ul>
-                            </div>
-                           </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                </ng-template>
-
-                <ng-template carouselSlide>
+               
+                <ng-template *ngFor="let engineer of ourEngineers" carouselSlide>
                     <div class="wrap">
                         <div class="flex">
                             <div class="left">
                                 <h2>Our <br>engineers</h2>
-        
-                                <span class="jeffStyle">
-                                    in the<br>
-            spotlight
-                                </span>
+                                <span class="jeffStyle">in the<br>spotlight</span>
                             </div>
-        
                             <div class="right">
-                               <div class="imgWrap">
-                                <img src="assets/images/ui/max.png" width="422" height="495">
-                               </div>
-                               <div class="content">
-                                <h2>
-                                    Maximilan White
-                                </h2>
-                                <span>M.Sc.</span>
-        
-                                <span class="position">
-                                    Ellectrical Engineer
-                                </span>
-        
-                                <p>
-                                    Focus on engineering. By making training more useful,<br> automating tedious tasks and giving exposure to a global<br> marketplace. 
-                                </p>
-                                <div class="expert">
-                                    <h3><span class="jeffStyle">My</span>  expertise at J&F</h3>
-        
-                                    <ul>
-                                        <li>
-                                           <strong> #</strong>Concept development
-                                        </li>
-                                        <li>
-                                            <strong> #</strong>Renewable enerigies
-                                         </li>
-                                         <li>
-                                            <strong> #</strong>Lightning Protection
-                                         </li>
-                                    </ul>
+                                <div class="imgWrap">
+                                    <img [src]="engineer.img" [alt]="engineer.name" width="422" height="495">
                                 </div>
-                               </div>
+                                <div class="content">
+                                    <h2>{{ engineer.name }}</h2>
+                                    <span [innerHTML]="engineer.title"></span>
+                
+                                    <p [innerHTML]="engineer.des"></p>
+                                    <div class="expert">
+                                        <h3><span class="jeffStyle">My</span> expertise at J&F</h3>
+                                        <ul>
+                                            <li *ngFor="let expertise of engineer.expertise">
+                                                <strong>#</strong> {{ expertise }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            
                         </div>
                     </div>
-                    </ng-template>
+                </ng-template>
+         
             </owl-carousel-o>
         </div>
     </div>
@@ -1292,15 +1014,15 @@
     </div>
 </app-accreditation>
 </div> -->
-<div id="social" class="scrollSection">
+<!-- <div id="social" class="scrollSection">
 
 <app-latest-update>
     <div class="latestUpdate">
         <div class="container">
             <div class="heading">Latest Updated</div>
             <div class="text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Stay informed with the latest news and updates from J&F. Learn about our recent projects, partnerships, and achievements.
+
             </div>
 
             <div class="testimonial">
@@ -1315,7 +1037,7 @@
         </h2>
 
         <p>
-            Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry.
+            J&F is a German based civil engineering consultancy with a strong footprint in Structural, MEP and BIM services around the globe.
         </p>
 
         <a href="#" class="btnNew"
@@ -1403,7 +1125,11 @@
         </div>
     </div>
 </app-latest-update>
-</div>
+</div> -->
+
+<app-social-wall></app-social-wall>
+
+
 <app-qualified>
     <div class="container">
         <div class="qualified">
@@ -1764,7 +1490,7 @@
             marketplace with clients from 10+ <br />
             countries - but gives you also access to Leads from open market.
         </p>
-        <a href="">Talk to J&F</a>
+        <a href="mailto:contact@jf-projects.com">Talk to J&F</a>
     </div>
 </app-get-started1>
 
@@ -1791,3 +1517,25 @@
 </div>
 
 
+
+
+<div class="popUP" [ngClass]="{'active':showPopup}">
+    <div class="coverPopup">
+      <i class="closeIcon" (click)="closePopup()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <g clip-path="url(#clip0_2773_1184811)">
+          <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_2773_11848">
+          <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
+          </svg>
+      </i>
+    <div class="coverPopupData">
+    
+  <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/pit-yogeswaran?embed=true"></div>
+</div>
+</div>
+</div>
