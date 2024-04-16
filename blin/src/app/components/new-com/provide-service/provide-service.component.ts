@@ -53,7 +53,7 @@ tabHead:any
     let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
     this.fixedElement = document.getElementById('scrollActivated');
     // inside active 
-    if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
+    if (this.FixedDiv < 200 && totalScroll > topscroll - 400) {
       this.fixedElement.classList.add("fixed2")
 
       let activeELe = document.querySelectorAll('[data-ele]');
@@ -79,9 +79,9 @@ tabHead:any
 
           for (let i = 11; i <= 16; i++) {
             let activeELe1 = document.querySelectorAll(`[data-ele${i}]`);
-            activeELe1.forEach((item1) => {
+            activeELe1.forEach((item1,indexData) => {
               const topPosition = item1.getBoundingClientRect().top;
-              if (topPosition < 900) {
+              if (topPosition < 600) {
                 item1.classList.add("active");
                 const dataIndex = item1.getAttribute(`data-ele${i}`);
                 if (dataIndex) {
@@ -89,6 +89,18 @@ tabHead:any
                 }
               } else {
                 item1.classList.remove("active");
+              }
+console.log(indexData);
+let HideMenu = document.getElementById('tabContent');
+
+              if(this.activeState2 == 16){
+
+    HideMenu?.classList.add('hideMenu')
+
+                
+              }
+              else{
+                HideMenu?.classList.remove('hideMenu')
               }
             });
           }
