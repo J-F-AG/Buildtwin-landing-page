@@ -74,3 +74,12 @@ top: 0;
 .talk{
     cursor: pointer;
 }
+
+div#tabContent.hideMenu {
+    transform: translateY(-500px);
+    opacity: 0;
+}
+
+div#tabContent{
+    transition: all ease 0.5s;
+}
