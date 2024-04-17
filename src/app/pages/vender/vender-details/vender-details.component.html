@@ -1,0 +1,1541 @@
+<app-hd-navbar></app-hd-navbar>
+<div class="stickyMneu"  [class.active]="isSticky">
+    <div class="stcikyTop">
+        <div class="container">
+        <div class="flex">
+            <a href="/">
+            <img src="assets/images/ui/buildTwin-logo.png" width="165" height="44">
+        </a>
+           <span> x</span>
+           <img src="assets/images/ui/jfLogo.png" width="64" height="33">
+        </div>
+        <div class="btnWrap">
+            <!-- <a  (click)="call()" class="cursor">
+                Schedule Interview
+            </a> -->
+            <a (click)="call()"  class="active cursor">
+                Start Enquiry
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="bottom">
+        <div class="container">
+            <ul>
+                <li [ngClass]="{'activeSection': activeSection === 'about'}" (click)="scrollToSection('about')">About</li>
+                <li [ngClass]="{'activeSection': activeSection === 'capabilities'}" (click)="scrollToSection('capabilities')">Capabilities</li>
+                <li [ngClass]="{'activeSection': activeSection === 'portfolio'}" (click)="scrollToSection('portfolio')">Portfolio</li>
+                <!-- <li [ngClass]="{'activeSection': activeSection === 'certification'}" (click)="scrollToSection('certification')">Certification</li> -->
+                <li [ngClass]="{'activeSection': activeSection === 'social'}" (click)="scrollToSection('Social')">Social Feed</li>
+            </ul>
+    </div>
+    </div>
+</div>
+<app-vender-banner>
+    <div class="hero">
+        <div class="rightPart">
+            <img
+                src="assets/images/ui/services.png"
+                alt=""
+                width="681"
+                height="848"
+            />
+        </div>
+        <div class="container">
+            <div class="info">
+                <div class="headPart">
+                    <div class="exp">
+                        <img
+                            src="assets/images/ui/logoJ&f.png"
+                            width="120"
+                            height="61"
+                        />
+
+                        <span class="jeffStyle">25+ years</span>
+                    </div>
+                    <h3>of engineering excellence</h3>
+
+             
+
+                    <ul>
+                        <li>
+                            <strong>400+</strong>
+                            <span>Employees</span>
+                        </li>
+                        <li>
+                            <strong>10+</strong>
+                            <span>Market</span>
+                        </li>
+                        <li>
+                            <strong>25+</strong>
+                            <span>Years in Business</span>
+                        </li>
+                        <li>
+                            <strong>1000+</strong>
+                            <span>Reference Projects</span>
+                        </li>
+                    </ul>
+                    <div class="footerLink">
+                        <div class="footLink">
+                            <img
+                                class="heading-link-icon"
+                                loading="lazy"
+                                alt=""
+                                src="assets/images/usa.svg"
+                            />
+
+                            <strong>USA</strong>
+                        </div>
+                        <div class="footLink">
+                            <img
+                                class="heading-link-icon"
+                                loading="lazy"
+                                alt=""
+                                src="assets/images/eu.svg"
+                            />
+
+                            <strong>EU</strong>
+                        </div>
+                        <div class="footLink">
+                            <img
+                                class="heading-link-icon"
+                                loading="lazy"
+                                alt=""
+                                src="assets/images/middle-east.svg"
+                            />
+
+                            <strong>Middle East </strong>
+                        </div>
+                        <div class="footLink">
+                            <img
+                                class="heading-link-icon"
+                                loading="lazy"
+                                alt=""
+                                src="assets/images/uk.png"
+                            />
+
+                            <strong>UK</strong>
+                        </div>
+                        <div class="footLink">
+                            <img
+                                class="heading-link-icon"
+                                loading="lazy"
+                                alt=""
+                                src="assets/images/australia.svg"
+                            />
+
+                            <strong>Australia</strong>
+                        </div>
+                        <div class="footLink">
+                            <img
+                                class="heading-link-icon"
+                                loading="lazy"
+                                alt=""
+                                src="assets/images/india.png"
+                            />
+
+                            <strong>India</strong>
+                        </div>
+                    </div>
+
+                    <div class="subHeading">
+                        <strong> Services:</strong> BIM | Structural | MEP |
+                        Infra
+                    </div>
+                    <a class="btn cursor" (click)="scrollToSection('about')"
+                        >More about J&F
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M11.7801 8.159C11.6395 8.01855 11.4488 7.93966 11.2501 7.93966C11.0513 7.93966 10.8607 8.01855 10.7201 8.159L8.75009 10.129V3.75C8.75009 3.55109 8.67107 3.36032 8.53042 3.21967C8.38977 3.07902 8.199 3 8.00009 3C7.80118 3 7.61041 3.07902 7.46976 3.21967C7.32911 3.36032 7.25009 3.55109 7.25009 3.75V10.129L5.28009 8.159C5.13792 8.02652 4.94987 7.9544 4.75557 7.95783C4.56127 7.96125 4.37588 8.03997 4.23847 8.17738C4.10106 8.31479 4.02234 8.50018 4.01892 8.69448C4.01549 8.88878 4.08761 9.07683 4.22009 9.219L7.47009 12.469L8.00009 13L8.53009 12.47L11.7801 9.22C11.8498 9.15035 11.9051 9.06765 11.9428 8.97662C11.9805 8.8856 11.9999 8.78803 11.9999 8.6895C11.9999 8.59097 11.9805 8.4934 11.9428 8.40238C11.9051 8.31135 11.8498 8.22865 11.7801 8.159Z"
+                                fill="#886DE0"
+                            /></svg
+                    ></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-vender-banner>
+
+<div id="about" class="scrollSection">
+<app-abount-jf>
+    <div class="about">
+        
+        <div class="whiteSection">
+            <div class="container">
+                <div class="flexStructure">
+                    <div class="leftPart">
+
+                        <div class="head">
+                            <!-- <img class="logo"
+                            src="assets/images/ui/logoJ&f.png"
+                            width="120"
+                            height="61"
+                        /> -->
+                            <h2>About J&F</h2>
+                            <p>
+                                J&F is an internationally established engineering consultancy. Founded in Germany, J&F also have offices in India, UK, AUS and US.
+                            </p>
+                
+                            <p>
+                                With offices in 5 countries, J&F is highly digitalised in operations and has expertise in large projects across the globe.
+                            </p>
+                            <h3>Engineering project for</h3>
+                            <img src="assets/images/ui/21.png" width="462" height="55" />
+
+                            <div class="btnWrap">
+                                <a (click)="call()" class="btnNew cursor"
+                                    >Start Enquiry<i
+                                        class="ti ti-arrow-narrow-right"
+                                    ></i
+                                ></a>
+
+
+                            </div>
+                        </div>
+                     
+                    </div>
+                    <div class="leftPart rightPart">
+                        <div class="box">
+                            <div class="grid_cover">
+                                <div class="grid">
+                                    <i
+                                        ><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="16"
+                                            height="16"
+                                            viewBox="0 0 16 16"
+                                            fill="none"
+                                        >
+                                            <path
+                                                d="M14.6654 4.66667V6.33333C14.6654 7.4826 14.2088 8.58481 13.3962 9.39746C12.5835 10.2101 11.4813 10.6667 10.332 10.6667H8.66536V14H7.33203V9.33333L7.3447 8.66667C7.42867 7.5783 7.9203 6.56172 8.72133 5.82014C9.52236 5.07856 10.5738 4.66662 11.6654 4.66667H14.6654ZM3.9987 2C4.9783 1.99997 5.93308 2.30808 6.72789 2.88071C7.52269 3.45333 8.11724 4.26145 8.42736 5.19067C7.91731 5.62305 7.49942 6.15359 7.19855 6.75074C6.89769 7.34789 6.71999 7.99945 6.67603 8.66667H5.9987C4.76102 8.66667 3.57404 8.175 2.69887 7.29983C1.8237 6.42466 1.33203 5.23768 1.33203 4V2H3.9987Z"
+                                                fill="white"
+                                            />
+                                        </svg>
+                                    </i>
+                                    <span>Founded</span>
+                                    <strong>1999</strong>
+                                </div>
+                                <div class="grid">
+                                    <img src="assets/images/ui/country5.png" />
+                                    <span>Headquarter</span>
+                                    <strong>Frankfurt, Germany</strong>
+                                </div>
+                                <div class="grid">
+                                    <img src="assets/images/ui/avatr.png" />
+                                    <span>Team</span>
+                                    <strong>550 Employees</strong>
+                                </div>
+                            </div>
+
+                            <div class="rowData">
+                                <h3>Pre-Qualified</h3>
+                                <ul>
+                                    <li>
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                rx="12"
+                                                fill="#F6F3FF"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M17.8162 8.20701C18.0701 8.47369 18.0597 8.89568 17.793 9.14954L10.0893 16.4829C9.95773 16.6081 9.78078 16.6742 9.59933 16.666C9.41788 16.6577 9.24766 16.5758 9.12803 16.4391L6.16506 13.0545C5.92254 12.7775 5.95052 12.3563 6.22755 12.1138C6.50459 11.8713 6.92577 11.8992 7.16829 12.1763L9.67342 15.0379L16.8737 8.1838C17.1404 7.92994 17.5624 7.94033 17.8162 8.20701Z"
+                                                fill="#886DE0"
+                                                stroke="#886DE0"
+                                                stroke-width="0.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                        Commercially
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                rx="12"
+                                                fill="#F6F3FF"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M17.8162 8.20701C18.0701 8.47369 18.0597 8.89568 17.793 9.14954L10.0893 16.4829C9.95773 16.6081 9.78078 16.6742 9.59933 16.666C9.41788 16.6577 9.24766 16.5758 9.12803 16.4391L6.16506 13.0545C5.92254 12.7775 5.95052 12.3563 6.22755 12.1138C6.50459 11.8713 6.92577 11.8992 7.16829 12.1763L9.67342 15.0379L16.8737 8.1838C17.1404 7.92994 17.5624 7.94033 17.8162 8.20701Z"
+                                                fill="#886DE0"
+                                                stroke="#886DE0"
+                                                stroke-width="0.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                        Plug & Play
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                rx="12"
+                                                fill="#F6F3FF"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M17.8162 8.20701C18.0701 8.47369 18.0597 8.89568 17.793 9.14954L10.0893 16.4829C9.95773 16.6081 9.78078 16.6742 9.59933 16.666C9.41788 16.6577 9.24766 16.5758 9.12803 16.4391L6.16506 13.0545C5.92254 12.7775 5.95052 12.3563 6.22755 12.1138C6.50459 11.8713 6.92577 11.8992 7.16829 12.1763L9.67342 15.0379L16.8737 8.1838C17.1404 7.92994 17.5624 7.94033 17.8162 8.20701Z"
+                                                fill="#886DE0"
+                                                stroke="#886DE0"
+                                                stroke-width="0.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                        Technical Capabilities
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                rx="12"
+                                                fill="#F6F3FF"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M17.8162 8.20701C18.0701 8.47369 18.0597 8.89568 17.793 9.14954L10.0893 16.4829C9.95773 16.6081 9.78078 16.6742 9.59933 16.666C9.41788 16.6577 9.24766 16.5758 9.12803 16.4391L6.16506 13.0545C5.92254 12.7775 5.95052 12.3563 6.22755 12.1138C6.50459 11.8713 6.92577 11.8992 7.16829 12.1763L9.67342 15.0379L16.8737 8.1838C17.1404 7.92994 17.5624 7.94033 17.8162 8.20701Z"
+                                                fill="#886DE0"
+                                                stroke="#886DE0"
+                                                stroke-width="0.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                        Digital Planning
+                                    </li>
+                                    <li>
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <rect
+                                                width="24"
+                                                height="24"
+                                                rx="12"
+                                                fill="#F6F3FF"
+                                            />
+                                            <path
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd"
+                                                d="M17.8162 8.20701C18.0701 8.47369 18.0597 8.89568 17.793 9.14954L10.0893 16.4829C9.95773 16.6081 9.78078 16.6742 9.59933 16.666C9.41788 16.6577 9.24766 16.5758 9.12803 16.4391L6.16506 13.0545C5.92254 12.7775 5.95052 12.3563 6.22755 12.1138C6.50459 11.8713 6.92577 11.8992 7.16829 12.1763L9.67342 15.0379L16.8737 8.1838C17.1404 7.92994 17.5624 7.94033 17.8162 8.20701Z"
+                                                fill="#886DE0"
+                                                stroke="#886DE0"
+                                                stroke-width="0.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                        Working with AI Design Manager
+                                    </li>
+                                   
+                                
+                                </ul>
+
+                                <div class="rating">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="101"
+                                        height="20"
+                                        viewBox="0 0 101 20"
+                                        fill="none"
+                                    >
+                                        <mask
+                                            id="mask0_6810_1196"
+                                            style="mask-type: alpha"
+                                            maskUnits="userSpaceOnUse"
+                                            x="0"
+                                            y="0"
+                                            width="101"
+                                            height="20"
+                                        >
+                                            <rect
+                                                width="101"
+                                                height="20"
+                                                fill="#836ED9"
+                                            />
+                                        </mask>
+                                        <g mask="url(#mask0_6810_1196)">
+                                            <path
+                                                d="M9.24426 1.976C9.40959 1.46715 10.1295 1.46715 10.2948 1.976L11.8907 6.88757C11.9646 7.11513 12.1767 7.26921 12.4159 7.26921H17.5803C18.1153 7.26921 18.3378 7.95385 17.9049 8.26833L13.7269 11.3039C13.5333 11.4445 13.4523 11.6938 13.5262 11.9213L15.1221 16.8329C15.2874 17.3418 14.7051 17.7649 14.2722 17.4504L10.0942 14.4149C9.90059 14.2743 9.63847 14.2743 9.44489 14.4149L5.26686 17.4504C4.83401 17.7649 4.25162 17.3418 4.41695 16.8329L6.01282 11.9213C6.08676 11.6938 6.00576 11.4445 5.81218 11.3039L1.63415 8.26833C1.2013 7.95385 1.42375 7.26921 1.95878 7.26921H7.12312C7.36239 7.26921 7.57445 7.11513 7.64839 6.88757L9.24426 1.976Z"
+                                                fill="#886DE0"
+                                            />
+                                            <path
+                                                d="M29.2443 1.976C29.4096 1.46715 30.1295 1.46715 30.2948 1.976L31.8907 6.88757C31.9646 7.11513 32.1767 7.26921 32.4159 7.26921H37.5803C38.1153 7.26921 38.3378 7.95385 37.9049 8.26833L33.7269 11.3039C33.5333 11.4445 33.4523 11.6938 33.5262 11.9213L35.1221 16.8329C35.2874 17.3418 34.7051 17.7649 34.2722 17.4504L30.0942 14.4149C29.9006 14.2743 29.6385 14.2743 29.4449 14.4149L25.2669 17.4504C24.834 17.7649 24.2516 17.3418 24.417 16.8329L26.0128 11.9213C26.0868 11.6938 26.0058 11.4445 25.8122 11.3039L21.6341 8.26833C21.2013 7.95385 21.4238 7.26921 21.9588 7.26921H27.1231C27.3624 7.26921 27.5745 7.11513 27.6484 6.88757L29.2443 1.976Z"
+                                                fill="#886DE0"
+                                            />
+                                            <path
+                                                d="M49.2443 1.976C49.4096 1.46715 50.1295 1.46715 50.2948 1.976L51.8907 6.88757C51.9646 7.11513 52.1767 7.26921 52.4159 7.26921H57.5803C58.1153 7.26921 58.3378 7.95385 57.9049 8.26833L53.7269 11.3039C53.5333 11.4445 53.4523 11.6938 53.5262 11.9213L55.1221 16.8329C55.2874 17.3418 54.7051 17.7649 54.2722 17.4504L50.0942 14.4149C49.9006 14.2743 49.6385 14.2743 49.4449 14.4149L45.2669 17.4504C44.834 17.7649 44.2516 17.3418 44.417 16.8329L46.0128 11.9213C46.0868 11.6938 46.0058 11.4445 45.8122 11.3039L41.6341 8.26833C41.2013 7.95385 41.4238 7.26921 41.9588 7.26921H47.1231C47.3624 7.26921 47.5745 7.11513 47.6484 6.88757L49.2443 1.976Z"
+                                                fill="#886DE0"
+                                            />
+                                            <path
+                                                d="M69.2443 1.976C69.4096 1.46715 70.1295 1.46715 70.2948 1.976L71.8907 6.88757C71.9646 7.11513 72.1767 7.26921 72.4159 7.26921H77.5803C78.1153 7.26921 78.3378 7.95385 77.9049 8.26833L73.7269 11.3039C73.5333 11.4445 73.4523 11.6938 73.5262 11.9213L75.1221 16.8329C75.2874 17.3418 74.7051 17.7649 74.2722 17.4504L70.0942 14.4149C69.9006 14.2743 69.6385 14.2743 69.4449 14.4149L65.2669 17.4504C64.834 17.7649 64.2516 17.3418 64.417 16.8329L66.0128 11.9213C66.0868 11.6938 66.0058 11.4445 65.8122 11.3039L61.6341 8.26833C61.2013 7.95385 61.4238 7.26921 61.9588 7.26921H67.1231C67.3624 7.26921 67.5745 7.11513 67.6484 6.88757L69.2443 1.976Z"
+                                                fill="#886DE0"
+                                            />
+                                            <path
+                                                d="M89.2443 1.976C89.4096 1.46715 90.1295 1.46715 90.2948 1.976L91.8907 6.88757C91.9646 7.11513 92.1767 7.26921 92.4159 7.26921H97.5803C98.1153 7.26921 98.3378 7.95385 97.9049 8.26833L93.7269 11.3039C93.5333 11.4445 93.4523 11.6938 93.5262 11.9213L95.1221 16.8329C95.2874 17.3418 94.7051 17.7649 94.2722 17.4504L90.0942 14.4149C89.9006 14.2743 89.6385 14.2743 89.4449 14.4149L85.2669 17.4504C84.834 17.7649 84.2516 17.3418 84.417 16.8329L86.0128 11.9213C86.0868 11.6938 86.0058 11.4445 85.8122 11.3039L81.6341 8.26833C81.2013 7.95385 81.4238 7.26921 81.9588 7.26921H87.1231C87.3624 7.26921 87.5745 7.11513 87.6484 6.88757L89.2443 1.976Z"
+                                                fill="#886DE0"
+                                            />
+                                        </g>
+                                    </svg>
+                                    <span class="manage">
+                                        rated on BuildTwin by 1000+ Users
+                                    </span>
+                                    <div class="flex">
+                                        <div class="founded">
+                                            <label>Website</label>
+                                            <span>www.jf.ag</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="founded">
+                                            <label>Phone Number</label>
+                                            <span>+49 641 98459311</span>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+
+                           
+                            </div>
+                            <div class="rowData">
+                                <h3>Availability in Time Zone</h3>
+  <div class="selectCover">
+    <div class="selectData">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <select [(ngModel)]="selectedOption" (change)="onSelectChange()">
+                <option value="gmt">GMT Time Zone</option>
+                <option value="est">EST Time Zone</option>
+                <option value="pst">PST Time Zone</option>
+            </select>
+    </div>
+   
+
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <g clip-path="url(#clip0_7144_11954)">
+            <path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96452 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM12 20.25C10.3683 20.25 8.77326 19.7661 7.41655 18.8596C6.05984 17.9531 5.00242 16.6646 4.378 15.1571C3.75358 13.6496 3.5902 11.9908 3.90853 10.3905C4.22685 8.79016 5.01259 7.32015 6.16637 6.16637C7.32016 5.01259 8.79017 4.22685 10.3905 3.90852C11.9909 3.59019 13.6497 3.75357 15.1571 4.37799C16.6646 5.00242 17.9531 6.05984 18.8596 7.41655C19.7662 8.77325 20.25 10.3683 20.25 12C20.2475 14.1873 19.3775 16.2843 17.8309 17.8309C16.2843 19.3775 14.1873 20.2475 12 20.25ZM18 12C18 12.1989 17.921 12.3897 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75H12C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4697C17.921 11.6103 18 11.8011 18 12Z" fill="#886DE0"/>
+            <circle cx="19.001" cy="19.0002" r="5" fill="#00B507"/>
+            <path d="M16.2354 19.2238L17.6184 21.0021L21.7666 17.0002" stroke="white" stroke-width="0.943779" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_7144_11954">
+            <rect width="24" height="24" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            {{ timeText }}
+    </span>
+  </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</app-abount-jf>
+</div>
+<div id="capabilities" class="scrollSection">
+<app-capability>
+    <div class="capability">
+        <div class="head">
+            <div class="container">
+                <h2>Capability Matrix</h2>
+                <p>
+                    J&F provides a wide range of services with multidisciplinary teams
+                </p>
+            </div>
+           
+        </div>
+        <div class="container">
+            <div class="flex">
+                <div class="left">
+                    <div class="containerData">
+                        <div class="headSection">
+                            <div class="common">Services</div>
+                            <div class="common">Type</div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">BIM</div>
+                                <div class="experience">Structural Stell</div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">BIM - Concrete</div>
+                                <div class="experience">Precast Rebar</div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">QS</div>
+                                <div class="experience">Services</div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">MEP</div>
+                                <div class="experience">Services</div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">Independent</div>
+                                <div class="experience">Structural Stell</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="left right">
+                    <div class="containerData manage">
+                        <strong>Particulars</strong>
+                        <div class="headSection">
+                            <div class="col">
+                                <strong>Junior</strong>
+                                <span>4 - 6 Years</span>
+                            </div>
+                            <div class="col">
+                                <strong>Senior</strong>
+                                <span>6 - 8 Years</span>
+                            </div>
+                            <div class="col">
+                                <strong>QAQC</strong>
+                                <span>8 - 10 Years</span>
+                            </div>
+                            <div class="col">
+                                <strong>PM/Coordinator</strong>
+                                <span>10 - 12 Years</span>
+                            </div>
+                            <div class="col">
+                                <strong>Reviewer</strong>
+                                <span>8 - 15 Years</span>
+                            </div>
+                        </div>
+
+                    
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">35</div>
+                                <div class="role">50</div>
+                                <div class="role">15</div>
+                                <div class="role">30</div>
+                                <div class="role"></div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="content">
+                                <div class="role dark">50</div>
+                                <div class="role dark">30</div>
+                                <div class="role dark">8</div>
+                                <div class="role dark">20</div>
+                                <div class="role dark"></div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">15</div>
+                                <div class="role">20</div>
+                                <div class="role">4</div>
+                                <div class="role">8</div>
+                                <div class="role"></div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role dark">30</div>
+                                <div class="role dark">10</div>
+                                <div class="role dark">3</div>
+                                <div class="role dark">2</div>
+                                <div class="role dark"></div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role"></div>
+                                <div class="role"></div>
+                                <div class="role"></div>
+                                <div class="role"></div>
+                                <div class="role dark">25</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overlay">
+                        <div class="box">
+                            <h2>Login to see Resource Matrix</h2>
+                            <a href="">Login Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-capability>
+
+<app-global-company>
+    <div class="partnerWrap vender">
+        <div class="container">
+            <owl-carousel-o [options]="reviewsSlides" class="partner">
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand1.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">6 Years of experience</span>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand2.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">6 Years of experience</span>
+                </ng-template>
+                <!-- <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand3.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">6 Years of experience</span>
+                </ng-template> -->
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand4.png"
+                       
+                        height="150"
+                    />
+
+                    <span class="exp">9 Years of experience</span>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand5.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">4 Years of experience</span>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand6.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">6 Years of experience</span>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand7.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">9 Years of experience</span>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand8.png"
+                       
+                        height="150"
+                    />
+                    <span class="exp">7 Years of experience</span>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <img
+                        src="assets/images/ui/brand9.png"
+                       
+                        height="150"
+                    />
+
+                    <span class="exp">8 Years of experience</span>
+                </ng-template>
+               
+            </owl-carousel-o>
+        </div>
+    </div>
+</app-global-company>
+<app-capability>
+    <div class="capability code">
+        <div class="head">
+            <div class="container">
+                <h2>Building Codes</h2>
+                <p>
+                    J&F works with regional building codes to provide the best and most fitting technical solutions.
+                </p>
+            </div>
+           
+        </div>
+        <div class="container">
+            <div class="flex">
+                <div class="left data">
+                    <div class="containerData">
+                        <div class="headSection">
+                            <div class="common"></div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">Building Code</div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">Number of Projects</div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">Years of Experience</div>
+                            </div>
+                        </div>
+                      
+                        
+                    </div>
+                </div>
+                <div class="left right">
+                    <div class="containerData">
+                        <div class="headSection">
+                            <div class="col">
+                                <strong>United States</strong>
+                            </div>
+                            <div class="col">
+                                <strong>Australia</strong>
+                            </div>
+                          
+                            <div class="col">
+                                <strong>European Union</strong>
+                            </div>
+                            <div class="col">
+                                <strong>United Kingdom</strong>
+                            </div>
+                            <div class="col">
+                                <strong>Canada</strong>
+                            </div>
+                            <div class="col">
+                                <strong>India</strong>
+                            </div>
+                           
+                        </div>
+
+                    
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">IBC</div>
+                                <div class="role">NCC</div>
+                                <div class="role">EC</div>
+                                <div class="role">BS</div>
+                                <div class="role">CBC</div>
+                                <div class="role">India</div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">45</div>
+                                <div class="role">48</div>
+                                <div class="role">35</div>
+                                <div class="role">66</div>
+                                <div class="role">101</div>
+                                <div class="role">63</div>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <div class="content">
+                                <div class="role">10</div>
+                                <div class="role">13</div>
+                                <div class="role">12</div>
+                                <div class="role">17</div>
+                                <div class="role">15</div>
+                                <div class="role">10</div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</app-capability>
+<app-simple-row>
+    <div class="row">
+        <div class="container">
+            <div class="head">
+                <h2>Special Tools & Methods</h2>
+                <p>
+                    Additionally to a range of engineering software, J&F uses special methods to work more digitally and efficiently.
+                </p>
+            </div>
+
+            <div class="listData">
+                <ul>
+                    <li>
+                        <div class="wrapLeft">
+                            <div class="retraingle">AP</div>
+                        </div>
+                        <div class="content">
+                            <p>Automatisation with Phytonscript</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="wrapLeft">
+                            <div class="retraingle">3D</div>
+                        </div>
+                        <div class="content">
+                            <p>3D Structural Design</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="wrapLeft">
+                            <div class="retraingle">DS</div>
+                        </div>
+                        <div class="content">
+                            <p>Dynamo Scripting</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wrapLeft">
+                            <div class="retraingle">7D</div>
+                        </div>
+                        <div class="content">
+                            <p>BIM 7D</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</app-simple-row>
+
+
+</div>
+
+
+<div id="portfolio" class="scrollSection">
+<app-feature-project>
+    <div class="accreditation">
+        <div class="container">
+            <div class="head">
+                <div class="left">
+                <h2>Featured Project</h2>
+                <span
+                    >From newly constructed skyscrapers to modernising factories, J&F has successfully engineered 1000+ projects worldwide.</span
+                >
+            </div>
+            <div class="right">
+                <div class="seelctWrap">
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M9.33537 8V13.2533C9.36204 13.4533 9.29537 13.6667 9.14204 13.8067C9.08036 13.8685 9.0071 13.9175 8.92646 13.951C8.84581 13.9844 8.75935 14.0016 8.67204 14.0016C8.58473 14.0016 8.49827 13.9844 8.41762 13.951C8.33698 13.9175 8.26372 13.8685 8.20204 13.8067L6.86204 12.4667C6.78937 12.3956 6.73411 12.3086 6.70058 12.2126C6.66704 12.1167 6.65614 12.0142 6.66871 11.9133V8H6.64871L2.80871 3.08C2.70045 2.94102 2.6516 2.76484 2.67283 2.58995C2.69407 2.41507 2.78366 2.2557 2.92204 2.14667C3.04871 2.05333 3.18871 2 3.33537 2H12.6687C12.8154 2 12.9554 2.05333 13.082 2.14667C13.2204 2.2557 13.31 2.41507 13.3312 2.58995C13.3525 2.76484 13.3036 2.94102 13.1954 3.08L9.35537 8H9.33537Z" fill="white"/>
+                            </svg>
+                    </i>
+                    <div class="arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </div>
+                    <select (change)="onTypeChange($event)">
+                        <option value="all">All</option>
+                        <option value="MEP">MEP</option>
+                        <option value="Structural">Structural</option>
+                    </select>
+            </div>
+            </div>
+            </div>
+            <div class="listItem">
+                <div *ngFor="let project of filteredProjects" class="item">
+                    <div class="itemHead">
+                        <span>{{ project.type }}</span>
+                        <h2>{{ project.name }}</h2>
+                        <div class="flex">
+                            <img src="assets/images/ui/country5.png" width="17" height="17" />
+                            <em>{{ project.location }}</em>
+                        </div>
+                    </div>
+                    <img [src]="project.image" width="416" height="240" />
+                    <div class="content">
+                        <h2>Construction Volume</h2>
+                        <span>{{ project.description }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btnWrap">
+                <a href="https://www.jf.ag/en/projects" target="_blank" class="btnNew"
+                    >View All Projects <i class="ti ti-arrow-narrow-right"></i
+                ></a>
+            </div>
+        </div>
+    </div>
+</app-feature-project>
+</div>
+<div id="team" class="scrollSection">
+<app-engineers>
+    <div class="slider">
+        <div class="container">
+            <owl-carousel-o [options]="aboutSlider">
+               
+                <ng-template *ngFor="let engineer of ourEngineers" carouselSlide>
+                    <div class="wrap">
+                        <div class="flex">
+                            <div class="left">
+                                <h2>Our <br>engineers</h2>
+                                <span class="jeffStyle">in the<br>spotlight</span>
+                            </div>
+                            <div class="right">
+                                <div class="imgWrap">
+                                    <img [src]="engineer.img" [alt]="engineer.name" width="422" height="495">
+                                </div>
+                                <div class="content">
+                                    <h2>{{ engineer.name }}</h2>
+                                    <span [innerHTML]="engineer.title"></span>
+                
+                                    <p [innerHTML]="engineer.des"></p>
+                                    <div class="expert">
+                                        <h3><span class="jeffStyle">My</span> expertise at J&F</h3>
+                                        <ul>
+                                            <li *ngFor="let expertise of engineer.expertise">
+                                                <strong>#</strong> {{ expertise }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+         
+            </owl-carousel-o>
+        </div>
+    </div>
+</app-engineers>
+</div>
+<!-- <div id="certification" class="scrollSection">
+<app-accreditation>
+    <div class="accreditation">
+        <div class="container">
+            <div class="head">
+                <h2>Accreditation</h2>
+                <span
+                    >Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.</span
+                >
+            </div>
+            <div class="listItem">
+                <div class="item">
+                    <img
+                        src="assets/images/ui/accreditation1.png"
+                        width="286"
+                        height="385"
+                    />
+                    <strong> Top Ten Architects </strong>
+                </div>
+                <div class="item">
+                    <img
+                    src="assets/images/ui/accreditation2.png"
+                    width="286"
+                    height="385"
+                />
+                    <strong> Asia Pacific Property Awards 2018 </strong>
+                </div>
+                <div class="item">
+                    <img
+                        src="assets/images/ui/accreditation3.png"
+                        width="286"
+                        height="385"
+                    />
+                    <strong> PAM Award Commendation </strong>
+                </div>
+                <div class="item">
+                    <img
+                    src="assets/images/ui/accreditation4.png"
+                    width="286"
+                    height="385"
+                />
+                    <strong> PAM Award 2019 Silver </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-accreditation>
+</div> -->
+<!-- <div id="social" class="scrollSection">
+
+<app-latest-update>
+    <div class="latestUpdate">
+        <div class="container">
+            <div class="heading">Latest Updated</div>
+            <div class="text">
+                Stay informed with the latest news and updates from J&F. Learn about our recent projects, partnerships, and achievements.
+
+            </div>
+
+            <div class="testimonial">
+                <div class="flex">
+<div class="slide">
+    <img src="assets/images/ui/testimonial1.png" width="595" height="382">
+<div class="slideOverlay">
+    <div class="contentSlide">
+        <span>Latest</span>
+        <h2>
+            J&F takes over <br>HOCHTIEF India
+        </h2>
+
+        <p>
+            J&F is a German based civil engineering consultancy with a strong footprint in Structural, MEP and BIM services around the globe.
+        </p>
+
+        <a href="#" class="btnNew"
+        >View All Updates <i class="ti ti-arrow-narrow-right"></i
+    ></a>
+    </div>
+</div>
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial2.png" width="696" height="382">
+<div class="overlay">
+    <span>
+        Take a look at our <a href=""> j&F Meets 2023 </a> event in Chennai
+    </span>
+</div>
+
+</div>
+
+</div>
+
+<div class="flex">
+
+<div class="slide">
+    <img src="assets/images/ui/testimonial3.png" width="295" height="382">
+    <div class="overlay">
+        <span>
+            Time critical  <a href=""> plan changes </a> in the ongoing project?
+        </span>
+       
+    </div>
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial4.png" width="295" height="382">
+
+    <div class="overlay">
+        <span>
+            How do we design <a href=""> remote work </a> in civil engineering?
+        </span>
+       
+    </div>
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial5.png" width="696" height="382">
+    <div class="overlay">
+        <span>
+            Learn more about using our <a href=""> digital and data driven </a> planning to make better decisions.        </span>
+       
+    </div>
+</div>
+</div>
+<div class="flex">
+<div class="slide">
+    <img src="assets/images/ui/testimonial6.png" width="595" height="382">
+    <div class="overlay">
+        <span>
+            Find out more about how J&F’s  <a href=""> global collaboration </a> with our Indian office works in everyday life.             </span>
+       
+    </div>
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial7.png" width="345" height="382">
+    <div class="overlay">
+        <span>
+            Our colleagues on the construction site of one of our current project <a href="#"> FOUR in Frankfurt </a>
+                    </span>
+       
+    </div>
+
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial8.png" width="345" height="382">
+
+    <div class="overlay">
+        <span>
+            Take a look at our <a href=""> office in Giessen </a>
+                    </span>
+       
+    </div>
+</div>
+          
+</div>
+            </div>
+          
+         
+        </div>
+    </div>
+</app-latest-update>
+</div> -->
+
+<app-social-wall></app-social-wall>
+
+
+<app-qualified>
+    <div class="container">
+        <div class="qualified">
+            <div class="head">
+                <div class="flex">
+                    <img src="assets/images/ui/jfLogo.png" width="64" height="33">
+                   <span> x</span>
+                   <img src="assets/images/ui/buildTwin-logo.png" width="165" height="44">
+                </div>
+                <h3>the BuildTwin advantage</h3>
+                <span>
+                    BuildTwin gives you an unfair advantage working with technical teams abroad.
+                </span>
+            </div>
+
+            <div class="itemFLex">
+                <div class="item">
+                    <div class="svgCover">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="60"
+                            height="59"
+                            viewBox="0 0 60 59"
+                            fill="none"
+                        >
+                            <circle
+                                cx="30"
+                                cy="29.3901"
+                                r="27.6667"
+                                fill="#886DE0"
+                                stroke="white"
+                                stroke-width="3.33333"
+                            />
+                            <path
+                                d="M30.4414 41.7383H20V18H39.8828V29.3691"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <circle
+                                cx="30.2666"
+                                cy="31.8526"
+                                r="5.16506"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M34.3008 35.7891L38.2756 39.5041"
+                                stroke="white"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+
+                    <h3>
+                        Plug & Play<br />
+                        into your workflow
+                    </h3>
+                    <p>
+                        Attract better offers with <br />
+                        marketing and legal guidance.
+                    </p>
+                </div>
+                <div class="item">
+                    <div class="svgCover">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="60"
+                            height="59"
+                            viewBox="0 0 60 59"
+                            fill="none"
+                        >
+                            <circle
+                                cx="30"
+                                cy="29.3901"
+                                r="27.6667"
+                                fill="#886DE0"
+                                stroke="white"
+                                stroke-width="3.33333"
+                            />
+                            <ellipse
+                                cx="29.6895"
+                                cy="25.6901"
+                                rx="8.6895"
+                                ry="8.69011"
+                                stroke="white"
+                                stroke-width="2.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <ellipse
+                                cx="29.6928"
+                                cy="25.6931"
+                                rx="4.17326"
+                                ry="4.17355"
+                                stroke="white"
+                                stroke-width="1.69398"
+                                stroke-linecap="round"
+                            />
+                            <path
+                                d="M23.1289 31.6914L19.5145 38.5397L23.3412 37.8988L24.9711 41.4205L28.5856 34.5722"
+                                stroke="white"
+                                stroke-width="1.69398"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M36.832 31.6914L40.4465 38.5397L36.6197 37.8988L34.9898 41.4205L31.3754 34.5722"
+                                stroke="white"
+                                stroke-width="1.69398"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+
+                    <h3>
+                        Ensuring Quality<br />
+                        Delivery
+                    </h3>
+                    <p>
+                        You have our acquisition <br />expertise from start to
+                        close.
+                    </p>
+                </div>
+                <div class="item">
+                    <div class="svgCover">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                        >
+                            <circle
+                                cx="30"
+                                cy="30"
+                                r="27.6667"
+                                fill="#886DE0"
+                                stroke="white"
+                                stroke-width="3.33333"
+                            />
+                            <path
+                                d="M37.1467 33.5894C37.7058 34.1186 37.7586 35.0504 37.2335 35.641C36.7377 36.2299 35.888 36.278 35.3289 35.7488L34.832 35.2784C35.3324 35.8109 35.3524 36.6822 34.8841 37.2384C34.3884 37.8274 33.5386 37.8755 32.9796 37.3463L32.4826 36.8759C32.9831 37.4084 33.003 38.2797 32.5348 38.8359C32.039 39.4248 31.1893 39.4729 30.6302 38.9437L30.1333 38.4733C30.6337 39.0058 30.6537 39.8771 30.1854 40.4333C29.6897 41.0223 28.8399 41.0704 28.2809 40.5412M28.5496 25.0403L23.6469 24.6324L19.2542 30.1157L19.8016 32.5151"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M36.5689 24.669C32.742 23.7154 27.6981 25.1695 26.1111 25.9402C25.5588 28.1609 24.2502 30.4356 24.8714 30.6986C26.3566 31.3274 27.9252 29.1794 27.9252 29.1794C27.9252 29.1794 29.4237 29.0945 30.0924 28.8796C31.7467 30.4683 33.4777 30.2113 33.901 30.1874C34.5082 31.3699 35.9923 33.6972 37.0715 33.5455C38.1507 33.3938 39.2794 32.5273 39.7088 32.113"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M44.5091 29.8144L41.3151 22.2056C41.1786 21.8706 40.7871 21.7058 40.4718 21.8483L36.8625 23.5171C36.5473 23.6596 36.3943 24.0733 36.5309 24.4083L39.7248 32.0171C39.8614 32.3521 40.2528 32.5169 40.5681 32.3744L44.1774 30.7056C44.5202 30.5304 44.6456 30.1494 44.5091 29.8144Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M23.3498 23.4127L20.2338 20.8161C19.9561 20.5825 19.5769 20.6352 19.3583 20.928L14.5237 27.4333C14.3051 27.7261 14.3573 28.1283 14.6351 28.3618L17.751 30.9585C18.0288 31.192 18.4079 31.1394 18.6265 30.8466L23.4611 24.3412C23.6815 24.0794 23.6275 23.6463 23.3498 23.4127Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M21.1113 31.6892L19.8526 32.8198C19.2929 33.3189 19.1388 34.2312 19.6153 34.8586C20.0917 35.4859 20.9796 35.5914 21.5392 35.0924L22.0162 34.6915C22.0438 34.6587 22.1006 34.6244 22.1281 34.5917L22.8841 33.9257C23.5006 33.3922 23.5305 32.3623 22.9093 31.7743L22.8782 31.7449C22.3813 31.2745 21.6159 31.2556 21.1113 31.6892Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M24.4246 36.269L24.9016 35.8681C25.5456 35.302 25.5462 34.2737 24.9268 33.7168C24.4298 33.2464 23.6645 33.2274 23.1617 33.6921L22.0148 34.7229C21.488 35.2824 21.5115 36.2158 22.0723 36.7761C22.571 37.2776 23.3639 37.2638 23.896 36.7975L24.3162 36.4309C24.3695 36.3345 24.397 36.3017 24.4246 36.269Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M26.7553 37.9417L26.9516 37.7748C27.5956 37.2086 27.5962 36.1803 26.9768 35.6234C26.4798 35.153 25.7145 35.134 25.2117 35.5987L24.3145 36.3662C23.7876 36.9257 23.8111 37.8591 24.3719 38.4194C24.8707 38.9208 25.6635 38.9071 26.1956 38.4407L26.6158 38.0742C26.6727 38.0398 26.6984 37.976 26.7553 37.9417Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M26.6457 38.082C26.1188 38.6415 26.1423 39.5749 26.7031 40.1352C27.2018 40.6366 27.9947 40.6229 28.5268 40.1565L29.0039 39.7556C29.6479 39.1895 29.6485 38.1612 29.0273 37.5732C28.5303 37.1028 27.765 37.0839 27.2622 37.5485L26.6457 38.082Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M22.1236 34.5625C22.096 34.5952 22.0392 34.6295 22.0116 34.6623L22.1236 34.5625Z"
+                                stroke="white"
+                                stroke-width="1.32178"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M24.4273 36.2749C24.3997 36.3076 24.3429 36.342 24.3153 36.3747L24.4273 36.2749Z"
+                                stroke="white"
+                                stroke-width="1.32178"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M41.6335 30.47C42.0057 30.4489 42.2893 30.112 42.267 29.7175C42.2446 29.323 41.9248 29.0202 41.5526 29.0413C41.1804 29.0624 40.8968 29.3993 40.9191 29.7938C40.9414 30.1883 41.2613 30.4911 41.6335 30.47Z"
+                                fill="white"
+                            />
+                            <path
+                                d="M17.3652 28.8315C17.7374 28.8104 18.021 28.4735 17.9987 28.079C17.9763 27.6844 17.6565 27.3817 17.2843 27.4028C16.9121 27.4238 16.6285 27.7607 16.6508 28.1553C16.6731 28.5498 16.993 28.8525 17.3652 28.8315Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+
+                    <h3>
+                        LIVE Project<br />
+                        Progress
+                    </h3>
+                    <p>
+                        If we can’t find your ideal buyer,<br />
+                        you pay absolutely zero.
+                    </p>
+                </div>
+                <div class="item">
+                    <div class="svgCover">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="60"
+                            height="59"
+                            viewBox="0 0 60 59"
+                            fill="none"
+                        >
+                            <circle
+                                cx="30"
+                                cy="29.3901"
+                                r="27.6667"
+                                fill="#886DE0"
+                                stroke="white"
+                                stroke-width="3.33333"
+                            />
+                            <rect
+                                x="19.0424"
+                                y="38.4755"
+                                width="17.1122"
+                                height="3.11131"
+                                rx="0.861582"
+                                stroke="white"
+                                stroke-width="1.72316"
+                            />
+                            <rect
+                                x="22.1537"
+                                y="35.3641"
+                                width="10.8896"
+                                height="3.11131"
+                                rx="0.861582"
+                                stroke="white"
+                                stroke-width="1.72316"
+                            />
+                            <rect
+                                x="26.423"
+                                y="24.0608"
+                                width="7.48189"
+                                height="5.00983"
+                                rx="0.861582"
+                                transform="rotate(-40.8666 26.423 24.0608)"
+                                stroke="white"
+                                stroke-width="1.72316"
+                            />
+                            <rect
+                                width="2.50492"
+                                height="7.51475"
+                                rx="0.861582"
+                                transform="matrix(-0.756235 0.6543 0.6543 0.756235 25.6018 23.1151)"
+                                stroke="white"
+                                stroke-width="1.72316"
+                            />
+                            <rect
+                                width="2.50492"
+                                height="7.51475"
+                                rx="0.861582"
+                                transform="matrix(-0.756235 0.6543 0.6543 0.756235 33.0431 16.6768)"
+                                stroke="white"
+                                stroke-width="1.72316"
+                            />
+                            <rect
+                                width="2.50492"
+                                height="11.6674"
+                                rx="0.861582"
+                                transform="matrix(-0.756235 0.6543 0.6543 0.756235 33.4301 24.8517)"
+                                stroke="white"
+                                stroke-width="1.72316"
+                            />
+                        </svg>
+                    </div>
+
+                    <h3>
+                        Digital Procurement<br />
+                    </h3>
+                    <p>
+                        We market your startup to buyers<br />
+                        with matching acquisition criteria.
+                    </p>
+                </div>
+                <div class="item">
+                    <div class="svgCover">
+                        <svg
+                            width="60"
+                            height="59"
+                            viewBox="0 0 60 59"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle
+                                cx="30"
+                                cy="29.3901"
+                                r="27.6667"
+                                fill="#886DE0"
+                                stroke="white"
+                                stroke-width="3.33333"
+                            />
+                            <path
+                                d="M37.5833 22.5H35.4167C35.4167 19.4667 33.0333 17.0834 30 17.0834C26.9667 17.0834 24.5833 19.4667 24.5833 22.5H22.4167C21.225 22.5 20.25 23.475 20.25 24.6667V37.6667C20.25 38.8584 21.225 39.8334 22.4167 39.8334H37.5833C38.775 39.8334 39.75 38.8584 39.75 37.6667V24.6667C39.75 23.475 38.775 22.5 37.5833 22.5ZM30 19.25C31.8417 19.25 33.25 20.6584 33.25 22.5H26.75C26.75 20.6584 28.1583 19.25 30 19.25ZM37.5833 37.6667H22.4167V24.6667H37.5833V37.6667ZM30 29C28.1583 29 26.75 27.5917 26.75 25.75H24.5833C24.5833 28.7834 26.9667 31.1667 30 31.1667C33.0333 31.1667 35.4167 28.7834 35.4167 25.75H33.25C33.25 27.5917 31.8417 29 30 29Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+
+                    <h3>Meeting Compliance</h3>
+                    <p>
+                        Get help negotiating buyer offers <br />
+                        to maximize your exit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-qualified>
+
+<app-get-started1>
+    <div class="startedData">
+        <h2>Ready to get started?</h2>
+        <p>
+            The BuildTwin Marketplace program not only covers our closed
+            marketplace with clients from 10+ <br />
+            countries - but gives you also access to Leads from open market.
+        </p>
+        <a href="mailto:contact@jf-projects.com">Talk to J&F</a>
+    </div>
+</app-get-started1>
+
+<!-- 
+    
+<app-hd-footer></app-hd-footer>
+
+-->
+
+<div class="footerLinks">
+    <div class="container">
+        <ul>
+            <li>
+                <a class="item-link" routerLink="/contact">Contact</a>
+            </li>
+            <li>
+                <a class="item-link" routerLink="/privacy-policy">Privacy Policy</a>
+            </li>
+            <li>
+                <a class="item-link1" routerLink="/terms-conditions">Imprint</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div class="popUP" [ngClass]="{'active':showPopup}">
+    <div class="coverPopup">
+      <i class="closeIcon" (click)="closePopup()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <g clip-path="url(#clip0_2773_1184811)">
+          <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_2773_11848">
+          <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
+          </svg>
+      </i>
+    <div class="coverPopupData">
+    
+  <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/pit-yogeswaran?embed=true"></div>
+</div>
+</div>
+</div>
