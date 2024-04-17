@@ -1,0 +1,362 @@
+<app-hd-navbar></app-hd-navbar>
+
+<app-om-banner-freelance></app-om-banner-freelance>
+
+<app-how-buildtwin-helps>
+    <div class="buildtwinHelps" id="scrollActivated">
+        <div class=""id="onScrollAnimation">
+            <div class="headSection">
+                <h2>Business Intelligence<br>with actionable Insights
+                </h2>
+            </div>
+        <div class="container">
+          
+            <div class="tabContent">
+                <div class="tabLeft">
+                    <ul>
+                        <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 1}">
+                            <i></i> Plug & Play
+                        </li>
+                        <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"   [ngClass]="{'active':activeState === 2}">
+                            <i></i> Plan vs. Actual
+                        </li>
+                        <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 3}">
+                            <i></i> GAP Analysis
+                        </li>
+                        <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 4}">
+                            <i></i> Benchmark
+                        </li>
+                        <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 5}">
+                            <i></i> Pricing Model
+                        </li>
+                        <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 6}">
+                            <i></i >Quotations
+                        </li>
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+        </div>
+
+        <div class="staticData">
+            <div class="tabRIght">
+                <div id="section1" class="active" data-ele="one"  >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild1.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Get started with minimum data
+
+                            </h3>
+                            <p>
+                                BuildTwin generates Checklists based on the user, deliverables and the discussed
+                                technical decision. The checklist also considers RFIs, Revisions and many other factors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section2"    data-ele="two">
+                    <div class="flex">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild2.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Visualise revisions, bugs and other efforts
+
+                            </h3>
+                            <p>
+                                BuildTwin generates Checklists based on the user, deliverables and the discussed
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section3" data-ele="three" >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild3.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Understanding the GAP
+
+
+                            </h3>
+                            <p>
+                                BuildTwin tracks and documents all activitis across all channels - and presents a easy to use and understand cockpit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section4" data-ele="four"  >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild4.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Benchmark your performance - against past performance. AND market performance.
+
+
+                            </h3>
+                            <p>
+                                The consolidated LIVE view shows you the LIVE project view of your project progress and whether your project is on track or not.                            </div>
+                    </div>
+                </div>
+                <div id="section5"  data-ele="five"  >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild5.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Optimise utilisation and model outcomes
+
+                            </h3>
+                            <p>
+                                The AI RFI manager tracks all RFIs across different channels such as emails, CDE, and technical meetings, presenting them in an easy-to-understand format.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div  id="section6" data-ele="six" >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild6.png" alt="" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Underwrite bids with dynamic data
+                            </h3>
+                            <p>
+                                With our Simulation tool you supercharge your Steering meetings, by analysing different scenarios and adopting new priorities with the click of a button.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+</app-how-buildtwin-helps>
+
+
+<!-- 
+    
+    <app-om-services-freelance></app-om-services-freelance>
+
+    
+!--> 
+
+
+<!-- Get started in minutes -->
+<app-om-about></app-om-about>
+
+<app-om-integrations-freelance>
+<div class="workflow">
+    <div class="container">
+        <div class="flex">
+            <div class="leftPart">
+<h2>Integration with your <br> workflow</h2>
+<p>
+    Link BuildTwin DSM to BuildTwin Copilot and Third-Party <br> business process tools and get actionable insights
+</p>
+<a mat-button routerLink="/" class="default-btn">Get Started</a>
+            </div>
+
+          
+        </div>
+    </div>
+    <div class="rightPart">
+        <img src="assets/images/ui/workflow.png" width="870" height="220">
+                  </div>
+</div>
+
+
+
+</app-om-integrations-freelance>
+
+<br> 
+
+<app-buildtwin-services>
+    <div class="buildtwinService forTraning ptb-100">
+
+        <div class="container">
+            <div class="headSection">
+                <h2><span>Actionable</span> Business Insight
+                </h2>
+                <p>
+                    Earn real money with tangible business insights.
+                </p>
+            </div>
+            <div class="tabContent">
+                <div class="tabLeft">
+                    <ul>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(10)"
+                            [ngClass]="{'active':activeState2 === 10}">
+                            <div class="flex-center">
+                                <i>1</i>Claims 
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    BuildTwin offers insights into additional work resulting from revisions and change requests 
+                                    from clients, and equips you with an automated assistant to claim extra work. Save time 
+                                    and money by letting AI identify, compose, and document claims at your fingertips.
+                                </p>
+                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                            </div>
+
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(11)"
+                            [ngClass]="{'active':activeState2 === 11}">
+                            <div class="flex-center">
+                                <i>2</i>Unaccounted hours
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    Timesheets are effective when submitted accurately. BuildTwin cross-checks timesheets with 
+                                    activities, creating a comprehensive understanding of the time budget for projects, training, and 
+                                    more.
+                                </p>
+                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                            </div>
+
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(12)"
+                            [ngClass]="{'active':activeState2 === 12}">
+                            <div class="flex-center">
+                                <i>3</i>Automatisation
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    Get deep understanding where to apply automatisation in your engineering projects and use trends to develop 
+                                    your automatisation strategy.
+                                </p>
+                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                            </div>
+
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(13)"
+                            [ngClass]="{'active':activeState2 === 13}">
+                            <div class="flex-center">
+                                <i>4</i> Automated Feedback & Incentives
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    BuildTwin provides a one-of-a-kind Feedback system. Your team gets instant feedback on the performance, where to 
+                                    improve and how to continuously meet business objectives. Develop bonus schemes which bridge the gap between 
+                                    constantly raising salaries and business objectives in the most aligned way.
+                                </p>
+                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabRIght">
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">
+                        <img src="assets/images/ui/service1.png" alt="" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 11">
+                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 12">
+                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 13">
+                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</app-buildtwin-services>
+
+<!-- Digital Self Management -->
+<app-task-management-business-intelligence></app-task-management-business-intelligence>
+
+
+<!-- trusted by marketplace -->
+<app-om-partners></app-om-partners>
+
+
+
+
+
+<br>
+
+
+
+
+
+
+<div class="banner-area position-relative z-1">
+    <div class="container">
+        <app-three-col-market>
+            <div class="cdeSection_wrap">
+                <h2>3 good reasons to subscribe TODAY</h2>
+              
+          <div class="cdeSection">
+            <div class="cde_col">
+              <div class="headPart">
+              <h2>Business Intelligence</h2>
+              <span>Gain Business Insights</span>
+            </div>
+              <img src="assets/images/email1.png">
+            
+              <p>Let AI Draft, track and process your Inbox, 
+                while you focus on what matters</p>
+                <i class="icon1">
+                  <svg width="32" height="228" viewBox="0 0 32 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 1V1C23.1634 1 16 8.16345 16 17V211C16 219.837 8.83656 227 0 227V227" stroke="#886DE0" stroke-dasharray="2"/>
+                    <path d="M8 89L16 99L24 89" stroke="#A692E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                </i>
+            </div>
+            <div class="cde_col">
+              <div class="headPart">
+              <h2>Claims</h2>
+              <span>Unlock missed earnings</span>
+              </div>
+              <img src="assets/images/email2.png">
+              <p>Save  files locally - and done. From re-naming, QC to uploading to third-party CDE. BuildTwin takes care of it.</p>
+              <i class="icon1">
+                <svg width="32" height="228" viewBox="0 0 32 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M-7.3346e-07 1V1C8.83655 1 16 8.16345 16 17V211C16 219.837 23.1634 227 32 227V227" stroke="#886DE0" stroke-dasharray="2"/>
+                  <path d="M24 89L16 99L8 89" stroke="#A692E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+              </i>
+            </div>
+      
+            <div class="cde_col">
+              <div class="headPart">
+              <h2>Benchmark </h2>
+              <span>Understand how to improve</span>
+              </div>
+              <img src="assets/images/email3.png">
+              <p>A new revision or an unanswered technical question - BuildTwin keeps track of what happens with the right 360° context</p>
+            </div>
+          </div>
+</div>
+        </app-three-col-market>
+      
+    </div>
+</div>
+
+
+<app-hd-footer></app-hd-footer>

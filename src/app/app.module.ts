@@ -32,205 +32,227 @@ import { LightgalleryModule } from 'lightgallery/angular';
 
 
 import { HttpClientModule } from '@angular/common/http';
-import { ThreeColMarketComponent } from './components/three-col-market/three-col-market.component';
-import { AiDrivenServicesComponent } from './components/ai-driven-services/ai-driven-services.component';
-import { HowBuildtwinHelpsComponent } from './components/how-buildtwin-helps/how-buildtwin-helps.component';
-import { TraningReviewComponent } from './components/traning-review/traning-review.component';
-import { HowProcessComponent } from './components/how-process/how-process.component';
-import { BuildtwinServicesComponent } from './components/buildtwin-services/buildtwin-services.component';
-import { AboutLorenzComponent } from './components/about-lorenz/about-lorenz.component';
-import { SucessStoryComponent } from './components/sucess-story/sucess-story.component';
-import { TraningCompanyComponent } from './components/traning-company/traning-company.component';
-import { GlobalCompanyComponent } from './components/global-company/global-company.component';
-import { ThreeColTraneeComponent } from './components/three-col-tranee/three-col-tranee.component';
-import { EventsProgramComponent } from './components/events-program/events-program.component';
-import { CourseDemoComponent } from './components/course-demo/course-demo.component';
-import { DifferentCountryComponent } from './components/different-country/different-country.component';
-import { PriceCoPilotComponent } from './components/price-co-pilot/price-co-pilot.component';
-import { PriceMonthlyComponent } from './components/price-monthly/price-monthly.component';
-import { PriceBasicComponent } from './components/price-basic/price-basic.component';
-import { ProvideServiceComponent } from './components/provide-service/provide-service.component';
-import { OmBannerFreelance2Component } from './components/provide-service/om-banner-freelance2/om-banner-freelance2.component';
-import { CountryDetailsComponent } from './components/country-details/country-details.component';
-import { ServiceProvideComponent } from './components/service-provide/service-provide.component';
-import { OpenMarketTabListComponent } from './components/open-market-tab-list/open-market-tab-list.component';
-import { ExperenceComponent } from './components/experence/experence.component';
-import { QualifiedComponent } from './components/qualified/qualified.component';
-import { MarketPlaceComponent } from './components/market-place/market-place.component';
-import { GetStarted1Component } from './components/get-started1/get-started1.component';
-import { DataSafetyComponent } from './components/data-safety/data-safety.component';
-import { VenderDetailsComponent } from './components/vender-details/vender-details.component';
-import { VenderBannerComponent } from './components/vender-banner/vender-banner.component';
-import { LatestUpdateComponent } from './components/latest-update/latest-update.component';
-import { AccreditationComponent } from './components/accreditation/accreditation.component';
-import { FeatureProjectComponent } from './components/feature-project/feature-project.component';
-import { CapabilityComponent } from './components/capability/capability.component';
-import { AbountJfComponent } from './components/abount-jf/abount-jf.component';
-import { SignupComponentComponent } from './components/signup-component/signup-component.component';
-import { SimpleRowComponent } from './components/simple-row/simple-row.component';
-import { EngineersComponent } from './components/engineers/engineers.component';
-import { HereSectionComponent } from './components/here-section/here-section.component';
-import { DataPrivacyComponent } from './components/data-privacy/data-safety.component';
-import { ComingSoonComponent } from './components/coming-soon/coming-soon.component';
-import { SocialWallComponent } from './components/social-wall/social-wall.component';
-import { HdFooterComponent } from './common/hd-footer/hd-footer.component';
-import { HdNavbarComponent } from './common/hd-navbar/hd-navbar.component';
-import { EmFaqComponent } from './common/em-faq/em-faq.component';
-import { VideoPopupComponent } from './common/video-popup/video-popup.component';
-import { HelpDeskHomeComponent } from './components/help-desk-home/help-desk-home.component';
-import { HdBannerComponent } from './components/help-desk-home/hd-banner/hd-banner.component';
-import { HappierCustomersComponent } from './components/happier-customers/happier-customers.component';
-import { HdIntegrationsComponent } from './components/hd-integrations/hd-integrations.component';
-import { HdAboutComponent } from './components/hd-about/hd-about.component';
-import { HdTestimonialsComponent } from './components/hd-testimonials/hd-testimonials.component';
-import { OnlineMeetingHomeComponent } from './components/online-meeting-home/online-meeting-home.component';
-import { OmBannerComponent } from './components/online-meeting-home/om-banner/om-banner.component';
-import { OmIntegrationsComponent } from './components/om-integrations/om-integrations.component';
-import { EmTestimonialsComponent } from './components/em-testimonials/em-testimonials.component';
-import { OmWhyChooseUsComponent } from './components/om-why-choose-us/om-why-choose-us.component';
-import { OmPartnersComponent } from './components/om-partners/om-partners.component';
-import { HdFaqComponent } from './components/hd-faq/hd-faq.component';
-import { OnlineMeetingHomeFreelanceComponent } from './components/online-meeting-home-freelance/online-meeting-home-freelance.component';
-import { OmBannerFreelanceComponent } from './components/online-meeting-home-freelance/om-banner-freelance/om-banner-freelance.component';
-import { OmAboutComponent } from './components/om-about/om-about.component';
-import { OmIntegrationsFreelanceComponent } from './components/om-integrations-freelance/om-integrations-freelance.component';
-import { TaskManagementBusinessIntelligenceComponent } from './components/task-management-business-intelligence/task-management-business-intelligence.component';
-import { TimeTrackingHomeComponent } from './components/time-tracking-home/time-tracking-home.component';
-import { TtBannerComponent } from './components/time-tracking-home/tt-banner/tt-banner.component';
-import { TtTestimonialsComponent } from './components/tt-testimonials/tt-testimonials.component';
-import { TtServicesComponent } from './components/tt-services/tt-services.component';
-import { SocialsMediaInfoComponent } from './components/socials-media-info/socials-media-info.component';
-import { TaskManagementComponent } from './components/task-management/task-management.component';
-import { TtAboutComponent } from './components/tt-about/tt-about.component';
-import { TtIntegrationsComponent } from './components/tt-integrations/tt-integrations.component';
-import { TtPartnersComponent } from './components/tt-partners/tt-partners.component';
-import { CtaComponent } from './components/cta/cta.component';
-import { TtFaqComponent } from './components/tt-faq/tt-faq.component';
-import { ElearningBannerComponent } from './components/elearning-school/elearning-banner/elearning-banner.component';
-import { ElearningSchoolComponent } from './components/elearning-school/elearning-school.component';
-import { ElearningAboutComponent } from './components/elearning-school/elearning-about/elearning-about.component';
-import { CoursesComponent } from './components/courses/courses.component';
-import { PremiumAccessComponent } from './components/premium-access/premium-access.component';
-import { FaqPageTrainingComponent } from './components/faq-page-training/faq-page.component';
-import { EmFaqTrainingComponent } from './components/faqs-training/em-faq/em-faq.component';
-import { EventsComponent } from './components/events/events.component';
-import { SubscribeComponent } from './components/subscribe/subscribe.component';
-import { PricingPageComponent } from './components/pricing-page/pricing-page.component';
-import { HdPricingComponent } from './components/hd-pricing/hd-pricing.component';
-import { EmailMarketingHomeComponent } from './components/email-marketing-home/email-marketing-home.component';
-import { EmPartnersComponent } from './components/em-partners/em-partners.component';
-import { BlogPageComponent } from './components/blog-page/blog-page.component';
-import { FaqPageComponent } from './components/faq-page/faq-page.component';
-import { IntegrationsPageComponent } from './components/integrations-page/integrations-page.component';
-import { ContactPageComponent } from './components/contact-page/contact-page.component';
-import { AboutPageComponent } from './components/about-page/about-page.component';
-import { EmWhyChooseUsComponent } from './components/em-why-choose-us/em-why-choose-us.component';
-import { EmFunfactsComponent } from './components/em-funfacts/em-funfacts.component';
-import { CoursesDetailsStyleOneComponent } from './components/courses-details-style-one/courses-details-style-one.component';
+import { HelpDeskHomeComponent } from './pages/Home/help-desk-home/help-desk-home.component';
+import { HdNavbarComponent } from './pages/includes/hd-navbar/hd-navbar.component';
+import { HdFooterComponent } from './pages/includes/hd-footer/hd-footer.component';
+
+import { ThreeColMarketComponent } from './pages/includes/three-col-market/three-col-market.component';
+import { HdBannerComponent } from './pages/Home/hd-banner/hd-banner.component';
+import { HappierCustomersComponent } from './pages/Home/happier-customers/happier-customers.component';
+import { HdIntegrationsComponent } from './pages/includes/hd-integrations/hd-integrations.component';
+import { HowProcessComponent } from './pages/Home/how-process/how-process.component';
+import { HdAboutComponent } from './pages/Home/hd-about/hd-about.component';
+import { AiDrivenServicesComponent } from './pages/Home/ai-driven-services/ai-driven-services.component';
+import { DifferentCountryComponent } from './pages/includes/different-country/different-country.component';
+import { HdTestimonialsComponent } from './pages/Home/hd-testimonials/hd-testimonials.component';
+import { OnlineMeetingHomeComponent } from './pages/co-pilot-for/co-pilot/online-meeting-home/online-meeting-home.component';
+import { OmBannerComponent } from './pages/co-pilot-for/co-pilot/om-banner/om-banner.component';
+import { VideoPopupComponent } from './pages/includes/video-popup/video-popup.component';
+import { HowBuildtwinHelpsComponent } from './pages/includes/how-buildtwin-helps/how-buildtwin-helps.component';
+import { OmIntegrationsComponent } from './pages/co-pilot-for/co-pilot/om-integrations/om-integrations.component';
+import { SignupComponentComponent } from './pages/co-pilot-for/co-pilot/signup-component/signup-component.component';
+import { EmTestimonialsComponent } from './pages/includes/em-testimonials/em-testimonials.component';
+import { BuildtwinServicesComponent } from './pages/includes/buildtwin-services/buildtwin-services.component';
+import { OmWhyChooseUsComponent } from './pages/co-pilot-for/co-pilot/om-why-choose-us/om-why-choose-us.component';
+import { OmPartnersComponent } from './pages/includes/om-partners/om-partners.component';
+import { HdFaqComponent } from './pages/co-pilot-for/co-pilot/hd-faq/hd-faq.component';
+import { OnlineMeetingHomeFreelanceComponent } from './pages/co-pilot-for/digital-self-management/online-meeting-home-freelance/online-meeting-home-freelance.component';
+import { OmBannerFreelanceComponent } from './pages/co-pilot-for/digital-self-management/om-banner-freelance/om-banner-freelance.component';
+import { OmAboutComponent } from './pages/co-pilot-for/digital-self-management/om-about/om-about.component';
+import { OmIntegrationsFreelanceComponent } from './pages/co-pilot-for/digital-self-management/om-integrations-freelance/om-integrations-freelance.component';
+import { TaskManagementBusinessIntelligenceComponent } from './pages/co-pilot-for/digital-self-management/task-management-business-intelligence/task-management-business-intelligence.component';
+import { ProvideServiceComponent } from './pages/marketplace/provide-service/provide-service.component';
+import { OmBannerFreelance2Component } from './pages/marketplace/provide-service/om-banner-freelance2/om-banner-freelance2.component';
+import { ExperenceComponent } from './pages/marketplace/provide-service/experence/experence.component';
+import { OpenMarketTabListComponent } from './pages/marketplace/provide-service/open-market-tab-list/open-market-tab-list.component';
+import { CountryDetailsComponent } from './pages/marketplace/provide-service/country-details/country-details.component';
+import { ServiceProvideComponent } from './pages/marketplace/provide-service/service-provide/service-provide.component';
+import { QualifiedComponent } from './pages/marketplace/provide-service/qualified/qualified.component';
+import { MarketPlaceComponent } from './pages/marketplace/provide-service/market-place/market-place.component';
+import { GetStarted1Component } from './pages/includes/get-started1/get-started1.component';
+import { EmFaqComponent } from './pages/includes/em-faq/em-faq.component';
+import { TimeTrackingHomeComponent } from './pages/marketplace/marketPlace/time-tracking-home/time-tracking-home.component';
+import { TtBannerComponent } from './pages/marketplace/marketPlace/tt-banner/tt-banner.component';
+import { TtTestimonialsComponent } from './pages/marketplace/marketPlace/tt-testimonials/tt-testimonials.component';
+import { TtServicesComponent } from './pages/marketplace/marketPlace/tt-services/tt-services.component';
+import { SocialsMediaInfoComponent } from './pages/marketplace/marketPlace/socials-media-info/socials-media-info.component';
+import { TaskManagementComponent } from './pages/marketplace/marketPlace/task-management/task-management.component';
+import { TtAboutComponent } from './pages/marketplace/marketPlace/tt-about/tt-about.component';
+import { TtIntegrationsComponent } from './pages/marketplace/marketPlace/tt-integrations/tt-integrations.component';
+import { TtPartnersComponent } from './pages/marketplace/marketPlace/tt-partners/tt-partners.component';
+import { CtaComponent } from './pages/includes/cta/cta.component';
+import { TtFaqComponent } from './pages/marketplace/marketPlace/tt-faq/tt-faq.component';
+import { ElearningSchoolComponent } from './pages/training/training/elearning-school/elearning-school.component';
+import { ElearningBannerComponent } from './pages/training/training/elearning-banner/elearning-banner.component';
+import { ElearningAboutComponent } from './pages/training/training/elearning-about/elearning-about.component';
+import { ThreeColTraneeComponent } from './pages/training/training/three-col-tranee/three-col-tranee.component';
+import { CoursesComponent } from './pages/training/training/courses/courses.component';
+import { GlobalCompanyComponent } from './pages/training/training/global-company/global-company.component';
+import { TraningCompanyComponent } from './pages/training/training/traning-company/traning-company.component';
+import { PremiumAccessComponent } from './pages/training/training/premium-access/premium-access.component';
+import { EventsComponent } from './pages/training/events/events/events.component';
+import { EventsProgramComponent } from './pages/training/events/events/events-program/events-program.component';
+import { SubscribeComponent } from './pages/training/events/events/subscribe/subscribe.component';
+import { FaqPageTrainingComponent } from './pages/training/faq/faq-page-training/faq-page.component';
+import { EmFaqTrainingComponent } from './pages/training/faq/faqs-training/em-faq/em-faq.component';
+import { PricingPageComponent } from './pages/price/pricing-page/pricing-page.component';
+import { HdPricingComponent } from './pages/price/hd-pricing/hd-pricing.component';
+import { PriceBasicComponent } from './pages/price/price-basic/price-basic.component';
+import { PriceCoPilotComponent } from './pages/price/price-co-pilot/price-co-pilot.component';
+import { PriceMonthlyComponent } from './pages/price/price-monthly/price-monthly.component';
+import { EmailMarketingHomeComponent } from './pages/whybuildtwin/why-buildtwin/email-marketing-home/email-marketing-home.component';
+import { HereSectionComponent } from './pages/whybuildtwin/why-buildtwin/here-section/here-section.component';
+import { EmPartnersComponent } from './pages/whybuildtwin/why-buildtwin/em-partners/em-partners.component';
+import { BlogPageComponent } from './pages/whybuildtwin/customer-sucess/blog-page/blog-page.component';
+import { FaqPageComponent } from './pages/whybuildtwin/faq/faq-page/faq-page.component';
+import { DataSafetyComponent } from './pages/whybuildtwin/data-safety/data-safety.component';
+import { IntegrationsPageComponent } from './pages/whybuildtwin/integrations-page/integrations-page.component';
+import { ContactPageComponent } from './pages/whybuildtwin/contact-page/contact-page.component';
+import { AboutPageComponent } from './pages/whybuildtwin/about-page/about-page.component';
+import { AboutLorenzComponent } from './pages/whybuildtwin/about-page/about-lorenz/about-lorenz.component';
+import { EmWhyChooseUsComponent } from './pages/whybuildtwin/about-page/em-why-choose-us/em-why-choose-us.component';
+import { EmFunfactsComponent } from './pages/whybuildtwin/about-page/em-funfacts/em-funfacts.component';
+import { TraningReviewComponent } from './pages/whybuildtwin/about-page/traning-review/traning-review.component';
+import { VenderDetailsComponent } from './pages/vender/vender-details/vender-details.component';
+import { VenderBannerComponent } from './pages/vender/vender-banner/vender-banner.component';
+import { AbountJfComponent } from './pages/vender/abount-jf/abount-jf.component';
+import { CapabilityComponent } from './pages/vender/capability/capability.component';
+import { EngineersComponent } from './pages/vender/engineers/engineers.component';
+import { FeatureProjectComponent } from './pages/vender/feature-project/feature-project.component';
+import { SimpleRowComponent } from './pages/vender/simple-row/simple-row.component';
+import { SocialWallComponent } from './pages/vender/social-wall/social-wall.component';
+import { CoursesDetailsStyleOneComponent } from './pages/training/training/sub-page/courses-details-style-one/courses-details-style-one.component';
+import { CourseDemoComponent } from './pages/training/training/sub-page/course-demo/course-demo.component';
+import { DataPrivacyComponent } from './pages/data-privacy/data-safety.component';
+import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
+import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
+import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
    
 
-
-   
-    ThreeColMarketComponent,
-    AiDrivenServicesComponent,
-    HowBuildtwinHelpsComponent,
-    TraningReviewComponent,
-    HowProcessComponent,
-    BuildtwinServicesComponent,
-    AboutLorenzComponent,
-    SucessStoryComponent,
-    TraningCompanyComponent,
-    GlobalCompanyComponent,
-    ThreeColTraneeComponent,
-    EventsProgramComponent,
-    CourseDemoComponent,
-    DifferentCountryComponent,
-    PriceBasicComponent,
-    PriceMonthlyComponent,
-    PriceCoPilotComponent,
-    ProvideServiceComponent,
-    OmBannerFreelance2Component,
-    CountryDetailsComponent,
-    ServiceProvideComponent,
-    OpenMarketTabListComponent,
-    ExperenceComponent,
-    QualifiedComponent,
-    MarketPlaceComponent,
-    GetStarted1Component,
-    VenderDetailsComponent,
-    DataSafetyComponent,
-    VenderBannerComponent,
-    LatestUpdateComponent,
-    AccreditationComponent,
-    FeatureProjectComponent,
-    CapabilityComponent,
-    AbountJfComponent,
-    SignupComponentComponent,
-    SimpleRowComponent,
-    EngineersComponent,
-    HereSectionComponent,
-    DataPrivacyComponent,
-    ComingSoonComponent,
-    SocialWallComponent,
-    HdFooterComponent,
     HdNavbarComponent,
-    EmFaqComponent,
-    VideoPopupComponent,
-    HelpDeskHomeComponent,
-    HdBannerComponent,
-    HappierCustomersComponent,
+    HdFooterComponent,
+    ThreeColMarketComponent,
     HdIntegrationsComponent,
-    HdAboutComponent,
-    HdTestimonialsComponent,
-    OnlineMeetingHomeComponent,
-    OmBannerComponent,
-    OmIntegrationsComponent,
+    DifferentCountryComponent,
+    VideoPopupComponent,
+    HowBuildtwinHelpsComponent,
     EmTestimonialsComponent,
-    OmWhyChooseUsComponent,
+    BuildtwinServicesComponent,
     OmPartnersComponent,
-    HdFaqComponent,
-    OnlineMeetingHomeFreelanceComponent,
-    OmBannerFreelanceComponent,
-    OmAboutComponent,
-    OmIntegrationsFreelanceComponent,
-    TaskManagementBusinessIntelligenceComponent,
-    TimeTrackingHomeComponent,
-    TtBannerComponent,
-    TtTestimonialsComponent,
-    TtServicesComponent,
-    SocialsMediaInfoComponent,
-    TaskManagementComponent,
-    TtAboutComponent,
-    TtIntegrationsComponent,
-    TtPartnersComponent,
+    GetStarted1Component,
+    EmFaqComponent,
     CtaComponent,
-    TtFaqComponent,
-    ElearningBannerComponent,
-    ElearningSchoolComponent,
-    ElearningAboutComponent,
-    CoursesComponent,
-    PremiumAccessComponent,
-    FaqPageTrainingComponent,
-    EmFaqTrainingComponent,
-    EventsComponent,
-    SubscribeComponent,
-    PricingPageComponent,
-    HdPricingComponent,
-    EmailMarketingHomeComponent,
-    EmPartnersComponent,
-    BlogPageComponent,
-    FaqPageComponent,
-    IntegrationsPageComponent,
-    ContactPageComponent,
-    AboutPageComponent,
-    EmWhyChooseUsComponent,
-    EmFunfactsComponent,
-    CoursesDetailsStyleOneComponent
+        // pages
+    AppComponent,
+   HelpDeskHomeComponent,
+   HdBannerComponent,
+   HappierCustomersComponent,
+   HowProcessComponent,
+   HdAboutComponent,
+   AiDrivenServicesComponent,
+   HdTestimonialsComponent,
+
+   OnlineMeetingHomeComponent,
+   OmBannerComponent,
+   OmIntegrationsComponent,
+   SignupComponentComponent,
+   OmWhyChooseUsComponent,
+   HdFaqComponent,
+
+
+   OnlineMeetingHomeFreelanceComponent,
+   OmBannerFreelanceComponent,
+   OmAboutComponent,
+   OmIntegrationsFreelanceComponent,
+   TaskManagementBusinessIntelligenceComponent,
+
+   ProvideServiceComponent,
+   OmBannerFreelance2Component,
+   ExperenceComponent,
+   OpenMarketTabListComponent,
+   CountryDetailsComponent,
+   ServiceProvideComponent,
+   QualifiedComponent,
+   MarketPlaceComponent,
+
+
+   TimeTrackingHomeComponent,
+   TtBannerComponent,
+   TtTestimonialsComponent,
+   TtServicesComponent,
+   SocialsMediaInfoComponent,
+   TaskManagementComponent,
+   TtAboutComponent,
+   TtIntegrationsComponent,
+   TtPartnersComponent,
+   TtFaqComponent,
+
+
+   ElearningSchoolComponent,
+   ElearningBannerComponent,
+   ElearningAboutComponent,
+   ThreeColTraneeComponent,
+   CoursesComponent,
+   GlobalCompanyComponent,
+   TraningCompanyComponent,
+   PremiumAccessComponent,
+
+
+   EventsComponent,
+   EventsProgramComponent,
+   SubscribeComponent,
+
+   FaqPageTrainingComponent,
+   EmFaqTrainingComponent,
+
+   PricingPageComponent,
+   HdPricingComponent,
+   PriceBasicComponent,
+   PriceCoPilotComponent,
+   PriceMonthlyComponent,
+
+
+   EmailMarketingHomeComponent,
+   HereSectionComponent,
+   EmPartnersComponent,
+
+
+   BlogPageComponent,
+   FaqPageComponent,
+   DataSafetyComponent,
+   IntegrationsPageComponent,
+   ContactPageComponent,
+
+   AboutPageComponent,
+   AboutLorenzComponent,
+   EmWhyChooseUsComponent,
+   EmFunfactsComponent,
+   TraningReviewComponent,
+
+   VenderDetailsComponent,
+   VenderBannerComponent,
+   AbountJfComponent,
+   CapabilityComponent,
+   EngineersComponent,
+   FeatureProjectComponent,
+   SimpleRowComponent,
+   SocialWallComponent,
+   CoursesDetailsStyleOneComponent,
+   CourseDemoComponent,
+   DataPrivacyComponent,
+   
+   PrivacyPolicyPageComponent,
+   TermsConditionsPageComponent,
+   ComingSoonComponent
+
+
+   
+    
   ],
   imports: [
     BrowserModule,
