@@ -1,4 +1,4 @@
-import { Component, HostListener ,AfterViewInit} from '@angular/core';
+import { Component, HostListener ,AfterViewInit, ViewChild, ElementRef, ViewChildren, QueryList} from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { GlobalService } from 'src/app/services/GlobalService';
@@ -18,7 +18,11 @@ export class EmailMarketingHomeComponent  implements AfterViewInit  {
     fixedElement: any
   
 
-  
+
+    isHeaderSticky: boolean[] = [];
+
+    @ViewChildren('headerElement') headerElements!: QueryList<ElementRef<HTMLTableHeaderCellElement>>;
+
     title = 'BuildTwin - good reasons';
  
     constructor(private titleService:Title,private globalService: GlobalService,private router: Router,private route: ActivatedRoute) {
@@ -43,7 +47,10 @@ export class EmailMarketingHomeComponent  implements AfterViewInit  {
 
     ngOnInit() {
         this.titleService.setTitle(this.title);
-    }
+        // this.isHeaderSticky = new Array(this.headerElements.length).fill(false);
+
+      }
+     
     @HostListener('window:scroll', ['$event'])
     handleScroll(event: any) {
       this.FixedDiv = document.getElementById('scrollActivated');
@@ -101,4 +108,20 @@ export class EmailMarketingHomeComponent  implements AfterViewInit  {
         });
   }
 
+
+//   @HostListener('window:scroll', [])
+//   onWindowScroll() {
+//       const scrollPosition = window.scrollY;
+
+//       this.headerElements.forEach((header, index) => {
+//           const headerTop = header.nativeElement.getBoundingClientRect().top;
+// console.log(headerTop,scrollPosition);
+
+//           if (headerTop >= scrollPosition) {
+//               this.isHeaderSticky[index] = true;
+//           } else {
+//               this.isHeaderSticky[index] = false;
+//           }
+//       });
+//   }
 }
