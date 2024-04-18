@@ -1,0 +1,115 @@
+import { Component, HostListener ,AfterViewInit, ViewChild, ElementRef, ViewChildren, QueryList} from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+import { GlobalService } from 'src/app/services/GlobalService';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+    selector: 'app-email-marketing-home',
+    templateUrl: './email-marketing-home.component.html',
+    styleUrls: ['./email-marketing-home.component.scss']
+})
+export class EmailMarketingHomeComponent  implements AfterViewInit  {
+    activeState: number = 1
+    FixedDiv: any
+    scrollActivated: any
+    scrollDivOffsettop: any
+    scrolledDivHeight: any
+    fixedElement: any
+  
+
+
+element:any
+
+ 
+
+    title = 'BuildTwin - good reasons';
+ 
+    constructor(private titleService:Title,private globalService: GlobalService,private router: Router,private route: ActivatedRoute) {
+
+
+      router.events.subscribe((val) => {
+        this.scrollActivated = document.getElementById('scrollActivated');
+        setTimeout(() => {
+          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          
+        }, 2000);
+    });
+    }
+    
+
+  getGlobalValue(): string {
+    return this.globalService.getGlobalValue();
+  }
+
+
+    ngOnInit() {
+        this.titleService.setTitle(this.title);
+        // this.isHeaderSticky = new Array(this.headerElements.length).fill(false);
+  this.element = document.getElementsByClassName('tableheader')
+
+        
+      }
+     
+    @HostListener('window:scroll', ['$event'])
+    handleScroll(event: any) {
+      this.FixedDiv = document.getElementById('scrollActivated');
+      this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
+      let topscroll = this.scrollDivOffsettop - this.FixedDiv
+      let winH = window.innerHeight
+      let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
+      this.fixedElement = document.getElementById('scrollActivated');
+  
+      // inside active 
+      if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
+        this.fixedElement.classList.add("fixedData")
+        let activeELe = document.querySelectorAll('[data-ele]');
+        activeELe.forEach((item, index) => {
+          if (item.getBoundingClientRect().top < 400) {
+            this.activeState = index + 1;
+            item.classList.add("active")
+          }
+          else {
+            item.classList.remove("active")
+          }
+  
+        })
+  
+      }
+      else {
+        this.fixedElement.classList.remove("fixedData")
+  
+      }
+    }
+  
+    scrollToSection(sectionId: string) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+          const offsetTop = section.getBoundingClientRect().top;
+          const desiredOffset = offsetTop - 390; 
+          window.scrollBy(0, desiredOffset);
+        }, 100); 
+      }
+    }
+
+
+    ngAfterViewInit() {
+      this.route.fragment.subscribe(fragment => {
+          if (fragment) {
+            setTimeout(() => {
+              const element = document.getElementById(fragment);
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 2000); 
+          }
+        });
+  }
+
+
+ 
+}
