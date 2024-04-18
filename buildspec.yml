@@ -11,24 +11,53 @@ env:
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 18
-  pre_build:
     commands:
-      # - cd blin
-      - echo install process started
-      - echo installing dependencies...
-      - npm install -g @angular/cli
-      - npm install
+      - echo "Updating and upgrading system packages..."
+      - sudo apt-get update
+      - sudo apt-get upgrade -y
+      
+      # Clean up unnecessary packages and fix broken installs
+      - echo "Cleaning up unnecessary packages and fixing broken installs..."
+      - sudo apt-get autoremove -y
+      - sudo apt-get autoclean
+      - sudo apt-get -f install
+      
+      # Remove previous Node and npm to avoid conflicts
+      - echo "Removing any existing Node.js and npm installations..."
+      - sudo rm -rf /usr/local/bin/node
+      - sudo rm -rf /usr/local/bin/npm
+      
+      # Install Node.js from NodeSource
+      - echo "Installing Node.js from NodeSource..."
+      - curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+      - sudo apt-get install -y nodejs
+      
+      # Check if npm is installed, otherwise install it
+      - echo "Checking for npm installation..."
+      # - if ! command -v npm &>/dev/null; then sudo apt-get install -y npm; fi
+      
+      # Verify installations
+      - echo "Verifying Node.js and npm versions..."
+      - node --version
+      - npm --version
+      - which npm
+      - which node
+      
+      # Clean up existing npm dependencies if any
+      - echo "Cleaning package lock files..."
+      - rm -rf package-lock.json
+
+       # Clean npm cache and install project dependencies
+       - echo "Cleaning npm cache and installing project dependencies..."
+       - npm cache clean --force
+       - export NODE_OPTIONS=--max-old-space-size=6144
+       - npm install --force
 
   build:
     commands:
        - echo testing...
        - ng build --configuration production --build-optimizer --aot
        - ls
-       - pwd
-       - ls
-       - pwd
        
   post_build:
     commands:
