@@ -48,20 +48,20 @@ phases:
       - rm -rf package-lock.json
 
        # Clean npm cache and install project dependencies
-       - echo "Cleaning npm cache and installing project dependencies..."
-       - npm cache clean --force
-       - export NODE_OPTIONS=--max-old-space-size=6144
-       - npm install --force
+      - echo "Cleaning npm cache and installing project dependencies..."
+      - npm cache clean --force
+      - export NODE_OPTIONS=--max-old-space-size=6144
+      - npm install --force
 
   build:
     commands:
-       - echo testing...
-       - ng build --configuration production --build-optimizer --aot
-       - ls
+      - echo testing...
+      - ng build --configuration production --build-optimizer --aot
+      - ls
        
   post_build:
     commands:
-       - aws configure set aws_access_key_id $AOA_ACCESS_KEY
-       - aws configure set aws_secret_access_key $AOA_SECRET_KEY
-       - aws s3 sync dist/ s3://$S3_BUCKET_BUILDTWIN/ --region eu-central-1 --acl public-read --exclude 'get-started/*'
-       - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
+      - aws configure set aws_access_key_id $AOA_ACCESS_KEY
+      - aws configure set aws_secret_access_key $AOA_SECRET_KEY
+      - aws s3 sync dist/ s3://$S3_BUCKET_BUILDTWIN/ --region eu-central-1 --acl public-read --exclude 'get-started/*'
+      - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
