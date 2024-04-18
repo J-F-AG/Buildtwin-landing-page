@@ -19,9 +19,9 @@ export class EmailMarketingHomeComponent  implements AfterViewInit  {
   
 
 
-    isHeaderSticky: boolean[] = [];
+element:any
 
-    @ViewChildren('headerElement') headerElements!: QueryList<ElementRef<HTMLTableHeaderCellElement>>;
+ 
 
     title = 'BuildTwin - good reasons';
  
@@ -48,7 +48,9 @@ export class EmailMarketingHomeComponent  implements AfterViewInit  {
     ngOnInit() {
         this.titleService.setTitle(this.title);
         // this.isHeaderSticky = new Array(this.headerElements.length).fill(false);
+  this.element = document.getElementsByClassName('tableheader')
 
+        
       }
      
     @HostListener('window:scroll', ['$event'])
@@ -109,19 +111,5 @@ export class EmailMarketingHomeComponent  implements AfterViewInit  {
   }
 
 
-//   @HostListener('window:scroll', [])
-//   onWindowScroll() {
-//       const scrollPosition = window.scrollY;
-
-//       this.headerElements.forEach((header, index) => {
-//           const headerTop = header.nativeElement.getBoundingClientRect().top;
-// console.log(headerTop,scrollPosition);
-
-//           if (headerTop >= scrollPosition) {
-//               this.isHeaderSticky[index] = true;
-//           } else {
-//               this.isHeaderSticky[index] = false;
-//           }
-//       });
-//   }
+ 
 }
