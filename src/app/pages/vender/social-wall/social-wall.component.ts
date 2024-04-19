@@ -11,7 +11,7 @@ declare var $: any;
 export class SocialWallComponent implements OnInit {
   ytsrc: any;
   ytVideoUrl = [
-    { selector: "1", url: "https://www.youtube.com/embed/kuCuP5nyQmY?rel=0" },
+    { selector: "1", url: "https://www.youtube.com/embed/piyN9mbjsho?si=REyW8Om9TMRTOJkE" },
     { selector: "2", url: "https://www.youtube.com/embed/qQUHrqyM-F0?rel=0" },
     { selector: "3", url: "https://www.youtube.com/embed/hduf4OgGKpY?rel=0" },
     { selector: "4", url: "https://www.youtube.com/embed/gtKAlvARYU0?rel=0" },
