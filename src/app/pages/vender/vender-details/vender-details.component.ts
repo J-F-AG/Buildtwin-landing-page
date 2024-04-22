@@ -30,16 +30,7 @@ export class VenderDetailsComponent {
       expertTitle: "<span>My</span> expertise at J&F",
       expertise: ["Concept development", "Renewable energies", "Lightning protection"]
     },
-    {
-      img: "assets/images/Albert.png",
-      name: "Albert Bituev",
-      title: "B.Sc. <br>Electrical Engineer",
-      des: "„His open and friendly manner helps <br>Albert to find solutions together with <br>all project participants.“",
-      medalInfo: "",
-      cusTitle: "What our customers say …",
-      expertTitle: "<span>My</span> expertise at J&F",
-      expertise: ["Distributions", "Fire safety", "QM"]
-    },
+ 
     {
       img: "assets/images/Saurav.png",
       name: "Saurav Kumar Verma",
@@ -149,11 +140,13 @@ filteredProjects = this.projects;
   reviewsSlides: OwlOptions = {
     items: 6,
 nav: true,
-margin: 0,
+margin: 20,
 dots: false,
 loop: true,
+autoWidth:true,
 autoplay: false,
 autoplayHoverPause: false,
+
 navText: [
   "<i class='ti ti-chevron-left'></i>",
   "<i class='ti ti-chevron-right'></i>",
@@ -168,6 +161,7 @@ aboutSlider: OwlOptions = {
   dots: true,
   loop: true,
   autoplay: true,
+  autoWidth:true,
   autoplayHoverPause: false,
   navText: [
     "<i class='ti ti-chevron-left'></i>",
