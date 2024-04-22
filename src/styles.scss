@@ -997,7 +997,6 @@ img {
         }
         p {
             margin-top: 12px;
-            max-width: 500px;
         }
     }
 
@@ -1198,10 +1197,20 @@ img {
 
 @media (max-width: 1200px){
 h2 {
-    font-size: 20px !important;
+    // font-size: 20px !important;
 }
 .container {
     max-width: 100%;
+    padding: 0 30px;
 }
 
+}
+
+@media (max-width:950px){
+    .container {
+        padding: 0 15px;
+    }
+    p {
+        font-size: 16px;
+    }
 }

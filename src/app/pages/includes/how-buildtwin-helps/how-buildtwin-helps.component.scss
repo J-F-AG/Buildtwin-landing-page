@@ -2,7 +2,7 @@
     margin: 100px 0;
     position: relative;
     .headSection {
-        padding-top: 19px;
+        padding-top: 30px;
         transition: all ease 0.5s;
         padding-bottom: 64px;
 
@@ -317,6 +317,10 @@
     .tabRIght > div{
         margin-right: 10px;
     }
+}
+
+:host ::ng-deep .buildtwinHelps .headSection h2{
+font-size: 30px !important;
 }
 }
 

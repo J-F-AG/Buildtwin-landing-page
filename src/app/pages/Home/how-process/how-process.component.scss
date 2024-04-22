@@ -63,11 +63,27 @@
         }
     }
 }
+@media (max-width:1200px) {
+ :host ::ng-deep  .process .itemWrap .contentWrap {
+        padding: 24px 0px;
+    }
+}
 
+@media (max-width:950px){
+   :host ::ng-deep .process {
+        padding: 63px 15px;
+    }
+
+    :host ::ng-deep .process .flex_item {
+    display: flex;
+    gap: 15px;
+}
+}
 @media (max-width:767px) {
   :host ::ng-deep   .process {
         display: flex;
         padding: 0;
+        margin-bottom: 50px;
 
         .itemWrap .contentWrap strong {
    

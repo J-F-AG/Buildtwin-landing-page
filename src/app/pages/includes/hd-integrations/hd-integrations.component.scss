@@ -78,6 +78,9 @@
     font-family: "tabler-icons";
 }
 
+.integrations-area.ptb-75 {
+    padding-bottom: 0;
+}
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
@@ -121,6 +124,12 @@
 /* Min width 1400px to Max width 1699px */
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {}
 
+
+@media (max-width:950px){
+    .integrations-area-list .owl-stage-outer {
+        margin: 0;
+    }
+}
 @media  (max-width: 767px) {
     .integrations-area-list::before{
         display: none;

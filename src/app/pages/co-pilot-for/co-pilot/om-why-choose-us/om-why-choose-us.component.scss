@@ -214,7 +214,12 @@
 
 
 }
-
+@media (max-width:1200px){
+    :host ::ng-deep .co-pilot-details .why-choose-us-content .flex {
+  
+        flex-direction: column;
+    }
+}
 
 @media (max-width:767px) {
     :host ::ng-deep .co-pilot-details {

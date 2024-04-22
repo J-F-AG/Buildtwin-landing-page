@@ -1428,16 +1428,31 @@ form {
     .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
 
         position: static;
-        margin-left: -15px;
-        background: transparent;
-        width: 100%;
-        box-shadow: none;
-        display: block;
+    margin-left: 0;
+    background: transparent;
+    width: 100%;
+    box-shadow: none;
+    display: block;
+    max-width: 100%;
+    
 
         .flex-column {
             width: 100% !important;
             margin-bottom: 12px;
 
+        }
+        .makrketPlaceMenuInner .flex-row{
+            flex-direction: row !important;
+            gap: 10px;
+
+        }
+        .makrketPlaceMenuInner section.padding-24.background-white.left {
+            background: #F6F3FF;
+            border-radius: 12px 0 0 12px;
+            min-width: 40%;
+        }
+        .makrketPlaceMenuInner section.padding-24.background-white {
+            padding: 11px 25px;
         }
     }
 
@@ -1525,6 +1540,9 @@ form {
     }
 
     .makrketPlaceMenu .flex-column.makrketPlaceMenuInner {
+
+
+
         flex-direction: column !important;
     }
 
@@ -1597,6 +1615,19 @@ form {
     .menu_copilot .font-bold {
         font-size: 16px !important;
     }  
+}
+
+@media (max-width:950px){
+    .navbar-area {
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    .navbar-area .navbar {
+        padding-right: 10px;
+    }
+    .menu_copilot .font-bold {
+        font-size: 13px !important;
+    }
 }
 
 

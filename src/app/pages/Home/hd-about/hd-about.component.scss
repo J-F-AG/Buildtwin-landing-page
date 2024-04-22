@@ -310,6 +310,16 @@
 
 }
 
+
+a.play {
+    display: block;
+    width: 126px;
+    position: absolute;
+    top: 47%;
+    left: 32%;
+}
+
+
 @media (max-width:767px){
     .about-content h2 span {
         font-size: 30px;
@@ -317,11 +327,9 @@
     .about-area.ptb-100{
         padding-bottom: 0;
     }
-}
-a.play {
-    display: block;
-    width: 126px;
-    position: absolute;
-    top: 47%;
-    left: 32%;
+    a.play {
+        width: 54px;
+        top: 41%;
+        left: 32%;
+    }
 }
