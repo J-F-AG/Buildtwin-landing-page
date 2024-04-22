@@ -66,7 +66,7 @@
 
             .owl-item .exp {
                 border-radius: 10px;
-                background: var(--color-green-button, #FFF);
+                background: #f9f9f9;
                 display: flex;
                 width: 170px;
                 padding: 10px 0px;
@@ -177,7 +177,7 @@
 :host ::ng-deep .partnerWrap.vender {
     padding-left: 0;
     box-shadow: none;
-    background: #f9f9f9;
+    background: #fff;
 
     .partner {
         padding: 0;

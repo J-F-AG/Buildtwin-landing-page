@@ -14,12 +14,19 @@ export class SocialWallComponent implements OnInit {
     { selector: "1", url: "https://www.youtube.com/embed/piyN9mbjsho?si=REyW8Om9TMRTOJkE" },
     { selector: "2", url: "https://www.youtube.com/embed/qQUHrqyM-F0?rel=0" },
     { selector: "3", url: "https://www.youtube.com/embed/hduf4OgGKpY?rel=0" },
-    { selector: "4", url: "https://www.youtube.com/embed/gtKAlvARYU0?rel=0" },
-    { selector: "5", url: "https://www.youtube.com/embed/P3sRFhhEEI8?rel=0" },
     { selector: "6", url: "https://www.youtube.com/embed/bwvjxKSt2ao?rel=0" },
-    { selector: "7", url: "https://www.youtube.com/embed/yzWoMDbMdmA?rel=0" },
-    { selector: "8", url: "https://www.youtube.com/embed/KOV2QG0VsEs?rel=0" },
-    { selector: "9", url: "https://www.youtube.com/embed/IpK1USHqMTY?rel=0" }
+    
+
+
+    { selector: "9", url: "https://www.youtube.com/embed/piyN9mbjsho?rel=0" },
+    { selector: "7", url: "https://www.youtube.com/embed/h6EbTOWy_rM?si=foMc0RgYLOBDgDFP" },
+    { selector: "4", url: "https://www.youtube.com/embed/gtKAlvARYU0?rel=0" },
+    { selector: "5", url: "https://www.youtube.com/embed/apdcMxGZCr0?si=eHpD-GR0OxGDjbjJ" },
+    { selector: "8", url: "https://www.youtube.com/embed/RCEz4U-JzaE?si=Q23xLm90Nw_vsJWq" },
+
+
+
+    
 ]
 
   youTubePopup: boolean = false;
