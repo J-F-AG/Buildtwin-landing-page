@@ -190,3 +190,24 @@
         }
     }
 }
+
+@media (max-width:1200px){
+   :host ::ng-deep .basic {
+        width: 100%;
+        gap: 12px;
+
+       .basicLeft .basic-price {
+          
+            min-width: 245px;
+            padding: 12px;
+        }
+   .basicLeft.right .basic-price {
+            padding: 14px 24px;
+            min-width: 222px;
+        }
+  .basicLeft .basic-Details {
+            min-width: 170px;
+            max-width: 206px;
+        }
+    }
+}

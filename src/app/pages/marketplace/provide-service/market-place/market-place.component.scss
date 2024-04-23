@@ -157,3 +157,9 @@
     }
 
 }
+
+@media (max-width:1200px){
+    :host ::ng-deep .marketPlace .container .slide .imgWrap {
+      min-width: 439px;
+  }
+  }

@@ -49,3 +49,10 @@ span{
         }
     }
 }
+
+@media (max-width:1200px){
+    :host ::ng-deep  .planDetails .listCover {
+       flex-wrap: wrap;
+       justify-content: end;
+    }
+}

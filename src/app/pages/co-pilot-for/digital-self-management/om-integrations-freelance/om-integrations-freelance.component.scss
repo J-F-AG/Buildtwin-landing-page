@@ -60,3 +60,22 @@
         }
     }
 }
+
+@media (max-width:1200px){
+    :host ::ng-deep .workflow {
+        padding: 20px;
+
+        .rightPart {
+          
+            width: 61%;
+        }
+        .leftPart {
+            max-width: 342px;
+        }
+        p{
+            br{
+                display: none;
+            }
+        }
+    }
+}

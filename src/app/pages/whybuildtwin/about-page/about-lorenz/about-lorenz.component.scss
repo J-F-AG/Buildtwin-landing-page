@@ -1,7 +1,9 @@
    :host ::ng-deep .aboutLorenze {
-    margin: 54px 0;
+       margin: 54px 0;
+
        .container {
-        max-width: 1296px;
+           max-width: 1296px;
+
            .flex {
                display: flex;
                gap: 80px;
@@ -44,5 +46,27 @@
 
                .imgWrap {}
            }
+       }
+   }
+
+
+   @media(max-width:1200px) {
+       :host ::ng-deep {
+        .aboutLorenze {
+            .container{
+                .flex {
+                    .aboutData {
+                        max-width: 400px; 
+                        p{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+
+         .traning_review .head .svg{
+                display: none;
+            }
+        }
        }
    }

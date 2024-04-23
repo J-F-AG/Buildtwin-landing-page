@@ -148,3 +148,9 @@ a.link.disabled {
     cursor: default;
     opacity: 0.5;
 }
+
+@media (max-width:1200px){
+    :host ::ng-deep .story .listItem .col {
+        width: 293px;
+    }
+}

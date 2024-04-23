@@ -705,3 +705,9 @@ bottom: 0;
         flex-basis: 120px;
     }
 }
+
+@media (max-width:1200px){
+    .banner-area {
+        height: 100vh;
+    }
+}

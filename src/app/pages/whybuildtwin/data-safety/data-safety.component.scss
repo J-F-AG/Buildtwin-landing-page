@@ -376,3 +376,31 @@ img {
     transform: scale(0.75);
     transform-origin: right top;
 }
+
+@media (max-width:1200px){
+    .topBanner .image {
+        margin-right: 52px;
+    }
+    .topBanner .profileInfo {
+      
+        padding: 1px;
+        text-align: center;
+        margin-left: 71px;
+        position: relative;
+        margin-top: 88px;
+    }
+    .pic-row {
+       
+        padding: 10px;
+        padding-top: 90px;
+    }
+    .fullyEncryp .content p {
+        font-size: 14px;
+    }
+    .fullyEncryp .content {
+        max-width: 500px;
+        width: 100%;
+        right: 50px;
+        top: 60px;
+    }
+}

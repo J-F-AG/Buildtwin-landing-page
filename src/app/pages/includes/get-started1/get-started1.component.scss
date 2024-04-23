@@ -48,3 +48,19 @@
         }
     }
 }
+
+@media (max-width:1200px){
+   :host ::ng-deep .startedData {
+        padding: 17px 24px 24px;
+        width: 97%;
+    }
+    :host ::ng-deep  .startedData p {
+        margin-bottom: 4px;
+        font-size: 14px;
+    }
+    :host ::ng-deep   .startedData a {
+        padding: 8px 24px;
+        font-size: 12px;
+        max-width: 147px;
+    }
+}

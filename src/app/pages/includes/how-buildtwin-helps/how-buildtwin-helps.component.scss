@@ -322,6 +322,10 @@
 :host ::ng-deep .buildtwinHelps .headSection h2{
 font-size: 30px !important;
 }
+:host ::ng-deep .buildtwinHelps .tabContent .tabLeft {
+    min-width: 249px;
+    margin-top: -51px;
+}
 }
 
 

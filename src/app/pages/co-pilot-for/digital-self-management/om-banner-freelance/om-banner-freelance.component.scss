@@ -550,3 +550,12 @@ line-height: 160%; /* 25.6px */
     right: 0;
     top: 110px;
 }
+
+
+@media (max-width:1200px){
+    .banner-image.videoCover img {
+        width: 50%;
+        top: 212px;
+        z-index: -1;
+    }
+}
