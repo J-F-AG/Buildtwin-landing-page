@@ -1,5 +1,6 @@
 :host ::ng-deep .traning_review {
-    padding: 50px 0;
+    padding: 0;
+    margin-bottom: 34px;
     .head {
         position: relative;
         margin-bottom: 30px;
@@ -113,6 +114,17 @@
                 padding-left: 0;
                 gap: 10px;
             }
+        }
+    }
+   
+}
+
+@media (max-width:950px){
+    :host ::ng-deep .traning_review {
+        padding: 0;
+        padding-bottom: 80px;
+        .list .listInner {
+            margin-bottom: 0;
         }
     }
    

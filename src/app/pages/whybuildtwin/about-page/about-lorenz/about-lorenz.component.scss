@@ -1,5 +1,5 @@
    :host ::ng-deep .aboutLorenze {
-       margin: 54px 0;
+    margin-bottom: 80px;
 
        .container {
            max-width: 1296px;
@@ -69,4 +69,11 @@
             }
         }
        }
+   }
+
+
+   @media (max-width:950px){
+    :host ::ng-deep .aboutLorenze {
+        margin: 0 0 80px 0;
+    }
    }

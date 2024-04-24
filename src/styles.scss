@@ -165,34 +165,32 @@ img {
 }
 .ptb-100 {
     padding: {
-        top: 100px;
-        bottom: 100px;
+        top: 0;
+        bottom: 80px;
     };
 }
 .pt-100 {
-    padding-top: 100px;
+    padding-top: 0;
 }
 .pt-140 {
-    padding-top: 140px;
+    padding-top: 0;
 }
 .pb-100 {
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 .pb-70 {
     padding-bottom: 70px;
 }
 .ptb-75 {
     padding: {
-        top: 75px;
+        top: 0;
         bottom: 75px;
     };
 }
 .pt-75 {
-    padding-top: 75px;
+    padding-top: 0;
 }
-.pb-75 {
-    padding-bottom: 75px;
-}
+
 
 // Font Family
 .font-syne {
@@ -492,6 +490,8 @@ img {
         top: 161px;
         bottom: 74px;
     };
+    margin-bottom: 80px;
+    
     .pt-shape1 {
         left: 17.7%;
         bottom: 30%;
@@ -802,12 +802,7 @@ img {
         line-height: 27px;
         font-size: 19px;
     }
-    .ptb-100 {
-        padding: {
-            top: 80px;
-            bottom: 80px;
-        };
-    }
+    
     .pt-100 {
         padding-top: 80px;
     }
@@ -823,9 +818,7 @@ img {
     .pt-75 {
         padding-top: 55px;
     }
-    .pb-75 {
-        padding-bottom: 55px;
-    }
+    
 
     // Default Btn
     .default-btn {
@@ -1208,9 +1201,26 @@ h2 {
 
 @media (max-width:950px){
     .container {
-        padding: 0 15px;
+        padding: 0 30px;
     }
     p {
         font-size: 16px;
     }
+    .pb-100 {
+        padding-bottom: 80px;
+        padding-top: 0;
+    }
+
+    .page-title-area {
+       
+        margin-bottom: 80px;
+    }
+    .pt-100 {
+        padding-top: 0;
+    }
+   
+}
+
+@media (max-width:767px){
+    
 }
