@@ -449,3 +449,59 @@ img {
         margin-left: 78px;
     }
 }
+
+@media (max-width:767px){
+    .topBanner {
+        flex-direction: column-reverse;
+        .content {
+            padding-top: 49px;
+            padding-left: 30px;
+            padding-right: 30px;
+            h1 {
+                font-size: 35px;
+            }
+        }
+        .buildtwinSafety{
+            padding: 0px 0 0 0;
+        }
+    }
+    .pic-row {
+        padding: 10px 30px;
+        padding-top: 90px;
+        flex-direction: column;
+    }
+    .pic-row .picBox {
+        margin-bottom: 89px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .safetyFramework {
+        padding-bottom: 40px;
+    }
+    .fullyEncryp .content {
+        position: static;
+        margin-top: 31px;
+        h3{
+            color: #000;
+
+        }
+        p{
+            color: #000;
+        }
+    }
+    .certificateSlide ::ng-deep .owl-nav  {
+        right: 0;
+        top: auto;
+    }
+    .audited .bg-building {
+        display: none;
+    }
+    .audited .audited-lock{
+        display: none;
+    }
+    .audited .thirdPartyAudit .item {
+        padding: 30px;
+    }
+}

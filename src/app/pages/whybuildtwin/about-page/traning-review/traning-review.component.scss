@@ -100,6 +100,7 @@
             }
         }
     }
+
 }
 
 @media (max-width:1200px){
@@ -128,4 +129,15 @@
         }
     }
    
+}
+
+@media (max-width:767px){
+  
+    .traning_review .list .listInner .box strong {
+        font-size: 19px;
+    }
+
+    :host ::ng-deep  .traning_review .list .listInner .box strong {
+        font-size: 20px;
+    }
 }

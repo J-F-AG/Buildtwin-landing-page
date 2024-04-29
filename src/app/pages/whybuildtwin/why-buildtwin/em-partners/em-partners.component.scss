@@ -11,3 +11,10 @@
 .partner-area.pt-100.pb-75 {
     margin-bottom: 80px;
 }
+
+@media (max-width:767px){
+    .partner-area.pt-100.pb-75 {
+        margin-bottom: 40px;
+        padding-bottom: 0;
+    }
+}

@@ -267,4 +267,37 @@ background: #f9f9f9;
   .header-title, .offer-text {
     font-size: 15.733px !important;
 }
+:host ::ng-deep  div#scrollActivated.fixedData .head {
+  top: 69px;
+}
+.header-title img, .offer-text img {
+  margin-left: 10px;
+  width: 78px;
+}
+.services-container h4 {
+  font-size: 13px;
+}
+.services-intro {
+  font-size: 14px;
+}
+.header-section {
+  padding: 1px 10px;
+  width: 173px;
+}
+section.content-wrapper .container {
+  padding: 0;
+}
+.content-wrapper {
+  top: 74px;
+}
+}
+
+@media (max-width:767px){
+  .header-section {
+      
+    display: none;
+}
+.services-intro {
+    display: none;
+}
 }

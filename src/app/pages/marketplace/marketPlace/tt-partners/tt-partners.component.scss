@@ -177,3 +177,16 @@ a.link.disabled {
   }
  
 }
+
+@media (max-width:767px){
+   :host ::ng-deep .story .listItem{
+flex-direction: column;
+.col{
+    width: 100%;
+}
+    }
+    :host ::ng-deep .story .listItem {
+        gap: 30px;
+    }
+   
+}

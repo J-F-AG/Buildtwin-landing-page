@@ -1,5 +1,6 @@
 .socials-media-info-area {
     background-color: #f8f8f8;
+    padding-top: 80px;
 
     h2 {
         font-size: 40px; font-weight: 600;
@@ -177,6 +178,14 @@
             }
         }
     }
+}
+
+.socials-media-info-area.ptb-100 {
+    padding-bottom: 0;
+}
+.socials-media-info-area {
+
+    padding-bottom: 80px;
 }
 /* Max width 767px */
 @media only screen and (max-width : 767px) {

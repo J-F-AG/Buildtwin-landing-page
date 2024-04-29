@@ -44,7 +44,7 @@
                    }
                }
 
-               .imgWrap {}
+          
            }
        }
    }
@@ -75,5 +75,23 @@
    @media (max-width:950px){
     :host ::ng-deep .aboutLorenze {
         margin: 0 0 80px 0;
+    }
+   }
+
+   @media(max-width:767px){
+    :host ::ng-deep .aboutLorenze {
+        margin: 0 0 60px 0;
+        .container .flex {
+            flex-direction: column-reverse;
+            gap: 10px;
+
+            .aboutData{
+                padding-right: 0;
+                gap: 30px;
+ p{
+    font-size: 20px;
+ }
+            }
+        }
     }
    }

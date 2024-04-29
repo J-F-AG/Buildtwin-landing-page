@@ -210,4 +210,66 @@
             max-width: 206px;
         }
     }
+
+
+
+
+
+}
+
+@media (max-width:950px){
+
+    :host ::ng-deep  .basic {
+        width: 100%;
+        gap: 12px;
+        flex-direction: column;
+        .basicLeft {
+            width: 100%;
+            justify-content: space-around;
+            .basic-price {
+                min-width: unset;
+                padding: 12px;
+                width: 50%;
+            }
+            .basic-Details {
+                min-width: unset;
+                max-width: unset;
+            }
+        }
+}
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .basic .basicLeft {
+    height: auto;
+    flex-direction: column;
+    .basic-price{
+        width: 100%;
+        padding: 14px 24px 25px;
+        min-width: 222px;
+        height: auto;
+    }
+    .basic-Details{
+    
+        .coverDiv{
+            height: auto;
+
+        }
+    }
+}
+
+
+:host ::ng-deep  .planDetails .listCover{
+    justify-content: start;
+}
+
+:host ::ng-deep  .basic .basicLeft.right .basic-Details{
+    min-width: 100%;
+    height: auto;
+}
+:host ::ng-deep .planDetails .listCover {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 }

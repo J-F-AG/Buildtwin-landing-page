@@ -36,6 +36,7 @@
                 margin: 44px 0 0;
                 display: flex;
                 justify-content: center;
+
                 ul {
                     display: flex;
                     gap: 72px;
@@ -43,11 +44,13 @@
                     margin: 0;
 
                     padding: 0;
+
                     li {
                         display: flex;
                         gap: 12px;
                         align-items: center;
                         position: relative;
+
                         i {
                             border: 3px solid #fff;
                             width: 24px;
@@ -61,19 +64,22 @@
                             font-size: 16px;
                             font-style: normal;
                             font-weight: 400;
-                            line-height: 145%; /* 20.3px */}
-                        &.active{
-                            i{
+                            line-height: 145%;
+                            /* 20.3px */
+                        }
+
+                        &.active {
+                            i {
                                 background: #fff;
 
                             }
-                           
-                            span{
+
+                            span {
                                 font-weight: 600;
                             }
                         }
 
-                        &:after{
+                        &:after {
                             content: "";
                             position: absolute;
                             right: -59px;
@@ -81,7 +87,8 @@
                             height: 2px;
                             background: #ECECEC;
                         }
-                        &:last-child::after{
+
+                        &:last-child::after {
                             display: none;
                         }
                     }
@@ -163,8 +170,52 @@
 
 }
 
-@media (max-width:1200px){
+@media (max-width:1200px) {
     :host ::ng-deep .marketPlace .container .slide .imgWrap {
-      min-width: 439px;
-  }
-  }
+        min-width: 439px;
+    }
+}
+
+@media (max-width:767px) {
+    :host ::ng-deep .marketPlace {
+            background: #886DE0;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        .container {
+            padding: 0;
+
+            .head {
+                text-align: center;
+                padding: 0 0 0px;
+                padding-top: 40px;
+                position: static !important;
+                .pagination ul {
+                    display: none;
+                }
+            }
+
+            .slide {
+                padding-bottom: 0;
+                padding-right: 0;
+                display: flex;
+                gap: 30px;
+                flex-direction: column;
+                .contentWrap {
+                    padding: 0 30px;
+                    a{
+                        margin-bottom: 30px;
+                    }
+                }
+                .imgWrap{
+                    min-width: 100%;
+                }
+            }
+        }
+
+       
+
+    }
+
+   
+
+}

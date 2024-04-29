@@ -1,5 +1,5 @@
 .single-courses-box {
-    margin-bottom: 30px;
+    margin-bottom: 0;
     position: relative;
     border-radius: 5px;
     background-color: var(--whiteColor);
@@ -582,6 +582,25 @@
     ;
 }
 
+ .footerLink {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+ .footerLink .footLink img {
+    width: 95px;
+    height: 95px;
+}
+.footerLink .footLink strong {
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22.965px;
+    display: block;
+}
+
 @media only screen and (max-width: 767px) {
 
     .single-courses-box {
@@ -837,7 +856,7 @@
 
 .course {
     padding: 0;
-    margin-top: 50px;
+    margin-top: 0;
     padding-bottom: 0;
 
 
@@ -887,7 +906,7 @@
 .wrap{
     // background: #F9F9F9;
     display: block;
-    padding: 61px 0 81px;
+    padding: 0 0 81px;
 }
 
 .section-title {
@@ -933,4 +952,44 @@
     height: 637px;
     overflow: hidden;
     width: 859px;
+}
+
+@media (max-width:950px){
+    .single-courses-box .courses-content p {
+        font-size: 13px;
+        min-height: 137px;
+    }
+   :host ::ng-deep .cdeSection .cde_col span {
+        font-size: 16px;
+    }
+    :host ::ng-deep   .single-courses-box {
+        margin-bottom: 56px;
+    }
+   
+    .course .flex-item .item span {
+        font-size: 15px;
+    }
+    .wrap {
+        padding: 0 0 25px;
+    }
+}
+
+@media (max-width:767px){
+    .single-courses-box .courses-content p {
+        min-height: auto;
+    }
+    .countryTraning .head {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footerLink {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 13px ;
+        flex-wrap: wrap;
+    }
+    .course .flex-item {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
