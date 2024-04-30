@@ -1,7 +1,7 @@
 .integrations-area-list {
     padding: {
         top: 60px;
-        bottom: 35px;
+        bottom: 24px;
     };
     &::before {
         top: 0;
@@ -14,13 +14,13 @@
         border-radius: 8px;//updated-from-20-8;
         background: #f8f8f8;
         margin: {
-            left: 105px;
-            right: 105px;
+            left: 0;
+            right: 0;
         };
     }
 }
 .integrations-area.overflow {
-    margin-top: 100px;
+    margin-top: 23px;
 }
 .integration-box {
     padding: 30px 25px 40px;

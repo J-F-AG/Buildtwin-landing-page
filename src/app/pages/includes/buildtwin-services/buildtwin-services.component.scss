@@ -144,6 +144,9 @@
         }
     }
 }
+:host ::ng-deep .buildtwinService.forTraning.ptb-100 {
+    padding-top: 80px;
+}
 
 @media (max-width:1220px){
    :host ::ng-deep .buildtwinService .tabContent .tabLeft {

@@ -1,7 +1,7 @@
 .banner-area {
     padding: {
         top: 140px;
-        bottom: 100px;
+        bottom: 30px;
     };
 }
 .banner-content {
@@ -545,11 +545,7 @@ line-height: 160%; /* 25.6px */
     }
 }
 
-.banner-image.videoCover img {
-    position: absolute;
-    right: 0;
-    top: 110px;
-}
+
 
 
 @media (max-width:1200px){
