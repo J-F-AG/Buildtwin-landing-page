@@ -322,3 +322,17 @@ margin-left: auto;
     line-height: 1.1;
 }
 }
+
+@media (max-width:767px){
+    :host ::ng-deep .serviceProvide .header {
+        flex-direction: column;
+    }
+    :host ::ng-deep .serviceProvide .tabList {
+        flex-direction: column;
+    }
+    :host ::ng-deep .tableCover {
+        overflow: auto;
+        height: 400px;
+    }
+   
+}

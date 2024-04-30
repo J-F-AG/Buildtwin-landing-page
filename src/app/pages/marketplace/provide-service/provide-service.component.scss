@@ -83,3 +83,12 @@ div#tabContent.hideMenu {
 div#tabContent{
     transition: all ease 0.5s;
 }
+
+@media (max-width:767px){
+    :host ::ng-deep div#scrollActivated.fixed2 .tabHead {
+        position: static;
+    }
+    .sampleTable {
+        padding: 50px 0;
+    }
+}

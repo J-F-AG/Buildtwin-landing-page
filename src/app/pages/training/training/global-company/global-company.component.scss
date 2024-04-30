@@ -183,7 +183,13 @@
         padding: 0;
     }
 }
+@media (max-width:1200px){
+    :host ::ng-deep .partnerWrap.vender {
+      
+        padding: 0 50px;
+    }
 
+}
 @media (max-width:950px){
     :host ::ng-deep  .partnerWrap .company {
         width: 100%;
@@ -193,4 +199,8 @@
  
         padding-left: 0;
     }
+}
+
+@media (max-width:767px){
+
 }

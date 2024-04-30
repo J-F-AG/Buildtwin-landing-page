@@ -524,6 +524,13 @@ line-height: 160%; /* 25.6px */
 // cde section
 
 
+@media (max-width:1200px){
+    .banner-image.videoCover img {
+        width: 50%;
+        top: 212px;
+        z-index: -1;
+    }
+}
 
 @media(max-width:767px) {
     .solutionGroup>div {
@@ -543,15 +550,10 @@ line-height: 160%; /* 25.6px */
         flex-direction: column;
         align-items: baseline !important;
     }
-}
 
-
-
-
-@media (max-width:1200px){
     .banner-image.videoCover img {
-        width: 50%;
-        top: 212px;
-        z-index: -1;
+        width: 100%;
     }
+   
+   
 }

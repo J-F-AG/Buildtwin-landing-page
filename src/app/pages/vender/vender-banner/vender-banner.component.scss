@@ -177,3 +177,15 @@
         }
     }
 }
+
+@media (max-width:950px){
+   :host ::ng-deep  .hero .container .info .headPart .exp img {
+        width: 62px;
+    }
+    :host ::ng-deep .hero .container .info .headPart ul li {
+        height: 94px;
+        padding: 16px 20px;
+        width: 30.3%;
+    }
+   
+}

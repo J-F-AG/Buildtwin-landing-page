@@ -79,3 +79,29 @@
         }
     }
 }
+
+@media (max-width:767px){
+    .integrations-area-list {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+   :host ::ng-deep .workflow .rightPart {
+    position: static;
+    width: 100%;
+    margin-top: 38px;
+    }
+     :host ::ng-deep .workflow {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .workflow .container {
+        padding: 0;
+    }
+     :host ::ng-deep .workflow .rightPart:before{
+        display: none;
+    }
+    :host ::ng-deep  .workflow .rightPart:after{
+        display: none;
+    }
+}

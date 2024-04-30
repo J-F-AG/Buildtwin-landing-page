@@ -37,3 +37,10 @@
         font-size: 25px;
     }
 }
+
+@media (max-width:767px){
+    :host ::ng-deep  .counteryList {
+      
+        padding: 63px 0 40px;
+    }
+}

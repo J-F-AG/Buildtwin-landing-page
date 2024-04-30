@@ -93,3 +93,37 @@
         text-align: center;
     }
 }
+
+@media (max-width:767px){
+   :host ::ng-deep .experience .info-container {
+        display: flex;
+        margin-top: 48px;
+        flex-direction: column;
+    }
+    :host ::ng-deep .experience .rating-box {
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+    :host ::ng-deep .experience .rating-box {
+        width: 100%;
+        height: auto;
+    }
+    :host ::ng-deep  .experience .info-box {
+        width: 100%;
+        margin-bottom: 10px;
+        height: auto;
+    }
+    :host ::ng-deep  .experience .divider {
+       
+        display: none;
+    }
+    :host ::ng-deep .experience .rating-info {
+        align-items: center;
+        width: 100%;
+    }
+    :host ::ng-deep  .experience {
+        padding: 30px 0;
+        margin: 0px 0 40px;
+    
+    }
+}

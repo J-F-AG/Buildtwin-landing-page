@@ -69,3 +69,19 @@
 
     }
 }
+
+@media (max-width:767px){
+   :host ::ng-deep .signUp {
+        margin: 20px;
+    }
+    :host ::ng-deep .signUp .container {
+        padding: 10px;
+        .flex {
+      
+            flex-direction: column;
+        }
+    }
+    :host ::ng-deep  .signUp .container .flex .col {
+        width: 100%;
+    }
+}

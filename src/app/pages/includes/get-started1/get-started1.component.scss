@@ -65,3 +65,23 @@
         max-width: 147px;
     }
 }
+
+@media (max-width:950px){
+    :host ::ng-deep .startedData h2 {
+        font-size: 17px;
+    }
+    :host ::ng-deep .startedData p {
+        margin-bottom: 4px;
+        font-size: 12px;
+        margin-top: -10px;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .startedData {
+        padding: 56px 24px 24px;
+        width: 97%;
+        background-color: #886DE0;
+        height: auto;
+    }
+}
