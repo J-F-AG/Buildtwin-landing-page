@@ -705,3 +705,21 @@ bottom: 0;
         flex-basis: 120px;
     }
 }
+
+@media (max-width:1200px){
+    .banner-area {
+        height: 100vh;
+    }
+}
+
+@media (max-width:767px){
+    .banner-area {
+        height: auto;
+    }
+    .partner{
+        padding: 12px 28px;
+    }
+    .partner li {
+        flex-basis: 102px;
+    }
+}

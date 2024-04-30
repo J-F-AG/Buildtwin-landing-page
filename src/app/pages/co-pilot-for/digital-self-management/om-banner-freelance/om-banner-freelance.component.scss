@@ -1,7 +1,7 @@
 .banner-area {
     padding: {
         top: 140px;
-        bottom: 100px;
+        bottom: 30px;
     };
 }
 .banner-content {
@@ -524,6 +524,13 @@ line-height: 160%; /* 25.6px */
 // cde section
 
 
+@media (max-width:1200px){
+    .banner-image.videoCover img {
+        width: 50%;
+        top: 212px;
+        z-index: -1;
+    }
+}
 
 @media(max-width:767px) {
     .solutionGroup>div {
@@ -543,10 +550,10 @@ line-height: 160%; /* 25.6px */
         flex-direction: column;
         align-items: baseline !important;
     }
-}
 
-.banner-image.videoCover img {
-    position: absolute;
-    right: 0;
-    top: 110px;
+    .banner-image.videoCover img {
+        width: 100%;
+    }
+   
+   
 }

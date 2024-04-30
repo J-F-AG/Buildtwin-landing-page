@@ -34,7 +34,24 @@ export class ElearningSchoolComponent implements OnInit {
   navText: [
     "<i class='ti ti-chevron-left'></i>",
     "<i class='ti ti-chevron-right'></i>",
-  ]
+  ],
+  responsive: {
+    0: {
+      items: 2
+    },
+    515: {
+      items: 3
+    },
+    768: {
+      items: 3
+    },
+    990: {
+      items: 4
+    },
+    1400: {
+      items: 5
+    }
+  }
   }
 
 

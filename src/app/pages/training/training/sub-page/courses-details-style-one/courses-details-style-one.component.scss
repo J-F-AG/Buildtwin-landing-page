@@ -1500,3 +1500,15 @@ img.progress {
     background: var(--color-green-button, #FFF);
     color: var(--primary, #886DE0);
 }
+
+@media (max-width:950px){
+    .row.mobileDesign {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .tabbing {
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: none;
+    }
+}

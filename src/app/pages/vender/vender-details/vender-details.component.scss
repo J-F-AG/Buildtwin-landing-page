@@ -153,4 +153,61 @@
     // width: auto;
     // height: 150px;
 }
+// @media (max-width:1200px){}
+// @media (max-width:950px){}
+// @media (max-width:767px){}
+
+@media (max-width:1200px){
+  :host ::ng-deep  .hero {
+
+    padding-bottom: 287px;
+    .rightPart img {
+        width: 36%;
+    }
+  }
+    .headPart {
+        padding: 0 30px;
+    }
+    .capability.code .headSection .col {
+        width: 17%;
+    }
+    .capability.code .right .role {
+        width: 126px !important;
+    }
+    .stickyMneu .stcikyTop {
+        border-bottom: 2px solid #EBE4FF;
+        padding: 0 30px;
+    }
+
+    .container {
+        max-width: 1297px;
+        padding: 0 30px;
+    }
+    
+}
+@media (max-width:950px){
+    :host ::ng-deep  .hero .container .info {
+        padding-top: 0;
+    }
+    .headPart {
+        padding: 0;
+    }
+    .capability.code .right .role {
+        width: 87px !important;
+    }
+    :host ::ng-deep .hero .rightPart img {
+        width: 50%;
+    }
+    .stickyMneu .bottom ul {
+        display: flex;
+        gap: 9px;
+    }
+    .footerLinks ul li a{
+        font-size: 16px;
+    }
+    .container {
+        overflow: hidden;
+    }
+}
+@media (max-width:767px){}
 

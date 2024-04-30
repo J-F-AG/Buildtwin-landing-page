@@ -1,8 +1,9 @@
 :host ::ng-deep .buildtwinHelps {
-    margin: 100px 0;
+  
     position: relative;
+    margin-bottom: 100px;
     .headSection {
-        padding-top: 19px;
+        padding-top: 50px;
         transition: all ease 0.5s;
         padding-bottom: 64px;
 
@@ -189,7 +190,7 @@
     .headSection{
         text-align: center;
         padding-bottom: 0;
-        padding-top: 50px;
+        padding-top: 80px;
     }
     .headSection p {
         color: #000;
@@ -318,12 +319,92 @@
         margin-right: 10px;
     }
 }
+
+:host ::ng-deep .buildtwinHelps .headSection h2{
+font-size: 30px !important;
+}
+:host ::ng-deep .buildtwinHelps .tabContent .tabLeft {
+    min-width: 249px;
+    margin-top: -51px;
+}
+
+:host ::ng-deep  .buildtwinHelps {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+}
+
+@media (max-width:950px){
+    :host ::ng-deep  .buildtwinHelps .tabContent .tabLeft {
+     
+        margin-left: 0;
+    }
+    :host ::ng-deep .fixed div#onScrollAnimation {
+        top: 70px;
+    }
+   
 }
 
 
 @media (max-width:767px){
     :host ::ng-deep .buildtwinHelps {
-        margin: 35px 0;
+        margin: 0;
+
+        .headSection {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            padding: 0 20px;
+        }
+    }
+    .traningCom {
+        margin-bottom: 80px;
     }
 
+    :host ::ng-deep .fixed div#onScrollAnimation {
+        top: 70px;
+        position: static;
+    }
+    :host ::ng-deep div#onScrollAnimation {
+        position: static;
+    }
+
+    :host ::ng-deep   .buildtwinHelps .tabRIght {
+        padding-right: 0;
+        margin-left: 0;
+        
+    }
+    :host ::ng-deep .forTraning .headSection {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    :host ::ng-deep .forTraning .staticData {
+        padding-top: 0;
+    }
+    :host ::ng-deep .buildtwinHelps .tabRIght > div {
+        margin-right: 10px;
+        transform: none;
+        opacity: 1;
+        margin-bottom: 15px;
+    }
+    :host ::ng-deep .buildtwinHelps .tabRIght .contentWrap {
+        padding-right: 0;
+    }
+    :host ::ng-deep  div#onScrollAnimation .container {
+        display: none;
+    }
+    :host ::ng-deep .staticData {
+        padding-top: 26px;
+    }
+    :host ::ng-deep .buildtwinHelps .tabRIght > div {
+        margin-right: 0;
+    }
+    :host ::ng-deep .buildtwinHelps .tabRIght {
+        padding: 10px;
+        margin-bottom: 40px;
+    }
+    :host ::ng-deep  .fixed div#onScrollAnimation .headSection {
+        padding-left: 20px;
+    }    
 }

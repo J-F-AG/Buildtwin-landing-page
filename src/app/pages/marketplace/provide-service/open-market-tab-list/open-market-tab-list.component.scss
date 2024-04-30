@@ -49,13 +49,12 @@
          .tab-content{
             .head{
                 .div {
-                    justify-content: center;
-                    align-items: center;
+                   
                     background-color: var(--color-green-button, #fff);
                     display: flex;
                     flex-direction: column;
                     text-align: center;
-                    padding: 35px 0px 36px;
+                    padding: 0px 0px 80px;
                   }
                
                   .div-2 {
@@ -73,6 +72,12 @@
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 160%;
+                    color: #000;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 600;
+                    width: 50%;
+                    margin: 26px auto 0;
                   }
               
             }
@@ -114,4 +119,41 @@
          }
          
     }
+}
+
+@media (max-width:1200px){
+:host ::ng-deep .tabCover .tab-content .contentBody .gap80 {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
+
+@media (max-width:767px){
+  :host ::ng-deep .tabCover .tabHead .tabItems{
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  :host ::ng-deep .tabCover .tab-content .head .div-3 {
+   
+    width: 100%;
+    font-size: 16px;
+    margin: 26px auto 0;
+    padding: 0 10px;
+}
+:host ::ng-deep .tabCover .tab-content .contentBody .gap80 {
+  flex-direction: column;
+}
+:host ::ng-deep .tabCover .tab-content .contentBody .gap80 .colData {
+  width: 100%;
+}
+:host ::ng-deep  .tabCover .tab-content .contentBody .gap80 .colData {
+  width: 100%;
+  padding: 0 15px;
+  padding-bottom: 30px;
+}
 }

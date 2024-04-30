@@ -718,6 +718,13 @@ line-height: 160%; /* 25.6px */
   
     }
 }
+
+@media (max-width:950px){
+    .videoCover {
+        position: relative;
+        height: auto;
+    }
+}
 @media (max-width:767px) {
     .videoCover {
         position: relative;
@@ -755,7 +762,13 @@ line-height: 160%; /* 25.6px */
     .content-container{
         padding-top: 40px;
     }
-   
+
+ 
+    .content-container {
+        padding-top: 0;
+    }
+    
+    
 }
 
 

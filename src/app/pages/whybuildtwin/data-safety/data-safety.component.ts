@@ -41,8 +41,8 @@ export class DataSafetyComponent {
       768: {
         items: 3
       },
-      990: {
-        items: 5
+      1100: {
+        items: 4
       },
       1400: {
         items: 5

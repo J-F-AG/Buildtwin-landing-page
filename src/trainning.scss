@@ -2802,6 +2802,8 @@
     .subscribe-area {
         position: relative;
         z-index: 1;
+        padding-top: 80px;
+
 
         .shape4 {
             right: auto;
@@ -5732,7 +5734,7 @@ Responsive CSS
         }
         .ptb-100 {
             padding: {
-                top: 80px;
+                top: 0;
                 bottom: 80px;
             }
         }
@@ -6772,5 +6774,25 @@ Responsive CSS
             right: 20%;
             top: 25%;
         }
+    }
+}
+
+
+@media (max-width:1200px){
+    .training-wrapper .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width:767px){
+    .training-wrapper .ptb-100 {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+    .training-wrapper .default-btn {
+        font-size: 11px;
+    }
+    .page-title-area {
+        margin-bottom: 0;
     }
 }

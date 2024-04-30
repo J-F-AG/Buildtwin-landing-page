@@ -138,7 +138,7 @@ filteredProjects = this.projects;
 
 
   reviewsSlides: OwlOptions = {
-    items: 6,
+    items: 5,
 nav: true,
 margin: 20,
 dots: false,
@@ -150,7 +150,24 @@ autoplayHoverPause: false,
 navText: [
   "<i class='ti ti-chevron-left'></i>",
   "<i class='ti ti-chevron-right'></i>",
-]
+],
+responsive: {
+  0: {
+    items: 2
+  },
+  515: {
+    items: 3
+  },
+  768: {
+    items: 4
+  },
+  990: {
+    items: 5
+  },
+  1400: {
+    items: 6
+  }
+}
 }
 
 

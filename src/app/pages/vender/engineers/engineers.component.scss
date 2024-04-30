@@ -201,3 +201,13 @@
        
     }
 }
+
+@media (max-width:1200px){
+   :host ::ng-deep .slider {
+        padding-bottom: 56px;
+        padding: 0 30px;
+    }
+    :host ::ng-deep .slider .container .wrap .flex .left {
+        min-width: 177px;
+    }
+}

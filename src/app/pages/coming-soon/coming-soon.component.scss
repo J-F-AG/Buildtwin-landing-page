@@ -58,3 +58,13 @@ img {
     overflow: hidden;
     width: 859px;
   }
+
+  @media (max-width:767px){
+    .content h1 {
+        font-size: 27px;
+    }    
+
+    .content .btnGroup a {
+        padding: 15px 10px;
+    }
+  }
