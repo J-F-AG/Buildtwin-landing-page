@@ -91,4 +91,11 @@ div#tabContent{
     .sampleTable {
         padding: 50px 0;
     }
+    :host ::ng-deep .fixed div#onScrollAnimation {
+        position: static;
+       
+    }
+    :host ::ng-deep .fixed div#onScrollAnimation .headSection {
+        padding: 0 15px;
+    }
 }

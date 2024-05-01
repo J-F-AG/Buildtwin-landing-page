@@ -118,4 +118,12 @@ margin-bottom: 0;
     .qualified .head {
         padding: 0 15px;
     }
+
+   .qualified .head .flex {
+    
+        margin-bottom: 20px;
+    }
+ :host ::ng-deep .qualified {
+        padding: 0 0 0;
+    }
 }

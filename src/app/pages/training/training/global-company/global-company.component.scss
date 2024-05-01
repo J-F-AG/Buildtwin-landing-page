@@ -202,5 +202,7 @@
 }
 
 @media (max-width:767px){
-
+    :host ::ng-deep .partnerWrap.vender {
+        padding: 0 0;
+    }
 }

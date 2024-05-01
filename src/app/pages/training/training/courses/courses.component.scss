@@ -911,6 +911,7 @@
 
 .section-title {
     margin-bottom: 75px;
+    padding-top: 80px;
     span{
         margin-bottom: 15px;
     }
@@ -991,5 +992,9 @@
     .course .flex-item {
         flex-wrap: wrap;
         gap: 10px;
+    }
+    .section-title {
+        margin-bottom: 75px;
+        padding-top: 0;
     }
 }

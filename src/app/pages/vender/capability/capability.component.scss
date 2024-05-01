@@ -276,10 +276,10 @@ text-align: center;
         text-align: center;
     }
     :host ::ng-deep  .capability .right .role {
-        width: 85px !important;
+        width: 80px !important;
     }
     :host ::ng-deep  .capability .headSection .col {
-        width: 93px;
+        width: 84px;
     }
     :host ::ng-deep  .capability .headSection .col strong {
         font-size: 13px;
@@ -296,4 +296,14 @@ text-align: center;
     }
     
 }
-@media (max-width:767px){}
+@media (max-width:767px){
+    :host ::ng-deep .capability .flex {
+        overflow: auto;
+    }
+    :host ::ng-deep .capability .right .overlay .box h2{
+        font-size: 14px !important;
+    }
+    :host ::ng-deep .capability .left .containerData {
+        padding: 62px 5px 14px 24px;
+    }
+}

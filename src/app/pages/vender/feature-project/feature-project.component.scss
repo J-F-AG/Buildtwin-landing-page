@@ -31,6 +31,7 @@
             .right {
                 .seelctWrap {
                     position: relative;
+
                     select {
                         border-radius: 8px;
                         background: var(--secondary, #F6F3FF);
@@ -63,7 +64,7 @@
                         justify-content: center;
                     }
 
-                    .arrow{
+                    .arrow {
                         position: absolute;
                         right: 13px;
                         top: 11px;
@@ -212,25 +213,55 @@
     }
 }
 
-@media (max-width:1200px){
-   :host ::ng-deep .accreditation {
+@media (max-width:1200px) {
+    :host ::ng-deep .accreditation {
         padding: 64px 0;
     }
+
     :host ::ng-deep .accreditation .listItem {
         gap: 10px;
     }
+
     :host ::ng-deep .accreditation .listItem .item {
         width: 49%;
     }
-    :host ::ng-deep  .itemHead + img {
+
+    :host ::ng-deep .itemHead+img {
         width: 100%;
     }
 
 }
 
-@media (max-width:950px){
+@media (max-width:950px) {
     :host ::ng-deep .accreditation .listItem .item h2 {
         color: #000;
         font-size: 15px;
     }
+}
+
+@media (max-width:767px) {
+    :host ::ng-deep .accreditation {
+        padding: 30px 0;
+    }
+
+    :host ::ng-deep .accreditation .head {
+        flex-direction: column;
+
+        .left {
+            margin-bottom: 20px;
+        }
+    }
+
+    :host ::ng-deep .accreditation .head .right .seelctWrap select {
+        width: 100%;
+    }
+
+    :host ::ng-deep .accreditation .listItem {
+        flex-direction: column;
+    }
+
+    :host ::ng-deep .accreditation .listItem .item {
+        width: 100%;
+    }
+    
 }
