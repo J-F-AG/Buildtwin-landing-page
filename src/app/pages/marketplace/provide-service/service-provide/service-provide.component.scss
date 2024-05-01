@@ -297,3 +297,42 @@ margin-left: auto;
         }
     }
 }
+
+@media (max-width:1200px){
+  :host ::ng-deep   .serviceProvide .tabList .list {
+        display: flex;
+        padding: 12px 12px;
+}
+
+:host ::ng-deep  .serviceProvide .tableCover td:first-child {
+    white-space: nowrap;
+}
+:host ::ng-deep  .serviceProvide .tableCover th {
+    padding: 12px 20px 12px 15px;
+}
+:host ::ng-deep .serviceProvide .tableCover th {
+    font-size: 13px;
+}
+:host ::ng-deep .serviceProvide .tableCover td .biding{
+    height: auto;
+}
+:host ::ng-deep .serviceProvide .tableCover td .label {
+    padding: 7px 8px;
+    font-size: 12px;
+    line-height: 1.1;
+}
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .serviceProvide .header {
+        flex-direction: column;
+    }
+    :host ::ng-deep .serviceProvide .tabList {
+        flex-direction: column;
+    }
+    :host ::ng-deep .tableCover {
+        overflow: auto;
+        height: 400px;
+    }
+   
+}

@@ -119,6 +119,16 @@
     }
 }
 
+.pt-100 {
+    padding-top: 80px;
+}
+.services-area.pt-100.pb-75.z-1.position-relative {
+    padding-top: 80px;
+    margin-bottom: 80px;
+}
+.integrations-area.ptb-75 {
+    margin-bottom: 60px;
+}
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 

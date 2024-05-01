@@ -49,3 +49,21 @@ span{
         }
     }
 }
+
+@media (max-width:1200px){
+    :host ::ng-deep  .planDetails .listCover {
+       flex-wrap: wrap;
+       justify-content: end;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .planDetails {
+        flex-direction: column;
+    }
+    :host ::ng-deep .planDetails .listCover {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    
+}

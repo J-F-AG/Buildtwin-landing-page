@@ -125,3 +125,49 @@ line-height: normal;
         background: #f9f9f9;
     }
 }
+
+
+@media (max-width:1200px){
+   :host ::ng-deep .row {
+        background: #fff;
+        padding: 64px 0;
+        margin: 0;
+        padding: 37px 30px;
+    }
+    :host ::ng-deep .row ul {
+        flex-wrap: wrap;
+    }
+    :host ::ng-deep .row ul li {
+        border-radius: 10px;
+        background: #FAFAFA;
+        width: 286px;
+        height: 62px;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .row {
+        padding: 30px 15px;
+        .container{
+            padding: 0;
+            ul {
+                flex-wrap: wrap;
+                gap: 10px;
+                li {
+                    padding: 6px 12px;
+                    width: 100%;
+                    height: auto;
+                    .content p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        .head{
+            margin-bottom: 30px;
+        }
+       
+    }
+    
+}

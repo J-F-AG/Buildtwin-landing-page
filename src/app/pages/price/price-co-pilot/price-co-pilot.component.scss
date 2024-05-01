@@ -188,3 +188,50 @@
 
     }
 }
+
+@media (max-width:950px){
+:host ::ng-deep .coPilot .twoCol .tableData .rowData .colFirst {
+    min-width: 369px;
+    }
+    :host ::ng-deep .coPilot .twoCol .LeftPart {
+        min-width: 151px;
+      
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colFirst .flex {
+        flex-wrap: wrap;
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colLast {
+        min-width: 184px;
+        padding: 24px 10px 24px;
+   
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colFirst {
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep   .coPilot .twoCol .tableData .rowData {
+        flex-direction: column;
+    }
+    :host ::ng-deep  .coPilot .twoCol {
+        flex-direction: column;
+    }
+    :host ::ng-deep  .coPilot .twoCol .tableData .rowData .colFirst {
+        min-width: unset;
+        border: none;
+    }
+    :host ::ng-deep  .coPilot .twoCol .LeftPart {
+        min-width: unset;
+        border: none;
+        padding: 10px;
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colLast strong {
+        color: #0A2540;
+        font-size: 16px;
+
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colLast span {
+        font-size: 16px;
+    }
+}

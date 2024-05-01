@@ -105,6 +105,10 @@
         };
     }
 }
+.ptb-100 {
+    padding-top: 41px;
+    padding-bottom: 128px;
+}
 .integrations-content {
     padding-left: 25px;
     display: flex;
@@ -448,4 +452,10 @@ line-height: 160%; /* 32px */
         bottom: 10%;
     }
 
+}
+
+@media (max-width:767px){
+    .integrations-area.position-relative.z-1.ptb-100{
+        overflow: hidden;
+    }
 }

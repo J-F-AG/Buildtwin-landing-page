@@ -1,6 +1,6 @@
 :host ::ng-deep {
     .qualified {
-        padding: 65px 0;
+        padding: 0 0 80px;
         .head {
             h2 {
                 color: #0E0E28;
@@ -111,5 +111,19 @@ margin-bottom: 0;
             }
         }
 
+    }
+}
+
+@media (max-width:767px){
+    .qualified .head {
+        padding: 0 15px;
+    }
+
+   .qualified .head .flex {
+    
+        margin-bottom: 20px;
+    }
+ :host ::ng-deep .qualified {
+        padding: 0 0 0;
     }
 }

@@ -1,4 +1,5 @@
 :host ::ng-deep .signUp {
+    margin: 80px 0;
     .container {
         border-radius: 10px;
         background: #F6F3FF;
@@ -66,5 +67,22 @@
         }
 
 
+    }
+}
+
+@media (max-width:767px){
+   :host ::ng-deep .signUp {
+        margin: 20px;
+        margin-bottom: 45px;
+    }
+    :host ::ng-deep .signUp .container {
+        padding: 10px;
+        .flex {
+      
+            flex-direction: column;
+        }
+    }
+    :host ::ng-deep  .signUp .container .flex .col {
+        width: 100%;
     }
 }

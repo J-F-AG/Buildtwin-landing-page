@@ -177,3 +177,36 @@
         }
     }
 }
+
+@media (max-width:950px){
+   :host ::ng-deep  .hero .container .info .headPart .exp img {
+        width: 62px;
+    }
+    :host ::ng-deep .hero .container .info .headPart ul li {
+        height: 94px;
+        padding: 16px 20px;
+        width: 30.3%;
+    }
+   
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .hero .container {
+        position: static;
+        padding: 15px;
+    }
+    :host ::ng-deep .hero {
+        margin-top: 71px;
+        padding-bottom: 0;
+    }
+    :host ::ng-deep .hero .container .info .headPart ul li {
+ 
+        width: 46%;
+    }
+    :host ::ng-deep .hero .container .info .headPart .footerLink{
+        flex-wrap: wrap;
+        gap: 9px 37px;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+}

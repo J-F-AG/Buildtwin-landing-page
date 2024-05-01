@@ -1,5 +1,5 @@
 :host ::ng-deep .countryTraning {
-    margin-bottom: 48px;
+    margin-bottom: 80px;
     .head {
         h2 {
             color: #000;
@@ -27,6 +27,20 @@
     .country_traning {
         display: flex;
         justify-content: center;
-        img {}
+      
+    }
+    
+}
+
+@media (max-width:950px){
+    :host ::ng-deep  .countryTraning .head h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep  .counteryList {
+      
+        padding: 63px 0 40px;
     }
 }

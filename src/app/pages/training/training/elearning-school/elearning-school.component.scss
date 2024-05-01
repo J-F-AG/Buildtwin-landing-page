@@ -53,11 +53,11 @@
 }
 
 .expert {
-    padding: 64px 72px 58px 72px;
+    padding: 64px 72px 80px 72px;
     justify-content: center;
     align-items: center;
     background: #fff;
-    margin-bottom: 20px;
+
 
     h2 {
         color: #0E0E28;
@@ -115,4 +115,40 @@
         }
     }
 
+}
+
+@media (max-width:950px){
+    .expert {
+        padding: 80px 0 0;
+    }
+    .expert .expertFlex .item span {
+        font-size: 15px;
+    }
+    .container.expertData .container {
+        padding: 0;
+    }
+}
+
+@media (max-width:767px){
+    .expert .expertFlex {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+      .item {
+            border-radius: 0px 8px 8px 0px;
+            border-left: 2px solid #886DE0;
+            background: #FAFAFA;
+            display: flex;
+            width: 100%;
+        }
+    }
+    .container.expertData .container {
+        display: none;
+    }
+
+   :host  ::ng-deep .cdeSection {
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 0;
+    }
 }

@@ -1,6 +1,6 @@
 .testimonial-container {
     width: 100%;
-    margin-top: 140px;
+    margin-top: 80px;
     text-align: center;
   }
 
@@ -139,6 +139,13 @@ ul.partner li {
       max-width: 100%;
     }
   }
+
+  @media (max-width:1200px){
+    .testimonial-container {
+      margin-top: 50px;
+  
+  }
+}
   @media (max-width: 767px) {
     .colWrapper {
         flex-direction: column;
