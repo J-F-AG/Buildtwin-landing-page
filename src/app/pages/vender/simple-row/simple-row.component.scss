@@ -144,3 +144,30 @@ line-height: normal;
         height: 62px;
     }
 }
+
+@media (max-width:767px){
+    :host ::ng-deep .row {
+        padding: 30px 15px;
+        .container{
+            padding: 0;
+            ul {
+                flex-wrap: wrap;
+                gap: 10px;
+                li {
+                    padding: 6px 12px;
+                    width: 100%;
+                    height: auto;
+                    .content p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        .head{
+            margin-bottom: 30px;
+        }
+       
+    }
+    
+}

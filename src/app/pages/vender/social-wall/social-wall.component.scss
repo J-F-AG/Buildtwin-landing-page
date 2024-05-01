@@ -144,3 +144,40 @@
     opacity: 1;
 }
 
+
+
+@media (max-width:767px){
+    .socialWallFirst, .socialWallSecond, .socialWallThird {
+        flex-direction: column;
+    }
+    .socialWallFirst > div {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    .newsBlog {
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 20px;
+    }
+    .newsBlog h3 {
+        margin-bottom: 3px;
+        font-size: 16px;
+    }
+    .newsBlog p br{
+        display: none;
+    }
+    .socialWallGroup .socialBlog {
+        width: 100% !important;
+    }
+    .newsBlog p {
+        margin-bottom: 6px;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .socialWallGroup {
+        padding: 10px 10px 30px;
+    }
+}

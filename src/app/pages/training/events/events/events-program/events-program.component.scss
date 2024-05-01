@@ -94,4 +94,8 @@
    :host ::ng-deep .eventsManage .container .event{
 width: 100%;
     }
+
+    :host ::ng-deep .eventsManage {
+        margin: 0;
+    }
 }

@@ -434,4 +434,18 @@ line-height: 138.252%;
         margin-top: 0;
     }
 }
-@media (max-width:767px){}
+@media (max-width:767px){
+    :host ::ng-deep .about {
+        padding-top: 40px;
+    }
+    :host ::ng-deep .about .container .flexStructure {
+        flex-direction: column;
+    }
+    :host ::ng-deep .about .container .flexStructure .leftPart {
+        width: 100%;
+    }
+    :host ::ng-deep  .about .container {
+      padding: 0 15px;
+    }
+    
+}
