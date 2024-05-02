@@ -161,14 +161,20 @@ line-height: 130%; /* 20.8px */
         }
     }
 }
-
+@media (max-width:950px){
+    :host ::ng-deep  .cdeSection {
+        gap: 1px;
+     }
+}
 @media (max-width:767px) {
 
 
     :host ::ng-deep .cdeSection{
          flex-direction: column;
          margin: 0;
-         margin-bottom: 50px;
+         margin-bottom: 0;
+         padding: 0;
+         background: transparent;
          .solutionGroup>div {
              min-width: unset;
              width: 100%;
@@ -188,9 +194,13 @@ line-height: 130%; /* 20.8px */
          }
          .cde_col{
 width: 100%;
+margin-bottom: 30px;
+&:last-child{
+    margin-bottom: 0;
+ }
          }
-     }
+      
     
- 
+        }
  
  }

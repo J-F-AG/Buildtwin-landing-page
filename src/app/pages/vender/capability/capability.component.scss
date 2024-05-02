@@ -2,7 +2,7 @@
     .capability {
         background: #f9f9f9;
         padding-top: 60px;
-        padding-bottom: 45px;
+        padding-bottom: 60px;
 
         .head {
             margin-bottom: 40px;
@@ -244,5 +244,66 @@ text-align: center;
         width: 163px;
     }
 }
+    }
+}
+
+@media (max-width:1200px){
+    :host ::ng-deep .capability {
+        padding: 30px;
+    }
+    :host ::ng-deep .capability .left .role,  :host ::ng-deep .capability .left .experience {
+        padding: 10px 18px;
+        width: 110px;
+        font-size: 11px;
+    }
+    :host ::ng-deep  .capability .headSection div.common {
+        display: flex;
+        width: 110px;
+    }
+    :host ::ng-deep .capability .left .experience {
+        white-space: normal;
+        width: 129px;
+    }
+
+   
+}
+@media (max-width:950px){
+    :host ::ng-deep .capability {
+        padding: 30px 0;
+    }
+    :host ::ng-deep  .capability .headSection .col {
+        width: 114px;
+        text-align: center;
+    }
+    :host ::ng-deep  .capability .right .role {
+        width: 80px !important;
+    }
+    :host ::ng-deep  .capability .headSection .col {
+        width: 84px;
+    }
+    :host ::ng-deep  .capability .headSection .col strong {
+        font-size: 13px;
+    }
+    :host ::ng-deep .capability .left .experience {
+        white-space: normal;
+        width: 116px;
+    }
+    :host ::ng-deep .capability.code .left.data .containerData {
+        padding: 41px 5px 14px 24px;
+    }
+    :host ::ng-deep .capability .left .role, :host ::ng-deep .capability .left .experience {
+        width: 130px;
+    }
+    
+}
+@media (max-width:767px){
+    :host ::ng-deep .capability .flex {
+        overflow: auto;
+    }
+    :host ::ng-deep .capability .right .overlay .box h2{
+        font-size: 14px !important;
+    }
+    :host ::ng-deep .capability .left .containerData {
+        padding: 62px 5px 14px 24px;
     }
 }

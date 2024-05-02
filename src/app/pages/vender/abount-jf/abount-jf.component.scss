@@ -1,8 +1,8 @@
 :host ::ng-deep {
     .about {
 
-        padding-top: 100px;
-        padding-bottom: 64px;
+        padding-top: 80px;
+        padding-bottom: 80px;
 
         .head {
             margin-bottom: 40px;;
@@ -398,4 +398,54 @@ line-height: 138.252%;
         }
 
     }
+}
+
+
+
+
+
+@media (max-width:1200px){
+    :host ::ng-deep .about .container .flexStructure .leftPart.rightPart {
+        padding-right: 0;
+        padding-left: 0;
+        flex: 1;
+    }
+    :host ::ng-deep  .about .container .flexStructure .leftPart .box .grid_cover {
+        gap: 7px;
+    }
+    :host ::ng-deep .about .container .flexStructure .leftPart .box .rowData ul li {
+       
+        margin-right: 19px;
+    }
+    :host ::ng-deep  .about {
+        padding: 80px 40px;
+    }
+}
+@media (max-width:950px){
+    :host ::ng-deep .about {
+        padding: 80px 0;
+        margin-top: 100px;
+    }
+    :host ::ng-deep .about .container .flexStructure .leftPart .box .grid_cover {
+        gap: 7px;
+        flex-wrap: wrap;
+    }
+    :host ::ng-deep  .about {
+        margin-top: 0;
+    }
+}
+@media (max-width:767px){
+    :host ::ng-deep .about {
+        padding-top: 40px;
+    }
+    :host ::ng-deep .about .container .flexStructure {
+        flex-direction: column;
+    }
+    :host ::ng-deep .about .container .flexStructure .leftPart {
+        width: 100%;
+    }
+    :host ::ng-deep  .about .container {
+      padding: 0 15px;
+    }
+    
 }

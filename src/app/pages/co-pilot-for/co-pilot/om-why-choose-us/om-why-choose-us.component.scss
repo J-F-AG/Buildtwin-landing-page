@@ -214,13 +214,22 @@
 
 
 }
-
+@media (max-width:1200px){
+    :host ::ng-deep .co-pilot-details .why-choose-us-content .flex {
+  
+        flex-direction: column;
+    }
+    :host ::ng-deep .co-pilot-details .colManage {
+      
+        margin-bottom: 80px;
+    }
+}
 
 @media (max-width:767px) {
     :host ::ng-deep .co-pilot-details {
         .colManage {
             display: flex;
-            gap: 72px;
+            gap: 20px;
             align-items: center;
             flex-direction: column;
         }

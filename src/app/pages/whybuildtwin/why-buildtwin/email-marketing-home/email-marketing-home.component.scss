@@ -62,7 +62,7 @@ background: #f9f9f9;
       border-radius: 16px;
       border: 1px solid #886DE0;
       overflow: hidden;
-      margin-bottom: 50px;
+      margin-bottom: 80px;
       padding: 0;
       height: 500px;
     overflow: auto;
@@ -104,7 +104,7 @@ background: #f9f9f9;
   display: flex;
   align-items: center;
   margin-bottom: 43px;
-  margin-top: 100px;
+ 
   justify-content: space-between;
   border-bottom: 1px solid #ECECEC;
   background: var(--secondary, #F6F3FF);
@@ -210,6 +210,9 @@ background: #f9f9f9;
     width: 24px;
   }
 
+  .happier-customers-image.ms-auto.me-auto.text-center.position-relative.z-1 {
+    margin-bottom: 10px;
+}
   @media (max-width: 991px) {
     .content-wrapper,
     .header-section,
@@ -229,11 +232,10 @@ background: #f9f9f9;
 
   :host ::ng-deep div#scrollActivated.fixedData .head {
     position: sticky;
-    top: 111px;
+    top: 108px;
     display: block;
     z-index: 9;
     background: #886DE0;
-    padding-top: 42px;
 }
 
 
@@ -248,4 +250,54 @@ background: #f9f9f9;
 .cover {
   position: sticky;
   top: 0;
+}
+
+
+
+@media (max-width:1200px){
+  div#features {
+    padding: 0 30px;
+}
+.header-title, .offer-text {
+  font-size: 22.733px;
+}
+}
+
+@media (max-width:950px){
+  .header-title, .offer-text {
+    font-size: 15.733px !important;
+}
+:host ::ng-deep  div#scrollActivated.fixedData .head {
+  top: 69px;
+}
+.header-title img, .offer-text img {
+  margin-left: 10px;
+  width: 78px;
+}
+.services-container h4 {
+  font-size: 13px;
+}
+.services-intro {
+  font-size: 14px;
+}
+.header-section {
+  padding: 1px 10px;
+  width: 173px;
+}
+section.content-wrapper .container {
+  padding: 0;
+}
+.content-wrapper {
+  top: 74px;
+}
+}
+
+@media (max-width:767px){
+  .header-section {
+      
+    display: none;
+}
+.services-intro {
+    display: none;
+}
 }

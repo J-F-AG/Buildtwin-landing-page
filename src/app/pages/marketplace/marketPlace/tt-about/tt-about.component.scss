@@ -89,6 +89,7 @@
             li {
                 margin-bottom: 20px;
                 padding-left: 30px;
+                font-size: 16px;
     
                 i {
                     width: 20px;
@@ -174,6 +175,9 @@
     }
 
 }
+.about-area {
+    margin-bottom: 46px;
+}
 
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -207,4 +211,10 @@
         padding-left: 25px;
     }
 
+}
+
+@media (max-width:767px){
+    .about-content {
+        margin-bottom: 40px;
+    }
 }

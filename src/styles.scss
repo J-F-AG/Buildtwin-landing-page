@@ -165,34 +165,32 @@ img {
 }
 .ptb-100 {
     padding: {
-        top: 100px;
-        bottom: 100px;
+        top: 0;
+        bottom: 80px;
     };
 }
 .pt-100 {
-    padding-top: 100px;
+    padding-top: 0;
 }
 .pt-140 {
-    padding-top: 140px;
+    padding-top: 0;
 }
 .pb-100 {
-    padding-bottom: 100px;
+    padding-bottom: 80px;
 }
 .pb-70 {
     padding-bottom: 70px;
 }
 .ptb-75 {
     padding: {
-        top: 75px;
+        top: 0;
         bottom: 75px;
     };
 }
 .pt-75 {
-    padding-top: 75px;
+    padding-top: 0;
 }
-.pb-75 {
-    padding-bottom: 75px;
-}
+
 
 // Font Family
 .font-syne {
@@ -492,6 +490,8 @@ img {
         top: 161px;
         bottom: 74px;
     };
+    margin-bottom: 80px;
+    
     .pt-shape1 {
         left: 17.7%;
         bottom: 30%;
@@ -613,181 +613,7 @@ img {
 }
 
 /* Max width 767px */
-@media only screen and (max-width : 767px) {
 
-    body {
-        font-size: 18px;
-
-    }
-    body.mat-typography.menuToggle {
-        overflow: hidden;
-    }
-    p {
-        font-size: 16px !important;
-        line-height: 26px;
-    }
-    .ptb-100 {
-        padding: {
-            top: 60px;
-            bottom: 60px;
-        };
-    }
-    .pt-100 {
-        padding-top: 60px;
-    }
-    .pb-100 {
-        padding-bottom: 60px;
-    }
-    .ptb-75 {
-        padding: {
-            top: 35px;
-            bottom: 35px;
-        };
-    }
-    .pt-75 {
-        padding-top: 35px;
-    }
-    .pb-75 {
-        padding-bottom: 35px;
-    }
-
-    // Default Btn
-    .default-btn {
-        &.mdc-button {
-            border-radius: 5px;
-            padding: 14px 30px;
-            font-size: 15px;
-        }
-    }
-
-    // EM Section Title
-    .em-section-title {
-        margin-bottom: 30px;
-        max-width: 100%;
-    
-        .sub-title {
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        h2 {
-            font-size: 25px;
-        }
-        p {
-            margin-top: 10px;
-        }
-    }
-
-    // TT Section Title
-    .tt-section-title {
-        max-width: 100%;
-        margin: {
-            bottom: 30px;
-            top: -4px;
-        };
-        h2 {
-            font-size: 25px;
-        }
-        p {
-            margin-top: 8px;
-            max-width: 100%;
-        }
-    }
-
-    // OM Section Title
-    .om-section-title {
-        max-width: 100%;
-        margin: {
-            top: -4px;
-            bottom: 25px;
-        };
-        h2 {
-            font-size: 25px;
-        }
-    }
-
-    // HD Section Title
-    .hd-section-title {
-        max-width: 100%;
-        margin: {
-            top: -4px;
-            bottom: 25px;
-        };
-        h2 {
-            font-size: 25px;
-        }
-        p {
-            margin-top: 12px;
-            max-width: 100%;
-        }
-    }
-
-    // FS Section Title
-    .fs-section-title {
-        max-width: 100%;
-        margin: {
-            top: -10px;
-            bottom: 30px;
-        };
-        h2 {
-            font-size: 35px;
-        }
-        p {
-            margin-top: 10px;
-        }
-    }
-
-    // Mat Select
-    .mat-mdc-select-panel {
-        .mat-mdc-option {
-            padding: {
-                top: 11px;
-                left: 15px;
-                right: 15px;
-                bottom: 11px;
-            };
-        }
-    }
-
-    // Page Title Area
-    .page-title-area {
-        padding: {
-            top: 140px;
-            bottom: 60px;
-        };
-        .pt-shape1, .pt-shape2 {
-            display: none;
-        }
-    }
-    .page-title-content {
-        ul {
-            margin-bottom: 8px;
-
-            li {
-                font-size: 14px;
-            }
-        }
-        h1 {
-            max-width: 100%;
-            font-size: 30px;
-        }
-    }
-
-    // ngx-scrolltop
-    .scrolltop-button {
-        right: 20px !important;
-        width: 42px !important;
-        bottom: 20px !important;
-        height: 42px !important;
-    
-        .symbol-container {
-            &::before {
-                font-size: 23px;
-                margin-top: -1px;
-            }
-        }
-    }
-
-}
 
 /* Min width 576px to Max width 767px */
 @media only screen and (min-width : 576px) and (max-width : 767px) {}
@@ -802,12 +628,7 @@ img {
         line-height: 27px;
         font-size: 19px;
     }
-    .ptb-100 {
-        padding: {
-            top: 80px;
-            bottom: 80px;
-        };
-    }
+    
     .pt-100 {
         padding-top: 80px;
     }
@@ -823,9 +644,7 @@ img {
     .pt-75 {
         padding-top: 55px;
     }
-    .pb-75 {
-        padding-bottom: 55px;
-    }
+    
 
     // Default Btn
     .default-btn {
@@ -997,7 +816,6 @@ img {
         }
         p {
             margin-top: 12px;
-            max-width: 500px;
         }
     }
 
@@ -1103,15 +921,14 @@ img {
     cursor: default !important;
 }
 
-@media (max-width:1200px){
-    h2{
-        font-size: 30px !important;
-    }
-}
+
 
 @media (max-width:767px){
     h2{
         font-size: 24px !important;
+    }
+    .container {
+        padding: 0 15px;
     }
 }
 
@@ -1198,10 +1015,216 @@ img {
 
 @media (max-width: 1200px){
 h2 {
-    font-size: 20px !important;
+    // font-size: 20px !important;
 }
 .container {
     max-width: 100%;
+    padding: 0 30px;
 }
 
+}
+
+@media (max-width:950px){
+    .container {
+        padding: 0 30px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .pb-100 {
+        padding-bottom: 80px;
+        padding-top: 0;
+    }
+
+    .page-title-area {
+       
+        margin-bottom: 80px;
+    }
+    .pt-100 {
+        padding-top: 0;
+    }
+   
+}
+
+@media only screen and (max-width : 767px) {
+
+    body {
+        font-size: 18px;
+
+    }
+    body.mat-typography.menuToggle {
+        overflow: hidden;
+    }
+    p {
+        font-size: 16px ;
+        line-height: 26px;
+    }
+    .ptb-100 {
+        padding: {
+          
+            bottom: 60px;
+        };
+    }
+    
+    .pb-100 {
+        padding-bottom: 60px;
+    }
+    .ptb-75 {
+        padding: {
+          
+            bottom: 35px;
+        };
+    }
+    .pt-75 {
+        padding-top: 35px;
+    }
+    .pb-75 {
+        padding-bottom: 35px;
+    }
+
+    // Default Btn
+    .default-btn {
+        &.mdc-button {
+            border-radius: 5px;
+            padding: 14px 30px;
+            font-size: 15px;
+        }
+    }
+
+    // EM Section Title
+    .em-section-title {
+        margin-bottom: 30px;
+        max-width: 100%;
+    
+        .sub-title {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    // TT Section Title
+    .tt-section-title {
+        max-width: 100%;
+        margin: {
+            bottom: 30px;
+            top: -4px;
+        };
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-top: 8px;
+            max-width: 100%;
+        }
+    }
+
+    // OM Section Title
+    .om-section-title {
+        max-width: 100%;
+        margin: {
+            top: -4px;
+            bottom: 25px;
+        };
+        h2 {
+            font-size: 25px;
+        }
+    }
+
+    // HD Section Title
+    .hd-section-title {
+        max-width: 100%;
+        margin: {
+            top: -4px;
+            bottom: 25px;
+        };
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-top: 12px;
+            max-width: 100%;
+        }
+    }
+
+    // FS Section Title
+    .fs-section-title {
+        max-width: 100%;
+        margin: {
+            top: -10px;
+            bottom: 30px;
+        };
+        h2 {
+            font-size: 35px;
+        }
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    // Mat Select
+    .mat-mdc-select-panel {
+        .mat-mdc-option {
+            padding: {
+                top: 11px;
+                left: 15px;
+                right: 15px;
+                bottom: 11px;
+            };
+        }
+    }
+
+    // Page Title Area
+    .page-title-area {
+        padding: {
+            top: 140px;
+            bottom: 60px;
+        };
+        .pt-shape1, .pt-shape2 {
+            display: none;
+        }
+    }
+    .page-title-content {
+        ul {
+            margin-bottom: 8px;
+
+            li {
+                font-size: 14px;
+            }
+        }
+        h1 {
+            max-width: 100%;
+            font-size: 30px;
+        }
+    }
+
+    // ngx-scrolltop
+    .scrolltop-button {
+        right: 20px !important;
+        width: 42px !important;
+        bottom: 20px !important;
+        height: 42px !important;
+    
+        .symbol-container {
+            &::before {
+                font-size: 23px;
+                margin-top: -1px;
+            }
+        }
+    }
+    .pb-100 {
+        padding-bottom: 40px;
+        padding-top: 0;
+    }    
+}
+
+@media (max-width:767px){
+    .container {
+        padding: 0 15px;
+    }
 }

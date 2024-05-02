@@ -24,7 +24,9 @@
 
     margin-bottom: 57px;
 }
-
+.task-management-area.ptb-100 {
+    padding-top: 80px;
+}
 .tabbing {
     margin: 0 auto;
 }
@@ -70,7 +72,7 @@
         position: absolute;
         bottom: -34px;
         white-space: nowrap;
-        left: -25px;
+        left: 1px;
     }
 
     .line span {
@@ -86,18 +88,18 @@
  color:  #886DE0;
 }
 .line span:nth-child(2) em{
-    left: -54px;
-}
-.line span:nth-child(3) em{
     left: -18px;
 }
+.line span:nth-child(3) em{
+    left: -28px;
+}
 .line span:nth-child(4) em{
-    left: -66px;
+    left: -28px;
 }
 .tabContent {
     text-align: center;
     margin: 0 auto;
-    margin-top: 75px;
+    margin-top: 95px;
 
     span {
         color: #0E0E28;
@@ -138,6 +140,20 @@ img.lineSvg.active {
     opacity: 1 !important;
 }
 
+@media (max-width:1200px){
+    .line em {
+        left: -2px;
+    }
+    .line span:nth-child(2) em {
+        left: -20px;
+    }
+    .line span:nth-child(3) em {
+        left: -31px;
+    }
+    .line span:nth-child(4) em {
+        left: -32px;
+    }
+}
 @media (max-width:767px){
     .line {
         position: relative;

@@ -185,9 +185,19 @@
     }
 }
 
+@media  (max-width:1200px){
+    :host ::ng-deep  .servicesWrap {
+        padding: 0 30px;
+    }
+}
+@media (max-width:950px){
+    :host ::ng-deep  .servicesWrap .itemFlex .item .bottom-content .labelBtn span em {
+        font-size: 11px;
+    }
+}
 @media (max-width:767px) {
     :host ::ng-deep {
-        .servicesWrap {
+    .servicesWrap {
             padding: 0;
         }
 
@@ -202,6 +212,9 @@
 
         }
     }
-
+    :host ::ng-deep .servicesWrap .itemFlex .item .bottom-content .labelBtn span {
+        gap: 8px;
+        padding-right: 23px;
+    }
 
 }

@@ -614,3 +614,9 @@
   overflow: hidden;
   width: 859px;
 }
+
+@media (max-width:1200px){
+  .frame-frame3 > div {
+    flex-basis: 106px;
+}
+}

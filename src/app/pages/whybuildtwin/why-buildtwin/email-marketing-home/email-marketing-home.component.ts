@@ -67,7 +67,7 @@ element:any
         this.fixedElement.classList.add("fixedData")
         let activeELe = document.querySelectorAll('[data-ele]');
         activeELe.forEach((item, index) => {
-          if (item.getBoundingClientRect().top < 400) {
+          if (item.getBoundingClientRect().top < 500) {
             this.activeState = index + 1;
             item.classList.add("active")
           }

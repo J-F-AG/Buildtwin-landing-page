@@ -80,3 +80,20 @@
         }
     }
 }
+
+@media(max-width:767px){
+    :host ::ng-deep .buildTwinDemo {
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        .imgWrap img {
+       
+            height: unset;
+            max-width: unset;
+        }
+    }
+    :host ::ng-deep .buildTwinDemo .content {
+        height: auto;
+        padding-right: 0;
+    }
+}
