@@ -149,6 +149,9 @@
                         font-weight: 400;
                         line-height: 160%;
                         margin-bottom: 6px;
+                        white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
                         /* 25.6px */
                     }
 

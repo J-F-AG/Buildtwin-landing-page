@@ -1,0 +1,315 @@
+import { Component,ElementRef,HostListener, Renderer2 } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
+@Component({
+  selector: 'app-vender-details-sublime',
+
+  templateUrl: './vender-details-sublime.component.html',
+  styleUrl: './vender-details-sublime.component.scss'
+})
+export class VenderDetailsSublimeComponent {
+
+   ourEngineers = [
+    {
+      img: "assets/images/ui/lorenz.png",
+      name: "Balachandran Krishnaraj",
+      title: "Technical Head | Tekla | Modeling",
+      des: "„With his experience and expertise from large <br>international projects, Balachandran is always able to <br>lead construction projects successfully.“",
+      medalInfo: "",
+      cusTitle: "What our customers say …",
+      expertTitle: "<span>My</span> expertise at sublime structures",
+      expertise: ["Project management", "Site management", "Global projects"]
+    },
+    {
+      img: "assets/images/ui/lorenz.png",
+      name: "Kannan Palanivel",
+      title: "Technical Head | Tekla | Erection",
+      des: "Kannan is a detail-oriented project <br>manager who enjoys working on and <br>solving complex technical issues.“",
+      medalInfo: "",
+      cusTitle: "What our customers say …",
+      expertTitle: "<span>My</span> expertise at sublime structures",
+      expertise: ["Concept development", "Renewable energies", "Lightning protection"]
+    },
+ 
+    {
+      img: "assets/images/ui/lorenz.png",
+      name: "Aravind Ramachandran",
+      title: "Technical Head | Tekla | Modeling",
+      des: "„Through his technical expertise in structural <br>design and engineering, Aravind is able to <br>deliver high-end outcomes in each project <br>we worked on.”",
+      medalInfo: "Gold Medalist DTU",
+      cusTitle: "What our customers say …",
+      expertTitle: "<span>My</span> expertise at sublime structures",
+      expertise: ["Structural Design", "Prestressed Elements", "Detailing as per EC"]
+    },
+    
+ 
+    {
+      img: "assets/images/ui/lorenz.png",
+      name: "Abinesh Rajendran",
+      title: "Technical Head | Tekla | QC | Sales",
+      des: "Abinesh is a competent and friendly <br>contact person with whom we are happy <br>to work.“",
+      medalInfo: "",
+      cusTitle: "What our customers say …",
+      expertTitle: "<span>My</span> expertise at sublime structures",
+      expertise: ["Fire alarm systems", "Voice alarm systems", "Technical concepts"]
+    },
+    {
+      img: "assets/images/ui/lorenz.png",
+      name: "Nithishkumar Pachiappan",
+      title: "B.Sc. <br>Architect",
+      des: "„Through her calm and thoughtful manner, <br>Nithishkumar Pachiappan always provides us with the desired <br>results.“",
+      medalInfo: "",
+      cusTitle: "What our customers say …",
+      expertTitle: "<span>My</span> expertise at sublime structures",
+      expertise: ["Lighting design", "Architecture"]
+    },
+    {
+      img: "assets/images/ui/lorenz.png",
+      name: "Sathish Kumar Muniyandi",
+      title: "Project Manager Electrical <br>Engineering",
+      des: "„Sathish Kumar Muniyandi impresses with his many <br>years of experience and always provides <br>technical and commercial solutions.“",
+      medalInfo: "",
+      cusTitle: "What our customers say …",
+      expertTitle: "<span>My</span> expertise at sublime structures",
+      expertise: ["Detailed design", "As-built surveys", "Object monitoring"]
+    }
+  ];
+  
+   projects = [
+    {
+        type: 'Structural detailing',
+        name: 'Samsung Trestle project',
+        location: 'NA',
+        image: 'assets/images/ui/project1.png',
+        description: 'Completing 1200+ shop drawings and 300+ is certainly our key achievement.',
+    },
+    {
+        type: 'steel detailing',
+        name: 'Anheuser Busch Evaporator Condenser',
+        location: 'NA',
+        image: 'assets/images/ui/project2.png',
+        description: 'Completed within 3 weeks despite 4 RFIs with over 50 questions',
+    },
+    {
+        type: 'Structural detailing',
+        name: 'AztecHotel',
+        location: 'NA',
+        image: 'assets/images/ui/project3.png',
+        description: 'Hotel project in San Antonio, Texas, with 80 tons of steel featuring trusses',
+    },
+    {
+        type: 'steel detailing',
+        name: 'Cems Analyzers',
+        location: 'NA',
+        image: 'assets/images/ui/project4.png',
+        description: 'Structural and miscellaneous steel detailing SDS2 calculations',
+    },
+    {
+        type: 'steel detailing',
+        name: 'Bay Pond Conservatory',
+        location: 'India',
+        image: 'assets/images/ui/project5.png',
+        description: 'Zero fit-up issues with glass panels',
+    },
+    {
+        type: 'Structural detailing',
+        name: 'Oasis at Lakeport',
+        location: 'NA',
+        image: 'assets/images/ui/project6.png',
+        description: '5 buildings in an amusement park in Osage Beach, Missouri, with 120 tons of steel',
+    },
+    {
+      type: 'Structural detailing',
+      name: 'Winchester Terminal',
+      location: 'NA',
+      image: 'assets/images/ui/project6.png',
+      description: 'Structural and miscellaneous steel detailing, connection design',
+  },
+  {
+    type: 'Structural detailing',
+    name: 'VCM#2 HAPF Project',
+    location: 'NA',
+    image: 'assets/images/ui/project6.png',
+    description: 'Achieved approval within 2 weeks',
+},
+{
+  type: 'Structural detailing',
+  name: 'IEA Headquarters',
+  location: 'NA',
+  image: 'assets/images/ui/project6.png',
+  description: 'Government office building in Dallas, Texas with 82 tons of steel',
+},
+{
+  type: 'Structural detailing',
+  name: 'Braya Renewable Fuels Project',
+  location: 'NA',
+  image: 'assets/images/ui/project6.png',
+  description: 'New platform steel for a renewable energy plant in Labrador, Canada, for 3 separate vessel drums',
+},
+{
+  type: 'Structural detailing',
+  name: 'AC Hotel',
+  location: 'NA',
+  image: 'assets/images/ui/project6.png',
+  description: 'Hotel building in Clayton, Missouri. Eleven- level hotel building with major steel in three levels Includes two stair towers with mesh railings, pit ladder, ship ladder',
+},
+{
+  type: 'Structural detailing',
+  name: 'Bay Pond Conservatory',
+  location: 'NA',
+  image: 'assets/images/ui/project6.png',
+  description: 'Nursery project in Saranac Lake, New  York, featuring trusses and complex  connections, excluding glass panels',
+},
+{
+  type: 'Structural detailing',
+  name: 'Fort Meade Visitor Center',
+  location: 'NA',
+  image: 'assets/images/ui/project6.png',
+  description: 'Access control facility centre in Fort   Meade, Maryland featuring Structural   elements include AESS braces with UPC',
+},
+];
+
+filteredProjects = this.projects;
+
+  constructor(private elRef: ElementRef, private renderer: Renderer2) { 
+
+
+  }
+  showPopup=false;
+
+
+  selectedOption: string = 'gmt'; // Default selected option
+  timeText: string = '10:00 AM to 07:00 PM'; // Default time text
+
+
+  isSticky: boolean = false;
+  activeSection: string = 'about'; // Default active section
+
+
+  reviewsSlides: OwlOptions = {
+    items: 5,
+nav: true,
+margin: 20,
+dots: false,
+loop: true,
+autoWidth:true,
+autoplay: false,
+autoplayHoverPause: false,
+
+navText: [
+  "<i class='ti ti-chevron-left'></i>",
+  "<i class='ti ti-chevron-right'></i>",
+],
+responsive: {
+  0: {
+    items: 2
+  },
+  515: {
+    items: 1
+  },
+  768: {
+    items: 4
+  },
+  990: {
+    items: 5
+  },
+  1400: {
+    items: 6
+  }
+}
+}
+
+
+aboutSlider: OwlOptions = {
+  items: 1,
+  nav: true,
+  margin: 0,
+  dots: true,
+  loop: true,
+  autoplay: true,
+  autoWidth:true,
+  autoplayHoverPause: false,
+  navText: [
+    "<i class='ti ti-chevron-left'></i>",
+    "<i class='ti ti-chevron-right'></i>",
+  ]
+
+}
+
+@HostListener('window:scroll', [])
+onWindowScroll() {
+  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  this.isSticky = scrollPosition >= 100;
+
+  if (scrollPosition >= 200) {
+    document.body.classList.add('removeDefaultHeader');
+  } else {
+    // document.body.classList.remove('scrolled');
+  }
+
+  // Determine active section
+  const sections = document.querySelectorAll('.scrollSection');
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionId = section.getAttribute('id');
+    if (sectionTop <= 200 && sectionTop >= -100 && sectionId) { // Check if sectionId is not null
+      this.activeSection = sectionId;
+    }
+  });
+}
+
+scrollToSection(sectionId: string) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const scrollOffset = section.getBoundingClientRect().top - 200; // Adjusted offset
+    window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
+  }
+}
+
+ngOnInit(){
+    this.loadScript();
+}
+loadScript() {
+  // Create script element
+  const script = this.renderer.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+
+  // Append script element to the body
+  this.renderer.appendChild(this.elRef.nativeElement, script);
+}
+call(){
+  this.showPopup =true
+  }
+  closePopup(){
+    this.showPopup =false
+  
+    }
+onSelectChange() {
+    switch (this.selectedOption) {
+      case 'gmt':
+        this.timeText = '10:00 AM to 07:00 PM';
+        break;
+      case 'est':
+        this.timeText = '09:00 AM to 06:00 PM';
+        break;
+      case 'pst':
+        this.timeText = '07:00 AM to 04:00 PM';
+        break;
+      default:
+        this.timeText = '10:00 AM to 07:00 PM'; // Default value
+        break;
+    }
+  }
+   filterProjectsByType(selectedType:string) {
+    return this.projects.filter(project => project.type === selectedType);
+}
+onTypeChange(event: any): void {
+  const selectedType = event.target.value;
+  if (selectedType === 'all') {
+      this.filteredProjects = this.projects;
+  } else {
+      this.filteredProjects = this.filterProjectsByType(selectedType);
+  }
+}
+}

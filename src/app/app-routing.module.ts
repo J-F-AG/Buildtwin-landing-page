@@ -22,6 +22,7 @@ import { DataPrivacyComponent } from './pages/data-privacy/data-safety.component
 import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
 import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
 import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sublime/vender-details-sublime.component';
 
 
 
@@ -45,6 +46,7 @@ const routes: Routes = [
     {path: 'contact', component: ContactPageComponent},
     {path: 'about', component: AboutPageComponent},
     {path: 'vender-details', component: VenderDetailsComponent},
+    {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
     {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
