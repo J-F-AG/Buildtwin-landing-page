@@ -128,6 +128,7 @@ import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-
 import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
 import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sublime/vender-details-sublime.component';
+import { AccreditationComponent } from './pages/vender/accreditation/accreditation.component';
 
 
 
@@ -250,7 +251,8 @@ import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sub
    PrivacyPolicyPageComponent,
    TermsConditionsPageComponent,
    ComingSoonComponent,
-   VenderDetailsSublimeComponent
+   VenderDetailsSublimeComponent,
+   AccreditationComponent
 
 
    

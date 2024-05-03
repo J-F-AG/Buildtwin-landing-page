@@ -109,6 +109,9 @@
                     font-weight: 600;
                     line-height: normal;
                     margin-bottom: 10px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                 }
 
                 .flex {
