@@ -1,3 +1,4 @@
+<div class="subline">
 <app-hd-navbar></app-hd-navbar>
 <div class="stickyMneu"  [class.active]="isSticky">
     <div class="stcikyTop">
@@ -25,7 +26,7 @@
                 <li [ngClass]="{'activeSection': activeSection === 'about'}" (click)="scrollToSection('about')">About</li>
                 <li [ngClass]="{'activeSection': activeSection === 'capabilities'}" (click)="scrollToSection('capabilities')">Capabilities</li>
                 <li [ngClass]="{'activeSection': activeSection === 'portfolio'}" (click)="scrollToSection('portfolio')">Portfolio</li>
-                <!-- <li [ngClass]="{'activeSection': activeSection === 'certification'}" (click)="scrollToSection('certification')">Certification</li> -->
+                <li [ngClass]="{'activeSection': activeSection === 'certification'}" (click)="scrollToSection('certification')">Certification</li>
                 <!-- <li [ngClass]="{'activeSection': activeSection === 'social'}" (click)="scrollToSection('Social')">Social Feed</li> -->
             </ul>
     </div>
@@ -51,7 +52,7 @@
                             height="85"
                         />
 
-                        <span class="jeffStyle">+ years</span>
+                        <span class="jeffStyle"> 3+ years</span>
                     </div> 
                     <h3>of engineering excellence</h3>
 
@@ -59,19 +60,19 @@
 
                     <ul>
                         <li>
-                            <strong>50+</strong>
+                            <strong>28+</strong>
                             <span>Employees</span>
                         </li>
                         <li>
-                            <strong>10+</strong>
+                            <strong>3+</strong>
                             <span>Market</span>
                         </li>
                         <li>
-                            <strong>5+</strong>
+                            <strong>3+</strong>
                             <span>Years in Business</span>
                         </li>
                         <li>
-                            <strong>250+</strong>
+                            <strong>28+</strong>
                             <span>Reference Projects</span>
                         </li>
                     </ul>
@@ -94,7 +95,7 @@
                       
                     </div>
                     <a class="btn cursor" (click)="scrollToSection('about')"
-                        >More about Sublime
+                        >More about Sublime Structures
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -130,16 +131,16 @@
                             width="120"
                             height="61"
                         /> -->
-                            <h2>About Sublime</h2>
+                            <h2>About Sublime Structures</h2>
                             <p>
-                                Sublime is a virtual construction modeling service provider specializing in Structural/Miscellaneous, Ornamental Steel and Duct / Plate work Detailing and Designing. We offer our services to the Construction Industry and its associated areas.
+                                Sublime Structures is a virtual construction modeling service provider specializing in Structural/Miscellaneous, Ornamental Steel and Duct / Plate work Detailing and Designing. We offer our services to the Construction Industry and its associated areas.
                             </p>
                 
                             <p>
-                                At Sublime, we believe in our service and product. We work hard to get to know our customers, to develop a connection and to understand them and their needs.
+                                At Sublime Structures, we believe in our service and product. We work hard to get to know our customers, to develop a connection and to understand them and their needs.
                             </p>
                             <h3>Engineering project for</h3>
-                            <img src="assets/images/ui/21.png" width="462" height="55" />
+                            <img class="resize" src="assets/images/ui/subline/logoPart.png" width="462" height="55" />
 
                             <div class="btnWrap">
                                 <a (click)="call()" class="btnNew cursor"
@@ -442,7 +443,7 @@
             <div class="container">
                 <h2>Capability Matrix</h2>
                 <p>
-                    J&F provides a wide range of services with multidisciplinary teams
+                    Sublime Structures provides a wide range of services with multidisciplinary teams
                 </p>
             </div>
            
@@ -585,7 +586,7 @@
                        
                         height="409" width="188"
                     />
-                    <span class="exp">6 Years of experience</span>
+                    <span class="exp">3 Years of experience</span>
                 </ng-template>
                 <ng-template carouselSlide>
                     <img
@@ -593,7 +594,7 @@
                        
                         height="409" width="188"
                     />
-                    <span class="exp">6 Years of experience</span>
+                    <span class="exp">4 Years of experience</span>
                 </ng-template>
                 <ng-template carouselSlide>
                     <img
@@ -601,7 +602,7 @@
                        
                         height="409" width="188"
                     />
-                    <span class="exp">6 Years of experience</span>
+                    <span class="exp">3 Years of experience</span>
                 </ng-template>
                 <ng-template carouselSlide>
                     <img
@@ -609,41 +610,9 @@
                        
                         height="409" width="188"
                     />
-                    <span class="exp">6 Years of experience</span>
+                    <span class="exp">4 Years of experience</span>
                 </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/sub1.png"
-                       
-                        height="409" width="188"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/sub2.png"
-                       
-                        height="409" width="188"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/sub3.png"
-                       
-                        height="409" width="188"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img
-                        src="assets/images/ui/sub4.png"
-                       
-                        height="409" width="188"
-                    />
-                    <span class="exp">6 Years of experience</span>
-                </ng-template>
-                
+               
             </owl-carousel-o>
         </div>
     </div>
@@ -654,7 +623,7 @@
             <div class="container">
                 <h2>Building Codes</h2>
                 <p>
-                    J&F works with regional building codes to provide the best and most fitting technical solutions.
+                    Sublime Structures works with regional building codes to provide the best and most fitting technical solutions.
                 </p>
             </div>
            
@@ -695,51 +664,30 @@
                                 <strong>American Standards</strong>
                             </div>
                           
-                            <div class="col">
-                                <strong>European Union</strong>
-                            </div>
-                            <div class="col">
-                                <strong>United Kingdom</strong>
-                            </div>
-                            <div class="col">
-                                <strong>Canada</strong>
-                            </div>
-                            <div class="col">
-                                <strong>India</strong>
-                            </div>
+                           
                            
                         </div>
 
                     
                         <div class="section">
                             <div class="content">
-                                <div class="role">IBC</div>
-                                <div class="role">NCC</div>
-                                <div class="role">EC</div>
-                                <div class="role">BS</div>
-                                <div class="role">CBC</div>
-                                <div class="role">India</div>
+                                <div class="role">NA</div>
+                                <div class="role">NA</div>
+                               
                             </div>
                         </div>
 
                         <div class="section">
                             <div class="content">
-                                <div class="role">45</div>
-                                <div class="role">48</div>
-                                <div class="role">35</div>
-                                <div class="role">66</div>
-                                <div class="role">101</div>
-                                <div class="role">63</div>
+                                <div class="role">13</div>
+                                <div class="role">8</div>
+                               
                             </div>
                         </div>
                         <div class="section">
                             <div class="content">
-                                <div class="role">10</div>
-                                <div class="role">13</div>
-                                <div class="role">12</div>
-                                <div class="role">17</div>
-                                <div class="role">15</div>
-                                <div class="role">10</div>
+                                <div class="role">4</div>
+                                <div class="role">3</div>
                             </div>
                         </div>
                        
@@ -757,7 +705,7 @@
             <div class="head">
                 <h2>Special Tools & Methods</h2>
                 <p>
-                    Additionally to a range of engineering software, J&F uses special methods to work more digitally and efficiently.
+                    Additionally to a range of engineering software, Sublime Structures uses special methods to work more digitally and efficiently.
                 </p>
             </div>
 
@@ -832,9 +780,8 @@
                     </div>
                     <select (change)="onTypeChange($event)">
                         <option value="all">All</option>
-                        <option value="Structural detailing">Structural detailing</option>
-                        <option value="steel detailing">steel
-                            detailing</option>
+                        <option value="Structural detailing">Structural Detailing</option>
+                        <option value="steel detailing">Steel Detailing</option>
                     </select>
             </div>
             </div>
@@ -845,7 +792,7 @@
                         <span>{{ project.type }}</span>
                         <h2>{{ project.name }}</h2>
                         <div class="flex">
-                            <img src="assets/images/ui/country5.png" width="17" height="17" />
+                            <img [src]="project.country" width="17" height="17" />
                             <em>{{ project.location }}</em>
                         </div>
                     </div>
@@ -889,7 +836,7 @@
                 
                                     <p [innerHTML]="engineer.des"></p>
                                     <div class="expert">
-                                        <h3><span class="jeffStyle">My</span> expertise at J&F</h3>
+                                        <h3><span class="jeffStyle">My</span> expertise at Sublime Structures</h3>
                                         <ul>
                                             <li *ngFor="let expertise of engineer.expertise">
                                                 <strong>#</strong> {{ expertise }}
@@ -907,55 +854,31 @@
     </div>
 </app-engineers>
 </div>
-<!-- <div id="certification" class="scrollSection">
+<div id="certification" class="scrollSection">
 <app-accreditation>
     <div class="accreditation">
         <div class="container">
             <div class="head">
                 <h2>Accreditation</h2>
-                <span
-                    >Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry.</span
-                >
+                
             </div>
             <div class="listItem">
                 <div class="item">
                     <img
-                        src="assets/images/ui/accreditation1.png"
-                        width="286"
-                        height="385"
+                        src="assets/images/ui/certificate.png"
+                       
                     />
-                    <strong> Top Ten Architects </strong>
+                    
                 </div>
-                <div class="item">
-                    <img
-                    src="assets/images/ui/accreditation2.png"
-                    width="286"
-                    height="385"
-                />
-                    <strong> Asia Pacific Property Awards 2018 </strong>
-                </div>
-                <div class="item">
-                    <img
-                        src="assets/images/ui/accreditation3.png"
-                        width="286"
-                        height="385"
-                    />
-                    <strong> PAM Award Commendation </strong>
-                </div>
-                <div class="item">
-                    <img
-                    src="assets/images/ui/accreditation4.png"
-                    width="286"
-                    height="385"
-                />
-                    <strong> PAM Award 2019 Silver </strong>
-                </div>
+                
+                
             </div>
         </div>
     </div>
 </app-accreditation>
-</div> -->
+</div>
+
+
 <!-- <div id="social" class="scrollSection">
 
 <app-latest-update>
@@ -963,7 +886,7 @@
         <div class="container">
             <div class="heading">Latest Updated</div>
             <div class="text">
-                Stay informed with the latest news and updates from J&F. Learn about our recent projects, partnerships, and achievements.
+                Stay informed with the latest news and updates from Sublime Structures. Learn about our recent projects, partnerships, and achievements.
 
             </div>
 
@@ -975,11 +898,11 @@
     <div class="contentSlide">
         <span>Latest</span>
         <h2>
-            J&F takes over <br>HOCHTIEF India
+            Sublime Structures takes over <br>HOCHTIEF India
         </h2>
 
         <p>
-            J&F is a German based civil engineering consultancy with a strong footprint in Structural, MEP and BIM services around the globe.
+            Sublime Structures is a German based civil engineering consultancy with a strong footprint in Structural, MEP and BIM services around the globe.
         </p>
 
         <a href="#" class="btnNew"
@@ -992,7 +915,7 @@
     <img src="assets/images/ui/testimonial2.png" width="696" height="382">
 <div class="overlay">
     <span>
-        Take a look at our <a href=""> j&F Meets 2023 </a> event in Chennai
+        Take a look at our <a href=""> Sublime Structures Meets 2023 </a> event in Chennai
     </span>
 </div>
 
@@ -1035,7 +958,7 @@
     <img src="assets/images/ui/testimonial6.png" width="595" height="382">
     <div class="overlay">
         <span>
-            Find out more about how J&F’s  <a href=""> global collaboration </a> with our Indian office works in everyday life.             </span>
+            Find out more about how Sublime Structures  <a href=""> global collaboration </a> with our Indian office works in everyday life.             </span>
        
     </div>
 </div>
@@ -1428,7 +1351,7 @@
             marketplace with clients from 10+ <br />
             countries - but gives you also access to Leads from open market.
         </p>
-        <a href="mailto:contact@jf-projects.com">Talk to J&F</a>
+        <a href="mailto:contact@jf-projects.com">Talk to Sublime Structures</a>
     </div>
 </app-get-started1>
 
@@ -1474,6 +1397,7 @@
     <div class="coverPopupData">
     
   <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/pit-yogeswaran?embed=true"></div>
+</div>
 </div>
 </div>
 </div>

@@ -1,0 +1,22 @@
+:host ::ng-deep {
+    .listItem {
+        display: flex;
+        margin-bottom: 120px;
+        margin-top: 24px;
+        gap: 10px;
+    }
+    .head h2{
+        color: #0E0E28;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: 30px;
+        margin-top: 80px;
+    }
+    .item img {
+        border: 1px solid #d7cece;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+}

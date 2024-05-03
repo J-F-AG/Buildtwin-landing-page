@@ -160,6 +160,31 @@
     position: relative;
     top: -11px;
 }
+img.resize {
+    width: 244px;
+}
+
+:host ::ng-deep .subline  .capability .right {
+    position: relative;
+    width: 100%;
+}
+:host ::ng-deep .subline  .capability .left .content {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+}
+:host ::ng-deep .subline .capability.code .right .role {
+    width: 50% !important;
+}
+
+:host ::ng-deep .subline  .capability.code .headSection .col {
+    width: 50%;
+}
+
+:host ::ng-deep .subline  .startedData a {
+    max-width: 232px;
+}
+
 @media (max-width:1200px){
   :host ::ng-deep  .hero {
 
