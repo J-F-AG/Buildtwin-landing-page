@@ -24,3 +24,10 @@
         // overflow: hidden;
     }
 }
+
+@media (max-width:767px){
+ :host ::ng-deep .listItem {
+   
+        justify-content: center;
+    }
+}
