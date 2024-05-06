@@ -4,6 +4,10 @@
         margin-bottom: 120px;
         margin-top: 24px;
         gap: 10px;
+
+        .item{
+            width: 200px;
+        }
     }
     .head h2{
         color: #0E0E28;
@@ -15,8 +19,8 @@
         margin-top: 80px;
     }
     .item img {
-        border: 1px solid #d7cece;
-        border-radius: 10px;
-        overflow: hidden;
+        // border: 1px solid #d7cece;
+        // border-radius: 10px;
+        // overflow: hidden;
     }
 }
