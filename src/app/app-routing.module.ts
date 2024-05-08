@@ -23,6 +23,7 @@ import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-
 import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
 import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sublime/vender-details-sublime.component';
+import { VenderDetailsCaldimComponent } from './pages/vender/vender-details-caldim/vender-details-caldim.component';
 
 
 
@@ -47,6 +48,7 @@ const routes: Routes = [
     {path: 'about', component: AboutPageComponent},
     {path: 'vender-details', component: VenderDetailsComponent},
     {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
+    {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
     {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},

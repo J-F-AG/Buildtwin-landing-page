@@ -129,6 +129,7 @@ import { TermsConditionsPageComponent } from './pages/terms-conditions-page/term
 import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sublime/vender-details-sublime.component';
 import { AccreditationComponent } from './pages/vender/accreditation/accreditation.component';
+import { VenderDetailsCaldimComponent } from './pages/vender/vender-details-caldim/vender-details-caldim.component';
 
 
 
@@ -252,7 +253,8 @@ import { AccreditationComponent } from './pages/vender/accreditation/accreditati
    TermsConditionsPageComponent,
    ComingSoonComponent,
    VenderDetailsSublimeComponent,
-   AccreditationComponent
+   AccreditationComponent,
+   VenderDetailsCaldimComponent
 
 
    
