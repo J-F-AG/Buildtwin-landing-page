@@ -2,97 +2,138 @@ import { Component,ElementRef,HostListener, Renderer2 } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
-  selector: 'app-vender-details-caldim',
+  selector: 'app-vender-details-moldtek',
 
-  templateUrl: './vender-details-caldim.component.html',
-  styleUrl: './vender-details-caldim.component.scss'
+  templateUrl: './vender-details-moldtek.component.html',
+  styleUrl: './vender-details-moldtek.component.scss'
 })
-export class VenderDetailsCaldimComponent {
+export class VenderDetailsMoldtekComponent {
 
    ourEngineers = [
     {
-      name: "Balasubramaniyam",
-      title: "Director",
-      des: "Mechanical Engineering graduate and NISD certified structural steel/Misc detailer in the field of steel detailing, possessing a solid foundation in mechanical engineering. With extensive onsite experience across commercial, industrial, and oil and gas sectors, he brings a comprehensive understanding of the intricacies involved in structural design and fabrication. His expertise includes translating engineering designs into precise and accurate detailed drawings, ensuring compliance with industry standards and regulations.      ",
-     
+      name: "Santosh Kurade",
+      title: "Chief Project Manager",
+      des: "Work Allocation ,QA process monitoring ",
+      img: 'assets/images/moldtek/placeholder.jpg',
     },
     {
-      name: "Uvaraj.K",
-      title: "Director",
-      des: "Civil Engineering graduate with specialized proficiency in steel detailing and construction techniques, coupled with strong leadership capabilities.” This succinctly communicates his educational background, technical skills, and leadership qualities. If you need a more detailed description, you could expand on his experience, highlighting specific projects he’s worked on, any notable achievements, and how he’s demonstrated his leadership skills in those contexts. ",
-     
+      name: "Chandra shekhar I",
+      title: "Dy.Manager-QA, QMS&ISMS-MR /CISO",
+      des: "QMS& ISMS Implementaion & Monitoring,Lead Auditor for ISO 9001:2015,ISO 27001 Internal Auditor.",
+      img: 'assets/images/moldtek/placeholder.jpg',
     },
     {
-      name: "Swaminathan",
-      title: "Technical Advisor",
-      des: "Swami is the Technical Advisor and Business Development Manager. He is a Diploma holder in Ship Building Technology, with about 50 years of experience in Steel Detailing of structures for various disciplines like Ship Building, Offshore structures, Power plants, Mining structures, American Industrial as well as commercial buildings. His experience includes serving in different capacities as detailer, checker, Project manager and General manager.",
-     
+      name: "M.Srikanth,PE",
+      title: "Chief Engineer ,PE",
+      des: "P.E stamping,Connection Design calculations &Project management",
+      img: 'assets/images/moldtek/placeholder.jpg',
     },
     {
-      name: "Vijay Anand",
-      title: "General Manager",
-      des: "Vijay has an Architectural engineering background and carries with him a diversified & combined rich work experience in Architectural. Structural, Precast & Rebar disciplines. His vast exposure in engineering disciplines eases & speeds up project co-ordination & RFI process for a smooth work outflow. He has also assisted Precasters/Fabricators with Marketing, helping in presentation for bidding. He is passionate, detail oriented & result driven, a strategic thinker & problem-solving with strong Management leadership & interpersonal skills, a team player with effective communication.",
-     
+      name: "M.Murali",
+      title: "Asst.General Manager",
+      des: "Mathcad,Ram connections",
+      img: 'assets/images/moldtek/placeholder.jpg',
     },
   ];
   
    projects = [
     {
         type: 'Structural detailing',
-        name: 'Upper Cheasapeake New Surgery cen#re expansion',
-        location: 'USA',
+        name: 'Molson Coors',
+        location: 'Golden, Colorado',
         country: 'assets/images/ui/code1.png',
-        image: 'assets/images/caldim/project1.png',
-        description: '392 Tons',
+        image: 'assets/images/moldtek/placeholder.jpg',
+        description: '3025',
     },
     {
         type: 'steel detailing',
-        name: 'Neighbourhood credi# union',
-        location: 'Sherman, Texas',
+        name: 'Domtar Project Smoky Processing, Pulping & Coarse Screening',
+        location: 'Kingsport, TN',
         country: 'assets/images/ui/code1.png',
-        image: 'assets/images/caldim/project2.png',
-        description: '25 Tons',
+        image: 'assets/images/moldtek/placeholder.jpg',
+        description: '1986',
     },
     {
         type: 'Structural detailing',
-        name: 'WF6',
+        name: 'Sonoco Stock Preparation Building',
         country: 'assets/images/ui/code1.png',
-        location: 'Tamaqua, PA',
-        image: 'assets/images/caldim/project3.png',
-        description: '502 Tons',
+        location: 'Hartsville, SC',
+        image: 'assets/images/moldtek/placeholder.jpg',
+        description: '500',
     },
     {
         type: 'steel detailing',
-        name: 'Hanimaadhoo International Airpor',
+        name: 'Fedex Kingman',
         country: 'assets/images/ui/code1.png',
-        location: 'Maldives',
-        image: 'assets/images/caldim/project4.png',
-        description: '1045 #ons',
+        location: 'Kingman, Arizona 86401',
+        image: 'assets/images/moldtek/placeholder.jpg',
+        description: '870',
     },
     {
         type: 'steel detailing',
-        name: 'Sacred Heart Catholic Church',
+        name: 'CMH062 Building 5',
         country: 'assets/images/ui/country3.png',
-        location: 'Carrollton, Texas',
-        image: 'assets/images/caldim/project5.png',
-        description: '230 Tons',
+        location: 'New Albany, OH',
+        image: 'assets/images/moldtek/placeholder.jpg',
+        description: '2800',
     },
     {
         type: 'Structural detailing',
-        name: 'ROD’N REEL Resor#',
+        name: 'Baptist Health Hardin Campus',
         country: 'assets/images/ui/code1.png',
-        location: 'Maryland',
-        image: 'assets/images/caldim/project6.png',
-        description: '211 Tons',
+        location: 'Elizabethtown, KY',
+        image: 'assets/images/moldtek/placeholder.jpg',
+        description: '2067',
     },
     {
       type: 'Structural detailing',
-      name: 'Secondary Crusher',
+      name: 'Henry Ford Macomb Hospital',
       country: 'assets/images/ui/code1.png',
       location: 'Medina, WA',
-      image: 'assets/images/caldim/project7.png',
-      description: '73 Tons',
+      image: 'assets/images/moldtek/placeholder.jpg',
+      description: '1866',
   },
+  {
+    type: 'Structural detailing',
+    name: 'Morrow High School',
+    country: 'assets/images/ui/code1.png',
+    location: 'Jonesboro, GA',
+    image: 'assets/images/moldtek/placeholder.jpg',
+    description: '1866',
+},
+
+{
+  type: 'Structural detailing',
+  name: 'Woods Creek Elementary School',
+  country: 'assets/images/ui/code1.png',
+  location: 'Holly Springs, NC',
+  image: 'assets/images/moldtek/placeholder.jpg',
+  description: '887',
+},
+{
+  type: 'Structural detailing',
+  name: 'Kingsdale Senior Living',
+  country: 'assets/images/ui/code1.png',
+  location: 'Columbus, Ohio',
+  image: 'assets/images/moldtek/placeholder.jpg',
+  description: '850',
+},
+{
+  type: 'Structural detailing',
+  name: 'Necco Street',
+  country: 'assets/images/ui/code1.png',
+  location: 'Boston, MA',
+  image: 'assets/images/moldtek/placeholder.jpg',
+  description: '850',
+},
+{
+  type: 'Structural detailing',
+  name: 'Project Novel Rino',
+  country: 'assets/images/ui/code1.png',
+  location: 'Denver, CO',
+  image: 'assets/images/moldtek/placeholder.jpg',
+  description: '200',
+},
     ];
 
 filteredProjects = this.projects;

@@ -193,10 +193,25 @@ img.resize {
     padding-bottom: 100px;
 }
 
+  .imgWrap {
+    min-width: 303px;
+}
+ .slider .right .content {
+    padding-left: 0;
 
-:host ::ng-deep .postion{
+}
+:host ::ng-deep .slider .container .wrap .flex .right {
+    padding-bottom: 100px;
+}
+
+:host ::ng-deep .subline .startedData a {
+    max-width: 300px;
+}
+:host ::ng-deep  .postion {
+    position: relative;
     top: 0;
 }
+
 .partnerData{
     display: flex;
     gap: 10px;
