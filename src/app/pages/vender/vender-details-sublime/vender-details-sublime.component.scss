@@ -285,6 +285,23 @@ img.resize {
     .footerLinks ul {
         justify-content: start;
     }
-    
+    :host ::ng-deep  .partnerData {
+        padding: 0;
+    }
+    :host ::ng-deep  .capability.code .headSection .col {
+        width: auto !important;
+        max-width: 100px;
+        min-width: 93px;
+    }
+    :host ::ng-deep .capability.code .left.data .containerData {
+        padding: 87px 5px 14px 24px !important;
+    }
+    :host ::ng-deep .head img {
+        width: 143px;
+    }
+    :host ::ng-deep  .imgWrap {
+        min-width: 303px;
+        margin-top: 30px;
+    }
 }
 
