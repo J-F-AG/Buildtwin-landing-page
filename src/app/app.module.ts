@@ -131,6 +131,7 @@ import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sub
 import { AccreditationComponent } from './pages/vender/accreditation/accreditation.component';
 import { VenderDetailsCaldimComponent } from './pages/vender/vender-details-caldim/vender-details-caldim.component';
 import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-moldtek/vender-details-moldtek.component';
+import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
 
 
 
@@ -256,7 +257,8 @@ import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-mol
    VenderDetailsSublimeComponent,
    AccreditationComponent,
    VenderDetailsCaldimComponent,
-   VenderDetailsMoldtekComponent
+   VenderDetailsMoldtekComponent,
+   VenderDetailsAarbeeComponent
 
    
     
