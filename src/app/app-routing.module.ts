@@ -25,6 +25,7 @@ import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sublime/vender-details-sublime.component';
 import { VenderDetailsCaldimComponent } from './pages/vender/vender-details-caldim/vender-details-caldim.component';
 import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-moldtek/vender-details-moldtek.component';
+import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
 
 
 
@@ -51,6 +52,7 @@ const routes: Routes = [
     {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
     {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
     {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
+    {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
     {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},

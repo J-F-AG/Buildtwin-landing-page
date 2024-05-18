@@ -18,7 +18,7 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Structural Steel Detailing", "Miscellaneous Steel Detailing", "Global projects"]
+      expertise: ["Miscellaneous steel", "Estimodeling", "AESS"]
     },
     {
        img: "assets/images/ui/subline/profile2.png",
@@ -28,7 +28,7 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Concept development", "Renewable energies", "Lightning protection"]
+      expertise: ["Quality Control", "Project Management", "OSHA"]
     },
  
     {
@@ -39,7 +39,7 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "Gold Medalist DTU",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Structural Design", "Prestressed Elements", "Detailing as per EC"]
+      expertise: ["Complex Modeling", "Material Takeoff", "Concept Development"]
     },
     
  
@@ -51,27 +51,27 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Fire alarm systems", "Voice alarm systems", "Technical concepts"]
+      expertise: ["Quality Control", "Document Control", "Timber"]
     },
     {
        img: "assets/images/ui/subline/profile5.png",
-      name: "Nithis hkumar Pachiappan",
+      name: "Nithishkumar Pachiappan",
       title: "B.Sc. <br>Architect",
       des: "„Through her calm and thoughtful manner, <br>Nithishkumar Pachiappan always provides us with the desired <br>results.“",
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Lighting design", "Architecture"]
+      expertise: ["Erection Drawing", "Modeling"]
     },
     {
        img: "assets/images/ui/subline/profile6.png",
-      name: "Sathish Kumar Muniyandi",
+      name: "Pradeepkumar",
       title: "Project Manager Electrical <br>Engineering",
-      des: "„Sathish Kumar Muniyandi impresses with his many <br>years of experience and always provides <br>technical and commercial solutions.“",
+      des: "„Pradeepkumar impresses with his many <br>years of experience and always provides <br>technical and commercial solutions.“",
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Detailed design", "As-built surveys", "Object monitoring"]
+      expertise: ["Ornamental Steel", "Detailing As Per AISC", "Project Management"]
     },
     {
        img: "assets/images/ui/subline/profile7.png",
@@ -81,7 +81,7 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Detailed design", "As-built surveys", "Object monitoring"]
+      expertise: ["Tekla EPM Connection Concepts", "Decorative Steel"]
     },
     {
        img: "assets/images/ui/subline/profile8.png",
@@ -91,21 +91,21 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Detailed design", "As-built surveys", "Object monitoring"]
+      expertise: ["Estimodeling", "Material Takeoff"]
     }
   ];
   
    projects = [
     {
-        type: 'Structural detailing',
+        type: 'Structural and miscellaneous steel detailing and designing.',
         name: 'Samsung Trestle project',
-        location: 'N/A',
+        location: 'USA',
         country: 'assets/images/ui/code1.png',
         image: 'assets/images/ui/subline/project1.png',
         description: 'Completing 1200+ shop drawings and 300+ is certainly our key achievement.',
     },
     {
-        type: 'steel detailing',
+        type: 'Structural and miscellaneous steel detailing and designing.',
         name: 'Anheuser Busch Evaporator Condenser',
         location: 'USA',
         country: 'assets/images/ui/code1.png',
@@ -113,7 +113,7 @@ export class VenderDetailsSublimeComponent {
         description: 'Completed within 3 weeks despite 4 RFIs with over 50 questions',
     },
     {
-        type: 'Structural detailing',
+        type: 'Structural and miscellaneous steel detailing.',
         name: 'AztecHotel',
         country: 'assets/images/ui/code1.png',
         location: 'USA',
@@ -121,7 +121,7 @@ export class VenderDetailsSublimeComponent {
         description: 'Hotel project in San Antonio, Texas, with 80 tons of steel featuring trusses',
     },
     {
-        type: 'steel detailing',
+        type: 'Structural and miscellaneous steel detailing and designing.',
         name: 'Cems Analyzers',
         country: 'assets/images/ui/code1.png',
         location: 'USA',
@@ -129,7 +129,7 @@ export class VenderDetailsSublimeComponent {
         description: 'Structural and miscellaneous steel detailing SDS2 calculations',
     },
     {
-        type: 'steel detailing',
+        type: 'Structural and ornamental steel detailing.',
         name: 'Bay Pond Conservatory',
         country: 'assets/images/ui/country3.png',
         location: 'India',
@@ -137,7 +137,7 @@ export class VenderDetailsSublimeComponent {
         description: 'Zero fit-up issues with glass panels',
     },
     {
-        type: 'Structural detailing',
+        type: 'Structural and miscellaneous steel detailing and designing.',
         name: 'Oasis at Lakeport',
         country: 'assets/images/ui/code1.png',
         location: 'USA',
@@ -145,7 +145,7 @@ export class VenderDetailsSublimeComponent {
         description: '5 buildings in an amusement park in Osage Beach, Missouri, with 120 tons of steel',
     },
     {
-      type: 'Structural detailing',
+      type: 'Structural and miscellaneous steel detailing.',
       name: 'Winchester Terminal',
       country: 'assets/images/ui/code1.png',
       location: 'USA',
@@ -153,7 +153,7 @@ export class VenderDetailsSublimeComponent {
       description: 'Structural and miscellaneous steel detailing, connection design',
   },
   {
-    type: 'Structural detailing',
+    type: 'Structural and miscellaneous steel detailing and designing.',
     name: 'VCM#2 HAPF Project',
     country: 'assets/images/ui/code1.png',
     location: 'USA',
@@ -161,7 +161,7 @@ export class VenderDetailsSublimeComponent {
     description: 'Achieved approval within 2 weeks',
 },
 {
-  type: 'Structural detailing',
+  type: 'Structural and miscellaneous steel detailing',
   name: 'IEA Headquarters',
   location: 'USA',
   country: 'assets/images/ui/code1.png',
@@ -177,7 +177,7 @@ export class VenderDetailsSublimeComponent {
   description: 'New platform steel for a renewable energy plant in Labrador, Canada, for 3 separate vessel drums',
 },
 {
-  type: 'Structural detailing',
+  type: 'Structural and miscellaneous steel detailing and designing.',
   name: 'AC Hotel',
   country: 'assets/images/ui/code1.png',
   location: 'USA',
@@ -193,7 +193,7 @@ export class VenderDetailsSublimeComponent {
   description: 'Nursery project in Saranac Lake, New York, featuring trusses and complex  connections, excluding glass panels',
 },
 {
-  type: 'Structural detailing',
+  type: 'Structural and miscellaneous steel detailing and designing.',
   name: 'Fort Meade Visitor Center',
   country: 'assets/images/ui/code1.png',
   location: 'USA',
