@@ -26,6 +26,7 @@ import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sub
 import { VenderDetailsCaldimComponent } from './pages/vender/vender-details-caldim/vender-details-caldim.component';
 import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-moldtek/vender-details-moldtek.component';
 import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
+import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-allied/vender-details-allied.component';
 
 
 
@@ -53,6 +54,7 @@ const routes: Routes = [
     {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
     {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
     {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
     {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
