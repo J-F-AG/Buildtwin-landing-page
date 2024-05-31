@@ -145,6 +145,24 @@ responsive: {
 }
 }
 
+heroSlides: OwlOptions = {
+    items: 1,
+    nav: true,
+    margin: 20,
+    dots: false,
+    loop: true,
+    autoWidth: true,
+    autoplay: false,
+    autoplayHoverPause: false,
+
+    navText: [
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ],
+   
+  }
+
+
 
 aboutSlider: OwlOptions = {
   items: 1,
