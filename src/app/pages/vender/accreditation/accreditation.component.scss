@@ -7,7 +7,16 @@
         gap: 25px;
 
         .item{
-            width: 200px;
+            width: 20%;
+            text-align: center;
+
+            p {
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 27px;
+                    color: #000;
+                    padding-top: 15px;
+                }
         }
     }
     .head h2{

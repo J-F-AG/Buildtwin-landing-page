@@ -215,6 +215,24 @@ export class VenderDetailsAarbeeComponent {
   }
 
 
+   heroSlides: OwlOptions = {
+    items: 1,
+    nav: true,
+    margin: 20,
+    dots: false,
+    loop: true,
+    autoWidth: true,
+    autoplay: false,
+    autoplayHoverPause: false,
+
+    navText: [
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ],
+   
+  }
+
+
   aboutSlider: OwlOptions = {
     items: 1,
     nav: true,
@@ -231,8 +249,16 @@ export class VenderDetailsAarbeeComponent {
 
   }
 
+  
+
   @HostListener('window:scroll', [])
+  
   onWindowScroll() {
+
+    var sections2: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="section"]')); // Select all sections with IDs starting with "section"
+    var otherSections: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="other-section"]')); // Select all other sections
+    
+
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.isSticky = scrollPosition >= 100;
 
@@ -251,7 +277,62 @@ export class VenderDetailsAarbeeComponent {
         this.activeSection = sectionId;
       }
     });
+   
+
+    // progress bar
+    var windowHeight = window.innerHeight;
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight;
+
+      var totalSectionHeight = 0;
+      var currentSectionIndex = -1;
+      
+      // Find the currently visible section
+      for (var i = 0; i < sections2.length; i++) {
+        var section = sections2[i];
+        var rect = section.getBoundingClientRect();
+        var sectionTop = rect.top + scrollTop;
+        var sectionBottom = sectionTop + rect.height;
+        
+        if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
+          currentSectionIndex = i;
+          break;
+        }
+        totalSectionHeight += rect.height;
+      }
+      
+      // Adjust totalSectionHeight for other sections in between
+      for (var j = 0; j < otherSections.length; j++) {
+        var otherSection = otherSections[j];
+        var rect = otherSection.getBoundingClientRect();
+        if (scrollTop >= rect.top + scrollTop) {
+          totalSectionHeight += rect.height;
+        }
+      }
+      
+      var percentScrolled;
+      
+      // If the scrollTop is in the last other section or beyond
+      if (scrollTop >= otherSections[otherSections.length - 1].getBoundingClientRect().top + scrollTop) {
+        percentScrolled = 100;
+      } else if (currentSectionIndex !== -1) {
+        var currentSectionTop = sections2[currentSectionIndex].getBoundingClientRect().top + scrollTop;
+        var rect = sections2[currentSectionIndex].getBoundingClientRect();
+        var scrolledInSection = scrollTop - currentSectionTop;
+        percentScrolled = (totalSectionHeight + scrolledInSection) / docHeight * 100;
+      } else {
+        percentScrolled = 0;
+      }
+      
+      console.log(percentScrolled);
+     var progressBar = document.getElementById('progress-bar');
+      if (progressBar !== null) {
+        progressBar.style.width = percentScrolled + '%';
+      }
+    
   }
+
+  
 
   scrollToSection(sectionId: string) {
     const section = document.getElementById(sectionId);
@@ -307,4 +388,7 @@ export class VenderDetailsAarbeeComponent {
       this.filteredProjects = this.filterProjectsByType(selectedType);
     }
   }
+
+
+
 }
