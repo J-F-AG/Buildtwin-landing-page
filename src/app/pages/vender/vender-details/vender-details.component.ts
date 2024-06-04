@@ -201,6 +201,23 @@ heroSlides: OwlOptions = {
       "<i class='ti ti-chevron-left'></i>",
       "<i class='ti ti-chevron-right'></i>",
     ],
+    responsive: {
+  0: {
+    items: 1
+  },
+  515: {
+    items: 1
+  },
+  768: {
+    items: 1
+  },
+  990: {
+    items: 1
+  },
+  1400: {
+    items: 1
+  }
+}
    
   }
 

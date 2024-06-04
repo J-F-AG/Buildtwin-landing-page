@@ -275,6 +275,17 @@ div#capabilities .partnerWrap.vender {
                     background: rgba(255, 255, 255, 0.3);
                     padding: 10px;
 
+                    @media (min-width:768px) and (max-width:1200px){
+                        margin-left: 20px;
+                    }
+
+                    @media (min-width:320px) and (max-width:767px) {
+                        margin-left: 10px;
+                            width: 27px;
+                            height: 27px;
+                            padding: 0;
+                    }
+
                     i {
                         color: #fff;
                         font-size: 27px;
@@ -292,6 +303,16 @@ div#capabilities .partnerWrap.vender {
                     margin-right: 48px;
                     background: rgba(255, 255, 255, 0.3);
                     padding: 10px;
+
+                    @media (min-width:768px) and (max-width:1200px) {
+                            margin-right: 20px;
+                        }
+                    @media (min-width:320px) and (max-width:767px) {
+                        width: 27px;
+                            height: 27px;
+                            padding: 0;
+                            margin-right: 10px;
+                    }
 
                     i {
                         color: #fff;
@@ -634,3 +655,285 @@ div#capabilities .partnerWrap.vender {
     
 }
 
+
+@media (max-width:767px){
+    .hero .heroSlides .owl-theme .owl-nav [class*=owl-]:first-child {
+            margin-left: 10px;
+            width: 27px;
+            height: 27px;
+            padding: 0;
+        }
+    
+        .hero .heroSlides .owl-theme .owl-nav [class*=owl-]:last-child {
+            width: 27px;
+            height: 27px;
+            padding: 0;
+            margin-right: 10px;
+        }
+    .hero {
+           
+               
+                img.hero-banner  {
+                        height: 296px;
+                    }
+               
+            .sliderContent {
+                top: 20%;
+                left: 8%;
+    
+                h1 {
+                    font-size: 26px;
+                    line-height: 30px;
+                }
+    
+                p {
+                    font-size: 15px;
+                }
+    
+                a {
+                    &.active {
+                        &.cursor {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    
+        div#about-service {
+            .container {
+                padding: 0 20px;
+    
+                .inner {
+                    padding: 20px;
+    
+                    .details {
+                        flex-flow: wrap;
+    
+                        .list {
+                            margin-bottom: 15px;
+    
+                            span {
+                                font-size: 20px;
+                            }
+    
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+    
+                    .service-section {
+                        .service-list {
+                            ul {
+                                padding: 0;
+    
+                                li {
+                                    width: auto;
+                                }
+                            }
+                        }
+    
+                        h3 {
+                            font-size: 20px;
+                        }
+                    }
+    
+                    .on-site {
+                        h3 {
+                            font-size: 20px;
+                        }
+    
+                        .site-list {
+                            ul {
+                                padding: 0;
+    
+                                li {
+                                    width: 33%;
+                                    flex-direction: column;
+                                    margin-bottom: 16px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .about {
+            .container {
+                .flexStructure {
+                    .leftPart {
+                        img {
+                            &.logo {
+                                margin-bottom: 30px;
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .qualified {
+            .head {
+                h3 {
+                    font-size: 27px;
+                }
+    
+                span {
+                    margin-bottom: 40px;
+                }
+            }
+    
+            .itemFLex {
+                flex-wrap: nowrap;
+                gap: 0;
+    
+                .left {
+                    .topheader {
+                        padding: 20px;
+    
+                        p {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+    
+                        h2 {
+                            line-height: 30px;
+                        }
+                    }
+    
+                    .contentpart {
+                        padding: 10px;
+    
+                        .items {
+                            padding: 10px 0;
+                            min-height: 159px;
+    
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                margin-right: 10px;
+                            }
+    
+                            h4 {
+                                font-size: 13px;
+                            }
+    
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+    
+                .right {
+                    .topheader2 {
+                        padding: 20px;
+    
+                        p {
+                            font-size: 14px;
+                            line-height: 20px;
+                            margin-top: 28px;
+                        }
+                    }
+    
+                    .contentpart {
+                        .list {
+                            min-height: 159px;
+                        }
+                    }
+                }
+            }
+        }
+
+                .stickyMneu {
+                    .stcikyTop {
+                        .container {
+                            .btnWrap {
+                                a {
+                                    &.not-active {
+                                        padding: 5px;
+                                        font-size: 10px;
+                                    }
+        
+                                    &.active {
+                                        padding: 5px;
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                .stcikyTop {
+                    img {
+                        width: 100px !important;
+                    }
+                }
+}
+
+
+@media (min-width:767px) and (max-width:1200px){
+    img {
+            &.hero-banner {
+                height: 420px;
+            }
+        }
+    
+        .hero {
+            padding-bottom: 0 !important;
+        }
+    
+        div#about-service {
+            .container {
+                padding: 030px;
+    
+                .inner {
+                    padding: 30px 15px;
+    
+                    .details {
+                        .list {
+                            padding: 0 10px;
+    
+                            span {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .qualified {
+            .itemFLex {
+                .left {
+                    .topheader {
+                        h2 {
+                            font-size: 30px;
+                        }
+                    }
+                }
+    
+                .right {
+                    .contentpart {
+                        .list {
+                            min-height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .stickyMneu {
+            .stcikyTop {
+                img {
+                    width: 258px;
+                }
+            }
+        }
+}
