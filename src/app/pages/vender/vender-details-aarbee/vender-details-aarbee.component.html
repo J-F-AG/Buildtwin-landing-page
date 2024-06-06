@@ -39,7 +39,7 @@
         <div class="hero" id="other-section1">
             <owl-carousel-o [options]="heroSlides" class="heroSlides">
                 <ng-template carouselSlide>
-                    <img src="assets/images/aarbee/arbee-hero.png" height="422" width="188" />
+                    <img src="assets/images/aarbee/arbee-hero.png" height="422" width="188" class="hero-banner"/>
                     <div class="sliderContent">
                         <h1>Thysee Printing</h1>
                         <p><img src="assets/images/aarbee/location.png" width="20" height="20"> Wisconsin, United States</p>
@@ -50,12 +50,7 @@
                         </div>
                     </div>
                 </ng-template>
-                <ng-template carouselSlide>
-                    <img src="assets/images/aarbee/arbee-hero.png" height="422" width="188" />
-                </ng-template>
-                <ng-template carouselSlide>
-                    <img src="assets/images/aarbee/arbee-hero.png" height="422" width="188" />
-                </ng-template>
+              
             </owl-carousel-o> 
         </div>
     </app-vender-banner>
@@ -1036,14 +1031,22 @@
     <app-engineers>
         <div class="slider" id="other-section6">
             <div class="container">
+                <div class="wrap">
+                    <div class="flex">
+                        <div class="left">
+                            <h2>Our <br>engineers</h2>
+                            <span class="jeffStyle">in the<br>spotlight</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamslider">
                 <owl-carousel-o [options]="aboutSlider">
                    
                     <ng-template *ngFor="let engineer of ourEngineers" carouselSlide>
                         <div class="wrap">
                             <div class="flex">
                                 <div class="left">
-                                    <h2>Our <br>engineers</h2>
-                                    <span class="jeffStyle">in the<br>spotlight</span>
+                                   
                                 </div>
                                 <div class="right">
                                     <div class="imgWrap">
@@ -1061,6 +1064,7 @@
                     </ng-template>
              
                 </owl-carousel-o>
+                </div>
             </div>
         </div>
     </app-engineers>

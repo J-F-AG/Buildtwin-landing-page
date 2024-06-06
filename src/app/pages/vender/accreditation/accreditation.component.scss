@@ -40,5 +40,11 @@
  :host ::ng-deep .listItem {
    
         justify-content: center;
+        flex-wrap: wrap;
+
+        .item {
+                width: auto;
+            }
     }
+        
 }
