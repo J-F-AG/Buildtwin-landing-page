@@ -133,6 +133,7 @@ import { VenderDetailsCaldimComponent } from './pages/vender/vender-details-cald
 import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-moldtek/vender-details-moldtek.component';
 import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
 import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-allied/vender-details-allied.component';
+import { AarbeeSocialWallComponent } from './pages/vender/vender-details-aarbee/social-wall/social-wall.component';
 
 
 
@@ -248,6 +249,7 @@ import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-alli
    FeatureProjectComponent,
    SimpleRowComponent,
    SocialWallComponent,
+   AarbeeSocialWallComponent,
    CoursesDetailsStyleOneComponent,
    CourseDemoComponent,
    DataPrivacyComponent,

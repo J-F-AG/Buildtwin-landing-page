@@ -13,31 +13,36 @@ export class VenderDetailsAarbeeComponent {
       img: "assets/images/aarbee/profile1.jpg",
       name: "Rajeevan Chingan",
       title: "Promoter / CEO",
-      des: "A revolutionary in the field of structural steel design, detailing and checking. He has developed a user-friendly detail sheets, adopting innovative dimensioning style and detailing methods. He has over 32 years of experience in the field and is completely at home with AISC, BS & IS codes of practice."
+      des: "A revolutionary in the field of structural steel design, detailing and checking. He has developed a user-friendly detail sheets, adopting innovative dimensioning style and detailing methods. He has over 32 years of experience in the field and is completely at home with AISC, BS & IS codes of practice.",
+      expertise: ["Project management", "Site management", "Global projects"]
     },
     {
       img: "assets/images/aarbee/profile2.jpg",
       name: "Biju P Varghese",
       title: "Promoter / COO",
-      des: "With over 30 years of experience in structural steel design, detailing and checking & well versed with AISC, BS & IS codes of practice. He has a comprehensive understanding of all aspects of design and detailing."
+      des: "With over 30 years of experience in structural steel design, detailing and checking & well versed with AISC, BS & IS codes of practice. He has a comprehensive understanding of all aspects of design and detailing.",
+      expertise: ["Concept development", "Renewable energies", "Lightning protection"]
     },
     {
       img: "assets/images/aarbee/profile3.jpg",
       name: "Prakasan T",
       title: "General Manager - Engineering",
-      des: "A proficient design engineer having 37 years of rich experience in Structural Steel, RCC and Tensile membrane structures. He is profound in identifying and resolving the complexities associated with various types of structures and connections."
+      des: "A proficient design engineer having 37 years of rich experience in Structural Steel, RCC and Tensile membrane structures. He is profound in identifying and resolving the complexities associated with various types of structures and connections.",
+      expertise: ["Structural Design", "Prestressed Elements", "Detailing as per EC"]
     },
     {
       img: "assets/images/aarbee/profile4.jpg",
       name: "Jinsmon Emmanuel",
       title: "General Manager - Delivery",
-      des: "Has more than 22 years of experience in the field of detailing and complete control on projects, delivery schedule, manpower allocation etc. He is exceptionally well verse in handling multiple projects in various types with stringent schedules."
+      des: "Has more than 22 years of experience in the field of detailing and complete control on projects, delivery schedule, manpower allocation etc. He is exceptionally well verse in handling multiple projects in various types with stringent schedules.",
+      expertise: ["Structural Design", "Prestressed Elements", "Detailing as per EC"]
     },
     {
       img: "assets/images/aarbee/profile5.jpg",
       name: "Gopinathan Pillai N",
       title: "General Manager - QA/QC",
-      des: "Has more than 40 years of experience in the field of drafting - detailing Structural Steel, RCC, & Cladding etc. He is well experienced in various types of projects like Airports, Desalination plants, Power Stations etc."
+      des: "Has more than 40 years of experience in the field of drafting - detailing Structural Steel, RCC, & Cladding etc. He is well experienced in various types of projects like Airports, Desalination plants, Power Stations etc.",
+      expertise: ["Structural Design", "Prestressed Elements", "Detailing as per EC"]
     }
   ];
 
