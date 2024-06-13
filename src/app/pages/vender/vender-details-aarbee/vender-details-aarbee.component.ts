@@ -260,9 +260,7 @@ export class VenderDetailsAarbeeComponent {
   
   onWindowScroll() {
 
-    var sections2: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="section"]')); // Select all sections with IDs starting with "section"
-    var otherSections: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="other-section"]')); // Select all other sections
-    
+    var sections= document.querySelectorAll('.scrollSection'); 
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.isSticky = scrollPosition >= 100;
@@ -273,71 +271,104 @@ export class VenderDetailsAarbeeComponent {
       // document.body.classList.remove('scrolled');
     }
 
-    // Determine active section
-    const sections = document.querySelectorAll('.scrollSection');
     sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const sectionId = section.getAttribute('id');
-      if (sectionTop <= 200 && sectionTop >= -100 && sectionId) { // Check if sectionId is not null
-        this.activeSection = sectionId;
+      const rect = section.getBoundingClientRect();
+      if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+        console.log(98888)
+        this.activeSection = section['id'];
       }
     });
-   
 
-    // progress bar
-    var windowHeight = window.innerHeight;
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      var docHeight = document.documentElement.scrollHeight;
-
-      var totalSectionHeight = 0;
-      var currentSectionIndex = -1;
-      
-      // Find the currently visible section
-      for (var i = 0; i < sections2.length; i++) {
-        var section = sections2[i];
-        var rect = section.getBoundingClientRect();
-        var sectionTop = rect.top + scrollTop;
-        var sectionBottom = sectionTop + rect.height;
-        
-        if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
-          currentSectionIndex = i;
-          break;
-        }
-        totalSectionHeight += rect.height;
-      }
-      
-      // Adjust totalSectionHeight for other sections in between
-      for (var j = 0; j < otherSections.length; j++) {
-        var otherSection = otherSections[j];
-        var rect = otherSection.getBoundingClientRect();
-        if (scrollTop >= rect.top + scrollTop) {
-          totalSectionHeight += rect.height;
-        }
-      }
-      
-      var percentScrolled;
-      
-      // If the scrollTop is in the last other section or beyond
-      if (scrollTop >= otherSections[otherSections.length - 1].getBoundingClientRect().top + scrollTop) {
-        percentScrolled = 100;
-      } else if (currentSectionIndex !== -1) {
-        var currentSectionTop = sections2[currentSectionIndex].getBoundingClientRect().top + scrollTop;
-        var rect = sections2[currentSectionIndex].getBoundingClientRect();
-        var scrolledInSection = scrollTop - currentSectionTop;
-        percentScrolled = (totalSectionHeight + scrolledInSection) / docHeight * 100;
-      } else {
-        percentScrolled = 0;
-      }
-      
-      console.log(percentScrolled);
+    let percentScrolled = this.getScrollPercentage();
      var progressBar = document.getElementById('progress-bar');
       if (progressBar !== null) {
         progressBar.style.width = percentScrolled + '%';
       }
+
+    // var sections2: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="section"]')); // Select all sections with IDs starting with "section"
+    // var otherSections: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="other-section"]')); // Select all other sections
+    
+
+    // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    // this.isSticky = scrollPosition >= 100;
+
+    // if (scrollPosition >= 200) {
+    //   document.body.classList.add('removeDefaultHeader');
+    // } else {
+    //   // document.body.classList.remove('scrolled');
+    // }
+
+    // // Determine active section
+    // const sections = document.querySelectorAll('.scrollSection');
+    // sections.forEach(section => {
+    //   const sectionTop = section.getBoundingClientRect().top;
+    //   const sectionId = section.getAttribute('id');
+    //   if (sectionTop <= 200 && sectionTop >= -100 && sectionId) { // Check if sectionId is not null
+    //     this.activeSection = sectionId;
+    //   }
+    // });
+   
+
+    // // progress bar
+    // var windowHeight = window.innerHeight;
+    //   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    //   var docHeight = document.documentElement.scrollHeight;
+
+    //   var totalSectionHeight = 0;
+    //   var currentSectionIndex = -1;
+      
+    //   // Find the currently visible section
+    //   for (var i = 0; i < sections2.length; i++) {
+    //     var section = sections2[i];
+    //     var rect = section.getBoundingClientRect();
+    //     var sectionTop = rect.top + scrollTop;
+    //     var sectionBottom = sectionTop + rect.height;
+        
+    //     if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
+    //       currentSectionIndex = i;
+    //       break;
+    //     }
+    //     totalSectionHeight += rect.height;
+    //   }
+      
+    //   // Adjust totalSectionHeight for other sections in between
+    //   for (var j = 0; j < otherSections.length; j++) {
+    //     var otherSection = otherSections[j];
+    //     var rect = otherSection.getBoundingClientRect();
+    //     if (scrollTop >= rect.top + scrollTop) {
+    //       totalSectionHeight += rect.height;
+    //     }
+    //   }
+      
+    //   var percentScrolled;
+      
+    //   // If the scrollTop is in the last other section or beyond
+    //   if (scrollTop >= otherSections[otherSections.length - 1].getBoundingClientRect().top + scrollTop) {
+    //     percentScrolled = 100;
+    //   } else if (currentSectionIndex !== -1) {
+    //     var currentSectionTop = sections2[currentSectionIndex].getBoundingClientRect().top + scrollTop;
+    //     var rect = sections2[currentSectionIndex].getBoundingClientRect();
+    //     var scrolledInSection = scrollTop - currentSectionTop;
+    //     percentScrolled = (totalSectionHeight + scrolledInSection) / docHeight * 100;
+    //   } else {
+    //     percentScrolled = 0;
+    //   }
+      
+    //   console.log(percentScrolled);
+    //  var progressBar = document.getElementById('progress-bar');
+    //   if (progressBar !== null) {
+    //     progressBar.style.width = percentScrolled + '%';
+    //   }
     
   }
 
-  
+  getScrollPercentage(): number {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight || 0;
+    const clientHeight = document.documentElement.clientHeight || window.innerHeight || 0;
+
+    return (scrollTop / (scrollHeight - clientHeight)) * 100;
+  }
 
   scrollToSection(sectionId: string) {
     const section = document.getElementById(sectionId);
