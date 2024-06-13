@@ -5,7 +5,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   selector: 'app-vender-details-moldtek',
 
   templateUrl: './vender-details-moldtek.component.html',
-  styleUrl: './vender-details-moldtek.component.scss'
+  styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-moldtek.component.scss']
+  // styleUrl: './vender-details-moldtek.component.scss'
 })
 export class VenderDetailsMoldtekComponent {
 
@@ -153,6 +154,23 @@ filteredProjects = this.projects;
   activeSection: string = 'about'; // Default active section
 
 
+  heroSlides: OwlOptions = {
+    items: 1,
+    nav: true,
+    margin: 20,
+    dots: false,
+    loop: true,
+    autoWidth: true,
+    autoplay: false,
+    autoplayHoverPause: false,
+
+    navText: [
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ],
+   
+  }
+  
   reviewsSlides: OwlOptions = {
     items: 5,
 nav: true,
