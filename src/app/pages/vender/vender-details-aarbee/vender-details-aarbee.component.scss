@@ -5,6 +5,16 @@
 .row.tools {
     padding-top: 28px;
 }
+
+.tbd{
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    &.small {
+        font-size: 20px;
+        text-align: left;
+    }
+}
 #team .teamslider {
     margin-top: -252px;
 
