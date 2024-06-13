@@ -5,7 +5,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   selector: 'app-vender-details-caldim',
 
   templateUrl: './vender-details-caldim.component.html',
-  styleUrl: './vender-details-caldim.component.scss'
+  styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-caldim.component.scss']
+  // styleUrl: './vender-details-caldim.component.scss'
 })
 export class VenderDetailsCaldimComponent {
 

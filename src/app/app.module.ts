@@ -134,6 +134,7 @@ import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-mol
 import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
 import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-allied/vender-details-allied.component';
 import { AarbeeSocialWallComponent } from './pages/vender/vender-details-aarbee/social-wall/social-wall.component';
+import { MoldtekSocialWallComponent } from './pages/vender/vender-details-moldtek/social-wall/social-wall.component';
 
 
 
@@ -250,6 +251,7 @@ import { AarbeeSocialWallComponent } from './pages/vender/vender-details-aarbee/
    SimpleRowComponent,
    SocialWallComponent,
    AarbeeSocialWallComponent,
+   MoldtekSocialWallComponent,
    CoursesDetailsStyleOneComponent,
    CourseDemoComponent,
    DataPrivacyComponent,

@@ -4,7 +4,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-vender-details-aarbee',
   templateUrl: './vender-details-aarbee.component.html',
-  styleUrl: './vender-details-aarbee.component.scss'
+  styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-aarbee.component.scss']
 })
 export class VenderDetailsAarbeeComponent {
 
@@ -12,14 +12,14 @@ export class VenderDetailsAarbeeComponent {
     {
       img: "assets/images/aarbee/profile1.jpg",
       name: "Rajeevan Chingan",
-      title: "Promoter / CEO",
+      title: "Co-Founder / CEO",
       des: "A revolutionary in the field of structural steel design, detailing and checking. He has developed a user-friendly detail sheets, adopting innovative dimensioning style and detailing methods. He has over 32 years of experience in the field and is completely at home with AISC, BS & IS codes of practice.",
       expertise: ["Project management", "Site management", "Global projects"]
     },
     {
       img: "assets/images/aarbee/profile2.jpg",
       name: "Biju P Varghese",
-      title: "Promoter / COO",
+      title: "Co-Founder / COO",
       des: "With over 30 years of experience in structural steel design, detailing and checking & well versed with AISC, BS & IS codes of practice. He has a comprehensive understanding of all aspects of design and detailing.",
       expertise: ["Concept development", "Renewable energies", "Lightning protection"]
     },
@@ -220,7 +220,7 @@ export class VenderDetailsAarbeeComponent {
   }
 
 
-   heroSlides: OwlOptions = {
+   heroSlides: OwlOptions = { 
     items: 1,
     nav: true,
     margin: 20,
