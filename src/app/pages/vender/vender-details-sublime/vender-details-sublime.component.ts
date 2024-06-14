@@ -5,7 +5,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   selector: 'app-vender-details-sublime',
 
   templateUrl: './vender-details-sublime.component.html',
-  styleUrl: './vender-details-sublime.component.scss'
+  styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-sublime.component.scss']
 })
 export class VenderDetailsSublimeComponent {
 
@@ -217,6 +217,23 @@ filteredProjects = this.projects;
 
   isSticky: boolean = false;
   activeSection: string = 'about'; // Default active section
+
+  heroSlides: OwlOptions = { 
+    items: 1,
+    nav: true,
+    margin: 20,
+    dots: false,
+    loop: true,
+    autoWidth: true,
+    autoplay: false,
+    autoplayHoverPause: false,
+
+    navText: [
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ],
+   
+  }
 
 
   reviewsSlides: OwlOptions = {
