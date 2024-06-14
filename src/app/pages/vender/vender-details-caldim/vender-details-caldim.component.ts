@@ -15,24 +15,28 @@ export class VenderDetailsCaldimComponent {
       name: "Balasubramaniyam",
       title: "Director",
       des: "Mechanical Engineering graduate and NISD certified structural steel/Misc detailer in the field of steel detailing, possessing a solid foundation in mechanical engineering. With extensive onsite experience across commercial, industrial, and oil and gas sectors, he brings a comprehensive understanding of the intricacies involved in structural design and fabrication. His expertise includes translating engineering designs into precise and accurate detailed drawings, ensuring compliance with industry standards and regulations.      ",
+      img: 'assets/images/moldtek/placeholder.jpg',
      
     },
     {
       name: "Uvaraj.K",
       title: "Director",
       des: "Civil Engineering graduate with specialized proficiency in steel detailing and construction techniques, coupled with strong leadership capabilities.” This succinctly communicates his educational background, technical skills, and leadership qualities. If you need a more detailed description, you could expand on his experience, highlighting specific projects he’s worked on, any notable achievements, and how he’s demonstrated his leadership skills in those contexts. ",
+      img: 'assets/images/moldtek/placeholder.jpg',
      
     },
     {
       name: "Swaminathan",
       title: "Technical Advisor",
       des: "Swami is the Technical Advisor and Business Development Manager. He is a Diploma holder in Ship Building Technology, with about 50 years of experience in Steel Detailing of structures for various disciplines like Ship Building, Offshore structures, Power plants, Mining structures, American Industrial as well as commercial buildings. His experience includes serving in different capacities as detailer, checker, Project manager and General manager.",
+      img: 'assets/images/moldtek/placeholder.jpg',
      
     },
     {
       name: "Vijay Anand",
       title: "General Manager",
       des: "Vijay has an Architectural engineering background and carries with him a diversified & combined rich work experience in Architectural. Structural, Precast & Rebar disciplines. His vast exposure in engineering disciplines eases & speeds up project co-ordination & RFI process for a smooth work outflow. He has also assisted Precasters/Fabricators with Marketing, helping in presentation for bidding. He is passionate, detail oriented & result driven, a strategic thinker & problem-solving with strong Management leadership & interpersonal skills, a team player with effective communication.",
+      img: 'assets/images/moldtek/placeholder.jpg',
      
     },
   ];
