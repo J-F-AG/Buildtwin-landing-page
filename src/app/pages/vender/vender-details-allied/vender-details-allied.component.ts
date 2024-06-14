@@ -5,7 +5,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-vender-details-allied',
   templateUrl: './vender-details-allied.component.html',
-  styleUrl: './vender-details-allied.component.scss'
+  styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-allied.component.scss']
+  // styleUrl: './vender-details-allied.component.scss'
 })
 export class VenderDetailsAlliedComponent {
   projects = [
@@ -140,6 +141,23 @@ export class VenderDetailsAlliedComponent {
   showPopup = false;
 
 
+
+  heroSlides: OwlOptions = { 
+    items: 1,
+    nav: true,
+    margin: 20,
+    dots: false,
+    loop: true,
+    autoWidth: true,
+    autoplay: false,
+    autoplayHoverPause: false,
+
+    navText: [
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ],
+   
+  }
   selectedOption: string = 'gmt'; // Default selected option
   timeText: string = '10:00 AM to 07:00 PM'; // Default time text
 

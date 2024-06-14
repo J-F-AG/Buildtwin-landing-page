@@ -136,6 +136,7 @@ import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-alli
 import { AarbeeSocialWallComponent } from './pages/vender/vender-details-aarbee/social-wall/social-wall.component';
 import { MoldtekSocialWallComponent } from './pages/vender/vender-details-moldtek/social-wall/social-wall.component';
 import { CaldimSocialWallComponent } from './pages/vender/vender-details-caldim/social-wall/social-wall.component';
+import { AlliedSocialWallComponent } from './pages/vender/vender-details-allied/social-wall/social-wall.component';
 
 
 
@@ -254,6 +255,7 @@ import { CaldimSocialWallComponent } from './pages/vender/vender-details-caldim/
    AarbeeSocialWallComponent,
    MoldtekSocialWallComponent,
    CaldimSocialWallComponent,
+   AlliedSocialWallComponent,
    CoursesDetailsStyleOneComponent,
    CourseDemoComponent,
    DataPrivacyComponent,
