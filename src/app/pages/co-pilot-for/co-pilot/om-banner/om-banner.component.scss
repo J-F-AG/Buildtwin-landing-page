@@ -332,7 +332,8 @@
 
 .videoCover {
     position: relative;
-    height: calc(100vh - 223px);
+    // height: calc(100vh - 223px);
+    height: auto;
     overflow: hidden;
     display: flex;
     align-items: center;
