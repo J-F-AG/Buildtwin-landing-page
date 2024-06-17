@@ -24,12 +24,12 @@ export class OmBannerFooterComponent {
     ],
     responsive: {
       0: {
-        items: 2
+        items: 1
       },
       515: {
         items: 1
       },
-      768: {
+      700: {
         items: 4
       },
       990: {

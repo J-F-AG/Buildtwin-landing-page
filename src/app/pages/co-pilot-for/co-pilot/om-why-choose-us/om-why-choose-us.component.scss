@@ -406,6 +406,15 @@
       
         margin-bottom: 80px;
     }
+    .slider-wrapper {
+        width: calc(100% - 80px);
+    }
+    .slider-container .handle {
+        margin-top: 160px;
+    }
+    .currentWrapper {
+        top: 480px;
+    }
 }
 
 @media (max-width:767px) {
@@ -416,5 +425,75 @@
             align-items: center;
             flex-direction: column;
         }
+    }
+    .slider-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .slider-wrapper {
+        width: 100%;
+    }
+    .slide figure {
+        width: 200px;
+        min-width: 200px;
+        margin-top: 70px;
+    }
+    .slide.active-1, .slide.active-2, .slide.active {
+        padding: 40px 21.258px;
+    }
+    .slider-container .handle {
+        margin-top: 0;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+    .slider-container .nav-button-v2 {
+        transform: none;
+    }
+    .slider-container .next {
+        transform: rotate(180deg);
+    }
+    .slider-container .dots {
+        flex-direction: row;
+        width: auto;
+        height: 3px;
+    }
+    .slider-container .dots span {
+        width: 25px;
+        height: 3px;
+    }
+    .currentWrapper {
+        top: auto;
+        bottom: 10px;
+        right: 26px;
+    }
+    :host ::ng-deep .co-pilot-details .colManage {
+        margin-bottom: 0;
+    }
+}
+@media (max-width:420px) {
+.slide {
+    flex-direction: column;
+}
+.slider-container {
+    width: 100%;
+}
+.slide figure {
+    margin-top:0;
+}
+    .slide.active-1, .slide.active-2, .slide.active {
+        padding: 20px 21.258px;
+    }
+
+    .slide.active-1,
+    .slide.active-2{
+        margin-bottom: -10px;
+        ;
+    }
+    .slide.active {
+        max-height: 670px;
+    }
+    .currentWrapper {
+        right: 16px;
     }
 }
