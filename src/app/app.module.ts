@@ -127,6 +127,8 @@ import { DataPrivacyComponent } from './pages/data-privacy/data-safety.component
 import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
 import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
 import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+import { OmBannerFooterComponent } from './pages/co-pilot-for/co-pilot/om-banner/om-banner-footer/om-banner-footer.component';
+import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/double-digit.pipe';
 
 
 
@@ -159,10 +161,12 @@ import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 
    OnlineMeetingHomeComponent,
    OmBannerComponent,
+   OmBannerFooterComponent,
    OmIntegrationsComponent,
    SignupComponentComponent,
    OmWhyChooseUsComponent,
    HdFaqComponent,
+   DoubleDigitPipe,
 
 
    OnlineMeetingHomeFreelanceComponent,

@@ -262,6 +262,17 @@ img {
 }
 
 // Default Btn
+.buttonV2 {
+    border-radius: 40px;
+    border: 1px solid #886DE0;
+    background: #f6f3ff;
+    color: #886de0;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
 .default-btn {
     &.mdc-button {
         height: auto;
