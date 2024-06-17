@@ -12,30 +12,61 @@ env:
 phases:
   install:
     commands:
-      - echo "Adding Yarn GPG Key" 
-      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-      - echo installing nodejs...
-      - curl -sL https://deb.nodesource.com/setup_14.x | bash -
-      - apt-get install -y nodejs
+      - echo "Updating and upgrading system packages..."
+      - sudo apt-get update
+      - sudo apt-get upgrade -y
+      
+      # Clean up unnecessary packages and fix broken installs
+      - echo "Cleaning up unnecessary packages and fixing broken installs..."
+      - sudo apt-get autoremove -y
+      - sudo apt-get autoclean
+      - sudo apt-get -f install
+      
+      # Remove previous Node and npm to avoid conflicts
+      - echo "Removing any existing Node.js and npm installations..."
+      - sudo rm -rf /usr/local/bin/node
+      - sudo rm -rf /usr/local/bin/npm
+      
+      # Install Node.js from NodeSource
+      - echo "Installing Node.js from NodeSource..."
+      - curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+      - sudo apt-get install -y nodejs
+      
+      # Check if npm is installed, otherwise install it
+      - echo "Checking for npm installation..."
+      # - if ! command -v npm &>/dev/null; then sudo apt-get install -y npm; fi
+      
+      # Verify installations
+      - echo "Verifying Node.js and npm versions..."
+      - node --version
+      - npm --version
+      - which npm
+      - which node
+      
+      # Clean up existing npm dependencies if any
+      - echo "Cleaning package lock files..."
       - rm -rf package-lock.json
+
   pre_build:
     commands:
-      - echo installing dependencies...
-      - npm install -g @angular/cli
-      - npm install
+      - echo "Installing Angular CLI and dependencies..."
+      - npm install -g @angular/cli@17.0.0
+
+       # Clean npm cache and install project dependencies
+      - echo "Cleaning npm cache and installing project dependencies..."
+      - npm cache clean --force
+      - export NODE_OPTIONS=--max-old-space-size=6144
+      - npm install --force
 
   build:
     commands:
-       - echo testing...
-       - ng build --configuration production --build-optimizer --aot
-       - ls
-       - pwd
-       - ls
-       - pwd
+      - echo testing...
+      - ng build --output-hashing=all --configuration production --build-optimizer --aot
+      - ls
        
-  post_build:  
+  post_build:
     commands:
-       - aws configure set aws_access_key_id $NEW_ACCESS_KEY
-       - aws configure set aws_secret_access_key $NEW_SECRET_KEY
-       - aws s3 sync dist/ s3://$S3_BUCKET_BUILDTWIN/ 
-       # - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
+      - aws configure set aws_access_key_id $AOA_ACCESS_KEY
+      - aws configure set aws_secret_access_key $AOA_SECRET_KEY
+      - aws s3 sync dist/ s3://$S3_BUCKET_BUILDTWIN/ --region eu-central-1 --acl public-read --exclude 'get-started/*'
+      - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
