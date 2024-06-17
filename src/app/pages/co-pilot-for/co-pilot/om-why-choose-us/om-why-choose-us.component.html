@@ -1,1 +1,54 @@
-<ng-content></ng-content>
+<div class="co-pilot-details">
+    <div class="why-choose-us-area  position-relative z-1">
+        <div class="container">
+            <div class="colManage">
+                <div class="head">
+                    <span class="buttonV2">
+                        USE CASES
+                    </span>
+                </div>
+                <div class="slider-container">
+                    <div class="slider-wrapper">
+                        <div class="slide" *ngFor="let slide of slides; let i = index" 
+                        [class.active]="i === currentIndex"
+                        [class.active-1]="i === (currentIndex+1)"
+                        [class.active-2]="i === (currentIndex+2)" >
+                             <!-- [style.height]="i === currentIndex ? '400px' : '0'" -->
+                            
+                             <div class="content">
+                                <div class="profile-image">
+                                    <img [attr.src]="slide['profileImage']" width="40" height="40" alt="">
+                                    <div class="name" [innerHtml]="slide['profileName']"></div>
+                                </div>
+                                <div class="faqcontent">
+                                    <h2>
+                                        {{ slide['faqHeading'] }}
+                                    </h2>
+                                    <ng-container *ngFor="let p of slide['faqParagraph']">
+                                        <p [innerHtml]="p"></p>
+                                    </ng-container>
+                                </div>
+                                <a [attr.href]="slide['faqAnchorLink']" class="default-btn">{{slide['faqAnchor']}}</a>
+                            </div>
+                            <figure>
+                                <img [attr.src]="slide['faqImage']" width="421" height="306" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="handle">
+                        <button class="nav-button-v2" (click)="moveSlide('prev')" [ngClass]="{'disabled': currentIndex == 0}">&#9650;</button>
+                        <div class="dots">
+                            <span *ngFor="let slide of slides; let i = index" 
+                            (click)="moveSlide(i)"
+                            [ngClass]="{'active': i === currentIndex}"></span>
+                        </div>
+                        <button class="nav-button-v2 next" (click)="moveSlide('next')" [ngClass]="{'disabled': (slides.length == currentIndex+1)}">&#9660;</button>
+                        <span class="currentWrapper">
+                            <span class="current">{{currentIndex+1 | doubleDigit}}</span>/<span class="total">{{slides.length | doubleDigit}}</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

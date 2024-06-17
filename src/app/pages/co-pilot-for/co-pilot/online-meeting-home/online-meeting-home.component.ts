@@ -8,6 +8,63 @@ import { Router } from '@angular/router';
     styleUrls: ['./online-meeting-home.component.scss']
 })
 export class OnlineMeetingHomeComponent {
+  listFaq:any = [
+  {
+    profileImage: 'assets/images/ui/user1.png',
+    profileName: '<strong>Charles</strong> Brown',
+    faqImage: 'assets/images/vid4.png',
+    faqHeading: 'Tracks who processed what and when',
+    faqParagraph: [
+      'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters.'
+    ],
+    faqAnchor: 'Try BuildTwin Now',
+    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+  },
+  {
+    profileImage: 'assets/images/ui/user2.png',
+    profileName: '<strong>Marquees</strong> Lee',
+    faqImage: 'assets/images/vid4.png',
+    faqHeading: 'Ensures quality requirements are met',
+    faqParagraph: [
+      'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.'
+    ],
+    faqAnchor: 'Try BuildTwin Now',
+    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+  },
+  {
+    profileImage: 'assets/images/ui/user3.png',
+    profileName: '<strong>Katrina</strong> Paine',
+    faqImage: 'assets/images/vid4.png',
+    faqHeading: 'Easily and quickly summaries activities into a workable cockpit',
+    faqParagraph: [
+      'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.'
+    ],
+    faqAnchor: 'Try BuildTwin Now',
+    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+  },
+  {
+    profileImage: 'assets/images/ui/user4.png',
+    profileName: '<strong>Rajdeep</strong> Sharma',
+    faqImage: 'assets/images/vid4.png',
+    faqHeading: 'Provides Automated feedback & learnings for easier understanding',
+    faqParagraph: [
+      'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.'
+    ],
+    faqAnchor: 'Try BuildTwin Now',
+    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+  },
+  {
+    profileImage: 'assets/images/ui/user1.png',
+    profileName: '<strong>Owen</strong> Weah',
+    faqImage: 'assets/images/vid4.png',
+    faqHeading: 'Generates one click reports such as for delays',
+    faqParagraph: [
+      'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.'
+    ],
+    faqAnchor: 'Try BuildTwin Now',
+    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+  }
+  ]
   @ViewChild('hdFaq') hdFaq!: ElementRef;
   
     activeState:number = 1

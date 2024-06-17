@@ -1,0 +1,110 @@
+.flex {
+    display: flex;
+    // position: fixed;
+    // left: 0;
+    // bottom: 0;
+    width: 100%;
+    z-index: 4;
+    position: relative;
+}
+.head {
+    background: #F6F3FF;
+    padding: 25px 67px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #9278E3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+    strong {
+        font-weight: 700;
+        display: block;
+    }
+}
+.content {
+    background: #F9F9F9;
+    flex-grow: 1;
+    overflow: hidden;
+    ul {
+        display: flex;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        height: 100%;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+:host ::ng-deep .owl-theme .owl-nav {
+    margin: 0;
+    .owl-prev{
+        position: absolute;
+        left: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        background: none;
+        &::after {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: -49px;
+            width: 200px;
+            height: 122px;
+            background: linear-gradient(90deg, #FAFAFA 28.14%, rgba(250, 250, 250, 0.00) 100%);
+            z-index: 1;
+        }
+        i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 36px;
+            height: 36px;
+            background: url(../../../../../../assets/images/ui/prev.svg);
+            border-radius: 100px;
+            background-position: center;
+            box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            text-indent: -9999px;
+        }
+    }
+    .owl-next {
+        position: absolute;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36px;
+        height: 36px;
+        background: none;
+        &::after {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: -49px;
+            width: 200px;
+            height: 122px;
+            background: linear-gradient(270deg, #FAFAFA 28.14%, rgba(250, 250, 250, 0.00) 100%);
+            z-index: 1;
+        }
+        i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 36px;
+            height: 36px;
+            background: url(../../../../../../assets/images/ui/next.svg);
+            border-radius: 100px;
+            background-position: center;
+            box-shadow: 0px 4px 35px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            text-indent: -9999px;
+        }
+    }
+}

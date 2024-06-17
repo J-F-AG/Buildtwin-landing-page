@@ -138,6 +138,8 @@ import { MoldtekSocialWallComponent } from './pages/vender/vender-details-moldte
 import { CaldimSocialWallComponent } from './pages/vender/vender-details-caldim/social-wall/social-wall.component';
 import { AlliedSocialWallComponent } from './pages/vender/vender-details-allied/social-wall/social-wall.component';
 import { SublimeSocialWallComponent } from './pages/vender/vender-details-sublime/social-wall/social-wall.component';
+import { OmBannerFooterComponent } from './pages/co-pilot-for/co-pilot/om-banner/om-banner-footer/om-banner-footer.component';
+import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/double-digit.pipe';
 
 
 
@@ -170,10 +172,12 @@ import { SublimeSocialWallComponent } from './pages/vender/vender-details-sublim
 
    OnlineMeetingHomeComponent,
    OmBannerComponent,
+   OmBannerFooterComponent,
    OmIntegrationsComponent,
    SignupComponentComponent,
    OmWhyChooseUsComponent,
    HdFaqComponent,
+   DoubleDigitPipe,
 
 
    OnlineMeetingHomeFreelanceComponent,

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GlobalService {
-  globalValue: string = '2.000';
+  globalValue: string = '5.000';
   payload:any;
   constructor(private http: HttpClient) {}
 
