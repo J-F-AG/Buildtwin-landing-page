@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { forkJoin } from 'rxjs';
 
@@ -210,10 +211,12 @@ export class VenderDetailsAarbeeComponent {
 
   filteredProjects = this.projects;
   serviceSkills = [] as any;
+  domain = ''
 
-  constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient) {
+  constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute) {
 
-    this.getBusinessListing()
+    this.getBusinessListing();
+    this.domain = this.route.snapshot.params['domain'];
   }
   showPopup = false;
 
@@ -466,9 +469,10 @@ export class VenderDetailsAarbeeComponent {
   }
 
   getBusinessListing() {
+    let domain = localStorage.getItem('domain');
     forkJoin([
       this.http.get('https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields'),
-      this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?domain=https://jf.buildtwin.com`)
+      this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?domain=${domain}`)
     ]).subscribe((res: any[]) => {
       // this.fieldData = res[0]['data'];
       // this.formData = res[1]['data'];

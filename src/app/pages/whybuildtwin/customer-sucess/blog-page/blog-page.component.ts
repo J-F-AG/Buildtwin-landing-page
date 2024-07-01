@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { Urls } from 'src/app/services/urls';
 
 @Component({
@@ -11,8 +12,9 @@ import { Urls } from 'src/app/services/urls';
 export class BlogPageComponent {
 
     title = 'BuildTwin - use cases';
+    companyList = [];
  
-    constructor(private titleService:Title, private http: HttpClient) {
+    constructor(private titleService:Title, private http: HttpClient, private router: Router) {
         this.getListOfCompany()
     }
     
@@ -21,9 +23,14 @@ export class BlogPageComponent {
     }
 
     getListOfCompany() {
-        this.http.get(`${Urls['marketplace']}businessListingPage/fields`).subscribe(res => {
-            
+        this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`).subscribe(res => {
+            this.companyList = res['data']['details'];
         })
+    }
+
+    redirect(domain) {
+        localStorage.setItem("domain", domain);
+        this.router.navigate([`/vender-details-aarbee`]);
     }
 
 }

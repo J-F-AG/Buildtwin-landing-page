@@ -41,12 +41,16 @@
     </div>
 </div>
 -->
-<div>
+<div class="margin">
     <h3>
         List Of Projects
     </h3>
-    <div>
-        
+    <div *ngFor="let c of companyList">
+        <span (click)="redirect(c.domain)" style="cursor: pointer;">
+            {{c.company_name}}
+        </span>
+        <br>
+        {{c.company_description}}
     </div>
 </div>
 
