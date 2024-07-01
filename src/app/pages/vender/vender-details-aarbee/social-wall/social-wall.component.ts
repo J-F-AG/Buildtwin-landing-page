@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 declare var $: any;
 
@@ -9,6 +9,11 @@ declare var $: any;
   styleUrls: ['./social-wall.component.scss']
 })
 export class AarbeeSocialWallComponent implements OnInit {
+  @Input()
+  name: string = '';
+  @Input()
+  description: string = '';
+  
   ytsrc: any;
   ytVideoUrl = [
     { selector: "1", url: "https://www.youtube.com/embed/piyN9mbjsho?si=REyW8Om9TMRTOJkE" },

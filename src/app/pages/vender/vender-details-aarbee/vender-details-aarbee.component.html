@@ -54,1179 +54,632 @@
             </owl-carousel-o> 
         </div>
     </app-vender-banner>
-
-<div id="about-service" class="about-service section1">
-        <div class="container">
-            <div class="inner">
-                <h2>About AARBEE</h2>
-                <div class="details">
-                    <div class="list">
-                        <span><img src="assets/images/ui/avatr.png" height="30" width="30" /> 800+</span>
-                        <p>Employees</p>
+<ng-container *ngIf="isLoaded">
+    <div id="about-service" class="about-service section1" >
+            <div class="container">
+                <div class="inner">
+                    <h2>About AARBEE</h2>
+                    <div class="details">
+                        <div class="list" *ngFor="let data of formData.about">
+                            <span><img src="assets/images/aarbee/market.png" height="30" width="30" /> 
+                                {{data.value}}<span *ngIf="data.isPlus">+</span>
+                            </span>
+                            <p>{{data.key}}</p>
+                        </div>
+                        <!-- <div class="list">
+                            <span><img src="assets/images/aarbee/market.png" height="21" width="21" /> 5</span>
+                            <p>Market</p>
+                        </div>
+                        <div class="list">
+                            <span><img src="assets/images/aarbee/exp.png" height="21" width="21" /> 26+</span>
+                            <p>Years in Business</p>
+                        </div>
+                        <div class="list">
+                            <span><img src="assets/images/aarbee/ref-project.png" height="21" width="21" /> 20+</span>
+                            <p>Reference Projects</p>
+                        </div>
+                        <div class="list">
+                            <span><img src="assets/images/ui/country3.png" height="21" width="21" /> Bangalore India</span>
+                            <p>Headquarter</p>
+                        </div>
+                        <div class="list">
+                            <span><img src="assets/images/aarbee/founded.png" height="21" width="21" /> 1998</span>
+                            <p>Founded</p>
+                        </div> -->
                     </div>
-                    <div class="list">
-                        <span><img src="assets/images/aarbee/market.png" height="21" width="21" /> 5</span>
-                        <p>Market</p>
+                    <div class="service-section">
+                        <h3>Services: <span>Structural</span></h3>
+                        <div class="service-list">
+                            <ul>
+                                <li *ngFor="let s of formData.services"><img src="assets/images/aarbee/structural.png" height="21" width="21" /> 
+                                    {{s.service_name}}
+                                </li>
+                                <!-- <li><img src="assets/images/aarbee/details.png" height="21" width="21" /> PEB Design and Detailing</li>
+                                <li><img src="assets/images/aarbee/bos.png" height="21" width="21" /> BoQ/QS Services</li>
+                                <li><img src="assets/images/aarbee/details.png" height="21" width="21" /> Detailed Engineering</li>
+                                <li><img src="assets/images/aarbee/duct.png" height="21" width="21" /> Duct Detailing</li>
+                                <li><img src="assets/images/aarbee/estimodeling.png" height="21" width="21" /> Estimodeling</li>
+                                <li><img src="assets/images/aarbee/misc.png" height="21" width="21" /> Miscellaneous Steel Detailing</li>
+                                <li><img src="assets/images/aarbee/structural.png" height="21" width="21" /> Structural Design</li>
+                                <li><img src="assets/images/aarbee/steel-struc.png" height="21" width="21" /> Structural Steel Detailing</li> -->
+                            </ul>
+                        </div>
                     </div>
-                    <div class="list">
-                        <span><img src="assets/images/aarbee/exp.png" height="21" width="21" /> 26+</span>
-                        <p>Years in Business</p>
-                    </div>
-                    <div class="list">
-                        <span><img src="assets/images/aarbee/ref-project.png" height="21" width="21" /> 20+</span>
-                        <p>Reference Projects</p>
-                    </div>
-                    <div class="list">
-                        <span><img src="assets/images/ui/country3.png" height="21" width="21" /> Bangalore India</span>
-                        <p>Headquarter</p>
-                    </div>
-                    <div class="list">
-                        <span><img src="assets/images/aarbee/founded.png" height="21" width="21" /> 1998</span>
-                        <p>Founded</p>
-                    </div>
-                </div>
-                <div class="service-section">
-                    <h3>Services: <span>Structural</span></h3>
-                    <div class="service-list">
-                        <ul>
-                            <li><img src="assets/images/aarbee/structural.png" height="21" width="21" /> Connection Engineering</li>
-                            <li><img src="assets/images/aarbee/details.png" height="21" width="21" /> PEB Design and Detailing</li>
-                            <li><img src="assets/images/aarbee/bos.png" height="21" width="21" /> BoQ/QS Services</li>
-                            <li><img src="assets/images/aarbee/details.png" height="21" width="21" /> Detailed Engineering</li>
-                            <li><img src="assets/images/aarbee/duct.png" height="21" width="21" /> Duct Detailing</li>
-                            <li><img src="assets/images/aarbee/estimodeling.png" height="21" width="21" /> Estimodeling</li>
-                            <li><img src="assets/images/aarbee/misc.png" height="21" width="21" /> Miscellaneous Steel Detailing</li>
-                            <li><img src="assets/images/aarbee/structural.png" height="21" width="21" /> Structural Design</li>
-                            <li><img src="assets/images/aarbee/steel-struc.png" height="21" width="21" /> Structural Steel Detailing</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="on-site">
-                    <h3>On-Site Available <span>(own office)</span></h3>
-                    <div class="site-list">
-                        <ul>
-                            <li><img src="assets/images/india.png" height="60" width="60" /> <span>India</span></li>
-                        </ul>
+                    <div class="on-site">
+                        <h3>On-Site Available <span>(own office)</span></h3>
+                        <div class="site-list">
+                            <ul>
+                                <li><span>{{formData.onsite}}</span></li>
+                                <!-- <li><img src="assets/images/india.png" height="60" width="60" /> <span>India</span></li> -->
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-</div>
-    
-    <div id="about" class="scrollSection">
-    <app-abount-jf>
-        <div class="about" id="other-service2">
-            
-            <div class="whiteSection">
-                <div class="container">
-                    <div class="flexStructure">
-                        <div class="leftPart">
-    
-                            <div class="head">
-                                <img class="logo" src="assets/images/aarbee/logo.jpg" width="120" height="100" /> 
-                                <p>Aarbee based at Bangalore, India has come ahead of time to the forefront since its inception in 1998. The Company has written a new era in the field of Structural Steel Designing and Detailing.</p>
-                                <p>Our strong clientele base enabled us to carve a niche in this arena. We, at Aarbee provide world class quality services adhering to AISC (American Institute for Steel Construction) and BS (British standard codes for steel detailing) standards in Structural Design & Steel Detailing of residential, commercial and industrial structures.</p>
-                                <h3>Engineering project for</h3>
-                                <img class="resize" src="assets/images/aarbee/eng-logos.png" width="451" height="100" />
-    
-                                <div class="btnWrap">
-                                    <a (click)="call()" class="btnNew cursor"
-                                        >Start Enquiry<i
-                                            class="ti ti-arrow-narrow-right"
-                                        ></i
-                                    ></a>
-    
-    
+    </div>
+        
+        <div id="about" class="scrollSection">
+        <app-abount-jf>
+            <div class="about" id="other-service2">
+                
+                <div class="whiteSection">
+                    <div class="container">
+                        <div class="flexStructure">
+                            <div class="leftPart">
+        
+                                <div class="head">
+                                    <img class="logo" [src]="formData.companyDetails.icon" width="120" height="100" /> 
+                                    <p>{{formData.companyDetails.company_description}}</p>
+                                    <!-- <p>Aarbee based at Bangalore, India has come ahead of time to the forefront since its inception in 1998. The Company has written a new era in the field of Structural Steel Designing and Detailing.</p>
+                                    <p>Our strong clientele base enabled us to carve a niche in this arena. We, at Aarbee provide world class quality services adhering to AISC (American Institute for Steel Construction) and BS (British standard codes for steel detailing) standards in Structural Design & Steel Detailing of residential, commercial and industrial structures.</p> -->
+                                    <h3>Engineering project for</h3>
+                                    <img class="resize" [src]="formData.companyDetails.engineering_project_icon" width="451" height="100" />
+        
+                                    <div class="btnWrap">
+                                        <a (click)="call()" class="btnNew cursor"
+                                            >Start Enquiry<i
+                                                class="ti ti-arrow-narrow-right"
+                                            ></i
+                                        ></a>
+        
+        
+                                    </div>
                                 </div>
+                             
                             </div>
-                         
-                        </div>
-                        <div class="leftPart rightPart">
-                            <div class="box">
-                               
-                                <div class="rowData">    
-                                    <div class="rating">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="101"
-                                            height="20"
-                                            viewBox="0 0 101 20"
-                                            fill="none"
-                                        >
-                                            <mask
-                                                id="mask0_6810_1196"
-                                                style="mask-type: alpha"
-                                                maskUnits="userSpaceOnUse"
-                                                x="0"
-                                                y="0"
+                            <div class="leftPart rightPart">
+                                <div class="box">
+                                   
+                                    <div class="rowData">    
+                                        <div class="rating">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
                                                 width="101"
                                                 height="20"
+                                                viewBox="0 0 101 20"
+                                                fill="none"
                                             >
-                                                <rect
+                                                <mask
+                                                    id="mask0_6810_1196"
+                                                    style="mask-type: alpha"
+                                                    maskUnits="userSpaceOnUse"
+                                                    x="0"
+                                                    y="0"
                                                     width="101"
                                                     height="20"
-                                                    fill="#836ED9"
-                                                />
-                                            </mask>
-                                            <g mask="url(#mask0_6810_1196)">
-                                                <path
-                                                    d="M9.24426 1.976C9.40959 1.46715 10.1295 1.46715 10.2948 1.976L11.8907 6.88757C11.9646 7.11513 12.1767 7.26921 12.4159 7.26921H17.5803C18.1153 7.26921 18.3378 7.95385 17.9049 8.26833L13.7269 11.3039C13.5333 11.4445 13.4523 11.6938 13.5262 11.9213L15.1221 16.8329C15.2874 17.3418 14.7051 17.7649 14.2722 17.4504L10.0942 14.4149C9.90059 14.2743 9.63847 14.2743 9.44489 14.4149L5.26686 17.4504C4.83401 17.7649 4.25162 17.3418 4.41695 16.8329L6.01282 11.9213C6.08676 11.6938 6.00576 11.4445 5.81218 11.3039L1.63415 8.26833C1.2013 7.95385 1.42375 7.26921 1.95878 7.26921H7.12312C7.36239 7.26921 7.57445 7.11513 7.64839 6.88757L9.24426 1.976Z"
-                                                    fill="#886DE0"
-                                                />
-                                                <path
-                                                    d="M29.2443 1.976C29.4096 1.46715 30.1295 1.46715 30.2948 1.976L31.8907 6.88757C31.9646 7.11513 32.1767 7.26921 32.4159 7.26921H37.5803C38.1153 7.26921 38.3378 7.95385 37.9049 8.26833L33.7269 11.3039C33.5333 11.4445 33.4523 11.6938 33.5262 11.9213L35.1221 16.8329C35.2874 17.3418 34.7051 17.7649 34.2722 17.4504L30.0942 14.4149C29.9006 14.2743 29.6385 14.2743 29.4449 14.4149L25.2669 17.4504C24.834 17.7649 24.2516 17.3418 24.417 16.8329L26.0128 11.9213C26.0868 11.6938 26.0058 11.4445 25.8122 11.3039L21.6341 8.26833C21.2013 7.95385 21.4238 7.26921 21.9588 7.26921H27.1231C27.3624 7.26921 27.5745 7.11513 27.6484 6.88757L29.2443 1.976Z"
-                                                    fill="#886DE0"
-                                                />
-                                                <path
-                                                    d="M49.2443 1.976C49.4096 1.46715 50.1295 1.46715 50.2948 1.976L51.8907 6.88757C51.9646 7.11513 52.1767 7.26921 52.4159 7.26921H57.5803C58.1153 7.26921 58.3378 7.95385 57.9049 8.26833L53.7269 11.3039C53.5333 11.4445 53.4523 11.6938 53.5262 11.9213L55.1221 16.8329C55.2874 17.3418 54.7051 17.7649 54.2722 17.4504L50.0942 14.4149C49.9006 14.2743 49.6385 14.2743 49.4449 14.4149L45.2669 17.4504C44.834 17.7649 44.2516 17.3418 44.417 16.8329L46.0128 11.9213C46.0868 11.6938 46.0058 11.4445 45.8122 11.3039L41.6341 8.26833C41.2013 7.95385 41.4238 7.26921 41.9588 7.26921H47.1231C47.3624 7.26921 47.5745 7.11513 47.6484 6.88757L49.2443 1.976Z"
-                                                    fill="#886DE0"
-                                                />
-                                                <path
-                                                    d="M69.2443 1.976C69.4096 1.46715 70.1295 1.46715 70.2948 1.976L71.8907 6.88757C71.9646 7.11513 72.1767 7.26921 72.4159 7.26921H77.5803C78.1153 7.26921 78.3378 7.95385 77.9049 8.26833L73.7269 11.3039C73.5333 11.4445 73.4523 11.6938 73.5262 11.9213L75.1221 16.8329C75.2874 17.3418 74.7051 17.7649 74.2722 17.4504L70.0942 14.4149C69.9006 14.2743 69.6385 14.2743 69.4449 14.4149L65.2669 17.4504C64.834 17.7649 64.2516 17.3418 64.417 16.8329L66.0128 11.9213C66.0868 11.6938 66.0058 11.4445 65.8122 11.3039L61.6341 8.26833C61.2013 7.95385 61.4238 7.26921 61.9588 7.26921H67.1231C67.3624 7.26921 67.5745 7.11513 67.6484 6.88757L69.2443 1.976Z"
-                                                    fill="#886DE0"
-                                                />
-                                                <path
-                                                    d="M89.2443 1.976C89.4096 1.46715 90.1295 1.46715 90.2948 1.976L91.8907 6.88757C91.9646 7.11513 92.1767 7.26921 92.4159 7.26921H97.5803C98.1153 7.26921 98.3378 7.95385 97.9049 8.26833L93.7269 11.3039C93.5333 11.4445 93.4523 11.6938 93.5262 11.9213L95.1221 16.8329C95.2874 17.3418 94.7051 17.7649 94.2722 17.4504L90.0942 14.4149C89.9006 14.2743 89.6385 14.2743 89.4449 14.4149L85.2669 17.4504C84.834 17.7649 84.2516 17.3418 84.417 16.8329L86.0128 11.9213C86.0868 11.6938 86.0058 11.4445 85.8122 11.3039L81.6341 8.26833C81.2013 7.95385 81.4238 7.26921 81.9588 7.26921H87.1231C87.3624 7.26921 87.5745 7.11513 87.6484 6.88757L89.2443 1.976Z"
-                                                    fill="#886DE0"
-                                                />
-                                            </g>
-                                        </svg>
-                                        <span class="manage">
-                                            rated on BuildTwin by 50+ Users
-                                        </span>
-                                        <div class="flex">
-                                            <div class="founded">
-                                                <label>Website</label>
-                                                <span><a href="https://aarbeestructures.com/">https://aarbeestructures.com/</a></span>
+                                                >
+                                                    <rect
+                                                        width="101"
+                                                        height="20"
+                                                        fill="#836ED9"
+                                                    />
+                                                </mask>
+                                                <g mask="url(#mask0_6810_1196)">
+                                                    <path
+                                                        d="M9.24426 1.976C9.40959 1.46715 10.1295 1.46715 10.2948 1.976L11.8907 6.88757C11.9646 7.11513 12.1767 7.26921 12.4159 7.26921H17.5803C18.1153 7.26921 18.3378 7.95385 17.9049 8.26833L13.7269 11.3039C13.5333 11.4445 13.4523 11.6938 13.5262 11.9213L15.1221 16.8329C15.2874 17.3418 14.7051 17.7649 14.2722 17.4504L10.0942 14.4149C9.90059 14.2743 9.63847 14.2743 9.44489 14.4149L5.26686 17.4504C4.83401 17.7649 4.25162 17.3418 4.41695 16.8329L6.01282 11.9213C6.08676 11.6938 6.00576 11.4445 5.81218 11.3039L1.63415 8.26833C1.2013 7.95385 1.42375 7.26921 1.95878 7.26921H7.12312C7.36239 7.26921 7.57445 7.11513 7.64839 6.88757L9.24426 1.976Z"
+                                                        fill="#886DE0"
+                                                    />
+                                                    <path
+                                                        d="M29.2443 1.976C29.4096 1.46715 30.1295 1.46715 30.2948 1.976L31.8907 6.88757C31.9646 7.11513 32.1767 7.26921 32.4159 7.26921H37.5803C38.1153 7.26921 38.3378 7.95385 37.9049 8.26833L33.7269 11.3039C33.5333 11.4445 33.4523 11.6938 33.5262 11.9213L35.1221 16.8329C35.2874 17.3418 34.7051 17.7649 34.2722 17.4504L30.0942 14.4149C29.9006 14.2743 29.6385 14.2743 29.4449 14.4149L25.2669 17.4504C24.834 17.7649 24.2516 17.3418 24.417 16.8329L26.0128 11.9213C26.0868 11.6938 26.0058 11.4445 25.8122 11.3039L21.6341 8.26833C21.2013 7.95385 21.4238 7.26921 21.9588 7.26921H27.1231C27.3624 7.26921 27.5745 7.11513 27.6484 6.88757L29.2443 1.976Z"
+                                                        fill="#886DE0"
+                                                    />
+                                                    <path
+                                                        d="M49.2443 1.976C49.4096 1.46715 50.1295 1.46715 50.2948 1.976L51.8907 6.88757C51.9646 7.11513 52.1767 7.26921 52.4159 7.26921H57.5803C58.1153 7.26921 58.3378 7.95385 57.9049 8.26833L53.7269 11.3039C53.5333 11.4445 53.4523 11.6938 53.5262 11.9213L55.1221 16.8329C55.2874 17.3418 54.7051 17.7649 54.2722 17.4504L50.0942 14.4149C49.9006 14.2743 49.6385 14.2743 49.4449 14.4149L45.2669 17.4504C44.834 17.7649 44.2516 17.3418 44.417 16.8329L46.0128 11.9213C46.0868 11.6938 46.0058 11.4445 45.8122 11.3039L41.6341 8.26833C41.2013 7.95385 41.4238 7.26921 41.9588 7.26921H47.1231C47.3624 7.26921 47.5745 7.11513 47.6484 6.88757L49.2443 1.976Z"
+                                                        fill="#886DE0"
+                                                    />
+                                                    <path
+                                                        d="M69.2443 1.976C69.4096 1.46715 70.1295 1.46715 70.2948 1.976L71.8907 6.88757C71.9646 7.11513 72.1767 7.26921 72.4159 7.26921H77.5803C78.1153 7.26921 78.3378 7.95385 77.9049 8.26833L73.7269 11.3039C73.5333 11.4445 73.4523 11.6938 73.5262 11.9213L75.1221 16.8329C75.2874 17.3418 74.7051 17.7649 74.2722 17.4504L70.0942 14.4149C69.9006 14.2743 69.6385 14.2743 69.4449 14.4149L65.2669 17.4504C64.834 17.7649 64.2516 17.3418 64.417 16.8329L66.0128 11.9213C66.0868 11.6938 66.0058 11.4445 65.8122 11.3039L61.6341 8.26833C61.2013 7.95385 61.4238 7.26921 61.9588 7.26921H67.1231C67.3624 7.26921 67.5745 7.11513 67.6484 6.88757L69.2443 1.976Z"
+                                                        fill="#886DE0"
+                                                    />
+                                                    <path
+                                                        d="M89.2443 1.976C89.4096 1.46715 90.1295 1.46715 90.2948 1.976L91.8907 6.88757C91.9646 7.11513 92.1767 7.26921 92.4159 7.26921H97.5803C98.1153 7.26921 98.3378 7.95385 97.9049 8.26833L93.7269 11.3039C93.5333 11.4445 93.4523 11.6938 93.5262 11.9213L95.1221 16.8329C95.2874 17.3418 94.7051 17.7649 94.2722 17.4504L90.0942 14.4149C89.9006 14.2743 89.6385 14.2743 89.4449 14.4149L85.2669 17.4504C84.834 17.7649 84.2516 17.3418 84.417 16.8329L86.0128 11.9213C86.0868 11.6938 86.0058 11.4445 85.8122 11.3039L81.6341 8.26833C81.2013 7.95385 81.4238 7.26921 81.9588 7.26921H87.1231C87.3624 7.26921 87.5745 7.11513 87.6484 6.88757L89.2443 1.976Z"
+                                                        fill="#886DE0"
+                                                    />
+                                                </g>
+                                            </svg>
+                                            <span class="manage">
+                                                rated on BuildTwin by 50+ Users
+                                            </span>
+                                            <div class="flex">
+                                                <div class="founded">
+                                                    <label>Website</label>
+                                                    <span><a [href]="formData.companyDetails.domain">{{formData.companyDetails.domain}}</a></span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="founded">
-                                                <label>Phone Number</label>
-                                                <span><a href="tel:+918068333400">+91 8068333400</a></span>
+                                            <div class="flex">
+                                                <div class="founded">
+                                                    <label>Phone Number</label>
+                                                    <span><a href="tel:+918068333400">{{formData.companyDetails.phone_number}}</a></span>
+                                                </div>
                                             </div>
+                                           
                                         </div>
-                                       
-                                    </div>
-    
-                               
-                                </div>
-                                <div class="rowData">
-                                    <h3>Availability in Time Zone</h3>
-      <div class="selectCover">
-        <div class="selectData">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <select [(ngModel)]="selectedOption" (change)="onSelectChange()">
-                    <option value="gmt">GMT Time Zone</option>
-                    <option value="est">EST Time Zone</option>
-                    <option value="pst">PST Time Zone</option>
-                </select>
-        </div>
-       
-    
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <g clip-path="url(#clip0_7144_11954)">
-                <path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96452 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM12 20.25C10.3683 20.25 8.77326 19.7661 7.41655 18.8596C6.05984 17.9531 5.00242 16.6646 4.378 15.1571C3.75358 13.6496 3.5902 11.9908 3.90853 10.3905C4.22685 8.79016 5.01259 7.32015 6.16637 6.16637C7.32016 5.01259 8.79017 4.22685 10.3905 3.90852C11.9909 3.59019 13.6497 3.75357 15.1571 4.37799C16.6646 5.00242 17.9531 6.05984 18.8596 7.41655C19.7662 8.77325 20.25 10.3683 20.25 12C20.2475 14.1873 19.3775 16.2843 17.8309 17.8309C16.2843 19.3775 14.1873 20.2475 12 20.25ZM18 12C18 12.1989 17.921 12.3897 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75H12C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4697C17.921 11.6103 18 11.8011 18 12Z" fill="#886DE0"/>
-                <circle cx="19.001" cy="19.0002" r="5" fill="#00B507"/>
-                <path d="M16.2354 19.2238L17.6184 21.0021L21.7666 17.0002" stroke="white" stroke-width="0.943779" stroke-linecap="round" stroke-linejoin="round"/>
-                </g>
-                <defs>
-                <clipPath id="clip0_7144_11954">
-                <rect width="24" height="24" fill="white"/>
-                </clipPath>
-                </defs>
-                </svg>
-                {{ timeText }}
-        </span>
-      </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                  
-                </div>
-            </div>
-        </div>
-    </app-abount-jf>
-    </div>
-    <div id="capabilities" class="scrollSection">
-    <app-capability>
-        <div class="capability" id="section2">
-            <div class="head">
-                <div class="container">
-                    <h2>Capability Matrix</h2>
-                    <p>
-                        Aarbee Structures provides a wide range of services with multidisciplinary teams
-                    </p>
-                </div>
-               
-            </div>
-            <div class="container">
-                <div class="service-info-wrapper">
-                    <table class="service-info">
-                        <thead>
-                            <tr>
-                                <th>
-
-                                </th>
-                                <th>
-                                    Airports
-                                </th>
-                                <th>
-                                    Commercial
-                                </th>
-                                <th>
-                                    Industrial
-                                </th>
-                                <th>
-                                    Metro
-                                </th>
-                                <th>
-                                    Residential
-                                </th>
-                                <th>
-                                    Water & Waste
-                                </th>
-                                <th>
-                                    Chemical Plants
-                                </th>
-                                <th>
-                                    Hospitals
-                                </th>
-                                <th>
-                                    Manufacturing Plants
-                                </th>
-                                <th>
-                                    Power Plants
-                                </th>
-                                <th>
-                                    Theatres
-                                </th>
-                                <th>
-                                    Schools
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    PEB Design and Detailing
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    BoQ/QS Services
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Connection Engineering
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Detailed Engineering
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Duct Detailing
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Estimodeling
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Miscellaneous Steel Detailing
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Structural Design
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                            <tr> 
-                                <td>
-                                    Structural Steel Detailing
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                                <td>
-                                    <i class="check"></i>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="flex align-items-center">
-                    <!-- <div class="left">
-                        <div class="containerData">
-                            <div class="headSection">
-                                <div class="common">Services</div>
-                                <div class="common">Type</div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Airports</div>
-                                    <div class="experience">Structural Stell</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Chemical Plants</div>
-                                    <div class="experience">Advisor</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Commercial</div>
-                                    <div class="experience">Engineering</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Hospitals</div>
-                                    <div class="experience">Cost Planning</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Industrial</div>
-                                    <div class="experience">Engineering</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Manufacturing Plants</div>
-                                    <div class="experience">Precast Rebar</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Metro</div>
-                                    <div class="experience">Cost Planning</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Power Plants</div>
-                                    <div class="experience">Structural Stell</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Residential</div>
-                                    <div class="experience">Engineering</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Theatres</div>
-                                    <div class="experience">Cost Planning</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Water & Waste</div>
-                                    <div class="experience">Precast Rebar</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Schools</div>
-                                    <div class="experience">Advisor</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="left right">
-                        <div class="containerData manage">
-                            <strong>Particulars</strong>
-                            <div class="headSection">
-                                <div class="col">
-                                    <strong>Junior</strong>
-                                    <span>4 - 6 Years</span>
-                                </div>
-                                <div class="col">
-                                    <strong>Senior</strong>
-                                    <span>6 - 8 Years</span>
-                                </div>
-                                <div class="col">
-                                    <strong>QAQC</strong>
-                                    <span>8 - 10 Years</span>
-                                </div>
-                                <div class="col">
-                                    <strong>PM/Coordinator</strong>
-                                    <span>10 - 12 Years</span>
-                                </div>
-                                <div class="col">
-                                    <strong>Reviewer</strong>
-                                    <span>8 - 15 Years</span>
-                                </div>
-                            </div>
-    
-                        
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">35</div>
-                                    <div class="role">50</div>
-                                    <div class="role">15</div>
-                                    <div class="role">30</div>
-                                    <div class="role"></div>
-                                </div>
-                            </div>
-    
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role dark">50</div>
-                                    <div class="role dark">30</div>
-                                    <div class="role dark">8</div>
-                                    <div class="role dark">20</div>
-                                    <div class="role dark"></div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">15</div>
-                                    <div class="role">20</div>
-                                    <div class="role">4</div>
-                                    <div class="role">8</div>
-                                    <div class="role"></div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role dark">30</div>
-                                    <div class="role dark">10</div>
-                                    <div class="role dark">3</div>
-                                    <div class="role dark">2</div>
-                                    <div class="role dark"></div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role"></div>
-                                    <div class="role"></div>
-                                    <div class="role"></div>
-                                    <div class="role"></div>
-                                    <div class="role dark">25</div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="overlay">
-                            <div class="box">
-                                <h2>Login to see Resource Matrix</h2>
-                                <a href="">Login Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </app-capability>
-
-    <app-global-company>
-        <div class="partnerWrap vender" id="other-section3">
-            <div class="container">
-                <owl-carousel-o [options]="reviewsSlides" class="partner">
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/advance-steel.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/allplan.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/autocad.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/Autodesk-DWGTrueView.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/bentley.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/bluebeam.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/grasshopper.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/navisworks-freedom.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/revit.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/sds2.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/tekla.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-                    <ng-template carouselSlide>
-                        <img src="assets/images/ui/software/trimble-connect.png" height="409" width="188" />
-                        <span class="exp">TBD Years of experience</span>
-                    </ng-template>
-    
-                </owl-carousel-o>
-            </div>
-        </div>
-    </app-global-company>
-
-    <app-capability>
-        <div class="capability code" id="other-section4">
-            <div class="head">
-                <div class="container">
-                    <h2>Building Codes</h2>
-                    <p>
-                        Aarbee Structures works with regional building codes to provide the best and most fitting technical solutions.
-                    </p>
-                </div>
-               
-            </div>
-            <div class="container">
-                <div class="flex">
-                    <div class="left data">
-                        <div class="containerData blur-lock">
-                            <div class="headSection">
-                                <div class="common"></div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Building Code</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Number of Projects</div>
-                                </div>
-                            </div>
-                            <div class="section">
-                                <div class="content">
-                                    <div class="role">Years of Experience</div>
-                                </div>
-                            </div>
-                          
-                            
-                        </div>
-                    </div>
-                    <div class="left right">
-                        <div class="containerData">
-                            <div class="headSection">
-                                <div class="col">
-                                    <strong>EURO</strong>
-                                </div>
-                                <div class="col">
-                                    <strong>American Standards</strong>
-                                </div>
-                                <div class="col">
-                                    <strong>British Standards</strong>
-                                </div>
-                                <div class="col">
-                                    <strong>Indian Standards (IS 1200)</strong>
-                                </div>
-                                <div class="col">
-                                    <strong>AISC</strong>
-                                </div>
-                                
-                              
-                               
-                               
-                            </div>
-                            <div class="blur-lock-relative">
-                                <div class="blur-lock">
-                                <div class="section">
-                                    <div class="content">
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                    
-                                    </div>
-                                </div>
         
-                                <div class="section">
-                                    <div class="content">
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                    
+                                   
                                     </div>
-                                </div>
-                                <div class="section">
-                                    <div class="content">
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                        <div class="role">NA</div>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="blur-lock-overlay">
-                                    <div class="box normal">
-                                        <h2>
-                                            Login to see under which building <br>code they worked.
-                                        </h2>
-                                        <a href="">
-                                            Login Now
-                                        </a>
-                                    </div>
+                                    <div class="rowData">
+                                        <h3>Availability in Time Zone</h3>
+          <div class="selectCover">
+            <div class="selectData">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <select [(ngModel)]="selectedOption" (change)="onSelectChange()">
+                        <option value="gmt">GMT Time Zone</option>
+                        <option value="est">EST Time Zone</option>
+                        <option value="pst">PST Time Zone</option>
+                    </select>
+            </div>
+           
+        
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_7144_11954)">
+                    <path d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96452 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM12 20.25C10.3683 20.25 8.77326 19.7661 7.41655 18.8596C6.05984 17.9531 5.00242 16.6646 4.378 15.1571C3.75358 13.6496 3.5902 11.9908 3.90853 10.3905C4.22685 8.79016 5.01259 7.32015 6.16637 6.16637C7.32016 5.01259 8.79017 4.22685 10.3905 3.90852C11.9909 3.59019 13.6497 3.75357 15.1571 4.37799C16.6646 5.00242 17.9531 6.05984 18.8596 7.41655C19.7662 8.77325 20.25 10.3683 20.25 12C20.2475 14.1873 19.3775 16.2843 17.8309 17.8309C16.2843 19.3775 14.1873 20.2475 12 20.25ZM18 12C18 12.1989 17.921 12.3897 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75H12C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4697C17.921 11.6103 18 11.8011 18 12Z" fill="#886DE0"/>
+                    <circle cx="19.001" cy="19.0002" r="5" fill="#00B507"/>
+                    <path d="M16.2354 19.2238L17.6184 21.0021L21.7666 17.0002" stroke="white" stroke-width="0.943779" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_7144_11954">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    {{ timeText }}
+            </span>
+          </div>
+                                        </div>
                                 </div>
                             </div>
-                           
                         </div>
-    
-                       
+                      
                     </div>
                 </div>
             </div>
+        </app-abount-jf>
         </div>
-    </app-capability>
-    <app-simple-row>
-        <div class="row tools" id="other-section5">
-            <div class="container">
+        <div id="capabilities" class="scrollSection">
+        <app-capability>
+            <div class="capability" id="section2">
                 <div class="head">
-                    <h2>Special Tools & Methods</h2>
-                    <p>
-                        Additionally to a range of engineering software, Aarbee Structures uses special methods to work more digitally and efficiently.
-                    </p>
-                </div>
-    
-                <div class="listData tbd">
-                    TBD
-                    <!-- <ul>
-                        <li>
-                            <div class="wrapLeft">
-                                <div class="retraingle">SD</div>
-                            </div>
-                            <div class="content">
-                                <p>Structural Designing</p>
-                            </div>
-                        </li>
-    
-                        <li>
-                            <div class="wrapLeft">
-                                <div class="retraingle">SD</div>
-                            </div>
-                            <div class="content">
-                                <p>Steel Detailing</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wrapLeft">
-                                <div class="retraingle">RM</div>
-                            </div>
-                            <div class="content">
-                                <p>Revit Modelling</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wrapLeft">
-                                <div class="retraingle">TM</div>
-                            </div>
-                            <div class="content">
-                                <p>Tekla Models</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="wrapLeft">
-                                <div class="retraingle">SD</div>
-                            </div>
-                            <div class="content">
-                                <p>SDS2 Models</p>
-                            </div>
-                        </li>
-                    </ul> -->
-                </div>
-            </div>
-        </div>
-    </app-simple-row>
-    
-    
-    </div>
-    
-    
-    <div id="portfolio" class="scrollSection">
-    <app-feature-project>
-        <div class="accreditation" id="section3">
-            <div class="container">
-                <div class="head">
-                    <div class="left">
-                    <h2>Featured Project</h2>
-                    <span
-                        >From newly constructed skyscrapers to modernising factories, Aarbee Structures has successfully engineered 50+ projects worldwide.</span
-                    >
-                </div>
-                <div class="right">
-                    <div class="seelctWrap">
-                        <i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M9.33537 8V13.2533C9.36204 13.4533 9.29537 13.6667 9.14204 13.8067C9.08036 13.8685 9.0071 13.9175 8.92646 13.951C8.84581 13.9844 8.75935 14.0016 8.67204 14.0016C8.58473 14.0016 8.49827 13.9844 8.41762 13.951C8.33698 13.9175 8.26372 13.8685 8.20204 13.8067L6.86204 12.4667C6.78937 12.3956 6.73411 12.3086 6.70058 12.2126C6.66704 12.1167 6.65614 12.0142 6.66871 11.9133V8H6.64871L2.80871 3.08C2.70045 2.94102 2.6516 2.76484 2.67283 2.58995C2.69407 2.41507 2.78366 2.2557 2.92204 2.14667C3.04871 2.05333 3.18871 2 3.33537 2H12.6687C12.8154 2 12.9554 2.05333 13.082 2.14667C13.2204 2.2557 13.31 2.41507 13.3312 2.58995C13.3525 2.76484 13.3036 2.94102 13.1954 3.08L9.35537 8H9.33537Z" fill="white"/>
-                                </svg>
-                        </i>
-                        <div class="arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                        </div>
-                        <select (change)="onTypeChange($event)">
-                            <option value="all">All</option>
-                            <option value="Commercial">Commercial</option>
-                            <option value="Duct">Duct</option>
-                            <option value="Arena">Arena</option>
-                        </select>
-                </div>
-                </div>
-                </div>
-                <div class="listItem">
-                    <div *ngFor="let project of filteredProjects" class="item">
-                        <div class="itemHead">
-                            <span>{{ project.type }}</span>
-                            <h2>{{ project.name }}</h2>
-                            <div class="flex">
-                                <img [src]="project.country" width="17" height="17" />
-                                <em>{{ project.location }}</em>
-                            </div>
-                        </div>
-                        <img [src]="project.image" width="416" height="240" />
-                        <div class="content">
-                            <h2>Construction Volume</h2>
-                            <span>{{ project.description }}</span>
-                        </div>
+                    <div class="container">
+                        <h2>Capability Matrix</h2>
+                        <p>
+                            Aarbee Structures provides a wide range of services with multidisciplinary teams
+                        </p>
                     </div>
-                </div>
-    
-                <div class="btnWrap">
-                    <a href="https://www.jf.ag/en/projects" target="_blank" class="btnNew"
-                        >View All Projects <i class="ti ti-arrow-narrow-right"></i
-                    ></a>
-                </div>
-            </div>
-        </div>
-    </app-feature-project>
-    </div>
-    <div id="team" class="scrollSection">
-    <app-engineers>
-        <div class="slider" id="other-section6">
-            <div class="container">
-                <div class="wrap">
-                    <div class="flex">
-                        <div class="left">
-                            <h2>Our <br>engineers</h2>
-                            <span class="jeffStyle">in the<br>spotlight</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="teamslider">
-                <owl-carousel-o [options]="aboutSlider">
                    
-                    <ng-template *ngFor="let engineer of ourEngineers" carouselSlide>
-                        <div class="wrap">
-                            <div class="flex">
-                                <div class="left">
+                </div>
+                <div class="container" *ngIf="selectedServices.length">
+                    <div class="service-info-wrapper">
+                        <table class="service-info">
+                            <thead>
+                                <tr>
+                                    <th *ngFor="let ser of serviceSkills">
+                                        {{ser.name}}
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let s of selectedServices;let pIdx = index">
+                                    <td>
+                                       {{s.service_name}}
+                                    </td>
+                                    <td *ngFor="let ser of s.functional_areas;let idx = index">
+                                        <label class="custom-checkbox">
+                                            <i class="check" *ngIf="ser.isChecked"></i>
+                                            <!-- <input type="checkbox" [value]="ser.name" [checked]="ser.isChecked" (change)="checkMatrix($event, pIdx, idx)"> -->
+                                            <span></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                             </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </app-capability>
+    
+        <app-global-company>
+            <div class="partnerWrap vender" id="other-section3">
+                <div class="container" *ngIf="formData.softwares?.length">
+                    <owl-carousel-o [options]="reviewsSlides" class="partner">
+                        <ng-container *ngFor="let software of formData.softwares">
+                            <ng-template carouselSlide>
+                                <img [src]="software.logo" height="409" width="188" />
+                                <span class="exp">{{software.name}}</span>
+                            </ng-template>
+                        </ng-container>
+                        <!-- <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/allplan.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/autocad.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/Autodesk-DWGTrueView.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/bentley.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/bluebeam.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/grasshopper.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/navisworks-freedom.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/revit.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/sds2.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/tekla.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/software/trimble-connect.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template> -->
+        
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </app-global-company>
+    
+        <app-capability>
+            <div class="capability code" id="other-section4">
+                <div class="head">
+                    <div class="container">
+                        <h2>Building Codes</h2>
+                        <p>
+                            Aarbee Structures works with regional building codes to provide the best and most fitting technical solutions.
+                        </p>
+                    </div>
+                   
+                </div>
+                <div class="container">
+                    <div class="flex" >
+                        <div class="left data">
+                            <div class="containerData">
+                                <div class="headSection">
+                                    <div class="common"></div>
+                                </div>
+                                <!-- <div class="section">
+                                    <div class="content">
+                                        <div class="role">Building Code</div>
+                                    </div>
+                                </div> -->
+                                <ng-container *ngFor="let c of listOfBuildingCode">
+
+                                    <div class="section">
+                                        <div class="content">
+                                            <div class="role">Number of Projects</div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="content">
+                                            <div class="role">Years of Experience</div>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                              
+                                
+                            </div>
+                        </div>
+                        <div class="left right">
+                            <div class="containerData">
+                                <div class="headSection">
+                                    <div class="col" *ngFor="let c of listOfBuildingCode">
+                                        <strong>{{c.code}}</strong>
+                                    </div>
+                                    <!-- <div class="col">
+                                        <strong>American Standards</strong>
+                                    </div>
+                                    <div class="col">
+                                        <strong>British Standards</strong>
+                                    </div>
+                                    <div class="col">
+                                        <strong>Indian Standards (IS 1200)</strong>
+                                    </div>
+                                    <div class="col">
+                                        <strong>AISC</strong> -->
+                                    <!-- </div> -->
+                                    
+                                  
+                                   
                                    
                                 </div>
-                                <div class="right">
-                                    <div class="imgWrap">
-                                        <img [src]="engineer.img" [alt]="engineer.name" width="422" height="495">
+                                <div class="" *ngFor="let c1 of listOfBuildingCode">
+                                    <!-- <div class="blur-lock"> -->
+                                    <div class="section">
+                                        <div class="content">
+                                            <div class="role" *ngFor="let c of c1.number_of_projects">{{c.number_of_projects || 'NA'}}</div>
+                                        </div>
                                     </div>
-                                    <div class="content">
-                                        <h2>{{ engineer.name }}</h2>
-                                        <span [innerHTML]="engineer.title"></span>
-                    
-                                        <p [innerHTML]="engineer.des"></p>
-                                        <div class="expert">
-                                            <h3><span class="jeffStyle">My</span> expertise at AARBEE</h3>
-                                            <ul class="tbd small">
-                                                TBD
-                                            </ul>
+                                    <div class="section">
+                                        <div class="content">
+                                            <div class="role" *ngFor="let c of c1.years_of_experience">{{c.years_of_experience || 'NA'}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+        
+                           
+                        </div>
+                    </div>
+                    <div class="g-row padding-top-none" *ngIf="false">
+                        <table width="100%" colspan="0" rowspan="0">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Building Code
+                                    </th>
+                                    <th *ngFor="let c of listOfBuildingCode">{{c.code}}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <ng-container *ngFor="let c of listOfBuildingCode">
+                                    <tr>
+                                        <td>
+                                            Number of Projects
+                                        </td>
+                                        <td *ngFor="let c1 of c.number_of_projects">{{c1.number_of_projects || 'NA'}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Years of Experience
+                                        </td>
+                                        <td *ngFor="let c2 of c.years_of_experience">{{c2.years_of_experience || 'NA'}}</td>
+                                    </tr>
+                                </ng-container>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </app-capability>
+        <app-simple-row>
+            <div class="row tools" id="other-section5">
+                <div class="container">
+                    <div class="head">
+                        <h2>Special Tools & Methods</h2>
+                        <p>
+                            {{formData.specialTool.special_tools}}
+                            <!-- Additionally to a range of engineering software, Aarbee Structures uses special methods to work more digitally and efficiently. -->
+                        </p>
+                    </div>
+        
+                    <div class="listData tbd">
+                        {{formData.specialTool.Special_tools_description}}
+                        <!-- <ul>
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">SD</div>
+                                </div>
+                                <div class="content">
+                                    <p>Structural Designing</p>
+                                </div>
+                            </li>
+        
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">SD</div>
+                                </div>
+                                <div class="content">
+                                    <p>Steel Detailing</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">RM</div>
+                                </div>
+                                <div class="content">
+                                    <p>Revit Modelling</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">TM</div>
+                                </div>
+                                <div class="content">
+                                    <p>Tekla Models</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">SD</div>
+                                </div>
+                                <div class="content">
+                                    <p>SDS2 Models</p>
+                                </div>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </app-simple-row>
+        
+        
+        </div>
+        
+        
+        <div id="portfolio" class="scrollSection">
+        <app-feature-project>
+            <div class="accreditation" id="section3">
+                <div class="container">
+                    <div class="head">
+                        <div class="left">
+                        <h2>Featured Project</h2>
+                        <span
+                            >From newly constructed skyscrapers to modernising factories, Aarbee Structures has successfully engineered 50+ projects worldwide.</span
+                        >
+                    </div>
+                    <div class="right">
+                        <div class="seelctWrap">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M9.33537 8V13.2533C9.36204 13.4533 9.29537 13.6667 9.14204 13.8067C9.08036 13.8685 9.0071 13.9175 8.92646 13.951C8.84581 13.9844 8.75935 14.0016 8.67204 14.0016C8.58473 14.0016 8.49827 13.9844 8.41762 13.951C8.33698 13.9175 8.26372 13.8685 8.20204 13.8067L6.86204 12.4667C6.78937 12.3956 6.73411 12.3086 6.70058 12.2126C6.66704 12.1167 6.65614 12.0142 6.66871 11.9133V8H6.64871L2.80871 3.08C2.70045 2.94102 2.6516 2.76484 2.67283 2.58995C2.69407 2.41507 2.78366 2.2557 2.92204 2.14667C3.04871 2.05333 3.18871 2 3.33537 2H12.6687C12.8154 2 12.9554 2.05333 13.082 2.14667C13.2204 2.2557 13.31 2.41507 13.3312 2.58995C13.3525 2.76484 13.3036 2.94102 13.1954 3.08L9.35537 8H9.33537Z" fill="white"/>
+                                    </svg>
+                            </i>
+                            <div class="arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </div>
+                            <select (change)="onTypeChange($event)">
+                                <option value="all">All</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Duct">Duct</option>
+                                <option value="Arena">Arena</option>
+                            </select>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="listItem">
+                        <div *ngFor="let project of formData.featuredProject.projects" class="item">
+                            <div class="itemHead">
+                                <span>{{ project.project_category }}</span>
+                                <h2>{{ project.project_name }}</h2>
+                                <div class="flex">
+                                    <!-- <img [src]="project.country" width="17" height="17" /> -->
+                                    <em>{{ project.project_region }}</em>
+                                </div>
+                            </div>
+                            <img [src]="project.project_logo" width="416" height="240" />
+                            <div class="content">
+                                <h2>Construction Volume</h2>
+                                <span>{{ project.volume }}</span>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="btnWrap">
+                        <a href="https://www.jf.ag/en/projects" target="_blank" class="btnNew"
+                            >View All Projects <i class="ti ti-arrow-narrow-right"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+        </app-feature-project>
+        </div>
+        <div id="team" class="scrollSection">
+        <app-engineers>
+            <div class="slider" id="other-section6">
+                <div class="container">
+                    <div class="wrap">
+                        <div class="flex">
+                            <div class="left">
+                                <h2>Our <br>engineers</h2>
+                                <span class="jeffStyle">in the<br>spotlight</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamslider">
+                    <owl-carousel-o [options]="aboutSlider">
+                       
+                        <ng-template *ngFor="let engineer of formData.engineers" carouselSlide>
+                            <div class="wrap">
+                                <div class="flex">
+                                    <div class="left">
+                                       
+                                    </div>
+                                    <div class="right">
+                                        <div class="imgWrap">
+                                            <img [src]="engineer.engineer_profile_picture" [alt]="engineer.engineer_name" width="422" height="495">
+                                        </div>
+                                        <div class="content">
+                                            <h2>{{ engineer.engineer_name }}</h2>
+                                            <span>{{engineer.engineer_designation}}</span>
+                        
+                                            <p>{{engineer.engineer_note}}</p>
+                                            <div class="expert">
+                                                <h3><span class="jeffStyle">My</span> expertise at AARBEE</h3>
+                                                <ul class="tbd small">
+                                                    {{engineer.engineer_expertise}}
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </ng-template>
+                 
+                    </owl-carousel-o>
+                    </div>
+                </div>
+            </div>
+        </app-engineers>
+        </div>
+        <div id="certification" class="scrollSection">
+        <app-accreditation>
+            <div class="accreditation" id="section4">
+                <div class="container">
+                    <div class="head">
+                        <h2>Accreditation</h2>
+                        
+                    </div>
+                    <div class="listItem">
+                        <div class="item" *ngFor="let acc of formData.accreditation">
+                            <img [src]="acc.logo"/>
+                            <p>{{acc.name}}</p>
                         </div>
-                    </ng-template>
-             
-                </owl-carousel-o>
-                </div>
-            </div>
-        </div>
-    </app-engineers>
-    </div>
-    <div id="certification" class="scrollSection">
-    <app-accreditation>
-        <div class="accreditation" id="section4">
-            <div class="container">
-                <div class="head">
-                    <h2>Accreditation</h2>
-                    
-                </div>
-                <div class="listItem">
-                    <div class="item">
-                        <img src="assets/images/aarbee/nisd-certificate.png"/>
-                        <p>National Institute of Steel Detailing</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/aarbee/tekla-certificate.png"/>
-                        <p>Tekla</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/aarbee/SDS2-certificate.png"/>
-                        <p>SDS2</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/aarbee/LMS-certificate.jpg"/>
-                        <p>LMS IAS Accredited</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/images/aarbee/AISC-certificate.jpg"/>
-                        <p>AISC Detailer</p>
+                        <!-- <div class="item">
+                            <img src="assets/images/aarbee/tekla-certificate.png"/>
+                            <p>Tekla</p>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/aarbee/SDS2-certificate.png"/>
+                            <p>SDS2</p>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/aarbee/LMS-certificate.jpg"/>
+                            <p>LMS IAS Accredited</p>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/aarbee/AISC-certificate.jpg"/>
+                            <p>AISC Detailer</p>
+                        </div> -->
                     </div>
                 </div>
             </div>
+        </app-accreditation>
         </div>
-    </app-accreditation>
-    </div>
+</ng-container>
     
     <app-aarbee-social-wall id="social" class="scrollSection"></app-aarbee-social-wall>
     

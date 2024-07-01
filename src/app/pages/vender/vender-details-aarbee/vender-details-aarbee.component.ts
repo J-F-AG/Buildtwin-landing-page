@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -169,11 +172,51 @@ export class VenderDetailsAarbeeComponent {
     }
   ];
 
+  formData = {
+    about: [],
+    onsite: '',
+    companyDetails: {
+      icon: '',
+      company_description: '',
+      engineering_project_icon: '',
+      rating: '',
+      domain: '',
+      phone_number: '',
+      working_timezone: '',
+      office_hours: ''
+    },
+    softwares: [],
+    buildingCode: [],
+    specialTool: {
+      special_tools: '',
+      Special_tools_description: ''
+    },
+    featuredProject: {
+      featured_projects_description: '',
+      projects: [],
+    },
+    engineers: [],
+    accreditation: [],
+    services: [],
+    serviceType: '',
+    capabilityMatrix: [],
+  } as any;
+  isLoaded = false;
+  selectedServices = [] as any;
+  listOfBuildingCode = [] as any;
+  listOfcodes = {
+    number_of_projects : [] as any,
+    years_of_experience: [] as any
+  } as any;
+
   filteredProjects = this.projects;
+  serviceSkills = [] as any;
+  domain = ''
 
-  constructor(private elRef: ElementRef, private renderer: Renderer2) {
+  constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute) {
 
-
+    this.getBusinessListing();
+    this.domain = this.route.snapshot.params['domain'];
   }
   showPopup = false;
 
@@ -425,6 +468,112 @@ export class VenderDetailsAarbeeComponent {
     }
   }
 
-
+  getBusinessListing() {
+    let domain = localStorage.getItem('domain');
+    forkJoin([
+      this.http.get('https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields'),
+      this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?domain=${domain}`)
+    ]).subscribe((res: any[]) => {
+      // this.fieldData = res[0]['data'];
+      // this.formData = res[1]['data'];
+      const formData = res[1]['data']['company_data'];
+      const bKey = 'basic_form_fields';
+      res[0]['data'][bKey].forEach((form: any) => {
+        if (form.field_group_name === 'About') {
+          form.fields.forEach((f: any) => {
+            this.formData.about.push({
+              key: f.field_name,
+              value: formData[bKey][f.field_key],
+              isPlus: f.field_name === 'Years in Business' || f.field_name === 'Reference Projects'
+            })
+          })
+        }
+        if (form.field_group_name === 'Accreditation') {
+          this.formData.accreditation = formData[bKey]['accreditation']
+        }
+        if (form.field_group_name === 'On-Site Available(own office)') {
+          form.fields.forEach((f: any) => {
+            this.formData.onsite = formData[bKey][f.field_key]
+          })
+        }
+        if (form.field_group_name === 'Bio') {
+          form.fields.forEach((f: any) => {
+            this.formData.companyDetails[f.field_key] = formData[bKey][f.field_key];
+          })
+        }
+        if (form.field_group_name === 'softwares') {
+          this.formData.softwares = formData[bKey]['softwares'] || [];
+        }
+        if (form.field_group_name === 'Special Tools & Methods') {
+          form.fields.forEach((f: any) => {
+            this.formData.specialTool[f.field_key] = formData[bKey][f.field_key];
+          })
+        }
+        if (form.field_group_name === 'featured_projects') {
+          form.fields.forEach((f: any) => {
+            this.formData.featuredProject[f.field_key] = formData[bKey][f.field_key];
+          });
+          this.formData.featuredProject.projects = formData['featured_projects'];
+        }
+        
+      })
+      this.formData.buildingCode = res[0]['data']['building_codes'];
+      this.formData.engineers = formData['our_engineers'];
+      this.formData.services = res[0]['data']['services']
+      this.isLoaded = true;
+      this.serviceSkills = [
+        {id: 0, name: ''},
+        ...res[0]['data']['service_func_area'],
+      ];
+      formData['service_information'].forEach((s: any) => {
+        // this.preSelectservices.push(s.name);
+        if (s.capability_matrix.length) {
+                let obj = {} as any
+                obj['functional_areas'] = JSON.parse(JSON.stringify(this.serviceSkills.filter((a: any) => a.id !== 0)));
+                obj['functional_areas'].forEach((val: any) => {
+                  let d = s.capability_matrix.filter((ab: any) => ab.functional_area_id === val.id);
+                  if (d.length) {
+                    val.isChecked = true;
+                  } else {
+                    val.isChecked = false;
+                  }
+                });
+                this.selectedServices.push({
+                  ...s,
+                  ...obj,
+                  service_name: s.name
+                })
+        }
+      })
+      formData['building_codes'].forEach((b: any) => {
+        let obj = {
+          code: b.name,
+          number_of_projects: [] as any,
+          years_of_experience: [] as any,
+        }
+        formData['building_codes'].forEach((ab: any) => {
+          let arrnum = [] as any;
+          let arrp = [] as any;
+          arrnum.push({
+            number_of_projects: ab.number_of_projects || 0,
+          });
+          arrp.push({
+            years_of_experience: ab.years_of_experience || 0,
+          });
+          this.listOfcodes = {
+            number_of_projects: [ ...this.listOfcodes.number_of_projects, ...arrnum],
+            years_of_experience: [ ...this.listOfcodes.years_of_experience, ...arrp],
+          } as any;
+          obj.number_of_projects.push({
+            number_of_projects: ab.number_of_projects || 0,
+          })
+          obj.years_of_experience.push({
+            years_of_experience: ab.years_of_experience || 0
+          })
+        })
+        this.listOfBuildingCode.push(obj)
+      })
+    })
+  }
 
 }
