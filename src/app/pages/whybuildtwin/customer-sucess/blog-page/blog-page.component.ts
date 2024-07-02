@@ -12,25 +12,15 @@ import { Urls } from 'src/app/services/urls';
 export class BlogPageComponent {
 
     title = 'BuildTwin - use cases';
-    companyList = [];
  
-    constructor(private titleService:Title, private http: HttpClient, private router: Router) {
-        this.getListOfCompany()
+    constructor(private titleService:Title) {
+
     }
     
     ngOnInit() {
         this.titleService.setTitle(this.title);
     }
 
-    getListOfCompany() {
-        this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`).subscribe(res => {
-            this.companyList = res['data']['details'];
-        })
-    }
-
-    redirect(domain) {
-        localStorage.setItem("domain", domain);
-        this.router.navigate([`/vender-details-aarbee`]);
-    }
+    
 
 }

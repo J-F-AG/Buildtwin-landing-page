@@ -58,7 +58,7 @@
     <div id="about-service" class="about-service section1" >
             <div class="container">
                 <div class="inner">
-                    <h2>About AARBEE</h2>
+                    <h2>About {{companyName}}</h2>
                     <div class="details">
                         <div class="list" *ngFor="let data of formData.about">
                             <span><img src="assets/images/aarbee/market.png" height="30" width="30" /> 
@@ -383,7 +383,7 @@
                                         <div class="role">Building Code</div>
                                     </div>
                                 </div> -->
-                                <ng-container *ngFor="let c of listOfBuildingCode">
+                                <!-- <ng-container *ngFor="let c of listOfBuildingCode"> -->
 
                                     <div class="section">
                                         <div class="content">
@@ -395,7 +395,7 @@
                                             <div class="role">Years of Experience</div>
                                         </div>
                                     </div>
-                                </ng-container>
+                                <!-- </ng-container> -->
                               
                                 
                             </div>
@@ -423,19 +423,19 @@
                                    
                                    
                                 </div>
-                                <div class="" *ngFor="let c1 of listOfBuildingCode">
+                                <!-- <div class="" *ngFor="let c1 of listOfBuildingCode"> -->
                                     <!-- <div class="blur-lock"> -->
                                     <div class="section">
                                         <div class="content">
-                                            <div class="role" *ngFor="let c of c1.number_of_projects">{{c.number_of_projects || 'NA'}}</div>
+                                            <div class="role" *ngFor="let c of listOfcodes.number_of_projects">{{c || 'NA'}}</div>
                                         </div>
                                     </div>
                                     <div class="section">
                                         <div class="content">
-                                            <div class="role" *ngFor="let c of c1.years_of_experience">{{c.years_of_experience || 'NA'}}</div>
+                                            <div class="role" *ngFor="let c of listOfcodes.years_of_experience">{{c || 'NA'}}</div>
                                         </div>
                                     </div>
-                                </div>
+                                <!-- </div> -->
                                
                             </div>
         
@@ -453,20 +453,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <ng-container *ngFor="let c of listOfBuildingCode">
+                                <!-- <ng-container *ngFor="let c of listOfBuildingCode"> -->
                                     <tr>
                                         <td>
                                             Number of Projects
                                         </td>
-                                        <td *ngFor="let c1 of c.number_of_projects">{{c1.number_of_projects || 'NA'}}</td>
+                                        <td *ngFor="let c1 of listOfcodes.number_of_projects">{{c1 || 'NA'}}</td>
                                     </tr>
                                     <tr>
                                         <td>
                                             Years of Experience
                                         </td>
-                                        <td *ngFor="let c2 of c.years_of_experience">{{c2.years_of_experience || 'NA'}}</td>
+                                        <td *ngFor="let c2 of listOfcodes.years_of_experience">{{c2 || 'NA'}}</td>
                                     </tr>
-                                </ng-container>
+                                <!-- </ng-container> -->
                             </tbody>
                         </table>
                     </div>
