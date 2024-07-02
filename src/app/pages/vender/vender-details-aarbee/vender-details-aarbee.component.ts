@@ -171,6 +171,7 @@ export class VenderDetailsAarbeeComponent {
       description: '520 Tons',
     }
   ];
+  companyName = '';
 
   formData = {
     about: [],
@@ -205,7 +206,7 @@ export class VenderDetailsAarbeeComponent {
   selectedServices = [] as any;
   listOfBuildingCode = [] as any;
   listOfcodes = {
-    number_of_projects : [] as any,
+    number_of_projects: [] as any,
     years_of_experience: [] as any
   } as any;
 
@@ -263,7 +264,7 @@ export class VenderDetailsAarbeeComponent {
   }
 
 
-   heroSlides: OwlOptions = { 
+  heroSlides: OwlOptions = {
     items: 1,
     nav: true,
     margin: 20,
@@ -277,7 +278,7 @@ export class VenderDetailsAarbeeComponent {
       "<i class='ti ti-chevron-left'></i>",
       "<i class='ti ti-chevron-right'></i>",
     ],
-   
+
   }
 
 
@@ -297,13 +298,13 @@ export class VenderDetailsAarbeeComponent {
 
   }
 
-  
+
 
   @HostListener('window:scroll', [])
-  
+
   onWindowScroll() {
 
-    var sections= document.querySelectorAll('.scrollSection'); 
+    var sections = document.querySelectorAll('.scrollSection');
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.isSticky = scrollPosition >= 100;
@@ -323,14 +324,14 @@ export class VenderDetailsAarbeeComponent {
     });
 
     let percentScrolled = this.getScrollPercentage();
-     var progressBar = document.getElementById('progress-bar');
-      if (progressBar !== null) {
-        progressBar.style.width = percentScrolled + '%';
-      }
+    var progressBar = document.getElementById('progress-bar');
+    if (progressBar !== null) {
+      progressBar.style.width = percentScrolled + '%';
+    }
 
     // var sections2: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="section"]')); // Select all sections with IDs starting with "section"
     // var otherSections: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="other-section"]')); // Select all other sections
-    
+
 
     // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     // this.isSticky = scrollPosition >= 100;
@@ -350,7 +351,7 @@ export class VenderDetailsAarbeeComponent {
     //     this.activeSection = sectionId;
     //   }
     // });
-   
+
 
     // // progress bar
     // var windowHeight = window.innerHeight;
@@ -359,21 +360,21 @@ export class VenderDetailsAarbeeComponent {
 
     //   var totalSectionHeight = 0;
     //   var currentSectionIndex = -1;
-      
+
     //   // Find the currently visible section
     //   for (var i = 0; i < sections2.length; i++) {
     //     var section = sections2[i];
     //     var rect = section.getBoundingClientRect();
     //     var sectionTop = rect.top + scrollTop;
     //     var sectionBottom = sectionTop + rect.height;
-        
+
     //     if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
     //       currentSectionIndex = i;
     //       break;
     //     }
     //     totalSectionHeight += rect.height;
     //   }
-      
+
     //   // Adjust totalSectionHeight for other sections in between
     //   for (var j = 0; j < otherSections.length; j++) {
     //     var otherSection = otherSections[j];
@@ -382,9 +383,9 @@ export class VenderDetailsAarbeeComponent {
     //       totalSectionHeight += rect.height;
     //     }
     //   }
-      
+
     //   var percentScrolled;
-      
+
     //   // If the scrollTop is in the last other section or beyond
     //   if (scrollTop >= otherSections[otherSections.length - 1].getBoundingClientRect().top + scrollTop) {
     //     percentScrolled = 100;
@@ -396,13 +397,13 @@ export class VenderDetailsAarbeeComponent {
     //   } else {
     //     percentScrolled = 0;
     //   }
-      
+
     //   console.log(percentScrolled);
     //  var progressBar = document.getElementById('progress-bar');
     //   if (progressBar !== null) {
     //     progressBar.style.width = percentScrolled + '%';
     //   }
-    
+
   }
 
   getScrollPercentage(): number {
@@ -515,38 +516,44 @@ export class VenderDetailsAarbeeComponent {
           });
           this.formData.featuredProject.projects = formData['featured_projects'];
         }
-        
+
       })
       this.formData.buildingCode = res[0]['data']['building_codes'];
       this.formData.engineers = formData['our_engineers'];
+      this.companyName = formData['basic_form_fields']['company_name'];
       this.formData.services = res[0]['data']['services']
       this.isLoaded = true;
       this.serviceSkills = [
-        {id: 0, name: ''},
+        { id: 0, name: '' },
         ...res[0]['data']['service_func_area'],
       ];
       formData['service_information'].forEach((s: any) => {
         // this.preSelectservices.push(s.name);
         if (s.capability_matrix.length) {
-                let obj = {} as any
-                obj['functional_areas'] = JSON.parse(JSON.stringify(this.serviceSkills.filter((a: any) => a.id !== 0)));
-                obj['functional_areas'].forEach((val: any) => {
-                  let d = s.capability_matrix.filter((ab: any) => ab.functional_area_id === val.id);
-                  if (d.length) {
-                    val.isChecked = true;
-                  } else {
-                    val.isChecked = false;
-                  }
-                });
-                this.selectedServices.push({
-                  ...s,
-                  ...obj,
-                  service_name: s.name
-                })
+          let obj = {} as any
+          obj['functional_areas'] = JSON.parse(JSON.stringify(this.serviceSkills.filter((a: any) => a.id !== 0)));
+          obj['functional_areas'].forEach((val: any) => {
+            let d = s.capability_matrix.filter((ab: any) => ab.functional_area_id === val.id);
+            if (d.length) {
+              val.isChecked = true;
+            } else {
+              val.isChecked = false;
+            }
+          });
+          this.selectedServices.push({
+            ...s,
+            ...obj,
+            service_name: s.name
+          })
         }
       })
+      let obj = {
+        code: '',
+        number_of_projects: [] as any,
+        years_of_experience: [] as any,
+      }
       formData['building_codes'].forEach((b: any) => {
-        let obj = {
+        obj = {
           code: b.name,
           number_of_projects: [] as any,
           years_of_experience: [] as any,
@@ -560,10 +567,11 @@ export class VenderDetailsAarbeeComponent {
           arrp.push({
             years_of_experience: ab.years_of_experience || 0,
           });
-          this.listOfcodes = {
-            number_of_projects: [ ...this.listOfcodes.number_of_projects, ...arrnum],
-            years_of_experience: [ ...this.listOfcodes.years_of_experience, ...arrp],
-          } as any;
+          // this.listOfcodes = {
+          //   number_of_projects: [ ...this.listOfcodes.number_of_projects, ...arrnum],
+          //   years_of_experience: [ ...this.listOfcodes.years_of_experience, ...arrp],
+          // } as any;
+
           obj.number_of_projects.push({
             number_of_projects: ab.number_of_projects || 0,
           })
@@ -571,6 +579,8 @@ export class VenderDetailsAarbeeComponent {
             years_of_experience: ab.years_of_experience || 0
           })
         })
+        this.listOfcodes.number_of_projects.push(b.number_of_projects);
+        this.listOfcodes.years_of_experience.push(b.years_of_experience);
         this.listOfBuildingCode.push(obj)
       })
     })
