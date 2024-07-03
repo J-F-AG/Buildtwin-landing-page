@@ -472,8 +472,8 @@ export class VenderDetailsAarbeeComponent {
   getBusinessListing() {
     let domain = localStorage.getItem('domain');
     forkJoin([
-      this.http.get('https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields'),
-      this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?domain=${domain}`)
+      this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
+      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${domain}`)
     ]).subscribe((res: any[]) => {
       // this.fieldData = res[0]['data'];
       // this.formData = res[1]['data'];

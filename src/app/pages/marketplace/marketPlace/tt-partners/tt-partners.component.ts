@@ -14,7 +14,7 @@ export class TtPartnersComponent {
     this.getListOfCompany()
   }
   getListOfCompany() {
-    this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`).subscribe(res => {
+    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`).subscribe(res => {
       this.companyList = res['data']['details'];
     })
   }
