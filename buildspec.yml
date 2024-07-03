@@ -8,6 +8,8 @@ env:
     NEW_SECRET_KEY: "codepipeline:NEW_SECRET_KEY"
     AOA_ACCESS_KEY: "codepipeline:AOA_ACCESS_KEY"
     AOA_SECRET_KEY: "codepipeline:AOA_SECRET_KEY"
+    ACCESS_KEY_APP: "codepipeline:ACCESS_KEY_APP"
+    SECRET_KEY_APP: "codepipeline:SECRET_KEY_APP"
 
 phases:
   install:
@@ -70,7 +72,7 @@ phases:
        
   post_build:
     commands:
-      - aws configure set aws_access_key_id $AOA_ACCESS_KEY
-      - aws configure set aws_secret_access_key $AOA_SECRET_KEY
+      - aws configure set aws_access_key_id $ACCESS_KEY_APP
+      - aws configure set aws_secret_access_key $SECRET_KEY_APP
       - aws s3 sync dist/ s3://$S3_BUCKET_DEV_BUILDTWIN/ --region eu-central-1 --acl public-read --exclude 'get-started/*'
       # - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
