@@ -140,6 +140,8 @@ import { AlliedSocialWallComponent } from './pages/vender/vender-details-allied/
 import { SublimeSocialWallComponent } from './pages/vender/vender-details-sublime/social-wall/social-wall.component';
 import { OmBannerFooterComponent } from './pages/co-pilot-for/co-pilot/om-banner/om-banner-footer/om-banner-footer.component';
 import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/double-digit.pipe';
+import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
+import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarbee2/social-wall/social-wall.component';
 
 
 
@@ -274,6 +276,8 @@ import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/
    VenderDetailsCaldimComponent,
    VenderDetailsMoldtekComponent,
    VenderDetailsAarbeeComponent,
+   VenderDetailsAarbeeOldComponent,
+   AarbeeSocialWallOldComponent,
    VenderDetailsAlliedComponent
 
    
