@@ -212,7 +212,8 @@ export class VenderDetailsAarbeeComponent {
 
   filteredProjects = this.projects;
   serviceSkills = [] as any;
-  domain = ''
+  domain = '';
+  selectedTomeSlot = ''
 
   constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute) {
 
@@ -473,11 +474,13 @@ export class VenderDetailsAarbeeComponent {
     let domain = localStorage.getItem('domain');
     forkJoin([
       this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
-      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${domain}`)
+      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=www.supriya.com`)
     ]).subscribe((res: any[]) => {
       // this.fieldData = res[0]['data'];
       // this.formData = res[1]['data'];
-      const formData = res[1]['data']['company_data'];
+      let formData = res[1]['data']['company_data'];
+      this.selectedOption = formData['basic_form_fields']['working_timezone'];
+      this.selectedTomeSlot = formData['basic_form_fields']['office_hours'];
       const bKey = 'basic_form_fields';
       res[0]['data'][bKey].forEach((form: any) => {
         if (form.field_group_name === 'About') {
