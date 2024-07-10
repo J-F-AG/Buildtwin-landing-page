@@ -179,7 +179,7 @@ export class VenderDetailsAarbeeComponent {
     companyDetails: {
       icon: '',
       company_description: '',
-      engineering_project_icon: '',
+      engineering_project_name: [],
       rating: '',
       domain: '',
       phone_number: '',
@@ -485,7 +485,6 @@ export class VenderDetailsAarbeeComponent {
     .subscribe( async (res: any[]) => {
       // this.fieldData = res[0]['data'];
       // this.formData = res[1]['data'];
-      
       let formData = res[1]['data']['company_data'];
       let fieldData = formData['basic_form_fields'];
       this.selectedOption = formData['basic_form_fields']['working_timezone'];
