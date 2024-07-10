@@ -111,7 +111,7 @@
                         <h3>On-Site Available <span>(own office)</span></h3>
                         <div class="site-list">
                             <ul>
-                                <li><span>{{formData.onsite}}</span></li>
+                                <li *ngFor="let site of formData.onsite"><span>{{site}}</span></li>
                                 <!-- <li><img src="assets/images/india.png" height="60" width="60" /> <span>India</span></li> -->
                             </ul>
                         </div>
@@ -304,14 +304,17 @@
     
         <app-global-company>
             <div class="partnerWrap vender" id="other-section3">
-                <div class="container" *ngIf="formData.softwares?.length">
-                    <owl-carousel-o [options]="reviewsSlides" class="partner">
+                <div class="container">
+                    Softwares
+                    <br>
+                    <span>{{formData.softwares.value}}</span> - <span>{{formData.softwares.name}}</span>
+                    <!-- <owl-carousel-o [options]="reviewsSlides" class="partner">
                         <ng-container *ngFor="let software of formData.softwares">
                             <ng-template carouselSlide>
                                 <img [src]="software.logo" height="409" width="188" />
                                 <span class="exp">{{software.name}}</span>
                             </ng-template>
-                        </ng-container>
+                        </ng-container> -->
                         <!-- <ng-template carouselSlide>
                             <img src="assets/images/ui/software/allplan.png" height="409" width="188" />
                             <span class="exp">TBD Years of experience</span>
@@ -357,7 +360,7 @@
                             <span class="exp">TBD Years of experience</span>
                         </ng-template> -->
         
-                    </owl-carousel-o>
+                    <!-- </owl-carousel-o> -->
                 </div>
             </div>
         </app-global-company>
@@ -683,7 +686,7 @@
         </div>
 </ng-container>
     
-    <app-aarbee-social-wall id="social" class="scrollSection"></app-aarbee-social-wall>
+    <app-aarbee-social-wall [name]="formData.specialTool.special_tools" [description]="formData.specialTool.Special_tools_description" id="social" class="scrollSection"></app-aarbee-social-wall>
     
     <app-qualified>
         <div class="container" id="other-section7">
@@ -702,7 +705,7 @@
                     <div class="left">
                         <div class="topheader">
                             <h2><b>Build</b>Twin Experience</h2>
-                            <p>Working with AARBEE unlocks the BuildTwin experience - from AI tracking to a
+                            <p>Working with {{companyName}} unlocks the BuildTwin experience - from AI tracking to a
                             seamless purchase and support experience</p>
                         </div>
                         <div class="contentpart">

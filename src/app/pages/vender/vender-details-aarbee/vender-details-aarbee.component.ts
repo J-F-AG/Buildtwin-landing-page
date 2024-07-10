@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { forkJoin } from 'rxjs';
+import { forkJoin, retry } from 'rxjs';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -186,7 +186,10 @@ export class VenderDetailsAarbeeComponent {
       working_timezone: '',
       office_hours: ''
     },
-    softwares: [],
+    softwares: {
+      name: '',
+      value: ''
+    },
     buildingCode: [],
     specialTool: {
       special_tools: '',
@@ -474,11 +477,17 @@ export class VenderDetailsAarbeeComponent {
     let domain = localStorage.getItem('domain');
     forkJoin([
       this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
-      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=www.supriya.com`)
-    ]).subscribe((res: any[]) => {
+      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?mode=company_data`)
+    ])
+    .pipe(
+      retry(2)
+    )
+    .subscribe( async (res: any[]) => {
       // this.fieldData = res[0]['data'];
       // this.formData = res[1]['data'];
+      
       let formData = res[1]['data']['company_data'];
+      let fieldData = formData['basic_form_fields'];
       this.selectedOption = formData['basic_form_fields']['working_timezone'];
       this.selectedTomeSlot = formData['basic_form_fields']['office_hours'];
       const bKey = 'basic_form_fields';
@@ -496,17 +505,20 @@ export class VenderDetailsAarbeeComponent {
           this.formData.accreditation = formData[bKey]['accreditation']
         }
         if (form.field_group_name === 'On-Site Available(own office)') {
+          // form.fields = JSON.parse(form.fields);
           form.fields.forEach((f: any) => {
-            this.formData.onsite = formData[bKey][f.field_key]
-          })
+            this.formData.onsite = JSON.parse(formData[bKey][f.field_key]);
+          });
         }
         if (form.field_group_name === 'Bio') {
           form.fields.forEach((f: any) => {
             this.formData.companyDetails[f.field_key] = formData[bKey][f.field_key];
           })
         }
-        if (form.field_group_name === 'softwares') {
-          this.formData.softwares = formData[bKey]['softwares'] || [];
+        if (form.field_group_name === 'softwares' && formData[bKey]['softwares'] && formData[bKey]['softwares'].length) {
+          const sdata = formData[bKey]['softwares'][0];
+          this.formData.softwares.name = sdata.name;
+          this.formData.softwares.value = sdata.logo;
         }
         if (form.field_group_name === 'Special Tools & Methods') {
           form.fields.forEach((f: any) => {
