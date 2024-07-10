@@ -40,7 +40,7 @@
             <owl-carousel-o [options]="heroSlides" class="heroSlides">
                 <ng-container *ngFor="let project of formData.featuredProject.projects">
                     <ng-template carouselSlide>
-                        <img src="assets/images/aarbee/arbee-hero.png" height="422" width="188" class="hero-banner"/>
+                        <img [src]="project.project_logo" height="422" width="188" class="hero-banner"/>
                         <div class="sliderContent">
                             <h1>{{project.project_name}}</h1>
                             <p><img src="assets/images/aarbee/location.png" width="20" height="20"> {{ project.project_region }}</p>
@@ -135,7 +135,11 @@
                                     <!-- <p>Aarbee based at Bangalore, India has come ahead of time to the forefront since its inception in 1998. The Company has written a new era in the field of Structural Steel Designing and Detailing.</p>
                                     <p>Our strong clientele base enabled us to carve a niche in this arena. We, at Aarbee provide world class quality services adhering to AISC (American Institute for Steel Construction) and BS (British standard codes for steel detailing) standards in Structural Design & Steel Detailing of residential, commercial and industrial structures.</p> -->
                                     <h3>Engineering project for</h3>
-                                    <img class="resize" [src]="formData.companyDetails.engineering_project_icon" width="451" height="100" />
+                                    <div *ngFor="let icon of formData.companyDetails.engineering_project_name">
+                                        <span>{{icon.name}}</span>
+                                        <br>
+                                        <img class="resize"  [src]="icon.logo" width="451" height="100" />
+                                    </div>
         
                                     <div class="btnWrap">
                                         <a (click)="call()" class="btnNew cursor"
