@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { retry } from 'rxjs';
 
 @Component({
   selector: 'app-tt-partners',
@@ -14,7 +15,11 @@ export class TtPartnersComponent {
     this.getListOfCompany()
   }
   getListOfCompany() {
-    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`).subscribe(res => {
+    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`)
+    .pipe(
+      retry(2)
+    )
+    .subscribe(res => {
       this.companyList = res['data']['details'];
     })
   }
