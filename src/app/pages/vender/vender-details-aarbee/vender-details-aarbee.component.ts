@@ -493,6 +493,178 @@ export class VenderDetailsAarbeeComponent {
       this.showPageLoader = false;
       // this.fieldData = res[0]['data'];
       // this.formData = res[1]['data'];
+      res[1]['data'] = {
+        "company_data": {
+            "basic_form_fields": {
+                "id": 323,
+                "domain": "www.test.com",
+                "created_at": "2024-07-11T13:26:01.000Z",
+                "updated_at": "2024-07-11T13:26:01.000Z",
+                "draft_data": null,
+                "employees_count": "12",
+                "market": "78",
+                "years_in_business": "789",
+                "reference_projects": "P1",
+                "headquarter": "Delhio",
+                "founding_year": "123",
+                "office_location": "[\"Australia\",\"Vietnam\"]",
+                "icon": "https://s3.eu-central-1.amazonaws.com/buildtwin-prod-devcockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240711/file_78cac99a-4a64-4acd-a9b6-e38570f8a8f4.png",
+                "company_description": "test",
+                "rating": "2",
+                "phone_number": "78978979",
+                "office_hours": "7-9",
+                "autodesk": null,
+                "allplan": null,
+                "autodeskcivil": null,
+                "bently": null,
+                "accreditation": [
+                    {
+                        "logo": "https://s3.eu-central-1.amazonaws.com/buildtwin-prod-devcockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240711/file_f9511198-9905-4f47-810c-091605f5eb1b.png",
+                        "name": "test 2"
+                    }
+                ],
+                "company_name": "Test1",
+                "softwares": [
+                    {
+                        "logo": "Autodesk",
+                        "name": "12"
+                    }
+                ],
+                "special_tools": "special tool",
+                "latest_updated_description": null,
+                "latest_updated_name": "test updted",
+                "icon_attachments": [
+                    "https://s3.eu-central-1.amazonaws.com/buildtwin-prod-devcockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240711/file_78cac99a-4a64-4acd-a9b6-e38570f8a8f4.png"
+                ],
+                "special_tools_description": null,
+                "featured_projects_description": null,
+                "working_timezone": "gmt",
+                "company_id": "83521233-ba32-4028-a0d8-2bc62bc11ae8",
+                "engineering_project_name": [
+                    {
+                        "name": "test 2"
+                    },
+                    {
+                        "name": "test3"
+                    },
+                    {
+                        "name": "test 5"
+                    },
+                    {
+                        "logo": "https://s3.eu-central-1.amazonaws.com/buildtwin-prod-devcockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240712/file_55fb4602-856d-4558-9f56-1f9e48c00bed.png",
+                        "name": "test7"
+                    }
+                ],
+                "latest_updated_image": "https://s3.eu-central-1.amazonaws.com/buildtwin-prod-devcockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240711/file_1626bfd8-dd72-4549-ac01-296c77fe9b0c.png"
+            },
+            "building_codes": [
+                {
+                    "id": 4,
+                    "entity_type": "building_codes",
+                    "is_selected": true,
+                    "name": "IBC",
+                    "number_of_projects": "1",
+                    "years_of_experience": "34"
+                }
+            ],
+            "service_information": [
+                {
+                    "id": 7,
+                    "parent_id": null,
+                    "name": "BoQ/QS Services",
+                    "is_selected": true,
+                    "service_type": "Structural",
+                    "sub_services": [],
+                    "capability_matrix": [
+                        {
+                            "functional_area_id": 1,
+                            "skill_level": "Best"
+                        }
+                    ]
+                },
+                {
+                    "id": 9,
+                    "parent_id": null,
+                    "name": "Detailed Engineering",
+                    "is_selected": true,
+                    "service_type": "Structural",
+                    "sub_services": [],
+                    "capability_matrix": [
+                        {
+                            "functional_area_id": 1,
+                            "skill_level": "Best"
+                        },
+                        {
+                            "functional_area_id": 2,
+                            "skill_level": "Best"
+                        },
+                        {
+                            "functional_area_id": 3,
+                            "skill_level": "Best"
+                        },
+                        {
+                            "functional_area_id": 4,
+                            "skill_level": "Best"
+                        },
+                        {
+                            "functional_area_id": 5,
+                            "skill_level": "Best"
+                        },
+                        {
+                            "functional_area_id": 6,
+                            "skill_level": "Best"
+                        }
+                    ]
+                }
+            ],
+            "featured_projects": [
+                {
+                    "id": 464,
+                    "domain": "www.test.com",
+                    "project_name": "Test",
+                    "project_description": "d1",
+                    "project_logo": "https://s3.eu-central-1.amazonaws.com/buildtwin-prod-devcockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240711/file_29ce1b9a-1a7d-4a24-8acf-14679fbc72d6.png",
+                    "project_title": "t1",
+                    "project_region": "p1",
+                    "project_category": "",
+                    "created_at": "2024-07-11T13:35:23.942Z",
+                    "updated_at": "2024-07-11T13:35:23.942Z",
+                    "is_selected": true,
+                    "volume": "",
+                    "service": "Structural"
+                },
+                {
+                    "id": 467,
+                    "domain": "www.test.com",
+                    "project_name": "p1",
+                    "project_description": "d1",
+                    "project_logo": "",
+                    "project_title": "t1",
+                    "project_region": "l1",
+                    "project_category": "",
+                    "created_at": "2024-07-11T13:50:54.406Z",
+                    "updated_at": "2024-07-11T13:50:54.406Z",
+                    "is_selected": true,
+                    "volume": "",
+                    "service": "Structural"
+                }
+            ],
+            "our_engineers": [
+                {
+                    "id": 446,
+                    "domain": "www.test.com",
+                    "engineer_name": "Test1",
+                    "engineer_designation": "des1",
+                    "engineer_note": "description1",
+                    "engineer_profile_picture": "https://s3.eu-central-1.amazonaws.com/buildtwin-prod-devcockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240711/file_58418148-ba38-4eb8-ae80-4e6f1bd5e1e2.png",
+                    "engineer_expertise": "Exp1",
+                    "is_selected": true,
+                    "created_at": "2024-07-11T13:31:25.766Z",
+                    "updated_at": "2024-07-11T13:31:25.766Z"
+                }
+            ]
+        }
+    }
       let formData = res[1]['data']['company_data'];
       let fieldData = formData['basic_form_fields'];
       this.selectedOption = formData['basic_form_fields']['working_timezone'];
