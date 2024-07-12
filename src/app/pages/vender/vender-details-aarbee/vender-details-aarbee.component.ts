@@ -484,7 +484,7 @@ export class VenderDetailsAarbeeComponent {
     this.showPageLoader = true;
     forkJoin([
       this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
-      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?mode=company_data`)
+      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${domain}`)
     ])
     .pipe(
       retry(2)
