@@ -140,8 +140,8 @@ import { AlliedSocialWallComponent } from './pages/vender/vender-details-allied/
 import { SublimeSocialWallComponent } from './pages/vender/vender-details-sublime/social-wall/social-wall.component';
 import { OmBannerFooterComponent } from './pages/co-pilot-for/co-pilot/om-banner/om-banner-footer/om-banner-footer.component';
 import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/double-digit.pipe';
-
-
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzRateModule } from 'ng-zorro-antd/rate';
 
 @NgModule({
   declarations: [
@@ -298,6 +298,8 @@ import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/
     LightgalleryModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NzSpinModule,
+    NzRateModule
   ],
   providers: [
     Title
