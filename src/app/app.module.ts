@@ -37,7 +37,8 @@ import { HdNavbarComponent } from './pages/includes/hd-navbar/hd-navbar.componen
 import { HdFooterComponent } from './pages/includes/hd-footer/hd-footer.component';
 
 import { ThreeColMarketComponent } from './pages/includes/three-col-market/three-col-market.component';
-import { HdBannerComponent } from './pages/Home/hd-banner/hd-banner.component';
+// import { HdBannerComponent } from './pages/Home/hd-banner/hd-banner.component';
+import { HdBannerNewComponent } from './pages/Home/hd-banner-new/hd-banner-new.component';
 import { HappierCustomersComponent } from './pages/Home/happier-customers/happier-customers.component';
 import { HdIntegrationsComponent } from './pages/includes/hd-integrations/hd-integrations.component';
 import { HowProcessComponent } from './pages/Home/how-process/how-process.component';
@@ -165,7 +166,8 @@ import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarb
         // pages
     AppComponent,
    HelpDeskHomeComponent,
-   HdBannerComponent,
+  //  HdBannerComponent,
+   HdBannerNewComponent,
    HappierCustomersComponent,
    HowProcessComponent,
    HdAboutComponent,
