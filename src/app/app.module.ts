@@ -141,6 +141,8 @@ import { AlliedSocialWallComponent } from './pages/vender/vender-details-allied/
 import { SublimeSocialWallComponent } from './pages/vender/vender-details-sublime/social-wall/social-wall.component';
 import { OmBannerFooterComponent } from './pages/co-pilot-for/co-pilot/om-banner/om-banner-footer/om-banner-footer.component';
 import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/double-digit.pipe';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzRateModule } from 'ng-zorro-antd/rate';
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
 import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarbee2/social-wall/social-wall.component';
 
@@ -304,6 +306,8 @@ import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarb
     LightgalleryModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NzSpinModule,
+    NzRateModule
   ],
   providers: [
     Title

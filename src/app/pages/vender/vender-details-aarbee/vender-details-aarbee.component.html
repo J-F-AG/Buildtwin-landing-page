@@ -1,11 +1,11 @@
-<div class="subline">
+<div class="subline" *ngIf="!showPageLoader">
     <app-hd-navbar></app-hd-navbar>
     <div class="stickyMneu"  [class.active]="isSticky">
         <div class="stcikyTop">
             <div class="container">
             <div class="flex">
                 <a href="/">
-                <img src="assets/images/aarbee/builtwin-aarbee-logo.png" width="339" height="100">
+                <img [src]="formData.companyDetails.icon ? formData.companyDetails.icon : 'assets/images/placeholder-image1.jpg'" width="339" height="100">
             </a>
               
             </div>
@@ -90,7 +90,7 @@
                         </div> -->
                     </div>
                     <div class="service-section">
-                        <h3>Services: <span>Structural</span></h3>
+                        <h3>Services: <span>{{formData?.serviceType}}</span></h3>
                         <div class="service-list">
                             <ul>
                                 <li *ngFor="let s of formData.services"><img src="assets/images/aarbee/structural.png" height="21" width="21" /> 
@@ -584,6 +584,7 @@
                             <div class="itemHead">
                                 <span>{{ project.project_category }}</span>
                                 <h2>{{ project.project_name }}</h2>
+                                <h4>Service - {{project.service}}</h4>
                                 <div class="flex">
                                     <!-- <img [src]="project.country" width="17" height="17" /> -->
                                     <em>{{ project.project_region }}</em>
@@ -591,8 +592,8 @@
                             </div>
                             <img [src]="project.project_logo" width="416" height="240" />
                             <div class="content">
-                                <h2>Construction Volume</h2>
-                                <span>{{ project.volume }}</span>
+                                <h2>{{project.project_title}}</h2>
+                                <span>{{ project.project_description }}</span>
                             </div>
                         </div>
                     </div>
@@ -690,7 +691,7 @@
         </div>
 </ng-container>
     
-    <app-aarbee-social-wall [name]="formData.specialTool.special_tools" [description]="formData.specialTool.Special_tools_description" id="social" class="scrollSection"></app-aarbee-social-wall>
+    <app-aarbee-social-wall [name]="formData?.latest?.latest_updated_name" [name]="formData?.latest?.latest_updated_image" id="social" class="scrollSection"></app-aarbee-social-wall>
     
     <app-qualified>
         <div class="container" id="other-section7">
@@ -836,3 +837,5 @@
     </div>
     </div>
     </div>
+
+    <nz-spin  [nzSize]="'large'" nzTip="Loading..." *ngIf="showPageLoader"> </nz-spin>
