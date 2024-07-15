@@ -199,6 +199,10 @@ export class VenderDetailsAarbeeComponent {
       featured_projects_description: '',
       projects: [],
     },
+    latest: {
+      latest_updated_name: '',
+      latest_updated_image: '',
+    },
     engineers: [],
     accreditation: [],
     services: [],
@@ -212,11 +216,13 @@ export class VenderDetailsAarbeeComponent {
     number_of_projects: [] as any,
     years_of_experience: [] as any
   } as any;
+  serviceTypes = [];
 
   filteredProjects = this.projects;
   serviceSkills = [] as any;
   domain = '';
-  selectedTomeSlot = ''
+  selectedTomeSlot = '';
+  showPageLoader = false;
 
   constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute) {
 
@@ -475,14 +481,16 @@ export class VenderDetailsAarbeeComponent {
 
   getBusinessListing() {
     let domain = localStorage.getItem('domain');
+    this.showPageLoader = true;
     forkJoin([
       this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
-      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?mode=company_data`)
+      this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${domain}`)
     ])
     .pipe(
       retry(2)
     )
     .subscribe( async (res: any[]) => {
+      this.showPageLoader = false;
       // this.fieldData = res[0]['data'];
       // this.formData = res[1]['data'];
       let formData = res[1]['data']['company_data'];
@@ -519,6 +527,11 @@ export class VenderDetailsAarbeeComponent {
           this.formData.softwares.name = sdata.name;
           this.formData.softwares.value = sdata.logo;
         }
+        if (form.field_group_name === 'Latest Updated') {
+          form.fields.forEach((f: any) => {
+            this.formData.latest[f.field_key] = formData[bKey][f.field_key];
+          })
+        }
         if (form.field_group_name === 'Special Tools & Methods') {
           form.fields.forEach((f: any) => {
             this.formData.specialTool[f.field_key] = formData[bKey][f.field_key];
@@ -543,6 +556,10 @@ export class VenderDetailsAarbeeComponent {
       ];
       formData['service_information'].forEach((s: any) => {
         // this.preSelectservices.push(s.name);
+        let exist = this.serviceTypes.findIndex(a => a === s.service_type);
+        if (exist === -1) {
+          this.serviceTypes.push(s.service_type);
+        }
         if (s.capability_matrix.length) {
           let obj = {} as any
           obj['functional_areas'] = JSON.parse(JSON.stringify(this.serviceSkills.filter((a: any) => a.id !== 0)));
@@ -560,12 +577,16 @@ export class VenderDetailsAarbeeComponent {
             service_name: s.name
           })
         }
-      })
+      });
       let obj = {
         code: '',
         number_of_projects: [] as any,
         years_of_experience: [] as any,
       }
+      if (this.serviceTypes.length) {
+        this.formData.serviceType = this.serviceTypes.join(',');
+      }
+      console.log(this.formData)
       formData['building_codes'].forEach((b: any) => {
         obj = {
           code: b.name,
