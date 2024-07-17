@@ -119,8 +119,13 @@
                     </div>
                     <div>
                         <div>
-                            <h4>Available Services for Direct Booking</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, exercitationem?</p>
+                            <div class="flex">
+                                <h4>Available Services for Direct Booking</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, exercitationem?</p>
+                            </div>
+                            <div>
+                                engineering_project_name -> logo : needed
+                            </div>
                         </div>
                         <div>
                             <div >
@@ -132,18 +137,89 @@
                                       <th>Service Add</th>
                                       <th></th>
                                     </tr>
-                                    <tr>
-                                      <td></td>
+                                    <tr *ngFor="let service of serviceTypes">
                                       <td>
-                                        <!-- <select>
-                                            <option *ngFor="let "></option>
-                                        </select> -->
+                                        <div>
+                                            <h4>{{service.service_type}}</h4>
+                                            <u>
+                                                <li *ngFor="let block of service?.special_feature_titles">{{block}}</li>
+                                            </u>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        <select>
+                                            <option>Autodesk</option>
+                                        </select>
                                         </td>
-                                      <td></td>
+                                      <td>
+                                        <select>
+                                            <option value="">Please select</option>
+                                            <option *ngFor="let code of formData?.buildingCode"> {{code.name}}</option>
+                                        </select>
+                                      </td>
+                                      <td>
+                                        <div>
+                                            <p *ngFor="let addon of service?.addon_titles">{{addon}}</p>
+                                        </div>
+                                      </td>
+                                      <td>
+                                        Start enquiry
+                                      </td>
                                     </tr>
                                   </table>
                                   
                             </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Our technical team in the Spotlight </h4>
+                        <div class="teamslider">
+                            <owl-carousel-o [options]="aboutSlider">
+
+                                <ng-template *ngFor="let engineer of formData.engineers" carouselSlide>
+                                    <div class="wrap">
+                                        <div class="flex">
+                                            <div class="left">
+
+                                            </div>
+                                            <div class="right">
+                                                <div class="imgWrap">
+                                                    <img [src]="engineer.engineer_profile_picture"
+                                                        [alt]="engineer.engineer_name" width="422" height="495">
+                                                </div>
+                                                <div class="content">
+                                                    <h2>{{ engineer.engineer_name }}</h2>
+                                                    <span>{{engineer.engineer_designation}}</span>
+
+                                                    <p>{{engineer.engineer_note}}</p>
+                                                    <div class="expert">
+                                                        <h3><span class="jeffStyle">My</span> expertise at
+                                                            {{companyName}}</h3>
+                                                        <ul class="tbd small">
+                                                            {{engineer.engineer_expertise}}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </ng-template>
+
+                            </owl-carousel-o>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Client Reviews</h4>
+                    </div>
+                    <div>
+                        see what client love about
+                    </div>
+                    <div class="flex">
+                        <div>
+                            Frequently Asked Questions about {{companyName}}
+                        </div>
+                        <div>
+                            
                         </div>
                     </div>
                 </ng-container>

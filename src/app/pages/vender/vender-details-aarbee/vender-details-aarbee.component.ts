@@ -207,6 +207,7 @@ export class VenderDetailsAarbeeComponent {
       latest_updated_name: '',
       latest_updated_image: '',
     },
+    faq: [],
     engineers: [],
     accreditation: [],
     services: [],
@@ -570,7 +571,7 @@ export class VenderDetailsAarbeeComponent {
         // this.preSelectservices.push(s.name);
         let exist = this.serviceTypes.findIndex(a => a === s.service_type);
         if (exist === -1) {
-          this.serviceTypes.push(s.service_type);
+          this.serviceTypes.push(s);
         }
         if (s.is_flagged) {
           this.formData.highlightServices.push(s)
