@@ -53,6 +53,13 @@
                                 <div>
                                     <h5>Company Highlights</h5>
                                     <div>
+                                        <h5>Startup | Perfect for fast projects delivery</h5>
+                                        <span>HQ: {{formData.companyDetails.headquarter}}</span>
+                                        <span>{{formData.companyDetails.employees_count}}+ Employees</span>
+                                        <span>{{formData.companyDetails.reference_projects}}+ projects</span>
+                                        <span>{{formData.companyDetails.years_in_business}}+ in Business</span>
+                                    </div>
+                                    <div>
                                         <ul>
                                             <li>
                                                 Compliance: BuildTwin ERP
@@ -124,7 +131,9 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, exercitationem?</p>
                             </div>
                             <div>
-                                engineering_project_name -> logo : needed
+                                <div *ngFor="let e of formData.engineeringData">
+                                    <img [src]="e.logo ? e.logo : 'assets/images/placeholder-image1.jpg'" alt="">
+                                </div>
                             </div>
                         </div>
                         <div>

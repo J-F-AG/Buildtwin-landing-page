@@ -214,6 +214,7 @@ export class VenderDetailsAarbeeComponent {
       latest_updated_name: '',
       latest_updated_image: '',
     },
+    engineeringData: [],
     faq: [],
     engineers: [],
     accreditation: [],
@@ -574,6 +575,7 @@ export class VenderDetailsAarbeeComponent {
         this.formData.directors = formData['basic_form_fields']['managing_director'];
         this.formData.jointbids = formData['basic_form_fields']['joint_bids'];
         this.formData.service_func_area = res[0]['data']['service_func_area'];
+        this.formData.engineeringData = formData['basic_form_fields']['engineering_project_name']
         if (formData['basic_form_fields']['operations']) {
           // this.formData.operations = JSON.parse(formData['basic_form_fields']['operations']);
         }
