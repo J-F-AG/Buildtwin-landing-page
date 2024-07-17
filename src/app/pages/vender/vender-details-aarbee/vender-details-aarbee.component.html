@@ -65,16 +65,11 @@
                                         <span>{{formData.companyDetails.reference_projects}}+ projects</span>
                                         <span>{{formData.companyDetails.years_in_business}}+ in Business</span>
                                     </div>
-                                    <div>
+                                    <div *ngIf="formData.additional_highlights.length">
+                                        <h4>{{formData?.additional_highlights[0].title}}</h4>
                                         <ul>
-                                            <li>
-                                                Compliance: BuildTwin ERP
-                                            </li>
-                                            <li>
-                                                Quality Control:
-                                            </li>
-                                            <li>
-                                                Lead Time: 1 week
+                                            <li *ngFor="let c of formData?.additional_highlights[0].content">
+                                                {{c}}
                                             </li>
                                         </ul>
                                     </div>
@@ -83,8 +78,14 @@
                                     Availabiliable for for Joint bids & Projects
                                 </div>
                                 <div>
-                                    <div>Local Customers</div>
-                                    <div>Most customers are repeated customers</div>
+                                    <div *ngIf="formData.additional_highlights.length">
+                                        <h4>{{formData?.additional_highlights[1].title}}</h4>
+                                        <ul>
+                                            <li *ngFor="let c of formData?.additional_highlights[1].content">
+                                                {{c}}
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
