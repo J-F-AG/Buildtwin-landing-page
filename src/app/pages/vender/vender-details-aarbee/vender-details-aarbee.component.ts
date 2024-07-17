@@ -197,10 +197,7 @@ export class VenderDetailsAarbeeComponent {
       third_party_mediation: '',
       liability_insurance: '',
     },
-    softwares: {
-      name: '',
-      value: ''
-    },
+    softwares: [],
     buildingCode: [],
     specialTool: {
       special_tools: '',
@@ -546,9 +543,7 @@ export class VenderDetailsAarbeeComponent {
             })
           }
           if (form.field_group_name === 'softwares' && formData[bKey]['softwares'] && formData[bKey]['softwares'].length) {
-            const sdata = formData[bKey]['softwares'][0];
-            this.formData.softwares.name = sdata.name;
-            this.formData.softwares.value = sdata.logo;
+            this.formData.softwares = formData[bKey]['softwares'];
           }
           if (form.field_group_name === 'Latest Updated') {
             form.fields.forEach((f: any) => {
