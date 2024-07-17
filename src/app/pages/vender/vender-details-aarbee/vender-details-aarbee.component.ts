@@ -197,6 +197,7 @@ export class VenderDetailsAarbeeComponent {
       third_party_mediation: '',
       liability_insurance: '',
     },
+    badges: [],
     softwares: [],
     buildingCode: [],
     specialTool: {
@@ -565,6 +566,7 @@ export class VenderDetailsAarbeeComponent {
         })
         this.formData.buildingCode = res[0]['data']['building_codes'];
         this.formData.engineers = formData['our_engineers'];
+        this.formData.badges = formData['badges'];
         this.companyName = formData['basic_form_fields']['company_name'];
         this.formData.services = res[0]['data']['services']
         this.formData.directors = formData['basic_form_fields']['managing_director'];

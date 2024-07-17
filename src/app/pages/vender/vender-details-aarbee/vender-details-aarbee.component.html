@@ -31,9 +31,15 @@
                             </svg>
                             <p>Premium Partner</p>
                         </div>
-                        <div>
-                            {{companyName}}
-                            <span>Offices in <span *ngFor="let site of formData.onsite">{{site}}</span></span>
+                        <div class="flex">
+                            <div>
+                                {{companyName}}
+                                <span>Offices in <span *ngFor="let site of formData.onsite">{{site}}</span></span>
+                            </div>
+                            <div *ngFor="let b of formData?.badges">
+                                {{b.title}}
+                                {{b.description}}
+                            </div>
                         </div>
                     </div>
                     <div class="flex">
@@ -89,7 +95,10 @@
                             <p>{{companyName}} is a qualified partner in manay areas</p>
                         </div>
                         <div>
-                            badge
+                            <div class="flex" *ngFor="let b of formData?.badges">
+                                {{b.title}}
+                                {{b.description}}
+                            </div>
                         </div>
                     </div>
                     <div>
