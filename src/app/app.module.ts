@@ -10,6 +10,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,12 @@ import { HdFooterComponent } from './pages/includes/hd-footer/hd-footer.componen
 import { ThreeColMarketComponent } from './pages/includes/three-col-market/three-col-market.component';
 // import { HdBannerComponent } from './pages/Home/hd-banner/hd-banner.component';
 import { HdBannerNewComponent } from './pages/Home/hd-banner-new/hd-banner-new.component';
+import { HdBannerTabsComponent } from './pages/Home/hd-banner-tabs/hd-banner-tabs.component';
+import { HdTrustedByComponent } from './pages/Home/hd-trusted-by/hd-trusted-by.component';
+import { HdSolutionProviderComponent } from './pages/Home/hd-solution-provider/hd-solution-provider.component';
+
+
+
 import { HappierCustomersComponent } from './pages/Home/happier-customers/happier-customers.component';
 import { HdIntegrationsComponent } from './pages/includes/hd-integrations/hd-integrations.component';
 import { HowProcessComponent } from './pages/Home/how-process/how-process.component';
@@ -145,6 +152,7 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
 import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarbee2/social-wall/social-wall.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 
@@ -170,6 +178,9 @@ import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarb
    HelpDeskHomeComponent,
   //  HdBannerComponent,
    HdBannerNewComponent,
+   HdTrustedByComponent,
+   HdSolutionProviderComponent,
+
    HappierCustomersComponent,
    HowProcessComponent,
    HdAboutComponent,
@@ -287,7 +298,8 @@ import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarb
    
     
   ],
-  imports: [
+  imports: [    
+   HdBannerTabsComponent,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -310,7 +322,8 @@ import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarb
     NzRateModule
   ],
   providers: [
-    Title
+    Title,
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

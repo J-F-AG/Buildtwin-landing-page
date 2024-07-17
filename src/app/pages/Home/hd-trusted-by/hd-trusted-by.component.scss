@@ -1,14 +1,15 @@
-
-:host ::ng-deep .owl-nav {
-    display: block!important;
+.common-Section { padding: 50px 0; background-color: white;
+    &.grayBg{background-color: #F8F8F8;}
 }
+
+::ng-deep .owl-carousel .owl-item img{ width: auto; display: initial;}
+
 :host ::ng-deep .owl-theme .owl-nav [class*=owl-] {
     right: 0 ;
     z-index: 99 ;
     width: 47px ;
     bottom: 0 ;
     height: 47px ;
-    display: block ;
     transition: var(--transition) ;
     background-color: var(--whiteColor) ;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px ;
@@ -17,25 +18,22 @@
     border-radius: 50%;
     padding: 0;
     position: relative;
-    .ti.ti-chevron-left,.ti.ti-chevron-right {
-        display: none;
-    }
 }
 :host ::ng-deep .owl-theme .owl-nav [class*=owl-prev]{    
     position: absolute;
     right: auto;
     bottom: auto;
-    left: 10px;
-    top: 62%;
+    left: -3px;
+    top: 67%;
     transform: translateY(-50%) rotate(-90deg);
     transform-origin: left;
 }
 :host ::ng-deep .owl-theme .owl-nav [class*=owl-next]{    
     position: absolute;
-    right: 10px;
+    right: -3px;
     bottom: auto;
     left: auto;
-    top: 62%;
+    top: 67%;
     transform: translateY(-50%) rotate(90deg);
     transform-origin: right;
 }
@@ -61,30 +59,10 @@
     font-family: "tabler-icons";
 }
 
-
-.integrations-area.ptb-75 {
-    padding-bottom: 40px;
-    padding-top: 50px;
+.hd-section-title{
+    h2{font-size: 33px; font-weight: 600;}
 }
 
-
-.integrations-area .plugWrapper{display: flex;
-    .hd-section-title { width: 110px;
-        h2{ font-size: 25px; color: #9278E3; margin-top: 25px;
-            strong{display: block;}
-        }
-    }
-    .integrations-area-list{flex: 1; overflow: hidden;}
-    
-}
-
-::ng-deep .plugWrapper .owl-stage-outer{  position: relative;
-    &::after,&::before{content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 80px; z-index: 2;
-        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%);}
-    &::after{left: auto; right: 0;
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%);  
-    }
-}
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
@@ -98,15 +76,18 @@
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
+
 }
 
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
+
 }
 
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
 
 }
 
