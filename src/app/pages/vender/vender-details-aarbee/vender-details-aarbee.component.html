@@ -44,7 +44,7 @@
                         <div>
                             <div>
                                 <div class="flex">
-                                    {{companyName}}
+                                    <img [src]="formData?.companyDetails.icon" alt="">
                                     <span *ngFor="let dir of formData.directors">
                                       <img [src]="dir.logo" height="50" width="50"  />
                                         {{dir.name}}
@@ -246,17 +246,86 @@
                             </div>
                             <div>
                                 Sectors
+                                <div *ngFor="let sector of formData?.sectors">
+                                    {{sector.name}}
+                                </div>
                             </div>
                             <div>
                                 Software
+                                <div>Software 1</div>
                             </div>
                             <div>
                                 Codes
+                                <div *ngFor="let code of formData?.buildingCode">
+                                    {{code.name}}
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        {{companyName}} 
+                        <h4>
+                            {{companyName}} &nbsp; {{formData?.companyDetails.headquarter}} Policy
+                        </h4>
+                        <div>
+                            <div class="flex">
+                                <div>
+                                    Business Hours
+                                </div>
+                                <div>
+                                    {{formData?.companyDetails.office_hours}}
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    Commercial Contact
+                                </div>
+                                <div>
+                                    {{formData?.companyDetails.commercial_contact}}
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    Complience Contact
+                                </div>
+                                <div>
+                                    {{formData?.companyDetails.compliance_contact}}
+                                </div>
+                            </div>
+                           
+                            <div class="flex">
+                                <div>
+                                    PI Liability
+                                </div>
+                                <div>
+                                    {{formData?.companyDetails.liability_insurance}}
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <div>
+                                    Third Party Mediation
+                                </div>
+                                <div>
+                                    {{formData?.companyDetails.third_party_mediation}}
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    Verified License
+                                </div>
+                                <div>
+                                    {{formData?.companyDetails.license}}
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div>
+                                    Tax ID
+                                </div>
+                                <div>
+                                    {{formData?.companyDetails.tax_id}}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </ng-container>
             </div>

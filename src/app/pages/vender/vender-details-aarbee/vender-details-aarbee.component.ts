@@ -188,7 +188,14 @@ export class VenderDetailsAarbeeComponent {
       domain: '',
       phone_number: '',
       working_timezone: '',
-      office_hours: ''
+      office_hours: '',
+      headquarter: '',
+      compliance_contact: '',
+      commercial_contact: '',
+      tax_id: '',
+      license: '',
+      third_party_mediation: '',
+      liability_insurance: '',
     },
     softwares: {
       name: '',
@@ -505,142 +512,158 @@ export class VenderDetailsAarbeeComponent {
       // this.fieldData = res[0]['data'];
       // this.formData = res[1]['data'];
       let formData = res[1]['data']['company_data'];
-      let fieldData = formData['basic_form_fields'];
-      this.selectedOption = formData['basic_form_fields']['working_timezone'];
-      this.selectedTomeSlot = formData['basic_form_fields']['office_hours'];
-      const bKey = 'basic_form_fields';
-      res[0]['data'][bKey].forEach((form: any) => {
-        if (form.field_group_name === 'About') {
-          form.fields.forEach((f: any) => {
-            this.formData.about.push({
-              key: f.field_name,
-              value: formData[bKey][f.field_key],
-              isPlus: f.field_name === 'Years in Business' || f.field_name === 'Reference Projects'
+      if (formData) {
+        let fieldData = formData['basic_form_fields'];
+        this.selectedOption = formData['basic_form_fields']['working_timezone'];
+        this.selectedTomeSlot = formData['basic_form_fields']['office_hours'];
+        const bKey = 'basic_form_fields';
+        res[0]['data'][bKey].forEach((form: any) => {
+          if (form.field_group_name === 'About') {
+            form.fields.forEach((f: any) => {
+              if (f.field_name === "Headquarter") {
+                this.formData.companyDetails.headquarter = formData[bKey][f.field_key];
+              }
+              this.formData.about.push({
+                key: f.field_name,
+                value: formData[bKey][f.field_key],
+                isPlus: f.field_name === 'Years in Business' || f.field_name === 'Reference Projects'
+              })
             })
-          })
+          }
+          if (form.field_group_name === 'Accreditation') {
+            this.formData.accreditation = formData[bKey]['accreditation']
+          }
+          if (form.field_group_name === 'On-Site Available(own office)') {
+            // form.fields = JSON.parse(form.fields);
+            form.fields.forEach((f: any) => {
+              this.formData.onsite = JSON.parse(formData[bKey][f.field_key]);
+            });
+          }
+          if (form.field_group_name === 'Bio' || form.field_group_name === 'About') {
+            form.fields.forEach((f: any) => {
+              this.formData.companyDetails[f.field_key] = formData[bKey][f.field_key];
+            })
+          }
+          if (form.field_group_name === 'softwares' && formData[bKey]['softwares'] && formData[bKey]['softwares'].length) {
+            const sdata = formData[bKey]['softwares'][0];
+            this.formData.softwares.name = sdata.name;
+            this.formData.softwares.value = sdata.logo;
+          }
+          if (form.field_group_name === 'Latest Updated') {
+            form.fields.forEach((f: any) => {
+              this.formData.latest[f.field_key] = formData[bKey][f.field_key];
+            })
+          }
+          if (form.field_group_name === 'Special Tools & Methods') {
+            form.fields.forEach((f: any) => {
+              this.formData.specialTool[f.field_key] = formData[bKey][f.field_key];
+            })
+          }
+          if (form.field_group_name === 'featured_projects') {
+            form.fields.forEach((f: any) => {
+              this.formData.featuredProject[f.field_key] = formData[bKey][f.field_key];
+            });
+            this.formData.featuredProject.projects = formData['featured_projects'];
+          }
+  
+        })
+        this.formData.buildingCode = res[0]['data']['building_codes'];
+        this.formData.engineers = formData['our_engineers'];
+        this.companyName = formData['basic_form_fields']['company_name'];
+        this.formData.services = res[0]['data']['services']
+        this.formData.directors = formData['basic_form_fields']['managing_director'];
+        this.formData.jointbids = formData['basic_form_fields']['joint_bids'];
+        this.formData.service_func_area = res[0]['data']['service_func_area'];
+        if (formData['basic_form_fields']['operations']) {
+          // this.formData.operations = JSON.parse(formData['basic_form_fields']['operations']);
         }
-        if (form.field_group_name === 'Accreditation') {
-          this.formData.accreditation = formData[bKey]['accreditation']
-        }
-        if (form.field_group_name === 'On-Site Available(own office)') {
-          // form.fields = JSON.parse(form.fields);
-          form.fields.forEach((f: any) => {
-            this.formData.onsite = JSON.parse(formData[bKey][f.field_key]);
-          });
-        }
-        if (form.field_group_name === 'Bio') {
-          form.fields.forEach((f: any) => {
-            this.formData.companyDetails[f.field_key] = formData[bKey][f.field_key];
-          })
-        }
-        if (form.field_group_name === 'softwares' && formData[bKey]['softwares'] && formData[bKey]['softwares'].length) {
-          const sdata = formData[bKey]['softwares'][0];
-          this.formData.softwares.name = sdata.name;
-          this.formData.softwares.value = sdata.logo;
-        }
-        if (form.field_group_name === 'Latest Updated') {
-          form.fields.forEach((f: any) => {
-            this.formData.latest[f.field_key] = formData[bKey][f.field_key];
-          })
-        }
-        if (form.field_group_name === 'Special Tools & Methods') {
-          form.fields.forEach((f: any) => {
-            this.formData.specialTool[f.field_key] = formData[bKey][f.field_key];
-          })
-        }
-        if (form.field_group_name === 'featured_projects') {
-          form.fields.forEach((f: any) => {
-            this.formData.featuredProject[f.field_key] = formData[bKey][f.field_key];
-          });
-          this.formData.featuredProject.projects = formData['featured_projects'];
-        }
-
-      })
-      this.formData.buildingCode = res[0]['data']['building_codes'];
-      this.formData.engineers = formData['our_engineers'];
-      this.companyName = formData['basic_form_fields']['company_name'];
-      this.formData.services = res[0]['data']['services']
-      this.formData.directors = formData['basic_form_fields']['managing_director'];
-      this.formData.jointbids = formData['basic_form_fields']['joint_bids'];
-      this.formData.service_func_area = res[0]['data']['service_func_area'];
-      if (formData['basic_form_fields']['operations']) {
-        // this.formData.operations = JSON.parse(formData['basic_form_fields']['operations']);
-      }
-      this.isLoaded = true;
-      this.serviceSkills = [
-        { id: 0, name: '' },
-        ...res[0]['data']['service_func_area'],
-      ];
-      this.formData.companyDetails.company_description = formData['basic_form_fields']['company_description'].replace(/(?:\r\n|\r|\n)/g, '<br>')
-      formData['service_information'].forEach((s: any) => {
-        // this.preSelectservices.push(s.name);
-        let exist = this.serviceTypes.findIndex(a => a === s.service_type);
-        if (exist === -1) {
-          this.serviceTypes.push(s);
-        }
-        if (s.is_flagged) {
-          this.formData.highlightServices.push(s)
-        }
-        if (s.capability_matrix.length) {
-          let obj = {} as any
-          obj['functional_areas'] = JSON.parse(JSON.stringify(this.serviceSkills.filter((a: any) => a.id !== 0)));
-          obj['functional_areas'].forEach((val: any) => {
-            let d = s.capability_matrix.filter((ab: any) => ab.functional_area_id === val.id);
-            if (d.length) {
-              val.isChecked = true;
-            } else {
-              val.isChecked = false;
-            }
-          });
-          this.selectedServices.push({
-            ...s,
-            ...obj,
-            service_name: s.name
-          })
-        }
-      });
-      let obj = {
-        code: '',
-        number_of_projects: [] as any,
-        years_of_experience: [] as any,
-      }
-      if (this.serviceTypes.length) {
-        this.formData.serviceType = this.serviceTypes.join(',');
-      }
-      this.formData.faq = formData['basic_form_fields']['faq'];
-      console.log(this.formData)
-      formData['building_codes'].forEach((b: any) => {
-        obj = {
-          code: b.name,
+        this.isLoaded = true;
+        this.serviceSkills = [
+          { id: 0, name: '' },
+          ...res[0]['data']['service_func_area'],
+        ];
+        this.formData.companyDetails.company_description = formData['basic_form_fields']['company_description'].replace(/(?:\r\n|\r|\n)/g, '<br>')
+        formData['service_information'].forEach((s: any) => {
+          // this.preSelectservices.push(s.name);
+          let exist = this.serviceTypes.findIndex(a => a === s.service_type);
+          if (exist === -1) {
+            this.serviceTypes.push(s);
+          }
+          if (s.is_flagged) {
+            this.formData.highlightServices.push(s)
+          }
+          if (s.capability_matrix.length) {
+            let obj = {} as any;
+            s.capability_matrix.forEach(matrix => {
+              let mat = this.formData.sectors.findIndex(a => a.id === matrix.functional_area_id);
+              if (mat === -1) {
+                let name = this.serviceSkills.filter(a => a.id === matrix.functional_area_id);
+                this.formData.sectors.push({
+                  name: name[0].name,
+                  id: name[0].id
+                });
+              }
+            })
+            obj['functional_areas'] = JSON.parse(JSON.stringify(this.serviceSkills.filter((a: any) => a.id !== 0)));
+            obj['functional_areas'].forEach((val: any) => {
+              let d = s.capability_matrix.filter((ab: any) => ab.functional_area_id === val.id);
+              
+              if (d.length) {
+                val.isChecked = true;
+              } else {
+                val.isChecked = false;
+              }
+            });
+            this.selectedServices.push({
+              ...s,
+              ...obj,
+              service_name: s.name
+            })
+          }
+        });
+        let obj = {
+          code: '',
           number_of_projects: [] as any,
           years_of_experience: [] as any,
         }
-        formData['building_codes'].forEach((ab: any) => {
-          let arrnum = [] as any;
-          let arrp = [] as any;
-          arrnum.push({
-            number_of_projects: ab.number_of_projects || 0,
-          });
-          arrp.push({
-            years_of_experience: ab.years_of_experience || 0,
-          });
-          // this.listOfcodes = {
-          //   number_of_projects: [ ...this.listOfcodes.number_of_projects, ...arrnum],
-          //   years_of_experience: [ ...this.listOfcodes.years_of_experience, ...arrp],
-          // } as any;
-
-          obj.number_of_projects.push({
-            number_of_projects: ab.number_of_projects || 0,
+        if (this.serviceTypes.length) {
+          this.formData.serviceType = this.serviceTypes.join(',');
+        }
+        this.formData.faq = formData['basic_form_fields']['faq'];
+        console.log(this.formData)
+        formData['building_codes'].forEach((b: any) => {
+          obj = {
+            code: b.name,
+            number_of_projects: [] as any,
+            years_of_experience: [] as any,
+          }
+          formData['building_codes'].forEach((ab: any) => {
+            let arrnum = [] as any;
+            let arrp = [] as any;
+            arrnum.push({
+              number_of_projects: ab.number_of_projects || 0,
+            });
+            arrp.push({
+              years_of_experience: ab.years_of_experience || 0,
+            });
+            // this.listOfcodes = {
+            //   number_of_projects: [ ...this.listOfcodes.number_of_projects, ...arrnum],
+            //   years_of_experience: [ ...this.listOfcodes.years_of_experience, ...arrp],
+            // } as any;
+  
+            obj.number_of_projects.push({
+              number_of_projects: ab.number_of_projects || 0,
+            })
+            obj.years_of_experience.push({
+              years_of_experience: ab.years_of_experience || 0
+            })
           })
-          obj.years_of_experience.push({
-            years_of_experience: ab.years_of_experience || 0
-          })
+          this.listOfcodes.number_of_projects.push(b.number_of_projects);
+          this.listOfcodes.years_of_experience.push(b.years_of_experience);
+          this.listOfBuildingCode.push(obj)
         })
-        this.listOfcodes.number_of_projects.push(b.number_of_projects);
-        this.listOfcodes.years_of_experience.push(b.years_of_experience);
-        this.listOfBuildingCode.push(obj)
-      })
-      console.log(this.selectedServices)
+        console.log(this.selectedServices)
+      }
     })
   }
 
