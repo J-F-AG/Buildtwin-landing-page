@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { forkJoin, retry } from 'rxjs';
+import { catchError, forkJoin, retry } from 'rxjs';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -213,7 +213,8 @@ export class VenderDetailsAarbeeComponent {
     services: [],
     serviceType: '',
     capabilityMatrix: [],
-    service_func_area: []
+    service_func_area: [],
+    sectors: [],
   } as any;
   isLoaded = false;
   selectedServices = [] as any;
@@ -493,6 +494,10 @@ export class VenderDetailsAarbeeComponent {
       this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${domain}`)
     ])
     .pipe(
+      catchError(err => {
+        this.showPageLoader = false;
+        return err;
+      }),
       retry(2)
     )
     .subscribe( async (res: any[]) => {
@@ -602,6 +607,7 @@ export class VenderDetailsAarbeeComponent {
       if (this.serviceTypes.length) {
         this.formData.serviceType = this.serviceTypes.join(',');
       }
+      this.formData.faq = formData['basic_form_fields']['faq'];
       console.log(this.formData)
       formData['building_codes'].forEach((b: any) => {
         obj = {
@@ -634,6 +640,7 @@ export class VenderDetailsAarbeeComponent {
         this.listOfcodes.years_of_experience.push(b.years_of_experience);
         this.listOfBuildingCode.push(obj)
       })
+      console.log(this.selectedServices)
     })
   }
 

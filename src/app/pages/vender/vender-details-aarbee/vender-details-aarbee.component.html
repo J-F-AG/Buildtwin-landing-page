@@ -219,8 +219,44 @@
                             Frequently Asked Questions about {{companyName}}
                         </div>
                         <div>
-                            
+                            <div *ngFor="let faq of formData?.faq">
+                                <div>Q: {{faq.Question}}</div>
+                                <div>A: {{faq.Answer}}</div>
+                            </div>
                         </div>
+                    </div>
+                    <div>
+                        <h4>Services, Building Code & Software</h4>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <div>
+                            <h6>Most popular services with Vendors</h6>
+                            <div *ngFor="let se of formData?.services">{{se.service_name}}</div>
+                        </div>
+                        <div class="flex space-around">
+                            <div>
+                                Services
+                                <div>
+                                    <div *ngFor="let se of selectedServices">
+                                        {{se.service_name}}
+                                        <div *ngFor="let s of se?.service_segments">
+                                            {{s}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                Sectors
+                            </div>
+                            <div>
+                                Software
+                            </div>
+                            <div>
+                                Codes
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        {{companyName}} 
                     </div>
                 </ng-container>
             </div>
