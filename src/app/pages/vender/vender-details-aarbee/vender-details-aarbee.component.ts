@@ -176,6 +176,10 @@ export class VenderDetailsAarbeeComponent {
   formData = {
     about: [],
     onsite: '',
+    directors: [],
+    highlightServices: [],
+    operations: [],
+    jointbids: false,
     companyDetails: {
       icon: '',
       company_description: '',
@@ -208,6 +212,7 @@ export class VenderDetailsAarbeeComponent {
     services: [],
     serviceType: '',
     capabilityMatrix: [],
+    service_func_area: []
   } as any;
   isLoaded = false;
   selectedServices = [] as any;
@@ -549,16 +554,26 @@ export class VenderDetailsAarbeeComponent {
       this.formData.engineers = formData['our_engineers'];
       this.companyName = formData['basic_form_fields']['company_name'];
       this.formData.services = res[0]['data']['services']
+      this.formData.directors = formData['basic_form_fields']['managing_director'];
+      this.formData.jointbids = formData['basic_form_fields']['joint_bids'];
+      this.formData.service_func_area = res[0]['data']['service_func_area'];
+      if (formData['basic_form_fields']['operations']) {
+        // this.formData.operations = JSON.parse(formData['basic_form_fields']['operations']);
+      }
       this.isLoaded = true;
       this.serviceSkills = [
         { id: 0, name: '' },
         ...res[0]['data']['service_func_area'],
       ];
+      this.formData.companyDetails.company_description = formData['basic_form_fields']['company_description'].replace(/(?:\r\n|\r|\n)/g, '<br>')
       formData['service_information'].forEach((s: any) => {
         // this.preSelectservices.push(s.name);
         let exist = this.serviceTypes.findIndex(a => a === s.service_type);
         if (exist === -1) {
           this.serviceTypes.push(s.service_type);
+        }
+        if (s.is_flagged) {
+          this.formData.highlightServices.push(s)
         }
         if (s.capability_matrix.length) {
           let obj = {} as any
