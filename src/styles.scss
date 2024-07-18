@@ -65,6 +65,17 @@ $buildtwin-theme: mat.define-light-theme((
     --fontSize: 15px;
     --fontSizeSmall: 12px;
     --paraFontSize: 17px;
+
+    // cockpitStylesVar
+
+    --color-theme: #886de0;    
+    --background-white: #ffffff;
+    --medium-global: "alliance_no.1medium";
+    --assistantBackgroundColor-global: #f8f8f8;
+    --semibold-global: "alliance_no.1semibold";
+    --border-color: #ECECEC;
+    --font-size-h6: 16px;
+
 }
 
 // Utilities CSS
@@ -626,6 +637,36 @@ img {
             }
         }
     }
+}
+
+// cockpit CSS
+
+.v-center-flex {
+    display: flex;
+    align-items: center;
+}
+.flex-justify {
+    display: flex;
+    justify-content: space-between;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    outline: none !important;
+    border: none;
+}
+ol, ul {
+    list-style: none;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* Max width 767px */

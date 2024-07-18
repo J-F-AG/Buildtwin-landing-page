@@ -1,0 +1,106 @@
+<div class="bookService">
+    <div class="bookServiceForm flex">
+        <div class="preCastWrapper">
+            <div class="flex groupField">
+                <div class="selectBox precastField">
+                    <div>
+                        <span class="title">Pre-Cast</span>
+                        <span class="selectedValue">{{selectedPrecastServices.label}}</span>
+                    </div>
+                    <app-bt-select [options]="precastServices" (selectedTabChange)="selectService($event)" [selectedInput]="selectedPrecastServices" ></app-bt-select>
+                </div>
+                <div class="selectBox precastField">
+                    <div>
+                        <span class="title">Pre-Cast</span>
+                        <span class="selectedValue v-center-flex"><lib-svg-icon [name]="selectedPrecast.svgName" [size]="26" [sizeH]="26"></lib-svg-icon>{{selectedPrecast.label}}</span>
+                    </div>
+                    <app-bt-select [options]="precastList" (selectedTabChange)="selectPrecast($event)" [selectedInput]="selectedPrecast" ></app-bt-select>
+                </div>
+            </div>
+        </div>
+        <div class="timeFrame">
+            <span class="smallHeading">Delivery Timeframe</span>
+            <div class="flex groupField">
+                <div class="selectBox dateField">
+                    <div>
+                        <span class="title">Start Date</span>
+                        <span class="selectedValue" *ngIf="selectDate">{{selectMonth}} {{selectDate}}, {{selectYear}}</span>
+                        <span class="selectedValue day"  *ngIf="selectDay">{{selectDay}}</span>
+                        <lib-svg-icon [name]="'calendar-icon'" [size]="16" [sizeH]="16"></lib-svg-icon>
+                    </div>
+                    <nz-date-picker [nzShowToday]="false" [(ngModel)]="startDate" (ngModelChange)="onStartDate($event)"></nz-date-picker>
+                </div>
+                <div class="selectBox dateField">
+                    <div>
+                        <span class="title">End Date</span>
+                        <span class="selectedValue" *ngIf="selectEndDate">{{selectEndMonth}} {{selectEndDate}}, {{selectEndYear}}</span>
+                        <span class="selectedValue day"  *ngIf="selectEndDay">{{selectEndDay}}</span>
+                        <lib-svg-icon [name]="'calendar-icon'" [size]="16" [sizeH]="16"></lib-svg-icon>
+                    </div>
+                    <nz-date-picker [nzShowToday]="false" [(ngModel)]="endDate" (ngModelChange)="onEndDate($event)"></nz-date-picker>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex-justify bookServiceFormBottom">
+        <!-- <div class="projectStartIn">
+            <span class="smallHeading">Project Start in</span>
+            <ul class="flex">
+                <li>
+                    <label class="smallHeading">
+                        <input type="radio" name="week" checked>
+                        <span></span>
+                        One Week
+                    </label>
+                </li>
+                <li>
+                    <label class="smallHeading">
+                        <input type="radio" name="week">
+                        <span></span>
+                        Two Week
+                    </label>
+                </li>
+                <li>
+                    <label class="smallHeading">
+                        <input type="radio" name="week">
+                        <span></span>
+                        Three Week
+                    </label>
+                </li>
+                <li>
+                    <label class="smallHeading">
+                        <input type="radio" name="week">
+                        <span></span>
+                        One Month
+                    </label>
+                </li>
+            </ul>
+        </div> -->
+
+        
+        <div class="v-center-flex groupField">
+            <div class="selectBox countryField">
+                <div class="v-center-flex">
+                    <img [src]="selectedCountry.image" width="29" height="29" alt="">
+                    <div>
+                        <span class="title">{{selectedCountry.label}}</span>
+                        <small>{{selectedCountry.currency}}</small>
+                    </div>
+                </div>
+                <app-bt-select [options]="countryArray" (selectedTabChange)="selectCountry($event)" [selectedInput]="selectedCountry" ></app-bt-select>
+            </div>
+            <div>
+                <label class="preQualified v-center-flex">
+                    <input type="checkbox" checked>
+                    <span></span>
+                    Pre-Qualified
+                </label>
+            </div>
+        </div>
+
+
+        <button class="tenderBtn" (click)="tenderWorkFunc()">
+            Tender work <lib-svg-icon [name]="'arrow-icon'" [size]="16" [sizeH]="18"></lib-svg-icon>
+        </button>
+    </div>
+</div>
