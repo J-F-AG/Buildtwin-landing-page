@@ -145,8 +145,10 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
 import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarbee2/social-wall/social-wall.component';
-
-
+import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { ModalPopupService } from './pages/vender/vender-details-aarbee/modal/modal.service';
+import { ModalComponent } from './pages/vender/vender-details-aarbee/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -282,8 +284,8 @@ import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarb
    VenderDetailsAarbeeComponent,
    VenderDetailsAarbeeOldComponent,
    AarbeeSocialWallOldComponent,
-   VenderDetailsAlliedComponent
-
+   VenderDetailsAlliedComponent,
+   ModalComponent
    
     
   ],
@@ -307,10 +309,13 @@ import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarb
     ReactiveFormsModule,
     HttpClientModule,
     NzSpinModule,
-    NzRateModule
+    NzRateModule,
+    NzProgressModule,
+    NzModalModule
   ],
   providers: [
-    Title
+    Title,
+    ModalPopupService
   ],
   bootstrap: [AppComponent]
 })

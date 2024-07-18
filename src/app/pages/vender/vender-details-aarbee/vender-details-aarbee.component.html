@@ -6,7 +6,7 @@
                 <ng-container *ngIf="isLoaded">
                     <div>
                         <div class="flex">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="101" height="20" viewBox="0 0 101 20" fill="none">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="101" height="20" viewBox="0 0 101 20" fill="none">
                                 <mask id="mask0_6810_1196" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="101"
                                     height="20">
                                     <rect width="101" height="20" fill="#836ED9" />
@@ -28,7 +28,8 @@
                                         d="M89.2443 1.976C89.4096 1.46715 90.1295 1.46715 90.2948 1.976L91.8907 6.88757C91.9646 7.11513 92.1767 7.26921 92.4159 7.26921H97.5803C98.1153 7.26921 98.3378 7.95385 97.9049 8.26833L93.7269 11.3039C93.5333 11.4445 93.4523 11.6938 93.5262 11.9213L95.1221 16.8329C95.2874 17.3418 94.7051 17.7649 94.2722 17.4504L90.0942 14.4149C89.9006 14.2743 89.6385 14.2743 89.4449 14.4149L85.2669 17.4504C84.834 17.7649 84.2516 17.3418 84.417 16.8329L86.0128 11.9213C86.0868 11.6938 86.0058 11.4445 85.8122 11.3039L81.6341 8.26833C81.2013 7.95385 81.4238 7.26921 81.9588 7.26921H87.1231C87.3624 7.26921 87.5745 7.11513 87.6484 6.88757L89.2443 1.976Z"
                                         fill="#886DE0" />
                                 </g>
-                            </svg>
+                            </svg> -->
+                            <nz-rate [ngModel]="formData.companyDetails.rating" nzDisabled></nz-rate>
                             <p>Premium Partner</p>
                         </div>
                         <div class="flex">
@@ -42,17 +43,133 @@
                             </div>
                         </div>
                     </div>
+                    <app-modal #modal>
+                        <div parent>
+                            <div class="flex">
+                                <div class="flex">
+                                    <div>
+                                        {{companyName}}
+                                    </div>
+                                    <nz-rate [ngModel]="formData.companyDetails.rating" nzDisabled></nz-rate>
+                                    <div *ngFor="let b of formData?.badges">
+                                        {{b.title}}
+                                        {{b.description}}
+                                    </div>
+                                </div>
+                                <div *ngFor="let project of formData.featuredProject.projects">
+                                    <div *ngFor="let pimg of project?.project_logo">
+                                        <p><img [src]="pimg" height="100" width="100" (click)="openModal(html, true, true, project)" />{{project.project_name}} in {{
+                                            project.project_region }}</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3>Engineering project for</h3>
+                                    <div *ngFor="let e of formData.engineeringData">
+                                        <img [src]="e.logo ? e.logo : 'assets/images/placeholder-image1.jpg'" alt="">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <div class="flex">
+                                            <img [src]="formData?.companyDetails.icon" alt="">
+                                            <span *ngFor="let dir of formData.directors">
+                                                <img [src]="dir.logo" height="50" width="50" />
+                                                {{dir.name}}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <h5>Company Highlights</h5>
+                                            <div>
+                                                <h5>Startup | Perfect for fast projects delivery</h5>
+                                                <span>HQ: {{formData.companyDetails.headquarter}}</span>
+                                                <span>{{formData.companyDetails.employees_count}}+ Employees</span>
+                                                <span>{{formData.companyDetails.reference_projects}}+ projects</span>
+                                                <span>{{formData.companyDetails.years_in_business}}+ in Business</span>
+                                            </div>
+                                            <div *ngIf="formData.additional_highlights.length">
+                                                <h4>{{formData?.additional_highlights[0].title}}</h4>
+                                                <ul>
+                                                    <li *ngFor="let c of formData?.additional_highlights[0].content">
+                                                        {{c}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div *ngIf="formData.jointbids">
+                                            Availabiliable for for Joint bids & Projects
+                                        </div>
+                                        <div>
+                                            <div *ngIf="formData.additional_highlights.length">
+                                                <h4>{{formData?.additional_highlights[1].title}}</h4>
+                                                <ul>
+                                                    <li *ngFor="let c of formData?.additional_highlights[1].content">
+                                                        {{c}}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4>Reviews</h4>
+                                            <div *ngFor="let review of formData.clientReviews">
+                                                <img [src]="review.provided_by_image" alt="">
+                                                {{review.description}}
+                                                {{review.provided_by_name}}
+                                                <img [src]="review.location_image" alt="">
+                                                {{review.location}}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h4>Rating</h4>
+                                            <div *ngFor="let c of formData.reviews">
+                                                {{c.title}} {{c.rating}}
+                                                <nz-progress [nzPercent]="c.rating" [nzShowInfo]="false"></nz-progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ng-container *ngIf="isChildModal">
+                                <app-modal #modal>
+                                    <div child>
+                                        {{selectedProject?.project_name}}
+                                        <div *ngFor="let pimg of selectedProject?.project_logo">
+                                            <p><img [src]="pimg" height="100" width="100" />{{selectedProject?.project_name}} in {{
+                                                selectedProject?.project_region }}</p>
+                                        </div>
+                                        <div>
+                                            {{selectedProject?.project_name}}
+                                            {{selectedProject?.project_region}}
+                                        </div>
+                                        <div>
+                                            Description
+                                            {{selectedProject?.project_description}}
+                                        </div>
+                                    </div>
+                                </app-modal>
+                            </ng-container>
+                            <!-- <button (click)="openModal(html, true, true)">Open Modal</button> -->
+                        </div>
+                    </app-modal>
                     <div class="flex">
-                        <div *ngFor="let project of formData.featuredProject.projects">
-                            <p><img [src]="project.project_logo" height="100" width="100" />{{project.project_name}} in {{
-                                project.project_region }}</p>
+                        <div *ngFor="let project of highlightImges; let i = index">
+                            <div *ngFor="let pimg of project?.project_logo">
+                                <p>
+                                    <ng-container *ngIf="i < 6">
+                                        <img [src]="pimg" height="100" width="100" />{{project.project_name}} in {{ project.project_region }}
+                                    </ng-container>
+                                    <ng-container *ngIf="i === 6">
+                                        <div *ngIf="i === 6">+{{imageLeftOutCount}}</div>
+                                        <img [src]="pimg" (click)="openModal(html, true, false, null)" height="100" width="100" />{{project.project_name}} in {{ project.project_region }}
+                                    </ng-container>
+                                </p>
+                            </div>
                         </div>
                         <div>
                             <div>
                                 <div class="flex">
                                     <img [src]="formData?.companyDetails.icon" alt="">
                                     <span *ngFor="let dir of formData.directors">
-                                      <img [src]="dir.logo" height="50" width="50"  />
+                                        <img [src]="dir.logo" height="50" width="50" />
                                         {{dir.name}}
                                     </span>
                                 </div>
@@ -108,7 +225,7 @@
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, exercitationem?</p>
                         </div>
                         <div>
-                            <div class="flex" *ngFor="let func of formData.service_func_area">
+                            <div class="flex" *ngFor="let func of formData.sectors">
                                 {{func.name}}
                             </div>
                         </div>
@@ -138,7 +255,8 @@
                         <div>
                             <div class="flex">
                                 <h4>Available Services for Direct Booking</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, exercitationem?</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, exercitationem?
+                                </p>
                             </div>
                             <div>
                                 <div *ngFor="let e of formData.engineeringData">
@@ -147,46 +265,48 @@
                             </div>
                         </div>
                         <div>
-                            <div >
+                            <div>
                                 <table>
                                     <tr>
-                                      <th>Service</th>
-                                      <th>Software</th>
-                                      <th>Building Code</th>
-                                      <th>Service Add</th>
-                                      <th></th>
+                                        <th>Service</th>
+                                        <th>Software</th>
+                                        <th>Building Code</th>
+                                        <th>Service Add</th>
+                                        <th></th>
                                     </tr>
                                     <tr *ngFor="let service of serviceTypes">
-                                      <td>
-                                        <div>
-                                            <h4>{{service.service_type}}</h4>
-                                            <u>
-                                                <li *ngFor="let block of service?.special_feature_titles">{{block}}</li>
-                                            </u>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <select>
-                                            <option>Autodesk</option>
-                                        </select>
+                                        <td>
+                                            <div>
+                                                <h4>{{service.service_type}}</h4>
+                                                <u>
+                                                    <li *ngFor="let block of service?.special_feature_titles">{{block}}
+                                                    </li>
+                                                </u>
+                                            </div>
                                         </td>
-                                      <td>
-                                        <select>
-                                            <option value="">Please select</option>
-                                            <option *ngFor="let code of formData?.buildingCode"> {{code.name}}</option>
-                                        </select>
-                                      </td>
-                                      <td>
-                                        <div>
-                                            <p *ngFor="let addon of service?.addon_titles">{{addon}}</p>
-                                        </div>
-                                      </td>
-                                      <td>
-                                        Start enquiry
-                                      </td>
+                                        <td>
+                                            <select>
+                                                <option>Autodesk</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select>
+                                                <option value="">Please select</option>
+                                                <option *ngFor="let code of formData?.buildingCode"> {{code.name}}
+                                                </option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <p *ngFor="let addon of service?.addon_titles">{{addon}}</p>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            Start enquiry
+                                        </td>
                                     </tr>
-                                  </table>
-                                  
+                                </table>
+
                             </div>
                         </div>
                     </div>
@@ -228,7 +348,40 @@
                         </div>
                     </div>
                     <div>
-                        <h4>Client Reviews</h4>
+                        <div>
+                            <h4>Client Reviews</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, illo.</p>
+                        </div>
+                        <div>
+                            {{verifiedReview.rating}}
+                            {{verifiedReview.state}}
+                            <span>{{verifiedReview.reviewerCount}} verified reviews</span>
+                        </div>
+                        <div>
+                            <h4>Categories:</h4>
+                            <div>
+                                <div *ngFor="let c of formData.reviews">
+                                    {{c.title}} {{c.rating}}
+                                    <nz-progress [nzPercent]="c.rating" [nzShowInfo]="false"></nz-progress>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>See what clients loves most:</h4>
+                            <div>
+                                <div *ngFor="let review of formData.clientReviews">
+                                    <img [src]="review.provided_by_image" alt="">
+                                    
+                                    {{review.provided_by_name}}
+                                    <div>
+                                        <img [src]="review.location_image" alt="">
+                                        {{review.location}}
+                                        {{review.description}}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         see what client love about
@@ -265,7 +418,7 @@
                             </div>
                             <div>
                                 Sectors
-                                <div *ngFor="let sector of formData?.sectors">
+                                <div *ngFor="let sector of formData?.service_func_area">
                                     {{sector.name}}
                                 </div>
                             </div>
@@ -310,7 +463,7 @@
                                     {{formData?.companyDetails.compliance_contact}}
                                 </div>
                             </div>
-                           
+
                             <div class="flex">
                                 <div>
                                     PI Liability

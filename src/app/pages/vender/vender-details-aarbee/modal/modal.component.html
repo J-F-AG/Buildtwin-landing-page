@@ -1,0 +1,9 @@
+<div #myModal class="modal-container">
+    <div class="modal-content">
+      <!-- <div class="content" [innerHTML]="html"></div> -->
+      <ng-content select="[parent]"></ng-content>
+      <ng-content select="[child]"></ng-content>
+      <button (click)="close()">Close</button>
+    </div>
+    </div>
+    
