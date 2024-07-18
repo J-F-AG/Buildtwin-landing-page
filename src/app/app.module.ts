@@ -153,7 +153,14 @@ import { NzRateModule } from 'ng-zorro-antd/rate';
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
 import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarbee2/social-wall/social-wall.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { BookServicesHeaderComponent } from './pages/Home/hd-banner-tabs/book-services-header/book-services-header.component';
 
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { BtSelectModule } from 'buildtwin-library-ux/bt-select';
+// import { BtIconModule } from 'buildtwin-library-ux/bt-icon';
+import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
+import { NZ_ICONS } from 'ng-zorro-antd/icon';
+import { BtIconModule } from 'projects/bt-icon/bt-icon.module';
 
 
 @NgModule({
@@ -180,6 +187,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
    HdBannerNewComponent,
    HdTrustedByComponent,
    HdSolutionProviderComponent,
+   BookServicesHeaderComponent,
 
    HappierCustomersComponent,
    HowProcessComponent,
@@ -293,13 +301,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
    VenderDetailsAarbeeComponent,
    VenderDetailsAarbeeOldComponent,
    AarbeeSocialWallOldComponent,
-   VenderDetailsAlliedComponent
+   VenderDetailsAlliedComponent,
+   HdBannerTabsComponent,
 
    
     
   ],
   imports: [    
-   HdBannerTabsComponent,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -319,11 +327,18 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     ReactiveFormsModule,
     HttpClientModule,
     NzSpinModule,
-    NzRateModule
+    NzRateModule,
+    BtSelectModule,
+    BtIconModule,
+    NzDatePickerModule,
+    MatTabsModule, 
+    MatIconModule
   ],
   providers: [
     Title,
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    { provide: NZ_I18N, useValue: en_US },
+    // { provide: NZ_ICONS, useValue: icons },
   ],
   bootstrap: [AppComponent]
 })

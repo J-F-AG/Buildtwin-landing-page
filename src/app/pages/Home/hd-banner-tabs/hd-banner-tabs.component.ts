@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatTabsModule} from '@angular/material/tabs';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { getDate } from 'date-fns';
 
 @Component({
   selector: 'app-hd-banner-tabs',
-  standalone: true,
   templateUrl: './hd-banner-tabs.component.html',
-  styleUrl: './hd-banner-tabs.component.scss',
-  imports: [MatTabsModule, MatIconModule],
+  styleUrls: ['./hd-banner-tabs.component.scss']
 })
-export class HdBannerTabsComponent {
+export class HdBannerTabsComponent implements OnInit {
 
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }
