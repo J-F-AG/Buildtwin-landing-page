@@ -161,7 +161,11 @@ import { BtSelectModule } from 'buildtwin-library-ux/bt-select';
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { NZ_ICONS } from 'ng-zorro-antd/icon';
 import { BtIconModule } from 'projects/bt-icon/bt-icon.module';
+import { HdServicesComponent } from './pages/Home/hd-services/hd-services.component';
 
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { HdDiscoverProjectsComponent } from './pages/Home/hd-discover-projects/hd-discover-projects.component';
+import { HdWhyBuildtwinComponent } from './pages/Home/hd-why-buildtwin/hd-why-buildtwin.component';
 
 @NgModule({
   declarations: [
@@ -303,8 +307,9 @@ import { BtIconModule } from 'projects/bt-icon/bt-icon.module';
    AarbeeSocialWallOldComponent,
    VenderDetailsAlliedComponent,
    HdBannerTabsComponent,
-
-   
+   HdServicesComponent,
+   HdDiscoverProjectsComponent,
+   HdWhyBuildtwinComponent
     
   ],
   imports: [    
@@ -332,7 +337,8 @@ import { BtIconModule } from 'projects/bt-icon/bt-icon.module';
     BtIconModule,
     NzDatePickerModule,
     MatTabsModule, 
-    MatIconModule
+    MatIconModule,
+    NzCarouselModule
   ],
   providers: [
     Title,

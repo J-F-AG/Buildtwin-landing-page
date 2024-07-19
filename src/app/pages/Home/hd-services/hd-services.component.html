@@ -1,0 +1,55 @@
+<div class="sectionContainer">
+    <div class="container">
+    <div class="abs-d">
+        <img src="assets/images/dots.png" width="269" height="306" alt="">
+    </div>
+    <div class="sectionTop">
+        <h1 class="heading">Services</h1>
+        <div class="assistant">
+            <img src="assets/images/avatar.svg" alt="avatar">
+            <div class="assitWrapper">
+                <div>Need help?</div>
+                <a href="#" class="link">Talk to our Advisors</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="sectionMid">
+        <div class="content">
+            The Best way to procure<br>
+            Technical Teams across The Globe
+        </div>
+        <button class="themeButton bookServicesButton">
+            Book Services
+        </button>
+    </div>
+    <div class="sectionBottom">
+        <div class="headerCarousel">
+            <nz-carousel [nzDots]="false">
+                <div nz-carousel-content *ngFor="let subServiceArray of discoverServices">
+
+                    <div class="carouselWrapper">
+                        <!-- <lib-svg-icon [name]="rightArrow-icon" class="leftslideButton" (click)="prev()" [size]="88"
+                            [sizeH]="88">
+                        </lib-svg-icon> -->
+                        <ng-container *ngFor=" let item of subServiceArray">
+                            <div class="cardWrapper">
+                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                                <div class="detail">
+                                    {{item.name}}
+                                </div>
+                            </div>
+                        </ng-container>
+                        <!-- <lib-svg-icon [name]="rightArrow-icon" class="rightslideButton" (click)="next()" [size]="88"
+                            [sizeH]="88">
+                        </lib-svg-icon> -->
+                    </div>
+                </div>
+            </nz-carousel>
+
+
+
+        </div>
+    </div>
+</div>
+</div>
