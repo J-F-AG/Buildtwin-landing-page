@@ -57,6 +57,7 @@ $buildtwin-theme: mat.define-light-theme((
     --whiteColor: #ffffff;
     --borderColor: #ececec;
     --backgroundColor: #f9f9f9;
+    --secondaryBackgroundColor: #F5F5F5;
     --fontSize: 15px;
     --fontSizeSmall: 12px;
     --paraFontSize: 17px;
@@ -262,6 +263,22 @@ img {
 }
 
 // Default Btn
+.button-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .default-btn.mdc-button {
+        margin-top: 0;
+        padding: 9px 0px 8px 0px;
+        text-align: center;
+    }
+    .buttonV2 {
+        padding: 9px 0px 8px 0px;
+        border-radius: 4px;
+        line-height: 1.15;
+        text-align: center;
+    }
+}
 .buttonV2 {
     border-radius: 40px;
     border: 1px solid #886DE0;

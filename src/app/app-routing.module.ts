@@ -28,6 +28,7 @@ import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-mol
 import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
 import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-allied/vender-details-allied.component';
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
+import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
 
 
 
@@ -56,6 +57,7 @@ const routes: Routes = [
     {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
     {path: 'vender-details/:id', component: VenderDetailsAarbeeComponent},
     {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-ui', component: VenderDetailsUiComponent},
     {path: 'details', component: VenderDetailsAarbeeOldComponent},
     {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
     {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
