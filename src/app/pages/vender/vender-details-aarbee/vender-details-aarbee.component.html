@@ -155,9 +155,11 @@
                             stroke="#886DE0" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     Offices in <span *ngFor="let site of formData.onsite; let i = index">{{site}}<ng-container
-                            *ngIf="i < (formData.onsite.lenngth - 1)">,</ng-container> </span>
+                            *ngIf="i < (formData.onsite.length - 1)">,</ng-container> </span>
                 </div>
             </div>
+            
+        
             <div class="right">
                 <div class="badge-wrapper">
                     <div class="badge" *ngFor="let b of formData?.badges" [ngStyle]="{'background-color': b?.badge_color?.background, 'border-color': b?.badge_color?.outline}">
@@ -263,7 +265,7 @@
                                 </figcaption>
                             </ng-container>
                         </figure>
-                        <figure *ngIf="i==6" (click)="openModal(html, true, false, null)">
+                        <figure *ngIf="i==6" (click)="showModal('parent')">
                             <img src="assets/images/image3.png" alt="image3" width="232" height="223">
                             <!-- <img [src]="pimg" alt="project.project_name" width="325" height="258"
                                         class="abs-image"> -->
@@ -494,7 +496,118 @@
         </div>
     </div>
 
-
+    <!-- <button nz-button (click)="showModal('parent')"><span>Show Modal</span></button> -->
+    <nz-modal [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+      <ng-container *nzModalContent>
+        
+        <!-- <button nz-button (click)="showModal('child')"><span>Show Modal</span></button> -->
+        <div parent>
+            <div class="flex">
+                <div class="flex">
+                    <div>
+                        {{companyName}}
+                    </div>
+                    <nz-rate [ngModel]="formData.companyDetails.rating" nzDisabled></nz-rate>
+                    <div *ngFor="let b of formData?.badges">
+                        {{b.title}}
+                        {{b.description}}
+                    </div>
+                </div>
+                <div *ngFor="let project of formData.featuredProject.projects">
+                    <div *ngFor="let pimg of project?.project_logo">
+                        <p><img [src]="pimg" height="100" width="100"
+                            (click)="showModal('child')" />{{project.project_name}} in {{
+                            project.project_region }}</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Engineering project for</h3>
+                    <div *ngFor="let e of formData.engineeringData">
+                        <img [src]="e.logo ? e.logo : 'assets/images/placeholder-image1.jpg'" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="flex">
+                            <img [src]="formData?.companyDetails.icon" alt="">
+                            <span *ngFor="let dir of formData.directors">
+                                <img [src]="dir.logo" height="50" width="50" />
+                                {{dir.name}}
+                            </span>
+                        </div>
+                        <div>
+                            <h5>Company Highlights</h5>
+                            <div>
+                                <h5>Startup | Perfect for fast projects delivery</h5>
+                                <span>HQ: {{formData.companyDetails.headquarter}}</span>
+                                <span>{{formData.companyDetails.employees_count}}+ Employees</span>
+                                <span>{{formData.companyDetails.reference_projects}}+ projects</span>
+                                <span>{{formData.companyDetails.years_in_business}}+ in Business</span>
+                            </div>
+                            <div *ngIf="formData.additional_highlights.length">
+                                <h4>{{formData?.additional_highlights[0].title}}</h4>
+                                <ul>
+                                    <li *ngFor="let c of formData?.additional_highlights[0].content">
+                                        {{c}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div *ngIf="formData.jointbids">
+                            Availabiliable for for Joint bids & Projects
+                        </div>
+                        <div>
+                            <div *ngIf="formData.additional_highlights.length">
+                                <h4>{{formData?.additional_highlights[1].title}}</h4>
+                                <ul>
+                                    <li *ngFor="let c of formData?.additional_highlights[1].content">
+                                        {{c}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Reviews</h4>
+                            <div *ngFor="let review of formData.clientReviews">
+                                <img [src]="review.provided_by_image" alt="">
+                                {{review.description}}
+                                {{review.provided_by_name}}
+                                <img [src]="review.location_image" alt="">
+                                {{review.location}}
+                            </div>
+                        </div>
+                        <div>
+                            <h4>Rating</h4>
+                            <div *ngFor="let c of formData.reviews">
+                                {{c.title}} {{c.rating}}
+                                <nz-progress [nzPercent]="c.rating" [nzShowInfo]="false"></nz-progress>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nz-modal [(nzVisible)]="isVisiblechild" nzTitle="The first Modal" (nzOnCancel)="handleCancelChild()" (nzOnOk)="handleOkChild()">
+                <ng-container *nzModalContent>
+                    <div child>
+                        {{selectedProject?.project_name}}
+                        <div *ngFor="let pimg of selectedProject?.project_logo">
+                            <p><img [src]="pimg" height="100" width="100" />{{selectedProject?.project_name}} in {{
+                                selectedProject?.project_region }}</p>
+                        </div>
+                        <div>
+                            {{selectedProject?.project_name}}
+                            {{selectedProject?.project_region}}
+                        </div>
+                        <div>
+                            Description
+                            {{selectedProject?.project_description}}
+                        </div>
+                    </div>
+                </ng-container>
+              </nz-modal>
+        </div>
+      </ng-container>
+    </nz-modal>
     <div class="secondaryBg qualified-partner block-section">
         <div class="container">
             <h2>

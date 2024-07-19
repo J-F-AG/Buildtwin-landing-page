@@ -248,6 +248,7 @@ export class VenderDetailsAarbeeComponent {
   html: HTMLElement | string = '<h1>TEST!</h1>';
   isParentModal = false;
   isChildModal = false;
+  isVisiblechild = false;
   selectedProject = {
     project_name: '',
     project_logo: [],
@@ -467,8 +468,13 @@ export class VenderDetailsAarbeeComponent {
       window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
     }
   }
-  showModal(): void {
-    this.isVisible = true;
+  showModal(type): void {
+    if (type === 'parent') {
+      this.isVisible = true;
+    }
+    if (type === 'child') {
+      this.isVisiblechild = true;
+    }
   }
 
   handleOk(): void {
@@ -479,6 +485,15 @@ export class VenderDetailsAarbeeComponent {
   handleCancel(): void {
     console.log('Button cancel clicked!');
     this.isVisible = false;
+  }
+  handleOkChild(): void {
+    console.log('Button ok clicked!');
+    this.isVisiblechild = false;
+  }
+
+  handleCancelChild(): void {
+    console.log('Button cancel clicked!');
+    this.isVisiblechild = false;
   }
 
   ngOnInit() {
