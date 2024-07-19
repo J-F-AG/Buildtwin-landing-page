@@ -11,7 +11,6 @@ import { ModalPopupService } from './modal/modal.service';
   styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-aarbee.component.scss']
 })
 export class VenderDetailsAarbeeComponent {
-
   ourEngineers = [
     {
       img: "assets/images/aarbee/profile1.jpg",
@@ -257,7 +256,7 @@ export class VenderDetailsAarbeeComponent {
   };
   highlightImges = [];
   imageLeftOutCount = 0;
-
+  currentFaq: any = 'faq0'
   constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService) {
 
     this.getBusinessListing();
@@ -334,20 +333,15 @@ export class VenderDetailsAarbeeComponent {
   }
 
 
+  
   aboutSlider: OwlOptions = {
     items: 1,
     nav: true,
     margin: 0,
     dots: true,
     loop: true,
-    autoplay: false,
-    autoWidth: true,
+    autoplay: true,
     autoplayHoverPause: false,
-    navText: [
-      "<i class='ti ti-chevron-left'></i>",
-      "<i class='ti ti-chevron-right'></i>",
-    ]
-
   }
 
 
@@ -608,7 +602,12 @@ export class VenderDetailsAarbeeComponent {
               formData['featured_projects'].forEach(a => {
                 a.project_logo = JSON.parse(a.project_logo);
               });
-              this.highlightImges = formData['featured_projects'];
+              // this.highlightImges = formData['featured_projects'];
+              for (let i = 0; i < 3; i++) {
+                formData['featured_projects'].forEach(item => {
+                  this.highlightImges.push(item);
+                });
+              }
               this.formData.featuredProject.projects = formData['featured_projects'];
             }
 
@@ -668,7 +667,7 @@ export class VenderDetailsAarbeeComponent {
           this.formData.engineeringData = formData['basic_form_fields']['engineering_project_name'];
           this.formData.additional_highlights = formData['basic_form_fields']['additional_highlights'];
           if (formData['basic_form_fields']['operations']) {
-            this.formData.operations = JSON.parse(formData['basic_form_fields']['operations']);
+            this.formData.operations = formData['basic_form_fields']['operations'];
           }
           this.isLoaded = true;
           this.serviceSkills = [
@@ -695,7 +694,8 @@ export class VenderDetailsAarbeeComponent {
                   if (matrix.fucntion_area_featured) {
                     this.formData.sectors.push({
                       name: name[0].name,
-                      id: name[0].id
+                      id: name[0].id,
+                      sector_image: name[0].sector_image
                     });
                   }
                 }
@@ -760,5 +760,11 @@ export class VenderDetailsAarbeeComponent {
         }
       })
   }
-
+  tabbing2(index){
+    if(this.currentFaq == index){
+      this.currentFaq = ''
+    }else {
+      this.currentFaq = index
+    }
+  }
 }

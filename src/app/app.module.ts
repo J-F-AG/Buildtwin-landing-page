@@ -149,6 +149,9 @@ import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { ModalPopupService } from './pages/vender/vender-details-aarbee/modal/modal.service';
 import { ModalComponent } from './pages/vender/vender-details-aarbee/modal/modal.component';
+import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
+
+
 
 @NgModule({
   declarations: [
@@ -282,6 +285,7 @@ import { ModalComponent } from './pages/vender/vender-details-aarbee/modal/modal
    VenderDetailsCaldimComponent,
    VenderDetailsMoldtekComponent,
    VenderDetailsAarbeeComponent,
+   VenderDetailsUiComponent,
    VenderDetailsAarbeeOldComponent,
    AarbeeSocialWallOldComponent,
    VenderDetailsAlliedComponent,
