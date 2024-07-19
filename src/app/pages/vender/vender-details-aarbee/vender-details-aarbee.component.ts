@@ -602,12 +602,12 @@ export class VenderDetailsAarbeeComponent {
               formData['featured_projects'].forEach(a => {
                 a.project_logo = JSON.parse(a.project_logo);
               });
-              // this.highlightImges = formData['featured_projects'];
-              for (let i = 0; i < 3; i++) {
-                formData['featured_projects'].forEach(item => {
-                  this.highlightImges.push(item);
-                });
-              }
+              this.highlightImges = formData['featured_projects'];
+              // for (let i = 0; i < 3; i++) {
+              //   formData['featured_projects'].forEach(item => {
+              //     this.highlightImges.push(item);
+              //   });
+              // }
               this.formData.featuredProject.projects = formData['featured_projects'];
             }
 
