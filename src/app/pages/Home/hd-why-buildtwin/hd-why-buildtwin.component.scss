@@ -1,3 +1,5 @@
+.whyBuildtwinSection{padding: 40px 0 0;}
+
 .title {
     font-family: var(--medium-global);
   }
@@ -38,8 +40,12 @@
   }
   .sectionHead {
     text-align: start;
-    font-size: 27px;
-    font-family: var(--semibold-global);
+      .title{
+      font-size: 40px;
+      font-family: var(--semibold-global);
+      font-weight: 600;
+      }
+      .subTitle{font-size: 16px;}
   }
   .bodyWrapper {
     margin: 15px 20px 28px 20px;

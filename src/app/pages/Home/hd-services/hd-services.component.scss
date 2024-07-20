@@ -1,15 +1,20 @@
 .sectionContainer {
-    max-height: 500px;
+    min-height: 500px;
     position: relative;
+    background-color: var(--assistantBackgroundColor-global);
+    padding: 82px 0;
   }
   .sectionTop {
     display: flex;
+    position: relative;
+    z-index: 2;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     .heading {
       font-size: 40px;
       font-weight: 600;
+      margin-bottom: 0;
     }
     .assistant {
       display: flex;
@@ -29,22 +34,20 @@
     }
   }
   .sectionMid {
-    text-align: start;
-    font-size: 30px;
-    font-weight: 400;
-    max-width: 491px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    .content{
+      font-size: 16px; font-weight: 500;
+    }
     .bookServicesButton {
-      padding: 10px;
-      width: 197px;
+      padding: 14px 18px;
       margin-top: 15px;
+      display: flex;
+      align-items: center;
+      span{padding-right: 50px;}
     }
   }
   .sectionBottom {
     width: 100%;
-    margin: 40px 0 0;
+    margin: 48px 0 0;
     position: relative;
     bottom: 0;
     z-index: 10;
@@ -123,4 +126,5 @@
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 1;
   }
