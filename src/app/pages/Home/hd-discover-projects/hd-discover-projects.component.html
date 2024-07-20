@@ -1,0 +1,66 @@
+<section class="discoverProjectsSection">
+    <div class="container">
+    <div class="sectionHeader">
+        <lib-svg-icon class="icon" [name]="'discover-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
+        <div class="heading">
+            <div class="title">Discover Projects from Vendors</div>
+            <div class="subTitle">40+ Projects listed</div>
+        </div>
+    </div>
+    <div class="sectionContent">
+        <nz-carousel [nzDots]="false">
+            <div nz-carousel-content *ngFor="let subProjectArray of discoverProjects">
+
+                <div class="cardContainer">
+                    <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
+                        [sizeH]="88">
+                    </lib-svg-icon>
+                    <ng-container *ngFor=" let item of subProjectArray">
+                        <div class="projectCard">
+
+                            <img src="{{item.img}}" class="projectImage" alt="cardImage">
+                            <div class="projectHighlight">
+                                <div class="projectCategory">{{item.category}}</div>
+                                <div class="projectName">{{item.projectTitle}}</div>
+                                <div class="company">
+                                    <img src="assets/images/ellipse.png" alt="icon">
+                                    <div class="companyName">
+                                        {{item.company}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="serviceCompanyDetails">
+                                <div class="serviceCompany">
+                                    <img src="{{item.serviceCompanyIcon}}" width="{{item.width}}" height="{{item.height}}" alt="serviceCompanyIcons">
+                                    <div class="companyName">{{item.serviceCompany}}</div>
+                                </div>
+
+                                <div class="companyDetails">
+                                    <div class="title">Rendered Services
+                                    </div>
+                                    <div class="service">
+                                        {{item.serviceDescription}}
+                                    </div>
+                                </div>
+
+                                <div class="cardFooter">
+                                    <a href="#"> Learn More about GPC
+                                        Engineering</a>
+                                    <lib-svg-icon class="arrowIcon" [name]="'arrow-icon'" [size]="14"
+                                        [sizeH]="22"></lib-svg-icon>
+                                </div>
+                            </div>
+
+                        </div>
+                    </ng-container>
+                    <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
+                        [sizeH]="88">
+                    </lib-svg-icon>
+                </div>
+
+            </div>
+        </nz-carousel>
+    </div>
+    </div>
+</section>

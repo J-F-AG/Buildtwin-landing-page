@@ -1,17 +1,3 @@
-.integration-box {
-    padding: 30px 25px 40px;
-    margin-bottom: 25px;
-    border-radius: 4px;
-    background-color: var(--whiteColor);
-    border: 1px solid var(--borderColor);
-    box-shadow: 0px 0px 30px rgba(87, 84, 255, 0.08);
-}
-
-::ng-deep {
-    .integrations-area-list {
-        
-    }
-}
 
 :host ::ng-deep .owl-nav {
     display: block!important;
@@ -39,17 +25,17 @@
     position: absolute;
     right: auto;
     bottom: auto;
-    left: -3px;
-    top: 50%;
+    left: 10px;
+    top: 62%;
     transform: translateY(-50%) rotate(-90deg);
     transform-origin: left;
 }
 :host ::ng-deep .owl-theme .owl-nav [class*=owl-next]{    
     position: absolute;
-    right: -3px;
+    right: 10px;
     bottom: auto;
     left: auto;
-    top: 50%;
+    top: 62%;
     transform: translateY(-50%) rotate(90deg);
     transform-origin: right;
 }
@@ -77,16 +63,32 @@
 
 
 .integrations-area.ptb-75 {
-    padding-bottom: 63px;
-    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-top: 50px;
+}
+
+
+.integrations-area .plugWrapper{display: flex;
+    .hd-section-title { width: 110px;
+        h2{ font-size: 25px; color: #9278E3; margin-top: 25px;
+            strong{display: block;}
+        }
+    }
+    .integrations-area-list{flex: 1; overflow: hidden;}
+    
+}
+
+::ng-deep .plugWrapper .owl-stage-outer{  position: relative;
+    &::after,&::before{content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 80px; z-index: 2;
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%);}
+    &::after{left: auto; right: 0;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%);  
+    }
 }
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
-    .integration-box {
-        padding: 25px 15px;
-    }
 
 }
 
@@ -96,27 +98,15 @@
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
-    .integration-box {
-        padding: 30px 20px;
-    }
-
 }
 
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
-    .integration-box {
-        padding: 30px 15px;
-    }
-
 }
 
 /* Min width 1200px to Max width 1399px */
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-
-    .integration-box {
-        padding: 35px 20px;
-    }
 
 }
 
@@ -125,20 +115,8 @@
 
 
 @media (max-width:950px){
-    .integrations-area-list .owl-stage-outer {
-        margin: 0;
-    }
+
 }
 @media  (max-width: 767px) {
-    .integrations-area-list::before{
-        display: none;
-    }
-    .integrations-area.ptb-75 {
-        padding-bottom: 40px;
-        padding-top: 70px;
-    }
 
-    .integrations-area.ptb-75 {
-        padding-top: 0;
-    }
 }

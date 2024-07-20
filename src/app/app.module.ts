@@ -10,6 +10,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +40,12 @@ import { HdFooterComponent } from './pages/includes/hd-footer/hd-footer.componen
 import { ThreeColMarketComponent } from './pages/includes/three-col-market/three-col-market.component';
 // import { HdBannerComponent } from './pages/Home/hd-banner/hd-banner.component';
 import { HdBannerNewComponent } from './pages/Home/hd-banner-new/hd-banner-new.component';
+import { HdBannerTabsComponent } from './pages/Home/hd-banner-tabs/hd-banner-tabs.component';
+import { HdTrustedByComponent } from './pages/Home/hd-trusted-by/hd-trusted-by.component';
+import { HdSolutionProviderComponent } from './pages/Home/hd-solution-provider/hd-solution-provider.component';
+
+
+
 import { HappierCustomersComponent } from './pages/Home/happier-customers/happier-customers.component';
 import { HdIntegrationsComponent } from './pages/includes/hd-integrations/hd-integrations.component';
 import { HowProcessComponent } from './pages/Home/how-process/how-process.component';
@@ -150,8 +157,20 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
 import { ModalPopupService } from './pages/vender/vender-details-aarbee/modal/modal.service';
 import { ModalComponent } from './pages/vender/vender-details-aarbee/modal/modal.component';
 import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { BookServicesHeaderComponent } from './pages/Home/hd-banner-tabs/book-services-header/book-services-header.component';
 
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { BtSelectModule } from 'buildtwin-library-ux/bt-select';
+// import { BtIconModule } from 'buildtwin-library-ux/bt-icon';
+import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
+import { NZ_ICONS } from 'ng-zorro-antd/icon';
+import { BtIconModule } from 'projects/bt-icon/bt-icon.module';
+import { HdServicesComponent } from './pages/Home/hd-services/hd-services.component';
 
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { HdDiscoverProjectsComponent } from './pages/Home/hd-discover-projects/hd-discover-projects.component';
+import { HdWhyBuildtwinComponent } from './pages/Home/hd-why-buildtwin/hd-why-buildtwin.component';
 
 @NgModule({
   declarations: [
@@ -175,6 +194,10 @@ import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vende
    HelpDeskHomeComponent,
   //  HdBannerComponent,
    HdBannerNewComponent,
+   HdTrustedByComponent,
+   HdSolutionProviderComponent,
+   BookServicesHeaderComponent,
+
    HappierCustomersComponent,
    HowProcessComponent,
    HdAboutComponent,
@@ -289,11 +312,15 @@ import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vende
    VenderDetailsAarbeeOldComponent,
    AarbeeSocialWallOldComponent,
    VenderDetailsAlliedComponent,
-   ModalComponent
+   ModalComponent,
    
+   HdBannerTabsComponent,
+   HdServicesComponent,
+   HdDiscoverProjectsComponent,
+   HdWhyBuildtwinComponent
     
   ],
-  imports: [
+  imports: [    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -314,12 +341,21 @@ import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vende
     HttpClientModule,
     NzSpinModule,
     NzRateModule,
+    BtSelectModule,
+    BtIconModule,
+    NzDatePickerModule,
+    MatTabsModule, 
+    MatIconModule,
+    NzCarouselModule,
     NzProgressModule,
     NzModalModule
   ],
   providers: [
     Title,
-    ModalPopupService
+    ModalPopupService,
+    provideAnimationsAsync(),
+    { provide: NZ_I18N, useValue: en_US },
+    // { provide: NZ_ICONS, useValue: icons },
   ],
   bootstrap: [AppComponent]
 })

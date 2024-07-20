@@ -25,6 +25,15 @@
 }
 
 @font-face {
+    font-family: 'alliance_no.1medium';
+    src: url('../fonts/AllianceNo1-Medium.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Alliance No1';
     src: url('../fonts/AllianceNo1-Light.woff2') format('woff2'),
         url('../fonts/AllianceNo1-Light.woff') format('woff');
@@ -40,6 +49,15 @@
     font-weight: 600;
     font-style: normal;
     font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'alliance_no.1semibold';
+    src: url('../fonts/AllianceNo1-SemiBold.woff2') format('woff2'),
+        url('../fonts/AllianceNo1-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {

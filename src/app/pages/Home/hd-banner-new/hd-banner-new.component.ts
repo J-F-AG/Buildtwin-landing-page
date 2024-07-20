@@ -24,6 +24,6 @@ export class HdBannerNewComponent {
     dots: true,
     loop: true,
     autoplay: true,
-    autoplayHoverPause: false,
+    autoplayHoverPause: false
   }
 }
