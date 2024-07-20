@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { retry } from 'rxjs';
+import { catchError, retry } from 'rxjs';
 
 @Component({
   selector: 'app-tt-partners',
@@ -19,6 +19,10 @@ export class TtPartnersComponent {
     this.showPageLoader = true;
     this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`)
     .pipe(
+      catchError(err => {
+        this.showPageLoader = false;
+        return err;
+      }),
       retry(2)
     )
     .subscribe(res => {

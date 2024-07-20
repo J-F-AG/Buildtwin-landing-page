@@ -152,6 +152,11 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzRateModule } from 'ng-zorro-antd/rate';
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
 import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarbee2/social-wall/social-wall.component';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { ModalPopupService } from './pages/vender/vender-details-aarbee/modal/modal.service';
+import { ModalComponent } from './pages/vender/vender-details-aarbee/modal/modal.component';
+import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BookServicesHeaderComponent } from './pages/Home/hd-banner-tabs/book-services-header/book-services-header.component';
 
@@ -303,9 +308,12 @@ import { HdWhyBuildtwinComponent } from './pages/Home/hd-why-buildtwin/hd-why-bu
    VenderDetailsCaldimComponent,
    VenderDetailsMoldtekComponent,
    VenderDetailsAarbeeComponent,
+   VenderDetailsUiComponent,
    VenderDetailsAarbeeOldComponent,
    AarbeeSocialWallOldComponent,
    VenderDetailsAlliedComponent,
+   ModalComponent,
+   
    HdBannerTabsComponent,
    HdServicesComponent,
    HdDiscoverProjectsComponent,
@@ -338,10 +346,13 @@ import { HdWhyBuildtwinComponent } from './pages/Home/hd-why-buildtwin/hd-why-bu
     NzDatePickerModule,
     MatTabsModule, 
     MatIconModule,
-    NzCarouselModule
+    NzCarouselModule,
+    NzProgressModule,
+    NzModalModule
   ],
   providers: [
     Title,
+    ModalPopupService,
     provideAnimationsAsync(),
     { provide: NZ_I18N, useValue: en_US },
     // { provide: NZ_ICONS, useValue: icons },
