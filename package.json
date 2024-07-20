@@ -23,6 +23,7 @@
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "boxicons": "^2.1.4",
+    "buildtwin-library-ux": "^0.0.206",
     "lightgallery": "^2.7.2",
     "ng-zorro-antd": "^17.4.1",
     "ngx-countup": "^13.1.0",
