@@ -3,7 +3,7 @@
     <div class="abs-d">
         <img src="assets/images/dots.png" width="269" height="306" alt="">
     </div>
-    <div class="sectionTop">
+    <div class="sectionTop" data-aos="fade-up" data-aos-duration="500">
         <h1 class="heading">Services</h1>
         <div class="assistant">
             <img src="assets/images/avatar.svg" alt="avatar">
@@ -14,24 +14,23 @@
 
         </div>
     </div>
-    <div class="sectionMid">
+    <div class="sectionMid"  data-aos="fade-up" data-aos-duration="500"  data-aos-delay="100">
         <div class="content">
-            The Best way to procure<br>
-            Technical Teams across The Globe
+            The best way to procure pre-qualified technical teams across the globe.
         </div>
         <button class="themeButton bookServicesButton">
-            Book Services
+            <span>Book Services</span> <lib-svg-icon [name]="'arrow-icon'" [size]="16" [sizeH]="18"></lib-svg-icon>
         </button>
     </div>
-    <div class="sectionBottom">
+    <div class="sectionBottom" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="200">
         <div class="headerCarousel">
             <nz-carousel [nzDots]="false">
                 <div nz-carousel-content *ngFor="let subServiceArray of discoverServices">
 
                     <div class="carouselWrapper">
-                        <!-- <lib-svg-icon [name]="rightArrow-icon" class="leftslideButton" (click)="prev()" [size]="88"
+                        <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
                             [sizeH]="88">
-                        </lib-svg-icon> -->
+                        </lib-svg-icon>
                         <ng-container *ngFor=" let item of subServiceArray">
                             <div class="cardWrapper">
                                 <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
@@ -40,9 +39,9 @@
                                 </div>
                             </div>
                         </ng-container>
-                        <!-- <lib-svg-icon [name]="rightArrow-icon" class="rightslideButton" (click)="next()" [size]="88"
+                        <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
                             [sizeH]="88">
-                        </lib-svg-icon> -->
+                        </lib-svg-icon>
                     </div>
                 </div>
             </nz-carousel>
