@@ -345,7 +345,7 @@ export class VenderDetailsAarbeeComponent {
     margin: 0,
     dots: true,
     loop: true,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: false,
   }
 
@@ -479,8 +479,8 @@ export class VenderDetailsAarbeeComponent {
     if (type === 'child') {
       this.isVisiblechild = true;
     }
-    if (project) {
-      this.selectedProject = project;
+    if(project){
+      this.selectedProject = project
     }
   }
 

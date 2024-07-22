@@ -4,7 +4,8 @@
     .mat-mdc-tab-labels{ background: var(--assistantBackgroundColor-global);
       .mat-mdc-tab{display: inline-block !important; flex: initial !important; height: 64px !important;
         font-size: 18px; font-weight: 600; padding: 0px 90px; letter-spacing: normal !important;
-        .mat-mdc-tab .mdc-tab-indicator__content--underline{ color: var(--color-theme) !important; }
+        .mdc-tab__text-label{color: black;}
+        .mat-mdc-tab .mdc-tab-indicator__content--underline{ border-color: var(--color-theme) !important; }
       }
     }
   }

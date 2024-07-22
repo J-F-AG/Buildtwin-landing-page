@@ -1,4 +1,7 @@
 
+::ng-deep .plugWrapper .owl-carousel .owl-item img{ width: 174px; }
+
+
 :host ::ng-deep .owl-nav {
     display: block!important;
 }
@@ -69,8 +72,8 @@
 
 
 .integrations-area .plugWrapper{display: flex;
-    .hd-section-title { width: 110px;
-        h2{ font-size: 25px; color: #9278E3; margin-top: 25px;
+    .hd-section-title { width: 157px;
+        h2{ font-size: 25px; color: #9278E3; margin-top: 25px; text-transform: uppercase;
             strong{display: block;}
         }
     }
@@ -79,10 +82,10 @@
 }
 
 ::ng-deep .plugWrapper .owl-stage-outer{  position: relative;
-    &::after,&::before{content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 80px; z-index: 2;
-        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,0) 100%);}
+    &::after,&::before{content: ""; position: absolute; left: 0; top: 0; height: 100%; width: 150px; z-index: 2;
+        background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,0) 100%);}
     &::after{left: auto; right: 0;
-        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%);  
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(255,255,255,1) 100%);  
     }
 }
 

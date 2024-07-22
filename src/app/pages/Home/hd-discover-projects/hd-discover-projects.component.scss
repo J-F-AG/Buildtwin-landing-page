@@ -3,11 +3,11 @@
   
   .discoverProjectsSection ::ng-deep {
     .slick-list, .slick-slide, .slick-track, .slick-slide {
-      max-height: 600px;
+      // max-height: 600px;
     }
   }
   .discoverProjectsSection {
-    padding: 82px 0;
+    padding: 82px 0 65px;
     background: var(--assistantBackgroundColor-global);
   
     .sectionHeader {
@@ -31,7 +31,9 @@
         font-weight: 400;
       }
     }
-    .sectionContent {
+    .sectionContent { 
+      max-height: 540px;
+      overflow: hidden;
       .cardContainer {
         display: flex;
         // gap: 23px;
@@ -53,8 +55,8 @@
         }
       }
       .projectCard {
-        width: 413px;
-        min-width: 413px;
+        width: 353px;
+        min-width: 353px;
         margin-right: 28px;
         background: #ffffff;
         border-radius: 7px;

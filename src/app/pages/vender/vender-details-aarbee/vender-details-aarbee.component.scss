@@ -4,6 +4,12 @@
 figure {
     margin: 0;
 }
+.align-item-center {
+    align-items: center;
+}
+strong {
+    font-weight: 700;
+}
 h2 {
     color: #0e0e28;
     font-family: var(--fontFamily);
@@ -150,8 +156,8 @@ ul {
             li {
                 position: relative;
                 color: var(--themeColor);
+                margin: 0;
                 .ant-rate-star-second {
-                    position: absolute;
                     left: 0;
                     top: 0;
                 }
@@ -205,6 +211,12 @@ ul {
     display: flex;
     gap: 16px;
     padding-bottom: 20px;
+    &.child {
+        padding: 17px;
+        .image-wrapper {
+            flex-grow: 1;
+        }
+    }
 }
 .image-wrapper {
     display: flex;
@@ -225,11 +237,13 @@ ul {
     .bottom {
         display: flex;
         gap: 11px;
+        flex-wrap: wrap;
     }
     figure {
         background: #ccc;
         position: relative;
         margin: 0;
+        overflow: hidden;
         .abs-image {
             position: absolute;
             left: 50%;
@@ -403,12 +417,17 @@ ul {
     .qualified-list {
         gap: 18px;
         display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -120px;
         .block {
             flex-grow: 1;
             box-shadow: 0px 1.731px 13.845px rgba(0, 0, 0, 0.06);
             border-radius: 10px;
             padding-top: 2px;
-            max-width: 25%;
+            max-width: calc(25% - 18px);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 120px;
             figure {
                 background: url(../../../../assets/images/figure-bg.png) repeat;
                 height: 163px;
@@ -428,6 +447,7 @@ ul {
                 gap: 7px;
                 background: white;
                 border-radius: 0 0 10px 10px;
+                flex-grow: 1;
                 h5 {
                     margin-bottom: 0;
                     color: #000;
@@ -467,10 +487,12 @@ ul {
 .specialised-item-list {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
     .block {
         display: flex;
         flex-direction: column;
         gap: 14px;
+        width: 214.052px;
         figure {
             border: 3.526px solid #fff;
             box-shadow: 0px 3.205px 25.64px rgba(0, 0, 0, 0.2);
@@ -478,7 +500,9 @@ ul {
             img {
                 display: block;
                 aspect-ratio: 192.812 / 251.278;
-                width: 100%;
+                width: 207px;
+                min-width: 207px;
+                max-width: 207px;
             }
         }
         figcaption {
@@ -732,7 +756,7 @@ ul {
     }
     ::ng-deep {
         .owl-carousel .owl-stage {
-            display: flex;
+            // display: flex;
         }
         .owl-prev {
             position: absolute;
@@ -813,6 +837,20 @@ ul {
 /*
     Client review css start
 */
+.info {
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 187.5% */
+    span {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+}
 #client-review {
     .review {
         display: flex;
@@ -855,20 +893,6 @@ ul {
             display: flex;
             flex-direction: column;
             width: calc(33.3% - 12.66px);
-        }
-        .info {
-            display: flex;
-            justify-content: space-between;
-            color: #000;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 30px; /* 187.5% */
-            span {
-                display: flex;
-                gap: 10px;
-                align-items: center;
-            }
         }
         ::ng-deep {
             .ant-progress-inner {
@@ -1160,7 +1184,7 @@ ul {
             line-height: 30px; /* 166.667% */
         }
         .blur {
-            filter: blur(25px)
+            filter: blur(4px)
         }
         .abs {
             border-radius: 8px;
@@ -1185,4 +1209,85 @@ ul {
             }
         }
     }
+}
+
+.popup-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #E7E7E7;
+    gap: 30px;
+    .logo-name {
+        color: #000;
+        font-family: var(--fontFamily);
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+::ng-deep .profile-image-modal {
+    .ant-modal-body {
+        padding: 0;
+    }
+    .ant-modal-content {
+        border-radius: 10px;
+    }
+}
+.gap16 {
+    gap: 16px;
+}
+.review-section {
+    .profile-wrapper {
+        display: flex;
+        gap: 8px;
+        color: #0E0E28;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 16.8px */
+    }
+    .pt-8 {
+        padding-top: 8px;
+    }
+    .mb-10 {
+        margin-bottom: 10px;
+    }
+    .profile-image {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .country {
+        display: flex;
+        gap: 6px;
+        color: #0E0E28;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 14.4px */
+    }
+    .country-image {
+        min-width: 15px;
+    }
+}
+
+.child {
+    .bottom {
+        margin-bottom: 10px;
+    }
+    h6 {
+        background: none;
+        padding: 0;
+        color: inherit;
+    }
+    .info {
+    font-size: 14px;
+}}
+.engineeringData {
+    display: flex;
+    flex-wrap: wrap;
 }
