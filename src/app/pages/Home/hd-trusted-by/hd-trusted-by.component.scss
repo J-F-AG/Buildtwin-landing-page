@@ -2,9 +2,9 @@
     &.grayBg{background-color: #F8F8F8;}
 }
 
-::ng-deep .owl-carousel .owl-item img{ width: auto; display: initial;}
+::ng-deep .trustedby-wrapper .owl-carousel .owl-item img{ width: auto; display: initial;}
 
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-] {
+:host ::ng-deep .trustedby-wrapper .owl-theme .owl-nav [class*=owl-] {
     right: 0 ;
     z-index: 99 ;
     width: 47px ;
@@ -19,7 +19,7 @@
     padding: 0;
     position: relative;
 }
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-prev]{    
+:host ::ng-deep .trustedby-wrapper .owl-theme .owl-nav [class*=owl-prev]{    
     position: absolute;
     right: auto;
     bottom: auto;
