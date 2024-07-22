@@ -468,12 +468,15 @@ export class VenderDetailsAarbeeComponent {
       window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
     }
   }
-  showModal(type): void {
+  showModal(type, project?): void {
     if (type === 'parent') {
       this.isVisible = true;
     }
     if (type === 'child') {
       this.isVisiblechild = true;
+    }
+    if(project){
+      this.selectedProject = project
     }
   }
 
