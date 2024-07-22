@@ -55,7 +55,7 @@
                         </svg></a>
                 </div>
             </ng-container>
-            <nz-spin  [nzSize]="'large'" nzTip="Loading..." *ngIf="showPageLoader"> </nz-spin>
+            <nz-skeleton *ngIf="showPageLoader"></nz-skeleton>
 
             <!-- <div class="col">
                 <div class="imgwRap">

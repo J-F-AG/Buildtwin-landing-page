@@ -150,8 +150,8 @@ ul {
             li {
                 position: relative;
                 color: var(--themeColor);
+                margin: 0;
                 .ant-rate-star-second {
-                    position: absolute;
                     left: 0;
                     top: 0;
                 }
@@ -403,12 +403,17 @@ ul {
     .qualified-list {
         gap: 18px;
         display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -120px;
         .block {
             flex-grow: 1;
             box-shadow: 0px 1.731px 13.845px rgba(0, 0, 0, 0.06);
             border-radius: 10px;
             padding-top: 2px;
-            max-width: 25%;
+            max-width: calc(25% - 18px);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 120px;
             figure {
                 background: url(../../../../assets/images/figure-bg.png) repeat;
                 height: 163px;
@@ -428,6 +433,7 @@ ul {
                 gap: 7px;
                 background: white;
                 border-radius: 0 0 10px 10px;
+                flex-grow: 1;
                 h5 {
                     margin-bottom: 0;
                     color: #000;
@@ -467,10 +473,12 @@ ul {
 .specialised-item-list {
     display: flex;
     gap: 24px;
+    flex-wrap: wrap;
     .block {
         display: flex;
         flex-direction: column;
         gap: 14px;
+        width: 214.052px;
         figure {
             border: 3.526px solid #fff;
             box-shadow: 0px 3.205px 25.64px rgba(0, 0, 0, 0.2);
@@ -478,7 +486,9 @@ ul {
             img {
                 display: block;
                 aspect-ratio: 192.812 / 251.278;
-                width: 100%;
+                width: 207px;
+                min-width: 207px;
+                max-width: 207px;
             }
         }
         figcaption {
@@ -732,7 +742,7 @@ ul {
     }
     ::ng-deep {
         .owl-carousel .owl-stage {
-            display: flex;
+            // display: flex;
         }
         .owl-prev {
             position: absolute;
@@ -1160,7 +1170,7 @@ ul {
             line-height: 30px; /* 166.667% */
         }
         .blur {
-            filter: blur(25px)
+            filter: blur(4px)
         }
         .abs {
             border-radius: 8px;
