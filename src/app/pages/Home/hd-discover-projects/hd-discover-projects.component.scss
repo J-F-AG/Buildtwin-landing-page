@@ -7,22 +7,23 @@
     }
   }
   .discoverProjectsSection {
-    padding: 30px 22px 0;
-    background: #fafafa;
+    padding: 82px 0;
+    background: var(--assistantBackgroundColor-global);
   
     .sectionHeader {
       display: flex;
       align-items: flex-start;
+      margin-bottom: 35px;
       .icon {
         padding-top: 0;
       }
       .title {
-        font-size: 27px;
+        font-size: 40px;
         font-family: var(--semibold-global);
       }
       .subTitle {
-        padding-top: 4px;
         display: block;
+        font-size: 16px;
       }
       .subTile {
         margin: 5px 0;
@@ -31,12 +32,10 @@
       }
     }
     .sectionContent {
-      height: 614px;
       .cardContainer {
         display: flex;
         // gap: 23px;
         justify-content: space-between;
-        padding: 20px;
         position: relative;
   
         .leftslideButton {
@@ -54,9 +53,9 @@
         }
       }
       .projectCard {
-        width: 365px;
-        min-width: 365px;
-        margin-right: 16px;
+        width: 413px;
+        min-width: 413px;
+        margin-right: 28px;
         background: #ffffff;
         border-radius: 7px;
         box-shadow: 0px 12.022px 17.174px 0px rgba(44, 44, 44, 0.06);
@@ -141,6 +140,7 @@
           font-size: 14px;
           display: flex;
           justify-content: space-between;
+          a{color: var(--color-theme)}
         }
       }
     }

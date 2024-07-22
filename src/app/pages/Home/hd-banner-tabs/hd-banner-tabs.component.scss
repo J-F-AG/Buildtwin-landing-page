@@ -1,9 +1,17 @@
-.bannerTabs{
-  margin-top: -48px;
+::ng-deep .bannerTabs{
+  margin-top: -64px;
+  .noTabs{
+    .mat-mdc-tab-labels{ background: var(--assistantBackgroundColor-global);
+      .mat-mdc-tab{display: inline-block !important; flex: initial !important; height: 64px !important;
+        font-size: 18px; font-weight: 600; padding: 0px 90px; letter-spacing: normal !important;
+        .mat-mdc-tab .mdc-tab-indicator__content--underline{ color: var(--color-theme) !important; }
+      }
+    }
+  }
 }
 ::ng-deep .mat-mdc-tab-labels{ border-radius: 8px 8px 0px 0px; overflow: hidden;
   .mdc-tab.mdc-tab--active{background: var(--background-white);}
-  .mdc-tab{background: var(--assistantBackgroundColor-global);}
+  // .mdc-tab{background: var(--assistantBackgroundColor-global);}
   }
 
 ::ng-deep .mat-mdc-tab-body-wrapper{border-radius: 0px 0px 8px 8px;
