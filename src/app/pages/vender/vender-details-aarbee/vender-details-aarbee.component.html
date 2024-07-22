@@ -401,8 +401,9 @@
                                     </svg>
                                 </i>
                                 <span>
-                                    {{formData.companyDetails.reference_projects}}+ projects <span
-                                        class="color">(Verified)</span>
+                                    {{formData.companyDetails.reference_projects}}+ projects 
+                                    <!-- <span
+                                        class="color">(Verified)</span> -->
                                 </span>
                             </li>
                             <li>
@@ -694,9 +695,6 @@
                         Get the worl class {{companyName}}
                     </h3>
                     <p [innerHtml]="formData.companyDetails?.company_description ">
-                        Sublime Structures is a virtual construction modeling service provider specializing in
-                        Structural/Miscellaneous, Ornamental Steel and Duct / Plate work Detailing and Designing. We
-                        offer our services to the Construction Industry and its associated areas. 
                     </p>
                     <div class="digitalised-operation">
                         <h6>
@@ -725,7 +723,7 @@
                     </small>
                 </h2>
                 <div class="flex" *ngFor="let e of formData.engineeringData">
-                    <img [src]="e.logo ? e.logo : 'assets/images/placeholder-image1.jpg'" alt="" width="252"
+                    <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" alt="" width="252"
                         height="73">
                 </div>
             </div>
@@ -927,7 +925,7 @@
                             {{c.rating}}
                         </span>
                     </div>
-                    <nz-progress [nzPercent]="c.rating" [nzShowInfo]="false"></nz-progress>
+                    <nz-progress [nzPercent]="c.rating" [nzStrokeColor]="c.color" [nzShowInfo]="false"></nz-progress>
                 </div>
             </div>
 
@@ -1212,4 +1210,5 @@
     </div>
 </div>
 
-<nz-spin [nzSize]="'large'" nzTip="Loading..." *ngIf="showPageLoader"> </nz-spin>
+<!-- <nz-spin [nzSize]="'large'" nzTip="Loading..." *ngIf="showPageLoader"> </nz-spin> -->
+<nz-skeleton *ngIf="showPageLoader"></nz-skeleton>

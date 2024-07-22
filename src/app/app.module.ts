@@ -171,6 +171,7 @@ import { HdServicesComponent } from './pages/Home/hd-services/hd-services.compon
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { HdDiscoverProjectsComponent } from './pages/Home/hd-discover-projects/hd-discover-projects.component';
 import { HdWhyBuildtwinComponent } from './pages/Home/hd-why-buildtwin/hd-why-buildtwin.component';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 
 @NgModule({
   declarations: [
@@ -348,7 +349,8 @@ import { HdWhyBuildtwinComponent } from './pages/Home/hd-why-buildtwin/hd-why-bu
     MatIconModule,
     NzCarouselModule,
     NzProgressModule,
-    NzModalModule
+    NzModalModule,
+    NzSkeletonModule
   ],
   providers: [
     Title,
