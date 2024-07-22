@@ -3,11 +3,11 @@
   
   .discoverProjectsSection ::ng-deep {
     .slick-list, .slick-slide, .slick-track, .slick-slide {
-      max-height: 600px;
+      // max-height: 600px;
     }
   }
   .discoverProjectsSection {
-    padding: 82px 0;
+    padding: 82px 0 0;
     background: var(--assistantBackgroundColor-global);
   
     .sectionHeader {
