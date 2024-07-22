@@ -847,7 +847,7 @@
             <h2>
                 Qualified Partner
                 <small>
-                    {{companyName}} is a qualified partner in many areas
+                    <strong>{{companyName}}</strong> has achieved pre-qualification status while meeting the high BuildTwin standards
                 </small>
             </h2>
 
@@ -860,8 +860,17 @@
                         <h5>
                             {{b.title}}
                         </h5>
-                        <p>
-                            {{b.description}}
+                        <p *ngIf="b.title == 'AI Quality Management'">
+                            {{companyName}} has qualified to work with the AI quality scheme
+                        </p>
+                        <p *ngIf="b.title == 'Live Tracking'">
+                            {{companyName}} supports live AI tracking of your projects
+                        </p>
+                        <p *ngIf="b.title == 'Verified Vendor'">
+                            {{companyName}} is a verified partner
+                        </p>
+                        <p *ngIf="b.title == 'Commercially Pre Qualified'">
+                            {{companyName}} is commercially pre-qualified
                         </p>
 
                         <div class="button-wrap">
@@ -882,7 +891,7 @@
             <h2>
                 Specialised Sector
                 <small>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    <strong>{{companyName}}'s</strong> technical competency and experience cover multiple sectors
                 </small>
             </h2>
             <div class="specialised-item-list">
@@ -904,12 +913,12 @@
             <h2>
                 Services
                 <small>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Design and Detailing Services
                 </small>
             </h2>
 
             <div class="service-flex">
-                <div class="left">
+                <div class="left" *ngIf="formData?.highlightServices?.length">
                     <ul class="list">
                         <li *ngFor="let h of formData.highlightServices">
                             <img [src]="h['service_icon']" alt="" width="32" height="32">
@@ -952,7 +961,7 @@
                 <h2>
                     Available Service for Direct Booking
                     <small>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Unlock the BuildTwin advantage
                     </small>
                 </h2>
                 <div class="flex" *ngFor="let e of formData.engineeringData">
@@ -1124,7 +1133,7 @@
             <h2>
                 Client Reviews
                 <small>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Learn more about what clients say about <strong>{{companyName}}</strong>
                 </small>
             </h2>
 
@@ -1232,7 +1241,7 @@
             <h2>
                 Services, Building Code & Software
                 <small>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Service Portfolio, Sectors of Expertise, Software and Codes Capabilities
                 </small>
             </h2>
             <div class="popular">
@@ -1346,7 +1355,7 @@
             <h2>
                 {{companyName}} &nbsp; {{formData?.companyDetails.headquarter}} Policy
                 <small>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    the policies at a glance
                 </small>
             </h2>
             <div class="policy-list">
@@ -1355,22 +1364,22 @@
                         Business Hours
                     </div>
                     <div class="block">
-                        Commercial Contact
+                        Commercial Contact 
                     </div>
                     <div class="block">
-                        Complience Contact
+                        IT / Compliance  Contact 
                     </div>
                     <div class="block">
-                        PI Liability
+                        PI Liability Insurance 
                     </div>
                     <div class="block">
-                        Third Party Mediation
+                        Third-Party Mediation
                     </div>
                     <div class="block">
-                        Verified License
+                        Verified License 
                     </div>
                     <div class="block">
-                        Tax ID
+                        Tax ID 
                     </div>
                 </div>
                 <div class="content">
