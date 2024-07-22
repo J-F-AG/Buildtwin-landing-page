@@ -7,7 +7,7 @@
     }
   }
   .discoverProjectsSection {
-    padding: 82px 0 0;
+    padding: 82px 0 65px;
     background: var(--assistantBackgroundColor-global);
   
     .sectionHeader {
@@ -31,7 +31,9 @@
         font-weight: 400;
       }
     }
-    .sectionContent {
+    .sectionContent { 
+      max-height: 540px;
+      overflow: hidden;
       .cardContainer {
         display: flex;
         // gap: 23px;
