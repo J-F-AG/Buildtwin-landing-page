@@ -7,6 +7,9 @@ figure {
 .align-item-center {
     align-items: center;
 }
+strong {
+    font-weight: 700;
+}
 h2 {
     color: #0e0e28;
     font-family: var(--fontFamily);
@@ -240,6 +243,7 @@ ul {
         background: #ccc;
         position: relative;
         margin: 0;
+        overflow: hidden;
         .abs-image {
             position: absolute;
             left: 50%;
