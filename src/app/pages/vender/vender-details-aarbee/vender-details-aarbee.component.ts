@@ -719,49 +719,52 @@ export class VenderDetailsAarbeeComponent {
                   { id: 0, name: '' },
                   ...res[0]['data']['service_func_area'],
                 ];
-                this.formData.companyDetails.company_description = formData['basic_form_fields']['company_description'].replace(/(?:\r\n|\r|\n)/g, '<br>')
-                formData['service_information'].forEach((s: any) => {
-                  // this.preSelectservices.push(s.name);
-                  let exist = this.serviceTypes.findIndex(a => a.service_type === s.service_type);
-                  if (exist === -1) {
-                    this.serviceTypes.push(s);
-                  }
-                  if (s.service_featured) {
-                    this.formData.highlightServices.push(s)
-                  }
-                  s.service_segments = JSON.parse(s.service_segments);
-                  if (s.capability_matrix.length) {
-                    let obj = {} as any;
-                    s.capability_matrix.forEach(matrix => {
-                      let mat = this.formData.sectors.findIndex(a => a.id === matrix.functional_area_id);
-                      if (mat === -1) {
-                        let name = this.serviceSkills.filter(a => a.id === matrix.functional_area_id);
-                        if (matrix.fucntion_area_featured) {
-                          this.formData.sectors.push({
-                            name: name[0].name,
-                            id: name[0].id,
-                            sector_image: name[0].sector_image
-                          });
+                this.formData.companyDetails.company_description = formData['basic_form_fields']['company_description'].replace(/(?:\r\n|\r|\n)/g, '<br>');
+                if (formData['service_information'] && formData['service_information'].length) {
+                  formData['service_information'].forEach((s: any) => {
+                    // this.preSelectservices.push(s.name);
+                    // let exist = this.serviceTypes.findIndex(a => a.service_type === s.service_type);
+                    // if (exist === -1) {
+                      this.serviceTypes.push(s);
+                      
+                    // }
+                    if (s.service_featured) {
+                      this.formData.highlightServices.push(s)
+                    }
+                    s.service_segments = JSON.parse(s.service_segments);
+                    if (s.capability_matrix.length) {
+                      let obj = {} as any;
+                      s.capability_matrix.forEach(matrix => {
+                        let mat = this.formData.sectors.findIndex(a => a.id === matrix.functional_area_id);
+                        if (mat === -1) {
+                          let name = this.serviceSkills.filter(a => a.id === matrix.functional_area_id);
+                          if (matrix.fucntion_area_featured) {
+                            this.formData.sectors.push({
+                              name: name[0].name,
+                              id: name[0].id,
+                              sector_image: name[0].sector_image
+                            });
+                          }
                         }
-                      }
-                    })
-                    obj['functional_areas'] = JSON.parse(JSON.stringify(this.serviceSkills.filter((a: any) => a.id !== 0)));
-                    obj['functional_areas'].forEach((val: any) => {
-                      let d = s.capability_matrix.filter((ab: any) => ab.functional_area_id === val.id);
-      
-                      if (d.length) {
-                        val.isChecked = true;
-                      } else {
-                        val.isChecked = false;
-                      }
-                    });
-                    this.selectedServices.push({
-                      ...s,
-                      ...obj,
-                      service_name: s.name
-                    })
-                  }
-                });
+                      })
+                      obj['functional_areas'] = JSON.parse(JSON.stringify(this.serviceSkills.filter((a: any) => a.id !== 0)));
+                      obj['functional_areas'].forEach((val: any) => {
+                        let d = s.capability_matrix.filter((ab: any) => ab.functional_area_id === val.id);
+        
+                        if (d.length) {
+                          val.isChecked = true;
+                        } else {
+                          val.isChecked = false;
+                        }
+                      });
+                      this.selectedServices.push({
+                        ...s,
+                        ...obj,
+                        service_name: s.name
+                      })
+                    }
+                  });
+                }
                 let obj = {
                   code: '',
                   number_of_projects: [] as any,
