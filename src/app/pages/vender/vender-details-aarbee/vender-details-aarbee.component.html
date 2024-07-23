@@ -42,7 +42,7 @@
                             <span>{{formData.companyDetails.reference_projects}}+ projects</span>
                             <span>{{formData.companyDetails.years_in_business}}+ in Business</span>
                         </div>
-                        <div *ngIf="formData.additional_highlights.length">
+                        <div *ngIf="formData?.additional_highlights?.length">
                             <h4>{{formData?.additional_highlights[0].title}}</h4>
                             <ul>
                                 <li *ngFor="let c of formData?.additional_highlights[0].content">
@@ -51,11 +51,11 @@
                             </ul>
                         </div>
                     </div>
-                    <div *ngIf="formData.jointbids">
+                    <div *ngIf="formData?.jointbids">
                         Availabiliable for for Joint bids & Projects
                     </div>
                     <div>
-                        <div *ngIf="formData.additional_highlights.length">
+                        <div *ngIf="formData?.additional_highlights?.length">
                             <h4>{{formData?.additional_highlights[1].title}}</h4>
                             <ul>
                                 <li *ngFor="let c of formData?.additional_highlights[1].content">
@@ -428,7 +428,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="block" *ngIf="formData.additional_highlights.length">
+                <div class="block" *ngIf="formData?.additional_highlights?.length">
                     <header class="head">
                         {{formData?.additional_highlights[0].title}}
                     </header>
@@ -474,7 +474,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="block" *ngIf="formData.additional_highlights.length">
+                <div class="block" *ngIf="formData?.additional_highlights?.length">
                     <header class="head">
                         {{formData?.additional_highlights[1].title}}
                     </header>
@@ -691,7 +691,7 @@
                             </div>
                         </div>
 
-                        <div class="block" *ngIf="formData.additional_highlights.length">
+                        <div class="block" *ngIf="formData?.additional_highlights?.length">
                             <header class="head">
                                 {{formData?.additional_highlights[0].title}}
                             </header>
@@ -742,7 +742,7 @@
                         </div>
 
 
-                        <div class="block" *ngIf="formData.additional_highlights.length">
+                        <div class="block" *ngIf="formData?.additional_highlights?.length">
                             <header class="head">
                                 {{formData?.additional_highlights[1].title}}
                             </header>
@@ -992,7 +992,7 @@
                     <tr *ngFor="let service of serviceTypes; let idx = index">
                         <td>
                             <h5>
-                                {{service.service_type}}
+                                {{service.name}}
                             </h5>
                             <ul class="list with-icon">
                                 <li *ngFor="let block of service?.special_feature_titles">
