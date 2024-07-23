@@ -233,6 +233,7 @@ export class VenderDetailsAarbeeComponent {
     years_of_experience: [] as any
   } as any;
   serviceTypes = [];
+  showAlservices = true;
 
   filteredProjects = this.projects;
   serviceSkills = [] as any;
@@ -245,6 +246,7 @@ export class VenderDetailsAarbeeComponent {
     state: ''
   };
   isVisible = false;
+  userSelectedSectors = [];
   html: HTMLElement | string = '<h1>TEST!</h1>';
   isParentModal = false;
   isChildModal = false;
@@ -726,18 +728,25 @@ export class VenderDetailsAarbeeComponent {
                     // let exist = this.serviceTypes.findIndex(a => a.service_type === s.service_type);
                     // if (exist === -1) {
                       this.serviceTypes.push(s);
-                      
+
                     // }
-                    if (s.service_featured) {
-                      this.formData.highlightServices.push(s)
-                    }
+                   
                     s.service_segments = JSON.parse(s.service_segments);
                     if (s.capability_matrix.length) {
                       let obj = {} as any;
                       s.capability_matrix.forEach(matrix => {
+                        let exist = this.formData.highlightServices.findIndex(a => a.id === s.id);
+                        if (matrix.fucntion_area_featured && exist === -1) {
+                          this.formData.highlightServices.push(s)
+                        }
                         let mat = this.formData.sectors.findIndex(a => a.id === matrix.functional_area_id);
                         if (mat === -1) {
                           let name = this.serviceSkills.filter(a => a.id === matrix.functional_area_id);
+                          this.userSelectedSectors.push({
+                            name: name[0].name,
+                            id: name[0].id,
+                            sector_image: name[0].sector_image
+                          })
                           if (matrix.fucntion_area_featured) {
                             this.formData.sectors.push({
                               name: name[0].name,
@@ -807,6 +816,9 @@ export class VenderDetailsAarbeeComponent {
                     this.listOfBuildingCode.push(obj)
                   })
                 }
+              }
+              if (this.formData.highlightServices && this.formData.highlightServices.length > 7) {
+                this.showAlservices = false;
               }
               this.showPageLoader = false;
             })
