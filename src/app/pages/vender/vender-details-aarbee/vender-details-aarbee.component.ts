@@ -684,6 +684,7 @@ export class VenderDetailsAarbeeComponent {
                 }
                 groupReviewArr.forEach(r => {
                   r.rating = Number((Number(r.score)/Number(r.count)).toFixed(1));
+                  r.percentRating = r.rating * 10;
                   if (this.verifiedReview.rating === 0 || this.verifiedReview.rating < r.rating) {
                     this.verifiedReview.rating = r.rating;
                     this.verifiedReview.reviewerCount = r.count;

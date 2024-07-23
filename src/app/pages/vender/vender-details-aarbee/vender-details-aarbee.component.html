@@ -78,7 +78,7 @@
                         <h4>Rating</h4>
                         <div *ngFor="let c of formData.reviews">
                             {{c.title}} {{c.rating}}
-                            <nz-progress [nzPercent]="c.rating" [nzShowInfo]="false"></nz-progress>
+                            <nz-progress [nzPercent]="c.percentRating" [nzShowInfo]="false"></nz-progress>
                         </div>
                     </div>
                 </div>
@@ -800,7 +800,7 @@
                                         </span>
                                     </div>
 
-                                    <nz-progress [nzPercent]="c.rating" [nzShowInfo]="false"></nz-progress>
+                                    <nz-progress [nzPercent]="c.percentRating" [nzShowInfo]="false"></nz-progress>
                                 </div>
                             </div>
                         </div>
@@ -1187,7 +1187,7 @@
                             {{c.rating}}
                         </span>
                     </div>
-                    <nz-progress [nzPercent]="c.rating" [nzStrokeColor]="c.color" [nzShowInfo]="false"></nz-progress>
+                    <nz-progress [nzPercent]="c.percentRating" [nzStrokeColor]="c.color" [nzShowInfo]="false"></nz-progress>
                 </div>
             </div>
 
