@@ -233,6 +233,11 @@ ul {
             flex-direction: column;
             gap: inherit;
         }
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
     }
     .bottom {
         display: flex;
@@ -1218,6 +1223,9 @@ ul {
     padding: 15px;
     border-bottom: 1px solid #E7E7E7;
     gap: 30px;
+    &.space-between {
+        justify-content: space-between;
+    }
     .logo-name {
         color: #000;
         font-family: var(--fontFamily);
@@ -1290,4 +1298,37 @@ ul {
 .engineeringData {
     display: flex;
     flex-wrap: wrap;
+}
+
+.project-detail {
+    .name {
+        padding: 18px 18px 10px;
+        border-bottom: 1px solid #EDE8FF;
+        font-family: var(--fontFamily);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        strong {
+            font-size: 18px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    h5 {
+        font-family: var(--fontFamily);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 30px; /* 187.5% */
+        margin-bottom: 0;
+    }
+    p{
+        font-family: var(--fontFamily);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }

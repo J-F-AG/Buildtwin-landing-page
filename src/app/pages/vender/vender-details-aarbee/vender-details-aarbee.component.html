@@ -814,28 +814,59 @@
         [nzFooter]="null" (nzOnCancel)="handleCancelChild()" (nzOnOk)="handleOkChild()">
         <ng-container *nzModalContent>
             <div child>
-                <div class="popup-header">
+                <div class="popup-header space-between">
                     <div class="logo-name">
                         {{selectedProject?.project_name}}
                     </div>
+                    <div></div>
                 </div>
                 <div class="flex company-overview child">
                     <div class="image-wrapper">
+                        <div class="top">
+                            <div class="left">
+                                <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
+                                    <figure *ngIf="i === 0">
+                                            <img src="assets/images/image5.jpg" alt="image3" width="759" height="394">
+                                            <img [src]="pimg" width="759" height="394" class="abs-image" />
+                                    </figure>
+                                </ng-container>
+                            </div>
+                            <div class="right">
+                                <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
+                                    <figure *ngIf="i > 0 && i < 3 ">
+                                            <img src="assets/images/image6.jpg" alt="image3" width="244" height="190">
+                                            <img [src]="pimg" width="244" height="190" class="abs-image" />
+                                    </figure>
+                                </ng-container>
+                            </div>
+                        </div>
                         <div class="bottom">
-                            <figure *ngFor="let pimg of selectedProject?.project_logo">
-                                <img src="assets/images/image4.png" alt="image3" width="244" height="190">
-                                <img [src]="pimg" width="244" height="190" class="abs-image" />
-                            </figure>
+                            <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
+                                <figure *ngIf="i > 2">
+                                        <img src="assets/images/image6.jpg" alt="image3" width="244" height="190">
+                                        <img [src]="pimg" width="244" height="190" class="abs-image" />
+                                </figure>
+                            </ng-container>
                         </div>
                     </div>
                     <div class="company-detail">
                         <div class="block project-detail">
-                            {{selectedProject?.project_name}}
-                            {{selectedProject?.project_region}}
-
-
-                            Description
-                            {{selectedProject?.project_description}}
+                                <header class="name">
+                                    <strong>
+                                        {{selectedProject?.project_name}}
+                                    </strong>
+                                    {{selectedProject?.project_region}}
+                                </header>
+    
+                                <div class="content">
+    
+                                <h5>
+                                    Description
+                                </h5>
+                                <p>
+                                    {{selectedProject?.project_description}}
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
