@@ -722,7 +722,9 @@ export class VenderDetailsAarbeeComponent {
                   { id: 0, name: '' },
                   ...res[0]['data']['service_func_area'],
                 ];
-                this.formData.companyDetails.company_description = formData['basic_form_fields']['company_description'].replace(/(?:\r\n|\r|\n)/g, '<br>');
+                if (formData['basic_form_fields'] && formData['basic_form_fields']['company_description']) {
+                  this.formData.companyDetails.company_description = formData['basic_form_fields']['company_description'].replace(/(?:\r\n|\r|\n)/g, '<br>');
+                }
                 if (formData['service_information'] && formData['service_information'].length) {
                   formData['service_information'].forEach((s: any) => {
                     // this.preSelectservices.push(s.name);
