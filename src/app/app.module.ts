@@ -172,6 +172,16 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { HdDiscoverProjectsComponent } from './pages/Home/hd-discover-projects/hd-discover-projects.component';
 import { HdWhyBuildtwinComponent } from './pages/Home/hd-why-buildtwin/hd-why-buildtwin.component';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
+import { ServicesComponent } from './pages/Services/services/services.component';
+import { MainBannerComponent } from './pages/Services/main-banner/main-banner.component';
+import { DirectBookingComponent } from './pages/Services/direct-booking/direct-booking.component';
+import { DrawingsComponent } from './pages/Services/drawings/drawings.component';
+import { E2eEncryptedComponent } from './pages/Services/e2e-encrypted/e2e-encrypted.component';
+import { HowItWorksComponent } from './pages/Services/how-it-works/how-it-works.component';
+import { LiveTrackingComponent } from './pages/Services/live-tracking/live-tracking.component';
+import { MeetingStandardsComponent } from './pages/Services/meeting-standards/meeting-standards.component';
+import { RightTeamComponent } from './pages/Services/right-team/right-team.component';
+import { ServTrustedByComponent } from './pages/Services/serv-trusted-by/serv-trusted-by.component';
 
 @NgModule({
   declarations: [
@@ -318,7 +328,17 @@ import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
    HdBannerTabsComponent,
    HdServicesComponent,
    HdDiscoverProjectsComponent,
-   HdWhyBuildtwinComponent
+   HdWhyBuildtwinComponent,
+   ServicesComponent,
+   MainBannerComponent,
+   DirectBookingComponent,
+   DrawingsComponent,
+   E2eEncryptedComponent,
+   HowItWorksComponent,
+   LiveTrackingComponent,
+   MeetingStandardsComponent,
+   RightTeamComponent,
+   ServTrustedByComponent
     
   ],
   imports: [    
