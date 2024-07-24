@@ -29,6 +29,7 @@ import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarb
 import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-allied/vender-details-allied.component';
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
 import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
+import { ServicesComponent } from './pages/Services/services/services.component';
 
 
 
@@ -71,6 +72,14 @@ const routes: Routes = [
     // {path: 'features', component: FeaturesPageComponent},
     // {path: 'services', component: ServicesPageComponent},
     // {path: 'service-details', component: ServiceDetailsPageComponent},
+
+    // New Pages
+
+    {path: 'Services', component: ServicesComponent},
+
+
+
+
 
     {path: '**', component: ComingSoonComponent} 
 ];
