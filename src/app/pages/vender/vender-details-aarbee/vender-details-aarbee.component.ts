@@ -552,11 +552,17 @@ export class VenderDetailsAarbeeComponent {
     }
   }
 
-  addAdons(index) {
-    let adon = this.addons.filter(a => a.id === Number(this.selectedAddon));
-    this.serviceTypes[index].addon_titles.push(adon[0].title);
-    this.isAddon = false;
-    this.selectedAddon = '';
+  removeAddon(index, i) {
+    this.serviceTypes[index].addon_titles[i].isSelected = false;
+    // this.serviceTypes[index].addon_titles = this.serviceTypes[index].addon_titles.filter((a, inx) => inx !== i);
+  }
+
+  addAdons(index, i) {
+    this.serviceTypes[index].addon_titles[i].isSelected = true;
+    // let adon = this.addons.filter(a => a.id === Number(this.selectedAddon));
+    // this.serviceTypes[index].addon_titles.push(adon[0].title);
+    // this.isAddon = false;
+    // this.selectedAddon = '';
   }
 
   add() {
@@ -663,9 +669,11 @@ export class VenderDetailsAarbeeComponent {
                 this.listOfSoftware = res[0]['data']['softwares'];
                 this.addons = res[0]['data']['addons'];
                 const reviewArr = [];
-                this.formData.clientReviews.forEach(rev => {
-                  reviewArr.push(...rev.ratings)
-                });
+                if (this.formData.clientReviews.length) {
+                  this.formData.clientReviews.forEach(rev => {
+                    reviewArr.push(...rev.ratings)
+                  });
+                }
                 const groupReviewArr = [];
                 reviewArr.forEach(r => {
                   let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
@@ -733,8 +741,20 @@ export class VenderDetailsAarbeeComponent {
                       this.serviceTypes.push(s);
 
                     // }
-                   
-                    s.service_segments = JSON.parse(s.service_segments);
+                    // isChecked
+                   if (s.addon_titles) {
+                    let arrAddon = [];
+                    s.addon_titles.forEach(a => {
+                      arrAddon.push({
+                        name: a,
+                        isSelected: false,
+                      })
+                    });
+                    s.addon_titles = arrAddon;
+                   }
+                   if (s.service_segments) {
+                     s.service_segments = JSON.parse(s.service_segments);
+                   }
                     if (s.capability_matrix.length) {
                       let obj = {} as any;
                       s.capability_matrix.forEach(matrix => {

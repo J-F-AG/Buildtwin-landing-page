@@ -1082,17 +1082,18 @@
                         </td>
                         <td>
                             <ul class="list">
-                                <li *ngFor="let addon of service?.addon_titles; let i = index">
-                                    {{addon}}
-                                    <i>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                <li *ngFor="let addon of service?.addon_titles; let i = index" [ngClass]="{'highlight': addon.isSelected}">
+                                    <!-- <input type="checkbox" [checked]="addon.isChecked"> -->
+                                    {{addon.name}}
+                                    <i class="cursor">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" *ngIf="addon.isSelected" (click)="removeAddon(idx, i)"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <rect width="24" height="24" rx="12" fill="#886DE0" />
                                             <path fill-rule="evenodd" clip-rule="evenodd"
                                                 d="M9.17161 7.75725C8.78109 7.36672 8.14792 7.36672 7.7574 7.75725C7.36688 8.14777 7.36688 8.78094 7.7574 9.17146L10.7627 12.1768L7.7574 15.1821C7.36688 15.5726 7.36688 16.2057 7.7574 16.5963C8.14792 16.9868 8.78109 16.9868 9.17161 16.5963L12.1769 13.591L15.182 16.5961C15.5725 16.9866 16.2057 16.9866 16.5962 16.5961C16.9868 16.2056 16.9868 15.5724 16.5962 15.1819L13.5911 12.1768L16.5962 9.17165C16.9868 8.78112 16.9868 8.14796 16.5962 7.75743C16.2057 7.36691 15.5725 7.36691 15.182 7.75743L12.1769 10.7625L9.17161 7.75725Z"
                                                 fill="white" />
                                         </svg>
-                                        <svg *ngIf="i === service?.addon_titles?.length - 1 && !isAddon" (click)="add()" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        <svg *ngIf="!addon.isSelected" width="24" height="24" viewBox="0 0 24 24" fill="none"  (click)="addAdons(idx, i)"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <rect width="24" height="24" rx="12" fill="white" />
                                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -1100,14 +1101,14 @@
                                                 fill="#886DE0" />
                                         </svg>
                                     </i>
-                                    <ng-container *ngIf="i === service?.addon_titles?.length - 1 && isAddon">
+                                    <!-- <ng-container *ngIf="i === service?.addon_titles?.length - 1 && isAddon">
                                         <select [(ngModel)]="selectedAddon" name="" id="" class="custom-select">
                                             <option value="">Please select</option>
                                             <option *ngFor="let add of addons" [value]="add.id"> {{add.title}}
                                             </option>
                                         </select>
                                         <span (click)="addAdons(idx)">+</span>
-                                    </ng-container>
+                                    </ng-container> -->
                                 </li>
                             </ul>
                         </td>
@@ -1123,7 +1124,7 @@
                             <!-- <a href="" class="default-btn mdc-button">
                                 Enquiry Now
                             </a> -->
-                            <a href="" class="default-btn mdc-button">
+                            <a target="_blank" href="http://buildtwin.dev.s3-website.ap-south-1.amazonaws.com/get-started/" class="default-btn mdc-button">
                                 Login Now
                             </a>
                         </td>
