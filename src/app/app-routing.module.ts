@@ -55,7 +55,7 @@ const routes: Routes = [
     {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
     {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
     {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
-    {path: 'vender-details/:id', component: VenderDetailsAarbeeComponent},
+    {path: 'partners/:id', component: VenderDetailsAarbeeComponent},
     {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
     {path: 'vender-details-ui', component: VenderDetailsUiComponent},
     {path: 'details', component: VenderDetailsAarbeeOldComponent},

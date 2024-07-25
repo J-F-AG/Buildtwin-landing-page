@@ -48,6 +48,6 @@ export class TtPartnersComponent {
 
   redirect(domain, company_name) {
     localStorage.setItem("domain", domain);
-    this.router.navigate([`/vender-details/${company_name.replace(/ /g,'')}`]);
+    this.router.navigate([`/partners/${company_name.replace(/ /g,'')}`]);
   }
 }
