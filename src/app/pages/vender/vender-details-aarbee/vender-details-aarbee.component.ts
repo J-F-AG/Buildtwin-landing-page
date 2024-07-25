@@ -172,6 +172,7 @@ export class VenderDetailsAarbeeComponent {
     }
   ];
   companyName = '';
+  companyHighlights: '';
 
   formData = {
     about: [],
@@ -601,6 +602,7 @@ export class VenderDetailsAarbeeComponent {
                 let fieldData = formData['basic_form_fields'];
                 this.selectedOption = formData['basic_form_fields']['working_timezone'];
                 this.selectedTomeSlot = formData['basic_form_fields']['office_hours'];
+                this.companyHighlights = formData['basic_form_fields']['company_highlights'];
                 const bKey = 'basic_form_fields';
                 res[0]['data'][bKey].forEach((form: any) => {
                   if (form.field_group_name === 'About') {
@@ -662,7 +664,7 @@ export class VenderDetailsAarbeeComponent {
                     // }
                     this.formData.featuredProject.projects = formData['featured_projects'];
                   }
-                })
+                });
                 this.formData.buildingCode = res[0]['data']['building_codes'];
                 this.formData.engineers = formData['our_engineers'];
                 this.formData.clientReviews = formData['reviews'];
@@ -690,19 +692,20 @@ export class VenderDetailsAarbeeComponent {
                   this.imageLeftOutCount = this.highlightImges.length - 7;
                   this.highlightImges = this.highlightImges.slice(0, 7);
                 }
+                let ratingrew = 0;
                 groupReviewArr.forEach(r => {
                   r.rating = Number((Number(r.score)/Number(r.count)).toFixed(1));
                   r.percentRating = r.rating * 10;
-                  if (this.verifiedReview.rating === 0 || this.verifiedReview.rating < r.rating) {
-                    this.verifiedReview.rating = r.rating;
+                  if (ratingrew === 0 || ratingrew < r.rating) {
+                    ratingrew = r.rating;
                     this.verifiedReview.reviewerCount = r.count;
-                    if (r.rating >= 8) {
-                      this.verifiedReview.state = "Fabulous";
-                    } else if (r.rating >= 6) {
-                      this.verifiedReview.state = "Good";
-                    } else if (r.rating < 6) {
-                      this.verifiedReview.state = "Okay";
-                    }
+                  //   if (r.rating >= 8) {
+                  //     this.verifiedReview.state = "Fabulous";
+                  //   } else if (r.rating >= 6) {
+                  //     this.verifiedReview.state = "Good";
+                  //   } else if (r.rating < 6) {
+                  //     this.verifiedReview.state = "Okay";
+                  //   }
                   }
                   if (r.rating >= 8) {
                     r.color  = 'green'
@@ -712,6 +715,20 @@ export class VenderDetailsAarbeeComponent {
                     r.color = 'yellow'
                   }
                 });
+                if (groupReviewArr.length) {
+                  this.verifiedReview.rating = Number((groupReviewArr.reduce((a, b) => a + b.rating, 0)/groupReviewArr.length - 1).toFixed(1));
+                  // const reviw = groupReviewArr.filter(a => a.rating <= this.verifiedReview.rating);
+                  // this.verifiedReview.reviewerCount = reviw.length;
+                  if (this.verifiedReview.rating !== 0) {
+                    if (this.verifiedReview.rating >= 8) {
+                      this.verifiedReview.state = "Fabulous";
+                    } else if (this.verifiedReview.rating >= 6) {
+                      this.verifiedReview.state = "Good";
+                    } else if (this.verifiedReview.rating < 6) {
+                      this.verifiedReview.state = "Poor";
+                    }
+                  }
+                }
                 this.formData.reviews = groupReviewArr;
                 // this.formData.clientReviews = 
                 this.formData.badges = formData['badges'];
