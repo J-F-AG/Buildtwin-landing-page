@@ -1,1 +1,100 @@
-<p>drawings works!</p>
+<section class="discoverProjectsSection">
+    <div class="container">
+    <div class="sectionHeader" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="200">
+        <div class="heading">
+            <div class="title">Sample Drawings</div>
+            <div class="subTitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        </div>
+    </div>
+    <div class="selectBoxWrapper">
+        <div class="selectBoxContainer">
+            <span class="label">
+                <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group 1171276146">
+                    <g id="Group 1171276144">
+                    <g id="Mask group">
+                    <path id="Rectangle 2" d="M3.01907 2.12059C3.35482 1.4348 4.05176 1.00002 4.81534 1.00001L6.68299 1L6.09578 6.19482H1.02441L3.01907 2.12059Z" stroke="white" stroke-linejoin="round"/>
+                    <path id="Rectangle 3" d="M10.0015 1.00002L6.68294 1L6.03027 6.19482H10.9772L10.0015 1.00002Z" stroke="white" stroke-linejoin="round"/>
+                    <path id="Rectangle 5" d="M14.1105 2.16226C13.7828 1.45587 13.0749 1.00391 12.2962 1.00391L9.99243 1.00393L10.9608 6.19312H15.9805L14.1105 2.16226Z" stroke="white" stroke-linejoin="round"/>
+                    </g>
+                    <path id="Vector 2" d="M8.47636 34.2133C6.68221 34.2133 6.03026 32.3907 6.03027 31.3848H10.9773C10.9773 32.4336 10.2705 34.2133 8.47636 34.2133Z" stroke="white" stroke-linejoin="round"/>
+                    <path id="Vector 3" d="M3.48713 34.2133C1.66288 34.2133 0.999987 32.3907 1 31.3848H6.03003C6.03003 32.4336 5.31137 34.2133 3.48713 34.2133Z" stroke="white" stroke-linejoin="round"/>
+                    <path id="Vector 5" d="M13.4607 34.2133C11.639 34.2133 10.977 32.3907 10.9771 31.3848H16C16 32.4336 15.2824 34.2133 13.4607 34.2133Z" stroke="white" stroke-linejoin="round"/>
+                    </g>
+                    </g>
+                    </svg>
+                    
+                Select Market
+                </span>
+            <div class="selectBox countryField">
+                <div class="v-center-flex">
+                    <img [src]="selectedCountry.image" width="29" height="29" alt="">
+                    <div>
+                        <span class="title">{{selectedCountry.label}}</span>
+                        <small>{{selectedCountry.currency}}</small>
+                    </div>
+                </div>
+                <app-bt-select [options]="countryArray" (selectedTabChange)="selectCountry($event)" [selectedInput]="selectedCountry" ></app-bt-select>
+            </div>
+        </div>
+    </div>
+    <div class="sectionContent" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <nz-carousel [nzDots]="false">
+            <div nz-carousel-content *ngFor="let subProjectArray of discoverProjects">
+
+                <div class="cardContainer">
+                    <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
+                        [sizeH]="88">
+                    </lib-svg-icon>
+                    <ng-container *ngFor=" let item of subProjectArray">
+                        <div class="projectCard">
+                            <div class="varifiedTag">
+                                <span class="icon">
+                                    <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g id="Group 2085652476">
+                                        <path id="Vector 2645" d="M10.4555 1C10.4555 1 4.61769 4.71061 1.12811 4.71061C1.12819 13.5903 -0.817728 18.0964 10.4555 23C20.5883 17.8313 19.4149 15.3404 19.4149 4.71061C14.852 3.91554 10.4555 1 10.4555 1Z" fill="#D3FFD5" stroke="#86DC89" stroke-width="1.5" stroke-linejoin="round"/>
+                                        <path id="Vector 2375" d="M6.5215 10.4681L9.81589 14.3542C9.81589 14.3542 14.6787 5.71033 21.0003 2.8291" stroke="#00B507" stroke-width="1.72185" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                                Verified Partner
+                            </div>
+                            <img src="{{item.img}}" class="projectImage" alt="cardImage">
+                            <div class="projectHighlight serviceCompanyDetails">
+                                <div class="serviceCompany">
+                                    <img src="{{item.serviceCompanyIcon}}" width="{{item.width}}" height="{{item.height}}" alt="serviceCompanyIcons">
+                                    <div class="companyName">{{item.serviceCompany}}</div>
+                                </div>
+                            </div>
+
+                            <div class="serviceCompanyDetails">
+                                
+
+                                <div class="companyDetails">
+                                    <div class="title">Rendered Services
+                                    </div>
+                                    <div class="service">
+                                        {{item.serviceDescription}}
+                                    </div>
+                                </div>
+
+                                <div class="cardFooter">
+                                    <a href="#"> Learn More about GPC
+                                        Engineering</a>
+                                    <lib-svg-icon class="arrowIcon" [name]="'arrow-icon'" [size]="14"
+                                        [sizeH]="22"></lib-svg-icon>
+                                </div>
+                            </div>
+
+                        </div>
+                    </ng-container>
+                    <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
+                        [sizeH]="88">
+                    </lib-svg-icon>
+                </div>
+
+            </div>
+        </nz-carousel>
+    </div>
+    </div>
+</section>
