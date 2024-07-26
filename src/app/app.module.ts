@@ -182,6 +182,7 @@ import { LiveTrackingComponent } from './pages/Services/live-tracking/live-track
 import { MeetingStandardsComponent } from './pages/Services/meeting-standards/meeting-standards.component';
 import { RightTeamComponent } from './pages/Services/right-team/right-team.component';
 import { ServTrustedByComponent } from './pages/Services/serv-trusted-by/serv-trusted-by.component';
+import { NzSelectModule } from 'ng-zorro-antd/select';
 
 @NgModule({
   declarations: [
@@ -370,7 +371,8 @@ import { ServTrustedByComponent } from './pages/Services/serv-trusted-by/serv-tr
     NzCarouselModule,
     NzProgressModule,
     NzModalModule,
-    NzSkeletonModule
+    NzSkeletonModule,
+    NzSelectModule
   ],
   providers: [
     Title,
