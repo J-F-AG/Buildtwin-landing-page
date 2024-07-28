@@ -125,12 +125,13 @@
                     </li> -->
 
                     <li class="nav-item  traning" routerLinkActive="active">
-                            <a href="javascript:void(0)" class="dropdown-toggle nav-link"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            <a class="nav-link" (click)="manageToggle($event)" routerLink="/provide-service" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact: true}">
                                 For Sellers
                             </a>
     
                         
-
+<!-- 
                         <div class="menu_copilot makrketPlaceMenu" (click)="manageToggle($event)">
                             <section class="container">
                                 <div class="flex-row">
@@ -142,7 +143,7 @@
                                             <div class="margin-top-7 height-1 background-secondary"></div>
                                             <div class="flex-row margin-top-24">
                                                 <a (click)="manageToggle($event)" routerLink="/provide-service" routerLinkActive="active"
-                                                [routerLinkActiveOptions]="{exact: true}">
+                                                [ro uterLinkActiveOptions]="{exact: true}">
                                                     <em class="flex-row font-bold">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                             <g clip-path="url(#clip0_5453_7308)">
@@ -165,17 +166,18 @@
 
                                 </div>
                             </section>
-                        </div>
+                        </div> -->
                     </li>
 
 
                     <li class="nav-item  traning" routerLinkActive="active">
-                        <a href="javascript:void(0)" class="dropdown-toggle nav-link"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <a class=" nav-link" (click)="manageToggle($event)" routerLink="/marketplace" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">
                             For Buyers
                         </a>
 
                     
-
+<!-- 
                     <div class="menu_copilot makrketPlaceMenu" (click)="manageToggle($event)">
                         <section class="container">
                             <div class="flex-row">
@@ -211,7 +213,7 @@
 
                             </div>
                         </section>
-                    </div>
+                    </div> -->
                 </li>
 
                     <!-- <li class="nav-item" routerLinkActive="active">
