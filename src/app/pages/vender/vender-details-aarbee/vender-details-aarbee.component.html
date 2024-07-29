@@ -138,7 +138,7 @@
                         </g>
                     </svg> -->
                     <nz-rate [ngModel]="formData.companyDetails.rating" nzDisabled></nz-rate>
-                    <span class="type">
+                    <span class="type" *ngIf="formData?.premium_partner">
                         Premium Partner
                     </span>
                 </div>
