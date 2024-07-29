@@ -225,6 +225,7 @@ export class VenderDetailsAarbeeComponent {
     capabilityMatrix: [],
     service_func_area: [],
     sectors: [],
+    premium_partner: false,
   } as any;
   isLoaded = false;
   selectedServices = [] as any;
@@ -246,6 +247,7 @@ export class VenderDetailsAarbeeComponent {
     reviewerCount: 0,
     state: ''
   };
+  premium_partner;
   isVisible = false;
   userSelectedSectors = [];
   html: HTMLElement | string = '<h1>TEST!</h1>';
@@ -735,6 +737,7 @@ export class VenderDetailsAarbeeComponent {
                 this.companyName = formData['basic_form_fields']['company_name'];
                 this.formData.services = res[0]['data']['services']
                 this.formData.directors = formData['basic_form_fields']['managing_director'];
+                this.formData.premium_partner = formData['basic_form_fields']['premium_partner'];
                 this.formData.jointbids = formData['basic_form_fields']['joint_bids'];
                 this.formData.service_func_area = res[0]['data']['service_func_area'];
                 this.formData.engineeringData = formData['basic_form_fields']['engineering_project_name'];
