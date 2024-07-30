@@ -4,7 +4,7 @@
         <img src="assets/images/dots.png" width="269" height="306" alt="">
     </div>
     <div class="sectionTop" data-aos="fade-up" data-aos-duration="500">
-        <h1 class="heading">services</h1>
+        <h1 class="heading">Services</h1>
         <div class="assistant">
             <img src="assets/images/avatar.svg" alt="avatar">
             <div class="assitWrapper">
@@ -18,7 +18,7 @@
         <div class="content">
             The best way to procure pre-qualified technical teams across the globe.
         </div>  
-        <button class="themeButton bookServicesButton" routerLink="/Services/">
+        <button class="themeButton bookServicesButton" routerLink="https://cockpit.buildtwin.com/signin">
             <span>Book Services</span> <lib-svg-icon [name]="'arrow-icon'" [size]="16" [sizeH]="18"></lib-svg-icon>
         </button>
     </div>
@@ -32,7 +32,7 @@
                             [sizeH]="88">
                         </lib-svg-icon>
                         <ng-container *ngFor=" let item of subServiceArray">
-                            <div class="cardWrapper">
+                            <div class="cardWrapper" routerLink="https://www.buildtwin.com/engineering-services/services">
                                 <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                                 <div class="detail">
                                     {{item.name}}
