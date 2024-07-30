@@ -1,0 +1,76 @@
+.sampleProjectsWrapper{ padding: 52px 0;
+
+    .hd-section-title{ margin-bottom: 50px;}
+
+    .sampleProject{position: relative; 
+        padding-bottom: 220px;}
+    .greyBG{border-radius: 6px; width: 78%;
+        background: #F8F6FF; padding: 33px 40% 33px 40px;
+        h3{font-size: 32px;
+            font-style: normal;
+            font-weight: 700;}
+        .infoCardList{ padding-top: 30px; max-width: 325px;
+            .infoCard {border-radius: 12px;
+                background: #FFF;
+                box-shadow: 0px 4px 10px 0px rgba(136, 109, 224, 0.10);
+                margin-bottom: 25px;
+                display: flex;
+                padding: 10px 24px;
+                align-items: center;
+                gap: 12px;
+                .projectInfo{
+                    span{display: block;}
+                    strong{display: block; font-size: 20px;}
+                }
+            }
+        }
+    }
+
+    .bigImg{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 40%;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+}
+
+::ng-deep .mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs{
+    position: relative;
+    .mat-mdc-tab-label-container{overflow: visible;}
+}
+
+::ng-deep .mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-header{
+    --mdc-secondary-navigation-tab-container-height: initial !important;
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 54%;
+    z-index: 3;
+    overflow: visible;
+
+    .mat-mdc-tab-labels{justify-content: space-between;}
+
+    .mat-mdc-tab{
+        padding: 0; flex-grow: unset !important;
+        width: 30%; border-radius: 12px; overflow: hidden;
+
+        &.mdc-tab--active{
+            box-shadow: 0px 7px 16px 0px rgba(61, 57, 74, 0.26);
+            border: solid 1px #886de0;
+        }
+    }
+    .mat-mdc-tab-ripple,
+    .mdc-tab-indicator{display: none !important;}
+}
+
+::ng-deep .mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs>.mat-mdc-tab-body-wrapper{}
+
+.sampleProjectsSlider{position: relative;
+    .navBtn{ position: absolute; bottom: 40px; right: 20px; z-index: 3; background: none;
+        &.perv-btn{ right: 100px; }
+        &.next-btn{ }
+    }
+}

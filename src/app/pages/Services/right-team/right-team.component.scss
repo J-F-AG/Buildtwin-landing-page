@@ -1,0 +1,27 @@
+.rightTeamWrapper{padding: 30px 0;}
+
+.threeCards{display: flex; gap: 20px;}
+.greyCard{ width: 33%; border-radius: 6px;
+    padding: 33px 24px 146px; position: relative;
+    background: #F8F6FF url(../../../../assets/images/rightTeamBG1.png) center bottom no-repeat;
+    &.secondCard{ background-image: url(../../../../assets/images/rightTeamBG2.png);  }
+    &.thirdCard{ background-image: url(../../../../assets/images/rightTeamBG3.png);  }
+
+    ul{list-style: initial; margin-left: 20px;
+        li{margin-bottom: 8px;}
+    }
+    .cardFooter {
+        border-radius: 6px;
+        background: #f8f6ff;
+        padding: 12px;
+        color: #886de0;
+        font-family: var(--semibold-global);
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute; 
+        bottom: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+      }
+}

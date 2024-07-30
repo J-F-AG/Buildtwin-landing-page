@@ -183,6 +183,7 @@ import { MeetingStandardsComponent } from './pages/Services/meeting-standards/me
 import { RightTeamComponent } from './pages/Services/right-team/right-team.component';
 import { ServTrustedByComponent } from './pages/Services/serv-trusted-by/serv-trusted-by.component';
 import { NzSelectModule } from 'ng-zorro-antd/select';
+import { SampleProjectsComponent } from './pages/Services/sample-projects/sample-projects.component';
 
 @NgModule({
   declarations: [
@@ -339,7 +340,8 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
    LiveTrackingComponent,
    MeetingStandardsComponent,
    RightTeamComponent,
-   ServTrustedByComponent
+   ServTrustedByComponent,
+   SampleProjectsComponent
     
   ],
   imports: [    
