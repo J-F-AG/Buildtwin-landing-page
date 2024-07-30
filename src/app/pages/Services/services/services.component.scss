@@ -1,0 +1,26 @@
+// Data Center
+
+.dataCenterSection{ padding: 72px 0;
+    background: url(../../../../assets/images/dotsBG.png) left top repeat-y;
+    .twoCol{display: flex; justify-content: space-between;
+        .col{width: 48%; }
+    }
+}
+
+//About Data Center
+
+.aboutDataCenterSection{ padding: 70px 0 40px;
+    .dataCenterList{ display: flex; flex-wrap: wrap; justify-content: space-between;
+        .dataCenterItem{ width: 32%; margin-bottom: 30px;
+            background: var(--lightest-grey, #F9F9F9);
+            display: flex;
+            flex-direction: column;  
+            .dataCenterinfo{padding: 15px; flex: 1;
+                h4{font-size: 20px; font-weight: 600;}
+            }
+            .postTime{padding: 15px; color: var(--primary, var(--Color-3, #886DE0));
+                font-size: 16px;
+                font-weight: 600;}      
+        }
+    }
+}
