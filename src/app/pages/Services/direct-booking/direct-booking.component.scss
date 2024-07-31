@@ -45,9 +45,10 @@
     }
   }
 
-  .bookingTable {
+  .TableRow {
     display: flex;
     background: #F6F3FF;
+    border-bottom:  solid 2px white;;
 
     .tableCol {
       width: 20%;

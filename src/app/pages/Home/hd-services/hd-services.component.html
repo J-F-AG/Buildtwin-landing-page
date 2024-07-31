@@ -18,9 +18,9 @@
         <div class="content">
             The best way to procure pre-qualified technical teams across the globe.
         </div>  
-        <button class="themeButton bookServicesButton" routerLink="https://cockpit.buildtwin.com/signin">
+        <a class="themeButton bookServicesButton" target="_blank" href="https://cockpit.buildtwin.com/signin">
             <span>Book Services</span> <lib-svg-icon [name]="'arrow-icon'" [size]="16" [sizeH]="18"></lib-svg-icon>
-        </button>
+        </a>
     </div>
     <div class="sectionBottom" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="200">
         <div class="headerCarousel">
@@ -32,12 +32,12 @@
                             [sizeH]="88">
                         </lib-svg-icon>
                         <ng-container *ngFor=" let item of subServiceArray">
-                            <div class="cardWrapper" routerLink="https://www.buildtwin.com/engineering-services/services">
+                            <a class="cardWrapper" href="https://www.buildtwin.com/engineering-services/services">
                                 <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                                 <div class="detail">
                                     {{item.name}}
                                 </div>
-                            </div>
+                            </a>
                         </ng-container>
                         <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
                             [sizeH]="88">

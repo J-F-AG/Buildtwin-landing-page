@@ -30,6 +30,7 @@ import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-alli
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
 import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
 import { ServicesComponent } from './pages/Services/services/services.component';
+import { SectorComponent } from './pages/sector/sector.component';
 
 
 
@@ -76,6 +77,7 @@ const routes: Routes = [
     // New Pages
 
     {path: 'Services', component: ServicesComponent},
+    {path: 'Sector', component: SectorComponent},
 
 
 

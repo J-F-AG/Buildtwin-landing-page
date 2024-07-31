@@ -1,0 +1,14 @@
+// Data Center
+
+.dataCenterSection{ padding: 72px 0; margin: 112px 0 0 0;
+    background: url(../../../../assets/images/dotsBG.png) left top repeat-y;
+    .twoCol{display: flex; justify-content: space-between;
+        .col{width: 48%; }
+    }
+}
+
+/* max width 992px */
+@media only screen and (max-width : 992px) {
+    .dataCenterSection {
+        margin: 70px 0 0 0;}
+    }
