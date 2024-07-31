@@ -8,7 +8,6 @@
   }
   .discoverProjectsSection {
     padding: 82px 0 65px;
-    background: var(--assistantBackgroundColor-global);
   
     .sectionHeader {
       display: flex;
@@ -37,6 +36,7 @@
       .cardContainer {
         display: flex;
         // gap: 23px;
+        padding: 20px;
         justify-content: space-between;
         position: relative;
   

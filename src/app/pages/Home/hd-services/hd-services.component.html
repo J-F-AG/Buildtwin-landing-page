@@ -32,12 +32,12 @@
                             [sizeH]="88">
                         </lib-svg-icon>
                         <ng-container *ngFor=" let item of subServiceArray">
-                            <a class="cardWrapper" href="https://www.buildtwin.com/engineering-services/services">
+                            <div class="cardWrapper" routerLink="/engineering-services/services">
                                 <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                                 <div class="detail">
                                     {{item.name}}
                                 </div>
-                            </a>
+                            </div>
                         </ng-container>
                         <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
                             [sizeH]="88">
