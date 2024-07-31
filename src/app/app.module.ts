@@ -184,6 +184,9 @@ import { RightTeamComponent } from './pages/Services/right-team/right-team.compo
 import { ServTrustedByComponent } from './pages/Services/serv-trusted-by/serv-trusted-by.component';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { SampleProjectsComponent } from './pages/Services/sample-projects/sample-projects.component';
+import { SectorComponent } from './pages/sector/sector.component';
+import { DataCenterSectionComponent } from './pages/sector/data-center-section/data-center-section.component';
+import { AboutDataCenterSectionComponent } from './pages/sector/about-data-center-section/about-data-center-section.component';
 
 @NgModule({
   declarations: [
@@ -341,7 +344,10 @@ import { SampleProjectsComponent } from './pages/Services/sample-projects/sample
    MeetingStandardsComponent,
    RightTeamComponent,
    ServTrustedByComponent,
-   SampleProjectsComponent
+   SampleProjectsComponent,
+   SectorComponent,
+   DataCenterSectionComponent,
+   AboutDataCenterSectionComponent
     
   ],
   imports: [    
