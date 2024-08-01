@@ -1476,7 +1476,7 @@
 
 
 
-    <app-hd-footer></app-hd-footer>
+    <app-hd-footer *ngIf="!isIframe"></app-hd-footer>
 
 
     <div class="popUP" [ngClass]="{'active':showPopup}">
