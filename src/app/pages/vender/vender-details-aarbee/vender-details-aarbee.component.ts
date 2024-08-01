@@ -267,10 +267,12 @@ export class VenderDetailsAarbeeComponent {
   highlightImges = [];
   imageLeftOutCount = 0;
   currentFaq: any = 'faq0'
+  isIframe = false;
   constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService) {
 
     this.getBusinessListing();
     this.domain = this.route.snapshot.params['id'];
+    this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
   }
   showPopup = false;
   openModal(html: HTMLElement | string = "", isParent: boolean, isChild: boolean, project) {
