@@ -867,6 +867,8 @@ export class VenderDetailsAarbeeComponent {
               }
               this.showPageLoader = false;
             })
+        } else {
+          this.showPageLoader = false;
         }
       } else {
         this.showPageLoader = false;
