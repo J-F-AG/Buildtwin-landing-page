@@ -108,7 +108,7 @@
 </app-modal>
 
 <div class="subline page-wrapper" *ngIf="!showPageLoader">
-    <app-hd-navbar></app-hd-navbar>
+    <app-hd-navbar *ngIf="!isIframe"></app-hd-navbar>
 
     <div class="container">
         <header id="page-head">
