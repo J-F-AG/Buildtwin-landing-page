@@ -3,9 +3,11 @@
     font-weight: 400;
     font-size: 46px;
 }
+.happier-customers-areaWrapper{background: url(../../../../assets/images/liveTrackingBGX.jpg) left bottom repeat-x}
 .happier-customers-area {
-    background: #fbfbfb;
+    background: url(../../../../assets/images/mapBG.jpg) center bottom no-repeat;
     padding-top: 80px;
+    .fullwidthImg{max-width: 1440px; margin: 0 auto;}
 }
 
 .happier-customers-inner {

@@ -76,8 +76,8 @@ const routes: Routes = [
 
     // New Pages
 
-    {path: 'Services', component: ServicesComponent},
-    {path: 'Sector', component: SectorComponent},
+    {path: 'engineering-services/services', component: ServicesComponent},
+    {path: 'engineering-services/sector', component: SectorComponent},
 
 
 
