@@ -2,7 +2,7 @@
 
 .providerList{ display: flex; flex-wrap: wrap; gap: 24px;
     .itemContainer{ width: 23.3%; padding: 13px; display: flex; 
-        .listItem{ 
+        .listItem{ cursor: pointer;
             .imgContainer{border: solid 5px white; margin-bottom: 20px; background-color: white;
                 filter: drop-shadow(0px 4.561px 36.484px rgba(0, 0, 0, 0.20));
                 img{display: block;}
