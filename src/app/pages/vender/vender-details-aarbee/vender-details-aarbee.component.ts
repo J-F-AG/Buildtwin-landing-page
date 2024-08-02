@@ -785,13 +785,17 @@ export class VenderDetailsAarbeeComponent {
                           this.formData.highlightServices.push(s)
                         }
                         let mat = this.formData.sectors.findIndex(a => a.id === matrix.functional_area_id);
-                        if (mat === -1) {
+                        let alreadySector = this.userSelectedSectors.findIndex(a => a.id === matrix.functional_area_id);
+                        if (alreadySector === -1) {
                           let name = this.serviceSkills.filter(a => a.id === matrix.functional_area_id);
                           this.userSelectedSectors.push({
                             name: name[0].name,
                             id: name[0].id,
                             sector_image: name[0].sector_image
                           })
+                        }
+                        if (mat === -1) {
+                          let name = this.serviceSkills.filter(a => a.id === matrix.functional_area_id);
                           if (matrix.fucntion_area_featured) {
                             this.formData.sectors.push({
                               name: name[0].name,
