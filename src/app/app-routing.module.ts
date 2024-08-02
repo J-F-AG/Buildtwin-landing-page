@@ -31,6 +31,8 @@ import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-a
 import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
 import { ServicesComponent } from './pages/Services/services/services.component';
 import { SectorComponent } from './pages/sector/sector.component';
+import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
+
 
 
 
@@ -78,6 +80,7 @@ const routes: Routes = [
 
     {path: 'engineering-services/services', component: ServicesComponent},
     {path: 'engineering-services/sector', component: SectorComponent},
+    {path: 'explore-services', component: BrowseServicesMainComponent},
 
 
 
