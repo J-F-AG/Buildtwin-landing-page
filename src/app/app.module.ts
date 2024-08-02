@@ -190,6 +190,18 @@ import { AboutDataCenterSectionComponent } from './pages/sector/about-data-cente
 import { DcEuropeComponent } from './pages/sector/dc-europe/dc-europe.component';
 import { GetStartedComponent } from './pages/sector/get-started/get-started.component';
 
+
+
+
+import { BtSelectGroupModule } from 'buildtwin-library-ux/bt-select-group';//buildtwin-library-ux
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { GlobalBannerModule } from './include-component/global-banner/global-banner.module';
+import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
+import { BrowseServiceHeaderComponent } from './pages/browse-services/components/browse-service-header/browse-service-header.component';
+import { SpecialProjectsComponent } from './pages/browse-services/components/special-projects/special-projects.component';
+import { WhyBuildtwinComponent } from './include-component/why-buildtwin/why-buildtwin.component';
+import { HubspotModule } from './include-component/hubspot/hubspot.module';
+
 @NgModule({
   declarations: [
    
@@ -351,7 +363,12 @@ import { GetStartedComponent } from './pages/sector/get-started/get-started.comp
    DataCenterSectionComponent,
    AboutDataCenterSectionComponent,
    DcEuropeComponent,
-   GetStartedComponent
+   GetStartedComponent,
+
+   BrowseServicesMainComponent,
+   BrowseServiceHeaderComponent,
+   SpecialProjectsComponent,
+   WhyBuildtwinComponent
     
   ],
   imports: [    
@@ -384,7 +401,11 @@ import { GetStartedComponent } from './pages/sector/get-started/get-started.comp
     NzProgressModule,
     NzModalModule,
     NzSkeletonModule,
-    NzSelectModule
+    NzSelectModule,
+    GlobalBannerModule,
+    BtSelectGroupModule,
+    NzDropDownModule,
+    HubspotModule
   ],
   providers: [
     Title,
