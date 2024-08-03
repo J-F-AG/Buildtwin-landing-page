@@ -20,12 +20,14 @@
             margin-bottom: 30px;
         }
 
-        button.whiteBg{background-color: white;
-            color: #886DE0;
+        .default-btn.mdc-button.whiteBg{background-color: white;
+            color: #886DE0 !important;
             font-size: 14px;
             font-weight: 500;
             padding: 15px 44px 16px 47px;
-            list-style: 1;
+            height: auto;
+            display: inline-block;
+            min-width: 170px;
         }
     }
 }

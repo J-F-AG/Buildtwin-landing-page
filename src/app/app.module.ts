@@ -201,6 +201,10 @@ import { BrowseServiceHeaderComponent } from './pages/browse-services/components
 import { SpecialProjectsComponent } from './pages/browse-services/components/special-projects/special-projects.component';
 import { WhyBuildtwinComponent } from './include-component/why-buildtwin/why-buildtwin.component';
 import { HubspotModule } from './include-component/hubspot/hubspot.module';
+import { sectorSampleProjectsComponent } from './pages/sector/sample-projects/sample-projects.component';
+import { sectorMeetingStandardsComponent } from './pages/sector/meeting-standards/meeting-standards.component';
+import { sectorDirectBookingComponent } from './pages/sector/direct-booking/direct-booking.component';
+import { sectorSolutionProviderComponent } from './pages/sector/hd-solution-provider/hd-solution-provider.component';
 
 @NgModule({
   declarations: [
@@ -368,7 +372,11 @@ import { HubspotModule } from './include-component/hubspot/hubspot.module';
    BrowseServicesMainComponent,
    BrowseServiceHeaderComponent,
    SpecialProjectsComponent,
-   WhyBuildtwinComponent
+   WhyBuildtwinComponent,
+   sectorSampleProjectsComponent,
+   sectorMeetingStandardsComponent,
+   sectorDirectBookingComponent,
+   sectorSolutionProviderComponent
     
   ],
   imports: [    

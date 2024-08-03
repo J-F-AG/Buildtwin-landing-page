@@ -1,14 +1,14 @@
-.aboutDataCenterSection{ background: #F8F8F8 url(../../../../assets/images/dcBG.png) right bottom no-repeat;
+.aboutDataCenterSection{ background: #F8F8F8 url(../../../../assets/images/dcBG.png) center bottom no-repeat;
 
     padding: 60px 0 22px;
     .container{display: flex;  justify-content: space-between; align-items: center;
-        .leftContent{width: 40%;
+        .leftContent{width: 45%;
 
             .mb-20{margin-bottom: 20px;}
 
-            .subTitle{font-size: 18px; font-weight: 500;}
+            .subTitle{font-size: 18px; display: block; font-weight: 500;}
             
-            p{font-size: 14px; font-weight: 400;}
+            p{font-size: 14px; font-weight: 400; line-height: 25px; margin-bottom: 20px;}
 
             .formWrapper{
                 .formRow{display: flex; align-items: center; gap: 16px;
@@ -16,13 +16,18 @@
                     input[type="text"]{
                         width: 100%;
                     }
-                    .default-btn{margin-top: 0 !important;}
+                    .default-btn{margin-top: 0 !important; min-width: 190px; padding: 13px 13px 13px 20px;
+                        
+                    }
                 }
             }
            
         }
     }
 }
+
+::ng-deep .aboutDataCenterSection .mdc-button__label{width: 100% !important; display: flex !important; align-items: center;
+    justify-content: space-between;}
 
 .borderedBtn{border-radius: 40px;
     border: 1px solid #886DE0;
