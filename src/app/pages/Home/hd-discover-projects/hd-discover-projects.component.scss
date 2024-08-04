@@ -148,3 +148,36 @@
     }
   }
   
+
+@media only screen and (max-width : 767px) {
+  .discoverProjectsSection {
+    padding: 60px 0;
+
+    .sectionHeader {
+      .title {
+        font-size: 35px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .sectionContent {
+      .projectCard {
+        width: 100%;
+        min-width: 100%;
+        margin-right: 15px;
+      }
+
+      .cardContainer {
+        .leftslideButton {
+          top: 100px;
+          left: -12px;
+        }
+        
+        .rightslideButton {
+          right: -12px;
+          top: 100px;
+        }
+      }
+    }
+  }
+}

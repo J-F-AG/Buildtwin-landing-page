@@ -130,3 +130,40 @@
     top: 0;
     z-index: 1;
   }
+
+@media only screen and (max-width : 767px) {
+  .sectionContainer {
+    padding: 50px 0;
+  }
+
+  .sectionTop {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .assistant {
+      margin-bottom: 20px;
+    }
+  }
+
+  .sectionBottom {
+    .headerCarousel {
+      .cardWrapper {
+        width: 50%;
+      }
+
+      .carouselWrapper {
+        gap: 10px;
+
+        .leftslideButton {
+          left: -15px;
+        }
+
+        .rightslideButton {
+          right: -15px;
+        }
+      }
+    }
+  }
+
+}

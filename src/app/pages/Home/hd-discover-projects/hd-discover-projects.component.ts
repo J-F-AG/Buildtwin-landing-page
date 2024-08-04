@@ -11,9 +11,6 @@ export class HdDiscoverProjectsComponent implements OnInit {
   constructor() {
   }
 
-  ngOnInit(): void {
-  }
-
   splitArray(dataArray: any[], x: number) {
     const result = [];
     for (let i = 0; i < dataArray.length; i += x) {
@@ -41,6 +38,12 @@ export class HdDiscoverProjectsComponent implements OnInit {
     discoverProjects = this.splitArray(this.projectsArray, 4);
   
     index = 0;
+
+    ngOnInit(): void {
+      if(window.innerWidth < 767) {
+        this.discoverProjects = this.splitArray(this.projectsArray, 1);
+      }
+    }
   
     @ViewChild(NzCarouselComponent, { static: false }) myCarousel: NzCarouselComponent;
   

@@ -1008,129 +1008,131 @@
                     <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" alt="" width="252" height="73">
                 </div>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            Service
-                        </th>
-                        <th>
-                            Software
-                        </th>
-                        <th>
-                            Building Code
-                        </th>
-                        <th>
-                            Service Add
-                        </th>
-                        <th>
-
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let service of serviceTypes; let idx = index">
-                        <td>
-                            <h5>
-                                {{service.name}}
-                            </h5>
-                            <ul class="list with-icon">
-                                <li *ngFor="let block of service?.special_feature_titles">
-                                    <i>
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <ellipse cx="11.0632" cy="11.0534" rx="8.64135" ry="8.64719"
-                                                stroke="#221638" stroke-width="1.4" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path
-                                                d="M10.8967 7.85147L8.08402 13.9497C7.91648 14.313 8.2895 14.6894 8.65426 14.5252L11.1119 13.4189C11.2248 13.3681 11.3541 13.3681 11.4669 13.4189L13.9246 14.5252C14.2893 14.6894 14.6624 14.313 14.4948 13.9497L11.6821 7.85148C11.5276 7.51634 11.0513 7.51634 10.8967 7.85147Z"
-                                                stroke="#221638" stroke-width="1.4" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M11.0625 1V3.59416" stroke="#221638" stroke-width="1.4"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M11.0625 18.4062V21.0004" stroke="#221638" stroke-width="1.4"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M18.4082 11.0547L21.0006 11.0547" stroke="#221638"
-                                                stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M1 11.0547L3.59241 11.0547" stroke="#221638" stroke-width="1.4"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                        <!-- <i>
-                                            <img [src]="h['service_icon']" alt="" width="22" height="22">
-                                        </i> -->
-                                    </i>
-                                    {{block}}
-                                </li>
-                            </ul>
-                        </td>
-                        <td>
-                            <div class="custom-select-wrapper">
-                                <select name="" id="" class="custom-select">
-                                    <option value="">Please select</option>
-                                    <option [value]="s.id" *ngFor="let s of listOfSoftware">{{s.name}}</option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="custom-select-wrapper">
-                                <select name="" id="" class="custom-select">
-                                    <option value="">Please select</option>
-                                    <option *ngFor="let code of formData?.buildingCode"> {{code.name}}
-                                    </option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <ul class="list">
-                                <li *ngFor="let addon of service?.addon_titles; let i = index" [ngClass]="{'highlight': addon.isSelected}">
-                                    <!-- <input type="checkbox" [checked]="addon.isChecked"> -->
-                                    {{addon.name}}
-                                    <i class="cursor">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" *ngIf="addon.isSelected" (click)="removeAddon(idx, i)"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="24" height="24" rx="12" fill="#886DE0" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M9.17161 7.75725C8.78109 7.36672 8.14792 7.36672 7.7574 7.75725C7.36688 8.14777 7.36688 8.78094 7.7574 9.17146L10.7627 12.1768L7.7574 15.1821C7.36688 15.5726 7.36688 16.2057 7.7574 16.5963C8.14792 16.9868 8.78109 16.9868 9.17161 16.5963L12.1769 13.591L15.182 16.5961C15.5725 16.9866 16.2057 16.9866 16.5962 16.5961C16.9868 16.2056 16.9868 15.5724 16.5962 15.1819L13.5911 12.1768L16.5962 9.17165C16.9868 8.78112 16.9868 8.14796 16.5962 7.75743C16.2057 7.36691 15.5725 7.36691 15.182 7.75743L12.1769 10.7625L9.17161 7.75725Z"
-                                                fill="white" />
-                                        </svg>
-                                        <svg *ngIf="!addon.isSelected" width="24" height="24" viewBox="0 0 24 24" fill="none"  (click)="addAdons(idx, i)"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <rect width="24" height="24" rx="12" fill="white" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M13 7C13 6.44772 12.5523 6 12 6C11.4477 6 11 6.44772 11 7V11.25H6.75C6.19772 11.25 5.75 11.6977 5.75 12.25C5.75 12.8023 6.19772 13.25 6.75 13.25H11V17.5C11 18.0523 11.4477 18.5 12 18.5C12.5523 18.5 13 18.0523 13 17.5V13.25H17.25C17.8023 13.25 18.25 12.8023 18.25 12.25C18.25 11.6977 17.8023 11.25 17.25 11.25H13V7Z"
-                                                fill="#886DE0" />
-                                        </svg>
-                                    </i>
-                                    <!-- <ng-container *ngIf="i === service?.addon_titles?.length - 1 && isAddon">
-                                        <select [(ngModel)]="selectedAddon" name="" id="" class="custom-select">
-                                            <option value="">Please select</option>
-                                            <option *ngFor="let add of addons" [value]="add.id"> {{add.title}}
-                                            </option>
-                                        </select>
-                                        <span (click)="addAdons(idx)">+</span>
-                                    </ng-container> -->
-                                </li>
-                            </ul>
-                        </td>
-                        <td class="normal">
-                            <h5>
-                                Start Enquiry
-                            </h5>
-                            <ul class="list bullets">
-                                <li>
-                                    It only takes few minutes
-                                </li>
-                            </ul>
-                            <!-- <a href="" class="default-btn mdc-button">
-                                Enquiry Now
-                            </a> -->
-                            <a target="_blank" href="https://cockpit.buildtwin.com/" class="default-btn mdc-button">
-                                Start Enquiry
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="service-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Service
+                            </th>
+                            <th>
+                                Software
+                            </th>
+                            <th>
+                                Building Code
+                            </th>
+                            <th>
+                                Service Add
+                            </th>
+                            <th>
+    
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let service of serviceTypes; let idx = index">
+                            <td>
+                                <h5>
+                                    {{service.name}}
+                                </h5>
+                                <ul class="list with-icon">
+                                    <li *ngFor="let block of service?.special_feature_titles">
+                                        <i>
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <ellipse cx="11.0632" cy="11.0534" rx="8.64135" ry="8.64719"
+                                                    stroke="#221638" stroke-width="1.4" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M10.8967 7.85147L8.08402 13.9497C7.91648 14.313 8.2895 14.6894 8.65426 14.5252L11.1119 13.4189C11.2248 13.3681 11.3541 13.3681 11.4669 13.4189L13.9246 14.5252C14.2893 14.6894 14.6624 14.313 14.4948 13.9497L11.6821 7.85148C11.5276 7.51634 11.0513 7.51634 10.8967 7.85147Z"
+                                                    stroke="#221638" stroke-width="1.4" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M11.0625 1V3.59416" stroke="#221638" stroke-width="1.4"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M11.0625 18.4062V21.0004" stroke="#221638" stroke-width="1.4"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M18.4082 11.0547L21.0006 11.0547" stroke="#221638"
+                                                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M1 11.0547L3.59241 11.0547" stroke="#221638" stroke-width="1.4"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <!-- <i>
+                                                <img [src]="h['service_icon']" alt="" width="22" height="22">
+                                            </i> -->
+                                        </i>
+                                        {{block}}
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <div class="custom-select-wrapper">
+                                    <select name="" id="" class="custom-select">
+                                        <option value="">Please select</option>
+                                        <option [value]="s.id" *ngFor="let s of listOfSoftware">{{s.name}}</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-select-wrapper">
+                                    <select name="" id="" class="custom-select">
+                                        <option value="">Please select</option>
+                                        <option *ngFor="let code of formData?.buildingCode"> {{code.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="list">
+                                    <li *ngFor="let addon of service?.addon_titles; let i = index" [ngClass]="{'highlight': addon.isSelected}">
+                                        <!-- <input type="checkbox" [checked]="addon.isChecked"> -->
+                                        {{addon.name}}
+                                        <i class="cursor">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" *ngIf="addon.isSelected" (click)="removeAddon(idx, i)"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="24" height="24" rx="12" fill="#886DE0" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.17161 7.75725C8.78109 7.36672 8.14792 7.36672 7.7574 7.75725C7.36688 8.14777 7.36688 8.78094 7.7574 9.17146L10.7627 12.1768L7.7574 15.1821C7.36688 15.5726 7.36688 16.2057 7.7574 16.5963C8.14792 16.9868 8.78109 16.9868 9.17161 16.5963L12.1769 13.591L15.182 16.5961C15.5725 16.9866 16.2057 16.9866 16.5962 16.5961C16.9868 16.2056 16.9868 15.5724 16.5962 15.1819L13.5911 12.1768L16.5962 9.17165C16.9868 8.78112 16.9868 8.14796 16.5962 7.75743C16.2057 7.36691 15.5725 7.36691 15.182 7.75743L12.1769 10.7625L9.17161 7.75725Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <svg *ngIf="!addon.isSelected" width="24" height="24" viewBox="0 0 24 24" fill="none"  (click)="addAdons(idx, i)"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="24" height="24" rx="12" fill="white" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13 7C13 6.44772 12.5523 6 12 6C11.4477 6 11 6.44772 11 7V11.25H6.75C6.19772 11.25 5.75 11.6977 5.75 12.25C5.75 12.8023 6.19772 13.25 6.75 13.25H11V17.5C11 18.0523 11.4477 18.5 12 18.5C12.5523 18.5 13 18.0523 13 17.5V13.25H17.25C17.8023 13.25 18.25 12.8023 18.25 12.25C18.25 11.6977 17.8023 11.25 17.25 11.25H13V7Z"
+                                                    fill="#886DE0" />
+                                            </svg>
+                                        </i>
+                                        <!-- <ng-container *ngIf="i === service?.addon_titles?.length - 1 && isAddon">
+                                            <select [(ngModel)]="selectedAddon" name="" id="" class="custom-select">
+                                                <option value="">Please select</option>
+                                                <option *ngFor="let add of addons" [value]="add.id"> {{add.title}}
+                                                </option>
+                                            </select>
+                                            <span (click)="addAdons(idx)">+</span>
+                                        </ng-container> -->
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="normal">
+                                <h5>
+                                    Start Enquiry
+                                </h5>
+                                <ul class="list bullets">
+                                    <li>
+                                        It only takes few minutes
+                                    </li>
+                                </ul>
+                                <!-- <a href="" class="default-btn mdc-button">
+                                    Enquiry Now
+                                </a> -->
+                                <a target="_blank" href="https://cockpit.buildtwin.com/" class="default-btn mdc-button">
+                                    Start Enquiry
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

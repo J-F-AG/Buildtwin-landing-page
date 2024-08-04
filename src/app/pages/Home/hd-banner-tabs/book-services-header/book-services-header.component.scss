@@ -289,3 +289,42 @@
     .countryField{width: calc(50% - 18px);}
   }
 }
+
+
+@media only screen and (max-width : 767px) {
+  .bookServiceForm {
+    flex-direction: column;
+    padding-bottom: 30px;
+    > div {
+      width: 100%;
+    }
+  
+    .groupField {
+      margin-bottom: 0;
+      flex-direction: column;
+      
+      >div {
+        width: 100%;
+      }
+    }
+  }
+
+  .preCastWrapper {
+    padding-top: 10px;
+  }
+
+  .bookServiceFormBottom,
+  .bookServiceFormBottom .groupField {
+    flex-direction: column;
+  }
+
+  .bookServiceFormBottom {
+    .groupField {
+      width: 100%;
+
+      .countryField {
+        width: 100%;
+      }
+    }
+  }
+}

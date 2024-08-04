@@ -200,4 +200,54 @@
   hr {
     margin: 10px 0;
   }
+
+@media only screen and (max-width : 767px) { 
+  .sectionHead {
+    .heading {
+      text-align: center;
+      padding: 0 25px;
+    }
+  }
+
+  .bodyWrapper {
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 30px 0;
+  }
+
+  .sectionMidMain {
+    width: 100%;
+    font-size: 15px;
+    overflow: auto;
+  }
+
+  .buildTwinItemsContainer {
+    white-space: nowrap;
+  }
+
+  .sectionContent {
+    flex-direction: column;
+    height: auto;
+
+    .leftChild {
+      width: auto;
+      padding: 30px 20px;
+
+      .contentIconSection {
+        width: 135px;
+      }
+    }
+
+    .rightChild {
+      width: auto;
+      padding: 30px 20px;
+
+      .content {
+        margin: 0 0 30px;
+      }
+    }
+  }
+}
+
   

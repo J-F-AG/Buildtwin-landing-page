@@ -11,9 +11,6 @@ export class HdServicesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
   splitArray(dataArray: any[], x: number) {
     const result = [];
     for (let i = 0; i < dataArray.length; i += x) {
@@ -39,6 +36,12 @@ export class HdServicesComponent implements OnInit {
   ]
 
   discoverServices = this.splitArray(this.servicesArray, 6);
+
+  ngOnInit(): void {
+    if(window.innerWidth < 767) {
+      this.discoverServices = this.splitArray(this.servicesArray, 2);
+    }
+  }
 
   index = 0;
 

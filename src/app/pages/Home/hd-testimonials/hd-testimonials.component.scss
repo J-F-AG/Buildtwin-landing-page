@@ -168,4 +168,14 @@ ul.partner li {
 .partnerWrap {
     height: auto;
 }
+
+.testimonial-container {
+  padding: 0 20px;
+
+  p {
+    br {
+      display: none;
+    }
+  }
+}
   }

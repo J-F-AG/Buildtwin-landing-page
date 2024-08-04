@@ -91,7 +91,24 @@
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
+    .integrations-area {
+        .plugWrapper {
+            flex-direction: column;
+        }
+    }
 
+    .integration-box {
+        display: flex;
+        justify-content: center;
+    }
+
+    :host ::ng-deep .owl-theme .owl-nav [class*=owl-prev] {
+        left: 20px;
+    }
+
+    :host ::ng-deep .owl-theme .owl-nav [class*=owl-next] {
+        right: 20px;
+    }
 
 }
 
