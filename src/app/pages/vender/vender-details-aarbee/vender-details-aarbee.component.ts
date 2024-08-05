@@ -197,6 +197,7 @@ export class VenderDetailsAarbeeComponent {
       license: '',
       third_party_mediation: '',
       liability_insurance: '',
+      registration_number: '',
     },
     additional_highlights: [],
     badges: [],
