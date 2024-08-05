@@ -28,7 +28,7 @@
     transform: translateY(-50%) rotate(-90deg);
     transform-origin: left;
 }
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-next]{    
+:host ::ng-deep .trustedby-wrapper .owl-theme .owl-nav [class*=owl-next]{    
     position: absolute;
     right: -3px;
     bottom: auto;
@@ -99,5 +99,11 @@
 
 }
 @media  (max-width: 767px) {
+    :host ::ng-deep .trustedby-wrapper .owl-theme .owl-nav [class*=owl-prev] {
+        left: 20px;
+    }
 
+    :host ::ng-deep .trustedby-wrapper .owl-theme .owl-nav [class*=owl-next] {
+        right: 20px;
+    }
 }
