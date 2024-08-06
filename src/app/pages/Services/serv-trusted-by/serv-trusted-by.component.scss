@@ -31,7 +31,7 @@
     transform: translateY(-50%) rotate(-90deg);
     transform-origin: left;
 }
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-next]{    
+:host ::ng-deep .serv-trustedby-wrapper .owl-theme .owl-nav [class*=owl-next]{    
     position: absolute;
     right: -3px;
     bottom: auto;
@@ -76,7 +76,13 @@
 
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
+    :host ::ng-deep .serv-trustedby-wrapper .owl-theme .owl-nav [class*=owl-prev]{  
+        left: 15px;
+    }
 
+    :host ::ng-deep .serv-trustedby-wrapper .owl-theme .owl-nav [class*=owl-next]{
+        right: 15px;
+    }
 
 }
 

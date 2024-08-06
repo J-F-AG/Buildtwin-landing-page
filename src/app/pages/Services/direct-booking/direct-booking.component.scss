@@ -120,7 +120,24 @@
 
 
 /* Max width 767px */
-@media only screen and (max-width : 767px) {}
+@media only screen and (max-width : 767px) {
+  .directBookingWrapper {
+    .containerHead {
+      flex-direction: column;
+      gap: 25px;
+    }
+  }
+
+  .bookingTableWrapper {
+    font-size: 14px;
+    margin-right: -15px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    .bookingTable {
+        width: 1300px;
+    }
+  }
+}
 
 /* Min width 768px to Max width 991px */
 @media only screen and (min-width : 768px) and (max-width : 991px) {}

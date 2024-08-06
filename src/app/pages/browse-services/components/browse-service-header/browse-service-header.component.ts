@@ -11,9 +11,6 @@ export class BrowseServiceHeaderComponent implements OnInit {
   showPopup=false;
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
   splitArray(dataArray: any[], x: number) {
     const result = [];
     for (let i = 0; i < dataArray.length; i += x) {
@@ -41,6 +38,12 @@ export class BrowseServiceHeaderComponent implements OnInit {
   discoverServices = this.splitArray(this.servicesArray, 6);
 
   index = 0;
+
+  ngOnInit(): void {
+    if(window.innerWidth < 767) {
+      this.discoverServices = this.splitArray(this.servicesArray, 2);
+    }
+  }
 
   @ViewChild(NzCarouselComponent, { static: false }) myCarousel: NzCarouselComponent;
 
