@@ -31,3 +31,13 @@
         }
     }
 }
+
+@media only screen and (max-width : 767px) {
+    .getStartedWrapper {
+        .container {
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

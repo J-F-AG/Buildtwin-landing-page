@@ -218,6 +218,10 @@ export class DrawingsComponent implements OnInit {
     constructor() { }
   
     ngOnInit(): void {
+      if(window.innerWidth < 767) {
+        this.discoverProjects = this.splitArray(this.projectsArray, 1);
+      }
+      
       this.startDate = new Date();
       this.endDate = new Date(new Date().setDate(new Date().getDate() + 6));
   

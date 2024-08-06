@@ -420,8 +420,10 @@
       }
       .rightSection {
         width: 70%;
-        display: flex;
-        border-radius: 7px;
+        > div {
+          display: flex;
+          border-radius: 7px;
+        }
         .companyCriterias {
           display: flex;
           flex-direction: column;
@@ -831,3 +833,133 @@
   .specialProjectsSection .carousel {
     max-width: 100%;
   }
+
+
+@media only screen and (max-width : 767px) {
+  .headerSection,
+  .discoverProjectsSection {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .discoverProjectsSection {
+    .sectionHeader {
+      .icon {
+        margin-left: -15px;
+      }
+    }
+
+    .sectionContent {
+      margin: 0 -15px;
+      .projectCard {
+        width: 100%;
+        min-width: 100%;
+        margin-right: 15px;
+      }
+
+      .cardContainer {
+        padding: 20px 15px 15px;
+        .leftslideButton {
+          top: 100px;
+          left: -12px;
+        }
+        
+        .rightslideButton {
+          right: -12px;
+          top: 100px;
+        }
+      }
+    }
+  }
+
+  .helpSection {
+    padding: 0;
+    
+    .sectionHeader {
+      .icon {
+        margin-left: -15px;
+      }
+    }
+
+    .sectionContent {
+      padding: 20px 0;
+
+      .helpGridContainer {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .column {
+        gap: 10px;
+      }
+    }
+  }
+
+  .solutionProviderSection {
+    padding: 0;
+
+    .sectionHeader {
+      .icon {
+        margin-left: -15px;
+      }
+    }
+
+    .sectionContent {
+      margin: 30px 0;
+      flex-direction: column;
+
+      .leftSection {
+        width: auto;
+
+        .moreFilters {
+          margin: 10px 0;
+        }
+      }
+
+      .rightSection {
+        width: auto;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        > div {
+          width: 900px;
+        }
+      }
+    }
+  }
+
+  .specialProjectsSection {
+    padding: 0;
+    .sectionHeader {
+      .icon {
+        margin-left: -15px;
+      }
+    }
+
+    .carousel {
+      padding: 15px 0;
+      margin: 0;
+
+      ::ng-deep {
+        .owl-carousel {
+          .owl-nav {
+            .owl-prev {
+              left: 10px;
+            }
+
+            .owl-next {
+              right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .image-container {
+      margin: 0 auto;
+    }
+  }
+
+  .whyBuildtwinSection {
+    padding: 0;
+  }
+  
+}

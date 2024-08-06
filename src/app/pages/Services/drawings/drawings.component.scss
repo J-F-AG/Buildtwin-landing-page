@@ -46,6 +46,7 @@
           left: 0;
           transform: rotate(180deg);
           cursor: pointer;
+          z-index: 1;
         }
         .rightslideButton {
           position: absolute;
@@ -273,6 +274,39 @@
 
     &.day {
       color: var(--color-theme);
+    }
+  }
+}
+
+
+@media only screen and (max-width : 767px) {
+  .discoverProjectsSection {
+    padding: 50px 0 0;
+    .sectionHeader {
+      .title {
+        font-size: 35px;
+      }
+    }
+
+    .sectionContent {
+      margin: 0 -15px;
+      .cardContainer {
+        padding: 20px 15px;
+      }
+
+      .projectCard {
+        width: 100%;
+        min-width: inherit;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .selectBoxWrapper {
+    .selectBoxContainer {
+      .label {
+        font-size: 14px;
+      }
     }
   }
 }

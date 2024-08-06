@@ -16,7 +16,7 @@ export class ServTrustedByComponent {
     navText: [ "", "" ],
     responsive: {
       0: {
-        items: 2,
+        items: 1,
         nav: true
       },
       515: {

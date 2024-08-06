@@ -32,6 +32,9 @@
         flex-direction: column; align-items: center;
         .ServBannerLeft{width: auto; text-align: center;
             .ServBannerImg{max-width: 280px; width: 70%; display: inline-block;}
+            h1 {
+                font-size: 35px;
+            }
         }
         .ServBannerRight{ width: 100%; flex-direction: column;  align-items: center;
             .bannerItems{ width: 70%;

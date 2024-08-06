@@ -39,8 +39,6 @@ export class BrowseServicesMainComponent implements OnInit {
     // document.body.classList.add('add-top-space');
   }
 
-  ngOnInit(): void {
-  }
   splitArray(dataArray: any[], x: number) {
     const result = [];
     for (let i = 0; i < dataArray.length; i += x) {
@@ -68,6 +66,12 @@ export class BrowseServicesMainComponent implements OnInit {
   discoverProjects = this.splitArray(this.projectsArray, 4);
 
   index = 0;
+
+  ngOnInit(): void {
+    if(window.innerWidth < 767) {
+      this.discoverProjects = this.splitArray(this.projectsArray, 1);
+    }
+  }
 
   @ViewChild(NzCarouselComponent, { static: false }) myCarousel: NzCarouselComponent;
 

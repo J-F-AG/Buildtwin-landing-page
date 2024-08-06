@@ -126,3 +126,41 @@
   right: 0;
   top: 0;
 }
+
+@media only screen and (max-width : 767px) {
+  .abs-d {
+    right: -15px;
+    top: -56px;
+  }
+
+  .sectionTop {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sectionMid {
+    font-size: 28px;
+    margin-top: 0;
+  }
+
+  .sectionBottom {
+    .headerCarousel {
+      .cardWrapper {
+        width: 50%;
+      }
+
+      .carouselWrapper {
+        gap: 10px;
+
+        .leftslideButton {
+          left: -15px;
+        }
+
+        .rightslideButton {
+          right: -15px;
+        }
+      }
+    }
+  }
+}

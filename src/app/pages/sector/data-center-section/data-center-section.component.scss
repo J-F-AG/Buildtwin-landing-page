@@ -20,5 +20,22 @@
 /* max width 992px */
 @media only screen and (max-width : 992px) {
     .dataCenterSection {
-        margin: 70px 0 0 0;}
+        margin: 70px 0 0 0;
     }
+}
+
+@media only screen and (max-width : 767px) {
+    .dataCenterSection {
+        h2 {
+            font-size: 40px !important;
+        }
+        .twoCol {
+            flex-direction: column;
+            gap: 40px;
+
+            .col {
+                width: auto;
+            }
+        }
+    }
+}

@@ -12,10 +12,18 @@
     }
 }
 
-/* Max width 575px */
-@media only screen and (max-width : 575px){
+@media only screen and (max-width : 767px) {
+    .solutionProviderSection {
+        .hd-section-title {
+            text-align: center;
+        }
+    }
+
     .providerList{
-        .itemContainer{ width: 100%;}
+        .itemContainer{ 
+            width: 100%;
+            justify-content: center;
+        }
     }
 }
 
