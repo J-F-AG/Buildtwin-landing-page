@@ -94,6 +94,9 @@
                     align-items: center;
                     gap: 9px;
                     margin-bottom: 21px;
+                    &.office-location {
+                        flex-wrap: wrap;
+                    }
 
                         
 
