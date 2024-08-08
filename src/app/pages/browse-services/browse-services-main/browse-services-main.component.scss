@@ -686,14 +686,15 @@
   
         .leftslideButton {
           position: absolute;
-          top: 134px;
+          top: 95px;
           left: 0;
           transform: rotate(180deg);
           cursor: pointer;
+          z-index: 1;
         }
         .rightslideButton {
           position: absolute;
-          top: 134px;
+          top: 95px;
           right: 0;
           cursor: pointer;
         }

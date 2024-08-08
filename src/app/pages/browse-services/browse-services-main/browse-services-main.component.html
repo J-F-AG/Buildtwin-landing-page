@@ -30,7 +30,7 @@
                                         <div class="projectCategory">{{item.category}}</div>
                                         <div class="projectName">{{item.projectTitle}}</div>
                                         <div class="company">
-                                            <img src="assets/images/ellipse.png" alt="icon">
+                                            <img src="{{item.locationFlag}}" alt="icon" width="20" height="20">
                                             <div class="companyName">
                                                 {{item.company}}
                                             </div>
@@ -52,8 +52,7 @@
                                         </div>
 
                                         <div class="cardFooter">
-                                            <a href="#"> Learn More about GPC
-                                                Engineering</a>
+                                            <a [routerLink]="item.link">{{item.linkTitle}}</a>
                                             <lib-svg-icon class="arrowIcon" [name]="'arrow-icon'" [size]="14"
                                                 [sizeH]="22"></lib-svg-icon>
                                         </div>
@@ -125,7 +124,7 @@
             </div>
         </div>
     </section>
-    <section class="solutionProviderSection">
+    <!-- <section class="solutionProviderSection">
         <div class="container">
             <div class="sectionHeader">
                 <lib-svg-icon class="icon" [name]="'solution-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
@@ -147,7 +146,6 @@
                         <app-bt-select [options]="countryArray" (selectedTabChange)="selectCountry($event)"
                             [selectedInput]="selectedCountry"></app-bt-select>
                     </div>
-                    <!-- Precast dropdown -->
                     <div class="selectBox precastField">
                         <div>
                             <span class="title">Pre-Cast</span>
@@ -156,7 +154,6 @@
                         <app-bt-select [options]="precastServices" (selectedTabChange)="selectService($event)"
                             [selectedInput]="selectedPrecastServices"></app-bt-select>
                     </div>
-                    <!-- Precase bridge -->
                     <div class="selectBox precastField">
                         <div>
                             <span class="title">Pre-Cast</span>
@@ -200,8 +197,6 @@
                                     <img src="assets/images/india-flag.png" style="width: 23px;height: 23px;">
     
                                     <div class="name" style="font-family: var(--medium-global);font-size: 14px; color: #000;">
-                                        <!-- <div>Bangalore <br>Karnataka, 
-                                        </div> -->
                                         <div>India</div>
                                     </div>
                                 </div>
@@ -273,14 +268,7 @@
                             <div style="display: flex;flex-direction: column; align-items: center; justify-content: space-around; background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center; color: #000;"
                                 class="">
                                 <div>
-                                    <!-- <div style="font-size: 14px;"> -->
-                                        <!-- <span style="font-family:var(--table-th-font);">GMT Time Zone</span> 
-                                        10:00 AM to 07:00 PM -->
-                                        <!-- --
-                                    </div> -->
                                     <div style="font-size: 14px; text-align: center;"><span style="font-family:var(--table-th-font);">Vietnam (GMT+7)</span> <br>10:00 AM to 07:00 PM </div>
-                                    <!-- <div style=" text-align: center;">different timezones</div> -->
-    
                                 </div>
                             </div>
                             <div style="display: flex;justify-content: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
@@ -334,15 +322,7 @@
                             <div style="display: flex;flex-direction: column; align-items: center; justify-content: space-around; background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center; color: #000;"
                                 class="">
                                 <div>
-                                
-                                    <!-- <div style="font-size: 14px;"> -->
-                                        <!-- <span style="font-family:var(--table-th-font);">GMT Time Zone</span> 
-                                        10:00 AM to 07:00 PM -->
-                                        <!-- --
-                                    </div> -->
                                     <div style="font-size: 14px; text-align: center;"><span style="font-family:var(--table-th-font);">Germany (GMT+2)</span> <br>10:00 AM to 07:00 PM </div>
-                                    <!-- <div style=" text-align: center;">different timezones</div> -->
-    
                                 </div>
                             </div>
                             <div style="display: flex;justify-content: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
@@ -368,7 +348,7 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="specialProjectsSection">
         <div class="container">
             <div class="sectionHeader">
