@@ -941,6 +941,7 @@ ul {
     .client-feeback-list {
         display: flex;
         gap: 20px;
+        flex-wrap: wrap;
         .block {
             border-radius: 12px;
             background: #fff;

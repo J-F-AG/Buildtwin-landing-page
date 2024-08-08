@@ -32,7 +32,7 @@
                             [sizeH]="88">
                         </lib-svg-icon>
                         <ng-container *ngFor=" let item of subServiceArray">
-                            <div class="cardWrapper" routerLink="/engineering-services/services">
+                            <div class="cardWrapper" routerLink="/engineering-services/services" >
                                 <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                                 <div class="detail">
                                     {{item.name}}
