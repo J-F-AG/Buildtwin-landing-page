@@ -133,6 +133,7 @@ ul {
     .company-address {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 4px;
         color: var(--paragraphColor);
         font-family: var(--fontFamily);
@@ -241,7 +242,7 @@ ul {
     }
     .bottom {
         display: flex;
-        gap: 11px;
+        gap: 7.4px;
         flex-wrap: wrap;
     }
     figure {
@@ -295,6 +296,10 @@ ul {
     flex-direction: column;
     gap: 11px;
     width: 334px;
+    &.in-popup {
+        width: 325px;
+        flex: 0 0 auto;
+    }
     .block {
         fill: #fff;
         box-shadow: 0px 0px 10px rgba(175, 175, 175, 0.15);
@@ -303,6 +308,7 @@ ul {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 25px;
             padding: 21px;
             .user-detail-child {
                 display: flex;
@@ -580,6 +586,13 @@ ul {
     Available Service for Direct Booking css start
 */
 #available-service {
+    .head {
+        ul {
+            gap: 25px;
+            width: 100%;
+            align-items: center;
+        }
+    }
     table {
         width: 100%;
         text-align: left;
@@ -1437,6 +1450,11 @@ ul {
 
 
     #available-service {
+        .head {
+            ul {
+                flex-wrap: wrap;
+            }
+        }
         .service-table {
             font-size: 14px;
             margin-right: -15px;

@@ -548,7 +548,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="company-detail">
+                    <div class="company-detail in-popup">
                         <div class="block user-detail-wrapper">
                             <img [src]="formData?.companyDetails.icon" alt="" width="64" height="33">
                             <div class="user-detail-child" *ngFor="let dir of formData.directors">
@@ -1004,9 +1004,11 @@
                         Unlock the BuildTwin advantage
                     </small>
                 </h2>
-                <div class="flex" *ngFor="let e of formData.engineeringData">
-                    <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" alt="" width="252" height="73">
-                </div>
+                <ul class="flex" *ngIf="formData.engineeringData.length">
+                    <li *ngFor="let e of formData.engineeringData">
+                        <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" alt="" width="252" height="73">
+                    </li>
+                </ul>
             </div>
             <div class="service-table">
                 <table>

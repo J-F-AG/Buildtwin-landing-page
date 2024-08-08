@@ -1,4 +1,10 @@
-.solutionProviderSection{padding: 42px 0;}
+.solutionProviderSection{
+    padding: 42px 0;
+    .hd-section-title,
+    .hd-section-title p {
+        max-width: 100%;
+    }
+}
 
 .providerList{ display: flex; flex-wrap: wrap; gap: 24px;
     .itemContainer{ width: 23.3%; padding: 13px; display: flex; 
