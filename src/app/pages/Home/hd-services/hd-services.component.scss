@@ -1,0 +1,169 @@
+.sectionContainer {
+    min-height: 500px;
+    position: relative;
+    background-color: var(--assistantBackgroundColor-global);
+    padding: 82px 0;
+  }
+  .sectionTop {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .heading {
+      font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .assistant {
+      display: flex;
+      gap: 5px;
+      img {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+      }
+      .assitWrapper {
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .link:hover {
+        color: #886de0;
+      }
+    }
+  }
+  .sectionMid {
+    .content{
+      font-size: 16px; font-weight: 500;
+    }
+    .bookServicesButton {
+      padding: 14px 18px;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      width: 212px;
+      span{padding-right: 50px;}
+    }
+  }
+  .sectionBottom {
+    width: 100%;
+    margin: 48px 0 0;
+    position: relative;
+    bottom: 0;
+    z-index: 10;
+    .headerCarousel {
+      display: flex;
+      justify-content: space-between;
+      .carouselWrapper {
+        display: flex;
+        // justify-content: space-between;
+        gap: 16px;
+        position: relative;
+        background: none;
+        .leftslideButton {
+          position: absolute;
+          left: 0;
+          top: 60px;
+          transform: rotate(180deg);
+          cursor: pointer;
+        }
+        .rightslideButton {
+          position: absolute;
+          right: 0;
+          top: 60px;
+          cursor: pointer;
+        }
+      }
+      .cardWrapper {
+        width: calc(16.66%);
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.03);
+        padding: 10px;
+        cursor: pointer;
+  
+        img {
+          // height: 137px;
+          // aspect-ratio: 153 / 137;
+          background: #fff;
+        }
+        .detail {
+          margin: 0 auto;
+          width: 95px;
+          text-align: center;
+          font-family: var(--semibold-global);
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  
+  //global
+  .link {
+    color: #886de0;
+  }
+  .themeButton {
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #886de0;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.1);
+  }
+  .carousel {
+  }
+  
+  
+  [nz-carousel-content] {
+    height: auto;
+  }
+  
+  :host ::ng-deep .slick-list,
+  :host ::ng-deep .slick-track,
+  :host ::ng-deep .slick-slide {
+    max-height: 210px;
+  }
+  .abs-d {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+@media only screen and (max-width : 767px) {
+  .sectionContainer {
+    padding: 50px 0;
+  }
+
+  .sectionTop {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .assistant {
+      margin-bottom: 20px;
+    }
+  }
+
+  .sectionBottom {
+    .headerCarousel {
+      .cardWrapper {
+        width: 50%;
+      }
+
+      .carouselWrapper {
+        gap: 10px;
+
+        .leftslideButton {
+          left: -15px;
+        }
+
+        .rightslideButton {
+          right: -15px;
+        }
+      }
+    }
+  }
+
+}

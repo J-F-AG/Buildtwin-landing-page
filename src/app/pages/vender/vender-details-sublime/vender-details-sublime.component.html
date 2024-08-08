@@ -1,0 +1,1082 @@
+<div class="subline">
+    <app-hd-navbar></app-hd-navbar>
+    <div class="stickyMneu" [class.active]="isSticky">
+        <div class="stcikyTop">
+            <div class="container">
+                <div class="flex">
+                    <a href="/">
+                        <img src="assets/images/sublimestructures.png" width="170" height="55">
+                    </a>
+
+                </div>
+                <div class="btnWrap">
+                    <!-- <a  (click)="call()" class="cursor">
+                Schedule Interview
+            </a> -->
+                    <a (click)="call()" class="active cursor">
+                        Start Enquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <ul>
+                    <li [ngClass]="{'activeSection': activeSection === 'about'}" (click)="scrollToSection('about')">
+                        About</li>
+                    <li [ngClass]="{'activeSection': activeSection === 'capabilities'}"
+                        (click)="scrollToSection('capabilities')">Capabilities</li>
+                    <li [ngClass]="{'activeSection': activeSection === 'portfolio'}"
+                        (click)="scrollToSection('portfolio')">Portfolio</li>
+                    <li [ngClass]="{'activeSection': activeSection === 'certification'}"
+                        (click)="scrollToSection('certification')">Certification</li>
+                    <li [ngClass]="{'activeSection': activeSection === 'social'}" (click)="scrollToSection('Social')">
+                        Social Feed</li>
+                </ul>
+                <!--   <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div> -->
+            </div>
+            <div id="progress-bar" ng-style="{width: progress + '%'}"></div>
+        </div>
+    </div>
+
+    <app-vender-banner>
+        <div class="hero" id="other-section1">
+            <owl-carousel-o [options]="heroSlides" class="heroSlides">
+                <ng-template carouselSlide>
+                    <img src="assets/images/sublime-banner.jpg" height="422" width="188" class="hero-banner" />
+                    <div class="sliderContent">
+                        <h1>Samsung Trestle project
+                        </h1>
+                        <p><img src="assets/images/aarbee/location.png" width="20" height="20"> USA</p>
+                        <div class="btnWrap">
+                            <a (click)="call()" class="active cursor">
+                                Learn more about Sublime <i class="ti ti-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </ng-template>
+
+            </owl-carousel-o>
+        </div>
+    </app-vender-banner>
+
+    <div id="about-service" class="about-service section1">
+        <div class="container">
+            <div class="inner">
+                <h2>About Sublime</h2>
+                <div class="details">
+                    <div class="list">
+                        <span><img src="assets/images/ui/avatr.png" height="30" width="30" /> 28+</span>
+                        <p>Employees</p>
+                    </div>
+                    <div class="list">
+                        <span><img src="assets/images/aarbee/market.png" height="21" width="21" /> 3+</span>
+                        <p>Market</p>
+                    </div>
+                    <div class="list">
+                        <span><img src="assets/images/aarbee/exp.png" height="21" width="21" /> 3+</span>
+                        <p>Years in Business</p>
+                    </div>
+                    <div class="list">
+                        <span><img src="assets/images/aarbee/ref-project.png" height="21" width="21" /> 28+</span>
+                        <p>Reference Projects</p>
+                    </div>
+                    <div class="list">
+                        <span><img src="assets/images/ui/country3.png" height="21" width="21" /> Coimbatore India</span>
+                        <p>Headquarter</p>
+                    </div>
+                    <div class="list">
+                        <span><img src="assets/images/aarbee/founded.png" height="21" width="21" /> 2021</span>
+                        <p>Founded</p>
+                    </div>
+                </div>
+                <div class="service-section">
+                    <h3>Services: <span>Structural</span></h3>
+                    <div class="service-list">
+                        <ul>
+                            <li><img src="assets/images/aarbee/misc.png" height="21" width="21" /> Miscellaneous Steel
+                                Detailing</li>
+                            <li><img src="assets/images/aarbee/structural.png" height="21" width="21" /> Structural
+                                Design</li>
+                            <li><img src="assets/images/aarbee/details.png" height="21" width="21" /> Estimodeling
+                                (Tekla EPM)</li>
+                            <li><img src="assets/images/aarbee/bos.png" height="21" width="21" /> Material Takeoffs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="on-site">
+                    <h3>On-Site Available <span>(own office)</span></h3>
+                    <div class="site-list">
+                        <ul>
+                            <li><img src="assets/images/india.png" height="60" width="60" /> <span>India</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="scrollSection">
+        <app-abount-jf>
+            <div class="about" id="other-service2">
+
+                <div class="whiteSection">
+                    <div class="container">
+                        <div class="flexStructure">
+                            <div class="leftPart">
+
+                                <div class="head">
+                                    <!-- <img class="logo"
+                            src="assets/images/ui/logoJ&f.png"
+                            width="120"
+                            height="61"
+                        /> -->
+                                    <h2>About Sublime Structures</h2>
+                                    <p>
+                                        Sublime Structures is a virtual construction modeling service provider
+                                        specializing in Structural/Miscellaneous, Ornamental Steel and Duct / Plate work
+                                        Detailing and Designing. We offer our services to the Construction Industry and
+                                        its associated areas.
+                                    </p>
+
+                                    <p>
+                                        At Sublime Structures, we believe in our service and product. We work hard to
+                                        get to know our customers, to develop a connection and to understand them and
+                                        their needs.
+                                    </p>
+                                    <h3>Engineering project for</h3>
+                                    <img class="resize" src="assets/images/aarbee/eng-logos.png" width="451"
+                                        height="100" />
+
+                                    <div class="btnWrap">
+                                        <a (click)="call()" class="btnNew cursor">Start Enquiry<i
+                                                class="ti ti-arrow-narrow-right"></i></a>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="leftPart rightPart">
+                                <div class="box">
+
+                                    <div class="rowData">
+                                        <div class="rating">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="101" height="20"
+                                                viewBox="0 0 101 20" fill="none">
+                                                <mask id="mask0_6810_1196" style="mask-type: alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="101" height="20">
+                                                    <rect width="101" height="20" fill="#836ED9" />
+                                                </mask>
+                                                <g mask="url(#mask0_6810_1196)">
+                                                    <path
+                                                        d="M9.24426 1.976C9.40959 1.46715 10.1295 1.46715 10.2948 1.976L11.8907 6.88757C11.9646 7.11513 12.1767 7.26921 12.4159 7.26921H17.5803C18.1153 7.26921 18.3378 7.95385 17.9049 8.26833L13.7269 11.3039C13.5333 11.4445 13.4523 11.6938 13.5262 11.9213L15.1221 16.8329C15.2874 17.3418 14.7051 17.7649 14.2722 17.4504L10.0942 14.4149C9.90059 14.2743 9.63847 14.2743 9.44489 14.4149L5.26686 17.4504C4.83401 17.7649 4.25162 17.3418 4.41695 16.8329L6.01282 11.9213C6.08676 11.6938 6.00576 11.4445 5.81218 11.3039L1.63415 8.26833C1.2013 7.95385 1.42375 7.26921 1.95878 7.26921H7.12312C7.36239 7.26921 7.57445 7.11513 7.64839 6.88757L9.24426 1.976Z"
+                                                        fill="#886DE0" />
+                                                    <path
+                                                        d="M29.2443 1.976C29.4096 1.46715 30.1295 1.46715 30.2948 1.976L31.8907 6.88757C31.9646 7.11513 32.1767 7.26921 32.4159 7.26921H37.5803C38.1153 7.26921 38.3378 7.95385 37.9049 8.26833L33.7269 11.3039C33.5333 11.4445 33.4523 11.6938 33.5262 11.9213L35.1221 16.8329C35.2874 17.3418 34.7051 17.7649 34.2722 17.4504L30.0942 14.4149C29.9006 14.2743 29.6385 14.2743 29.4449 14.4149L25.2669 17.4504C24.834 17.7649 24.2516 17.3418 24.417 16.8329L26.0128 11.9213C26.0868 11.6938 26.0058 11.4445 25.8122 11.3039L21.6341 8.26833C21.2013 7.95385 21.4238 7.26921 21.9588 7.26921H27.1231C27.3624 7.26921 27.5745 7.11513 27.6484 6.88757L29.2443 1.976Z"
+                                                        fill="#886DE0" />
+                                                    <path
+                                                        d="M49.2443 1.976C49.4096 1.46715 50.1295 1.46715 50.2948 1.976L51.8907 6.88757C51.9646 7.11513 52.1767 7.26921 52.4159 7.26921H57.5803C58.1153 7.26921 58.3378 7.95385 57.9049 8.26833L53.7269 11.3039C53.5333 11.4445 53.4523 11.6938 53.5262 11.9213L55.1221 16.8329C55.2874 17.3418 54.7051 17.7649 54.2722 17.4504L50.0942 14.4149C49.9006 14.2743 49.6385 14.2743 49.4449 14.4149L45.2669 17.4504C44.834 17.7649 44.2516 17.3418 44.417 16.8329L46.0128 11.9213C46.0868 11.6938 46.0058 11.4445 45.8122 11.3039L41.6341 8.26833C41.2013 7.95385 41.4238 7.26921 41.9588 7.26921H47.1231C47.3624 7.26921 47.5745 7.11513 47.6484 6.88757L49.2443 1.976Z"
+                                                        fill="#886DE0" />
+                                                    <path
+                                                        d="M69.2443 1.976C69.4096 1.46715 70.1295 1.46715 70.2948 1.976L71.8907 6.88757C71.9646 7.11513 72.1767 7.26921 72.4159 7.26921H77.5803C78.1153 7.26921 78.3378 7.95385 77.9049 8.26833L73.7269 11.3039C73.5333 11.4445 73.4523 11.6938 73.5262 11.9213L75.1221 16.8329C75.2874 17.3418 74.7051 17.7649 74.2722 17.4504L70.0942 14.4149C69.9006 14.2743 69.6385 14.2743 69.4449 14.4149L65.2669 17.4504C64.834 17.7649 64.2516 17.3418 64.417 16.8329L66.0128 11.9213C66.0868 11.6938 66.0058 11.4445 65.8122 11.3039L61.6341 8.26833C61.2013 7.95385 61.4238 7.26921 61.9588 7.26921H67.1231C67.3624 7.26921 67.5745 7.11513 67.6484 6.88757L69.2443 1.976Z"
+                                                        fill="#886DE0" />
+                                                    <path
+                                                        d="M89.2443 1.976C89.4096 1.46715 90.1295 1.46715 90.2948 1.976L91.8907 6.88757C91.9646 7.11513 92.1767 7.26921 92.4159 7.26921H97.5803C98.1153 7.26921 98.3378 7.95385 97.9049 8.26833L93.7269 11.3039C93.5333 11.4445 93.4523 11.6938 93.5262 11.9213L95.1221 16.8329C95.2874 17.3418 94.7051 17.7649 94.2722 17.4504L90.0942 14.4149C89.9006 14.2743 89.6385 14.2743 89.4449 14.4149L85.2669 17.4504C84.834 17.7649 84.2516 17.3418 84.417 16.8329L86.0128 11.9213C86.0868 11.6938 86.0058 11.4445 85.8122 11.3039L81.6341 8.26833C81.2013 7.95385 81.4238 7.26921 81.9588 7.26921H87.1231C87.3624 7.26921 87.5745 7.11513 87.6484 6.88757L89.2443 1.976Z"
+                                                        fill="#886DE0" />
+                                                </g>
+                                            </svg>
+                                            <span class="manage">
+                                                rated on BuildTwin by 50+ Users
+                                            </span>
+                                            <div class="flex">
+                                                <div class="founded">
+                                                    <label>Website</label>
+                                                    <a href="https://www.sublimestructures.com/" target="_blank">
+                                                        sublimestructures.com
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="founded">
+                                                    <label>Phone Number</label>
+                                                    <span>+91 9384495844</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <div class="rowData">
+                                        <h3>Availability in Time Zone</h3>
+                                        <div class="selectCover">
+                                            <div class="selectData">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16" fill="none">
+                                                    <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                                <select [(ngModel)]="selectedOption" (change)="onSelectChange()">
+                                                    <option value="gmt">GMT Time Zone</option>
+                                                    <option value="est">EST Time Zone</option>
+                                                    <option value="pst">PST Time Zone</option>
+                                                </select>
+                                            </div>
+
+
+                                            <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <g clip-path="url(#clip0_7144_11954)">
+                                                        <path
+                                                            d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96452 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7473 9.41498 20.7192 6.93661 18.8913 5.10872C17.0634 3.28084 14.585 2.25273 12 2.25ZM12 20.25C10.3683 20.25 8.77326 19.7661 7.41655 18.8596C6.05984 17.9531 5.00242 16.6646 4.378 15.1571C3.75358 13.6496 3.5902 11.9908 3.90853 10.3905C4.22685 8.79016 5.01259 7.32015 6.16637 6.16637C7.32016 5.01259 8.79017 4.22685 10.3905 3.90852C11.9909 3.59019 13.6497 3.75357 15.1571 4.37799C16.6646 5.00242 17.9531 6.05984 18.8596 7.41655C19.7662 8.77325 20.25 10.3683 20.25 12C20.2475 14.1873 19.3775 16.2843 17.8309 17.8309C16.2843 19.3775 14.1873 20.2475 12 20.25ZM18 12C18 12.1989 17.921 12.3897 17.7803 12.5303C17.6397 12.671 17.4489 12.75 17.25 12.75H12C11.8011 12.75 11.6103 12.671 11.4697 12.5303C11.329 12.3897 11.25 12.1989 11.25 12V6.75C11.25 6.55109 11.329 6.36032 11.4697 6.21967C11.6103 6.07902 11.8011 6 12 6C12.1989 6 12.3897 6.07902 12.5303 6.21967C12.671 6.36032 12.75 6.55109 12.75 6.75V11.25H17.25C17.4489 11.25 17.6397 11.329 17.7803 11.4697C17.921 11.6103 18 11.8011 18 12Z"
+                                                            fill="#886DE0" />
+                                                        <circle cx="19.001" cy="19.0002" r="5" fill="#00B507" />
+                                                        <path d="M16.2354 19.2238L17.6184 21.0021L21.7666 17.0002"
+                                                            stroke="white" stroke-width="0.943779"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7144_11954">
+                                                            <rect width="24" height="24" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                                {{ timeText }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </app-abount-jf>
+    </div>
+    <div id="capabilities" class="scrollSection">
+        <app-capability>
+            <div class="capability">
+                <div class="head">
+                    <div class="container">
+                        <h2>Capability Matrix</h2>
+                        <p>
+                            Sublime Structures provides a wide range of services with multidisciplinary teams
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="container">
+                    <div class="service-info-wrapper">
+                        <table class="service-info">
+                            <thead>
+                                <tr>
+                                    <th>
+
+                                    </th>
+                                    <th>
+                                        Chemical Plants
+                                    </th>
+                                    <th>
+                                        Theatres
+                                    </th>
+                                    <th>
+                                        Industrial
+                                    </th>
+                                    <th>
+                                        Power Plants
+                                    </th>
+                                    <th>
+                                        Manufacturing Plants
+                                    </th>
+                                    <th>
+                                        Bridges
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Structural designing
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Miscellaneous steel detailing and design
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Estimodeling (Tekla EPM)
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Material Takeoffs
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                    <td>
+                                        <i class="check"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flex align-items-center">
+                        <div class="left right">
+                            <div class="containerData manage">
+                                <strong>Particulars</strong>
+                                <div class="headSection">
+                                    <div class="col">
+                                        <strong>Junior</strong>
+                                        <span>4 - 6 Years</span>
+                                    </div>
+                                    <div class="col">
+                                        <strong>Senior</strong>
+                                        <span>6 - 8 Years</span>
+                                    </div>
+                                    <div class="col">
+                                        <strong>QAQC</strong>
+                                        <span>8 - 10 Years</span>
+                                    </div>
+                                    <div class="col">
+                                        <strong>PM/Coordinator</strong>
+                                        <span>10 - 12 Years</span>
+                                    </div>
+                                    <div class="col">
+                                        <strong>Reviewer</strong>
+                                        <span>8 - 15 Years</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="section">
+                                    <div class="content">
+                                        <div class="role">NA</div>
+                                        <div class="role">NA</div>
+                                        <div class="role">NA</div>
+                                        <div class="role">NA</div>
+                                        <div class="role"></div>
+                                    </div>
+                                </div>
+
+                                <div class="section">
+                                    <div class="content">
+                                        <div class="role dark">NA</div>
+                                        <div class="role dark">NA</div>
+                                        <div class="role dark">NA</div>
+                                        <div class="role dark">NA</div>
+                                        <div class="role dark"></div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="content">
+                                        <div class="role">NA</div>
+                                        <div class="role">NA</div>
+                                        <div class="role">NA</div>
+                                        <div class="role">NA</div>
+                                        <div class="role"></div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="content">
+                                        <div class="role dark">NA</div>
+                                        <div class="role dark">NA</div>
+                                        <div class="role dark">NA</div>
+                                        <div class="role dark">NA</div>
+                                        <div class="role dark"></div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="content">
+                                        <div class="role"></div>
+                                        <div class="role"></div>
+                                        <div class="role"></div>
+                                        <div class="role"></div>
+                                        <div class="role dark">NA</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="overlay">
+                                <div class="box">
+                                    <h2>Login to see Resource Matrix</h2>
+                                    <a href="">Login Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </app-capability>
+
+        <app-global-company>
+            <div class="partnerWrap vender">
+                <div class="container">
+                    <owl-carousel-o [options]="reviewsSlides" class="partner">
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/sub1.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/sub2.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/sub3.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <img src="assets/images/ui/sub4.png" height="409" width="188" />
+                            <span class="exp">TBD Years of experience</span>
+                        </ng-template>
+
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </app-global-company>
+        <app-capability>
+            <div class="capability code">
+                <div class="head">
+                    <div class="container">
+                        <h2>Building Codes</h2>
+                        <p>
+                            Sublime Structures works with regional building codes to provide the best and most fitting
+                            technical solutions.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="container">
+                    <div class="flex">
+                        <div class="left data">
+                            <div class="containerData blur-lock">
+                                <div class="headSection">
+                                    <div class="common"></div>
+                                </div>
+                                <div class="section">
+                                    <div class="content">
+                                        <div class="role">Building Code</div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="content">
+                                        <div class="role">Number of Projects</div>
+                                    </div>
+                                </div>
+                                <div class="section">
+                                    <div class="content">
+                                        <div class="role">Years of Experience</div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="left right">
+                            <div class="containerData">
+                                <div class="headSection">
+                                    <div class="col">
+                                        <strong>AISC</strong>
+                                    </div>
+                                    <div class="col">
+                                        <strong>CISC</strong>
+                                    </div>
+                                    <div class="col">
+                                        <strong>EURO</strong>
+                                    </div>
+                                    <div class="col">
+                                        <strong>American Standards</strong>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="blur-lock-relative">
+                                    <div class="blur-lock">
+                                        <div class="section">
+                                            <div class="content">
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="section">
+                                            <div class="content">
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="section">
+                                            <div class="content">
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+                                                <div class="role">NA</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="blur-lock-overlay">
+                                        <div class="box normal">
+                                            <h2>
+                                                Login to see under which building <br>code they worked.
+                                            </h2>
+                                            <a href="">
+                                                Login Now
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </app-capability>
+        <app-simple-row>
+            <div class="row">
+                <div class="container">
+                    <div class="head">
+                        <h2>Special Tools & Methods</h2>
+                        <p>
+                            Additionally to a range of engineering software, Sublime Structures uses special methods to
+                            work more digitally and efficiently.
+                        </p>
+                    </div>
+
+                    <div class="listData tbd">
+                        TBD
+                        <!-- <ul>
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">SD</div>
+                                </div>
+                                <div class="content">
+                                    <p>SDS2</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">TE</div>
+                                </div>
+                                <div class="content">
+                                    <p>Tekla EPM</p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">TC</div>
+                                </div>
+                                <div class="content">
+                                    <p>Trimble Connect</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">NW</div>
+                                </div>
+                                <div class="content">
+                                    <p>Navisworks</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="wrapLeft">
+                                    <div class="retraingle">TS</div>
+                                </div>
+                                <div class="content">
+                                    <p>Tekla Structures</p>
+                                </div>
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </app-simple-row>
+
+
+    </div>
+
+
+    <div id="portfolio" class="scrollSection">
+        <app-feature-project>
+            <div class="accreditation">
+                <div class="container">
+                    <div class="head">
+                        <div class="left">
+                            <h2>Featured Project</h2>
+                            <span>From newly constructed skyscrapers to modernising factories, Sublime Structures has
+                                successfully engineered 50+ projects worldwide.</span>
+                        </div>
+                        <div class="right">
+                            <div class="seelctWrap">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M9.33537 8V13.2533C9.36204 13.4533 9.29537 13.6667 9.14204 13.8067C9.08036 13.8685 9.0071 13.9175 8.92646 13.951C8.84581 13.9844 8.75935 14.0016 8.67204 14.0016C8.58473 14.0016 8.49827 13.9844 8.41762 13.951C8.33698 13.9175 8.26372 13.8685 8.20204 13.8067L6.86204 12.4667C6.78937 12.3956 6.73411 12.3086 6.70058 12.2126C6.66704 12.1167 6.65614 12.0142 6.66871 11.9133V8H6.64871L2.80871 3.08C2.70045 2.94102 2.6516 2.76484 2.67283 2.58995C2.69407 2.41507 2.78366 2.2557 2.92204 2.14667C3.04871 2.05333 3.18871 2 3.33537 2H12.6687C12.8154 2 12.9554 2.05333 13.082 2.14667C13.2204 2.2557 13.31 2.41507 13.3312 2.58995C13.3525 2.76484 13.3036 2.94102 13.1954 3.08L9.35537 8H9.33537Z"
+                                            fill="white" />
+                                    </svg>
+                                </i>
+                                <div class="arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path d="M4 6L8 10L12 6" stroke="#886DE0" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <select (change)="onTypeChange($event)">
+                                    <option value="all">All</option>
+                                    <option value="Structural detailing">Structural Detailing</option>
+                                    <option value="steel detailing">Steel Detailing</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <div *ngFor="let project of filteredProjects" class="item">
+                            <div class="itemHead">
+                                <span>{{ project.type }}</span>
+                                <h2>{{ project.name }}</h2>
+                                <div class="flex">
+                                    <img [src]="project.country" width="17" height="17" />
+                                    <em>{{ project.location }}</em>
+                                </div>
+                            </div>
+                            <img [src]="project.image" width="416" height="240" />
+                            <div class="content">
+                                <h2>Construction Volume</h2>
+                                <span>{{ project.description }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btnWrap">
+                        <a href="https://www.jf.ag/en/projects" target="_blank" class="btnNew">View All Projects <i
+                                class="ti ti-arrow-narrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </app-feature-project>
+    </div>
+    <div id="team" class="scrollSection">
+        <app-engineers>
+            <div class="slider">
+                <div class="container">
+                    <owl-carousel-o [options]="aboutSlider">
+
+                        <ng-template *ngFor="let engineer of ourEngineers" carouselSlide>
+                            <div class="wrap">
+                                <div class="flex">
+                                    <div class="left">
+                                        <h2>Our <br>engineers</h2>
+                                        <span class="jeffStyle">in the<br>spotlight</span>
+                                    </div>
+                                    <div class="right">
+                                        <div class="imgWrap">
+                                            <img [src]="engineer.img" [alt]="engineer.name" width="422" height="495">
+                                        </div>
+                                        <div class="content">
+                                            <h2>{{ engineer.name }}</h2>
+                                            <span [innerHTML]="engineer.title"></span>
+
+                                            <p [innerHTML]="engineer.des"></p>
+                                            <div class="expert">
+                                                <h3><span class="jeffStyle">My</span> expertise at Sublime Structures
+                                                </h3>
+                                                <ul>
+                                                    <li *ngFor="let expertise of engineer.expertise">
+                                                        <strong>#</strong> {{ expertise }}
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+
+                    </owl-carousel-o>
+                </div>
+            </div>
+        </app-engineers>
+    </div>
+    <div id="certification" class="scrollSection">
+        <app-accreditation>
+            <div class="accreditation">
+                <div class="container">
+                    <div class="head">
+                        <h2>Accreditation</h2>
+
+                    </div>
+                    <div class="listItem">
+                        <div class="item">
+                            <img src="assets/images/ui/subline/certificate.png" />
+                            <p>American Institute of Steel Construction</p>
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/caldim/certificate2.png" />
+                            <p>National Institute of Steel Detailing</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </app-accreditation>
+    </div>
+
+    <app-sublime-social-wall id="social" class="scrollSection"></app-sublime-social-wall>
+
+    <!-- <div id="social" class="scrollSection">
+
+<app-latest-update>
+    <div class="latestUpdate">
+        <div class="container">
+            <div class="heading">Latest Updated</div>
+            <div class="text">
+                Stay informed with the latest news and updates from Sublime Structures. Learn about our recent projects, partnerships, and achievements.
+
+            </div>
+
+            <div class="testimonial">
+                <div class="flex">
+<div class="slide">
+    <img src="assets/images/ui/testimonial1.png" width="595" height="382">
+<div class="slideOverlay">
+    <div class="contentSlide">
+        <span>Latest</span>
+        <h2>
+            Sublime Structures takes over <br>HOCHTIEF India
+        </h2>
+
+        <p>
+            Sublime Structures is a German based civil engineering consultancy with a strong footprint in Structural, MEP and BIM services around the globe.
+        </p>
+
+        <a href="#" class="btnNew"
+        >View All Updates <i class="ti ti-arrow-narrow-right"></i
+    ></a>
+    </div>
+</div>
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial2.png" width="696" height="382">
+<div class="overlay">
+    <span>
+        Take a look at our <a href=""> Sublime Structures Meets 2023 </a> event in Chennai
+    </span>
+</div>
+
+</div>
+
+</div>
+
+<div class="flex">
+
+<div class="slide">
+    <img src="assets/images/ui/testimonial3.png" width="295" height="382">
+    <div class="overlay">
+        <span>
+            Time critical  <a href=""> plan changes </a> in the ongoing project?
+        </span>
+       
+    </div>
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial4.png" width="295" height="382">
+
+    <div class="overlay">
+        <span>
+            How do we design <a href=""> remote work </a> in civil engineering?
+        </span>
+       
+    </div>
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial5.png" width="696" height="382">
+    <div class="overlay">
+        <span>
+            Learn more about using our <a href=""> digital and data driven </a> planning to make better decisions.        </span>
+       
+    </div>
+</div>
+</div>
+<div class="flex">
+<div class="slide">
+    <img src="assets/images/ui/testimonial6.png" width="595" height="382">
+    <div class="overlay">
+        <span>
+            Find out more about how Sublime Structures  <a href=""> global collaboration </a> with our Indian office works in everyday life.             </span>
+       
+    </div>
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial7.png" width="345" height="382">
+    <div class="overlay">
+        <span>
+            Our colleagues on the construction site of one of our current project <a href="#"> FOUR in Frankfurt </a>
+                    </span>
+       
+    </div>
+
+</div>
+<div class="slide">
+    <img src="assets/images/ui/testimonial8.png" width="345" height="382">
+
+    <div class="overlay">
+        <span>
+            Take a look at our <a href=""> office in Giessen </a>
+                    </span>
+       
+    </div>
+</div>
+          
+</div>
+            </div>
+          
+         
+        </div>
+    </div>
+</app-latest-update>
+</div> -->
+
+    <!-- <app-social-wall></app-social-wall> -->
+
+
+    <app-qualified>
+        <div class="container" id="other-section7">
+            <div class="qualified">
+                <div class="head">
+                    <div class="flex">
+                        <img src="assets/images/sublimestructures.png" width="164" height="60">
+                        <span> x</span>
+                        <img src="assets/images/ui/buildTwin-logo.png" width="165" height="44">
+
+                    </div>
+                    <h3>The BuildTwin advantage</h3>
+                    <span>
+                        BuildTwin gives you an unfair advantage working with technical teams abroad.
+                    </span>
+                </div>
+                <div class="itemFLex">
+                    <div class="left">
+                        <div class="topheader">
+                            <h2><b>Build</b>Twin Experience</h2>
+                            <p>Working with Sublime unlocks the BuildTwin experience - from AI tracking to a
+                                seamless purchase and support experience</p>
+                        </div>
+                        <div class="contentpart">
+                            <div class="items">
+                                <img src="assets/images/aarbee/glass.png" />
+                                <div class="rightcontent">
+                                    <h4>Plug & Play into your workflow</h4>
+                                    <p>BuildTwin consolidates Files, emails, chats and more into a single point of
+                                        truth.</p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="assets/images/aarbee/badge.png" />
+                                <div class="rightcontent">
+                                    <h4>Ensuring Quality Delivery</h4>
+                                    <p>BuildTwin creates delivery-based checklists and ensures a high degree of quality.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="assets/images/aarbee/hand.png" />
+                                <div class="rightcontent">
+                                    <h4>LIVE Project Progress</h4>
+                                    <p>BuildTwin tracks and documents all activities across all channels.</p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="assets/images/aarbee/digital.png" />
+                                <div class="rightcontent">
+                                    <h4>Digital Procurement</h4>
+                                    <p>BuildTwin Marketplace gives you access to Leads from open markets.</p>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <img src="assets/images/aarbee/bag.png" />
+                                <div class="rightcontent">
+                                    <h4>Meeting Compliance</h4>
+                                    <p>BuildTwin ensures compliance with international standards.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="topheader2" style="background-image: url('assets/images/back-adv.png');">
+                            <img class="logo" src="assets/images/aarbee/arbee-logo-trnasparent.png" width="70"
+                                height="45" />
+                            <p>With more than 28+ strength Sublime is your right partner. Get started Today.</p>
+                        </div>
+                        <div class="contentpart">
+                            <div class="list">
+                                <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                            </div>
+                            <div class="list">
+                                <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                            </div>
+                            <div class="list">
+                                <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                            </div>
+                            <div class="list">
+                                <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                            </div>
+                            <div class="list">
+                                <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </app-qualified>
+
+    <app-get-started1>
+        <div class="startedData">
+            <h2>Ready to get started?</h2>
+            <p>
+                The BuildTwin Marketplace program not only covers our closed
+                marketplace with clients from 10+ <br />
+                countries - but gives you also access to Leads from open market.
+            </p>
+            <a href="mailto:contact@jf-projects.com">Talk to Sublime Structures</a>
+        </div>
+    </app-get-started1>
+
+    <!-- 
+    
+<app-hd-footer></app-hd-footer>
+
+-->
+    <app-hd-footer></app-hd-footer>
+    <!-- <div class="footerLinks">
+        <div class="container">
+            <ul>
+                <li>
+                    <a class="item-link" routerLink="/contact">Contact</a>
+                </li>
+                <li>
+                    <a class="item-link" routerLink="/privacy-policy">Privacy Policy</a>
+                </li>
+                <li>
+                    <a class="item-link1" routerLink="/terms-conditions">Imprint</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+
+
+
+    <div class="popUP" [ngClass]="{'active':showPopup}">
+        <div class="coverPopup">
+            <i class="closeIcon" (click)="closePopup()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <g clip-path="url(#clip0_2773_1184811)">
+                        <path
+                            d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z"
+                            fill="black" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2773_11848">
+                            <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </i>
+            <div class="coverPopupData">
+
+                <div class="meetings-iframe-container"
+                    data-src="https://success.buildtwin.com/meetings/buildtwin?embed=true"></div>
+            </div>
+        </div>
+    </div>
+</div>

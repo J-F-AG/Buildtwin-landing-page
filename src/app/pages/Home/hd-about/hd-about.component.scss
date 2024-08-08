@@ -6,7 +6,7 @@
     h2 {
         font-size: 40px; font-weight: 600;
         max-width: 606px;
-        line-height: 1.1;
+        line-height: 1.4;
         margin-bottom: 17px;
         span {
             font-size: 40px; font-weight: 600;
@@ -15,6 +15,10 @@
         }
         i {
             font-size: 37px;
+        }
+        .jeffStyle {
+            font-size: 56px;
+            font-weight: 400;
         }
     }
     p {
@@ -29,6 +33,7 @@
             top: 13px;
             bottom: 13px;
         };
+        align-self: flex-start;
     }
     .brands-list {
         margin-top: 50px;
@@ -106,6 +111,23 @@
 }
 .about-area.pb-75 {
     margin-bottom: 67px;
+}
+.coming {
+    border-radius: 40px;
+    border: 1px solid #886DE0;
+    background: #f6f3ff;
+    color: #886de0;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    align-self: flex-start;
+}
+.about-content-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
@@ -317,8 +339,8 @@ a.play {
     display: block;
     width: 126px;
     position: absolute;
-    top: 47%;
-    left: 32%;
+    top: 19%;
+    left: 15.5%;
 }
 
 
@@ -331,8 +353,8 @@ a.play {
     }
     a.play {
         width: 54px;
-        top: 41%;
-        left: 32%;
+        // top: 41%;
+        // left: 32%;
     }
     .about-area.pb-75 {
         margin-bottom: 25px;

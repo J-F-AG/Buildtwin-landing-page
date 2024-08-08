@@ -1,6 +1,21 @@
+
+.e2eSection{max-width: 580px; width: 70%; margin: 0 auto; padding-top: 20px; display: flex; text-align: left;
+    .e2eImg{margin-right: 20px;}
+    .e2eContent{flex: 1;
+        h4, p{font-size:  16px; margin: 0;}
+    }
+}
+
+.jeffStyle {
+    font-weight: 400;
+    font-size: 46px;
+}
 .happier-customers-area {
-    background: var(--backgroundColor);
+    background: #fff;
     padding-top: 80px;
+
+    .container{position: relative; z-index: 2;}
+    .happier-customers-image{position: relative; z-index: 1; margin-top: -50px;}
 }
 
 .happier-customers-inner {
@@ -20,12 +35,11 @@
     //     margin-bottom: 31px;
     //     background: var(--backgroundColor);
     // }
-    .hd-section-title {
-        margin-bottom: 24px;
-    }
+    .hd-section-title{margin-bottom: 0;}
 }
+
+
 .happier-customers-content {
-    margin-bottom: -58px;
 
     ul {
         li {
@@ -52,10 +66,7 @@
     }
 }
 .happier-customers-image {
-    img {
-        display: block;
-    }
-    // max-width: 1070px;
+    text-align: center; 
 
     // img {
     //     &:nth-child(1) {
@@ -106,9 +117,6 @@
         //     border-radius: 4px;
         //     margin-bottom: 30px;
         // }
-        .hd-section-title {
-            margin-bottom: 30px;
-        }
     }
     .happier-customers-content {
         margin-bottom: 20px;
@@ -143,6 +151,20 @@
     //     }
     // }
 
+    .jeffStyle {
+        font-size: 30px;
+    }
+
+    .happier-customers-area {
+        .happier-customers-image {
+            margin-top: 0;
+        }
+    }
+
+    .e2eSection {
+        width: 100%;
+    }
+
 }
 
 /* Min width 576px to Max width 767px */
@@ -156,9 +178,6 @@
         //     left: 50px;
         //     right: 50px;
         // };
-        .hd-section-title {
-            margin-bottom: 35px;
-        }
     }
     .happier-customers-content {
         margin-bottom: 10px;
@@ -200,9 +219,7 @@
         //     left: 50px;
         //     right: 50px;
         // };
-        .hd-section-title {
-            margin-bottom: 40px;
-        }
+        
     }
     .happier-customers-content {
         margin-bottom: 40px;
@@ -238,9 +255,6 @@
         //     left: 70px;
         //     right: 70px;
         // };
-        .hd-section-title {
-            margin-bottom: 50px;
-        }
     }
     .happier-customers-content {
         margin-bottom: -55px;

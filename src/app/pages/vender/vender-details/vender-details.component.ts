@@ -187,6 +187,40 @@ aboutSlider: OwlOptions = {
 
 }
 
+heroSlides: OwlOptions = {
+    items: 1,
+    nav: true,
+    margin: 20,
+    dots: false,
+    loop: true,
+    autoWidth: true,
+    autoplay: false,
+    autoplayHoverPause: false,
+
+    navText: [
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ],
+    responsive: {
+  0: {
+    items: 1
+  },
+  515: {
+    items: 1
+  },
+  768: {
+    items: 1
+  },
+  990: {
+    items: 1
+  },
+  1400: {
+    items: 1
+  }
+}
+   
+  }
+
 @HostListener('window:scroll', [])
 onWindowScroll() {
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;

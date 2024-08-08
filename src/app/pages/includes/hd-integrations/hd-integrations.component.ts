@@ -9,8 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class HdIntegrationsComponent {
   integrationsList: OwlOptions = {
     nav: false,
-    margin: 25,
-    loop: false,
+    loop: true,
     dots: false,
     autoplay: true,
     autoplayHoverPause: true,
@@ -20,7 +19,7 @@ export class HdIntegrationsComponent {
     ],
     responsive: {
       0: {
-        items: 2
+        items: 1
       },
       515: {
         items: 3
@@ -29,7 +28,7 @@ export class HdIntegrationsComponent {
         items: 4
       },
       990: {
-        items: 5
+        items: 6
       },
       1400: {
         items: 6

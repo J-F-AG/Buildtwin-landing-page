@@ -1,0 +1,1518 @@
+<app-modal #modal>
+    <div parent>
+        <div class="flex">
+            <div class="flex">
+                <div>
+                    {{companyName}}
+                </div>
+                <nz-rate [ngModel]="formData.companyDetails.rating" nzDisabled></nz-rate>
+                <div *ngFor="let b of formData?.badges">
+                    {{b.title}}
+                    {{b.description}}
+                </div>
+            </div>
+            <div *ngFor="let project of formData.featuredProject.projects">
+                <div *ngFor="let pimg of project?.project_logo">
+                    <p><img [src]="pimg" height="100" width="100"
+                            (click)="openModal(html, true, true, project)" />{{project.project_name}} in {{
+                        project.project_region }}</p>
+                </div>
+            </div>
+            <div>
+                <h3>Engineering project for</h3>
+                <div *ngFor="let e of formData.engineeringData">
+                    <img [src]="e.logo ? e.logo : 'assets/images/placeholder-image1.jpg'" alt="">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="flex">
+                        <img [src]="formData?.companyDetails.icon" alt="">
+                        <span *ngFor="let dir of formData.directors">
+                            <img [src]="dir.logo" height="50" width="50" />
+                            {{dir.name}}
+                        </span>
+                    </div>
+                    <div>
+                        <h5>Company Highlights</h5>
+                        <div>
+                            <h5>{{companyHighlights}}</h5>
+                            <span>HQ: {{formData.companyDetails.headquarter}}</span>
+                            <span>{{formData.companyDetails.employees_count}}+ Employees</span>
+                            <span>{{formData.companyDetails.reference_projects}}+ projects</span>
+                            <span>{{formData.companyDetails.years_in_business}}+ in Business</span>
+                        </div>
+                        <div *ngIf="formData?.additional_highlights?.length">
+                            <h4>{{formData?.additional_highlights[0].title}}</h4>
+                            <ul>
+                                <li *ngFor="let c of formData?.additional_highlights[0].content">
+                                    {{c}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div *ngIf="formData?.jointbids">
+                        Availabiliable for for Joint bids & Projects
+                    </div>
+                    <div>
+                        <div *ngIf="formData?.additional_highlights?.length">
+                            <h4>{{formData?.additional_highlights[1].title}}</h4>
+                            <ul>
+                                <li *ngFor="let c of formData?.additional_highlights[1].content">
+                                    {{c}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Reviews</h4>
+                        <div *ngFor="let review of formData.clientReviews">
+                            <img [src]="review.provided_by_image" alt="">
+                            {{review.description}}
+                            {{review.provided_by_name}}
+                            <img [src]="review.location_image" alt="">
+                            {{review.location}}
+                        </div>
+                    </div>
+                    <div>
+                        <h4>Rating</h4>
+                        <div *ngFor="let c of formData.reviews">
+                            {{c.title}} {{c.rating}}
+                            <nz-progress [nzPercent]="c.percentRating" [nzShowInfo]="false"></nz-progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-container *ngIf="isChildModal">
+            <app-modal #modal>
+                <div child>
+                    {{selectedProject?.project_name}}
+                    <div *ngFor="let pimg of selectedProject?.project_logo">
+                        <p><img [src]="pimg" height="100" width="100" />{{selectedProject?.project_name}} in {{
+                            selectedProject?.project_region }}</p>
+                    </div>
+                    <div>
+                        {{selectedProject?.project_name}}
+                        {{selectedProject?.project_region}}
+                    </div>
+                    <div>
+                        Description
+                        {{selectedProject?.project_description}}
+                    </div>
+                </div>
+            </app-modal>
+        </ng-container>
+        <!-- <button (click)="openModal(html, true, true)">Open Modal</button> -->
+    </div>
+</app-modal>
+
+<div class="subline page-wrapper" *ngIf="!showPageLoader">
+    <app-hd-navbar *ngIf="!isIframe"></app-hd-navbar>
+
+    <div class="container">
+        <header id="page-head">
+            <div class="left">
+                <div class="rating">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="101" height="20" viewBox="0 0 101 20" fill="none">
+                        <mask id="mask0_6810_1196" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="101" height="20">
+                            <rect width="101" height="20" fill="#836ED9" />
+                        </mask>
+                        <g mask="url(#mask0_6810_1196)">
+                            <path
+                                d="M9.24426 1.976C9.40959 1.46715 10.1295 1.46715 10.2948 1.976L11.8907 6.88757C11.9646 7.11513 12.1767 7.26921 12.4159 7.26921H17.5803C18.1153 7.26921 18.3378 7.95385 17.9049 8.26833L13.7269 11.3039C13.5333 11.4445 13.4523 11.6938 13.5262 11.9213L15.1221 16.8329C15.2874 17.3418 14.7051 17.7649 14.2722 17.4504L10.0942 14.4149C9.90059 14.2743 9.63847 14.2743 9.44489 14.4149L5.26686 17.4504C4.83401 17.7649 4.25162 17.3418 4.41695 16.8329L6.01282 11.9213C6.08676 11.6938 6.00576 11.4445 5.81218 11.3039L1.63415 8.26833C1.2013 7.95385 1.42375 7.26921 1.95878 7.26921H7.12312C7.36239 7.26921 7.57445 7.11513 7.64839 6.88757L9.24426 1.976Z"
+                                fill="#886DE0" />
+                            <path
+                                d="M29.2443 1.976C29.4096 1.46715 30.1295 1.46715 30.2948 1.976L31.8907 6.88757C31.9646 7.11513 32.1767 7.26921 32.4159 7.26921H37.5803C38.1153 7.26921 38.3378 7.95385 37.9049 8.26833L33.7269 11.3039C33.5333 11.4445 33.4523 11.6938 33.5262 11.9213L35.1221 16.8329C35.2874 17.3418 34.7051 17.7649 34.2722 17.4504L30.0942 14.4149C29.9006 14.2743 29.6385 14.2743 29.4449 14.4149L25.2669 17.4504C24.834 17.7649 24.2516 17.3418 24.417 16.8329L26.0128 11.9213C26.0868 11.6938 26.0058 11.4445 25.8122 11.3039L21.6341 8.26833C21.2013 7.95385 21.4238 7.26921 21.9588 7.26921H27.1231C27.3624 7.26921 27.5745 7.11513 27.6484 6.88757L29.2443 1.976Z"
+                                fill="#886DE0" />
+                            <path
+                                d="M49.2443 1.976C49.4096 1.46715 50.1295 1.46715 50.2948 1.976L51.8907 6.88757C51.9646 7.11513 52.1767 7.26921 52.4159 7.26921H57.5803C58.1153 7.26921 58.3378 7.95385 57.9049 8.26833L53.7269 11.3039C53.5333 11.4445 53.4523 11.6938 53.5262 11.9213L55.1221 16.8329C55.2874 17.3418 54.7051 17.7649 54.2722 17.4504L50.0942 14.4149C49.9006 14.2743 49.6385 14.2743 49.4449 14.4149L45.2669 17.4504C44.834 17.7649 44.2516 17.3418 44.417 16.8329L46.0128 11.9213C46.0868 11.6938 46.0058 11.4445 45.8122 11.3039L41.6341 8.26833C41.2013 7.95385 41.4238 7.26921 41.9588 7.26921H47.1231C47.3624 7.26921 47.5745 7.11513 47.6484 6.88757L49.2443 1.976Z"
+                                fill="#886DE0" />
+                            <path
+                                d="M69.2443 1.976C69.4096 1.46715 70.1295 1.46715 70.2948 1.976L71.8907 6.88757C71.9646 7.11513 72.1767 7.26921 72.4159 7.26921H77.5803C78.1153 7.26921 78.3378 7.95385 77.9049 8.26833L73.7269 11.3039C73.5333 11.4445 73.4523 11.6938 73.5262 11.9213L75.1221 16.8329C75.2874 17.3418 74.7051 17.7649 74.2722 17.4504L70.0942 14.4149C69.9006 14.2743 69.6385 14.2743 69.4449 14.4149L65.2669 17.4504C64.834 17.7649 64.2516 17.3418 64.417 16.8329L66.0128 11.9213C66.0868 11.6938 66.0058 11.4445 65.8122 11.3039L61.6341 8.26833C61.2013 7.95385 61.4238 7.26921 61.9588 7.26921H67.1231C67.3624 7.26921 67.5745 7.11513 67.6484 6.88757L69.2443 1.976Z"
+                                fill="#886DE0" />
+                            <path
+                                d="M89.2443 1.976C89.4096 1.46715 90.1295 1.46715 90.2948 1.976L91.8907 6.88757C91.9646 7.11513 92.1767 7.26921 92.4159 7.26921H97.5803C98.1153 7.26921 98.3378 7.95385 97.9049 8.26833L93.7269 11.3039C93.5333 11.4445 93.4523 11.6938 93.5262 11.9213L95.1221 16.8329C95.2874 17.3418 94.7051 17.7649 94.2722 17.4504L90.0942 14.4149C89.9006 14.2743 89.6385 14.2743 89.4449 14.4149L85.2669 17.4504C84.834 17.7649 84.2516 17.3418 84.417 16.8329L86.0128 11.9213C86.0868 11.6938 86.0058 11.4445 85.8122 11.3039L81.6341 8.26833C81.2013 7.95385 81.4238 7.26921 81.9588 7.26921H87.1231C87.3624 7.26921 87.5745 7.11513 87.6484 6.88757L89.2443 1.976Z"
+                                fill="#886DE0" />
+                        </g>
+                    </svg> -->
+                    <nz-rate [ngModel]="formData.companyDetails.rating" nzDisabled></nz-rate>
+                    <span class="type" *ngIf="formData?.premium_partner">
+                        Premium Partner
+                    </span>
+                </div>
+                <div class="company-name">
+                    {{companyName}}
+                </div>
+                <div class="company-address">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.5 8.3335C17.5 14.1668 10 19.1668 10 19.1668C10 19.1668 2.5 14.1668 2.5 8.3335C2.5 6.34437 3.29018 4.43672 4.6967 3.0302C6.10322 1.62367 8.01088 0.833496 10 0.833496C11.9891 0.833496 13.8968 1.62367 15.3033 3.0302C16.7098 4.43672 17.5 6.34437 17.5 8.3335Z"
+                            stroke="#886DE0" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M10 10.8335C11.3807 10.8335 12.5 9.71421 12.5 8.3335C12.5 6.95278 11.3807 5.8335 10 5.8335C8.61929 5.8335 7.5 6.95278 7.5 8.3335C7.5 9.71421 8.61929 10.8335 10 10.8335Z"
+                            stroke="#886DE0" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Offices in <span *ngFor="let site of formData.onsite; let i = index">{{site}}<ng-container
+                            *ngIf="i < (formData.onsite.length - 1)">,</ng-container> </span>
+                </div>
+            </div>
+
+
+            <div class="right">
+                <div class="badge-wrapper">
+                    <div class="badge" *ngFor="let b of formData?.badges"
+                        [ngStyle]="{'background-color': b?.badge_color?.background, 'border-color': b?.badge_color?.outline}">
+                        <!-- <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.4555 1C10.4555 1 4.61769 4.71061 1.12811 4.71061C1.12819 13.5903 -0.817728 18.0964 10.4555 23C20.5883 17.8313 19.4149 15.3404 19.4149 4.71061C14.852 3.91554 10.4555 1 10.4555 1Z"
+                                fill="#D3FFD5" stroke="#86DC89" stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M6.5215 10.4681L9.81589 14.3542C9.81589 14.3542 14.6787 5.71033 21.0003 2.8291"
+                                stroke="#00B507" stroke-width="1.72185" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg> -->
+                        <img [src]="b?.badge_icon" width="24" height="24" alt="" *ngIf="b?.badge_icon">
+                        {{b.title}}
+                        <!-- {{b.description}} -->
+                    </div>
+                    <!-- <div class="badge secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="22" height="22" rx="11" fill="#E4DDFF" />
+                            <rect x="1" y="1" width="22" height="22" rx="11" stroke="#C9B8FF" stroke-width="1.29139"
+                                stroke-linejoin="round" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.8162 8.20701C18.0701 8.47369 18.0597 8.89568 17.793 9.14954L10.0893 16.4829C9.95773 16.6081 9.78078 16.6742 9.59933 16.666C9.41788 16.6577 9.24766 16.5758 9.12803 16.4391L6.16506 13.0545C5.92254 12.7775 5.95052 12.3563 6.22755 12.1138C6.50459 11.8713 6.92577 11.8992 7.16829 12.1763L9.67342 15.0379L16.8737 8.1838C17.1404 7.92994 17.5624 7.94033 17.8162 8.20701Z"
+                                fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Commercially Pre-qualified
+                    </div> -->
+                </div>
+            </div>
+        </header>
+
+        <div class="company-overview">
+            <section class="image-wrapper">
+                <div class="top">
+                    <div class="left">
+                        <ng-container *ngFor="let project of highlightImges; let i = index">
+                            <figure *ngIf="i<2" (click)="showModal('child', project)">
+                                <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
+                                    <div *ngIf="ci == 0">
+                                        <img src="assets/images/image1.png" alt="image1" width="325" height="258">
+                                        <img [src]="pimg" alt="project.project_name" width="325" height="258"
+                                            class="abs-image">
+                                        <figcaption>
+                                            {{project.project_name}} in {{ project.project_region }}
+                                        </figcaption>
+                                    </div>
+                                </ng-container>
+                                <ng-container *ngIf="!project?.project_logo.length">
+                                    <img src="assets/images/image1.png" alt="image1" width="325" height="258">
+                                    <figcaption>
+                                        {{project.project_name}} in {{ project.project_region }}
+                                    </figcaption>
+                                </ng-container>
+                            </figure>
+                        </ng-container>
+                        <!-- <figure>
+                            <img src="assets/images/image1.png" alt="image1" width="325" height="258">
+                            <figcaption>
+                                Power Plant in Berlin
+                            </figcaption>
+                        </figure> -->
+                    </div>
+                    <div class="right" *ngIf="highlightImges.length > 2">
+                        <ng-container *ngFor="let project of highlightImges; let i = index">
+                            <figure *ngIf="i==2" (click)="showModal('child', project)">
+                                <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
+                                    <div *ngIf="ci == 0">
+                                        <img src="assets/images/image2.png" alt="image2" width="630" height="528">
+                                        <img [src]="pimg" alt="project.project_name" width="325" height="258"
+                                            class="abs-image">
+                                        <figcaption>
+                                            {{project.project_name}} in {{ project.project_region }}
+                                        </figcaption>
+                                    </div>
+                                </ng-container>
+                                <ng-container *ngIf="!project?.project_logo.length">
+                                    <img src="assets/images/image2.png" alt="image2" width="630" height="528">
+                                    <figcaption>
+                                        {{project.project_name}} in {{ project.project_region }}
+                                    </figcaption>
+                                </ng-container>
+                            </figure>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="bottom" *ngIf="highlightImges.length > 3">
+                    <ng-container *ngFor="let project of highlightImges; let i = index">
+                        <figure *ngIf="i>2 && i<6" (click)="showModal('child', project)">
+                            <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
+                                <div *ngIf="ci == 0">
+                                    <img src="assets/images/image3.png" alt="image3" width="232" height="223">
+                                    <img [src]="pimg" alt="project.project_name" width="325" height="258"
+                                        class="abs-image">
+                                    <figcaption>
+                                        {{project.project_name}} in {{ project.project_region }}
+                                    </figcaption>
+                                </div>
+                            </ng-container>
+                            <ng-container *ngIf="!project?.project_logo.length">
+                                <img src="assets/images/image3.png" alt="image3" width="232" height="223">
+                                <figcaption>
+                                    {{project.project_name}} in {{ project.project_region }}
+                                </figcaption>
+                            </ng-container>
+                        </figure>
+                        <figure *ngIf="i==6" (click)="showModal('parent')">
+                            <img src="assets/images/image3.png" alt="image3" width="232" height="223">
+                            <!-- <img [src]="pimg" alt="project.project_name" width="325" height="258"
+                                        class="abs-image"> -->
+                            <figcaption class="abs-caption">
+                                +{{imageLeftOutCount+1}} Projects
+                            </figcaption>
+                        </figure>
+                    </ng-container>
+                </div>
+            </section>
+            <div class="company-detail">
+                <div class="block user-detail-wrapper">
+                    <img [src]="formData?.companyDetails.icon" alt="" width="64" height="33">
+                    <div class="user-detail-child" *ngFor="let dir of formData.directors">
+                        <figure>
+                            <img [src]="dir.logo" height="28" width="28" />
+                        </figure>
+                        <div class="user-detail">
+                            <strong>
+                                {{dir.name}}
+                            </strong>
+                            <!-- {{Managing Director}} -->
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <header class="head">
+                        Company Highlights
+                    </header>
+                    <div class="content">
+                        <div class="sub-heading">
+                            {{companyHighlights}}
+                        </div>
+                        <ul class="list with-icon">
+                            <li>
+                                <i class="icon">
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.4698 8.56061H11.5042C11.5957 8.56061 11.6834 8.59328 11.7481 8.65141C11.8127 8.70955 11.849 8.7884 11.849 8.87062V9.80062C11.849 9.88284 11.8127 9.96169 11.7481 10.0198C11.6834 10.078 11.5957 10.1106 11.5042 10.1106H10.4698C10.3784 10.1106 10.2907 10.078 10.226 10.0198C10.1613 9.96169 10.125 9.88284 10.125 9.80062V8.87062C10.125 8.7884 10.1613 8.70955 10.226 8.65141C10.2907 8.59328 10.3784 8.56061 10.4698 8.56061Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M13.2283 8.56061H14.2627C14.3542 8.56061 14.4419 8.59328 14.5065 8.65141C14.5712 8.70955 14.6075 8.7884 14.6075 8.87062V9.80062C14.6075 9.88284 14.5712 9.96169 14.5065 10.0198C14.4419 10.078 14.3542 10.1106 14.2627 10.1106H13.2283C13.1368 10.1106 13.0491 10.078 12.9845 10.0198C12.9198 9.96169 12.8835 9.88284 12.8835 9.80062V8.87062C12.8835 8.7884 12.9198 8.70955 12.9845 8.65141C13.0491 8.59328 13.1368 8.56061 13.2283 8.56061Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M13.2283 6.0806H14.2627C14.3542 6.0806 14.4419 6.11326 14.5065 6.1714C14.5712 6.22953 14.6075 6.30838 14.6075 6.3906V7.32061C14.6075 7.40283 14.5712 7.48168 14.5065 7.53981C14.4419 7.59795 14.3542 7.63061 14.2627 7.63061H13.2283C13.1368 7.63061 13.0491 7.59795 12.9845 7.53981C12.9198 7.48168 12.8835 7.40283 12.8835 7.32061V6.3906C12.8835 6.30838 12.9198 6.22953 12.9845 6.1714C13.0491 6.11326 13.1368 6.0806 13.2283 6.0806Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M10.4698 6.0806H11.5042C11.5957 6.0806 11.6834 6.11326 11.7481 6.1714C11.8127 6.22953 11.849 6.30838 11.849 6.3906V7.32061C11.849 7.40283 11.8127 7.48168 11.7481 7.53981C11.6834 7.59795 11.5957 7.63061 11.5042 7.63061H10.4698C10.3784 7.63061 10.2907 7.59795 10.226 7.53981C10.1613 7.48168 10.125 7.40283 10.125 7.32061V6.3906C10.125 6.30838 10.1613 6.22953 10.226 6.1714C10.2907 6.11326 10.3784 6.0806 10.4698 6.0806Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M10.4698 3.60059H11.5042C11.5957 3.60059 11.6834 3.63325 11.7481 3.69138C11.8127 3.74952 11.849 3.82837 11.849 3.91059V4.84059C11.849 4.92281 11.8127 5.00166 11.7481 5.0598C11.6834 5.11793 11.5957 5.15059 11.5042 5.15059H10.4698C10.3784 5.15059 10.2907 5.11793 10.226 5.0598C10.1613 5.00166 10.125 4.92281 10.125 4.84059V3.91059C10.125 3.82837 10.1613 3.74952 10.226 3.69138C10.2907 3.63325 10.3784 3.60059 10.4698 3.60059Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M13.2283 3.60059H14.2627C14.3542 3.60059 14.4419 3.63325 14.5065 3.69138C14.5712 3.74952 14.6075 3.82837 14.6075 3.91059V4.84059C14.6075 4.92281 14.5712 5.00166 14.5065 5.0598C14.4419 5.11793 14.3542 5.15059 14.2627 5.15059H13.2283C13.1368 5.15059 13.0491 5.11793 12.9845 5.0598C12.9198 5.00166 12.8835 4.92281 12.8835 4.84059V3.91059C12.8835 3.82837 12.9198 3.74952 12.9845 3.69138C13.0491 3.63325 13.1368 3.60059 13.2283 3.60059Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M5.70307 11.1678H6.60279C6.68233 11.1678 6.75862 11.1962 6.81486 11.2468C6.8711 11.2973 6.9027 11.3659 6.9027 11.4374V12.2463C6.9027 12.3178 6.8711 12.3864 6.81486 12.437C6.75862 12.4876 6.68233 12.516 6.60279 12.516H5.70307C5.62353 12.516 5.54725 12.4876 5.491 12.437C5.43476 12.3864 5.40316 12.3178 5.40316 12.2463V11.4374C5.40316 11.3659 5.43476 11.2973 5.491 11.2468C5.54725 11.1962 5.62353 11.1678 5.70307 11.1678Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M3.30381 11.1678H4.20353C4.28308 11.1678 4.35936 11.1962 4.4156 11.2468C4.47184 11.2973 4.50344 11.3659 4.50344 11.4374V12.2463C4.50344 12.3178 4.47184 12.3864 4.4156 12.437C4.35936 12.4876 4.28308 12.516 4.20353 12.516H3.30381C3.22427 12.516 3.14799 12.4876 3.09175 12.437C3.0355 12.3864 3.00391 12.3178 3.00391 12.2463V11.4374C3.00391 11.3659 3.0355 11.2973 3.09175 11.2468C3.14799 11.1962 3.22427 11.1678 3.30381 11.1678Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M3.30381 9.01074H4.20353C4.28308 9.01074 4.35936 9.03915 4.4156 9.08972C4.47184 9.14028 4.50344 9.20886 4.50344 9.28037V10.0893C4.50344 10.1608 4.47184 10.2294 4.4156 10.2799C4.35936 10.3305 4.28308 10.3589 4.20353 10.3589H3.30381C3.22427 10.3589 3.14799 10.3305 3.09175 10.2799C3.0355 10.2294 3.00391 10.1608 3.00391 10.0893V9.28037C3.00391 9.20886 3.0355 9.14028 3.09175 9.08972C3.14799 9.03915 3.22427 9.01074 3.30381 9.01074Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M5.70307 9.01074H6.60279C6.68233 9.01074 6.75862 9.03915 6.81486 9.08972C6.8711 9.14028 6.9027 9.20886 6.9027 9.28037V10.0893C6.9027 10.1608 6.8711 10.2294 6.81486 10.2799C6.75862 10.3305 6.68233 10.3589 6.60279 10.3589H5.70307C5.62353 10.3589 5.54725 10.3305 5.491 10.2799C5.43476 10.2294 5.40316 10.1608 5.40316 10.0893V9.28037C5.40316 9.20886 5.43476 9.14028 5.491 9.08972C5.54725 9.03915 5.62353 9.01074 5.70307 9.01074Z"
+                                            fill="#886DE0" />
+                                        <path
+                                            d="M8.3902 6.86837C8.39932 6.90592 8.40394 6.94423 8.40399 6.98267V13.8617C8.40399 14.0047 8.34081 14.1419 8.22835 14.243C8.11589 14.3441 7.96337 14.4009 7.80432 14.4009H2.10748C1.94844 14.4009 1.79591 14.3441 1.68345 14.243C1.57099 14.1419 1.50781 14.0047 1.50781 13.8617V8.09625C1.50783 7.97318 1.55469 7.85382 1.6406 7.758C1.7265 7.66218 1.84629 7.59567 1.98005 7.56951L7.6769 6.4562C7.75385 6.44113 7.83336 6.43983 7.91088 6.45239C7.98839 6.46495 8.0624 6.49111 8.12866 6.52939C8.19493 6.56766 8.25216 6.6173 8.29709 6.67546C8.34202 6.73363 8.37346 6.79918 8.3902 6.86837Z"
+                                            stroke="#886DE0" stroke-width="0.999756" stroke-linecap="round" />
+                                        <path
+                                            d="M15.6453 1.99951C15.8282 1.99951 16.0036 2.06483 16.1329 2.18111C16.2622 2.29738 16.3349 2.45508 16.3349 2.61952C16.3349 2.61952 16.3349 2.61952 16.3349 2.61952C16.3349 2.61952 16.3349 14.0619 16.3349 14.3996C16.3349 14.4758 14.7081 14.4435 13.7719 14.4185C13.4126 14.409 13.1282 14.1144 13.1282 13.755V11.9196C13.1282 11.8374 13.0919 11.7585 13.0272 11.7004C12.9625 11.6422 12.8748 11.6096 12.7834 11.6096H11.7489C11.6575 11.6096 11.5698 11.6422 11.5051 11.7004C11.4405 11.7585 11.4041 11.8374 11.4041 11.9196V13.7331C11.4041 14.1012 11.1057 14.3996 10.7376 14.3996H8.4043V2.61952C8.4043 2.45508 8.47695 2.29738 8.60628 2.18111C8.73561 2.06483 8.91102 1.99951 9.09391 1.99951H15.6453Z"
+                                            stroke="#886DE0" stroke-width="0.999756" stroke-linecap="round" />
+                                    </svg>
+                                </i>
+                                <span>
+                                    HQ: {{formData.companyDetails.headquarter}}
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon">
+                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.2604 8.11377C11.2882 8.11377 9.68945 9.71252 9.68945 11.6847C9.68945 11.7069 9.70744 11.7249 9.72963 11.7249H16.8715C16.8936 11.7249 16.9116 11.7069 16.9116 11.6847C16.9116 9.71252 15.3129 8.11377 13.3407 8.11377H13.2604Z"
+                                            fill="white" stroke="#B19CF3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="13.3016" cy="6.30799" r="1.80554" fill="white" stroke="#B19CF3"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M4.59239 8.11377C2.62023 8.11377 1.02148 9.71252 1.02148 11.6847C1.02148 11.7069 1.03947 11.7249 1.06166 11.7249H8.20348C8.22567 11.7249 8.24366 11.7069 8.24366 11.6847C8.24366 9.71252 6.64491 8.11377 4.67275 8.11377H4.59239Z"
+                                            fill="white" stroke="#B19CF3" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="4.63172" cy="6.30799" r="1.80554" fill="white" stroke="#B19CF3"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M8.83173 9.46826C6.61305 9.46826 4.81445 11.2669 4.81445 13.4855C4.81445 13.5105 4.83469 13.5307 4.85965 13.5307H5.32226H5.83007H6.84569H8.87693H12.8942C12.9192 13.5307 12.9394 13.5105 12.9394 13.4855C12.9394 11.2669 11.1408 9.46826 8.92213 9.46826H8.83173Z"
+                                            fill="white" stroke="#886DE0" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="8.87499" cy="7.43651" r="2.03124" fill="white" stroke="#886DE0"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M7.625 2.36914H10.3635" stroke="#886DE0" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M8.99219 1L8.99219 3.73849" stroke="#886DE0" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </i>
+                                <span>
+                                    {{formData.companyDetails.employees_count}}+ Employees
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon">
+                                    <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.38959 13H1.35742V1H10.3574V7" stroke="#886DE0"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M10.1252 9.05275C10.5432 8.52089 11.3618 8.52089 11.7797 9.05275V9.05275C11.9838 9.3125 12.3041 9.46002 12.634 9.44275L12.8298 9.4325C13.446 9.40024 13.9024 9.99861 13.7127 10.5858V10.5858C13.6122 10.8972 13.6939 11.2401 13.9251 11.4717V11.4717C14.3743 11.9217 14.2067 12.6856 13.6105 12.9064L13.5282 12.9368C13.2219 13.0503 12.9969 13.3204 12.9369 13.6416V13.6416C12.8206 14.2647 12.1383 14.6131 11.5712 14.3299L11.4313 14.2601C11.1298 14.1096 10.7751 14.1096 10.4737 14.2601L10.3338 14.3299C9.76664 14.6131 9.08433 14.2647 8.96803 13.6416V13.6416C8.9081 13.3204 8.68307 13.0503 8.3767 12.9368L8.29448 12.9064C7.69821 12.6856 7.53069 11.9217 7.97987 11.4717V11.4717C8.21107 11.2401 8.29277 10.8972 8.1922 10.5858V10.5858C8.00258 9.99861 8.45895 9.40024 9.07514 9.4325L9.27099 9.44275C9.60088 9.46002 9.92113 9.3125 10.1252 9.05275V9.05275Z"
+                                            stroke="#886DE0" stroke-width="0.682494" stroke-linecap="round" />
+                                        <ellipse cx="10.9506" cy="11.6278" rx="1.56188" ry="1.40418" stroke="#886DE0"
+                                            stroke-width="0.682494" stroke-linecap="round" />
+                                        <path d="M9.65234 14.5742V16.5219L10.9495 15.93L12.2467 16.5219V14.5742"
+                                            stroke="#886DE0" stroke-width="0.682494" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M3.35742 4H7.69834" stroke="#886DE0" stroke-width="0.682494"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M3.35742 5.9917H6.85742" stroke="#886DE0" stroke-width="0.682494"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M3.35742 8H6.35742" stroke="#886DE0" stroke-width="0.682494"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </i>
+                                <span>
+                                    {{formData.companyDetails.reference_projects}}+ projects
+                                    <!-- <span
+                                        class="color">(Verified)</span> -->
+                                </span>
+                            </li>
+                            <li>
+                                <i class="icon">
+                                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1.35938" y="3.06738" width="12.9766" height="9.04544" stroke="#886DE0"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M6.82809 6.16868H1.35938V3.06738H14.336V6.16868H8.86727"
+                                            stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10.2577 3.06753V1H5.80859V3.06753" stroke="#886DE0"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M6.91992 6.16895H9.14448V8.23647H6.91992V6.16895Z" stroke="#B19CF3"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </i>
+                                <span>
+                                    {{formData.companyDetails.years_in_business}}+ in Business
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block" *ngIf="formData?.additional_highlights?.length">
+                    <header class="head">
+                        {{formData?.additional_highlights[0].title}}
+                    </header>
+                    <div class="content">
+                        <ul class="list bullets">
+                            <li *ngFor="let c of formData?.additional_highlights[0].content">
+                                {{c}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block" *ngIf="formData.jointbids">
+                    <div class="content">
+                        <ul class="list with-icon">
+                            <li>
+                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.99609 12.1781L3.62295 10.2618C3.9637 9.86044 4.58364 9.86218 4.92212 10.2655V10.2655C5.16642 10.5565 5.18787 10.9744 4.97467 11.2889L4.05114 12.6515C3.93966 12.816 3.9225 13.0238 3.95622 13.2196C4.0451 13.7358 3.93678 14.4712 3.23305 15.1039"
+                                        stroke="#886DE0" stroke-linecap="round" />
+                                    <path
+                                        d="M2.71287 11.1405L2.71287 8.18262L1.64526 9.21352C0.958293 9.87687 0.570312 10.7908 0.570312 11.7458L0.570312 16.6108C0.570312 16.9996 0.885517 17.3148 1.27434 17.3148H4.22228C4.6111 17.3148 4.92631 16.9996 4.92631 16.6108V16.5122C4.92631 16.3024 5.02023 16.1039 5.17454 15.9617C5.49978 15.6622 6.05464 15.1056 6.27534 14.6114C6.54599 14.0054 6.48274 13.8328 6.39454 13.7896C6.32199 13.7541 6.23404 13.7858 6.15325 13.7858H4.42204"
+                                        stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M2.80859 9.15527L2.80859 11.1927M11.4812 9.15527V13.7709L6.42685 13.7709"
+                                        stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M12.3086 6.1355L10.1719 8.25381C9.81997 8.6027 9.24504 8.57639 8.92645 8.19681V8.19681C8.65708 7.87588 8.66276 7.40624 8.93982 7.09192L10.1873 5.6766C10.3374 5.50635 10.3724 5.26725 10.3404 5.04258C10.2673 4.52971 10.391 3.82167 11.0716 3.20971"
+                                        stroke="#886DE0" stroke-linecap="round" />
+                                    <path
+                                        d="M11.6696 6.90633L11.6696 10.1338L12.7321 9.09945C13.4129 8.43678 13.7969 7.52709 13.7969 6.57706L13.7969 1.70368C13.7969 1.31486 13.4817 0.999651 13.0928 0.999651H10.1449C9.75609 0.999651 9.44088 1.31486 9.44088 1.70368V1.80227C9.44088 2.01206 9.34695 2.21062 9.19265 2.35275C8.86741 2.65232 8.31255 3.20886 8.09185 3.70307C7.80786 4.33901 7.89149 5.28749 7.98584 5.87751C8.03669 6.19558 8.31739 6.41416 8.6395 6.41416L9.44088 6.41416"
+                                        stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M7.79565 4.60644L2.80784 4.60644V9.15479H4.97599L6.41406 9.15478M11.4805 6.88162L11.4805 9.15479H9.31231L7.9043 9.15479"
+                                        stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M6.5859 9.15637L6.25245 9.53889C6.10223 9.7112 6.01948 9.93208 6.01948 10.1607V10.1607C6.01948 10.6833 6.44313 11.1069 6.96573 11.1069H7.15232H7.3389C7.8615 11.1069 8.28516 10.6833 8.28516 10.1607V10.1607C8.28516 9.93208 8.2024 9.7112 8.05218 9.53889L7.71874 9.15637"
+                                        stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span>
+                                    Available for Joint-bids & Projects
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="block" *ngIf="formData?.additional_highlights?.length">
+                    <header class="head">
+                        {{formData?.additional_highlights[1].title}}
+                    </header>
+                    <div class="content">
+                        <ul class="list bullets">
+                            <li *ngFor="let c of formData?.additional_highlights[1].content">
+                                {{c}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="button-wrap">
+                    <a href="" class="default-btn mdc-button">
+                        Start Enquiry
+                    </a>
+                    <a href="" class="buttonV2">
+                        +Add to Invitation List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <button nz-button (click)="showModal('parent')"><span>Show Modal</span></button> -->
+    <nz-modal [(nzVisible)]="isVisible" [nzWidth]="1376" [nzTitle]="null" [nzClassName]="'profile-image-modal'"
+        [nzFooter]="null" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+        <ng-container *nzModalContent>
+
+            <!-- <button nz-button (click)="showModal('child')"><span>Show Modal</span></button> -->
+            <div parent>
+                <div class="popup-header">
+                    <div class="logo-name">
+                        {{companyName}}
+                    </div>
+
+                    <div class="rating">
+                        <nz-rate [ngModel]="formData.companyDetails.rating" nzDisabled></nz-rate>
+                    </div>
+
+
+                    <div class="badge-wrapper">
+                        <div class="badge" *ngFor="let b of formData?.badges"
+                            [ngStyle]="{'background-color': b?.badge_color?.background, 'border-color': b?.badge_color?.outline}">
+                            <img [src]="b?.badge_icon" width="24" height="24" alt="" *ngIf="b?.badge_icon">
+                            {{b.title}}
+                        </div>
+                    </div>
+                </div>
+                <div class="flex company-overview child">
+                    <div class="image-wrapper">
+                        <div class="bottom">
+                            <figure *ngFor="let project of formData.featuredProject.projects">
+                                <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
+                                    <div *ngIf="ci == 0">
+                                        <img src="assets/images/image4.png" alt="image3" width="244" height="190">
+                                        <img [src]="pimg" width="244" height="190" class="abs-image"
+                                            (click)="showModal('child', project)" />
+                                        <figcaption>
+                                            {{project.project_name}} in {{
+                                            project.project_region }}
+                                        </figcaption>
+                                    </div>
+                                </ng-container>
+                            </figure>
+                        </div>
+                        <div>
+                            <h6>Engineering project for</h6>
+                            <div *ngFor="let e of formData.engineeringData" class="engineeringData">
+                                <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" width="130"
+                                    height="38" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company-detail in-popup">
+                        <div class="block user-detail-wrapper">
+                            <img [src]="formData?.companyDetails.icon" alt="" width="64" height="33">
+                            <div class="user-detail-child" *ngFor="let dir of formData.directors">
+                                <figure>
+                                    <img [src]="dir.logo" height="28" width="28" />
+                                </figure>
+                                <div class="user-detail">
+                                    <strong>
+                                        {{dir.name}}
+                                    </strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <header class="head">
+                                Company Highlights
+                            </header>
+                            <div class="content">
+                                <div class="sub-heading">
+                                    {{companyHighlights}}
+                                </div>
+                                <ul class="list with-icon">
+                                    <li>
+                                        <i class="icon">
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.4698 8.56061H11.5042C11.5957 8.56061 11.6834 8.59328 11.7481 8.65141C11.8127 8.70955 11.849 8.7884 11.849 8.87062V9.80062C11.849 9.88284 11.8127 9.96169 11.7481 10.0198C11.6834 10.078 11.5957 10.1106 11.5042 10.1106H10.4698C10.3784 10.1106 10.2907 10.078 10.226 10.0198C10.1613 9.96169 10.125 9.88284 10.125 9.80062V8.87062C10.125 8.7884 10.1613 8.70955 10.226 8.65141C10.2907 8.59328 10.3784 8.56061 10.4698 8.56061Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M13.2283 8.56061H14.2627C14.3542 8.56061 14.4419 8.59328 14.5065 8.65141C14.5712 8.70955 14.6075 8.7884 14.6075 8.87062V9.80062C14.6075 9.88284 14.5712 9.96169 14.5065 10.0198C14.4419 10.078 14.3542 10.1106 14.2627 10.1106H13.2283C13.1368 10.1106 13.0491 10.078 12.9845 10.0198C12.9198 9.96169 12.8835 9.88284 12.8835 9.80062V8.87062C12.8835 8.7884 12.9198 8.70955 12.9845 8.65141C13.0491 8.59328 13.1368 8.56061 13.2283 8.56061Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M13.2283 6.0806H14.2627C14.3542 6.0806 14.4419 6.11326 14.5065 6.1714C14.5712 6.22953 14.6075 6.30838 14.6075 6.3906V7.32061C14.6075 7.40283 14.5712 7.48168 14.5065 7.53981C14.4419 7.59795 14.3542 7.63061 14.2627 7.63061H13.2283C13.1368 7.63061 13.0491 7.59795 12.9845 7.53981C12.9198 7.48168 12.8835 7.40283 12.8835 7.32061V6.3906C12.8835 6.30838 12.9198 6.22953 12.9845 6.1714C13.0491 6.11326 13.1368 6.0806 13.2283 6.0806Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M10.4698 6.0806H11.5042C11.5957 6.0806 11.6834 6.11326 11.7481 6.1714C11.8127 6.22953 11.849 6.30838 11.849 6.3906V7.32061C11.849 7.40283 11.8127 7.48168 11.7481 7.53981C11.6834 7.59795 11.5957 7.63061 11.5042 7.63061H10.4698C10.3784 7.63061 10.2907 7.59795 10.226 7.53981C10.1613 7.48168 10.125 7.40283 10.125 7.32061V6.3906C10.125 6.30838 10.1613 6.22953 10.226 6.1714C10.2907 6.11326 10.3784 6.0806 10.4698 6.0806Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M10.4698 3.60059H11.5042C11.5957 3.60059 11.6834 3.63325 11.7481 3.69138C11.8127 3.74952 11.849 3.82837 11.849 3.91059V4.84059C11.849 4.92281 11.8127 5.00166 11.7481 5.0598C11.6834 5.11793 11.5957 5.15059 11.5042 5.15059H10.4698C10.3784 5.15059 10.2907 5.11793 10.226 5.0598C10.1613 5.00166 10.125 4.92281 10.125 4.84059V3.91059C10.125 3.82837 10.1613 3.74952 10.226 3.69138C10.2907 3.63325 10.3784 3.60059 10.4698 3.60059Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M13.2283 3.60059H14.2627C14.3542 3.60059 14.4419 3.63325 14.5065 3.69138C14.5712 3.74952 14.6075 3.82837 14.6075 3.91059V4.84059C14.6075 4.92281 14.5712 5.00166 14.5065 5.0598C14.4419 5.11793 14.3542 5.15059 14.2627 5.15059H13.2283C13.1368 5.15059 13.0491 5.11793 12.9845 5.0598C12.9198 5.00166 12.8835 4.92281 12.8835 4.84059V3.91059C12.8835 3.82837 12.9198 3.74952 12.9845 3.69138C13.0491 3.63325 13.1368 3.60059 13.2283 3.60059Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M5.70307 11.1678H6.60279C6.68233 11.1678 6.75862 11.1962 6.81486 11.2468C6.8711 11.2973 6.9027 11.3659 6.9027 11.4374V12.2463C6.9027 12.3178 6.8711 12.3864 6.81486 12.437C6.75862 12.4876 6.68233 12.516 6.60279 12.516H5.70307C5.62353 12.516 5.54725 12.4876 5.491 12.437C5.43476 12.3864 5.40316 12.3178 5.40316 12.2463V11.4374C5.40316 11.3659 5.43476 11.2973 5.491 11.2468C5.54725 11.1962 5.62353 11.1678 5.70307 11.1678Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M3.30381 11.1678H4.20353C4.28308 11.1678 4.35936 11.1962 4.4156 11.2468C4.47184 11.2973 4.50344 11.3659 4.50344 11.4374V12.2463C4.50344 12.3178 4.47184 12.3864 4.4156 12.437C4.35936 12.4876 4.28308 12.516 4.20353 12.516H3.30381C3.22427 12.516 3.14799 12.4876 3.09175 12.437C3.0355 12.3864 3.00391 12.3178 3.00391 12.2463V11.4374C3.00391 11.3659 3.0355 11.2973 3.09175 11.2468C3.14799 11.1962 3.22427 11.1678 3.30381 11.1678Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M3.30381 9.01074H4.20353C4.28308 9.01074 4.35936 9.03915 4.4156 9.08972C4.47184 9.14028 4.50344 9.20886 4.50344 9.28037V10.0893C4.50344 10.1608 4.47184 10.2294 4.4156 10.2799C4.35936 10.3305 4.28308 10.3589 4.20353 10.3589H3.30381C3.22427 10.3589 3.14799 10.3305 3.09175 10.2799C3.0355 10.2294 3.00391 10.1608 3.00391 10.0893V9.28037C3.00391 9.20886 3.0355 9.14028 3.09175 9.08972C3.14799 9.03915 3.22427 9.01074 3.30381 9.01074Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M5.70307 9.01074H6.60279C6.68233 9.01074 6.75862 9.03915 6.81486 9.08972C6.8711 9.14028 6.9027 9.20886 6.9027 9.28037V10.0893C6.9027 10.1608 6.8711 10.2294 6.81486 10.2799C6.75862 10.3305 6.68233 10.3589 6.60279 10.3589H5.70307C5.62353 10.3589 5.54725 10.3305 5.491 10.2799C5.43476 10.2294 5.40316 10.1608 5.40316 10.0893V9.28037C5.40316 9.20886 5.43476 9.14028 5.491 9.08972C5.54725 9.03915 5.62353 9.01074 5.70307 9.01074Z"
+                                                    fill="#886DE0" />
+                                                <path
+                                                    d="M8.3902 6.86837C8.39932 6.90592 8.40394 6.94423 8.40399 6.98267V13.8617C8.40399 14.0047 8.34081 14.1419 8.22835 14.243C8.11589 14.3441 7.96337 14.4009 7.80432 14.4009H2.10748C1.94844 14.4009 1.79591 14.3441 1.68345 14.243C1.57099 14.1419 1.50781 14.0047 1.50781 13.8617V8.09625C1.50783 7.97318 1.55469 7.85382 1.6406 7.758C1.7265 7.66218 1.84629 7.59567 1.98005 7.56951L7.6769 6.4562C7.75385 6.44113 7.83336 6.43983 7.91088 6.45239C7.98839 6.46495 8.0624 6.49111 8.12866 6.52939C8.19493 6.56766 8.25216 6.6173 8.29709 6.67546C8.34202 6.73363 8.37346 6.79918 8.3902 6.86837Z"
+                                                    stroke="#886DE0" stroke-width="0.999756" stroke-linecap="round" />
+                                                <path
+                                                    d="M15.6453 1.99951C15.8282 1.99951 16.0036 2.06483 16.1329 2.18111C16.2622 2.29738 16.3349 2.45508 16.3349 2.61952C16.3349 2.61952 16.3349 2.61952 16.3349 2.61952C16.3349 2.61952 16.3349 14.0619 16.3349 14.3996C16.3349 14.4758 14.7081 14.4435 13.7719 14.4185C13.4126 14.409 13.1282 14.1144 13.1282 13.755V11.9196C13.1282 11.8374 13.0919 11.7585 13.0272 11.7004C12.9625 11.6422 12.8748 11.6096 12.7834 11.6096H11.7489C11.6575 11.6096 11.5698 11.6422 11.5051 11.7004C11.4405 11.7585 11.4041 11.8374 11.4041 11.9196V13.7331C11.4041 14.1012 11.1057 14.3996 10.7376 14.3996H8.4043V2.61952C8.4043 2.45508 8.47695 2.29738 8.60628 2.18111C8.73561 2.06483 8.91102 1.99951 9.09391 1.99951H15.6453Z"
+                                                    stroke="#886DE0" stroke-width="0.999756" stroke-linecap="round" />
+                                            </svg>
+                                        </i>
+                                        <span>HQ: {{formData.companyDetails.headquarter}}</span>
+                                    </li>
+                                    <li>
+                                        <i class="icon">
+                                            <svg width="18" height="15" viewBox="0 0 18 15" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13.2604 8.11377C11.2882 8.11377 9.68945 9.71252 9.68945 11.6847C9.68945 11.7069 9.70744 11.7249 9.72963 11.7249H16.8715C16.8936 11.7249 16.9116 11.7069 16.9116 11.6847C16.9116 9.71252 15.3129 8.11377 13.3407 8.11377H13.2604Z"
+                                                    fill="white" stroke="#B19CF3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <circle cx="13.3016" cy="6.30799" r="1.80554" fill="white"
+                                                    stroke="#B19CF3" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M4.59239 8.11377C2.62023 8.11377 1.02148 9.71252 1.02148 11.6847C1.02148 11.7069 1.03947 11.7249 1.06166 11.7249H8.20348C8.22567 11.7249 8.24366 11.7069 8.24366 11.6847C8.24366 9.71252 6.64491 8.11377 4.67275 8.11377H4.59239Z"
+                                                    fill="white" stroke="#B19CF3" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <circle cx="4.63172" cy="6.30799" r="1.80554" fill="white"
+                                                    stroke="#B19CF3" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M8.83173 9.46826C6.61305 9.46826 4.81445 11.2669 4.81445 13.4855C4.81445 13.5105 4.83469 13.5307 4.85965 13.5307H5.32226H5.83007H6.84569H8.87693H12.8942C12.9192 13.5307 12.9394 13.5105 12.9394 13.4855C12.9394 11.2669 11.1408 9.46826 8.92213 9.46826H8.83173Z"
+                                                    fill="white" stroke="#886DE0" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <circle cx="8.87499" cy="7.43651" r="2.03124" fill="white"
+                                                    stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M7.625 2.36914H10.3635" stroke="#886DE0" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M8.99219 1L8.99219 3.73849" stroke="#886DE0"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </i>
+                                        <span>{{formData.companyDetails.employees_count}}+ Employees</span>
+                                    </li>
+                                    <li>
+                                        <i class="icon">
+                                            <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.38959 13H1.35742V1H10.3574V7" stroke="#886DE0"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M10.1252 9.05275C10.5432 8.52089 11.3618 8.52089 11.7797 9.05275V9.05275C11.9838 9.3125 12.3041 9.46002 12.634 9.44275L12.8298 9.4325C13.446 9.40024 13.9024 9.99861 13.7127 10.5858V10.5858C13.6122 10.8972 13.6939 11.2401 13.9251 11.4717V11.4717C14.3743 11.9217 14.2067 12.6856 13.6105 12.9064L13.5282 12.9368C13.2219 13.0503 12.9969 13.3204 12.9369 13.6416V13.6416C12.8206 14.2647 12.1383 14.6131 11.5712 14.3299L11.4313 14.2601C11.1298 14.1096 10.7751 14.1096 10.4737 14.2601L10.3338 14.3299C9.76664 14.6131 9.08433 14.2647 8.96803 13.6416V13.6416C8.9081 13.3204 8.68307 13.0503 8.3767 12.9368L8.29448 12.9064C7.69821 12.6856 7.53069 11.9217 7.97987 11.4717V11.4717C8.21107 11.2401 8.29277 10.8972 8.1922 10.5858V10.5858C8.00258 9.99861 8.45895 9.40024 9.07514 9.4325L9.27099 9.44275C9.60088 9.46002 9.92113 9.3125 10.1252 9.05275V9.05275Z"
+                                                    stroke="#886DE0" stroke-width="0.682494" stroke-linecap="round" />
+                                                <ellipse cx="10.9506" cy="11.6278" rx="1.56188" ry="1.40418"
+                                                    stroke="#886DE0" stroke-width="0.682494" stroke-linecap="round" />
+                                                <path d="M9.65234 14.5742V16.5219L10.9495 15.93L12.2467 16.5219V14.5742"
+                                                    stroke="#886DE0" stroke-width="0.682494" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M3.35742 4H7.69834" stroke="#886DE0" stroke-width="0.682494"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M3.35742 5.9917H6.85742" stroke="#886DE0"
+                                                    stroke-width="0.682494" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M3.35742 8H6.35742" stroke="#886DE0" stroke-width="0.682494"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </i>
+                                        <span>{{formData.companyDetails.reference_projects}}+ projects</span>
+                                    </li>
+                                    <li>
+                                        <i class="icon">
+                                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="1.35938" y="3.06738" width="12.9766" height="9.04544"
+                                                    stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.82809 6.16868H1.35938V3.06738H14.336V6.16868H8.86727"
+                                                    stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10.2577 3.06753V1H5.80859V3.06753" stroke="#886DE0"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M6.91992 6.16895H9.14448V8.23647H6.91992V6.16895Z"
+                                                    stroke="#B19CF3" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </i>
+                                        <span>{{formData.companyDetails.years_in_business}}+ in Business</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="block" *ngIf="formData?.additional_highlights?.length">
+                            <header class="head">
+                                {{formData?.additional_highlights[0].title}}
+                            </header>
+                            <div class="content">
+                                <ul class="list bullets">
+                                    <li *ngFor="let c of formData?.additional_highlights[0].content">
+                                        {{c}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="block" *ngIf="formData.jointbids">
+                            <div class="content">
+                                <ul class="list with-icon">
+                                    <li>
+                                        <i class="icon">
+                                            <svg width="15" height="18" viewBox="0 0 15 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M1.99609 12.1781L3.62295 10.2618C3.9637 9.86044 4.58364 9.86218 4.92212 10.2655V10.2655C5.16642 10.5565 5.18787 10.9744 4.97467 11.2889L4.05114 12.6515C3.93966 12.816 3.9225 13.0238 3.95622 13.2196C4.0451 13.7358 3.93678 14.4712 3.23305 15.1039"
+                                                    stroke="#886DE0" stroke-linecap="round" />
+                                                <path
+                                                    d="M2.71287 11.1405L2.71287 8.18262L1.64526 9.21352C0.958293 9.87687 0.570312 10.7908 0.570312 11.7458L0.570312 16.6108C0.570312 16.9996 0.885517 17.3148 1.27434 17.3148H4.22228C4.6111 17.3148 4.92631 16.9996 4.92631 16.6108V16.5122C4.92631 16.3024 5.02023 16.1039 5.17454 15.9617C5.49978 15.6622 6.05464 15.1056 6.27534 14.6114C6.54599 14.0054 6.48274 13.8328 6.39454 13.7896C6.32199 13.7541 6.23404 13.7858 6.15325 13.7858H4.42204"
+                                                    stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M2.80859 9.15527L2.80859 11.1927M11.4812 9.15527V13.7709L6.42685 13.7709"
+                                                    stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M12.3086 6.1355L10.1719 8.25381C9.81997 8.6027 9.24504 8.57639 8.92645 8.19681V8.19681C8.65708 7.87588 8.66276 7.40624 8.93982 7.09192L10.1873 5.6766C10.3374 5.50635 10.3724 5.26725 10.3404 5.04258C10.2673 4.52971 10.391 3.82167 11.0716 3.20971"
+                                                    stroke="#886DE0" stroke-linecap="round" />
+                                                <path
+                                                    d="M11.6696 6.90633L11.6696 10.1338L12.7321 9.09945C13.4129 8.43678 13.7969 7.52709 13.7969 6.57706L13.7969 1.70368C13.7969 1.31486 13.4817 0.999651 13.0928 0.999651H10.1449C9.75609 0.999651 9.44088 1.31486 9.44088 1.70368V1.80227C9.44088 2.01206 9.34695 2.21062 9.19265 2.35275C8.86741 2.65232 8.31255 3.20886 8.09185 3.70307C7.80786 4.33901 7.89149 5.28749 7.98584 5.87751C8.03669 6.19558 8.31739 6.41416 8.6395 6.41416L9.44088 6.41416"
+                                                    stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M7.79565 4.60644L2.80784 4.60644V9.15479H4.97599L6.41406 9.15478M11.4805 6.88162L11.4805 9.15479H9.31231L7.9043 9.15479"
+                                                    stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path
+                                                    d="M6.5859 9.15637L6.25245 9.53889C6.10223 9.7112 6.01948 9.93208 6.01948 10.1607V10.1607C6.01948 10.6833 6.44313 11.1069 6.96573 11.1069H7.15232H7.3389C7.8615 11.1069 8.28516 10.6833 8.28516 10.1607V10.1607C8.28516 9.93208 8.2024 9.7112 8.05218 9.53889L7.71874 9.15637"
+                                                    stroke="#886DE0" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </i>
+                                        Availabiliable for Joint bids & Projects
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="block" *ngIf="formData?.additional_highlights?.length">
+                            <header class="head">
+                                {{formData?.additional_highlights[1].title}}
+                            </header>
+                            <div class="content">
+                                <ul class="list bullets">
+                                    <li *ngFor="let c of formData?.additional_highlights[1].content">
+                                        {{c}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="block review-section">
+                            <header class="head">
+                                Reviews
+                            </header>
+                            <div class="content">
+                                <div class="mb-10" *ngFor="let review of formData.clientReviews">
+                                    {{review.description}}
+                                    <div class="flex gap16 align-item-center pt-8">
+                                        <div class="profile-wrapper align-item-center">
+                                            <div class="profile-image">
+                                                <img [src]="review.provided_by_image" alt="" width="32" height="32">
+                                            </div>
+                                            {{review.provided_by_name}}
+                                        </div>
+                                        <div class="country align-item-center">
+                                            <div class="country-image">
+                                                <img [src]="review.location_image" alt="" width="15">
+                                            </div>
+                                            {{review.location}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <header class="head">
+                                Rating
+                            </header>
+                            <div class="content">
+                                <div *ngFor="let c of formData.reviews">
+                                    <div class="info">
+                                        <span>
+                                            {{c.title}}
+                                            <svg width="12" height="16" viewBox="0 0 12 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 15L6 1.5M6 1.5L11.25 6.75M6 1.5L0.75 6.75" stroke="#00B507"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            {{c.rating}}
+                                        </span>
+                                    </div>
+
+                                    <nz-progress [nzPercent]="c.percentRating" [nzShowInfo]="false"></nz-progress>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </ng-container>
+    </nz-modal>
+    <nz-modal [(nzVisible)]="isVisiblechild" [nzWidth]="1376" [nzTitle]="null" [nzClassName]="'profile-image-modal'"
+        [nzFooter]="null" (nzOnCancel)="handleCancelChild()" (nzOnOk)="handleOkChild()">
+        <ng-container *nzModalContent>
+            <div child>
+                <div class="popup-header space-between">
+                    <div class="logo-name">
+                        {{selectedProject?.project_name}}
+                    </div>
+                    <div></div>
+                </div>
+                <div class="flex company-overview child">
+                    <div class="image-wrapper">
+                        <div class="top">
+                            <div class="left">
+                                <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
+                                    <figure *ngIf="i === 0">
+                                            <img src="assets/images/image5.jpg" alt="image3" width="759" height="394">
+                                            <img [src]="pimg" width="759" height="394" class="abs-image" />
+                                    </figure>
+                                </ng-container>
+                            </div>
+                            <div class="right">
+                                <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
+                                    <figure *ngIf="i > 0 && i < 3 ">
+                                            <img src="assets/images/image6.jpg" alt="image3" width="244" height="190">
+                                            <img [src]="pimg" width="244" height="190" class="abs-image" />
+                                    </figure>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
+                                <figure *ngIf="i > 2">
+                                        <img src="assets/images/image6.jpg" alt="image3" width="244" height="190">
+                                        <img [src]="pimg" width="244" height="190" class="abs-image" />
+                                </figure>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="company-detail">
+                        <div class="block project-detail">
+                                <header class="name">
+                                    <strong>
+                                        {{selectedProject?.project_name}}
+                                    </strong>
+                                    {{selectedProject?.project_region}}
+                                </header>
+    
+                                <div class="content">
+    
+                                <h5>
+                                    Description
+                                </h5>
+                                <p>
+                                    {{selectedProject?.project_description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </nz-modal>
+    <div class="secondaryBg qualified-partner block-section">
+        <div class="container">
+            <h2>
+                Qualified Partner
+                <small>
+                    <strong>{{companyName}}</strong> has achieved pre-qualification status while meeting the high BuildTwin standards
+                </small>
+            </h2>
+
+            <section class="qualified-list">
+                <div class="block" *ngFor="let b of formData?.badges">
+                    <figure>
+                        <img [src]="b?.badge_image" alt="" width="250" height="217">
+                    </figure>
+                    <div class="detail">
+                        <h5>
+                            {{b.title}}
+                        </h5>
+                        <p *ngIf="b.title == 'AI Quality Management'">
+                            {{companyName}} has qualified to work with the AI quality scheme
+                        </p>
+                        <p *ngIf="b.title == 'Live Tracking'">
+                            {{companyName}} supports live AI tracking of your projects
+                        </p>
+                        <p *ngIf="b.title == 'Verified Vendor'">
+                            {{companyName}} is a verified partner
+                        </p>
+                        <p *ngIf="b.title == 'Commercially Pre Qualified'">
+                            {{companyName}} is commercially pre-qualified
+                        </p>
+
+                        <div class="button-wrap">
+                            <a href="" class="buttonV2">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+    <div class="block-section">
+        <div class="container">
+            <h2>
+                Specialised Sector
+                <small>
+                    <strong>{{companyName}}'s</strong> technical competency and experience cover multiple sectors
+                </small>
+            </h2>
+            <div class="specialised-item-list">
+                <div class="block" *ngFor="let func of formData.sectors">
+                    <figure>
+                        <img [src]="func['sector_image']" alt="" width="207" height="244">
+                    </figure>
+                    <figcaption>
+                        {{func.name}}
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-section">
+        <div class="container">
+            <h2>
+                Services
+                <small>
+                    Design and Detailing Services
+                </small>
+            </h2>
+
+            <div class="service-flex">
+                <div class="left" *ngIf="formData?.highlightServices?.length">
+                    <ul class="list">
+                        <li *ngFor="let h of formData.highlightServices; let i = index">
+                            <ng-container *ngIf="showAlservices">
+                                <img [src]="h['service_icon']" alt="" width="32" height="32">
+                                {{h.name}}
+                            </ng-container>
+                            <ng-container *ngIf="!showAlservices && i < 7">
+                                <img [src]="h['service_icon']" alt="" width="32" height="32">
+                                {{h.name}}
+                            </ng-container>
+                        </li>
+                        <ng-container *ngIf="formData?.highlightServices?.length > 7 && !showAlservices">
+                            <button (click)="this.showAlservices = true">View more services</button>
+                        </ng-container>
+                    </ul>
+
+                    <!-- <div class="button-wrap">
+                        <a href="" class="buttonV2">
+                            View More Services
+                        </a>
+                    </div> -->
+                </div>
+                <div class="right">
+                    <h3>
+                        Get the world class {{companyName}}
+                    </h3>
+                    <p [innerHtml]="formData.companyDetails?.company_description ">
+                    </p>
+                    <div class="digitalised-operation">
+                        <h6>
+                            Digitalised Operation
+                        </h6>
+                        <ul class="list">
+                            <li *ngFor="let digi of formData?.operations">
+                                <img [src]="digi['logo']" alt="" width="24" height="24">
+                                {{digi['name']}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-section" id="available-service">
+        <div class="container">
+            <div class="head">
+                <h2>
+                    Available Service for Direct Booking
+                    <small>
+                        Unlock the BuildTwin advantage
+                    </small>
+                </h2>
+                <ul class="flex" *ngIf="formData.engineeringData.length">
+                    <li *ngFor="let e of formData.engineeringData">
+                        <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" alt="" width="252" height="73">
+                    </li>
+                </ul>
+            </div>
+            <div class="service-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Service
+                            </th>
+                            <th>
+                                Software
+                            </th>
+                            <th>
+                                Building Code
+                            </th>
+                            <th>
+                                Service Add
+                            </th>
+                            <th>
+    
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let service of serviceTypes; let idx = index">
+                            <td>
+                                <h5>
+                                    {{service.name}}
+                                </h5>
+                                <ul class="list with-icon">
+                                    <li *ngFor="let block of service?.special_feature_titles">
+                                        <i>
+                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <ellipse cx="11.0632" cy="11.0534" rx="8.64135" ry="8.64719"
+                                                    stroke="#221638" stroke-width="1.4" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M10.8967 7.85147L8.08402 13.9497C7.91648 14.313 8.2895 14.6894 8.65426 14.5252L11.1119 13.4189C11.2248 13.3681 11.3541 13.3681 11.4669 13.4189L13.9246 14.5252C14.2893 14.6894 14.6624 14.313 14.4948 13.9497L11.6821 7.85148C11.5276 7.51634 11.0513 7.51634 10.8967 7.85147Z"
+                                                    stroke="#221638" stroke-width="1.4" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M11.0625 1V3.59416" stroke="#221638" stroke-width="1.4"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M11.0625 18.4062V21.0004" stroke="#221638" stroke-width="1.4"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M18.4082 11.0547L21.0006 11.0547" stroke="#221638"
+                                                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M1 11.0547L3.59241 11.0547" stroke="#221638" stroke-width="1.4"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <!-- <i>
+                                                <img [src]="h['service_icon']" alt="" width="22" height="22">
+                                            </i> -->
+                                        </i>
+                                        {{block}}
+                                    </li>
+                                </ul>
+                            </td>
+                            <td>
+                                <div class="custom-select-wrapper">
+                                    <select name="" id="" class="custom-select">
+                                        <option value="">Please select</option>
+                                        <option [value]="s.id" *ngFor="let s of listOfSoftware">{{s.name}}</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="custom-select-wrapper">
+                                    <select name="" id="" class="custom-select">
+                                        <option value="">Please select</option>
+                                        <option *ngFor="let code of formData?.buildingCode"> {{code.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <ul class="list">
+                                    <li *ngFor="let addon of service?.addon_titles; let i = index" [ngClass]="{'highlight': addon.isSelected}">
+                                        <!-- <input type="checkbox" [checked]="addon.isChecked"> -->
+                                        {{addon.name}}
+                                        <i class="cursor">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" *ngIf="addon.isSelected" (click)="removeAddon(idx, i)"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="24" height="24" rx="12" fill="#886DE0" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M9.17161 7.75725C8.78109 7.36672 8.14792 7.36672 7.7574 7.75725C7.36688 8.14777 7.36688 8.78094 7.7574 9.17146L10.7627 12.1768L7.7574 15.1821C7.36688 15.5726 7.36688 16.2057 7.7574 16.5963C8.14792 16.9868 8.78109 16.9868 9.17161 16.5963L12.1769 13.591L15.182 16.5961C15.5725 16.9866 16.2057 16.9866 16.5962 16.5961C16.9868 16.2056 16.9868 15.5724 16.5962 15.1819L13.5911 12.1768L16.5962 9.17165C16.9868 8.78112 16.9868 8.14796 16.5962 7.75743C16.2057 7.36691 15.5725 7.36691 15.182 7.75743L12.1769 10.7625L9.17161 7.75725Z"
+                                                    fill="white" />
+                                            </svg>
+                                            <svg *ngIf="!addon.isSelected" width="24" height="24" viewBox="0 0 24 24" fill="none"  (click)="addAdons(idx, i)"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="24" height="24" rx="12" fill="white" />
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M13 7C13 6.44772 12.5523 6 12 6C11.4477 6 11 6.44772 11 7V11.25H6.75C6.19772 11.25 5.75 11.6977 5.75 12.25C5.75 12.8023 6.19772 13.25 6.75 13.25H11V17.5C11 18.0523 11.4477 18.5 12 18.5C12.5523 18.5 13 18.0523 13 17.5V13.25H17.25C17.8023 13.25 18.25 12.8023 18.25 12.25C18.25 11.6977 17.8023 11.25 17.25 11.25H13V7Z"
+                                                    fill="#886DE0" />
+                                            </svg>
+                                        </i>
+                                        <!-- <ng-container *ngIf="i === service?.addon_titles?.length - 1 && isAddon">
+                                            <select [(ngModel)]="selectedAddon" name="" id="" class="custom-select">
+                                                <option value="">Please select</option>
+                                                <option *ngFor="let add of addons" [value]="add.id"> {{add.title}}
+                                                </option>
+                                            </select>
+                                            <span (click)="addAdons(idx)">+</span>
+                                        </ng-container> -->
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="normal">
+                                <h5>
+                                    Start Enquiry
+                                </h5>
+                                <ul class="list bullets">
+                                    <li>
+                                        It only takes few minutes
+                                    </li>
+                                </ul>
+                                <!-- <a href="" class="default-btn mdc-button">
+                                    Enquiry Now
+                                </a> -->
+                                <a target="_blank" href="https://cockpit.buildtwin.com/" class="default-btn mdc-button">
+                                    Start Enquiry
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="secondaryBg block-section" id="team-wrapper">
+        <div class="container">
+
+            <owl-carousel-o [options]="aboutSlider">
+                <ng-template *ngFor="let engineer of formData.engineers" carouselSlide>
+                    <div class="slide">
+                        <figure>
+                            <img [src]="engineer.engineer_profile_picture" [alt]="engineer.engineer_name" width="362"
+                                height="425">
+                        </figure>
+                        <div class="content">
+                            <h2>
+                                Our Technical Team in the Spotlight
+                            </h2>
+                            <div class="team-member">
+                                <div class="name">
+                                    {{ engineer.engineer_name }}
+                                </div>
+                                <div class="detail">
+                                    {{engineer.engineer_designation}}
+                                    <!-- <small>
+                                Ellectrical Engineer
+                            </small> -->
+                                </div>
+                                <p>
+                                    {{engineer.engineer_note}}
+                                </p>
+                                <div class="my-expertise">
+                                    <span>My</span> expertise at {{companyName}}
+                                </div>
+                                <div class="expertise-list">
+                                    <span class="block">
+                                        <span>#</span>{{engineer.engineer_expertise}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+
+
+            </owl-carousel-o>
+        </div>
+    </div>
+
+
+    <div class="block-section" id="client-review">
+        <div class="container">
+            <h2>
+                Client Reviews
+                <small>
+                    Learn more about what clients say about <strong>{{companyName}}</strong>
+                </small>
+            </h2>
+
+            <div class="review">
+                <span class="number">
+                    {{verifiedReview.rating}}
+                </span>
+                <span class="review-count">
+                    <strong>
+                        {{verifiedReview.state}}
+                    </strong>
+                    {{verifiedReview.reviewerCount}} verified reviews
+                </span>
+            </div>
+            <h4>
+                Categories:
+            </h4>
+            <div class="category-list">
+                <div class="block" *ngFor="let c of formData.reviews">
+                    <div class="info">
+                        <span>
+                            {{c.title}}
+                            <svg width="12" height="16" viewBox="0 0 12 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 15L6 1.5M6 1.5L11.25 6.75M6 1.5L0.75 6.75" stroke="#00B507"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <span>
+                            {{c.rating}}
+                        </span>
+                    </div>
+                    <nz-progress [nzPercent]="c.percentRating" [nzStrokeColor]="c.color" [nzShowInfo]="false"></nz-progress>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="block-section" id="client-feeback">
+        <div class="container">
+            <h2>
+                See What Clients Loved Most:
+            </h2>
+            <div class="client-feeback-list">
+                <div class="block" *ngFor="let review of formData.clientReviews">
+                    <header>
+                        <figure>
+                            <img [src]="review.provided_by_image" alt="" width="48" height="48">
+                        </figure>
+                        <div class="detail">
+                            <div class="name">
+                                {{review.provided_by_name}}
+                            </div>
+                            <div class="country-detail">
+                                <img [src]="review.location_image" width="24" height="24" alt="">
+                                {{review.location}}
+                            </div>
+                        </div>
+                    </header>
+                    <p>
+                        {{review.description}}
+                    </p>
+                    <a href="">
+                        Read more
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="block-section" id="faq-wrapper">
+        <div class="container">
+            <div class="left">
+                <h2>
+                    Frequently asked questions
+                </h2>
+                <small class="small">
+                    about {{companyName}}
+                </small>
+            </div>
+            <div class="right">
+                <div class="accordion-list" *ngFor="let faq of formData?.faq; let i = index"
+                    [ngClass]="{'show':currentFaq == 'faq'+i}">
+                    <h4 class="cursor" (click)="tabbing2('faq'+i)">
+                        {{faq.Question}}
+                        <span class="trigger" [ngClass]="{'minus':currentFaq === 'faq'+i}">
+
+                        </span>
+                    </h4>
+                    <p>
+                        {{faq.Answer}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-section" id="software">
+        <div class="container">
+            <h2>
+                Services, Building Code & Software
+                <small>
+                    Service Portfolio, Sectors of Expertise, Software and Codes Capabilities
+                </small>
+            </h2>
+            <div class="popular">
+                <h5>
+                    Most popular services with Vendors
+                </h5>
+                <ul>
+                    <li *ngFor="let se of formData?.highlightServices">
+                        <i>
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M13.8162 4.54002C14.0701 4.8067 14.0597 5.22868 13.793 5.48254L6.08929 12.8159C5.95773 12.9411 5.78078 13.0072 5.59933 12.999C5.41788 12.9907 5.24766 12.9088 5.12803 12.7721L2.16506 9.38752C1.92254 9.11048 1.95052 8.6893 2.22755 8.44678C2.50459 8.20426 2.92577 8.23224 3.16829 8.50927L5.67342 11.3709L12.8737 4.51681C13.1404 4.26295 13.5624 4.27334 13.8162 4.54002Z"
+                                    fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </i>
+                        {{se.name}}
+                    </li>
+                </ul>
+            </div>
+            <div class="service-list-wrapper">
+                <div class="block">
+                    <h5>
+                        Services
+                    </h5>
+                    <ng-container *ngFor="let se of selectedServices">
+                        <h6>
+                            {{se.service_name}}
+                        </h6>
+                        <ul>
+                            <li *ngFor="let s of se?.service_segments">
+                                <i *ngIf="s">
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M13.8162 4.54002C14.0701 4.8067 14.0597 5.22868 13.793 5.48254L6.08929 12.8159C5.95773 12.9411 5.78078 13.0072 5.59933 12.999C5.41788 12.9907 5.24766 12.9088 5.12803 12.7721L2.16506 9.38752C1.92254 9.11048 1.95052 8.6893 2.22755 8.44678C2.50459 8.20426 2.92577 8.23224 3.16829 8.50927L5.67342 11.3709L12.8737 4.51681C13.1404 4.26295 13.5624 4.27334 13.8162 4.54002Z"
+                                            fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </i>
+                                {{s}}
+                            </li>
+                        </ul>
+                    </ng-container>
+                </div>
+                <div class="block">
+                    <h5>
+                        Sectors
+                    </h5>
+                    <ul>
+                        <li *ngFor="let sector of userSelectedSectors">
+                            <i>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13.8162 4.54002C14.0701 4.8067 14.0597 5.22868 13.793 5.48254L6.08929 12.8159C5.95773 12.9411 5.78078 13.0072 5.59933 12.999C5.41788 12.9907 5.24766 12.9088 5.12803 12.7721L2.16506 9.38752C1.92254 9.11048 1.95052 8.6893 2.22755 8.44678C2.50459 8.20426 2.92577 8.23224 3.16829 8.50927L5.67342 11.3709L12.8737 4.51681C13.1404 4.26295 13.5624 4.27334 13.8162 4.54002Z"
+                                        fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </i>
+                            {{sector.name}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <h5>
+                        Software
+                    </h5>
+                    <ul>
+                        <li *ngFor="let s of formData.softwares">
+                            <i>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13.8162 4.54002C14.0701 4.8067 14.0597 5.22868 13.793 5.48254L6.08929 12.8159C5.95773 12.9411 5.78078 13.0072 5.59933 12.999C5.41788 12.9907 5.24766 12.9088 5.12803 12.7721L2.16506 9.38752C1.92254 9.11048 1.95052 8.6893 2.22755 8.44678C2.50459 8.20426 2.92577 8.23224 3.16829 8.50927L5.67342 11.3709L12.8737 4.51681C13.1404 4.26295 13.5624 4.27334 13.8162 4.54002Z"
+                                        fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </i>
+                            {{s.logo}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <h5>
+                        Codes
+                    </h5>
+                    <ul>
+                        <li *ngFor="let c of listOfBuildingCode">
+                            <i>
+                                <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13.8162 4.54002C14.0701 4.8067 14.0597 5.22868 13.793 5.48254L6.08929 12.8159C5.95773 12.9411 5.78078 13.0072 5.59933 12.999C5.41788 12.9907 5.24766 12.9088 5.12803 12.7721L2.16506 9.38752C1.92254 9.11048 1.95052 8.6893 2.22755 8.44678C2.50459 8.20426 2.92577 8.23224 3.16829 8.50927L5.67342 11.3709L12.8737 4.51681C13.1404 4.26295 13.5624 4.27334 13.8162 4.54002Z"
+                                        fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </i>
+                            {{c.code}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="secondaryBg block-section" id="policy-wrapper">
+        <div class="container">
+            <h2>
+                {{companyName}} &nbsp; {{formData?.companyDetails.headquarter}} Policy
+                <small>
+                    the policies at a glance
+                </small>
+            </h2>
+            <div class="policy-list">
+                <div class="list">
+                    <div class="block">
+                        Business Hours
+                    </div>
+                    <div class="block">
+                        Company Registration Number
+                    </div>
+                    <div class="block">
+                        Commercial Contact 
+                    </div>
+                    <div class="block">
+                        IT / Compliance  Contact 
+                    </div>
+                    <div class="block">
+                        PI Liability Insurance 
+                    </div>
+                    <div class="block">
+                        Third-Party Mediation
+                    </div>
+                    <div class="block">
+                        Verified License 
+                    </div>
+                    <div class="block">
+                        Tax ID 
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="block">
+                        {{formData?.companyDetails.office_hours}}
+                    </div>
+                    <div class="relative">
+                        <div class="blur">
+                            <div class="block">
+                                {{formData?.companyDetails.registration_number}}
+                            </div>
+                            <div class="block">
+                                {{formData?.companyDetails.commercial_contact}}
+                            </div>
+                            <div class="block">
+                                {{formData?.companyDetails.compliance_contact}}
+                            </div>
+                            <div class="block">
+                                {{formData?.companyDetails.liability_insurance}}
+                            </div>
+                            <div class="block">
+                                {{formData?.companyDetails.third_party_mediation}}
+                            </div>
+                            <div class="block">
+                                {{formData?.companyDetails.license}}
+                            </div>
+                            <div class="block">
+                                {{formData?.companyDetails.tax_id}}
+                            </div>
+                        </div>
+                        <div class="abs">
+                            <span>
+                                Login to see Resource Matrix
+                            </span>
+                            <a href="" class="default-btn mdc-button">
+                                Login Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <app-hd-footer *ngIf="!isIframe"></app-hd-footer>
+
+
+    <div class="popUP" [ngClass]="{'active':showPopup}">
+        <div class="coverPopup">
+            <i class="closeIcon" (click)="closePopup()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <g clip-path="url(#clip0_2773_1184811)">
+                        <path
+                            d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z"
+                            fill="black" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_2773_11848">
+                            <rect width="20" height="20" fill="white" transform="translate(0 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </i>
+            <div class="coverPopupData">
+
+                <div class="meetings-iframe-container"
+                    data-src="https://success.buildtwin.com/meetings/buildtwin?embed=true"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <nz-spin [nzSize]="'large'" nzTip="Loading..." *ngIf="showPageLoader"> </nz-spin> -->
+<nz-skeleton *ngIf="showPageLoader"></nz-skeleton>

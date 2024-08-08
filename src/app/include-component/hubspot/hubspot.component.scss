@@ -1,0 +1,66 @@
+.coverPopupData {
+    position: relative;
+    height: 637px;
+    overflow: hidden;
+    width: 859px;
+}
+
+.coverPopup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.popUP {
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    left: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* transform: translateY(-45%); */
+    padding-top: 19px;
+    padding-right: 20px;
+    visibility: hidden;
+    background: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 29px 21px;
+    z-index: 9999;
+    display: flex !important;
+    align-items: center;
+
+    i.closeIcon {
+        position: absolute;
+        right: -10px;
+        width: 30px;
+        background: #fff;
+        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        top: -12px;
+    }
+    i.closeIcon svg {
+        width: 25px;
+        height: auto;
+    }
+}
+:host.active .popUP {
+    display: block;
+    visibility: visible;
+}
+
+.coverPopup {
+    position: relative;
+}

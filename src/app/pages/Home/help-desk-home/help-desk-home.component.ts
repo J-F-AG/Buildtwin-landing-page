@@ -49,33 +49,35 @@ export class HelpDeskHomeComponent {
   @HostListener('window:scroll', ['$event'])
   handleScroll(event: any) {
     this.FixedDiv = document.getElementById('scrollActivated');
-    this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
-    let topscroll = this.scrollDivOffsettop - this.FixedDiv
-    let winH = window.innerHeight
-    console.log(winH);
-    
-    let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
-    this.fixedElement = document.getElementById('scrollActivated');
-
-    // inside active 
-    if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
-      this.fixedElement.classList.add("fixed")
-      let activeELe = document.querySelectorAll('[data-ele]');
-      activeELe.forEach((item, index) => {
-        if (item.getBoundingClientRect().top < 500) {
-          this.activeState = index + 1;
-          item.classList.add("active")
-        }
-        else {
-          item.classList.remove("active")
-        }
-
-      })
-
-    }
-    else {
-      this.fixedElement.classList.remove("fixed")
-
+    if(this.FixedDiv){
+      this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
+      let topscroll = this.scrollDivOffsettop - this.FixedDiv
+      let winH = window.innerHeight
+      console.log(winH);
+      
+      let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
+      this.fixedElement = document.getElementById('scrollActivated');
+  
+      // inside active 
+      if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
+        this.fixedElement.classList.add("fixed")
+        let activeELe = document.querySelectorAll('[data-ele]');
+        activeELe.forEach((item, index) => {
+          if (item.getBoundingClientRect().top < 500) {
+            this.activeState = index + 1;
+            item.classList.add("active")
+          }
+          else {
+            item.classList.remove("active")
+          }
+  
+        })
+  
+      }
+      else {
+        this.fixedElement.classList.remove("fixed")
+  
+      }
     }
   }
 

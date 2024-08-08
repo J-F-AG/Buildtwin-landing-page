@@ -1,0 +1,51 @@
+.e2eEncryptedWrapper {
+    background: url(../../../../assets/images/e2eBG.png) right bottom no-repeat; 
+    background-color: var(--lightest-grey, #F9F9F9);
+    padding: 72px 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .contantCard {
+            width: 55%;
+        }
+        .bigIcon{width: 35%;}
+    }
+}
+
+.contantCard {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 3.026px 36.307px 0px rgba(0, 0, 0, 0.06);
+    padding: 53px;
+    h2{font-size: 30px;
+        font-style: normal;
+        font-weight: 600;}
+        p{
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+        }
+}
+
+@media only screen and (max-width : 767px) {
+    .e2eEncryptedWrapper {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .contantCard {
+                width: auto;
+                padding: 30px;
+            }
+
+            .bigIcon {
+                width: 70%;
+                transform: translateX(36%);
+            }
+        }
+    }
+}

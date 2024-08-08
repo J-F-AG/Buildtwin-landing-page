@@ -22,6 +22,17 @@ import { DataPrivacyComponent } from './pages/data-privacy/data-safety.component
 import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
 import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
 import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sublime/vender-details-sublime.component';
+import { VenderDetailsCaldimComponent } from './pages/vender/vender-details-caldim/vender-details-caldim.component';
+import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-moldtek/vender-details-moldtek.component';
+import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
+import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-allied/vender-details-allied.component';
+import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
+import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
+import { ServicesComponent } from './pages/Services/services/services.component';
+import { SectorComponent } from './pages/sector/sector.component';
+import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
+
 
 
 
@@ -45,6 +56,14 @@ const routes: Routes = [
     {path: 'contact', component: ContactPageComponent},
     {path: 'about', component: AboutPageComponent},
     {path: 'vender-details', component: VenderDetailsComponent},
+    {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
+    {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
+    {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
+    {path: 'partners/:id', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-ui', component: VenderDetailsUiComponent},
+    {path: 'details', component: VenderDetailsAarbeeOldComponent},
+    {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
     {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
@@ -56,6 +75,16 @@ const routes: Routes = [
     // {path: 'features', component: FeaturesPageComponent},
     // {path: 'services', component: ServicesPageComponent},
     // {path: 'service-details', component: ServiceDetailsPageComponent},
+
+    // New Pages
+
+    {path: 'engineering-services/services', component: ServicesComponent},
+    {path: 'engineering-services/sector', component: SectorComponent},
+    {path: 'explore-services', component: BrowseServicesMainComponent},
+
+
+
+
 
     {path: '**', component: ComingSoonComponent} 
 ];

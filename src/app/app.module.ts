@@ -10,6 +10,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,7 +38,14 @@ import { HdNavbarComponent } from './pages/includes/hd-navbar/hd-navbar.componen
 import { HdFooterComponent } from './pages/includes/hd-footer/hd-footer.component';
 
 import { ThreeColMarketComponent } from './pages/includes/three-col-market/three-col-market.component';
-import { HdBannerComponent } from './pages/Home/hd-banner/hd-banner.component';
+// import { HdBannerComponent } from './pages/Home/hd-banner/hd-banner.component';
+import { HdBannerNewComponent } from './pages/Home/hd-banner-new/hd-banner-new.component';
+import { HdBannerTabsComponent } from './pages/Home/hd-banner-tabs/hd-banner-tabs.component';
+import { HdTrustedByComponent } from './pages/Home/hd-trusted-by/hd-trusted-by.component';
+import { HdSolutionProviderComponent } from './pages/Home/hd-solution-provider/hd-solution-provider.component';
+
+
+
 import { HappierCustomersComponent } from './pages/Home/happier-customers/happier-customers.component';
 import { HdIntegrationsComponent } from './pages/includes/hd-integrations/hd-integrations.component';
 import { HowProcessComponent } from './pages/Home/how-process/how-process.component';
@@ -127,8 +135,76 @@ import { DataPrivacyComponent } from './pages/data-privacy/data-safety.component
 import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
 import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
 import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+import { VenderDetailsSublimeComponent } from './pages/vender/vender-details-sublime/vender-details-sublime.component';
+import { AccreditationComponent } from './pages/vender/accreditation/accreditation.component';
+import { VenderDetailsCaldimComponent } from './pages/vender/vender-details-caldim/vender-details-caldim.component';
+import { VenderDetailsMoldtekComponent } from './pages/vender/vender-details-moldtek/vender-details-moldtek.component';
+import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
+import { VenderDetailsAlliedComponent } from './pages/vender/vender-details-allied/vender-details-allied.component';
+import { AarbeeSocialWallComponent } from './pages/vender/vender-details-aarbee/social-wall/social-wall.component';
+import { MoldtekSocialWallComponent } from './pages/vender/vender-details-moldtek/social-wall/social-wall.component';
+import { CaldimSocialWallComponent } from './pages/vender/vender-details-caldim/social-wall/social-wall.component';
+import { AlliedSocialWallComponent } from './pages/vender/vender-details-allied/social-wall/social-wall.component';
+import { SublimeSocialWallComponent } from './pages/vender/vender-details-sublime/social-wall/social-wall.component';
+import { OmBannerFooterComponent } from './pages/co-pilot-for/co-pilot/om-banner/om-banner-footer/om-banner-footer.component';
+import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/double-digit.pipe';
+import { NzSpinModule } from 'ng-zorro-antd/spin';
+import { NzRateModule } from 'ng-zorro-antd/rate';
+import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
+import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarbee2/social-wall/social-wall.component';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+import { ModalPopupService } from './pages/vender/vender-details-aarbee/modal/modal.service';
+import { ModalComponent } from './pages/vender/vender-details-aarbee/modal/modal.component';
+import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vender-details-ui.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { BookServicesHeaderComponent } from './pages/Home/hd-banner-tabs/book-services-header/book-services-header.component';
+
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
+import { BtSelectModule } from 'buildtwin-library-ux/bt-select';
+// import { BtIconModule } from 'buildtwin-library-ux/bt-icon';
+import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
+import { NZ_ICONS } from 'ng-zorro-antd/icon';
+import { BtIconModule } from 'projects/bt-icon/bt-icon.module';
+import { HdServicesComponent } from './pages/Home/hd-services/hd-services.component';
+
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { HdDiscoverProjectsComponent } from './pages/Home/hd-discover-projects/hd-discover-projects.component';
+import { HdWhyBuildtwinComponent } from './pages/Home/hd-why-buildtwin/hd-why-buildtwin.component';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
+import { ServicesComponent } from './pages/Services/services/services.component';
+import { MainBannerComponent } from './pages/Services/main-banner/main-banner.component';
+import { DirectBookingComponent } from './pages/Services/direct-booking/direct-booking.component';
+import { DrawingsComponent } from './pages/Services/drawings/drawings.component';
+import { E2eEncryptedComponent } from './pages/Services/e2e-encrypted/e2e-encrypted.component';
+import { HowItWorksComponent } from './pages/Services/how-it-works/how-it-works.component';
+import { LiveTrackingComponent } from './pages/Services/live-tracking/live-tracking.component';
+import { MeetingStandardsComponent } from './pages/Services/meeting-standards/meeting-standards.component';
+import { RightTeamComponent } from './pages/Services/right-team/right-team.component';
+import { ServTrustedByComponent } from './pages/Services/serv-trusted-by/serv-trusted-by.component';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { SampleProjectsComponent } from './pages/Services/sample-projects/sample-projects.component';
+import { SectorComponent } from './pages/sector/sector.component';
+import { DataCenterSectionComponent } from './pages/sector/data-center-section/data-center-section.component';
+import { AboutDataCenterSectionComponent } from './pages/sector/about-data-center-section/about-data-center-section.component';
+import { DcEuropeComponent } from './pages/sector/dc-europe/dc-europe.component';
+import { GetStartedComponent } from './pages/sector/get-started/get-started.component';
 
 
+
+
+import { BtSelectGroupModule } from 'buildtwin-library-ux/bt-select-group';//buildtwin-library-ux
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { GlobalBannerModule } from './include-component/global-banner/global-banner.module';
+import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
+import { BrowseServiceHeaderComponent } from './pages/browse-services/components/browse-service-header/browse-service-header.component';
+import { SpecialProjectsComponent } from './pages/browse-services/components/special-projects/special-projects.component';
+import { WhyBuildtwinComponent } from './include-component/why-buildtwin/why-buildtwin.component';
+import { HubspotModule } from './include-component/hubspot/hubspot.module';
+import { sectorSampleProjectsComponent } from './pages/sector/sample-projects/sample-projects.component';
+import { sectorMeetingStandardsComponent } from './pages/sector/meeting-standards/meeting-standards.component';
+import { sectorDirectBookingComponent } from './pages/sector/direct-booking/direct-booking.component';
+import { sectorSolutionProviderComponent } from './pages/sector/hd-solution-provider/hd-solution-provider.component';
 
 @NgModule({
   declarations: [
@@ -150,7 +226,12 @@ import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
         // pages
     AppComponent,
    HelpDeskHomeComponent,
-   HdBannerComponent,
+  //  HdBannerComponent,
+   HdBannerNewComponent,
+   HdTrustedByComponent,
+   HdSolutionProviderComponent,
+   BookServicesHeaderComponent,
+
    HappierCustomersComponent,
    HowProcessComponent,
    HdAboutComponent,
@@ -159,10 +240,12 @@ import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
 
    OnlineMeetingHomeComponent,
    OmBannerComponent,
+   OmBannerFooterComponent,
    OmIntegrationsComponent,
    SignupComponentComponent,
    OmWhyChooseUsComponent,
    HdFaqComponent,
+   DoubleDigitPipe,
 
 
    OnlineMeetingHomeFreelanceComponent,
@@ -242,19 +325,61 @@ import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
    FeatureProjectComponent,
    SimpleRowComponent,
    SocialWallComponent,
+   AarbeeSocialWallComponent,
+   MoldtekSocialWallComponent,
+   CaldimSocialWallComponent,
+   AlliedSocialWallComponent,
+   SublimeSocialWallComponent,
    CoursesDetailsStyleOneComponent,
    CourseDemoComponent,
    DataPrivacyComponent,
    
    PrivacyPolicyPageComponent,
    TermsConditionsPageComponent,
-   ComingSoonComponent
-
-
+   ComingSoonComponent,
+   VenderDetailsSublimeComponent,
+   AccreditationComponent,
+   VenderDetailsCaldimComponent,
+   VenderDetailsMoldtekComponent,
+   VenderDetailsAarbeeComponent,
+   VenderDetailsUiComponent,
+   VenderDetailsAarbeeOldComponent,
+   AarbeeSocialWallOldComponent,
+   VenderDetailsAlliedComponent,
+   ModalComponent,
    
+   HdBannerTabsComponent,
+   HdServicesComponent,
+   HdDiscoverProjectsComponent,
+   HdWhyBuildtwinComponent,
+   ServicesComponent,
+   MainBannerComponent,
+   DirectBookingComponent,
+   DrawingsComponent,
+   E2eEncryptedComponent,
+   HowItWorksComponent,
+   LiveTrackingComponent,
+   MeetingStandardsComponent,
+   RightTeamComponent,
+   ServTrustedByComponent,
+   SampleProjectsComponent,
+   SectorComponent,
+   DataCenterSectionComponent,
+   AboutDataCenterSectionComponent,
+   DcEuropeComponent,
+   GetStartedComponent,
+
+   BrowseServicesMainComponent,
+   BrowseServiceHeaderComponent,
+   SpecialProjectsComponent,
+   WhyBuildtwinComponent,
+   sectorSampleProjectsComponent,
+   sectorMeetingStandardsComponent,
+   sectorDirectBookingComponent,
+   sectorSolutionProviderComponent
     
   ],
-  imports: [
+  imports: [    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -273,9 +398,29 @@ import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
     LightgalleryModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NzSpinModule,
+    NzRateModule,
+    BtSelectModule,
+    BtIconModule,
+    NzDatePickerModule,
+    MatTabsModule, 
+    MatIconModule,
+    NzCarouselModule,
+    NzProgressModule,
+    NzModalModule,
+    NzSkeletonModule,
+    NzSelectModule,
+    GlobalBannerModule,
+    BtSelectGroupModule,
+    NzDropDownModule,
+    HubspotModule
   ],
   providers: [
-    Title
+    Title,
+    ModalPopupService,
+    provideAnimationsAsync(),
+    { provide: NZ_I18N, useValue: en_US },
+    // { provide: NZ_ICONS, useValue: icons },
   ],
   bootstrap: [AppComponent]
 })

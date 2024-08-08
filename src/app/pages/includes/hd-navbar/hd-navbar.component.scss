@@ -434,9 +434,14 @@
     flex-direction: row !important;
 }
 
+.nav-item.traning{
+    position: relative;
+}
+
 .menu_copilot.makrketPlaceMenu {
-    width: 916px;
-    max-width: 916px;
+    width: 360;
+    max-width: 360px;
+    left: 0;
 }
 
 .traning .menu_copilot.makrketPlaceMenu .flex-grow {

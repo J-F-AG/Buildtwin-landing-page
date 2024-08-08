@@ -4,15 +4,13 @@
         <div class="container">
         <div class="flex">
             <a href="/">
-            <img src="assets/images/ui/buildTwin-logo.png" width="165" height="44">
+            <img src="assets/images/jf-logo.png" width="339" height="100">
         </a>
-           <span> x</span>
-           <img src="assets/images/ui/jfLogo.png" width="64" height="33">
         </div>
         <div class="btnWrap">
-            <!-- <a  (click)="call()" class="cursor">
+            <a (click)="call()" class="cursor not-active">
                 Schedule Interview
-            </a> -->
+            </a>
             <a (click)="call()"  class="active cursor">
                 Start Enquiry
             </a>
@@ -32,137 +30,82 @@
     </div>
 </div>
 <app-vender-banner>
-    <div class="hero">
-        <div class="rightPart">
-            <img
-                src="assets/images/ui/services.png"
-                alt=""
-                width="681"
-                height="848"
-            />
-        </div>
-        <div class="container">
-            <div class="info">
-                <div class="headPart">
-                    <div class="exp">
-                        <img
-                            src="assets/images/ui/logoJ&f.png"
-                            width="120"
-                            height="61"
-                        />
+    <div class="hero" id="other-section1">
+        <owl-carousel-o [options]="heroSlides" class="heroSlides">
+            <ng-template carouselSlide>
+                <img src="assets/images/jf-banner.png" height="422" width="188" class="hero-banner"/>
+                <div class="sliderContent">
+                    <h1>Airport Expansion</h1>
+                    <p><img src="assets/images/aarbee/location.png" width="20" height="20"> Abu Dhabi, United Arab Emirates</p>
+                    <div class="btnWrap">
+                        <a (click)="call()" class="active cursor">
+                            Learn more about J&F <i class="ti ti-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </ng-template>
+           
+        </owl-carousel-o>
+    </div>
+</app-vender-banner>
 
-                        <span class="jeffStyle">25+ years</span>
-                    </div> 
-                    <h3>of engineering excellence</h3>
-
-             
-
+<div id="about-service" class="about-service section1">
+    <div class="container">
+        <div class="inner">
+            <h2>About J&F</h2>
+            <div class="details">
+                <div class="list">
+                    <span><img src="assets/images/ui/avatr.png" height="30" width="30" /> 400+</span>
+                    <p>Employees</p>
+                </div>
+                <div class="list">
+                    <span><img src="assets/images/aarbee/market.png" height="21" width="21" /> 10+</span>
+                    <p>Market</p>
+                </div>
+                <div class="list">
+                    <span><img src="assets/images/aarbee/exp.png" height="21" width="21" /> 25+</span>
+                    <p>Years in Business</p>
+                </div>
+                <div class="list">
+                    <span><img src="assets/images/aarbee/ref-project.png" height="21" width="21" /> 1000+</span>
+                    <p>Reference Projects</p>
+                </div>
+                <div class="list">
+                    <span><img src="assets/images/ui/country3.png" height="21" width="21" /> Frankfurt, Germany</span>
+                    <p>Headquarter</p>
+                </div>
+                <div class="list">
+                    <span><img src="assets/images/aarbee/founded.png" height="21" width="21" /> 1999</span>
+                    <p>Founded</p>
+                </div>
+            </div>
+            <div class="service-section">
+                <h3>Services: <span>Structural + MEP</span></h3>
+                <div class="service-list">
                     <ul>
-                        <li>
-                            <strong>400+</strong>
-                            <span>Employees</span>
-                        </li>
-                        <li>
-                            <strong>10+</strong>
-                            <span>Market</span>
-                        </li>
-                        <li>
-                            <strong>25+</strong>
-                            <span>Years in Business</span>
-                        </li>
-                        <li>
-                            <strong>1000+</strong>
-                            <span>Reference Projects</span>
-                        </li>
+                        <li><img src="assets/images/aarbee/bos.png" height="21" width="21" /> BIM</li>
+                        <li><img src="assets/images/aarbee/duct.png" height="21" width="21" /> MEP</li>
+                        <li><img src="assets/images/aarbee/details.png" height="21" width="21" />Infra</li>
+                        <li><img src="assets/images/aarbee/steel-struc.png" height="21" width="21" /> Structural</li>
                     </ul>
-                    <div class="footerLink">
-                        <div class="footLink">
-                            <img
-                                class="heading-link-icon"
-                                loading="lazy"
-                                alt=""
-                                src="assets/images/usa.svg"
-                            />
-
-                            <strong>USA</strong>
-                        </div>
-                        <div class="footLink">
-                            <img
-                                class="heading-link-icon"
-                                loading="lazy"
-                                alt=""
-                                src="assets/images/eu.svg"
-                            />
-
-                            <strong>EU</strong>
-                        </div>
-                        <div class="footLink">
-                            <img
-                                class="heading-link-icon"
-                                loading="lazy"
-                                alt=""
-                                src="assets/images/middle-east.svg"
-                            />
-
-                            <strong>Middle East </strong>
-                        </div>
-                        <div class="footLink">
-                            <img
-                                class="heading-link-icon"
-                                loading="lazy"
-                                alt=""
-                                src="assets/images/uk.png"
-                            />
-
-                            <strong>UK</strong>
-                        </div>
-                        <div class="footLink">
-                            <img
-                                class="heading-link-icon"
-                                loading="lazy"
-                                alt=""
-                                src="assets/images/australia.svg"
-                            />
-
-                            <strong>Australia</strong>
-                        </div>
-                        <div class="footLink">
-                            <img
-                                class="heading-link-icon"
-                                loading="lazy"
-                                alt=""
-                                src="assets/images/india.png"
-                            />
-
-                            <strong>India</strong>
-                        </div>
-                    </div>
-
-                    <div class="subHeading">
-                        <strong> Services:</strong> BIM | Structural | MEP |
-                        Infra
-                    </div>
-                    <a class="btn cursor" (click)="scrollToSection('about')"
-                        >More about J&F
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 16 16"
-                            fill="none"
-                        >
-                            <path
-                                fill-rule="evenodd"
-                                clip-rule="evenodd"
-                                d="M11.7801 8.159C11.6395 8.01855 11.4488 7.93966 11.2501 7.93966C11.0513 7.93966 10.8607 8.01855 10.7201 8.159L8.75009 10.129V3.75C8.75009 3.55109 8.67107 3.36032 8.53042 3.21967C8.38977 3.07902 8.199 3 8.00009 3C7.80118 3 7.61041 3.07902 7.46976 3.21967C7.32911 3.36032 7.25009 3.55109 7.25009 3.75V10.129L5.28009 8.159C5.13792 8.02652 4.94987 7.9544 4.75557 7.95783C4.56127 7.96125 4.37588 8.03997 4.23847 8.17738C4.10106 8.31479 4.02234 8.50018 4.01892 8.69448C4.01549 8.88878 4.08761 9.07683 4.22009 9.219L7.47009 12.469L8.00009 13L8.53009 12.47L11.7801 9.22C11.8498 9.15035 11.9051 9.06765 11.9428 8.97662C11.9805 8.8856 11.9999 8.78803 11.9999 8.6895C11.9999 8.59097 11.9805 8.4934 11.9428 8.40238C11.9051 8.31135 11.8498 8.22865 11.7801 8.159Z"
-                                fill="#886DE0"
-                            /></svg
-                    ></a>
+                </div>
+            </div>
+            <div class="on-site">
+                <h3>On-Site Available <span>(own office)</span></h3>
+                <div class="site-list">
+                    <ul>
+                        <li><img src="assets/images/usa.svg" height="60" width="60" /> <span>USA</span></li>
+                        <li><img src="assets/images/eu.svg" height="60" width="60" /> <span>EU</span></li>
+                        <li><img src="assets/images/middle-east.svg" height="60" width="60" /> <span>Middle East</span></li>
+                        <li><img src="assets/images/uk.png" height="60" width="60" /> <span>UK</span></li>
+                        <li><img src="assets/images/australia.svg" height="60" width="60" /> <span>Australia</span></li>
+                        <li><img src="assets/images/india.png" height="60" width="60" /> <span>India</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</app-vender-banner>
+</div>
 
 <div id="about" class="scrollSection">
 <app-abount-jf>
@@ -174,12 +117,7 @@
                     <div class="leftPart">
 
                         <div class="head">
-                            <!-- <img class="logo"
-                            src="assets/images/ui/logoJ&f.png"
-                            width="120"
-                            height="61"
-                        /> -->
-                            <h2>About J&F</h2>
+                            <img class="logo" src="assets/images/jf1.png" width="120" height="61" />
                             <p>
                                 J&F is an internationally established engineering consultancy. Founded in Germany, J&F also have offices in India, UK, AUS and US.
                             </p>
@@ -196,45 +134,11 @@
                                         class="ti ti-arrow-narrow-right"
                                     ></i
                                 ></a>
-
-
                             </div>
                         </div>
-                     
                     </div>
                     <div class="leftPart rightPart">
-                        <div class="box">
-                            <div class="grid_cover">
-                                <div class="grid">
-                                    <i
-                                        ><svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="16"
-                                            height="16"
-                                            viewBox="0 0 16 16"
-                                            fill="none"
-                                        >
-                                            <path
-                                                d="M14.6654 4.66667V6.33333C14.6654 7.4826 14.2088 8.58481 13.3962 9.39746C12.5835 10.2101 11.4813 10.6667 10.332 10.6667H8.66536V14H7.33203V9.33333L7.3447 8.66667C7.42867 7.5783 7.9203 6.56172 8.72133 5.82014C9.52236 5.07856 10.5738 4.66662 11.6654 4.66667H14.6654ZM3.9987 2C4.9783 1.99997 5.93308 2.30808 6.72789 2.88071C7.52269 3.45333 8.11724 4.26145 8.42736 5.19067C7.91731 5.62305 7.49942 6.15359 7.19855 6.75074C6.89769 7.34789 6.71999 7.99945 6.67603 8.66667H5.9987C4.76102 8.66667 3.57404 8.175 2.69887 7.29983C1.8237 6.42466 1.33203 5.23768 1.33203 4V2H3.9987Z"
-                                                fill="white"
-                                            />
-                                        </svg>
-                                    </i>
-                                    <span>Founded</span>
-                                    <strong>1999</strong>
-                                </div>
-                                <div class="grid">
-                                    <img src="assets/images/ui/country5.png" />
-                                    <span>Headquarter</span>
-                                    <strong>Frankfurt, Germany</strong>
-                                </div>
-                                <div class="grid">
-                                    <img src="assets/images/ui/avatr.png" />
-                                    <span>Team</span>
-                                    <strong>400+ Employees</strong>
-                                </div>
-                            </div>
-
+                        <div class="box">   
                             <div class="rowData">
                                 <h3>Pre-Qualified</h3>
                                 <ul>
@@ -429,19 +333,16 @@
                                     <div class="flex">
                                         <div class="founded">
                                             <label>Website</label>
-                                            <span>www.jf.ag</span>
+                                            <span><a href="www.jf.ag">www.jf.ag</a></span>
                                         </div>
                                     </div>
                                     <div class="flex">
                                         <div class="founded">
                                             <label>Phone Number</label>
-                                            <span>+49 641 98459311</span>
+                                            <span><a href="tel:+4964198459311">+49 641 98459311</a></span>
                                         </div>
                                     </div>
-                                   
-                                </div>
-
-                           
+                                </div>     
                             </div>
                             <div class="rowData">
                                 <h3>Availability in Time Zone</h3>
@@ -919,14 +820,22 @@
 <app-engineers>
     <div class="slider">
         <div class="container">
+            <div class="wrap">
+                <div class="flex">
+                    <div class="left">
+                        <h2>Our <br>engineers</h2>
+                        <span class="jeffStyle">in the<br>spotlight</span>
+                    </div>
+                </div>
+            </div>
+            <div class="teamslider">
             <owl-carousel-o [options]="aboutSlider">
                
-                <ng-template *ngFor="let engineer of ourEngineers" carouselSlide>
+                <ng-template  *ngFor="let engineer of ourEngineers" carouselSlide>
                     <div class="wrap">
                         <div class="flex">
                             <div class="left">
-                                <h2>Our <br>engineers</h2>
-                                <span class="jeffStyle">in the<br>spotlight</span>
+                               
                             </div>
                             <div class="right">
                                 <div class="imgWrap">
@@ -952,6 +861,7 @@
                 </ng-template>
          
             </owl-carousel-o>
+            </div>
         </div>
     </div>
 </app-engineers>
@@ -1126,343 +1036,82 @@
         <div class="qualified">
             <div class="head">
                 <div class="flex">
-                    <img src="assets/images/ui/jfLogo.png" width="64" height="33">
-                   <span> x</span>
-                   <img src="assets/images/ui/buildTwin-logo.png" width="165" height="44">
+                <img class="postion" src="assets/images/jf-logo.png" width="350" height="100">
+                   
                 </div>
-                <h3>the BuildTwin advantage</h3>
+                <h3>The BuildTwin advantage</h3>
                 <span>
                     BuildTwin gives you an unfair advantage working with technical teams abroad.
                 </span>
             </div>
 
             <div class="itemFLex">
-                <div class="item">
-                    <div class="svgCover">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="60"
-                            height="59"
-                            viewBox="0 0 60 59"
-                            fill="none"
-                        >
-                            <circle
-                                cx="30"
-                                cy="29.3901"
-                                r="27.6667"
-                                fill="#886DE0"
-                                stroke="white"
-                                stroke-width="3.33333"
-                            />
-                            <path
-                                d="M30.4414 41.7383H20V18H39.8828V29.3691"
-                                stroke="white"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <circle
-                                cx="30.2666"
-                                cy="31.8526"
-                                r="5.16506"
-                                stroke="white"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M34.3008 35.7891L38.2756 39.5041"
-                                stroke="white"
-                                stroke-width="3"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
+                <div class="left">
+                    <div class="topheader">
+                        <h2><b>Build</b>Twin Experience</h2>
+                        <p>Working with J&F unlocks the BuildTwin experience - from AI tracking to a
+                            seamless purchase and support experience</p>
                     </div>
-
-                    <h3>
-                        Plug & Play<br />
-                        into your workflow
-                    </h3>
-                    <p>
-                        BuildTwin consolidates Files, emails, chats and more into a single point of truth.
-                    </p>
+                    <div class="contentpart">
+                        <div class="items">
+                            <img src="assets/images/aarbee/glass.png" />
+                            <div class="rightcontent">
+                                <h4>Plug & Play into your workflow</h4>
+                                <p>BuildTwin consolidates Files, emails, chats and more into a single point of truth.</p>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <img src="assets/images/aarbee/badge.png" />
+                            <div class="rightcontent">
+                                <h4>Ensuring Quality Delivery</h4>
+                                <p>BuildTwin creates delivery-based checklists and ensures a high degree of quality.</p>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <img src="assets/images/aarbee/hand.png" />
+                            <div class="rightcontent">
+                                <h4>LIVE Project Progress</h4>
+                                <p>BuildTwin tracks and documents all activities across all channels.</p>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <img src="assets/images/aarbee/digital.png" />
+                            <div class="rightcontent">
+                                <h4>Digital Procurement</h4>
+                                <p>BuildTwin Marketplace gives you access to Leads from open markets.</p>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <img src="assets/images/aarbee/bag.png" />
+                            <div class="rightcontent">
+                                <h4>Meeting Compliance</h4>
+                                <p>BuildTwin ensures compliance with international standards.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="item">
-                    <div class="svgCover">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="60"
-                            height="59"
-                            viewBox="0 0 60 59"
-                            fill="none"
-                        >
-                            <circle
-                                cx="30"
-                                cy="29.3901"
-                                r="27.6667"
-                                fill="#886DE0"
-                                stroke="white"
-                                stroke-width="3.33333"
-                            />
-                            <ellipse
-                                cx="29.6895"
-                                cy="25.6901"
-                                rx="8.6895"
-                                ry="8.69011"
-                                stroke="white"
-                                stroke-width="2.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <ellipse
-                                cx="29.6928"
-                                cy="25.6931"
-                                rx="4.17326"
-                                ry="4.17355"
-                                stroke="white"
-                                stroke-width="1.69398"
-                                stroke-linecap="round"
-                            />
-                            <path
-                                d="M23.1289 31.6914L19.5145 38.5397L23.3412 37.8988L24.9711 41.4205L28.5856 34.5722"
-                                stroke="white"
-                                stroke-width="1.69398"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M36.832 31.6914L40.4465 38.5397L36.6197 37.8988L34.9898 41.4205L31.3754 34.5722"
-                                stroke="white"
-                                stroke-width="1.69398"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                        </svg>
+                <div class="right">
+                    <div class="topheader2" style="background-image: url('assets/images/back-adv.png');">
+                        <img class="logo" src="assets/images/jf1.png" width="70" height="45" />
+                        <p>With more than 400+ strength J&F is your right partner. Get started Today.</p>
                     </div>
-
-                    <h3>
-                        Ensuring Quality<br />
-                        Delivery
-                    </h3>
-                    <p>
-                        BuildTwin creates delivery-based checklists and ensures a high degree of quality.
-                    </p>
-                </div>
-                <div class="item">
-                    <div class="svgCover">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="60"
-                            height="60"
-                            viewBox="0 0 60 60"
-                            fill="none"
-                        >
-                            <circle
-                                cx="30"
-                                cy="30"
-                                r="27.6667"
-                                fill="#886DE0"
-                                stroke="white"
-                                stroke-width="3.33333"
-                            />
-                            <path
-                                d="M37.1467 33.5894C37.7058 34.1186 37.7586 35.0504 37.2335 35.641C36.7377 36.2299 35.888 36.278 35.3289 35.7488L34.832 35.2784C35.3324 35.8109 35.3524 36.6822 34.8841 37.2384C34.3884 37.8274 33.5386 37.8755 32.9796 37.3463L32.4826 36.8759C32.9831 37.4084 33.003 38.2797 32.5348 38.8359C32.039 39.4248 31.1893 39.4729 30.6302 38.9437L30.1333 38.4733C30.6337 39.0058 30.6537 39.8771 30.1854 40.4333C29.6897 41.0223 28.8399 41.0704 28.2809 40.5412M28.5496 25.0403L23.6469 24.6324L19.2542 30.1157L19.8016 32.5151"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M36.5689 24.669C32.742 23.7154 27.6981 25.1695 26.1111 25.9402C25.5588 28.1609 24.2502 30.4356 24.8714 30.6986C26.3566 31.3274 27.9252 29.1794 27.9252 29.1794C27.9252 29.1794 29.4237 29.0945 30.0924 28.8796C31.7467 30.4683 33.4777 30.2113 33.901 30.1874C34.5082 31.3699 35.9923 33.6972 37.0715 33.5455C38.1507 33.3938 39.2794 32.5273 39.7088 32.113"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M44.5091 29.8144L41.3151 22.2056C41.1786 21.8706 40.7871 21.7058 40.4718 21.8483L36.8625 23.5171C36.5473 23.6596 36.3943 24.0733 36.5309 24.4083L39.7248 32.0171C39.8614 32.3521 40.2528 32.5169 40.5681 32.3744L44.1774 30.7056C44.5202 30.5304 44.6456 30.1494 44.5091 29.8144Z"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M23.3498 23.4127L20.2338 20.8161C19.9561 20.5825 19.5769 20.6352 19.3583 20.928L14.5237 27.4333C14.3051 27.7261 14.3573 28.1283 14.6351 28.3618L17.751 30.9585C18.0288 31.192 18.4079 31.1394 18.6265 30.8466L23.4611 24.3412C23.6815 24.0794 23.6275 23.6463 23.3498 23.4127Z"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M21.1113 31.6892L19.8526 32.8198C19.2929 33.3189 19.1388 34.2312 19.6153 34.8586C20.0917 35.4859 20.9796 35.5914 21.5392 35.0924L22.0162 34.6915C22.0438 34.6587 22.1006 34.6244 22.1281 34.5917L22.8841 33.9257C23.5006 33.3922 23.5305 32.3623 22.9093 31.7743L22.8782 31.7449C22.3813 31.2745 21.6159 31.2556 21.1113 31.6892Z"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M24.4246 36.269L24.9016 35.8681C25.5456 35.302 25.5462 34.2737 24.9268 33.7168C24.4298 33.2464 23.6645 33.2274 23.1617 33.6921L22.0148 34.7229C21.488 35.2824 21.5115 36.2158 22.0723 36.7761C22.571 37.2776 23.3639 37.2638 23.896 36.7975L24.3162 36.4309C24.3695 36.3345 24.397 36.3017 24.4246 36.269Z"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M26.7553 37.9417L26.9516 37.7748C27.5956 37.2086 27.5962 36.1803 26.9768 35.6234C26.4798 35.153 25.7145 35.134 25.2117 35.5987L24.3145 36.3662C23.7876 36.9257 23.8111 37.8591 24.3719 38.4194C24.8707 38.9208 25.6635 38.9071 26.1956 38.4407L26.6158 38.0742C26.6727 38.0398 26.6984 37.976 26.7553 37.9417Z"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M26.6457 38.082C26.1188 38.6415 26.1423 39.5749 26.7031 40.1352C27.2018 40.6366 27.9947 40.6229 28.5268 40.1565L29.0039 39.7556C29.6479 39.1895 29.6485 38.1612 29.0273 37.5732C28.5303 37.1028 27.765 37.0839 27.2622 37.5485L26.6457 38.082Z"
-                                stroke="white"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M22.1236 34.5625C22.096 34.5952 22.0392 34.6295 22.0116 34.6623L22.1236 34.5625Z"
-                                stroke="white"
-                                stroke-width="1.32178"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M24.4273 36.2749C24.3997 36.3076 24.3429 36.342 24.3153 36.3747L24.4273 36.2749Z"
-                                stroke="white"
-                                stroke-width="1.32178"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            />
-                            <path
-                                d="M41.6335 30.47C42.0057 30.4489 42.2893 30.112 42.267 29.7175C42.2446 29.323 41.9248 29.0202 41.5526 29.0413C41.1804 29.0624 40.8968 29.3993 40.9191 29.7938C40.9414 30.1883 41.2613 30.4911 41.6335 30.47Z"
-                                fill="white"
-                            />
-                            <path
-                                d="M17.3652 28.8315C17.7374 28.8104 18.021 28.4735 17.9987 28.079C17.9763 27.6844 17.6565 27.3817 17.2843 27.4028C16.9121 27.4238 16.6285 27.7607 16.6508 28.1553C16.6731 28.5498 16.993 28.8525 17.3652 28.8315Z"
-                                fill="white"
-                            />
-                        </svg>
+                    <div class="contentpart">
+                        <div class="list">
+                            <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                        </div>
+                        <div class="list">
+                            <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                        </div>
+                        <div class="list">
+                            <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                        </div>
+                        <div class="list">
+                            <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                        </div>
+                        <div class="list">
+                            <img class="check-icon" src="assets/images/aarbee/check.png" width="50" height="50" />
+                        </div>
                     </div>
-
-                    <h3>
-                        LIVE Project<br />
-                        Progress
-                    </h3>
-                    <p>
-                        BuildTwin tracks and documents all activities across all channels.
-                    </p>
-                </div>
-                <div class="item">
-                    <div class="svgCover">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="60"
-                            height="59"
-                            viewBox="0 0 60 59"
-                            fill="none"
-                        >
-                            <circle
-                                cx="30"
-                                cy="29.3901"
-                                r="27.6667"
-                                fill="#886DE0"
-                                stroke="white"
-                                stroke-width="3.33333"
-                            />
-                            <rect
-                                x="19.0424"
-                                y="38.4755"
-                                width="17.1122"
-                                height="3.11131"
-                                rx="0.861582"
-                                stroke="white"
-                                stroke-width="1.72316"
-                            />
-                            <rect
-                                x="22.1537"
-                                y="35.3641"
-                                width="10.8896"
-                                height="3.11131"
-                                rx="0.861582"
-                                stroke="white"
-                                stroke-width="1.72316"
-                            />
-                            <rect
-                                x="26.423"
-                                y="24.0608"
-                                width="7.48189"
-                                height="5.00983"
-                                rx="0.861582"
-                                transform="rotate(-40.8666 26.423 24.0608)"
-                                stroke="white"
-                                stroke-width="1.72316"
-                            />
-                            <rect
-                                width="2.50492"
-                                height="7.51475"
-                                rx="0.861582"
-                                transform="matrix(-0.756235 0.6543 0.6543 0.756235 25.6018 23.1151)"
-                                stroke="white"
-                                stroke-width="1.72316"
-                            />
-                            <rect
-                                width="2.50492"
-                                height="7.51475"
-                                rx="0.861582"
-                                transform="matrix(-0.756235 0.6543 0.6543 0.756235 33.0431 16.6768)"
-                                stroke="white"
-                                stroke-width="1.72316"
-                            />
-                            <rect
-                                width="2.50492"
-                                height="11.6674"
-                                rx="0.861582"
-                                transform="matrix(-0.756235 0.6543 0.6543 0.756235 33.4301 24.8517)"
-                                stroke="white"
-                                stroke-width="1.72316"
-                            />
-                        </svg>
-                    </div>
-
-                    <h3>
-                        Digital Procurement<br />
-                    </h3>
-                    <p>
-                        BuildTwin Marketplace gives you access to Leads from open markets.
-                    </p>
-                </div>
-                <div class="item">
-                    <div class="svgCover">
-                        <svg
-                            width="60"
-                            height="59"
-                            viewBox="0 0 60 59"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <circle
-                                cx="30"
-                                cy="29.3901"
-                                r="27.6667"
-                                fill="#886DE0"
-                                stroke="white"
-                                stroke-width="3.33333"
-                            />
-                            <path
-                                d="M37.5833 22.5H35.4167C35.4167 19.4667 33.0333 17.0834 30 17.0834C26.9667 17.0834 24.5833 19.4667 24.5833 22.5H22.4167C21.225 22.5 20.25 23.475 20.25 24.6667V37.6667C20.25 38.8584 21.225 39.8334 22.4167 39.8334H37.5833C38.775 39.8334 39.75 38.8584 39.75 37.6667V24.6667C39.75 23.475 38.775 22.5 37.5833 22.5ZM30 19.25C31.8417 19.25 33.25 20.6584 33.25 22.5H26.75C26.75 20.6584 28.1583 19.25 30 19.25ZM37.5833 37.6667H22.4167V24.6667H37.5833V37.6667ZM30 29C28.1583 29 26.75 27.5917 26.75 25.75H24.5833C24.5833 28.7834 26.9667 31.1667 30 31.1667C33.0333 31.1667 35.4167 28.7834 35.4167 25.75H33.25C33.25 27.5917 31.8417 29 30 29Z"
-                                fill="white"
-                            />
-                        </svg>
-                    </div>
-
-                    <h3>Meeting Compliance</h3>
-                    <p>
-                        BuildTwin ensures compliance with international standards.
-
-                    </p>
                 </div>
             </div>
         </div>
@@ -1481,11 +1130,11 @@
     </div>
 </app-get-started1>
 
-<!-- 
+
     
 <app-hd-footer></app-hd-footer>
 
--->
+<!-- 
 
 <div class="footerLinks">
     <div class="container">
@@ -1503,7 +1152,7 @@
     </div>
 </div>
 
-
+-->
 
 
 <div class="popUP" [ngClass]="{'active':showPopup}">
@@ -1522,7 +1171,7 @@
       </i>
     <div class="coverPopupData">
     
-  <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/pit-yogeswaran?embed=true"></div>
+  <div class="meetings-iframe-container" data-src="https://success.buildtwin.com/meetings/buildtwin?embed=true"></div>
 </div>
 </div>
 </div>

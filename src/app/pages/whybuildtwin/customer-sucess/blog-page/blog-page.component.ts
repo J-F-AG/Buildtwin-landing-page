@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-blog-page',
@@ -10,10 +12,14 @@ export class BlogPageComponent {
 
     title = 'BuildTwin - use cases';
  
-    constructor(private titleService:Title) {}
+    constructor(private titleService:Title) {
+
+    }
     
     ngOnInit() {
         this.titleService.setTitle(this.title);
     }
+
+    
 
 }
