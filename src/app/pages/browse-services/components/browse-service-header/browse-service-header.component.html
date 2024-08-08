@@ -31,8 +31,12 @@
                         <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
                             [sizeH]="88">
                         </lib-svg-icon>
-                        <ng-container *ngFor=" let item of subServiceArray">
-                            <div class="cardWrapper">
+                        <div class="cardWrapper" routerLink="/engineering-services/services">
+                            <img src="assets/images/structuralDesign.png" alt="cardImage" width="151" height="137">
+                            <div class="detail">Structural Design</div>
+                        </div>
+                        <ng-container *ngFor="let item of subServiceArray">
+                            <div class="cardWrapper hs-cta-trigger-button hs-cta-trigger-button-111746633934">
                                 <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                                 <div class="detail">
                                     {{item.name}}
