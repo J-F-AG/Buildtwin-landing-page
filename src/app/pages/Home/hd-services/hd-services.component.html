@@ -9,7 +9,7 @@
             <img src="assets/images/avatar.svg" alt="avatar">
             <div class="assitWrapper">
                 <div>Need help?</div>
-                <a href="#" class="link">Talk to our Advisors</a>
+                <a class="link" (click)="call()">Talk to our Advisors</a>
             </div>
 
         </div>
@@ -52,3 +52,5 @@
     </div>
 </div>
 </div>
+
+<app-hubspot [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

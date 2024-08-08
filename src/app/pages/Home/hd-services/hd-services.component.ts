@@ -8,7 +8,7 @@ import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 })
 
 export class HdServicesComponent implements OnInit {
-
+  showPopup=false;
   constructor() { }
 
   splitArray(dataArray: any[], x: number) {
@@ -57,5 +57,13 @@ export class HdServicesComponent implements OnInit {
   }
   next() {
     this.myCarousel.next();
+  }
+
+  call(){
+    this.showPopup =true
+  }
+  
+  closePopupStatus($event) {
+    this.showPopup = false;
   }
 }

@@ -32,7 +32,7 @@
       }
     }
     .sectionContent { 
-      max-height: 540px;
+      height: 550px;
       overflow: hidden;
       .cardContainer {
         display: flex;
@@ -42,22 +42,23 @@
   
         .leftslideButton {
           position: absolute;
-          top: 134px;
-          left: 0;
+          top: 95px;
+          left: -15px;
           transform: rotate(180deg);
           cursor: pointer;
+          z-index: 1;
         }
         .rightslideButton {
           position: absolute;
-          top: 134px;
-          right: 0;
+          top: 95px;
+          right: -15px;
           cursor: pointer;
         }
       }
       .projectCard {
-        width: 353px;
-        min-width: 353px;
-        margin-right: 28px;
+        width: 312px;
+        min-width: 312px;
+        margin-right: 16px;
         background: #ffffff;
         border-radius: 7px;
         box-shadow: 0px 12.022px 17.174px 0px rgba(44, 44, 44, 0.06);
@@ -111,7 +112,7 @@
           display: flex;
           justify-content: flex-start;
           column-gap: 10px;
-          // align-items: center;
+          align-items: center;
           .companyIcon {
             height: 30px;
             width: 57px;
