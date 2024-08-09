@@ -21,7 +21,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
   }
 
   servicesArray = [
-    // { name: 'Structural Design', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
+    { name: 'Structural Design', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
     { name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137' },
     { name: '3D Rebar Capabilities', img: '/assets/images/rebar.png', width:'151', height: '137' },
     { name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137' },

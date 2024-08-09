@@ -7,17 +7,12 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrl: './om-banner-footer.component.scss'
 })
 export class OmBannerFooterComponent {
-
-  reviewsSlides: OwlOptions = {
-    items: 6,
-    nav: true,
-    margin: 0,
-    dots: false,
+  integrationsList: OwlOptions = {
+    nav: false,
     loop: true,
-    autoWidth: true,
-    autoplay: false,
-    autoplayHoverPause: false,
-
+    dots: false,
+    autoplay: true,
+    autoplayHoverPause: true,
     navText: [
       "<i class='ti ti-chevron-left'></i>",
       "<i class='ti ti-chevron-right'></i>",
@@ -27,9 +22,9 @@ export class OmBannerFooterComponent {
         items: 1
       },
       515: {
-        items: 1
+        items: 3
       },
-      700: {
+      768: {
         items: 4
       },
       990: {
