@@ -676,8 +676,13 @@ export class VenderDetailsAarbeeComponent {
                 this.listOfSoftware = res[0]['data']['softwares'];
                 this.addons = res[0]['data']['addons'];
                 const reviewArr = [];
+                let revieCount = 0;
+                let reviewRatCount = 0;
                 if (this.formData.clientReviews.length) {
                   this.formData.clientReviews.forEach(rev => {
+                    revieCount += rev.ratings.length;
+                    rev.reviesSum = rev.ratings.reduce((a, b) => a + b.score, 0);
+                    reviewRatCount += rev.reviesSum;
                     reviewArr.push(...rev.ratings)
                   });
                 }
@@ -721,7 +726,7 @@ export class VenderDetailsAarbeeComponent {
                   }
                 });
                 if (groupReviewArr.length) {
-                  this.verifiedReview.rating = Number((groupReviewArr.reduce((a, b) => a + b.rating, 0)/groupReviewArr.length - 1).toFixed(1));
+                  this.verifiedReview.rating = Number((reviewRatCount/revieCount).toFixed(1));
                   // const reviw = groupReviewArr.filter(a => a.rating <= this.verifiedReview.rating);
                   // this.verifiedReview.reviewerCount = reviw.length;
                   if (this.verifiedReview.rating !== 0) {
@@ -738,6 +743,7 @@ export class VenderDetailsAarbeeComponent {
                 // this.formData.clientReviews = 
                 this.formData.badges = formData['badges'];
                 this.companyName = formData['basic_form_fields']['company_name'];
+                this.formData.companyDetails.rating = formData['basic_form_fields']['rating']
                 this.formData.services = res[0]['data']['services']
                 this.formData.directors = formData['basic_form_fields']['managing_director'];
                 this.formData.premium_partner = formData['basic_form_fields']['premium_partner'];
@@ -778,13 +784,13 @@ export class VenderDetailsAarbeeComponent {
                    if (s.service_segments) {
                      s.service_segments = JSON.parse(s.service_segments);
                    }
+                   let exist = this.formData.highlightServices.findIndex(a => a.id === s.id);
+                   if (s.service_featured && exist === -1) {
+                     this.formData.highlightServices.push(s)
+                   }
                     if (s.capability_matrix.length) {
                       let obj = {} as any;
                       s.capability_matrix.forEach(matrix => {
-                        let exist = this.formData.highlightServices.findIndex(a => a.id === s.id);
-                        if (matrix.fucntion_area_featured && exist === -1) {
-                          this.formData.highlightServices.push(s)
-                        }
                         let mat = this.formData.sectors.findIndex(a => a.id === matrix.functional_area_id);
                         let alreadySector = this.userSelectedSectors.findIndex(a => a.id === matrix.functional_area_id);
                         if (alreadySector === -1) {
