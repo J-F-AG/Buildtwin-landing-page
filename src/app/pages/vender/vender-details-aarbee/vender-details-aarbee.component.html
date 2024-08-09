@@ -951,16 +951,12 @@
             <div class="service-flex">
                 <div class="left" *ngIf="formData?.highlightServices?.length">
                     <ul class="list">
-                        <li *ngFor="let h of formData.highlightServices; let i = index">
-                            <ng-container *ngIf="showAlservices">
-                                <img [src]="h['service_icon']" alt="" width="32" height="32">
-                                {{h.name}}
-                            </ng-container>
-                            <ng-container *ngIf="!showAlservices && i < 7">
-                                <img [src]="h['service_icon']" alt="" width="32" height="32">
-                                {{h.name}}
-                            </ng-container>
-                        </li>
+                        <ng-container *ngFor="let h of formData.highlightServices; let i = index">
+                            <li *ngIf="showAlservices || (!showAlservices && i < 7)">
+                                    <img [src]="h['service_icon']" alt="" width="32" height="32">
+                                    {{h.name}}
+                            </li>
+                        </ng-container>
                         <ng-container *ngIf="formData?.highlightServices?.length > 7 && !showAlservices">
                             <button (click)="this.showAlservices = true">View more services</button>
                         </ng-container>
