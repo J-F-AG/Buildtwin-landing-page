@@ -27,12 +27,6 @@ export class AppComponent {
         public router: Router
     ) {
         AOS.init();
-        const currentPath = window.location.pathname + window.location.search;
-        if (window.location.pathname.startsWith('/get-started/') && window.location.pathname !== '/get-started') {
-            // Code for child pages of get-started
-            sessionStorage.setItem('redirectPath', currentPath.replace('/get-started', ''));
-            window.location.href = 'https://www.buildtwin.com/get-started/';
-        }
     }
 
     ngOnInit(){
