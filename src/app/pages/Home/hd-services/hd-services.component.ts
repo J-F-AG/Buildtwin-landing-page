@@ -25,7 +25,7 @@ export class HdServicesComponent implements OnInit {
     { name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137' },
     { name: '3D Rebar Capabilities', img: '/assets/images/rebar.png', width:'151', height: '137' },
     { name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137' },
-    { name: 'BI Modeling', img: '/assets/images/modelling.png', width:'151', height: '137' },
+    { name: 'BIM Model', img: '/assets/images/modelling.png', width:'151', height: '137' },
     { name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137' },
     { name: 'Structural Design', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
     { name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137' },
