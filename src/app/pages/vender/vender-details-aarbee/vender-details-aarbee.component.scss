@@ -1717,7 +1717,8 @@ ul {
 
 .thumbnails {
     display: flex;
-    gap: 7px;
+    gap: 12px;
+    margin-bottom: 26px;
     .thumbnail {
         width: 112px;
         display: flex;
@@ -1741,5 +1742,14 @@ ul {
             overflow: hidden;
             text-overflow: ellipsis;
         }
+    }
+}
+.image-popup {
+    flex-grow: 1;
+    padding: 40px;
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
 }
