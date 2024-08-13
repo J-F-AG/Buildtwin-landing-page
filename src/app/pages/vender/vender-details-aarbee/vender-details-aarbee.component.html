@@ -873,7 +873,7 @@
             </div>
         </ng-container>
     </nz-modal>
-    <div class="secondaryBg qualified-partner block-section">
+    <div class="secondaryBg qualified-partner block-section" *ngIf="formData?.badges?.length">
         <div class="container">
             <h2>
                 Qualified Partner
@@ -917,7 +917,7 @@
 
 
 
-    <div class="block-section">
+    <div class="block-section" *ngIf="formData?.sectors?.length">
         <div class="container">
             <h2>
                 Specialised Sector
@@ -939,7 +939,7 @@
     </div>
 
 
-    <div class="block-section">
+    <div class="block-section" *ngIf="formData?.highlightServices?.length">
         <div class="container">
             <h2>
                 Services
@@ -991,7 +991,7 @@
     </div>
 
 
-    <div class="block-section" id="available-service">
+    <div class="block-section" id="available-service" *ngIf="formData?.engineeringData?.length">
         <div class="container">
             <div class="head">
                 <h2>
@@ -1135,7 +1135,7 @@
     </div>
 
 
-    <div class="secondaryBg block-section" id="team-wrapper">
+    <div class="secondaryBg block-section" id="team-wrapper" *ngIf="formData?.engineers?.length">
         <div class="container">
 
             <owl-carousel-o [options]="aboutSlider">
@@ -1181,7 +1181,7 @@
     </div>
 
 
-    <div class="block-section" id="client-review">
+    <div class="block-section" id="client-review" *ngIf="formData?.reviews?.length">
         <div class="container">
             <h2>
                 Client Reviews
@@ -1227,7 +1227,7 @@
     </div>
 
 
-    <div class="block-section" id="client-feeback">
+    <div class="block-section" id="client-feeback" *ngIf="formData?.clientReviews?.length">
         <div class="container">
             <h2>
                 See What Clients Loved Most:
@@ -1261,7 +1261,7 @@
 
 
 
-    <div class="block-section" id="faq-wrapper">
+    <div class="block-section" id="faq-wrapper" *ngIf="formData?.faq?.length">
         <div class="container">
             <div class="left">
                 <h2>
@@ -1289,7 +1289,7 @@
     </div>
 
 
-    <div class="block-section" id="software">
+    <div class="block-section" id="software" *ngIf="formData?.highlightServices?.length">
         <div class="container">
             <h2>
                 Services, Building Code & Software
