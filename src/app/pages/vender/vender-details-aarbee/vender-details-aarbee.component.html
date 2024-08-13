@@ -223,7 +223,7 @@
                             </figcaption>
                         </figure> -->
                     </div>
-                    <div class="right" *ngIf="highlightImges.length > 2">
+                    <div class="right" *ngIf="highlightImges?.length > 2">
                         <ng-container *ngFor="let project of highlightImges; let i = index">
                             <figure *ngIf="i==2" (click)="showModal('child', project)">
                                 <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
@@ -246,7 +246,7 @@
                         </ng-container>
                     </div>
                 </div>
-                <div class="bottom" *ngIf="highlightImges.length > 3">
+                <div class="bottom" *ngIf="highlightImges?.length > 3">
                     <ng-container *ngFor="let project of highlightImges; let i = index">
                         <figure *ngIf="i>2 && i<6" (click)="showModal('child', project)">
                             <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">

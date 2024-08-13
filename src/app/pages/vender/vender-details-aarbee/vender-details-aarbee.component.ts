@@ -262,6 +262,7 @@ export class VenderDetailsAarbeeComponent {
     project_description: ''
   };
   addons = [];
+  cockpitDomain = '';
   isAddon = false;
   selectedAddon = '';
   listOfSoftware = [];
@@ -274,6 +275,7 @@ export class VenderDetailsAarbeeComponent {
     this.getBusinessListing();
     this.domain = this.route.snapshot.params['id'];
     this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
+    this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
   }
   showPopup = false;
   openModal(html: HTMLElement | string = "", isParent: boolean, isChild: boolean, project) {
@@ -587,10 +589,16 @@ export class VenderDetailsAarbeeComponent {
     ).subscribe(companies => {
       if (companies && companies['data'] && companies['data']['details'] && companies['data']['details'].length) {
         let company = companies['data']['details'].filter(a => a.company_name.replace(/ /g,'') === this.domain);
-        if (company.length) {
+        if (company.length || this.isIframe) {
+          let queryParam = company.length ? company[0].domain: this.cockpitDomain;
+          if (this.isIframe) {
+            company = [{
+              domain: this.domain
+            }]
+          }
           forkJoin([
             this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
-            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${company[0].domain}`)
+            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${queryParam}`)
           ])
             .pipe(
               catchError(err => {
@@ -605,30 +613,30 @@ export class VenderDetailsAarbeeComponent {
               let formData = res[1]['data']['company_data'];
               if (formData) {
                 let fieldData = formData['basic_form_fields'];
-                this.selectedOption = formData['basic_form_fields']['working_timezone'];
-                this.selectedTomeSlot = formData['basic_form_fields']['office_hours'];
-                this.companyHighlights = formData['basic_form_fields']['company_highlights'];
+                this.selectedOption = fieldData ? formData['basic_form_fields']['working_timezone']: '';
+                this.selectedTomeSlot = fieldData ? formData['basic_form_fields']['office_hours'] : '';
+                this.companyHighlights = fieldData ? formData['basic_form_fields']['company_highlights']: '';
                 const bKey = 'basic_form_fields';
                 res[0]['data'][bKey].forEach((form: any) => {
                   if (form.field_group_name === 'About') {
                     form.fields.forEach((f: any) => {
                       if (f.field_name === "Headquarter") {
-                        this.formData.companyDetails.headquarter = formData[bKey][f.field_key];
+                        this.formData.companyDetails.headquarter = formData[bKey] ? formData[bKey][f.field_key]: '';
                       }
                       this.formData.about.push({
                         key: f.field_name,
-                        value: formData[bKey][f.field_key],
+                        value: formData[bKey] ? formData[bKey][f.field_key]: '',
                         isPlus: f.field_name === 'Years in Business' || f.field_name === 'Reference Projects'
                       })
                     })
                   }
                   if (form.field_group_name === 'Accreditation') {
-                    this.formData.accreditation = formData[bKey]['accreditation']
+                    this.formData.accreditation = formData[bKey] ? formData[bKey]['accreditation']: this.formData.accreditation
                   }
                   if (form.field_group_name === 'On-Site Available(own office)') {
                     // form.fields = JSON.parse(form.fields);
                     form.fields.forEach((f: any) => {
-                      this.formData.onsite = JSON.parse(formData[bKey][f.field_key]);
+                      this.formData.onsite = formData[bKey] ? JSON.parse(formData[bKey][f.field_key]): this.formData.onsite;
                     });
                   }
                   if (form.field_group_name === 'Bio' || form.field_group_name === 'About') {
@@ -636,31 +644,33 @@ export class VenderDetailsAarbeeComponent {
                       if (f.field_key === 'rating') {
                         formData[bKey][f.field_key] = Number(formData[bKey][f.field_key]);
                       }
-                      this.formData.companyDetails[f.field_key] = formData[bKey][f.field_key];
+                      this.formData.companyDetails[f.field_key] = formData[bKey] ? formData[bKey][f.field_key]: this.formData.companyDetails[f.field_key];
                     })
                   }
-                  if (form.field_group_name === 'softwares' && formData[bKey]['softwares'] && formData[bKey]['softwares'].length) {
-                    this.formData.softwares = formData[bKey]['softwares'];
+                  if (form.field_group_name === 'softwares' && formData[bKey] && formData[bKey]['softwares'] && formData[bKey]['softwares'].length) {
+                    this.formData.softwares = formData[bKey] ? formData[bKey]['softwares']: this.formData.softwares;
                   }
                   if (form.field_group_name === 'Latest Updated') {
                     form.fields.forEach((f: any) => {
-                      this.formData.latest[f.field_key] = formData[bKey][f.field_key];
+                      this.formData.latest[f.field_key] = formData[bKey] ? formData[bKey][f.field_key]: this.formData.latest[f.field_key];
                     })
                   }
                   if (form.field_group_name === 'Special Tools & Methods') {
                     form.fields.forEach((f: any) => {
-                      this.formData.specialTool[f.field_key] = formData[bKey][f.field_key];
+                      this.formData.specialTool[f.field_key] = formData[bKey] ? formData[bKey][f.field_key]: this.formData.specialTool[f.field_key];
                     })
                   }
                   if (form.field_group_name === 'featured_projects') {
                     form.fields.forEach((f: any) => {
-                      this.formData.featuredProject[f.field_key] = formData[bKey][f.field_key];
+                      this.formData.featuredProject[f.field_key] = formData[bKey] ? formData[bKey][f.field_key]: this.formData.featuredProject[f.field_key];
                     });
-                    formData['featured_projects'].forEach(a => {
-                      a.project_logo = a.project_logo.replace('{', '[');
-                      a.project_logo = a.project_logo.replace('}', ']');
-                      a.project_logo = JSON.parse(a.project_logo);
-                    });
+                    if (formData['featured_projects']) {
+                      formData['featured_projects'].forEach(a => {
+                        a.project_logo = a.project_logo.replace('{', '[');
+                        a.project_logo = a.project_logo.replace('}', ']');
+                        a.project_logo = JSON.parse(a.project_logo);
+                      });
+                    }
                     this.highlightImges = formData['featured_projects'];
                     // for (let i = 0; i < 3; i++) {
                     //   formData['featured_projects'].forEach(item => {
@@ -678,7 +688,7 @@ export class VenderDetailsAarbeeComponent {
                 const reviewArr = [];
                 let revieCount = 0;
                 let reviewRatCount = 0;
-                if (this.formData.clientReviews.length) {
+                if (this.formData.clientReviews && this.formData.clientReviews.length) {
                   this.formData.clientReviews.forEach(rev => {
                     revieCount += rev.ratings.length;
                     rev.reviesSum = rev.ratings.reduce((a, b) => a + b.score, 0);
@@ -698,7 +708,7 @@ export class VenderDetailsAarbeeComponent {
                     groupReviewArr[ridx].score += r.score;
                   }
                 });
-                if (this.highlightImges.length > 7) {
+                if (this.highlightImges && this.highlightImges.length > 7) {
                   this.imageLeftOutCount = this.highlightImges.length - 7;
                   this.highlightImges = this.highlightImges.slice(0, 7);
                 }
@@ -742,16 +752,16 @@ export class VenderDetailsAarbeeComponent {
                 this.formData.reviews = groupReviewArr;
                 // this.formData.clientReviews = 
                 this.formData.badges = formData['badges'];
-                this.companyName = formData['basic_form_fields']['company_name'];
-                this.formData.companyDetails.rating = formData['basic_form_fields']['rating']
+                this.companyName = fieldData? formData['basic_form_fields']['company_name']: '';
+                this.formData.companyDetails.rating = fieldData ? formData['basic_form_fields']['rating']: 0;
                 this.formData.services = res[0]['data']['services']
-                this.formData.directors = formData['basic_form_fields']['managing_director'];
-                this.formData.premium_partner = formData['basic_form_fields']['premium_partner'];
-                this.formData.jointbids = formData['basic_form_fields']['joint_bids'];
+                this.formData.directors = fieldData ? formData['basic_form_fields']['managing_director']: this.formData.directors;
+                this.formData.premium_partner = fieldData ? formData['basic_form_fields']['premium_partner']: this.formData.premium_partner;
+                this.formData.jointbids = fieldData ? formData['basic_form_fields']['joint_bids']: this.formData.jointbids;
                 this.formData.service_func_area = res[0]['data']['service_func_area'];
-                this.formData.engineeringData = formData['basic_form_fields']['engineering_project_name'];
-                this.formData.additional_highlights = formData['basic_form_fields']['additional_highlights'];
-                if (formData['basic_form_fields']['operations']) {
+                this.formData.engineeringData = fieldData ? formData['basic_form_fields']['engineering_project_name']: this.formData.engineeringData;
+                this.formData.additional_highlights = fieldData ? formData['basic_form_fields']['additional_highlights']: this.formData.additional_highlights;
+                if (fieldData && formData['basic_form_fields'] && formData['basic_form_fields']['operations']) {
                   this.formData.operations = formData['basic_form_fields']['operations'];
                 }
                 this.isLoaded = true;
@@ -838,7 +848,7 @@ export class VenderDetailsAarbeeComponent {
                 if (this.serviceTypes.length) {
                   this.formData.serviceType = this.serviceTypes.join(',');
                 }
-                this.formData.faq = formData['basic_form_fields']['faq'];
+                this.formData.faq = formData['basic_form_fields'] ? formData['basic_form_fields']['faq']: this.formData.faq;
                 if (formData['building_codes'] && formData['building_codes'].length) {
                   formData['building_codes'].forEach((b: any) => {
                     obj = {
