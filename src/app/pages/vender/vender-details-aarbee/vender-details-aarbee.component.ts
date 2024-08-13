@@ -631,10 +631,10 @@ export class VenderDetailsAarbeeComponent {
     ).subscribe(companies => {
       if (companies && companies['data'] && companies['data']['details'] && companies['data']['details'].length) {
         let company = companies['data']['details'].filter(a => a.company_name.replace(/ /g,'') === this.domain);
-        if (company.length) {
+        if (company.length || true) {
           forkJoin([
             this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
-            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${company[0].domain}`)
+            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=www.testdomain.com`)
           ])
             .pipe(
               catchError(err => {

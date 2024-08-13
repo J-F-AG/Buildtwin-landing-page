@@ -908,9 +908,9 @@
         <ng-container *nzModalContent>
             <div image class="flex">
                 <div>
-                    <img [src]="selectedPrimaryImage" alt="">
+                    <img [src]="selectedPrimaryImage" width="244" height="190"  alt="">
                 </div>
-                <div>
+                <!-- <div>
                     <h2>List of Images</h2>
                     <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
                         <figure>
@@ -918,7 +918,7 @@
                                 <img [src]="pimg" (click)="setPrimaryImage(pimg, i)" width="759" height="394" class="abs-image" />
                         </figure>
                     </ng-container>
-                </div>
+                </div> -->
             </div>
         </ng-container>
     </nz-modal>
