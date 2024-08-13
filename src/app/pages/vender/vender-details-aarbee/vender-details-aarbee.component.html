@@ -195,7 +195,7 @@
         <div class="company-overview">
             <section class="image-wrapper">
                 <div class="top">
-                    <div class="left">
+                    <div class="left" [ngClass]="{'twoItem':highlightImges.length<3}">
                         <ng-container *ngFor="let project of highlightImges; let i = index">
                             <figure *ngIf="i<2" (click)="showModal('child', project)">
                                 <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
@@ -251,12 +251,12 @@
                             </figure>
                         </ng-container>
                     </div>
-                    <figure (click)="showModal('parent')" *ngIf="highlightImges.length" class="moreImagePlaceholder">
+                    <!-- <figure (click)="showModal('parent')" *ngIf="highlightImges.length" class="moreImagePlaceholder">
                         <img src="assets/images/image3.png" alt="image3" width="232" height="223">
                         <figcaption class="abs-caption">
                             View More+
                         </figcaption>
-                    </figure>
+                    </figure> -->
                 </div>
                 <div class="bottom" *ngIf="highlightImges.length > 3">
                     <ng-container *ngFor="let project of highlightImges; let i = index">
@@ -844,13 +844,17 @@
                 </div>
                 <div class="flex company-overview child">
                     <div class="image-wrapper">
-                        <div class="flex" *ngFor="let cat of selectedProject?.categorylist; let idx = index">
-                           <div (click)="selectCategory(idx)">
-                            {{cat.name}}
-                            <ng-container *ngFor="let pimg of cat?.imageurls; let i = index">
-                                <img [src]="pimg" width="244" height="190" *ngIf="i === 0" class="abs-image" />
-                            </ng-container>
-                           </div>
+                        <div class="thumbnails">
+                            <div class="thumbnail" *ngFor="let cat of selectedProject?.categorylist; let idx = index" (click)="selectCategory(idx)">
+                                 <figure>
+                                    <ng-container *ngFor="let pimg of cat?.imageurls; let i = index">
+                                        <img [src]="pimg" width="112" height="70" *ngIf="i === 0" />
+                                    </ng-container>
+                                 </figure>
+                                 <figcaption>
+                                    {{cat.name}}
+                                 </figcaption>
+                             </div>
                         </div>
                         <div class="top">
                             <div class="left fullImage">
