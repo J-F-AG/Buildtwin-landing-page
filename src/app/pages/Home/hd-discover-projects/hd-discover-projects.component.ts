@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 
@@ -8,7 +9,7 @@ import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 })
 export class HdDiscoverProjectsComponent implements OnInit {
 
-  constructor() {
+  constructor(private http: HttpClient) {
   }
 
   splitArray(dataArray: any[], x: number) {
@@ -38,6 +39,10 @@ export class HdDiscoverProjectsComponent implements OnInit {
       if(window.innerWidth < 767) {
         this.discoverProjects = this.splitArray(this.projectsArray, 1);
       }
+
+      this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/featured-projects?page=1&service=Structural&category=try`).subscribe(res => {
+        debugger
+      })
     }
   
     @ViewChild(NzCarouselComponent, { static: false }) myCarousel: NzCarouselComponent;
