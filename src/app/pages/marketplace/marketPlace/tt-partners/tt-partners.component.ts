@@ -17,6 +17,7 @@ export class TtPartnersComponent {
   }
   getListOfCompany() {
     this.showPageLoader = true;
+    // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
     this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`)
     .pipe(
       catchError(err => {
