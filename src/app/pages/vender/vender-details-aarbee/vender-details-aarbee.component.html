@@ -195,7 +195,7 @@
         <div class="company-overview">
             <section class="image-wrapper">
                 <div class="top">
-                    <div class="left">
+                    <div class="left" [ngClass]="{'twoItem':highlightImges.length<3}">
                         <ng-container *ngFor="let project of highlightImges; let i = index">
                             <figure *ngIf="i<2" (click)="showModal('child', project)">
                                 <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
@@ -216,6 +216,12 @@
                                 </ng-container>
                             </figure>
                         </ng-container>
+                        <!-- <figure (click)="showModal('parent')" class="moreImagePlaceholder">
+                            <img src="assets/images/image3.png" alt="image3" width="232" height="223">
+                            <figcaption class="abs-caption">
+                                View More+
+                            </figcaption>
+                        </figure> -->
                         <!-- <figure>
                             <img src="assets/images/image1.png" alt="image1" width="325" height="258">
                             <figcaption>
@@ -245,6 +251,12 @@
                             </figure>
                         </ng-container>
                     </div>
+                    <!-- <figure (click)="showModal('parent')" *ngIf="highlightImges.length" class="moreImagePlaceholder">
+                        <img src="assets/images/image3.png" alt="image3" width="232" height="223">
+                        <figcaption class="abs-caption">
+                            View More+
+                        </figcaption>
+                    </figure> -->
                 </div>
                 <div class="bottom" *ngIf="highlightImges?.length > 3">
                     <ng-container *ngFor="let project of highlightImges; let i = index">
@@ -526,18 +538,28 @@
                 <div class="flex company-overview child">
                     <div class="image-wrapper">
                         <div class="bottom">
-                            <figure *ngFor="let project of formData.featuredProject.projects">
-                                <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
-                                    <div *ngIf="ci == 0">
-                                        <img src="assets/images/image4.png" alt="image3" width="244" height="190">
-                                        <img [src]="pimg" width="244" height="190" class="abs-image"
-                                            (click)="showModal('child', project)" />
+                            <div>
+                                <div *ngFor="let category of categorisedProjectImages; let i = index">
+                                    <div (click)="selectedProjectCategor(i)">
+                                        {{category.name}}
+                                        <ng-container *ngFor="let pimg of category?.imageUrls; let i = index">
+                                            <img [src]="pimg.imageUrl" width="244" height="190" *ngIf="i === 0" class="abs-image" />
+                                        </ng-container>
+                                    </div>
+                                </div>
+                            </div>
+                            <figure *ngFor="let project of selectedProjectCategory?.imageUrls; let i = index">
+                                <!-- <ng-container *ngFor="let pimg of project?.project_logo; let ci = index"> -->
+                                    <div>
+                                        <img src="assets/images/image4.png"  alt="image3" width="244" height="190">
+                                        <img [src]="project.imageUrl" width="244" height="190" class="abs-image"
+                                            (click)="showModal('child',project)" />
                                         <figcaption>
                                             {{project.project_name}} in {{
                                             project.project_region }}
                                         </figcaption>
                                     </div>
-                                </ng-container>
+                                <!-- </ng-container> -->
                             </figure>
                         </div>
                         <div>
@@ -822,12 +844,24 @@
                 </div>
                 <div class="flex company-overview child">
                     <div class="image-wrapper">
+                        <div class="thumbnails">
+                            <div class="thumbnail cursor" *ngFor="let cat of selectedProject?.categorylist; let idx = index" (click)="selectCategory(idx)" [ngClass]="{'active': filterIndex == idx}">
+                                 <figure>
+                                    <ng-container *ngFor="let pimg of cat?.imageurls; let i = index">
+                                        <img [src]="pimg" width="112" height="70" *ngIf="i === 0" />
+                                    </ng-container>
+                                 </figure>
+                                 <figcaption>
+                                    {{cat.name}}
+                                 </figcaption>
+                             </div>
+                        </div>
                         <div class="top">
                             <div class="left fullImage">
                                 <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
                                     <figure *ngIf="i === 0">
                                             <img src="assets/images/image5.jpg" alt="image3" width="759" height="394">
-                                            <img [src]="pimg" width="759" height="394" class="abs-image" />
+                                            <img [src]="pimg" (click)="showModal('image', null, i)" width="759" height="394" class="abs-image" />
                                     </figure>
                                 </ng-container>
                             </div>
@@ -835,7 +869,7 @@
                                 <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
                                     <figure *ngIf="i > 0 && i < 3 ">
                                             <img src="assets/images/image6.jpg" alt="image3" width="244" height="190">
-                                            <img [src]="pimg" width="244" height="190" class="abs-image" />
+                                            <img [src]="pimg" (click)="showModal('image', null, i)" width="244" height="190" class="abs-image" />
                                     </figure>
                                 </ng-container>
                             </div>
@@ -844,7 +878,7 @@
                             <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
                                 <figure *ngIf="i > 2">
                                         <img src="assets/images/image6.jpg" alt="image3" width="244" height="190">
-                                        <img [src]="pimg" width="244" height="190" class="abs-image" />
+                                        <img [src]="pimg" (click)="showModal('image', null, i)" width="244" height="190" class="abs-image" />
                                 </figure>
                             </ng-container>
                         </div>
@@ -870,6 +904,25 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </ng-container>
+    </nz-modal>
+    <nz-modal [(nzVisible)]="isVisibleImage" [nzWidth]="1376" [nzTitle]="null" [nzClassName]="'profile-image-modal'"
+        [nzFooter]="null" (nzOnCancel)="handleCancelImage()" (nzOnOk)="handleOkImage()">
+        <ng-container *nzModalContent>
+            <div image class="flex">
+                <div class="image-popup">
+                    <img [src]="selectedPrimaryImage" width="244" height="190"  alt="">
+                </div>
+                <!-- <div>
+                    <h2>List of Images</h2>
+                    <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
+                        <figure>
+                                <img src="assets/images/image5.jpg" alt="image3" width="759" height="394">
+                                <img [src]="pimg" (click)="setPrimaryImage(pimg, i)" width="759" height="394" class="abs-image" />
+                        </figure>
+                    </ng-container>
+                </div> -->
             </div>
         </ng-container>
     </nz-modal>

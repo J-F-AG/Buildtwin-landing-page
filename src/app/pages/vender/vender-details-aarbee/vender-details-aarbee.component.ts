@@ -237,6 +237,11 @@ export class VenderDetailsAarbeeComponent {
   } as any;
   serviceTypes = [];
   showAlservices = true;
+  selectedProjectCategory = {
+    imageUrls: [],
+    project_name: '',
+    project_region: ''
+  };
 
   filteredProjects = this.projects;
   serviceSkills = [] as any;
@@ -255,11 +260,13 @@ export class VenderDetailsAarbeeComponent {
   isParentModal = false;
   isChildModal = false;
   isVisiblechild = false;
+  isVisibleImage = false;
   selectedProject = {
     project_name: '',
     project_logo: [],
     project_region: '',
-    project_description: ''
+    project_description: '',
+    categorylist: [],
   };
   addons = [];
   cockpitDomain = '';
@@ -270,6 +277,9 @@ export class VenderDetailsAarbeeComponent {
   imageLeftOutCount = 0;
   currentFaq: any = 'faq0'
   isIframe = false;
+  selectedPrimaryImage = '';
+  filterIndex = 0;
+  categorisedProjectImages = [];
   constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService) {
 
     this.getBusinessListing();
@@ -482,35 +492,60 @@ export class VenderDetailsAarbeeComponent {
       window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
     }
   }
-  showModal(type, project?): void {
+  setPrimaryImage(img, imageIndx) {
+    this.selectedPrimaryImage = img;
+    // let image = this.selectedProject[this.filterIndex].imageurls.filter((a, i) => i === imageIndx);
+  }
+
+  showModal(type, project?, imageIndx?, parentName?): void {
     if (type === 'parent') {
       this.isVisible = true;
+      if (!this.selectedProjectCategory.imageUrls.length) {
+        this.selectedProjectCategor(0);
+      }
     }
     if (type === 'child') {
       this.isVisiblechild = true;
     }
+    if (type === 'image') {
+      this.isVisibleImage = true;
+      let image = [];
+      if (parentName === 'parent') {
+        image = this.selectedProjectCategory.imageUrls.filter((a, i) => i === imageIndx);
+      } else {
+        image = this.selectedProject.categorylist[this.filterIndex].imageurls.filter((a, i) => i === imageIndx);
+      }
+      this.selectedPrimaryImage = image[0];
+    }
     if(project){
-      this.selectedProject = project
+      this.filterIndex = 0;
+      this.selectedProject = project;
+      if (type === 'child') {
+        this.selectCategory(0);
+      }
     }
   }
 
   handleOk(): void {
-    console.log('Button ok clicked!');
     this.isVisible = false;
   }
 
   handleCancel(): void {
-    console.log('Button cancel clicked!');
     this.isVisible = false;
   }
   handleOkChild(): void {
-    console.log('Button ok clicked!');
     this.isVisiblechild = false;
   }
 
   handleCancelChild(): void {
-    console.log('Button cancel clicked!');
     this.isVisiblechild = false;
+  }
+  handleOkImage(): void {
+    this.isVisibleImage = false;
+  }
+
+  handleCancelImage(): void {
+    this.isVisibleImage = false;
   }
 
   ngOnInit() {
@@ -573,13 +608,22 @@ export class VenderDetailsAarbeeComponent {
     // this.selectedAddon = '';
   }
 
+  selectCategory(idx) {
+    this.filterIndex = idx;
+    this.selectedProject.project_logo = this.selectedProject.categorylist[idx].imageurls;
+  }
+
+  selectedProjectCategor(idx) {
+    this.selectedProjectCategory = this.categorisedProjectImages[idx];
+  }
+
   add() {
     this.isAddon = true;
   }
 
   getBusinessListing() {
     this.showPageLoader = true;
-    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`)
+    this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`)
     .pipe(
       catchError(err => {
         this.showPageLoader = false;
@@ -596,9 +640,10 @@ export class VenderDetailsAarbeeComponent {
               domain: this.domain
             }]
           }
+          // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
           forkJoin([
-            this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
-            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${queryParam}`)
+            this.http.get('https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields'),
+            this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?domain=${queryParam}`)
           ])
             .pipe(
               catchError(err => {
@@ -662,14 +707,103 @@ export class VenderDetailsAarbeeComponent {
                   }
                   if (form.field_group_name === 'featured_projects') {
                     form.fields.forEach((f: any) => {
-                      this.formData.featuredProject[f.field_key] = formData[bKey] ? formData[bKey][f.field_key]: this.formData.featuredProject[f.field_key];
+                      this.formData.featuredProject[f.field_key] = formData[bKey][f.field_key];
                     });
+                    let isImage = false;
                     if (formData['featured_projects']) {
                       formData['featured_projects'].forEach(a => {
-                        a.project_logo = a.project_logo.replace('{', '[');
-                        a.project_logo = a.project_logo.replace('}', ']');
-                        a.project_logo = JSON.parse(a.project_logo);
+                        if (!a.project_logo.includes("name")) {
+                          a.project_logo = a.project_logo.replace('{', '[');
+                          a.project_logo = a.project_logo.replace('}', ']');
+                          a.project_logo = JSON.parse(a.project_logo);
+                          a.categorylist = [];
+                          let arrayy = [];
+                          this.categorisedProjectImages = [];
+                          
+                          a.project_logo.forEach(p => {
+                            arrayy.push({
+                              imageUrl: p,
+                              ...a
+                            })
+                            // if (!this.categorisedProjectImages.length) {
+                              this.selectedProjectCategory.imageUrls.push(...arrayy)
+                            // }
+                          })
+                        } else {
+                          a.project_logo = a.project_logo.replace('{', '[');
+                          a.project_logo = a.project_logo.replace(/.$/,"]");
+                          a.project_logo = JSON.parse(a.project_logo);
+                          let arr = [];
+                          let cat = [];
+                          isImage = true;
+                          a.project_logo.forEach(p => {
+                            p = JSON.parse(p);
+                            cat.push(p);
+                            arr.push(...p.imageurls);
+                            if (!this.categorisedProjectImages.length) {
+                              let arr = [];
+                              p.imageurls.forEach(im => {
+                                arr.push({
+                                  imageUrl: im,
+                                  ...a
+                                 })
+                              })
+                              this.categorisedProjectImages.push({
+                                 name: p.name,
+                                 imageUrls: arr
+                              })
+                            } else {
+                              let indx = this.categorisedProjectImages.findIndex(a => a.name === p.name);
+                              if (indx === -1) {
+                              let arr = [];
+                                p.imageurls.forEach(im => {
+                                  arr.push({
+                                    imageUrl: im,
+                                    ...a
+                                   })
+                                  })
+                                  this.categorisedProjectImages.push({
+                                     name: p.name,
+                                     imageUrls: arr
+                                  })
+                              } else {
+                                let arr = [];
+                                p.imageurls.forEach(im => {
+                                  arr.push({
+                                    imageUrl: im,
+                                    ...a
+                                   })
+                                  })
+                                this.categorisedProjectImages[indx].imageUrls.push(
+                                  ...arr
+                                )
+                              }
+                            }
+                          });
+                          a.categorylist = cat;
+                          a.project_logo = arr;
+                          // a.project_logo = a.project_logo.map(a => a.logo);
+                        }
                       });
+                    }
+                    if (this.categorisedProjectImages.length) {
+                      this.categorisedProjectImages.forEach(a => {
+                        a.imageUrls.forEach(b => {
+                          let arr = [];
+                          b.categorylist = [];
+                          if (isImage) {
+                            b.project_logo.forEach(c => {
+
+                              b.categorylist.push(JSON.parse(c));
+                              let bb = (JSON.parse(c)).imageurls.map(a1 => a1);
+                              arr.push(...bb);
+                            });
+                          } else {
+                            arr = b.project_logo
+                          }
+                          b.project_logo = arr;
+                        })
+                      })
                     }
                     this.highlightImges = formData['featured_projects'];
                     // for (let i = 0; i < 3; i++) {
