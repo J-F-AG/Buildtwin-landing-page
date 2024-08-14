@@ -279,6 +279,7 @@ export class VenderDetailsAarbeeComponent {
   isIframe = false;
   selectedPrimaryImage = '';
   filterIndex = 0;
+  filterSelectedProjectCategorIndex = 0;
   categorisedProjectImages = [];
   constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService) {
 
@@ -614,6 +615,7 @@ export class VenderDetailsAarbeeComponent {
   }
 
   selectedProjectCategor(idx) {
+    this.filterSelectedProjectCategorIndex = idx;
     this.selectedProjectCategory = this.categorisedProjectImages[idx];
   }
 

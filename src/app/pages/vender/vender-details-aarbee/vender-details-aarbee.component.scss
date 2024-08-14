@@ -259,6 +259,9 @@ ul {
         display: flex;
         gap: 7.4px;
         flex-wrap: wrap;
+        figure {
+            width: calc(25% - 6px);
+        }
     }
     figure {
         background: #ccc;
@@ -1414,6 +1417,9 @@ ul {
 
     .image-wrapper .bottom {
         gap: 7px;
+        figure {
+            width: calc(25% - 6px);
+        }
     }
 
     .moreImagePlaceholder {
