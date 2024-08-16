@@ -76,4 +76,4 @@ phases:
       - aws configure set aws_access_key_id $AOA_ACCESS_KEY
       - aws configure set aws_secret_access_key $AOA_SECRET_KEY
       - aws s3 sync dist/ s3://$S3_BUCKET_BUILDTWIN/ --region eu-central-1 --acl public-read --exclude 'get-started/*'
-      # - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
+      - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
