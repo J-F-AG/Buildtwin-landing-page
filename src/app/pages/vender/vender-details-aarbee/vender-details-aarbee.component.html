@@ -1513,32 +1513,32 @@
                         {{formData?.companyDetails.office_hours}}
                     </div>
                     <div class="relative">
-                        <div class="blur">
+                        <div [ngClass]="{'blur':!isIframe}" class="block-wrapper">
                             <div class="block">
-                                {{formData?.companyDetails.registration_number}}
+                                {{formData?.companyDetails.registration_number?formData?.companyDetails.registration_number:'--'}}
                             </div>
                             <div class="block">
-                                {{formData?.companyDetails.commercial_contact}}
+                                {{formData?.companyDetails.commercial_contact?formData?.companyDetails.commercial_contact:'--'}}
                             </div>
                             <div class="block">
-                                {{formData?.companyDetails.compliance_contact}}
+                                {{formData?.companyDetails.compliance_contact?formData?.companyDetails.compliance_contact:'--'}}
                             </div>
                             <div class="block">
-                                {{formData?.companyDetails.liability_insurance}}
+                                {{formData?.companyDetails.liability_insurance?formData?.companyDetails.liability_insurance:'--'}}
                             </div>
                             <div class="block">
-                                {{formData?.companyDetails.third_party_mediation}}
+                                {{formData?.companyDetails.third_party_mediation?formData?.companyDetails.third_party_mediation:'--'}}
                             </div>
                             <div class="block">
-                                {{formData?.companyDetails.license}}
+                                {{formData?.companyDetails.license?formData?.companyDetails.license:'--'}}
                             </div>
                             <div class="block">
-                                {{formData?.companyDetails.tax_id}}
+                                {{formData?.companyDetails.tax_id?formData?.companyDetails.tax_id:'--'}}
                             </div>
                         </div>
-                        <div class="abs">
+                        <div class="abs" *ngIf="!isIframe">
                             <span>
-                                Login to see Resource Matrix
+                                Login to see Data
                             </span>
                             <a href="" class="default-btn mdc-button">
                                 Login Now
