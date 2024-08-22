@@ -1,4 +1,5 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { FooterService } from './footer.service';
 
 @Component({
   selector: 'app-hd-footer',
@@ -6,7 +7,7 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
   styleUrls: ['./hd-footer.component.scss']
 })
 export class HdFooterComponent {
-  constructor(private elRef: ElementRef, private renderer: Renderer2) { 
+  constructor(private elRef: ElementRef, private renderer: Renderer2, public _footerService: FooterService) { 
 
 
   }
