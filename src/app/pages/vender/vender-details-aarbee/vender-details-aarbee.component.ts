@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { catchError, forkJoin, retry } from 'rxjs';
 import { ModalPopupService } from './modal/modal.service';
+import { FooterService } from '../../includes/hd-footer/footer.service';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -281,7 +282,7 @@ export class VenderDetailsAarbeeComponent {
   filterIndex = 0;
   filterSelectedProjectCategorIndex = 0;
   categorisedProjectImages = [];
-  constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService) {
+  constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
 
     this.getBusinessListing();
     this.domain = this.route.snapshot.params['id'];
@@ -889,6 +890,7 @@ export class VenderDetailsAarbeeComponent {
                 // this.formData.clientReviews = 
                 this.formData.badges = formData['badges'];
                 this.companyName = fieldData? formData['basic_form_fields']['company_name']: '';
+                this._footerService['companyDetail']['name'] = this.companyName;
                 this.formData.companyDetails.rating = fieldData ? formData['basic_form_fields']['rating']: 0;
                 this.formData.services = res[0]['data']['services']
                 this.formData.directors = fieldData ? formData['basic_form_fields']['managing_director']: this.formData.directors;
@@ -1038,5 +1040,8 @@ export class VenderDetailsAarbeeComponent {
     }else {
       this.currentFaq = index
     }
+  }
+  ngOnDestroy() {
+    this._footerService['companyDetail'] = {}
   }
 }
