@@ -2,8 +2,17 @@
     &.grayBg{background-color: #F8F8F8;}
 }
 
-::ng-deep .trustedby-wrapper .owl-carousel .owl-item img{ width: auto; display: initial;}
-
+::ng-deep .trustedby-wrapper .owl-carousel .owl-item img{ width: revert-layer; display: initial;}
+.integrations-area-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    .integration-box {
+        width: auto;
+        padding: 0;
+    }
+}
 :host ::ng-deep .trustedby-wrapper .owl-theme .owl-nav [class*=owl-] {
     right: 0 ;
     z-index: 99 ;
@@ -105,5 +114,8 @@
 
     :host ::ng-deep .trustedby-wrapper .owl-theme .owl-nav [class*=owl-next] {
         right: 20px;
+    }
+    .integrations-area-list {
+        flex-direction: column;
     }
 }
