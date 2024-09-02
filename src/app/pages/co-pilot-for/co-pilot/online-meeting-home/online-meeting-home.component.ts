@@ -18,7 +18,7 @@ export class OnlineMeetingHomeComponent {
       'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters.'
     ],
     faqAnchor: 'Try BuildTwin Now',
-    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+    faqAnchorLink: 'http://buildtwin.dev.s3-website.ap-south-1.amazonaws.com/get-started'
   },
   {
     profileImage: 'assets/images/ui/user2.png',
@@ -29,7 +29,7 @@ export class OnlineMeetingHomeComponent {
       'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.'
     ],
     faqAnchor: 'Try BuildTwin Now',
-    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+    faqAnchorLink: 'http://buildtwin.dev.s3-website.ap-south-1.amazonaws.com/get-started'
   },
   {
     profileImage: 'assets/images/ui/user3.png',
@@ -40,7 +40,7 @@ export class OnlineMeetingHomeComponent {
       'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.'
     ],
     faqAnchor: 'Try BuildTwin Now',
-    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+    faqAnchorLink: 'http://buildtwin.dev.s3-website.ap-south-1.amazonaws.com/get-started'
   },
   {
     profileImage: 'assets/images/ui/user4.png',
@@ -51,7 +51,7 @@ export class OnlineMeetingHomeComponent {
       'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.'
     ],
     faqAnchor: 'Try BuildTwin Now',
-    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+    faqAnchorLink: 'http://buildtwin.dev.s3-website.ap-south-1.amazonaws.com/get-started'
   },
   {
     profileImage: 'assets/images/ui/user1.png',
@@ -62,7 +62,7 @@ export class OnlineMeetingHomeComponent {
       'BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.'
     ],
     faqAnchor: 'Try BuildTwin Now',
-    faqAnchorLink: 'https://www.buildtwin.com/get-started'
+    faqAnchorLink: 'http://buildtwin.dev.s3-website.ap-south-1.amazonaws.com/get-started'
   }
   ]
   @ViewChild('hdFaq') hdFaq!: ElementRef;
