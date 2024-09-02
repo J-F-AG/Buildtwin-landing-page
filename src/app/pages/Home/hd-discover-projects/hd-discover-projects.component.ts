@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
+import { catchError, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-hd-discover-projects',
@@ -25,31 +26,14 @@ export class HdDiscoverProjectsComponent implements OnInit {
 
     // discoverProjectSection
     projectsArray = [
-      { img: 'assets/images/Tesla-002.jpg', category: 'Structural', projectTitle: 'TESLA Gigafactory', company: 'Grünheide, Germany', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'GPC Engineering', serviceCompanyIcon: 'assets/images/gbcEngineering.png', width:'57', height:'30', serviceDescription: "Structural Design, work stage 1-6 (LP1-6) | Steel Structure Design...", linkTitle: 'Learn More about GPC Engineering', link: '/partners/GBCEngineers' },
-      { img: 'assets/images/high-building.png', category: 'Structural', projectTitle: 'High-Rise Buildings', company: 'FOURFrankfurt', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'J&F India', serviceCompanyIcon: 'assets/images/jf-icon.jpg', width:'59', height:'30', serviceDescription: "1 million € construction costs electrical | approx. 22,000 m²", linkTitle: 'Learn More about J&F India', link: '/partners/J&FIndia' },
-      { img: 'assets/images/Jim-Bridger-SCR-Plate-Flues-Ducts.jpg', category: 'Structural', projectTitle: 'Jim Bridger SCR Plate', company: 'Wyoming, US.', locationFlag: 'assets/images/us-flag.png', serviceCompany: 'Aarbee Structures', serviceCompanyIcon: 'assets/images/aarbee-icon.jpg', width:'46', height:'30', serviceDescription: "Type of building: Duct | Tonnage: 3,800 Tons", linkTitle: 'Learn More about Aarbee', link: '/partners/AarbeeStructuresPrivateLimited' },
-      { img: 'assets/images/Gillette-Stadium.jpg', category: 'Structural', projectTitle: 'Gillette Stadium North end zone renovation', company: 'Foxborough, MA', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'Mold-Tek Technologies', serviceCompanyIcon: 'assets/images/moldtek-icon.jpg', width:'60', height:'30', serviceDescription: "Tonnage: 2,800 Tons", linkTitle: 'Learn More about MoldTek', link: '/partners/Mold-TekTechnologiesLimited' }
+      // { img: 'assets/images/Tesla-002.jpg', category: 'Structural', projectTitle: 'TESLA Gigafactory', company: 'Grünheide, Germany', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'GPC Engineering', serviceCompanyIcon: 'assets/images/gbcEngineering.png', width:'57', height:'30', serviceDescription: "Structural Design, work stage 1-6 (LP1-6) | Steel Structure Design...", linkTitle: 'Learn More about GPC Engineering', link: '/partners/GBCEngineers' },
+      // { img: 'assets/images/high-building.png', category: 'Structural', projectTitle: 'High-Rise Buildings', company: 'FOURFrankfurt', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'J&F India', serviceCompanyIcon: 'assets/images/jf-icon.jpg', width:'59', height:'30', serviceDescription: "1 million € construction costs electrical | approx. 22,000 m²", linkTitle: 'Learn More about J&F India', link: '/partners/J&FIndia' },
+      // { img: 'assets/images/Jim-Bridger-SCR-Plate-Flues-Ducts.jpg', category: 'Structural', projectTitle: 'Jim Bridger SCR Plate', company: 'Wyoming, US.', locationFlag: 'assets/images/us-flag.png', serviceCompany: 'Aarbee Structures', serviceCompanyIcon: 'assets/images/aarbee-icon.jpg', width:'46', height:'30', serviceDescription: "Type of building: Duct | Tonnage: 3,800 Tons", linkTitle: 'Learn More about Aarbee', link: '/partners/AarbeeStructuresPrivateLimited' },
+      // { img: 'assets/images/Gillette-Stadium.jpg', category: 'Structural', projectTitle: 'Gillette Stadium North end zone renovation', company: 'Foxborough, MA', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'Mold-Tek Technologies', serviceCompanyIcon: 'assets/images/moldtek-icon.jpg', width:'60', height:'30', serviceDescription: "Tonnage: 2,800 Tons", linkTitle: 'Learn More about MoldTek', link: '/partners/Mold-TekTechnologiesLimited' }
     ]
   
-    discoverProjects = this.splitArray(this.projectsArray, 4);
-    response = [{
-      "id": 3,
-      "domain": "test140.buildtwin.com",
-      "project_name": "Design and Analysis of Iconic Bridge",
-      "project_description": "Designed and analyzed an iconic bridge structure for long-term durability and safety under varying environmental conditions.\nTechnologies Used:\nAdvanced structural analysis software (STAAD.Pro, MIDAS Civil)\n3D modeling tools (AutoCAD, Revit)\nWind and seismic load analysis\nOutcome:\nVerified structural integrity and load-bearing capacity through detailed simulations and analysis.\nDelivered comprehensive engineering reports and construction drawings for implementation.",
-      "project_logo": '{"{\"name\":\"Overview\",\"imageurls\":[\"https://s3.ap-southeast-1.amazonaws.com/buildtwin-prod-cockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240812/file_37244016-3a0d-40b1-b31c-b28f3a2da507.png\"]}","{\"name\":\"Structural Details\",\"imageurls\":[\"https://s3.ap-southeast-1.amazonaws.com/buildtwin-prod-cockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240812/file_62b6e1e6-8d47-489a-a504-806dff4b6c2c.png\",\"https://s3.ap-southeast-1.amazonaws.com/buildtwin-prod-cockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240812/file_e4dca355-d0fc-4d81-b16d-490bfa5a5461.png\"]}","{\"name\":\"BIM Model\",\"imageurls\":[\"https://s3.ap-southeast-1.amazonaws.com/buildtwin-prod-cockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240812/file_7375a084-86ce-47a9-b3f5-387fda9d9507.png\"]}","{\"name\":\"Connection Designs\",\"imageurls\":[\"https://s3.ap-southeast-1.amazonaws.com/buildtwin-prod-cockpit.buildtwin.com/bt-assets/resource/privateS3/upload/business-listing-image/public/20240812/file_79701f36-8e65-4c6c-87a6-d0433080000a.png\"]}"}',
-      "project_title": "Design and Analysis of Iconic Bridge",
-      "project_region": "India",
-      "project_category": "",
-      "created_at": "2024-07-12T12:07:04.208Z",
-      "updated_at": "2024-07-12T12:07:04.208Z",
-      "is_selected": true,
-      "company_id": "24733f92-b6fc-464c-a52e-174b77b64294",
-      "service": "Structural",
-      "is_featured": true,
-      "company_name": "",
-      "company_logo": ""
-    }]
+    discoverProjects = [];
+    showLoader = false;
   
     index = 0;
 
@@ -57,9 +41,47 @@ export class HdDiscoverProjectsComponent implements OnInit {
       if(window.innerWidth < 767) {
         this.discoverProjects = this.splitArray(this.projectsArray, 1);
       }
-
-      this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/featured-projects?page=1`).subscribe(res => {
-        debugger
+      this.showLoader = true;
+      this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/featured-projects?page=1`)
+      .pipe(
+        catchError(err => {
+          this.showLoader = false;
+          return err;
+        }),
+        retry(2)
+      )
+      .subscribe(response => {
+        this.showLoader = false;
+        if (response && response['data']) {
+          response['data'].forEach(res => {
+            let proImage = '';
+            if (res.project_logo) {
+              res.project_logo = res.project_logo.replace('{', '[');
+              res.project_logo = res.project_logo.replace(/.$/,"]");
+              let images = JSON.parse(res.project_logo);
+              if (images.length) {
+                let im1 = JSON.parse(images[0]);
+                if (im1 && im1.imageurls && im1.imageurls.length) {
+                  proImage = im1.imageurls[0];
+                }
+              }
+            }
+            this.projectsArray.push({
+              img: proImage || 'assets/images/placeholder-logo.png', 
+              category: res.service,
+              projectTitle: res.project_name,
+              company: res.project_region,
+              locationFlag: '',
+              serviceCompany: res.company_name, 
+              serviceCompanyIcon: res.company_logo,
+              width:'57', height:'30', 
+              serviceDescription: res.project_description.replace(/(?:\r\n|\r|\n)/g, '<br>'),
+              linkTitle: 'Learn More about GPC Engineering', 
+              link: `/partners/${res.company_name}`
+            })
+          });
+          this.discoverProjects = this.splitArray(this.projectsArray, 4);
+        }
       })
     }
   
