@@ -24,6 +24,20 @@ export class HdBannerNewComponent {
     dots: true,
     loop: true,
     autoplay: true,
-    autoplayHoverPause: false
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
+    },
   }
 }
