@@ -943,11 +943,13 @@ export class VenderDetailsAarbeeComponent {
                         let alreadySector = this.userSelectedSectors.findIndex(a => a.id === matrix.functional_area_id);
                         if (alreadySector === -1) {
                           let name = this.serviceSkills.filter(a => a.id === matrix.functional_area_id);
-                          this.userSelectedSectors.push({
-                            name: name[0].name,
-                            id: name[0].id,
-                            sector_image: name[0].sector_image
-                          })
+                          if(name && name.length) {
+                            this.userSelectedSectors.push({
+                              name: name[0].name,
+                              id: name[0].id,
+                              sector_image: name[0].sector_image
+                            })
+                          }
                         }
                         if (mat === -1) {
                           let name = this.serviceSkills.filter(a => a.id === matrix.functional_area_id);
