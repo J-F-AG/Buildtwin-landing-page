@@ -288,6 +288,9 @@ export class VenderDetailsAarbeeComponent {
     this.domain = this.route.snapshot.params['id'];
     this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
+    if(this.route.snapshot.queryParams['isIframe']){
+      document.body.classList.add('iframeEmbed');
+    }
   }
   showPopup = false;
   openModal(html: HTMLElement | string = "", isParent: boolean, isChild: boolean, project) {
