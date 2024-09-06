@@ -1305,3 +1305,8 @@ img {
     }
 }
 html, body { height: 100%; }
+
+.iframeEmbed #hubspot-messages-iframe-container,
+.iframeEmbed #localize-widget {
+    display: none!important;
+}
