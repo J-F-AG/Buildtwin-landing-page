@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { LanguageService } from 'src/app/services/language.service';
 declare global {
   interface Window {
       hbspt: {
@@ -25,6 +26,8 @@ export class HdNavbarComponent {
     showPopup1=false;
 
     constructor(
+      public _languageService:LanguageService,
+
         public router: Router
     ) { }
 
