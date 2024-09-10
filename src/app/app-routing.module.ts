@@ -68,6 +68,39 @@ const routes: Routes = [
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
+
+
+
+    {path: 'AI-project-management/:lang', component: OnlineMeetingHomeComponent},
+    {path: 'business-intelligence/:lang', component: OnlineMeetingHomeFreelanceComponent},
+    {path: 'provide-service/:lang', component: ProvideServiceComponent},
+    {path: 'marketplace/:lang', component: TimeTrackingHomeComponent},
+    {path: 'training/:lang', component: ElearningSchoolComponent}, 
+    {path: 'events/:lang', component: EventsComponent},
+    {path: 'training-faq/:lang', component: FaqPageTrainingComponent},
+    {path: 'pricing/:lang', component: PricingPageComponent},
+    {path: 'good-reason/:lang', component: EmailMarketingHomeComponent}, 
+    {path: 'use-cases/:lang', component: BlogPageComponent},
+    {path: 'faq/:lang', component: FaqPageComponent},
+    {path: 'data-safety/:lang', component: DataSafetyComponent},
+    {path: 'integrations/:lang', component: IntegrationsPageComponent},
+    {path: 'contact/:lang', component: ContactPageComponent},
+    {path: 'about/:lang', component: AboutPageComponent},
+    {path: 'vender-details/:lang', component: VenderDetailsComponent},
+    {path: 'vender-details-sublimestructures/:lang', component: VenderDetailsSublimeComponent},
+    {path: 'vender-details-caldim/:lang', component: VenderDetailsCaldimComponent},
+    {path: 'vender-details-moldtek/:lang', component: VenderDetailsMoldtekComponent},
+    {path: 'partners/:id/:lang', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-aarbee/:lang', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-ui/:lang', component: VenderDetailsUiComponent},
+    {path: 'details/:lang', component: VenderDetailsAarbeeOldComponent},
+    {path: 'vender-details-allied/:lang', component: VenderDetailsAlliedComponent},
+    {path: 'courses-sample/:lang', component: CoursesDetailsStyleOneComponent},
+    {path: 'terms-of-service/:lang', component: DataPrivacyComponent},
+    {path: 'privacy-policy/:lang', component: PrivacyPolicyPageComponent},
+    {path: 'terms-conditions/:lang', component: TermsConditionsPageComponent},
+
+
     {path: 'coming-soon', component: ComingSoonComponent},
 
     // Old pages 
@@ -81,6 +114,10 @@ const routes: Routes = [
     {path: 'engineering-services/services', component: ServicesComponent},
     {path: 'engineering-services/sector', component: SectorComponent},
     {path: 'explore-services', component: BrowseServicesMainComponent},
+
+    {path: 'engineering-services/services/:lang', component: ServicesComponent},
+    {path: 'engineering-services/sector/:lang', component: SectorComponent},
+    {path: 'explore-services/:lang', component: BrowseServicesMainComponent},
 
 
 
