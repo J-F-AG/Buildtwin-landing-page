@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
     selector: 'app-courses',
@@ -7,7 +8,7 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 })
 export class CoursesComponent implements OnInit {
 
-    constructor(private elRef: ElementRef, private renderer: Renderer2) { 
+    constructor(private elRef: ElementRef, private renderer: Renderer2, public _languageService:LanguageService) { 
 
 
     }

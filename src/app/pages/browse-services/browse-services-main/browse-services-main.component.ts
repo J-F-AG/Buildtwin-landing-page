@@ -1,6 +1,7 @@
 import { Component, Injector, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-browse-services-main',
@@ -34,7 +35,8 @@ export class BrowseServicesMainComponent implements OnInit {
   }
   _jfOneHeaderService:any;
   constructor(
-    private injector: Injector
+    private injector: Injector,
+    public _languageService:LanguageService,
   ) {
     // document.body.classList.add('add-top-space');
   }

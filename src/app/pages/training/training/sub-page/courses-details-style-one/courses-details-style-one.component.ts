@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import lgVideo from 'lightgallery/plugins/video';
 import { BeforeSlideDetail } from 'lightgallery/lg-events';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
 	selector: 'app-courses-details-style-one',
@@ -9,7 +10,7 @@ import { BeforeSlideDetail } from 'lightgallery/lg-events';
 })
 export class CoursesDetailsStyleOneComponent implements OnInit {
 
-	constructor() { }
+	constructor(public _languageService:LanguageService) { }
 
 	ngOnInit(): void {}
 
