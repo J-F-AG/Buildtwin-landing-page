@@ -1,11 +1,12 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { LanguageService } from 'src/app/services/language.service';
 @Component({
   selector: 'app-coming-soon',
   templateUrl: './coming-soon.component.html',
   styleUrl: './coming-soon.component.scss'
 })
 export class ComingSoonComponent {
-  constructor(private elRef: ElementRef, private renderer: Renderer2) { 
+  constructor(private elRef: ElementRef, private renderer: Renderer2, public _languageService:LanguageService) { 
 
 
   }

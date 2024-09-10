@@ -8,7 +8,7 @@
             <h1>Coming Soon!</h1>
             <p>Stay Tuned! We are currently updating this section. <br>Meanwhile you can learn more about us or reach out to schedule a call.</p>
             <div class="btnGroup">
-                <a mat-button routerLink="/" class="default-btn">Learn More</a>
+                <a mat-button routerLink="/{{_languageService.currentLanguage}}" class="default-btn">Learn More</a>
                 <a mat-button (click)="call()" class="default-btn">Schedule a Call</a>
             </div>
         </div>
