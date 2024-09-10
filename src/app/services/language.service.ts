@@ -25,7 +25,11 @@ export class LanguageService {
     })
 
     if(languageFound && languageFound.value){
+      try{
         window['Localize'].setLanguage(languageFound.value);
+      }catch(E){
+        console.log(e)
+      }
 
         this.currentLanguage=languageFound.value;
     }
