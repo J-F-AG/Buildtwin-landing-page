@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-hd-trusted-by',
@@ -39,4 +40,5 @@ export class HdTrustedByComponent {
       }
     }
   }
+  constructor(public _languageService:LanguageService) { }
 }

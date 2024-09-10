@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LanguageService } from 'src/app/services/language.service';
 
 interface HbsptForms {
   create(config: any): void;
@@ -62,7 +63,8 @@ export class DataSafetyComponent {
       "<i class='ti ti-chevron-right'></i>",
     ]
   }
-
+  constructor(public _languageService:LanguageService) {
+  }
   ngOnInit(): void {
    
   const script = document.createElement('script');

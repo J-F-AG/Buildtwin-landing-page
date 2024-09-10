@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
     selector: 'app-online-meeting-home',
@@ -87,7 +88,7 @@ export class OnlineMeetingHomeComponent {
 
     
 
-    constructor(private titleService: Title,private router: Router) { 
+    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
 
       router.events.subscribe((val) => {
         this.scrollActivated = document.getElementById('scrollActivated');

@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { LanguageService } from 'src/app/services/language.service';
 
 
 @Component({
@@ -32,7 +33,7 @@ export class ProvideServiceComponent {
 navBar:any
 tabHead:any
 
-  constructor(private titleService: Title, private router: Router) {
+  constructor(private titleService: Title, private router: Router, public _languageService:LanguageService) {
     router.events.subscribe((val) => {
       this.scrollActivated = document.getElementById('scrollActivated');
       setTimeout(() => {
