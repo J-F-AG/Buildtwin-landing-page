@@ -45,6 +45,38 @@ const routes: Routes = [
 
 
 
+    {path: 'AI-project-management', component: OnlineMeetingHomeComponent},
+    {path: 'business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
+    {path: 'provide-service', component: ProvideServiceComponent},
+    {path: 'marketplace', component: TimeTrackingHomeComponent},
+    {path: 'training', component: ElearningSchoolComponent}, 
+    {path: 'events', component: EventsComponent},
+    {path: 'training-faq', component: FaqPageTrainingComponent},
+    {path: 'pricing', component: PricingPageComponent},
+    {path: 'good-reason', component: EmailMarketingHomeComponent}, 
+    {path: 'use-cases', component: BlogPageComponent},
+    {path: 'faq', component: FaqPageComponent},
+    {path: 'data-safety', component: DataSafetyComponent},
+    {path: 'integrations', component: IntegrationsPageComponent},
+    {path: 'contact', component: ContactPageComponent},
+    {path: 'about', component: AboutPageComponent},
+    {path: 'vender-details', component: VenderDetailsComponent},
+    {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
+    {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
+    {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
+    {path: 'partners/:id', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-ui', component: VenderDetailsUiComponent},
+    {path: 'details', component: VenderDetailsAarbeeOldComponent},
+    {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
+    {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
+    {path: 'terms-of-service', component: DataPrivacyComponent},
+    {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
+    {path: 'terms-conditions', component: TermsConditionsPageComponent},
+    {path: 'engineering-services/services', component: ServicesComponent},
+    {path: 'engineering-services/sector', component: SectorComponent},
+    {path: 'explore-services', component: BrowseServicesMainComponent},
+    
     {path: ':lang/AI-project-management', component: OnlineMeetingHomeComponent},
     {path: ':lang/business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
     {path: ':lang/provide-service', component: ProvideServiceComponent},
@@ -73,25 +105,13 @@ const routes: Routes = [
     {path: ':lang/terms-of-service', component: DataPrivacyComponent},
     {path: ':lang/privacy-policy', component: PrivacyPolicyPageComponent},
     {path: ':lang/terms-conditions', component: TermsConditionsPageComponent},
-
-
-    {path: 'coming-soon', component: ComingSoonComponent},
-
-    // Old pages 
-
-    // {path: 'features', component: FeaturesPageComponent},
-    // {path: 'services', component: ServicesPageComponent},
-    // {path: 'service-details', component: ServiceDetailsPageComponent},
-
-    // New Pages
-
-
-    {path: 'engineering-services/services', component: ServicesComponent},
-    {path: 'engineering-services/sector', component: SectorComponent},
+    {path: ':lang/engineering-services/services', component: ServicesComponent},
+    {path: ':lang/engineering-services/sector', component: SectorComponent},
     {path: ':lang/explore-services', component: BrowseServicesMainComponent},
 
 
 
+    {path: 'coming-soon', component: ComingSoonComponent},
 
 
     {path: '**', component: ComingSoonComponent} 
