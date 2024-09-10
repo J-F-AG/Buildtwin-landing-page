@@ -29,7 +29,7 @@ export class AppComponent {
 
         public router: Router
     ) {
-        localStorage.setItem("appVersion","0.0.11")
+        localStorage.setItem("appVersion","0.0.12")
         AOS.init();
     }
 
