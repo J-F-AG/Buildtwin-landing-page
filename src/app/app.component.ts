@@ -41,6 +41,8 @@ export class AppComponent {
         this.routerSubscription = this.router.events
             .pipe(filter(event => event instanceof NavigationEnd || event instanceof NavigationCancel))
             .subscribe(event => {
+                this._languageService.setCanonicalURL();
+                this._languageService.setLanguageTags();
 
                 console.log(event)
                 this.location = this.router.url;
