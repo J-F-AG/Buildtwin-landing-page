@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-hd-discover-projects',
@@ -9,7 +10,7 @@ import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 })
 export class HdDiscoverProjectsComponent implements OnInit {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public _languageService:LanguageService) {
   }
 
   splitArray(dataArray: any[], x: number) {
@@ -58,9 +59,9 @@ export class HdDiscoverProjectsComponent implements OnInit {
         this.discoverProjects = this.splitArray(this.projectsArray, 1);
       }
 
-      this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/featured-projects?page=1`).subscribe(res => {
-        debugger
-      })
+      // this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/featured-projects?page=1`).subscribe(res => {
+      //   debugger
+      // })
     }
   
     @ViewChild(NzCarouselComponent, { static: false }) myCarousel: NzCarouselComponent;

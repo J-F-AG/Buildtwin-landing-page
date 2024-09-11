@@ -1060,8 +1060,8 @@
         </div>
     </div>
 
-
-    <div class="block-section" id="available-service" *ngIf="formData?.engineeringData?.length">
+    <!-- *ngIf="formData?.engineeringData?.length" -->
+    <div class="block-section" id="available-service">
         <div class="container">
             <div class="head">
                 <h2>
@@ -1383,8 +1383,8 @@
                                     <h3>
                                         {{se.name}}
                                     </h3>
-                                    <figure>
-                                        <img src="{{se['feature_icon']}}" alt="{{se.name}}">
+                                    <figure *ngIf="se['service_image']">
+                                        <img src="{{se['service_image']}}" alt="{{se.name}}">
                                     </figure>
                                     <svg (click)="toggleContent(i)" class="trigger" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect width="40" height="40" rx="20" fill="black" fill-opacity="0.1"/>

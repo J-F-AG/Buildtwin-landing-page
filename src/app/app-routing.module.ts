@@ -40,11 +40,16 @@ const routes: Routes = [
 
     
     {path: '', component: HelpDeskHomeComponent},
+     {path: 'de', component: HelpDeskHomeComponent},
+    {path: 'en', component: HelpDeskHomeComponent},
+
+
+
     {path: 'AI-project-management', component: OnlineMeetingHomeComponent},
     {path: 'business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'provide-service', component: ProvideServiceComponent},
     {path: 'marketplace', component: TimeTrackingHomeComponent},
-    {path: 'training', component: ElearningSchoolComponent},
+    {path: 'training', component: ElearningSchoolComponent}, 
     {path: 'events', component: EventsComponent},
     {path: 'training-faq', component: FaqPageTrainingComponent},
     {path: 'pricing', component: PricingPageComponent},
@@ -68,22 +73,45 @@ const routes: Routes = [
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    {path: 'coming-soon', component: ComingSoonComponent},
-
-    // Old pages 
-
-    // {path: 'features', component: FeaturesPageComponent},
-    // {path: 'services', component: ServicesPageComponent},
-    // {path: 'service-details', component: ServiceDetailsPageComponent},
-
-    // New Pages
-
     {path: 'engineering-services/services', component: ServicesComponent},
     {path: 'engineering-services/sector', component: SectorComponent},
     {path: 'explore-services', component: BrowseServicesMainComponent},
+    
+    {path: ':lang/AI-project-management', component: OnlineMeetingHomeComponent},
+    {path: ':lang/business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
+    {path: ':lang/provide-service', component: ProvideServiceComponent},
+    {path: ':lang/marketplace', component: TimeTrackingHomeComponent},
+    {path: ':lang/training', component: ElearningSchoolComponent}, 
+    {path: ':lang/events', component: EventsComponent},
+    {path: ':lang/training-faq', component: FaqPageTrainingComponent},
+    {path: ':lang/pricing', component: PricingPageComponent},
+    {path: ':lang/good-reason', component: EmailMarketingHomeComponent}, 
+    {path: ':lang/use-cases', component: BlogPageComponent},
+    {path: ':lang/faq', component: FaqPageComponent},
+    {path: ':lang/data-safety', component: DataSafetyComponent},
+    {path: ':lang/integrations', component: IntegrationsPageComponent},
+    {path: ':lang/contact', component: ContactPageComponent},
+    {path: ':lang/about', component: AboutPageComponent},
+    {path: ':lang/vender-details', component: VenderDetailsComponent},
+    {path: ':lang/vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
+    {path: ':lang/vender-details-caldim', component: VenderDetailsCaldimComponent},
+    {path: ':lang/vender-details-moldtek', component: VenderDetailsMoldtekComponent},
+    {path: ':lang/partners/:id', component: VenderDetailsAarbeeComponent},
+    {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
+    {path: ':lang/vender-details-ui', component: VenderDetailsUiComponent},
+    {path: ':lang/details', component: VenderDetailsAarbeeOldComponent},
+    {path: ':lang/vender-details-allied', component: VenderDetailsAlliedComponent},
+    {path: ':lang/courses-sample', component: CoursesDetailsStyleOneComponent},
+    {path: ':lang/terms-of-service', component: DataPrivacyComponent},
+    {path: ':lang/privacy-policy', component: PrivacyPolicyPageComponent},
+    {path: ':lang/terms-conditions', component: TermsConditionsPageComponent},
+    {path: ':lang/engineering-services/services', component: ServicesComponent},
+    {path: ':lang/engineering-services/sector', component: SectorComponent},
+    {path: ':lang/explore-services', component: BrowseServicesMainComponent},
 
 
 
+    {path: 'coming-soon', component: ComingSoonComponent},
 
 
     {path: '**', component: ComingSoonComponent} 

@@ -1,7 +1,7 @@
 <div class="navbar-area" id="navBar" [ngClass]="{'sticky': isSticky}" >
     <div class="container">
         <nav class="navbar navbar-expand-lg" [class.active]="classApplied">
-            <a class="navbar-brand" routerLink="/">
+            <a class="navbar-brand" routerLink="/{{_languageService.currentLanguage}}">
                 <img src="assets/images/logo2.png" alt="logo" width="165" height="45">
                 <span>Beta</span>
             </a>
@@ -15,13 +15,13 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav font-poppins" >
                     <li class="nav-item " >
-                        <a routerLink="/explore-services" routerLinkActive="active" class="nav-link" >
+                        <a  [routerLink]="['/',_languageService.currentLanguage,'explore-services']" routerLinkActive="active" class="nav-link" >
                             Explore Services
                         </a>
                     </li>
 
                     <li class="nav-item  traning" routerLinkActive="active">
-                            <a class="nav-link" (click)="manageToggle($event)" routerLink="/provide-service" routerLinkActive="active"
+                            <a class="nav-link" (click)="manageToggle($event)"  [routerLink]="['/',_languageService.currentLanguage,'provide-service']" routerLinkActive="active"
                             [routerLinkActiveOptions]="{exact: true}">
                                 For Sellers
                             </a>                        
@@ -29,7 +29,7 @@
 
 
                     <li class="nav-item  traning" routerLinkActive="active">
-                        <a class=" nav-link" (click)="manageToggle($event)" routerLink="/marketplace" routerLinkActive="active"
+                        <a class=" nav-link" (click)="manageToggle($event)"[routerLink]="['/',_languageService.currentLanguage,'marketplace']"  routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}">
                             For Buyers
                         </a>                    
