@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LanguageService {
-   language = [{ lang: "/en", "value": "en" }, { lang: "/de", value: "de" }]
-   currentLanguage ='en';
+   language = [{ lang: "/en", "value": "/" }, { lang: "/de", value: "/de" }]
+   currentLanguage ='/';
   constructor(
     private metaService: Meta, private titleService: Title, private router: Router
   ) {

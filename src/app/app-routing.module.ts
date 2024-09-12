@@ -41,7 +41,7 @@ const routes: Routes = [
     
     {path: '', component: HelpDeskHomeComponent},
      {path: 'de', component: HelpDeskHomeComponent},
-    {path: 'en', component: HelpDeskHomeComponent},
+    // {path: 'en', component: HelpDeskHomeComponent},
 
 
 
