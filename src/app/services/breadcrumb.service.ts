@@ -1,11 +1,11 @@
-    import { Injectable } from '@angular/core';
-    import { Router, NavigationEnd } from '@angular/router';
-    import { filter } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
-    @Injectable({
+@Injectable({
     providedIn: 'root'
-    })
-    export class BreadcrumbService {
+})
+export class BreadcrumbService {
     breadcrumbs: any[] = [];
 
     constructor(private router: Router) {
@@ -13,18 +13,47 @@
 
     generateBreadcrumbs(url: string): void {
         this.breadcrumbs = [];
-        const paths = url.split('/').filter(path => path);
-        let pathUrl = '';
+        const paths: any = url.split('/').filter(path => path);
+        let language = '';
+        if (paths.length) {
+            if (paths[0] === 'de') {
+                paths.shift()
+                language = '/de';
+            }
+        }
 
-        paths.forEach((path, index) => {
-        pathUrl += `/${path}`;
-        this.breadcrumbs.push({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": this.getDisplayName(path),
-            "item": `https://www.buildtwin.com${pathUrl}`
-        });
-        });
+        if (!paths.length) {
+            this.breadcrumbs.push({
+                "@type": "ListItem",
+                "position": 1,
+                "name": 'Home',
+                "item": `https://www.buildtwin.com${language}`
+            });
+        }
+        let pathArray = this.getDisplayName(paths);
+        if (pathArray.length) {
+            this.breadcrumbs.push({
+                "@type": "ListItem",
+                "position": 1,
+                "name": 'Home',
+                "item": `https://www.buildtwin.com${language}`
+            });
+            this.breadcrumbs.push({
+                "@type": "ListItem",
+                "position": 2,
+                "name": this.getDisplayName(paths),
+                "item": `https://www.buildtwin.com${url}`
+            });
+        }
+        // paths.forEach((path, index) => {
+        // pathUrl += `/${path}`;
+        // this.breadcrumbs.push({
+        //     "@type": "ListItem",
+        //     "position": index + 1,
+        //     "name": this.getDisplayName(path),
+        //     "item": `https://www.buildtwin.com${pathUrl}`
+        // });
+        // });
     }
 
     getDisplayName(path: string): string {
@@ -52,4 +81,4 @@
         };
         return names[path] || path;
     }
-    }
+}
