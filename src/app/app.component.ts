@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { Router, NavigationCancel, NavigationEnd } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import * as AOS from "aos";
 import { LanguageService } from './services/language.service';
+import { BreadcrumbService } from './services/breadcrumb.service';
 declare let $: any;
 
 @Component({
@@ -23,12 +24,14 @@ export class AppComponent {
 
     location: any;
     routerSubscription: any;
-
+    breadcrumbs: any[] = [];
     constructor(
+        private breadcrumbService: BreadcrumbService,
         private _languageService:LanguageService,
-
+        private renderer: Renderer2,
         public router: Router
     ) {
+        // Directly assign the breadcrumbs array from the service
         localStorage.setItem("appVersion","0.0.12")
         AOS.init();
     }
@@ -41,7 +44,11 @@ export class AppComponent {
         this.routerSubscription = this.router.events
             .pipe(filter(event => event instanceof NavigationEnd || event instanceof NavigationCancel))
             .subscribe(event => {
-
+                this._languageService.setCanonicalURL();
+                this._languageService.setLanguageTags();
+                this.breadcrumbService.generateBreadcrumbs(this.router.url);
+                this.breadcrumbs = this.breadcrumbService.breadcrumbs;
+                this.injectBreadcrumbScript();
                 console.log(event)
                 this.location = this.router.url;
 
@@ -54,6 +61,8 @@ export class AppComponent {
             });
     }
 
-
+// Dynamically inject breadcrumb schema script if breadcrumbs are present
+injectBreadcrumbScript() {
+  }
    
 }

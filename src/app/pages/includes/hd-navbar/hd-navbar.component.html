@@ -1,7 +1,7 @@
 <div class="navbar-area" id="navBar" [ngClass]="{'sticky': isSticky}" >
     <div class="container">
         <nav class="navbar navbar-expand-lg" [class.active]="classApplied">
-            <a class="navbar-brand" routerLink="/{{_languageService.currentLanguage}}">
+            <a class="navbar-brand" routerLink="{{_languageService.currentLanguage}}">
                 <img src="assets/images/logo2.png" alt="logo" width="165" height="45">
                 <span>Beta</span>
             </a>
@@ -15,13 +15,13 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav font-poppins" >
                     <li class="nav-item " >
-                        <a  [routerLink]="['/',_languageService.currentLanguage,'explore-services']" routerLinkActive="active" class="nav-link" >
+                        <a [routerLink]="[_languageService.currentLanguage,'explore-services']" routerLinkActive="active" class="nav-link" >
                             Explore Services
                         </a>
                     </li>
 
                     <li class="nav-item  traning" routerLinkActive="active">
-                            <a class="nav-link" (click)="manageToggle($event)"  [routerLink]="['/',_languageService.currentLanguage,'provide-service']" routerLinkActive="active"
+                            <a class="nav-link" (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'provide-service']" routerLinkActive="active"
                             [routerLinkActiveOptions]="{exact: true}">
                                 For Sellers
                             </a>                        
@@ -29,7 +29,7 @@
 
 
                     <li class="nav-item  traning" routerLinkActive="active">
-                        <a class=" nav-link" (click)="manageToggle($event)"[routerLink]="['/',_languageService.currentLanguage,'marketplace']"  routerLinkActive="active"
+                        <a class=" nav-link" (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'marketplace']" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}">
                             For Buyers
                         </a>                    
@@ -50,7 +50,7 @@
                                         <div class="text-primary font-medium">Why BuildTwin</div>
                                         <div class="margin-top-7 height-1 background-secondary"></div>
                                         <div class="flex-row margin-top-24">
-                                            <a routerLink="/good-reason" routerLinkActive="active" (click)="manageToggle($event)"
+                                            <a [routerLink]="[_languageService.currentLanguage,'good-reason']" routerLinkActive="active" (click)="manageToggle($event)"
                                                 [routerLinkActiveOptions]="{exact: true}"
                                                 class="flex-grow flex-column">
                                                 <em class="flex-row font-bold">
@@ -78,7 +78,7 @@
                                                     Discover why we're the preferred choice for engineering consultancies.
                                                 </p>
                                             </a>
-                                            <a (click)="manageToggle($event)" routerLink="/data-safety" routerLinkActive="active"
+                                            <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'data-safety']" routerLinkActive="active"
                                                 [routerLinkActiveOptions]="{exact: true}"
                                                 class="flex-grow flex-column">
                                                 <em class="flex-row font-bold">
@@ -111,7 +111,7 @@
                                                    How we keep your data secure and private.
                                                 </p>
                                             </a>
-                                            <a  (click)="manageToggle($event)" routerLink="/integrations" routerLinkActive="active"
+                                            <a  (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'integrations']" routerLinkActive="active"
                                             [routerLinkActiveOptions]="{exact: true}"
                                             class="flex-grow flex-column">
                                             <em class="flex-row font-bold">
@@ -147,7 +147,7 @@
                                                 Seamlessly integrate our solutions into your existing workflows.
                                             </p>
                                         </a>
-                                            <a  (click)="manageToggle($event)" routerLink="/use-cases" routerLinkActive="active"
+                                            <a  (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'use-cases']" routerLinkActive="active"
                                                 [routerLinkActiveOptions]="{exact: true}"
                                                 class="flex-grow flex-column">
                                                 <em class="flex-row font-bold">
@@ -177,7 +177,7 @@
                                                 </p>
                                             </a>
                                         
-                                        <a (click)="manageToggle($event)" routerLink="/faq" routerLinkActive="active"
+                                        <a (click)="manageToggle($event)"  [routerLink]="[_languageService.currentLanguage,'faq']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column">
                                         <em class="flex-row font-bold">
@@ -204,7 +204,7 @@
                                             Quick answers to your most common questions.
                                         </p>
                                         </a>
-                                        <a (click)="manageToggle($event)" routerLink="/contact" routerLinkActive="active"
+                                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'contact']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column">
                                         <em class="flex-row font-bold">
@@ -237,7 +237,7 @@
                                         </p>
                                         </a>
 
-                                        <a (click)="manageToggle($event)" routerLink="/AI-project-management" routerLinkActive="active"
+                                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'AI-project-management']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column">
                                         <em class="flex-row font-bold">
@@ -261,7 +261,7 @@
                                             <br>(Plug & Play)
                                         </p>
                                     </a>
-                                    <a (click)="manageToggle($event)" routerLink="/business-intelligence" routerLinkActive="active"
+                                    <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'business-intelligence']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column">
                                         <em class="flex-row font-bold">
@@ -274,7 +274,7 @@
                                             <br>(Plug & Play)
                                         </p>
                                     </a>
-                                    <a (click)="manageToggle($event)" routerLink="/training" routerLinkActive="active"
+                                    <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'training']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column">
                                         <em class="flex-row font-bold">
@@ -316,7 +316,7 @@
                                             Discover BuildTwin's mission and learn about our dedication to connecting global talent and 
                                             fostering innovation in the engineering field.
                                         </p>
-                                        <a routerLink="/about" class="cta-button">The Company</a>
+                                        <a [routerLink]="[_languageService.currentLanguage,'about']" class="cta-button">The Company</a>
                                     </section>
                                 </aside>
                             </div>
