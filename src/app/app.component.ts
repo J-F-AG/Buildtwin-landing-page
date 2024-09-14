@@ -63,29 +63,6 @@ export class AppComponent {
 
 // Dynamically inject breadcrumb schema script if breadcrumbs are present
 injectBreadcrumbScript() {
-    // First remove any existing breadcrumb script
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {
-      this.renderer.removeChild(document.head, existingScript);
-    }
-
-    // Check if breadcrumbs array has items
-    if (this.breadcrumbs.length > 0) {
-      const jsonLdScriptTag = this.renderer.createElement('script');
-      jsonLdScriptTag.type = 'application/ld+json';
-      
-      const breadcrumbSchema = {
-        "@context": "https://schema.org/",
-        "@type": "BreadcrumbList",
-        "itemListElement": this.breadcrumbs
-      };
-      
-      // Add breadcrumb JSON to script tag
-      jsonLdScriptTag.text = JSON.stringify(breadcrumbSchema);
-      
-      // Append new script to head
-      this.renderer.appendChild(document.head, jsonLdScriptTag);
-    }
   }
    
 }
