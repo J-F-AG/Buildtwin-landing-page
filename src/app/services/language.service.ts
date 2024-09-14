@@ -45,20 +45,6 @@ export class LanguageService {
   }
 
   setCanonicalURL() {
-    const url = this.router.url;
-    const currentUrl = window.location.href; // Get the full URL
-    const urlObj = new URL(currentUrl);      // Create a URL object
-    const baseUrl = `${urlObj.protocol}//${urlObj.hostname}`;
-
-    let link: HTMLLinkElement = document.querySelector(`link[rel='canonical']`) || null;
-    if (link) {
-      link.href = baseUrl + url;
-    } else {
-      link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', baseUrl + url);
-      document.head.appendChild(link);
-    }
   }
 
   setLanguageTags() {
