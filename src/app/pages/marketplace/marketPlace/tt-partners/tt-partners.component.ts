@@ -50,6 +50,6 @@ export class TtPartnersComponent {
 
   redirect(domain, company_name) {
     localStorage.setItem("domain", domain);
-    this.router.navigate([`/${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
+    this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
   }
 }
