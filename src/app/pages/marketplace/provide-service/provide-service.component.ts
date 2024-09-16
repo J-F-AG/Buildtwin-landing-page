@@ -12,6 +12,7 @@ import { LanguageService } from 'src/app/services/language.service';
 export class ProvideServiceComponent {
 
   showPopup1=false;
+  showPopup=false;
   activeState: number = 1
   activeState2: number = 11
   title = 'BuildTwin - Software for technical Teams';
@@ -214,6 +215,12 @@ let HideMenu = document.getElementById('tabContent');
         }
   
 
+        callStatus(){
+          this.showPopup =true
+          }
+          closePopupStatus($event) {
+            this.showPopup = false;
+          }
 
 
   

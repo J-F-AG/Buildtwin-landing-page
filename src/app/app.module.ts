@@ -205,6 +205,7 @@ import { sectorSampleProjectsComponent } from './pages/sector/sample-projects/sa
 import { sectorMeetingStandardsComponent } from './pages/sector/meeting-standards/meeting-standards.component';
 import { sectorDirectBookingComponent } from './pages/sector/direct-booking/direct-booking.component';
 import { sectorSolutionProviderComponent } from './pages/sector/hd-solution-provider/hd-solution-provider.component';
+import { GetStartedModule } from './include-component/get-started/get-started.module';
 
 @NgModule({
   declarations: [
@@ -413,7 +414,8 @@ import { sectorSolutionProviderComponent } from './pages/sector/hd-solution-prov
     GlobalBannerModule,
     BtSelectGroupModule,
     NzDropDownModule,
-    HubspotModule
+    HubspotModule,
+    GetStartedModule
   ],
   providers: [
     Title,

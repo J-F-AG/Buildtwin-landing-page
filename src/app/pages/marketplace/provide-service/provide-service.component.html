@@ -2,7 +2,64 @@
 
 <app-om-banner-freelance2></app-om-banner-freelance2>
 
-
+<app-get-started-block>
+    <h2>
+        Get started <span>today</span>
+    </h2>
+    <div class="block-wrapper">
+        <div class="block">
+            <figure>
+                <img src="assets/images/sellers1.png" alt="" width="388" height="253">
+            </figure>
+            <div class="content">
+                <h3>
+                    Get your Business listings for free
+                </h3>
+                <p>
+                    Claim your business listing for free today and boost your online visibility effortlessly.
+                </p>
+                <a href="https://www.buildtwin.com/get-started" class="btnNew">
+                    Get started for FREE
+                    <i class="ti ti-arrow-narrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="assets/images/sellers2.png" alt="" width="388" height="253">
+            </figure>
+            <div class="content">
+                <h3>
+                    Get pre-qualified and invited for private tenders
+                </h3>
+                <p>
+                    Are you ready? Get your business pre-qualified and get invited to submit bids for private projects.
+                </p>
+                <a href="javascript:;" (click)="callStatus()" class="btnNew">
+                    Get pre-qualified
+                    <i class="ti ti-arrow-narrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="assets/images/sellers3.png" alt="" width="388" height="253">
+            </figure>
+            <div class="content">
+                <h3>
+                    Take to our Sales Advisor (all timezones) 
+                </h3>
+                <p>
+                    Talk to our dedicated sales team to start your journey witih BuildTwin. 
+                </p>
+                <a href="javascript:;" (click)="callStatus()" class="btnNew">
+                    Schedule Call
+                    <i class="ti ti-arrow-narrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</app-get-started-block>
 
 
 <app-experence>
@@ -511,8 +568,8 @@
                                                     transform="matrix(-1 0 0 1 16 0)"
                                                 />
                                             </clipPath>
-                                        </defs></svg
-                                ></a>
+                                        </defs></svg>
+                                </a>
                             </td>
                         </tr>
                         <tr>
@@ -1552,3 +1609,4 @@
   </div>
   </div>
 </div>
+<app-hubspot [ngClass]="{'active':showPopup}" [name]="'arun'" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, Renderer2 } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-hubspot',
@@ -7,11 +7,17 @@ import { Component, ElementRef, EventEmitter, OnInit, Output, Renderer2 } from '
 })
 export class HubspotComponent implements OnInit {
   @Output() closePopupStatus: EventEmitter<any> = new EventEmitter<any>();
+  @Input() name: string = '';
+  path: any = 'https://success.buildtwin.com/meetings/buildtwin?embed=true'
   constructor(
     private elRef: ElementRef, private renderer: Renderer2,
   ) { }
 
   ngOnInit(): void {
+    if(this.name === 'arun'){
+      this.path = 'https://meetings-eu1.hubspot.com/arun-vs?embed=true'
+    }else {
+    }
     this.loadScript();
   }
 

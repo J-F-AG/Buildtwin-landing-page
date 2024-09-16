@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LanguageService } from 'src/app/services/language.service';
 @Component({
     selector: 'app-time-tracking-home',
     templateUrl: './time-tracking-home.component.html',
@@ -35,8 +36,9 @@ export class TimeTrackingHomeComponent {
     "<i class='ti ti-chevron-right'></i>",
   ]
   }
-
-    constructor(private titleService: Title,private router: Router) { 
+  showPopup1=false;
+  showPopup=false;
+    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
 
       router.events.subscribe((val) => {
         this.scrollActivated = document.getElementById('scrollActivated');
@@ -53,6 +55,18 @@ export class TimeTrackingHomeComponent {
     ngOnInit() {
         this.titleService.setTitle(this.title);
 
+        const script = document.createElement('script');
+        script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+        script.async = true;
+        script.charset = 'utf-8';
+      
+        // Append script to the document body
+        document.body.appendChild(script);
+      
+        // Initialize HubSpot form after the script is loaded
+        script.onload = () => {
+          this.initHubSpotForm();
+        };
         
 
     }
@@ -101,4 +115,30 @@ export class TimeTrackingHomeComponent {
         }, 100); // Adjust the delay if needed
       }
     }
+
+    private initHubSpotForm() {
+      // Create the HubSpot form
+      window.hbspt.forms.create({
+        region: "eu1",
+        portalId: "144368007",
+        formId: "4f09f05d-b46d-4497-b49e-4bf67f826066",
+        target: '#hubspotFormContainer21'
+      });
+    
+        }
+    call(){
+      this.showPopup1 =true
+      }
+      closePopup1(){
+        this.showPopup1 =false
+      
+        }
+
+
+        callStatus(){
+          this.showPopup =true
+          }
+          closePopupStatus($event) {
+            this.showPopup = false;
+          }
 }
