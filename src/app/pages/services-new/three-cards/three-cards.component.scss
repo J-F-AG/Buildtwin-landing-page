@@ -1,0 +1,11 @@
+.threeCardsWrapper{margin-top: -140px; position: relative; margin-bottom: 80px;}
+.threeCardsWrapper .container {display: flex; gap: 20px;}
+.threeCardsWrapper .container .col-3{width: 31%;border-radius: 12px;
+    border: 1px solid #C8B7FF;
+    background: linear-gradient(180deg, #F8F6FF 0%, #FFF 100%); padding: 20px 20px 10px ;}
+
+.threeCardsWrapper .col-3 figure{
+    display: flex; width: 100%; align-items: center; justify-content: center; margin-bottom: 28px;
+}
+.threeCardsWrapper h3{ font-size: 22px; font-weight: 600;}
+.threeCardsWrapper p{ font-size: 14px; font-weight: 400;}

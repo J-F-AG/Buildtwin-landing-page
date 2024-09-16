@@ -205,6 +205,21 @@ import { sectorSampleProjectsComponent } from './pages/sector/sample-projects/sa
 import { sectorMeetingStandardsComponent } from './pages/sector/meeting-standards/meeting-standards.component';
 import { sectorDirectBookingComponent } from './pages/sector/direct-booking/direct-booking.component';
 import { sectorSolutionProviderComponent } from './pages/sector/hd-solution-provider/hd-solution-provider.component';
+import { ServicesNewComponent } from './pages/services-new/services-new.component';
+import { BannerComponent } from './pages/services-new/banner/banner.component';
+import { DrawingFreelancersComponent } from './pages/services-new/drawing-freelancers/drawing-freelancers.component';
+import { E2eEncryptionComponent } from './pages/services-new/e2e-encryption/e2e-encryption.component';
+import { FaqBuildtwinComponent } from './pages/services-new/faq-buildtwin/faq-buildtwin.component';
+import { FreeOfferFormComponent } from './pages/services-new/free-offer-form/free-offer-form.component';
+import { HowItWorksNewComponent } from './pages/services-new/how-it-works/how-it-works.component';
+import { LiveTrackingNewComponent } from './pages/services-new/live-tracking/live-tracking.component';
+import { PlugPlayNewComponent } from './pages/services-new/plug-play/plug-play.component';
+import { PrecastServiceComponent } from './pages/services-new/precast-service/precast-service.component';
+import { SampleDrawingComponent } from './pages/services-new/sample-drawing/sample-drawing.component';
+import { ServicesOfferedComponent } from './pages/services-new/services-offered/services-offered.component';
+import { ThreeCardsComponent } from './pages/services-new/three-cards/three-cards.component';
+import { TopVendorsComponent } from './pages/services-new/top-vendors/top-vendors.component';
+import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.component';
 
 @NgModule({
   declarations: [
@@ -376,8 +391,24 @@ import { sectorSolutionProviderComponent } from './pages/sector/hd-solution-prov
    sectorSampleProjectsComponent,
    sectorMeetingStandardsComponent,
    sectorDirectBookingComponent,
-   sectorSolutionProviderComponent
-    
+   sectorSolutionProviderComponent,
+
+   ServicesNewComponent,
+   BannerComponent,
+   DrawingFreelancersComponent,
+   E2eEncryptionComponent,
+   HowItWorksNewComponent,
+   LiveTrackingNewComponent,
+   PlugPlayNewComponent,
+   PrecastServiceComponent,
+   SampleDrawingComponent,
+   ServicesOfferedComponent,
+   ThreeCardsComponent,
+   TopVendorsComponent,
+   TrustByNewComponent,
+   
+   FreeOfferFormComponent,
+   FaqBuildtwinComponent    
   ],
   imports: [    
     BrowserModule,
