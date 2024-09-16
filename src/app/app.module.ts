@@ -220,6 +220,7 @@ import { ServicesOfferedComponent } from './pages/services-new/services-offered/
 import { ThreeCardsComponent } from './pages/services-new/three-cards/three-cards.component';
 import { TopVendorsComponent } from './pages/services-new/top-vendors/top-vendors.component';
 import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.component';
+import { GetStartedModule } from './include-component/get-started/get-started.module';
 
 @NgModule({
   declarations: [
@@ -444,7 +445,8 @@ import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.comp
     GlobalBannerModule,
     BtSelectGroupModule,
     NzDropDownModule,
-    HubspotModule
+    HubspotModule,
+    GetStartedModule
   ],
   providers: [
     Title,
