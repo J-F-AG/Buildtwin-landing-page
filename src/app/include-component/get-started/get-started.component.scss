@@ -1,0 +1,91 @@
+:host ::ng-deep {
+    h2 {
+        font-size: 40px;
+        text-align: center;
+        font-family: var(--syneFontFamily);
+        font-weight: 500;
+        margin-bottom: 40px;
+        span {
+            font-family: "Jeff Script";
+            font-weight: 400;
+            color: #886de0;
+            font-size: 1.25em;
+        }
+    }
+    .block-wrapper {
+        display: flex;
+        gap: 40px;
+        width: calc(100%);
+        .block {
+            border: 1px solid #D8D8D8;
+            background: #FFF;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 26.666%);
+            figure {
+                width: 100%;
+                aspect-ratio: 388 / 253;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 12px;
+                }
+            }
+            .content {
+                padding: 20px;
+                flex-direction: column;
+                display: flex;
+                flex-grow: 1;
+                h3 {
+                    font-size: 18px;
+                    line-height: 1.2;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
+                p {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 1.667;
+                    flex-grow: 1;
+                    min-height: 70px;
+                }
+                .btnNew {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 12px 20px;
+                    border-radius: 4px;
+                    background: #886DE0;
+                    color: white;
+                    font-size: 14px;
+                    .ti {
+                        color: white;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    :host ::ng-deep {
+        .block-wrapper .block {
+            width: calc(50% - 20px);
+        }
+        .block-wrapper {
+            flex-wrap: wrap;
+        }
+    }
+    .ptb-100 {
+        padding-top: 0;
+        padding-bottom: 0px;
+    }
+}
+@media (max-width: 479px) {
+    :host ::ng-deep {
+        .block-wrapper .block {
+            width: 100%;
+        }
+    }
+}
