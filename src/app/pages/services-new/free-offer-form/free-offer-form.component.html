@@ -1,0 +1,76 @@
+
+<div class="formHeader" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+    <strong>Get FREE offer for </strong>
+    <h3>Structural Detailing Pre-Cast</h3>
+    <div>from 5+ pre-qualified vendors</div>
+</div>
+
+    <div class="formContainer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+        <div class="topPart">
+            Select services from Buildtwin 
+        </div>
+        <div class="middlePart">
+            <div class="formRow">
+
+                <div class="selectBox precastField">
+                    <div>
+                        <span class="selectedValue">{{selectedPrecastServices.label}}</span>
+                    </div>
+                    <app-bt-select [options]="precastServices" (selectedTabChange)="selectService($event)" [selectedInput]="selectedPrecastServices" ></app-bt-select>
+                </div>
+                
+            </div>
+            
+            <div class="formRow">
+
+                <div class="selectBox precastField">
+                    <div>
+                        <span class="selectedValue">{{selectedPrecastServices2.label}}</span>
+                    </div>
+                    <app-bt-select [options]="precastServices2" (selectedTabChange)="selectService2($event)" [selectedInput]="selectedPrecastServices2" ></app-bt-select>
+                </div>
+                
+            </div>
+            
+            <div class="formRow">
+
+                <div class="selectBox precastField">
+                    <div>
+                        <span class="selectedValue">{{selectedPrecastServices3.label}}</span>
+                    </div>
+                    <app-bt-select [options]="precastServices3" (selectedTabChange)="selectService3($event)" [selectedInput]="selectedPrecastServices3" ></app-bt-select>
+                </div>
+                
+            </div>
+        </div>
+        <div class="bottomPart">
+            <h5>Start Enquiry</h5>
+            <p>If it take few minutes and then sit back and relax our customer care person contact you asap</p>
+
+            <div class="buttonContainer">
+            <button mat-button class="default-btn"> Start enquiry now </button>
+            </div>
+
+            <div class="integrationsContainer">
+                <strong>Additional Integrations:</strong>
+                <div class="integrationsList">
+                    <div class="listItem">
+                        <lib-svg-icon class="integrationsIcon" [name]="'AIschedule'" [size]="17"
+                                                [sizeH]="17"></lib-svg-icon>
+                        AI schedule</div>
+                    <div class="listItem">
+                        <lib-svg-icon class="integrationsIcon" [name]="'CDEIntegration'" [size]="17"
+                                                [sizeH]="17"></lib-svg-icon>
+                        CDE Integration</div>
+                    <div class="listItem">
+                        <lib-svg-icon class="integrationsIcon" [name]="'LiveTracking'" [size]="17"
+                                                [sizeH]="17"></lib-svg-icon>
+                        Live Tracking</div>
+                    <div class="listItem">
+                        <lib-svg-icon class="integrationsIcon" [name]="'RFIManagement'" [size]="17"
+                                                [sizeH]="17"></lib-svg-icon>
+                        RFI Management</div>
+                </div>
+            </div>
+        </div>
+    </div>

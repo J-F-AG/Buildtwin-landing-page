@@ -32,6 +32,7 @@ import { VenderDetailsUiComponent } from './pages/vender/vender-details-ui/vende
 import { ServicesComponent } from './pages/Services/services/services.component';
 import { SectorComponent } from './pages/sector/sector.component';
 import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
+import { ServicesNewComponent } from './pages/services-new/services-new.component';
 
 
 
@@ -43,8 +44,7 @@ const routes: Routes = [
      {path: 'de', component: HelpDeskHomeComponent},
     // {path: 'en', component: HelpDeskHomeComponent},
 
-
-
+    
     {path: 'AI-project-management', component: OnlineMeetingHomeComponent},
     {path: 'business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
     {path: 'provide-service', component: ProvideServiceComponent},
@@ -76,6 +76,7 @@ const routes: Routes = [
     {path: 'engineering-services/services', component: ServicesComponent},
     {path: 'engineering-services/sector', component: SectorComponent},
     {path: 'explore-services', component: BrowseServicesMainComponent},
+    {path: 'services', component: ServicesNewComponent},
     
     {path: ':lang/AI-project-management', component: OnlineMeetingHomeComponent},
     {path: ':lang/business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
@@ -108,7 +109,7 @@ const routes: Routes = [
     {path: ':lang/engineering-services/services', component: ServicesComponent},
     {path: ':lang/engineering-services/sector', component: SectorComponent},
     {path: ':lang/explore-services', component: BrowseServicesMainComponent},
-
+    {path: ':lang/services', component: ServicesNewComponent},    
 
 
     {path: 'coming-soon', component: ComingSoonComponent},
