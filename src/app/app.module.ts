@@ -221,6 +221,7 @@ import { ThreeCardsComponent } from './pages/services-new/three-cards/three-card
 import { TopVendorsComponent } from './pages/services-new/top-vendors/top-vendors.component';
 import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.component';
 import { GetStartedModule } from './include-component/get-started/get-started.module';
+import { LanguageChangeModule } from './include-component/language-change/language-change.module';
 
 @NgModule({
   declarations: [
@@ -446,7 +447,8 @@ import { GetStartedModule } from './include-component/get-started/get-started.mo
     BtSelectGroupModule,
     NzDropDownModule,
     HubspotModule,
-    GetStartedModule
+    GetStartedModule,
+    LanguageChangeModule
   ],
   providers: [
     Title,

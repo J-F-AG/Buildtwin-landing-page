@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LanguageService {
-  language = [{ lang: "/en", "value": "/" }, { lang: "/de", value: "/de" }]
+  language = [{ lang: "/en", "value": "/", text: 'en' }, { lang: "/de", value: "/de", text: 'de' }]
   currentLanguage = '/';
   constructor(
     private metaService: Meta, private titleService: Title, private router: Router
@@ -76,5 +76,24 @@ export class LanguageService {
       link.setAttribute('hreflang', tag.hreflang);
       document.body.prepend(link);
     });
+  }
+
+  checkAndSwitchVersion(currentUrl: string, lang: string): void {
+    const url = new URL(currentUrl);
+
+    // Use a regex to check if the path starts with "/de" followed by either end of string or a slash (to ensure "/de" is a standalone segment)
+    // const isDeVersion = /^\/de(\/|$)/.test(url.pathname);
+
+    if (lang === 'en') {
+      // If the URL starts with '/de', switch to the version without '/de'
+      const newPath = url.pathname.replace(/^\/de/, ''); // Remove only the leading '/de'
+      const newUrl = `${url.origin}${newPath}${url.search}${url.hash}`;
+      window.location.href = newUrl;
+    } else {
+      // If the URL does not start with '/de', add '/de' at the beginning of the path
+      const newPath = `/de${url.pathname}`;
+      const newUrl = `${url.origin}${newPath}${url.search}${url.hash}`;
+      window.location.href = newUrl;
+    }
   }
 }

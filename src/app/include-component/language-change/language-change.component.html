@@ -1,0 +1,8 @@
+<div class="selected-language" nz-dropdown [nzDropdownMenu]="menu">
+    {{selectedLang}}
+</div>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu nzSelectable>
+      <li class="tt" nz-menu-item *ngFor="let item of _languageService.language" (click)="selecteLanguage(item)">{{item['text']}}</li>
+    </ul>
+  </nz-dropdown-menu>
