@@ -21,7 +21,7 @@ export class GlobalService {
   }
   public saveUser(payload:any){
    
-    const url = 'https://6ev8zqp6l6.execute-api.eu-central-1.amazonaws.com/V1/onboarding/save-customer-type';
+    const url = 'https://fxb5vcoax1.execute-api.ap-southeast-1.amazonaws.com/production/onboarding/save-customer-type';
     return this.http.post<any>(url,payload);
   }
 }

@@ -657,7 +657,7 @@ export class VenderDetailsAarbeeComponent {
 
   getBusinessListing() {
     this.showPageLoader = true;
-    this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`)
+    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`)
     .pipe(
       catchError(err => {
         this.showPageLoader = false;
@@ -676,8 +676,8 @@ export class VenderDetailsAarbeeComponent {
           }
           // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
           forkJoin([
-            this.http.get('https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields'),
-            this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?domain=${queryParam}`)
+            this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
+            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${queryParam}`)
           ])
             .pipe(
               catchError(err => {

@@ -44,7 +44,7 @@
                                 </div>
 
                                 <div class="cardFooter">
-                                    <a [routerLink]="item.link">{{item.linkTitle}}</a>
+                                    <a [routerLink]="_languageService.currentLanguage+item.link">{{item.linkTitle}}</a>
                                     <lib-svg-icon class="arrowIcon" [name]="'arrow-icon'" [size]="14"
                                         [sizeH]="22"></lib-svg-icon>
                                 </div>

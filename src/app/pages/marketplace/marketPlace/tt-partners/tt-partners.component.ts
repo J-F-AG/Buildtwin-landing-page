@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, retry } from 'rxjs';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-tt-partners',
@@ -12,13 +13,13 @@ export class TtPartnersComponent {
   companyList = [];
   showPageLoader = false;
 
-  constructor(private http: HttpClient, private router: Router) {
+  constructor(private http: HttpClient, private router: Router, public _languageService:LanguageService) {
     this.getListOfCompany()
   }
   getListOfCompany() {
     this.showPageLoader = true;
     // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
-    this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`)
+    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`)
     .pipe(
       catchError(err => {
         this.showPageLoader = false;
@@ -49,6 +50,6 @@ export class TtPartnersComponent {
 
   redirect(domain, company_name) {
     localStorage.setItem("domain", domain);
-    this.router.navigate([`/partners/${company_name.replace(/ /g,'')}`]);
+    this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
   }
 }

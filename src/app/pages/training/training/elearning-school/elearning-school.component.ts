@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
     selector: 'app-elearning-school',
@@ -55,7 +56,7 @@ export class ElearningSchoolComponent implements OnInit {
   }
 
 
-    constructor(private titleService: Title,private router: Router) { 
+    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
 
       router.events.subscribe((val) => {
         this.scrollActivated = document.getElementById('scrollActivated');

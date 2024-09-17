@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { getDate } from 'date-fns';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-drawings',
@@ -211,7 +212,7 @@ export class DrawingsComponent implements OnInit {
     selectEndDate: number;
     selectEndYear: number;
   
-    constructor() { }
+    constructor(public _languageService:LanguageService) { }
   
     ngOnInit(): void {
       if(window.innerWidth < 767) {

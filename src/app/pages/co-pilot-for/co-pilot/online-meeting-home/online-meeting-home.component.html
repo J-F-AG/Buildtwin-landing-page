@@ -211,7 +211,7 @@
           </div>
 
           <div class="btnCover">
-            <a href="http://buildtwin.dev.s3-website.ap-south-1.amazonaws.com/get-started">
+            <a href="https://www.buildtwin.com/get-started">
                 FREE 14 Days Trial
             </a>
           </div>
@@ -261,7 +261,7 @@
                                     everything into an operable cockpit. Such as what deliverables need to be delivered
                                     by when or what RFIs are still open.
                                 </p>
-                                <a routerLink="/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
                             </div>
 
                         </li>
@@ -276,7 +276,7 @@
                                 <p>
                                     The DSM system helps you to stay on top of things and provides meaningful insight into project performance and how it can be improved. With our anonymized (opt-in) benchmark feature, you also get insight into how you perform against peers.
                                 </p>
-                                <a routerLink="/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
                             </div>
 
                         </li>
@@ -290,7 +290,7 @@
                                 <p>
                                     We manage files for you, between your team and your client. By uploading the deliverables in the right name convention to CDE and internally tracking each revision.It is as easy as saving your file locally.
                                 </p>
-                                <a routerLink="/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
                             </div>
 
                         </li>
@@ -304,13 +304,13 @@
                                 <p>
                                     BuildTwin tracks all RFIs across all channels and shows the discussion and result of each discussion in an easy-to-understand overview.Coming soon: Based on building code, technical standards, and trained data on constructability, BuildTwin AI will provide suggested answers to technical questions.
                                 </p>
-                                <a routerLink="/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
                             </div>
 
                         </li>
                     </ul>
 
-                    <a mat-button id="scrollSecond" routerLink="/good-reason" [fragment]="'features'" class="default-btn" style="width: 180px;">See All Features</a>
+                    <a mat-button id="scrollSecond" routerLink="{{_languageService.currentLanguage}}/good-reason" [fragment]="'features'" class="default-btn" style="width: 180px;">See All Features</a>
                 </div>
                 <div class="tabRIght">
                     <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">

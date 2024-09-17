@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { GlobalService } from 'src/app/services/GlobalService';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-hd-banner',
@@ -8,7 +9,7 @@ import { GlobalService } from 'src/app/services/GlobalService';
   styleUrls: ['./hd-banner.component.scss']
 })
 export class HdBannerComponent {
-  constructor(private globalService: GlobalService) { }
+  constructor(private globalService: GlobalService, public _languageService:LanguageService) { }
   getGlobalValue(): string {
     return this.globalService.getGlobalValue();
   }

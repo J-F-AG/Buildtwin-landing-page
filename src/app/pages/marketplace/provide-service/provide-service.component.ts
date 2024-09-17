@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { LanguageService } from 'src/app/services/language.service';
 
 
 @Component({
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
 export class ProvideServiceComponent {
 
   showPopup1=false;
+  showPopup=false;
   activeState: number = 1
   activeState2: number = 11
   title = 'BuildTwin - Software for technical Teams';
@@ -32,7 +34,7 @@ export class ProvideServiceComponent {
 navBar:any
 tabHead:any
 
-  constructor(private titleService: Title, private router: Router) {
+  constructor(private titleService: Title, private router: Router, public _languageService:LanguageService) {
     router.events.subscribe((val) => {
       this.scrollActivated = document.getElementById('scrollActivated');
       setTimeout(() => {
@@ -213,6 +215,12 @@ let HideMenu = document.getElementById('tabContent');
         }
   
 
+        callStatus(){
+          this.showPopup =true
+          }
+          closePopupStatus($event) {
+            this.showPopup = false;
+          }
 
 
   
