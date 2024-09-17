@@ -206,6 +206,7 @@ import { sectorMeetingStandardsComponent } from './pages/sector/meeting-standard
 import { sectorDirectBookingComponent } from './pages/sector/direct-booking/direct-booking.component';
 import { sectorSolutionProviderComponent } from './pages/sector/hd-solution-provider/hd-solution-provider.component';
 import { GetStartedModule } from './include-component/get-started/get-started.module';
+import { LanguageChangeModule } from './include-component/language-change/language-change.module';
 
 @NgModule({
   declarations: [
@@ -415,7 +416,8 @@ import { GetStartedModule } from './include-component/get-started/get-started.mo
     BtSelectGroupModule,
     NzDropDownModule,
     HubspotModule,
-    GetStartedModule
+    GetStartedModule,
+    LanguageChangeModule
   ],
   providers: [
     Title,
