@@ -656,8 +656,17 @@ export class VenderDetailsAarbeeComponent {
   }
 
   getBusinessListing() {
+
+    let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`
+    this.route.queryParams.subscribe(params => {
+      const status = params['status'];
+      // Check if both parameters are available
+      if (status === 'unpublished') {
+        url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=${'Unpublished'}`
+      }
+    });
     this.showPageLoader = true;
-    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`)
+    this.http.get(url)
     .pipe(
       catchError(err => {
         this.showPageLoader = false;
