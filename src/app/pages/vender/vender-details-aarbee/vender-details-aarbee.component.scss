@@ -1149,6 +1149,9 @@ ul {
                 margin: 0;
                 line-height: 1.2;
                 padding-right: 60px;
+                &.one {
+                    max-width: 33.3%;
+                }
                 .small {
                     display: block;
                     font-size: 16px;
@@ -1429,6 +1432,28 @@ ul {
     }
 }
 
+@media only screen and (max-width : 940px) {
+    #software {
+        .popular {
+            li {
+                    &.one {
+                        max-width: 50%;
+                    }
+                }
+            }
+        }
+}
+@media only screen and (max-width : 740px) {
+    #software {
+        .popular {
+            li {
+                    &.one {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+}
 @media only screen and (max-width : 767px) {
     .page-wrapper {
         padding-top: 100px;

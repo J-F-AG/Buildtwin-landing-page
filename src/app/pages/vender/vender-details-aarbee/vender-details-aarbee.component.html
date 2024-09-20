@@ -1375,7 +1375,7 @@
                     <owl-carousel-o [options]="serviceSlider">
                         <ng-container *ngFor="let se of formData?.highlightServices; let i = index;">
                             <ng-template carouselSlide>
-                                <li>
+                                <li [ngClass]="{'one': (formData?.highlightServices?.length <= 3)}">
                                         
                                     <small class="small">
                                         Specialized services
