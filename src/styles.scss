@@ -1310,3 +1310,7 @@ html, body { height: 100%; }
 .iframeEmbed #localize-widget {
     display: none!important;
 }
+#localize-widget {
+    opacity: 0;
+    visibility: hidden;
+}
