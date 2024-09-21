@@ -70,9 +70,9 @@ export class FreeOfferFormComponent {
 
   fetchData() {
     forkJoin([
-      this._http.patch(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/marketplaceBookService
+      this._http.patch(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/production/marketplaceBookService
 `, { "mode": "building_code" }),
-      this._http.patch(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/marketplaceBookService
+      this._http.patch(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/production/marketplaceBookService
 `, { "mode": "pre_cast_services" })
     ])
       .pipe(
@@ -125,7 +125,7 @@ export class FreeOfferFormComponent {
       };
 
       forkJoin([
-        this._http.post(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/marketplaceBookService/book-service
+        this._http.post(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/production/marketplaceBookService/book-service
   `, this.payload)
       ])
         .pipe(
