@@ -11,7 +11,7 @@
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="middlePart">
 
-            <div class="formRow" *ngIf="showdropDown">
+            <!-- <div class="formRow" *ngIf="showdropDown">
 
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid)}">
@@ -27,7 +27,7 @@
                     <span>Sector selection is required.</span>
                 </div>
 
-            </div>
+            </div> -->
             <div class="formRow" *ngIf="showdropDown">
 
                 <div class="selectBox precastField"
