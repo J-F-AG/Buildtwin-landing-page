@@ -52,11 +52,18 @@ export class FreeOfferFormComponent {
       description: [''], // Description validation
     });
     // this.route.queryParams.subscribe(params => {
-    //   const serviceId = params['service_id'];
+    //   const serviceId = params['service'];
     //   if (serviceId) {
-    //     this.payload['serviceId'] = serviceId;
+    //     this.myForm.get('serviceId')?.setValue(serviceId);
     //   }
     // });
+    // Get the current URL
+    const url = new URL(window.location.href);
+    // Extract the 'service' parameter
+    const serviceId = url.searchParams.get('service');
+    if (serviceId) {
+      this.myForm.get('serviceId')?.setValue(serviceId);
+    }
   }
   selectSector(selectedOption: any) {
     this.myForm.get('selectedPrecastServices')?.setValue(selectedOption); // Update the form control with the selected value
@@ -70,9 +77,9 @@ export class FreeOfferFormComponent {
 
   fetchData() {
     forkJoin([
-      this._http.patch(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/production/marketplaceBookService
+      this._http.patch(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService
 `, { "mode": "building_code" }),
-      this._http.patch(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/production/marketplaceBookService
+      this._http.patch(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService
 `, { "mode": "pre_cast_services" })
     ])
       .pipe(
@@ -125,7 +132,7 @@ export class FreeOfferFormComponent {
       };
 
       forkJoin([
-        this._http.post(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/production/marketplaceBookService/book-service
+        this._http.post(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService/book-service
   `, this.payload)
       ])
         .pipe(
@@ -143,7 +150,15 @@ export class FreeOfferFormComponent {
             this.myForm.reset(); // Clears the form fields
             this.myForm.get('selectedPrecastServices')?.setValue(null); // If needed, reset the selected value specifically
             this.myForm.get('buildingCodeId')?.setValue(null); // If needed, reset the selected value specifically
-            this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
+            // this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
+
+            // Get the current URL
+            const url = new URL(window.location.href);
+            // Extract the 'service' parameter
+            const serviceId = url.searchParams.get('service');
+            if (serviceId) {
+              this.myForm.get('serviceId')?.setValue(serviceId);
+            }
             setInterval(() => {
               this.showdropDown = true;
             }, 10);

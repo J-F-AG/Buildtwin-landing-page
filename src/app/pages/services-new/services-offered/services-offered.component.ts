@@ -23,21 +23,21 @@ export class ServicesOfferedComponent {
   
       // discoverProjectSection
       projectsArray = [
-        { img: 'assets/images/airportImg.jpg', projectTitle: 'Airports'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Residential, commercial and industrial buildings'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Data centers'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Power plants'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Chemical plants'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Manufacturing plants'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Parking structures'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Schools'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Hospitals'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Warehouses'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Bridges, tunnels, water & waste'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Metros'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Roadways'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Retaining walls'},
-        { img: 'assets/images/commercialBulding.jpg', projectTitle: 'Foundations'},
+        { img: 'assets/images/solutionProvider1.jpg', projectTitle: 'Airports'},
+        { img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Residential, commercial and industrial buildings'},
+        { img: 'assets/images/solutionProvider3.jpg', projectTitle: 'Data centers'},
+        { img: 'assets/images/solutionProvider5.jpg', projectTitle: 'Power plants'},
+        { img: 'assets/images/solutionProvider11.jpg', projectTitle: 'Chemical plants'},
+        { img: 'assets/images/solutionProvider13.jpg', projectTitle: 'Manufacturing plants'},
+        { img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Parking structures'},
+        { img: 'assets/images/solutionProvider8.jpg', projectTitle: 'Schools'},
+        { img: 'assets/images/solutionProvider12.jpg', projectTitle: 'Hospitals'},
+        { img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Warehouses'},
+        { img: 'assets/images/solutionProvider10.jpg', projectTitle: 'Bridges, tunnels, water & waste'},
+        { img: 'assets/images/solutionProvider14.jpg', projectTitle: 'Metros'},
+        { img: 'assets/images/solutionProvider15.jpg', projectTitle: 'Roadways'},
+        { img: 'assets/images/solutionProvider6.jpg', projectTitle: 'PRE-CAST'},
+        { img: 'assets/images/solutionProvider7.jpg', projectTitle: 'Residential Buildings'},
     
       ]
     
