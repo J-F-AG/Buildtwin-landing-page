@@ -1,54 +1,108 @@
-
 <div class="formHeader" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
     <strong>Get FREE offer for </strong>
     <h3>Structural Detailing Pre-Cast</h3>
     <div>from 5+ pre-qualified vendors</div>
 </div>
 
-    <div class="formContainer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-        <div class="topPart">
-            Select services from Buildtwin 
-        </div>
+<div class="formContainer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+    <div class="topPart">
+        Select services from Buildtwin
+    </div>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="middlePart">
-            <div class="formRow">
 
-                <div class="selectBox precastField">
-                    <div>
-                        <span class="selectedValue">{{selectedPrecastServices.label}}</span>
-                    </div>
-                    <app-bt-select [options]="precastServices" (selectedTabChange)="selectService($event)" [selectedInput]="selectedPrecastServices" ></app-bt-select>
-                </div>
-                
-            </div>
-            
-            <div class="formRow">
+            <div class="formRow" *ngIf="showdropDown">
 
-                <div class="selectBox precastField">
+                <div class="selectBox precastField"
+                    [ngClass]="{'error-border': (myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid)}">
                     <div>
-                        <span class="selectedValue">{{selectedPrecastServices2.label}}</span>
+                        <span class="selectedValue">
+                            {{ myForm.get('serviceId')?.value ?
+                            serviceObj[myForm.get('serviceId').value]['service_name'] : 'Select service' }}
+                        </span>
                     </div>
-                    <app-bt-select [options]="precastServices2" (selectedTabChange)="selectService2($event)" [selectedInput]="selectedPrecastServices2" ></app-bt-select>
+                    <app-bt-select [options]="serviceArray" (selectedTabChange)="selectService($event)"></app-bt-select>
                 </div>
-                
-            </div>
-            
-            <div class="formRow">
+                <div *ngIf="myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid" class="error-message">
+                    <span>Sector selection is required.</span>
+                </div>
 
-                <div class="selectBox precastField">
-                    <div>
-                        <span class="selectedValue">{{selectedPrecastServices3.label}}</span>
-                    </div>
-                    <app-bt-select [options]="precastServices3" (selectedTabChange)="selectService3($event)" [selectedInput]="selectedPrecastServices3" ></app-bt-select>
-                </div>
-                
             </div>
+            <div class="formRow" *ngIf="showdropDown">
+
+                <div class="selectBox precastField"
+                    [ngClass]="{'error-border': (myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid)}">
+                    <div>
+                        <span class="selectedValue">
+                            {{ myForm.get('selectedPrecastServices')?.value ?
+                            sectorObj[myForm.get('selectedPrecastServices').value]['service_name'] : 'Select sector' }}
+                        </span>
+                    </div>
+                    <app-bt-select [options]="sectorArray" (selectedTabChange)="selectSector($event)"></app-bt-select>
+                </div>
+                <div *ngIf="myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid"
+                    class="error-message">
+                    <span>Sector selection is required.</span>
+                </div>
+
+            </div>
+
+            <div class="formRow" *ngIf="showdropDown">
+
+                <div class="selectBox precastField"
+                    [ngClass]="{'error-border': (myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid)}">
+                    <div>
+                        <span class="selectedValue">
+                            {{ myForm.get('buildingCodeId')?.value ?
+                            buildingCodeObj[myForm.get('buildingCodeId').value]['building_code'] : 'Select Building
+                            code' }}
+                        </span>
+                    </div>
+                    <app-bt-select [options]="buildingCodeArray"
+                        (selectedTabChange)="selectBuildingCode($event)"></app-bt-select>
+                </div>
+                <div *ngIf="myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid"
+                    class="error-message">
+                    <span>Building code selection is required.</span>
+                </div>
+
+            </div>
+
+            <div class="formRow">
+                <div class="selectBox"
+                    [ngClass]="{'error-border': (myForm.get('email')?.touched && myForm.get('email')?.invalid)}">
+                    <input class="input-text" type="text" placeholder="Enter Email" formControlName="email">
+                </div>
+                <div *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid" class="error-message">
+                    <span *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</span>
+                    <span *ngIf="myForm.get('email')?.errors?.['email']">Invalid email format.</span>
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="selectBox"
+                    [ngClass]="{'error-border': (myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid)}">
+                    <input class="input-text" type="text" placeholder="Project Name" formControlName="projectName">
+                </div>
+                <div *ngIf="myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid"
+                    class="error-message">
+                    <span *ngIf="myForm.get('projectName')?.errors?.['required']">Project Name is required.</span>
+                </div>
+            </div>
+            <div class="formRow">
+                <div class="selectBox">
+                    <textarea class="textarea-description" formControlName="description"
+                        placeholder="Description"></textarea>
+                </div>
+            </div>
+
         </div>
         <div class="bottomPart">
             <h5>Start Enquiry</h5>
             <p>If it take few minutes and then sit back and relax our customer care person contact you asap</p>
 
             <div class="buttonContainer">
-            <button mat-button class="default-btn"> Start enquiry now </button>
+                <button mat-button class="default-btn" type="submit" [disabled]="myForm.invalid"> Submit Enquiry
+                </button>
             </div>
 
             <div class="integrationsContainer">
@@ -56,21 +110,26 @@
                 <div class="integrationsList">
                     <div class="listItem">
                         <lib-svg-icon class="integrationsIcon" [name]="'AIschedule'" [size]="17"
-                                                [sizeH]="17"></lib-svg-icon>
-                        AI schedule</div>
+                            [sizeH]="17"></lib-svg-icon>
+                        AI schedule
+                    </div>
                     <div class="listItem">
                         <lib-svg-icon class="integrationsIcon" [name]="'CDEIntegration'" [size]="17"
-                                                [sizeH]="17"></lib-svg-icon>
-                        CDE Integration</div>
+                            [sizeH]="17"></lib-svg-icon>
+                        CDE Integration
+                    </div>
                     <div class="listItem">
                         <lib-svg-icon class="integrationsIcon" [name]="'LiveTracking'" [size]="17"
-                                                [sizeH]="17"></lib-svg-icon>
-                        Live Tracking</div>
+                            [sizeH]="17"></lib-svg-icon>
+                        Live Tracking
+                    </div>
                     <div class="listItem">
                         <lib-svg-icon class="integrationsIcon" [name]="'RFIManagement'" [size]="17"
-                                                [sizeH]="17"></lib-svg-icon>
-                        RFI Management</div>
+                            [sizeH]="17"></lib-svg-icon>
+                        RFI Management
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
+</div>
