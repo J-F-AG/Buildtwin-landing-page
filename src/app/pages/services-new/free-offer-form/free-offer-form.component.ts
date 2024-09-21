@@ -1,4 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { catchError, forkJoin } from 'rxjs';
+import { NzMessageModule, NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-free-offer-form',
@@ -9,72 +14,148 @@ import { Component } from '@angular/core';
 })
 export class FreeOfferFormComponent {
 
+  showdropDown: boolean = true;
 
-  precastServices = [
-    {
-      label: 'Select software',
-      value: 'Select software'
-    },
-    {
-      label: 'software 1',
-      value: 'software 1'
-    },
-    {
-      label: 'software 2',
-      value: 'software 2'
-    },
-  ]
+  // enquiryPayload = {
+  //   "buildingCodeId": 13, //static
+  //   "preQualified": false,
+  //   "type": "get_quote", //static
+  //   "serviceId": 0,
+  //   "subServiceId": 0,
+  //   "user_email": "",
+  //   "project_description": "",
+  //   "project_name": ""
+  // }
 
-  selectedPrecastServices = this.precastServices[0];
+  buildingCodeArray = [];
+  serviceArray = [];
+  sectorArray = [];
+  buildingCodeObj = {};
+  serviceObj = {};
+  sectorObj = {};
+  payload: any = {
+    "preQualified": false,
+    "type": "get_quote", //static
+  }
+  myForm: FormGroup;
 
+  constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService) {
+    this.fetchData()
+  }
+  ngOnInit(): void {
+    this.myForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]], // Email field validation
+      projectName: ['', Validators.required], // Project Name validation
+      selectedPrecastServices: [null], // Validation for selectedPrecastServices
+      buildingCodeId: [null], // Static building code
+      serviceId: [null, Validators.required], // New control for service ID
+      description: [''], // Description validation
+    });
+    // this.route.queryParams.subscribe(params => {
+    //   const serviceId = params['service_id'];
+    //   if (serviceId) {
+    //     this.payload['serviceId'] = serviceId;
+    //   }
+    // });
+  }
+  selectSector(selectedOption: any) {
+    this.myForm.get('selectedPrecastServices')?.setValue(selectedOption); // Update the form control with the selected value
+  }
   selectService(selectedOption: any) {
-    this.selectedPrecastServices = this.precastServices.find(e => e.value === selectedOption);
+    this.myForm.get('serviceId')?.setValue(selectedOption); // Update the form control with the selected value
+  }
+  selectBuildingCode(selectedOption: any) {
+    this.myForm.get('buildingCodeId')?.setValue(selectedOption); // Update the form control with the selected value
   }
 
-
-  
-  precastServices2 = [
-    {
-      label: 'Select building code',
-      value: 'Select building code'
-    },
-    {
-      label: 'building code 1',
-      value: 'building code 1'
-    },
-    {
-      label: 'building code 2',
-      value: 'building code 2'
-    },
-  ]
-
-  selectedPrecastServices2 = this.precastServices2[0];
-
-  selectService2(selectedOption2: any) {
-    this.selectedPrecastServices2 = this.precastServices2.find(e => e.value === selectedOption2);
+  fetchData() {
+    forkJoin([
+      this._http.patch(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/marketplaceBookService
+`, { "mode": "building_code" }),
+      this._http.patch(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/marketplaceBookService
+`, { "mode": "pre_cast_services" })
+    ])
+      .pipe(
+        catchError(err => {
+          return err;
+        }),
+      )
+      .subscribe(res => {
+        console.log(res);
+        let localbuildingCodeArray = res[0]['data'];
+        let localserviceArray = res[1]['data'][0]['services'];
+        let localsectorArray = res[1]['data'][0]['sectors'];
+        localbuildingCodeArray.filter(e => {
+          this.buildingCodeObj[e.id] = e;
+          let obj = {
+            label: e['building_code'],
+            value: e['id']
+          };
+          this.buildingCodeArray.push(obj);
+        });
+        localserviceArray.filter(e => {
+          this.serviceObj[e.id] = e;
+          let obj = {
+            label: e['service_name'],
+            value: e['id']
+          };
+          this.serviceArray.push(obj)
+        });
+        localsectorArray.filter(e => {
+          this.sectorObj[e.id] = e;
+          let obj = {
+            label: e['service_name'],
+            value: e['id']
+          };
+          this.sectorArray.push(obj);
+        });
+      })
   }
-  
-  
-  precastServices3 = [
-    {
-      label: 'Select services addons',
-      value: 'Select services addons'
-    },
-    {
-      label: 'addons 1',
-      value: 'addons 1'
-    },
-    {
-      label: 'addons 2',
-      value: 'addons 2'
-    },
-  ]
 
-  selectedPrecastServices3 = this.precastServices3[0];
+  onSubmit() {
+    if (this.myForm.valid) {
+      this.payload = {
+        ...this.payload, // Retain existing static properties
+        buildingCodeId: this.myForm.get('buildingCodeId')?.value, // Using form value
+        serviceId: this.myForm.get('serviceId')?.value, // New service ID
+        subServiceId: this.myForm.get('selectedPrecastServices')?.value,
+        user_email: this.myForm.get('email')?.value,
+        project_description: this.myForm.get('description')?.value,
+        project_name: this.myForm.get('projectName')?.value
+      };
 
-  selectService3(selectedOption3: any) {
-    this.selectedPrecastServices3 = this.precastServices3.find(e => e.value === selectedOption3);
+      forkJoin([
+        this._http.post(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/marketplaceBookService/book-service
+  `, this.payload)
+      ])
+        .pipe(
+          catchError(err => {
+            return err;
+          }),
+        )
+        .subscribe(res => {
+          if(res[0]['status'] === 'success'){
+            console.log(res);
+            console.log('Form submitted with payload:', this.payload);
+            this.message.create('success', `${res[0]['data']['message']}`);
+            this.showdropDown = false;
+            // Reset the form after submission
+            this.myForm.reset(); // Clears the form fields
+            this.myForm.get('selectedPrecastServices')?.setValue(null); // If needed, reset the selected value specifically
+            this.myForm.get('buildingCodeId')?.setValue(null); // If needed, reset the selected value specifically
+            this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
+            setInterval(() => {
+              this.showdropDown = true;
+            }, 10);
+          }else {
+            this.message.create('error', `${res[0]['data']['message']}`);
+          }
+        })
+
+    } else {
+      console.log('Form is invalid');
+      this.myForm.markAllAsTouched(); // Mark all fields as touched to show errors
+    }
   }
-
 
 }

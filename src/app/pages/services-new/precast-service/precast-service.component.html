@@ -3,12 +3,15 @@
 
         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
             <h2>
-                Precast Detailing Service
+                All-in-one pre-cast detailing services
             </h2>
 
             <p>
-                Precast detailing services provide accurate drawings, designs, and plans for manufacturing and assembling
-                precast concrete components.
+                Our pre-cast detailing services cover everything from precise drawings and 
+blueprints to documents for manufacturing and assembling of pre-cast 
+components. Our standard processes at every step ensure that your team of 
+architects, engineers, or construction heads can execute high-end building 
+projects with minimal time and effort.
             </p>
         </div>
         <!-- tabs -->
@@ -29,25 +32,9 @@
                 <p><small>{{ detail.subContent }}</small></p>
             </div>
             <div class="dataList">
-                <div>
+                <div *ngFor="let item of detail['items']">
                     <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
-                    <span>AS 3850.1</span>
-                </div>
-                <div>
-                    <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
-                    <span>ACI 318</span>
-                </div>
-                <div>
-                    <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
-                    <span>IS 15917</span>
-                </div>
-                <div>
-                    <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
-                    <span>BS 8297</span>
-                </div>
-                <div>
-                    <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
-                    <span>EN 13369</span>
+                    <span>{{item}}</span>
                 </div>
             </div>
         </div>
