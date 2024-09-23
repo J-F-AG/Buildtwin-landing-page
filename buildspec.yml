@@ -8,8 +8,8 @@ env:
     NEW_SECRET_KEY: "codepipeline:NEW_SECRET_KEY"
     AOA_ACCESS_KEY: "codepipeline:AOA_ACCESS_KEY"
     AOA_SECRET_KEY: "codepipeline:AOA_SECRET_KEY"
-    ACCESS_KEY_APP: "codepipeline:ACCESS_KEY_APP"
-    SECRET_KEY_APP: "codepipeline:SECRET_KEY_APP"
+    NEW_ACCESS_KEY1: "codepipeline:NEW_ACCESS_KEY1"
+    NEW_SECRET_KEY1: "codepipeline:NEW_SECRET_KEY1"
 
 phases:
   install:
