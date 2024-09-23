@@ -1,0 +1,120 @@
+.sectionContainer{ background-color: #f8f8f8; position: relative;
+    padding: 34px 0 60px;
+    .sectionTop{ 
+        margin-bottom: 40px;
+        padding-right: 160px;
+      .heading{
+        font-size: 32px; 
+        font-weight: 600;
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+      p{font-size: 16px;
+        font-weight: 400;}
+    }
+  }
+  
+  
+  .relativeContainer{position: relative;}
+  
+  ::ng-deep .offeredCarousel {
+    .owl-carousel{position: static;}
+  .owl-nav {
+    display: flex;
+    position: absolute; right: 0;
+    top: 0;
+    margin-top: 0;
+  
+    .owl-prev,
+    .owl-next {
+      text-indent: 110%;
+      overflow: hidden;
+      transition: background-color 0.2s ease;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: solid 1px #E5E5EA;
+      background-color: white;
+      position: relative;
+  
+      &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: solid 1px black;
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(45deg);
+        left: 50%;
+        top: 50%;
+      }
+  
+      &:hover {
+        background-color: white;
+      }
+    }
+  
+    .owl-prev::before {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      margin-left: 2px;
+    }
+  
+    .owl-next::before {
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      margin-left: -2px;
+    }
+  }
+  
+  .owl-dots{ margin-left: 60px;
+    .owl-dot{
+      span{width: 16px;
+        height: 8px; transition: all 0.2s ease 0;}
+        &.active{
+          span{width: 30px; background: #6448BD;}
+        }
+    }
+  }
+  }
+  
+  ::ng-deep .offeredCarouselWrapper{overflow: hidden;
+    .offeredCarousel{width: calc(100% - 220px); 
+      .owl-carousel .owl-stage-outer{ overflow: visible; padding-bottom: 40px;
+        &::after{ content: ""; display: block; position: absolute; height: 100%; width: 220px; right: -220px; top: 0;
+          background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(248,248,248,0.5) 50%,rgba(248,248,248,1) 100%);
+        }
+      }
+      .owl-item{
+        overflow: hidden;
+      }
+      
+      }
+  }
+
+  .projectItem{border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #E9E9E9;
+    background-color: white;
+    .projectImage{border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 12px;
+    }
+    .projectTitle{font-size: 18px; font-weight: 700; margin-bottom: 0;}
+}
+ 
+@media (max-width:767px){
+  .sectionContainer .sectionTop {
+    padding-right: 0;
+  }
+  .sectionContainer .sectionTop .heading {
+    font-size: 22px;
+    padding-right: 80px;
+  }
+  .offeredCarouselWrapper .offeredCarousel {
+    width: 100%;
+  }
+  :host ::ng-deep .offeredCarousel .owl-dots {
+    margin-left: 0;
+  }
+}

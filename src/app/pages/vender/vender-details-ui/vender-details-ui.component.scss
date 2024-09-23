@@ -854,7 +854,7 @@ ul {
     Faq Wrapper css start
 */
 #faq-wrapper {
-    .container {
+    .container,.container-with-right {
         display: flex;
         gap: 30px;
         .left {

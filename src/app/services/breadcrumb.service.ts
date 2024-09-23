@@ -77,7 +77,10 @@ export class BreadcrumbService {
             'about': 'About',
             'terms-of-service': 'Terms of Service',
             'privacy-policy': 'Privacy Policy',
-            'terms-conditions': 'Terms and Conditions'
+            'terms-conditions': 'Terms and Conditions',
+            
+            'services': 'Services',
+            // 'servicesNew': 'Services New'
         };
         return names[path] || path;
     }
