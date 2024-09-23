@@ -9,8 +9,8 @@
 </div>
     <div class="tabbing">
         <div class="line">
-            <span (click)="tabinbg(1)" [ngClass]="{'active':activeState >= 1}"> <strong>1 </strong><em>Tendering</em></span>
-            <span (click)="tabinbg(2)" [ngClass]="{'active':activeState >= 2}"><strong>2 </strong> <em>Bidding & Matching</em></span>
+            <span (click)="tabinbg(1)" [ngClass]="{'active':activeState >= 1}"> <strong>1 </strong><em>Post the Job</em></span>
+            <span (click)="tabinbg(2)" [ngClass]="{'active':activeState >= 2}"><strong>2 </strong> <em>Invite Vendors</em></span>
             <span (click)="tabinbg(3)" [ngClass]="{'active':activeState >= 3}"><strong>3 </strong> <em>Awarding</em></span>
             <span (click)="tabinbg(4)" [ngClass]="{'active':activeState >= 4}"><strong>4 </strong> <em>Commercial Contracting</em></span>
       <div class="svgFlex">
@@ -31,10 +31,11 @@
            <img src="assets/images/tab1.png" alt="" width="" height="">
         </div>
         <div class="tab1" *ngIf="activeState===2">
-            <span>Bidding & Matching</span> 
+            <span>Invite Vendors</span> 
  
             <p>
-                BuildTwin's sophisticated AI system finds the right vendors and enables an easy-to-run <br>bidding process with sampling, verifying information, and running a pre-qualification process.            </p>
+                You are in full control. Invite selected vendors based on your requirements to submit a bid. 
+            </p>
  
             <img src="assets/images/tab2.png" alt="" width="" height="">
          </div>

@@ -1,16 +1,72 @@
 <app-hd-navbar></app-hd-navbar>
 
-
 <!-- Logos -->
 <app-tt-banner></app-tt-banner>
 
-
+<div class="ptb-100">
+    <app-get-started-block>
+        <h2>
+            Get started <span>today</span>
+        </h2>
+        <div class="block-wrapper">
+            <div class="block">
+                <figure>
+                    <img src="assets/images/buyer1.png" alt="" width="388" height="253">
+                </figure>
+                <div class="content">
+                    <h3>
+                        Get 5+ competitive offer for your project today. 
+                    </h3>
+                    <p>
+                        Work with BuildTwin to find the most competitive bid for your projects from <u>pre-qualified</u> vendors. 
+                    </p>
+                    <a href="https://www.buildtwin.com/get-started" class="btnNew">
+                        Get started for FREE
+                        <i class="ti ti-arrow-narrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="block">
+                <figure>
+                    <img src="assets/images/buyer2.png" alt="" width="388" height="253">
+                </figure>
+                <div class="content">
+                    <h3>
+                        Explore engineering services 
+                    </h3>
+                    <p>
+                        Browse engineering services offered by 100s of pre-qualified vendors across the world. 
+                    </p>
+                    <a routerLink="{{_languageService.currentLanguage}}/explore-services" class="btnNew">
+                        Explore Services
+                        <i class="ti ti-arrow-narrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="block">
+                <figure>
+                    <img src="assets/images/buyer3.png" alt="" width="388" height="253">
+                </figure>
+                <div class="content">
+                    <h3>
+                        Take to our Sales Advisor (all timezones) 
+                    </h3>
+                    <p>
+                        Talk to our dedicated sales team to start your journey with BuildTwin. 
+                    </p>
+                    <a href="javascript:;" (click)="callStatus()" class="btnNew">
+                        Schedule Call
+                        <i class="ti ti-arrow-narrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </app-get-started-block>
+</div>
 <!-- Testimmonials -->
 <app-tt-testimonials></app-tt-testimonials>
-
 <!-- 3 Businesslines BuildTwin -->
 <app-tt-services></app-tt-services>
-
 
 <!-- Plug & Play -->
 <app-hd-integrations></app-hd-integrations>
@@ -18,13 +74,11 @@
 <!-- Services -->
 <app-socials-media-info></app-socials-media-info>
 
-
 <!-- Digital Procurement -->
 <app-task-management></app-task-management>
 
 <!-- Plug & Play -->
 <app-tt-about></app-tt-about>
-
 
 <app-how-buildtwin-helps>
     <div class="buildtwinHelps" id="scrollActivated">
@@ -42,14 +96,6 @@
                                 [ngClass]="{'active':activeState === 1}">
                                 <i></i> Quality Management
                             </li>
-                            <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"
-                                [ngClass]="{'active':activeState === 2}">
-                                <i></i> Continuous Improvement
-                            </li>
-                            <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"
-                                [ngClass]="{'active':activeState === 3}">
-                                <i></i> Documenting Everything
-                            </li>
                             <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"
                                 [ngClass]="{'active':activeState === 4}">
                                 <i></i> Live Project Progress
@@ -59,9 +105,9 @@
                                 <i></i> Live RFI Tracking
                             </li>
                             <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"
-                                [ngClass]="{'active':activeState === 6}">
-                                <i></i> Simulation
-                            </li>
+                            [ngClass]="{'active':activeState === 6}">
+                            <i></i> File Management
+                        </li>
                         </ul>
                     </div>
 
@@ -84,40 +130,6 @@
                             <p>
                                 BuildTwin generates Checklists based on the user, deliverables and the discussed
                                 technical decision. The checklist also considers RFIs, Revisions and many other factors.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="section2" data-ele="two">
-                    <div class="flex">
-                        <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild2.png" alt="" title="">
-                        </div>
-                        <div class="contentWrap">
-                            <h3>
-                                Continuous Learning
-
-                            </h3>
-                            <p>
-                                The digital self management portal provides custom feedback, trainings and benchmarks
-                                based
-                                on quality issues, technical queries and general learning materials.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="section3" data-ele="three">
-                    <div class="flex ">
-                        <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild3.png" alt="" title="">
-                        </div>
-                        <div class="contentWrap">
-                            <h3>
-                                Documenting Everything
-                            </h3>
-                            <p>
-                                BuildTwin tracks and documents all activitis across all channels - and presents
-                                a easy to use and understand cockpit.
                             </p>
                         </div>
                     </div>
@@ -156,19 +168,18 @@
                         </div>
                     </div>
                 </div>
-                <div id="section6" data-ele="six">
+                <div id="section6" data-ele="three">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild6.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild3.png" alt="" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
-                                Simulation
-
+                                Documenting Everything
                             </h3>
                             <p>
-                                With our Simulation tool you supercharge your Steering meetings, by analysing different
-                                scenarios and adopting new priorities with the click of a button.
+                                BuildTwin tracks and documents all activitis across all channels - and presents
+                                a easy to use and understand cockpit.
                             </p>
                         </div>
                     </div>
@@ -180,10 +191,6 @@
     </div>
 </app-how-buildtwin-helps>
 
-
-
-<!-- Training -->
-<app-tt-integrations></app-tt-integrations>
 
 
 <!-- Partner  -->
@@ -204,3 +211,25 @@
 
 <!-- Footer -->
 <app-hd-footer></app-hd-footer>
+
+<div class="popUP" [ngClass]="{'active':showPopup1}">
+    <div class="coverPopup">
+      <i class="closeIcon" (click)="closePopup1()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <g clip-path="url(#clip0_2773_11848aaa)">
+          <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_2773_11848">
+          <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
+          </svg>
+      </i>
+      <div class="coverPopupData">
+   
+    <div id="hubspotFormContainer21"></div>
+  </div>
+  </div>
+</div>
+<app-hubspot [ngClass]="{'active':showPopup}" [name]="'arun'" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

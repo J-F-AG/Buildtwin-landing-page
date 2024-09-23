@@ -12,6 +12,31 @@ import { FooterService } from '../../includes/hd-footer/footer.service';
   styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-aarbee.component.scss']
 })
 export class VenderDetailsAarbeeComponent {
+  toggleContentIndex:number= -1
+  serviceSlider: OwlOptions = {
+    loop: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 2
+      },
+      940: {
+        items: 3
+      }
+    },
+    nav: true
+  }
   ourEngineers = [
     {
       img: "assets/images/aarbee/profile1.jpg",
@@ -555,6 +580,9 @@ export class VenderDetailsAarbeeComponent {
 
   ngOnInit() {
     this.loadScript();
+    setTimeout(() => {
+      console.log(this.formData?.highlightServices)
+    }, 10000);
   }
   loadScript() {
     // Create script element
@@ -628,8 +656,17 @@ export class VenderDetailsAarbeeComponent {
   }
 
   getBusinessListing() {
+
+    let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`
+    this.route.queryParams.subscribe(params => {
+      const status = params['status'];
+      // Check if both parameters are available
+      if (status === 'unpublished') {
+        url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=${'Unpublished'}`
+      }
+    });
     this.showPageLoader = true;
-    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`)
+    this.http.get(url)
     .pipe(
       catchError(err => {
         this.showPageLoader = false;
@@ -1044,6 +1081,13 @@ export class VenderDetailsAarbeeComponent {
       this.currentFaq = ''
     }else {
       this.currentFaq = index
+    }
+  }
+  toggleContent(i) {
+    if(i === this.toggleContentIndex){
+      this.toggleContentIndex = -1;
+    }else {
+      this.toggleContentIndex = i;
     }
   }
   ngOnDestroy() {

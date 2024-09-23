@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, retry } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
 
@@ -12,14 +12,29 @@ import { LanguageService } from 'src/app/services/language.service';
 export class TtPartnersComponent {
   companyList = [];
   showPageLoader = false;
+  paramsStatus = false;
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, public _languageService:LanguageService) {
+     // Extract status
+     this.route.queryParams.subscribe(params => {
+      const status = params['status'];
 
-  constructor(private http: HttpClient, private router: Router, public _languageService:LanguageService) {
-    this.getListOfCompany()
+      // Check if both parameters are available
+      if (status === 'unpublished') {
+        this.paramsStatus = true;
+        this.getListOfCompany('Unpublished')
+      }else {
+        this.getListOfCompany()
+      }
+    });
   }
-  getListOfCompany() {
+  getListOfCompany(type?) {
     this.showPageLoader = true;
     // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
-    this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`)
+    let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`
+    if(type){
+      url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=${type}`
+    }
+    this.http.get(url)
     .pipe(
       catchError(err => {
         this.showPageLoader = false;
@@ -50,6 +65,13 @@ export class TtPartnersComponent {
 
   redirect(domain, company_name) {
     localStorage.setItem("domain", domain);
-    this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
+    if(this.paramsStatus){
+      this.router.navigate(
+        [`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g, '')}`], 
+        { queryParams: { status: 'unpublished' } }
+      );
+    }else {
+      this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
+    }
   }
 }

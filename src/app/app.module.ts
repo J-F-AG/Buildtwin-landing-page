@@ -222,6 +222,7 @@ import { TopVendorsComponent } from './pages/services-new/top-vendors/top-vendor
 import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.component';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { FileUploadServiceComponent } from './pages/services-new/free-offer-form/file-upload-service/file-upload-service.component';
+import { GetStartedModule } from './include-component/get-started/get-started.module';
 
 @NgModule({
   declarations: [
@@ -448,7 +449,8 @@ import { FileUploadServiceComponent } from './pages/services-new/free-offer-form
     BtSelectGroupModule,
     NzDropDownModule,
     HubspotModule,
-    NzUploadModule
+    NzUploadModule,
+    GetStartedModule
   ],
   providers: [
     Title,
