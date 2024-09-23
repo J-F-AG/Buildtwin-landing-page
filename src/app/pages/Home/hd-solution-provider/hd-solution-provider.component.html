@@ -40,7 +40,7 @@
                     <h4 class="itemTitle">Power plant</h4>
                 </div>
             </div>
-            <div class="itemContainer">
+            <div class="itemContainer cursor" [routerLink]="[_languageService.currentLanguage + '/services']" [queryParams]="{ service: 9 }">
                 <div class="listItem">
                     <div class="imgContainer"><img src="assets/images/solutionProvider6.jpg" alt="solutionProvider6"></div>
                     <h4 class="itemTitle">PRE-CAST</h4>
