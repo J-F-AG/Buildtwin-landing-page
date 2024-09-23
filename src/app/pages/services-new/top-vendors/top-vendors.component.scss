@@ -342,3 +342,16 @@
     }
 
   }
+
+  @media (max-width:767px){
+    .sectionContainer .sectionTop .heading {
+      font-size: 22px;
+      padding-right: 80px;
+    }
+    .sectionContainer .sectionTop {
+      padding-right: 0;
+    }
+    .topVendorsCarouselWrapper .topVendorsCarousel {
+      width: 100%;
+    }
+  }

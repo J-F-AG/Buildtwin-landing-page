@@ -38,7 +38,9 @@ export class FreeOfferFormComponent {
     "type": "get_quote", //static
   }
   myForm: FormGroup;
-
+  isTenderWork = {};
+  uploadedMessage = '';
+  disableButton: boolean = false;
   constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService) {
     this.fetchData()
   }
@@ -123,14 +125,19 @@ export class FreeOfferFormComponent {
     if (this.myForm.valid) {
       this.payload = {
         ...this.payload, // Retain existing static properties
-        buildingCodeId: this.myForm.get('buildingCodeId')?.value, // Using form value
-        serviceId: this.myForm.get('serviceId')?.value, // New service ID
-        subServiceId: this.myForm.get('selectedPrecastServices')?.value,
+        buildingCodeId: this.myForm.get('buildingCodeId')?.value?Number(this.myForm.get('buildingCodeId')?.value):null, // Using form value
+        serviceId: this.myForm.get('serviceId')?.value?Number(this.myForm.get('serviceId')?.value):null, // New service ID
+        subServiceId: this.myForm.get('selectedPrecastServices')?.value?Number(this.myForm.get('selectedPrecastServices')?.value):null,
         user_email: this.myForm.get('email')?.value,
         project_description: this.myForm.get('description')?.value,
         project_name: this.myForm.get('projectName')?.value
       };
-
+      // Remove keys with null or blank values
+      this.payload = Object.fromEntries(
+        Object.entries(this.payload)
+          .filter(([_, v]) => v !== null && v !== '' && v !== undefined) // Retain only non-null, non-blank, and defined values
+      );
+      this.disableButton = true;
       forkJoin([
         this._http.post(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService/book-service
   `, this.payload)
@@ -144,24 +151,9 @@ export class FreeOfferFormComponent {
           if(res[0]['status'] === 'success'){
             console.log(res);
             console.log('Form submitted with payload:', this.payload);
-            this.message.create('success', `${res[0]['data']['message']}`);
-            this.showdropDown = false;
-            // Reset the form after submission
-            this.myForm.reset(); // Clears the form fields
-            this.myForm.get('selectedPrecastServices')?.setValue(null); // If needed, reset the selected value specifically
-            this.myForm.get('buildingCodeId')?.setValue(null); // If needed, reset the selected value specifically
-            // this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
-
-            // Get the current URL
-            const url = new URL(window.location.href);
-            // Extract the 'service' parameter
-            const serviceId = url.searchParams.get('service');
-            if (serviceId) {
-              this.myForm.get('serviceId')?.setValue(serviceId);
-            }
-            setInterval(() => {
-              this.showdropDown = true;
-            }, 10);
+            this.isTenderWork = res[0]['data'];
+            this.uploadedMessage = res[0]['data']['message'];
+            this.fileUploadedStatus('')
           }else {
             this.message.create('error', `${res[0]['data']['message']}`);
           }
@@ -172,5 +164,26 @@ export class FreeOfferFormComponent {
       this.myForm.markAllAsTouched(); // Mark all fields as touched to show errors
     }
   }
+  fileUploadedStatus($event){
+    // console.log($event);
+    this.disableButton = false;
+    this.message.create('success', `${this.uploadedMessage}`);
+    this.showdropDown = false;
+    // Reset the form after submission
+    this.myForm.reset(); // Clears the form fields
+    this.myForm.get('selectedPrecastServices')?.setValue(null); // If needed, reset the selected value specifically
+    this.myForm.get('buildingCodeId')?.setValue(null); // If needed, reset the selected value specifically
+    // this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
 
+    // Get the current URL
+    const url = new URL(window.location.href);
+    // Extract the 'service' parameter
+    const serviceId = url.searchParams.get('service');
+    if (serviceId) {
+      this.myForm.get('serviceId')?.setValue(serviceId);
+    }
+    setInterval(() => {
+      this.showdropDown = true;
+    }, 10);
+  }
 }

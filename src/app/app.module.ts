@@ -220,6 +220,8 @@ import { ServicesOfferedComponent } from './pages/services-new/services-offered/
 import { ThreeCardsComponent } from './pages/services-new/three-cards/three-cards.component';
 import { TopVendorsComponent } from './pages/services-new/top-vendors/top-vendors.component';
 import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.component';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { FileUploadServiceComponent } from './pages/services-new/free-offer-form/file-upload-service/file-upload-service.component';
 
 @NgModule({
   declarations: [
@@ -408,7 +410,8 @@ import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.comp
    TrustByNewComponent,
    
    FreeOfferFormComponent,
-   FaqBuildtwinComponent    
+   FaqBuildtwinComponent  ,
+   FileUploadServiceComponent  
   ],
   imports: [    
     BrowserModule,
@@ -444,7 +447,8 @@ import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.comp
     GlobalBannerModule,
     BtSelectGroupModule,
     NzDropDownModule,
-    HubspotModule
+    HubspotModule,
+    NzUploadModule
   ],
   providers: [
     Title,

@@ -329,3 +329,12 @@
     }
   }
 }
+@media (max-width:767px){
+  .sectionContainer .sectionTop .heading {
+    font-size: 22px;
+    padding-right: 90px;
+  }
+  .drawingCarouselWrapper .drawingCarousel {
+    width: 100%;
+  }
+}

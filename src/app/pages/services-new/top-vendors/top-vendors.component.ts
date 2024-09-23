@@ -32,7 +32,6 @@ export class TopVendorsComponent{
       { img: 'assets/images/Gillette-Stadium.jpg', category: 'Structural', projectTitle: 'Gillette Stadium North end zone renovation', company: 'Foxborough, MA', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'Mold-Tek Technologies', serviceCompanyIcon: 'assets/images/moldtek-icon.jpg', width:'60', height:'30', serviceDescription: "Tonnage: 2,800 Tons", linkTitle: 'Learn More about MoldTek', link: '/partners/Mold-TekTechnologiesLimited' }
     ]
   
-    discoverProjects = this.splitArray(this.projectsArray, 4);
 
   customOptions: OwlOptions = {
     margin: 25,

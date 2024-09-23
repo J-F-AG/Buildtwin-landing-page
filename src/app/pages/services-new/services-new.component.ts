@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './services-new.component.scss'
 })
 export class ServicesNewComponent {
-
+  toggleSidebarStatus = false;
+  toggleSidebar() {
+    this.toggleSidebarStatus = !this.toggleSidebarStatus;
+  }
 }

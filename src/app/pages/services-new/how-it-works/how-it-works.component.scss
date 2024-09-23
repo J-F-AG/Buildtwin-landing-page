@@ -26,3 +26,8 @@ url(../../../../assets/images/how-it-worksBGX.jpg) left top repeat-x;
 
 
 }
+@media (max-width:767px){
+    .howItWorksWrapper .container .content {
+        font-size: 16px;
+    }
+}

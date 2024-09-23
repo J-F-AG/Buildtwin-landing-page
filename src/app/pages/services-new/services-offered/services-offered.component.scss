@@ -103,3 +103,18 @@
     .projectTitle{font-size: 18px; font-weight: 700; margin-bottom: 0;}
 }
  
+@media (max-width:767px){
+  .sectionContainer .sectionTop {
+    padding-right: 0;
+  }
+  .sectionContainer .sectionTop .heading {
+    font-size: 22px;
+    padding-right: 80px;
+  }
+  .offeredCarouselWrapper .offeredCarousel {
+    width: 100%;
+  }
+  :host ::ng-deep .offeredCarousel .owl-dots {
+    margin-left: 0;
+  }
+}

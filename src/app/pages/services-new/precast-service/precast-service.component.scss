@@ -21,7 +21,37 @@
 }
 
 .sectionMidContainer{
-    .precastTabs{display: flex; border-bottom: 1px solid #DEDEDE;
+    .precastTabs{display: flex; border-bottom: 1px solid #DEDEDE; justify-content: space-between; white-space: nowrap; overflow: auto;
+        &::-webkit-scrollbar {
+            width: 2px;
+            height: 2px;
+          }
+          /* Track */
+          &::-webkit-scrollbar-track {
+              background: none; 
+          }
+          
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+              background: none; 
+          }
+          
+          &:hover {
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1; 
+            }
+            
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #888; 
+            }
+            
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555; 
+            }
+          }
         .tab{padding: 10px; cursor: pointer; font-size: 15px; color: #B3B3B3;
             &.activeContainer {
                 color: #886de0;
@@ -31,4 +61,11 @@
         }
     }
 }
-
+@media (max-width:767px){
+    .dataList {
+        flex-wrap: wrap;
+    }
+    .sectionContainer .tabContent {
+        padding-right: 0;
+    }
+}
