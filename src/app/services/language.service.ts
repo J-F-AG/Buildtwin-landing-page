@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 export class LanguageService {
   language = [{ lang: "/en", "value": "/" }, { lang: "/de", value: "/de" }]
   currentLanguage = '/';
+  serviceId: any = {
+    "pre-cast-detailing-services": 9
+  }
   constructor(
     private metaService: Meta, private titleService: Title, private router: Router
   ) {

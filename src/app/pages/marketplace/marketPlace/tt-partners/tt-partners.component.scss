@@ -57,7 +57,7 @@
                 display: none;
             }
             .col {
-                
+                display: block;
                 border-radius: 8px;
                 background: var(--White-Fill, #FFF);
                 box-shadow: 0px 3px 20px 0px rgba(44, 44, 44, 0.06);
@@ -132,6 +132,9 @@
                 }
 
                 .link {
+                    background: none;
+                    outline: none;
+                    box-shadow: none;
                     display: flex;
                     color: #886DE0;
 
