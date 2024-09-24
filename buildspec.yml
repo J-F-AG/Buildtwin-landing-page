@@ -51,8 +51,8 @@ phases:
 
   pre_build:
     commands:
-      - echo "Installing Angular CLI and dependencies..."
-      - npm install -g @angular/cli@17.0.0
+      # - echo "Installing Angular CLI and dependencies..."
+      # - npm install -g @angular/cli@17.0.0
 
        # Clean npm cache and install project dependencies
       - echo "Cleaning npm cache and installing project dependencies..."
