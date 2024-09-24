@@ -68,7 +68,7 @@ phases:
   build:
     commands:
       - echo testing...
-      - ng build --output-hashing=all --configuration production --build-optimizer --aot
+      - ng build --output-hashing=all --configuration production --build-optimizer --aot --maxParallelJobs=1
       - ls
        
   post_build:
