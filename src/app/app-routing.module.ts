@@ -76,7 +76,7 @@ const routes: Routes = [
     {path: 'engineering-services/services', component: ServicesComponent},
     {path: 'engineering-services/sector', component: SectorComponent},
     {path: 'explore-services', component: BrowseServicesMainComponent},
-    {path: 'services', component: ServicesNewComponent},
+    {path: 'services/pre-cast-detailing-services', component: ServicesNewComponent},
     
     {path: ':lang/AI-project-management', component: OnlineMeetingHomeComponent},
     {path: ':lang/business-intelligence', component: OnlineMeetingHomeFreelanceComponent},
@@ -109,7 +109,7 @@ const routes: Routes = [
     {path: ':lang/engineering-services/services', component: ServicesComponent},
     {path: ':lang/engineering-services/sector', component: SectorComponent},
     {path: ':lang/explore-services', component: BrowseServicesMainComponent},
-    {path: ':lang/services', component: ServicesNewComponent},    
+    {path: ':lang/services/pre-cast-detailing-services', component: ServicesNewComponent},    
 
 
     {path: 'coming-soon', component: ComingSoonComponent},

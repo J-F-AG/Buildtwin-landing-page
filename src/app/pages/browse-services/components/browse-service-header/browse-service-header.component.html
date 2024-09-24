@@ -24,31 +24,22 @@
     </div>
     <div class="sectionBottom">
         <div class="headerCarousel">
-            <nz-carousel [nzDots]="false">
-                <div nz-carousel-content *ngFor="let subServiceArray of discoverServices">
-
-                    <div class="carouselWrapper">
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
-                        <!-- <div class="cardWrapper" routerLink="/engineering-services/services">
-                            <img src="assets/images/structuralDesign.png" alt="cardImage" width="151" height="137">
-                            <div class="detail">Structural Design</div>
-                        </div> -->
-                        <ng-container *ngFor="let item of subServiceArray">
-                            <div class="cardWrapper">
-                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
-                                <div class="detail">
-                                    {{item.name}}
-                                </div>
-                            </div>
-                        </ng-container>
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
+            <owl-carousel-o [options]="customOptions">
+                <ng-template *ngFor="let item of servicesArray" carouselSlide>
+                    <div class="cardWrapper" *ngIf="!item['serviceId']">
+                        <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                        <div class="detail">
+                            {{item.name}}
+                        </div>
                     </div>
-                </div>
-            </nz-carousel>
+                    <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="[_languageService.currentLanguage + '/services/pre-cast-detailing-services']">
+                        <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                        <div class="detail">
+                            {{item.name}}
+                        </div>
+                    </a>
+                </ng-template>
+            </owl-carousel-o>
 
 
 

@@ -58,20 +58,23 @@ export class TtPartnersComponent {
             d.service_type_name = str;
           }
         })
-        this.companyList = res['data']['details'];
+        res['data']['details'].filter(res=>{
+          res['route'] = res['company_name'].replace(/ /g, '');
+          this.companyList.push(res)
+        })
       }
     })
   }
 
   redirect(domain, company_name) {
     localStorage.setItem("domain", domain);
-    if(this.paramsStatus){
-      this.router.navigate(
-        [`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g, '')}`], 
-        { queryParams: { status: 'unpublished' } }
-      );
-    }else {
-      this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
-    }
+    // if(this.paramsStatus){
+    //   this.router.navigate(
+    //     [`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g, '')}`], 
+    //     { queryParams: { status: 'unpublished' } }
+    //   );
+    // }else {
+    //   this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
+    // }
   }
 }

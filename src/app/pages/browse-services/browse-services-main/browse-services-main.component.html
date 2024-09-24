@@ -390,14 +390,14 @@
                                         <h3>{{ image.title }}</h3>
                                     </div>
                                 </div>
-                                <div *ngIf="image['serviceId']" class="image-container cursor"  [routerLink]="[_languageService.currentLanguage + '/services']" [queryParams]="{ service: image['serviceId'] }">
+                                <a *ngIf="image['serviceId']" class="image-container cursor">
                                     <figure>
                                         <img [src]="image.src" width="185" height="245" />
                                     </figure>
                                     <div class="image-caption">
                                         <h3>{{ image.title }}</h3>
                                     </div>
-                                </div>
+                                </a>
                             </ng-template>
                         </ng-container>
                     </ng-container>

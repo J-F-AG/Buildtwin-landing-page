@@ -103,7 +103,7 @@ export class BrowseServicesMainComponent implements OnInit {
         { src: 'assets/images/solutionProvider3.jpg', title: 'Data Center', description: '10+ Vendors' },
         { src: 'assets/images/solutionProvider4.jpg', title: 'INDUSTRIAL BUILDINGS', description: '10+ Vendors' },
         { src: 'assets/images/solutionProvider5.jpg', title: 'Power plant', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider6.jpg', title: 'PRE-CAST', description: '10+ Vendors', serviceId: 9 },
+        { src: 'assets/images/solutionProvider6.jpg', title: 'PRE-CAST', description: '10+ Vendors'},
         { src: 'assets/images/solutionProvider7.jpg', title: 'Residential Buildings', description: '10+ Vendors' },
         { src: 'assets/images/solutionProvider8.jpg', title: 'Schools', description: '10+ Vendors' },
         { src: 'assets/images/solutionProvider9.jpg', title: 'Theaters', description: '10+ Vendors' },

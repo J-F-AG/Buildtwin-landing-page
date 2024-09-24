@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, forkJoin } from 'rxjs';
 import { NzMessageModule, NzMessageService } from 'ng-zorro-antd/message';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-free-offer-form',
@@ -41,7 +42,7 @@ export class FreeOfferFormComponent {
   isTenderWork = {};
   uploadedMessage = '';
   disableButton: boolean = false;
-  constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService) {
+  constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService, public _languageService: LanguageService) {
     this.fetchData()
   }
   ngOnInit(): void {
@@ -59,12 +60,13 @@ export class FreeOfferFormComponent {
     //     this.myForm.get('serviceId')?.setValue(serviceId);
     //   }
     // });
+    this.updateServiceId()
+  }
+  updateServiceId(){
     // Get the current URL
-    const url = new URL(window.location.href);
-    // Extract the 'service' parameter
-    const serviceId = url.searchParams.get('service');
-    if (serviceId) {
-      this.myForm.get('serviceId')?.setValue(serviceId);
+    const url = window.location.href;
+    if (url.includes('pre-cast-detailing-services')) {
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['pre-cast-detailing-services']);
     }
   }
   selectSector(selectedOption: any) {
@@ -175,13 +177,7 @@ export class FreeOfferFormComponent {
     this.myForm.get('buildingCodeId')?.setValue(null); // If needed, reset the selected value specifically
     // this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
 
-    // Get the current URL
-    const url = new URL(window.location.href);
-    // Extract the 'service' parameter
-    const serviceId = url.searchParams.get('service');
-    if (serviceId) {
-      this.myForm.get('serviceId')?.setValue(serviceId);
-    }
+    this.updateServiceId()
     setInterval(() => {
       this.showdropDown = true;
     }, 10);

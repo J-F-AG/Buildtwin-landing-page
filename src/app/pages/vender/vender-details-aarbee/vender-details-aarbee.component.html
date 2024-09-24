@@ -1371,11 +1371,11 @@
                 <h5>
                     Most popular services with Vendors
                 </h5>
-                <ul class="service-slider" id="servicceSlider">
+                <ul class="service-slider" id="servicceSlider" [ngClass]="{'one': (formData?.highlightServices?.length <= 3)}">
                     <owl-carousel-o [options]="serviceSlider">
                         <ng-container *ngFor="let se of formData?.highlightServices; let i = index;">
                             <ng-template carouselSlide>
-                                <li [ngClass]="{'one': (formData?.highlightServices?.length <= 3)}">
+                                <li>
                                         
                                     <small class="small">
                                         Our service
