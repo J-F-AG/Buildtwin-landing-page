@@ -48,13 +48,20 @@ phases:
       # # Clean up existing npm dependencies if any
       # - echo "Cleaning package lock files..."
       # - rm -rf package-lock.json
+      
+      # Enable swap memory to avoid memory issues
+      - echo "Enabling swap memory..."
+      - sudo fallocate -l 1G /swapfile
+      - sudo chmod 600 /swapfile
+      - sudo mkswap /swapfile
+      - sudo swapon /swapfile
 
   pre_build:
     commands:
       # - echo "Installing Angular CLI and dependencies..."
       # - npm install -g @angular/cli@17.0.0
 
-       # Clean npm cache and install project dependencies
+      # Clean npm cache and install project dependencies
       - echo "Cleaning npm cache and installing project dependencies..."
       - aws configure set aws_access_key_id $ACCESS_KEY
       - aws configure set aws_secret_access_key $SECRET_KEY
@@ -62,7 +69,7 @@ phases:
       - aws codeartifact login --tool npm --repository one-jf-search --domain jf-one-modules --domain-owner 188097494660
       - npm cache clean --force
       - npm install buildtwin-library-ux@0.0.199 --legacy-peer-deps
-      - export NODE_OPTIONS=--max-old-space-size=6144
+      - export NODE_OPTIONS=--max-old-space-size=8192
       - npm install --force
 
   build:
@@ -70,14 +77,10 @@ phases:
       - echo testing...
       - ng build --output-hashing=all --configuration production --build-optimizer --aot
       - ls
-       
+
   post_build:
     commands:
       - aws configure set aws_access_key_id $AOA_ACCESS_KEY
       - aws configure set aws_secret_access_key $AOA_SECRET_KEY
-      #- aws s3 sync dist/ s3://$S3_BUCKET_BUILDTWIN/ --region eu-central-1 --acl public-read --exclude 'get-started/*'
-      #- aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html"
-      
-
-
-      
+      # - aws s3 sync dist/ s3://$S3_BUCKET_BUILDTWIN/ --region eu-central-1 --acl public-read --exclude 'get-started/*'
+      # - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html"
