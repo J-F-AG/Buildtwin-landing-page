@@ -382,7 +382,15 @@
                     <ng-container *ngFor="let slide of slides">
                         <ng-container *ngFor="let image of slide.images">
                             <ng-template carouselSlide>
-                                <div class="image-container">
+                                <div *ngIf="!image['serviceId']" class="image-container">
+                                    <figure>
+                                        <img [src]="image.src" width="185" height="245" />
+                                    </figure>
+                                    <div class="image-caption">
+                                        <h3>{{ image.title }}</h3>
+                                    </div>
+                                </div>
+                                <div *ngIf="image['serviceId']" class="image-container cursor"  [routerLink]="[_languageService.currentLanguage + '/services']" [queryParams]="{ service: image['serviceId'] }">
                                     <figure>
                                         <img [src]="image.src" width="185" height="245" />
                                     </figure>
