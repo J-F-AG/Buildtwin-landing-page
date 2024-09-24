@@ -67,8 +67,9 @@ phases:
 
   build:
     commands:
-      - echo testing...
-      - ng build --output-hashing=all --configuration production --build-optimizer --aot
+      - echo "Starting Angular build process..."
+      # Temporarily disabling optimization and removing AOT
+      - ng build --output-hashing=all --configuration production --build-optimizer=false
       - ls
 
   post_build:
