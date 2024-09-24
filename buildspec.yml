@@ -48,13 +48,6 @@ phases:
       # # Clean up existing npm dependencies if any
       # - echo "Cleaning package lock files..."
       # - rm -rf package-lock.json
-      
-      # Enable swap memory to avoid memory issues
-      - echo "Enabling swap memory..."
-      - sudo fallocate -l 1G /swapfile
-      - sudo chmod 600 /swapfile
-      - sudo mkswap /swapfile
-      - sudo swapon /swapfile
 
   pre_build:
     commands:
