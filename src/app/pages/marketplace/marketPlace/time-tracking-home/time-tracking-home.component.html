@@ -232,4 +232,4 @@
   </div>
   </div>
 </div>
-<app-hubspot [ngClass]="{'active':showPopup}" [name]="'arun'" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" [name]="'arun'" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

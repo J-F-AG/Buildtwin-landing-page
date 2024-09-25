@@ -57,4 +57,4 @@
 </div>
 </div>
 
-<app-hubspot [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
