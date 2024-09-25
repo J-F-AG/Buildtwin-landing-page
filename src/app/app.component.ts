@@ -48,7 +48,8 @@ export class AppComponent {
                 this._languageService.setLanguageTags();
                 this.breadcrumbService.generateBreadcrumbs(this.router.url);
                 this.breadcrumbs = this.breadcrumbService.breadcrumbs;
-                this.injectBreadcrumbScript();
+                let url = this.router.url;
+                this.injectBreadcrumbScript(url);
                 console.log(event)
                 this.location = this.router.url;
 
@@ -62,12 +63,12 @@ export class AppComponent {
     }
 
 // Dynamically inject breadcrumb schema script if breadcrumbs are present
-injectBreadcrumbScript() {
-    // First remove any existing breadcrumb script
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {
-      this.renderer.removeChild(document.head, existingScript);
-    }
+injectBreadcrumbScript(url) {
+    // First, remove all existing breadcrumb scripts
+    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    existingScripts.forEach(script => {
+        this.renderer.removeChild(document.head, script);
+    });
 
     // Check if breadcrumbs array has items
     if (this.breadcrumbs.length > 0) {
@@ -85,6 +86,15 @@ injectBreadcrumbScript() {
       
       // Append new script to head
       this.renderer.appendChild(document.head, jsonLdScriptTag);
+    }
+    if(url == '/provide-service'){
+        this._languageService.injectFaqSchema(this.renderer);
+    }else if(url == '/marketplace'){
+        this._languageService.injectForMarketplaceSchema(this.renderer);
+    }else if(url == '/AI-project-management'){
+        this._languageService.injectForAIProjectManagementSchema(this.renderer);
+    }else if(url == '/faq'){
+        this._languageService.injectFAQSchemaForFaqPage(this.renderer)
     }
   }
    
