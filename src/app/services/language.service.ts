@@ -339,4 +339,150 @@ export class LanguageService {
     // Append the script to the head of the document
     renderer.appendChild(document.head, jsonLdScriptTag);
   }
+  
+  injectFAQSchemaForPreCastDetailingServices(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+
+      "@type": "FAQPage",
+
+      "mainEntity": [{
+
+        "@type": "Question",
+
+        "name": "Why should I choose a vendor from BuildTwin?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin is a one-stop platform that gives you ready access to multiple global vendors from around the world for pre-cast detailing services. These vendors are pre-qualified and aggregated onto the platform to instantly invite the best bids, thereby completely eliminating the laborious task of searching for vendors everywhere. BuildTwin automates your entire project, by giving you remote access to every single update for close monitoring.Not only that, you can even plug in your own workflow portal with BuildTwin for seamless integration."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "What software do vendors on BuildTwin use for precast detailing?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin’s vendors stay up to date on the latest industry trends when it comes to their choice of software, AutoCAD and Revit."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "How does BuildTwin ensure the security and confidentiality of my project data?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Our AI-driven project management platform is meticulously designed with industry-leading privacy protocols to ensure that your data remains confidential, secure, and under your control. Our embedded trust system is integrated into every workflow, automating compliance tasks and reducing manual work, allowing you to focus on engineering while we ensure your operations remain compliant and secure."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "What is the process for BuildTwin pre-qualifying its vendors?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin aggregates the best-in-industry vendors by conducting a thorough background check and verification of a proven track record in pre-cast detailing services. The vendors are chosen based on experience, reliability, and a line of successful projects to their name."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "How can I compare vendors listed on BuildTwin?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin provides you with a list of the top vendors categorized based on their sectors, experience, delivered projects, and locations. You can easily compare them against these parameters by selecting your required filters."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "What type of projects can vendors on BuildTwin handle?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "The vendors listed on BuildTwin are experienced in handling pre-cast detailing services for airports, residential, commercial and industrial buildings, data centers, power plants, chemical plants, manufacturing plants, parking structures, schools, hospitals, warehouses, bridges, tunnels, water & waste, metros, roadways, retaining walls, and foundations, among others."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "How does BuildTwin ensure the quality of the services provided by vendors?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "By having a systematic step-by-step process in place and strict adherence to international compliance codes, BuildTwin makes sure you have direct access to every stage of the project. Right from erection drawings to cast-in components, quantity take-offs to assembling and production, and for every step in between, BuiltTwin ensures detailed reviews and stringent quality control in its pre-cast detailing services."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "How quickly can I expect a response from vendors on BuildTwin?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "As soon as you sign up on BuildTwin, you can access our ready list of vendors for pre-cast detailing services from around the globe. All you need to do is invite 5+ vendors to bid on your project, and they will reach out to you with their best offers in X hours/days."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "What support does BuildTwin offer during the project?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin automates your entire project, by doing most of your work behind the scenes for you. From vendor selection to quality control, digitalized documentation to live updates, BuildTwin gives you the freedom to manage your project from anywhere with the best resources and practices."
+
+        }
+
+      }]
+
+    };
+
+    // Create the script element
+    const jsonLdScriptTag = renderer.createElement('script');
+    jsonLdScriptTag.type = 'application/ld+json';
+    jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // Append the script to the head of the document
+    renderer.appendChild(document.head, jsonLdScriptTag);
+  }
 }
