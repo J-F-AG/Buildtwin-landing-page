@@ -53,8 +53,10 @@ export class AppComponent {
         mergeMap((route) => route.data)
       )
         .subscribe((event) => {
-            this._seoService.updateTitle(event['title']);
-            this._seoService.updateDescription(event['description']);
+            if(event['title']){
+                this._seoService.updateTitle(event['title']);
+                this._seoService.updateDescription(event['description']);
+                }
         })
     }
 
