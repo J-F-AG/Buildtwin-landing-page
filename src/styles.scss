@@ -129,6 +129,10 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 .h1, .h2, h1, h2 {
     font-weight: 400;
 }
+h1.heading {
+    font-size: 40px;
+    font-weight: 600;
+}
 .overflow{
     overflow: hidden;
 }
