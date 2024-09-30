@@ -553,16 +553,21 @@
                 <div class="flex company-overview child">
                     <div class="image-wrapper">
                         <div class="thumbnails">
-                            <div class="thumbnail cursor" *ngFor="let category of categorisedProjectImages; let i = index" (click)="selectedProjectCategor(i)" [ngClass]="{'active': filterSelectedProjectCategorIndex == i}">
-                                 <figure>
-                                    <ng-container  *ngFor="let pimg of category?.imageUrls; let i = index">
-                                        <img [src]="pimg.imageUrl" width="244" height="190" *ngIf="i === 0"/>
-                                    </ng-container>
-                                 </figure>
-                                 <figcaption>
-                                    {{category.name}}
-                                 </figcaption>
-                             </div>
+                            <ng-container *ngFor="let category of categorisedProjectImages; let i = index">
+                                <ng-container *ngIf="category?.imageUrls?.length > 0"> <!-- Check if imageUrls exist and have items -->
+                                    <div class="thumbnail cursor" (click)="selectedProjectCategor(i)" [ngClass]="{'active': filterSelectedProjectCategorIndex == i}">
+                                        <figure>
+                                            <ng-container *ngFor="let pimg of category.imageUrls; let j = index">
+                                                <img [src]="pimg.imageUrl" width="244" height="190" *ngIf="j === 0 && pimg.imageUrl"/> <!-- Ensure pimg.imageUrl exists -->
+                                            </ng-container>
+                                        </figure>
+                                        <figcaption>
+                                            {{category.name}}
+                                        </figcaption>
+                                    </div>
+                                </ng-container>
+                            </ng-container>
+                            
                         </div>
                         <div class="bottom">
                             <figure *ngFor="let project of selectedProjectCategory?.imageUrls; let i = index">
@@ -862,16 +867,24 @@
                 <div class="flex company-overview child">
                     <div class="image-wrapper">
                         <div class="thumbnails">
-                            <div class="thumbnail cursor" *ngFor="let cat of selectedProject?.categorylist; let idx = index" (click)="selectCategory(idx)" [ngClass]="{'active': filterIndex == idx}">
-                                 <figure>
-                                    <ng-container *ngFor="let pimg of cat?.imageurls; let i = index">
-                                        <img [src]="pimg" width="112" height="70" *ngIf="i === 0" />
-                                    </ng-container>
-                                 </figure>
-                                 <figcaption>
-                                    {{cat.name}}
-                                 </figcaption>
-                             </div>
+                            <ng-container *ngFor="let cat of selectedProject?.categorylist; let idx = index" >
+                                <div class="thumbnail cursor" 
+                                    
+                                    (click)="selectCategory(idx)" 
+                                    [ngClass]="{'active': filterIndex == idx}" 
+                                    *ngIf="cat?.imageurls?.length > 0"> <!-- Check if imageurls exist and have items -->
+                                    
+                                    <figure>
+                                        <ng-container *ngFor="let pimg of cat.imageurls; let i = index">
+                                            <img [src]="pimg" width="112" height="70" *ngIf="i === 0" />
+                                        </ng-container>
+                                    </figure>
+                                    <figcaption>
+                                        {{cat.name}}
+                                    </figcaption>
+                                </div>
+                            </ng-container>
+
                         </div>
                         <div class="top">
                             <div class="left fullImage">
@@ -1071,9 +1084,11 @@
                     </small>
                 </h2>
                 <ul class="flex" *ngIf="formData.engineeringData.length">
-                    <li *ngFor="let e of formData.engineeringData">
-                        <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" alt="" width="252" height="73">
-                    </li>
+                    <ng-container *ngFor="let e of formData.engineeringData">
+                        <li *ngIf="e.logo">
+                            <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" alt="" width="252" height="73">
+                        </li>
+                    </ng-container>
                 </ul>
             </div>
             <div class="service-table">
@@ -1420,18 +1435,20 @@
                             {{se.service_name}}
                         </h6>
                         <ul>
-                            <li *ngFor="let s of se?.service_segments">
-                                <i *ngIf="s">
-                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M13.8162 4.54002C14.0701 4.8067 14.0597 5.22868 13.793 5.48254L6.08929 12.8159C5.95773 12.9411 5.78078 13.0072 5.59933 12.999C5.41788 12.9907 5.24766 12.9088 5.12803 12.7721L2.16506 9.38752C1.92254 9.11048 1.95052 8.6893 2.22755 8.44678C2.50459 8.20426 2.92577 8.23224 3.16829 8.50927L5.67342 11.3709L12.8737 4.51681C13.1404 4.26295 13.5624 4.27334 13.8162 4.54002Z"
-                                            fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                </i>
-                                {{s}}
-                            </li>
+                            <ng-container *ngFor="let s of se?.service_segments">
+                                <li *ngIf="s">
+                                    <i>
+                                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M13.8162 4.54002C14.0701 4.8067 14.0597 5.22868 13.793 5.48254L6.08929 12.8159C5.95773 12.9411 5.78078 13.0072 5.59933 12.999C5.41788 12.9907 5.24766 12.9088 5.12803 12.7721L2.16506 9.38752C1.92254 9.11048 1.95052 8.6893 2.22755 8.44678C2.50459 8.20426 2.92577 8.23224 3.16829 8.50927L5.67342 11.3709L12.8737 4.51681C13.1404 4.26295 13.5624 4.27334 13.8162 4.54002Z"
+                                                fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </i>
+                                    {{s}}
+                                </li>
+                            </ng-container>
                         </ul>
                     </ng-container>
                 </div>

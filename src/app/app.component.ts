@@ -43,7 +43,14 @@ export class AppComponent {
     recallJsFuntions() {
         this.routerSubscription = this.router.events
             .pipe(filter(event => event instanceof NavigationEnd || event instanceof NavigationCancel))
-            .subscribe(event => {
+            .subscribe((event:any) => {
+                const urlEn = event.urlAfterRedirects;
+
+                // Check if the URL starts with '/en/' and redirect to the same URL without '/en/'
+                if (urlEn.startsWith('/en/')) {
+                    const newUrl = urlEn.replace('/en/', '/');
+                    this.router.navigateByUrl(newUrl);
+                }
                 this._languageService.setCanonicalURL();
                 this._languageService.setLanguageTags();
                 this.breadcrumbService.generateBreadcrumbs(this.router.url);
@@ -87,14 +94,16 @@ injectBreadcrumbScript(url) {
       // Append new script to head
       this.renderer.appendChild(document.head, jsonLdScriptTag);
     }
-    if(url == '/provide-service'){
+    if(url.includes('/provide-service')){
         this._languageService.injectFaqSchema(this.renderer);
-    }else if(url == '/marketplace'){
+    }else if(url.includes('/marketplace')){
         this._languageService.injectForMarketplaceSchema(this.renderer);
-    }else if(url == '/AI-project-management'){
+    }else if(url.includes('/AI-project-management')){
         this._languageService.injectForAIProjectManagementSchema(this.renderer);
-    }else if(url == '/faq'){
+    }else if(url.includes('/faq')){
         this._languageService.injectFAQSchemaForFaqPage(this.renderer)
+    }else if(url.includes('/pre-cast-detailing-services')){
+        this._languageService.injectFAQSchemaForPreCastDetailingServices(this.renderer)
     }
   }
    

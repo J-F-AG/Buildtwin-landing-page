@@ -614,8 +614,9 @@ ul {
     .head {
         ul {
             gap: 25px;
-            width: 100%;
+            width: auto;
             align-items: center;
+            margin-bottom: 10px;
         }
     }
     table {
@@ -1835,7 +1836,7 @@ ul {
             display: flex;
             align-items: center;
             height: 70px;
-            background: black;
+            // background: black;
         }
         figcaption {
             white-space: nowrap;
