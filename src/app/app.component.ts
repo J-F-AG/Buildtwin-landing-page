@@ -1,10 +1,11 @@
 import { Component, Renderer2 } from '@angular/core';
-import { Router, NavigationCancel, NavigationEnd } from '@angular/router';
+import { Router, NavigationCancel, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { filter } from 'rxjs/operators';
+import { filter, map, mergeMap } from 'rxjs/operators';
 import * as AOS from "aos";
 import { LanguageService } from './services/language.service';
 import { BreadcrumbService } from './services/breadcrumb.service';
+import { SeoService } from './services/seo.service';
 declare let $: any;
 
 @Component({
@@ -29,7 +30,9 @@ export class AppComponent {
         private breadcrumbService: BreadcrumbService,
         private _languageService:LanguageService,
         private renderer: Renderer2,
-        public router: Router
+        public router: Router,
+        private _seoService: SeoService,
+        private activatedRoute: ActivatedRoute
     ) {
         // Directly assign the breadcrumbs array from the service
         localStorage.setItem("appVersion","0.0.12")
@@ -38,6 +41,23 @@ export class AppComponent {
 
     ngOnInit() {
         this.recallJsFuntions();
+
+    this.router.events.pipe(
+        filter((event) => event instanceof NavigationEnd),
+        map(() => this.activatedRoute),
+        map((route) => {
+          while (route.firstChild) route = route.firstChild;
+          return route;
+        }),
+        filter((route) => route.outlet === 'primary'),
+        mergeMap((route) => route.data)
+      )
+        .subscribe((event) => {
+            if(event['title']){
+                this._seoService.updateTitle(event['title']);
+                this._seoService.updateDescription(event['description']);
+                }
+        })
     }
 
     recallJsFuntions() {
