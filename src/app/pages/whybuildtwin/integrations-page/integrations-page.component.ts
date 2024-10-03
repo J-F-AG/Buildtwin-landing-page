@@ -9,7 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class IntegrationsPageComponent {
 
-    title = 'BuildTwin - integration';
+    // title = 'BuildTwin - integration';
     integrationsList: OwlOptions = {
         nav: false,
         margin: 25,
@@ -43,7 +43,7 @@ export class IntegrationsPageComponent {
     constructor(private titleService:Title) {}
     
     ngOnInit() {
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
     }
 
 }

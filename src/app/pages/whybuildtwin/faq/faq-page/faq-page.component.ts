@@ -8,12 +8,12 @@ import { Title } from '@angular/platform-browser';
 })
 export class FaqPageComponent {
 
-    title = 'BuildTwin - FAQ';
+    // title = 'BuildTwin - FAQ';
  
     constructor(private titleService:Title) {}
     
     ngOnInit() {
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
     }
 
 }

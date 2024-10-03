@@ -70,7 +70,7 @@ export class OnlineMeetingHomeComponent {
   
     activeState:number = 1
     activeState2:number = 10 
-    title = 'BuildTwin - Software for technical Teams';
+    // title = 'BuildTwin - Software for technical Teams';
  
 
     activeState3: number = 1
@@ -109,7 +109,7 @@ export class OnlineMeetingHomeComponent {
    
     
     ngOnInit() {
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
 
   
 

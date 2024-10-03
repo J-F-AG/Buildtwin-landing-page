@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HelpDeskHomeComponent {
   activeState: number = 1
-  title = 'BuildTwin - the hub for engineering AI software, projects and training';
+  // title = 'BuildTwin - the hub for engineering AI software, projects and training';
   FixedDiv: any
   FixedDivPositionTop: any
   fixedDIvOffsetTop: any
@@ -38,7 +38,7 @@ export class HelpDeskHomeComponent {
 
   ngOnInit() {
   
-    this.titleService.setTitle(this.title);
+    // this.titleService.setTitle(this.title);
 
   
   }

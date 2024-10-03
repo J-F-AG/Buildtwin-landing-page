@@ -6,14 +6,49 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class SeoService {
 
-  constructor(private title: Title, private meta: Meta) { }
+  constructor(private title: Title, private metaService: Meta) { }
 
   updateTitle(title: string) {
     this.title.setTitle(title);
+    this.updateOGTags('og:title', title);
+    this.updateTwitterTags('twitter:title', title);
   }
 
   updateDescription(desc: string) {
-    this.meta.updateTag({ name: 'description', content: desc })
+    this.metaService.updateTag({ name: 'description', content: desc })
+    this.updateOGTags('og:description', desc);
+    this.updateTwitterTags('twitter:description', desc);
+  }
+
+
+  // Update OG Tags
+  updateOGTags(property: string, content: string) {
+    this.metaService.updateTag({ property: property, content: content });
+  }
+
+  // Update Twitter Tags
+  updateTwitterTags(name: string, content: string) {
+    this.metaService.updateTag({ name: name, content: content });
+  }
+
+  // Update the OG URL
+  updateOGUrl(url: string) {
+    this.metaService.updateTag({ property: 'og:url', content: url });
+  }
+
+  // Update the OG image
+  updateOGImage(imageUrl: string) {
+    this.metaService.updateTag({ property: 'og:image', content: imageUrl });
+  }
+
+  // Update Twitter image
+  updateTwitterImage(imageUrl: string) {
+    this.metaService.updateTag({ name: 'twitter:image', content: imageUrl });
+  }
+
+  // Update Twitter card type
+  updateTwitterCardType(type: string) {
+    this.metaService.updateTag({ name: 'twitter:card', content: type });
   }
 
 }

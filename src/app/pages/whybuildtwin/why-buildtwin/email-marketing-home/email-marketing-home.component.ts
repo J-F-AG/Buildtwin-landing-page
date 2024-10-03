@@ -23,7 +23,7 @@ element:any
 
  
 
-    title = 'BuildTwin - good reasons';
+    // title = 'BuildTwin - good reasons';
  
     constructor(private titleService:Title,private globalService: GlobalService,private router: Router,private route: ActivatedRoute) {
 
@@ -46,7 +46,7 @@ element:any
 
 
     ngOnInit() {
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
         // this.isHeaderSticky = new Array(this.headerElements.length).fill(false);
   this.element = document.getElementsByClassName('tableheader')
 
