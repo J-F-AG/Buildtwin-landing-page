@@ -12,7 +12,7 @@ export class OnlineMeetingHomeFreelanceComponent {
 
   activeState3:number = 1
   activeState2:number = 10 
-    title = 'BuildTwin - Software for Freelancer / small Teams';
+    // title = 'BuildTwin - Software for Freelancer / small Teams';
     activeState: number = 1
     FixedDiv: any
     FixedDivPositionTop: any
@@ -43,7 +43,7 @@ export class OnlineMeetingHomeFreelanceComponent {
     ngOnInit() {
      
       
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
 
     
     }

@@ -11,7 +11,8 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class ElearningSchoolComponent implements OnInit {
     activeState: number = 1
-    title = 'BuildTwin - Marketplace for global engineering projects';    FixedDiv: any
+    // title = 'BuildTwin - Marketplace for global engineering projects';    
+    FixedDiv: any
     FixedDivPositionTop: any
     fixedDIvOffsetTop: any
     scrollPosition: any

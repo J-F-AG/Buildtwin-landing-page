@@ -15,7 +15,7 @@ export class ProvideServiceComponent {
   showPopup=false;
   activeState: number = 1
   activeState2: number = 11
-  title = 'BuildTwin - Software for technical Teams';
+  // title = 'BuildTwin - Software for technical Teams';
   activeState3: number = 21
   FixedDiv: any
   FixedDivPositionTop: any
@@ -175,7 +175,7 @@ let HideMenu = document.getElementById('tabContent');
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle(this.title);
+    // this.titleService.setTitle(this.title);
     const script = document.createElement('script');
     script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
     script.async = true;

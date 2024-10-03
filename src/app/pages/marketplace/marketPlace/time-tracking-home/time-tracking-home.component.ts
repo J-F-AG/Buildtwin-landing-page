@@ -10,7 +10,8 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class TimeTrackingHomeComponent {
     activeState: number = 1
-    title = 'BuildTwin - Marketplace for global engineering projects';    FixedDiv: any
+    // title = 'BuildTwin - Marketplace for global engineering projects';    
+    FixedDiv: any
     FixedDivPositionTop: any
     fixedDIvOffsetTop: any
     scrollPosition: any
@@ -53,7 +54,7 @@ export class TimeTrackingHomeComponent {
     }
     
     ngOnInit() {
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
 
         const script = document.createElement('script');
         script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';

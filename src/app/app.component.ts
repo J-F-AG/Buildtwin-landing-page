@@ -21,7 +21,7 @@ declare let $: any;
 })
 export class AppComponent {
 
-    title = 'BuildTwin - the hub for engineering AI software, projects and training';
+    // title = 'BuildTwin - the hub for engineering AI software, projects and training';
 
     location: any;
     routerSubscription: any;
@@ -56,7 +56,14 @@ export class AppComponent {
             if(event['title']){
                 this._seoService.updateTitle(event['title']);
                 this._seoService.updateDescription(event['description']);
-                }
+                // Update OG tags
+                this._seoService.updateOGUrl(this.router.url);
+                this._seoService.updateOGImage(event['image']);
+
+                // Update Twitter card tags
+                this._seoService.updateTwitterCardType('summary_large_image');
+                this._seoService.updateTwitterImage(event['image']);
+            }
         })
     }
 
