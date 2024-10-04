@@ -156,7 +156,7 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {path: 'engineering-services/sector',
-        redirectTo: '/explore-services',
+        redirectTo: '/',
         pathMatch: 'full'
     },
     {path: 'explore-services', component: BrowseServicesMainComponent,
@@ -273,7 +273,7 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {path: 'de/engineering-services/sector',
-        redirectTo: '/de/explore-services',
+        redirectTo: '/de',
         pathMatch: 'full'
     },
     {path: 'de/explore-services', component: BrowseServicesMainComponent,
