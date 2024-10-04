@@ -62,8 +62,6 @@ export class BreadcrumbService {
             'provide-service': 'Provide Service',
             'marketplace': 'Marketplace',
             'partners/J&FIndia': 'J&F India',
-            'engineering-services/services': 'Engineering Services - Services',
-            'engineering-services/sector': 'Engineering Services - Sector',
             'AI-project-management': 'AI Project Management',
             'business-intelligence': 'Business Intelligence',
             'training': 'Training',

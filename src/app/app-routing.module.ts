@@ -151,8 +151,14 @@ const routes: Routes = [
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    {path: 'engineering-services/services', component: ServicesComponent},
-    {path: 'engineering-services/sector', component: SectorComponent},
+    {path: 'engineering-services/services',
+        redirectTo: '/explore-services',
+        pathMatch: 'full'
+    },
+    {path: 'engineering-services/sector',
+        redirectTo: '/',
+        pathMatch: 'full'
+    },
     {path: 'explore-services', component: BrowseServicesMainComponent,
         data: {
             title: 'Find Top Structural Engineering Services | BuildTwin',
@@ -262,8 +268,14 @@ const routes: Routes = [
     {path: 'de/terms-of-service', component: DataPrivacyComponent},
     {path: 'de/privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'de/terms-conditions', component: TermsConditionsPageComponent},
-    {path: 'de/engineering-services/services', component: ServicesComponent},
-    {path: 'de/engineering-services/sector', component: SectorComponent},
+    {path: 'de/engineering-services/services',
+        redirectTo: '/de/explore-services',
+        pathMatch: 'full'
+    },
+    {path: 'de/engineering-services/sector',
+        redirectTo: '/de',
+        pathMatch: 'full'
+    },
     {path: 'de/explore-services', component: BrowseServicesMainComponent,
         data: {
             title: 'Find Top Structural Engineering Services | BuildTwin',
