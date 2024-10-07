@@ -16,7 +16,7 @@ export class LanguageService {
     let localLanng = '/'
     const url = window.location.href; // Get the current URL
     if (this.isGermanURL(url)) {
-      localLanng = 'de'
+      localLanng = '/de'
     } else {
         console.log("This URL is not in German.");
     }
@@ -52,7 +52,7 @@ export class LanguageService {
         console.log(E)
       }
 
-      this.currentLanguage = languageFound.value;
+      // this.currentLanguage = languageFound.value;
     }
     console.log(url, languageFound, "language")
 
