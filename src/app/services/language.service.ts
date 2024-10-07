@@ -33,30 +33,30 @@ export class LanguageService {
     return pathname.startsWith('/de');
 }
 
-  getLanguage(url) {
+  // getLanguage(url) {  
+  //   debugger
 
+  //   let languageFound = undefined;
+  //   this.language.forEach((ele) => {
+  //     console.log(url.includes(ele.lang), ele);
+  //     if (url.includes(ele.lang)) {
+  //       languageFound = ele
+  //     }
 
-    let languageFound = undefined;
-    this.language.forEach((ele) => {
-      console.log(url.includes(ele.lang), ele);
-      if (url.includes(ele.lang)) {
-        languageFound = ele
-      }
+  //   })
 
-    })
+  //   if (languageFound && languageFound.value) {
+  //     try {
+  //       // window['Localize'].setLanguage(languageFound.value);
+  //     } catch (E) {
+  //       console.log(E)
+  //     }
 
-    if (languageFound && languageFound.value) {
-      try {
-        window['Localize'].setLanguage(languageFound.value);
-      } catch (E) {
-        console.log(E)
-      }
+  //     // this.currentLanguage = languageFound.value;
+  //   }
+  //   console.log(url, languageFound, "language")
 
-      // this.currentLanguage = languageFound.value;
-    }
-    console.log(url, languageFound, "language")
-
-  }
+  // }
 
   setCanonicalURL() {
     const url = this.router.url;
