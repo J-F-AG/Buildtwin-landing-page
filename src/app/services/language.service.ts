@@ -13,13 +13,25 @@ export class LanguageService {
   constructor(
     private router: Router
   ) {
-    let localLanng = window['Localize'].getLanguage()
-    if (localLanng == 'en') {
-      localLanng = '/'
+    let localLanng = '/'
+    const url = window.location.href; // Get the current URL
+    if (this.isGermanURL(url)) {
+      localLanng = 'de'
+    } else {
+        console.log("This URL is not in German.");
     }
     this.currentLanguage = localLanng
   }
-
+  isGermanURL(url) {
+    // Create a URL object to easily parse the input URL
+    const parsedURL = new URL(url);
+    
+    // Get the pathname of the URL (e.g., "/de/about")
+    const pathname = parsedURL.pathname;
+    
+    // Check if the pathname starts with "/de"
+    return pathname.startsWith('/de');
+}
 
   getLanguage(url) {
 
