@@ -87,7 +87,7 @@ export class AppComponent {
                 console.log(event)
                 this.location = this.router.url;
 
-                this._languageService.getLanguage(this.location);
+                // this._languageService.getLanguage(this.location);
 
                 if (!(event instanceof NavigationEnd)) {
                     return;
