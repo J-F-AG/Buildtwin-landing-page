@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: 
+Disallow: /source/*
+Disallow: /en/*
 
 Sitemap: https://www.buildtwin.com/sitemap.xml
