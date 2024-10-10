@@ -15,12 +15,12 @@ export class BreadcrumbService {
         this.breadcrumbs = [];
         const paths: any = url.split('/').filter(path => path);
         let language = '';
-        if (paths.length) {
-            if (paths[0] === 'de') {
-                paths.shift()
-                language = '/de';
-            }
-        }
+        // if (paths.length) {
+        //     if (paths[0] === 'de') {
+        //         paths.shift()
+        //         language = '/de';
+        //     }
+        // }
 
         if (!paths.length) {
             this.breadcrumbs.push({

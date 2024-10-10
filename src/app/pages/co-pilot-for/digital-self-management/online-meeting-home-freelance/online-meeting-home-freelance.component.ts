@@ -29,11 +29,15 @@ export class OnlineMeetingHomeFreelanceComponent {
     constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
 
       router.events.subscribe((val) => {
-        this.scrollActivated = document.getElementById('scrollActivated');
         setTimeout(() => {
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          this.scrollActivated = document.getElementById('scrollActivated');
+          if(this.scrollActivated){
+            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+            console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          } else {
+            console.error('Element with ID scrollActivated not found');
+          }
           
         }, 2000);
     });
