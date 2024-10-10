@@ -91,13 +91,37 @@ export class OnlineMeetingHomeComponent {
     constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
 
       router.events.subscribe((val) => {
-        this.scrollActivated = document.getElementById('scrollActivated');
         setTimeout(() => {
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          this.scrollActivated = document.getElementById('scrollActivated');
+          if(this.scrollActivated){
+            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+            console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          } else {
+            console.error('Element with ID scrollActivated not found');
+          }
           
         }, 2000);
+    });
+
+    router.events.subscribe((val) => {
+      // Wait for the page to settle down before searching for the element
+      setTimeout(() => {
+        this.scrollActivated = document.getElementById('scrollActivated');
+    
+        if (this.scrollActivated) {
+          // Retrieve the offset top and height safely
+          const rect = this.scrollActivated.getBoundingClientRect();
+          this.scrollDivOffsettop = rect.top;
+          this.scrolledDivHeight = rect.height;
+          
+          // console.log(this.scrollDivOffsettop, this.scrolledDivHeight);
+        } else {
+          // Log a clear message when the element is not found
+          // console.error('Element with ID scrollActivated not found');
+        }
+    
+      }, 2000); // Wait 2 seconds before executing the search
     });
 
     
