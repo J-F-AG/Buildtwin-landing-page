@@ -25,7 +25,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
   servicesArray = [
     { name: 'PRE-CAST', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', serviceId: 9},
     { name: 'Structural Design', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
-    { name: '3D Rebar Capabilities', img: '/assets/images/rebar.png', width:'151', height: '137' },
+    { name: '3D Rebar Capabilities', img: '/assets/images/rebar.png', width:'151', height: '137', serviceId: 10},
     { name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137' },
     { name: 'BI Modeling', img: '/assets/images/modelling.png', width:'151', height: '137' },
     { name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137' },
@@ -36,6 +36,20 @@ export class BrowseServiceHeaderComponent implements OnInit {
     { name: 'BI Modeling', img: '/assets/images/modelling.png', width:'151', height: '137' },
     { name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137' },
   ]
+
+
+  serviceRoutesMap = {
+    9: '/services/pre-cast-detailing-services',
+    10: '/services/rebar-detailing-services',
+    // Add more serviceId to route mappings here
+  };
+
+
+  getServiceRoute(serviceId: number): string {
+    const baseUrl = this._languageService.currentLanguage;
+    return baseUrl + (this.serviceRoutesMap[serviceId] || '');
+  }
+
 
   discoverServices = this.splitArray(this.servicesArray, 6);
 
