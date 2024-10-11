@@ -16,24 +16,24 @@ export class LanguageService {
   ) {
     let localLanng = '/'
     const url = window.location.href; // Get the current URL
-    if (this.isGermanURL(url)) {
-      localLanng = '/de'
-    } else {
+    // if (this.isGermanURL(url)) {
+    //   localLanng = '/de'
+    // } else {
         window['Localize'].setLanguage('en')
         console.log("This URL is not in German.");
-    }
+    // }
     this.currentLanguage = localLanng
   }
-  isGermanURL(url) {
-    // Create a URL object to easily parse the input URL
-    const parsedURL = new URL(url);
+//   isGermanURL(url) {
+//     // Create a URL object to easily parse the input URL
+//     const parsedURL = new URL(url);
     
-    // Get the pathname of the URL (e.g., "/de/about")
-    const pathname = parsedURL.pathname;
+//     // Get the pathname of the URL (e.g., "/de/about")
+//     const pathname = parsedURL.pathname;
     
-    // Check if the pathname starts with "/de"
-    return pathname.startsWith('/de');
-}
+//     // Check if the pathname starts with "/de"
+//     return pathname.startsWith('/de');
+// }
 
   // getLanguage(url) {  
   //   debugger
@@ -87,7 +87,7 @@ export class LanguageService {
     // Define language tags
     const languageTags = [
       { href: `${fullUrl}`, hreflang: 'en' },
-      { href: `${fullUrl}`, hreflang: 'de' },
+      // { href: `${fullUrl}`, hreflang: 'de' },
       // { href: `${fullUrl}`, hreflang: 'en-in' },
       // { href: `${fullUrl}`, hreflang: 'en-us' },
       // { href: `${fullUrl}`, hreflang: 'en-gb' },
