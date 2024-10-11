@@ -29,7 +29,14 @@ export class PrecastServiceComponent implements OnInit {
             'CRSI',
             'NZS',
             'AS',
-            'BS'
+            'BS',
+            'Eurocode (EN)',
+            'CSA',
+            'DIN',
+            'IS',
+            'JIS',
+            'SNI',
+            'SANS'
           ],
         }
       ]

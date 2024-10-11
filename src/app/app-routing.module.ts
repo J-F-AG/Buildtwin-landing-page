@@ -33,6 +33,7 @@ import { ServicesComponent } from './pages/Services/services/services.component'
 import { SectorComponent } from './pages/sector/sector.component';
 import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
 import { ServicesNewComponent } from './pages/services-new/services-new.component';
+import { RebarServicesNewComponent } from './pages/rebar/services-new.component';
 
 
 
@@ -173,6 +174,14 @@ const routes: Routes = [
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
         }
     },
+
+    {path: 'services/rebar-detailing-services', component: RebarServicesNewComponent,
+        data: {
+            title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
+            description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+        }
+    },
     
     {path: 'de/AI-project-management', component: OnlineMeetingHomeComponent,
         data: {
@@ -287,6 +296,13 @@ const routes: Routes = [
         data: {
             title: 'Precast Detailing Services by Pre-Qualified Vendors | BuildTwin',
             description: "Streamline your projects with BuildTwin's precast detailing services. Select from hundreds of pre-qualified vendors, monitor progress live, and receive internationally compliant drawings",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+        }
+    },
+    {path: 'de/services/rebar-detailing-services', component: RebarServicesNewComponent,
+        data: {
+            title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
+            description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
         }
     },    

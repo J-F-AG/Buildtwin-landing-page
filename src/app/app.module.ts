@@ -223,6 +223,22 @@ import { TrustByNewComponent } from './pages/services-new/trust-by/trust-by.comp
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { FileUploadServiceComponent } from './pages/services-new/free-offer-form/file-upload-service/file-upload-service.component';
 import { GetStartedModule } from './include-component/get-started/get-started.module';
+import { RebarServicesNewComponent } from './pages/rebar/services-new.component';
+import { RebarBannerComponent } from './pages/rebar/banner/banner.component';
+import { RebarDrawingFreelancersComponent } from './pages/rebar/drawing-freelancers/drawing-freelancers.component';
+import { RebarE2eEncryptionComponent } from './pages/rebar/e2e-encryption/e2e-encryption.component';
+import { RebarFaqBuildtwinComponent } from './pages/rebar/faq-buildtwin/faq-buildtwin.component';
+import { RebarFreeOfferFormComponent } from './pages/rebar/free-offer-form/free-offer-form.component';
+import { RebarHowItWorksNewComponent } from './pages/rebar/how-it-works/how-it-works.component';
+import { RebarLiveTrackingNewComponent } from './pages/rebar/live-tracking/live-tracking.component';
+import { RebarPlugPlayNewComponent } from './pages/rebar/plug-play/plug-play.component';
+import { RebarPrecastServiceComponent } from './pages/rebar/precast-service/precast-service.component';
+import { RebarSampleDrawingComponent } from './pages/rebar/sample-drawing/sample-drawing.component';
+import { RebarServicesOfferedComponent } from './pages/rebar/services-offered/services-offered.component';
+import { RebarThreeCardsComponent } from './pages/rebar/three-cards/three-cards.component';
+import { RebarTopVendorsComponent } from './pages/rebar/top-vendors/top-vendors.component';
+import { RebarTrustByNewComponent } from './pages/rebar/trust-by/trust-by.component';
+import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/file-upload-service/file-upload-service.component';
 
 @NgModule({
   declarations: [
@@ -412,7 +428,23 @@ import { GetStartedModule } from './include-component/get-started/get-started.mo
    
    FreeOfferFormComponent,
    FaqBuildtwinComponent  ,
-   FileUploadServiceComponent  
+   FileUploadServiceComponent,
+   RebarServicesNewComponent,
+   RebarBannerComponent,
+   RebarDrawingFreelancersComponent,
+   RebarE2eEncryptionComponent,
+   RebarFaqBuildtwinComponent,
+   RebarFreeOfferFormComponent,
+   RebarHowItWorksNewComponent,
+   RebarLiveTrackingNewComponent,
+   RebarPlugPlayNewComponent,
+   RebarPrecastServiceComponent,
+   RebarSampleDrawingComponent,
+   RebarServicesOfferedComponent,
+   RebarThreeCardsComponent,
+   RebarTopVendorsComponent,
+   RebarTrustByNewComponent,
+   RebarFileUploadServiceComponent
   ],
   imports: [    
     BrowserModule,

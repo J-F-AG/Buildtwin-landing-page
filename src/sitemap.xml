@@ -30,9 +30,15 @@
   <changefreq>daily</changefreq>
   <priority>0.90</priority>
 </url>
-      <url>
+<url>
   <loc>https://www.buildtwin.com/services/pre-cast-detailing-services</loc>
   <lastmod>2024-09-27</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/rebar-detailing-services</loc>
+  <lastmod>2024-10-11</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.90</priority>
 </url>
