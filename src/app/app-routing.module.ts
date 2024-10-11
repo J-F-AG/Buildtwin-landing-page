@@ -297,7 +297,14 @@ const routes: Routes = [
     //         description: "Streamline your projects with BuildTwin's precast detailing services. Select from hundreds of pre-qualified vendors, monitor progress live, and receive internationally compliant drawings",
     //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
     //     }
-    // },    
+    // },
+    // {path: 'de/services/rebar-detailing-services', component: RebarServicesNewComponent,
+    //     data: {
+    //         title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
+    //         description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
+    //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+    //     }
+    // },     
     // :lang(de|fr)
 
     {path: 'coming-soon', component: ComingSoonComponent},
