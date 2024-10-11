@@ -1,0 +1,30 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="mainContainer">
+    <div class="maincontent">
+        <app-rebar-banner></app-rebar-banner>
+        <app-rebar-three-cards></app-rebar-three-cards>
+        <app-rebar-trust-by></app-rebar-trust-by>
+        <app-rebar-sample-drawing></app-rebar-sample-drawing>
+        <app-rebar-precast-service></app-rebar-precast-service>
+        <app-rebar-top-vendors></app-rebar-top-vendors>
+
+        <app-rebar-how-it-worksNew></app-rebar-how-it-worksNew>
+        <app-rebar-live-trackingNew></app-rebar-live-trackingNew>
+
+        <app-rebar-plug-play></app-rebar-plug-play>
+        <app-rebar-services-offered></app-rebar-services-offered>
+        <app-rebar-e2e-encryption></app-rebar-e2e-encryption>
+        <app-rebar-faq-buildtwin></app-rebar-faq-buildtwin>
+    </div>
+    <div class="toggle-sidebar" (click)="toggleSidebar()"><span></span></div>
+    <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+        <span class="cross" (click)="toggleSidebar()"></span>
+        <aside class="Stickyform">
+            <app-rebar-free-offer-form class="formWrapper"></app-rebar-free-offer-form>
+        </aside>
+    </div>
+</div>
+
+<app-rebar-drawing-freelancers></app-rebar-drawing-freelancers> 
+<app-hd-footer></app-hd-footer>

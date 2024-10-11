@@ -8,7 +8,8 @@ export class LanguageService {
   language = [{ lang: "/en", "value": "/" }, { lang: "/de", value: "/de" }]
   currentLanguage = '/';
   serviceId: any = {
-    "pre-cast-detailing-services": 9
+    "pre-cast-detailing-services": 9,
+    "rebar-detailing-services" : 9  //this has to be updated later
   }
   constructor(
     private router: Router
