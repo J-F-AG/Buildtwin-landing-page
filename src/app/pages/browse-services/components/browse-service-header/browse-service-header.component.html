@@ -32,7 +32,7 @@
                             {{item.name}}
                         </div>
                     </div>
-                    <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="[_languageService.currentLanguage + '/services/pre-cast-detailing-services']">
+                    <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="getServiceRoute(item.serviceId)">
                         <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                         <div class="detail">
                             {{item.name}}

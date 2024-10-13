@@ -9,7 +9,7 @@ export class LanguageService {
   currentLanguage = '/';
   serviceId: any = {
     "pre-cast-detailing-services": 9,
-    "rebar-detailing-services" : 9  //this has to be updated later
+    "rebar-detailing-services" : 10  //this has to be updated later
   }
   constructor(
     private router: Router

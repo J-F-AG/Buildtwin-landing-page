@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-hd-services',
@@ -9,7 +10,7 @@ import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 
 export class HdServicesComponent implements OnInit {
   showPopup=false;
-  constructor() { }
+  constructor(public _languageService: LanguageService) { }
 
   splitArray(dataArray: any[], x: number) {
     const result = [];
@@ -21,9 +22,10 @@ export class HdServicesComponent implements OnInit {
   }
 
   servicesArray = [
+    { name: 'PRE-CAST', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', serviceId: 9},
     { name: 'Structural Design', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
     { name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137' },
-    { name: '3D Rebar Capabilities', img: '/assets/images/rebar.png', width:'151', height: '137' },
+    { name: '3D Rebar Capabilities', img: '/assets/images/rebar.png', width:'151', height: '137', serviceId: 10},
     { name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137' },
     { name: 'BIM Model', img: '/assets/images/modelling.png', width:'151', height: '137' },
     { name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137' },
@@ -34,6 +36,19 @@ export class HdServicesComponent implements OnInit {
     { name: 'BI Modeling', img: '/assets/images/modelling.png', width:'151', height: '137' },
     { name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137' },
   ]
+
+  serviceRoutesMap = {
+    9: '/services/pre-cast-detailing-services',
+    10: '/services/rebar-detailing-services',
+    // Add more serviceId to route mappings here
+  };
+
+
+  getServiceRoute(serviceId: number): string {
+    const baseUrl = this._languageService.currentLanguage;
+    return baseUrl + (this.serviceRoutesMap[serviceId] || '/services/default-page');
+  }
+
 
   discoverServices = this.splitArray(this.servicesArray, 6);
 

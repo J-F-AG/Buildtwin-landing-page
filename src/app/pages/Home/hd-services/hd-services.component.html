@@ -36,12 +36,18 @@
                             <div class="detail">Structural Design</div>
                         </div> -->
                         <ng-container *ngFor="let item of subServiceArray">
-                            <div class="cardWrapper">
+                            <div class="cardWrapper" *ngIf="!item['serviceId']">
                                 <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                                 <div class="detail">
                                     {{item.name}}
                                 </div>
                             </div>
+                            <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="getServiceRoute(item.serviceId)">
+                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                                <div class="detail">
+                                    {{item.name}}
+                                </div>
+                            </a>
                         </ng-container>
                         <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
                             [sizeH]="88">
