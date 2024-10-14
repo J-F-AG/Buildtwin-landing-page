@@ -18,8 +18,8 @@ export class LanguageService {
     // if (this.isGermanURL(url)) {
     //   localLanng = '/de'
     // } else {
-        window['Localize'].setLanguage('en')
-        console.log("This URL is not in German.");
+        // window['Localize'].setLanguage('en')
+        // console.log("This URL is not in German.");
     // }
     this.currentLanguage = localLanng
   }
