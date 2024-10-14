@@ -39,7 +39,6 @@
               "node_modules/ngx-lightbox/lightbox.css",
               "node_modules/animate.css/animate.min.css",
               "node_modules/boxicons/css/boxicons.min.css",
-              "node_modules/aos/dist/aos.css",
               "src/assets/css/fonts.css",
               "src/assets/css/tabler-icons.min.css",
               "src/assets/css/flaticon.css",
