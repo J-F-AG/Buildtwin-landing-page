@@ -61,7 +61,6 @@ phases:
       - aws configure set region eu-central-1
       - aws codeartifact login --tool npm --repository one-jf-search --domain jf-one-modules --domain-owner 188097494660
       - npm cache clean --force
-      - npm install buildtwin-library-ux@0.0.199 --legacy-peer-deps
       - export NODE_OPTIONS=--max-old-space-size=6144
       - npm install --force
 

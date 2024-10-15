@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { functionList } from 'buildtwin-library-ux/core';//buildtwin-library-ux
+// import { functionList } from 'buildtwin-library-ux/core';//buildtwin-library-ux
 // import { ModuleImportService } from 'src/app/overview/service/module-import.service';
 
 @Component({
@@ -57,7 +57,7 @@ export class GlobalBannerComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    functionList.unsubscribeAll(this.unsubscribe)
+    // functionList.unsubscribeAll(this.unsubscribe)
     const tabList = document.querySelector("#banner-wrapper");
     const mobDesign = document.querySelector("#mobDesign");
     if(tabList){

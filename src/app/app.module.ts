@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserModule, Title, provideClientHydration } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -161,7 +161,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { BookServicesHeaderComponent } from './pages/Home/hd-banner-tabs/book-services-header/book-services-header.component';
 
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
-import { BtSelectModule } from 'buildtwin-library-ux/bt-select';
+// import { BtSelectModule } from 'buildtwin-library-ux/bt-select';
 // import { BtIconModule } from 'buildtwin-library-ux/bt-icon';
 import { en_US, NZ_I18N } from 'ng-zorro-antd/i18n';
 import { NZ_ICONS } from 'ng-zorro-antd/icon';
@@ -193,7 +193,7 @@ import { GetStartedComponent } from './pages/sector/get-started/get-started.comp
 
 
 
-import { BtSelectGroupModule } from 'buildtwin-library-ux/bt-select-group';//buildtwin-library-ux
+// import { BtSelectGroupModule } from 'buildtwin-library-ux/bt-select-group';//buildtwin-library-ux
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { GlobalBannerModule } from './include-component/global-banner/global-banner.module';
 import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
@@ -467,7 +467,7 @@ import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/f
     HttpClientModule,
     NzSpinModule,
     NzRateModule,
-    BtSelectModule,
+    // BtSelectModule,
     BtIconModule,
     NzDatePickerModule,
     MatTabsModule, 
@@ -478,7 +478,7 @@ import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/f
     NzSkeletonModule,
     NzSelectModule,
     GlobalBannerModule,
-    BtSelectGroupModule,
+    // BtSelectGroupModule,
     NzDropDownModule,
     HubspotModule,
     NzUploadModule,
@@ -489,6 +489,7 @@ import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/f
     ModalPopupService,
     provideAnimationsAsync(),
     { provide: NZ_I18N, useValue: en_US },
+    provideClientHydration(),
     // { provide: NZ_ICONS, useValue: icons },
   ],
   bootstrap: [AppComponent]
