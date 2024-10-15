@@ -307,12 +307,12 @@ const routes: Routes = [
     // },     
     // :lang(de|fr)
 
-    {path: 'coming-soon', component: ComingSoonComponent},
+    {path: 'notfound', component: ComingSoonComponent},
 
 
-    {path: '**', component: ComingSoonComponent} 
-    // {path: '**', redirectTo: '/',
-    //     pathMatch: 'full'} 
+    // {path: '**', component: ComingSoonComponent} 
+    {path: '**', redirectTo: '/notfound',
+        pathMatch: 'full'} 
 ];
 
 @NgModule({
