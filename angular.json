@@ -17,10 +17,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "prerender": {
-              "discoverRoutes": false,
-              "routesFile": "src/routes.txt"
-            },
             "outputPath": "dist/buildtwin/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -154,9 +150,8 @@
         "prerender": {
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
-            "routes": [
-              "/"
-            ]
+            "discoverRoutes": false,  // Moved from build section
+            "routesFile": "src/routes.txt"  // Moved from build section
           },
           "configurations": {
             "production": {
