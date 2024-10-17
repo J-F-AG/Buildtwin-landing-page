@@ -22,18 +22,12 @@ export class HdServicesComponent implements OnInit {
   }
 
   servicesArray = [
-    { name: 'PRE-CAST', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', serviceId: 9},
-    { name: 'Structural Design', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
+    { name: 'Precast Detailing', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', serviceId: 9},
+    { name: 'Structural Steel Detailing', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
     { name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137' },
-    { name: '3D Rebar Capabilities', img: '/assets/images/rebar.png', width:'151', height: '137', serviceId: 10},
+    { name: 'Rebar Detailing', img: '/assets/images/rebar.png', width:'151', height: '137', serviceId: 10},
     { name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137' },
-    { name: 'BIM Model', img: '/assets/images/modelling.png', width:'151', height: '137' },
-    { name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137' },
-    { name: 'Structural Design', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
-    { name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137' },
-    { name: '3D Rebar Capabilities', img: '/assets/images/rebar.png', width:'151', height: '137' },
-    { name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137' },
-    { name: 'BI Modeling', img: '/assets/images/modelling.png', width:'151', height: '137' },
+    { name: 'BIM Services', img: '/assets/images/modelling.png', width:'151', height: '137' },
     { name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137' },
   ]
 
