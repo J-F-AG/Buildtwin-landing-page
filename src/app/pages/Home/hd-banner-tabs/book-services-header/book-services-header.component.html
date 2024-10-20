@@ -7,14 +7,14 @@
                         <span class="title">Pre-Cast</span>
                         <span class="selectedValue">{{selectedPrecastServices.label}}</span>
                     </div>
-                    <!-- <app-bt-select [options]="precastServices" (selectedTabChange)="selectService($event)" [selectedInput]="selectedPrecastServices" ></app-bt-select> -->
+                    <app-bt-select [options]="precastServices" (selectedTabChange)="selectService($event)" [selectedInput]="selectedPrecastServices" ></app-bt-select>
                 </div>
                 <div class="selectBox precastField">
                     <div>
                         <span class="title">Pre-Cast</span>
                         <span class="selectedValue v-center-flex"><lib-svg-icon [name]="selectedPrecast.svgName" [size]="26" [sizeH]="26"></lib-svg-icon>{{selectedPrecast.label}}</span>
                     </div>
-                    <!-- <app-bt-select [options]="precastList" (selectedTabChange)="selectPrecast($event)" [selectedInput]="selectedPrecast" ></app-bt-select> -->
+                    <app-bt-select [options]="precastList" (selectedTabChange)="selectPrecast($event)" [selectedInput]="selectedPrecast" ></app-bt-select>
                 </div>
             </div>
         </div>
@@ -87,7 +87,7 @@
                         <small>{{selectedCountry.currency}}</small>
                     </div>
                 </div>
-                <!-- <app-bt-select [options]="countryArray" (selectedTabChange)="selectCountry($event)" [selectedInput]="selectedCountry" ></app-bt-select> -->
+                <app-bt-select [options]="countryArray" (selectedTabChange)="selectCountry($event)" [selectedInput]="selectedCountry" ></app-bt-select>
             </div>
             <div>
                 <label class="preQualified v-center-flex">

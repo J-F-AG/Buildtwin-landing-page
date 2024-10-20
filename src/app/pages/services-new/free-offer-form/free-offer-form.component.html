@@ -38,7 +38,7 @@
                             sectorObj[myForm.get('selectedPrecastServices').value]['service_name'] : 'Select sector' }}
                         </span>
                     </div>
-                    <!-- <app-bt-select [options]="sectorArray" (selectedTabChange)="selectSector($event)"></app-bt-select> -->
+                    <app-bt-select [options]="sectorArray" (selectedTabChange)="selectSector($event)"></app-bt-select>
                 </div>
                 <div *ngIf="myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid"
                     class="error-message">
@@ -58,8 +58,8 @@
                             code' }}
                         </span>
                     </div>
-                    <!-- <app-bt-select [options]="buildingCodeArray"
-                        (selectedTabChange)="selectBuildingCode($event)"></app-bt-select> -->
+                    <app-bt-select [options]="buildingCodeArray"
+                        (selectedTabChange)="selectBuildingCode($event)"></app-bt-select>
                 </div>
                 <div *ngIf="myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid"
                     class="error-message">

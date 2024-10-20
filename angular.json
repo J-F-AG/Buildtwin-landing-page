@@ -150,8 +150,8 @@
         "prerender": {
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
-            "discoverRoutes": false,  // Moved from build section
-            "routesFile": "src/routes.txt"  // Moved from build section
+            "discoverRoutes": false, 
+            "routesFile": "src/routes.txt" 
           },
           "configurations": {
             "production": {
