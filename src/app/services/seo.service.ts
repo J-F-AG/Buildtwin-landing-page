@@ -51,4 +51,18 @@ export class SeoService {
     this.metaService.updateTag({ name: 'twitter:card', content: type });
   }
 
+
+  setCanonicalURL(url: string) {
+    // Correctly select the canonical tag using the 'link[rel="canonical"]' selector
+  // const existingCanonical = this.metaService.getTag('link[rel="canonical"]');
+
+  // // If the canonical tag exists, remove it
+  // if (existingCanonical) {
+  //   this.metaService.removeTag('link[rel="canonical"]');
+  // }
+
+  // Add the new canonical tag
+  this.metaService.addTag({ rel: 'canonical', href: url });
+  }
+
 }

@@ -2,6 +2,8 @@ import { Component, Renderer2 } from '@angular/core';
 import { Router, NavigationCancel, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { filter, map, mergeMap } from 'rxjs/operators';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, PLATFORM_ID } from '@angular/core';
 // import * as AOS from "aos";
 import { LanguageService } from './services/language.service';
 import { BreadcrumbService } from './services/breadcrumb.service';
@@ -32,10 +34,13 @@ export class AppComponent {
         private renderer: Renderer2,
         public router: Router,
         private _seoService: SeoService,
-        private activatedRoute: ActivatedRoute
+        private activatedRoute: ActivatedRoute,
+        @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
         // Directly assign the breadcrumbs array from the service
-        localStorage.setItem("appVersion","0.0.12")
+        if (isPlatformBrowser(this.platformId)) {
+            localStorage.setItem("appVersion", "0.0.12");
+        }
         // AOS.init();
     }
 
@@ -63,10 +68,19 @@ export class AppComponent {
                 // Update Twitter card tags
                 this._seoService.updateTwitterCardType('summary_large_image');
                 this._seoService.updateTwitterImage(event['image']);
+                this._seoService.setCanonicalURL(event['canonical']);
             }
+            if(event['canonical']){
+            }
+            
+            this._languageService.setLanguageTags();
+            this.breadcrumbService.generateBreadcrumbs(this.router.url);
+            this.breadcrumbs = this.breadcrumbService.breadcrumbs;
+            let url = this.router.url;
+            this.injectBreadcrumbScript(url);
+            console.log(event)
         })
     }
-
     recallJsFuntions() {
         this.routerSubscription = this.router.events
             .pipe(filter(event => event instanceof NavigationEnd || event instanceof NavigationCancel))
@@ -78,13 +92,6 @@ export class AppComponent {
                     const newUrl = urlEn.replace('/en/', '/');
                     this.router.navigateByUrl(newUrl);
                 }
-                this._languageService.setCanonicalURL();
-                this._languageService.setLanguageTags();
-                this.breadcrumbService.generateBreadcrumbs(this.router.url);
-                this.breadcrumbs = this.breadcrumbService.breadcrumbs;
-                let url = this.router.url;
-                this.injectBreadcrumbScript(url);
-                console.log(event)
                 this.location = this.router.url;
 
                 // this._languageService.getLanguage(this.location);

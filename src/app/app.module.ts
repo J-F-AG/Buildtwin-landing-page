@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserModule, Title, provideClientHydration } from '@angular/platform-browser';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -489,6 +489,7 @@ import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/f
     ModalPopupService,
     provideAnimationsAsync(),
     { provide: NZ_I18N, useValue: en_US },
+    provideClientHydration(),
     // { provide: NZ_ICONS, useValue: icons },
   ],
   bootstrap: [AppComponent]
