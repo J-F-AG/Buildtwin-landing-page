@@ -44,7 +44,7 @@ const routes: Routes = [
     {path: '', component: HelpDeskHomeComponent,
     data: {
         title: 'Buildtwin | Marketplace for Structural Engineering Services',
-        description: 'Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform."',
+        description: 'Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform.',
         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
         canonical: 'https://www.buildtwin.com'
       }
@@ -99,9 +99,6 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/training'
         }
     }, 
-    {path: 'events', component: EventsComponent},
-    {path: 'training-faq', component: FaqPageTrainingComponent},
-    {path: 'pricing', component: PricingPageComponent},
     {path: 'good-reason', component: EmailMarketingHomeComponent,
         data: {
             title: 'Why Choose Buildtwin | Efficient Engineering Team Matching',
@@ -150,20 +147,25 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/contact'
         }
     },
-    {path: 'about', component: AboutPageComponent},
-    {path: 'vender-details', component: VenderDetailsComponent},
-    {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
-    {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
-    {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
     {path: 'partners/:id', component: VenderDetailsAarbeeComponent},
-    {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
-    {path: 'vender-details-ui', component: VenderDetailsUiComponent},
-    {path: 'details', component: VenderDetailsAarbeeOldComponent},
-    {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
-    {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
+    {path: 'about', component: AboutPageComponent},
+
+    // {path: 'vender-details', component: VenderDetailsComponent},
+    // {path: 'events', component: EventsComponent},
+    // {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
+    // {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
+    // {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
+    // {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
+    // {path: 'vender-details-ui', component: VenderDetailsUiComponent},
+    // {path: 'details', component: VenderDetailsAarbeeOldComponent},
+    // {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
+    // {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
+    
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
+    {path: 'training-faq', component: FaqPageTrainingComponent},
+    {path: 'pricing', component: PricingPageComponent},
     // {path: 'engineering-services/services',
     //     redirectTo: '/explore-services',
     //     pathMatch: 'full'
