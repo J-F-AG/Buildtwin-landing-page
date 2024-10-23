@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationCancel, NavigationEnd, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { catchError, forkJoin, retry } from 'rxjs';
+import { catchError, filter, forkJoin, map, mergeMap, retry } from 'rxjs';
 import { ModalPopupService } from './modal/modal.service';
 import { FooterService } from '../../includes/hd-footer/footer.service';
+import { SeoService } from 'src/app/services/seo.service';
+import { VenderDetailService } from './vender-detail.service';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -307,7 +309,7 @@ export class VenderDetailsAarbeeComponent {
   filterIndex = 0;
   filterSelectedProjectCategorIndex = 0;
   categorisedProjectImages = [];
-  constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
+  constructor(private _venderDetailService : VenderDetailService, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
 
     this.getBusinessListing();
     this.domain = this.route.snapshot.params['id'];
@@ -316,6 +318,48 @@ export class VenderDetailsAarbeeComponent {
     if(this.route.snapshot.queryParams['isIframe']){
       document.body.classList.add('iframeEmbed');
     }
+
+    // this.router.events.pipe(
+    //   filter((event) => event instanceof NavigationEnd),
+    //   map(() => this.route),
+    //   map((route) => {
+    //     while (route.firstChild) route = route.firstChild;
+    //     return route;
+    //   }),
+    //   filter((route) => route.outlet === 'primary'),
+    //   mergeMap((route) => route.data)
+    // )
+    //   .subscribe((event) => {
+    //     console.log(event)
+    //           // this._seoService.updateTitle(event['title']);
+    //           // this._seoService.updateDescription(event['description']);
+    //           // // Update OG tags
+    //           // this._seoService.updateOGUrl(this.router.url);
+    //           // this._seoService.updateOGImage(event['image']);
+
+    //           // // Update Twitter card tags
+    //           // this._seoService.updateTwitterCardType('summary_large_image');
+    //           // this._seoService.updateTwitterImage(event['image']);
+    //           // this._seoService.setCanonicalURL(event['canonical']);
+    //   })
+
+
+      // let url = this.router.url;
+      // console.log(url)
+      const urlSegments = this.router.url.split('/');
+      let url = urlSegments[urlSegments.length - 1];
+        if(this._venderDetailService['detalMeta'][url]){
+          this._seoService.updateTitle(this._venderDetailService['detalMeta'][url]['title']);
+          this._seoService.updateDescription(this._venderDetailService['detalMeta'][url]['description']);
+          // Update OG tags
+          this._seoService.updateOGUrl(this.router.url);
+          this._seoService.updateOGImage(this._venderDetailService['detalMeta'][url]['image']);
+  
+          // Update Twitter card tags
+          this._seoService.updateTwitterCardType('summary_large_image');
+          this._seoService.updateTwitterImage(this._venderDetailService['detalMeta'][url]['image']);
+          this._seoService.setCanonicalURL(this._venderDetailService['detalMeta'][url]['canonical']);
+        }
   }
   showPopup = false;
   openModal(html: HTMLElement | string = "", isParent: boolean, isChild: boolean, project) {
