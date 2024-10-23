@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { LanguageService } from 'src/app/services/language.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-hd-services',
@@ -9,6 +10,33 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 
 export class HdServicesComponent implements OnInit {
+
+
+  integrationsList: OwlOptions = {
+    nav: true,
+    loop: true,
+    dots: false,
+    autoplay: false,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      515: {
+        items: 3
+      },
+      768: {
+        items: 4
+      },
+      990: {
+        items: 6
+      },
+      1400: {
+        items: 6
+      }
+    }
+  }
+
   showPopup=false;
   constructor(public _languageService: LanguageService) { }
 
