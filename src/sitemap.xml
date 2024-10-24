@@ -7,213 +7,215 @@
 
 
 <url>
-  <loc>https://www.buildtwin.com/</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <loc>https://www.buildtwin.com</loc>
+  <lastmod>2024-10-23T12:49:32+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/explore-services</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:31+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/provide-service</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/marketplace</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:33+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/services/pre-cast-detailing-services</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/services/rebar-detailing-services</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/J&amp;FIndia</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/Durchgeplant</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/Caldim</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/Sublime</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/Mold-TekTechnologiesLimited</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/GBCEngineers</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/AarbeeStructuresPrivateLimited</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/TrikaalTechEnterprisesPrivateLimited</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/REPLinfosystems</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/PrecisionPrecastSolutionsPrivateLimited</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/OrioleDesignTechSolutionsLLP</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/InnowellEngineeringInternationalPvtLtd</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/CloveTechnologiesPrivateLimited</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/TRITECHCORPORATION</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/partners/CosmereTechnologies</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/AI-project-management</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/business-intelligence</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/training</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/pricing</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/good-reason</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:31+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/data-safety</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.buildtwin.com/use-cases</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:30+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/integrations</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:32+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/use-cases</loc>
+  <lastmod>2024-10-23T12:49:38+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/faq</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:31+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/contact</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:30+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/AI-project-management</loc>
+  <lastmod>2024-10-23T12:48:15+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/business-intelligence</loc>
+  <lastmod>2024-10-23T12:49:30+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/training</loc>
+  <lastmod>2024-10-23T12:49:38+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/about</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:48:16+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.buildtwin.com/terms-of-service</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <loc>https://www.buildtwin.com/get-started</loc>
+  <lastmod>2024-10-08T08:20:25+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/GBCEngineers</loc>
+  <lastmod>2024-10-23T12:49:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/J&amp;FIndia</loc>
+  <lastmod>2024-10-23T12:49:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/Durchgeplant</loc>
+  <lastmod>2024-10-23T12:49:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/AarbeeStructuresPrivateLimited</loc>
+  <lastmod>2024-10-23T12:49:33+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/Caldim</loc>
+  <lastmod>2024-10-23T12:49:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/pre-cast-detailing-services</loc>
+  <lastmod>2024-10-23T12:49:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/rebar-detailing-services</loc>
+  <lastmod>2024-10-23T12:49:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/Mold-TekTechnologiesLimited</loc>
+  <lastmod>2024-10-23T12:49:35+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/privacy-policy</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:36+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.buildtwin.com/terms-conditions</loc>
-  <lastmod>2024-10-23</lastmod>
-  <changefreq>daily</changefreq>
+  <lastmod>2024-10-23T12:49:37+00:00</lastmod>
+  <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://www.buildtwin.com/partners/Sublime</loc>
+  <lastmod>2024-10-23T12:49:35+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/TrikaalTechEnterprisesPrivateLimited</loc>
+  <lastmod>2024-10-23T12:49:35+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/REPLinfosystems</loc>
+  <lastmod>2024-10-23T12:49:35+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/PrecisionPrecastSolutionsPrivateLimited</loc>
+  <lastmod>2024-10-23T12:49:35+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/OrioleDesignTechSolutionsLLP</loc>
+  <lastmod>2024-10-23T12:49:35+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/InnowellEngineeringInternationalPvtLtd</loc>
+  <lastmod>2024-10-23T12:49:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/CloveTechnologiesPrivateLimited</loc>
+  <lastmod>2024-10-23T12:49:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/TRITECHCORPORATION</loc>
+  <lastmod>2024-10-23T12:49:35+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/CosmereTechnologies</loc>
+  <lastmod>2024-10-23T12:49:34+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/partners/MACEngineersVietnamCO.LTD.</loc>
+  <lastmod>2024-10-23T12:49:32+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
