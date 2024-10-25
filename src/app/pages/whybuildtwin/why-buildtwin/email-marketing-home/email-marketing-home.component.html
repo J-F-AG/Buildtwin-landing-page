@@ -111,7 +111,7 @@
                     of RFIs, timelines, and quality control.
 
                 </p>
-                <a href="">How Co-Pilot works</a>
+                <a routerLink="{{_languageService.currentLanguage}}/AI-project-management">How Co-Pilot works</a>
             </div>
         </div>
         <div class="slide" data-ele="3">
@@ -130,7 +130,7 @@
                 
                     Plug & Play into all major workflows.
                 </p>
-                <a href="">Schedule a Call with Our Team</a>
+                <a (click)="call()">Schedule a Call with Our Team</a>
             </div>
         </div>
     </div>
@@ -476,3 +476,4 @@
 <app-cta></app-cta>
 
 <app-hd-footer></app-hd-footer>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
