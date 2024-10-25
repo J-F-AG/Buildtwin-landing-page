@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
 
 @Component({
   selector: 'lib-svg-icon',
@@ -10,11 +12,23 @@ export class SvgIconComponent {
   @Input() size = 16;
   @Input() sizeH = 16;
   @Input() fill = 'currentColor';
-  window: any = window;
   @Input() toolTip: string = '';
-  constructor() { }
-  get iconUrl() {
-    return `${this.window.location.href}#${this.name!}`;
+
+  private isBrowser: boolean;
+  private _window: any;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    // Check if the code is running in the browser
+    this.isBrowser = isPlatformBrowser(this.platformId);
+    if (this.isBrowser) {
+      this._window = window;
+    }
   }
 
+  get iconUrl() {
+    if (this.isBrowser) {
+      return `${this._window.location.href}#${this.name}`;
+    }
+    return ''; // Fallback for SSR, no window available
+  }
 }

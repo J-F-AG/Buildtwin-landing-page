@@ -44,8 +44,9 @@ const routes: Routes = [
     {path: '', component: HelpDeskHomeComponent,
     data: {
         title: 'Buildtwin | Marketplace for Structural Engineering Services',
-        description: 'Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform."',
-        image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+        description: 'Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform.',
+        image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        canonical: 'https://www.buildtwin.com'
       }
     },
     //  {path: 'de', component: HelpDeskHomeComponent,
@@ -62,96 +63,109 @@ const routes: Routes = [
         data: {
             title: 'Simplify Structural Engineering Projects with AI Design Manager',
             description: "BuildTwin's AI Design Manager simplifies structural engineering projects with AI assistance at every step. Features collaboration and planning tools. Trusted by over 5,000 engineers",
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/AI-project-management'
         }
     },
     {path: 'business-intelligence', component: OnlineMeetingHomeFreelanceComponent,
         data: {
             title: 'AI-driven Business Intelligence Platform for AEC Industry | BuildTwin',
             description: "BuildTwin's AI-driven Business Intelligence platform for AEC industry that offers a comprehensive understanding of your technical teams' commercial performance. Gain valuable insights and optimize your operations for success.",
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/business-intelligence'
         }
     },
     {path: 'provide-service', component: ProvideServiceComponent,
         data: {
             title: 'Offer Your Structural Engineering Services Worldwide | Buildtwin',
             description: 'Provide your structural engineering services worldwide with Buildtwin. Access global projects and clients through our trusted platform.',
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/provide-service'
         }
     },
     {path: 'marketplace', component: TimeTrackingHomeComponent,
         data: {
             title: 'BuildTwin: Global AEC Marketplace for Structural Engineering',
             description: 'Connect with global AEC solution providers on BuildTwin. Manage structural engineering projects with our AI platform. Register to bid and post projects today.',
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/marketplace'
         }
     },
     {path: 'training', component: ElearningSchoolComponent,
         data: {
             title: 'Become Eligible for More Projects | BuildTwin Training',
             description: 'Gain skills to bid on new projects with BuildTwin Training. Co-developed by industry leaders, covering software, building codes, technical solutions, and productivity improvements.',
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/training'
         }
     }, 
-    {path: 'events', component: EventsComponent},
-    {path: 'training-faq', component: FaqPageTrainingComponent},
-    {path: 'pricing', component: PricingPageComponent},
     {path: 'good-reason', component: EmailMarketingHomeComponent,
         data: {
             title: 'Why Choose Buildtwin | Efficient Engineering Team Matching',
             description: 'Buildtwin matches engineering teams with pre-qualified vendors. Features include Global Marketplace access, AI Project Management, Specialized Training, and AI-powered Business Intelligence to ensure project success.',
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/good-reason'
         }
     }, 
     {path: 'use-cases', component: BlogPageComponent,
         data: {
             title: 'Explore Use Cases of BuildTwin for Enhanced Project Outcomes | BuildTwin',
             description: 'BuildTwin transforms project outcomes with innovative use cases. Explore applications across AEC industry for improved efficiency and collaboration.',
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/use-cases'
         }
     },
     {path: 'faq', component: FaqPageComponent,
         data: {
             title: 'Frequently Asked Questions | Buildtwin',
             description: "Find answers to common questions about Buildtwin's structural engineering marketplace, AI project management tools, data safety, integrations, training programs, and more.",
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/faq'
         }
     },
     {path: 'data-safety', component: DataSafetyComponent,
         data: {
             title: 'Data Safety for Structural Engineers | BuildTwin',
             description: "Ensure data safety and compliance with BuildTwin's secure project management platform for structural engineers. Collaborate confidently with our privacy-focused tools.",
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/data-safety'
         }
     },
     {path: 'integrations', component: IntegrationsPageComponent,
         data: {
             title: 'Integrate BuildTwin with Your CDE/ERP Software',
             description: 'Seamlessly connect BuildTwin with your CDE/ERP software. Access tailored solutions designed to enhance your experience and boost productivity.',
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/integrations'
         }
     },
     {path: 'contact', component: ContactPageComponent,
         data: {
             title: 'Contact Us | Buildtwin - Structural Engineering Marketplace',
             description: "Reach out to Buildtwin for any inquiries about our structural engineering services, AI tools, marketplace, integrations, or training. We're here to help you succeed.",
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/contact'
         }
     },
-    {path: 'about', component: AboutPageComponent},
-    {path: 'vender-details', component: VenderDetailsComponent},
-    {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
-    {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
-    {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
     {path: 'partners/:id', component: VenderDetailsAarbeeComponent},
-    {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
-    {path: 'vender-details-ui', component: VenderDetailsUiComponent},
-    {path: 'details', component: VenderDetailsAarbeeOldComponent},
-    {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
-    {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
+    {path: 'about', component: AboutPageComponent},
+
+    // {path: 'vender-details', component: VenderDetailsComponent},
+    // {path: 'events', component: EventsComponent},
+    // {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
+    // {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
+    // {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
+    // {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
+    // {path: 'vender-details-ui', component: VenderDetailsUiComponent},
+    // {path: 'details', component: VenderDetailsAarbeeOldComponent},
+    // {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
+    // {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
+    
     {path: 'terms-of-service', component: DataPrivacyComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
+    {path: 'training-faq', component: FaqPageTrainingComponent},
+    {path: 'pricing', component: PricingPageComponent},
     // {path: 'engineering-services/services',
     //     redirectTo: '/explore-services',
     //     pathMatch: 'full'
@@ -164,14 +178,16 @@ const routes: Routes = [
         data: {
             title: 'Find Top Structural Engineering Services | BuildTwin',
             description: 'Connect with top structural engineering service providers on BuildTwin. Collaborate globally on  precast detailing, BIM modeling, 3D rebar, structural design, and more.',
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/explore-services'
         }
     },
     {path: 'services/pre-cast-detailing-services', component: ServicesNewComponent,
         data: {
             title: 'Precast Detailing Services by Pre-Qualified Vendors | BuildTwin',
             description: "Streamline your projects with BuildTwin's precast detailing services. Select from hundreds of pre-qualified vendors, monitor progress live, and receive internationally compliant drawings",
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/pre-cast-detailing-services'
         }
     },
 
@@ -179,7 +195,8 @@ const routes: Routes = [
         data: {
             title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
             description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/rebar-detailing-services'
         }
     },
     

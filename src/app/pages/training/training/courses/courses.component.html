@@ -13,7 +13,7 @@
                     </h2>
                     <span>Germany, UK, Australia, United States, India, Middle-East.</span>
                 </div>
-                <a (click)="call()" class="scheduleCall">Schedule a Call</a>
+                <a (click)="call()" class="scheduleCall" href="javascript:void(0)">Schedule a Call</a>
             </div>
 
             <div class="popUP" [ngClass]="{'active':showPopup}">
@@ -113,9 +113,9 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-courses-box">
                     <div class="courses-image">
-                        <a routerLink="{{_languageService.currentLanguage}}/courses-sample" class="d-block image">
+                        <div class="d-block image">
                             <img src="assets/images/training/courses/img1.jpg" alt="image">
-                        </a>
+                        </div>
                        
                         <div class="price shadow">1</div>
                     </div>
@@ -124,7 +124,7 @@
                             <img src="assets/images/training/user1.svg" class="rounded-circle" alt="image">
                             <span>EURO Code</span>
                         </div>
-                        <h3><a routerLink="{{_languageService.currentLanguage}}/courses-sample">German Building Code</a></h3>
+                        <h3><div>German Building Code</div></h3>
                         <div class="content-wrap">
                         <p>
                             In this course, you'll learn the foundation of planning for 
@@ -141,9 +141,9 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-courses-box">
                     <div class="courses-image">
-                        <a routerLink="{{_languageService.currentLanguage}}/courses-sample" class="d-block image">
+                        <div class="d-block image">
                             <img src="assets/images/training/courses/img2.jpg" alt="image">
-                        </a>
+                        </div>
                         <div class="price shadow">2</div>
                     </div>
                     <div class="courses-content">
@@ -151,7 +151,7 @@
                             <img src="assets/images/training/user2.svg" class="rounded-circle" alt="image">
                             <span>NEM products</span>
                         </div>
-                        <h3><a routerLink="{{_languageService.currentLanguage}}/courses-sample">Software Training</a></h3>
+                        <h3><div>Software Training</div></h3>
                         <div class="content-wrap">
                            <p>
                             In this course, you will learn to work with the cutting-edge software ALLPLAN. You will master not only the software itself but also how to smartly implement technical solutions.
@@ -166,9 +166,9 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-courses-box">
                     <div class="courses-image">
-                        <a routerLink="{{_languageService.currentLanguage}}/courses-sample" class="d-block image">
+                        <div class="d-block image">
                             <img src="assets/images/training/courses/img3.jpg" alt="image">
-                        </a>
+                        </div>
                         <div class="price shadow">3</div>
                     </div>
                     <div class="courses-content">
@@ -176,7 +176,7 @@
                             <img src="assets/images/training/user3.svg" class="rounded-circle" alt="image">
                             <span>Factory feasability</span>
                         </div>
-                        <h3><a routerLink="{{_languageService.currentLanguage}}/single-courses-1">German Pre-Cast & On-Site</a></h3>
+                        <h3>German Pre-Cast & On-Site</h3>
                         <div class="content-wrap">
                         <p>
                             In this course, you will learn the intricacies of managing precast 

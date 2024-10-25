@@ -1,5 +1,24 @@
 User-agent: *
 Disallow: /source/*
 Disallow: /en/*
+Disallow: /vender-details
+Disallow: /events
+Disallow: /vender-details-sublimestructures
+Disallow: /vender-details-caldim
+Disallow: /vender-details-moldtek
+Disallow: /vender-details-aarbee
+Disallow: /vender-details-ui
+Disallow: /details
+Disallow: /vender-details-allied
+Disallow: /courses-sample
+Disallow: /get-started/auto-enroll
+Disallow: /coming-soon
+Disallow: /help-desk
+Disallow: /single-courses-1
+Disallow: /blog-details
+Disallow: /blog-details2
+Disallow: /blog-details3
+Disallow: /blog-details4
+Disallow: /blog-details5
 
 Sitemap: https://www.buildtwin.com/sitemap.xml

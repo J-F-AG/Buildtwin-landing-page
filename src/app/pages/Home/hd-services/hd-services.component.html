@@ -9,7 +9,7 @@
             <img src="assets/images/avatar.svg" alt="avatar">
             <div class="assitWrapper">
                 <div>Need help?</div>
-                <a class="link" (click)="call()">Talk to our Advisors</a>
+                <a class="link" (click)="call()" href="javascript:void(0)">Talk to our Advisors</a>
             </div>
 
         </div>
@@ -24,37 +24,22 @@
     </div>
     <div class="sectionBottom" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="200">
         <div class="headerCarousel">
-            <nz-carousel [nzDots]="false">
-                <div nz-carousel-content *ngFor="let subServiceArray of discoverServices">
-
-                    <div class="carouselWrapper">
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
-                        <!-- <div class="cardWrapper" routerLink="/engineering-services/services">
-                            <img src="assets/images/structuralDesign.png" alt="cardImage" width="151" height="137">
-                            <div class="detail">Structural Design</div>
-                        </div> -->
-                        <ng-container *ngFor="let item of subServiceArray">
-                            <div class="cardWrapper" *ngIf="!item['serviceId']">
-                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
-                                <div class="detail">
-                                    {{item.name}}
+            <owl-carousel-o [options]="integrationsList">
+                <ng-template carouselSlide *ngFor="let item of servicesArray">
+                                <div class="cardWrapper" *ngIf="!item['serviceId']">
+                                    <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                                    <div class="detail">
+                                        {{item.name}}
+                                    </div>
                                 </div>
-                            </div>
-                            <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="getServiceRoute(item.serviceId)">
-                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
-                                <div class="detail">
-                                    {{item.name}}
-                                </div>
-                            </a>
-                        </ng-container>
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
-                    </div>
-                </div>
-            </nz-carousel>
+                                <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="getServiceRoute(item.serviceId)">
+                                    <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                                    <div class="detail">
+                                        {{item.name}}
+                                    </div>
+                                </a>
+                </ng-template>
+            </owl-carousel-o>
 
 
 

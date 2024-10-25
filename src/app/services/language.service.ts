@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -12,10 +13,11 @@ export class LanguageService {
     "rebar-detailing-services" : 10  //this has to be updated later
   }
   constructor(
-    private router: Router
+    private router: Router,
+    private metaService: Meta
   ) {
     let localLanng = '/'
-    const url = window.location.href; // Get the current URL
+    // const url = window.location.href; // Get the current URL
     // if (this.isGermanURL(url)) {
     //   localLanng = '/de'
     // } else {
@@ -60,22 +62,18 @@ export class LanguageService {
 
   // }
 
-  setCanonicalURL() {
-    const url = this.router.url;
-    const currentUrl = window.location.href; // Get the full URL
-    const urlObj = new URL(currentUrl);      // Create a URL object
-    const baseUrl = `${urlObj.protocol}//${urlObj.hostname}`;
-
-    let link: HTMLLinkElement = document.querySelector(`link[rel='canonical']`) || null;
-    if (link) {
-      link.href = baseUrl + url;
-    } else {
-      link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', baseUrl + url);
-      document.head.appendChild(link);
+  setCanonicalURL(url: string) {
+    const existingCanonical = this.metaService.getTag("link[rel='canonical']");
+  
+    // If the canonical tag exists, remove it
+    if (existingCanonical) {
+      this.metaService.removeTag("link[rel='canonical']");
     }
+  
+    // Add the new canonical tag
+    this.metaService.addTag({ rel: 'canonical', href: url }, true); // <-- Second parameter is critical for SSR/SSG
   }
+  
 
   setLanguageTags() {
     const currentUrl = window.location.href; // Get the full URL

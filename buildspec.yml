@@ -1,6 +1,5 @@
 version: 0.2
 env:
-
   secrets-manager:
     SECRET_KEY: "codepipeline:SECRET_KEY"
     NEW_ACCESS_KEY: "codepipeline:NEW_ACCESS_KEY"
@@ -61,8 +60,8 @@ phases:
       - aws configure set region eu-central-1
       - aws codeartifact login --tool npm --repository one-jf-search --domain jf-one-modules --domain-owner 188097494660
       - npm cache clean --force
-      - npm install buildtwin-library-ux@0.0.199 --legacy-peer-deps
       - export NODE_OPTIONS=--max-old-space-size=6144
+      - npm install buildtwin-library-ux@0.0.261 --legacy-peer-deps
       - npm install --force
 
   build:
