@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarNewComponent } from './navbar-new.component';
+import { HdGoodCompanyComponent } from './hd-good-company.component';
 
-describe('NavbarNewComponent', () => {
-  let component: NavbarNewComponent;
-  let fixture: ComponentFixture<NavbarNewComponent>;
+describe('HdGoodCompanyComponent', () => {
+  let component: HdGoodCompanyComponent;
+  let fixture: ComponentFixture<HdGoodCompanyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavbarNewComponent]
+      imports: [HdGoodCompanyComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(NavbarNewComponent);
+    fixture = TestBed.createComponent(HdGoodCompanyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

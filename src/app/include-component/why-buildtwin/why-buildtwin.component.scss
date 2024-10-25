@@ -6,14 +6,14 @@
 }
 
 .icon:hover {
-  color: #886de0;
+  color: #0053fa;
 }
 
 .activeIcon {
-  color: #886de0;
+  color: #0053fa;
 }
 .activeContainer {
-  border-bottom: 2px solid #886de0;
+  border-bottom: 2px solid #0053fa;
 }
 .sectionHeader {
   display: flex;
@@ -116,7 +116,7 @@
     flex-wrap: wrap;
     text-align: center;
     padding-bottom: 17px;
-    border-bottom: 2px solid #886de0;
+    border-bottom: 2px solid #0053fa;
   }
   .contentDetails {
     text-align: center;
@@ -177,19 +177,19 @@
   }
   .noLink {
     font-family: var(--medium-global);
-    color: #886DE0;
+    color: #0053fa;
   }
 }
 .detailLink {
-  // color: #886de0;
-  // border-bottom: 1px solid #886de0;
+  // color: #0053fa;
+  // border-bottom: 1px solid #0053fa;
 }
 .detailText {
   color: #000;
 }
 .divider {
   width: 100%;
-  border: 2px solid #886de0;
+  border: 2px solid #0053fa;
 }
 hr {
   margin: 10px 0;

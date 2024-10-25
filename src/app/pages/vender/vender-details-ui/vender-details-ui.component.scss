@@ -43,7 +43,7 @@ h6 {
     background: #f6f3ff;
     margin-bottom: 10px;
     padding: 0 16px;
-    color: #886de0;
+    color: #0053fa;
     font-family: var(--fontFamily);
     font-size: 16px;
     font-style: normal;
@@ -165,7 +165,7 @@ ul {
         gap: 11px;
         padding: 5px 9px;
         &.secondary {
-            color: #886de0;
+            color: #0053fa;
             border-color: #c9b8ff;
             background: #f7f5ff;
         }
@@ -269,7 +269,7 @@ ul {
         }
 
         .head {
-            color: #886de0;
+            color: #0053fa;
             text-align: center;
             font-family: var(--fontFamily);
             font-size: 16px;
@@ -321,7 +321,7 @@ ul {
                     gap: 12px;
                     align-items: center;
                     span.color {
-                        color: #886de0;
+                        color: #0053fa;
                     }
                 }
             }
@@ -496,7 +496,7 @@ ul {
         width: 100%;
         text-align: left;
         th {
-            background: #886de0;
+            background: #0053fa;
             border-right: 4px solid white;
             color: var(--white, #fff);
             font-family: var(--fontFamily);
@@ -524,7 +524,7 @@ ul {
             }
             h5 {
                 margin-bottom: 20px;
-                color: var(--Color-3, #886de0);
+                color: var(--Color-3, #0053fa);
                 font-family: var(--fontFamily);
                 font-size: 18px;
                 font-style: normal;
@@ -613,7 +613,7 @@ ul {
                 margin-bottom: 4px;
             }
             .detail {
-                color: var(--Color-3, #886de0);
+                color: var(--Color-3, #0053fa);
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -659,7 +659,7 @@ ul {
                     padding: 0 14px;
                     display: block;
                     span {
-                        color: #886de0;
+                        color: #0053fa;
                     }
                 }
             }
@@ -698,7 +698,7 @@ ul {
             border-radius: 3px;
             display: block;
             &.active {
-                background: #886DE0;
+                background: #0053fa;
             }
         }
     }
@@ -721,7 +721,7 @@ ul {
             width: 70px;
             height: 62px;
             border-radius: 10px;
-            background: #886de0;
+            background: #0053fa;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -924,7 +924,7 @@ ul {
                     transform: translate(-50%, -50%) rotate(90deg);
                 }
                 &.minus::before {
-                    background: #886de0;
+                    background: #0053fa;
                 }
                 &.minus::after {
                     display: none;
@@ -939,7 +939,7 @@ ul {
 
 #software {
     h5 {
-        color: #886de0;
+        color: #0053fa;
         font-size: 18px;
         font-style: normal;
         font-weight: 600;

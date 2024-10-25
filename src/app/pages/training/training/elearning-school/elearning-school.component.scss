@@ -1,6 +1,6 @@
 .course_schedule {
     border-radius: 8px;
-    border: 1px solid var(--gradient, #886DE0);
+    border: 1px solid var(--gradient, #0053fa);
     background: #F6F3FF;
     display: flex;
     gap: 32px;
@@ -33,7 +33,7 @@
 
     .btn {
         border-radius: 6.242px;
-        background: #886DE0;
+        background: #0053fa;
         display: inline-flex;
         padding: 14px 40px;
         justify-content: center;
@@ -86,7 +86,7 @@
 
         .item {
             border-radius: 0px 8px 8px 0px;
-            border-left: 2px solid #886DE0;
+            border-left: 2px solid #0053fa;
 
             background: #FAFAFA;
             display: flex;
@@ -97,7 +97,7 @@
             gap: 8px;
 
             strong {
-                color: var(--primary, #886DE0);
+                color: var(--primary, #0053fa);
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 600;
@@ -136,7 +136,7 @@
         flex-direction: column;
       .item {
             border-radius: 0px 8px 8px 0px;
-            border-left: 2px solid #886DE0;
+            border-left: 2px solid #0053fa;
             background: #FAFAFA;
             display: flex;
             width: 100%;

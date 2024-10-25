@@ -60,7 +60,7 @@ background: #f9f9f9;
 
     .container{
       border-radius: 16px;
-      border: 1px solid #886DE0;
+      border: 1px solid #0053fa;
       overflow: hidden;
       margin-bottom: 80px;
       padding: 0;
@@ -174,9 +174,9 @@ background: #f9f9f9;
     gap: 12px;
     justify-content: space-between;
     border-radius: 40px;
-    border: 1px solid #886de0;
+    border: 1px solid #0053fa;
     background-color: #f6f3ff;
-    color: #886de0;
+    color: #0053fa;
     line-height: 140%;
     padding: 8px 20px;
     display: flex;
@@ -185,11 +185,11 @@ background: #f9f9f9;
     align-items: center;
     gap: 12px;
     border-radius: 40px;
-    border: 1px solid #886DE0;
+    border: 1px solid #0053fa;
     background: var(--color-green-button, #FFF);
    
     h4{
-      color: #886DE0;
+      color: #0053fa;
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -235,7 +235,7 @@ background: #f9f9f9;
     top: 108px;
     display: block;
     z-index: 9;
-    background: #886DE0;
+    background: #0053fa;
 }
 
 
@@ -243,7 +243,7 @@ background: #f9f9f9;
   position: fixed;
   left: 0;
   width: 100%;
-  border-top: 1px solid #886DE0;
+  border-top: 1px solid #0053fa;
   top: 190px;
 }
 

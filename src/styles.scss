@@ -41,21 +41,27 @@ $buildtwin-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --fontFamily: "Alliance No1", sans-serif;
-  --archivoFontFamily: "Alliance No1", sans-serif;
-  --poppinsFontFamily: "Alliance No1", sans-serif;
-  --mulishFontFamily: "Alliance No1", sans-serif;
-  --syneFontFamily: "Alliance No1", sans-serif;
+  // --fontFamily: "Alliance No1", sans-serif;
+  // --archivoFontFamily: "Alliance No1", sans-serif;
+  // --poppinsFontFamily: "Alliance No1", sans-serif;
+  // --mulishFontFamily: "Alliance No1", sans-serif;
+  // --syneFontFamily: "Alliance No1", sans-serif;
+  --fontFamily: "New Rubrik Edge", sans-serif;
+  --archivoFontFamily: "New Rubrik Edge", sans-serif;
+  --poppinsFontFamily: "New Rubrik Edge", sans-serif;
+  --mulishFontFamily: "New Rubrik Edge", sans-serif;
+  --syneFontFamily: "New Rubrik Edge", sans-serif;
   --jeffFontFamily: "Jeff Script", sans-serif;
   --neonOrangeColor: #f46f49;
   --transition: all ease 0.5s;
   --paragraphColor: #000000;
   --neonGreenColor: #c1ff00;
   --tealBlueColor: #608594;
-  --primaryColor: #5754ff;
+  // --primaryColor: #5754ff;
+  --primaryColor: #0053fa;
   --yellowColor: #f8d472;
   --orangeColor: #ec764b;
-  --themeColor: #886de0;
+  --themeColor: #0053fa;
   --themeColorOpposite: #fff;
   --blackColor: #0e0e28;
   --lightColor: #808080;
@@ -70,14 +76,18 @@ $buildtwin-theme: mat.define-light-theme(
   --newThemeColor: #0053fa; //newThemeColor
   --newButtonColor: #002e3b; //newButtonColor
   --newBorderColor: #cbd6e2; //newBorderColor
+  --lightTextColor: #668189;
+  --newBackgroundColor: #F3F8FF;
 
   // cockpitStylesVar
 
-  --color-theme: #886de0;
+  --color-theme: #0053fa;
   --background-white: #ffffff;
-  --medium-global: "alliance_no.1medium";
+  // --medium-global: "alliance_no.1medium";
+  --medium-global: "new_rubrik_edge_medium";
   --assistantBackgroundColor-global: #f8f8f8;
-  --semibold-global: "alliance_no.1semibold";
+  // --semibold-global: "alliance_no.1semibold";
+  --semibold-global: "new_rubrik_edge_semibold";
   --border-color: #ececec;
   --font-size-h6: 16px;
   --blue-color: #2c80ff;
@@ -347,9 +357,9 @@ img {
 }
 .buttonV2 {
   border-radius: 40px;
-  border: 1px solid #886de0;
+  border: 1px solid #0053fa;
   background: #f6f3ff;
-  color: #886de0;
+  color: #0053fa;
   padding: 8px 24px;
   font-size: 14px;
   font-style: normal;
