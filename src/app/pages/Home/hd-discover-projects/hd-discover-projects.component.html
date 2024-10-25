@@ -1,4 +1,4 @@
-<section class="discoverProjectsSection">
+<!-- <section class="discoverProjectsSection">
     <div class="container">
     <div class="sectionHeader" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="200">
         <div class="heading">
@@ -61,4 +61,127 @@
         </nz-carousel>
     </div>
     </div>
-</section>
+</section> -->
+<div class="project-providers">
+    <div class="headings">
+      <span class="title">Discover top-tier solutions tailored to your project needs</span>
+      <hr>
+      <p class="titel-1">Discover specialist projects providers</p>
+      <span class="description">From complex Design to Detailing - book services from a single vendor or manage joint-bids. </span>
+    </div>  
+    <div>
+      <owl-carousel-o [options]="factorySlider">
+        <ng-container *ngFor="let subProjectArray of discoverProjects">
+            <ng-container *ngFor="let item of subProjectArray">
+                <ng-template carouselSlide>
+                    <div class="item">
+                        <div class="d-flex col-gap factories">
+                            <div class="d-flex factory-box">
+                                <div class="bg-image" [style]="{'background-image': 'url(' + item.img + ')'}">
+                                    <div class="country-bg">
+                                        <img src={{item.locationFlag}} class="cntry-img">
+                                        <span class="cntry-txt">{{item.company}}</span>
+                                    </div>
+                                </div>
+                                <div class="factory-detail">
+                                    <h5 class="fact-title">{{item.projectTitle}}</h5>
+                                    <span>Mep</span>
+                                    <p class="fact-desc">{{item.serviceDescription}}</p>
+                                    <div class="cmpny-logo">
+                                        <img src={{item.serviceCompanyIcon}} alt="" class="logo-img">
+                                        <span class="heading">vendor
+                                            <br>
+                                            <span class="heading-1">{{item.serviceCompany}}</span>
+                                        </span>
+                                        <img src="assets/images/home/vector.svg" alt="" class="arrow-vector">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </ng-container>
+            <!--<ng-template carouselSlide>
+              <div class="item">
+                  <div class="d-flex col-gap factories">
+                      <div class="d-flex factory-box">
+                          <div class="bg-image">
+                              <div class="country-bg">
+                                  <!-- <img src="../../../../assets/images/home/Grünheide-Germany.png" class="cntry-img"> ->
+                                  <span class="cntry-txt">Grünheide, Germany</span>
+                              </div>
+                          </div>
+                          <div class="factory-detail">
+                              <h5 class="fact-title">Tesla Gigafactory</h5>
+                              <span>Mep</span>
+                              <p class="fact-desc">1 million Ђ construction costs electrical | approx. 22,000 mІ</p>
+                              <div class="cmpny-logo">
+                                  <!-- <img src="../../../../assets/images/home/gbc.png" alt="" class="logo-img"> ->
+                                  <span class="heading">vendor
+                                      <br>
+                                      <span class="heading-1">GPC Engineering</span>
+                                  </span>
+                                  <!-- <img src="../../../../assets/images/home/Vector.svg" alt="" class="arrow-vector"> ->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="item">
+                  <div class="d-flex col-gap factories">
+                      <div class="d-flex factory-box">
+                          <div class="bg-image">
+                              <div class="country-bg">
+                                  <!-- <img src="../../../../assets/images/home/Grünheide-Germany.png" class="cntry-img"> ->
+                                  <span class="cntry-txt">Grünheide, Germany</span>
+                              </div>
+                          </div>
+                          <div class="factory-detail">
+                              <h5 class="fact-title">Tesla Gigafactory</h5>
+                              <p class="fact-desc">1 million Ђ construction costs electrical | approx. 22,000 mІ</p>
+                              <div class="cmpny-logo">
+                                  <!-- <img src="../../../../assets/images/home/gbc.png" alt="" class="logo-img"> ->
+                                  <span class="heading">vendor
+                                      <br>
+                                      <span class="heading-1">GPC Engineering</span>
+                                  </span>
+                                  <!-- <img src="../../../../assets/images/home/Vector.svg" alt="" class="arrow-vector"> ->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </ng-template>
+             <ng-template carouselSlide>
+              <div class="item">
+                  <div class="d-flex col-gap factories">
+                      <div class="d-flex factory-box">
+                          <div class="bg-image">
+                              <div class="country-bg">
+                                  <!-- <img src="../../../../assets/images/home/Grünheide-Germany.png" class="cntry-img"> ->
+                                  <span class="cntry-txt">Grünheide, Germany</span>
+                              </div>
+                          </div>
+                          <div class="factory-detail">
+                              <h5 class="fact-title">Tesla Gigafactory</h5>
+                              <p class="fact-desc">1 million Ђ construction costs electrical | approx. 22,000 mІ</p>
+                              <div class="cmpny-logo">
+                                  <!-- <img src="../../../../assets/images/home/gbc.png" alt="" class="logo-img"> ->
+                                  <span class="heading">vendor
+                                      <br>
+                                      <span class="heading-1">GPC Engineering</span>
+                                  </span>
+                                  <!-- <img src="../../../../assets/images/home/Vector.svg" alt="" class="arrow-vector"> ->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </ng-template>-->
+      </owl-carousel-o>
+    </div>
+    
+  </div>

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -9,6 +10,34 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './hd-discover-projects.component.scss'
 })
 export class HdDiscoverProjectsComponent implements OnInit {
+
+  factorySlider: OwlOptions = {
+    nav: true,
+    margin: 10,  // Adjust as needed
+    dots: false,
+    loop: true,
+    autoplay: false,
+    autoplayHoverPause: false,
+    navText: [
+			"<i class='ti ti-chevron-left'></i>",
+			"<i class='ti ti-chevron-right'></i>",
+		],
+    stagePadding: 0,  // Adjust padding for the "half" item effect
+    responsive: {
+      0: {
+        items: 1  // 1 item for small screens
+      },
+      400: {
+        items: 1  // 1 item for slightly larger screens
+      },
+      740: {
+        items: 2  // 2 items for medium screens
+      },
+      940: {
+        items: 2.1  // 2 full items and a half item for larger screens
+      }
+    }
+  };
 
   constructor(private http: HttpClient, public _languageService:LanguageService) {
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { LanguageService } from 'src/app/services/language.service';
 
 export class HdServicesComponent implements OnInit {
   showPopup=false;
+  
   constructor(public _languageService: LanguageService) { }
 
   splitArray(dataArray: any[], x: number) {

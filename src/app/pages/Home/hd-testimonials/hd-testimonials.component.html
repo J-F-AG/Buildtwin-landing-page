@@ -1,6 +1,6 @@
 
 <div class="container">
-  <section class="testimonial-container">
+  <!-- <section class="testimonial-container">
       <h2 class="testimonial-title" data-aos="fade-up" data-aos-duration="500">What buyers are saying about BuildTwin</h2>
       <p class="testimonial-text" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
        
@@ -8,7 +8,17 @@
 
       </p>
       <a mat-button routerLink="{{_languageService.currentLanguage}}/about" class="default-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Get started now</a>  
-  </section>
+  </section> -->
+  <div class="main-head">
+    <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+        <div class="main-title">Our testimonials</div>
+        <div class="heading">
+            <div class="title">What our customers says</div>
+            <div class="subTitle">If there are any questions you want to ask, we will answer your questions</div>
+        </div>
+    </div>
+    <button mat-button class="default-btn align-self-end">Explore Case studyes</button>
+  </div>
   <div class="partnerWrap" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
       <ul class="partner"> 
         <li>
@@ -31,7 +41,7 @@
   </div>
   </div>
   <div class="container">
-  <div class="colWrapper">
+  <!-- <div class="colWrapper">
       <div class="col">
           <article class="profile-card">
               <div class="profile-info">
@@ -214,5 +224,78 @@
                 BuildTwin's Innovation Campus gave us a competitive edge by connecting us directly with field experts and real-world tech challenges. It’s been instrumental in our approach to complex projects.                </p>
             </article>
       </div>
+  </div> -->
+
+  <div class="testimonial-slides">
+    <owl-carousel-o [options]="testimonialsSlides">
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/home/placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Charles Brown</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Consultancy from Germany</p>
+                </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
+              </div>
+            </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/home/placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Martha Stewart</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Consultancy from Germany</p>
+                </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
+              </div>
+            </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/home/placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Aria Martinez</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Consultancy from Germany</p>
+                </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
+              </div>
+            </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/home/placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Amina Aziz</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Consultancy from Germany</p>
+                </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
+              </div>
+            </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
   </div>
-  
+</div>
