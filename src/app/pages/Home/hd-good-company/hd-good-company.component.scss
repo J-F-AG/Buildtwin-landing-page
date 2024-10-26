@@ -95,3 +95,16 @@
         }
     }
 }
+
+@media only screen and (max-width: 567px) {
+    .good-company {
+        padding: 10px;
+        .main-head {
+            grid-template-columns: 1fr;
+        }
+        .card-container {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+}

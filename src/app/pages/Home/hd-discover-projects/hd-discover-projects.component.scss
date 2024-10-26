@@ -487,3 +487,12 @@
   justify-content: center;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 576px) {
+  .project-providers {
+    padding-inline: 10px;
+    &__carousel {
+      margin-block-start: 60px;
+    }
+  }
+}

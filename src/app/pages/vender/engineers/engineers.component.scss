@@ -110,7 +110,7 @@
                                     margin: 0;
                                     li {
                                         display: flex;
-                                        background: var(--secondary, #F6F3FF);
+                                        background: var(--secondary, #F3F8FF);
                                         flex-shrink: 0;
                                         width: 184px;
                                         border-radius: 4px;
@@ -152,7 +152,7 @@
             margin-right: 5px;
             border-radius: 100px;
         }::ng-deep   .owl-theme .owl-dots .owl-dot span{
-            background: #F6F3FF;
+            background: #F3F8FF;
         }
         ::ng-deep  .owl-theme .owl-dots .owl-dot.active span,::ng-deep   .owl-theme .owl-dots .owl-dot:hover span {
             background: #0053fa;

@@ -587,3 +587,16 @@
       width: 100%;
     }
   }
+
+@media only screen and (max-width: 576px) {
+    .banner-area {
+        width: 100% !important;
+    }
+    .formContainer {
+        width: 90% !important;
+        margin-inline: 10px !important;
+    }
+    .sliderCover {
+        width: 90vw !important;
+    }
+}

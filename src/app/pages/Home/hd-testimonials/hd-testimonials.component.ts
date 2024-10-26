@@ -15,7 +15,7 @@ export class HdTestimonialsComponent {
 		margin: 25,
 		dots: true,
 		loop: true,
-		autoplay: true,
+		autoplay: false,
 		autoplayHoverPause: true,
 		responsive: {
 			0: {

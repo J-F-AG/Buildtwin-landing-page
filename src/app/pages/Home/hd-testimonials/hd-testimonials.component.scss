@@ -294,3 +294,29 @@ ul.partner li {
   }
 }
   }
+
+  @media only screen and (max-width: 576px){
+    .container {
+      width: 100%;
+    }
+    .main-head{
+      grid-template-columns: unset;
+    }
+
+    .testimonial-slides {
+      &__profile {
+        grid-template-columns: 1fr;
+        &--image {
+          height: 300px;
+          width: 300px;
+          border-radius: 50%;
+        }
+        &--user {
+          margin-block-start: 20px;
+          &--description{
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
