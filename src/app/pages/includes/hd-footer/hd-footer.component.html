@@ -152,7 +152,9 @@
 </div>
 </div>
 
-<div class="popUP" [ngClass]="{'active':showPopup}" *ngIf="showPopup">
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+
+<!-- <div class="popUP" [ngClass]="{'active':showPopup}" *ngIf="showPopup">
   <div class="coverPopup">
     <i class="closeIcon" (click)="closePopup()">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
@@ -168,7 +170,7 @@
     </i>
   <div class="coverPopupData">
   
-<iframe src="https://success.buildtwin.com/meetings/buildtwin?embed=true" width="100%" height="637px" frameborder="0"></iframe>
+<iframe src="https://success.buildtwin.com/meetings/buildtwin?embed=true" width="100%" height="700px" frameborder="0"></iframe>
 </div>
 </div>
-</div>
+</div> -->

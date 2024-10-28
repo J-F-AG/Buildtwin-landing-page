@@ -1,15 +1,16 @@
-import { Component, HostListener ,AfterViewInit, ViewChild, ElementRef, ViewChildren, QueryList} from '@angular/core';
+import { Component, HostListener ,AfterViewInit, ViewChild, ElementRef, ViewChildren, QueryList, OnInit} from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { GlobalService } from 'src/app/services/GlobalService';
 import { ActivatedRoute } from '@angular/router';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
     selector: 'app-email-marketing-home',
     templateUrl: './email-marketing-home.component.html',
     styleUrls: ['./email-marketing-home.component.scss']
 })
-export class EmailMarketingHomeComponent  implements AfterViewInit  {
+export class EmailMarketingHomeComponent  implements AfterViewInit, OnInit  {
     activeState: number = 1
     FixedDiv: any
     scrollActivated: any
@@ -25,7 +26,7 @@ element:any
 
     // title = 'BuildTwin - good reasons';
  
-    constructor(private titleService:Title,private globalService: GlobalService,private router: Router,private route: ActivatedRoute) {
+    constructor(private titleService:Title,private globalService: GlobalService,private router: Router,private route: ActivatedRoute, public _languageService:LanguageService) {
 
 
       router.events.subscribe((val) => {
@@ -56,6 +57,25 @@ element:any
 
         
       }
+
+      showPopup = false;
+
+  //   loadScript() {
+  //   // Create script element
+  //   const script = this.renderer.createElement('script');
+  //   script.type = 'text/javascript';
+  //   script.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+
+  //   // Append script element to the body
+  //   this.renderer.appendChild(this.elRef.nativeElement, script);
+  // }
+
+  call(){
+    this.showPopup =true
+    }
+    closePopupStatus($event) {
+      this.showPopup = false;
+    }
      
     @HostListener('window:scroll', ['$event'])
     handleScroll(event: any) {
