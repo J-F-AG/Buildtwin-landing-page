@@ -12,6 +12,14 @@ export class LanguageService {
     "pre-cast-detailing-services": 9,
     "rebar-detailing-services" : 10  //this has to be updated later
   }
+  serviceData: any = {
+    "pre-cast-detailing-services": {
+      name: 'Structural Detailing Pre-Cast'
+    },
+    "rebar-detailing-services" : {
+      name: 'Rebar Detailing Services'
+    }  //this has to be updated later
+  }
   constructor(
     private router: Router,
     private metaService: Meta

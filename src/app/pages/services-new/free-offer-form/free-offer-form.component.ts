@@ -42,6 +42,7 @@ export class FreeOfferFormComponent {
   isTenderWork = {};
   uploadedMessage = '';
   disableButton: boolean = false;
+  data = {};
   constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService, public _languageService: LanguageService) {
     this.fetchData()
   }
@@ -67,6 +68,10 @@ export class FreeOfferFormComponent {
     const url = window.location.href;
     if (url.includes('pre-cast-detailing-services')) {
       this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['pre-cast-detailing-services']);
+      this.data = this._languageService['serviceData']['pre-cast-detailing-services'];
+    }else if (url.includes('rebar-detailing-services')) {
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['rebar-detailing-services']);
+      this.data = this._languageService['serviceData']['rebar-detailing-services'];
     }
   }
   selectSector(selectedOption: any) {

@@ -228,7 +228,7 @@ import { RebarBannerComponent } from './pages/rebar/banner/banner.component';
 import { RebarDrawingFreelancersComponent } from './pages/rebar/drawing-freelancers/drawing-freelancers.component';
 import { RebarE2eEncryptionComponent } from './pages/rebar/e2e-encryption/e2e-encryption.component';
 import { RebarFaqBuildtwinComponent } from './pages/rebar/faq-buildtwin/faq-buildtwin.component';
-import { RebarFreeOfferFormComponent } from './pages/rebar/free-offer-form/free-offer-form.component';
+// import { RebarFreeOfferFormComponent } from './pages/rebar/free-offer-form/free-offer-form.component';
 import { RebarHowItWorksNewComponent } from './pages/rebar/how-it-works/how-it-works.component';
 import { RebarLiveTrackingNewComponent } from './pages/rebar/live-tracking/live-tracking.component';
 import { RebarPlugPlayNewComponent } from './pages/rebar/plug-play/plug-play.component';
@@ -238,7 +238,6 @@ import { RebarServicesOfferedComponent } from './pages/rebar/services-offered/se
 import { RebarThreeCardsComponent } from './pages/rebar/three-cards/three-cards.component';
 import { RebarTopVendorsComponent } from './pages/rebar/top-vendors/top-vendors.component';
 import { RebarTrustByNewComponent } from './pages/rebar/trust-by/trust-by.component';
-import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/file-upload-service/file-upload-service.component';
 
 @NgModule({
   declarations: [
@@ -434,7 +433,7 @@ import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/f
    RebarDrawingFreelancersComponent,
    RebarE2eEncryptionComponent,
    RebarFaqBuildtwinComponent,
-   RebarFreeOfferFormComponent,
+  //  RebarFreeOfferFormComponent,
    RebarHowItWorksNewComponent,
    RebarLiveTrackingNewComponent,
    RebarPlugPlayNewComponent,
@@ -443,8 +442,7 @@ import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/f
    RebarServicesOfferedComponent,
    RebarThreeCardsComponent,
    RebarTopVendorsComponent,
-   RebarTrustByNewComponent,
-   RebarFileUploadServiceComponent
+   RebarTrustByNewComponent
   ],
   imports: [    
     BrowserModule,
