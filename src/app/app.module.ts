@@ -238,6 +238,37 @@ import { RebarServicesOfferedComponent } from './pages/rebar/services-offered/se
 import { RebarThreeCardsComponent } from './pages/rebar/three-cards/three-cards.component';
 import { RebarTopVendorsComponent } from './pages/rebar/top-vendors/top-vendors.component';
 import { RebarTrustByNewComponent } from './pages/rebar/trust-by/trust-by.component';
+import { BimServicesNewComponent } from './pages/bim/services-new.component';
+import { BimBannerComponent } from './pages/bim/banner/banner.component';
+import { BimDrawingFreelancersComponent } from './pages/bim/drawing-freelancers/drawing-freelancers.component';
+import { BimE2eEncryptionComponent } from './pages/bim/e2e-encryption/e2e-encryption.component';
+import { BimFaqBuildtwinComponent } from './pages/bim/faq-buildtwin/faq-buildtwin.component';
+// import { BimFileUploadServiceComponent } from './pages/bim/free-offer-form/file-upload-service/file-upload-service.component';
+import { BimHowItWorksNewComponent } from './pages/bim/how-it-works/how-it-works.component';
+import { BimLiveTrackingNewComponent } from './pages/bim/live-tracking/live-tracking.component';
+import { BimPlugPlayNewComponent } from './pages/bim/plug-play/plug-play.component';
+import { BimPrecastServiceComponent } from './pages/bim/precast-service/precast-service.component';
+import { BimSampleDrawingComponent } from './pages/bim/sample-drawing/sample-drawing.component';
+import { BimServicesOfferedComponent } from './pages/bim/services-offered/services-offered.component';
+import { BimThreeCardsComponent } from './pages/bim/three-cards/three-cards.component';
+import { BimTopVendorsComponent } from './pages/bim/top-vendors/top-vendors.component';
+import { BimTrustByNewComponent } from './pages/bim/trust-by/trust-by.component';
+import { StructuralSteelServicesNewComponent } from './pages/structural-steel/services-new.component';
+import { StructuralSteelBannerComponent } from './pages/structural-steel/banner/banner.component';
+import { StructuralSteelDrawingFreelancersComponent } from './pages/structural-steel/drawing-freelancers/drawing-freelancers.component';
+import { StructuralSteelE2eEncryptionComponent } from './pages/structural-steel/e2e-encryption/e2e-encryption.component';
+import { StructuralSteelFaqBuildtwinComponent } from './pages/structural-steel/faq-buildtwin/faq-buildtwin.component';
+// import { StructuralSteelFreeOfferFormComponent } from './pages/structural-steel/free-offer-form/free-offer-form.component';
+import { StructuralSteelHowItWorksNewComponent } from './pages/structural-steel/how-it-works/how-it-works.component';
+import { StructuralSteelLiveTrackingNewComponent } from './pages/structural-steel/live-tracking/live-tracking.component';
+import { StructuralSteelPlugPlayNewComponent } from './pages/structural-steel/plug-play/plug-play.component';
+// import { StructuralSteelFileUploadServiceComponent } from './pages/structural-steel/free-offer-form/file-upload-service/file-upload-service.component';
+import { StructuralSteelPrecastServiceComponent } from './pages/structural-steel/precast-service/precast-service.component';
+import { StructuralSteelSampleDrawingComponent } from './pages/structural-steel/sample-drawing/sample-drawing.component';
+import { StructuralSteelServicesOfferedComponent } from './pages/structural-steel/services-offered/services-offered.component';
+import { StructuralSteelThreeCardsComponent } from './pages/structural-steel/three-cards/three-cards.component';
+import { StructuralSteelTopVendorsComponent } from './pages/structural-steel/top-vendors/top-vendors.component';
+import { StructuralSteelTrustByNewComponent } from './pages/structural-steel/trust-by/trust-by.component';
 
 @NgModule({
   declarations: [
@@ -442,7 +473,39 @@ import { RebarTrustByNewComponent } from './pages/rebar/trust-by/trust-by.compon
    RebarServicesOfferedComponent,
    RebarThreeCardsComponent,
    RebarTopVendorsComponent,
-   RebarTrustByNewComponent
+   RebarTrustByNewComponent,
+   BimServicesNewComponent,
+   BimBannerComponent,
+   BimDrawingFreelancersComponent,
+   BimE2eEncryptionComponent,
+   BimFaqBuildtwinComponent,
+  //  BimFileUploadServiceComponent,
+   BimHowItWorksNewComponent,
+   BimLiveTrackingNewComponent,
+   BimPlugPlayNewComponent,
+   BimPrecastServiceComponent,
+   BimSampleDrawingComponent,
+   BimServicesOfferedComponent,
+   BimThreeCardsComponent,
+   BimTopVendorsComponent,
+   BimTrustByNewComponent,
+
+   StructuralSteelServicesNewComponent,
+   StructuralSteelBannerComponent,
+   StructuralSteelDrawingFreelancersComponent,
+   StructuralSteelE2eEncryptionComponent,
+   StructuralSteelFaqBuildtwinComponent,
+  //  StructuralSteelFileUploadServiceComponent,
+   StructuralSteelHowItWorksNewComponent,
+   StructuralSteelLiveTrackingNewComponent,
+   StructuralSteelPlugPlayNewComponent,
+   StructuralSteelPrecastServiceComponent,
+   StructuralSteelSampleDrawingComponent,
+   StructuralSteelServicesOfferedComponent,
+   StructuralSteelThreeCardsComponent,
+   StructuralSteelTopVendorsComponent,
+   StructuralSteelTrustByNewComponent
+
   ],
   imports: [    
     BrowserModule,

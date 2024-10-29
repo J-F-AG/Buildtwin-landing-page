@@ -24,10 +24,10 @@ export class BrowseServiceHeaderComponent implements OnInit {
 
   servicesArray = [
     { name: 'Precast Detailing', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', serviceId: 9},
-    { name: 'Structural Steel Detailing', img: '/assets/images/structuralDesign.png', width:'151', height: '137' },
+    { name: 'Structural Steel Detailing', img: '/assets/images/structuralDesign.png', width:'151', height: '137', serviceId: 12 },
     { name: 'Rebar Detailing', img: '/assets/images/rebar.png', width:'151', height: '137', serviceId: 10},
     { name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137' },
-    { name: 'BIM Services', img: '/assets/images/modelling.png', width:'151', height: '137' },
+    { name: 'BIM Services', img: '/assets/images/modelling.png', width:'151', height: '137', serviceId: 11 },
     { name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137' },
     { name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137' },
   ]
@@ -36,6 +36,8 @@ export class BrowseServiceHeaderComponent implements OnInit {
   serviceRoutesMap = {
     9: '/services/pre-cast-detailing-services',
     10: '/services/rebar-detailing-services',
+    11: '/services/bim-services',
+    12: '/services/steel-detailing-services'
     // Add more serviceId to route mappings here
   };
 

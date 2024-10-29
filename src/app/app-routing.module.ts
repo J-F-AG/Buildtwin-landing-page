@@ -34,6 +34,8 @@ import { SectorComponent } from './pages/sector/sector.component';
 import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
 import { ServicesNewComponent } from './pages/services-new/services-new.component';
 import { RebarServicesNewComponent } from './pages/rebar/services-new.component';
+import { BimServicesNewComponent } from './pages/bim/services-new.component';
+import { StructuralSteelServicesNewComponent } from './pages/structural-steel/services-new.component';
 
 
 
@@ -199,6 +201,24 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/services/rebar-detailing-services'
         }
     },
+
+    {path: 'services/bim-services', component: BimServicesNewComponent,
+        data: {
+            title: 'BIM (Building Information Modeling) Services For AEC Projects | BuildTwin',
+            description: "BuildTwin Marketplace offers comprehensive BIM services to streamline your AEC projects. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/bim-services'
+        }
+    },
+
+    {path: 'services/steel-detailing-services', component: StructuralSteelServicesNewComponent,
+        data: {
+            title: 'Structural Steel Detailing Services for AEC Project | BuildTwin',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects. Our services include shop drawings, erection drawings, 2D and 3D modelling, connection design, and miscellaneous steel detailing.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/steel-detailing-services'
+        }
+    },
     
     // {path: 'de/AI-project-management', component: OnlineMeetingHomeComponent,
     //     data: {
@@ -319,6 +339,21 @@ const routes: Routes = [
     //     data: {
     //         title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
     //         description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
+    //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+    //     }
+    // },
+    // {path: 'de/services/bim-services', component: BimServicesNewComponent,
+    //     data: {
+    //         title: 'BIM (Building Information Modeling) Services For AEC Projects | BuildTwin',
+    //         description: "BuildTwin Marketplace offers comprehensive BIM services to streamline your AEC projects. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
+    //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+    //     }
+    // },
+
+    // {path: 'de/services/steel-detailing-services', component: StructuralSteelServicesNewComponent,
+    //     data: {
+    //         title: 'Structural Steel Detailing Services for AEC Project | BuildTwin',
+    //         description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects. Our services include shop drawings, erection drawings, 2D and 3D modelling, connection design, and miscellaneous steel detailing.",
     //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
     //     }
     // },     

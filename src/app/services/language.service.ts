@@ -10,7 +10,9 @@ export class LanguageService {
   currentLanguage = '/';
   serviceId: any = {
     "pre-cast-detailing-services": 9,
-    "rebar-detailing-services" : 10  //this has to be updated later
+    "rebar-detailing-services" : 10,  //this has to be updated later
+    "bim-services" : 11,  //this has to be updated later
+    "steel-detailing-services" : 12,  //this has to be updated later
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
@@ -18,7 +20,13 @@ export class LanguageService {
     },
     "rebar-detailing-services" : {
       name: 'Rebar Detailing Services'
-    }  //this has to be updated later
+    },  //this has to be updated later
+    "bim-services" : {
+      name: 'BIM Services'
+    },
+    "steel-detailing-services" : {
+      name: 'Structural Steel Detailing Services'
+    }
   }
   constructor(
     private router: Router,

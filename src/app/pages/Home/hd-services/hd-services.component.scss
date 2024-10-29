@@ -115,8 +115,8 @@
     border-radius: 12px;
     box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.1);
   }
-  .carousel {
-  }
+  // .carousel {
+  // }
   
   
   [nz-carousel-content] {
@@ -133,6 +133,12 @@
     right: 0;
     top: 0;
     z-index: 1;
+  }
+
+  .headerCarousel {
+    ::ng-deep .owl-stage {
+      display: flex;
+    }
   }
 
 @media only screen and (max-width : 767px) {

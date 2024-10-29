@@ -1,0 +1,73 @@
+<div class="sectionContainer">
+    <div class="container">
+        <div class="container-with-right">
+            <div class="relativeContainer">
+                <div class="sectionTop" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <h2 class="heading">Plug your workflow into our platform for seamless integration</h2>
+                    <p>Simply combine your internal workflow with our platform, and coordinate with 
+                        global vendors without any halts.</p>
+                </div>
+
+                <div class="topVendorsCarouselWrapper">
+                    <div class="topVendorsCarousel">
+
+                        <owl-carousel-o [options]="customOptions">
+                            <ng-template carouselSlide *ngFor=" let item of projectsArray">
+                                <div class="projectCard"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                                    <div class="projectImg">
+                                        <img src="{{item.img}}" class="projectImage" alt="cardImage">
+                                    
+                                        <div class="imgOverlay">
+                                            <div class="projectCategory">{{item.category}}</div>
+                                            <div class="projectName">{{item.projectTitle}}</div>
+                                            <div class="company">
+                                                <img src="{{item.locationFlag}}" alt="icon" width="20" height="20">
+                                                <div class="companyName">
+                                                    {{item.company}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slideContent">
+                                        <div class="projectHighlight">
+                                            <div class="serviceCompany">
+                                                <img src="{{item.serviceCompanyIcon}}" width="{{item.width}}"
+                                                    height="{{item.height}}" alt="serviceCompanyIcons">
+                                                <div class="companyName">
+                                                    <small>Vendor</small>
+                                                    {{item.serviceCompany}}
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="serviceCompanyDetails">
+                                            <div class="companyDetails">
+                                                <div class="title">Rendered Services
+                                                </div>
+                                                <div class="service">
+                                                    {{item.serviceDescription}}
+                                                </div>
+                                            </div>
+
+                                            <div class="cardFooter">
+                                                <a [routerLink]="item.link">
+                                                    {{item.linkTitle}}
+                                                </a>
+                                                <lib-svg-icon class="arrowIcon" [name]="'arrow-icon'" [size]="14"
+                                                    [sizeH]="22"></lib-svg-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-template>
+                            <!-- <ng-template carouselSlide>Slide 2</ng-template>
+                        <ng-template carouselSlide>Slide 3</ng-template>
+                        <ng-template carouselSlide>Slide 4</ng-template> -->
+                        </owl-carousel-o>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
