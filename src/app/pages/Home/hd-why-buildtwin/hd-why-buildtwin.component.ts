@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { LanguageService } from 'src/app/services/language.service';
+
 
 @Component({
   selector: 'app-hd-why-buildtwin',
@@ -7,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HdWhyBuildtwinComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _languageService:LanguageService) { }
 
   ngOnInit(): void {
   }

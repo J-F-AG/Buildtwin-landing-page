@@ -60,9 +60,31 @@ export class SeoService {
   // if (existingCanonical) {
   //   this.metaService.removeTag('link[rel="canonical"]');
   // }
-
+  // Correctly select the canonical tag using the 'link[rel="canonical"]' selector
+    // const existingCanonical = this.metaService.getTag("meta[rel='canonical']");
+  
+    // // If the canonical tag exists, remove it
+    try {
+      this.removeCanonicalURL()
+    } catch (error) {
+      
+    }
   // Add the new canonical tag
   this.metaService.addTag({ rel: 'canonical', href: url });
+  }
+
+  removeCanonicalURL() {
+try {
+  
+  const metaCanonical = document.querySelector('meta[rel="canonical"]');
+
+
+  if (metaCanonical) {
+    metaCanonical.remove();    
+  }
+} catch (error) {
+  
+}
   }
 
 }

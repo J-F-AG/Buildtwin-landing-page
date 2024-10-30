@@ -1,7 +1,7 @@
 .coverPopupData {
     position: relative;
-    height: 637px;
-    overflow: hidden;
+    height: 100%;
+    overflow: auto;
     width: 859px;
 }
 
@@ -9,6 +9,7 @@
     background: #fff;
     padding: 20px;
     border-radius: 10px;
+    height: 100%;
 }
 
 .popUP {
@@ -18,7 +19,7 @@
     z-index: 99999;
     width: 100%;
     left: 0;
-    height: 100vh;
+    height: 100%;
     align-items: center;
     justify-content: center;
     left: 0;

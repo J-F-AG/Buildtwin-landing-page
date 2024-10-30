@@ -11,7 +11,7 @@
             <div nz-carousel-content *ngFor="let subProjectArray of discoverProjects">
 
                 <div class="cardContainer">
-                    <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
+                    <lib-svg-icon *ngIf="subProjectArray.length > 4" [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
                         [sizeH]="88">
                     </lib-svg-icon>
                     <ng-container *ngFor=" let item of subProjectArray">
@@ -52,7 +52,7 @@
 
                         </div>
                     </ng-container>
-                    <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
+                    <lib-svg-icon *ngIf="subProjectArray.length > 4" [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
                         [sizeH]="88">
                     </lib-svg-icon>
                 </div>

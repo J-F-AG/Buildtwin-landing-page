@@ -9,7 +9,7 @@
             <img src="assets/images/avatar.svg" alt="avatar">
             <div class="assitWrapper">
                 <div>Need help?</div>
-                <a class="link" (click)="call()">Talk to our Advisors</a>
+                <a class="link" (click)="call()" href="javascript:void(0)">Talk to our Advisors</a>
             </div>
 
         </div>
@@ -47,14 +47,14 @@
                                 <div class="detail">
                                     {{item.name}}
                                 </div>
-                            </a>
-                        </ng-container>
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
-                    </div>
-                </div>
-            </nz-carousel>
+                                <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="getServiceRoute(item.serviceId)">
+                                    <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                                    <div class="detail">
+                                        {{item.name}}
+                                    </div>
+                                </a>
+                </ng-template>
+            </owl-carousel-o>
 
 
 
