@@ -32,7 +32,7 @@
         }
 
         .twoCol {
-            background: #F6F3FF;
+            background: #F3F8FF;
             text-align: left;
             display: flex;
 
@@ -78,7 +78,7 @@
                         padding: 24px 16px;
                         padding-bottom: 24px;
                         flex: 1;
-                        border-right: 1px solid #886DE0;
+                        border-right: 1px solid #0053fa;
 
                         strong {
                             color: #0A2540;
@@ -116,7 +116,7 @@
                         }
 
                         a {
-                            color: var(--primary, #886DE0);
+                            color: var(--primary, #0053fa);
                             font-size: 14px;
                             font-style: normal;
                             font-weight: 500;
@@ -169,7 +169,7 @@
                         }
 
                         a {
-                            color: var(--primary, #886DE0);
+                            color: var(--primary, #0053fa);
                             font-size: 14px;
                             font-style: normal;
                             font-weight: 500;

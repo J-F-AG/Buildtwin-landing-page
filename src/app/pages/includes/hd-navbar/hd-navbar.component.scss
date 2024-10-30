@@ -22,7 +22,7 @@
             position: relative;
 
             span {
-                background: #886de0;
+                background: #0053fa;
                 font-size: 10px;
                 color: #fff;
                 padding: 5px 8px 3px;
@@ -356,6 +356,12 @@
                     }
                 }
             }
+            .text-btn {
+                background-color: transparent !important;
+                border-color: var(--newButtonColor) !important;
+                color: var(--newButtonColor) !important;
+                margin-inline: 10px;
+            }
         }
 
         .navbar-toggler {
@@ -390,6 +396,10 @@
             bottom: 7px;
         }
 
+    }
+
+    .mis-auto {
+        margin-inline-start: auto;
     }
 }
 
@@ -479,7 +489,7 @@
 }
 
 .mainHeading {
-    color: var(--primary, #886DE0);
+    color: var(--primary, #0053fa);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -497,7 +507,7 @@
 }
 
 .makrketPlaceMenuInner section.padding-24.background-white.left {
-    background: #F6F3FF;
+    background: #F3F8FF;
     border-radius: 12px 0 0 12px;
     // opacity: 1;
 }
@@ -977,19 +987,58 @@
 }
 
 .menu_copilot {
-    border-radius: 12px;
+    border-radius: 2px 16px 16px 16px;
+    border: 1px solid var(--themeColor);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
-    max-width: 897px;
+    max-width: 320px;
     margin: auto;
-    width: 897px;
+    width: 320px;
+    height: 450px;
+    overflow-y: auto;
     position: absolute;
-    left: -30%;
+    // left: -30%;
     top: 102px;
     z-index: 99;
     background: #fff;
     transition: all 0.5s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    .mi--12 {
+        margin-inline: -12px;
+    }
+    &__text {
+        width: 100%;
+        padding: 0px 12px;
+        &:hover {
+          padding-block: 10px;
+          background-color: var(--backgroundColor);
+          border-radius: 8px;
+          .menu_copilot__text--sub {
+            display: block;
+            margin-inline-start: 28px;
+          }
+          .menu_copilot__text--head {
+            color: var(--newThemeColor);
+            path, ellipse, circle {
+                stroke: var(--themeColor);
+            }
+          }
+          .menu_copilot__text--arrow {
+            display: none;
+          }
+          .menu_copilot__text--arrow-up {
+            display: block;
+          }
+        }
+    
+        &--arrow-up {
+          display: none;
+        }
+    
+        &--sub {
+          display: none;
+        }
+      }
 }
 
 .menu_copilot .container {
@@ -1042,6 +1091,7 @@
 
 .menu_copilot .background-secondary {
     background-color: #ececec;
+    margin-inline: -24px;
 }
 
 .menu_copilot .margin-top-24 {
@@ -1056,7 +1106,7 @@
 }
 
 .menu_copilot .flex-grow {
-    flex-basis: 227px;
+    // flex-basis: 227px;
 
 }
 
@@ -1081,7 +1131,7 @@
 .menu_copilot .cta-button {
     justify-content: center;
     border-radius: 4px;
-    background-color: #886de0;
+    background-color: #0053fa;
     margin-top: 24px;
     color: #fff;
     font-weight: 500;
@@ -1251,7 +1301,7 @@ a.flex-grow.flex-column.active em svg path {
         align-items: center;
 
         span {
-            color: var(--primary, #886DE0);
+            color: var(--primary, #0053fa);
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -1267,7 +1317,7 @@ a.flex-grow.flex-column.active em svg path {
             justify-content: center;
             align-items: center;
             border-radius: 4px;
-            background: #886DE0;
+            background: #0053fa;
             color: var(--color-green-button, #FFF);
 
             font-size: 14px;
@@ -1452,7 +1502,7 @@ form {
 
         }
         .makrketPlaceMenuInner section.padding-24.background-white.left {
-            background: #F6F3FF;
+            background: #F3F8FF;
             border-radius: 12px 0 0 12px;
             min-width: 40%;
         }
@@ -1622,7 +1672,7 @@ form {
     }  
 
     .menu_copilot {
-        left: -45%;
+        // left: -45%;
     }
 }
 

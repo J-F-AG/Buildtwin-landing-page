@@ -238,6 +238,9 @@ import { RebarServicesOfferedComponent } from './pages/rebar/services-offered/se
 import { RebarThreeCardsComponent } from './pages/rebar/three-cards/three-cards.component';
 import { RebarTopVendorsComponent } from './pages/rebar/top-vendors/top-vendors.component';
 import { RebarTrustByNewComponent } from './pages/rebar/trust-by/trust-by.component';
+// import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/file-upload-service/file-upload-service.component';
+import { HdProvidersComponent } from './pages/Home/hd-providers/hd-providers.component';
+import { HdGoodCompanyComponent } from './pages/Home/hd-good-company/hd-good-company.component';
 
 @NgModule({
   declarations: [
@@ -442,7 +445,10 @@ import { RebarTrustByNewComponent } from './pages/rebar/trust-by/trust-by.compon
    RebarServicesOfferedComponent,
    RebarThreeCardsComponent,
    RebarTopVendorsComponent,
-   RebarTrustByNewComponent
+   RebarTrustByNewComponent,
+  //  RebarFileUploadServiceComponent,
+   HdProvidersComponent,
+   HdGoodCompanyComponent
   ],
   imports: [    
     BrowserModule,

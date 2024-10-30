@@ -39,7 +39,7 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            color: var(--primary, #886DE0);
+            color: var(--primary, #0053fa);
             font-size: 14px;
             font-style: normal;
             font-weight: 500;
@@ -81,7 +81,7 @@
     :host ::ng-deep .startedData {
         padding: 56px 24px 24px;
         width: 97%;
-        background-color: #886DE0;
+        background-color: #0053fa;
         height: auto;
     }
 }
