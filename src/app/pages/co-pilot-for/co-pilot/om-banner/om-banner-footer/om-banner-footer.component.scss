@@ -75,7 +75,7 @@
 
 .plugWrapper{display: flex;
     .hd-section-title { width: 157px;
-        h2{ font-size: 25px; color: #9278E3; margin-top: 25px; text-transform: uppercase;
+        h2{ font-size: 25px; color: var(--themeColor); margin-top: 25px; text-transform: uppercase;
             strong{display: block;}
         }
     }

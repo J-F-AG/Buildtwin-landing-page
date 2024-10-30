@@ -64,7 +64,10 @@
     font-family: "tabler-icons";
 }
 
-
+.integrations-area {
+    padding-left: 100px;
+    padding-right: 100px;
+}
 .integrations-area.ptb-75 {
     padding-bottom: 40px;
     padding-top: 50px;
@@ -73,7 +76,7 @@
 
 .integrations-area .plugWrapper{display: flex;
     .hd-section-title { width: 157px;
-        h2{ font-size: 25px; color: #9278E3; margin-top: 25px; text-transform: uppercase;
+        h2{ font-size: 25px; color: var(--themeColor); margin-top: 25px; text-transform: uppercase;
             strong{display: block;}
         }
     }

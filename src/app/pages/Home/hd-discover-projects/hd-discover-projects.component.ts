@@ -13,7 +13,7 @@ export class HdDiscoverProjectsComponent implements OnInit {
 
   factorySlider: OwlOptions = {
     nav: true,
-    margin: 10,  // Adjust as needed
+    margin: 37,  // Adjust as needed
     dots: false,
     loop: true,
     autoplay: false,
