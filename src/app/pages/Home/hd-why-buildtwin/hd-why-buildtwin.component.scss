@@ -219,6 +219,7 @@
         align-items: center;
         justify-content: center;
         width: 24px;
+        min-width: 24px;
         height: 24px;
         border-radius: 50%;
         background: var(--themeColor);
@@ -256,11 +257,32 @@
     margin: 10px 0;
   }
 
+  @media only screen and (max-width : 1200px) {
+    .whyBuildtwinSection {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media only screen and (max-width : 992px) {
+  .whyBuildtwinSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media only screen and (max-width : 767px) { 
+  .main-title {
+    font-size: 15px;
+  }
+  .sectionHead .title {
+    font-size: 24px;
+  }
+  .sectionHead .subTitle {
+    font-size: 14px;
+  }
   .sectionHead {
     .heading {
-      text-align: center;
-      padding: 0 25px;
+      text-align: left;
+      padding: 0;
     }
   }
 
@@ -268,7 +290,7 @@
     background: none;
     box-shadow: none;
     margin: 0;
-    padding: 30px 0;
+    padding: 30px 0 0;
   }
 
   .sectionMidMain {
@@ -279,15 +301,18 @@
 
   .buildTwinItemsContainer {
     white-space: nowrap;
+    padding: 6px 10px;
+    font-size: 16px;
   }
 
   .sectionContent {
     flex-direction: column;
     height: auto;
+    margin-top: 0;
 
     .leftChild {
       width: auto;
-      padding: 30px 20px;
+      padding: 0;
 
       .contentIconSection {
         width: 135px;
@@ -296,12 +321,18 @@
 
     .rightChild {
       width: auto;
-      padding: 30px 20px;
+      padding: 20px 20px;
 
       .content {
         margin: 0 0 30px;
       }
     }
+  }
+  .rightChild .contentHeader {
+    font-size: 15px;
+  }
+  .rightChild .content-top__title {
+    font-size: 15px;
   }
 }
 

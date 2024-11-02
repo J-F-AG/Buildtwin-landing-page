@@ -352,6 +352,38 @@
   }
 }
 
+@media only screen and (max-width : 1200px) {
+  .services {
+      padding-left: 30px;
+  }
+}
+
+@media only screen and (max-width : 992px) {
+  .services {
+    padding-left: 20px;
+  }
+  .services .main-head {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services .main-title {
+    font-size: 16px;
+  }
+  .services .title {
+    font-size: 24px;
+  }
+  .services .subTitle {
+    font-size: 14px;
+  }
+  .services .service__items__title--main {
+    font-size: 24px;
+  }
+  .services .service__items__sub__title {
+    font-size: 24px;
+  }
+}
 @media only screen and (max-width: 567px) {
   .services {
     padding: 10px !important;

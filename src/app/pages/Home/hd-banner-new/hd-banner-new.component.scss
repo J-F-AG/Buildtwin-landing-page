@@ -491,6 +491,12 @@
         }
     }
 }
+@media only screen and (max-width : 1200px) {
+    .banner-area {
+        padding-left: 7px;
+        padding-right: 30px;
+    }
+}
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
@@ -504,11 +510,36 @@
         // }
     }
 }
-
+@media only screen and (max-width : 1024px) {
+    .banner-area .integrationsList {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: auto;
+    }
+    .bannerr-area-item-image {
+        margin-top: -60px;
+        position: relative;
+        z-index: -1;
+    }
+    .scroll-next {
+        display: none;
+    }
+}
 /* max width 992px */
 @media only screen and (max-width : 992px) {
+    .banner-area .integrationsList {
+        padding-top: 30px;
+    }
+    .banner-area .sliderCover {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .banner-area .integrationsList ::ng-deep .owl-carousel {
+        padding: 0 0;
+    }
     .banner-area {
-        padding: 100px 24px 24px;
+        padding: 100px 0 24px 0;
         grid-template-columns: unset;
         gap: 24px;
 
@@ -529,7 +560,8 @@
             }
         }
         .formContainer {
-            width: 50%;
+            width: auto;
+            margin: 0 20px;
             margin-inline: auto;
         }
     }
@@ -594,7 +626,22 @@
         transform: scale(.7);
         transform-origin: 0 0;
     }
-
+    .banner-area--item--step {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .line-container {
+        height: 3px;
+    }
+    .banner-area--item--title {
+        font-size: 25px;
+    }
+    .banner-area--item--desc {
+        font-size: 16px;
+    }
+    .bannerr-area-item-image {
+        margin-top: -20px;
+    }
 }
 
 
@@ -605,9 +652,9 @@
 }
 
 @media (min-width: 768px) {
-    .banner-area .sliderCover ::ng-deep .owl-nav {
-        max-width: 720px;
-    }
+    // .banner-area .sliderCover ::ng-deep .owl-nav {
+    //     max-width: 720px;
+    // }
     .banner-area .sliderCover .item .container {
         padding: 0 70px;
         min-height: 0;
@@ -653,10 +700,10 @@
         width: 100% !important;
     }
     .formContainer {
-        width: 90% !important;
+        width: calc(100% - 20px) !important;
         margin-inline: 10px !important;
     }
     .sliderCover {
-        width: 90vw !important;
+        width: 100vw !important;
     }
 }

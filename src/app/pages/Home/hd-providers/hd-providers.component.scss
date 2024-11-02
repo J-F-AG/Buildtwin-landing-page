@@ -58,9 +58,21 @@
       }
     }
   }
+  @media only screen and (max-width : 1200px) {
+    .solution-providers {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+  }
+  @media (max-width: 992px){
+    .solution-providers {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
   @media (max-width: 520px){
     .solution-providers {
-      padding: 40px 20px;
+      padding: 0 20px 40px;
       gap: 40px;
       opacity: 0px;
     
@@ -102,6 +114,9 @@
           flex-wrap: wrap;
           justify-items: center;
           column-gap: 30px;
+          & > div {
+            margin: auto;
+          }
           .border-img {
             border-width: 10px; /* Adjust this value as needed */
             border-style: solid; /* Required for border image to show */

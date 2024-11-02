@@ -19,7 +19,7 @@ export class HdBannerNewComponent {
     margin: 0,
     dots: false,
     loop: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3100,
     // smartSpeed: 2000,
     autoplayHoverPause: false,
