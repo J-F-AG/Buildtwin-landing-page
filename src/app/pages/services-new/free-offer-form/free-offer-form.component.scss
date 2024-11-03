@@ -262,3 +262,38 @@
 .mat-mdc-button-disabled {
   opacity: .5;
 }
+@media only screen and (max-width : 992px) {
+  .formContainer .middlePart {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .formContainer .middlePart .formRow {
+    width: calc(50% - 10px);
+    margin: 0;
+  }
+  .formContainer .bottomPart .buttonContainer {
+    padding: 10px 0;
+  }
+}
+
+
+@media only screen and (max-width : 767px) {
+  .formContainer .middlePart .formRow {
+    width: calc(100%);
+    margin: 0;
+  }
+  .formContainer .topPart {
+    font-size: 16px;
+  }
+  .selectBox .input-text, .selectBox .textarea-description {
+    padding: 9px 35px 9px 12px;
+    font-size: 14px;
+  }
+  .selectBox.precastField > div, .selectBox.dateField > div {
+    padding: 9px 35px 9px 12px;
+  }
+  .selectBox .selectedValue {
+    font-size: 14px;
+  }
+}

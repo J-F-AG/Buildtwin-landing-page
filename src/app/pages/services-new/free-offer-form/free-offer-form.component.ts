@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, forkJoin } from 'rxjs';
@@ -14,7 +14,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './free-offer-form.component.scss'
 })
 export class FreeOfferFormComponent {
-
+  @Input() type: string = '';
   showdropDown: boolean = true;
 
   // enquiryPayload = {

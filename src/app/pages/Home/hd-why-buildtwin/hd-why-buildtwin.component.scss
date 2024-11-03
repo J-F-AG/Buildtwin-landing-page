@@ -1,5 +1,5 @@
 .whyBuildtwinSection{
-  padding: 40px 0 0; 
+  padding: 40px 100px 0; 
   background-color: var(--whiteColor);
   .container {
     margin-inline: auto;
@@ -84,11 +84,8 @@
       .subTitle{font-size: 18px; color: var(--lightTextColor); font-weight: 400;}
   }
   .bodyWrapper {
-    margin: 15px 20px 28px 20px;
-    padding: 32px 22px 22px 22px;
-    border-radius: 7px;
-    background: #fff;
-    box-shadow: 0px 9.194px 36.774px 0px rgba(44, 44, 44, 0.04);
+    margin: 15px 0 28px 0;
+    padding: 32px 0 22px 0;
   }
   .sectionMidContainer {
     border-bottom: 2px solid #efefef;
@@ -98,7 +95,7 @@
     align-items: center;
     // justify-content: space-between;
     gap: 15px;
-    width: 80%;
+    width: 100%;
     gap: 10px;
     margin: 0px auto;
   }
@@ -121,7 +118,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    gap: 20px;
+    gap: 40px;
     height: 450px;
     margin: 30px auto;
   }
@@ -131,7 +128,7 @@
     // border: 1px solid #e3e2e0;
     background: #fff;
     height: 100%;
-    padding: 20px 20px 45px;
+    padding: 20px 0 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,6 +219,7 @@
         align-items: center;
         justify-content: center;
         width: 24px;
+        min-width: 24px;
         height: 24px;
         border-radius: 50%;
         background: var(--themeColor);
@@ -259,11 +257,32 @@
     margin: 10px 0;
   }
 
+  @media only screen and (max-width : 1200px) {
+    .whyBuildtwinSection {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media only screen and (max-width : 992px) {
+  .whyBuildtwinSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media only screen and (max-width : 767px) { 
+  .main-title {
+    font-size: 15px;
+  }
+  .sectionHead .title {
+    font-size: 24px;
+  }
+  .sectionHead .subTitle {
+    font-size: 14px;
+  }
   .sectionHead {
     .heading {
-      text-align: center;
-      padding: 0 25px;
+      text-align: left;
+      padding: 0;
     }
   }
 
@@ -271,7 +290,7 @@
     background: none;
     box-shadow: none;
     margin: 0;
-    padding: 30px 0;
+    padding: 30px 0 0;
   }
 
   .sectionMidMain {
@@ -282,15 +301,18 @@
 
   .buildTwinItemsContainer {
     white-space: nowrap;
+    padding: 6px 10px;
+    font-size: 16px;
   }
 
   .sectionContent {
     flex-direction: column;
     height: auto;
+    margin-top: 0;
 
     .leftChild {
       width: auto;
-      padding: 30px 20px;
+      padding: 0;
 
       .contentIconSection {
         width: 135px;
@@ -299,12 +321,18 @@
 
     .rightChild {
       width: auto;
-      padding: 30px 20px;
+      padding: 20px 20px;
 
       .content {
         margin: 0 0 30px;
       }
     }
+  }
+  .rightChild .contentHeader {
+    font-size: 15px;
+  }
+  .rightChild .content-top__title {
+    font-size: 15px;
   }
 }
 

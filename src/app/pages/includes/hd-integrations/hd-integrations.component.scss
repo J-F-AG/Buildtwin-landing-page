@@ -1,4 +1,7 @@
 
+.integration-box.ng-star-inserted {
+    display: none;
+}
 ::ng-deep .plugWrapper .owl-carousel .owl-item img{ width: 174px; }
 
 
@@ -64,7 +67,10 @@
     font-family: "tabler-icons";
 }
 
-
+.integrations-area {
+    padding-left: 100px;
+    padding-right: 100px;
+}
 .integrations-area.ptb-75 {
     padding-bottom: 40px;
     padding-top: 50px;
@@ -73,7 +79,7 @@
 
 .integrations-area .plugWrapper{display: flex;
     .hd-section-title { width: 157px;
-        h2{ font-size: 25px; color: #9278E3; margin-top: 25px; text-transform: uppercase;
+        h2{ font-size: 25px; color: var(--themeColor); margin-top: 25px; text-transform: uppercase;
             strong{display: block;}
         }
     }
@@ -89,12 +95,28 @@
     }
 }
 
+@media only screen and (max-width : 1200px) {
+    .integrations-area {
+        padding-left: 7px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .integrations-area {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
     .integrations-area {
         .plugWrapper {
             flex-direction: column;
         }
+    }
+    .integrations-area.ptb-75 {
+        padding-top: 0!important;
     }
 
     .integration-box {
