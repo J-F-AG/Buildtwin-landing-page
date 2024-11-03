@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GlobalService } from 'src/app/services/GlobalService';
 import { LanguageService } from 'src/app/services/language.service';
 
 
@@ -9,7 +10,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class HdWhyBuildtwinComponent implements OnInit {
 
-  constructor(public _languageService:LanguageService) { }
+  constructor(public _languageService:LanguageService, private globalService: GlobalService) { }
 
   ngOnInit(): void {
   }
@@ -152,6 +153,11 @@ export class HdWhyBuildtwinComponent implements OnInit {
 
   get activeContent() {
     return this.whyBuildTwinArray[this.activeTab];
+  }
+
+
+  scrollToSection(sectionId: string) {
+    this.globalService.scrollToSection(sectionId);
   }
 
 }
