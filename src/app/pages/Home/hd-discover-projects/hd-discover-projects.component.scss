@@ -1,5 +1,5 @@
 
-.item.ng-star-inserted {
+.item:not(.ng-star-inserted) {
   display: none;
 }
 //   //discoverProjects
