@@ -95,7 +95,7 @@
         }
 
         .icon1 {
-            background-color: #F6F3FF;
+            background-color: #F3F8FF;
             border-radius: 50%;
             position: absolute;
             text-align: center;
@@ -122,7 +122,7 @@
 
         .icon2 {
             transition: var(--transition);
-            background-color: #F6F3FF;
+            background-color: #F3F8FF;
             border-radius: 50%;
             position: absolute;
             text-align: center;
@@ -184,7 +184,7 @@
 
                 a {
                     border-radius: 4px;
-                    background: #886DE0;
+                    background: #0053fa;
                     display: inline-flex;
                     padding: 13px 13.39px 12.05px 13.09px;
                     justify-content: center;
@@ -230,7 +230,7 @@
     top: 420px;
     font-size: 12px;
     .current{
-        color: #886DE0;
+        color: #0053fa;
         font-weight: 600;
     }
 }
@@ -259,7 +259,7 @@
             height: 25px;
             cursor: pointer;
             &.active {
-                background: #886DE0;
+                background: #0053fa;
             }
         }
     }

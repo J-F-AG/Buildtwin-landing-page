@@ -62,7 +62,7 @@
                     justify-content: center;
                     align-items: center;
                     border-radius: 4px;
-                    background: #886DE0;
+                    background: #0053fa;
                     color: var(--color-green-button, #FFF);
 
                     font-size: 14px;
@@ -84,7 +84,7 @@
                 align-items: flex-start;
                 gap: 32px;
                 border-radius: 0px 4px 4px 0px;
-                background: var(--secondary, #F6F3FF);
+                background: var(--secondary, #F3F8FF);
 
                 .coverDiv {
                     display: flex;
@@ -181,7 +181,7 @@
                             font-style: normal;
                             font-weight: 500;
                             line-height: normal;
-                            background: var(--primary, #886DE0);
+                            background: var(--primary, #0053fa);
                             margin-bottom: 8px;
                         }
                     }

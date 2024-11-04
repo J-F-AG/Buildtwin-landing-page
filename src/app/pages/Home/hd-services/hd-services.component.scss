@@ -1,240 +1,411 @@
-.sectionContainer {
-    min-height: 500px;
-    position: relative;
-    background-color: var(--assistantBackgroundColor-global);
-    padding: 82px 0;
+// .sectionContainer {
+//     min-height: 500px;
+//     position: relative;
+//     background-color: var(--assistantBackgroundColor-global);
+//     padding: 82px 0;
+//     .cardWrapper:nth-child(2) {
+//       transform: scaleY(2);
+//     }
+//   }
+//   .sectionTop {
+//     display: flex;
+//     position: relative;
+//     z-index: 2;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     .heading {
+//       font-size: 40px;
+//       font-weight: 600;
+//       margin-bottom: 0;
+//     }
+//     .assistant {
+//       display: flex;
+//       gap: 5px;
+//       img {
+//         width: 42px;
+//         height: 42px;
+//         border-radius: 50%;
+//       }
+//       .assitWrapper {
+//         font-size: 15px;
+//         font-weight: 600;
+//       }
+//       .link:hover {
+//         color: #0053fa;
+//       }
+//     }
+//   }
+//   .sectionMid {
+//     .content{
+//       font-size: 16px; font-weight: 500;
+//     }
+//     .bookServicesButton {
+//       padding: 14px 18px;
+//       margin-top: 15px;
+//       display: flex;
+//       align-items: center;
+//       width: 212px;
+//       span{padding-right: 50px;}
+//     }
+//   }
+//   .sectionBottom {
+//     width: 100%;
+//     margin: 48px 0 0;
+//     position: relative;
+//     bottom: 0;
+//     z-index: 10;
+//     .headerCarousel {
+//       display: flex;
+//       justify-content: space-between;
+//       .carouselWrapper {
+//         display: flex;
+//         // justify-content: space-between;
+//         gap: 16px;
+//         position: relative;
+//         background: none;
+//         .leftslideButton {
+//           position: absolute;
+//           left: 0;
+//           top: 60px;
+//           transform: rotate(180deg);
+//           cursor: pointer;
+//           z-index: 1;
+//         }
+//         .rightslideButton {
+//           position: absolute;
+//           right: 0;
+//           top: 60px;
+//           cursor: pointer;
+//         }
+//       }
+//       .cardWrapper {
+//         // width: 100%;
+//         background: #fff;
+//         border-radius: 6px;
+//         box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.03);
+//         padding: 10px;
+//         margin: 0 8px;
+//         min-height: 100%;
+//         display: block;
+//         // cursor: pointer;
+  
+//         img {
+//           // height: 137px;
+//           // aspect-ratio: 153 / 137;
+//           background: #fff;
+//         }
+//         .detail {
+//           margin: 0 auto;
+//           width: 95px;
+//           text-align: center;
+//           font-family: var(--semibold-global);
+//           font-size: 16px;
+//         }
+//       }
+//     }
+//   }
+  
+//   //global
+//   .link {
+//     color: #0053fa;
+//   }
+//   .themeButton {
+//     font-weight: 500;
+//     font-size: 16px;
+//     background-color: #0053fa;
+//     color: #fff;
+//     border-radius: 12px;
+//     box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.1);
+//   }
+//   .carousel {
+//   }
+  
+  
+//   [nz-carousel-content] {
+//     height: auto;
+//   }
+  
+//   :host ::ng-deep .slick-list,
+//   :host ::ng-deep .slick-track,
+//   :host ::ng-deep .slick-slide {
+//     max-height: 210px;
+//   }
+//   .abs-d {
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     z-index: 1;
+//   }
+
+// @media only screen and (max-width : 767px) {
+//   .sectionContainer {
+//     padding: 50px 0;
+//   }
+
+//   .sectionTop {
+//     flex-direction: column-reverse;
+//     align-items: flex-start;
+//     justify-content: flex-start;
+
+//     .assistant {
+//       margin-bottom: 20px;
+//     }
+//   }
+
+//   .sectionBottom {
+//     .headerCarousel {
+//       .cardWrapper {
+//         width: calc(50% - 5px);
+//         flex: 0 0 auto;
+//       }
+
+//       .carouselWrapper {
+//         gap: 10px;
+
+//         .leftslideButton {
+//           left: -15px;
+//         }
+
+//         .rightslideButton {
+//           right: -15px;
+//         }
+//       }
+//     }
+//   }
+
+// }
+
+.services {
+  padding: 40px 0 40px 100px;
+  font-family: var(--fontFamily);
+  background: var(--whiteColor) url(../../../../assets/images/servicie-bg.png) right top no-repeat;
+  background-size: 665px 614px;
+  .main-head {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 24px;
+    margin-block-end: 100px;
+    padding-right: 100px;
   }
-  .sectionTop {
+  .main-title {
+    font-family: var(--fontFamily);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--themeColor);
     display: flex;
-    position: relative;
-    z-index: 2;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    .heading {
-      font-size: 40px;
-      font-weight: 600;
-      margin-bottom: 0;
-    }
-    .assistant {
-      display: flex;
-      gap: 5px;
-      img {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-      }
-      .assitWrapper {
-        font-size: 15px;
-        font-weight: 600;
-      }
-      .link:hover {
-        color: #886de0;
-      }
+    gap: 24px;
+    &:after {
+      content: '';
+      width: 100px;
+      height: 2px;
+      border: 1px solid var(--themeColor);
     }
   }
-  .sectionMid {
-    .content{
-      font-size: 16px; font-weight: 500;
-    }
-    .bookServicesButton {
-      padding: 14px 18px;
-      margin-top: 15px;
-      display: flex;
-      align-items: center;
-      width: 212px;
-      span{padding-right: 50px;}
-    }
+  .heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .sectionBottom {
-    width: 100%;
-    margin: 48px 0 0;
-    position: relative;
-    bottom: 0;
-    z-index: 10;
-    .headerCarousel {
-      // display: flex;
-      // justify-content: space-between;
-      .carouselWrapper {
-        display: flex;
-        // justify-content: space-between;
-        gap: 16px;
-        position: relative;
-        background: none;
-        .leftslideButton {
-          position: absolute;
-          left: 0;
-          top: 60px;
-          transform: rotate(180deg);
-          cursor: pointer;
-          z-index: 1;
-        }
-        .rightslideButton {
-          position: absolute;
-          right: 0;
-          top: 60px;
-          cursor: pointer;
-        }
-      }
-      .cardWrapper {
-        // width: 100%;
-        background: #fff;
-        border-radius: 6px;
-        box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.03);
-        padding: 10px;
-        margin: 0 8px;
-        min-height: 100%;
-        display: block;
-        // cursor: pointer;
-  
-        img {
-          // height: 137px;
-          // aspect-ratio: 153 / 137;
-          background: #fff;
-        }
-        .detail {
-          margin: 0 auto;
-          width: 95px;
-          text-align: center;
-          font-family: var(--semibold-global);
-          font-size: 16px;
-        }
-      }
-    }
-  }
-  
-  //global
-  .link {
-    color: #886de0;
-  }
-  .themeButton {
-    font-weight: 500;
-    font-size: 16px;
-    background-color: #886de0;
-    color: #fff;
-    border-radius: 12px;
-    box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.1);
-  }
-  // .carousel {
-  // }
-  
-  
-  [nz-carousel-content] {
-    height: auto;
-  }
-  
-  :host ::ng-deep .slick-list,
-  :host ::ng-deep .slick-track,
-  :host ::ng-deep .slick-slide {
-    max-height: 210px;
-  }
-  .abs-d {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 1;
+  .title{
+    font-size: 40px;
+    font-family: var(--fontFamily);
+    font-weight: 600;
+    color: var(--newButtonColor);
   }
 
+  .subTitle{
+    font-size: 18px;
+    color: var(--lightTextColor);
+    font-weight: 400;
+  }
+
+  .align-self-end {
+    align-self: end;
+  }
+
+  .service__items {
+    width: 100%;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 170px 170px;
+    gap: 24px;
+    font-family: var(--fontFamily);
+    &__main {
+      grid-row: 1/-1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      img {
+        transform: scale(2);
+      }
+      background: linear-gradient(to bottom left ,#F4F6F7 0%, #002E3B 95%);
+      animation: fadeInOut 5s infinite;
+    }
+    &__title {
+      grid-column: 2/-1;
+      display: grid;
+      gap: 10px;
+      animation: fadeInOut 5s infinite;
+      padding-right: 100px;
+      &--main {
+        color: var(--newButtonColor);
+        font-size: 32px;
+        font-weight: 500;
+        align-self: end;
+      }
+      &--sub {
+        color: #668189;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    &__subWrapper {
+      display: grid;
+      grid-template-columns: repeat(6, 300px);
+      gap: 24px;
+      width: 100%;
+      overflow-x: auto;
+    }
+    &__sub {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      border-radius: 16px;
+      padding-inline-start: 10px;
+      padding-block-start: 10px;
+      animation: fadeInOut 5s infinite;
+      position: relative;
+      &__title {
+        font-size: 16px;
+        font-size: 30px;
+        font-weight: 500;
+        color: var(--newButtonColor);
+        position: relative;
+        z-index: 9;
+        // word-wrap: break-word;
+      }
+      &__image {
+        justify-self: end;
+        align-self: end;
+      }
+    }
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+    0% {
+      left: 0;
+    }
+    90% {
+      left: 0;
+    }
+    100% {
+      left: -100px;
+    }
+
+  }
+  
+  ::ng-deep .owl-item {
+    overflow: visible;
+  }
   .headerCarousel {
     ::ng-deep .owl-stage {
       display: flex;
     }
   }
-
-@media only screen and (max-width : 767px) {
-  .sectionContainer {
-    padding: 50px 0;
-  }
-
-  .sectionTop {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: flex-start;
-
-    .assistant {
-      margin-bottom: 20px;
+  .carousel-item {
+    border-radius: 8px;
+    display: flex;
+    transition: transform 0.25s ease-in-out;
+    height: 170px;
+    width: 300px;
+    img {
+      align-self: flex-end;
+      justify-self: flex-end;
+      height: unset !important;
     }
-  }
-
-  .sectionBottom {
-    .headerCarousel {
-      .cardWrapper {
-        width: calc(50% - 5px);
-        flex: 0 0 auto;
-      }
-
-      .carouselWrapper {
-        gap: 10px;
-
-        .leftslideButton {
-          left: -15px;
-        }
-
-        .rightslideButton {
-          right: -15px;
-        }
+    a {
+      display: flex;
+      &:hover {
+        text-decoration: none;
+        color: initial;
       }
     }
   }
 
+  .highlighted-image {
+    transform: scaleY(2) translateY(10px);
+  }
+
+  .highlighted-slide {
+    a {
+      visibility: hidden;
+    }
+  }
+  
+  .highlighted-text {
+    
+  }
 }
 
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-] {
-  right: 0 ;
-  z-index: 99 ;
-  width: 47px ;
-  bottom: 0 ;
-  height: 47px ;
-  display: block ;
-  transition: var(--transition) ;
-  background-color: var(--whiteColor) ;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px ;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  padding: 0;
-  position: relative;
-  font-size: 0;
-  .ti.ti-chevron-left,.ti.ti-chevron-right {
-      display: none;
+@media only screen and (max-width : 1200px) {
+  .services {
+      padding-left: 30px;
   }
 }
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-prev]{    
-  position: absolute;
-  right: auto;
-  bottom: auto;
-  left: 10px;
-  top: 62%;
-  transform: translateY(-50%) rotate(-90deg);
-  transform-origin: left;
-}
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-next]{    
-  position: absolute;
-  right: 10px;
-  bottom: auto;
-  left: auto;
-  top: 62%;
-  transform: translateY(-50%) rotate(90deg);
-  transform-origin: right;
-}
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-]:hover {
-  opacity: .92;
-  background-color: var(--themeColor) ;
-  &::before{
-      color: var(--whiteColor);
+
+@media only screen and (max-width : 992px) {
+  .services {
+    padding-left: 20px;
+  }
+  .services .main-head {
+    padding-right: 20px;
   }
 }
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-]::before {
-  left: 0;
-  right: 0;
-  top: 50%;
-  line-height: 1;
-  content: "\ea62";
-  margin-top: -0.5px;
-  position: absolute;
-  color: var(--blackColor);
-  transform: translateY(-50%);
-  transition: var(--transition);
-  font-size: 25px;
-  font-family: "tabler-icons";
+
+@media (max-width: 768px) {
+  .services .main-title {
+    font-size: 16px;
+  }
+  .services .title {
+    font-size: 24px;
+  }
+  .services .subTitle {
+    font-size: 14px;
+  }
+  .services .service__items__title--main {
+    font-size: 24px;
+  }
+  .services .service__items__sub__title {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 567px) {
+  .services {
+    padding: 10px !important;
+    .main-head {
+      grid-template-columns: 1fr;
+      margin-block-end: 24px;
+    }
+  }
+  .service__items {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr !important;
+    &__main {
+      grid-column: unset !important;
+      grid-row: 2/3 !important;
+    }
+    &__title {
+      grid-column: unset !important;
+      grid-row: 1/2 !important;
+    }
+  }
 }

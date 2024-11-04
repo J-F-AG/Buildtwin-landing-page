@@ -269,6 +269,9 @@ import { StructuralSteelServicesOfferedComponent } from './pages/structural-stee
 import { StructuralSteelThreeCardsComponent } from './pages/structural-steel/three-cards/three-cards.component';
 import { StructuralSteelTopVendorsComponent } from './pages/structural-steel/top-vendors/top-vendors.component';
 import { StructuralSteelTrustByNewComponent } from './pages/structural-steel/trust-by/trust-by.component';
+// import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/file-upload-service/file-upload-service.component';
+import { HdProvidersComponent } from './pages/Home/hd-providers/hd-providers.component';
+import { HdGoodCompanyComponent } from './pages/Home/hd-good-company/hd-good-company.component';
 
 @NgModule({
   declarations: [
@@ -504,8 +507,11 @@ import { StructuralSteelTrustByNewComponent } from './pages/structural-steel/tru
    StructuralSteelServicesOfferedComponent,
    StructuralSteelThreeCardsComponent,
    StructuralSteelTopVendorsComponent,
-   StructuralSteelTrustByNewComponent
+   StructuralSteelTrustByNewComponent,
 
+  //  RebarFileUploadServiceComponent,
+   HdProvidersComponent,
+   HdGoodCompanyComponent
   ],
   imports: [    
     BrowserModule,

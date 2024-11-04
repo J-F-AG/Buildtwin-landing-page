@@ -7,6 +7,8 @@
     right: 0;
     left: 0;
     top: 0;
+    padding-left: 100px;
+    padding-right: 100px;
 
     .navbar {
         justify-content: space-between;
@@ -22,7 +24,7 @@
             position: relative;
 
             span {
-                background: #886de0;
+                background: #0053fa;
                 font-size: 10px;
                 color: #fff;
                 padding: 5px 8px 3px;
@@ -356,6 +358,12 @@
                     }
                 }
             }
+            .text-btn {
+                background-color: transparent !important;
+                border-color: var(--newButtonColor) !important;
+                color: var(--newButtonColor) !important;
+                margin-inline: 10px;
+            }
         }
 
         .navbar-toggler {
@@ -390,6 +398,10 @@
             bottom: 7px;
         }
 
+    }
+
+    .mis-auto {
+        margin-inline-start: auto;
     }
 }
 
@@ -479,7 +491,7 @@
 }
 
 .mainHeading {
-    color: var(--primary, #886DE0);
+    color: var(--primary, #0053fa);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -497,7 +509,7 @@
 }
 
 .makrketPlaceMenuInner section.padding-24.background-white.left {
-    background: #F6F3FF;
+    background: #F3F8FF;
     border-radius: 12px 0 0 12px;
     // opacity: 1;
 }
@@ -510,6 +522,30 @@
     opacity: 1;
 }
 
+@media only screen and (max-width : 1200px) {
+    .navbar-area {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media only screen and (min-width : 992px) and (max-width : 1024px) {
+    .navbar-area {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item .nav-link {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-toggle::before {
+        top: 23px;
+    }
+}
+@media only screen and (max-width : 992px) {
+    .navbar-area {
+        padding: 20px;
+    }
+}
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
@@ -520,7 +556,7 @@
                 display: block;
                 max-height: 50vh;
                 flex-direction: unset;
-                background-color: #f8f8f8;
+                background-color: none;
 
                 overflow: {
                     y: scroll;
@@ -977,19 +1013,62 @@
 }
 
 .menu_copilot {
-    border-radius: 12px;
+    border-radius: 2px 16px 16px 16px;
+    border: 1px solid var(--themeColor);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
-    max-width: 897px;
+    max-width: 320px;
     margin: auto;
-    width: 897px;
+    width: 320px;
+    height: 450px;
+    overflow-y: auto;
     position: absolute;
-    left: -30%;
+    // left: -30%;
     top: 102px;
     z-index: 99;
     background: #fff;
     transition: all 0.5s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    .mi--12 {
+        margin-inline: -12px;
+    }
+    &__text {
+        width: 100%;
+        padding: 0px 12px;
+        &:hover {
+          padding-block: 10px;
+          background-color: var(--backgroundColor);
+          border-radius: 8px;
+          .menu_copilot__text--sub {
+            max-height: 100px;
+            margin-top: 8px;
+          }
+          .menu_copilot__text--head {
+            color: var(--newThemeColor);
+            path, ellipse, circle {
+                stroke: var(--themeColor);
+            }
+          }
+          .menu_copilot__text--arrow {
+            display: none;
+          }
+          .menu_copilot__text--arrow-up {
+            display: block;
+          }
+        }
+    
+        &--arrow-up {
+          display: none;
+        }
+    
+        &--sub {
+            display: block; 
+            margin-inline-start: 28px;
+            max-height: 0;
+            transition: all .3s ease;
+            overflow: hidden;
+        }
+      }
 }
 
 .menu_copilot .container {
@@ -1042,6 +1121,7 @@
 
 .menu_copilot .background-secondary {
     background-color: #ececec;
+    margin-inline: -24px;
 }
 
 .menu_copilot .margin-top-24 {
@@ -1056,7 +1136,7 @@
 }
 
 .menu_copilot .flex-grow {
-    flex-basis: 227px;
+    // flex-basis: 227px;
 
 }
 
@@ -1081,7 +1161,7 @@
 .menu_copilot .cta-button {
     justify-content: center;
     border-radius: 4px;
-    background-color: #886de0;
+    background-color: #0053fa;
     margin-top: 24px;
     color: #fff;
     font-weight: 500;
@@ -1251,7 +1331,7 @@ a.flex-grow.flex-column.active em svg path {
         align-items: center;
 
         span {
-            color: var(--primary, #886DE0);
+            color: var(--primary, #0053fa);
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -1267,7 +1347,7 @@ a.flex-grow.flex-column.active em svg path {
             justify-content: center;
             align-items: center;
             border-radius: 4px;
-            background: #886DE0;
+            background: #0053fa;
             color: var(--color-green-button, #FFF);
 
             font-size: 14px;
@@ -1444,6 +1524,7 @@ form {
         .flex-column {
             width: 100% !important;
             margin-bottom: 12px;
+            background: none;
 
         }
         .makrketPlaceMenuInner .flex-row{
@@ -1452,7 +1533,7 @@ form {
 
         }
         .makrketPlaceMenuInner section.padding-24.background-white.left {
-            background: #F6F3FF;
+            background: #F3F8FF;
             border-radius: 12px 0 0 12px;
             min-width: 40%;
         }
@@ -1576,6 +1657,8 @@ form {
 
     .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
         margin-left: 0;
+        padding: 0 10px;
+        margin-top: 10px;
     }
 
     span.text {
@@ -1622,17 +1705,18 @@ form {
     }  
 
     .menu_copilot {
-        left: -45%;
+        // left: -45%;
     }
 }
 
 @media (max-width:950px){
     .navbar-area {
-        padding-top: 11px;
-        padding-bottom: 11px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .navbar-area .navbar {
         padding-right: 10px;
+        align-items: flex-start;
     }
     .menu_copilot .font-bold {
         font-size: 13px !important;

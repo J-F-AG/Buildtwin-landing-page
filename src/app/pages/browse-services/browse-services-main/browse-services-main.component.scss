@@ -410,7 +410,7 @@
         }
         .moreFilters {
           margin: 30px 0 74px 0;
-          color: #886de0;
+          color: #0053fa;
           font-size: 16px;
           text-decoration: underline;
           &:hover {
@@ -427,7 +427,7 @@
         .companyCriterias {
           display: flex;
           flex-direction: column;
-          background: linear-gradient(170deg, #9c7efd 0.97%, #886de0 97.09%);
+          background: linear-gradient(170deg, #9c7efd 0.97%, #0053fa 97.09%);
           color: #fff;
           padding: 25px 25px 0px 25px;
           width: 25%;
@@ -475,7 +475,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #f6f3ff;
+            background: #F3F8FF;
             width: 100%;
             height: 84px;
             font-family: var(--medium-global);
@@ -730,7 +730,7 @@
         .projectCategory {
           font-weight: 400;
           font-size: 14px;
-          color: #886de0;
+          color: #0053fa;
         }
         .projectName {
           font-family: var(--semibold-global);
@@ -784,7 +784,7 @@
           border-radius: 6px;
           background: #f8f6ff;
           padding: 12px;
-          color: #886de0;
+          color: #0053fa;
           font-family: var(--semibold-global);
           font-size: 14px;
           display: flex;

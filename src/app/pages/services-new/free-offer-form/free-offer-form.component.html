@@ -1,17 +1,17 @@
-<div class="formHeader">
+<div class="formHeader" *ngIf="type != 'outside'">
     <strong>Get FREE offer for </strong>
     <h3>{{data['name']}}</h3>
     <div>from 5+ pre-qualified vendors</div>
 </div>
 
-<div class="formContainer">
+<div class="formContainer" id="formContainer">
     <div class="topPart">
         Select services from Buildtwin
     </div>
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="middlePart">
 
-            <!-- <div class="formRow" *ngIf="showdropDown">
+            <div class="formRow" *ngIf="type == 'outside' && showdropDown">
 
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid)}">
@@ -27,7 +27,7 @@
                     <span>Sector selection is required.</span>
                 </div>
 
-            </div> -->
+            </div>
             <div class="formRow" *ngIf="showdropDown">
 
                 <div class="selectBox precastField"
@@ -47,7 +47,7 @@
 
             </div>
 
-            <div class="formRow" *ngIf="showdropDown">
+            <div class="formRow" *ngIf="showdropDown && type != 'outside'">
 
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid)}">

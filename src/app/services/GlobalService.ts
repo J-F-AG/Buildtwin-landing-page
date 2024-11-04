@@ -24,4 +24,13 @@ export class GlobalService {
     const url = 'https://fxb5vcoax1.execute-api.ap-southeast-1.amazonaws.com/production/onboarding/save-customer-type';
     return this.http.post<any>(url,payload);
   }
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const topPos = element.getBoundingClientRect().top + window.scrollY - 100;
+      // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.scrollTo({ top: topPos, behavior: 'smooth' });
+    }
+  }
 }

@@ -87,4 +87,58 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'New Rubrik Edge';
+    src: url('../fonts/New-Rubrik-Edge-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'New Rubrik Edge';
+    src: url('../fonts/New-Rubrik-Edge-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Rubrik Edge';
+    src: url('../fonts/New-Rubrik-Edge-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'new_rubrik_edge_medium';
+    src: url('../fonts/New-Rubrik-Edge-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Rubrik Edge';
+    src: url('../fonts/New-Rubrik-Edge-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New Rubrik Edge';
+    src: url('../fonts/New-Rubrik-Edge-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'new_rubrik_edge_semibold';
+    src: url('../fonts/New-Rubrik-Edge-SemiBold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -41,7 +41,7 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(200px);
-            background: #F6F3FF;
+            background: #F3F8FF;
         }
     
         &::before {
@@ -54,7 +54,7 @@
             position: absolute;
             border-radius: 50%;
             filter: blur(200px);
-            background: #F6F3FF;
+            background: #F3F8FF;
         }
     
         .overlay {
@@ -713,7 +713,7 @@
     }
     
     ::ng-deep .banner-area.position-relative.z-1 .owl-theme .owl-dots .owl-dot.active span,::ng-deep .banner-area.position-relative.z-1  .owl-theme .owl-dots .owl-dot:hover span {
-        background: #886DE0;
+        background: #0053fa;
     }
     ::ng-deep .banner-area.position-relative.z-1 .owl-carousel .owl-item .imgWrap img {
         width: 109px;

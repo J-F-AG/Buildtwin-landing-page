@@ -1,6 +1,6 @@
 
-<div class="container">
-  <section class="testimonial-container">
+<div class="testimonial-container">
+  <!-- <section class="testimonial-container">
       <h2 class="testimonial-title" data-aos="fade-up" data-aos-duration="500">What buyers are saying about BuildTwin</h2>
       <p class="testimonial-text" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
        
@@ -8,7 +8,17 @@
 
       </p>
       <a mat-button routerLink="{{_languageService.currentLanguage}}/about" class="default-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Get started now</a>  
-  </section>
+  </section> -->
+  <div class="main-head">
+    <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+        <div class="main-title">Our testimonials</div>
+        <div class="heading">
+            <div class="title">What our customers says</div>
+            <div class="subTitle">If there are any questions you want to ask, we will answer your questions</div>
+        </div>
+    </div>
+    <button mat-button class="default-btn align-self-end">Explore Case studyes</button>
+  </div>
   <div class="partnerWrap" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
       <ul class="partner"> 
         <li>
@@ -31,188 +41,246 @@
   </div>
   </div>
   <div class="container">
-  <div class="colWrapper">
-      <div class="col">
-          <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy" src="assets/images/profile1.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Charles Brown</h3>
-                  <p class="profile-company">Consultancy from Germany</p>
-                </div>
-              </div>
-              <p class="profile-description">
-                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.                </p>
-            </article>
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile2.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Marquees Lee</h3>
-                  <p class="profile-company">Tech Firm from the US</p>
-                </div>
-              </div>
-              <p class="profile-description">
-                The Structural Detailing for Pre-cast course by BuildTwin provided our firm with invaluable insights, directly applicable to our international projects.
+  <div class="testimonial-slides">
+    <owl-carousel-o [options]="testimonialsSlides">
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.
               </p>
-            </article>
-  
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile3.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Shweta Singh</h3>
-                  <p class="profile-company">Business Consultancy from India</p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Charles Brown</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Consultancy from Germany</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <div class="videoWrap">
-                  <img  src="assets/images/vid1.png"  />
-  
-              </div>
-            </article>
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile4.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Lumin King</h3>
-                  <p class="profile-company">PM from UK</p>
+            </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                The Structural Detailing for Pre-cast course by BuildTwin provided our firm with invaluable insights, directly applicable to our international projec
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Marquees Lee</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Tech Firm from the US</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <p class="profile-description">
-                The Technical Highlight series illuminated complex problems with clarity and depth, significantly enhancing our technical approach.                </p>
-            </article>
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile5.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Ziggy Crown</h3>
-                  <p class="profile-company">Engineering Consultancy from China</p>
+            </div>
+        </div>
+      </ng-template>
+      <!-- <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid1.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Shweta Singh</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Business Consultancy from India</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <p class="profile-description">
+            </div>
+        </div>
+      </ng-template> -->
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                The Technical Highlight series illuminated complex problems with clarity and depth, significantly enhancing our technical approach.
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Lumin King</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">PM from UK</p>
+                </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
+              </div>
+            </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
                 BuildTwin's courses on Building Codes were meticulously detailed, ensuring our compliance with international standards was seamless.
               </p>
-            </article>
-      </div>
-      <div class="col">
-          <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile6.png"  class="profile-image" onerror="this.onerror=null; this.src='assets/images/default_profile_pic.png';" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Winnower Plight</h3>
-                  <p class="profile-company">Consultancy from Australia</p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name"> Ziggy Crown</h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Engineering Consultancy from China</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <div class="videoWrap">
-                  <img  src="assets/images/vid2.png"  />
-  
-              </div>
-            </article>
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile7.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Ming Li</h3>
-                  <p class="profile-company">Consultancy from Australia
-                  </p>
+            </div>
+        </div>
+      </ng-template>
+      <!-- <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid2.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Winnower Plight </h3>
+                  <p class="testimonial-slides__profile--user--footer--org">Consultancy from Australia </p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <p class="profile-description">
+            </div>
+        </div>
+      </ng-template> -->
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
                 Attending the Innovation Campus event facilitated by BuildTwin opened doors to collaborations that were transformative for our business strategies.
               </p>
-            </article>
-  
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile8.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Parth Sinha</h3>
-                  <p class="profile-company">Consultancy from India</p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name"> Ming Li</h3>
+                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from Australia</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <p class="profile-description">
+            </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
                 BuildTwin's Accredited Software Training equipped our consultants with cutting-edge skills, giving us a competitive edge in the market.
               </p>
-            </article>
-  
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile9.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Martha Stewart</h3>
-                  <p class="profile-company">Consultancy from USA</p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Parth Sinha </h3>
+                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from India</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <div class="videoWrap">
-                  <img  src="assets/images/vid3.png"  />
-  
-              </div>
-            </article>
-  
-      </div>
-      <div class="col">
-          <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile10.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Jade Kong</h3>
-                  <p class="profile-company">Design Manager</p>
+            </div>
+        </div>
+      </ng-template>
+      <!-- <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid3.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Martha Stewart </h3>
+                  <p class="testimonial-slides__profile--user--footer--org"> Zomato</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <p class="profile-description">
+            </div>
+        </div>
+      </ng-template> -->
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                BuildTwin's Innovation Campus gave us a competitive edge by connecting us directly with field experts and real-world tech challenges. It’s been instrumental in our approach to complex projects.
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Aria Martinez </h3>
+                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from AUS</p>
+                </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
+              </div>
+            </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
                 The Career Growth program has been a game-changer for our employees, providing them with clear pathways and strategies for professional advancement.
               </p>
-            </article>
-  
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile11.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Raj Patel</h3>
-                  <p class="profile-company">Consultancy from India</p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Jade Kong </h3>
+                  <p class="testimonial-slides__profile--user--footer--org"> Design Manager</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <p class="profile-description">
+            </div>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
                 The Innovation Campus by BuildTwin was an incredible experience, filled with collaboration and learning from top field experts.
               </p>
-            </article>
-  
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile12.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Liam Scott</h3>
-                  <p class="profile-company">Environmental Consultancy from the UK</p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Raj Patel </h3>
+                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from India</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <div class="videoWrap">
-                  <img  src="assets/images/vid4.png"  />
-  
-              </div>
-            </article>
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile13.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Amina Aziz</h3>
-                  <p class="profile-company">Consultancy from the UAE</p>
+            </div>
+        </div>
+      </ng-template>
+      <!-- <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid4.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
+                
+              </p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Liam Scott </h3>
+                  <p class="testimonial-slides__profile--user--footer--org"> Environmental Consultancy from the UK</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <p class="profile-description">
+            </div>
+        </div>
+      </ng-template> -->
+      <ng-template carouselSlide>
+        <div class="testimonial-slides__profile">
+            <img loading="lazy" src="assets/images/vid-placeholder.png"  class="testimonial-slides__profile--image" />
+            <div class="testimonial-slides__profile--user">
+              <p class="testimonial-slides__profile--user--description">
                 BuildTwin's Accredited Software program was comprehensive and tailored, equipping us with the skills to leverage technology for efficient project management.
               </p>
-            </article>
-            <article class="profile-card">
-              <div class="profile-info">
-                <img loading="lazy"src="assets/images/profile14.png"  class="profile-image" />
-                <div class="profile-details">
-                  <h3 class="profile-name">Aria Martinez</h3>
-                  <p class="profile-company">Consultancy from AUS</p>
+              <div class="testimonial-slides__profile--user--footer">
+                <div class="testimonial-slides__profile--user--footer__block">
+                  <h3 class="testimonial-slides__profile--user--footer--name">Amina Aziz </h3>
+                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from the UAE</p>
                 </div>
+                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
               </div>
-              <p class="profile-description">
-                BuildTwin's Innovation Campus gave us a competitive edge by connecting us directly with field experts and real-world tech challenges. It’s been instrumental in our approach to complex projects.                </p>
-            </article>
-      </div>
+            </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
   </div>
-  
+</div>

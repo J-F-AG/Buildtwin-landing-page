@@ -1,5 +1,5 @@
 :host ::ng-deep .marketPlace {
-    background: #886DE0;
+    background: #0053fa;
     padding-bottom: 80px;
     margin-bottom: 80px;
 
@@ -151,7 +151,7 @@
                     gap: 10px;
                     border-radius: 4px;
                     background: var(--color-green-button, #FFF);
-                    color: #886DE0;
+                    color: #0053fa;
 
                     font-size: 14px;
                     font-style: normal;
@@ -178,7 +178,7 @@
 
 @media (max-width:767px) {
     :host ::ng-deep .marketPlace {
-            background: #886DE0;
+            background: #0053fa;
             padding-bottom: 30px;
             margin-bottom: 40px;
         .container {

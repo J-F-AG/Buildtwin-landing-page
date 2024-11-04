@@ -1,4 +1,4 @@
-<div class="sectionContainer">
+<!-- <div class="sectionContainer">
     <div class="container">
     <div class="abs-d">
         <img src="assets/images/dots.png" width="269" height="306" alt="">
@@ -24,13 +24,28 @@
     </div>
     <div class="sectionBottom" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="200">
         <div class="headerCarousel">
-            <owl-carousel-o [options]="integrationsList">
-                <ng-template carouselSlide *ngFor="let item of servicesArray">
-                                <div class="cardWrapper" *ngIf="!item['serviceId']">
-                                    <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
-                                    <div class="detail">
-                                        {{item.name}}
-                                    </div>
+            <nz-carousel [nzDots]="false">
+                <div nz-carousel-content *ngFor="let subServiceArray of discoverServices">
+
+                    <div class="carouselWrapper">
+                        <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
+                            [sizeH]="88">
+                        </lib-svg-icon> -->
+                        <!-- <div class="cardWrapper" routerLink="/engineering-services/services">
+                            <img src="assets/images/structuralDesign.png" alt="cardImage" width="151" height="137">
+                            <div class="detail">Structural Design</div>
+                        </div> -->
+                        <!-- <ng-container *ngFor="let item of subServiceArray">
+                            <div class="cardWrapper" *ngIf="!item['serviceId']">
+                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                                <div class="detail">
+                                    {{item.name}}
+                                </div>
+                            </div>
+                            <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="getServiceRoute(item.serviceId)">
+                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                                <div class="detail">
+                                    {{item.name}}
                                 </div>
                                 <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="getServiceRoute(item.serviceId)">
                                     <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
@@ -48,4 +63,49 @@
 </div>
 </div>
 
-<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot> -->
+
+<div class="services" id="targetSection">
+    <div class="main-head">
+        <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+            <div class="main-title">Discover top-tier solutions tailored to your project needs</div>
+            <div class="heading">
+                <div class="title">Find service solution</div>
+                <div class="subTitle">The best way to procure pre-qualified technical teams across the globe.</div>
+            </div>
+        </div>
+        <a mat-button class="default-btn align-self-end" href="https://cockpit.buildtwin.com/signin">Book a service</a>
+    </div>
+
+    <!-- <owl-carousel-o [options]="serviceSlider" (translated)="onTranslate($event)">
+        <ng-container *ngFor="let item of servicesArray; let itemIndex = index">
+            <ng-template carouselSlide [id]="itemIndex.toString()">
+                <div class="carousel-item" [ngClass]="{'highlighted-slide': itemIndex === highlightedIndex}" [ngStyle]="{'background-color': '#FFE7CB', borderRadius: '8px'}">
+                    <a class="cardWrapper cursor" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
+                        <span>{{item.name}}</span>
+                        <img class="carousel-image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                    </a>
+                </div>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o> -->
+
+    <div class="service__items">
+        <a class="service__items__main" [routerLink]="servicesArray[highlightedIndex]?.serviceId ? getServiceRoute(servicesArray[highlightedIndex]?.serviceId) : ''">
+            <img class="carousel-image" src="{{servicesArray[highlightedIndex]?.img}}" alt="cardImage" [attr.width]="servicesArray[highlightedIndex]?.width" [attr.height]="servicesArray[highlightedIndex]?.height">
+        </a>
+        <div class="service__items__title">
+            <span class="service__items__title--main">{{servicesArray[highlightedIndex]?.name}}</span>
+            <span class="service__items__title--sub">Cannon design used Bluebeam to manage a $2 billion hospital project and finished the job faster. Cannon design used Bluebeam to manage a $2 billion hospital project </span>
+        </div>
+        <div class="service__items__subWrapper">
+            <ng-container *ngFor="let item of servicesArray; let itemIndex = index">
+                <a class="service__items__sub" *ngIf="itemIndex !== highlightedIndex" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''" [ngStyle]="{backgroundColor: item.color}">
+                    <span class="service__items__sub__title">{{item.name}}</span>
+                    <img class="service__items__sub__image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                </a>
+            </ng-container>
+        </div>
+    </div>
+
+</div>

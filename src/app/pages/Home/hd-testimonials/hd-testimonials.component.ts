@@ -15,8 +15,22 @@ export class HdTestimonialsComponent {
 		margin: 25,
 		dots: true,
 		loop: true,
-		autoplay: true,
+		autoplay: false,
 		autoplayHoverPause: true,
+		responsive: {
+			0: {
+			  items: 1
+			},
+			400: {
+			  items: 1
+			},
+			740: {
+			  items: 1
+			},
+			940: {
+			  items: 1
+			}
+		  },
 		navText: [
 			"<i class='ti ti-chevron-left'></i>",
 			"<i class='ti ti-chevron-right'></i>",
