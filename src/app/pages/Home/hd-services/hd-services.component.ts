@@ -55,17 +55,19 @@ export class HdServicesComponent implements OnInit, OnDestroy {
 
   servicesArray = [
     { id: '1', name: 'Precast Detailing', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', serviceId: 9, color: "#C3EEFF" },
-    { id: '2', name: 'Structural Steel Detailing', img: '/assets/images/structuralDesign.png', width:'151', height: '137', color: "#FFE2E1" },
+    { id: '2', name: 'Structural Steel Detailing', img: '/assets/images/structuralDesign.png', width:'151', height: '137', serviceId: 12, color: "#FFE2E1" },
     { id: '3', name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', color: "#FFE8CB" },
     { id: '4', name: 'Rebar Detailing', img: '/assets/images/rebar.png', width:'151', height: '137', serviceId: 10, color: "#C3EEFF" },
     { id: '5', name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137', color: "#FFE2E1" },
-    { id: '6', name: 'BIM Services', img: '/assets/images/modelling.png', width:'151', height: '137', color: "#FFE8CB" },
+    { id: '6', name: 'BIM Services', img: '/assets/images/modelling.png', width:'151', height: '137', color: "#FFE8CB", serviceId: 11 },
     { id: '7', name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137', color: "#E2EED9" },
   ]
 
   serviceRoutesMap = {
     9: '/services/pre-cast-detailing-services',
     10: '/services/rebar-detailing-services',
+    11: '/services/bim-services',
+    12: '/services/steel-detailing-services'
     // Add more serviceId to route mappings here
   };
 

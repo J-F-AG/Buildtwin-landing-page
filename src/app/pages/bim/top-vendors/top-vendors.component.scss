@@ -1,0 +1,357 @@
+.sectionContainer{ background-color: #f8f8f8; position: relative;
+    padding: 34px 0 60px;
+    .sectionTop{ margin-bottom: 40px; padding-right: 160px;
+      .heading{
+        font-size: 32px; 
+        font-weight: 600;
+        margin-bottom: 12px;
+        line-height: 1.4;
+      }
+      p{font-size: 16px;
+        font-weight: 400;}
+    }
+  }
+  
+  
+  .relativeContainer{position: relative;}
+  
+  ::ng-deep .topVendorsCarousel {
+    .owl-carousel{position: static;}
+  .owl-nav {
+    display: flex;
+    position: absolute; right: 0;
+    top: 0;
+    margin-top: 0;
+  
+    .owl-prev,
+    .owl-next {
+      text-indent: 110%;
+      overflow: hidden;
+      transition: background-color 0.2s ease;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: solid 1px #E5E5EA;
+      background-color: white;
+      position: relative;
+  
+      &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border: solid 1px black;
+        position: absolute;
+        transform: translate(-50%, -50%) rotate(45deg);
+        left: 50%;
+        top: 50%;
+      }
+  
+      &:hover {
+        background-color: white;
+      }
+    }
+  
+    .owl-prev::before {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      margin-left: 2px;
+    }
+  
+    .owl-next::before {
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      margin-left: -2px;
+    }
+  }
+  
+  .owl-dots{ margin-left: 60px;
+    .owl-dot{
+      span{width: 16px;
+        height: 8px; transition: all 0.2s ease 0;}
+        &.active{
+          span{width: 30px; background: #6448BD;}
+        }
+    }
+  }
+  }
+  
+  ::ng-deep .topVendorsCarouselWrapper{overflow: hidden;
+    .topVendorsCarousel{width: calc(100% - 220px); 
+      .owl-carousel .owl-stage-outer{ overflow: visible; padding-bottom: 40px;
+        &::after{ content: ""; display: block; position: absolute; height: 100%; width: 220px; right: -220px; top: 0;
+          background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(248,248,248,0.5) 50%,rgba(248,248,248,1) 100%);
+        }
+      }
+      .owl-item{
+        border-radius: 12px;
+        overflow: hidden;
+      min-height: 277px;
+      display: flex;
+      }
+      .owl-item.active{
+        background: #ffffff;
+        box-shadow: 99px 65px 33px 0px rgba(191, 191, 191, 0.00), 63px 41px 30px 0px rgba(191, 191, 191, 0.01), 36px 23px 26px 0px rgba(191, 191, 191, 0.05), 16px 10px 19px 0px rgba(191, 191, 191, 0.09), 4px 3px 10px 0px rgba(191, 191, 191, 0.10);
+      }
+      
+      }
+  }
+  
+  
+  .projectCard {
+    display: flex;
+    
+   
+  
+    .projectImg {
+      position: relative;
+      width: 50%;
+      display: flex;
+
+      .imgOverlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 16px;
+
+        &::before{
+          content: "";
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          position: absolute;
+          background: linear-gradient(69deg, rgba(255, 255, 255, 0.80) 24.27%, rgba(255, 255, 255, 0.00) 175.21%);
+          filter: blur(17px);
+          backdrop-filter: blur(12px);
+        }
+
+        &>div{position: relative;}
+  
+        .projectCategory {
+          color: #886de0;
+          font-family: var(--semibold-global);
+          font-size: 14px;
+        }
+
+        .projectName{font-size: 16px;
+          font-weight: 600; line-height: 1.4;}
+
+        .company{display: flex; gap: 4px;
+          img{width: 18px; height: 18px;}
+          .companyName{font-size: 14px;}
+        }
+  
+    }
+
+    }
+  
+    .slideContent {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+  
+    .projectHighlight {
+      display: flex;
+      flex-direction: column;
+      row-gap: 18px;
+      padding: 10px 16px;
+  
+      img{
+        width: 68px;
+      }
+  
+      .serviceCompany {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+  
+        // align-items: center;
+        .companyIcon {
+          height: 30px;
+          width: 57px;
+          align-self: flex-start;
+        }
+  
+        .companyName {
+          font-family: var(--medium-global);
+          font-size: 14.7px;
+  
+          small {
+            font-size: 12px;
+            display: block;
+          }
+        }
+      }
+    }
+  
+  
+  }
+  
+  
+  .selectBoxWrapper { display: flex; gap: 10px; margin-bottom: 40px;
+    label{border-radius: 8px 0px 0px 8px;
+      background: #6448BD; color: white; padding: 17px 11px 17px 0; display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+  }
+  
+  
+  ::ng-deep .selectBoxWrapper .selectBox {
+    position: relative; 
+    width: 240px;
+  
+    app-bt-select {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+  
+      ::ng-deep {
+        .ant-select {
+          width: 100%;
+        }
+      }
+    }
+  
+    > div {
+      position: relative;
+  
+      &:after {
+        content: '';
+        border-right: 2px var(--color-theme) solid;
+        border-bottom: 2px var(--color-theme) solid;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: rotate(45deg) translateY(-50%);
+        transform-origin: top right;
+      }
+    }
+  
+    &.countryField {
+      > div {
+        padding: 9px 20px 9px 7px;
+        gap: 8px;
+      }
+  
+      ::ng-deep {
+        .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+          height: 52px;
+        }
+      }
+  
+      small {
+        display: block;
+        font-family: var(--semibold-global);
+        font-size: 11px;
+      }
+    }
+  
+    &.precastField {
+      ::ng-deep {
+        .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+          height: 74px;
+        }
+      }
+    }
+  
+    &.precastField,
+    &.dateField {
+      >div {
+        padding: 9px 35px 8px 10px;
+        min-height: 74px;
+      }
+    }
+  
+    &.dateField {
+      > div {
+        &:after {
+          display: none;
+        }
+  
+        lib-svg-icon {
+          position: absolute;
+          right: 9px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+  
+      nz-date-picker {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+      }
+    }
+  
+    .title {
+      display: block;
+      font-family: var(--semibold-global);
+      color: black;
+      font-size: 18px; 
+      font-weight: 600;
+    }
+  
+    .selectedValue {
+      display: flex;
+      font-size: var(--font-size-h6);
+      line-height: 1.2;
+      gap: 7px;
+  
+      &.day {
+        color: var(--color-theme);
+      }
+    }
+  }
+
+  .serviceCompanyDetails{
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    padding: 10px 16px;
+    flex: 1;
+    .companyDetails{flex: 1;
+      .title{    font-family: var(--medium-global);
+        font-size: 14px;
+        color: var(--color-theme);}
+      .service{
+        color: black;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+
+    .cardFooter{color: #886de0;
+      font-family: var(--semibold-global);
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+     a{color: #886de0;}
+    }
+
+  }
+
+  @media (max-width:767px){
+    .sectionContainer .sectionTop .heading {
+      font-size: 22px;
+      padding-right: 80px;
+    }
+    .sectionContainer .sectionTop {
+      padding-right: 0;
+    }
+    .topVendorsCarouselWrapper .topVendorsCarousel {
+      width: 100%;
+    }
+  }

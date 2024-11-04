@@ -316,7 +316,11 @@
   ::ng-deep .owl-item {
     overflow: visible;
   }
-
+  .headerCarousel {
+    ::ng-deep .owl-stage {
+      display: flex;
+    }
+  }
   .carousel-item {
     border-radius: 8px;
     display: flex;

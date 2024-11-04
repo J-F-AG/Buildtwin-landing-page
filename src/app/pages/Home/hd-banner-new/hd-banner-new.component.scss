@@ -1,7 +1,7 @@
-.banner-area--item.ng-star-inserted {
+.banner-area--item:not(.ng-star-inserted) {
     display: none!important;
 }
-.integration-box.ng-star-inserted {
+.integration-box:not(.ng-star-inserted) {
     display: none!important;
 }
 .banner-area {
