@@ -1510,7 +1510,30 @@ form {
 
 
 @media (max-width:991px) {
+
     .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item.showDropdown .menu_copilot {
+        opacity: 1;
+        visibility: visible;
+        padding: 0 10px;
+        margin-top: 10px;
+        border: none;
+        background: #f8f8f8;
+        border-radius: 4px;
+        height: auto;
+        position: static;
+        border: none;
+        box-shadow: none;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: auto;
+        max-width: none;
+        display: block;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item.showDropdown .menu_copilot {
 
         position: static;
     margin-left: 0;
@@ -1658,7 +1681,7 @@ form {
         width: 15px;
         height: 15px;
     }
-    .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
+    .navbar-area .navbar .navbar-nav .nav-item.showDropdown .menu_copilot {
         padding: 0 10px;
         margin-top: 10px;
         border: none;
@@ -1735,11 +1758,3 @@ form {
         font-size: 13px !important;
     }
 }
-
-
-
-
-
-
-
-

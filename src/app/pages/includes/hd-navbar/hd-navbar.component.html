@@ -36,8 +36,8 @@
                 </li>
 
 
-                <li class="nav-item ">
-                    <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                <li class="nav-item " [ngClass]="{'showDropdown':showDropdownStatus}">
+                    <a href="javascript:void(0)" class="dropdown-toggle nav-link" (click)="toggleshowDropdownStatus()">
                         Why BuildTwin
                     </a>
 
