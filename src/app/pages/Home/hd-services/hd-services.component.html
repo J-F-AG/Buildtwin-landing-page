@@ -74,7 +74,7 @@
                 <div class="subTitle">The best way to procure pre-qualified technical teams across the globe.</div>
             </div>
         </div>
-        <a mat-button class="default-btn align-self-end" href="https://cockpit.buildtwin.com/signin">Book a service</a>
+        <a mat-button class="default-btn align-self-end" href="javascript:void(0)" (click)="scrollToSection('formContainer')">Book a service</a>
     </div>
 
     <!-- <owl-carousel-o [options]="serviceSlider" (translated)="onTranslate($event)">
@@ -91,10 +91,10 @@
     </owl-carousel-o> -->
 
     <div class="service__items">
-        <a class="service__items__main" [routerLink]="servicesArray[highlightedIndex]?.serviceId ? getServiceRoute(servicesArray[highlightedIndex]?.serviceId) : ''">
+        <a class="service__items__main" [routerLink]="servicesArray[highlightedIndex]?.serviceId ? getServiceRoute(servicesArray[highlightedIndex]?.serviceId) : ''" [ngClass]="{'active': activeClass}">
             <img class="carousel-image" src="{{servicesArray[highlightedIndex]?.img}}" alt="cardImage" [attr.width]="servicesArray[highlightedIndex]?.width" [attr.height]="servicesArray[highlightedIndex]?.height">
         </a>
-        <div class="service__items__title">
+        <div class="service__items__title" [ngClass]="{'active': activeClass}">
             <span class="service__items__title--main">{{servicesArray[highlightedIndex]?.name}}</span>
             <span class="service__items__title--sub">Cannon design used Bluebeam to manage a $2 billion hospital project and finished the job faster. Cannon design used Bluebeam to manage a $2 billion hospital project </span>
         </div>

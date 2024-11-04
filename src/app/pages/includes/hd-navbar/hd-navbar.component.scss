@@ -1523,7 +1523,7 @@ form {
 
         .flex-column {
             width: 100% !important;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
             background: none;
 
         }
@@ -1654,11 +1654,24 @@ form {
         width: 100%;
         padding: 11px;
     }
-
+    a.flex-grow.flex-column em > svg {
+        width: 15px;
+        height: 15px;
+    }
     .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
-        margin-left: 0;
         padding: 0 10px;
         margin-top: 10px;
+        border: none;
+        background: #f8f8f8;
+        border-radius: 4px;
+        height: auto;
+        position: static;
+        border: none;
+        box-shadow: none;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: auto;
+        max-width: none;
     }
 
     span.text {

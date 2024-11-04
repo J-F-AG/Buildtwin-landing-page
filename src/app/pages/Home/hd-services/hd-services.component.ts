@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
+import { GlobalService } from 'src/app/services/GlobalService';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -10,6 +11,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 
 export class HdServicesComponent implements OnInit, OnDestroy {
+  activeClass: boolean = false;
   showPopup=false;
   interval: any;
   serviceSlider: OwlOptions = {
@@ -42,7 +44,7 @@ export class HdServicesComponent implements OnInit, OnDestroy {
 
   highlightedIndex: number = 0;
   
-  constructor(public _languageService: LanguageService) { }
+  constructor(public _languageService: LanguageService, private globalService: GlobalService) { }
 
   splitArray(dataArray: any[], x: number) {
     const result = [];
@@ -56,10 +58,10 @@ export class HdServicesComponent implements OnInit, OnDestroy {
   servicesArray = [
     { id: '1', name: 'Precast Detailing', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', serviceId: 9, color: "#C3EEFF" },
     { id: '2', name: 'Structural Steel Detailing', img: '/assets/images/structuralDesign.png', width:'151', height: '137', serviceId: 12, color: "#FFE2E1" },
-    { id: '3', name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', color: "#FFE8CB" },
     { id: '4', name: 'Rebar Detailing', img: '/assets/images/rebar.png', width:'151', height: '137', serviceId: 10, color: "#C3EEFF" },
-    { id: '5', name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137', color: "#FFE2E1" },
     { id: '6', name: 'BIM Services', img: '/assets/images/modelling.png', width:'151', height: '137', color: "#FFE8CB", serviceId: 11 },
+    { id: '3', name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', color: "#FFE8CB" },
+    { id: '5', name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137', color: "#FFE2E1" },
     { id: '7', name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137', color: "#E2EED9" },
   ]
 
@@ -121,8 +123,15 @@ export class HdServicesComponent implements OnInit, OnDestroy {
     const rotatedArray = this.servicesArray.slice(1).concat(this.servicesArray.slice(0, 1));
     console.log(rotatedArray);
     this.servicesArray = rotatedArray;
+    this.activeClass = true;
+    setTimeout(() => {
+      this.activeClass = false;
+    }, 2000);
   }
 
+  scrollToSection(sectionId: string) {
+    this.globalService.scrollToSection(sectionId);
+  }
   ngOnDestroy(): void {
     if (this.interval) {
       clearInterval(this.interval);

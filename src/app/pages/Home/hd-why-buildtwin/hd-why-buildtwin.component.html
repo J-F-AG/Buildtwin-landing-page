@@ -75,7 +75,7 @@
                             </span>
                         </div>
                         <div class="content">
-                            <div class="contentHeader">{{ detail.header }}</div>
+                            <div class="contentHeader" *ngIf="detail['header']">{{ detail.header }}</div>
                             <p class="contentcontent" *ngIf="detail['content']">{{ detail.content }}</p>
                             <div class="contentDetails">
                                 <div class="detail" *ngFor="let item of detail.items">
