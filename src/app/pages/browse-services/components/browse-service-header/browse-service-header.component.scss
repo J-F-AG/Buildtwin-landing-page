@@ -166,6 +166,9 @@
   }
 }
 @media only screen and (max-width : 767px) {
+  .sectionContainer {
+    max-height: none;
+  }
   .abs-d {
     right: -15px;
     top: -56px;

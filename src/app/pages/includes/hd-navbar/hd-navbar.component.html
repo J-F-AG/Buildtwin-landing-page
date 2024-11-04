@@ -15,7 +15,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav font-poppins" >
                     <li class="nav-item " >
-                        <a [routerLink]="[_languageService.currentLanguage,'explore-services']" routerLinkActive="active" class="nav-link" >
+                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'explore-services']" routerLinkActive="active" class="nav-link" >
                             Explore Services
                         </a>
                     </li>
