@@ -19,7 +19,7 @@ export class HdBannerNewComponent {
     margin: 0,
     dots: false,
     loop: true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 3100,
     // smartSpeed: 2000,
     autoplayHoverPause: false,
@@ -188,11 +188,6 @@ export class HdBannerNewComponent {
     }, 10);
   }
   scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const topPos = element.getBoundingClientRect().top + window.scrollY - 100;
-      // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.scrollTo({ top: topPos, behavior: 'smooth' });
-    }
+    this.globalService.scrollToSection(sectionId);
   }
 }

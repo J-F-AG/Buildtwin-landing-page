@@ -1040,8 +1040,8 @@
           background-color: var(--backgroundColor);
           border-radius: 8px;
           .menu_copilot__text--sub {
-            display: block;
-            margin-inline-start: 28px;
+            max-height: 100px;
+            margin-top: 8px;
           }
           .menu_copilot__text--head {
             color: var(--newThemeColor);
@@ -1062,7 +1062,11 @@
         }
     
         &--sub {
-          display: none;
+            display: block; 
+            margin-inline-start: 28px;
+            max-height: 0;
+            transition: all .3s ease;
+            overflow: hidden;
         }
       }
 }
