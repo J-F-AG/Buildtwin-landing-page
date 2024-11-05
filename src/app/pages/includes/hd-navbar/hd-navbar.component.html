@@ -36,8 +36,8 @@
                 </li>
 
 
-                <li class="nav-item ">
-                    <a href="javascript:void(0)" class="dropdown-toggle nav-link">
+                <li class="nav-item " [ngClass]="{'showDropdown':showDropdownStatus}">
+                    <a href="javascript:void(0)" class="dropdown-toggle nav-link" (click)="toggleshowDropdownStatus()">
                         Why BuildTwin
                     </a>
 
@@ -405,7 +405,7 @@
                                             Discover BuildTwin's mission and learn about our dedication to connecting global talent and 
                                             fostering innovation in the engineering field.
                                         </p>
-                                        <a [routerLink]="[_languageService.currentLanguage,'about']" class="cta-button">The Company</a>
+                                        <a [routerLink]="[_languageService.currentLanguage,'about']" class="cta-button" (click)="manageToggle($event)">The Company</a>
                                     </section>
                                 </aside>
                             </div>
@@ -418,7 +418,7 @@
 
                 <div class="other-options d-flex align-items-center">
                     <!-- <a href=""><img src="assets/images/home/GlobeSimple.svg" alt="" /></a> -->
-                    <a mat-button href="https://cockpit.buildtwin.com/" class="default-btn text-btn">Sign in</a>
+                    <a mat-button href="https://cockpit.buildtwin.com/" target="_blank" class="default-btn text-btn">Sign in</a>
                     <a mat-button href="https://www.buildtwin.com/get-started" class="default-btn" >
                         Get Started
                     </a>

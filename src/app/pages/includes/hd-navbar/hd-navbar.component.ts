@@ -23,6 +23,7 @@ declare global {
 })
 export class HdNavbarComponent {
     togglePopup: boolean = false;
+    showDropdownStatus: boolean = false;
     showPopup1=false;
 
     constructor(
@@ -53,8 +54,11 @@ export class HdNavbarComponent {
     loginPopup() {
         this.togglePopup = !this.togglePopup;
       }
+      toggleshowDropdownStatus() {
+        this.showDropdownStatus = !this.showDropdownStatus;
+      }
       manageToggle(event:any){
-        
+        this.showDropdownStatus = false
         document.getElementsByTagName('body')[0].classList.remove('menuToggle')
 
 
