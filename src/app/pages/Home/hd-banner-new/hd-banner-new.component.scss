@@ -580,6 +580,9 @@
 }
 
 @media only screen and (max-width : 767px) {
+    .hidemobile {
+        display: none;
+    }
     .banner-area {
         .sliderCover {
             .item .container {
