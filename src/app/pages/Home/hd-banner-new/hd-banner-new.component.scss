@@ -1,7 +1,7 @@
-.banner-area--item:not(.ng-star-inserted) {
+.banner-area--item111:not(.ng-star-inserted) {
     display: none!important;
 }
-.integration-box:not(.ng-star-inserted) {
+.integration-box111:not(.ng-star-inserted) {
     display: none!important;
 }
 .banner-area {
@@ -565,7 +565,7 @@
         .formContainer {
             width: auto;
             margin: 0 20px;
-            margin-inline: auto;
+            // margin-inline: auto;
         }
     }
     .banner-area .sliderCover .bannerImg img {
@@ -631,6 +631,13 @@
     .banner-area .sliderCover .owl-nav .owl-next{
         transform: scale(.7);
         transform-origin: 0 0;
+    }
+
+    .banner-area .sliderCover .integrationsList ::ng-deep .owl-nav .owl-prev {
+        left: -10px;
+    }
+    .banner-area .sliderCover .integrationsList ::ng-deep .owl-nav .owl-next {
+        right: -10px;
     }
     .banner-area--item--step {
         font-size: 16px;

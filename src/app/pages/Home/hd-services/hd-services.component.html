@@ -90,7 +90,7 @@
         </ng-container>
     </owl-carousel-o> -->
 
-    <div class="service__items">
+    <!-- <div class="service__items">
         <a class="service__items__main" [routerLink]="servicesArray[highlightedIndex]?.serviceId ? getServiceRoute(servicesArray[highlightedIndex]?.serviceId) : ''" [ngClass]="{'active': activeClass}">
             <img class="carousel-image" src="{{servicesArray[highlightedIndex]?.img}}" alt="cardImage" [attr.width]="servicesArray[highlightedIndex]?.width" [attr.height]="servicesArray[highlightedIndex]?.height">
         </a>
@@ -106,6 +106,21 @@
                 </a>
             </ng-container>
         </div>
+    </div> -->
+
+    <div class="slider">
+        <owl-carousel-o [options]="factorySlider" (change)="getData($event)">
+            <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
+                <a class="service__items__sub" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''" [ngStyle]="{backgroundColor: item.color}">
+                    <span class="service__items__sub__title">{{item.name}}</span>
+                    <img class="service__items__sub__image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                </a>
+                <div class="service__items__title">
+                    <span class="service__items__title--main">{{servicesArray[i]?.name}}</span>
+                    <!-- <span class="service__items__title--sub">Cannon design used Bluebeam to manage a $2 billion hospital project and finished the job faster. Cannon design used Bluebeam to manage a $2 billion hospital project </span> -->
+                </div>
+            </ng-template>
+        </owl-carousel-o>
     </div>
 
 </div>

@@ -80,15 +80,42 @@ export class HdServicesComponent implements OnInit, OnDestroy {
   }
 
 
+  factorySlider: OwlOptions = {
+    nav: false,
+    margin: 24,  // Adjust as needed
+    dots: false,
+    loop: true,
+    autoplay: false,
+    autoplayHoverPause: false,
+    navText: [
+			"<i class='ti ti-chevron-left'></i>",
+			"<i class='ti ti-chevron-right'></i>",
+		],
+    stagePadding: 0,  // Adjust padding for the "half" item effect
+    responsive: {
+      0: {
+        items: 1  // 1 item for small screens
+      },
+      400: {
+        items: 1  // 1 item for slightly larger screens
+      },
+      768: {
+        items: 3  // 2 items for medium screens
+      },
+      1000: {
+        items: 4  // 2 full items and a half item for larger screens
+      }
+    }
+  };
   discoverServices = this.splitArray(this.servicesArray, 6);
 
   ngOnInit(): void {
     if(window.innerWidth < 767) {
       this.discoverServices = this.splitArray(this.servicesArray, 2);
     }
-    this.interval = setInterval(() => {
-      this.rotateArray();
-    }, 5000);
+    // this.interval = setInterval(() => {
+    //   this.rotateArray();
+    // }, 5000);
   }
 
   index = 0;
@@ -131,6 +158,11 @@ export class HdServicesComponent implements OnInit, OnDestroy {
 
   scrollToSection(sectionId: string) {
     this.globalService.scrollToSection(sectionId);
+  }
+  getData(data: SlidesOutputData) {
+    // this.activeSlides = data;
+    this.highlightedIndex = data.startPosition;
+    console.log(data);
   }
   ngOnDestroy(): void {
     if (this.interval) {

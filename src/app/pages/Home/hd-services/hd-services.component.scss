@@ -1,186 +1,60 @@
-// .sectionContainer {
-//     min-height: 500px;
-//     position: relative;
-//     background-color: var(--assistantBackgroundColor-global);
-//     padding: 82px 0;
-//     .cardWrapper:nth-child(2) {
-//       transform: scaleY(2);
-//     }
-//   }
-//   .sectionTop {
-//     display: flex;
-//     position: relative;
-//     z-index: 2;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 100%;
-//     .heading {
-//       font-size: 40px;
-//       font-weight: 600;
-//       margin-bottom: 0;
-//     }
-//     .assistant {
-//       display: flex;
-//       gap: 5px;
-//       img {
-//         width: 42px;
-//         height: 42px;
-//         border-radius: 50%;
-//       }
-//       .assitWrapper {
-//         font-size: 15px;
-//         font-weight: 600;
-//       }
-//       .link:hover {
-//         color: #0053fa;
-//       }
-//     }
-//   }
-//   .sectionMid {
-//     .content{
-//       font-size: 16px; font-weight: 500;
-//     }
-//     .bookServicesButton {
-//       padding: 14px 18px;
-//       margin-top: 15px;
-//       display: flex;
-//       align-items: center;
-//       width: 212px;
-//       span{padding-right: 50px;}
-//     }
-//   }
-//   .sectionBottom {
-//     width: 100%;
-//     margin: 48px 0 0;
-//     position: relative;
-//     bottom: 0;
-//     z-index: 10;
-//     .headerCarousel {
-//       display: flex;
-//       justify-content: space-between;
-//       .carouselWrapper {
-//         display: flex;
-//         // justify-content: space-between;
-//         gap: 16px;
-//         position: relative;
-//         background: none;
-//         .leftslideButton {
-//           position: absolute;
-//           left: 0;
-//           top: 60px;
-//           transform: rotate(180deg);
-//           cursor: pointer;
-//           z-index: 1;
-//         }
-//         .rightslideButton {
-//           position: absolute;
-//           right: 0;
-//           top: 60px;
-//           cursor: pointer;
-//         }
-//       }
-//       .cardWrapper {
-//         // width: 100%;
-//         background: #fff;
-//         border-radius: 6px;
-//         box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.03);
-//         padding: 10px;
-//         margin: 0 8px;
-//         min-height: 100%;
-//         display: block;
-//         // cursor: pointer;
-  
-//         img {
-//           // height: 137px;
-//           // aspect-ratio: 153 / 137;
-//           background: #fff;
-//         }
-//         .detail {
-//           margin: 0 auto;
-//           width: 95px;
-//           text-align: center;
-//           font-family: var(--semibold-global);
-//           font-size: 16px;
-//         }
-//       }
-//     }
-//   }
-  
-//   //global
-//   .link {
-//     color: #0053fa;
-//   }
-//   .themeButton {
-//     font-weight: 500;
-//     font-size: 16px;
-//     background-color: #0053fa;
-//     color: #fff;
-//     border-radius: 12px;
-//     box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.1);
-//   }
-//   .carousel {
-//   }
-  
-  
-//   [nz-carousel-content] {
-//     height: auto;
-//   }
-  
-//   :host ::ng-deep .slick-list,
-//   :host ::ng-deep .slick-track,
-//   :host ::ng-deep .slick-slide {
-//     max-height: 210px;
-//   }
-//   .abs-d {
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//     z-index: 1;
-//   }
-
-// @media only screen and (max-width : 767px) {
-//   .sectionContainer {
-//     padding: 50px 0;
-//   }
-
-//   .sectionTop {
-//     flex-direction: column-reverse;
-//     align-items: flex-start;
-//     justify-content: flex-start;
-
-//     .assistant {
-//       margin-bottom: 20px;
-//     }
-//   }
-
-//   .sectionBottom {
-//     .headerCarousel {
-//       .cardWrapper {
-//         width: calc(50% - 5px);
-//         flex: 0 0 auto;
-//       }
-
-//       .carouselWrapper {
-//         gap: 10px;
-
-//         .leftslideButton {
-//           left: -15px;
-//         }
-
-//         .rightslideButton {
-//           right: -15px;
-//         }
-//       }
-//     }
-//   }
-
-// }
-
+.slide-wrapper111:not(.ng-star-inserted) {
+  display: none!important;
+}
+.slider {
+  padding-right: 100px;
+  ::ng-deep div .active + .active, ::ng-deep div .owl-item {
+    height: 140px;
+    margin-top: 230px;
+    transition: all 0.5s ease;
+    position: relative;
+    .service__items__sub__title {
+      display: block;
+    }
+    .service__items__title {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .service__items__sub {
+      display: grid;
+      padding-inline-start: 10px;
+      padding-block-start: 10px;
+      img.service__items__sub__image {
+        justify-self: end;
+        align-self: end;
+      }
+    }
+  }
+  ::ng-deep div .active {
+    height: 370px;
+    margin-top: 0;
+    transition: all 0.5s ease;
+    .service__items__sub__title {
+      display: none;
+    }
+    .service__items__title {
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.3s ease 0.3s;
+    }
+    .service__items__sub {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      img.service__items__sub__image {
+        justify-self: center;
+        align-self: center;
+      }
+    }
+  }
+}
 .services {
   padding: 40px 0 40px 100px;
   font-family: var(--fontFamily);
   background: var(--whiteColor) url(../../../../assets/images/servicie-bg.png) right top no-repeat;
   background-size: 665px 614px;
+  transition: all .5s ease;
   .main-head {
     display: grid;
     grid-template-columns: 1fr max-content;
@@ -244,16 +118,24 @@
       }
       background: linear-gradient(to bottom left ,#F4F6F7 0%, #002E3B 95%);
       &.active {
-        animation: fadeInOut 5s infinite;
+        // animation: fadeInOut 5s infinite;
       }
     }
     &__title {
       grid-column: 2/-1;
       display: grid;
       gap: 10px;
-      padding-right: 100px;
+      padding-right: 0;
+      position: absolute;
+      left: calc(100% + 24px);
+      width: 300%;
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      height: 210px;
+      top: 0;
       &.active {
-        animation: fadeInOut 5s infinite;
+        // animation: fadeInOut 5s infinite;
       }
       &--main {
         color: var(--newButtonColor);
@@ -280,7 +162,8 @@
       border-radius: 16px;
       padding-inline-start: 10px;
       padding-block-start: 10px;
-      animation: fadeInOut 5s infinite;
+      height: 100%;
+      // animation: fadeInOut 5s infinite;
       position: relative;
       &__title {
         font-size: 16px;
@@ -370,12 +253,12 @@
   .services {
     padding-left: 20px;
   }
-  .services .main-head {
+  .services .main-head, .slider {
     padding-right: 20px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .services .main-title {
     font-size: 16px;
   }
@@ -391,6 +274,37 @@
   .services .service__items__sub__title {
     font-size: 24px;
   }
+  .slider ::ng-deep div .active {
+    height: auto;
+  }
+  .services .service__items__title {
+    position: static;
+    width: auto;
+    height: auto;
+    padding-top: 20px;
+  }
+  .slider ::ng-deep div .active + .active, .slider ::ng-deep div .owl-item {
+    height: auto;
+    margin-top: 0;
+  }
+  .slider ::ng-deep div .active .service__items__sub__title {
+    display: block;
+  }
+  .slider ::ng-deep div .active .service__items__sub {
+    display: grid;
+    padding-inline-start: 10px;
+    padding-block-start: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider ::ng-deep div .active + .active .service__items__sub, .slider ::ng-deep div .owl-item .service__items__sub {
+    align-items: center;
+    justify-content: center;
+  }
+  .slider ::ng-deep div .active + .active .service__items__title, .slider ::ng-deep div .owl-item .service__items__title {
+    opacity: 1;
+    visibility: visible;
+}
 }
 @media only screen and (max-width: 567px) {
   .services {
