@@ -1011,7 +1011,27 @@
     visibility: visible;
 
 }
-
+.nav-item {
+    /* width */
+    ::-webkit-scrollbar {
+        width: 4px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: var(--themeColor); 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--themeColor); 
+      }
+}
 .menu_copilot {
     border-radius: 2px 16px 16px 16px;
     border: 1px solid var(--themeColor);
@@ -1019,8 +1039,6 @@
     max-width: 320px;
     margin: auto;
     width: 320px;
-    height: 450px;
-    overflow-y: auto;
     position: absolute;
     // left: -30%;
     top: 102px;
@@ -1029,6 +1047,11 @@
     transition: all 0.5s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    overflow: hidden;
+    .container {
+        height: 450px;
+        overflow-y: auto;
+    }
     .mi--12 {
         margin-inline: -12px;
     }
@@ -1532,6 +1555,9 @@ form {
         width: auto;
         max-width: none;
         display: block;
+        .container {
+            height: auto;
+        }
     }
     .navbar-area .navbar .navbar-nav .nav-item.showDropdown .menu_copilot {
 
@@ -1695,6 +1721,9 @@ form {
         margin-right: -10px;
         width: auto;
         max-width: none;
+        .container {
+            height: auto;
+        }
     }
 
     span.text {

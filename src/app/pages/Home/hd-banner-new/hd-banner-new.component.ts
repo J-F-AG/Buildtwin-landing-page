@@ -52,10 +52,10 @@ export class HdBannerNewComponent {
       0: {
         items: 1
       },
-      515: {
+      415: {
         items: 3
       },
-      768: {
+      600: {
         items: 4
       },
       990: {
