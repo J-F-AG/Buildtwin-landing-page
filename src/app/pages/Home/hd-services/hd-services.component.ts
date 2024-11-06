@@ -85,7 +85,7 @@ export class HdServicesComponent implements OnInit, OnDestroy {
     margin: 24,  // Adjust as needed
     dots: false,
     loop: true,
-    autoplay: false,
+    autoplay: true,
     autoplayHoverPause: false,
     navText: [
 			"<i class='ti ti-chevron-left'></i>",
