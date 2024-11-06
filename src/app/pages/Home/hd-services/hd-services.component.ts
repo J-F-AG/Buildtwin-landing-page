@@ -12,38 +12,38 @@ import { LanguageService } from 'src/app/services/language.service';
 
 export class HdServicesComponent implements OnInit, OnDestroy {
   activeClass: boolean = false;
-  showPopup=false;
+  showPopup = false;
   interval: any;
   serviceSlider: OwlOptions = {
     items: 5,
-		nav: false,
-		margin: 25,
-		dots: false,
-		loop: true,
-		autoplay: false,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-			  items: 1
-			},
-			400: {
-			  items: 1
-			},
-			740: {
-			  items: 3
-			},
-			940: {
-			  items: 5
-			}
-		  },
-		navText: [
-			"<i class='ti ti-chevron-left'></i>",
-			"<i class='ti ti-chevron-right'></i>",
-		]
+    nav: false,
+    margin: 25,
+    dots: false,
+    loop: true,
+    autoplay: false,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 5
+      }
+    },
+    navText: [
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ]
   }
 
   highlightedIndex: number = 0;
-  
+
   constructor(public _languageService: LanguageService, private globalService: GlobalService) { }
 
   splitArray(dataArray: any[], x: number) {
@@ -56,10 +56,50 @@ export class HdServicesComponent implements OnInit, OnDestroy {
   }
 
   servicesArray = [
-    { id: '1', name: 'Precast Detailing', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', serviceId: 9, color: "#C3EEFF" },
-    { id: '2', name: 'Structural Steel Detailing', img: '/assets/images/structuralDesign.png', width:'151', height: '137', serviceId: 12, color: "#FFE2E1" },
-    { id: '4', name: 'Rebar Detailing', img: '/assets/images/rebar.png', width:'151', height: '137', serviceId: 10, color: "#C3EEFF" },
-    { id: '6', name: 'BIM Services', img: '/assets/images/modelling.png', width:'151', height: '137', color: "#FFE8CB", serviceId: 11 },
+    {
+      id: '1',
+      name: 'Precast Detailing',
+      img: '/assets/images/structuralSoultion.png',
+      width: '151',
+      height: '137',
+      serviceId: 9,
+      color: "#C3EEFF",
+      description: "Find expert vendors for <strong>Precast Detailing Services</strong> on BuildTwin's marketplace. Access comprehensive and precise drawings for precast concrete components, ensuring seamless project execution with accurate fabrication details and international compliance."
+    },
+
+    {
+      id: '2',
+      name: 'Structural Steel Detailing',
+      img: '/assets/images/structuralDesign.png',
+      width: '151',
+      height: '137',
+      serviceId: 12,
+      color: "#FFE2E1",
+      description: "Connect with professional vendors offering <strong>Steel Detailing Services</strong> on BuildTwin. Obtain detailed shop and erection drawings for steel structures to enhance fabrication and installation efficiency, reducing errors and saving time on your projects."
+    },
+
+    {
+      id: '4',
+      name: 'Rebar Detailing',
+      img: '/assets/images/rebar.png',
+      width: '151',
+      height: '137',
+      serviceId: 10,
+      color: "#C3EEFF",
+      description: "Discover skilled vendors for <strong>Rebar Detailing Services</strong> on BuildTwin. Get precise bar bending schedules, placement drawings, and material take-offs to ensure accuracy and compliance for efficient, cost-effective reinforcement projects."
+    },
+
+    {
+      id: '6',
+      name: 'BIM Services',
+      img: '/assets/images/modelling.png',
+      width: '151',
+      height: '137',
+      color: "#FFE8CB",
+      serviceId: 11,
+      description: "Explore BuildTwin's marketplace for top <strong>BIM Services</strong> vendors. Access advanced 3D modeling, clash detection, and coordination services that improve collaboration, reduce errors, and enhance efficiency across all project phases."
+    },
+
     // { id: '3', name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', color: "#FFE8CB" },
     // { id: '5', name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137', color: "#FFE2E1" },
     // { id: '7', name: 'Form Works Design', img: '/assets/images/formworks.png', width:'151', height: '137', color: "#E2EED9" },
@@ -88,9 +128,9 @@ export class HdServicesComponent implements OnInit, OnDestroy {
     autoplay: true,
     autoplayHoverPause: false,
     navText: [
-			"<i class='ti ti-chevron-left'></i>",
-			"<i class='ti ti-chevron-right'></i>",
-		],
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ],
     stagePadding: 0,  // Adjust padding for the "half" item effect
     responsive: {
       0: {
@@ -110,7 +150,7 @@ export class HdServicesComponent implements OnInit, OnDestroy {
   discoverServices = this.splitArray(this.servicesArray, 6);
 
   ngOnInit(): void {
-    if(window.innerWidth < 767) {
+    if (window.innerWidth < 767) {
       this.discoverServices = this.splitArray(this.servicesArray, 2);
     }
     // this.interval = setInterval(() => {
@@ -134,10 +174,10 @@ export class HdServicesComponent implements OnInit, OnDestroy {
     this.myCarousel.next();
   }
 
-  call(){
-    this.showPopup =true
+  call() {
+    this.showPopup = true
   }
-  
+
   closePopupStatus($event) {
     this.showPopup = false;
   }
