@@ -115,10 +115,10 @@
                     <span class="service__items__sub__title">{{item.name}}</span>
                     <img class="service__items__sub__image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                 </a>
-                <div class="service__items__title">
+                <a class="service__items__title" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
                     <span class="service__items__title--main">{{servicesArray[i]?.name}}</span>
                     <span class="service__items__title--sub" *ngIf="servicesArray[i] && servicesArray[i]['description']" [innerHtml]="servicesArray[i]['description']"></span>
-                </div>
+                </a>
             </ng-template>
         </owl-carousel-o>
     </div>
