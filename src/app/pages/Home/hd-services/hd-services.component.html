@@ -117,7 +117,7 @@
                 </a>
                 <div class="service__items__title">
                     <span class="service__items__title--main">{{servicesArray[i]?.name}}</span>
-                    <!-- <span class="service__items__title--sub">Cannon design used Bluebeam to manage a $2 billion hospital project and finished the job faster. Cannon design used Bluebeam to manage a $2 billion hospital project </span> -->
+                    <span class="service__items__title--sub" *ngIf="servicesArray[i] && servicesArray[i]['description']" [innerHtml]="servicesArray[i]['description']"></span>
                 </div>
             </ng-template>
         </owl-carousel-o>

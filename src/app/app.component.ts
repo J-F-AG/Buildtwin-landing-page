@@ -8,6 +8,7 @@ import { Inject, PLATFORM_ID } from '@angular/core';
 import { LanguageService } from './services/language.service';
 import { BreadcrumbService } from './services/breadcrumb.service';
 import { SeoService } from './services/seo.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 declare let $: any;
 
 @Component({
@@ -28,6 +29,8 @@ export class AppComponent {
     location: any;
     routerSubscription: any;
     breadcrumbs: any[] = [];
+    breadcrumbSchemaHtml: SafeHtml;
+    faqSchemaHtml: SafeHtml;
     constructor(
         private breadcrumbService: BreadcrumbService,
         private _languageService:LanguageService,
@@ -35,6 +38,7 @@ export class AppComponent {
         public router: Router,
         private _seoService: SeoService,
         private activatedRoute: ActivatedRoute,
+        private sanitizer: DomSanitizer,
         @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
         // Directly assign the breadcrumbs array from the service
@@ -106,38 +110,64 @@ export class AppComponent {
 // Dynamically inject breadcrumb schema script if breadcrumbs are present
 injectBreadcrumbScript(url) {
     // First, remove all existing breadcrumb scripts
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    existingScripts.forEach(script => {
-        this.renderer.removeChild(document.head, script);
-    });
+    try {
+        const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+        existingScripts.forEach(script => {
+            this.breadcrumbSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+            this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+        });
+    } catch (error) {
+        
+    }
 
     // Check if breadcrumbs array has items
     if (this.breadcrumbs.length > 0) {
-      const jsonLdScriptTag = this.renderer.createElement('script');
-      jsonLdScriptTag.type = 'application/ld+json';
+    //   const jsonLdScriptTag = this.renderer.createElement('script');
+    //   jsonLdScriptTag.type = 'application/ld+json';
       
       const breadcrumbSchema = {
         "@context": "https://schema.org/",
         "@type": "BreadcrumbList",
         "itemListElement": this.breadcrumbs
       };
-      
+      this.breadcrumbSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`
+      );
       // Add breadcrumb JSON to script tag
-      jsonLdScriptTag.text = JSON.stringify(breadcrumbSchema);
+    //   jsonLdScriptTag.text = JSON.stringify(breadcrumbSchema);
       
       // Append new script to head
-      this.renderer.appendChild(document.head, jsonLdScriptTag);
+    //   this.renderer.appendChild(document.head, jsonLdScriptTag);
     }
     if(url.includes('/provide-service')){
-        this._languageService.injectFaqSchema(this.renderer);
+        const faqSchema = this._languageService.injectFaqSchema(this.renderer);
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }else if(url.includes('/marketplace')){
-        this._languageService.injectForMarketplaceSchema(this.renderer);
+        const faqSchema = this._languageService.injectForMarketplaceSchema(this.renderer);
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }else if(url.includes('/AI-project-management')){
-        this._languageService.injectForAIProjectManagementSchema(this.renderer);
+        const faqSchema = this._languageService.injectForAIProjectManagementSchema(this.renderer);
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }else if(url.includes('/faq')){
-        this._languageService.injectFAQSchemaForFaqPage(this.renderer)
+        const faqSchema = this._languageService.injectFAQSchemaForFaqPage(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }else if(url.includes('/pre-cast-detailing-services')){
-        this._languageService.injectFAQSchemaForPreCastDetailingServices(this.renderer)
+        const faqSchema = this._languageService.injectFAQSchemaForPreCastDetailingServices(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }
   }
    

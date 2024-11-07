@@ -92,34 +92,38 @@ export class LanguageService {
   
 
   setLanguageTags() {
-    const currentUrl = window.location.href; // Get the full URL
-    const urlObj = new URL(currentUrl);      // Create a URL object
-    const baseUrl = `${urlObj.protocol}//${urlObj.hostname}`;
-    const url = this.router.url;
-    const fullUrl = baseUrl + url;
+    try {
+      const currentUrl = window.location.href; // Get the full URL
+      const urlObj = new URL(currentUrl);      // Create a URL object
+      const baseUrl = `${urlObj.protocol}//${urlObj.hostname}`;
+      const url = this.router.url;
+      const fullUrl = baseUrl + url;
 
-    // Define language tags
-    const languageTags = [
-      { href: `${fullUrl}`, hreflang: 'en' },
-      // { href: `${fullUrl}`, hreflang: 'de' },
-      // { href: `${fullUrl}`, hreflang: 'en-in' },
-      // { href: `${fullUrl}`, hreflang: 'en-us' },
-      // { href: `${fullUrl}`, hreflang: 'en-gb' },
-      // { href: `${fullUrl}`, hreflang: 'de-de' }
-    ];
+      // Define language tags
+      const languageTags = [
+        { href: `${fullUrl}`, hreflang: 'en' },
+        // { href: `${fullUrl}`, hreflang: 'de' },
+        // { href: `${fullUrl}`, hreflang: 'en-in' },
+        // { href: `${fullUrl}`, hreflang: 'en-us' },
+        // { href: `${fullUrl}`, hreflang: 'en-gb' },
+        // { href: `${fullUrl}`, hreflang: 'de-de' }
+      ];
 
-    // Remove existing alternate links
-    // const body = document.querySelector('body');
-    document.querySelectorAll('link[rel="alternate"]').forEach(link => link.remove());
+      // Remove existing alternate links
+      // const body = document.querySelector('body');
+      document.querySelectorAll('link[rel="alternate"]').forEach(link => link.remove());
 
-    // Add new alternate links for each language
-    languageTags.forEach(tag => {
-      const link: HTMLLinkElement = document.createElement('link');
-      link.setAttribute('rel', 'alternate');
-      link.setAttribute('href', tag.href);
-      link.setAttribute('hreflang', tag.hreflang);
-      document.body.prepend(link);
-    });
+      // Add new alternate links for each language
+      languageTags.forEach(tag => {
+        const link: HTMLLinkElement = document.createElement('link');
+        link.setAttribute('rel', 'alternate');
+        link.setAttribute('href', tag.href);
+        link.setAttribute('hreflang', tag.hreflang);
+        document.body.prepend(link);
+      });
+    } catch (error) {
+      
+    }
   }
 
   injectFaqSchema(renderer) {
@@ -187,13 +191,13 @@ export class LanguageService {
         }
       ]
     };
-
+    return JSON.stringify(faqSchema);
     // Create the JSON-LD script tag
-    const jsonLdScriptTag = renderer.createElement('script');
-    jsonLdScriptTag.type = 'application/ld+json';
-    jsonLdScriptTag.text = JSON.stringify(faqSchema);
-    // Append the script tag to the document head
-    renderer.appendChild(document.head, jsonLdScriptTag);
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+    // // Append the script tag to the document head
+    // renderer.appendChild(document.head, jsonLdScriptTag);
   }
 
   injectForMarketplaceSchema(renderer) {
@@ -238,11 +242,12 @@ export class LanguageService {
     };
 
     // Create the JSON-LD script tag
-    const jsonLdScriptTag = renderer.createElement('script');
-    jsonLdScriptTag.type = 'application/ld+json';
-    jsonLdScriptTag.text = JSON.stringify(MarketplaceSchema);
-    // Append the script tag to the document head
-    renderer.appendChild(document.head, jsonLdScriptTag);
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(MarketplaceSchema);
+    // // Append the script tag to the document head
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(MarketplaceSchema);
   }
 
   injectForAIProjectManagementSchema(renderer) {
@@ -287,12 +292,13 @@ export class LanguageService {
     };
 
     // Create the script element
-    const jsonLdScriptTag = renderer.createElement('script');
-    jsonLdScriptTag.type = 'application/ld+json';
-    jsonLdScriptTag.text = JSON.stringify(AIProjectManagementSchema);
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(AIProjectManagementSchema);
 
-    // Append the script to the head of the document
-    renderer.appendChild(document.head, jsonLdScriptTag);
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(AIProjectManagementSchema);
   }
   injectFAQSchemaForFaqPage(renderer) {
     // Create the FAQ schema for the FAQ page
@@ -360,12 +366,13 @@ export class LanguageService {
     };
 
     // Create the script element
-    const jsonLdScriptTag = renderer.createElement('script');
-    jsonLdScriptTag.type = 'application/ld+json';
-    jsonLdScriptTag.text = JSON.stringify(faqSchema);
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
 
-    // Append the script to the head of the document
-    renderer.appendChild(document.head, jsonLdScriptTag);
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
   }
   
   injectFAQSchemaForPreCastDetailingServices(renderer) {
@@ -506,11 +513,12 @@ export class LanguageService {
     };
 
     // Create the script element
-    const jsonLdScriptTag = renderer.createElement('script');
-    jsonLdScriptTag.type = 'application/ld+json';
-    jsonLdScriptTag.text = JSON.stringify(faqSchema);
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
 
-    // Append the script to the head of the document
-    renderer.appendChild(document.head, jsonLdScriptTag);
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
   }
 }

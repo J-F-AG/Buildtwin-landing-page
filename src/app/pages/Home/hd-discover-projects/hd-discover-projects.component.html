@@ -7,8 +7,7 @@
     </div>  
     <div class="project-providers__carousel">
       <owl-carousel-o [options]="factorySlider">
-        <ng-container *ngFor="let subProjectArray of discoverProjects">
-            <ng-container *ngFor="let item of subProjectArray">
+            <ng-container *ngFor="let item of projectsArray">
                 <ng-template carouselSlide>
                     <div class="item">
                         <div class="d-flex col-gap factories">
@@ -23,21 +22,20 @@
                                     <h5 class="fact-title">{{item.projectTitle}}</h5>
                                     <span>Mep</span>
                                     <p class="fact-desc">{{item.serviceDescription}}</p>
-                                    <div class="cmpny-logo">
+                                    <a [routerLink]="_languageService.currentLanguage+item.link" class="cmpny-logo">
                                         <img src={{item.serviceCompanyIcon}} alt="" class="logo-img">
                                         <span class="heading">vendor
                                             <br>
                                             <span class="heading-1">{{item.serviceCompany}}</span>
                                         </span>
                                         <img src="assets/images/home/vector.svg" alt="" class="arrow-vector">
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </ng-template>
             </ng-container>
-        </ng-container>
       </owl-carousel-o>
     </div>
     
