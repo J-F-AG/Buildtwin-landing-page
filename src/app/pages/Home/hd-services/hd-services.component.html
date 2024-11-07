@@ -70,7 +70,7 @@
         <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
             <div class="main-title">Discover top-tier solutions tailored to your project needs</div>
             <div class="heading">
-                <div class="title">Find service solution</div>
+                <h1 class="title">Find Structural Engineering Services & Solutions</h1>
                 <div class="subTitle">The best way to procure pre-qualified technical teams across the globe.</div>
             </div>
         </div>
@@ -112,11 +112,11 @@
         <owl-carousel-o [options]="factorySlider" (change)="getData($event)">
             <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
                 <a class="service__items__sub" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''" [ngStyle]="{backgroundColor: item.color}">
-                    <span class="service__items__sub__title">{{item.name}}</span>
+                    <h2 class="service__items__sub__title">{{item.name}}</h2>
                     <img class="service__items__sub__image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                 </a>
                 <a class="service__items__title" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
-                    <span class="service__items__title--main">{{servicesArray[i]?.name}}</span>
+                    <h2 class="service__items__title--main">{{servicesArray[i]?.name}}</h2>
                     <span class="service__items__title--sub" *ngIf="servicesArray[i] && servicesArray[i]['description']" [innerHtml]="servicesArray[i]['description']"></span>
                 </a>
             </ng-template>

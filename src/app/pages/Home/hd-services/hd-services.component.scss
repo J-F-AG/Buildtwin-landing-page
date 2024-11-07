@@ -89,6 +89,7 @@
     font-family: var(--fontFamily);
     font-weight: 600;
     color: var(--newButtonColor);
+    margin: 0;
   }
 
   .subTitle{
@@ -144,6 +145,7 @@
         font-size: 32px;
         font-weight: 500;
         align-self: end;
+        margin: 0;
       }
       &--sub {
         color: #668189;
@@ -174,6 +176,7 @@
         color: var(--newButtonColor);
         position: relative;
         z-index: 9;
+        margin: 0;
         // word-wrap: break-word;
       }
       &__image {
