@@ -4,9 +4,17 @@
     <div>from 5+ pre-qualified vendors</div>
 </div>
 
-<div class="formContainer" id="formContainer">
+<div class="formContainer" id="formContainer" [ngClass]="{'formSubmitted':thankyouMessage}">
     <div class="topPart">
         Select services from Buildtwin
+    </div>
+    <div class="submited-form" *ngIf="thankyouMessage">
+        <img src="https://www.jf.ag/assets/images/responder-banner@2x.jpg">
+        <div class="check"></div>
+        <div class="message">
+            Thank you!
+            <small>Our team will be in touch with you soon.</small>
+        </div>
     </div>
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="middlePart">

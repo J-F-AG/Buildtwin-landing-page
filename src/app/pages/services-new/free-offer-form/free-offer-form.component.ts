@@ -42,6 +42,7 @@ export class FreeOfferFormComponent {
   isTenderWork = {};
   uploadedMessage = '';
   disableButton: boolean = false;
+  thankyouMessage: boolean = false;
   data = {};
   constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService, public _languageService: LanguageService) {
     this.fetchData()
@@ -178,9 +179,11 @@ export class FreeOfferFormComponent {
     }
   }
   fileUploadedStatus($event){
+
+    this.thankyouMessage = true
     // console.log($event);
     this.disableButton = false;
-    this.message.create('success', `${this.uploadedMessage}`);
+    // this.message.create('success', `${this.uploadedMessage}`);
     this.showdropDown = false;
     // Reset the form after submission
     this.myForm.reset(); // Clears the form fields
@@ -189,8 +192,11 @@ export class FreeOfferFormComponent {
     // this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
 
     this.updateServiceId()
-    setInterval(() => {
+    setTimeout(() => {
       this.showdropDown = true;
     }, 10);
+    setTimeout(() => {
+      this.thankyouMessage = false;
+    }, 5000);
   }
 }

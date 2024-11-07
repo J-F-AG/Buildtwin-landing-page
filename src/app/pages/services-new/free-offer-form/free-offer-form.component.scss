@@ -262,6 +262,71 @@
 .mat-mdc-button-disabled {
   opacity: .5;
 }
+.formSubmitted {
+  position: relative;
+  .submited-form {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    img {
+      width: 80%;
+    }
+  }
+  form, .topPart {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.submited-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 0 0;
+    .check {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 7px solid #82cc82;
+      position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 10px;
+          top: 32px;
+          width: 29px;
+          height: 7px;
+          background: #82cc82;
+          border-radius: 5px;
+          transform: rotate(44deg);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 23px;
+        top: 22px;
+        width: 64px;
+        height: 13px;
+        background: #82cc82;
+        border-radius: 17px;
+        border: 3px solid white;
+        transform: rotate(-35deg);
+      }
+    }
+    .message {
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      padding: 0 20px;
+      small {
+        font-size: 15px;
+        font-weight: 500;
+        display: block;
+        padding-top: 20px;
+      }
+    }
+}
 @media only screen and (max-width : 992px) {
   .formContainer .middlePart {
     display: flex;
