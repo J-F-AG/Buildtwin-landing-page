@@ -19,10 +19,10 @@ phases:
       # - sudo apt-get upgrade -y
       
       # Clean up unnecessary packages and fix broken installs
-      - echo "Cleaning up unnecessary packages and fixing broken installs..."
-      - sudo apt-get autoremove -y
-      - sudo apt-get autoclean
-      - sudo apt-get -f install
+      # - echo "Cleaning up unnecessary packages and fixing broken installs..."
+      # - sudo apt-get autoremove -y
+      # - sudo apt-get autoclean
+      # - sudo apt-get -f install
       
       # Remove previous Node and npm to avoid conflicts
       # - echo "Removing any existing Node.js and npm installations..."
