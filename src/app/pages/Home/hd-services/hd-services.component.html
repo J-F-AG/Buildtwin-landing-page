@@ -115,10 +115,17 @@
                     <h2 class="service__items__sub__title">{{item.name}}</h2>
                     <img class="service__items__sub__image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                 </a>
-                <a class="service__items__title" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
-                    <h2 class="service__items__title--main">{{servicesArray[i]?.name}}</h2>
-                    <span class="service__items__title--sub" *ngIf="servicesArray[i] && servicesArray[i]['description']" [innerHtml]="servicesArray[i]['description']"></span>
-                </a>
+                <div class="service__items__title">
+                    <h2 class="service__items__title--main">
+                        <a target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
+                            {{servicesArray[i]?.name}}
+                        </a>
+                    </h2>
+                    <p class="service__items__title--sub" *ngIf="servicesArray[i] && servicesArray[i]['description']" [innerHtml]="servicesArray[i]['description']"></p>
+                    <a class="default-btn mdc-button" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
+                        Know More
+                    </a>
+                </div>
             </ng-template>
         </owl-carousel-o>
     </div>

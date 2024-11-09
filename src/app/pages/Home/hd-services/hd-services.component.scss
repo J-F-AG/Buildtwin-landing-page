@@ -125,8 +125,9 @@
       }
     }
     &__title {
-      grid-column: 2/-1;
-      display: grid;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       gap: 10px;
       padding-right: 0;
       position: absolute;
@@ -137,6 +138,7 @@
       visibility: hidden;
       height: 228px;
       top: 0;
+      justify-content: center;
       &.active {
         // animation: fadeInOut 5s infinite;
       }
@@ -144,13 +146,16 @@
         color: var(--newButtonColor);
         font-size: 32px;
         font-weight: 500;
-        align-self: end;
         margin: 0;
+        a {
+          color: inherit;
+        }
       }
       &--sub {
         color: #668189;
         font-size: 14px;
         font-weight: 400;
+        margin: 0;
       }
     }
     &__subWrapper {
@@ -247,7 +252,9 @@
     
   }
 }
+.default-btn {
 
+}
 @media only screen and (max-width : 1200px) {
   .services {
       padding-left: 30px;
