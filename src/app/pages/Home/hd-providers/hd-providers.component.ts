@@ -9,7 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class HdProvidersComponent {
 
   factorySlider: OwlOptions = {
-    nav: false,
+    nav: true,
     margin: 30,  // Adjust as needed
     dots: false,
     loop: true,
