@@ -477,7 +477,7 @@ export class VenderDetailsAarbeeComponent {
     margin: 0,
     dots: false,
     loop: false,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: false,
     responsive: {
       0: {

@@ -72,6 +72,7 @@ p {
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 16px;
+    letter-spacing: .27px;
 }
 .custom-select {
     padding: 12px 26px 12px 16px;
@@ -111,7 +112,7 @@ ul {
     padding: 0;
 }
 .block-section {
-    padding: 40px 0;
+    padding: 40px 0 30px;
 }
 .secondaryBg {
     background: var(--backgroundColor);
@@ -184,6 +185,7 @@ ul {
                         font-weight: 400;
                         align-items: center;
                         white-space: nowrap;
+                        padding-top: 2px;
                     }
                 }
             }
@@ -236,7 +238,7 @@ ul {
     gap: 18px;
     position: relative;
     top: -6px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     .badge {
     }
 }
@@ -250,7 +252,7 @@ ul {
 .company-overview {
     display: flex;
     gap: 24px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     &.child {
         padding: 17px;
         .image-wrapper {
@@ -599,9 +601,10 @@ ul {
             height: 48px;
             font-size: 0;
             position: absolute;
-            right: -30px;
+            right: -50px;
             top: 50%;
             transform: translateY(-50%);
+            margin: 0;
             &:hover {
                 background: rgba(0, 0, 0, 0.10);
             }
@@ -610,28 +613,28 @@ ul {
                 content: "";
                 position: absolute;
                 left: 50%;
-                width: 10px;
-                height: 10px;
-                margin-left: -3px;
-                border-top: 1.5px solid #002E3B;
-                border-right: 1.5px solid #002E3B;
+                width: 16px;
+                height: 16px;
+                margin-left: -5px;
+                border-top: 2px solid #002E3B;
+                border-right: 2px solid #002E3B;
                 transform: translate(-50%, -50%) rotate(45deg);
             }
         }
         .owl-prev {
-            left: -65px;
+            left: -80px;
             right: auto;
             &::after {
                 transform: translate(-50%, -50%) rotate(-135deg);
-                margin-left: 0;
+                margin-left: 4px;
             }
         }
     }
     .block {
         display: flex;
         flex-direction: column;
-        gap: 14px;
-        margin-right: 32px;
+        gap: 19px;
+        margin-right: 28px;
         figure {
             margin: 0;
             padding: 10px 0 0 9px;
@@ -707,14 +710,15 @@ ul {
     .right {
         background: #F3F8FF;
         border-radius: 12px;
-        padding: 35px 40px;
+        padding: 40px 40px;
     }
     .digitalised-operation ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 10px;
         margin: 0;
         padding: 0;
+        column-gap: 24px;
         li {
             display: flex;
             align-items: center;
@@ -885,6 +889,7 @@ ul {
                 top: 0;
                 width: 100%;
                 height: auto;
+                transform: translateY(-10%);
             }
         }
         h2 {
@@ -1036,15 +1041,15 @@ ul {
     .category-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 19px;
+        gap: 30px;
         .block {
             display: flex;
             flex-direction: column;
-            width: calc(33.3% - 12.66px);
+            width: calc(33.3% - 24.66px);
             .info {
                 display: flex;
                 flex-direction: column;
-                gap: 4px;
+                gap: 0;
                 span {
                     font-size: 16px;
                     font-weight: 600;
@@ -1055,6 +1060,7 @@ ul {
                         display: flex;
                         align-items: center;
                         gap: 4px;
+                        line-height: 1.2;
                         small {
                             color: #668189;
                             font-size: inherit;
@@ -1091,18 +1097,20 @@ ul {
 #client-feeback {
     .client-feeback-list {
         display: flex;
-        gap: 20px;
+        gap: 17px;
         flex-wrap: wrap;
+        row-gap: 20px;
         .block {
             border-radius: 12px;
             background: #fff;
             border: 1px solid #E4E4E4;
-            width: calc(33.3% - 13.33px);
+            width: calc(33.3% - 11.33px);
             padding: 20px;
             display: flex;
             flex-direction: column;
             position: relative;
             margin-bottom: 16px;
+            min-height: 228px;
             &::after {
                 content: "";
                 position: absolute;
@@ -1162,7 +1170,7 @@ ul {
                 font-weight: 400;
                 line-height: 18px; /* 187.5% */
                 flex-grow: 1;
-                margin-bottom: 38px;
+                margin-bottom: 30px;
             }
             a {
                 color: #0053FA;
@@ -1303,7 +1311,7 @@ ul {
         }
         li {
             // width: 324px;
-            aspect-ratio: 324/354;
+            aspect-ratio: 324/256;
             border-radius: 12px;
             border: 1px solid #A7C4FF;
             background: #ffffff;
@@ -1398,7 +1406,7 @@ ul {
 
 .policy-list {
     display: flex;
-    gap: 40px;
+    gap: 50px;
     .relative {
         position: relative;
     }
@@ -1413,8 +1421,9 @@ ul {
             font-size: 18px;
             font-weight: 600;
             height: 60px;
-            width: 440px;
+            width: 450px;
             line-height: 60px;
+            padding-left: 19px;
             &::after {
                 content: "";
                 position: absolute;
@@ -1472,8 +1481,8 @@ ul {
             flex-direction: column;
             gap: 12px;
             position: absolute;
-            left: 50%;
-            top: 50%;
+            left: 48%;
+            top: 43%;
             transform: translate(-50%, -50%);
             align-items: center;
             span {
@@ -1755,7 +1764,7 @@ ul {
         }
     }
     ::ng-deep .owl-item {
-        padding-right: 24px;
+        padding-right: 15px;
     }
     ::ng-deep .owl-carousel .owl-stage-outer {
         // margin-right: -80px;
@@ -1930,8 +1939,9 @@ ul {
 .company-detail-review {
     display: flex;
     gap: 8px;
-    padding: 20px;
+    padding: 20px 20px 20px 0;
     align-items: center;
+    margin-bottom: 40px;
     figure {
         width: 48px;
         height: 48px;
@@ -1944,14 +1954,17 @@ ul {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-right: 30px;
+        margin-right: 54px;
         span {
             display: block;
             font-size: 16px;
             font-weight: 600;
+            letter-spacing: .3px;
+            margin-bottom: 6px;
             &.name {
                 color: #0053FA;
                 font-weight: 500;
+                letter-spacing: 0.03px;
             }
         }
     }
@@ -1961,6 +1974,8 @@ ul {
         display: flex;
         align-items: center;
         gap: 9.336px;
+        padding: 0;
+        letter-spacing: .7px;
         &.rating ::ng-deep {
             .ant-rate li svg {
                 width: 37px;
