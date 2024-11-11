@@ -521,4 +521,167 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(faqSchema);
   }
+
+  injectFAQSchemaForSteelDetailingServices(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+          "@type": "Question",
+          "name": "What steel detailing services does BuildTwin offer through its platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildTwin provides a comprehensive range of steel detailing services to support your construction and engineering projects. Our offerings include: Shop Drawings: Detailed fabrication drawings for steel components such as beams, columns, trusses, and connections. Erection Drawings: Precise plans for the assembly and installation of steel structures on-site. 3D Modeling: Advanced 3D models using software like Tekla Structures and AutoCAD for accurate visualization. Connection Design: Detailed design and detailing of bolted and welded connections, ensuring structural integrity. Material Lists: Bill of materials (BOM) including quantities, sizes, and specifications for procurement. Clash Detection: Identifying and resolving conflicts within the steel framework and with other building systems. Miscellaneous Steel Detailing: Services for stairs, handrails, ladders, platforms, and other custom steel elements. Our pre-qualified vendors are skilled professionals who deliver high-quality steel detailing services tailored to your project's specific requirements."
+          }
+      },{
+          "@type": "Question",
+          "name": "How does BuildTwin ensure the quality and accuracy of steel detailing services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quality and accuracy are paramount in steel detailing to ensure structural safety and project success. BuildTwin ensures this by: Pre-Qualified Vendors: All vendors undergo a rigorous vetting process to verify their expertise and track record. International Standards Compliance: Vendors adhere to global standards like AISC, BS, Eurocode, and AWS for welding. AI-Powered Quality Management: Our AI Design Manager assists in checking drawings for errors and compliance issues. Certified Workflows: We implement standardized, certified workflows to maintain consistency and reliability. Live Project Tracking: Monitor your project's progress in real-time and collaborate directly with vendors. Regular Updates and Reviews: Vendors provide frequent updates, and you can review and provide feedback at each stage. By combining experienced vendors, advanced technology, and robust processes, we ensure high-quality deliverables for your steel detailing projects."
+          }
+      },{
+          "@type": "Question",
+          "name": "Can I choose from pre-qualified vendors for steel detailing services on BuildTwin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, BuildTwin offers access to a network of pre-qualified vendors specializing in steel detailing services. You can: Browse Vendor Profiles: View detailed profiles, past projects, client reviews, and areas of expertise. Compare Bids: Receive proposals from multiple vendors to find the best fit for your budget and project needs. Select Based on Expertise: Choose vendors with specific experience relevant to your project's requirements. Global Access: Connect with vendors worldwide, giving you access to a broader talent pool. Our platform simplifies the vendor selection process, ensuring you find the right partner for your project."
+          }
+      },{
+          "@type": "Question",
+          "name": "What international codes and standards are followed in the steel detailing services offered through BuildTwin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our vendors adhere to various international codes and standards to ensure compliance and quality, including: American Institute of Steel Construction (AISC) Standards British Standards (BS) and BS EN Series Eurocode 3 for Steel Structures Australian Standards (AS/NZS) Canadian Standards Association (CSA) Codes American Welding Society (AWS) Specifications Other Regional Codes: Depending on your project's location and requirements. Compliance with these standards ensures that your steel structures are designed and detailed to meet safety and quality benchmarks."
+          }
+      },{
+          "@type": "Question",
+          "name": "How does BuildTwin's AI technology enhance steel detailing projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildTwin leverages AI technology to enhance various aspects of steel detailing projects: AI Design Manager: Assists with project management tasks, automating routine processes and maintaining compliance. Automated Quality Checks: AI algorithms review drawings for errors, ensuring high accuracy. Efficient Communication: Streamlines communication between clients and vendors, reducing delays. Data Management: Securely manages project data with easy access and version control. Predictive Insights: Provides insights into project timelines and potential bottlenecks for proactive management. By integrating AI, we help you achieve greater efficiency, accuracy, and productivity in your steel detailing projects."
+          }
+      }]
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+  injectFAQSchemaForRebarDetailingServices(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What rebar detailing services does BuildTwin offer through its platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At BuildTwin, we provide a comprehensive range of rebar detailing services through our one-stop platform. Our services include: Detailed Rebar Drawings: Precise and accurate drawings for the placement and installation of reinforcing steel bars in concrete structures. Bar Bending Schedules: Detailed lists specifying the shape, dimensions, and quantity of each rebar required. Quantity Take-offs: Accurate calculations of the materials needed, helping in cost estimation and procurement. Fabrication Details: Instructions and specifications for the fabrication of rebar components. 3D Modelling and BIM Integration: Advanced modelling for clash detection and seamless integration with Building Information Modelling systems. Our pre-qualified vendors are equipped to handle projects of any scale, ensuring high-quality deliverables that meet your specific requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BuildTwin ensure the quality and compliance of rebar detailing services provided by vendors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quality and compliance are paramount at BuildTwin. We ensure this via: Pre-Qualified Vendors: All vendors on our platform undergo a rigorous qualification process to verify their expertise and track record. Adherence to International Standards: Our vendors comply with global building codes and standards such as ACI, BS, Eurocode, and others relevant to your project location. AI-Powered Quality Management: Our AI Design Manager assists in checking drawings and documents for accuracy and compliance, reducing errors and omissions. Certified Workflows: We implement standardized workflows that are certified to meet industry best practices, ensuring consistency and reliability in all deliverables. Live Project Tracking: Clients can monitor progress in real-time, allowing for immediate feedback and adjustments as needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I choose from pre-qualified vendors for rebar detailing services on BuildTwin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. At BuildTwin, we offer access to a network of pre-qualified vendors specializing in rebar detailing services. You can: Browse Vendor Profiles: View detailed profiles, including past projects, client reviews, and areas of expertise. Compare Bids: Receive and compare bids from multiple vendors to find the best fit for your project budget and timeline. Select Based on Expertise: Choose vendors with specific experience relevant to your project's requirements. Get Global Access: Connect with vendors worldwide, giving you access to a broader talent pool and competitive pricing. Our platform simplifies the vendor selection process, ensuring you find the right partner for your project."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BuildTwin's AI technology enhance rebar detailing services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At BuildTwin, we leverage AI technology to enhance rebar detailing services in several ways: AI Design Manager: Assists with project management tasks, automates routine processes, and helps in maintaining compliance with industry standards. Automated Quality Checks: AI algorithms review drawings and models for errors, ensuring high-quality outputs. Efficient Communication: AI-powered tools facilitate streamlined communication between clients and vendors, reducing delays. Data Management: Our AI manages project data securely, providing easy access and version control. Predictive Insights: AI provides insights into project timelines and potential bottlenecks, allowing for proactive management. By integrating AI, we help you achieve greater efficiency, accuracy, and productivity in your rebar detailing projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What international codes and standards are followed in the rebar detailing services offered through BuildTwin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our vendors adhere to a variety of international codes and standards to ensure that all rebar detailing services meet the required compliance and quality benchmarks. These include: ASTM - American Society of Testing Materials ACI - American Concrete Institute CRSI - Concrete Reinforcing Steel Institute NZS - New Zealand Standards AS - Australian Standards BS - British Standards Eurocode (EN) - European Standards CSA - Canadian Standards Association DIN - Deutsches Institut für Normung (German Standards) IS - Indian Standards JIS - Japanese Industrial Standards SNI - Standar Nasional Indonesia (Indonesian Standards) SANS - South African National Standards Other Regional Standards: Depending on the project's location and specific requirements Compliance with these standards ensures that the rebar detailing is suitable for structural integrity, safety, and durability, meeting both local and international regulations."
+          }
+        }
+      ]
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+  injectFAQSchemaForBimServices(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What BIM services does BuildTwin offer through its platform?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BuildTwin provides comprehensive BIM (Building Information Modeling) services to streamline your architectural, engineering, and construction projects. Our offerings include: 3D Modeling and Visualization: Creation of detailed 3D models for better project visualization and decision-making. BIM Coordination and Clash Detection: Identifying and resolving conflicts between different building systems before construction begins. 4D and 5D BIM Services: Integrating time (4D) and cost (5D) data into your BIM models for enhanced project planning and budgeting. BIM Consulting and Implementation: Assisting in the adoption of BIM processes and best practices within your organization. Facility Management BIM (6D BIM): Providing models enriched with data for maintenance and operation post-construction. LOD (Level of Development) Specific Models: Developing models at various LODs (100 to 500) based on project requirements. Our pre-qualified vendors are skilled in using industry-leading BIM software like Autodesk Revit, Navisworks, and more, ensuring high-quality deliverables tailored to your project's needs."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Why do I need BIM for my construction projects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BIM (Building Information Modeling) offers numerous benefits for construction projects, including: Enhanced Collaboration: BIM facilitates better communication among architects, engineers, contractors, and stakeholders through a centralized 3D model. Improved Visualization: 3D models provide a clear understanding of the project, reducing misunderstandings and errors. Clash Detection: Early identification of conflicts between building systems saves time and costs associated with rework. Efficient Project Management: BIM integrates various aspects like design, materials, time, and cost, allowing for more effective project planning and execution. Cost and Time Savings: By streamlining processes and reducing errors, BIM helps in minimizing delays and budget overruns. Lifecycle Management: BIM models serve as valuable resources for facility management after construction is completed. Implementing BIM leads to more efficient, accurate, and successful project outcomes."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does BIM differ from traditional 3D CAD?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While both BIM and traditional 3D CAD involve creating digital representations of buildings, there are significant differences: Data Integration: BIM models are data-rich, containing detailed information about each element's properties, whereas 3D CAD models primarily represent geometry. Collaboration: BIM enables real-time collaboration among various stakeholders, whereas 3D CAD is often limited to individual disciplines. Lifecycle Management: BIM supports the entire lifecycle of a building, from design and construction to operation and maintenance. 3D CAD typically focuses on the design phase only. Clash Detection and Analysis: BIM provides advanced tools for clash detection and project analysis, which are not inherent in traditional 3D CAD. 4D, 5D, and Beyond: BIM extends to include time (4D), cost (5D), sustainability (6D), and facility management (7D), offering a more comprehensive approach than 3D CAD. In essence, BIM is a holistic process that enhances collaboration, efficiency, and decision-making throughout a project's lifecycle."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the challenges in BIM implementation, and how can BuildTwin help?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Implementing BIM can present several challenges: Technical Expertise: Requires skilled professionals proficient in BIM software and processes. Initial Costs: Investment in software, hardware, and training can be substantial. Process Changes: Transitioning from traditional methods to BIM necessitates changes in workflows and collaboration practices. Data Management: Handling large amounts of data securely and efficiently can be complex. Standardization: Ensuring compliance with industry standards and project-specific requirements. How BuildTwin Helps: Access to Experts: Connect with pre-qualified BIM professionals and vendors who bring the necessary expertise to your projects. Cost-Effective Solutions: By outsourcing BIM services through BuildTwin, you can reduce the need for significant upfront investments. Training Programs: BuildTwin offers training to upskill your team in BIM practices and software. Streamlined Processes: Our platform provides AI-powered project management tools to simplify workflows and enhance collaboration. Compliance Assurance: Vendors adhere to international BIM standards and project-specific requirements, ensuring high-quality deliverables. BuildTwin simplifies BIM adoption, helping you overcome implementation challenges effectively."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Which BIM Level of Development (LOD) is required for my AEC project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The appropriate Level of Development (LOD) for your project depends on various factors, including the project's phase, complexity, and specific requirements. LOD levels range from 100 to 500: LOD 100 (Conceptual Design): Basic massing models representing overall project intent. LOD 200 (Schematic Design): Generalized systems and assemblies with approximate quantities, size, shape, and location. LOD 300 (Detailed Design): Precise modeling with specific assemblies, accurate quantities, and dimensions suitable for coordination. LOD 350 (Construction Documentation): Includes interfaces between building elements, supporting detailed coordination. LOD 400 (Fabrication and Assembly): Models include complete fabrication and assembly information. LOD 500 (As-Built): Represents the project as constructed, useful for operations and maintenance. How BuildTwin Assists: Our vendors can deliver BIM models at any LOD required for your project. We recommend: Early Phases: Start with LOD 100-200 for conceptual and schematic designs. Design Development: Progress to LOD 300-350 for detailed coordination and construction documentation. Construction and Fabrication: Utilize LOD 400 for fabrication details. Facility Management: Employ LOD 500 for as-built models for long-term maintenance. Our experts can guide you in selecting the appropriate LOD to meet your project's needs and objectives."
+        }
+      }]
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
 }

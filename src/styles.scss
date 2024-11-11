@@ -391,7 +391,14 @@ img {
     }
   }
 }
-
+.link-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--themeColor);
+  &:hover {
+    text-decoration: underline;
+  }
+}
 // EM Section Title
 .em-section-title {
   margin-bottom: 40px;
