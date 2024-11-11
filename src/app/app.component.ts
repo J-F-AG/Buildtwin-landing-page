@@ -167,6 +167,24 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
+    }else if(url.includes('/steel-detailing-services')){
+        const faqSchema = this._languageService.injectFAQSchemaForSteelDetailingServices(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/rebar-detailing-services')){
+        const faqSchema = this._languageService.injectFAQSchemaForRebarDetailingServices(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/bim-services')){
+        const faqSchema = this._languageService.injectFAQSchemaForBimServices(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }
   }
    
