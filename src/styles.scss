@@ -371,7 +371,7 @@ img {
     height: auto;
     border-radius: 8px;
     display: inline-block;
-    padding: 13px 30.1px;
+    padding: 13px 25.7px;
     transition: var(--transition);
     color: var(--whiteColor) !important;
     line-height: 1.29;
@@ -380,6 +380,7 @@ img {
     margin-top: 0;
     padding-top: 15px;
     padding-bottom: 15px;
+    letter-spacing: .2px;
     font: {
       family: var(--syneFontFamily);
       weight: 500;
@@ -1377,7 +1378,7 @@ body {
 
 
 // body {
-//   background: url(./assets/images/layout.png) center -471px no-repeat;
+//   background: url(./assets/images/layout.png) center -0 no-repeat;
 //   background-size: 100% auto;
 //   & > * {
 //     opacity: .5;
