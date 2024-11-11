@@ -1,18 +1,20 @@
-.bannerWrapper{position: relative; padding-top: 112px;}
+.bannerWrapper{position: relative; padding-top: 90px;}
 .bannerContainer{position: absolute; height: 100%; left: 0; top: 0; width: 100%;}
-.container,.container-with-right{min-height: 100vh; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 210px;}
+.container,.container-with-right{min-height: 100vh; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 116px;}
 .bannerWrapper > img{width: 100%; display: block;}
 
 .bannerWrapper h1,.bannerWrapper p{ color: white;}
-.bannerWrapper h1{ font-size: 51px; margin-bottom: 8px; font-weight: 700;}
-.bannerWrapper p{ font-size: 20px; font-weight: 400;}
+.bannerWrapper h1{     font-size: 44px; margin-bottom: 8px; font-weight: 500; color: inherit;}
+.color {
+    background: #5DD7AD;
+}
+.bannerWrapper p{ font-size: 18px; font-weight: 400; color: var(--lightTextColor);}
 @media (max-width:900px){
     .bannerWrapper {
         padding-top: 65px;
     }
     .container-with-right {
         justify-content: flex-start;
-        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     }
 }
 @media (max-width:767px){

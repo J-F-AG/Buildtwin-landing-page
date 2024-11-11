@@ -76,11 +76,10 @@ export class AppComponent {
             }
             if(event['canonical']){
             }
-            
+            let url = this.router.url;
             this._languageService.setLanguageTags();
             this.breadcrumbService.generateBreadcrumbs(this.router.url);
             this.breadcrumbs = this.breadcrumbService.breadcrumbs;
-            let url = this.router.url;
             this.injectBreadcrumbScript(url);
             console.log(event)
         })
@@ -121,7 +120,7 @@ injectBreadcrumbScript(url) {
     }
 
     // Check if breadcrumbs array has items
-    if (this.breadcrumbs.length > 0) {
+    if (this.breadcrumbs.length > 0 && url !== '/') {
     //   const jsonLdScriptTag = this.renderer.createElement('script');
     //   jsonLdScriptTag.type = 'application/ld+json';
       

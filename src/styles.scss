@@ -749,10 +749,20 @@ img {
   .container-with-right {
     padding-right: calc(440px - ((100vw - 1116px) / 2));
   }
+  .bannerContainer .container-with-right {
+    h1, p {
+      padding-right: 290px;
+    }
+  }
 }
 @media (min-width: 1440px) {
   .container-with-right {
     padding-right: calc(440px - ((100vw - 1440px) / 2));
+  }
+  .bannerContainer .container-with-right {
+    h1, p {
+      padding-right: 290px;
+    }
   }
 }
 /* Max width 767px */
