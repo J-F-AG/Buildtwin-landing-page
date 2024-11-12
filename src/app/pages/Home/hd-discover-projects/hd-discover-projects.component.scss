@@ -192,12 +192,22 @@
   opacity: 0px;
   position: relative;
   .headings {
+    
     .title {
+      font-family: var(--fontFamily);
       font-size: 20px;
       font-weight: 600;
-      line-height: 25.46px;
-      text-align: left;
-      color: var(--newThemeColor);
+      color: var(--themeColor);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 17px;
+      &:after {
+        content: '';
+        width: 85px;
+        height: 2px;
+        border: 1px solid var(--themeColor);
+      }
     }
     .line {
       width: 85.6px;
@@ -212,7 +222,7 @@
       line-height: 56.01px;
       text-align: left;
       color: var(--newButtonColor);
-      margin: 0;
+      margin: 0 0 8px;
     }
     .description {
       font-size: 18px;
@@ -229,7 +239,7 @@
   .factories {
     display: grid;
     row-gap: 40px;
-    padding: 30px 0;
+    padding: 40px 0;
     .factory-box {
       width: 100%;
       height: auto;
@@ -248,13 +258,13 @@
         gap: 0px;
         border-radius: 8px;
         .country-bg {
-          padding: 5px 10px 8px 6px;
+          padding: 2px 6px 2px 2px;
           gap: 4px;
           border-radius: 100px;
           opacity: 0px;
           background: #00000080;
           backdrop-filter: blur(14px);
-          margin: 10px;
+          margin: 8px;
           justify-self: start;
           .owl-carousel .owl-item img {
             width: auto !important;
@@ -262,7 +272,7 @@
           }
           .cntry-img{
             vertical-align: sub;
-            margin-inline-end: 5px;
+            margin-inline-end: 4px;
             width: 18px !important;
             height: 18px !important;
             display: inline !important;
@@ -279,46 +289,58 @@
       }
       .factory-detail{
         width: 50%;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         padding: 10px 0;
         .fact-title{
           font-size: 20px;
           font-weight: 600;
           line-height: 25.46px;
-          text-align: left;          
+          text-align: left;     
+          margin-bottom: -3px;  
+          & + span {
+            display: block;
+            margin-bottom: 5px;
+          }   
         }
         .fact-desc{
           font-size: 12px;
           font-weight: 400;
           line-height: 18px;
           letter-spacing: 0.02em;
-          text-align: left;          
+          text-align: left;    
+          flex-grow: 1;      
         }
         .cmpny-logo{
-          gap: 16px;
+          gap: 4px;
           display: inline-flex;
           align-items: center;
           .logo-img{
             border-radius: 100px;
-            width: 30px !important;
-            // height: 30px !important;
+            overflow: hidden;
+            width: 40px;
+            height: 30px;
           }
           .heading{
             font-size: 12px;
             font-weight: 500;
             line-height: 15.28px;
             letter-spacing: 0.02em;
-            text-align: left;            
+            text-align: left;       
+            color: #0053FA;     
             .heading-1{
-              font-size: 14.71px;
+              font-size: 14.707px;
               font-weight: 600;
               line-height: 18.72px;
               letter-spacing: 0.02em;
-              text-align: left;              
+              text-align: left;  
+              color: #002E3B;            
             }
           }
           .arrow-vector{
             width: auto !important;
+            margin-left: auto;
+            margin-right: 30px;
           }
         }
       }
@@ -353,6 +375,10 @@
   justify-content: center;
   cursor: pointer;
   font-size: 24px;
+  .ti {
+    font-size: 32px;
+    color: var(--blackColor);
+  }
 }
 @media only screen and (max-width : 1200px) {
   .project-providers {

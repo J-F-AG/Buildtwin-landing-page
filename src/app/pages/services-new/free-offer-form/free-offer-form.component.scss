@@ -16,7 +16,6 @@
   }
 
   div {
-    color: black;
     font-size: 22px;
   }
 }
@@ -30,13 +29,16 @@
     color: #0053fa;
     font-size: 18px;
     font-weight: 700;
-    padding: 20px;
+    padding: 29px 18px;
     background: #F3F8FF;
     border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .middlePart {
-    padding: 20px;
+    padding: 18px 20px;
 
     .formRow {
       margin-bottom: 12px;
@@ -47,20 +49,21 @@
   }
 
   .bottomPart {
-    border-top: 1px solid #cbd6e2;
-    padding: 20px;
+    border-top: none;
+    padding: 5px 20px 20px;
 
     h5 {
-      color: black;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
+      margin-bottom: 2px;
     }
 
     p {
-      color: #584d8b;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 400;
       margin-bottom: 0;
+      line-height: 1.4;
+      letter-spacing: .253px;
     }
 
     .buttonContainer {
@@ -69,21 +72,24 @@
       .default-btn {
         display: block;
         width: 100%;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        background: #002E3B;
       }
     }
 
     .integrationsContainer {
       strong {
-        font-size: 14px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 600;
         display: block;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
       }
 
       .integrationsList {
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 9px;
 
         .listItem {
           color: #0053fa;
@@ -94,6 +100,7 @@
           padding: 0;
           white-space: nowrap;
           gap: 4px;
+          padding: 4px 12px;
         }
       }
     }
@@ -112,7 +119,7 @@
   .input-text,
   .textarea-description {
     padding: 12px 35px 12px 12px;
-    font-size: var(--font-size-h6);
+    font-size: 14px;
     line-height: 1.2;
     background: none;
     width: 100%;
@@ -152,15 +159,14 @@
 
     &:after {
       content: "";
-      border: 6px transparent solid;
-      border-top-color: #343330;
-      width: 12px;
-      height: 12px;
+      border-right: 1px #343330 solid;
+      border-bottom: 1px #343330 solid;
+      width: 8px;
+      height: 8px;
       position: absolute;
-      right: 13px;
+      right: 14px;
       top: 50%;
-      // transform: rotate(45deg) translateY(-50%);
-      // transform-origin: top right;
+      transform: translateY(-63%) rotate(45deg);
     }
   }
 
@@ -193,7 +199,7 @@
   &.precastField,
   &.dateField {
     > div {
-      padding: 12px 35px 12px 12px;
+      padding: 15px 35px 14px 10px;
     }
   }
 
@@ -230,7 +236,7 @@
 
   .selectedValue {
     display: flex;
-    font-size: var(--font-size-h6);
+    font-size: 14px;
     line-height: 1.2;
     gap: 7px;
 

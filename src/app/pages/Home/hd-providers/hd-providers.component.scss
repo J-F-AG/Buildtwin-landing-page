@@ -4,13 +4,23 @@
     padding: 0 100px;
   
     .headings {
-      .title {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 25.46px;
-        text-align: left;
-        color: var(--newThemeColor);
+    .title {
+      font-family: var(--fontFamily);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--themeColor);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      display: flex;
+      margin-bottom: 17px;
+      &:after {
+        content: '';
+        width: 85px;
+        height: 2px;
+        border: 1px solid var(--themeColor);
       }
+    }
       .line {
         width: 85.6px;
         height: 0px;
@@ -37,9 +47,9 @@
     .buildings {
       // display: grid;
       row-gap: 40px;
-      padding: 30px 0;
+      padding: 38px 0;
       .border-img {
-        border-width: 10px; /* Adjust this value as needed */
+        border-width: 8px; /* Adjust this value as needed */
         border-style: solid; /* Required for border image to show */
         border-image-source: url("../../../../assets/images/home/border-rect.png");
         border-image-slice: 30; /* Adjust based on your image */
@@ -51,7 +61,7 @@
         letter-spacing: 0.02em;
         text-align: center;
         color: var(--newTitleColor);
-        padding: 10px 0;
+        padding: 15px 0;
       }
     }
 

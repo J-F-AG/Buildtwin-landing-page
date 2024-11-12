@@ -2,7 +2,7 @@
   display: none!important;
 }
 .slider {
-  padding-right: 100px;
+  padding-right: 0;
   ::ng-deep div .active + .active, ::ng-deep div .owl-item {
     height: 140px;
     margin-top: 230px;
@@ -37,6 +37,7 @@
       opacity: 1;
       visibility: visible;
       transition: all 0.3s ease 0.3s;
+      padding-right: 100px;
     }
     .service__items__sub {
       display: flex;
@@ -52,16 +53,16 @@
   }
 }
 .services {
-  padding: 40px 0 40px 100px;
+  padding: 78px 0 40px 100px;
   font-family: var(--fontFamily);
-  background: var(--whiteColor) url(../../../../assets/images/servicie-bg.png) right top no-repeat;
+  background: var(--whiteColor) url(../../../../assets/images/servicie-bg.png) right 22px no-repeat;
   background-size: 665px 614px;
   transition: all .5s ease;
   .main-head {
     display: grid;
     grid-template-columns: 1fr max-content;
     gap: 24px;
-    margin-block-end: 100px;
+    margin-block-end: 41px;
     padding-right: 100px;
   }
   .main-title {
@@ -71,10 +72,11 @@
     color: var(--themeColor);
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 10px;
+    margin-bottom: 17px;
     &:after {
       content: '';
-      width: 100px;
+      width: 85px;
       height: 2px;
       border: 1px solid var(--themeColor);
     }
@@ -85,17 +87,18 @@
     justify-content: space-between;
   }
   .title{
-    font-size: 40px;
+    font-size: 44px;
     font-family: var(--fontFamily);
-    font-weight: 600;
+    font-weight: 500;
     color: var(--newButtonColor);
-    margin: 0;
+    margin: 0 0 2px;
   }
 
   .subTitle{
     font-size: 18px;
     color: var(--lightTextColor);
     font-weight: 400;
+    letter-spacing: .35px;
   }
 
   .align-self-end {
@@ -131,7 +134,7 @@
       gap: 10px;
       padding-right: 0;
       position: absolute;
-      left: calc(100% + 24px);
+      left: calc(100% + 16px);
       width: 300%;
       transition: all 0.3s ease;
       opacity: 0;
