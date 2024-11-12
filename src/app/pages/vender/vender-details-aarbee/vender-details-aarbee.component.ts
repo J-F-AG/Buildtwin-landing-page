@@ -256,6 +256,18 @@ export class VenderDetailsAarbeeComponent {
     sectors: [],
     premium_partner: false,
   } as any;
+
+
+  listOfBuildingCodeList = [
+    {
+      value: '',
+      label: 'Select Building Code'
+    }
+  ];
+  selectedBuildingCode = {
+    value: '',
+    label: 'Select Building Code'
+  };
   isLoaded = false;
   selectedServices = [] as any;
   listOfBuildingCode = [] as any;
@@ -301,6 +313,16 @@ export class VenderDetailsAarbeeComponent {
   isAddon = false;
   selectedAddon = '';
   listOfSoftware = [];
+  listOfSoftwareList = [
+    {
+      value: '',
+      label: 'Select Software'
+    }
+  ];
+  selectedSoftware = {
+    value: '',
+    label: 'Select Software'
+  };
   highlightImges = [];
   imageLeftOutCount = 0;
   currentFaq: any = 'faq0'
@@ -309,6 +331,13 @@ export class VenderDetailsAarbeeComponent {
   filterIndex = 0;
   filterSelectedProjectCategorIndex = 0;
   categorisedProjectImages = [];
+
+  selectedPrecastServices = {
+    value: '',
+    label: 'Select services'
+  };
+  precastServices = []
+  AvailableServicesToggle : boolean = false;
   constructor(private _venderDetailService : VenderDetailService, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
 
     this.getBusinessListing();
@@ -441,6 +470,32 @@ export class VenderDetailsAarbeeComponent {
     loop: true,
     autoplay: false,
     autoplayHoverPause: false,
+  }
+  sectorsSlider: OwlOptions = {
+    items: 1,
+    nav: true,
+    margin: 0,
+    dots: false,
+    loop: false,
+    autoplay: false,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      768: {
+        items: 4
+      },
+      990: {
+        items: 4
+      },
+      1400: {
+        items: 4
+      }
+    }
   }
 
 
@@ -625,7 +680,7 @@ export class VenderDetailsAarbeeComponent {
   ngOnInit() {
     this.loadScript();
     setTimeout(() => {
-      console.log(this.formData?.highlightServices)
+      console.log(this.formData)
     }, 10000);
   }
   loadScript() {
@@ -902,9 +957,22 @@ export class VenderDetailsAarbeeComponent {
                   }
                 });
                 this.formData.buildingCode = res[0]['data']['building_codes'];
+                this.formData.buildingCode.forEach(a => {
+                  this.listOfBuildingCodeList.push({
+                    value: a.id,
+                    label: a.name
+                  })
+                });
                 this.formData.engineers = formData['our_engineers'];
                 this.formData.clientReviews = formData['reviews'];
                 this.listOfSoftware = res[0]['data']['softwares'];
+                this.listOfSoftware.forEach(a => {
+                  this.listOfSoftwareList.push({
+                    value: a.id,
+                    label: a.name
+                  })
+                });
+                console.log(this.listOfSoftware)
                 this.addons = res[0]['data']['addons'];
                 const reviewArr = [];
                 let revieCount = 0;
@@ -1063,6 +1131,12 @@ export class VenderDetailsAarbeeComponent {
                       })
                     }
                   });
+                  this.serviceTypes.forEach((s: any) => {
+                    this.precastServices.push({
+                      value: s.id,
+                      label: s.name
+                    });
+                  });
                 }
                 let obj = {
                   code: '',
@@ -1133,6 +1207,20 @@ export class VenderDetailsAarbeeComponent {
     }else {
       this.toggleContentIndex = i;
     }
+  }
+
+  selectService(selectedOption: any) {
+    this.selectedPrecastServices = this.precastServices.find(e => e.value === selectedOption);
+  }
+  selectSoftware(selectedOption: any) {
+    this.selectedSoftware = this.listOfSoftwareList.find(e => e.value === selectedOption);
+  }
+  selectBuildingCode(selectedOption: any) {
+    this.selectedBuildingCode = this.listOfBuildingCodeList.find(e => e.value === selectedOption);
+    // this.selectedSoftware = this.listOfSoftwareList.find(e => e.value === selectedOption);
+  }
+  AvailableServicesToggleStatus(){
+    this.AvailableServicesToggle = !this.AvailableServicesToggle;
   }
   ngOnDestroy() {
     this._footerService['companyDetail'] = {}

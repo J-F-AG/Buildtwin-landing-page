@@ -63,7 +63,7 @@ $buildtwin-theme: mat.define-light-theme(
   --orangeColor: #ec764b;
   --themeColor: #0053fa;
   --themeColorOpposite: #fff;
-  --blackColor: #0e0e28;
+  --blackColor: #002E3B;
   --lightColor: #808080;
   --extraLightColor: #d0d0d0;
   --whiteColor: #ffffff;
@@ -350,16 +350,16 @@ img {
   }
   .buttonV2 {
     padding: 9px 0px 8px 0px;
-    border-radius: 4px;
+    border-radius: 8px;
     line-height: 1.15;
     text-align: center;
   }
 }
 .buttonV2 {
   border-radius: 40px;
-  border: 1px solid #0053fa;
+  border: 1px solid #002E3B;
   background: #F3F8FF;
-  color: #0053fa;
+  color: #002E3B;
   padding: 8px 24px;
   font-size: 14px;
   font-style: normal;
@@ -369,17 +369,18 @@ img {
 .default-btn {
   &.mdc-button {
     height: auto;
-    border-radius: 4px;
+    border-radius: 8px;
     display: inline-block;
-    padding: 13px 30.1px;
+    padding: 13px 25.7px;
     transition: var(--transition);
     color: var(--whiteColor) !important;
     line-height: 1.29;
     font-family: var(--poppinsFontFamily);
     background-color: var(--themeColor);
     margin-top: 0;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    letter-spacing: .2px;
     font: {
       family: var(--syneFontFamily);
       weight: 500;
@@ -1391,3 +1392,12 @@ body {
 .pdR30 {
   padding-right: 25%;
 }
+
+
+// body {
+//   background: url(./assets/images/layout.png) center -0 no-repeat;
+//   background-size: 100% auto;
+//   & > * {
+//     opacity: .5;
+//   }
+// }
