@@ -150,6 +150,7 @@ import { OmBannerFooterComponent } from './pages/co-pilot-for/co-pilot/om-banner
 import { DoubleDigitPipe } from './pages/co-pilot-for/co-pilot/om-why-choose-us/double-digit.pipe';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzRateModule } from 'ng-zorro-antd/rate';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { VenderDetailsAarbeeOldComponent } from './pages/vender/vender-details-aarbee2/vender-details-aarbee.component';
 import { AarbeeSocialWallOldComponent } from './pages/vender/vender-details-aarbee2/social-wall/social-wall.component';
 import { NzProgressModule } from 'ng-zorro-antd/progress';
@@ -534,6 +535,7 @@ import { HdGoodCompanyComponent } from './pages/Home/hd-good-company/hd-good-com
     HttpClientModule,
     NzSpinModule,
     NzRateModule,
+    NzToolTipModule,
     BtSelectModule,
     BtIconModule,
     NzDatePickerModule,
