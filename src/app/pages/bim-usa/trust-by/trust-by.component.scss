@@ -1,0 +1,20 @@
+.trustedByWrapper{background: rgba(240, 244, 251, 0.60);
+    backdrop-filter: blur(10px); padding: 40px 0; position: relative;}
+
+.trustedByWrapper h2{font-size: 32px; font-weight: 600; margin-bottom: 0;}
+.trustedByWrapper p{font-size: 14px; font-weight: 400;}
+
+.trustedBrands{padding: 25px 25px 0 0; display: flex; justify-content: space-between; width: 100%; gap: 30px;}
+.trustedBrands strong{font-size: 38px; font-family:  "Alumni Sans", sans-serif;
+    color: #747474;font-weight: 900;letter-spacing: 1.9px;}
+
+@media (max-width:767px){
+    .trustedBrands {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0px;
+        strong {
+            margin-right: 20px;
+        }
+    }
+}

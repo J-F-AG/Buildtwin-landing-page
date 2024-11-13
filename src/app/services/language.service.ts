@@ -13,6 +13,7 @@ export class LanguageService {
     "rebar-detailing-services" : 10,  //this has to be updated later
     "bim-services" : 11,  //this has to be updated later
     "steel-detailing-services" : 12,  //this has to be updated later
+    "bim-service-provider-in-usa" : 13  //this has to be updated later
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
@@ -26,6 +27,9 @@ export class LanguageService {
     },
     "steel-detailing-services" : {
       name: 'Structural Steel Detailing Services'
+    },
+    "bim-service-provider-in-usa" : {
+      name: 'BIM Services'
     }
   }
   constructor(

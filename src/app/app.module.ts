@@ -272,6 +272,20 @@ import { StructuralSteelTrustByNewComponent } from './pages/structural-steel/tru
 // import { RebarFileUploadServiceComponent } from './pages/rebar/free-offer-form/file-upload-service/file-upload-service.component';
 import { HdProvidersComponent } from './pages/Home/hd-providers/hd-providers.component';
 import { HdGoodCompanyComponent } from './pages/Home/hd-good-company/hd-good-company.component';
+import { BimUsaServicesNewComponent } from './pages/bim-usa/services-new.component';
+import { BimUsaBannerComponent } from './pages/bim-usa/banner/banner.component';
+import { BimUsaDrawingFreelancersComponent } from './pages/bim-usa/drawing-freelancers/drawing-freelancers.component';
+import { BimUsaE2eEncryptionComponent } from './pages/bim-usa/e2e-encryption/e2e-encryption.component';
+import { BimUsaFaqBuildtwinComponent } from './pages/bim-usa/faq-buildtwin/faq-buildtwin.component';
+import { BimUsaHowItWorksNewComponent } from './pages/bim-usa/how-it-works/how-it-works.component';
+import { BimUsaLiveTrackingNewComponent } from './pages/bim-usa/live-tracking/live-tracking.component';
+import { BimUsaPlugPlayNewComponent } from './pages/bim-usa/plug-play/plug-play.component';
+import { BimUsaPrecastServiceComponent } from './pages/bim-usa/precast-service/precast-service.component';
+import { BimUsaSampleDrawingComponent } from './pages/bim-usa/sample-drawing/sample-drawing.component';
+import { BimUsaServicesOfferedComponent } from './pages/bim-usa/services-offered/services-offered.component';
+import { BimUsaThreeCardsComponent } from './pages/bim-usa/three-cards/three-cards.component';
+import { BimUsaTopVendorsComponent } from './pages/bim-usa/top-vendors/top-vendors.component';
+import { BimUsaTrustByNewComponent } from './pages/bim-usa/trust-by/trust-by.component';
 
 @NgModule({
   declarations: [
@@ -509,6 +523,21 @@ import { HdGoodCompanyComponent } from './pages/Home/hd-good-company/hd-good-com
    StructuralSteelTopVendorsComponent,
    StructuralSteelTrustByNewComponent,
 
+   BimUsaServicesNewComponent,
+   BimUsaBannerComponent,
+   BimUsaDrawingFreelancersComponent,
+   BimUsaE2eEncryptionComponent,
+   BimUsaFaqBuildtwinComponent,
+   BimUsaHowItWorksNewComponent,
+   BimUsaLiveTrackingNewComponent,
+   BimUsaPlugPlayNewComponent,
+   BimUsaPrecastServiceComponent,
+   BimUsaSampleDrawingComponent,
+   BimUsaServicesOfferedComponent,
+   BimUsaThreeCardsComponent,
+   BimUsaTopVendorsComponent,
+   BimUsaTrustByNewComponent,
+   
   //  RebarFileUploadServiceComponent,
    HdProvidersComponent,
    HdGoodCompanyComponent

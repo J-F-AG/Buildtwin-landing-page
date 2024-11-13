@@ -36,6 +36,7 @@ import { ServicesNewComponent } from './pages/services-new/services-new.componen
 import { RebarServicesNewComponent } from './pages/rebar/services-new.component';
 import { BimServicesNewComponent } from './pages/bim/services-new.component';
 import { StructuralSteelServicesNewComponent } from './pages/structural-steel/services-new.component';
+import { BimUsaServicesNewComponent } from './pages/bim-usa/services-new.component';
 
 
 
@@ -219,6 +220,15 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/services/steel-detailing-services'
         }
     },
+
+    {path: 'services/bim-service-provider-in-usa', component: BimUsaServicesNewComponent,
+        data: {
+            title: 'Connect with BIM modeling Service provider vendors in USA',
+            description: "BuildTwin Marketplace offers comprehensive BIM modeling services to streamline AEC projects in USA, Arizona, California, Florida, Pennsylvania, Texas, New York, Boston, Los Angeles, Chicago, Houston, Phoenix, Philadelphia, San Antonio, San Diego, Dallas, Near Me. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/bim-service-provider-in-usa'
+        }
+    },
     
     // {path: 'de/AI-project-management', component: OnlineMeetingHomeComponent,
     //     data: {
@@ -355,6 +365,14 @@ const routes: Routes = [
     //         title: 'Structural Steel Detailing Services for AEC Project | BuildTwin',
     //         description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects. Our services include shop drawings, erection drawings, 2D and 3D modelling, connection design, and miscellaneous steel detailing.",
     //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+    //     }
+    // },
+    // {path: 'de/services/bim-service-provider-in-usa', component: BimUsaServicesNewComponent,
+    //     data: {
+    //         title: 'Connect with BIM modeling Service provider vendors in USA',
+    //         description: "BuildTwin Marketplace offers comprehensive BIM modeling services​ to streamline AEC projects in USA, Arizona, California, Florida, Pennsylvania, Texas, New York, Boston, Los Angeles, Chicago, Houston, Phoenix, Philadelphia, San Antonio, San Diego, Dallas, Near Me. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
+    //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+    //         canonical: 'https://www.buildtwin.com/services/bim-service-provider-in-usa'
     //     }
     // },     
     // :lang(de|fr)
