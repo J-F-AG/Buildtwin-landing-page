@@ -79,6 +79,9 @@ export class FreeOfferFormComponent {
     }else if(url.includes('steel-detailing-services')){
       this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
       this.data = this._languageService['serviceData']['steel-detailing-services'];
+    }else if(url.includes('bim-service-provider-in-usa')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-service-provider-in-usa']);
+      this.data = this._languageService['serviceData']['bim-service-provider-in-usa'];
     }
   }
   selectSector(selectedOption: any) {
