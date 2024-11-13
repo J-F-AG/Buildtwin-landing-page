@@ -23,7 +23,9 @@
                                     <span>{{item['category']}}</span>
                                     <p class="fact-desc">{{item.serviceDescription}}</p>
                                     <a target="_blank" [routerLink]="_languageService.currentLanguage+item.link" class="cmpny-logo">
-                                        <img src={{item.serviceCompanyIcon}} alt="" class="logo-img">
+                                        <span class="logo-img">
+                                            <img src={{item.serviceCompanyIcon}} alt="">
+                                        </span>
                                         <span class="heading">vendor
                                             <br>
                                             <span class="heading-1">{{item.serviceCompany}}</span>

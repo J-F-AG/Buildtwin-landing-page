@@ -122,7 +122,7 @@ export class HdServicesComponent implements OnInit, OnDestroy {
 
   factorySlider: OwlOptions = {
     nav: false,
-    margin: 24,  // Adjust as needed
+    margin: 16,  // Adjust as needed
     dots: false,
     loop: true,
     autoplay: false,

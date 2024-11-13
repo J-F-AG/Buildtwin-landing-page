@@ -29,20 +29,22 @@
     grid-template-columns: 1fr max-content;
     gap: 24px;
 }
+
 .main-title {
-    font-family: var(--fontFamily);
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--themeColor);
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    &:after {
-      content: '';
-      width: 100px;
-      height: 2px;
-      border: 1px solid var(--themeColor);
-    }
+  font-family: var(--fontFamily);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--themeColor);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 17px;
+  &:after {
+    content: '';
+    width: 85px;
+    height: 2px;
+    border: 1px solid var(--themeColor);
+  }
 }
 .heading {
     display: flex;
@@ -54,13 +56,14 @@
     font-family: var(--fontFamily);
     font-weight: 600;
     color: var(--newButtonColor);
-    margin: 0;
+    margin: 0 0 8px;
 }
 
 .subTitle{
     font-size: 18px;
     color: var(--lightTextColor);
     font-weight: 400;
+    letter-spacing: 0.35px;
 }
 
 .align-self-end {
@@ -69,6 +72,7 @@
 
 .testimonial-slides {
   background: url('../../../../assets/images/home/map.png') left -50px no-repeat;
+  margin-bottom: 40px;
   &__profile {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -133,6 +137,9 @@
     background-color: #E8E8E8;  /* Color of the line */
     border-radius: 2px;      /* Rounded corners, optional */
     transition: background-color 0.3s ease; /* Transition for active state */
+    span {
+      display: none;
+    }
   }
   
   /* Active dot style */

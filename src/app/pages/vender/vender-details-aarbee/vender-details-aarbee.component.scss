@@ -392,7 +392,7 @@ ul {
                 display: flex;
                 align-items: center;
                 gap: 7px;
-                margin-left: -14px;
+                // margin-left: -14px;
                 figure {
                     width: 40px;
                     height: 40px;
@@ -777,6 +777,7 @@ ul {
     border-top: 1px solid #DDD;
     gap: 20px;
     z-index: 99;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     h3 {
         font-size: 26px;
         small {
