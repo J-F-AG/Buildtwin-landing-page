@@ -111,7 +111,7 @@
     <div class="slider">
         <owl-carousel-o [options]="factorySlider" (change)="getData($event)">
             <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
-                <a class="service__items__sub" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''" [ngStyle]="{backgroundColor: item.color}">
+                <a class="service__items__sub" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''" [ngStyle]="{backgroundColor: item.color, color: item.textColor}">
                     <h2 class="service__items__sub__title">{{item.name}}</h2>
                     <img class="service__items__sub__image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
                 </a>

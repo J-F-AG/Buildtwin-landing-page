@@ -20,7 +20,7 @@ export class HdServicesComponent implements OnInit, OnDestroy {
     margin: 25,
     dots: false,
     loop: true,
-    autoplay: false,
+    autoplay: true,
     autoplayHoverPause: true,
     responsive: {
       0: {
@@ -63,7 +63,8 @@ export class HdServicesComponent implements OnInit, OnDestroy {
       width: '151',
       height: '137',
       serviceId: 9,
-      color: "#C3EEFF",
+      color: "#002e3b",
+      textColor: "#5395a7",
       description: "Find expert vendors for <strong>Precast Detailing Services</strong> on BuildTwin's marketplace. Access comprehensive and precise drawings for precast concrete components, ensuring seamless project execution with accurate fabrication details and international compliance."
     },
 
@@ -74,7 +75,8 @@ export class HdServicesComponent implements OnInit, OnDestroy {
       width: '151',
       height: '137',
       serviceId: 12,
-      color: "#FFE2E1",
+      color: "#5dd8ad",
+      textColor: "#2e7159",
       description: "Connect with professional vendors offering <strong>Steel Detailing Services</strong> on BuildTwin. Obtain detailed shop and erection drawings for steel structures to enhance fabrication and installation efficiency, reducing errors and saving time on your projects."
     },
 
@@ -85,7 +87,8 @@ export class HdServicesComponent implements OnInit, OnDestroy {
       width: '151',
       height: '137',
       serviceId: 10,
-      color: "#C3EEFF",
+      color: "#5c6a6e",
+      textColor: "#2f3739",
       description: "Discover skilled vendors for <strong>Rebar Detailing Services</strong> on BuildTwin. Get precise bar bending schedules, placement drawings, and material take-offs to ensure accuracy and compliance for efficient, cost-effective reinforcement projects."
     },
 
@@ -95,7 +98,8 @@ export class HdServicesComponent implements OnInit, OnDestroy {
       img: '/assets/images/modelling.png',
       width: '151',
       height: '137',
-      color: "#FFE8CB",
+      color: "#fcf477",
+      textColor: "#a8a23d",
       serviceId: 11,
       description: "Explore BuildTwin's marketplace for top <strong>BIM Services</strong> vendors. Access advanced 3D modeling, clash detection, and coordination services that improve collaboration, reduce errors, and enhance efficiency across all project phases."
     },
@@ -126,7 +130,7 @@ export class HdServicesComponent implements OnInit, OnDestroy {
     dots: false,
     loop: true,
     autoplay: false,
-    autoplayHoverPause: false,
+    autoplayHoverPause: true,
     navText: [
       "<i class='ti ti-chevron-left'></i>",
       "<i class='ti ti-chevron-right'></i>",

@@ -51,8 +51,7 @@
       .border-img {
         border-width: 8px; /* Adjust this value as needed */
         border-style: solid; /* Required for border image to show */
-        border-image-source: url("../../../../assets/images/home/border-rect.png");
-        border-image-slice: 30; /* Adjust based on your image */
+        border-color: transparent;
       }
       .image-title {
         font-size: 20px;
@@ -64,21 +63,11 @@
         padding: 15px 0;
       }
     }
-
+    ::ng-deep .owl-nav {
+      top: 40%;
+    }
     ::ng-deep .owl-nav .owl-prev,
     ::ng-deep .owl-nav .owl-next {
-      width: 48px;
-      height: 48px;
-      padding: 12px 8px;
-      gap: 4px;
-      border-radius: 8px;
-      opacity: 1; /* To make it visible; set to 0 if you want it hidden initially */
-      background: #F8F9FF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 24px;
       position: absolute;
       left: -64px;
       top: 50%;
@@ -93,6 +82,29 @@
     flex-wrap: wrap;
     & > div {
       width: calc(25% - 23px);
+    }
+  }
+  .slide {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 127px;
+      width: 0;
+      height: 141px;
+      border-left: 1.5px solid #0053FA;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% - 9px);
+      height: 127px;
+      border: 1.5px solid #0053FA;
+      border-bottom: 0;
+      border-radius: 0 18px 0 0;
     }
   }
   @media only screen and (max-width : 1200px) {

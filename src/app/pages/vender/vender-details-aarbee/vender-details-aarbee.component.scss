@@ -803,6 +803,8 @@ ul {
         background: #FAFAFA;
         padding: 20px;
         gap: 18px;
+        flex-wrap: wrap;
+        align-items: flex-start;
     }
     .default-btn.mdc-button {
         align-self: center;
@@ -1824,7 +1826,7 @@ ul {
     border-radius: 4px;
     border: 1px solid #EEE;
     background: #FFF;
-  
+    width: calc(33.3% - 12px);
     app-bt-select {
       position: absolute;
       width: 100%;
@@ -1854,6 +1856,21 @@ ul {
         top: 50%;
         transform: rotate(45deg) translateY(-50%);
         transform-origin: top right;
+      }
+      &.normal {
+        padding-right: 7px;
+        &::after {
+            display: none;
+        }
+        input, textarea {
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            &::placeholder {
+                color: var(--blackColor);
+                opacity: 1; /* Ensures full opacity */
+              }
+        }
       }
     }
   
@@ -1890,6 +1907,9 @@ ul {
         padding: 8px 35px 8px 8px;
         min-height: 58px;
         min-width: 286px;
+        &.normal {
+            padding-right: 7px;
+        }
       }
     }
   

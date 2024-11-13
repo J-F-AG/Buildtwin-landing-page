@@ -23,14 +23,14 @@
 .formContainer {
   border-radius: 8px;
   background-color: white;
-  border: 1px solid #0053fa;
+  border: 1px solid #CBD6E2;
 
   .topPart {
     color: #0053fa;
     font-size: 18px;
     font-weight: 700;
     padding: 29px 18px;
-    background: #F3F8FF;
+    background: #F1F4F5;
     border-radius: 8px 8px 0 0;
     display: flex;
     align-items: center;
@@ -123,19 +123,20 @@
     line-height: 1.2;
     background: none;
     width: 100%;
+    color: var(--blackColor);
     &::placeholder {
-      color: rgb(14, 14, 40);
+      color: var(--blackColor);
       opacity: 1; /* Ensures full opacity */
     }
 
     /* For Internet Explorer 10+ */
     &:-ms-input-placeholder {
-      color: rgb(14, 14, 40);
+      color: var(--blackColor);
     }
 
     /* For Microsoft Edge */
     &::-ms-input-placeholder {
-      color: rgb(14, 14, 40);
+      color: var(--blackColor);
     }
   }
   app-bt-select {

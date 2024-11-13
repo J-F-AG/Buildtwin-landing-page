@@ -353,32 +353,14 @@
   padding-right: 230px;
 }
 :host ::ng-deep .project-providers .owl-nav {
-  position: absolute !important;
-  top: -60px !important;
-  right: 100px !important;
-  display: flex !important;
-  justify-content: flex-end !important;
-  gap: 10px !important;
-  z-index: 10 !important;
-}
-:host ::ng-deep .project-providers .owl-nav .owl-prev,
-:host ::ng-deep .project-providers .owl-nav .owl-next {
-  width: 48px;
-  height: 48px;
-  padding: 12px 8px;
-  gap: 4px;
-  border-radius: 8px;
-  opacity: 1; /* To make it visible; set to 0 if you want it hidden initially */
-  background: #F8F9FF;
+  position: absolute;
+  top: -63px;
+  right: 95px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 24px;
-  .ti {
-    font-size: 32px;
-    color: var(--blackColor);
-  }
+  gap: 10px;
+  z-index: 10;
+  left: auto;
+  width: auto;
 }
 @media only screen and (max-width : 1200px) {
   .project-providers {
