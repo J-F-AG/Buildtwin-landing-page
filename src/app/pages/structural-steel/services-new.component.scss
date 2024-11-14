@@ -5,7 +5,7 @@
 }
 
 .Stickyform{position: sticky; display: flex; right: 0; top: 0; padding-top: 112px; height: 100vh; width: 440px; background: white;}
-.formWrapper{padding: 40px 30px; flex: 1; overflow: auto;}
+.formWrapper{padding: 0px 30px 40px; flex: 1; overflow: auto; display: flex; flex-direction: column;}
 
 
 @media (max-width:1199px){

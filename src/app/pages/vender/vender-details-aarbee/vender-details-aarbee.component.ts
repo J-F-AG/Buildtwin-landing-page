@@ -340,9 +340,12 @@ export class VenderDetailsAarbeeComponent {
   precastServices = []
   AvailableServicesToggle : boolean = false;
   myForm: FormGroup;
+  companyId = '';
+  companyEmail = '';
   constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
 
     this.getBusinessListing();
+    this.getCompanyDetail()
     this.domain = this.route.snapshot.params['id'];
     this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
@@ -1204,6 +1207,34 @@ export class VenderDetailsAarbeeComponent {
       } else {
         this.showPageLoader = false;
       }
+    })
+  }
+
+  getCompanyDetail() {
+    let payload = {
+      status: "Published"
+    }
+    let url = `https://8d26kljxt6.execute-api.ap-southeast-1.amazonaws.com/production/onboarding/get-requests`
+    this.route.queryParams.subscribe(params => {
+      const status = params['status'];
+      // Check if both parameters are available
+      if (status === 'unpublished') {
+        payload['status'] = "Unpublished";
+      }
+    });
+    this.http.post(url, payload)
+    .pipe(
+      catchError(err => {
+        return err;
+      }),
+      retry(2)
+    ).subscribe(companies => {
+      companies['data'].forEach(company => {
+        if (company.name.replace(/ /g,'') === this.domain) {
+          this.companyId = company.id;
+          this.companyEmail = company.email;
+        }
+      });
     })
   }
   tabbing2(index){

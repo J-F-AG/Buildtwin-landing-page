@@ -6,6 +6,7 @@
       font-weight: 600;
       margin-bottom: 12px;
       line-height: 1.4;
+      padding-right: 100px;
     }
     p{font-size: 16px;
       font-weight: 400;}
@@ -70,7 +71,7 @@
     span{width: 16px;
       height: 8px; transition: all 0.2s ease 0;}
       &.active{
-        span{width: 30px; background: #6448BD;}
+        span{width: 30px; background: #0053fa;}
       }
   }
 }
@@ -210,7 +211,7 @@
 
 .selectBoxWrapper { display: flex; gap: 10px; margin-bottom: 40px;
   label{border-radius: 8px 0px 0px 8px;
-    background: #6448BD; color: white; padding: 17px 11px 17px 0; display: flex; align-items: center; justify-content: center; gap: 8px;
+    background: #0053fa; color: white; padding: 17px 11px 17px 0; display: flex; align-items: center; justify-content: center; gap: 8px;
   }
 }
 

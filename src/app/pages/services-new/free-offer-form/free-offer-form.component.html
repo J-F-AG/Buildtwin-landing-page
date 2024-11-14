@@ -1,22 +1,35 @@
-<div class="formHeader" *ngIf="type != 'outside'">
+<div class="formHeader" *ngIf="type != 'outside' && style != 'secondary'">
     <strong>Get FREE offer for </strong>
     <h3>{{data['name']}}</h3>
     <div>from 5+ pre-qualified vendors</div>
 </div>
 
-<div class="formContainer" id="formContainer" [ngClass]="{'formSubmitted':thankyouMessage}">
-    <div class="topPart">
+<div class="formContainer" id="formContainer" [ngClass]="{'formSubmitted':thankyouMessage, 'secondary' : style == 'secondary'}">
+    <div class="topPart" *ngIf="style != 'secondary'">
         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12.8828 2.75C10.9544 2.75 9.06939 3.32183 7.46601 4.39317C5.86263 5.46451 4.61295 6.98726 3.87499 8.76884C3.13704 10.5504 2.94395 12.5108 3.32016 14.4021C3.69637 16.2934 4.62496 18.0307 5.98853 19.3943C7.35209 20.7579 9.08937 21.6865 10.9807 22.0627C12.872 22.4389 14.8324 22.2458 16.614 21.5078C18.3956 20.7699 19.9183 19.5202 20.9896 17.9168C22.061 16.3134 22.6328 14.4284 22.6328 12.5C22.6301 9.91498 21.602 7.43661 19.7741 5.60872C17.9462 3.78084 15.4678 2.75273 12.8828 2.75ZM17.1634 10.7806L11.9134 16.0306C11.8438 16.1004 11.7611 16.1557 11.67 16.1934C11.579 16.2312 11.4814 16.2506 11.3828 16.2506C11.2843 16.2506 11.1867 16.2312 11.0956 16.1934C11.0046 16.1557 10.9218 16.1004 10.8522 16.0306L8.60219 13.7806C8.46146 13.6399 8.3824 13.449 8.3824 13.25C8.3824 13.051 8.46146 12.8601 8.60219 12.7194C8.74292 12.5786 8.93379 12.4996 9.13282 12.4996C9.33184 12.4996 9.52271 12.5786 9.66344 12.7194L11.3828 14.4397L16.1022 9.71937C16.1719 9.64969 16.2546 9.59442 16.3456 9.5567C16.4367 9.51899 16.5343 9.49958 16.6328 9.49958C16.7314 9.49958 16.8289 9.51899 16.92 9.5567C17.011 9.59442 17.0938 9.64969 17.1634 9.71937C17.2331 9.78906 17.2884 9.87178 17.3261 9.96283C17.3638 10.0539 17.3832 10.1515 17.3832 10.25C17.3832 10.3485 17.3638 10.4461 17.3261 10.5372C17.2884 10.6282 17.2331 10.7109 17.1634 10.7806Z" fill="#0053FA"/>
             </svg>
         Select services from Buildtwin
     </div>
     <div class="submited-form" *ngIf="thankyouMessage">
-        <img src="https://www.jf.ag/assets/images/responder-banner@2x.jpg">
-        <div class="check"></div>
-        <div class="message">
-            Thank you!
-            <small>Our team will be in touch with you soon.</small>
+        <figure>
+            <img src="assets/images/placeholder-thankyou.png">
+        </figure>
+        <div class="check-wrapper" *ngIf="!companyId">
+            <div class="check"></div>
+            <div class="message">
+                Thank you!
+                <small>Our team will be in touch with you soon.</small>
+            </div>
+        </div>
+        <div class="check-wrapper" *ngIf="companyId">
+            <div class="message">
+                Thank you for your enquiry!
+                <small>
+                    We've received your request, and our Success Advisor will <a href="javascript:void(0);" (click)="call()">connect with you shortly to assist you</a>.<br><br>
+                    In the meantime, explore <a href="https://cockpit.buildtwin.com/" target="_blank"><strong>Cockpit</strong></a> — your all-in-one dashboard to effortlessly manage leads and vendor interactions on BuildTwin. And if you're curious to see it in action, don't hesitate to schedule a quick demo with your Success Advisor when they reach out.
+                </small>
+            </div>
         </div>
     </div>
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
@@ -27,6 +40,7 @@
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid)}">
                     <div>
+                        <span *ngIf="style == 'secondary'" class="title">Service <span class="red">*</span></span>
                         <span class="selectedValue">
                             {{ myForm.get('serviceId')?.value ?
                             serviceObj[myForm.get('serviceId').value]['service_name'] : 'Select service' }}
@@ -44,6 +58,7 @@
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid)}">
                     <div>
+                        <span *ngIf="style == 'secondary'" class="title">Sector</span>
                         <span class="selectedValue">
                             {{ myForm.get('selectedPrecastServices')?.value ?
                             sectorObj[myForm.get('selectedPrecastServices').value]['service_name'] : 'Select sector' }}
@@ -58,11 +73,12 @@
 
             </div>
 
-            <div class="formRow" *ngIf="showdropDown && type != 'outside'">
+            <div class="formRow" *ngIf="(showdropDown && type != 'outside') || style == 'secondary'">
 
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid)}">
                     <div>
+                        <span *ngIf="style == 'secondary'" class="title">Building Code</span>
                         <span class="selectedValue">
                             {{ myForm.get('buildingCodeId')?.value ?
                             buildingCodeObj[myForm.get('buildingCodeId').value]['building_code'] : 'Select Building
@@ -82,7 +98,10 @@
             <div class="formRow">
                 <div class="selectBox"
                     [ngClass]="{'error-border': (myForm.get('email')?.touched && myForm.get('email')?.invalid)}">
-                    <input class="input-text" type="text" placeholder="Enter Email" formControlName="email">
+                    <div class="normal">
+                        <span *ngIf="style == 'secondary'" class="title">Email <span class="red">*</span></span>
+                        <input class="input-text" type="text" placeholder="Enter Email" formControlName="email">
+                    </div>
                 </div>
                 <div *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid" class="error-message">
                     <span *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</span>
@@ -92,7 +111,10 @@
             <div class="formRow">
                 <div class="selectBox"
                     [ngClass]="{'error-border': (myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid)}">
+                    <div class="normal">
+                        <span *ngIf="style == 'secondary'" class="title">Project Name <span class="red">*</span></span>
                     <input class="input-text" type="text" placeholder="Project Name" formControlName="projectName">
+                    </div>
                 </div>
                 <div *ngIf="myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid"
                     class="error-message">
@@ -101,8 +123,10 @@
             </div>
             <div class="formRow">
                 <div class="selectBox">
-                    <textarea class="textarea-description" formControlName="description"
-                        placeholder="Description"></textarea>
+                    <div class="normal">
+                        <textarea class="textarea-description" formControlName="description"
+                            placeholder="Description"></textarea>
+                    </div>
                 </div>
             </div>
             
@@ -112,15 +136,15 @@
 
         </div>
         <div class="bottomPart">
-            <h5>Start Enquiry</h5>
-            <p>If it take few minutes and then sit back and relax our customer care person contact you asap</p>
+            <h5 *ngIf="style != 'secondary'">Start Enquiry</h5>
+            <p *ngIf="style != 'secondary'">If it take few minutes and then sit back and relax our customer care person contact you asap</p>
 
-            <div class="buttonContainer">
+            <div class="buttonContainer" [ngClass]="{'pt-none' : style == 'secondary', 'normalBtn':normalBtn}">
                 <button mat-button class="default-btn submit_enquiry_form" type="submit" [disabled]="myForm.invalid && disableButton"> Submit Enquiry
                 </button>
             </div>
 
-            <div class="integrationsContainer">
+            <div class="integrationsContainer" *ngIf="style != 'secondary'">
                 <strong>Additional Integrations:</strong>
                 <div class="integrationsList">
                     <div class="listItem">
@@ -148,3 +172,4 @@
         </div>
     </form>
 </div>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
