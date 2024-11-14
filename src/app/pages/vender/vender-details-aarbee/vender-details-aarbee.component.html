@@ -396,7 +396,7 @@
                             </ul>
                         </ng-container>
                         <div class="button-wrap">
-                            <a href="https://cockpit.buildtwin.com/" target="_blank" class="default-btn mdc-button">
+                            <a href="javascript:void(0)" class="default-btn mdc-button" (click)="AvailableServicesToggleStatus(true)">
                                 Start Enquiry
                             </a>
                             <!-- <a href="javascript:void(0)" class="buttonV2">
@@ -1387,8 +1387,8 @@
         </div>
     </div>
 
-    <div class="sticky-bottom">
-        <div class="toggle" [ngClass]="{'active':AvailableServicesToggle}" (click)="AvailableServicesToggleStatus()">
+    <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle}" (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
+        <div class="toggle" [ngClass]="{'active':AvailableServicesToggle}" (click)="AvailableServicesToggleStatus(); $event.stopPropagation()">
 
         </div>
         <h3>
@@ -1404,37 +1404,62 @@
                 </li>
             </ng-container>
         </ul> -->
-        <div class="flex bg-sticky" *ngIf="AvailableServicesToggle">
-            <div class="selectBox precastField">
-                <div>
-                    <span class="title">Service <span class="red">*</span></span>
-                    <!-- <span class="selectedValue">{{selectedPrecastServices?.label}}</span> -->
-                    <span class="selectedValue v-center-flex">
-                        {{selectedPrecastServices?.label}}</span>
+        <!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit()"> -->
+            <div class="flex bg-sticky" *ngIf="AvailableServicesToggle">
+                <div class="selectBox precastField">
+                    <div>
+                        <span class="title">Service <span class="red">*</span></span>
+                        <!-- <span class="selectedValue">{{selectedPrecastServices?.label}}</span> -->
+                        <span class="selectedValue v-center-flex">
+                            {{selectedPrecastServices?.label}}</span>
+                    </div>
+                    <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="precastServices" (selectedTabChange)="selectService($event)" [selectedInput]="selectedPrecastServices" ></app-bt-select>
                 </div>
-                <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="precastServices" (selectedTabChange)="selectService($event)" [selectedInput]="selectedPrecastServices" ></app-bt-select>
-            </div>
-            <div class="selectBox precastField">
-                <div>
-                    <span class="title">Software <span class="red">*</span></span>
-                    <span class="selectedValue v-center-flex">
-                        {{selectedSoftware?.label}}</span>
+                <div class="selectBox precastField">
+                    <div>
+                        <span class="title">Software <span class="red">*</span></span>
+                        <span class="selectedValue v-center-flex">
+                            {{selectedSoftware?.label}}</span>
+                    </div>
+                    <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="listOfSoftwareList" (selectedTabChange)="selectSoftware($event)" [selectedInput]="selectedSoftware" ></app-bt-select>
                 </div>
-                <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="listOfSoftwareList" (selectedTabChange)="selectSoftware($event)" [selectedInput]="selectedSoftware" ></app-bt-select>
-            </div>
-            <div class="selectBox precastField">
-                <div>
-                    <span class="title">Building Code <span class="red">*</span></span>
-                    <span class="selectedValue v-center-flex">
-                        {{selectedBuildingCode?.label}}</span>
+                <div class="selectBox precastField">
+                    <div>
+                        <span class="title">Building Code <span class="red">*</span></span>
+                        <span class="selectedValue v-center-flex">
+                            {{selectedBuildingCode?.label}}</span>
+                    </div>
+                    <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="listOfBuildingCodeList" (selectedTabChange)="selectBuildingCode($event)" [selectedInput]="selectedBuildingCode" ></app-bt-select>
                 </div>
-                <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="listOfBuildingCodeList" (selectedTabChange)="selectBuildingCode($event)" [selectedInput]="selectedBuildingCode" ></app-bt-select>
-            </div>
+                <div class="selectBox precastField">
+                    <div class="normal">
+                        <span class="title">Email <span class="red">*</span></span>
+                        <span class="selectedValue v-center-flex">
+                            <input type="text" placeholder="Enter Email"></span>
+                    </div>
+                </div>
+                
+                <div class="selectBox precastField">
+                    <div class="normal">
+                        <span class="title">Project Name <span class="red">*</span></span>
+                        <span class="selectedValue v-center-flex">
+                            <input type="text" placeholder="Project Name">
+                        </span>
+                    </div>
+                </div>
 
-            <a target="_blank" href="https://cockpit.buildtwin.com/" class="default-btn mdc-button">
-                Tender work
-            </a>
-        </div>
+                <div class="selectBox precastField">
+                    <div class="normal">
+                        <span class="selectedValue v-center-flex">
+                            <textarea placeholder="Description"></textarea>
+                        </span>
+                    </div>
+                </div>
+                <a target="_blank" href="https://cockpit.buildtwin.com/" class="default-btn mdc-button">
+                    Tender work
+                </a>
+            </div>
+        <!-- </form> -->
     </div>
 
 </div>

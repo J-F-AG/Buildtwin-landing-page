@@ -69,85 +69,134 @@
 .align-self-end {
   align-self: end;
 }
-
 .testimonial-slides {
-  background: url('../../../../assets/images/home/map.png') left -50px no-repeat;
-  margin-bottom: 40px;
-  &__profile {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    &--image {
-      height: 500px;
-      width: 400px !important;
-      justify-self: end;
-    }
-    &--user {
-      display: grid;
-      margin-block-start: 25%;
-      &--description {
-        font-family: var(--fontFamily);
-        color: var(--newButtonColor);
-        padding: 40px;
-        background-color: var(--newBackgroundColor);
-      }
-      &--footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        justify-content: center;
-        &__block {
-          display: grid;
-          justify-content: center;
-          border-inline-end: 1px solid #D2D2D2;
-        }
-        &--name {
-          color: black;
-          font-size: 22px;
-          font-weight: 700;
-        }
-        &--org {
-          color: black;
-          font-size: 14px;
-        }
-      }
-      &--logo {
-        height: 24px;
-      }
-    }
-  }
-  ::ng-deep .owl-dots {
+  border-radius: 0 12px 12px 12px;
+  border: 1px solid #0053FA;
+  background: #FFF;
+  .testimonial-slides__profile {
     display: flex;
-    justify-content: flex-end;
-    gap: 8px;  /* Adjust spacing between lines */
-  }
-
-  ::ng-deep .owl-nav {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  ::ng-deep .owl-prev, ::ng-deep .owl-next {
-    background-color: #F8F9FF;
-  }
-  
-  /* Style individual dots as lines */
-    ::ng-deep .owl-dot {
-    width: 16px;             /* Width of the line */
-    height: 4px;             /* Height of the line */
-    background-color: #E8E8E8;  /* Color of the line */
-    border-radius: 2px;      /* Rounded corners, optional */
-    transition: background-color 0.3s ease; /* Transition for active state */
-    span {
-      display: none;
+    gap: 15px;
+    figure {
+      min-width: 465px;
+      max-width: 465px;
+      position: relative;
+      border-radius: 0 0 0 12px;
+      overflow: hidden;
+      margin: 0;
+      .abs {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70%;
+        transform: translateY(-26%) translateX(20%);
+      }
+    }
+    .testimonial-slides__profile--user {
+      flex-grow: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .testimonial-slides__profile--user--footer--name {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 1px;
+    }
+    .testimonial-slides__profile--user--footer--org {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--lightTextColor);
+      margin-bottom: 9px;
+    }
+    .testimonial-slides__profile--user--description {
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      line-height: 1.3;
     }
   }
-  
-  /* Active dot style */
-  ::ng-deep .owl-dot.active {
-    background-color: var(--themeColor);  /* Active line color */
-    width: 80px;
+  ::ng-deep {
+    
+      .owl-nav {
+          position: absolute;
+          right: 92px;
+          top: -52px;
+          margin: 0;
+          padding: 20px;
+          background: white;
+          display: flex;
+          gap: 14px;
+      }
+      .owl-prev {
+          position: relative;
+          width: 48px;
+          height: 48px;
+          border-radius: 8px;
+          background: rgba(0, 0, 0, 0.10);
+          backdrop-filter: blur(5px);
+          font-size: 0;
+          &::after {
+              top: 50%;
+              content: "";
+              position: absolute;
+              left: 50%;
+              width: 15px;
+              height: 15px;
+              margin-left: 5px;
+              border-top: 2.5px solid #002E3B;
+              border-right: 2.5px solid #002E3B;
+              transform: translate(-50%, -50%) rotate(-135deg);
+          }
+      }
+      .owl-next {
+          position: relative;
+          width: 48px;
+          height: 48px;
+          border-radius: 8px;
+          background: rgba(0, 0, 0, 0.10);
+          backdrop-filter: blur(5px);
+          font-size: 0;
+          &::after {
+              top: 50%;
+              content: "";
+              position: absolute;
+              left: 50%;
+              width: 15px;
+              height: 15px;
+              margin-left: -5px;
+              border-top: 2.5px solid #002E3B;
+              border-right: 2.5px solid #002E3B;
+              transform: translate(-50%, -50%) rotate(45deg);
+          }
+      }
+      .owl-dots {
+          display: inline-flex;
+          height: 6px;
+          margin-top: 0;
+          position: absolute;
+          right: 30px;
+          bottom: 29px;
+          gap: 10px;
+      }
+      .owl-theme .owl-dots .owl-dot span {
+          display: none;
+      }
+      .owl-theme .owl-dots .owl-dot {
+          width: 16px;
+          height: 6px;
+          border-radius: 100px;
+          display: block;
+          background: #E4EAF5;
+          &.active {
+              width: 40px;
+              background: #0053fa;
+          }
+      }
   }
 }
+
 
 .partnerWrap{
     width: 100%;

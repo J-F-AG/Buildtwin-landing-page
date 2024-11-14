@@ -7,6 +7,7 @@ import { ModalPopupService } from './modal/modal.service';
 import { FooterService } from '../../includes/hd-footer/footer.service';
 import { SeoService } from 'src/app/services/seo.service';
 import { VenderDetailService } from './vender-detail.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -338,7 +339,8 @@ export class VenderDetailsAarbeeComponent {
   };
   precastServices = []
   AvailableServicesToggle : boolean = false;
-  constructor(private _venderDetailService : VenderDetailService, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
+  myForm: FormGroup;
+  constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
 
     this.getBusinessListing();
     this.domain = this.route.snapshot.params['id'];
@@ -678,6 +680,16 @@ export class VenderDetailsAarbeeComponent {
   }
 
   ngOnInit() {
+
+    this.myForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]], // Email field validation
+      projectName: ['', Validators.required], // Project Name validation
+      selectedSoftware: [null], // Validation for selectedSoftware
+      buildingCodeId: [null], // Static building code
+      serviceId: [null, Validators.required], // New control for service ID
+      description: [''], // Description validation
+    });
+    
     this.loadScript();
     setTimeout(() => {
       console.log(this.formData)
@@ -1219,8 +1231,13 @@ export class VenderDetailsAarbeeComponent {
     this.selectedBuildingCode = this.listOfBuildingCodeList.find(e => e.value === selectedOption);
     // this.selectedSoftware = this.listOfSoftwareList.find(e => e.value === selectedOption);
   }
-  AvailableServicesToggleStatus(){
-    this.AvailableServicesToggle = !this.AvailableServicesToggle;
+  AvailableServicesToggleStatus(type?){
+    if(type && !this.AvailableServicesToggle) {
+      this.AvailableServicesToggle = type
+    }
+    if(!type){
+      this.AvailableServicesToggle = !this.AvailableServicesToggle;
+    }
   }
   ngOnDestroy() {
     this._footerService['companyDetail'] = {}

@@ -16,14 +16,21 @@
       visibility: hidden;
     }
     .service__items__sub {
-      display: grid;
+      display: flex;
+      align-items: flex-end;
       padding-inline-start: 10px;
       padding-block-start: 10px;
+      &::before,&::after {
+        display: none;
+      }
       img.service__items__sub__image {
         justify-self: end;
         align-self: end;
         width: 151px;
       }
+    }
+    &::after {
+      display: none;
     }
   }
   ::ng-deep div .active {
@@ -42,14 +49,49 @@
     .service__items__sub {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       padding: 0;
+      position: relative;
+      // &::before {
+      //   content: "";
+      //   width: 205px;
+      //   height: 150px;
+      //   background: url(../../../../assets/images/active-service-top.svg) 0 0 no-repeat;
+      //   background-size: 100% auto;
+      //   position: absolute;
+      //   left: 0;
+      //   top: 0;
+      //   display: block;
+      // }
+      // &::after {
+      //   content: "";
+      //   width: 75px;
+      //   height: 75px;
+      //   background: url(../../../../assets/images/active-service-bottom.svg) 0 0 no-repeat;
+      //   background-size: 100% auto;
+      //   position: absolute;
+      //   left: 0;
+      //   bottom: 0;
+      //   display: block;
+      //   z-index: 2;
+      // }
       img.service__items__sub__image {
         justify-self: center;
         align-self: center;
         width: 100%;
       }
     }
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   left: -46px;
+    //   bottom: -10px;
+    //   width: 136px;
+    //   height: 67px;
+    //   background: white;
+    //   transform: rotate(45deg);
+    // }
   }
 }
 .services {
@@ -171,20 +213,22 @@
     &__sub {
       display: grid;
       grid-template-columns: 50% 50%;
-      border-radius: 16px;
+      border-radius: 20px 20px 0 20px;
       padding-inline-start: 10px;
       padding-block-start: 10px;
       height: 100%;
       // animation: fadeInOut 5s infinite;
       position: relative;
       &__title {
-        font-size: 16px;
-        font-size: 30px;
-        font-weight: 500;
+        font-size: 25px;
+        font-weight: 600;
         color: var(--newButtonColor);
         position: relative;
         z-index: 9;
         margin: 0;
+        padding-bottom: 20px;
+        margin-right: -20px;
+        color: inherit;
         // word-wrap: break-word;
       }
       &__image {
