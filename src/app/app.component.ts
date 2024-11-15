@@ -185,7 +185,13 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
-    }
+    }else if(url.includes('/services/bim-service-provider-in-usa')){
+      const faqSchema = this._languageService.injectFAQSchemaForBimServiceProvider(this.renderer)
+
+    this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+      `<script type="application/ld+json">${faqSchema}</script>`
+    );
+  }
   }
    
 }

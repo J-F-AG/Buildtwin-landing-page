@@ -223,9 +223,9 @@ const routes: Routes = [
 
     {path: 'services/bim-service-provider-in-usa', component: BimUsaServicesNewComponent,
         data: {
-            title: 'Connect with BIM modeling Service provider vendors in USA',
-            description: "BuildTwin Marketplace offers comprehensive BIM modeling services to streamline AEC projects in USA, Arizona, California, Florida, Pennsylvania, Texas, New York, Boston, Los Angeles, Chicago, Houston, Phoenix, Philadelphia, San Antonio, San Diego, Dallas, Near Me. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
-            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            title: 'BIM Services USA | BIM Outsourcing Companies USA - BuildTwin Marketplace',
+            description: "BuildTwin Marketplace is your trusted BIM services provider in USA. Our expert team offers comprehensive BIM consulting and outsourcing solutions to optimize your AEC projects. We deliver quality results across New York, Florida, Chicago, Texas, and nearby areas.",
+            image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
             canonical: 'https://www.buildtwin.com/services/bim-service-provider-in-usa'
         }
     },
