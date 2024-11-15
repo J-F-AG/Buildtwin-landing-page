@@ -353,6 +353,12 @@ ul.partner li {
 //     }
 //   }
 // }
+.testimonial-slides .testimonial-slides__profile {
+  flex-direction: column;
+}
+.testimonial-slides .testimonial-slides__profile .testimonial-slides__profile--user {
+  padding: 20px;
+}
   }
   @media only screen and (max-width : 767px) {
     .title {
@@ -360,6 +366,17 @@ ul.partner li {
     }
     .subTitle {
       font-size: 14px;
+    }
+    .testimonial-slides ::ng-deep .owl-nav {
+      position: absolute;
+      right: 50%;
+      top: -40px;
+      margin: 0;
+      padding: 4px 14px;
+      background: white;
+      display: flex;
+      gap: 14px;
+      transform: translateX(50%);
     }
   }
 
@@ -382,7 +399,7 @@ ul.partner li {
         &--user {
           margin-block-start: 20px;
           &--description{
-            padding: 10px;
+            padding: 10px 0;
           }
         }
       }

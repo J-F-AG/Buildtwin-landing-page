@@ -24,8 +24,8 @@ export class HdProvidersComponent {
       0: {
         items: 1  // 1 item for small screens
       },
-      400: {
-        items: 1  // 1 item for slightly larger screens
+      600: {
+        items: 2  // 1 item for slightly larger screens
       },
       740: {
         items: 3  // 2 items for medium screens

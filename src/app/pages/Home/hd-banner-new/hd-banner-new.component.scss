@@ -16,6 +16,12 @@
     .formContainer {
         width: 440px;
         min-width: 440px;
+        display: flex;
+        flex-direction: column;
+        app-free-offer-form {
+            flex-grow: 1;
+            display: flex;
+        }
     }
     .integration-box {
         display: flex;
@@ -26,9 +32,9 @@
     }
     .sliderCover {
         // background: linear-gradient(64.99deg, #EAE3FF -43.3%, rgba(255, 255, 255, 0.9) 200.99%);
-        padding: 0 24px;
+        padding: 0 24px 110px;
         position: relative;
-        min-height: 100%;
+        // min-height: 100%;
         display: grid;
         overflow: hidden;
         grid-template-columns: 100%;
@@ -474,15 +480,16 @@
         left: 0;
         top: 0;
         width: auto;
+        padding: 0 30px;
     }
     .bannerr-area-item-image {
         margin-top: -60px;
         position: relative;
         z-index: -1;
     }
-    .scroll-next {
-        display: none;
-    }
+    // .scroll-next {
+    //     display: none;
+    // }
 }
 /* max width 992px */
 @media only screen and (max-width : 992px) {
@@ -494,7 +501,7 @@
         padding-right: 20px;
     }
     .banner-area .integrationsList {
-        padding: 0 0;
+        padding: 0 30px;
         ::ng-deep .owl-carousel {
 
         }
@@ -521,8 +528,8 @@
             }
         }
         .formContainer {
-            width: auto;
-            margin: 0 20px;
+            // width: auto;
+            // margin: 0 20px;
             // margin-inline: auto;
         }
     }
@@ -591,12 +598,12 @@
     //     transform-origin: 0 0;
     // }
 
-    .banner-area .sliderCover .integrationsList ::ng-deep .owl-nav .owl-prev {
-        left: -10px;
-    }
-    .banner-area .sliderCover .integrationsList ::ng-deep .owl-nav .owl-next {
-        right: -10px;
-    }
+    // .banner-area .sliderCover .integrationsList ::ng-deep .owl-nav .owl-prev {
+    //     left: -10px;
+    // }
+    // .banner-area .sliderCover .integrationsList ::ng-deep .owl-nav .owl-next {
+    //     right: -10px;
+    // }
     .banner-area--item--step {
         font-size: 16px;
         margin-bottom: 20px;
@@ -671,8 +678,9 @@
         width: 100% !important;
     }
     .formContainer {
-        width: calc(100% - 20px) !important;
-        margin-inline: 10px !important;
+        width: calc(100vw - 50px) !important;
+        margin-inline: 0 !important;
+        min-width: 0 !important;
     }
     .sliderCover {
         width: 100vw !important;
