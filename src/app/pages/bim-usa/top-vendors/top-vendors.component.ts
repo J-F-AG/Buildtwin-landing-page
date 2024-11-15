@@ -37,9 +37,9 @@ export class BimUsaTopVendorsComponent{
 
   customOptions: OwlOptions = {
     margin: 25,
-    loop: false,
+    loop: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplayHoverPause: false,
     navText:['<button type="button" class="btn slider-left-btn"> </button>','<button type="button" class="btn slider-right-btn"> </button>'],
     nav: true,

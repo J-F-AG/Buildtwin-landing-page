@@ -1387,7 +1387,7 @@
         </div>
     </div>
 
-    <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle}" (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
+    <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle,'active': AvailableServicesToggle}" (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
         <div class="toggle" [ngClass]="{'active':AvailableServicesToggle}" (click)="AvailableServicesToggleStatus(); $event.stopPropagation()">
 
         </div>
@@ -1404,62 +1404,9 @@
                 </li>
             </ng-container>
         </ul> -->
-        <!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit()"> -->
             <div class="flex bg-sticky" *ngIf="AvailableServicesToggle">
-                <div class="selectBox precastField">
-                    <div>
-                        <span class="title">Service <span class="red">*</span></span>
-                        <!-- <span class="selectedValue">{{selectedPrecastServices?.label}}</span> -->
-                        <span class="selectedValue v-center-flex">
-                            {{selectedPrecastServices?.label}}</span>
-                    </div>
-                    <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="precastServices" (selectedTabChange)="selectService($event)" [selectedInput]="selectedPrecastServices" ></app-bt-select>
-                </div>
-                <div class="selectBox precastField">
-                    <div>
-                        <span class="title">Software <span class="red">*</span></span>
-                        <span class="selectedValue v-center-flex">
-                            {{selectedSoftware?.label}}</span>
-                    </div>
-                    <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="listOfSoftwareList" (selectedTabChange)="selectSoftware($event)" [selectedInput]="selectedSoftware" ></app-bt-select>
-                </div>
-                <div class="selectBox precastField">
-                    <div>
-                        <span class="title">Building Code <span class="red">*</span></span>
-                        <span class="selectedValue v-center-flex">
-                            {{selectedBuildingCode?.label}}</span>
-                    </div>
-                    <app-bt-select [imageIcon]="true" [nzShowSearch]="true" [options]="listOfBuildingCodeList" (selectedTabChange)="selectBuildingCode($event)" [selectedInput]="selectedBuildingCode" ></app-bt-select>
-                </div>
-                <div class="selectBox precastField">
-                    <div class="normal">
-                        <span class="title">Email <span class="red">*</span></span>
-                        <span class="selectedValue v-center-flex">
-                            <input type="text" placeholder="Enter Email"></span>
-                    </div>
-                </div>
-                
-                <div class="selectBox precastField">
-                    <div class="normal">
-                        <span class="title">Project Name <span class="red">*</span></span>
-                        <span class="selectedValue v-center-flex">
-                            <input type="text" placeholder="Project Name">
-                        </span>
-                    </div>
-                </div>
-
-                <div class="selectBox precastField">
-                    <div class="normal">
-                        <span class="selectedValue v-center-flex">
-                            <textarea placeholder="Description"></textarea>
-                        </span>
-                    </div>
-                </div>
-                <a target="_blank" href="https://cockpit.buildtwin.com/" class="default-btn mdc-button">
-                    Tender work
-                </a>
+                <app-free-offer-form [type]="'outside'" [normalBtn]="true" [style]="'secondary'" [companyId]="companyId" [companyEmail]="companyEmail"></app-free-offer-form>
             </div>
-        <!-- </form> -->
     </div>
 
 </div>

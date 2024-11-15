@@ -15,6 +15,10 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class FreeOfferFormComponent {
   @Input() type: string = '';
+  @Input() style: string = '';
+  @Input() companyId: string = '';
+  @Input() companyEmail: string = '';
+  @Input() normalBtn: boolean = false;
   showdropDown: boolean = true;
 
   // enquiryPayload = {
@@ -44,6 +48,7 @@ export class FreeOfferFormComponent {
   disableButton: boolean = false;
   thankyouMessage: boolean = false;
   data = {};
+  showPopup=false;
   constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService, public _languageService: LanguageService) {
     this.fetchData()
   }
@@ -149,6 +154,9 @@ export class FreeOfferFormComponent {
         project_description: this.myForm.get('description')?.value,
         project_name: this.myForm.get('projectName')?.value
       };
+      if(this.companyId) {
+        this.payload['company_id'] = this.companyId;
+      }
       // Remove keys with null or blank values
       this.payload = Object.fromEntries(
         Object.entries(this.payload)
@@ -171,6 +179,9 @@ export class FreeOfferFormComponent {
             this.isTenderWork = res[0]['data'];
             this.uploadedMessage = res[0]['data']['message'];
             this.fileUploadedStatus('')
+            if(this.companyId) {
+              this.inviteUser(res[0]['data'])
+            }
           }else {
             this.message.create('error', `${res[0]['data']['message']}`);
           }
@@ -181,6 +192,34 @@ export class FreeOfferFormComponent {
       this.myForm.markAllAsTouched(); // Mark all fields as touched to show errors
     }
   }
+
+  inviteUser(data){
+
+    let payloadInvite = {
+      "booked_service_id": data['id'],
+      "is_private": false,
+    }
+    
+    
+    payloadInvite['companies'] = [
+      {
+        company_id: this.companyId,
+        email: this.companyEmail
+      }
+    ];
+
+    this._http.post(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService/invite-user
+      `, payloadInvite)
+      .pipe(
+        catchError(err => {
+          return err;
+        }),
+      )
+      .subscribe(res => {
+
+      });
+  }
+
   fileUploadedStatus($event){
 
     this.thankyouMessage = true
@@ -198,8 +237,17 @@ export class FreeOfferFormComponent {
     setTimeout(() => {
       this.showdropDown = true;
     }, 10);
-    setTimeout(() => {
-      this.thankyouMessage = false;
-    }, 5000);
+    if(!this.companyId) {
+      setTimeout(() => {
+        this.thankyouMessage = false;
+      }, 5000);
+    }
   }
+
+  call(){
+    this.showPopup =true
+    }
+    closePopupStatus($event) {
+      this.showPopup = false;
+    }
 }

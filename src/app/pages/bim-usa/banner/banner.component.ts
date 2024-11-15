@@ -13,24 +13,24 @@ import { isPlatformBrowser } from '@angular/common';
 export class BimUsaBannerComponent {
   cities = ['Arizona', 'New York', 'Texas', 'Pennsylvania', 'Florida', 'California'];
   currentCity: string = this.cities[0];
-  private cityIndex = 0;
-  private citySubscription: Subscription | undefined;
+  // private cityIndex = 0;
+  // private citySubscription: any;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      this.citySubscription = interval(2000).subscribe(() => {
-        this.cityIndex = (this.cityIndex + 1) % this.cities.length; // Loop back to the first city
-        this.currentCity = this.cities[this.cityIndex];
-      });
+      // this.citySubscription = setInterval(() => {
+      //   this.cityIndex = (this.cityIndex + 1) % this.cities.length; // Loop back to the first city
+      //   this.currentCity = this.cities[this.cityIndex];
+      // }, 2000);
     }
   }
 
   ngOnDestroy(): void {
-    if (this.citySubscription) {
-      this.citySubscription.unsubscribe(); // Clean up the subscription on component destroy
-    }
+    // if (this.citySubscription) {
+    //   clearInterval(this.citySubscription)
+    // }
   }
   
 }

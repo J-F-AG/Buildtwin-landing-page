@@ -1,6 +1,11 @@
 .bannerWrapper{position: relative; padding-top: 90px;}
 .bannerContainer{position: absolute; height: 100%; left: 0; top: 0; width: 100%;}
 .container,.container-with-right{min-height: 100vh; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 116px;}
+.container {
+    max-width: none;
+    padding-left: 100px;
+    padding-right: 100px;
+}
 .bannerWrapper > img{width: 100%; display: block;}
 
 .bannerWrapper h1,.bannerWrapper p{ color: white;}
@@ -33,6 +38,72 @@
     background: #8CF4F3;
 }
 .bannerWrapper p{ font-size: 18px; font-weight: 400; color: var(--lightTextColor);}
+.states {
+    position: relative;
+}
+.states span {
+    position: absolute;
+    opacity: 0;
+    animation: showHide 12s infinite;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  /* Set different delays for each span to show in sequence */
+  .states span:nth-child(1) { animation-delay: 0s; }
+  .states span:nth-child(2) { animation-delay: 2s; }
+  .states span:nth-child(3) { animation-delay: 4s; }
+  .states span:nth-child(4) { animation-delay: 6s; }
+  .states span:nth-child(5) { animation-delay: 8s; }
+  .states span:nth-child(6) { animation-delay: 10s; }
+  
+  @keyframes showHide {
+    0%, 16.66% { opacity: 0; }  /* Hidden at start and end of each segment */
+    8.33%, 13.33% { opacity: 1; } /* Visible in the middle of each segment */
+  }
+
+@media (min-width:1500px){
+    .container {
+        justify-content: flex-start;
+        padding-bottom: 0;
+    }
+    .container-with-right {
+        justify-content: flex-start;
+        padding-bottom: 0;
+        padding-top: 140px;
+    }
+    h1 {
+        &::after, &::before {
+            display: none;
+        }
+    }
+    p {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: calc(100% + 30px);
+            width: calc(100% - 50px);
+            height: 200px;
+            border: 1px solid #8CF4F3;
+            border-top: none;
+            border-radius: 0 0 12px 0;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 50px;
+            top: -30px;
+            bottom: -30px;
+            width: 240px;
+            border: 1px solid #8CF4F3;
+            border-left: none;
+            border-bottom: none;
+            border-radius: 0 12px 0 0;
+        }
+    }
+}
 @media (max-width:900px){
     .bannerWrapper {
         padding-top: 65px;
