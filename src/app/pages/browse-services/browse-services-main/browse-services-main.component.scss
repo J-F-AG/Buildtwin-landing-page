@@ -839,6 +839,14 @@
 
 
 @media only screen and (max-width : 767px) {
+  .sectionTop .heading {
+    font-size: 24px;
+  }
+  .discoverProjectsSection .sectionHeader .title,
+  .helpSection .sectionHeader .title,
+  .specialProjectsSection .sectionHeader .title {
+    font-size: 22px;
+  }
   .headerSection,
   .discoverProjectsSection {
     padding-left: 0;

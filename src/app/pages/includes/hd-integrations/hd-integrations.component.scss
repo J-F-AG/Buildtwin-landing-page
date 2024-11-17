@@ -14,6 +14,7 @@
     left: -10px;
     top: 50%;
     transform: translateY(-50%);
+    margin: 0;
 }
 :host ::ng-deep .owl-theme .owl-nav [class*=owl-next] {
     left: auto;
@@ -120,7 +121,7 @@
 
 @media only screen and (max-width : 1200px) {
     .integrations-area {
-        padding-left: 7px;
+        padding-left: 30px;
         padding-right: 30px;
     }
 }
@@ -135,11 +136,17 @@
 @media only screen and (max-width : 767px) {
     .integrations-area {
         .plugWrapper {
-            flex-direction: column;
+            gap: 20px;
+            // flex-direction: column;
+        }
+        & ::ng-deep {
+            .plugWrapper .owl-stage-outer::after, .plugWrapper .owl-stage-outer::before {
+                opacity: 0;
+            }
         }
     }
     .integrations-area.ptb-75 {
-        padding-top: 0!important;
+        // padding-top: 0!important;
     }
 
     .integration-box {

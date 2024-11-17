@@ -108,6 +108,7 @@ a {
           padding-top: 15px;
           padding-bottom: 15px;
           background: var(--themeColor);
+          box-shadow: none;
         }
       }
     }
@@ -150,7 +151,7 @@ a {
     gap: 8px;
     position: sticky;
     top: 0;
-    z-index: 9;
+    z-index: 1;
   }
 
   .middlePart {
@@ -210,6 +211,9 @@ a {
         &::after {
           display: none;
         }
+        & + .integrationsContainer {
+          padding-bottom: 0;
+        }
       }
       &.pt-none {
         padding-top: 0px;
@@ -222,6 +226,10 @@ a {
         padding-top: 13px;
         padding-bottom: 13px;
         background: #002E3B;
+        box-shadow: 0 -11px 22px 14px white;
+        &.normalBtn {
+          box-shadow: none;
+        }
       }
     }
 
@@ -444,6 +452,11 @@ a {
       flex-direction: column;
       gap: 20px;
       align-items: center;
+      &.left-align {
+        .message {
+          text-align: left;
+        }
+      }
     }
     .check {
       width: 80px;
@@ -521,5 +534,8 @@ a {
   }
   .selectBox .selectedValue {
     font-size: 14px;
+  }
+  .formContainer.secondary .middlePart .formRow {
+    width: calc(50% - 9px);
   }
 }

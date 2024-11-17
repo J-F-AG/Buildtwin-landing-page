@@ -185,7 +185,24 @@ ul {
                         font-weight: 400;
                         align-items: center;
                         white-space: nowrap;
-                        padding-top: 2px;
+                        padding-top: 0;
+                        padding-left: 13px;
+                        margin-top: 2px;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 1px;
+                            height: 12px;
+                            background: #738288;
+                        }
+                        span {
+                            color: #0053fb;
+                            font-weight: 600;
+                        }
                     }
                 }
             }
@@ -410,11 +427,11 @@ ul {
                     font-weight: 400;
                     line-height: normal;
                     strong {
-                        color: #000;
+                        color: var(--lightTextColor);
                         font-family: var(--fontFamily);
                         font-size: 16px;
                         font-style: normal;
-                        font-weight: 600;
+                        font-weight: 400;
                         line-height: normal;
                         display: block;
                     }
@@ -848,12 +865,12 @@ ul {
             .team-member {
                 .name {
                     font-size: 22px;
-                    font-weight: 700;
+                    font-weight: 600;
                     margin-bottom: 1px;
                 }
                 .detail {
                     font-size: 14px;
-                    font-weight: 400;
+                    font-weight: 500;
                     color: var(--lightTextColor);
                     margin-bottom: 9px;
                 }
@@ -865,7 +882,7 @@ ul {
                 }
                 .my-expertise {
                     font-size: 16px;
-                    font-weight: 700;
+                    font-weight: 600;
                     margin-bottom: 9px;
                 }
                 .expertise-list {
@@ -923,7 +940,7 @@ ul {
             width: 48px;
             height: 48px;
             border-radius: 8px;
-            background: rgba(0, 0, 0, 0.10);
+            background: #f3f3f3;
             backdrop-filter: blur(5px);
             font-size: 0;
             &::after {
@@ -944,7 +961,7 @@ ul {
             width: 48px;
             height: 48px;
             border-radius: 8px;
-            background: rgba(0, 0, 0, 0.10);
+            background: #f3f3f3;
             backdrop-filter: blur(5px);
             font-size: 0;
             &::after {
@@ -1123,11 +1140,11 @@ ul {
                 content: "";
                 position: absolute;
                 right: 50px;
-                top: -16px;
+                top: -17px;
                 width: 52px;
                 height: 17px;
                 background: url(../../../../assets/images/arrow-up.png) no-repeat;
-                background-size: 52px auto;
+                background-size: 53px auto;
             }
             header {
                 display: flex;
@@ -1855,6 +1872,7 @@ app-free-offer-form {
                 color: #0053FA;
                 font-weight: 500;
                 letter-spacing: 0.03px;
+                margin-bottom: 0;
             }
         }
     }
@@ -1975,7 +1993,7 @@ app-free-offer-form {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     #page-head {
         flex-direction: column;
         gap: 20px;
@@ -2051,6 +2069,12 @@ app-free-offer-form {
         flex-wrap: wrap;
     }
     #page-head .top-icon {
-        left: -27px;
+        left: -10px;
+        top: -14px;
+    }
+}
+@media only screen and (max-width : 767px) {
+    #faq-wrapper {
+        overflow: hidden;
     }
 }

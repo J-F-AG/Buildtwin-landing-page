@@ -50,7 +50,7 @@ export class HdBannerNewComponent {
     ],
     responsive: {
       0: {
-        items: 1
+        items: 2
       },
       415: {
         items: 3
@@ -79,7 +79,7 @@ export class HdBannerNewComponent {
   sectorArray = [];
   buildingCodeObj = {};
   buildingCodeArray = [];
-
+  toggleSidebarStatus = false;
 
   constructor(private _http: HttpClient, private message: NzMessageService, private fb: FormBuilder, private globalService: GlobalService, public _languageService:LanguageService) { }
 
@@ -189,5 +189,8 @@ export class HdBannerNewComponent {
   }
   scrollToSection(sectionId: string) {
     this.globalService.scrollToSection(sectionId);
+  }
+  toggleSidebar() {
+    this.toggleSidebarStatus = !this.toggleSidebarStatus;
   }
 }

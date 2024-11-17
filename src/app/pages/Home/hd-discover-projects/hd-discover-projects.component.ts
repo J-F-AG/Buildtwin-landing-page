@@ -31,7 +31,7 @@ export class HdDiscoverProjectsComponent implements OnInit {
         items: 1  // 1 item for slightly larger screens
       },
       740: {
-        items: 2  // 2 items for medium screens
+        items: 1  // 2 items for medium screens
       },
       940: {
         items: 2.1  // 2 full items and a half item for larger screens

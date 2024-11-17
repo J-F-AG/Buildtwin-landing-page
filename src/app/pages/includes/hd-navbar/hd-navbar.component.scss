@@ -546,6 +546,9 @@
     .navbar-area {
         padding: 20px;
     }
+    ::ng-deep .menuToggle .navbar-area {
+        z-index: 999!important;
+    }
 }
 /* Max width 767px */
 @media only screen and (max-width : 767px) {

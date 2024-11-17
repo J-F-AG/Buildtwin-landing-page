@@ -117,15 +117,14 @@
     .solution-providers {
       padding-left: 20px;
       padding-right: 20px;
-      ::ng-deep .owl-nav .owl-prev,
-      ::ng-deep .owl-nav .owl-next {
-        display: none;
+      .buildings {
+        padding: 38px 60px;
       }
     }
   }
   @media (max-width: 520px){
     .solution-providers {
-      padding: 0 20px 40px;
+      padding: 0 20px 0;
       gap: 40px;
       opacity: 0px;
     
@@ -163,7 +162,10 @@
       }
       .buildings {
         row-gap: 20px;
-        padding: 15px 0;
+        padding: 15px 50px 0;
+        ::ng-deep .owl-nav .owl-next {
+          right: -60px
+        }
         .col-gap {
           flex-wrap: wrap;
           justify-items: center;
