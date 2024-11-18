@@ -64,4 +64,24 @@
 
 .coverPopup {
     position: relative;
+    width: 100%;
+    padding: 20px 0;
+    border: 20px solid white;
+    border-top: 0;
+    border-bottom: 0;
+    // overflow: auto;
+}
+
+@media only screen and (max-width : 767px) {
+    .coverPopup {
+        overflow: auto;
+        padding-top: 36px;
+    }
+    .popUP i.closeIcon {
+        position: fixed;
+        right: 40px;
+        top: 35px;
+        box-shadow: none;
+        border-radius: 0;
+    }
 }

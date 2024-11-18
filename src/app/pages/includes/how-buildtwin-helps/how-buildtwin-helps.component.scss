@@ -341,7 +341,7 @@ font-size: 30px !important;
         margin-left: 0;
     }
     :host ::ng-deep .fixed div#onScrollAnimation {
-        top: 70px;
+        top: 102px!important;
     }
    
 }
@@ -363,11 +363,11 @@ font-size: 30px !important;
     }
 
     :host ::ng-deep .fixed div#onScrollAnimation {
-        top: 70px;
-        position: static;
+        top: 194px!important;
+        // position: static;
     }
     :host ::ng-deep div#onScrollAnimation {
-        position: static;
+        // position: static;
     }
 
     :host ::ng-deep   .buildtwinHelps .tabRIght {

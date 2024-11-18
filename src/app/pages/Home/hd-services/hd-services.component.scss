@@ -337,6 +337,8 @@
   .slider ::ng-deep div .owl-item .service__items__sub img.service__items__sub__image {
     width: 100%;
   }
+  .slider ::ng-deep div .owl-item .service__items__sub__title,
+  .slider ::ng-deep div .active + .active .service__items__sub__title, 
   .slider ::ng-deep div .owl-item .service__items__sub__title {
     display: none;
   }

@@ -84,9 +84,17 @@ div#tabContent{
     transition: all ease 0.5s;
 }
 
-@media (max-width:767px){
+@media (max-width:1024px){
     :host ::ng-deep div#scrollActivated.fixed2 .tabHead {
-        position: static;
+        top: 52px;
+    }
+}
+@media (max-width:767px){
+    :host ::ng-deep div#scrollActivated3.fixedData .head {
+        top: 142px;
+    }
+    :host ::ng-deep div#scrollActivated.fixed2 .tabHead {
+        // position: static;
     }
     .sampleTable {
         padding: 50px 0;

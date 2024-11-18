@@ -15,14 +15,13 @@
                 </div>
             </div>
             <div class="sectionContent">
-                <nz-carousel [nzDots]="false">
-                    <div nz-carousel-content *ngFor="let subProjectArray of discoverProjects">
-
-                        <div class="cardContainer">
-                            <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
+                <div class="cardContainer roundButtonWrapper">
+                    <owl-carousel-o [options]="discoverProjectsOption">
+                        <ng-template carouselSlide *ngFor="let item of projectsArray">
+                            <!-- <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
                                 [sizeH]="88">
                             </lib-svg-icon>
-                            <ng-container *ngFor=" let item of subProjectArray">
+                            <ng-container *ngFor=" let item of subProjectArray"> -->
                                 <div class="projectCard">
 
                                     <img src="{{item.img}}" class="projectImage" alt="cardImage">
@@ -59,14 +58,13 @@
                                     </div>
 
                                 </div>
-                            </ng-container>
+                            <!-- </ng-container>
                             <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
                                 [sizeH]="88">
-                            </lib-svg-icon>
-                        </div>
-
-                    </div>
-                </nz-carousel>
+                            </lib-svg-icon> -->
+                        </ng-template>
+                    </owl-carousel-o>
+                </div>
             </div>
         </div>
     </section>
