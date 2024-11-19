@@ -2073,6 +2073,13 @@ app-free-offer-form {
         top: -14px;
     }
 }
+@media only screen and (max-width : 1024px) {
+    :host #software .popular #servicceSlider {
+        padding: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
 @media only screen and (max-width : 767px) {
     #faq-wrapper {
         overflow: hidden;

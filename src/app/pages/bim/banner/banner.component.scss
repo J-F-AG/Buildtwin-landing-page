@@ -17,9 +17,9 @@
         content: "";
         position: absolute;
         left: 0;
-        bottom: calc(100% + 30px);
+        bottom: calc(100% + 20px);
         width: calc(100% - 50px);
-        height: 125px;
+        height: 100px;
         border: 1px solid #8CF4F3;
         border-bottom: none;
         border-radius: 0 12px 0 0;
@@ -28,7 +28,7 @@
         content: "";
         position: absolute;
         right: 50px;
-        top: -30px;
+        top: -20px;
         bottom: -30px;
         width: 240px;
         border: 1px solid #8CF4F3;

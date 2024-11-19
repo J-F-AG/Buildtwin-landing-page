@@ -33,6 +33,31 @@ export class BrowseServicesMainComponent implements OnInit {
     },
     nav: true
   }
+  discoverProjectsOption: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    margin: 16,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
   _jfOneHeaderService:any;
   constructor(
     private injector: Injector,

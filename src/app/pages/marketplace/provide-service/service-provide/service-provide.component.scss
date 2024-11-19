@@ -323,6 +323,14 @@ margin-left: auto;
 }
 }
 
+@media (max-width:1024px){
+    :host ::ng-deep .serviceProvide .container {
+        overflow: auto;
+    }
+    :host ::ng-deep .serviceProvide .tabList .filterIcon {
+        min-width: 38px;
+    }
+}
 @media (max-width:767px){
     :host ::ng-deep .serviceProvide .header {
         flex-direction: column;
