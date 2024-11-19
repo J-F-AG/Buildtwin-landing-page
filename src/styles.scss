@@ -934,7 +934,7 @@ img {
         top: 200px;
         width: 70px;
         overflow: hidden;
-        height: 120px;
+        height: 103px;
         z-index: 998;
         transform: scaleX(.9);
         transform-origin: 100% 0;
@@ -951,6 +951,7 @@ img {
         position: absolute;
         left: 0px;
         top: 50%;
+        margin-top: -10px;
     }
     .toggle-sidebar span {
         display: block;
@@ -971,13 +972,13 @@ img {
     }
     .toggle-sidebar span::after {
         margin-left: 9px;
-        margin-top: 2px;
+        margin-top: -8px;
         animation: marginLoop 1s infinite; /* Adjust the duration as needed */
     }
     .toggle-sidebar span::before {
         width: 11px;
         height: 11px;
-        margin-top: 5px;
+        margin-top: -5px;
         border-radius: 2px;
     }
 
