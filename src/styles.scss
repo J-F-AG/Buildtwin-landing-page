@@ -133,6 +133,27 @@ input[type="submit"] {
   border: none;
 }
 
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: var(--themeColor); 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--themeColor); 
+    }
+
 .h1,
 .h2,
 .h3,
@@ -1620,7 +1641,8 @@ body {
 }
 
 .iframeEmbed #hubspot-messages-iframe-container,
-.iframeEmbed #localize-widget {
+.iframeEmbed #localize-widget,
+#localize-widget {
   display: none !important;
 }
 
