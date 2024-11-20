@@ -76,4 +76,4 @@ phases:
       - aws configure set aws_access_key_id $ACCESS_KEY_APP
       - aws configure set aws_secret_access_key $SECRET_KEY_APP
       - aws s3 sync dist/ s3://$S3FrontendBucket/ --region eu-central-1 --exclude 'get-started/*'
-      # - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
+      - aws cloudfront create-invalidation --distribution-id EPLSHPTTCJVLG --paths "/index.html" 
