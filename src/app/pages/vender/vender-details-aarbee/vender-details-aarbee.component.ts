@@ -342,6 +342,7 @@ export class VenderDetailsAarbeeComponent {
   myForm: FormGroup;
   companyId = '';
   companyEmail = '';
+  // companyAllDetail = {};
   constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
 
     this.getBusinessListing();
@@ -382,6 +383,7 @@ export class VenderDetailsAarbeeComponent {
       // console.log(url)
       const urlSegments = this.router.url.split('/');
       let url = urlSegments[urlSegments.length - 1];
+      url = url.toLowerCase();
         if(this._venderDetailService['detalMeta'][url]){
           this._seoService.updateTitle(this._venderDetailService['detalMeta'][url]['title']);
           this._seoService.updateDescription(this._venderDetailService['detalMeta'][url]['description']);
@@ -789,12 +791,12 @@ export class VenderDetailsAarbeeComponent {
       retry(2)
     ).subscribe(companies => {
       if (companies && companies['data'] && companies['data']['details'] && companies['data']['details'].length) {
-        let company = companies['data']['details'].filter(a => a.company_name.replace(/ /g,'') === this.domain);
+        let company = companies['data']['details'].filter(a => a.company_name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase());
         if (company.length || this.isIframe) {
           let queryParam = company.length ? company[0].domain: this.cockpitDomain;
           if (this.isIframe) {
             company = [{
-              domain: this.domain
+              domain: company[0].domain
             }]
           }
           // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
@@ -1230,7 +1232,7 @@ export class VenderDetailsAarbeeComponent {
       retry(2)
     ).subscribe(companies => {
       companies['data'].forEach(company => {
-        if (company.name.replace(/ /g,'') === this.domain) {
+        if (company.name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase()) {
           this.companyId = company.id;
           this.companyEmail = company.email;
         }

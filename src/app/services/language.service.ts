@@ -89,6 +89,9 @@ export class LanguageService {
     if (existingCanonical) {
       this.metaService.removeTag("link[rel='canonical']");
     }
+    if(url.includes('partners')){
+      url = url.toLowerCase();
+    }
   
     // Add the new canonical tag
     this.metaService.addTag({ rel: 'canonical', href: url }, true); // <-- Second parameter is critical for SSR/SSG

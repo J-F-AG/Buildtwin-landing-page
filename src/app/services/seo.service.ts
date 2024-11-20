@@ -33,6 +33,9 @@ export class SeoService {
 
   // Update the OG URL
   updateOGUrl(url: string) {
+    if(url.includes('partners')){
+      url = url.toLowerCase();
+    }
     this.metaService.updateTag({ property: 'og:url', content: url });
   }
 
@@ -68,6 +71,9 @@ export class SeoService {
       this.removeCanonicalURL()
     } catch (error) {
       
+    }
+    if(url.includes('partners')){
+      url = url.toLowerCase();
     }
   // Add the new canonical tag
   this.metaService.addTag({ rel: 'canonical', href: url });
