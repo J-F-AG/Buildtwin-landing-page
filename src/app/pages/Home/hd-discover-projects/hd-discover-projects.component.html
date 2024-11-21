@@ -14,7 +14,7 @@
                             <div class="d-flex factory-box">
                                 <div class="bg-image" [style]="{'background-image': 'url(' + item.img + ')'}">
                                     <div class="country-bg">
-                                        <img src={{item.locationFlag}} class="cntry-img">
+                                        <img src={{item.locationFlag}} [alt]="item.alt" class="cntry-img">
                                         <span class="cntry-txt">{{item.company}}</span>
                                     </div>
                                 </div>
