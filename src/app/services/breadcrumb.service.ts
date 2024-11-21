@@ -62,7 +62,7 @@ export class BreadcrumbService {
             'provide-service': 'Provide Service',
             'marketplace': 'Marketplace',
             'partners/J&FIndia': 'J&F India',
-            'AI-project-management': 'AI Project Management',
+            'ai-project-management': 'AI Project Management',
             'business-intelligence': 'Business Intelligence',
             'training': 'Training',
             'pricing': 'Pricing',

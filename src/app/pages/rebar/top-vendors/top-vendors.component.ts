@@ -12,7 +12,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class RebarTopVendorsComponent{
 
-
+  constructor(public _languageService:LanguageService) { }
   splitArray(dataArray: any[], x: number) {
     const result = [];
     for (let i = 0; i < dataArray.length; i += x) {
