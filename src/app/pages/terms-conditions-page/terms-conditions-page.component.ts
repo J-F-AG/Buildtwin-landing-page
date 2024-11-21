@@ -9,12 +9,12 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class TermsConditionsPageComponent {
 
-    title = 'Terms & Conditions - Buildtwin';
+    // title = 'Terms & Conditions - Buildtwin';
  
     constructor(private titleService:Title, public _languageService:LanguageService) {}
     
     ngOnInit() {
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
     }
 
 }

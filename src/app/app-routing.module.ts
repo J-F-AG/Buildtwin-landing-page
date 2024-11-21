@@ -141,15 +141,55 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/contact'
         }
     },
-    { path: 'partners/:id', component: VenderDetailsAarbeeComponent },
-    { path: 'about', component: AboutPageComponent },
-    { path: 'terms-of-service', component: DataPrivacyComponent },
-    { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
-    { path: 'terms-conditions', component: TermsConditionsPageComponent },
-    { path: 'training-faq', component: FaqPageTrainingComponent },
-    { path: 'pricing', component: PricingPageComponent },
-    {
-        path: 'explore-services', component: BrowseServicesMainComponent,
+    {path: 'partners/:id', component: VenderDetailsAarbeeComponent},
+    {path: 'about', component: AboutPageComponent,
+        data: {
+            title: 'BuildTwin Marketplace Helps Engineers and Technical Teams For AEC Projects',
+            description: "BuildTwin streamlines structural engineering by automating tasks, improving feedback, and connecting engineers with a global marketplace for vendors and services.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/about'
+        }
+    },
+
+    // {path: 'vender-details', component: VenderDetailsComponent},
+    // {path: 'events', component: EventsComponent},
+    // {path: 'vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
+    // {path: 'vender-details-caldim', component: VenderDetailsCaldimComponent},
+    // {path: 'vender-details-moldtek', component: VenderDetailsMoldtekComponent},
+    // {path: 'vender-details-aarbee', component: VenderDetailsAarbeeComponent},
+    // {path: 'vender-details-ui', component: VenderDetailsUiComponent},
+    // {path: 'details', component: VenderDetailsAarbeeOldComponent},
+    // {path: 'vender-details-allied', component: VenderDetailsAlliedComponent},
+    // {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
+    
+    {path: 'terms-of-service', component: DataPrivacyComponent},
+    {path: 'privacy-policy', component: PrivacyPolicyPageComponent,
+        data: {
+            title: 'Privacy Policy | BuildTwin',
+            description: "Learn how BuildTwin protects your data. Our Privacy Policy outlines the collection, use, and safeguarding of your information on our platform.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/privacy-policy'
+        }
+    },
+    {path: 'terms-conditions', component: TermsConditionsPageComponent,
+        data: {
+            title: 'Terms and Conditions | BuildTwin',
+            description: "Understand the terms and conditions for using BuildTwin's platform. Explore your rights, responsibilities, and the guidelines for accessing our services.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/terms-conditions'
+        }
+    },
+    {path: 'training-faq', component: FaqPageTrainingComponent},
+    {path: 'pricing', component: PricingPageComponent},
+    // {path: 'engineering-services/services',
+    //     redirectTo: '/explore-services',
+    //     pathMatch: 'full'
+    // },
+    // {path: 'engineering-services/sector',
+    //     redirectTo: '/',
+    //     pathMatch: 'full'
+    // },
+    {path: 'explore-services', component: BrowseServicesMainComponent,
         data: {
             title: 'Find Top Structural Engineering Services | BuildTwin',
             description: 'Connect with top structural engineering service providers on BuildTwin. Collaborate globally on  precast detailing, BIM modeling, 3D rebar, structural design, and more.',
@@ -318,15 +358,49 @@ const routes: Routes = [
     //         canonical: 'https://www.buildtwin.com/contact'
     //     }
     // },
-    // { path: 'de/partners/:id', component: VenderDetailsAarbeeComponent },
-    // { path: 'de/about', component: AboutPageComponent },
-    // { path: 'de/terms-of-service', component: DataPrivacyComponent },
-    // { path: 'de/privacy-policy', component: PrivacyPolicyPageComponent },
-    // { path: 'de/terms-conditions', component: TermsConditionsPageComponent },
-    // { path: 'de/training-faq', component: FaqPageTrainingComponent },
-    // { path: 'de/pricing', component: PricingPageComponent },
-    // {
-    //     path: 'de/explore-services', component: BrowseServicesMainComponent,
+    // {path: 'de/about', component: AboutPageComponent,
+        // data: {
+        //     title: 'BuildTwin Marketplace Helps Engineers and Technical Teams For AEC Projects',
+        //     description: "BuildTwin streamlines structural engineering by automating tasks, improving feedback, and connecting engineers with a global marketplace for vendors and services.",
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/about'
+        // }
+    // },
+    // {path: 'de/vender-details', component: VenderDetailsComponent},
+    // {path: 'de/vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
+    // {path: 'de/vender-details-caldim', component: VenderDetailsCaldimComponent},
+    // {path: 'de/vender-details-moldtek', component: VenderDetailsMoldtekComponent},
+    // {path: 'de/partners/:id', component: VenderDetailsAarbeeComponent},
+    // {path: 'de/vender-details-ui', component: VenderDetailsUiComponent},
+    // {path: 'de/details', component: VenderDetailsAarbeeOldComponent},
+    // {path: 'de/vender-details-allied', component: VenderDetailsAlliedComponent},
+    // {path: 'de/courses-sample', component: CoursesDetailsStyleOneComponent},
+    // {path: 'de/terms-of-service', component: DataPrivacyComponent},
+    // {path: 'de/privacy-policy', component: PrivacyPolicyPageComponent,
+        // data: {
+        //     title: 'Privacy Policy | BuildTwin',
+        //     description: "Learn how BuildTwin protects your data. Our Privacy Policy outlines the collection, use, and safeguarding of your information on our platform.",
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/privacy-policy'
+        // }
+    // },
+    // {path: 'de/terms-conditions', component: TermsConditionsPageComponent,
+        // data: {
+        //     title: 'Terms and Conditions | BuildTwin',
+        //     description: "Understand the terms and conditions for using BuildTwin's platform. Explore your rights, responsibilities, and the guidelines for accessing our services.",
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/terms-conditions'
+        // }
+    // },
+    // {path: 'de/engineering-services/services',
+    //     redirectTo: '/de/explore-services',
+    //     pathMatch: 'full'
+    // },
+    // {path: 'de/engineering-services/sector',
+    //     redirectTo: '/de',
+    //     pathMatch: 'full'
+    // },
+    // {path: 'de/explore-services', component: BrowseServicesMainComponent,
     //     data: {
     //         title: 'Find Top Structural Engineering Services | BuildTwin',
     //         description: 'Connect with top structural engineering service providers on BuildTwin. Collaborate globally on  precast detailing, BIM modeling, 3D rebar, structural design, and more.',

@@ -72,37 +72,43 @@ export class BimUsaSampleDrawingComponent{
       image: 'assets/images/us-flag.png',
       label: 'United States',
       value: 'UnitedStates',
-      currency: 'IBC'
+      currency: 'IBC',
+      alt: 'US Flag'
     },
     {
       image: 'assets/images/aus-flag.png',
       label: 'Australia',
       value: 'Australia',
-      currency: 'NCC'
+      currency: 'NCC',
+      alt: 'AUS Flag'
     },
     {
       image: 'assets/images/eu-flag.png',
       label: 'European Union',
       value: 'EuropeanUnion',
-      currency: 'EC'
+      currency: 'EC',
+      alt: 'EU Flag'
     },
     {
       image: 'assets/images/uk-flag.png',
       label: 'United Kingdom',
       value: 'UK',
-      currency: 'BS'
+      currency: 'BS',
+      alt: 'UK Flag'
     },
     {
       image: 'assets/images/canada-flag.png',
       label: 'Canada',
       value: 'Canada',
-      currency: 'CBC'
+      currency: 'CBC',
+      alt: 'Canada Flag'
     },
     {
       image: 'assets/images/india-flag.png',
       label: 'India',
       value: 'India',
-      currency: 'INR'
+      currency: 'INR',
+      alt: 'India Flag'
     }
   ]
 
