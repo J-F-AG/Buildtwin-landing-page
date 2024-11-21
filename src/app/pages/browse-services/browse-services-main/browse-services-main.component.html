@@ -29,7 +29,7 @@
                                         <div class="projectCategory">{{item.category}}</div>
                                         <div class="projectName">{{item.projectTitle}}</div>
                                         <div class="company">
-                                            <img src="{{item.locationFlag}}" [attr.alt]="item.locationFlag === 'assets/images/ui/germany.png' ? 'Germany Flag' : item.locationFlag === 'assets/images/us-flag.png' ? 'US Flag' : 'icon'" width="20" height="20">
+                                            <img src="{{item.locationFlag}}" [alt]="item.alt" width="20" height="20">
                                             <div class="companyName">
                                                 {{item.company}}
                                             </div>
