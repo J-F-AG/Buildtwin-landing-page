@@ -292,6 +292,7 @@ ul {
             display: flex;
             flex-direction: column;
             gap: inherit;
+            width: calc(50% - 6px);
             &.fullImage {
                 width: 100%;
             }
@@ -311,6 +312,7 @@ ul {
             display: flex;
             flex-direction: column;
             gap: 14px;
+            width: calc(50% - 6px);
         }
     }
     .bottom {
@@ -318,7 +320,7 @@ ul {
         gap: 7.4px;
         flex-wrap: wrap;
         figure {
-            width: calc(25% - 6px);
+            width: calc(25% - 5.55px);
         }
     }
     figure {
@@ -2008,7 +2010,9 @@ app-free-offer-form {
     .image-wrapper .bottom {
         flex-direction: column;
     }
-    .image-wrapper .bottom figure {
+    .image-wrapper .bottom figure,
+    .image-wrapper .top .left,
+    .image-wrapper .top .right {
         width: 100%;
     }
     .service-flex .right {

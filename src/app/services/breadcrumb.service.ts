@@ -42,7 +42,7 @@ export class BreadcrumbService {
                 "@type": "ListItem",
                 "position": 2,
                 "name": this.getDisplayName(paths),
-                "item": `https://www.buildtwin.com${url}`
+                "item": `https://www.buildtwin.com${paths.includes('partners')?url.toLowerCase():url}`
             });
         }
         // paths.forEach((path, index) => {
@@ -80,6 +80,14 @@ export class BreadcrumbService {
             'services': 'Services',
             // 'servicesNew': 'Services New'
         };
-        return names[path] || path;
+        let pathUpdated = path;
+        if (Array.isArray(path) && path[0] === 'partners') {
+            // Update all elements in the array to lowercase
+            for (let i = 0; i < path.length; i++) {
+              path[i] = path[i].toLowerCase();
+            }
+            pathUpdated = path
+        }
+        return names[path] || pathUpdated;
     }
 }
