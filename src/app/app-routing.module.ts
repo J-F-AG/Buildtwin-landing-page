@@ -151,7 +151,14 @@ const routes: Routes = [
         }
     },
     {path: 'partners/:id', component: VenderDetailsAarbeeComponent},
-    {path: 'about', component: AboutPageComponent},
+    {path: 'about', component: AboutPageComponent,
+        data: {
+            title: 'BuildTwin Marketplace Helps Engineers and Technical Teams For AEC Projects',
+            description: "BuildTwin streamlines structural engineering by automating tasks, improving feedback, and connecting engineers with a global marketplace for vendors and services.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/about'
+        }
+    },
 
     // {path: 'vender-details', component: VenderDetailsComponent},
     // {path: 'events', component: EventsComponent},
@@ -165,8 +172,22 @@ const routes: Routes = [
     // {path: 'courses-sample', component: CoursesDetailsStyleOneComponent},
     
     {path: 'terms-of-service', component: DataPrivacyComponent},
-    {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
-    {path: 'terms-conditions', component: TermsConditionsPageComponent},
+    {path: 'privacy-policy', component: PrivacyPolicyPageComponent,
+        data: {
+            title: 'Privacy Policy | BuildTwin',
+            description: "Learn how BuildTwin protects your data. Our Privacy Policy outlines the collection, use, and safeguarding of your information on our platform.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/privacy-policy'
+        }
+    },
+    {path: 'terms-conditions', component: TermsConditionsPageComponent,
+        data: {
+            title: 'Terms and Conditions | BuildTwin',
+            description: "Understand the terms and conditions for using BuildTwin's platform. Explore your rights, responsibilities, and the guidelines for accessing our services.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/terms-conditions'
+        }
+    },
     {path: 'training-faq', component: FaqPageTrainingComponent},
     {path: 'pricing', component: PricingPageComponent},
     // {path: 'engineering-services/services',
@@ -310,7 +331,14 @@ const routes: Routes = [
     //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
     //     }
     // },
-    // {path: 'de/about', component: AboutPageComponent},
+    // {path: 'de/about', component: AboutPageComponent,
+        // data: {
+        //     title: 'BuildTwin Marketplace Helps Engineers and Technical Teams For AEC Projects',
+        //     description: "BuildTwin streamlines structural engineering by automating tasks, improving feedback, and connecting engineers with a global marketplace for vendors and services.",
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/about'
+        // }
+    // },
     // {path: 'de/vender-details', component: VenderDetailsComponent},
     // {path: 'de/vender-details-sublimestructures', component: VenderDetailsSublimeComponent},
     // {path: 'de/vender-details-caldim', component: VenderDetailsCaldimComponent},
@@ -321,8 +349,22 @@ const routes: Routes = [
     // {path: 'de/vender-details-allied', component: VenderDetailsAlliedComponent},
     // {path: 'de/courses-sample', component: CoursesDetailsStyleOneComponent},
     // {path: 'de/terms-of-service', component: DataPrivacyComponent},
-    // {path: 'de/privacy-policy', component: PrivacyPolicyPageComponent},
-    // {path: 'de/terms-conditions', component: TermsConditionsPageComponent},
+    // {path: 'de/privacy-policy', component: PrivacyPolicyPageComponent,
+        // data: {
+        //     title: 'Privacy Policy | BuildTwin',
+        //     description: "Learn how BuildTwin protects your data. Our Privacy Policy outlines the collection, use, and safeguarding of your information on our platform.",
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/privacy-policy'
+        // }
+    // },
+    // {path: 'de/terms-conditions', component: TermsConditionsPageComponent,
+        // data: {
+        //     title: 'Terms and Conditions | BuildTwin',
+        //     description: "Understand the terms and conditions for using BuildTwin's platform. Explore your rights, responsibilities, and the guidelines for accessing our services.",
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/terms-conditions'
+        // }
+    // },
     // {path: 'de/engineering-services/services',
     //     redirectTo: '/de/explore-services',
     //     pathMatch: 'full'

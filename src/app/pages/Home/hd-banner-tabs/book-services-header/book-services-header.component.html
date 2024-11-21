@@ -81,7 +81,7 @@
         <div class="v-center-flex groupField">
             <div class="selectBox countryField">
                 <div class="v-center-flex">
-                    <img [src]="selectedCountry.image" width="29" height="29" alt="">
+                    <img [src]="selectedCountry.image" width="29" height="29" [attr.alt]="selectedCountry.image === 'assets/images/ui/germany.png' ? 'Germany Flag' : selectedCountry.image === 'assets/images/us-flag.png' ? 'US Flag' : 'icon'">
                     <div>
                         <span class="title">{{selectedCountry.label}}</span>
                         <small>{{selectedCountry.currency}}</small>

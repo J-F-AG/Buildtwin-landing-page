@@ -18,7 +18,8 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Miscellaneous steel", "Estimodeling", "AESS"]
+      expertise: ["Miscellaneous steel", "Estimodeling", "AESS"],
+      alt: "Profile1"
     },
     {
        img: "assets/images/ui/subline/profile2.png",
@@ -28,7 +29,8 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Quality Control", "Project Management", "OSHA"]
+      expertise: ["Quality Control", "Project Management", "OSHA"],
+      alt: "Profile2"
     },
  
     {
@@ -39,7 +41,8 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "Gold Medalist DTU",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Complex Modeling", "Material Takeoff", "Concept Development"]
+      expertise: ["Complex Modeling", "Material Takeoff", "Concept Development"],
+      alt: "Profile3"
     },
     
  
@@ -51,7 +54,8 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Quality Control", "Document Control", "Timber"]
+      expertise: ["Quality Control", "Document Control", "Timber"],
+      alt: "Profile4"
     },
     {
        img: "assets/images/ui/subline/profile5.png",
@@ -61,7 +65,8 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Erection Drawing", "Modeling"]
+      expertise: ["Erection Drawing", "Modeling"],
+      alt: "Profile5"
     },
     {
        img: "assets/images/ui/subline/profile6.png",
@@ -71,7 +76,8 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Ornamental Steel", "Detailing As Per AISC", "Project Management"]
+      expertise: ["Ornamental Steel", "Detailing As Per AISC", "Project Management"],
+      alt: "Profile6"
     },
     {
        img: "assets/images/ui/subline/profile7.png",
@@ -81,7 +87,8 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Tekla EPM Connection Concepts", "Decorative Steel"]
+      expertise: ["Tekla EPM Connection Concepts", "Decorative Steel"],
+      alt: "Profile7"
     },
     {
        img: "assets/images/ui/subline/profile8.png",
@@ -91,7 +98,8 @@ export class VenderDetailsSublimeComponent {
       medalInfo: "",
       cusTitle: "What our customers say …",
       expertTitle: "<span>My</span> expertise at sublime structures",
-      expertise: ["Estimodeling", "Material Takeoff"]
+      expertise: ["Estimodeling", "Material Takeoff"],
+      alt: "Profile8"
     }
   ];
   
@@ -362,4 +370,5 @@ onTypeChange(event: any): void {
       this.filteredProjects = this.filterProjectsByType(selectedType);
   }
 }
+
 }
