@@ -25,7 +25,7 @@
     <div class="list-item-link-svg2"></div>
     <div class="home-link">
       <div class="app-banner">
-        <a class="navbar-brand" routerLink="{{_languageService.currentLanguage}}">
+        <a class="navbar-brand" [routerLink]="_languageService.currentLanguage || '/'">
             <img src="assets/images/logo2.png" alt="logo">
             <!-- <span>Beta</span> ! -->
         </a>

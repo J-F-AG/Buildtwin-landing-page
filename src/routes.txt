@@ -7,7 +7,7 @@
 /services/bim-services
 /services/bim-service-provider-in-usa
 /services/steel-detailing-services
-/AI-project-management
+/ai-project-management
 /business-intelligence
 /training
 /pricing
@@ -21,3 +21,17 @@
 /terms-of-service
 /privacy-policy
 /terms-conditions
+/partners/durchgeplant
+/partners/caldim
+/partners/sublime
+/partners/j&findia
+/partners/mold-tektechnologieslimited
+/partners/gbcengineers
+/partners/aarbeestructuresprivatelimited
+/partners/trikaaltechenterprisesprivatelimited
+/partners/replinfosystems
+/partners/precisionprecastsolutionsprivatelimited
+/partners/orioledesigntechsolutionsllp
+/partners/innowellengineeringinternationalpvtltd
+/partners/clovetechnologiesprivatelimited
+/partners/tritechcorporation

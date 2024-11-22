@@ -394,7 +394,7 @@ export class VenderDetailsAarbeeComponent {
           // Update Twitter card tags
           this._seoService.updateTwitterCardType('summary_large_image');
           this._seoService.updateTwitterImage(this._venderDetailService['detalMeta'][url]['image']);
-          this._seoService.setCanonicalURL(this._venderDetailService['detalMeta'][url]['canonical']);
+          this._seoService.setCanonicalURL(this._venderDetailService['detalMeta'][url]['canonical'], this.renderer);
         }
   }
   showPopup = false;
