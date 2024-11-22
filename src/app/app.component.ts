@@ -30,7 +30,6 @@ export class AppComponent {
     routerSubscription: any;
     breadcrumbs: any[] = [];
     breadcrumbSchemaHtml: SafeHtml;
-    langHtml: SafeHtml;
     faqSchemaHtml: SafeHtml;
     constructor(
         private breadcrumbService: BreadcrumbService,
@@ -73,35 +72,17 @@ export class AppComponent {
                 // Update Twitter card tags
                 this._seoService.updateTwitterCardType('summary_large_image');
                 this._seoService.updateTwitterImage(event['image']);
-                this._seoService.setCanonicalURL(event['canonical'], this.renderer);
+                this._seoService.setCanonicalURL(event['canonical']);
             }
             if(event['canonical']){
             }
             let url = this.router.url;
-            this._languageService.setLanguageTags(this.router.url);
-            this.injectLang();
+            this._languageService.setLanguageTags();
             this.breadcrumbService.generateBreadcrumbs(this.router.url);
             this.breadcrumbs = this.breadcrumbService.breadcrumbs;
             this.injectBreadcrumbScript(url);
             console.log(event)
         })
-    }
-    injectLang(){
-      try {
-        const existingScripts = document.querySelectorAll('link[rel="alternate"]');
-        existingScripts.forEach(script => {
-            this.langHtml = this.sanitizer.bypassSecurityTrustHtml('');
-        });
-      } catch (error) {
-          
-      }
-       // Build new language tags
-      let langHtmlCommon = '';
-      this._languageService.setLanguageTagsObj.forEach(element => {
-        langHtmlCommon += `<link rel="alternate" hreflang="${element.hreflang}" href="${element.href}" />`;
-      });
-      // Sanitize and update innerHTML
-      this.langHtml = this.sanitizer.bypassSecurityTrustHtml(langHtmlCommon);
     }
     recallJsFuntions() {
         this.routerSubscription = this.router.events
@@ -168,7 +149,7 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
-    }else if(url.includes('/ai-project-management')){
+    }else if(url.includes('/AI-project-management')){
         const faqSchema = this._languageService.injectForAIProjectManagementSchema(this.renderer);
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
