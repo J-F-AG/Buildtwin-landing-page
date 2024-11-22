@@ -1,14 +1,13 @@
-import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LanguageService {
-  language = [{ lang: "/en", "value": "", text: 'en' }, { lang: "/de", value: "/de", text: 'de' }]
-  currentLanguage = '';
+  language = [{ lang: "/en", "value": "/" }, { lang: "/de", value: "/de" }]
+  currentLanguage = '/';
   serviceId: any = {
     "pre-cast-detailing-services": 9,
     "rebar-detailing-services" : 10,  //this has to be updated later
@@ -33,66 +32,31 @@ export class LanguageService {
       name: 'BIM Services'
     }
   }
-  isBrowser: boolean;
-  setLanguageTagsObj: any[] = [];
   constructor(
     private router: Router,
-    private metaService: Meta,
-    @Inject(PLATFORM_ID) private platformId: Object
+    private metaService: Meta
   ) {
-    this.isBrowser = isPlatformBrowser(this.platformId);
-
-    // if (this.isBrowser) {
-    //   let localLang = '';
-    //   const url = window.location.href; // Get the current URL
-    //   if (this.isGermanURL(url)) {
-    //     localLang = '/de';
-    //   } else {
-    //     if (window['Localize']) {
-    //       window['Localize'].setLanguage('en');
-    //     }
-    //     console.log("This URL is not in German.");
-    //   }
-    //   this.currentLanguage = localLang;
+    let localLanng = '/'
+    // const url = window.location.href; // Get the current URL
+    // if (this.isGermanURL(url)) {
+    //   localLanng = '/de'
+    // } else {
+        // window['Localize'].setLanguage('en')
+        // console.log("This URL is not in German.");
     // }
+    this.currentLanguage = localLanng
   }
+//   isGermanURL(url) {
+//     // Create a URL object to easily parse the input URL
+//     const parsedURL = new URL(url);
+    
+//     // Get the pathname of the URL (e.g., "/de/about")
+//     const pathname = parsedURL.pathname;
+    
+//     // Check if the pathname starts with "/de"
+//     return pathname.startsWith('/de');
+// }
 
-  isGermanURL(url: string): boolean {
-    if (!this.isBrowser) {
-      return false; // Always return false on the server as URL parsing is browser-specific
-    }
-
-    // Create a URL object to easily parse the input URL
-    const parsedURL = new URL(url);
-
-    // Get the pathname of the URL (e.g., "/de/about")
-    const pathname = parsedURL.pathname;
-
-    // Check if the pathname starts with "/de"
-    return pathname.startsWith('/de');
-  }
-
-  checkAndSwitchVersion(currentUrl: string, lang: string): void {
-    if (!this.isBrowser) {
-      return; // Prevent any execution on the server
-    }
-
-    const url = new URL(currentUrl);
-
-    if (lang === 'en') {
-      // If the URL starts with '/de', switch to the version without '/de'
-      // const newPath = url.pathname.replace(/^\/de/, ''); // Remove only the leading '/de'
-      // const newUrl = `${url.origin}${newPath}${url.search}${url.hash}`;
-      // window.location.href = newUrl;
-      window['Localize'].setLanguage('en');
-    } else {
-      // If the URL does not start with '/de', add '/de' at the beginning of the path
-      // const newPath = `/de${url.pathname}`;
-      // const newUrl = `${url.origin}${newPath}${url.search}${url.hash}`;
-      // window.location.href = newUrl;
-      window['Localize'].setLanguage('de');
-    }
-  }
   // getLanguage(url) {  
   //   debugger
 
@@ -134,23 +98,36 @@ export class LanguageService {
   }
   
 
-  setLanguageTags(url: string): void {
+  setLanguageTags() {
     try {
-      const fullUrl = 'https://www.buildtwin.com' + url;
+      const currentUrl = window.location.href; // Get the full URL
+      const urlObj = new URL(currentUrl);      // Create a URL object
+      const baseUrl = `${urlObj.protocol}//${urlObj.hostname}`;
+      const url = this.router.url;
+      const fullUrl = baseUrl + url;
 
       // Define language tags
       const languageTags = [
         { href: `${fullUrl}`, hreflang: 'en' },
-        // { href: `${fullUrl}`, hreflang: 'de' }
+        // { href: `${fullUrl}`, hreflang: 'de' },
+        // { href: `${fullUrl}`, hreflang: 'en-in' },
+        // { href: `${fullUrl}`, hreflang: 'en-us' },
+        // { href: `${fullUrl}`, hreflang: 'en-gb' },
+        // { href: `${fullUrl}`, hreflang: 'de-de' }
       ];
 
+      // Remove existing alternate links
+      // const body = document.querySelector('body');
+      document.querySelectorAll('link[rel="alternate"]').forEach(link => link.remove());
 
       // Add new alternate links for each language
-      this.setLanguageTagsObj = languageTags.map(tag => ({
-        hreflang: tag.hreflang,
-        href: tag.href,
-        rel: 'alternate'
-      }));
+      languageTags.forEach(tag => {
+        const link: HTMLLinkElement = document.createElement('link');
+        link.setAttribute('rel', 'alternate');
+        link.setAttribute('href', tag.href);
+        link.setAttribute('hreflang', tag.hreflang);
+        document.body.prepend(link);
+      });
     } catch (error) {
       
     }

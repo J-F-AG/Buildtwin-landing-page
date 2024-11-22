@@ -287,9 +287,6 @@ import { BimUsaServicesOfferedComponent } from './pages/bim-usa/services-offered
 import { BimUsaThreeCardsComponent } from './pages/bim-usa/three-cards/three-cards.component';
 import { BimUsaTopVendorsComponent } from './pages/bim-usa/top-vendors/top-vendors.component';
 import { BimUsaTrustByNewComponent } from './pages/bim-usa/trust-by/trust-by.component';
-import { LanguageChangeModule } from './include-component/language-change/language-change.module';
-import { UrlSerializer } from '@angular/router';
-import { LowerCaseUrlSerializer } from './services/lowercase-url-serializer';
 
 @NgModule({
   declarations: [
@@ -583,8 +580,7 @@ import { LowerCaseUrlSerializer } from './services/lowercase-url-serializer';
     NzDropDownModule,
     HubspotModule,
     NzUploadModule,
-    GetStartedModule,
-    LanguageChangeModule
+    GetStartedModule
   ],
   providers: [
     Title,
@@ -592,7 +588,6 @@ import { LowerCaseUrlSerializer } from './services/lowercase-url-serializer';
     provideAnimationsAsync(),
     { provide: NZ_I18N, useValue: en_US },
     provideClientHydration(),
-    {provide: UrlSerializer, useClass: LowerCaseUrlSerializer}
     // { provide: NZ_ICONS, useValue: icons },
   ],
   bootstrap: [AppComponent]

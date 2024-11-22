@@ -1,17 +1,12 @@
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
 
-  constructor(private title: Title, private metaService: Meta, private activatedRoute: ActivatedRoute,
-    @Inject(PLATFORM_ID) private platformId: Object, 
-    @Inject(DOCUMENT) private doc: Document
-  ) { }
+  constructor(private title: Title, private metaService: Meta) { }
 
   updateTitle(title: string) {
     this.title.setTitle(title);
@@ -41,7 +36,6 @@ export class SeoService {
     if(url.includes('partners')){
       url = url.toLowerCase();
     }
-    url = 'https://www.buildtwin.com'+url
     this.metaService.updateTag({ property: 'og:url', content: url });
   }
 
@@ -61,32 +55,7 @@ export class SeoService {
   }
 
 
-  setCanonicalURL(url: string, renderer: any) {
-    const link: HTMLLinkElement = renderer.createElement('link');
-    link.setAttribute('rel', 'canonical');
-    link.setAttribute('href', url);
-
-    // // Remove any existing canonical tags to avoid duplicates
-    try {
-      const existingLinks = this.doc.head.querySelectorAll('link[rel="canonical"]');
-      existingLinks.forEach((existingLink) => renderer.removeChild(this.doc.head, existingLink));
-    } catch (error) {
-      
-    }
-
-    // Append the new canonical tag to the head
-    renderer.appendChild(this.doc.head, link);
-    // const childRoute = this.getChild(this.activatedRoute);
-    // childRoute.data.subscribe(data => {
-    //   const canonicalUrl = data['canonical'] || `https://www.buildtwin.com${url}`;
-    //   if (isPlatformBrowser(this.platformId)) {
-    //     // Only run this part in the browser
-    //     this.updateCanonicalUrl(canonicalUrl);
-    //   } else {
-    //     // Set canonical link during SSR before page load
-    //     this.metaService.updateTag({ rel: 'canonical', href: canonicalUrl });
-    //   }
-    // });
+  setCanonicalURL(url: string) {
     // Correctly select the canonical tag using the 'link[rel="canonical"]' selector
   // const existingCanonical = this.metaService.getTag('link[rel="canonical"]');
 
@@ -98,35 +67,18 @@ export class SeoService {
     // const existingCanonical = this.metaService.getTag("meta[rel='canonical']");
   
     // // If the canonical tag exists, remove it
-  //   try {
-  //     this.removeCanonicalURL()
-  //   } catch (error) {
+    try {
+      this.removeCanonicalURL()
+    } catch (error) {
       
-  //   }
-  //   if(url.includes('partners')){
-  //     url = url.toLowerCase();
-  //   }
-  // // Add the new canonical tag
-  // this.metaService.addTag({ rel: 'canonical', href: url });
-  }
-  getChild(route: ActivatedRoute): ActivatedRoute {
-    if (route.firstChild) {
-      return this.getChild(route.firstChild);
-    } else {
-      return route;
     }
-  }
-  updateCanonicalUrl(url: string) {
-    const existingLink = document.querySelector('link[rel="canonical"]');
-    if (existingLink) {
-      existingLink.setAttribute('href', url);
-    } else {
-      const link: HTMLLinkElement = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', url);
-      document.head.appendChild(link);
+    if(url.includes('partners')){
+      url = url.toLowerCase();
     }
+  // Add the new canonical tag
+  this.metaService.addTag({ rel: 'canonical', href: url });
   }
+
   removeCanonicalURL() {
 try {
   

@@ -1,9 +1,0 @@
-<div class="selected-language v-center-flex" nz-dropdown [nzDropdownMenu]="menu">
-    <img src="assets/images/home/GlobeSimple.svg" alt="" />
-    {{selectedLang}}
-</div>
-<nz-dropdown-menu #menu="nzDropdownMenu">
-    <ul nz-menu nzSelectable>
-      <li class="tt" nz-menu-item *ngFor="let item of _languageService.language" (click)="selecteLanguage(item)" [ngClass]="{'active': selectedLang == item['text']}">{{item['text']}}</li>
-    </ul>
-  </nz-dropdown-menu>
