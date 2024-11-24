@@ -1,7 +1,7 @@
 <div class="navbar-area" id="navBar" [ngClass]="{'sticky': isSticky}" >
     <div>
         <nav class="navbar navbar-expand-lg" [class.active]="classApplied">
-            <a class="navbar-brand" routerLink="{{_languageService.currentLanguage}}">
+            <a class="navbar-brand" [routerLink]="_languageService.currentLanguage || '/'">
                 <img src="assets/images/logo@2x.png" alt="logo" width="156" height="27.5">
                 <!-- <span>Beta</span> -->
             </a>
@@ -296,7 +296,7 @@
                                         </p>
                                         </a>
 
-                                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'AI-project-management']" routerLinkActive="active"
+                                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'ai-project-management']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column menu_copilot__text">
                                         <em class="flex-row font-bold menu_copilot__text--head">
@@ -417,7 +417,8 @@
 
 
                 <div class="other-options d-flex align-items-center">
-                    <!-- <a href=""><img src="assets/images/home/GlobeSimple.svg" alt="" /></a> -->
+                    <!-- <a href="javascript:void(0);"><img src="assets/images/home/GlobeSimple.svg" alt="" /></a> -->
+                     <app-language-change></app-language-change>
                     <a mat-button href="https://cockpit.buildtwin.com/" target="_blank" class="default-btn text-btn signin_button_header">Sign in</a>
                     <a mat-button href="https://www.buildtwin.com/get-started" target="_blank" class="default-btn get_started_button_header" >
                         Get Started
