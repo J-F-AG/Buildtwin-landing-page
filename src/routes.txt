@@ -21,3 +21,17 @@
 /terms-of-service
 /privacy-policy
 /terms-conditions
+/partners/durchgeplant
+/partners/caldim
+/partners/sublime
+/partners/j&findia
+/partners/mold-tektechnologieslimited
+/partners/gbcengineers
+/partners/aarbeestructuresprivatelimited
+/partners/trikaaltechenterprisesprivatelimited
+/partners/replinfosystems
+/partners/precisionprecastsolutionsprivatelimited
+/partners/orioledesigntechsolutionsllp
+/partners/innowellengineeringinternationalpvtltd
+/partners/clovetechnologiesprivatelimited
+/partners/tritechcorporation

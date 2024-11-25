@@ -46,7 +46,9 @@ export class TtPartnersComponent {
       this.showPageLoader = false;
       if (res['data'] && res['data']['details'] && res['data']['details'].length) {
         res['data']['details'].forEach(d => {
-          d.office_location = JSON.parse(d.office_location);
+          if(typeof d.office_location === 'string'){
+            d.office_location = JSON.parse(d.office_location);
+          }
           if (d.service_types.length) {
             let str = '';
             if (d.service_types[0]) {

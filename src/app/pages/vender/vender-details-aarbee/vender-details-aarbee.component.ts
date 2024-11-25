@@ -345,11 +345,11 @@ export class VenderDetailsAarbeeComponent {
   // companyAllDetail = {};
   constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
 
-    this.getBusinessListing();
-    this.getCompanyDetail()
     this.domain = this.route.snapshot.params['id'];
     this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
+    this.getBusinessListing();
+    this.getCompanyDetail()
     if(this.route.snapshot.queryParams['isIframe']){
       document.body.classList.add('iframeEmbed');
     }
@@ -840,7 +840,11 @@ export class VenderDetailsAarbeeComponent {
                   if (form.field_group_name === 'On-Site Available(own office)') {
                     // form.fields = JSON.parse(form.fields);
                     form.fields.forEach((f: any) => {
-                      this.formData.onsite = formData[bKey] ? JSON.parse(formData[bKey][f.field_key]): this.formData.onsite;
+                      if(typeof formData[bKey][f.field_key] === 'string') {
+                        this.formData.onsite = formData[bKey] ? JSON.parse(formData[bKey][f.field_key]): this.formData.onsite;
+                      }else {
+                        this.formData.onsite = formData[bKey] ? formData[bKey][f.field_key]: this.formData.onsite;
+                      }
                     });
                   }
                   if (form.field_group_name === 'Bio' || form.field_group_name === 'About') {
@@ -871,78 +875,92 @@ export class VenderDetailsAarbeeComponent {
                     let isImage = false;
                     if (formData['featured_projects']) {
                       formData['featured_projects'].forEach(a => {
-                        if (!a.project_logo.includes("name")) {
-                          a.project_logo = a.project_logo.replace('{', '[');
-                          a.project_logo = a.project_logo.replace('}', ']');
-                          a.project_logo = JSON.parse(a.project_logo);
-                          a.categorylist = [];
-                          let arrayy = [];
-                          this.categorisedProjectImages = [];
-                          
-                          a.project_logo.forEach(p => {
-                            arrayy.push({
-                              imageUrl: p,
-                              ...a
+                        if(typeof a.project_logo === 'string') {
+                          if (!a.project_logo.includes("name")) {
+                            a.project_logo = a.project_logo.replace('{', '[');
+                            a.project_logo = a.project_logo.replace('}', ']');
+                            a.project_logo = JSON.parse(a.project_logo);
+                          }else {
+                            a.project_logo = a.project_logo.replace('{', '[');
+                            a.project_logo = a.project_logo.replace(/.$/,"]");
+                            a.project_logo = JSON.parse(a.project_logo);
+                          }
+
+                        }
+                          if (!a.project_logo.includes("name")) {
+                            // a.project_logo = a.project_logo.replace('{', '[');
+                            // a.project_logo = a.project_logo.replace('}', ']');
+                            // a.project_logo = JSON.parse(a.project_logo);
+                            a.categorylist = [];
+                            let arrayy = [];
+                            this.categorisedProjectImages = [];
+                            
+                            a.project_logo.forEach(p => {
+                              arrayy.push({
+                                imageUrl: p,
+                                ...a
+                              })
+                              // if (!this.categorisedProjectImages.length) {
+                                this.selectedProjectCategory.imageUrls.push(...arrayy)
+                              // }
                             })
-                            // if (!this.categorisedProjectImages.length) {
-                              this.selectedProjectCategory.imageUrls.push(...arrayy)
-                            // }
-                          })
-                        } else {
-                          a.project_logo = a.project_logo.replace('{', '[');
-                          a.project_logo = a.project_logo.replace(/.$/,"]");
-                          a.project_logo = JSON.parse(a.project_logo);
-                          let arr = [];
-                          let cat = [];
-                          isImage = true;
-                          a.project_logo.forEach(p => {
-                            p = JSON.parse(p);
-                            cat.push(p);
-                            arr.push(...p.imageurls);
-                            if (!this.categorisedProjectImages.length) {
-                              let arr = [];
-                              p.imageurls.forEach(im => {
-                                arr.push({
-                                  imageUrl: im,
-                                  ...a
-                                 })
-                              })
-                              this.categorisedProjectImages.push({
-                                 name: p.name,
-                                 imageUrls: arr
-                              })
-                            } else {
-                              let indx = this.categorisedProjectImages.findIndex(a => a.name === p.name);
-                              if (indx === -1) {
-                              let arr = [];
-                                p.imageurls.forEach(im => {
-                                  arr.push({
-                                    imageUrl: im,
-                                    ...a
-                                   })
-                                  })
-                                  this.categorisedProjectImages.push({
-                                     name: p.name,
-                                     imageUrls: arr
-                                  })
-                              } else {
+                          } else {
+                            // a.project_logo = a.project_logo.replace('{', '[');
+                            // a.project_logo = a.project_logo.replace(/.$/,"]");
+                            // a.project_logo = JSON.parse(a.project_logo);
+                            let arr = [];
+                            let cat = [];
+                            isImage = true;
+                            a.project_logo.forEach(p => {
+                              if(typeof p === 'string') {
+                                p = JSON.parse(p);
+                              }
+                              cat.push(p);
+                              arr.push(...p.imageurls);
+                              if (!this.categorisedProjectImages.length) {
                                 let arr = [];
                                 p.imageurls.forEach(im => {
                                   arr.push({
                                     imageUrl: im,
                                     ...a
-                                   })
                                   })
-                                this.categorisedProjectImages[indx].imageUrls.push(
-                                  ...arr
-                                )
+                                })
+                                this.categorisedProjectImages.push({
+                                  name: p.name,
+                                  imageUrls: arr
+                                })
+                              } else {
+                                let indx = this.categorisedProjectImages.findIndex(a => a.name === p.name);
+                                if (indx === -1) {
+                                let arr = [];
+                                  p.imageurls.forEach(im => {
+                                    arr.push({
+                                      imageUrl: im,
+                                      ...a
+                                    })
+                                    })
+                                    this.categorisedProjectImages.push({
+                                      name: p.name,
+                                      imageUrls: arr
+                                    })
+                                } else {
+                                  let arr = [];
+                                  p.imageurls.forEach(im => {
+                                    arr.push({
+                                      imageUrl: im,
+                                      ...a
+                                    })
+                                    })
+                                  this.categorisedProjectImages[indx].imageUrls.push(
+                                    ...arr
+                                  )
+                                }
                               }
-                            }
-                          });
-                          a.categorylist = cat;
-                          a.project_logo = arr;
-                          // a.project_logo = a.project_logo.map(a => a.logo);
-                        }
+                            });
+                            a.categorylist = cat;
+                            a.project_logo = arr;
+                            // a.project_logo = a.project_logo.map(a => a.logo);
+                          }
                       });
                     }
                     if (this.categorisedProjectImages.length) {
@@ -952,10 +970,14 @@ export class VenderDetailsAarbeeComponent {
                           b.categorylist = [];
                           if (isImage) {
                             b.project_logo.forEach(c => {
-
-                              b.categorylist.push(JSON.parse(c));
-                              let bb = (JSON.parse(c)).imageurls.map(a1 => a1);
-                              arr.push(...bb);
+                              if(typeof c === 'string') {
+                                b.categorylist.push(JSON.parse(c));
+                                let bb = (JSON.parse(c)).imageurls.map(a1 => a1);
+                                arr.push(...bb);
+                              }else {
+                                b.categorylist.push(c);
+                                arr.push(...c.imageurls);
+                              }
                             });
                           } else {
                             arr = b.project_logo
@@ -997,21 +1019,29 @@ export class VenderDetailsAarbeeComponent {
                 if (this.formData.clientReviews && this.formData.clientReviews.length) {
                   this.formData.clientReviews.forEach(rev => {
                     revieCount += rev.ratings.length;
-                    rev.reviesSum = rev.ratings.reduce((a, b) => a + b.score, 0);
-                    reviewRatCount += rev.reviesSum;
+                    if(rev.reviesSum) {
+                      reviewRatCount += rev.reviesSum;
+                    }else {
+                      rev.reviesSum = rev.ratings.reduce((a, b) => a + b.score, 0);
+                      reviewRatCount += rev.reviesSum;
+                    }
                     reviewArr.push(...rev.ratings)
                   });
                 }
                 const groupReviewArr = [];
                 reviewArr.forEach(r => {
-                  let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
-                  if (indx === -1 || !groupReviewArr.length) {
-                    r.count = 1;
+                  if(!r['percentRating']) {
+                    let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                    if (indx === -1 || !groupReviewArr.length) {
+                      r.count = 1;
+                      groupReviewArr.push(r)
+                    } else {
+                      let ridx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                      groupReviewArr[ridx].count++;
+                      groupReviewArr[ridx].score += r.score;
+                    }
+                  }else {
                     groupReviewArr.push(r)
-                  } else {
-                    let ridx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
-                    groupReviewArr[ridx].count++;
-                    groupReviewArr[ridx].score += r.score;
                   }
                 });
                 if (this.highlightImges && this.highlightImges.length > 7) {
@@ -1099,7 +1129,11 @@ export class VenderDetailsAarbeeComponent {
                     s.addon_titles = arrAddon;
                    }
                    if (s.service_segments) {
-                     s.service_segments = JSON.parse(s.service_segments);
+                    if (typeof s.service_segments === 'string') {
+                      s.service_segments = JSON.parse(s.service_segments);
+                    }else {
+                      s.service_segments = s.service_segments;
+                    }
                    }
                    let exist = this.formData.highlightServices.findIndex(a => a.id === s.id);
                    if (s.service_featured && exist === -1) {
