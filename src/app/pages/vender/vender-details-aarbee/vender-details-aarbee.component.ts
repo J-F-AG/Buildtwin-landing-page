@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { ActivatedRoute, NavigationCancel, NavigationEnd, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { catchError, filter, forkJoin, map, mergeMap, retry } from 'rxjs';
@@ -8,6 +8,7 @@ import { FooterService } from '../../includes/hd-footer/footer.service';
 import { SeoService } from 'src/app/services/seo.service';
 import { VenderDetailService } from './vender-detail.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -16,30 +17,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class VenderDetailsAarbeeComponent {
   toggleContentIndex:number= -1
-  serviceSlider: OwlOptions = {
-    loop: false,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1,
-      },
-      400: {
-        items: 1
-      },
-      740: {
-        items: 2
-      },
-      940: {
-        items: 3
-      }
-    },
-    nav: true
-  }
   ourEngineers = [
     {
       img: "assets/images/aarbee/profile1.jpg",
@@ -343,8 +320,11 @@ export class VenderDetailsAarbeeComponent {
   companyId = '';
   companyEmail = '';
   // companyAllDetail = {};
-  constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
-
+  isBrowser: boolean;
+  constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.domain = this.route.snapshot.params['id'];
     this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
@@ -469,41 +449,11 @@ export class VenderDetailsAarbeeComponent {
 
 
   
-  aboutSlider: OwlOptions = {
-    items: 1,
-    nav: true,
-    margin: 0,
-    dots: true,
-    loop: true,
-    autoplay: false,
-    autoplayHoverPause: false,
-  }
-  sectorsSlider: OwlOptions = {
-    items: 1,
-    nav: true,
-    margin: 0,
-    dots: false,
-    loop: false,
-    autoplay: false,
-    autoplayHoverPause: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      768: {
-        items: 4
-      },
-      990: {
-        items: 4
-      },
-      1400: {
-        items: 4
-      }
-    }
-  }
+  
+  serviceSlider: OwlOptions | null = null;
+  aboutSlider: OwlOptions | null = null;
+  sectorsSlider: OwlOptions | null = null;
+  
 
 
 
@@ -685,7 +635,7 @@ export class VenderDetailsAarbeeComponent {
   }
 
   ngOnInit() {
-
+    this.sliderInit()
     this.myForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]], // Email field validation
       projectName: ['', Validators.required], // Project Name validation
@@ -699,6 +649,70 @@ export class VenderDetailsAarbeeComponent {
     setTimeout(() => {
       console.log(this.formData)
     }, 10000);
+  }
+  sliderInit(){
+    if (this.isBrowser) {
+      this.sectorsSlider = {
+        items: 1,
+        nav: true,
+        margin: 0,
+        dots: false,
+        loop: false,
+        autoplay: false,
+        autoplayHoverPause: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          768: {
+            items: 4
+          },
+          990: {
+            items: 4
+          },
+          1400: {
+            items: 4
+          }
+        }
+      }
+      this.aboutSlider = {
+        items: 1,
+        nav: true,
+        margin: 0,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        autoplayHoverPause: false,
+      }
+
+      this.serviceSlider = {
+        loop: false,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        dots: false,
+        navSpeed: 700,
+        navText: ['', ''],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          400: {
+            items: 1
+          },
+          740: {
+            items: 2
+          },
+          940: {
+            items: 3
+          }
+        },
+        nav: true
+      }
+    }
   }
   loadScript() {
     // Create script element
@@ -1030,7 +1044,7 @@ export class VenderDetailsAarbeeComponent {
                 }
                 const groupReviewArr = [];
                 reviewArr.forEach(r => {
-                  if(!r['percentRating']) {
+                  if(!reviewArr[0]['percentRating']) {
                     let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
                     if (indx === -1 || !groupReviewArr.length) {
                       r.count = 1;
@@ -1041,7 +1055,10 @@ export class VenderDetailsAarbeeComponent {
                       groupReviewArr[ridx].score += r.score;
                     }
                   }else {
-                    groupReviewArr.push(r)
+                    let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                    if (indx === -1 || !groupReviewArr.length) {
+                      groupReviewArr.push(r)
+                    }
                   }
                 });
                 if (this.highlightImges && this.highlightImges.length > 7) {
