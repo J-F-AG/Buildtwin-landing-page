@@ -871,5 +871,714 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(faqSchema);
   }
+  injectFAQSchemaForDurchgeplant(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "FAQPage", 
+    
+      "mainEntity": [{ 
+    
+        "@type": "Question", 
+    
+        "name": "Durchgeplant Planning and Management GmbH general business conditions at a glance", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Your reliable partner for the planning of your precast concrete elements." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "Can Durchgeplant also support me with an already ongoing project?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Yes, Durchgeplant can support you with ongoing projects by providing additional expertise and resources to ensure project success." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "How quickly can I get a quote for my request?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "You can receive a quote for your request within 48 hours. Our team works quickly to provide accurate and competitive pricing." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "With which CAD programs does Durchgeplant work?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Durchgeplant works with various CAD programs including AutoCAD, Revit, and Tekla Structures to meet diverse project needs." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "Can Durchgeplant provide reinforcement data for mesh welding machines?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Yes, Durchgeplant can provide reinforcement data for mesh welding machines, ensuring precise and efficient production processes." 
+    
+        } 
+    
+      }] 
+    
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+  injectFAQSchemaForCaldim(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "FAQPage", 
+    
+      "mainEntity": [ 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Caldim general business conditions at a glance", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Your reliable partner for the planning of your precast concrete elements." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can Caldim also support me with an already ongoing project?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, Caldim can support you with ongoing projects by providing additional expertise and resources to ensure project success." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "How quickly can I get a quote for my request?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "You can receive a quote for your request within 48 hours. Our team works quickly to provide accurate and competitive pricing." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "With which CAD programs does Caldim work?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Caldim works with various CAD programs including AutoCAD, Revit, and Tekla Structures to meet diverse project needs." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can Caldim provide reinforcement data for mesh welding machines?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, Caldim can provide reinforcement data for mesh welding machines, ensuring precise and efficient production processes." 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+  injectFAQSchemaForSublime(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "FAQPage", 
+    
+      "mainEntity": [ 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Sublime Structures general business conditions at a glance", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Your reliable partner for the planning of your precast concrete elements." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can Sublime Structures also support me with an already ongoing project?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, Sublime Structures can support you with ongoing projects by providing additional expertise and resources to ensure project success." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "How quickly can I get a quote for my request?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "You can receive a quote for your request within 48 hours. Our team works quickly to provide accurate and competitive pricing." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "With which CAD programs does Sublime Structures work?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Sublime Structures works with various CAD programs including AutoCAD, Revit, and Tekla Structures to meet diverse project needs." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can Sublime Structures provide reinforcement data for mesh welding machines?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, Sublime Structures can provide reinforcement data for mesh welding machines, ensuring precise and efficient production processes." 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+  injectFAQSchemaForjfindia(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "FAQPage", 
+    
+      "mainEntity": [ 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "What will I learn in the BuildTwin program?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "In the BuildTwin program, you will learn about advanced building information modeling (BIM), digital twin technology, and how to apply these concepts to real-world projects to improve efficiency and accuracy." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "How long is the typical course?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "The typical course duration is 12 weeks, with a mix of online lectures, hands-on projects, and collaborative assignments." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Do I need previous experience with ALLPLAN?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "No, previous experience with ALLPLAN is not required. The course includes an introductory module to help you get up to speed with the software." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "What are the technical requirements?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "The technical requirements include a computer with at least 8GB of RAM, an internet connection, and basic knowledge of construction and architecture principles." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "J&F company business terms & conditions at a glance", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "The course is specifically designed for engineers, architects, and project managers seeking to meet the unique demands of specific international markets and real client requirements." 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+  injectFAQSchemaForMoldTektechnologieslimited(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "FAQPage", 
+    
+      "mainEntity": [ 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Moldtek general business conditions at a glance", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Your reliable partner for the planning of your precast concrete elements." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can Moldtek also support me with an already ongoing project?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, Moldtek can support you with ongoing projects by providing additional expertise and resources to ensure project success." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "How quickly can I get a quote for my request?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "You can receive a quote for your request within 48 hours. Our team works quickly to provide accurate and competitive pricing." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "With which CAD programs does Moldtek work?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Moldtek works with various CAD programs including AutoCAD, Revit, and Tekla Structures to meet diverse project needs." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can Moldtek provide reinforcement data for mesh welding machines?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, Moldtek can provide reinforcement data for mesh welding machines, ensuring precise and efficient production processes." 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+  injectFAQSchemaForGbcEngineers(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "FAQPage", 
+    
+      "mainEntity": [ 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "GBC general business conditions at a glance", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Your reliable partner for the planning of your precast concrete elements." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can GBC also support me with an already ongoing project?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, GBC can support you with ongoing projects by providing additional expertise and resources to ensure project success." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "How quickly can I get a quote for my request?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "You can receive a quote for your request within 48 hours. Our team works quickly to provide accurate and competitive pricing." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "With which CAD programs does GBC work?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "GBC works with various CAD programs including AutoCAD, Revit, and Tekla Structures to meet diverse project needs." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can GBC provide reinforcement data for mesh welding machines?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, GBC can provide reinforcement data for mesh welding machines, ensuring precise and efficient production processes." 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+  injectFAQSchemaForAarbeeStructuresPrivateLimited(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "FAQPage", 
+    
+      "mainEntity": [ 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Aarbee general business conditions at a glance", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Your reliable partner for the planning of your precast concrete elements." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can Aarbee also support me with an already ongoing project?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, Aarbee can support you with ongoing projects by providing additional expertise and resources to ensure project success." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "How quickly can I get a quote for my request?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "You can receive a quote for your request within 48 hours. Our team works quickly to provide accurate and competitive pricing." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "With which CAD programs does Aarbee work?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Aarbee works with various CAD programs including AutoCAD, Revit, and Tekla Structures to meet diverse project needs." 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Question", 
+    
+          "name": "Can Aarbee provide reinforcement data for mesh welding machines?", 
+    
+          "acceptedAnswer": { 
+    
+            "@type": "Answer", 
+    
+            "text": "Yes, Aarbee can provide reinforcement data for mesh welding machines, ensuring precise and efficient production processes." 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
 
 }
