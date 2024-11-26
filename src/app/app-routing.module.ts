@@ -240,8 +240,8 @@ const routes: Routes = [
     {
         path: 'services/bim-service-provider-in-usa', component: BimUsaServicesNewComponent,
         data: {
-            title: 'BIM Services USA | BIM Outsourcing Companies USA - BuildTwin Marketplace',
-            description: "BuildTwin Marketplace is your trusted BIM services provider in USA. Our expert team offers comprehensive BIM consulting and outsourcing solutions to optimize your AEC projects. We deliver quality results across New York, Florida, Chicago, Texas, and nearby areas.",
+            title: 'Connect with BIM Modeling Services Providers for AEC Projects Across the USA | BuildTwin',
+            description: "Connect top-tier BIM service providers across the USA. Our BIM services provider specialize in BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM.",
             image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
             canonical: 'https://www.buildtwin.com/services/bim-service-provider-in-usa'
         }
@@ -451,8 +451,8 @@ const routes: Routes = [
     // {
     //     path: 'de/services/bim-service-provider-in-usa', component: BimUsaServicesNewComponent,
     //     data: {
-    //         title: 'BIM Services USA | BIM Outsourcing Companies USA - BuildTwin Marketplace',
-    //         description: "BuildTwin Marketplace is your trusted BIM services provider in USA. Our expert team offers comprehensive BIM consulting and outsourcing solutions to optimize your AEC projects. We deliver quality results across New York, Florida, Chicago, Texas, and nearby areas.",
+    //         title: 'Connect with BIM Modeling Services Providers for AEC Projects Across the USA | BuildTwin',
+    //         description: "Connect top-tier BIM service providers across the USA. Our BIM services provider specialize in BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM.",
     //         image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
     //         canonical: 'https://www.buildtwin.com/services/bim-service-provider-in-usa'
     //     }
