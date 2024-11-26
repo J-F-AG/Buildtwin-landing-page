@@ -11,7 +11,7 @@ import { isPlatformBrowser } from '@angular/common';
 })
 
 export class BimUsaBannerComponent {
-  cities = ['Arizona', 'New York', 'Texas', 'Pennsylvania', 'Florida', 'California'];
+  cities = ['Arizona', 'New York', 'Texas', 'Pennsylvania', 'Florida', 'California', 'Chicago'];
   currentCity: string = this.cities[0];
   // private cityIndex = 0;
   // private citySubscription: any;
