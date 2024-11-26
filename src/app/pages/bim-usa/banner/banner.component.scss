@@ -47,7 +47,7 @@
 .states span {
     position: absolute;
     opacity: 0;
-    animation: showHide 12s infinite;
+    animation: showHide 14s infinite;
     display: inline-block;
     white-space: nowrap;
   }
@@ -59,6 +59,7 @@
   .states span:nth-child(4) { animation-delay: 6s; }
   .states span:nth-child(5) { animation-delay: 8s; }
   .states span:nth-child(6) { animation-delay: 10s; }
+  .states span:nth-child(7) { animation-delay: 12s; }
   
   @keyframes showHide {
     0%, 16.66% { opacity: 0; }  /* Hidden at start and end of each segment */

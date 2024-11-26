@@ -17,16 +17,19 @@ export class BimUsaPrecastServiceComponent implements OnInit {
 
   precastArray = [
     {
-      name: 'BIM modelling',
+      name: 'BIM modeling',
       details: [
         {
-          mainContent: 'With our automated platform, you can manage BIM (Building Information Modelling) services for your project needs far more efficiently. Not only are your BIM modelling services streamlined, you also get to easily create detailed 3D models complete with material, cost, and scheduling information. While our pre-qualified vendors ensure expertise, our platform gives you precision and consistency via automation, thereby reducing manual efforts and errors. With ready access to any part of the project lifecycle, be it the history, ongoing progress or upcoming plans, you get the ability to keep track of any point in the timeline, anywhere, any time.',
+          mainContentHead: 'Efficient management of BIM (Building Information Modeling) services for your project needs.',
+          mainContent: 'Our automated platform enhances the management of BIM services by simplifying the BIM modeling process. This allows you to create detailed 3D models, including material, cost, and scheduling information, streamlining the entire construction project lifecycle. BIM modeling services are further enhanced by our pre-qualified vendors who ensure top-notch expertise, helping you reduce manual efforts and errors in the design process. With ready access to any part of the project lifecycle, you can track project history, ongoing progress, and future plans in real time, giving you full visibility and control of every aspect of the project. This allows you to efficiently manage BIM modeling and ensure the successful delivery of your AEC projects.',
           header: 'Our industry standards for BIM services',
-          subContent: `We ensure that our BIM designs comply with the American standard code of practice.`,
+          subContent: `We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:`,
           items: [
             'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
@@ -35,13 +38,16 @@ export class BimUsaPrecastServiceComponent implements OnInit {
       name: '3D rendering',
       details: [
         {
-          mainContent: 'As opposed to traditional BIM services, when it comes to 3D rendering on our platform, you get access to detailed, realistic visuals of your project based on the BIM model. This helps you easily visualize the 3D rendering, allows for quicker comparisons between design options, and enables faster decision-making. By facilitating seamless collaboration between architects, engineers, and contractors, the platform reduces gaps and improves communication. Having automated 3D renderings also benefits by saving costs and potential delays, which in turn makes the overall project more efficient.',
+          mainContentHead: 'Enhanced visualization and decision-making through automated 3D rendering.',
+          mainContent: 'Unlike traditional BIM services, 3D rendering on our platform gives you access to high-quality, realistic visuals based on the BIM model. This empowers project teams to visualize 3D rendering clearly, compare various design options, versions, and make informed decisions quickly. Seamless collaboration between architects, engineers, and contractors fosters better communication, reduces errors, and improves project efficiency. Automated 3D rendering results in cost savings and reduced delays, directly enhancing the overall project efficiency and delivering optimal outcomes for your AEC projects.',
           header: 'Our industry standards for BIM services',
-          subContent: 'We ensure that our BIM designs comply with the American standard code of practice.',
+          subContent: 'We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:',
           items: [
-           'ASTM (American Society for Testing and Materials)',
+            'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
@@ -50,13 +56,16 @@ export class BimUsaPrecastServiceComponent implements OnInit {
       name: 'BIM coordination',
       details: [
         {
-          mainContent: 'As BIM coordination involves alignment between all vendors and stakeholders of your project, our platform takes this process to the next level. By having shared access, yourteams can review designs, materials, and timelines, and reduce on-site issues. This is the perfect way to optimize your BIM coordination where not only do you get to ensure that cross-functional communication is seamless, but your overall productivity gets a significant boost.',
+          mainContentHead: 'Optimizing BIM coordination to ensure seamless project execution',
+          mainContent: 'BIM coordination involves aligning all vendors and stakeholders within the project. BuildTwin’s platform allows teams to collaborate effectively by providing shared access to designs, materials, timelines, and other essential project data. This ensures that all project participants are on the same page, leading to fewer on-site issues and faster decision-making. By optimizing BIM coordination, the platform ensures better communication, reduces the risk of errors, and boosts overall project management and productivity, helping deliver your construction projects on time and within budget.',
           header: 'Our industry standards for BIM services',
-          subContent: 'We ensure that our BIM designs comply with the American standard code of practice.',
+          subContent: 'We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:',
           items: [
             'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
@@ -65,13 +74,16 @@ export class BimUsaPrecastServiceComponent implements OnInit {
       name: 'Scan to BIM',
       details: [
         {
-          mainContent: 'While our certified vendors ensure high-quality scans to BIM, our platform automates the conversion of those scans to accurate BIM models. This gives you enhanced projectoutcomes by having the top global vendors, who use only the latest technology, and comply with the global standards we have laid out. By having all these checklists already in place, you get the most out of our services, with minimal efforts on your and your teams’ ends.',
+          mainContentHead: 'Accurate, high-quality Scan to BIM services for improved project outcomes.',
+          mainContent: 'BuildTwin provides Scan to BIM services that automatically convert scanned data into accurate BIM models, reducing manual efforts and errors. With certified vendors using the latest technology, our platform ensures that your BIM models are built with high precision and compliance to global standards. This service guarantees enhanced project outcomes by ensuring that the Scan to BIM process is as seamless and efficient as possible, benefiting your AEC projects and reducing the time and effort required for creating detailed BIM models.',
           header: 'Our industry standards for BIM services',
-          subContent: 'We ensure that our BIM designs comply with the American standard code of practice.',
+          subContent: 'We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:',
           items: [
             'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
@@ -80,13 +92,16 @@ export class BimUsaPrecastServiceComponent implements OnInit {
       name: 'MEP BIM',
       details: [
         {
-          mainContent: 'MEP BIM (Mechanical, Electrical, Plumbing in Building Information Modelling) becomes a lot more precise and seamless with our platform. With so many components involved in MEP BIM, it can become tricky to go back to designs, revisions, or reports during the course of a project. Our cloud-backed documentation, which even provide summarized emails, allows you to go back to a specific detail that you want to access within seconds. With such attention to detail that goes into the minutest level of the processes involved, you have the freedom to switch between previous and ongoing project files, without having to invest in any additional resources or time.',
+          mainContentHead: 'Precision in MEP BIM (Mechanical, Electrical, Plumbing) design and documentation',
+          mainContent: 'The complexity of MEP BIM can be challenging, but BuildTwin’s platform makes it simpler and more accurate. With numerous components involved, our platform allows you to access and revise MEP BIM designs, reports, and revisions effortlessly. Cloud-backed documentation and real-time tracking make it easy for you to revisit specific details at any time, increasing accuracy and saving resources. Whether you’re working on MEP BIM designs, revisions, or reports, our platform simplifies the process, ensuring efficiency and reliability for your construction projects.',
           header: 'Our industry standards for BIM services',
-          subContent: 'We ensure that our BIM designs comply with the American standard code of practice.',
+          subContent: 'We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:',
           items: [
             'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
@@ -95,13 +110,16 @@ export class BimUsaPrecastServiceComponent implements OnInit {
       name: 'Architectural BIM',
       details: [
         {
-          mainContent: 'While assessing aesthetics, functionality, and spatial alignments in your architectural BIM, having a one-stop platform to design, coordinate and accelerate the entire process is an asset. That is what our platform brings to the table, with vendors who canhelp you and your teams visualize designs more effectively via integrated workflows. By provide you with detailed architectural BIMs, tools to facilitate clash detection and improve coordination, and ultimately elevate project progress and outcomes, you get tobe intrinsically involved from the beginning to execution of your projects.',
+          mainContentHead: 'Streamline the design process with integrated Architectural BIM services.',
+          mainContent: 'BuildTwin’s platform facilitates Architectural BIM by integrating design, coordination, and execution into one centralized space. With architectural BIM, you can evaluate aesthetics, functionality, and spatial alignments in one place. The platform enhances BIM coordination, enables clash detection, and accelerates the design process, ultimately improving project progress. By using BuildTwin’s platform, teams can visualize designs more effectively and streamline the entire architectural BIM process, from conception to execution, ensuring better project outcomes.',
           header: 'Our industry standards for BIM services',
-          subContent: 'We ensure that our BIM designs comply with the American standard code of practice.',
+          subContent: 'We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:',
           items: [
             'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
@@ -110,13 +128,16 @@ export class BimUsaPrecastServiceComponent implements OnInit {
       name: 'Structural BIM',
       details: [
         {
-          mainContent: 'For the most accurate structural designs, the key is to have every detail of the structural BIM accessible in real-time for your engineers, irrespective of location. Our platform gives them that and more by bringing every stakeholder – structural engineer,architect, and contractor, among others – together to make the best decisions for accelerated design iterations, analysis of structural integrity, and optimal material usage, while complying to global standards.',
+          mainContentHead: 'Real-time access to Structural BIM for optimal decision-making.',
+          mainContent: 'Accurate Structural BIM designs are crucial for the success of any construction project. BuildTwin’s platform offers real-time access to all structural BIM data for engineers and other stakeholders, enabling faster decision-making and better collaboration. Whether you are working on structural analysis, material usage, or design iterations, the platform’s integrated workflow supports seamless project execution. By utilizing Structural BIM, engineers, architects, and contractors can collaborate more effectively, improving structural integrity, optimizing materials, and adhering to global standards for AEC projects.',
           header: 'Our industry standards for BIM services',
-          subContent: 'We ensure that our BIM designs comply with the American standard code of practice.',
+          subContent: 'We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:',
           items: [
             'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
@@ -125,13 +146,16 @@ export class BimUsaPrecastServiceComponent implements OnInit {
       name: 'Facade BIM',
       details: [
         {
-          mainContent: 'With ready vendors on board for your facade BIM process, you get qualified contractors who can quickly provide estimates and enable timely project execution. By monitoring progress in real time, you and your stakeholders together can ensure that timelines and budgets are adhered to. For this, our CDE integration is a key factor. It facilitates seamless data sharing and collaboration amongst all parties, minimizing gaps and improving outcomes. With all legal risks and compliances in check, your designs meet local regulations and global standards, resulting in overall project success every time.',
+          mainContentHead: 'Streamlined Facade BIM for efficient project execution.',
+          mainContent: 'Facade design is critical for the success of a construction project, and BuildTwin’s platform makes the Facade BIM process more efficient. With qualified contractors ready to provide quick estimates, you can ensure timely project execution. The platform integrates CDEs (Common Data Environments), facilitating seamless data sharing and communication among all parties involved. Real-time tracking ensures that timelines and budgets are adhered to, and with all legal and compliance checks in place, your Facade BIM designs meet local regulations and global standards, leading to successful AEC project delivery.',
           header: 'Our industry standards for BIM services',
-          subContent: 'We ensure that our BIM designs comply with the American standard code of practice.',
+          subContent: 'We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:',
           items: [
             'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
@@ -140,13 +164,16 @@ export class BimUsaPrecastServiceComponent implements OnInit {
       name: 'Revit BIM',
       details: [
         {
-          mainContent: 'Staying updated is indispensable when it comes to technology, especially to maintain global industry relevance. Our pre-qualified vendors use the latest industry software to give you the most up-to-date technological edge from planning to execution, such as with Revit BIM. This ensures that the designs generated are competent, provide accuracy, and lead to optimal outcomes. Our CDE integration allows architects, engineers, contractors, and other stakeholders, from teams on both ends to work seamlessly during the Revit BIM process.',
+          mainContentHead: 'Utilize Revit BIM for optimal design outcomes in your AEC projects.',
+          mainContent: 'Revit BIM is essential for maintaining technological relevance in the AEC industry. BuildTwin’s platform integrates Revit BIM services to ensure the latest industry software and tools are used for design and execution. This ensures that the designs generated are accurate, meet global standards, and lead to successful project outcomes. Our CDE integration facilitates smooth collaboration among architects, engineers, and contractors during the Revit BIM process, ensuring that every aspect of the project is executed flawlessly.',
           header: 'Our industry standards for BIM services',
-          subContent: 'We ensure that our BIM designs comply with the American standard code of practice.',
+          subContent: 'We commit to the highest industry standards, ensuring durability and compliance in all our BIM services, particularly in rebar structures, by adhering to global standard codes and American codes such as:',
           items: [
             'ASTM (American Society for Testing and Materials)',
             'ACI (American Concrete Institute)',
-            'CRSI (Concrete Reinforcing Steel Institute)'
+            'CRSI (Concrete Reinforcing Steel Institute)',
+            'NISD (Institute of Steel Detailing)',
+            'RCSC (Research Council on Structural Connections)'
           ],
         }
       ]
