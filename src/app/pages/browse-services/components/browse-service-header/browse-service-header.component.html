@@ -23,7 +23,7 @@
         </a>
     </div>
     <div class="sectionBottom">
-        <div class="headerCarousel">
+        <div class="headerCarousel" [ngClass]="{'single-desktop': servicesArray.length<7}">
             <owl-carousel-o [options]="customOptions">
                 <ng-template *ngFor="let item of servicesArray" carouselSlide>
                     <div class="cardWrapper" *ngIf="!item['serviceId']">

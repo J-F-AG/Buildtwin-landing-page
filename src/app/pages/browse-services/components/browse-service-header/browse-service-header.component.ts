@@ -52,7 +52,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
 
   index = 0;
   customOptions: OwlOptions = {
-    loop: true,
+    loop: false,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
