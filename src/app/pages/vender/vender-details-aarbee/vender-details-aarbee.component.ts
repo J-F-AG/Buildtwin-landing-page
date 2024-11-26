@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { ActivatedRoute, NavigationCancel, NavigationEnd, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { catchError, filter, forkJoin, map, mergeMap, retry } from 'rxjs';
@@ -8,6 +8,7 @@ import { FooterService } from '../../includes/hd-footer/footer.service';
 import { SeoService } from 'src/app/services/seo.service';
 import { VenderDetailService } from './vender-detail.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -16,30 +17,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class VenderDetailsAarbeeComponent {
   toggleContentIndex:number= -1
-  serviceSlider: OwlOptions = {
-    loop: false,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1,
-      },
-      400: {
-        items: 1
-      },
-      740: {
-        items: 2
-      },
-      940: {
-        items: 3
-      }
-    },
-    nav: true
-  }
   ourEngineers = [
     {
       img: "assets/images/aarbee/profile1.jpg",
@@ -343,13 +320,16 @@ export class VenderDetailsAarbeeComponent {
   companyId = '';
   companyEmail = '';
   // companyAllDetail = {};
-  constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
-
-    this.getBusinessListing();
-    this.getCompanyDetail()
+  isBrowser: boolean;
+  constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.domain = this.route.snapshot.params['id'];
     this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
+    this.getBusinessListing();
+    this.getCompanyDetail()
     if(this.route.snapshot.queryParams['isIframe']){
       document.body.classList.add('iframeEmbed');
     }
@@ -394,7 +374,7 @@ export class VenderDetailsAarbeeComponent {
           // Update Twitter card tags
           this._seoService.updateTwitterCardType('summary_large_image');
           this._seoService.updateTwitterImage(this._venderDetailService['detalMeta'][url]['image']);
-          this._seoService.setCanonicalURL(this._venderDetailService['detalMeta'][url]['canonical']);
+          this._seoService.setCanonicalURL(this._venderDetailService['detalMeta'][url]['canonical'], this.renderer);
         }
   }
   showPopup = false;
@@ -469,41 +449,11 @@ export class VenderDetailsAarbeeComponent {
 
 
   
-  aboutSlider: OwlOptions = {
-    items: 1,
-    nav: true,
-    margin: 0,
-    dots: true,
-    loop: true,
-    autoplay: false,
-    autoplayHoverPause: false,
-  }
-  sectorsSlider: OwlOptions = {
-    items: 1,
-    nav: true,
-    margin: 0,
-    dots: false,
-    loop: false,
-    autoplay: false,
-    autoplayHoverPause: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      768: {
-        items: 4
-      },
-      990: {
-        items: 4
-      },
-      1400: {
-        items: 4
-      }
-    }
-  }
+  
+  serviceSlider: OwlOptions | null = null;
+  aboutSlider: OwlOptions | null = null;
+  sectorsSlider: OwlOptions | null = null;
+  
 
 
 
@@ -685,7 +635,7 @@ export class VenderDetailsAarbeeComponent {
   }
 
   ngOnInit() {
-
+    this.sliderInit()
     this.myForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]], // Email field validation
       projectName: ['', Validators.required], // Project Name validation
@@ -699,6 +649,70 @@ export class VenderDetailsAarbeeComponent {
     setTimeout(() => {
       console.log(this.formData)
     }, 10000);
+  }
+  sliderInit(){
+    if (this.isBrowser) {
+      this.sectorsSlider = {
+        items: 1,
+        nav: true,
+        margin: 0,
+        dots: false,
+        loop: false,
+        autoplay: false,
+        autoplayHoverPause: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          768: {
+            items: 4
+          },
+          990: {
+            items: 4
+          },
+          1400: {
+            items: 4
+          }
+        }
+      }
+      this.aboutSlider = {
+        items: 1,
+        nav: true,
+        margin: 0,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        autoplayHoverPause: false,
+      }
+
+      this.serviceSlider = {
+        loop: false,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        dots: false,
+        navSpeed: 700,
+        navText: ['', ''],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          400: {
+            items: 1
+          },
+          740: {
+            items: 2
+          },
+          940: {
+            items: 3
+          }
+        },
+        nav: true
+      }
+    }
   }
   loadScript() {
     // Create script element
@@ -840,7 +854,11 @@ export class VenderDetailsAarbeeComponent {
                   if (form.field_group_name === 'On-Site Available(own office)') {
                     // form.fields = JSON.parse(form.fields);
                     form.fields.forEach((f: any) => {
-                      this.formData.onsite = formData[bKey] ? JSON.parse(formData[bKey][f.field_key]): this.formData.onsite;
+                      if(typeof formData[bKey][f.field_key] === 'string') {
+                        this.formData.onsite = formData[bKey] ? JSON.parse(formData[bKey][f.field_key]): this.formData.onsite;
+                      }else {
+                        this.formData.onsite = formData[bKey] ? formData[bKey][f.field_key]: this.formData.onsite;
+                      }
                     });
                   }
                   if (form.field_group_name === 'Bio' || form.field_group_name === 'About') {
@@ -871,78 +889,92 @@ export class VenderDetailsAarbeeComponent {
                     let isImage = false;
                     if (formData['featured_projects']) {
                       formData['featured_projects'].forEach(a => {
-                        if (!a.project_logo.includes("name")) {
-                          a.project_logo = a.project_logo.replace('{', '[');
-                          a.project_logo = a.project_logo.replace('}', ']');
-                          a.project_logo = JSON.parse(a.project_logo);
-                          a.categorylist = [];
-                          let arrayy = [];
-                          this.categorisedProjectImages = [];
-                          
-                          a.project_logo.forEach(p => {
-                            arrayy.push({
-                              imageUrl: p,
-                              ...a
+                        if(typeof a.project_logo === 'string') {
+                          if (!a.project_logo.includes("name")) {
+                            a.project_logo = a.project_logo.replace('{', '[');
+                            a.project_logo = a.project_logo.replace('}', ']');
+                            a.project_logo = JSON.parse(a.project_logo);
+                          }else {
+                            a.project_logo = a.project_logo.replace('{', '[');
+                            a.project_logo = a.project_logo.replace(/.$/,"]");
+                            a.project_logo = JSON.parse(a.project_logo);
+                          }
+
+                        }
+                          if (!a.project_logo.includes("name")) {
+                            // a.project_logo = a.project_logo.replace('{', '[');
+                            // a.project_logo = a.project_logo.replace('}', ']');
+                            // a.project_logo = JSON.parse(a.project_logo);
+                            a.categorylist = [];
+                            let arrayy = [];
+                            this.categorisedProjectImages = [];
+                            
+                            a.project_logo.forEach(p => {
+                              arrayy.push({
+                                imageUrl: p,
+                                ...a
+                              })
+                              // if (!this.categorisedProjectImages.length) {
+                                this.selectedProjectCategory.imageUrls.push(...arrayy)
+                              // }
                             })
-                            // if (!this.categorisedProjectImages.length) {
-                              this.selectedProjectCategory.imageUrls.push(...arrayy)
-                            // }
-                          })
-                        } else {
-                          a.project_logo = a.project_logo.replace('{', '[');
-                          a.project_logo = a.project_logo.replace(/.$/,"]");
-                          a.project_logo = JSON.parse(a.project_logo);
-                          let arr = [];
-                          let cat = [];
-                          isImage = true;
-                          a.project_logo.forEach(p => {
-                            p = JSON.parse(p);
-                            cat.push(p);
-                            arr.push(...p.imageurls);
-                            if (!this.categorisedProjectImages.length) {
-                              let arr = [];
-                              p.imageurls.forEach(im => {
-                                arr.push({
-                                  imageUrl: im,
-                                  ...a
-                                 })
-                              })
-                              this.categorisedProjectImages.push({
-                                 name: p.name,
-                                 imageUrls: arr
-                              })
-                            } else {
-                              let indx = this.categorisedProjectImages.findIndex(a => a.name === p.name);
-                              if (indx === -1) {
-                              let arr = [];
-                                p.imageurls.forEach(im => {
-                                  arr.push({
-                                    imageUrl: im,
-                                    ...a
-                                   })
-                                  })
-                                  this.categorisedProjectImages.push({
-                                     name: p.name,
-                                     imageUrls: arr
-                                  })
-                              } else {
+                          } else {
+                            // a.project_logo = a.project_logo.replace('{', '[');
+                            // a.project_logo = a.project_logo.replace(/.$/,"]");
+                            // a.project_logo = JSON.parse(a.project_logo);
+                            let arr = [];
+                            let cat = [];
+                            isImage = true;
+                            a.project_logo.forEach(p => {
+                              if(typeof p === 'string') {
+                                p = JSON.parse(p);
+                              }
+                              cat.push(p);
+                              arr.push(...p.imageurls);
+                              if (!this.categorisedProjectImages.length) {
                                 let arr = [];
                                 p.imageurls.forEach(im => {
                                   arr.push({
                                     imageUrl: im,
                                     ...a
-                                   })
                                   })
-                                this.categorisedProjectImages[indx].imageUrls.push(
-                                  ...arr
-                                )
+                                })
+                                this.categorisedProjectImages.push({
+                                  name: p.name,
+                                  imageUrls: arr
+                                })
+                              } else {
+                                let indx = this.categorisedProjectImages.findIndex(a => a.name === p.name);
+                                if (indx === -1) {
+                                let arr = [];
+                                  p.imageurls.forEach(im => {
+                                    arr.push({
+                                      imageUrl: im,
+                                      ...a
+                                    })
+                                    })
+                                    this.categorisedProjectImages.push({
+                                      name: p.name,
+                                      imageUrls: arr
+                                    })
+                                } else {
+                                  let arr = [];
+                                  p.imageurls.forEach(im => {
+                                    arr.push({
+                                      imageUrl: im,
+                                      ...a
+                                    })
+                                    })
+                                  this.categorisedProjectImages[indx].imageUrls.push(
+                                    ...arr
+                                  )
+                                }
                               }
-                            }
-                          });
-                          a.categorylist = cat;
-                          a.project_logo = arr;
-                          // a.project_logo = a.project_logo.map(a => a.logo);
-                        }
+                            });
+                            a.categorylist = cat;
+                            a.project_logo = arr;
+                            // a.project_logo = a.project_logo.map(a => a.logo);
+                          }
                       });
                     }
                     if (this.categorisedProjectImages.length) {
@@ -952,10 +984,14 @@ export class VenderDetailsAarbeeComponent {
                           b.categorylist = [];
                           if (isImage) {
                             b.project_logo.forEach(c => {
-
-                              b.categorylist.push(JSON.parse(c));
-                              let bb = (JSON.parse(c)).imageurls.map(a1 => a1);
-                              arr.push(...bb);
+                              if(typeof c === 'string') {
+                                b.categorylist.push(JSON.parse(c));
+                                let bb = (JSON.parse(c)).imageurls.map(a1 => a1);
+                                arr.push(...bb);
+                              }else {
+                                b.categorylist.push(c);
+                                arr.push(...c.imageurls);
+                              }
                             });
                           } else {
                             arr = b.project_logo
@@ -997,21 +1033,32 @@ export class VenderDetailsAarbeeComponent {
                 if (this.formData.clientReviews && this.formData.clientReviews.length) {
                   this.formData.clientReviews.forEach(rev => {
                     revieCount += rev.ratings.length;
-                    rev.reviesSum = rev.ratings.reduce((a, b) => a + b.score, 0);
-                    reviewRatCount += rev.reviesSum;
+                    if(rev.reviesSum) {
+                      reviewRatCount += rev.reviesSum;
+                    }else {
+                      rev.reviesSum = rev.ratings.reduce((a, b) => a + b.score, 0);
+                      reviewRatCount += rev.reviesSum;
+                    }
                     reviewArr.push(...rev.ratings)
                   });
                 }
                 const groupReviewArr = [];
                 reviewArr.forEach(r => {
-                  let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
-                  if (indx === -1 || !groupReviewArr.length) {
-                    r.count = 1;
-                    groupReviewArr.push(r)
-                  } else {
-                    let ridx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
-                    groupReviewArr[ridx].count++;
-                    groupReviewArr[ridx].score += r.score;
+                  if(!reviewArr[0]['percentRating']) {
+                    let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                    if (indx === -1 || !groupReviewArr.length) {
+                      r.count = 1;
+                      groupReviewArr.push(r)
+                    } else {
+                      let ridx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                      groupReviewArr[ridx].count++;
+                      groupReviewArr[ridx].score += r.score;
+                    }
+                  }else {
+                    let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                    if (indx === -1 || !groupReviewArr.length) {
+                      groupReviewArr.push(r)
+                    }
                   }
                 });
                 if (this.highlightImges && this.highlightImges.length > 7) {
@@ -1099,7 +1146,11 @@ export class VenderDetailsAarbeeComponent {
                     s.addon_titles = arrAddon;
                    }
                    if (s.service_segments) {
-                     s.service_segments = JSON.parse(s.service_segments);
+                    if (typeof s.service_segments === 'string') {
+                      s.service_segments = JSON.parse(s.service_segments);
+                    }else {
+                      s.service_segments = s.service_segments;
+                    }
                    }
                    let exist = this.formData.highlightServices.findIndex(a => a.id === s.id);
                    if (s.service_featured && exist === -1) {
