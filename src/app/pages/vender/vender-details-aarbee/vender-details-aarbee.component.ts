@@ -889,19 +889,19 @@ export class VenderDetailsAarbeeComponent {
                     let isImage = false;
                     if (formData['featured_projects']) {
                       formData['featured_projects'].forEach(a => {
-                        if(typeof a.project_logo === 'string') {
+                        if (typeof a.project_logo === 'string') {
                           if (!a.project_logo.includes("name")) {
                             a.project_logo = a.project_logo.replace('{', '[');
                             a.project_logo = a.project_logo.replace('}', ']');
                             a.project_logo = JSON.parse(a.project_logo);
                           }else {
                             a.project_logo = a.project_logo.replace('{', '[');
-                            a.project_logo = a.project_logo.replace(/.$/,"]");
+                            a.project_logo = a.project_logo.replace(/.$/, "]");
                             a.project_logo = JSON.parse(a.project_logo);
                           }
 
                         }
-                          if (!a.project_logo.includes("name")) {
+                          if (typeof a.project_logo[0] === 'string' && !a.project_logo[0].includes("name")) {
                             // a.project_logo = a.project_logo.replace('{', '[');
                             // a.project_logo = a.project_logo.replace('}', ']');
                             // a.project_logo = JSON.parse(a.project_logo);
