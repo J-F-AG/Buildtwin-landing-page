@@ -28,7 +28,7 @@ export class BrowseServicesMainComponent implements OnInit {
         items: 3
       },
       940: {
-        items: 5
+        items: 4
       }
     },
     nav: true
@@ -116,30 +116,30 @@ export class BrowseServicesMainComponent implements OnInit {
     {
       images: [
         {
-          src: 'assets/images/home/Airports.png',
+          src: 'assets/images/services/Sector_Airports.png',
           title: 'AIRPORTS',
           description: '50+ Vendors',
         },
         {
-          src: 'assets/images/solutionProvider2.jpg',
+          src: 'assets/images/services/Sector_commercialBuilding.png',
           title: 'Commercial building',
           description: '20+ Vendors',
         },
-        { src: 'assets/images/home/data center.png', title: 'Data Center', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider4.jpg', title: 'INDUSTRIAL BUILDINGS', description: '10+ Vendors' },
-        { src: 'assets/images/home/power plant.png', title: 'Power plant', description: '10+ Vendors' },
-        { src: 'assets/images/home/pre-cast.png', title: 'PRE-CAST', description: '10+ Vendors'},
-        { src: 'assets/images/home/residential buildings.png', title: 'Residential Buildings', description: '10+ Vendors' },
-        { src: 'assets/images/home/schools.png', title: 'Schools', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider9.jpg', title: 'Theaters', description: '10+ Vendors' },
-        { src: 'assets/images/home/Sector_Bridges.png', title: 'Bridge', description: '10+ Vendors' },
-        { src: 'assets/images/home/Sector_ChemicalPlants.png', title: 'Chemical plants', description: '10+ Vendors' },
-        { src: 'assets/images/home/Sector_Hospitals.png', title: 'HOSPITALS', description: '10+ Vendors' },
-        { src: 'assets/images/home/Sector_ManufacturingPlants.png', title: 'Manufacturing plants', description: '10+ Vendors' },
-        { src: 'assets/images/home/Sector_Metros.png', title: 'Metros', description: '10+ Vendors' },
-        { src: 'assets/images/home/Sector_Roads.png', title: 'Road ways', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider16.jpg', title: 'Water & waste', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider17.jpg', title: 'Tunnel', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_datacenter.png', title: 'Data Center', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_industrialbulidings.png', title: 'INDUSTRIAL BUILDINGS', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_powerplant.png', title: 'Power plant', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_pre-cast.png', title: 'PRE-CAST', description: '10+ Vendors'},
+        { src: 'assets/images/services/Sector_residentialbuildings.png', title: 'Residential Buildings', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_schools.png', title: 'Schools', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_theaters.png', title: 'Theaters', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_Bridges.png', title: 'Bridge', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_ChemicalPlants.png', title: 'Chemical plants', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_Hospitals.png', title: 'HOSPITALS', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_ManufacturingPlants.png', title: 'Manufacturing plants', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_Metros.png', title: 'Metros', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_Roads.png', title: 'Road ways', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_Waterwaste.png', title: 'Water & waste', description: '10+ Vendors' },
+        { src: 'assets/images/services/Sector_tunnel.png', title: 'Tunnel', description: '10+ Vendors' },
       ],
     },
     // {

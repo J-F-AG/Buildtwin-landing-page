@@ -207,10 +207,52 @@ injectBreadcrumbScript(url) {
     }else if(url.includes('/services/bim-service-provider-in-usa')){
       const faqSchema = this._languageService.injectFAQSchemaForBimServiceProvider(this.renderer)
 
-    this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-      `<script type="application/ld+json">${faqSchema}</script>`
-    );
-  }
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/partners/durchgeplant')){
+      const faqSchema = this._languageService.injectFAQSchemaForDurchgeplant(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/partners/caldim')){
+      const faqSchema = this._languageService.injectFAQSchemaForCaldim(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/partners/sublime')){
+      const faqSchema = this._languageService.injectFAQSchemaForSublime(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/partners/j&findia')){
+      const faqSchema = this._languageService.injectFAQSchemaForjfindia(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/partners/mold-tektechnologieslimited')){
+      const faqSchema = this._languageService.injectFAQSchemaForMoldTektechnologieslimited(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/partners/gbcengineers')){
+      const faqSchema = this._languageService.injectFAQSchemaForGbcEngineers(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/partners/aarbeestructuresprivatelimited')){
+      const faqSchema = this._languageService.injectFAQSchemaForAarbeeStructuresPrivateLimited(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }
   }
    
 }

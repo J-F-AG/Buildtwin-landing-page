@@ -840,6 +840,7 @@ img {
   right: 0;
   display: flex;
   gap: 10px;
+  transform: translateY(-50%);
   .owl-prev,
   .owl-next {
       position: relative;
