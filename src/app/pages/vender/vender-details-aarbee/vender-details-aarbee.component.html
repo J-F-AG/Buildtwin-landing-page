@@ -142,7 +142,8 @@
                                 </svg>    
                                 <div class="flex">
                                     Office in &nbsp;<span *ngFor="let site of formData.onsite; let i = index"> {{site}} <ng-container
-                                        *ngIf="i < (formData.onsite.length - 1)"> and &nbsp; </ng-container> </span>
+                                        *ngIf="i < (formData.onsite.length - 2)">, &nbsp; </ng-container> <ng-container
+                                        *ngIf="i < (formData.onsite.length - 1) && i > (formData.onsite.length - 3)"> and &nbsp; </ng-container> </span>
                                 </div>                                
                             </div>
                             <div class="projects-count">

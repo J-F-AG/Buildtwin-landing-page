@@ -8,14 +8,14 @@
     <section class="discoverProjectsSection">
         <div class="container">
             <div class="sectionHeader">
-                <lib-svg-icon class="icon" [name]="'discover-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
+                <!-- <lib-svg-icon class="icon" [name]="'discover-icon'" [size]="80" [sizeH]="80"></lib-svg-icon> -->
                 <div class="heading">
                     <div class="title">Discover Projects from Vendors</div>
                     <div class="subTitle">40+ Projects listed</div>
                 </div>
             </div>
             <div class="sectionContent">
-                <div class="cardContainer roundButtonWrapper">
+                <div class="cardContainer squareButtonWrapper">
                     <owl-carousel-o [options]="discoverProjectsOption">
                         <ng-template carouselSlide *ngFor="let item of projectsArray">
                             <!-- <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
@@ -24,36 +24,51 @@
                             <ng-container *ngFor=" let item of subProjectArray"> -->
                                 <div class="projectCard">
 
-                                    <img src="{{item.img}}" class="projectImage" alt="cardImage">
-                                    <div class="projectHighlight">
-                                        <div class="projectCategory">{{item.category}}</div>
-                                        <div class="projectName">{{item.projectTitle}}</div>
+                                    <figure>
+                                        <img src="{{item.img}}" class="projectImage" alt="cardImage">
+
                                         <div class="company">
                                             <img src="{{item.locationFlag}}" [alt]="item.alt" width="20" height="20">
                                             <div class="companyName">
                                                 {{item.company}}
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="serviceCompanyDetails">
-                                        <div class="serviceCompany">
-                                            <img src="{{item.serviceCompanyIcon}}" width="{{item.width}}" height="{{item.height}}" alt="serviceCompanyIcons">
-                                            <div class="companyName">{{item.serviceCompany}}</div>
+                                    </figure>
+                                    <div class="slider-content">
+                                        <div class="projectHighlight">
+                                            <div class="projectName">{{item.projectTitle}}</div>
+                                            <div class="projectCategory">{{item.category}}</div>
+                                                <div class="service">
+                                                    {{item.serviceDescription}}
+                                                </div>
                                         </div>
-
-                                        <div class="companyDetails">
-                                            <div class="title">Rendered Services
+    
+                                        <div class="serviceCompanyDetails">
+                                            <div class="serviceCompany">
+                                                <figure>
+                                                    <img src="{{item.serviceCompanyIcon}}" width="{{item.width}}" height="{{item.height}}" alt="serviceCompanyIcons">
+                                                </figure>
+                                                <div class="companyNameVendor">
+                                                    <small>Vendor</small> 
+                                                    {{item.serviceCompany}}
+                                                    <div class="arrow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M18.7499 6V15.75C18.7499 15.9489 18.6709 16.1397 18.5303 16.2803C18.3896 16.421 18.1988 16.5 17.9999 16.5C17.801 16.5 17.6103 16.421 17.4696 16.2803C17.3289 16.1397 17.2499 15.9489 17.2499 15.75V7.81031L6.53055 18.5306C6.38982 18.6714 6.19895 18.7504 5.99993 18.7504C5.80091 18.7504 5.61003 18.6714 5.4693 18.5306C5.32857 18.3899 5.24951 18.199 5.24951 18C5.24951 17.801 5.32857 17.6101 5.4693 17.4694L16.1896 6.75H8.24993C8.05102 6.75 7.86025 6.67098 7.7196 6.53033C7.57895 6.38968 7.49993 6.19891 7.49993 6C7.49993 5.80109 7.57895 5.61032 7.7196 5.46967C7.86025 5.32902 8.05102 5.25 8.24993 5.25H17.9999C18.1988 5.25 18.3896 5.32902 18.5303 5.46967C18.6709 5.61032 18.7499 5.80109 18.7499 6Z" fill="#002E3B"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="service">
-                                                {{item.serviceDescription}}
-                                            </div>
-                                        </div>
-
-                                        <div class="cardFooter">
-                                            <a [routerLink]="_languageService.currentLanguage+item.link">{{item.linkTitle}}</a>
-                                            <lib-svg-icon class="arrowIcon" [name]="'arrow-icon'" [size]="14"
-                                                [sizeH]="22"></lib-svg-icon>
+    
+                                            <!-- <div class="companyDetails">
+                                                <div class="title">Rendered Services
+                                                </div>
+                                            </div> -->
+    
+                                            <!-- <div class="cardFooter">
+                                                <a [routerLink]="_languageService.currentLanguage+item.link">{{item.linkTitle}}</a>
+                                                <lib-svg-icon class="arrowIcon" [name]="'arrow-icon'" [size]="14"
+                                                    [sizeH]="22"></lib-svg-icon>
+                                            </div> -->
                                         </div>
                                     </div>
 
@@ -71,7 +86,7 @@
     <section class="helpSection">
         <div class="container">
             <div class="sectionHeader">
-                <lib-svg-icon class="icon" [name]="'browse-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
+                <!-- <lib-svg-icon class="icon" [name]="'browse-icon'" [size]="80" [sizeH]="80"></lib-svg-icon> -->
                 <div class="heading">
                     <div class="title">Help is Here</div>
                     <div class="subTitle">Whenever and however you need it.</div>
@@ -349,7 +364,7 @@
     <section class="specialProjectsSection">
         <div class="container">
             <div class="sectionHeader">
-                <lib-svg-icon class="icon" [name]="'specialProject-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
+                <!-- <lib-svg-icon class="icon" [name]="'specialProject-icon'" [size]="80" [sizeH]="80"></lib-svg-icon> -->
                 <div class="heading">
                     <div class="title">Special Projects</div>
                     <div class="subTitle">We have some very special projects</div>
