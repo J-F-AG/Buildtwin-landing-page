@@ -66,14 +66,15 @@
       justify-content: space-between;
     }
     .title {
-      font-size: 27px;
-      font-family: var(--semibold-global);
-      margin: 0;
+      font-size: 44px;
+      font-family: var(--medium-global);
+      font-weight: 500;
     }
-    .subTile {
+    .subTitle {
       margin: 5px 0;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 400;
+      color: #668189;
     }
   }
   .main-head {

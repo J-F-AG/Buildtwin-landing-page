@@ -41,7 +41,7 @@ export class BrowseServicesMainComponent implements OnInit {
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
-    margin: 16,
+    margin: 37,
     responsive: {
       0: {
         items: 1,
@@ -50,10 +50,10 @@ export class BrowseServicesMainComponent implements OnInit {
         items: 2
       },
       740: {
-        items: 3
+        items: 2
       },
-      940: {
-        items: 4
+      1500: {
+        items: 3
       }
     },
     nav: true
