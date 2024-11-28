@@ -67,7 +67,7 @@ export class WhyBuildtwinComponent implements OnInit {
         'Our solutions are designed for easy integration, allowing you to quickly implement and start using them with minimal setup time.',
       details: [
         {
-          header: 'Plug & Play',
+          header: '',
           content: 'No additional workflow required - just connect BuildTwin to your existing tools and get access to 100s of technical teams. ',
           items: [
             'Supports all major CDEs ',
@@ -88,7 +88,7 @@ export class WhyBuildtwinComponent implements OnInit {
         'Flexible payment options to suit your needs. We offer multiple payment methods and plans to make transactions smooth and hassle-free.',
       details: [
         { 
-          header: 'Easy payment', 
+          header: '', 
           content: 'BuildTwin provides (optional) easy to use payment methods - including methods to withhold payment / keeping money in trust. ',
           items: [
             'Optional: third party trust available  ',
@@ -109,7 +109,7 @@ export class WhyBuildtwinComponent implements OnInit {
         'Enhance your experience with our additional services tailored to meet your specific needs and provide extra value.',
       details: [
         {
-          header: 'Additional services',
+          header: '',
           content: 'Customise your BuildTwin experience with tailored services as per your requirements. ',
           items: [
             'On-Site support ',
@@ -130,7 +130,7 @@ export class WhyBuildtwinComponent implements OnInit {
         'We provide exceptional support to ensure your satisfaction. Our dedicated team is available to assist you with any queries or issues.',
       details: [
         {
-          header: 'Support',
+          header: '',
           content: 'BuildTwin Supports resolves issue when it matters - including support in finding solutions once schedules / quality requirements are not met. ',
           items: [
             'Support from BuildTwin in terms of escalation ',
