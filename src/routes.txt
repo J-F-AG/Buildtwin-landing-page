@@ -6,6 +6,7 @@
 /services/rebar-detailing-services
 /services/bim-services
 /services/bim-service-provider-in-usa
+/services/steel-detailing-services-in-usa
 /services/steel-detailing-services
 /ai-project-management
 /business-intelligence

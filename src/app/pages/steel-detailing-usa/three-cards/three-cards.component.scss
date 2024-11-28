@@ -1,0 +1,97 @@
+.threeCardsWrapper{margin-top: -140px; position: relative; margin-bottom: 80px;}
+.threeCardsWrapper .container, .threeCardsWrapper .container-with-right {display: flex; gap: 20px;}
+.threeCardsWrapper .container .col-3{width: 31%;border-radius: 12px;
+    border: 1px solid #C8B7FF;
+    background: linear-gradient(180deg, #F8F6FF 0%, #FFF 100%); padding: 20px 20px 10px ;}
+
+.threeCardsWrapper .col-3 figure{
+    display: flex; width: 100%; align-items: center; justify-content: center; margin-bottom: 28px;
+}
+.threeCardsWrapper h3{ font-size: 22px; font-weight: 600;}
+.threeCardsWrapper p{ font-size: 14px; font-weight: 400;}
+
+@media (max-width:767px){
+    .threeCardsWrapper .container-with-right {
+        flex-direction: column;
+    }
+    .threeCardsWrapper .container .col-3 {
+        width: 100%;
+    }
+    .threeCardsWrapper {
+        margin-top: 20px;
+    }
+
+}
+
+
+
+.dropdown-menu {
+    margin-top: 15px;
+}
+
+.dropdown-menu summary {
+    cursor: pointer;
+    color: #6b46c1; /* Purple color to match the design */
+    font-weight: 600;
+    list-style: none;
+}
+
+// .dropdown-menu summary:hover {
+//     text-decoration: underline;
+// }
+
+.dropdown-menu summary::-webkit-details-marker {
+    display: none; /* Hide default marker */
+}
+
+.dropdown-menu .dropdown-content {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f6ff;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+
+.dropdown-menu summary {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.dropdown-menu summary::after {
+    content: '>';
+    display: inline-block;
+    margin-left: 1px;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    transform: rotate(90deg); /* Initially point upwards */
+}
+
+.dropdown-menu[open] summary::after {
+    transform: rotate(-90deg); /* Rotate to point downwards when open */
+}
+
+
+
+// .dropdown-menu summary {
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+// }
+
+// .dropdown-menu summary::after {
+//     content: '▼';
+//     transition: transform 0.3s ease;
+//     display: inline-block;
+//     transform-origin: center;
+// }
+
+// .dropdown-menu[open] summary::after {
+//     content: '▲';
+// }
+
+
+
+

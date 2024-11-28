@@ -290,6 +290,22 @@ import { BimUsaTrustByNewComponent } from './pages/bim-usa/trust-by/trust-by.com
 import { LanguageChangeModule } from './include-component/language-change/language-change.module';
 import { UrlSerializer } from '@angular/router';
 import { LowerCaseUrlSerializer } from './services/lowercase-url-serializer';
+import { SteelDetailingUsaBannerComponent } from './pages/steel-detailing-usa/banner/banner.component';
+import { SteelDetailingUsaDrawingFreelancersComponent } from './pages/steel-detailing-usa/drawing-freelancers/drawing-freelancers.component';
+import { SteelDetailingUsaE2eEncryptionComponent } from './pages/steel-detailing-usa/e2e-encryption/e2e-encryption.component';
+import { SteelDetailingUsaFaqBuildtwinComponent } from './pages/steel-detailing-usa/faq-buildtwin/faq-buildtwin.component';
+import { SteelDetailingUsaHowItWorksNewComponent } from './pages/steel-detailing-usa/how-it-works/how-it-works.component';
+import { SteelDetailingUsaLiveTrackingNewComponent } from './pages/steel-detailing-usa/live-tracking/live-tracking.component';
+import { SteelDetailingUsaPlugPlayNewComponent } from './pages/steel-detailing-usa/plug-play/plug-play.component';
+import { SteelDetailingUsaPrecastServiceComponent } from './pages/steel-detailing-usa/precast-service/precast-service.component';
+import { SteelDetailingUsaSampleDrawingComponent } from './pages/steel-detailing-usa/sample-drawing/sample-drawing.component';
+import { SteelDetailingUsaServicesOfferedComponent } from './pages/steel-detailing-usa/services-offered/services-offered.component';
+import { SteelDetailingUsaThreeCardsComponent } from './pages/steel-detailing-usa/three-cards/three-cards.component';
+import { SteelDetailingUsaTopVendorsComponent } from './pages/steel-detailing-usa/top-vendors/top-vendors.component';
+import { SteelDetailingUsaTrustByNewComponent } from './pages/steel-detailing-usa/trust-by/trust-by.component';
+import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
+
+
 
 @NgModule({
   declarations: [
@@ -544,7 +560,22 @@ import { LowerCaseUrlSerializer } from './services/lowercase-url-serializer';
    
   //  RebarFileUploadServiceComponent,
    HdProvidersComponent,
-   HdGoodCompanyComponent
+   HdGoodCompanyComponent,
+
+   SteelDetailingUsaBannerComponent,
+   SteelDetailingUsaDrawingFreelancersComponent,
+   SteelDetailingUsaE2eEncryptionComponent,
+   SteelDetailingUsaFaqBuildtwinComponent,
+   SteelDetailingUsaHowItWorksNewComponent,
+   SteelDetailingUsaLiveTrackingNewComponent,
+   SteelDetailingUsaPlugPlayNewComponent,
+   SteelDetailingUsaPrecastServiceComponent,
+   SteelDetailingUsaSampleDrawingComponent,
+   SteelDetailingUsaServicesOfferedComponent,
+   SteelDetailingUsaThreeCardsComponent,
+   SteelDetailingUsaTopVendorsComponent,
+   SteelDetailingUsaTrustByNewComponent,
+   SteelDetailingUsaServicesNewComponent
   ],
   imports: [    
     BrowserModule,
