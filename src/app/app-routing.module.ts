@@ -26,6 +26,7 @@ import { RebarServicesNewComponent } from './pages/rebar/services-new.component'
 import { BimServicesNewComponent } from './pages/bim/services-new.component';
 import { StructuralSteelServicesNewComponent } from './pages/structural-steel/services-new.component';
 import { BimUsaServicesNewComponent } from './pages/bim-usa/services-new.component';
+import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
 
 
 
@@ -247,6 +248,16 @@ const routes: Routes = [
         }
     },
 
+    {
+        path: 'services/steel-detailing-services-in-usa', component: SteelDetailingUsaServicesNewComponent,
+        data: {
+            title: 'Structural Steel Detailing Vendors from USA for AEC Projects',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects in the USA. Our services include shop drawings, erection drawings, 2D and 3D modeling, connection design, and miscellaneous steel detailing.",
+            image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
+            canonical: 'https://www.buildtwin.com/services/steel-detailing-services-in-usa'
+        }
+    },
+
     { path: 'notfound', component: ComingSoonComponent },
 
 
@@ -455,6 +466,16 @@ const routes: Routes = [
     //         description: "Connect top-tier BIM service providers across the USA. Our BIM services provider specialize in BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM.",
     //         image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
     //         canonical: 'https://www.buildtwin.com/services/bim-service-provider-in-usa'
+    //     }
+    // },
+
+    // {
+    //     path: 'de/services/steel-detailing-services-in-usa', component: SteelDetailingUsaServicesNewComponent,
+    //     data: {
+    //         title: 'Structural Steel Detailing Vendors from USA for AEC Projects',
+    //         description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects in the USA. Our services include shop drawings, erection drawings, 2D and 3D modeling, connection design, and miscellaneous steel detailing.",
+    //         image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
+    //         canonical: 'https://www.buildtwin.com/services/steel-detailing-services-in-usa'
     //     }
     // },
 

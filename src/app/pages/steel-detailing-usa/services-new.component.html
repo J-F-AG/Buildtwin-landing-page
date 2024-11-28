@@ -1,0 +1,30 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="mainContainer">
+    <div class="maincontent">
+        <app-steel-detailing-usa-banner></app-steel-detailing-usa-banner>
+        <app-steel-detailing-usa-three-cards></app-steel-detailing-usa-three-cards>
+        <app-steel-detailing-usa-trust-by></app-steel-detailing-usa-trust-by>
+        <!-- <app-steel-detailing-usa-sample-drawing></app-steel-detailing-usa-sample-drawing> -->
+        <app-steel-detailing-usa-precast-service></app-steel-detailing-usa-precast-service>
+        <app-steel-detailing-usa-top-vendors></app-steel-detailing-usa-top-vendors>
+
+        <app-steel-detailing-usa-how-it-worksNew></app-steel-detailing-usa-how-it-worksNew>
+        <app-steel-detailing-usa-live-trackingNew></app-steel-detailing-usa-live-trackingNew>
+
+        <app-steel-detailing-usa-plug-play></app-steel-detailing-usa-plug-play>
+        <app-steel-detailing-usa-services-offered></app-steel-detailing-usa-services-offered>
+        <app-steel-detailing-usa-e2e-encryption></app-steel-detailing-usa-e2e-encryption>
+        <app-steel-detailing-usa-faq-buildtwin></app-steel-detailing-usa-faq-buildtwin>
+    </div>
+    <div class="toggle-sidebar" (click)="toggleSidebar()"><span></span></div>
+    <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+        <span class="cross" (click)="toggleSidebar()"></span>
+        <aside class="Stickyform">
+            <app-free-offer-form class="formWrapper"></app-free-offer-form>
+        </aside>
+    </div>
+</div>
+
+<app-steel-detailing-usa-drawing-freelancers></app-steel-detailing-usa-drawing-freelancers> 
+<app-hd-footer></app-hd-footer>

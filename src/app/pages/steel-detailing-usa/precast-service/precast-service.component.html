@@ -1,0 +1,56 @@
+<div class="sectionContainer">
+    <div class="container">
+        <div class="container-with-right">
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <h2>
+                All-in-one structural steel detailing services
+            </h2>
+
+            <p>
+                While accurate shop drawings, fabrication drawings, and erection plans are essential to steel detailing services, BuildTwin's comprehensive system also enhances your people-driven processes. The platform enables seamless communication among multiple stakeholders and ensures tracking of every minor update, offering you complete control to manage your steel construction project at every stage with absolute transparency and quality control.
+<br><br>
+            </p>
+        </div>
+        <!-- tabs -->
+
+    <div class="sectionMidContainer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <div class="precastTabs">
+                <ng-container *ngFor="let item of precastArray; let i = index">
+                        <div class="tab" [class.active]="activeTab === i" (click)="setActiveTab(i)"
+                        [ngClass]="{ 'activeContainer': activeTab === i }">
+                            {{ item.name }}
+                        </div>
+                </ng-container>
+        </div>
+        <div class="tabContent" *ngFor="let detail of activeContent.details">
+            <!-- <p style="font-size: 15px;"><b>{{ detail.mainContentHead }}</b></p> -->
+            <p>{{ detail.mainContent }}</p>
+            <h3>{{ detail.header }}</h3>
+            <div class="subContent" style="margin-bottom: 10px;">
+                <p>{{ detail.subContent }}</p>
+            </div>
+            <!-- <div class="subContent" style="margin-bottom: 8px;">
+                <ul>
+                    <li><p>The synergy of experience and expertise results in superior outcomes.</p></li>
+                    <li><p>With a deep understanding of both national and international compliances.</p></li>
+                    <li><p>An economical choice for BIM Services that adhere to USA standards.</p></li>
+                    <li><p>Trusted by the best architects, contractors, AEC firms, and design build firms in the USA.</p></li>
+                </ul>
+            </div> -->
+            <!-- <div class="subContent" style="margin-bottom: 8px;">
+                <br>
+                <p>The adherence to quality forms a cornerstone of our company's success. For this, we adhere to the following US standard code:</p>
+            </div> -->
+            
+            <div class="dataList">
+                <div *ngFor="let item of detail['items']">
+                    <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
+                    <span>{{item}}</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        </div>
+    </div>
+</div>
