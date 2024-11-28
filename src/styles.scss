@@ -832,6 +832,30 @@ img {
     }
   }
 }
+
+.owl-dots {
+  display: inline-flex;
+  height: 6px;
+  margin-top: 0;
+  position: absolute;
+  right: 30px;
+  bottom: 29px;
+  gap: 10px;
+}
+.owl-theme .owl-dots .owl-dot span {
+  display: none;
+}
+.owl-theme .owl-dots .owl-dot {
+  width: 16px;
+  height: 6px;
+  border-radius: 100px;
+  display: block;
+  background: #E4EAF5;
+  &.active {
+      width: 40px;
+      background: #0053fa;
+  }
+}
 .squareButtonWrapper .owl-nav {
   position: absolute;
   z-index: 2;

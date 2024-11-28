@@ -1,12 +1,47 @@
 <app-hd-navbar></app-hd-navbar>
 <div class="componentWrapper">
-    <section class="headerSection">
-        <div class="container">
-            <app-browse-service-header></app-browse-service-header>
+    <section class="headerSection squareButtonWrapper" id="explore-service-banner">
+        <div class="containerWrap">
+            <div class="aboutSlider">
+                <owl-carousel-o [options]="aboutSlider">
+                    <ng-template carouselSlide *ngFor="let item of projectsArray">
+                        <div class="slide-banner">
+                            <figure>
+                                <img src="assets/images/explore-service-banner.jpg" alt="" class="normal">
+                                <img src="{{item.img}}" class="abs" alt="cardImage">
+                            </figure>
+                            <div class="content">
+                                <div class="top">
+                                    <div class="logo-banner">
+                                        <img src="{{item.serviceCompanyIcon}}" width="{{item.width}}" height="{{item.height}}" alt="serviceCompanyIcons">
+                                    </div>
+                                    <div class="detail">
+                                        <h2>
+                                            {{item.serviceCompany}}
+                                        </h2>
+                                        <span class="location">
+                                            {{item.company}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <a [routerLink]="_languageService.currentLanguage+item.link" class="default-btn mdc-button">
+                                    Learn more about {{item.serviceCompany}}
+                                </a>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
         </div>
     </section>
+    <app-hd-services [page]="'explore-service'"></app-hd-services>
+    <!-- <section class="headerSection">
+        <div class="containerWrap">
+            <app-browse-service-header></app-browse-service-header>
+        </div>
+    </section> -->
     <section class="discoverProjectsSection">
-        <div class="container">
+        <div class="containerWrap">
             <div class="sectionHeader">
                 <!-- <lib-svg-icon class="icon" [name]="'discover-icon'" [size]="80" [sizeH]="80"></lib-svg-icon> -->
                 <div class="heading">
@@ -84,7 +119,7 @@
         </div>
     </section>
     <section class="helpSection">
-        <div class="container">
+        <div class="containerWrap">
             <div class="sectionHeader">
                 <!-- <lib-svg-icon class="icon" [name]="'browse-icon'" [size]="80" [sizeH]="80"></lib-svg-icon> -->
                 <div class="heading">
@@ -362,7 +397,7 @@
         </div>
     </section> -->
     <section class="specialProjectsSection">
-        <div class="container">
+        <div class="containerWrap">
             <div class="sectionHeader">
                 <!-- <lib-svg-icon class="icon" [name]="'specialProject-icon'" [size]="80" [sizeH]="80"></lib-svg-icon> -->
                 <div class="heading">
@@ -421,9 +456,33 @@
         </div>
     </section>
     <section class="whyBuildtwinSection">
-        <div class="container">
+        <div class="containerWrap">
             <app-why-buildtwin [isBrowseService]="true"></app-why-buildtwin>
         </div>
     </section>
+    <app-hd-integrations></app-hd-integrations>
+
+ <!-- <app-hd-good-company></app-hd-good-company> -->
+    <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle,'active': AvailableServicesToggle}" (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
+        <div class="toggle" [ngClass]="{'active':AvailableServicesToggle}" (click)="AvailableServicesToggleStatus(); $event.stopPropagation()">
+
+        </div>
+        <h3>
+            Available Service for Direct Booking
+            <small>
+                Unlock the BuildTwin advantage
+            </small>
+        </h3>
+        <!-- <ul class="flex logo-liist" *ngIf="formData.engineeringData.length">
+            <ng-container *ngFor="let e of formData.engineeringData">
+                <li *ngIf="e.logo">
+                    <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" alt="" width="252" height="73">
+                </li>
+            </ng-container>
+        </ul> -->
+            <div class="flex bg-sticky" *ngIf="AvailableServicesToggle">
+                <app-free-offer-form [type]="'outside'" [normalBtn]="true" [style]="'secondary'"></app-free-offer-form>
+            </div>
+    </div>
 </div>
 <app-hd-footer></app-hd-footer>

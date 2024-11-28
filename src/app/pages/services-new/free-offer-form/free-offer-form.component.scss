@@ -40,6 +40,7 @@ a {
       margin-bottom: 18px;
       .formRow {
         width: calc(33.3% - 12px);
+        min-width: calc(33.3% - 12px);
         margin: 0;
         .selectBox {
           border-radius: 4px;
@@ -122,7 +123,7 @@ a {
         min-width: 320px;
         border-radius: 10px 0 0 10px;
         overflow: hidden;
-        margin: -20px 0 -20px -20px;
+        margin: 0 0 0 -20px;
         padding: 0;
       }
       .message {
@@ -509,6 +510,7 @@ a {
   }
   .formContainer .middlePart .formRow {
     width: calc(50% - 10px);
+    min-width: calc(50% - 10px);
     margin: 0;
   }
   .formContainer .bottomPart .buttonContainer {
@@ -520,6 +522,7 @@ a {
 @media only screen and (max-width : 767px) {
   .formContainer .middlePart .formRow {
     width: calc(100%);
+    min-width: calc(100%);
     margin: 0;
   }
   .formContainer .topPart {
