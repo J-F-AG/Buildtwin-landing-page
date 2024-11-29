@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
 import { GlobalService } from 'src/app/services/GlobalService';
@@ -9,8 +9,9 @@ import { LanguageService } from 'src/app/services/language.service';
   templateUrl: './hd-services.component.html',
   styleUrls: ['./hd-services.component.scss']
 })
-
+ 
 export class HdServicesComponent implements OnInit, OnDestroy {
+  @Input() page: string = '';
   activeClass: boolean = false;
   showPopup = false;
   interval: any;
