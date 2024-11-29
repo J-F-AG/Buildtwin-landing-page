@@ -130,14 +130,14 @@ ul {
     .top-icon {
         position: absolute;
         left: 0;
-        top: 8px;
+        top: 0px;
     }
     .left {
         display: flex;
         flex-direction: column;
         gap: 8px;
         position: relative;
-        padding: 0 12px;
+        padding: 20px 12px;
         .left-child {
             display: flex;
             gap: 16px;

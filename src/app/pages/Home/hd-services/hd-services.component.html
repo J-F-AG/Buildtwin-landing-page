@@ -68,13 +68,14 @@
 <div class="services" id="targetSection">
     <div class="main-head">
         <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
-            <div class="main-title">Discover top-tier solutions tailored to your project needs</div>
+            <div class="main-title" *ngIf="!page">Discover top-tier solutions tailored to your project needs</div>
             <div class="heading">
                 <h1 class="title">Find Structural Engineering Services & Solutions</h1>
                 <div class="subTitle">The best way to procure pre-qualified technical teams across the globe.</div>
             </div>
         </div>
-        <a mat-button class="default-btn align-self-end" href="javascript:void(0)" (click)="scrollToSection('formContainer')">Book a service</a>
+        <a *ngIf="!page" mat-button class="default-btn align-self-end" href="javascript:void(0)" (click)="scrollToSection('formContainer')">Book a service</a>
+        <a *ngIf="page" mat-button class="default-btn align-self-end" target="_blank" href="https://cockpit.buildtwin.com/signin">Book a service</a>
     </div>
 
     <!-- <owl-carousel-o [options]="serviceSlider" (translated)="onTranslate($event)">

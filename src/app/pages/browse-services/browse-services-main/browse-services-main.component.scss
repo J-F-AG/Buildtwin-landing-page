@@ -4,16 +4,134 @@
     row-gap: 30px;
     // background: #fafafa;
   }
-  
+  .aboutSlider {
+    margin-left: -5px;
+  }
+  .containerWrap {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  #explore-service-banner {
+    ::ng-deep .owl-nav  {
+      left: auto;
+      right: 30px;
+      top: auto;
+      bottom: 20px;
+      transform: none;
+    }
+    ::ng-deep {
+      .owl-dots {
+        right: auto;
+        left: 26px;
+      }
+      .owl-theme .owl-dots .owl-dot {
+        background: white;
+      }
+      .owl-theme .owl-dots .owl-dot.active {
+        background: var(--color-theme);
+      }
+    }
+    figure {
+      margin: 0 0 0 5px;
+      position: relative;
+      img.abs {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+        height: 100%;
+        mask-image: linear-gradient(111deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 56%, rgba(0,0,0,1) 100%);
+        -webkit-mask-image: linear-gradient(111deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 56%, rgba(0,0,0,1) 100%);
+        border-radius: 0 18px 18px 0;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: -5px;
+        right: 5px;
+        height: 66px;
+        border-radius: 0 18px 0 0;
+        border: 1px solid var(--color-theme);
+        border-bottom: 0;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        top: 61px;
+        height: 100px;
+        width: 1px;
+        background: var(--color-theme);
+      }
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 0 18px 18px 18px;
+      }
+    }
+    .slide-banner {
+      position: relative;
+      padding-top: 5px;
+      .content {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+        .top {
+          display: flex;
+          gap: 10px;
+          .logo-banner {
+            border-radius: 10px;
+            background: #FFF;
+            width: 190px;
+            height: 66px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3px 37px 3px 38px;
+            img {
+              width: 68px;
+            }
+          }
+          .detail {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h2 {
+              font-size: 32px;
+              font-weight: 500;
+              margin: 0;
+            }
+            .location {
+              font-size: 18px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+  :host div ::ng-deep .integrations-area {
+    padding-top: 0;
+  }
+  :host div ::ng-deep .services {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-position: right -10px;
+  }
   //header
   .headerSection {
-    padding: 73px 40px 30px;
-    background: linear-gradient(82deg, #FBFAFF -3.26%, #F5F4FF 121.32%);
-    box-shadow: 0px 0px 9px 0px rgba(208, 208, 208, 0.12);
+    padding: 73px 0 0;
+    // background: linear-gradient(82deg, #FBFAFF -3.26%, #F5F4FF 121.32%);
+    // box-shadow: 0px 0px 9px 0px rgba(208, 208, 208, 0.12);
   }
   //help
   .helpSection {
-    padding: 0 24px;
+    padding: 0 0;
     background: none;
     .sectionHeader {
       display: flex;
@@ -22,18 +140,20 @@
         padding-top: 0;
       }
       .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
+        font-size: 44px;
+        font-family: var(--medium-global);
+        font-weight: 500;
       }
-      .subTile {
+      .subTitle {
         margin: 5px 0;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 400;
+        color: #668189;
       }
     }
     .sectionContent {
       width: 100%;
-      padding: 20px;
+      padding: 20px 0 0;
       .helpGridContainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -98,17 +218,19 @@
         padding-top: 25px;
       }
       .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
+        font-size: 44px;
+        font-family: var(--medium-global);
+        font-weight: 500;
       }
-      .subTile {
+      .subTitle {
         margin: 5px 0;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 400;
+        color: #668189;
       }
     }
     .sectionContent {
-      margin: 28px 20px 23px 20px;
+      margin: 28px 0 23px 0;
       width: 100%;
       display: flex;
       gap: 10px;
@@ -200,7 +322,7 @@
   
           &.countryField {
             > div {
-              padding: 9px 20px 9px 7px;
+              padding: 9px 0 9px 0;
               gap: 8px;
             }
   
@@ -261,7 +383,8 @@
   
           .title {
             display: block;
-            font-family: var(--semibold-global);
+            font-family: var(--medium-global);
+            font-weight: 500;
             font-size: 13px;
             color: var(--color-theme);
           }
@@ -488,7 +611,7 @@
   }
   //carousel
   .specialProjectsSection {
-    padding: 0 24px;
+    padding: 0 0;
     background: none;
     .sectionHeader {
       display: flex;
@@ -497,13 +620,15 @@
         padding-top: 25px;
       }
       .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
+        font-size: 44px;
+        font-family: var(--medium-global);
+        font-weight: 500;
       }
-      .subTile {
+      .subTitle {
         margin: 5px 0;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 400;
+        color: #668189;
       }
     }
   
@@ -513,7 +638,7 @@
       width: 100%;
       max-width: calc(100vw - 313px);
       // overflow: hidden;
-      padding: 22px 20px 14px;
+      padding: 22px 0 0;
       // background: linear-gradient(
       //   180deg,
       //   #fafafa 28.14%,
@@ -527,19 +652,24 @@
         padding-top: 20px;
       }
       &.squareButtonWrapper ::ng-deep .owl-nav {
-        margin-top: -40px;
-        .owl-prev {
-          left: -80px;
-          position: absolute;
-          top: 0;
-          transform: translateY(-50%);
-        }
-        .owl-next {
-          right: -50px;
-          position: absolute;
-          top: 0;
-          transform: translateY(-50%);
-        }
+          left: auto;
+          right: 0;
+          top: -90px;
+          transform: none;
+          width: auto;
+          gap: 20px;
+        // .owl-prev {
+        //   left: -80px;
+        //   position: absolute;
+        //   top: 0;
+        //   transform: translateY(-50%);
+        // }
+        // .owl-next {
+        //   right: -50px;
+        //   position: absolute;
+        //   top: 0;
+        //   transform: translateY(-50%);
+        // }
       }
       // ::ng-deep .owl-carousel .owl-nav .owl-next,::ng-deep .owl-carousel .owl-nav .owl-prev {
       //   width: 37px;
@@ -688,12 +818,20 @@
   //discoverProjects
   
   .discoverProjectsSection ::ng-deep {
+    .squareButtonWrapper .owl-nav {
+      left: auto;
+      right: 0;
+      top: -90px;
+      transform: none;
+      width: auto;
+      gap: 20px;
+    }
     .slick-list, .slick-slide, .slick-track, .slick-slide {
       max-height: 600px;
     }
   }
   .discoverProjectsSection {
-    padding: 30px 22px 0;
+    padding: 0 0;
     // background: #fafafa;
   
     .sectionHeader {
@@ -703,34 +841,31 @@
         padding-top: 0;
       }
       .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
+        font-size: 44px;
+        font-family: var(--medium-global);
+        font-weight: 500;
       }
       .subTitle {
-        padding-top: 4px;
-        display: block;
-      }
-      .subTile {
         margin: 5px 0;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 400;
+        color: #668189;
       }
     }
     .sectionContent {
-      height: 614px;
+      // height: 614px;
       .cardContainer {
         // display: flex;
         // gap: 23px;
         // justify-content: space-between;
-        padding: 20px;
+        padding: 35px 0 0;
         position: relative;
         ::ng-deep .owl-stage {
-          padding-bottom: 30px;
+          padding-bottom: 0;
         }
-        ::ng-deep img {
-          width: revert-layer;
-        }
-  
+        // ::ng-deep img {
+        //   width: revert-layer;
+        // }
         .leftslideButton {
           position: absolute;
           top: 95px;
@@ -747,76 +882,158 @@
         }
       }
       .projectCard {
-        width: 365px;
-        min-width: 365px;
+        // width: 365px;
+        // min-width: 365px;
         // margin-right: 16px;
-        background: #ffffff;
-        border-radius: 7px;
-        box-shadow: 0px 12.022px 17.174px 0px rgba(44, 44, 44, 0.06);
+        display: flex;
+        gap: 12px;
+        border-radius: 12px;
+        border: 1px solid #E9E9E9;
+        background: linear-gradient(180deg, #FFF 0%, #F4F6FA 100%);
+        // box-shadow: 0px 12.022px 17.174px 0px rgba(44, 44, 44, 0.06);
+        padding: 8px;
+      }
+
+      figure {
+        width: 47%;
+        min-width: 47%;
+        max-width: 47%;
+        margin: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        .company {
+          position: absolute;
+          left: 8px;
+          top: 8px;
+          padding: 2px 6px 2px 2px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          &::before {
+            content: "";
+            border-radius: 100px;
+            background: rgba(0, 0, 0, 0.50);
+            backdrop-filter: blur(7px);
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          img {
+            position: relative;
+            z-index: 2;
+            width: 18.383px;
+            height: 18.383px;
+          }
+          .companyName {
+            position: relative;
+            z-index: 2;
+            color: #FFF;
+            font-size: 12px;
+          }
+        }
       }
       .projectImage {
-        width: 100%;
-        border-top-left-radius: 7px;
-        border-top-right-radius: 7px;
+        width: auto;
+        height: 100%;
+      }
+      .slider-content {
+        padding: 6px 12px;
+        display: flex;
+        flex-direction: column;
       }
       .projectHighlight {
-        padding: 9px 16px;
-        position: relative;
-        bottom: 30px;
-        width: calc(100% - 24px);
-        margin: 0 auto;
-        border-radius: 6px;
-        background: #fff;
-        box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.05);
+        flex-grow: 1;
         img {
           height: 14px;
           width: 14px;
         }
         .projectCategory {
-          font-weight: 400;
+          font-weight: 500;
           font-size: 14px;
-          color: #0053fa;
+          color: #668189;
+          margin-top: -2px;
+        }
+        .service {
+          font-size: 12px;
+          color: #668189;
+          line-height: 18px;
+          margin-top: 6px;
         }
         .projectName {
           font-family: var(--semibold-global);
-          font-size: 18px;
+          font-size: 20px;
         }
-        .company {
-          display: flex;
-          font-weight: 400;
-          font-size: 14px;
-          margin-top: 7px;
-          align-items: center;
-          gap: 5px;
-        }
-        .companyIcon {
-          margin-top: -4px;
-          margin-left: -8px;
-        }
+        // .company {
+        //   display: flex;
+        //   font-weight: 400;
+        //   font-size: 14px;
+        //   margin-top: 7px;
+        //   align-items: center;
+        //   gap: 5px;
+        // }
+        // .companyIcon {
+        //   margin-top: -4px;
+        //   margin-left: -8px;
+        // }
       }
       .serviceCompanyDetails {
         display: flex;
         flex-direction: column;
         row-gap: 18px;
-        padding: 10px 16px;
+        padding: 10px 0 0;
         .serviceCompany {
           display: flex;
-          justify-content: flex-start;
-          column-gap: 10px;
-          // align-items: center;
+          // justify-content: flex-start;
+          // column-gap: 10px;
+          gap: 4px;
+          align-items: center;
+          figure {
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            border-radius: 50%;
+            overflow: hidden;
+            max-width: 40px;
+            min-width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
           .companyIcon {
             height: 30px;
             width: 57px;
             align-self: flex-start;
           }
-          .companyName {
-            font-family: var(--medium-global);
+          .companyNameVendor {
+            font-family: var(--semibold-global);
             font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 4px;
+            padding-right: 50px;
+            flex-grow: 1;
+            small {
+              font-size: 12px;
+              color: #0053FA;
+              font-family: var(--medium-global);
+            }
+            .arrow {
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+            }
           }
         }
         .companyDetails {
           .title {
             font-family: var(--medium-global);
+            font-weight: 500;
             font-size: 14px;
             color: #6E6E6E;
           }
@@ -841,7 +1058,7 @@
   
   //whyBuildtwin
   .whyBuildtwinSection {
-    padding: 0 24px;
+    padding: 0 0;
     background: none;
     .sectionHeader {
       display: flex;
@@ -850,13 +1067,15 @@
         padding-top: 25px;
       }
       .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
+        font-size: 44px;
+        font-family: var(--medium-global);
+        font-weight: 500;
       }
-      .subTile {
+      .subTitle {
         margin: 5px 0;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 400;
+        color: #668189;
       }
     }
   }
@@ -866,7 +1085,7 @@
 
   // unnique CSS
   .headerSection {
-    padding-top: 123px;
+    padding-top: 88px;
   }
   :host ::ng-deep .ant-carousel .slick-slider {
     width: 100%;
@@ -874,6 +1093,7 @@
   .discoverProjectsSection .sectionContent .projectCard {
     min-width: 0;
     max-width: calc(100% - 0px);
+    width: auto;
   }
   .discoverProjectsSection .sectionContent .cardContainer .leftslideButton {
     z-index: 2;
@@ -891,6 +1111,93 @@
   .helpSection .sectionContent .gridItemWrapper {
     padding: 0;
   }
+
+.toggle {
+  position: absolute;
+  right: 100px;
+  top: 40px;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(5px);
+  font-size: 0;
+  cursor: pointer;
+  &::after {
+      top: 50%;
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 15px;
+      height: 15px;
+      margin-top: 5px;
+      border-top: 2.5px solid #002E3B;
+      border-right: 2.5px solid #002E3B;
+      transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &.active {
+      &::after {
+          transform: translate(-50%, -50%) rotate(135deg);
+          margin-top: -4px;
+      }
+  }
+}
+  .sticky-bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-top: 1px solid #DDD;
+    gap: 20px;
+    z-index: 99;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease;
+    &:hover,
+    &.active {
+        background: rgb(242, 242, 242);
+    }
+    h3 {
+        font-size: 26px;
+        small {
+            padding-top: 4px;
+            color: var(--lightTextColor);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            display: block;
+            letter-spacing: 0.35px;
+        }
+    }
+    ul.logo-liist {
+        gap: 25px;
+        width: auto;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .bg-sticky {
+        border-radius: var(--padding-medium-pad-12, 12px);
+        border: 1px solid #EAEAEA;
+        background: #FAFAFA;
+        padding: 20px;
+        gap: 18px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .default-btn.mdc-button {
+        align-self: center;
+    }
+}
+@media only screen and (max-width : 1200px) {
+  .containerWrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 @media only screen and (max-width : 1024px) {
   .headerSection, .discoverProjectsSection, .helpSection {
     padding-left: 0;
@@ -909,7 +1216,55 @@
     left: -60px;
   }
 }
+@media only screen and (max-width : 900px) {
+
+  #explore-service-banner figure img.normal {
+    height: 250px;
+  }
+  .containerWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sticky-bottom {
+    padding: 30px 20px 30px 20px;
+}
+.toggle {
+    right: 20px;
+}
+.sticky-bottom h3 {
+    font-size: 20px;
+    padding-right: 60px;
+}
+.sticky-bottom .bg-sticky {
+    flex-wrap: wrap;
+}
+}
 @media only screen and (max-width : 767px) {
+  #explore-service-banner .slide-banner .content .top .logo-banner {
+    width: 120px;
+    height: 46px;
+  }
+  #explore-service-banner .slide-banner .content .top {
+    flex-direction: column;
+  }
+  #explore-service-banner .slide-banner .content {
+    gap: 20px;
+  }
+  #explore-service-banner .slide-banner .content .top .detail .location {
+    font-size: 14px;
+  }
+  #explore-service-banner ::ng-deep .owl-nav {
+    right: 20px;
+    bottom: 10px;
+  }
+  #explore-service-banner ::ng-deep .owl-dots {
+    bottom: 10px;
+  }
+  .containerWrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .sectionTop .heading {
     font-size: 24px;
   }
@@ -923,16 +1278,54 @@
     padding-left: 0;
     padding-right: 0;
   }
-
+  .specialProjectsSection .carousel.squareButtonWrapper ::ng-deep .owl-nav {
+    top: -28px;
+  }
   .discoverProjectsSection {
+    .sectionContent .cardContainer ::ng-deep .owl-stage {
+      padding-bottom: 0;
+    }
+    ::ng-deep .squareButtonWrapper .owl-nav {
+      top: -48px;
+    }
     .sectionHeader {
       .icon {
         margin-left: -15px;
       }
     }
-
     .sectionContent {
-      margin: 0 -15px;
+      margin: 0 0;
+      .serviceCompanyDetails .serviceCompany figure {
+        width: 30px;
+        height: 30px;
+        max-width: 30px;
+        min-width: 30px;
+      }
+      .serviceCompanyDetails .serviceCompany .companyNameVendor {
+        font-size: 12px;
+        padding-right: 0;
+        .arrow {
+          display: none;
+        }
+      }
+      .serviceCompanyDetails .serviceCompany .companyNameVendor small {
+        font-size: 10px;
+      }
+      .slider-content {
+        padding: 6px 0;
+      }
+      .projectHighlight {
+        .projectCategory {
+          font-size: 12px;
+        }
+        .projectName {
+          font-size: 16px;
+        }
+        .service {
+          font-size: 10px;
+          line-height: 15px;
+        }
+      }
       .projectCard {
         width: 100%;
         min-width: 100%;
@@ -940,7 +1333,7 @@
       }
 
       .cardContainer {
-        padding: 20px 15px 15px;
+        padding: 20px 0 15px;
         .leftslideButton {
           top: 100px;
           left: -12px;
