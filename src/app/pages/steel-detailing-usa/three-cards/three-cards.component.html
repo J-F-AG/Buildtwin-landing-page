@@ -9,7 +9,11 @@
                 <h3>Ready-to-bid vendors</h3>
                 <p>Choose from a network of pre-qualified vendors for structural steel detailing services in the USA at the right price.</p>
                 <details class="dropdown-menu">
-                    <summary>See more</summary>
+                    <summary (click)="clickDropdown()">{{dropdownText}}
+                        <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
                     <div class="dropdown-content">
                         <p>BuildTwin connects you with steel fabricators and steel detailers who deliver steel construction services for your project.</p>
                     </div>
@@ -23,39 +27,15 @@
                 <h3>Live Project Tracking</h3>
                 <p>Remotely monitor and coordinate progress with vendors across the globe via BuildTwin LIVE Track, providing you with real-time updates.</p>
                 <details class="dropdown-menu">
-                    <summary>See more</summary>
+                    <summary (click)="clickDropdown()">{{dropdownText}}
+                        <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
                     <div class="dropdown-content">
                         <p>Track each steel component and its progress as your steel structure comes together, every detail marked to perfection.</p>
                     </div>
                 </details>
-                <!-- <div class="dropdown-info-container">
-                    <svg 
-                        class="info-icon" 
-                        (click)="toggleDropdown()"
-                        [class.active]="isDropdownVisible"
-                        xmlns="http://www.w3.org/2000/svg" 
-                        width="24" 
-                        height="24" 
-                        viewBox="0 0 24 24" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        stroke-width="2" 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="16" x2="12" y2="12"></line>
-                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                    </svg>
-                    <div class="dropdown-content" *ngIf="isDropdownVisible">
-                        <p>Our network of pre-qualified vendors undergoes rigorous screening to ensure top-quality structural steel detailing services. We match you with experts who understand your specific project requirements.</p>
-                    </div>
-                </div> -->
-                <!-- <details class="dropdown-menu">
-                    <summary>Learn More</summary>
-                    <div class="dropdown-content">
-                        <p>Track each steel component and its progress as your steel structure comes together, every detail marked to perfection.</p>
-                    </div>
-                </details> -->
             </div>
 
             <div class="col-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
@@ -66,7 +46,11 @@
                 <h3>CDE Integration and Global Compliance</h3>
                 <p>Seamlessly integrate your existing workflow with BuildTwin, and receive updates on transmittals, submissions, RFIs, and more, in compliance with American standards.</p>
                 <details class="dropdown-menu">
-                    <summary>See more</summary>
+                    <summary (click)="clickDropdown()">{{dropdownText}}
+                        <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </summary>
                     <div class="dropdown-content">
                         <p>Ensures compliance with American industry standards but also with international.</p>
                     </div>

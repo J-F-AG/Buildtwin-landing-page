@@ -31,9 +31,11 @@ export class SteelDetailingUsaThreeCardsComponent {
     });
   }
 
-  // isDropdownVisible = false;
+  dropdownText = "See more";
 
-  // toggleDropdown() {
-  //   this.isDropdownVisible = !this.isDropdownVisible;
-  // }
+  clickDropdown(){
+    if(this.dropdownText == 'See more') this.dropdownText = 'See less';
+    else this.dropdownText = 'See more';
+  }
+
 }
