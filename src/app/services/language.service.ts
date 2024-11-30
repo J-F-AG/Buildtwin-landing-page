@@ -2,6 +2,7 @@ import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +36,7 @@ export class LanguageService {
   }
   isBrowser: boolean;
   setLanguageTagsObj: any[] = [];
+  faqSchemaSubject = new Subject();
   constructor(
     private router: Router,
     private metaService: Meta,

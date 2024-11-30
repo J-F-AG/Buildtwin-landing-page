@@ -42,6 +42,12 @@ export class AppComponent {
         private sanitizer: DomSanitizer,
         @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
+      this._languageService.faqSchemaSubject.subscribe((data) => {
+        const faqSchema = this.injectFaqSchema(data['data']);
+        this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+          `<script type="application/ld+json">${faqSchema}</script>`
+        );
+      });
         // Directly assign the breadcrumbs array from the service
         if (isPlatformBrowser(this.platformId)) {
             localStorage.setItem("appVersion", "0.0.12");
@@ -86,6 +92,32 @@ export class AppComponent {
             console.log(event)
         })
     }
+
+  injectFaqSchema(data) {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": []
+    };
+    data.filter((a, i) => {
+      let obj = {
+        "@type": "Question", 
+        "name": a['Question'], 
+        "acceptedAnswer": { 
+          "@type": "Answer", 
+          "text": a['Answer'] 
+        } 
+      }
+      faqSchema['mainEntity'].push(obj)
+    });
+    return JSON.stringify(faqSchema);
+    // Create the JSON-LD script tag
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+    // // Append the script tag to the document head
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+  }
     injectLang(){
       try {
         const existingScripts = document.querySelectorAll('link[rel="alternate"]');
@@ -210,49 +242,50 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
-    }else if(url.includes('/partners/durchgeplant')){
-      const faqSchema = this._languageService.injectFAQSchemaForDurchgeplant(this.renderer)
-
-      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-        `<script type="application/ld+json">${faqSchema}</script>`
-      );
-    }else if(url.includes('/partners/caldim')){
-      const faqSchema = this._languageService.injectFAQSchemaForCaldim(this.renderer)
-
-      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-        `<script type="application/ld+json">${faqSchema}</script>`
-      );
-    }else if(url.includes('/partners/sublime')){
-      const faqSchema = this._languageService.injectFAQSchemaForSublime(this.renderer)
-
-      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-        `<script type="application/ld+json">${faqSchema}</script>`
-      );
-    }else if(url.includes('/partners/j&findia')){
-      const faqSchema = this._languageService.injectFAQSchemaForjfindia(this.renderer)
-
-      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-        `<script type="application/ld+json">${faqSchema}</script>`
-      );
-    }else if(url.includes('/partners/mold-tektechnologieslimited')){
-      const faqSchema = this._languageService.injectFAQSchemaForMoldTektechnologieslimited(this.renderer)
-
-      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-        `<script type="application/ld+json">${faqSchema}</script>`
-      );
-    }else if(url.includes('/partners/gbcengineers')){
-      const faqSchema = this._languageService.injectFAQSchemaForGbcEngineers(this.renderer)
-
-      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-        `<script type="application/ld+json">${faqSchema}</script>`
-      );
-    }else if(url.includes('/partners/aarbeestructuresprivatelimited')){
-      const faqSchema = this._languageService.injectFAQSchemaForAarbeeStructuresPrivateLimited(this.renderer)
-
-      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-        `<script type="application/ld+json">${faqSchema}</script>`
-      );
     }
+    // else if(url.includes('/partners/durchgeplant')){
+    //   const faqSchema = this._languageService.injectFAQSchemaForDurchgeplant(this.renderer)
+
+    //   this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+    //     `<script type="application/ld+json">${faqSchema}</script>`
+    //   );
+    // }else if(url.includes('/partners/caldim')){
+    //   const faqSchema = this._languageService.injectFAQSchemaForCaldim(this.renderer)
+
+    //   this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+    //     `<script type="application/ld+json">${faqSchema}</script>`
+    //   );
+    // }else if(url.includes('/partners/sublime')){
+    //   const faqSchema = this._languageService.injectFAQSchemaForSublime(this.renderer)
+
+    //   this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+    //     `<script type="application/ld+json">${faqSchema}</script>`
+    //   );
+    // }else if(url.includes('/partners/j&findia')){
+    //   const faqSchema = this._languageService.injectFAQSchemaForjfindia(this.renderer)
+
+    //   this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+    //     `<script type="application/ld+json">${faqSchema}</script>`
+    //   );
+    // }else if(url.includes('/partners/mold-tektechnologieslimited')){
+    //   const faqSchema = this._languageService.injectFAQSchemaForMoldTektechnologieslimited(this.renderer)
+
+    //   this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+    //     `<script type="application/ld+json">${faqSchema}</script>`
+    //   );
+    // }else if(url.includes('/partners/gbcengineers')){
+    //   const faqSchema = this._languageService.injectFAQSchemaForGbcEngineers(this.renderer)
+
+    //   this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+    //     `<script type="application/ld+json">${faqSchema}</script>`
+    //   );
+    // }else if(url.includes('/partners/aarbeestructuresprivatelimited')){
+    //   const faqSchema = this._languageService.injectFAQSchemaForAarbeeStructuresPrivateLimited(this.renderer)
+
+    //   this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+    //     `<script type="application/ld+json">${faqSchema}</script>`
+    //   );
+    // }
   }
    
 }

@@ -9,6 +9,8 @@ import { SeoService } from 'src/app/services/seo.service';
 import { VenderDetailService } from './vender-detail.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { isPlatformBrowser } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -321,9 +323,21 @@ export class VenderDetailsAarbeeComponent {
   companyEmail = '';
   // companyAllDetail = {};
   isBrowser: boolean;
+  faqSchemaHtml: SafeHtml;
   constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private sanitizer: DomSanitizer,
+    private _languageService: LanguageService
   ) {
+    // First, remove all existing breadcrumb scripts
+    try {
+      const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+      existingScripts.forEach(script => {
+          this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+      });
+  } catch (error) {
+      
+  }
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.domain = this.route.snapshot.params['id'];
     this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
@@ -1215,6 +1229,7 @@ export class VenderDetailsAarbeeComponent {
                   this.formData.serviceType = this.serviceTypes.join(',');
                 }
                 this.formData.faq = formData['basic_form_fields'] ? formData['basic_form_fields']['faq']: this.formData.faq;
+                this.updateSchema(this.formData.faq)
                 if (formData['building_codes'] && formData['building_codes'].length) {
                   formData['building_codes'].forEach((b: any) => {
                     obj = {
@@ -1304,7 +1319,9 @@ export class VenderDetailsAarbeeComponent {
       this.toggleContentIndex = i;
     }
   }
-
+  updateSchema(data) {
+    this._languageService.faqSchemaSubject.next({data: data, type: 'faq'})
+  }
   selectService(selectedOption: any) {
     this.selectedPrecastServices = this.precastServices.find(e => e.value === selectedOption);
   }
