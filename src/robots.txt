@@ -21,4 +21,6 @@ Disallow: /blog-details3
 Disallow: /blog-details4
 Disallow: /blog-details5
 
+Allow: /services/bim-service-provider-in-usa
+
 Sitemap: https://www.buildtwin.com/sitemap.xml

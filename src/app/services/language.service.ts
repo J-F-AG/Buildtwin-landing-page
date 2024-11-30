@@ -15,7 +15,8 @@ export class LanguageService {
     "rebar-detailing-services" : 10,  //this has to be updated later
     "bim-services" : 11,  //this has to be updated later
     "steel-detailing-services" : 12,  //this has to be updated later
-    "bim-service-provider-in-usa" : 13  //this has to be updated later
+    "bim-service-provider-in-usa" : 13,  //this has to be updated later
+    "steel-detailing-services-in-usa" : 14,  //this has to be updated later
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
@@ -32,6 +33,9 @@ export class LanguageService {
     },
     "bim-service-provider-in-usa" : {
       name: 'BIM Services'
+    },
+    "steel-detailing-services-in-usa" : {
+      name: 'Structural Steel Detailing Services'
     }
   }
   isBrowser: boolean;
@@ -873,6 +877,137 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(faqSchema);
   }
+
+  injectFAQSchemaForSteelUSAServiceProvider(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+        "@type": "Question", 
+    
+        "name": "What steel detailing services does BuildTwin offer through its platform?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "BuildTwin provides a comprehensive suite of structural steel detailing services for construction and engineering projects in America. Our offerings include: ●	Shop Drawing Services: Detailed steel shop drawings for steel components like beams, columns, trusses, and connections. ●	Erection Drawings: Accurate design drawings outlining the assembly and installation of steel structures on-site. ●	Structural 3D Modeling: Advanced structural 3D modeling using leading software like Tekla Structures and AutoCAD for precise visualization. ●	Connection Design: Comprehensive design and detailing of bolted and welded connections to ensure structural integrity. ●	Material Lists: Bill of materials (BOM), including quantities, sizes, and specifications for procurement. ●	Clash Detection: Identifying and resolving conflicts within the steel framework and other building systems. ●	Miscellaneous Steel Detailing: Detailing for custom steel elements like stairs, handrails, ladders, and platforms. Our pre-qualified steel detailing vendors in USA deliver high-quality structural steel detailing services tailored to the specific needs of your project." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "How does BuildTwin ensure the quality and accuracy of steel detailing services?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "At BuildTwin, we prioritize quality and accuracy in every aspect of our steel detailing services to ensure structural safety and project success. We achieve this by: ●	Pre-Qualified Vendors: All our steel detailers undergo a thorough vetting process to verify their expertise and track record in structural steel detailing in USA. ●	International Standards Compliance: Our vendors comply with global and American standards such as AISC, BS, Eurocode, and AWS for welding. ●	AI-Powered Quality Management: Our AI Design Manager reviews shop drawings and models for errors, helping maintain high levels of accuracy and compliance. ●	Certified Workflows: We implement standardized, certified workflows to guarantee consistency and reliability in shop drawing services in USA. ●	Live Project Tracking: Track project progress in real-time and collaborate seamlessly with steel detailing vendors in USA. ●	Regular Updates and Reviews: Receive frequent updates and review each stage of the project, ensuring continuous quality improvement. Through a combination of experienced steel detailers, advanced technology, and proven processes, we ensure the highest quality structural detailing services in USA for your project." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "Can I choose from pre-qualified vendors for steel detailing services on BuildTwin?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Yes, BuildTwin offers access to a network of pre-qualified steel detailing vendors in USA. You can: ●	Browse Vendor Profiles: Review detailed profiles, past projects, client feedback, and areas of expertise. ●	Compare Bids: Receive proposals from multiple steel detailing vendors to select the best match for your project and budget. ●	Select Based on Expertise: Choose vendors who specialize in specific aspects of structural steel detailing that align with your project’s needs. ●	Global Access: In addition to American vendors, you can connect with global experts, offering a broader range of choices for your steel detailing projects. Our platform simplifies vendor selection, making it easy to find the right partner for your steel detailing services." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "What American codes and standards are followed in the steel detailing services offered through BuildTwin?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Our steel detailing services adhere to a variety of international codes and standards to ensure compliance and quality, including: ●	AISC: American Institute of Steel Construction ●	ASTM: American Society for Testing and Materials ●	NISD: National Institute of Steel Detailing ●	ACI: American Concrete Institute ●	RCSC: Research Council on Structural Connections ●	CRSI: Concrete Reinforcing Steel Institute ●	AWS: American Welding Society ●	Other regional codes based on your project's location and specific requirements. By adhering to these standards, we ensure that your steel structures are designed and detailed according to the highest safety and quality benchmarks in America." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "How does BuildTwin's AI technology enhance steel detailing projects?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "BuildTwin integrates AI technology to enhance various aspects of steel detailing services, improving efficiency and accuracy: ●	AI Design Manager: Assists with project management tasks, automating routine processes and ensuring compliance with industry standards. ●	Automated Quality Checks: AI algorithms review shop drawings and models for errors, ensuring precision. ●	Efficient Communication: Streamlines communication between clients and steel detailers, reducing project delays. ●	Data Management: Securely manages your project data, offering easy access and version control. ●	Predictive Insights: Provides insights into project timelines and potential bottlenecks, helping you manage your project proactively. With AI at its core, BuildTwin helps you achieve superior structural steel detailing with improved efficiency, accuracy, and project outcomes." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "What Software Tools are Used for Structural Steel Detailing in USA?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Professionals in structural steel detailing commonly rely on advanced software tools like Tekla Structures, AutoCAD, and SDS2. These tools enable the creation of detailed steel shop drawings, 2D and 3D models, as well as accurate fabrication drawings." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "What Information is Included in Structural Steel Detailing?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Structural steel detailing includes comprehensive information for fabricating and assembling steel components. This includes: ●	Size, shape, and dimensions of steel components ●	Welding specifications, bolt sizes, and locations ●	Connection details for beams, columns, and trusses ●	Material specifications ●	Design drawings and other relevant construction details This detailed information ensures proper fabrication and seamless installation of the steel components in your project." 
+    
+        } 
+    
+      },{ 
+    
+        "@type": "Question", 
+    
+        "name": "Can Structural Steel Detailing Be Customized for Unique Projects?", 
+    
+        "acceptedAnswer": { 
+    
+          "@type": "Answer", 
+    
+          "text": "Yes, structural steel detailing can be fully customized to meet the specific requirements of your project. Our steel detailing vendors collaborate closely with clients to understand their needs, tailoring steel detailing services to accommodate custom designs, unique components, and specific project conditions." 
+    
+        } 
+    
+      }] 
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
   injectFAQSchemaForDurchgeplant(renderer) {
     // Create the FAQ schema for the FAQ page
     const faqSchema = { 

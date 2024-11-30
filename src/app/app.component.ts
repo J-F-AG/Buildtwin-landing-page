@@ -218,6 +218,18 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
+    }else if(url.includes('/services/steel-detailing-services-in-usa')){
+      const faqSchema = this._languageService.injectFAQSchemaForSteelUSAServiceProvider(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/services/bim-service-provider-in-usa')){
+      const faqSchema = this._languageService.injectFAQSchemaForBimServiceProvider(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }else if(url.includes('/steel-detailing-services')){
         const faqSchema = this._languageService.injectFAQSchemaForSteelDetailingServices(this.renderer)
 
