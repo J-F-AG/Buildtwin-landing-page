@@ -324,6 +324,7 @@ export class VenderDetailsAarbeeComponent {
   // companyAllDetail = {};
   isBrowser: boolean;
   faqSchemaHtml: SafeHtml;
+  AvailableServicesToggleStatusHoverStatus:boolean = true;
   constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService,
     @Inject(PLATFORM_ID) private platformId: Object,
     private sanitizer: DomSanitizer,
@@ -1331,6 +1332,12 @@ export class VenderDetailsAarbeeComponent {
   selectBuildingCode(selectedOption: any) {
     this.selectedBuildingCode = this.listOfBuildingCodeList.find(e => e.value === selectedOption);
     // this.selectedSoftware = this.listOfSoftwareList.find(e => e.value === selectedOption);
+  }
+  AvailableServicesToggleStatusHover(){
+    if(this.AvailableServicesToggleStatusHoverStatus){
+      this.AvailableServicesToggleStatusHoverStatus = false;
+      this.AvailableServicesToggleStatus(true)
+    }
   }
   AvailableServicesToggleStatus(type?){
     if(type && !this.AvailableServicesToggle) {

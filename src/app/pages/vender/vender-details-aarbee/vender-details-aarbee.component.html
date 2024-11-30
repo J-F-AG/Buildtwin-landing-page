@@ -1394,7 +1394,7 @@
         </div>
     </div>
 
-    <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle,'active': AvailableServicesToggle}" (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
+    <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle,'active': AvailableServicesToggle}" (mouseover)="AvailableServicesToggleStatusHover()" (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
         <div class="toggle" [ngClass]="{'active':AvailableServicesToggle}" (click)="AvailableServicesToggleStatus(); $event.stopPropagation()">
 
         </div>
