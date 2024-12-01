@@ -86,6 +86,7 @@ export class BrowseServicesMainComponent implements OnInit {
   }
   _jfOneHeaderService:any;
   AvailableServicesToggle : boolean = false;
+  AvailableServicesToggleStatusHoverStatus:boolean = true;
   constructor(
     private injector: Injector,
     public _languageService:LanguageService,
@@ -359,6 +360,12 @@ export class BrowseServicesMainComponent implements OnInit {
 
   selectPrecast(selectedOption: any) {
     this.selectedPrecast = this.precastList.find(e => e.value === selectedOption);
+  }
+  AvailableServicesToggleStatusHover(){
+    if(this.AvailableServicesToggleStatusHoverStatus){
+      this.AvailableServicesToggleStatusHoverStatus = false;
+      this.AvailableServicesToggleStatus(true)
+    }
   }
   AvailableServicesToggleStatus(type?){
     if(type && !this.AvailableServicesToggle) {
