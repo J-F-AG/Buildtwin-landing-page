@@ -6,7 +6,7 @@
       <span class="description">From complex Design to Detailing - book services from a single vendor or manage joint-bids. </span>
     </div>  
     <div class="project-providers__carousel squareButtonWrapper">
-      <owl-carousel-o [options]="factorySlider">
+      <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
             <ng-container *ngFor="let item of projectsArray">
                 <ng-template carouselSlide>
                     <div class="item">

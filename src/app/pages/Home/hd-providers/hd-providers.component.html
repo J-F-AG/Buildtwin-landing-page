@@ -9,7 +9,7 @@
     </div>  
     <div class="buildings">
      <div class="buildings-wrapper squareButtonWrapper">
-        <owl-carousel-o [options]="factorySlider">
+        <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
             <ng-template carouselSlide>
                 <div class="slide">
                     <img src="assets/images/home/Airports.png" alt="" class="border-img">

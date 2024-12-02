@@ -3,7 +3,7 @@
   <div class="left">
     
     <div class="sliderCover relative">
-      <owl-carousel-o [options]="aboutSlider">
+      <owl-carousel-o [options]="aboutSlider" *ngIf="isBrowser">
         <ng-template carouselSlide>
           <div class="banner-area--item">
             <div class="banner-area--item--step">
@@ -82,7 +82,7 @@
         </ng-template>
       </owl-carousel-o>
       <div class="integrationsList roundButtonWrapper">
-        <owl-carousel-o [options]="integrationsList">
+        <owl-carousel-o [options]="integrationsList" *ngIf="isBrowser">
           <ng-template carouselSlide>
             <div class="integration-box text-center">
                 <a routerLink="{{_languageService.currentLanguage}}/partners/gbcengineers"><img src="assets/images/gbc_black.png" alt="Gbc" style="width: 100px;" width="100" height="57"></a>

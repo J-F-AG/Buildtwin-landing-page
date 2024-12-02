@@ -1,5 +1,6 @@
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { LanguageService } from 'src/app/services/language.service';
@@ -11,35 +12,12 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class HdDiscoverProjectsComponent implements OnInit {
 
-  factorySlider: OwlOptions = {
-    nav: true,
-    margin: 37,  // Adjust as needed
-    dots: false,
-    loop: true,
-    autoplay: false,
-    autoplayHoverPause: false,
-    navText: [
-			"<i class='ti ti-chevron-left'></i>",
-			"<i class='ti ti-chevron-right'></i>",
-		],
-    stagePadding: 0,  // Adjust padding for the "half" item effect
-    responsive: {
-      0: {
-        items: 1  // 1 item for small screens
-      },
-      400: {
-        items: 1  // 1 item for slightly larger screens
-      },
-      740: {
-        items: 1  // 2 items for medium screens
-      },
-      940: {
-        items: 2.1  // 2 full items and a half item for larger screens
-      }
-    }
-  };
-
-  constructor(private http: HttpClient, public _languageService:LanguageService) {
+  factorySlider: OwlOptions | null = null; 
+  isBrowser: boolean;
+  constructor(private http: HttpClient, public _languageService:LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   splitArray(dataArray: any[], x: number) {
@@ -84,6 +62,7 @@ export class HdDiscoverProjectsComponent implements OnInit {
     index = 0;
 
     ngOnInit(): void {
+      this.sliderInit()
       if(window.innerWidth < 767) {
         this.discoverProjects = this.splitArray(this.projectsArray, 1);
       }
@@ -92,7 +71,35 @@ export class HdDiscoverProjectsComponent implements OnInit {
       //   debugger
       // })
     }
-  
+    sliderInit (){
+      this.factorySlider = {
+        nav: true,
+        margin: 37,  // Adjust as needed
+        dots: false,
+        loop: true,
+        autoplay: false,
+        autoplayHoverPause: false,
+        navText: [
+          "<i class='ti ti-chevron-left'></i>",
+          "<i class='ti ti-chevron-right'></i>",
+        ],
+        stagePadding: 0,  // Adjust padding for the "half" item effect
+        responsive: {
+          0: {
+            items: 1  // 1 item for small screens
+          },
+          400: {
+            items: 1  // 1 item for slightly larger screens
+          },
+          740: {
+            items: 1  // 2 items for medium screens
+          },
+          940: {
+            items: 2.1  // 2 full items and a half item for larger screens
+          }
+        }
+      };
+    }
     @ViewChild(NzCarouselComponent, { static: false }) myCarousel: NzCarouselComponent;
   
     goTo() {

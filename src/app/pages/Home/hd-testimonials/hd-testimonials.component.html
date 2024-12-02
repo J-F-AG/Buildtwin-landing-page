@@ -42,7 +42,7 @@
   </div>
   <div class="container">
   <div class="testimonial-slides">
-    <owl-carousel-o [options]="testimonialsSlides">
+    <owl-carousel-o [options]="testimonialsSlides" *ngIf="isBrowser">
       <ng-template carouselSlide>
         <div class="testimonial-slides__profile">
             <figure>

@@ -1,4 +1,5 @@
-import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, Input, OnDestroy, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { OwlOptions, SlidesOutputData } from 'ngx-owl-carousel-o';
 import { GlobalService } from 'src/app/services/GlobalService';
@@ -15,37 +16,16 @@ export class HdServicesComponent implements OnInit, OnDestroy {
   activeClass: boolean = false;
   showPopup = false;
   interval: any;
-  serviceSlider: OwlOptions = {
-    items: 5,
-    nav: false,
-    margin: 25,
-    dots: false,
-    loop: true,
-    autoplay: true,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 1
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 5
-      }
-    },
-    navText: [
-      "<i class='ti ti-chevron-left'></i>",
-      "<i class='ti ti-chevron-right'></i>",
-    ]
-  }
+  serviceSlider: OwlOptions | null = null;
+  
 
   highlightedIndex: number = 0;
-
-  constructor(public _languageService: LanguageService, private globalService: GlobalService) { }
+  isBrowser: boolean;
+  constructor(public _languageService: LanguageService, private globalService: GlobalService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { 
+    this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   splitArray(dataArray: any[], x: number) {
     const result = [];
@@ -129,42 +109,73 @@ export class HdServicesComponent implements OnInit, OnDestroy {
   }
 
 
-  factorySlider: OwlOptions = {
-    nav: false,
-    margin: 16,  // Adjust as needed
-    dots: false,
-    loop: true,
-    autoplay: false,
-    autoplayHoverPause: true,
-    navText: [
-      "<i class='ti ti-chevron-left'></i>",
-      "<i class='ti ti-chevron-right'></i>",
-    ],
-    stagePadding: 0,  // Adjust padding for the "half" item effect
-    responsive: {
-      0: {
-        items: 1  // 1 item for small screens
-      },
-      400: {
-        items: 1  // 1 item for slightly larger screens
-      },
-      768: {
-        items: 3  // 2 items for medium screens
-      },
-      1000: {
-        items: 4  // 2 full items and a half item for larger screens
-      }
-    }
-  };
+  factorySlider: OwlOptions | null = null; 
   discoverServices = this.splitArray(this.servicesArray, 6);
 
   ngOnInit(): void {
+    this.sliderInit();
     if (window.innerWidth < 767) {
       this.discoverServices = this.splitArray(this.servicesArray, 2);
     }
     // this.interval = setInterval(() => {
     //   this.rotateArray();
     // }, 5000);
+  }
+  sliderInit(){
+    this.factorySlider = {
+      nav: false,
+      margin: 16,  // Adjust as needed
+      dots: false,
+      loop: true,
+      autoplay: false,
+      autoplayHoverPause: true,
+      navText: [
+        "<i class='ti ti-chevron-left'></i>",
+        "<i class='ti ti-chevron-right'></i>",
+      ],
+      stagePadding: 0,  // Adjust padding for the "half" item effect
+      responsive: {
+        0: {
+          items: 1  // 1 item for small screens
+        },
+        400: {
+          items: 1  // 1 item for slightly larger screens
+        },
+        768: {
+          items: 3  // 2 items for medium screens
+        },
+        1000: {
+          items: 4  // 2 full items and a half item for larger screens
+        }
+      }
+    };
+    this.serviceSlider = {
+      items: 5,
+      nav: false,
+      margin: 25,
+      dots: false,
+      loop: true,
+      autoplay: true,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        400: {
+          items: 1
+        },
+        740: {
+          items: 3
+        },
+        940: {
+          items: 5
+        }
+      },
+      navText: [
+        "<i class='ti ti-chevron-left'></i>",
+        "<i class='ti ti-chevron-right'></i>",
+      ]
+    }
   }
 
   index = 0;
