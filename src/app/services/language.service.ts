@@ -41,6 +41,11 @@ export class LanguageService {
   isBrowser: boolean;
   setLanguageTagsObj: any[] = [];
   faqSchemaSubject = new Subject();
+  customMapping: { [key: string]: string } = {
+    'Caldim': 'caldim-engineering',
+    'Sublime': 'sublime-structures',
+    'MACEngineersVietnamCO.LTD.': 'mac-engineers-vietnam-co-ltd',
+  };
   constructor(
     private router: Router,
     private metaService: Meta,
