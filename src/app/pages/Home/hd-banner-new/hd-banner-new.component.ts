@@ -1,5 +1,6 @@
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -13,59 +14,10 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./hd-banner-new.component.scss']
 })
 export class HdBannerNewComponent {
-  aboutSlider: OwlOptions = {
-    items: 1,
-    // nav: true,
-    margin: 0,
-    dots: false,
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5100,
-    // smartSpeed: 2000,
-    autoplayHoverPause: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 1
-      },
-      740: {
-        items: 1
-      },
-      940: {
-        items: 1
-      }
-    },
-  }
+  aboutSlider: OwlOptions | null = null;
 
-  integrationsList: OwlOptions = {
-    nav: true,
-    loop: true,
-    dots: false,
-    autoplay: false,
-    navText: [
-      "<i class='ti ti-chevron-left'></i>",
-      "<i class='ti ti-chevron-right'></i>",
-    ],
-    responsive: {
-      0: {
-        items: 2
-      },
-      415: {
-        items: 3
-      },
-      600: {
-        items: 4
-      },
-      990: {
-        items: 5
-      },
-      1400: {
-        items: 5
-      }
-    }
-  };
+  integrationsList: OwlOptions | null = null;
+  
   myForm: FormGroup;
   payload: any = {
     "preQualified": false,
@@ -80,10 +32,15 @@ export class HdBannerNewComponent {
   buildingCodeObj = {};
   buildingCodeArray = [];
   toggleSidebarStatus = false;
-
-  constructor(private _http: HttpClient, private message: NzMessageService, private fb: FormBuilder, private globalService: GlobalService, public _languageService:LanguageService) { }
+  isBrowser: boolean;
+  constructor(private _http: HttpClient, private message: NzMessageService, private fb: FormBuilder, private globalService: GlobalService, public _languageService:LanguageService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+   }
 
   ngOnInit(): void {
+    this.sliderInit();
     this.myForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]], // Email field validation
       projectName: ['', Validators.required], // Project Name validation
@@ -100,7 +57,62 @@ export class HdBannerNewComponent {
     // });
     this.updateServiceId()
   }
-
+  sliderInit(){
+    if (this.isBrowser) {
+      this.integrationsList = {
+        nav: true,
+        loop: true,
+        dots: false,
+        autoplay: false,
+        navText: [
+          "<i class='ti ti-chevron-left'></i>",
+          "<i class='ti ti-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 2
+          },
+          415: {
+            items: 3
+          },
+          600: {
+            items: 4
+          },
+          990: {
+            items: 5
+          },
+          1400: {
+            items: 5
+          }
+        }
+      };
+      this.aboutSlider = {
+        items: 1,
+        // nav: true,
+        margin: 0,
+        dots: false,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5100,
+        // smartSpeed: 2000,
+        autoplayHoverPause: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          400: {
+            items: 1
+          },
+          740: {
+            items: 1
+          },
+          940: {
+            items: 1
+          }
+        },
+      }
+    }
+  }
   getGlobalValue(): string {
     return this.globalService.getGlobalValue();
   }

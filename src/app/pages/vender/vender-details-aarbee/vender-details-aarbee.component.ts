@@ -820,7 +820,21 @@ export class VenderDetailsAarbeeComponent {
       retry(2)
     ).subscribe(companies => {
       if (companies && companies['data'] && companies['data']['details'] && companies['data']['details'].length) {
-        let company = companies['data']['details'].filter(a => a.company_name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase());
+        debugger
+        let company = companies['data']['details'].filter(a => {
+          if (this._languageService.customMapping[a['company_name']]) {
+            a['route'] = this._languageService.customMapping[a['company_name']];
+            a['linking'] = this._languageService.customMapping[a['company_name']];
+          }else {
+            a['route'] = a['company_name'].replace(/ /g, '');
+            a['linking'] = a['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+            .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+            .toLowerCase();
+          }
+          if(a.company_name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase() || a.linking === this.domain.toLowerCase()){
+            return a
+          }
+        });
         if (company.length || this.isIframe) {
           let queryParam = company.length ? company[0].domain: this.cockpitDomain;
           if (this.isIframe) {
@@ -1298,11 +1312,23 @@ export class VenderDetailsAarbeeComponent {
       }),
       retry(2)
     ).subscribe(companies => {
+      debugger
       companies['data'].forEach(company => {
-        if (company.name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase()) {
+        if (this._languageService.customMapping[company['name']]) {
+          company['route'] = this._languageService.customMapping[company['name']];
+          company['linking'] = this._languageService.customMapping[company['name']];
+        }else {
+          company['route'] = company['name'].replace(/ /g, '');
+          company['linking'] = company['name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+          .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+          .toLowerCase();
+        }
+        if(company.name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase() || company.linking === this.domain.toLowerCase()){
           this.companyId = company.id;
           this.companyEmail = company.email;
         }
+        // if (company.name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase()) {
+        // }
       });
     })
   }

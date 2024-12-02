@@ -3,7 +3,7 @@
   <div class="left">
     
     <div class="sliderCover relative">
-      <owl-carousel-o [options]="aboutSlider">
+      <owl-carousel-o [options]="aboutSlider" *ngIf="isBrowser">
         <ng-template carouselSlide>
           <div class="banner-area--item">
             <div class="banner-area--item--step">
@@ -82,15 +82,15 @@
         </ng-template>
       </owl-carousel-o>
       <div class="integrationsList roundButtonWrapper">
-        <owl-carousel-o [options]="integrationsList">
+        <owl-carousel-o [options]="integrationsList" *ngIf="isBrowser">
           <ng-template carouselSlide>
             <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/gbcengineers"><img src="assets/images/gbc_black.png" alt="Gbc" style="width: 100px;" width="100" height="57"></a>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers"><img src="assets/images/gbc_black.png" alt="Gbc" style="width: 100px;" width="100" height="57"></a>
             </div>
         </ng-template>
         <ng-template carouselSlide>
             <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/j&findia"><img src="assets/images/jf_black.png" alt="J&F" style="width: 68.522px;" width="68.522" height="34.731"></a>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india"><img src="assets/images/jf_black.png" alt="J&F" style="width: 68.522px;" width="68.522" height="34.731"></a>
             </div>
         </ng-template>
         <ng-template carouselSlide>
@@ -100,12 +100,12 @@
         </ng-template>
         <ng-template carouselSlide>
             <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/aarbeestructuresprivatelimited"><img src="assets/images/aarbee_black.png" alt="Aarbee" style="width: 399.985px;" width="399.985" height="50.847"></a>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited"><img src="assets/images/aarbee_black.png" alt="Aarbee" style="width: 399.985px;" width="399.985" height="50.847"></a>
             </div>
         </ng-template>
         <ng-template carouselSlide>
             <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/caldim"><img src="assets/images/caldim_black.png" alt="Caldim" style="width: 134.489px;" width="134.489" height="56.627"></a>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering"><img src="assets/images/caldim_black.png" alt="Caldim" style="width: 134.489px;" width="134.489" height="56.627"></a>
             </div>
         </ng-template>
       </owl-carousel-o>

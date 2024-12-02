@@ -61,7 +61,15 @@ export class TtPartnersComponent {
           }
         })
         res['data']['details'].filter(res=>{
-          res['route'] = res['company_name'].replace(/ /g, '');
+          if (this._languageService.customMapping[res['company_name']]) {
+            res['route'] = this._languageService.customMapping[res['company_name']];
+            res['linking'] = this._languageService.customMapping[res['company_name']];
+          }else {
+            res['route'] = res['company_name'].replace(/ /g, '');
+            res['linking'] = res['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+            .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+            .toLowerCase();
+          }
           this.companyList.push(res)
         })
       }

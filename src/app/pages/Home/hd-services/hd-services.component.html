@@ -110,7 +110,7 @@
     </div> -->
 
     <div class="slider">
-        <owl-carousel-o [options]="factorySlider" (change)="getData($event)">
+        <owl-carousel-o [options]="factorySlider" (change)="getData($event)" *ngIf="isBrowser">
             <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
                 <!-- , color: item.textColor -->
                 <a class="service__items__sub" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''" [ngStyle]="{backgroundColor: item.color}">

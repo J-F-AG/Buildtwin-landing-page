@@ -257,6 +257,9 @@
         height: 214px;
         gap: 0px;
         border-radius: 8px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
         .country-bg {
           padding: 2px 6px 2px 2px;
           gap: 4px;
