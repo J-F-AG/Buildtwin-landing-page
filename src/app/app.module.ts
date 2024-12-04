@@ -304,6 +304,7 @@ import { SteelDetailingUsaThreeCardsComponent } from './pages/steel-detailing-us
 import { SteelDetailingUsaTopVendorsComponent } from './pages/steel-detailing-usa/top-vendors/top-vendors.component';
 import { SteelDetailingUsaTrustByNewComponent } from './pages/steel-detailing-usa/trust-by/trust-by.component';
 import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
+import { SpecialProjectComponent } from './include-component/special-project/special-project.component';
 
 
 
@@ -575,7 +576,8 @@ import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-u
    SteelDetailingUsaThreeCardsComponent,
    SteelDetailingUsaTopVendorsComponent,
    SteelDetailingUsaTrustByNewComponent,
-   SteelDetailingUsaServicesNewComponent
+   SteelDetailingUsaServicesNewComponent,
+   SpecialProjectComponent
   ],
   imports: [    
     BrowserModule,

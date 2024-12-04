@@ -27,6 +27,7 @@ import { BimServicesNewComponent } from './pages/bim/services-new.component';
 import { StructuralSteelServicesNewComponent } from './pages/structural-steel/services-new.component';
 import { BimUsaServicesNewComponent } from './pages/bim-usa/services-new.component';
 import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
+import { SectorComponent } from './pages/sector/sector.component';
 
 
 
@@ -186,10 +187,9 @@ const routes: Routes = [
     //     redirectTo: '/explore-services',
     //     pathMatch: 'full'
     // },
-    // {path: 'engineering-services/sector',
-    //     redirectTo: '/',
-    //     pathMatch: 'full'
-    // },
+    {path: 'engineering-services/sector',
+        component: SectorComponent
+    },
     {path: 'explore-services', component: BrowseServicesMainComponent,
         data: {
             title: 'Find Top Structural Engineering Services | BuildTwin',

@@ -396,65 +396,7 @@
             </div>
         </div>
     </section> -->
-    <section class="specialProjectsSection">
-        <div class="containerWrap">
-            <div class="sectionHeader">
-                <!-- <lib-svg-icon class="icon" [name]="'specialProject-icon'" [size]="80" [sizeH]="80"></lib-svg-icon> -->
-                <div class="heading">
-                    <div class="title">Special Projects</div>
-                    <div class="subTitle">We have some very special projects</div>
-                </div>
-            </div>
-            <div class="carousel squareButtonWrapper">
-                <!-- <lib-svg-icon [name]="'rightArrow-icon'" class="carousel-control prev" (click)="prevSlide()" [size]="88"
-                    [sizeH]="88">
-                </lib-svg-icon>
-                <div class="carousel-wrapper" [style.transform]="transformStyle">
-                    <div class="carousel-item" *ngFor="let slide of slides; let i = index"
-                        [class.active]="i === currentIndex">
-                        <div style="display: flex; gap: 20px; justify-content: space-between">
-                            <div class="image-container" *ngFor="let image of slide.images">
-                                <figure>
-                                    <img [src]="image.src" alt="Slide {{ i + 1 }}" width="185" height="245" />
-                                </figure>
-                                <div class="image-caption">
-                                    <h3>{{ image.title }}</h3>
-                                    <p>{{ image.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <owl-carousel-o [options]="customOptions">
-                    <ng-container *ngFor="let slide of slides">
-                        <ng-container *ngFor="let image of slide.images">
-                            <ng-template carouselSlide>
-                                <div *ngIf="!image['serviceId']" class="image-container">
-                                    <figure>
-                                        <img [src]="image.src" width="185" height="245" />
-                                    </figure>
-                                    <div class="image-caption">
-                                        <h3>{{ image.title }}</h3>
-                                    </div>
-                                </div>
-                                <a *ngIf="image['serviceId']" class="image-container cursor" href="javascript:void(0)">
-                                    <figure>
-                                        <img [src]="image.src" width="185" height="245" />
-                                    </figure>
-                                    <div class="image-caption">
-                                        <h3>{{ image.title }}</h3>
-                                    </div>
-                                </a>
-                            </ng-template>
-                        </ng-container>
-                    </ng-container>
-                </owl-carousel-o>
-
-                <!-- <lib-svg-icon [name]="'rightArrow-icon'" class="carousel-control next" (click)="nextSlide()" [size]="88"
-                    [sizeH]="88"></lib-svg-icon> -->
-            </div>
-        </div>
-    </section>
+    <app-special-project></app-special-project>
     <section class="whyBuildtwinSection">
         <div class="containerWrap">
             <app-why-buildtwin [isBrowseService]="true"></app-why-buildtwin>
