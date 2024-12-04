@@ -187,7 +187,7 @@ const routes: Routes = [
     //     redirectTo: '/explore-services',
     //     pathMatch: 'full'
     // },
-    {path: 'engineering-services/sector',
+    {path: 'sector',
         component: SectorComponent
     },
     {path: 'explore-services', component: BrowseServicesMainComponent,
