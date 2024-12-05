@@ -1,7 +1,7 @@
 .solutionProviderSection{padding: 42px 0;}
 
 .providerList{ display: flex; flex-wrap: wrap; gap: 24px;
-    .itemContainer{ width: 15%; padding: 13px; display: flex; 
+    .itemContainer{ width: calc(25% - 18px); min-width: calc(25% - 18px); padding: 13px; display: flex; 
         .listItem{ cursor: pointer;
             .imgContainer{border: solid 5px white; margin-bottom: 20px; background-color: white;
                 filter: drop-shadow(0px 4.561px 36.484px rgba(0, 0, 0, 0.20));

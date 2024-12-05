@@ -1,0 +1,34 @@
+<section class="specialProjectsSection">
+    <div class="containerWrap">
+        <div class="sectionHeader">
+            <div class="heading">
+                <div class="title">Special Projects</div>
+                <div class="subTitle">We have some very special projects</div>
+            </div>
+        </div>
+        <div class="carousel squareButtonWrapper">
+            <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let image of slides[0]['images']">
+                        <ng-template carouselSlide>
+                            <div *ngIf="!image['serviceId']" class="image-container">
+                                <figure>
+                                    <img [src]="image.src" width="185" height="245" />
+                                </figure>
+                                <div class="image-caption">
+                                    <h3>{{ image.title }}</h3>
+                                </div>
+                            </div>
+                            <a *ngIf="image['serviceId']" class="image-container cursor" href="javascript:void(0)">
+                                <figure>
+                                    <img [src]="image.src" width="185" height="245" />
+                                </figure>
+                                <div class="image-caption">
+                                    <h3>{{ image.title }}</h3>
+                                </div>
+                            </a>
+                        </ng-template>
+                    </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>

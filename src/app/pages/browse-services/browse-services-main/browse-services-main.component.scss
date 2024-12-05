@@ -610,210 +610,6 @@
     }
   }
   //carousel
-  .specialProjectsSection {
-    padding: 0 0;
-    background: none;
-    .sectionHeader {
-      display: flex;
-      align-items: center;
-      .icon {
-        padding-top: 25px;
-      }
-      .title {
-        font-size: 44px;
-        font-family: var(--medium-global);
-        font-weight: 500;
-      }
-      .subTitle {
-        margin: 5px 0;
-        font-size: 18px;
-        font-weight: 400;
-        color: #668189;
-      }
-    }
-  
-    .carousel {
-      margin: 10px 0 0;
-      position: relative;
-      width: 100%;
-      max-width: calc(100vw - 313px);
-      // overflow: hidden;
-      padding: 22px 0 0;
-      // background: linear-gradient(
-      //   180deg,
-      //   #fafafa 28.14%,
-      //   rgba(250, 250, 250, 0) 100%
-      // );
-      ::ng-deep .owl-item {
-        // padding-left: 12px;
-        // padding-right: 12px;
-      }
-      ::ng-deep owl-stage > div {
-        padding-top: 20px;
-      }
-      &.squareButtonWrapper ::ng-deep .owl-nav {
-          left: auto;
-          right: 0;
-          top: -90px;
-          transform: none;
-          width: auto;
-          gap: 20px;
-        // .owl-prev {
-        //   left: -80px;
-        //   position: absolute;
-        //   top: 0;
-        //   transform: translateY(-50%);
-        // }
-        // .owl-next {
-        //   right: -50px;
-        //   position: absolute;
-        //   top: 0;
-        //   transform: translateY(-50%);
-        // }
-      }
-      // ::ng-deep .owl-carousel .owl-nav .owl-next,::ng-deep .owl-carousel .owl-nav .owl-prev {
-      //   width: 37px;
-      //   height: 37px;
-      //   position: absolute;
-      //   left: -12px;
-      //   top: 50%;
-      //   transform: translateY(-50%);
-      //   background: white;
-      //   border-radius: 50%;
-      //   box-shadow: 0px 2.205px 12.64px rgba(0, 0, 0, 0.2);
-      //   &::after {
-      //     position: absolute;
-      //     left: 53%;
-      //     top: 50%;
-      //     transform: translate(-50%, -50%) rotate(135deg);
-      //     width: 10px;
-      //     height: 10px;
-      //     border-right: 2px solid #000;
-      //     border-bottom: 2px solid #000;
-      //     content: "";
-      //   }
-      // }
-      // ::ng-deep .owl-carousel .owl-nav .owl-next {
-      //   right: -12px;
-      //   left: auto;
-      //   &::after {
-      //     left: 45%;
-      //     transform: translate(-50%, -50%) rotate(-45deg);
-      //   }
-      // }
-    }
-  
-    .carousel-wrapper {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      gap: 20px;
-    }
-  
-    .carousel-item {
-      position: relative;
-      min-width: 100%;
-      box-sizing: border-box;
-    }
-  
-    .carousel-item img {
-      width: 400px;
-      height: 500px;
-      display: block;
-    }
-  
-    .carousel-caption {
-      position: absolute;
-      top: 40px;
-      left: 50px;
-      color: black;
-      padding: 10px;
-    }
-  
-    .carousel-control {
-      position: absolute;
-      transform: translateY(-50%);
-      border: none;
-      color: white;
-      font-size: 2em;
-      cursor: pointer;
-      padding: 10px;
-      z-index: 1000;
-    }
-  
-    .carousel-control.prev {
-      left: 10px;
-      top: 134px;
-      transform: rotate(180deg);
-    }
-  
-    .carousel-control.next {
-      right: 10px;
-      top: 200px;
-    }
-  
-    .image-container {
-      position: relative;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 19px;
-      margin-right: 28px;
-      figure {
-        margin: 0;
-        padding: 10px 0 0 9px;
-        position: relative;
-        img {
-          border-radius: 0 18px 18px;
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 127px;
-          width: 0;
-          height: 141px;
-          border-left: 1.5px solid #0053FA;
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: calc(100% - 9px);
-          height: 127px;
-          border: 1.5px solid #0053FA;
-          border-bottom: 0;
-          border-radius: 0 18px 0 0;
-        }
-      }
-    }
-  
-    .image-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  
-    .image-caption {
-      color: #000;
-      font-size: 16px;
-      font-style: normal;
-      font-family: var(--semibold-global);
-      line-height: 31.025px; /* 193.904% */
-      text-transform: uppercase;
-      text-align: center;
-    }
-  
-    .image-caption h3 {
-      margin: 0;
-      font-size: 16px;
-    }
-  
-    .image-caption p {
-      margin: 0;
-      font-size: 14px;
-    }
-  }
   
   //discoverProjects
   
@@ -1102,9 +898,6 @@
   .discoverProjectsSection .sectionContent .cardContainer .leftslideButton {
     z-index: 2;
   }
-  .specialProjectsSection .carousel {
-    max-width: 100%;
-  }
 
 
   .helpSection .sectionContent .column {
@@ -1216,9 +1009,6 @@
   .helpSection .sectionContent .gridItemWrapper .helpDetails {
     padding: 10px;
   }
-  .specialProjectsSection .carousel.squareButtonWrapper ::ng-deep .owl-nav .owl-prev {
-    left: -60px;
-  }
 }
 @media only screen and (max-width : 900px) {
 
@@ -1273,17 +1063,13 @@
     font-size: 24px;
   }
   .discoverProjectsSection .sectionHeader .title,
-  .helpSection .sectionHeader .title,
-  .specialProjectsSection .sectionHeader .title {
+  .helpSection .sectionHeader .title {
     font-size: 22px;
   }
   .headerSection,
   .discoverProjectsSection {
     padding-left: 0;
     padding-right: 0;
-  }
-  .specialProjectsSection .carousel.squareButtonWrapper ::ng-deep .owl-nav {
-    top: -28px;
   }
   .discoverProjectsSection {
     .sectionContent .cardContainer ::ng-deep .owl-stage {
@@ -1405,37 +1191,6 @@
     }
   }
 
-  .specialProjectsSection {
-    padding: 0;
-    .sectionHeader {
-      .icon {
-        margin-left: -15px;
-      }
-    }
-
-    .carousel {
-      padding: 15px 0;
-      margin: 0;
-
-      ::ng-deep {
-        .owl-carousel {
-          .owl-nav {
-            .owl-prev {
-              left: 10px;
-            }
-
-            .owl-next {
-              right: 10px;
-            }
-          }
-        }
-      }
-    }
-
-    .image-container {
-      margin: 0 auto;
-    }
-  }
 
   .whyBuildtwinSection {
     padding: 0;
