@@ -10,6 +10,7 @@
 /services/steel-detailing-services
 /ai-project-management
 /business-intelligence
+/sector
 /training
 /pricing
 /good-reason

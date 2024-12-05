@@ -20,6 +20,7 @@ Disallow: /blog-details2
 Disallow: /blog-details3
 Disallow: /blog-details4
 Disallow: /blog-details5
+Disallow: /sector
 
 Allow: /services/bim-service-provider-in-usa
 
