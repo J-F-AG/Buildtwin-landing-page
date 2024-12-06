@@ -46,10 +46,15 @@
     }
 
     .card-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        // gap: 12px;
         margin-top: 24px;
+        ::ng-deep .owl-nav {
+            left: auto;
+            right: 0;
+            top: -60px;
+        }
     }
     .card {
         display: grid;
@@ -61,24 +66,27 @@
             align-items: center;
             justify-content: center;
             background-repeat: no-repeat;
-            img {
-                width: 167px;
-                height: 41px;
-            }
+            overflow: hidden;
+            // img {
+            //     width: 167px;
+            //     height: 41px;
+            // }
             &--first {
-                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('../../../../assets/images/home/goodCompany1.png');
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
             }
             &--second {
-                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8)), url('../../../../assets/images/home/goodCompany2.png');
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
             }
             &--third {
-                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url('../../../../assets/images/home/goodCompany3.png');
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
             }
         }
         &__title {
             font-size: 24px;
             font-weight: 600;
             color: var(--newButtonColor);
+            margin-bottom: 0;
+            line-height: 1.4;
         }
         &__desc {
             font-size: 14px;
@@ -92,10 +100,25 @@
             font-weight: 600;
             text-decoration: underline;
             color: var(--newButtonColor);
+            img {
+                width: 17px;
+            }
         }
     }
 }
 
+@media only screen and (min-width: 740px) {
+    .desktop3col {
+        ::ng-deep .owl-item {
+            width: calc(33.3333% - 30px) !important;
+        }
+    }
+    .desktop2col {
+        ::ng-deep .owl-item {
+            width: calc(50% - 30px) !important;
+        }
+    }
+}
 @media only screen and (max-width: 567px) {
     .good-company {
         padding: 10px;

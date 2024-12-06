@@ -1,17 +1,31 @@
 <div class="bottom-space">
     <app-hd-navbar></app-hd-navbar>
     <app-data-center-section></app-data-center-section>
-    <app-about-data-center-section></app-about-data-center-section>
-    <app-dc-europe></app-dc-europe>
-    <app-sector-ample-projects></app-sector-ample-projects>
-    <app-right-team></app-right-team>
-    <app-sector-meeting-standards></app-sector-meeting-standards>
-    <app-hd-integrations></app-hd-integrations>
+    <!-- <app-about-data-center-section></app-about-data-center-section> -->
+    <!-- <app-sector-ample-projects></app-sector-ample-projects> -->
+    <!-- <app-right-team></app-right-team> -->
     <!-- <app-sector-direct-booking></app-sector-direct-booking> -->
     <!-- <app-sector-solution-provider></app-sector-solution-provider> -->
+     <!-- <div class="bottom-space-gap"> -->
+        <app-hd-discover-projects [hideTitle]="true"></app-hd-discover-projects>
+     <!-- </div> -->
+      <div class="child-pb-none">
+          <app-sector-meeting-standards></app-sector-meeting-standards>
+      </div>
+     <app-hd-integrations></app-hd-integrations>
      <div class="bottom-space-gap">
          <app-special-project></app-special-project>
-     </div>
+    </div>
+    <div class="bottom-space-big">
+        <app-dc-europe></app-dc-europe>
+    </div>
+    <div class="bottom-space-gap">
+        <app-sector-category [category]="8" ></app-sector-category>
+    </div>
+    <app-faq-buildtwin [fullScreen]="true"></app-faq-buildtwin>
+    <div class="bottom-space-big">
+        <app-drawing-freelancers></app-drawing-freelancers>
+    </div>
     <app-get-started></app-get-started>
     <app-hd-footer></app-hd-footer>
     <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle,'active': AvailableServicesToggle}"

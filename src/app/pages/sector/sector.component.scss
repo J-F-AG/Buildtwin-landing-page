@@ -1,8 +1,14 @@
+:host .child-pb-none ::ng-deep .meetingStandardsWrapper {
+    padding-bottom: 0;
+}
 .bottom-space {
     padding-bottom: 160px;
 }
 .bottom-space-gap {
     margin-bottom: 30px;
+}
+.bottom-space-big {
+    margin-bottom: 50px;
 }
 .toggle {
     position: absolute;
