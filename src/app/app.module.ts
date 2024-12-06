@@ -305,6 +305,8 @@ import { SteelDetailingUsaTopVendorsComponent } from './pages/steel-detailing-us
 import { SteelDetailingUsaTrustByNewComponent } from './pages/steel-detailing-usa/trust-by/trust-by.component';
 import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
 import { SpecialProjectComponent } from './include-component/special-project/special-project.component';
+import { ServiceCategoryComponent } from './include-component/service-category/service-category.component';
+import { SectorCategoryComponent } from './include-component/sector-category/service-category.component';
 
 
 
@@ -577,7 +579,9 @@ import { SpecialProjectComponent } from './include-component/special-project/spe
    SteelDetailingUsaTopVendorsComponent,
    SteelDetailingUsaTrustByNewComponent,
    SteelDetailingUsaServicesNewComponent,
-   SpecialProjectComponent
+   SpecialProjectComponent,
+   ServiceCategoryComponent,
+   SectorCategoryComponent
   ],
   imports: [    
     BrowserModule,

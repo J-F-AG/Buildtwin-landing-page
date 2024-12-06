@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-faq-buildtwin',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './faq-buildtwin.component.scss'
 })
 export class FaqBuildtwinComponent {
+  @Input() fullScreen: boolean = false;
   isFirst = true;
 }

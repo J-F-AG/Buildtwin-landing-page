@@ -1,6 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { Component, Inject, Input, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { LanguageService } from 'src/app/services/language.service';
@@ -11,7 +11,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './hd-discover-projects.component.scss'
 })
 export class HdDiscoverProjectsComponent implements OnInit {
-
+  @Input() hideTitle: boolean = false;
   factorySlider: OwlOptions | null = null; 
   isBrowser: boolean;
   constructor(private http: HttpClient, public _languageService:LanguageService,
