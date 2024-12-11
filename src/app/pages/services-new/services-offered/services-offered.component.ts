@@ -44,7 +44,7 @@ export class ServicesOfferedComponent {
       // discoverProjects = this.splitArray(this.projectsArray, 4);
   
     customOptions: OwlOptions = {
-      margin: 25,
+      margin: 15,
       loop: false,
       dots: true,
       autoplay: false,
@@ -56,10 +56,10 @@ export class ServicesOfferedComponent {
             items:1
         },
         600:{
-            items:2
+            items:3
         },
         1000:{
-            items:2
+            items:3
         }
     }      
     }
