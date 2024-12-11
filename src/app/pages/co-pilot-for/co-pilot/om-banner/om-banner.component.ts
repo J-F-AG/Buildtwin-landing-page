@@ -43,12 +43,16 @@ showPopup=false;
   }
   playVideo() {
    let video2 = <HTMLVideoElement>document.getElementById('video1');
-    video2.pause();
-    video2.play();
+   if(video2){
+     video2.pause();
+     video2.play();
+   }
   }
   pauseVideo() {
     let video2 = <HTMLVideoElement>document.getElementById('video1');
-    video2.pause();
+    if(video2){
+      video2.pause();
+    }
   }   
     ngOnInit(): void {
     //   let video2 = <HTMLVideoElement>document.getElementById('video1');
