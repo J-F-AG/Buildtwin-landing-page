@@ -84,6 +84,13 @@ export class HdGoodCompanyComponent {
     this.blogService.getBlogsByCategory(this.category).subscribe({
       next: (data) => {
         this.allBlogs = data
+        this.allBlogs = this.allBlogs.map((blog: any) => {
+          return {
+            ...blog,
+            jetpack_featured_media_url: blog.jetpack_featured_media_url?blog.jetpack_featured_media_url.replace('http://35.158.244.95', 'https://www.buildtwin.com/blog'):'',
+            link: blog.link?blog.link.replace('http://35.158.244.95', 'https://www.buildtwin.com/blog'):'',
+          }
+        });
         console.log(this.allBlogs)
       },
       error: (err) => console.error('Error fetching all blogs', err),
