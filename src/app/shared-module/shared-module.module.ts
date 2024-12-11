@@ -12,7 +12,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import {MatIconModule} from '@angular/material/icon';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 import { CountUpModule } from 'ngx-countup';
 import { LightgalleryModule } from 'lightgallery/angular';
@@ -34,10 +33,6 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { HdNavbarComponent } from '../pages/includes/hd-navbar/hd-navbar.component';
 import { HdFooterComponent } from '../pages/includes/hd-footer/hd-footer.component';
-import { HdServicesComponent } from '../pages/Home/hd-services/hd-services.component';
-import { HdDiscoverProjectsComponent } from '../pages/Home/hd-discover-projects/hd-discover-projects.component';
-import { HdGoodCompanyComponent } from '../pages/Home/hd-good-company/hd-good-company.component';
-import { HdIntegrationsComponent } from '../pages/includes/hd-integrations/hd-integrations.component';
 import { LanguageChangeModule } from '../include-component/language-change/language-change.module';
 import { RouterModule } from '@angular/router';
 import { FreeOfferFormComponent } from '../pages/services-new/free-offer-form/free-offer-form.component';
@@ -64,16 +59,11 @@ import { EmPartnersComponent } from '../pages/whybuildtwin/why-buildtwin/em-part
 import { SpecialProjectComponent } from '../include-component/special-project/special-project.component';
 import { FaqBuildtwinComponent } from '../pages/services-new/faq-buildtwin/faq-buildtwin.component';
 import { DrawingFreelancersComponent } from '../pages/services-new/drawing-freelancers/drawing-freelancers.component';
-import { ServiceCategoryComponent } from '../include-component/service-category/service-category.component';
 
 @NgModule({
   declarations: [
     HdNavbarComponent,
     HdFooterComponent,
-    HdServicesComponent,// browse-services, help-desk
-    HdDiscoverProjectsComponent,// help-desk, sector
-    HdGoodCompanyComponent,// help-desk, sector-category, service-category, browse-services
-    HdIntegrationsComponent, // help-desk, sector, service, browse-services, time-tracking
     FreeOfferFormComponent, // multiple
     HowBuildtwinHelpsComponent, // online-meeting-home, online-meeting-home-freelance, time-tracking-home, provide-service, elearning-school,
     EmTestimonialsComponent, // online-meeting-home, pricing-page, about-page
@@ -95,11 +85,9 @@ import { ServiceCategoryComponent } from '../include-component/service-category/
     SpecialProjectComponent, //browse-services-main, sector
     FaqBuildtwinComponent, // sector, service-new
     DrawingFreelancersComponent, // sector, service-new,
-    ServiceCategoryComponent,
   ],
   imports: [
     CommonModule,
-    // BrowserAnimationsModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
@@ -172,10 +160,8 @@ import { ServiceCategoryComponent } from '../include-component/service-category/
     LanguageChangeModule,
     HdNavbarComponent,
     HdFooterComponent,
-    HdServicesComponent,
-    HdDiscoverProjectsComponent,
-    HdGoodCompanyComponent,
-    HdIntegrationsComponent,
+    // HdGoodCompanyComponent,
+    // HdIntegrationsComponent,
     RouterModule,
     BtIconModule,
     GlobalBannerModule,
@@ -202,7 +188,7 @@ import { ServiceCategoryComponent } from '../include-component/service-category/
     SpecialProjectComponent,
     FaqBuildtwinComponent,
     DrawingFreelancersComponent,
-    ServiceCategoryComponent
+    // ServiceCategoryComponent
   ]
 })
 export class SharedModuleModule { }

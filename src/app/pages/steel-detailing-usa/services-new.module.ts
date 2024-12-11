@@ -16,6 +16,7 @@ import { SteelDetailingUsaServicesOfferedComponent } from './services-offered/se
 import { SteelDetailingUsaThreeCardsComponent } from './three-cards/three-cards.component';
 import { SteelDetailingUsaTopVendorsComponent } from './top-vendors/top-vendors.component';
 import { SteelDetailingUsaTrustByNewComponent } from './trust-by/trust-by.component';
+import { ServiceCategoryModule } from 'src/app/include-component/service-category/service-category.module';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    ServiceCategoryModule,
     RouterModule.forChild(routes),
   ],
 })

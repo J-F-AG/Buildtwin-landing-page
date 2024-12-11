@@ -16,6 +16,7 @@ import { StructuralSteelServicesOfferedComponent } from './services-offered/serv
 import { StructuralSteelThreeCardsComponent } from './three-cards/three-cards.component';
 import { StructuralSteelTopVendorsComponent } from './top-vendors/top-vendors.component';
 import { StructuralSteelTrustByNewComponent } from './trust-by/trust-by.component';
+import { ServiceCategoryModule } from 'src/app/include-component/service-category/service-category.module';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    ServiceCategoryModule,
     RouterModule.forChild(routes),
   ],
 })

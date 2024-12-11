@@ -8,6 +8,9 @@ import { sectorMeetingStandardsComponent } from './meeting-standards/meeting-sta
 import { DcEuropeComponent } from './dc-europe/dc-europe.component';
 import { SectorCategoryComponent } from 'src/app/include-component/sector-category/service-category.component';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { HdDiscoverProjectsModule } from '../Home/hd-discover-projects/hd-discover-projects.module';
+import { HdGoodCompanyModule } from '../Home/hd-good-company/hd-good-company.module';
+import { HdIntegrationsModule } from '../includes/hd-integrations/hd-integrations.module';
 
 const routes: Routes = [
   {
@@ -28,6 +31,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    HdDiscoverProjectsModule,
+    HdGoodCompanyModule,
+    HdIntegrationsModule,
     RouterModule.forChild(routes),
   ],
 })

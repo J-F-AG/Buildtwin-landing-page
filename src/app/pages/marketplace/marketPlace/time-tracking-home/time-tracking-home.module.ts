@@ -9,6 +9,7 @@ import { TtServicesComponent } from '../tt-services/tt-services.component';
 import { TtAboutComponent } from '../tt-about/tt-about.component';
 import { TtFaqComponent } from '../tt-faq/tt-faq.component';
 import { SocialsMediaInfoComponent } from '../socials-media-info/socials-media-info.component';
+import { HdIntegrationsModule } from 'src/app/pages/includes/hd-integrations/hd-integrations.module';
 
 const routes: Routes = [
   {
@@ -30,6 +31,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    HdIntegrationsModule,
     RouterModule.forChild(routes),
   ],
 })
