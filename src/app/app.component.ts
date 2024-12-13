@@ -69,11 +69,15 @@ export class AppComponent {
         mergeMap((route) => route.data)
       )
         .subscribe((event) => {
+            let url = this.router.url
+            if(url.includes('#')){
+              url = url.split('#')[0];
+            }
             if(event['title']){
                 this._seoService.updateTitle(event['title']);
                 this._seoService.updateDescription(event['description']);
                 // Update OG tags
-                this._seoService.updateOGUrl(this.router.url);
+                this._seoService.updateOGUrl(url);
                 this._seoService.updateOGImage(event['image']);
 
                 // Update Twitter card tags
@@ -83,10 +87,10 @@ export class AppComponent {
             }
             if(event['canonical']){
             }
-            let url = this.router.url;
-            this._languageService.setLanguageTags(this.router.url);
+            // let url = this.router.url;
+            this._languageService.setLanguageTags(url);
             this.injectLang();
-            this.breadcrumbService.generateBreadcrumbs(this.router.url);
+            this.breadcrumbService.generateBreadcrumbs(url);
             this.breadcrumbs = this.breadcrumbService.breadcrumbs;
             this.injectBreadcrumbScript(url);
             console.log(event)

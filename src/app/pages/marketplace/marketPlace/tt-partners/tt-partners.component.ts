@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, retry } from 'rxjs';
+import { GlobalService } from 'src/app/services/GlobalService';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class TtPartnersComponent {
   companyList = [];
   showPageLoader = false;
   paramsStatus = false;
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, public _languageService:LanguageService) {
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, private globalService: GlobalService, public _languageService:LanguageService) {
      // Extract status
      this.route.queryParams.subscribe(params => {
       const status = params['status'];
@@ -86,5 +87,11 @@ export class TtPartnersComponent {
     // }else {
     //   this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
     // }
+  }
+  
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.globalService.scroll()
+    }, 2000);
   }
 }

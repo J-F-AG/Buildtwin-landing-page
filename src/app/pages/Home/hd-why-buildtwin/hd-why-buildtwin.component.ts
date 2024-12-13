@@ -13,6 +13,9 @@ export class HdWhyBuildtwinComponent implements OnInit {
   constructor(public _languageService:LanguageService, private globalService: GlobalService) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.globalService.scroll()
+    }, 2000);
   }
   @Input() isBrowseService: boolean = false;
 
