@@ -56,6 +56,7 @@ export class AppComponent {
     }
 
     ngOnInit() {
+        localStorage.setItem('appVerionId', '0.0.1');
         this.recallJsFuntions();
 
     this.router.events.pipe(
