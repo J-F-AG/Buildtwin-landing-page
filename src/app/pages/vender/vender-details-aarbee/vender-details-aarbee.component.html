@@ -294,7 +294,7 @@
                     </figure> -->
                     <div class="user-detail-child" *ngFor="let dir of formData.directors">
                         <figure>
-                            <img [src]="dir.logo" height="40" width="40" />
+                            <img [src]="dir.logo?dir.logo:'assets/images/default_profile_pic.png'" height="40" width="40" />
                         </figure>
                         <div class="user-detail">
                             <strong>
@@ -492,7 +492,7 @@
                             </figure>
                             <div class="user-detail-child" *ngFor="let dir of formData.directors">
                                 <figure>
-                                    <img [src]="dir.logo" height="28" width="28" />
+                                    <img [src]="dir.logo?dir.logo:'assets/images/default_profile_pic.png'" height="28" width="28" />
                                 </figure>
                                 <div class="user-detail">
                                     <strong>
