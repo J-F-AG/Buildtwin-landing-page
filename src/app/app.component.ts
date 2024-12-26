@@ -56,7 +56,9 @@ export class AppComponent {
     }
 
     ngOnInit() {
+        if (isPlatformBrowser(this.platformId)) {
         localStorage.setItem('appVerionId', '0.0.1');
+        }
         this.recallJsFuntions();
 
     this.router.events.pipe(
