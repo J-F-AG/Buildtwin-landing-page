@@ -14,6 +14,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './free-offer-form.component.scss'
 })
 export class FreeOfferFormComponent {
+  @Input() page: string = ''; //sector
   @Input() type: string = '';
   @Input() style: string = '';
   @Input() companyId: string = '';

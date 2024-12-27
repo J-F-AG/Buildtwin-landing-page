@@ -9,14 +9,30 @@
 }
 
 #peek-into-buildtwin-solution-providers {
-    padding-top: 100px;
+    // padding-top: 100px;
 }
 :host ::ng-deep {
     .story {
-        margin-bottom: 80px;
+        // margin-bottom: 80px;
         .head {
             margin-bottom: 40px;
             text-align: center;
+            &.left {
+                text-align: left;
+                h3 {
+                    font-size: 44px;
+                    font-family: var(--medium-global);
+                    font-weight: 500;
+                    margin-bottom: 0;
+                }
+                p {
+                    text-align: left;
+                    margin: 5px 0;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: #668189;
+                }
+            }
 
             h2 {
                 color: #0E0E28;
@@ -57,6 +73,22 @@
                 width: 100%;
                 bottom: 65px;
                 display: none;
+            }
+            .owl-theme {
+                // padding: 0 20px;
+            }
+            .owl-carousel .owl-stage-outer {
+                // padding: 20px;
+                // margin: 0 -20px;
+            }
+            .owl-carousel .owl-item img {
+                width: revert-layer;
+            }
+            .owl-item {
+                .col {
+                    width: calc(100% - 20px);
+                    margin: 10px;
+                }
             }
             .col {
                 display: block;
@@ -159,7 +191,59 @@ a.link.disabled {
     cursor: default;
     opacity: 0.5;
 }
-
+.owl-wrapper {
+    width: 100%;
+}
+.story .listItem .owl-wrapper .col {
+    strong {
+        padding-bottom: 0;
+    }
+    .link {
+        font-size: inherit;
+    }
+}
+.rating-wrapper {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+    color: var(--lightColor);
+    font-weight: 400;
+    font-size: 14px;
+    .block {
+        position: relative;
+        &::after {
+            width: 5px;
+            height: 5px;
+            content: "";
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: var(--lightColor);
+        }
+        &:first-child::after {
+            display: none;
+        }
+    }
+}
+.specializations {
+    h5 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        li {
+            background-color: var(--secondaryBackgroundColor);
+            border-radius: 30px;
+            padding: 4px 10px;
+        }
+    }
+}
 @media (max-width:1200px){
     :host ::ng-deep .story .listItem .col {
         width: 293px;

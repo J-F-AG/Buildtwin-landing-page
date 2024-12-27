@@ -11,6 +11,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './hd-discover-projects.component.scss'
 })
 export class HdDiscoverProjectsComponent implements OnInit {
+  @Input() page: string = ''; //sector
   @Input() hideTitle: boolean = false;
   factorySlider: OwlOptions | null = null; 
   isBrowser: boolean;

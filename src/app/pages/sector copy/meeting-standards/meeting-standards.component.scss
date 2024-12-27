@@ -1,0 +1,196 @@
+.meetingStandardsWrapper{padding: 0 0 72px;
+.hd-section-title{margin-bottom: 43px;}
+}
+
+.cardsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+
+    .listItem {
+        width: 48%;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 3.026px 36.307px 0px rgba(0, 0, 0, 0.06);
+        display: inline-flex;
+        padding: 24px 22px 27px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+.greyBG {
+    background: #F8F6FF;
+}
+
+.meetingContainer {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+
+.containerLeft { flex: 1;
+}
+
+.containerRight {
+    width: 33%;
+    border-radius: 6px;
+    padding: 24px;
+
+    
+.asideTabs{margin-bottom: 20px;}
+
+    .asideHeader {
+        padding: 0 30px 0 0;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+    }
+
+    .checklistInfo {
+        margin-bottom: 10px;
+
+        .listHeader {
+            display: flex;
+            margin-bottom: 10px;
+
+            strong {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                flex: 1;
+            }
+
+        }
+
+        .checkedBy {
+            display: flex;
+            align-items: center;
+
+            .label {
+                margin-right: 6px;
+                line-height: 1;
+            }
+        }
+    }
+
+}
+
+.checklist {
+    border-top: solid 1px #EFEFEF;
+
+    .listItem { padding: 24px; border-bottom: solid 1px #EFEFEF;
+        .toggleHead {
+            display: flex;
+            gap: 10px;
+
+            .itemPoint {
+                flex: 1;
+            }
+
+            .successRate {
+                width: 24px;
+            }
+
+            .toggleBtn {
+                width: 24px;
+            }
+        }
+
+        .toggleBody {
+            .pointList {
+                .point {
+                    display: flex;
+                    position: relative; 
+                    padding: 20px 0;               
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        left: 30px;
+                        bottom: 0;
+                        background: #ECECEC;
+                    }
+                    &:first-child{ &::before {height: 50%;} }
+                    &:last-child { &::before {height: 50%; top: 0; bottom: auto;}}
+
+                    .serialNo { 
+                        width: 60px;
+                        margin-right: 10px;
+
+                        span {
+                            display: block;
+                            padding: 4px 8px;
+                            line-height: 1;
+                            border-radius: 30px;
+                            text-align: center;
+                            border: 1px solid var(--grey-dark, #ECECEC);
+                            background: var(--lightest-grey, #F9F9F9);
+                            position: relative;
+                        }
+                    }
+
+                    .pointContent {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+button.leftIconTextBtn { display: flex; background-color: transparent; gap: 8px;
+    .iconBtn {font-size: 12px; }
+    span{ color: var(--color-theme);}
+}
+
+.borderedBtn {
+    border-radius: 40px;
+    border: 1px solid #D3E4FF;
+    padding: 4px 12px;
+    font-family: var(--fontFamily);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+
+    &.smallBtn {
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+
+    &.blueBtn {
+        border-color: #D3E4FF;
+        background: #EFF5FF;
+        color: var(--blue-color);
+    }
+}
+
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+    .cardsList .listItem{width: 100%;
+        
+    }
+    .containerRight{display: none;}
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+    .cardsList .listItem{width: 47%;}
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+    .cardsList .listItem{width: 47.8%;}
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}

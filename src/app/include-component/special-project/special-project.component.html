@@ -1,9 +1,14 @@
-<section class="specialProjectsSection">
+<section class="specialProjectsSection global-mb">
     <div class="containerWrap">
         <div class="sectionHeader">
             <div class="heading">
-                <div class="title">Discover Sectors</div>
-                <!-- <div class="subTitle">We have some very special projects</div> -->
+                <div class="title" *ngIf="!page; else other_content">Discover Sectors</div>
+                <ng-template #other_content>
+                    <div class="title">
+                        Engineering Sectors We Serve
+                    </div>
+                    <div class="subTitle">Specialized engineering solutions across diverse industries, delivered by pre-qualified expert teams</div>
+                </ng-template>
             </div>
         </div>
         <div class="carousel squareButtonWrapper">
@@ -14,16 +19,54 @@
                                 <figure>
                                     <img [src]="image.src" width="185" height="245" />
                                 </figure>
-                                <div class="image-caption">
+                                <div class="image-caption" [ngClass]="{'page':page}">
                                     <h3>{{ image.title }}</h3>
+                                    <div class="sector-detail" *ngIf="page">
+                                        <p>
+                                            Specialized structural engineering services for mission-critical data center facilities.
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Structural Analysis
+                                            </li>
+                                            <li>
+                                                MEP Integration
+                                            </li>
+                                            <li>
+                                                Seismic Design
+                                            </li>
+                                        </ul>
+                                        <a href="" class="link-text">
+                                            Learn More
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <a *ngIf="image['serviceId']" class="image-container cursor" href="javascript:void(0)">
                                 <figure>
                                     <img [src]="image.src" width="185" height="245" />
                                 </figure>
-                                <div class="image-caption">
+                                <div class="image-caption" [ngClass]="{'page':page}">
                                     <h3>{{ image.title }}</h3>
+                                    <div class="sector-detail" *ngIf="page">
+                                        <p>
+                                            Specialized structural engineering services for mission-critical data center facilities.
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Structural Analysis
+                                            </li>
+                                            <li>
+                                                MEP Integration
+                                            </li>
+                                            <li>
+                                                Seismic Design
+                                            </li>
+                                        </ul>
+                                        <a href="" class="link-text">
+                                            Learn More
+                                        </a>
+                                    </div>
                                 </div>
                             </a>
                         </ng-template>

@@ -47,7 +47,7 @@
     .buildings {
       // display: grid;
       row-gap: 40px;
-      padding: 38px 0;
+      padding: 38px 0 0;
       .border-img {
         border-width: 8px; /* Adjust this value as needed */
         border-style: solid; /* Required for border image to show */
@@ -118,7 +118,7 @@
       padding-left: 20px;
       padding-right: 20px;
       .buildings {
-        padding: 38px 60px;
+        padding: 38px 60px 0;
       }
     }
   }

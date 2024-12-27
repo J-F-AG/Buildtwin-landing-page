@@ -261,6 +261,9 @@ img {
     vertical-align: middle;
   }
 }
+.global-mb {
+  margin-bottom: 80px;
+}
 .ptb-100 {
   padding: {
     top: 0;
@@ -376,6 +379,10 @@ img {
     text-align: center;
   }
 }
+.button-wrapper {
+  display: flex;
+  gap: 20px;
+}
 .buttonV2 {
   border-radius: 40px;
   border: 1px solid #002E3B;
@@ -410,6 +417,13 @@ img {
     &:hover {
       background-color: var(--themeColor);
       color: var(--whiteColor) !important;
+    }
+    &.border {
+      background: none;
+      border: 2px solid black;
+      color: black!important;
+      padding-top: 13px;
+      padding-bottom: 13px;
     }
   }
 }
@@ -856,6 +870,11 @@ img {
       background: #0053fa;
   }
 }
+.squareButtonWrapper.top-right .owl-nav {
+  left: auto;
+  top: -100px;
+  transform: none;
+}
 .squareButtonWrapper .owl-nav {
   position: absolute;
   z-index: 2;
@@ -912,6 +931,24 @@ img {
           }
       }
   }
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    .title {
+      font-size: 40px;
+      font-family: var(--fontFamily);
+      font-weight: 600;
+      color: var(--newButtonColor);
+    }
+    .subTitle {
+      font-size: 18px;
+      color: var(--lightTextColor);
+      font-weight: 400;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -1342,6 +1379,15 @@ img {
   }
 }
 @media (max-width:767px){
+  .global-mb {
+    margin-bottom: 40px;
+  }
+  .heading {
+    margin-bottom: 30px;
+    .title {
+      font-size: 22px;
+    }
+  }
   .container {
       padding-left: 20px;
       padding-right: 20px;
