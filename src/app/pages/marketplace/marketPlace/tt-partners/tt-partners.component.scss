@@ -179,8 +179,14 @@
                     gap: 10px;
                     position: relative;
                     z-index: 9;
-
-                    svg {}
+                    &:hover {
+                        svg {
+                            transform: translateX(5px);
+                        }
+                    }
+                    svg {
+                        transition: all .3s ease;
+                    }
                 }
             }
         }

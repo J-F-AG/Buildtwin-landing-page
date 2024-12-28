@@ -415,7 +415,7 @@ img {
       size: 14px;
     }
     &:hover {
-      background-color: var(--themeColor);
+      background-color: color-mix(in srgb, var(--themeColor) 80%, black 20%);
       color: var(--whiteColor) !important;
     }
     &.border {
@@ -424,6 +424,11 @@ img {
       color: black!important;
       padding-top: 13px;
       padding-bottom: 13px;
+      &:hover {
+        background: black; /* Change background color on hover */
+        color: white !important; /* Change text color on hover */
+        border-color: black; /* Optional: keep the border consistent */
+      }
     }
   }
 }

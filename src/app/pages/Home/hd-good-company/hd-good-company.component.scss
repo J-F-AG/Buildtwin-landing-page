@@ -209,6 +209,12 @@
             .block {
                 display: flex;
                 gap: 16px;
+                
+                &:hover {
+                    h5 {
+                        color: var(--themeColor);
+                    }
+                }
                 .sq {
                     font-size: 24px;
                     color: var(--lightColor);
