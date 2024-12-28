@@ -1,0 +1,42 @@
+.solutionProviderSection{padding: 42px 0;}
+
+.providerList{ display: flex; flex-wrap: wrap; gap: 24px;
+    .itemContainer{ width: calc(25% - 18px); min-width: calc(25% - 18px); padding: 13px; display: flex; 
+        .listItem{ cursor: pointer;
+            .imgContainer{border: solid 5px white; margin-bottom: 20px; background-color: white;
+                filter: drop-shadow(0px 4.561px 36.484px rgba(0, 0, 0, 0.20));
+                img{display: block;}
+            }
+            h4.itemTitle{font-size: 20px; text-transform: uppercase; text-align: center;}
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .solutionProviderSection {
+        .hd-section-title {
+            text-align: center;
+        }
+    }
+
+    .providerList{
+        .itemContainer{ 
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+    .providerList{
+        .itemContainer{ width: 50%;}
+    }
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+    .providerList{
+        .itemContainer{ width: 33.33%;}
+    }   
+}

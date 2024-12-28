@@ -21,4 +21,14 @@ export class BlogService {
     const url = `${this.baseUrl}?categories=${category}`;
     return this.http.get<any>(url);
   }
+  // Get blogs by category
+  getBlogsByFeatured(payload): Observable<any> {
+    const queryParams = Object.entries(payload)
+    .map(([key, value]:any) => `${key}=${encodeURIComponent(value)}`)
+    .join('&');
+    const url = `${this.baseUrl}?${queryParams}`;
+    return this.http.get<any>(url);
+    // const url = `${this.baseUrl}?categories=${category}`;
+    // return this.http.get<any>(url);
+  }
 }

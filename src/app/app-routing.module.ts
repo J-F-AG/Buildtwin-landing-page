@@ -483,10 +483,10 @@ const routes: Routes = [
 
 
     // {path: '**', component: ComingSoonComponent} 
-    {
-        path: '**', redirectTo: '/notfound',
-        pathMatch: 'full'
-    }
+    // {
+    //     path: '**', redirectTo: '/notfound',
+    //     pathMatch: 'full'
+    // }
 ];
 
 @NgModule({

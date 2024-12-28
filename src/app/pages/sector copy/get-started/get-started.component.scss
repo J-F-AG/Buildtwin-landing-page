@@ -1,0 +1,43 @@
+.getStartedWrapper{
+    background: #0053fa;
+    padding: 60px 0;
+    color: white;
+    .container,.container-with-right{display: flex; flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .getStartedIcon{margin-bottom: 20px;}
+
+        h2{font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+        }
+        p{  color: white;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .default-btn.mdc-button.whiteBg{background-color: white;
+            color: #0053fa !important;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 15px 44px 16px 47px;
+            height: auto;
+            display: inline-block;
+            min-width: 170px;
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .getStartedWrapper {
+        .container {
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

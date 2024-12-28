@@ -11,12 +11,13 @@ import { BlogService } from 'src/app/services/blog.service';
   styleUrl: './hd-good-company.component.scss'
 })
 export class HdGoodCompanyComponent {
+  @Input() page: string = ''; //sector
   @Input() category: number = 0;
   @Input() defaultVisible: number = 3;
   @Input() hideTitle: boolean = false;
   @Input() count: number = 0;
   allBlogs: any[] = [];
-  categoryBlogs: any[] = [];
+  featuredBlogs: any = {};
 
   factorySlider: OwlOptions | null = null; 
   isBrowser: boolean;
@@ -28,6 +29,7 @@ export class HdGoodCompanyComponent {
       this.fetchAllBlogs();
     }else {
       this.fetchCategoryBlogs();
+      this.fetchFeaturedBlogs()
     }
   
     this.sliderInit()
@@ -92,6 +94,30 @@ export class HdGoodCompanyComponent {
           }
         });
         console.log(this.allBlogs)
+      },
+      error: (err) => console.error('Error fetching all blogs', err),
+    });
+  }
+  fetchFeaturedBlogs(): void {
+    let payload = {
+      featured: true
+    }
+    if(this.category) {
+      payload['categories'] = this.category
+    }
+    this.blogService.getBlogsByFeatured(payload).subscribe({
+      next: (data) => {
+        this.featuredBlogs = data[0] ? {
+          ...data[0],
+          jetpack_featured_media_url: data[0].jetpack_featured_media_url
+            ? data[0].jetpack_featured_media_url.replace('http://35.158.244.95', 'https://www.buildtwin.com/blog')
+            : '',
+          link: data[0].link
+            ? data[0].link.replace('http://35.158.244.95', 'https://www.buildtwin.com/blog')
+            : '',
+        } : null;
+        
+        console.log(this.featuredBlogs);
       },
       error: (err) => console.error('Error fetching all blogs', err),
     });

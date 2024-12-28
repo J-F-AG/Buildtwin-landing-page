@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SectorCategoryComponent {
   @Input() category: number = 0;
+  @Input() page: string = ''; //sector
 }
