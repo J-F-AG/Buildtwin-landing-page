@@ -32,6 +32,7 @@ export class AppComponent {
     breadcrumbSchemaHtml: SafeHtml;
     langHtml: SafeHtml;
     faqSchemaHtml: SafeHtml;
+    testimonialSchemaHtml: SafeHtml;
     constructor(
         private breadcrumbService: BreadcrumbService,
         private _languageService:LanguageService,
@@ -207,11 +208,24 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
+
+      const testimonialSchema = this._languageService.injectForMarketplaceTestimonialSchema(this.renderer);
+
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
+      );
+
     }else if(url.includes('/ai-project-management')){
         const faqSchema = this._languageService.injectForAIProjectManagementSchema(this.renderer);
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+      const testimonialSchema = this._languageService.injectForAIProjectManagementTestimonialSchema(this.renderer);
+
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
       );
     }else if(url.includes('/faq')){
         const faqSchema = this._languageService.injectFAQSchemaForFaqPage(this.renderer)
