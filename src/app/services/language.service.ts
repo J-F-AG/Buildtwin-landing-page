@@ -291,6 +291,131 @@ export class LanguageService {
     return JSON.stringify(MarketplaceSchema);
   }
 
+  injectForMarketplaceTestimonialSchema(renderer) {
+
+    const MarketplaceTestimonialSchema = {
+
+      "@context": "https://schema.org", 
+    
+      "@type": "ItemList", 
+    
+      "itemListElement": [ 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "reviewBody": "BuildTwin has transformed the way our team operates.", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Elena Rodriguez" 
+    
+          }, 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5", 
+    
+            "worstRating": "1" 
+    
+          }, 
+    
+          "publisher": { 
+    
+            "@type": "Organization", 
+    
+            "name": "BuildTwin" 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "reviewBody": "The level of detail and accuracy provided by BuildTwin's AI Design Manager has made a noticeable difference in our quality control processes.", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Ralf Kipping" 
+    
+          }, 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5", 
+    
+            "worstRating": "1" 
+    
+          }, 
+    
+          "publisher": { 
+    
+            "@type": "Organization", 
+    
+            "name": "BuildTwin" 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "reviewBody": "BuildTwin allows us to achieve the work of a larger team with limited resources.", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Takahiro Fujimoto" 
+    
+          }, 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5", 
+    
+            "worstRating": "1" 
+    
+          }, 
+    
+          "publisher": { 
+    
+            "@type": "Organization", 
+    
+            "name": "BuildTwin" 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    return JSON.stringify(MarketplaceTestimonialSchema);
+  }
+
   injectForAIProjectManagementSchema(renderer) {
     // Create the AIProjectManagement schema for the AI Project Management page
     const AIProjectManagementSchema = {
@@ -341,6 +466,132 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(AIProjectManagementSchema);
   }
+
+  injectForAIProjectManagementTestimonialSchema(renderer) {
+
+    const AIProjectManagementSchema = {
+
+      "@context": "https://schema.org", 
+    
+      "@type": "ItemList", 
+    
+      "itemListElement": [ 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "reviewBody": "With BuildTwin I get access to specialized vendors in MEP works. This solved our core issue of continuously having a shortage of skilled technical engineers.", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Elena Rodriguez" 
+    
+          }, 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5", 
+    
+            "worstRating": "1" 
+    
+          }, 
+    
+          "publisher": { 
+    
+            "@type": "Organization", 
+    
+            "name": "BuildTwin" 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "reviewBody": "BuildTwin does a lot of the heavy lifting for me. The AI Design Manager especially helps me to track what is happening, are we on track for project delivery and keeps my attention on the most important things for me.", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Takahiro Fujimoto" 
+    
+          }, 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5", 
+    
+            "worstRating": "1" 
+    
+          }, 
+    
+          "publisher": { 
+    
+            "@type": "Organization", 
+    
+            "name": "BuildTwin" 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "reviewBody": "The BuildTwin marketplace opens new horizons for us. We get access to global markets, materials to train our staff according to specific requirements and the ability to bid and win projects with new clients.", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Ralf Kipping" 
+    
+          }, 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5", 
+    
+            "worstRating": "1" 
+    
+          }, 
+    
+          "publisher": { 
+    
+            "@type": "Organization", 
+    
+            "name": "BuildTwin" 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    return JSON.stringify(AIProjectManagementSchema);
+  }
+
   injectFAQSchemaForFaqPage(renderer) {
     // Create the FAQ schema for the FAQ page
     const faqSchema = {
