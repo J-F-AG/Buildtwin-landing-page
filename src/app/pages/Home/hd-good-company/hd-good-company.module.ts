@@ -17,4 +17,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HdGoodCompanyComponent
   ]
 })
-export class HdGoodCompanyModule { }
+export class HdGoodCompanyModule {
+  static HdGoodCompanyComponent() {
+    return HdGoodCompanyComponent
+  }
+ }

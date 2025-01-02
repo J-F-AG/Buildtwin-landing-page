@@ -17,4 +17,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HdIntegrationsComponent
   ]
 })
-export class HdIntegrationsModule { }
+export class HdIntegrationsModule { 
+  static HdIntegrationsComponent() {
+    return HdIntegrationsComponent
+  }
+}

@@ -19,4 +19,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HdDiscoverProjectsComponent
   ]
 })
-export class HdDiscoverProjectsModule { }
+export class HdDiscoverProjectsModule {
+  static HdDiscoverProjectsComponent() {
+    return HdDiscoverProjectsComponent
+  }
+ }

@@ -31,9 +31,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { BtSelectGroupModule } from 'buildtwin-library-ux/bt-select-group';//buildtwin-library-ux
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
-import { HdNavbarComponent } from '../pages/includes/hd-navbar/hd-navbar.component';
-import { HdFooterComponent } from '../pages/includes/hd-footer/hd-footer.component';
-import { LanguageChangeModule } from '../include-component/language-change/language-change.module';
+import { HdFooterModule } from '../pages/includes/hd-footer/hd-footer.module';
 import { RouterModule } from '@angular/router';
 import { FreeOfferFormComponent } from '../pages/services-new/free-offer-form/free-offer-form.component';
 import { GlobalBannerModule } from '../include-component/global-banner/global-banner.module';
@@ -59,11 +57,10 @@ import { EmPartnersComponent } from '../pages/whybuildtwin/why-buildtwin/em-part
 import { SpecialProjectComponent } from '../include-component/special-project/special-project.component';
 import { FaqBuildtwinComponent } from '../pages/services-new/faq-buildtwin/faq-buildtwin.component';
 import { DrawingFreelancersComponent } from '../pages/services-new/drawing-freelancers/drawing-freelancers.component';
+import { HdNavbarModule } from '../pages/includes/hd-navbar/hd-navbar.module';
 
 @NgModule({
   declarations: [
-    HdNavbarComponent,
-    HdFooterComponent,
     FreeOfferFormComponent, // multiple
     HowBuildtwinHelpsComponent, // online-meeting-home, online-meeting-home-freelance, time-tracking-home, provide-service, elearning-school,
     EmTestimonialsComponent, // online-meeting-home, pricing-page, about-page
@@ -118,12 +115,13 @@ import { DrawingFreelancersComponent } from '../pages/services-new/drawing-freel
     BtSelectGroupModule,
     NzDropDownModule,
     NzUploadModule,
-    LanguageChangeModule,
     RouterModule,
     BtIconModule,
     GlobalBannerModule,
     HubspotModule,
-    GetStartedModule
+    GetStartedModule,
+    HdNavbarModule,
+    HdFooterModule
   ],
   exports: [
     // BrowserAnimationsModule,
@@ -157,9 +155,8 @@ import { DrawingFreelancersComponent } from '../pages/services-new/drawing-freel
     BtSelectGroupModule,
     NzDropDownModule,
     NzUploadModule,
-    LanguageChangeModule,
-    HdNavbarComponent,
-    HdFooterComponent,
+    HdNavbarModule,
+    HdFooterModule,
     // HdGoodCompanyComponent,
     // HdIntegrationsComponent,
     RouterModule,

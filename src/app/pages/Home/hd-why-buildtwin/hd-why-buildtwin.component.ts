@@ -23,6 +23,8 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 18,
       icon: 'quality-icon',
       displayIcon: 'assets/images/qualityBuildtwin.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Our tools ensure superior quality and durability, enhancing efficiency and reducing maintenance costs. <br><br>Experience precise workmanship and long-lasting performance with every project.',
       details: [
@@ -44,6 +46,8 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 16.55,
       icon: 'onTime-icon',
       displayIcon: 'assets/images/on time.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Timely delivery is our promise. We value your time and ensure that projects are completed within the agreed timeframe without compromising on quality.',
       details: [
@@ -65,6 +69,8 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 16.38,
       icon: 'plugAndPlay-icon',
       displayIcon: 'assets/images/plug and play.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Our solutions are designed for easy integration, allowing you to quickly implement and start using them with minimal setup time.',
       details: [
@@ -86,6 +92,8 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 16.77,
       icon: 'payments-icon',
       displayIcon: 'assets/images/Easy payment.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Flexible payment options to suit your needs. We offer multiple payment methods and plans to make transactions smooth and hassle-free.',
       details: [
@@ -107,6 +115,8 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 18.39,
       icon: 'additionalServices-icon',
       displayIcon: 'assets/images/live video rec.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Enhance your experience with our additional services tailored to meet your specific needs and provide extra value.',
       details: [
@@ -128,6 +138,8 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 18.39,
       icon: 'support-icon',
       displayIcon: 'assets/images/support.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'We provide exceptional support to ensure your satisfaction. Our dedicated team is available to assist you with any queries or issues.',
       details: [
