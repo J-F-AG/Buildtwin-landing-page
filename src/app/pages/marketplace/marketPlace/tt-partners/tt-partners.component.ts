@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { catchError, retry } from 'rxjs';
+import { GlobalService } from 'src/app/services/GlobalService';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -10,10 +12,11 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./tt-partners.component.scss']
 })
 export class TtPartnersComponent {
+  @Input() page: string = ''; //sector
   companyList = [];
   showPageLoader = false;
   paramsStatus = false;
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, public _languageService:LanguageService) {
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, private globalService: GlobalService, public _languageService:LanguageService) {
      // Extract status
      this.route.queryParams.subscribe(params => {
       const status = params['status'];
@@ -86,5 +89,35 @@ export class TtPartnersComponent {
     // }else {
     //   this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
     // }
+  }
+  customOptions: OwlOptions = {
+      loop: true,
+      margin: 0,
+      mouseDrag: false,
+      touchDrag: false,
+      pullDrag: false,
+      dots: false,
+      navSpeed: 700,
+      navText: ['', ''],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        400: {
+          items: 2
+        },
+        740: {
+          items: 3
+        },
+        940: {
+          items: 4
+        }
+      },
+      nav: true
+    }
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.globalService.scroll()
+    }, 2000);
   }
 }

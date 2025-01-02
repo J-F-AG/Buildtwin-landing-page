@@ -95,7 +95,7 @@
   }
 }
 .services {
-  padding: 78px 0 40px 100px;
+  padding: 0 0 0 100px;
   font-family: var(--fontFamily);
   background: var(--whiteColor) url(../../../../assets/images/servicie-bg.png) right 22px no-repeat;
   background-size: 665px 614px;
@@ -382,7 +382,7 @@
 }
 @media only screen and (max-width: 567px) {
   .services {
-    padding: 10px !important;
+    padding: 0 10px !important;
     .main-head {
       grid-template-columns: 1fr;
       margin-block-end: 24px;

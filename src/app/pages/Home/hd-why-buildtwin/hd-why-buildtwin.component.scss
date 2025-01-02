@@ -1,5 +1,5 @@
 .whyBuildtwinSection{
-  padding: 40px 100px 0; 
+  padding: 0 100px 0; 
   background-color: var(--whiteColor);
   .container {
     margin-inline: auto;
@@ -74,6 +74,9 @@
     grid-template-columns: 1fr max-content;
     gap: 24px;
   }
+  .default-btn.align-self-end {
+    margin-bottom: 20px;
+  }
   .align-self-end {
     align-self: end;
   }
@@ -95,8 +98,8 @@
       }
   }
   .bodyWrapper {
-    margin: 15px 0 0 0;
-    padding: 24px 0 0 0;
+    // margin: 15px 0 0 0;
+    // padding: 24px 0 0 0;
   }
   .sectionMidContainer {
     border-bottom: 2px solid #efefef;
@@ -324,7 +327,7 @@
     background: none;
     box-shadow: none;
     margin: 0;
-    padding: 30px 0 0;
+    // padding: 30px 0 0;
   }
 
   .sectionMidMain {

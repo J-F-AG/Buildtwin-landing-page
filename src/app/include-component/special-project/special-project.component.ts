@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
@@ -7,7 +7,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrl: './special-project.component.scss'
 })
 export class SpecialProjectComponent {
-
+  @Input() page: string = ''; //sector
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,

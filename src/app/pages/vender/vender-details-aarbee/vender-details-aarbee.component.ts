@@ -341,11 +341,11 @@ export class VenderDetailsAarbeeComponent {
   }
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.domain = this.route.snapshot.params['id'];
-    this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
+    this.isIframe = this.route.snapshot.queryParams['isiframe'] ? true : false;
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
     this.getBusinessListing();
     this.getCompanyDetail()
-    if(this.route.snapshot.queryParams['isIframe']){
+    if(this.route.snapshot.queryParams['isiframe']){
       document.body.classList.add('iframeEmbed');
     }
 
@@ -810,6 +810,9 @@ export class VenderDetailsAarbeeComponent {
         url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=${'Unpublished'}`
       }
     });
+    if(this.isIframe) {
+      url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?mode=company_data`
+    }
     this.showPageLoader = true;
     this.http.get(url)
     .pipe(
@@ -819,8 +822,11 @@ export class VenderDetailsAarbeeComponent {
       }),
       retry(2)
     ).subscribe(companies => {
+      if(this.isIframe){
+        companies['data']['details'] = [companies['data']['company_data']['basic_form_fields']]
+      }
       if (companies && companies['data'] && companies['data']['details'] && companies['data']['details'].length) {
-        debugger
+        // debugger
         let company = companies['data']['details'].filter(a => {
           if (this._languageService.customMapping[a['company_name']]) {
             a['route'] = this._languageService.customMapping[a['company_name']];
@@ -1298,6 +1304,10 @@ export class VenderDetailsAarbeeComponent {
       status: "Published"
     }
     let url = `https://8d26kljxt6.execute-api.ap-southeast-1.amazonaws.com/production/onboarding/get-requests`
+
+    if(this.isIframe) {
+      url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?mode=company_data`
+    }
     this.route.queryParams.subscribe(params => {
       const status = params['status'];
       // Check if both parameters are available

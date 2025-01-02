@@ -1,0 +1,92 @@
+:host .child-pb-none ::ng-deep .meetingStandardsWrapper {
+    padding-bottom: 0;
+}
+.bottom-space {
+    padding-bottom: 160px;
+}
+.bottom-space-gap {
+    margin-bottom: 30px;
+}
+.bottom-space-big {
+    margin-bottom: 50px;
+}
+.toggle {
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(5px);
+    font-size: 0;
+    cursor: pointer;
+    &::after {
+        top: 50%;
+        content: "";
+        position: absolute;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        margin-top: 5px;
+        border-top: 2.5px solid #002E3B;
+        border-right: 2.5px solid #002E3B;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &.active {
+        &::after {
+            transform: translate(-50%, -50%) rotate(135deg);
+            margin-top: -4px;
+        }
+    }
+  }
+    .sticky-bottom {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 30px 100px 20px;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-top: 1px solid #DDD;
+      gap: 20px;
+      z-index: 99;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: all .3s ease;
+      &:hover,
+      &.active {
+          background: rgb(242, 242, 242);
+      }
+      h3 {
+          font-size: 26px;
+          small {
+              padding-top: 4px;
+              color: var(--lightTextColor);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%;
+              display: block;
+              letter-spacing: 0.35px;
+          }
+      }
+      ul.logo-liist {
+          gap: 25px;
+          width: auto;
+          align-items: center;
+          margin-bottom: 10px;
+      }
+      .bg-sticky {
+          border-radius: var(--padding-medium-pad-12, 12px);
+          border: 1px solid #EAEAEA;
+          background: #FAFAFA;
+          padding: 20px;
+          gap: 18px;
+          flex-wrap: wrap;
+          align-items: flex-start;
+      }
+      .default-btn.mdc-button {
+          align-self: center;
+      }
+  }

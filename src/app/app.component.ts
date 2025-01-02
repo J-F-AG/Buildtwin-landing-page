@@ -32,6 +32,7 @@ export class AppComponent {
     breadcrumbSchemaHtml: SafeHtml;
     langHtml: SafeHtml;
     faqSchemaHtml: SafeHtml;
+    testimonialSchemaHtml: SafeHtml;
     constructor(
         private breadcrumbService: BreadcrumbService,
         private _languageService:LanguageService,
@@ -56,6 +57,9 @@ export class AppComponent {
     }
 
     ngOnInit() {
+        if (isPlatformBrowser(this.platformId)) {
+        localStorage.setItem('appVerionId', '0.0.2');
+        }
         this.recallJsFuntions();
 
     this.router.events.pipe(
@@ -69,11 +73,15 @@ export class AppComponent {
         mergeMap((route) => route.data)
       )
         .subscribe((event) => {
+            let url = this.router.url
+            if(url.includes('#')){
+              url = url.split('#')[0];
+            }
             if(event['title']){
                 this._seoService.updateTitle(event['title']);
                 this._seoService.updateDescription(event['description']);
                 // Update OG tags
-                this._seoService.updateOGUrl(this.router.url);
+                this._seoService.updateOGUrl(url);
                 this._seoService.updateOGImage(event['image']);
 
                 // Update Twitter card tags
@@ -83,10 +91,10 @@ export class AppComponent {
             }
             if(event['canonical']){
             }
-            let url = this.router.url;
-            this._languageService.setLanguageTags(this.router.url);
+            // let url = this.router.url;
+            this._languageService.setLanguageTags(url);
             this.injectLang();
-            this.breadcrumbService.generateBreadcrumbs(this.router.url);
+            this.breadcrumbService.generateBreadcrumbs(url);
             this.breadcrumbs = this.breadcrumbService.breadcrumbs;
             this.injectBreadcrumbScript(url);
             console.log(event)
@@ -200,11 +208,24 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
+
+      const testimonialSchema = this._languageService.injectForMarketplaceTestimonialSchema(this.renderer);
+
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
+      );
+
     }else if(url.includes('/ai-project-management')){
         const faqSchema = this._languageService.injectForAIProjectManagementSchema(this.renderer);
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+      const testimonialSchema = this._languageService.injectForAIProjectManagementTestimonialSchema(this.renderer);
+
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
       );
     }else if(url.includes('/faq')){
         const faqSchema = this._languageService.injectFAQSchemaForFaqPage(this.renderer)

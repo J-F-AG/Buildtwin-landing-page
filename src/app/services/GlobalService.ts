@@ -48,4 +48,15 @@ export class GlobalService {
       }
     }
   }
+  scroll(){
+    try {
+      const section = window.location.hash.split('#')[1];
+      const element = document.getElementById(section);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+    } catch (error) {
+      
+    }
+  }
 }

@@ -187,7 +187,7 @@
 // }
 
 .project-providers {
-  padding: 40px 0 40px 100px;
+  padding: 0 0 0 100px;
   gap: 40px;
   opacity: 0px;
   position: relative;
@@ -239,7 +239,7 @@
   .factories {
     display: grid;
     row-gap: 40px;
-    padding: 40px 0;
+    padding: 40px 0 0;
     .factory-box {
       width: 100%;
       height: auto;
@@ -260,6 +260,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
+        position: relative;
         .country-bg {
           padding: 2px 6px 2px 2px;
           gap: 4px;
@@ -295,6 +296,7 @@
         display: flex;
         flex-direction: column;
         padding: 10px 0;
+        position: relative;
         .fact-title{
           font-size: 20px;
           font-weight: 600;
@@ -314,6 +316,13 @@
           text-align: left;    
           flex-grow: 1;      
         }
+        .duration {
+          color: var(--lightColor);
+          display: block;
+          padding-bottom: 5px;
+          font-size: 12px;
+          font-weight: 400;
+        }
         .cmpny-logo{
           gap: 4px;
           display: inline-flex;
@@ -331,6 +340,7 @@
             letter-spacing: 0.02em;
             text-align: left;       
             color: #0053FA;     
+            margin-bottom: 0;
             .heading-1{
               font-size: 14.707px;
               font-weight: 600;
@@ -401,7 +411,7 @@
 }
 @media (max-width: 520px) {
   .project-providers {
-    padding: 40px 40px 0;
+    padding: 0 40px 0;
     gap: 40px;
     opacity: 0px;
     .headings {
