@@ -196,10 +196,32 @@
 .list-type-wrapper {
     display: flex;
     gap: 32px;
+    .banner {
+        width: calc(100% + 48px); /* Adjust width as needed */
+        aspect-ratio: 352 / 192;
+        background: linear-gradient(to right, #1e3a8a, #1d4ed8);
+        margin: -24px -24px 20px -24px;
+        border-radius: 12px 12px 0 0;
+    }
     h5 {
         font-size: 22px;
         margin-bottom: 16px;
         font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        figure {
+            margin: 0;
+        }
+        &.heading-col {
+            flex-direction: column;
+            align-items: flex-start;
+            figure {
+                padding: 16px;
+                border-radius: 50%;
+                background: rgb(219 234 254 / var(--tw-bg-opacity, 1));
+            }
+        }
     }
     .block {
         flex-grow: 1;
@@ -207,11 +229,21 @@
         border: 1px solid #e9e9e9;
         background: linear-gradient(180deg, #ffffff 0%, #f4f6fa 100%);
         border-radius: 12px;
+        flex: 1;
         .list {
             display: flex;
             flex-direction: column;
             gap: 12px;
             margin: 0;
+            &.half {
+                flex-direction: initial;
+                flex-wrap: wrap;
+                li {
+                    width: calc(50% - 6px);
+                    min-width: calc(50% - 6px);
+                    max-width: calc(50% - 6px);
+                }
+            }
             li {
                 position: relative;
                 padding-left: 28px;
@@ -274,3 +306,56 @@
         }
     }
 }
+
+
+.form-wrap {
+    gap: 48px;
+    display: flex;
+    align-items: center;
+    h2 {
+      font-size: 36px;
+      line-height: 1.3;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 48px;
+      h5 {
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+      li {
+        position: relative;
+        padding-left: 32px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 2px;
+          top: calc(50% - 2px);
+          width: 14px;
+          height: 8px;
+          border-left: 2px solid var(--themeColor);
+          border-bottom: 2px solid var(--themeColor);
+          transform: translateY(-50%) rotate(-45deg);
+        }
+      }
+    }
+    .logo-wrapper {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .flex-grow-1 ::ng-deep .formContainer .bottomPart .buttonContainer {
+      bottom: 20px;
+    }
+    .formContainer .bottomPart .integrationsContainer {
+      // padding-bottom: 80px;
+    }
+  }

@@ -28,6 +28,7 @@ import { StructuralSteelServicesNewComponent } from './pages/structural-steel/se
 import { BimUsaServicesNewComponent } from './pages/bim-usa/services-new.component';
 import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
 import { SectorComponent } from './pages/sector/sector.component';
+import { BuildingCodeComponent } from './pages/building-code/sector.component';
 
 
 
@@ -189,6 +190,9 @@ const routes: Routes = [
     // },
     {path: 'sector',
         component: SectorComponent
+    },
+    {path: 'building-code',
+        component: BuildingCodeComponent
     },
     {path: 'explore-services', component: BrowseServicesMainComponent,
         data: {

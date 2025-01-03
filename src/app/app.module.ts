@@ -306,7 +306,19 @@ import { SteelDetailingUsaTrustByNewComponent } from './pages/steel-detailing-us
 import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
 import { SpecialProjectComponent } from './include-component/special-project/special-project.component';
 import { ServiceCategoryComponent } from './include-component/service-category/service-category.component';
+import { BuildingCodeComponent } from './pages/building-code/sector.component';
+import { TtPartnersSectorComponent } from './pages/sector/tt-partners/tt-partners.component';
+import { SpecialProjectSectorComponent } from './pages/sector/special-project/special-project.component';
+import { HdDiscoverProjectsSectorComponent } from './pages/sector/hd-discover-projects/hd-discover-projects.component';
+import { FaqBuildtwinSectorComponent } from './pages/sector/faq-buildtwin/faq-buildtwin.component';
+import { SectorCategorySectorComponent } from './pages/sector/sector-category/service-category.component';
 import { SectorCategoryComponent } from './include-component/sector-category/service-category.component';
+import { FaqBuildtwinBuildingCodeComponent } from './pages/building-code/faq-buildtwin/faq-buildtwin.component';
+import { HdDiscoverProjectsBuildingCodeComponent } from './pages/building-code/hd-discover-projects/hd-discover-projects.component';
+import { SectorCategoryBuildingCodeComponent } from './pages/building-code/sector-category/service-category.component';
+import { SpecialProjectBuildingCodeComponent } from './pages/building-code/special-project/special-project.component';
+import { TtPartnersBuildingCodeComponent } from './pages/building-code/tt-partners/tt-partners.component';
+import { HdServicesBuildingCodeComponent } from './pages/building-code/hd-services/hd-services.component';
 
 
 
@@ -581,7 +593,19 @@ import { SectorCategoryComponent } from './include-component/sector-category/ser
    SteelDetailingUsaServicesNewComponent,
    SpecialProjectComponent,
    ServiceCategoryComponent,
-   SectorCategoryComponent
+   SectorCategoryComponent,
+   TtPartnersSectorComponent,
+   SpecialProjectSectorComponent,
+   HdDiscoverProjectsSectorComponent,
+   SectorCategorySectorComponent,
+   FaqBuildtwinSectorComponent,
+   BuildingCodeComponent,
+   FaqBuildtwinBuildingCodeComponent,
+   HdDiscoverProjectsBuildingCodeComponent,
+   SectorCategoryBuildingCodeComponent,
+   SpecialProjectBuildingCodeComponent,
+   TtPartnersBuildingCodeComponent,
+   HdServicesBuildingCodeComponent
   ],
   imports: [    
     BrowserModule,
