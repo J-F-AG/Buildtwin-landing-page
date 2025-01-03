@@ -319,6 +319,13 @@ import { SectorCategoryBuildingCodeComponent } from './pages/building-code/secto
 import { SpecialProjectBuildingCodeComponent } from './pages/building-code/special-project/special-project.component';
 import { TtPartnersBuildingCodeComponent } from './pages/building-code/tt-partners/tt-partners.component';
 import { HdServicesBuildingCodeComponent } from './pages/building-code/hd-services/hd-services.component';
+import { DataCenterSectorComponent } from './pages/sector-data-center/sector.component';
+import { DataCenterSpecialProjectComponent } from './pages/sector-data-center/special-project/special-project.component';
+import { DataCenterTtPartnersComponent } from './pages/sector-data-center/tt-partners/tt-partners.component';
+import { DataCenterHdDiscoverProjectsComponent } from './pages/sector-data-center/hd-discover-projects/hd-discover-projects.component';
+import { DataCenterSectorCategoryComponent } from './pages/sector-data-center/sector-category/service-category.component';
+import { DataCenterHdGoodCompanyComponent } from './pages/sector-data-center/hd-good-company/hd-good-company.component';
+import { DataCenterFaqBuildtwinComponent } from './pages/sector-data-center/faq-buildtwin/faq-buildtwin.component';
 
 
 
@@ -484,6 +491,14 @@ import { HdServicesBuildingCodeComponent } from './pages/building-code/hd-servic
    AboutDataCenterSectionComponent,
    DcEuropeComponent,
    GetStartedComponent,
+
+   DataCenterSectorComponent,
+   DataCenterSpecialProjectComponent,
+   DataCenterTtPartnersComponent,
+   DataCenterHdDiscoverProjectsComponent,
+   DataCenterSectorCategoryComponent,
+   DataCenterHdGoodCompanyComponent,
+   DataCenterFaqBuildtwinComponent,
 
    BrowseServicesMainComponent,
    BrowseServiceHeaderComponent,

@@ -11,6 +11,7 @@
 /ai-project-management
 /business-intelligence
 /sector
+/sector/data-centre
 /training
 /pricing
 /good-reason

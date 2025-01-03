@@ -29,6 +29,7 @@ import { BimUsaServicesNewComponent } from './pages/bim-usa/services-new.compone
 import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
 import { SectorComponent } from './pages/sector/sector.component';
 import { BuildingCodeComponent } from './pages/building-code/sector.component';
+import { DataCenterSectorComponent } from './pages/sector-data-center/sector.component';
 
 
 
@@ -188,11 +189,19 @@ const routes: Routes = [
     //     redirectTo: '/explore-services',
     //     pathMatch: 'full'
     // },
-    {path: 'sector',
+    {path: 'sector', 
         component: SectorComponent
     },
     {path: 'building-code',
         component: BuildingCodeComponent
+    },
+    {path: 'sector/data-centre', component: DataCenterSectorComponent,
+        data: {
+            title: 'Connect with Expert Data Center Designers | BuildTwin Marketplace',
+            description: 'Unlock expert data center construction solutions with BuildTwin. From modular to hyperscale data centers, we offer tailored design, compliance, and management with a global vendor network.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/data-centre'
+        }
     },
     {path: 'explore-services', component: BrowseServicesMainComponent,
         data: {
