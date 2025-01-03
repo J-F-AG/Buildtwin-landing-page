@@ -1974,4 +1974,147 @@ export class LanguageService {
     return JSON.stringify(faqSchema);
   }
 
+
+  injectFAQSchemaForSectorDataCenter(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What are the key considerations in data center design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Location: Proximity to power sources, climate, and risk of natural disasters. Scalability: Design flexibility to accommodate future growth and technology upgrades. Energy Efficiency: Implementation of systems that minimize energy consumption, such as advanced cooling solutions and energy-efficient power systems." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does site selection influence data center performance and security?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "The choice of location impacts risk management, operational efficiency, and connectivity. Factors such as proximity to energy grids, risk of natural disasters, and local data protection laws play significant roles." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can you explain the difference between Tier 3 and Tier 4 data centers?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Tier 3 data centers offer N+1 redundancy, allowing any component to be maintained without affecting operations, whereas Tier 4 provides 2N+1 redundancy, ensuring fault tolerance and no downtime even during system failures." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the advantages of using a modular data center design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Modular designs allow for faster deployment and scalability. They are prefabricated off site, reducing on-site construction time and potentially lowering costs." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do I find the right vendor for my data center project?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin’s marketplace uses an intelligent matching system to connect you with vendors based on your project’s specific needs, including expertise in cooling technologies, energy efficiency, and scalable infrastructure." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Is BuildTwin capable of handling global data center projects?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Yes, BuildTwin’s platform is designed for global use, with vendors from multiple countries, ensuring that your project meets international standards while catering to local compliance and regulations." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What makes BuildTwin’s ERP system different from other project management tools?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin’s ERP system is tailored specifically for the AEC industry, offering comprehensive tools for managing everything from budgeting and scheduling to resource allocation and vendor communications, all in real-time." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do I get started with my data center project on BuildTwin?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Simply visit our website and explore our marketplace or schedule a consultation to discuss your project’s needs, filling the form on Contact us. Our team is ready to help you get started!" 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin assist with the retrofitting or upgrading of existing data centers?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Absolutely. BuildTwin offers solutions not just for new constructions but also for upgrading or expanding existing facilities. Our network includes vendors who specialize in retrofitting and can integrate the latest technologies into your current data center." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
 }

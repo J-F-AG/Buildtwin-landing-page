@@ -275,6 +275,12 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
+    }else if(url.includes('/sector/data-centre')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorDataCenter(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }
   }
    
