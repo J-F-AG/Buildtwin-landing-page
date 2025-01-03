@@ -1,50 +1,4 @@
-<div [ngClass]="{'bt-flex form-wrap': page}">
-    <div *ngIf="page" class="flex-grow-1">
-<h2>
-    Ready to Start Your Engineering Project?
-</h2>
-<p>
-    Connect with our pre-qualified vendors and get your project started today. Our experts are ready to assist you.
-</p>
-<ul class="list">
-    <li>
-        <h5>
-            Verified Vendors
-        </h5>
-        <span>
-            Access to pre-qualified engineering teams
-        </span>
-    </li>
-    <li>
-        <h5>
-            Dedicated Support
-        </h5>
-        <span>
-            24/7 project management assistance
-        </span>
-    </li>
-    <li>
-        <h5>
-            Secure Platform
-        </h5>
-        <span>
-            Protected data and communication channels
-        </span>
-    </li>
-</ul>
-<div class="logo-wrapper">
-    <div class="block">
-        <img src="assets/images/qualityBuildtwin.png" alt="Quality Badge" width="54" height="48">
-    </div>
-    <div class="block">
-        <img src="assets/images/trustedBy-gbc.jpg" alt="Partner Logo" width="78" height="48">
-    </div>
-    <div class="block">
-        <img src="assets/images/trustedBy-caldim.jpg" alt="Partner Logo" width="114" height="48">
-    </div>
-</div>
-    </div>
-<div class="flex-grow-1">
+
 <div class="formHeader" *ngIf="type != 'outside' && style != 'secondary' && !page">
     <strong>Get FREE offer for </strong>
     <h3>{{data['name']}}</h3>
@@ -221,7 +175,5 @@
             </div>
         </div>
     </form>
-</div>
-</div>
 </div>
 <app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

@@ -12,6 +12,7 @@ import { BlogService } from 'src/app/services/blog.service';
 })
 export class HdGoodCompanyComponent {
   @Input() page: string = ''; //sector
+  @Input() heading: boolean = true; //sector
   @Input() category: number = 0;
   @Input() defaultVisible: number = 3;
   @Input() hideTitle: boolean = false;
