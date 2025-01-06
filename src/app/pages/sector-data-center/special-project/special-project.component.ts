@@ -45,7 +45,7 @@ export class DataCenterSpecialProjectComponent {
           title: 'Commercial building',
           description: '20+ Vendors',
         },
-        { src: 'assets/images/services/Sector_datacenter.png', title: 'Data Center', description: '10+ Vendors' },
+        // { src: 'assets/images/services/Sector_datacenter.png', title: 'Data Center', description: '10+ Vendors' },
         { src: 'assets/images/services/Sector_industrialbulidings.png', title: 'INDUSTRIAL BUILDINGS', description: '10+ Vendors' },
         { src: 'assets/images/services/Sector_powerplant.png', title: 'Power plant', description: '10+ Vendors' },
         { src: 'assets/images/services/Sector_pre-cast.png', title: 'PRE-CAST', description: '10+ Vendors'},

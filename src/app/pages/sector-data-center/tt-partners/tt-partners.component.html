@@ -92,7 +92,7 @@
                                         Top Rated Vendor
                                     </span>
                                     <span class="block">
-                                        4.9/5 Rating
+                                        {{detailData[c['id']]['rating']}} Rating
                                     </span>
                                 </div>
                                 <div class="specializations">
@@ -100,15 +100,16 @@
                                         Specializations
                                     </h5>
                                     <ul>
-                                        <li>
-                                            Data Centers
-                                        </li>
-                                        <li>
-                                            Industrial Buildings
-                                        </li>
-                                        <li>
-                                            Steel Detailing
-                                        </li>
+                                        <ng-container *ngFor="let list of detailData[c['id']]['sector']; let i = index">
+                                            <li *ngIf="i<5">
+                                                {{list}}
+                                            </li>
+                                        </ng-container>
+                                        <ng-container *ngIf="detailData[c['id']]['sector'].length > 5">
+                                            <li class="more">
+                                                + {{detailData[c['id']]['sector'].length - 5}}
+                                            </li>
+                                        </ng-container>
                                     </ul>
                                 </div>
                                 <button class="link pointer">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">

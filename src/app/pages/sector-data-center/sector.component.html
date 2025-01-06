@@ -28,60 +28,72 @@
         <div class="global-mb container">
             <div class="heading">
                 <div class="title">
-                    Reliability Layered by Design
+                    Types of Data Center Supported by Our Vendors
                 </div>
                 <div class="subTitle">
-                    Structured to Ensure Reliability and Operational Continuity
+                    Get optimized structural and engineering designs for every business needs
                 </div>
             </div>
     
-            <div class="list-type-wrapper bottom-space-big">
+            <div class="list-type-wrapper bottom-space-big flex-wrap col-3-big">
                 <div class="block">
                     <h5>
                         <figure>
                             <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
-                            <h4>Tier 1: Basic Site Infrastructure</h4>
                         </figure>
-                        Essential Facilities with Minimal Redundancy
+                        Colocation Data Centers
                     </h5>
+                    <h4>Shared Facilities, Individual Control </h4>
                     <p>
-                        Ideal for smaller businesses, offering a basic level of uptime and cost-effective operational solutions.
+                        Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
                     </p>
                 </div>
                 <div class="block">
                     <h5>
                         <figure>
                             <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
-                            <h4>Tier 2: Redundant Components</h4>
                         </figure>
-                        Additional Safeguards for Enhanced Reliability
+                        Enterprise Data Centers
                     </h5>
+                    <h4>Tailored Architecture for Business Criticality </h4>
                     <p>
-                        Provides extra safeguards with additional power and cooling resources, suitable for medium-level operational demands.
+                        Custom facilities designed to support specific business operations, enhanced control over data management and security.
                     </p>
                 </div>
                 <div class="block">
                     <h5>
                         <figure>
                             <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
-                            <h4>Tier 3: Concurrently Maintainable</h4>
                         </figure>
-                        Designed for Zero Downtime Maintenance 
+                        Managed Services Data Centers
                     </h5>
+                    <h4>Streamlined Operations by Experts </h4>
                     <p>
-                        Designed to allow any component maintenance without affecting the data center’s operational continuity.
+                        Third-party managed infrastructures providing specialized maintenance and operations, freeing up your resources for core business tasks.
                     </p>
                 </div>
                 <div class="block">
                     <h5>
                         <figure>
                             <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
-                            <h4>Tier 4: Fault Tolerant</h4>
                         </figure>
-                        Ultimate Resilience with Comprehensive Redundancy 
+                        Cloud Data Centers
                     </h5>
+                    <h4>Dynamic Scaling and High Elasticity</h4>
                     <p>
-                        Ensures the highest operational continuity with complete redundancy in all critical components and systems.
+                        Flexible, scalable solutions for businesses needing dynamic capacity and minimal physical infrastructure investment.
+                    </p>
+                </div>
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                        </figure>
+                        Hyperscale Data Centers
+                    </h5>
+                    <h4>Robust Structures for Massive Scale Operations</h4>
+                    <p>
+                        Built for large-scale operations, these centers support extensive data demands with high efficiency and robust architecture.
                     </p>
                 </div>
             </div>
@@ -101,7 +113,7 @@
             </div> -->
         </div>
 
-        <div class="global-mb container">
+        <!-- <div class="global-mb container">
             <div class="heading">
                 <div class="title">
                     Diverse Infrastructure Solutions
@@ -175,8 +187,9 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
+        <app-data-center-tt-partners [page]="'sector'" id="targetSection1"></app-data-center-tt-partners>
         <div class="global-mb container">
             <div class="heading">
                 <div class="title">
@@ -199,7 +212,7 @@
                     <!-- <p>
                         Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
                     </p> -->
-                    <ul class="default-list-ul">
+                    <ul class="list">
                         <li>Structural Design</li>
                         <li>Structural Precast Design</li>
                         <li>Cast-in-situ Design</li>
@@ -217,7 +230,7 @@
                     <!-- <p>
                         Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
                     </p> -->
-                    <ul class="default-list-ul">
+                    <ul class="list">
                         <li>MEP to Structural Integration</li>
                         <li>Detailed Engineering</li>
                         <li>Duct Detailing</li>
@@ -234,7 +247,7 @@
                     <!-- <p>
                         Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
                     </p> -->
-                    <ul class="default-list-ul">
+                    <ul class="list">
                         <li>BIM Modeling </li>
                         <li>Estimodeling</li>
                         <li>Digital Planning </li>
@@ -251,7 +264,7 @@
                     <!-- <p>
                         Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
                     </p> -->
-                    <ul class="default-list-ul">
+                    <ul class="list">
                         <li>Structural Steel Detailing</li>
                         <li>Precast Detailing</li>
                         <li>Cast-in-situ Detailing</li>
@@ -260,12 +273,79 @@
                 </div>
             </div>
         </div>
-
+        <div class="global-mb container">
+            <div class="heading">
+                <div class="title">
+                    Data Centers Tiers
+                </div>
+            </div>
+    
+            <div class="list-type-wrapper bottom-space-big">
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                        </figure>
+                        Tier 1: 
+                    </h5>
+                    <h4>
+                        Basic Site Infrastructure 
+                    </h4>
+                    <p>
+                        Ideal for smaller businesses, offering a basic level of uptime and cost-effective operational solutions.
+                    </p>
+                </div>
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                        </figure>
+                        Tier 2: 
+                       
+                    </h5>
+                    <h4>
+                        Redundant Components 
+                    </h4>
+                    <p>
+                        Provides extra safeguards with additional power and cooling resources, suitable for medium-level operational demands.
+                    </p>
+                </div>
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                        </figure>
+                        Tier 3: 
+                        
+                    </h5>
+                    <h4>
+                        Concurrently Maintainable
+                    </h4>
+                    <p>
+                        Designed to allow any component maintenance without affecting the data center’s operational continuity.
+                    </p>
+                </div>
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                        </figure>
+                        Tier  4: 
+                                             
+                    </h5>
+                    <h4>
+                        Fault Tolerant   
+                    </h4>
+                    <p>
+                        Ensures the highest operational continuity with complete redundancy in all critical components and systems.
+                    </p>
+                </div>
+            </div>
+        </div>
         
      <!-- <div class="bottom-space-gap"> -->
         <!-- <app-data-center-special-project [page]="'sector'"></app-data-center-special-project> -->
    <!-- </div> -->
-   <app-data-center-tt-partners [page]="'sector'" id="targetSection1"></app-data-center-tt-partners>
         <app-data-center-hd-discover-projects [hideTitle]="true" [page]="'sector'"></app-data-center-hd-discover-projects>
    <div class="container">
     <div class="count-wrapper global-mb">
@@ -297,7 +377,7 @@
    </div>
 
    <div class="bottom-space-gap">
-    <app-data-center-sector-category [category]="8" [page]="'sector'"></app-data-center-sector-category>
+    <app-data-center-sector-category [category]="18" [page]="'sector'"></app-data-center-sector-category>
 </div>
 
 <div class="global-mb container">
@@ -378,12 +458,12 @@
         </div>
     </div>
 
-    <div class="list-type-wrapper">
-        <div class="heading">
-            <div class="title">
-                Global, Regional Standards
-            </div>
+    <div class="heading">
+        <div class="title">
+            Global, Regional Standards
         </div>
+    </div>
+    <div class="list-type-wrapper">
         <div class="block">
             <h5>
                 Data Centers code
@@ -567,8 +647,50 @@
 
     <app-data-center-faq-buildtwin [fullScreen]="true"></app-data-center-faq-buildtwin>
     <div id="targetSection2"></div>
-    <div class="container">
+    <!-- <div class="container">
         <app-free-offer-form [page]="'sector'"></app-free-offer-form>
+    </div> -->
+    
+    <div class="container">
+        <div class="bt-flex form-wrap">
+            <div class="flex-grow-1">
+        <h2>
+            Get Started With BuildTwin Today!
+        </h2>
+        <p>
+            Your Next Data Center Project Begins Here
+        </p>
+        <ul class="list">
+            <li>
+                <h5>
+                    Global Expertise
+                </h5>
+                <span>
+                    Access vendors with proven track records in complex data center infrastructure projects.
+                </span>
+            </li>
+            <li>
+                <h5>
+                    Integrated ERP System
+                </h5>
+                <span>
+                    Streamline project management from vendor selection to commissioning
+                </span>
+            </li>
+            <li>
+                <h5>
+                    Sustainability Focus
+                </h5>
+                <span>
+                    Align projects with global renewable energy goals and emission reduction standards.
+                </span>
+            </li>
+        </ul>
+            </div>
+        <div class="flex-grow-1">
+        <app-free-offer-form [page]="'sector'"></app-free-offer-form>
+        </div>
+        </div>
     </div>
     <!-- <div class="bottom-space-big">
         <app-drawing-freelancers></app-drawing-freelancers>

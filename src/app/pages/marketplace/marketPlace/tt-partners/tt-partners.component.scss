@@ -241,6 +241,10 @@ a.link.disabled {
             background-color: var(--secondaryBackgroundColor);
             border-radius: 30px;
             padding: 4px 10px;
+            &.more {
+                background: none;
+                font-weight: bold;
+            }
         }
     }
 }

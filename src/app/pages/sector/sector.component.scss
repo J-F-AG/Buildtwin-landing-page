@@ -203,6 +203,10 @@
         margin: -24px -24px 20px -24px;
         border-radius: 12px 12px 0 0;
     }
+    h4 {
+        font-size: 18px;
+        font-weight: 500;
+    }
     h5 {
         font-size: 22px;
         margin-bottom: 16px;
@@ -212,6 +216,8 @@
         gap: 20px;
         figure {
             margin: 0;
+            min-width: 40px;
+            max-width: 40px;
         }
         &.heading-col {
             flex-direction: column;
@@ -306,7 +312,18 @@
         }
     }
 }
-
+.col-4-big {
+    .block {
+        width: calc(25% - 24px);
+        flex: initial;
+    }
+}
+.col-3-big {
+    .block {
+        width: calc(33.33% - 21.33px);
+        flex: initial;
+    }
+}
 
 .form-wrap {
     gap: 48px;
