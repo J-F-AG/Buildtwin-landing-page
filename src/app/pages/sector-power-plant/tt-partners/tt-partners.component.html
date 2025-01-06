@@ -1,0 +1,431 @@
+<div class="container global-mb" id="peek-into-buildtwin-solution-providers">
+    <div class="story">
+        <div class="head" *ngIf="!page; else other_content">
+            
+            <h2>Peek into BuildTwin Solution Providers</h2>
+            <p>
+                
+            Meet few selected solution providers, each exemplifying different technical capabilities. 
+            <br>The solution providers bring tailored expertise, cutting-edge solutions, and a commitment 
+            <br>to quality that enhances every project they touch.
+            </p>
+        </div>
+        <ng-template #other_content>
+            <div class="head left">
+                
+                <h2>Connect With Specialized Vendors</h2>
+                <p>
+                    List of architecture and structural Engineering vendors who specialize in scalable and sustainable energy solutions
+                </p>
+            </div>
+        </ng-template>
+        <div class="listItem">
+            <ng-container *ngIf="!showPageLoader">
+                <ng-container *ngIf="!page">
+                    <ng-container *ngFor="let c of companyList">
+                        <a 
+                            class="col cursor"
+                            (click)="redirect(c.domain, c.company_name)" 
+                            [routerLink]="[_languageService.currentLanguage + '/partners/' + (c.linking)]" 
+                            [queryParams]="paramsStatus ? { status: 'unpublished' } : null" >
+                            <div class="imgwRap">
+                                <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="145" height="74">
+                            </div>
+                           
+                            <strong>
+                                {{c.company_name}}
+                            </strong>
+                            <div class="twoFLex office-location">
+                                <!-- <img src="assets/images/ui/india.png" width="25" height="25">      -->
+                                <span *ngFor="let loc of c.office_location"> {{loc}}</span>
+                            </div>
+                            <div class="twoFLex">
+                                <!-- <div class="avtar">
+                                    <img src="assets/images/ui/avtar1.png" width="25" height="25">
+                                    <img class="last" src="assets/images/ui/avtar2.png" width="25" height="25">
+                                </div> -->
+                                {{c.employees_count}}+ Employees
+                            </div>
+                            <div class="twoFLex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                                    <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                                    </svg>
+                             <p> services from {{c.service_type_name}}</p>
+                            </div>
+                            <div class="twoFLex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                                    <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                                    </svg>
+                                 <p>   <em> {{c.status}} </em> solution provider</p> 
+                            </div>
+                            <button class="link pointer">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <g clip-path="url(#clip0_5994_22263)">
+                                <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_5994_22263">
+                                <rect width="20" height="20" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg></button>
+                            </a>
+                    </ng-container>
+                </ng-container>
+            <div class="owl-wrapper carousel squareButtonWrapper top-right" *ngIf="page">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let c of companyList">
+                        <ng-template carouselSlide>
+                            <a 
+                                class="col cursor"
+                                (click)="redirect(c.domain, c.company_name)" 
+                                [routerLink]="[_languageService.currentLanguage + '/partners/' + (c.linking)]" 
+                                [queryParams]="paramsStatus ? { status: 'unpublished' } : null" >
+                                <div class="imgwRap">
+                                    <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="145" height="74">
+                                </div>
+                            
+                                <strong>
+                                    {{c.company_name}}
+                                </strong>
+                                <div class="rating-wrapper">
+                                    <span class="block">
+                                        Top Rated Vendor
+                                    </span>
+                                    <span class="block">
+                                        {{detailData[c['id']]['rating']}} Rating
+                                    </span>
+                                </div>
+                                <div class="specializations">
+                                    <h5>
+                                        Specializations
+                                    </h5>
+                                    <ul>
+                                        <ng-container *ngFor="let list of detailData[c['id']]['sector']; let i = index">
+                                            <li *ngIf="i<5">
+                                                {{list}}
+                                            </li>
+                                        </ng-container>
+                                        <ng-container *ngIf="detailData[c['id']]['sector'].length > 5">
+                                            <li class="more">
+                                                + {{detailData[c['id']]['sector'].length - 5}}
+                                            </li>
+                                        </ng-container>
+                                    </ul>
+                                </div>
+                                <button class="link pointer">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_5994_22263)">
+                                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_5994_22263">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg></button>
+                                </a>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+            </ng-container>
+            <nz-skeleton *ngIf="showPageLoader"></nz-skeleton>
+
+            <!-- <div class="col">
+                <div class="imgwRap">
+                    <img src="assets/images/ui/logo2.png" width="234" height="115">
+                </div>
+               
+                <strong>
+                    GBC Engineers
+                </strong>
+                <div class="twoFLex">
+                    <img src="assets/images/ui/germany.png" width="25" height="25">     <span>Germany and Vietnam</span>
+                </div>
+                <div class="twoFLex">
+                    <div class="avtar">
+                        <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                        <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                    </div>
+                    300+ Employees
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                 <p> <em>  Design Office</em> in Germany. Experts in automatization</p>
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                        <p>   <em> Pre-qualified </em> solution provider</p> 
+                    </div>
+                <a  class="link disabled">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_5994_22263)">
+                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5994_22263">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></a>
+            </div>
+
+            <div class="col">
+                <div class="imgwRap">
+                    <img src="assets/images/ui/logo3.png" width="200" height="74">
+                </div>
+               
+                <strong>
+                    MAC Engineers
+                </strong>
+                <div class="twoFLex">
+                    <img src="assets/images/ui/germany.png" width="25" height="25">     <span>Vietnam, Singapore and Germany</span>
+                </div>
+                <div class="twoFLex">
+                    <div class="avtar">
+                        <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                        <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                    </div>
+                    200+ Employees
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                 <p> <em>  JV</em> with Infra Company and Multi-disciplinary</p>
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                        <p>   <em> Pre-qualified </em> solution provider</p> 
+                    </div>
+                <a  class="link disabled">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_5994_22263)">
+                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5994_22263">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></a>
+            </div>
+
+            <div class="col">
+                <div class="imgwRap">
+                    <img src="assets/images/sublimestructures.png" width="200" height="74">
+                </div>
+               
+                <strong>
+                    Sublime Structures
+                </strong>
+                <div class="twoFLex">
+                    <img src="assets/images/ui/india.png" width="25" height="25">     <span>Coimbatore 
+                        Tamilnadu, India</span>
+                </div>
+                <div class="twoFLex">
+                    <div class="avtar">
+                        <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                        <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                    </div>
+                    28+ Employees
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                 <p> proven track record of delivering error free Structural Steel </p>
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                        <p>   <em> Pre-qualified </em> solution provider</p> 
+                    </div>
+                <a routerLink="/vender-details-sublimestructures" class="link ">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_5994_22263)">
+                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5994_22263">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></a>
+            </div>
+
+            <div class="col">
+                <div class="imgwRap">
+                    <img src="assets/images/caldim/caldim.png" width="200" height="74">
+                </div>
+               
+                <strong>
+                    Caldim Engineering Private Limited
+                </strong>
+                <div class="twoFLex">
+                    <img src="assets/images/ui/india.png" width="25" height="25">     <span>Chennai 
+                        Tamilnadu, India</span>
+                </div>
+                <div class="twoFLex">
+                    <div class="avtar">
+                        <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                        <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                    </div>
+                   60+ Employees
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                 <p> proven track record of delivering error free Structural Steel </p>
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                        <p>   <em> Pre-qualified </em> solution provider</p> 
+                    </div>
+                <a routerLink="/vender-details-caldim" class="link ">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_5994_22263)">
+                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5994_22263">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></a>
+            </div>
+
+
+            <div class="col">
+                <div class="imgwRap">
+                    <img src="assets/images/moldtek/moldtek.png" width="200" height="74">
+                </div>
+               
+                <strong>
+                    Mold-Tek Technologies Limited
+                </strong>
+                <div class="twoFLex">
+                    <img src="assets/images/ui/india.png" width="25" height="25">     <span>Hyderabad 
+                        Telangana, India</span>
+                </div>
+                <div class="twoFLex">
+                    <div class="avtar">
+                        <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                        <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                    </div>
+                    1,100+ Employees
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                 <p> proven track record of delivering error free Structural Steel </p>
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                        <p>   <em> Pre-qualified </em> solution provider</p> 
+                    </div>
+                <a routerLink="/vender-details-moldtek" class="link ">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_5994_22263)">
+                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5994_22263">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></a>
+            </div>
+            <div class="col">
+                <div class="imgwRap">
+                    <img src="assets/images/aarbee/logo.jpg" width="200" height="134">
+                </div>
+               
+                <strong>
+                    Aarbee Structures Private Limited
+                </strong>
+                <div class="twoFLex">
+                    <img src="assets/images/ui/india.png" width="25" height="25">     <span>Bangalore 
+                        Karnataka, India</span>
+                </div>
+                <div class="twoFLex">
+                    <div class="avtar">
+                        <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                        <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                    </div>
+                    800+ Employees
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                 <p> proven track record of delivering error free Structural Steel </p>
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                        <p>   <em> Pre-qualified </em> solution provider</p> 
+                    </div>
+                <a routerLink="/vender-details-aarbee" class="link ">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_5994_22263)">
+                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5994_22263">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></a>
+            </div>
+            <div class="col">
+                <div class="imgwRap">
+                    <img src="assets/images/allied/logo.png" width="200" height="41">
+                </div>
+               
+                <strong>
+                    Allied Engineers Grup
+                </strong>
+                <div class="twoFLex">
+                    <img src="assets/images/ui/romania.png" width="25" height="25">     <span>București, România</span>
+                </div>
+                <div class="twoFLex">
+                    <div class="avtar">
+                        <img src="assets/images/ui/avtar3.png" width="25" height="25">
+                        <img class="last" src="assets/images/ui/avtar3.png" width="25" height="25">
+                    </div>
+                    60+ Employees
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                 <p> proven track record of delivering error free Structural Steel </p>
+                </div>
+                <div class="twoFLex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <path d="M18.473 8.7523C18.0542 8.33639 17.3778 8.33758 16.9604 8.75497L8.78597 16.9294L6.26552 14.4172C5.84802 14.0011 5.1724 14.0016 4.75559 14.4184C4.33829 14.8357 4.33829 15.5123 4.75559 15.9296L7.93728 19.1113C8.406 19.58 9.16594 19.58 9.63466 19.1113L18.4757 10.2703C18.8952 9.85078 18.894 9.1703 18.473 8.7523Z" fill="#0053fa"/>
+                        </svg>
+                        <p>   <em> Pre-qualified </em> solution provider</p> 
+                    </div>
+                <a routerLink="/vender-details-allied" class="link ">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <g clip-path="url(#clip0_5994_22263)">
+                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_5994_22263">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg></a>
+            </div> -->
+        </div>
+    </div>
+</div>

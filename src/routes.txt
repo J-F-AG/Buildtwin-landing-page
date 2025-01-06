@@ -12,6 +12,7 @@
 /business-intelligence
 /sector
 /sector/data-centre
+/sector/power-plant
 /training
 /pricing
 /good-reason
@@ -39,3 +40,4 @@
 /partners/clove-technologies-private-limited
 /partners/tritech-corporation
 /building-code
+/building-code/aisc

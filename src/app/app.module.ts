@@ -333,6 +333,19 @@ import { DataCenterFaqBuildtwinComponent } from './pages/sector-data-center/faq-
 // import { SpecialProjectArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/special-project/special-project.component';
 // import { SectorCategoryArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector-category/service-category.component';
 // import { HdServicesArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/hd-services/hd-services.component';
+import { FaqBuildtwinBuildingCodeAiscComponent } from './pages/building-code-aisc/faq-buildtwin/faq-buildtwin.component';
+import { HdDiscoverProjectsBuildingCodeAiscComponent } from './pages/building-code-aisc/hd-discover-projects/hd-discover-projects.component';
+import { HdServicesBuildingCodeAiscComponent } from './pages/building-code-aisc/hd-services/hd-services.component';
+import { SectorCategoryBuildingCodeAiscComponent } from './pages/building-code-aisc/sector-category/service-category.component';
+import { SpecialProjectBuildingCodeAiscComponent } from './pages/building-code-aisc/special-project/special-project.component';
+import { TtPartnersBuildingCodeAiscComponent } from './pages/building-code-aisc/tt-partners/tt-partners.component';
+import { BuildingCodeAiscComponent } from './pages/building-code-aisc/sector.component';
+import { SectorPowerPlantComponent } from './pages/sector-power-plant/sector.component';
+import { PowerPlantFaqBuildtwinComponent } from './pages/sector-power-plant/faq-buildtwin/faq-buildtwin.component';
+import { PowerPlantHdDiscoverProjectsComponent } from './pages/sector-power-plant/hd-discover-projects/hd-discover-projects.component';
+import { PowerPlantSectorCategoryComponent } from './pages/sector-power-plant/sector-category/service-category.component';
+import { PowerPlantSpecialProjectComponent } from './pages/sector-power-plant/special-project/special-project.component';
+import { PowerPlantTtPartnersComponent } from './pages/sector-power-plant/tt-partners/tt-partners.component';
 
 
 
@@ -635,6 +648,21 @@ import { DataCenterFaqBuildtwinComponent } from './pages/sector-data-center/faq-
   //  SectorCategoryArchitectureDesignServicesComponent,
   //  SpecialProjectArchitectureDesignServicesComponent,
   //  TtPartnersArchitectureDesignServicesComponent,
+
+   FaqBuildtwinBuildingCodeAiscComponent,
+   HdDiscoverProjectsBuildingCodeAiscComponent,
+   HdServicesBuildingCodeAiscComponent,
+   SectorCategoryBuildingCodeAiscComponent,
+   SpecialProjectBuildingCodeAiscComponent,
+   TtPartnersBuildingCodeAiscComponent,
+   BuildingCodeAiscComponent,
+
+   SectorPowerPlantComponent,
+   PowerPlantFaqBuildtwinComponent,
+   PowerPlantHdDiscoverProjectsComponent,
+   PowerPlantSectorCategoryComponent,
+   PowerPlantSpecialProjectComponent,
+   PowerPlantTtPartnersComponent
   ],
   imports: [    
     BrowserModule,

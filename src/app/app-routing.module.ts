@@ -30,6 +30,8 @@ import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-u
 import { SectorComponent } from './pages/sector/sector.component';
 import { BuildingCodeComponent } from './pages/building-code/sector.component';
 import { DataCenterSectorComponent } from './pages/sector-data-center/sector.component';
+import { BuildingCodeAiscComponent } from './pages/building-code-aisc/sector.component';
+import { SectorPowerPlantComponent } from './pages/sector-power-plant/sector.component';
 
 
 
@@ -195,12 +197,28 @@ const routes: Routes = [
     {path: 'building-code',
         component: BuildingCodeComponent
     },
+    {path: 'building-code/aisc', component: BuildingCodeAiscComponent,
+        data: {
+            title: 'Find AISC-Compliant Service Providers for Your Next Project',
+            description: 'Explore the importance of the AISC Building Code for safe, durable, and efficient steel construction. Connect with AISC-compliant service providers on BuildTwin',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/building-code/aisc'
+        }
+    },
     {path: 'sector/data-centre', component: DataCenterSectorComponent,
         data: {
             title: 'Connect with Expert Data Center Designers | BuildTwin Marketplace',
             description: 'Unlock expert data center construction solutions with BuildTwin. From modular to hyperscale data centers, we offer tailored design, compliance, and management with a global vendor network.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/data-centre'
+        }
+    },
+    {path: 'sector/power-plant', component: SectorPowerPlantComponent,
+        data: {
+            title: 'Connect with Expert Power Plant Engineering Designers | BuildTwin Marketplace',
+            description: 'Connecting Global Expertise with Advanced ERP Solutions for Power Plant Design and Development',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/power-plant'
         }
     },
     {path: 'explore-services', component: BrowseServicesMainComponent,

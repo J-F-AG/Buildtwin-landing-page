@@ -2117,4 +2117,288 @@ export class LanguageService {
     return JSON.stringify(faqSchema);
   }
 
+  injectFAQSchemaForBuildingCodeAisc(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What is the purpose of the AISC Building Code?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "The AISC code is for designing and building safe, durable, and efficient steel structures.  AISC covers buildings, bridges, industrial facilities, and other steel structures. These guidelines ensure structural safety, stability and performance of buildings, bridges and industrial facilities." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Is AISC mandatory for all projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "AISC is not required for all projects. However, many jurisdictions, agencies, and clients require AISC compliance as a condition of project approval for steel and other structures. Where it is not required, it’s often used as a best practice." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How often is the AISC code updated?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "The AISC Building Code is updated every 5 years to reflect new technology, industry changes and professional feedback. These updates keep the code relevant with new materials, techniques and design methods." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can small projects benefit from AISC compliance?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes, small projects can benefit greatly from AISC. Following AISC will mean better material utilization, cost savings, and easier project approvals, worth the investment." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does AISC address sustainability?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "AISC addresses sustainability by promoting material efficiency, recycling of steel and energy efficiency in construction. It emphasizes life cycle assessments to ensure structures are environmentally friendly. AISC also promotes local sourcing to reduce the carbon footprint of steel production and transportation." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure that vendors adhere to the AISC Building Code?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "We do a rigorous check before listing a vendor on our platform. You can select from a wide range of vendors who strictly adhere to the AISC Building Code." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Why should I choose vendors from BuilTwin?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "If you select a vendor from our platform, your project will benefit from experts who follow the AISC standards. By choosing reliable vendors, you will also reduce risks and optimize project timelines and costs." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForSectorPowerPlant(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What types of power plants does BuildTwin support?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin facilitates connections with vendors specializing in thermal, hydroelectric, nuclear, renewable, and hybrid energy plants, tailored for diverse energy requirements." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure vendor quality for power plant projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Vendors undergo a rigorous qualification process, assessing expertise in design, compliance, and project execution to ensure they meet global standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin support remote or challenging project locations?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes, BuildTwin’s network includes vendors experienced in managing projects across diverse terrains and climates, ensuring efficient solutions in any location." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How are safety and compliance managed in power plant construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our vendors prioritize designs that meet international safety protocols, regulatory standards, and environmental guidelines to ensure secure operations and sustainability." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What role does advanced technology play in modern power plants?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Technologies like Building Information Modeling (BIM), predictive maintenance tools, and energy management systems optimize plant efficiency and reduce operational risks." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the advantages of modular power plant designs?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Modular designs allow for faster deployment, scalability, and cost-efficiency. They are ideal for meeting urgent energy needs or expanding existing capacity." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How is grid connectivity ensured in power plant projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Projects are designed to integrate seamlessly with local and national grids, ensuring efficient power transmission and distribution." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What sustainability practices are implemented in power plant projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Vendors focus on reducing carbon footprints through waste heat recovery, emissions control, and the use of sustainable building materials." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin’s ERP system enhance project management?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our ERP tools streamline project oversight, enabling real-time collaboration, resource tracking, and milestone management for efficient and timely delivery." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What types of renewable power plants are supported?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin connects you with experts in solar, wind, geothermal, and biomass energy projects, ensuring compliance and efficiency." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin facilitate cost control in power plant projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Through vendor selection, integrated ERP systems, and real-time budget monitoring, BuildTwin ensures projects remain within financial limits." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
 }

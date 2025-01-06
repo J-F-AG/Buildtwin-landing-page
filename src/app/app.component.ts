@@ -281,6 +281,18 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
+    }else if(url.includes('/building-code/aisc')){
+      const faqSchema = this._languageService.injectFAQSchemaForBuildingCodeAisc(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/sector/power-plant')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorPowerPlant(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }
   }
    
