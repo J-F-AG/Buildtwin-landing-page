@@ -16,6 +16,62 @@ export class DataCenterTtPartnersComponent {
   companyList = [];
   showPageLoader = false;
   paramsStatus = false;
+  detailData = {
+    3: {
+     rating: 'N/A',
+     sector: [
+      'Bridges',
+      'Chemical Plants',
+      'Data Center',
+      'Roads',
+      'Schools'
+     ]
+    },
+    7: {
+      rating: '8.5',
+      sector: [
+        'Airports',
+        'Commercial Buildings',
+        'Data Center',
+        'Industrial Buildings',
+        'Power Plants',
+        'Precast',
+        'Residential Buildings',
+        'Schools',
+        'Theatres',
+        'Bridges',
+        'Chemical Plants',
+        'Hospitals',
+        'Manufacturing Plants',
+        'Metros',
+        'Roads',
+        'Tunnels',
+        'Water & Waste'
+      ]
+    },
+    11: {
+     rating: 'N/A',
+     sector: [
+      'Chemical Plants',
+      'Theatres',
+      'Metros',
+      'Residential Buildings',
+      'Bridges',
+      'Precast',
+      'Roads',
+      'Tunnels',
+      'Water & Waste',
+      'Data Center',
+      'Power Plants',
+      'Schools',
+      'Airports',
+      'Commercial Buildings',
+      'Hospitals',
+      'Industrial Buildings',
+      'Manufacturing Plants'
+     ]
+    }
+  }
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, private globalService: GlobalService, public _languageService:LanguageService) {
      // Extract status
      this.route.queryParams.subscribe(params => {
@@ -64,17 +120,20 @@ export class DataCenterTtPartnersComponent {
           }
         })
         res['data']['details'].filter(res=>{
-          if (this._languageService.customMapping[res['company_name']]) {
-            res['route'] = this._languageService.customMapping[res['company_name']];
-            res['linking'] = this._languageService.customMapping[res['company_name']];
-          }else {
-            res['route'] = res['company_name'].replace(/ /g, '');
-            res['linking'] = res['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
-            .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
-            .toLowerCase();
-          }
-          this.companyList.push(res)
+          if ([3, 7, 11].includes(res['id'])) {
+            if (this._languageService.customMapping[res['company_name']]) {
+              res['route'] = this._languageService.customMapping[res['company_name']];
+              res['linking'] = this._languageService.customMapping[res['company_name']];
+            }else {
+              res['route'] = res['company_name'].replace(/ /g, '');
+              res['linking'] = res['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+              .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+              .toLowerCase();
+            }
+            this.companyList.push(res)
+         }
         })
+        console.log(this.companyList)
       }
     })
   }

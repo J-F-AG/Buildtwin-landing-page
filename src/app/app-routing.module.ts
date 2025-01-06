@@ -200,7 +200,7 @@ const routes: Routes = [
             title: 'Connect with Expert Data Center Designers | BuildTwin Marketplace',
             description: 'Unlock expert data center construction solutions with BuildTwin. From modular to hyperscale data centers, we offer tailored design, compliance, and management with a global vendor network.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/data-centre'
+            canonical: 'https://www.buildtwin.com/sector/data-centre'
         }
     },
     {path: 'explore-services', component: BrowseServicesMainComponent,
