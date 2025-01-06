@@ -22,6 +22,7 @@ Disallow: /blog-details4
 Disallow: /blog-details5
 Disallow: /sector
 Disallow: /building-code
+Disallow: /software/architecture-design-services
 
 Allow: /services/bim-service-provider-in-usa
 
