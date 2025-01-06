@@ -452,8 +452,10 @@ display:flex;
 }
 .link-text {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--themeColor);
+  display: flex;
+  gap: 10px;
   &:hover {
     text-decoration: underline;
   }

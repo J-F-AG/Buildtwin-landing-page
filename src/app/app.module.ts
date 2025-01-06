@@ -324,8 +324,15 @@ import { DataCenterSpecialProjectComponent } from './pages/sector-data-center/sp
 import { DataCenterTtPartnersComponent } from './pages/sector-data-center/tt-partners/tt-partners.component';
 import { DataCenterHdDiscoverProjectsComponent } from './pages/sector-data-center/hd-discover-projects/hd-discover-projects.component';
 import { DataCenterSectorCategoryComponent } from './pages/sector-data-center/sector-category/service-category.component';
-import { DataCenterHdGoodCompanyComponent } from './pages/sector-data-center/hd-good-company/hd-good-company.component';
+// import { DataCenterHdGoodCompanyComponent } from './pages/sector-data-center/hd-good-company/hd-good-company.component';
 import { DataCenterFaqBuildtwinComponent } from './pages/sector-data-center/faq-buildtwin/faq-buildtwin.component';
+// import { ArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector.component';
+// import { FaqBuildtwinArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/faq-buildtwin/faq-buildtwin.component';
+// import { HdDiscoverProjectsArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/hd-discover-projects/hd-discover-projects.component';
+// import { TtPartnersArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/tt-partners/tt-partners.component';
+// import { SpecialProjectArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/special-project/special-project.component';
+// import { SectorCategoryArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector-category/service-category.component';
+// import { HdServicesArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/hd-services/hd-services.component';
 
 
 
@@ -497,7 +504,7 @@ import { DataCenterFaqBuildtwinComponent } from './pages/sector-data-center/faq-
    DataCenterTtPartnersComponent,
    DataCenterHdDiscoverProjectsComponent,
    DataCenterSectorCategoryComponent,
-   DataCenterHdGoodCompanyComponent,
+  //  DataCenterHdGoodCompanyComponent,
    DataCenterFaqBuildtwinComponent,
 
    BrowseServicesMainComponent,
@@ -620,7 +627,14 @@ import { DataCenterFaqBuildtwinComponent } from './pages/sector-data-center/faq-
    SectorCategoryBuildingCodeComponent,
    SpecialProjectBuildingCodeComponent,
    TtPartnersBuildingCodeComponent,
-   HdServicesBuildingCodeComponent
+   HdServicesBuildingCodeComponent,
+  //  ArchitectureDesignServicesComponent,
+  //  FaqBuildtwinArchitectureDesignServicesComponent,
+  //  HdDiscoverProjectsArchitectureDesignServicesComponent,
+  //  HdServicesArchitectureDesignServicesComponent,
+  //  SectorCategoryArchitectureDesignServicesComponent,
+  //  SpecialProjectArchitectureDesignServicesComponent,
+  //  TtPartnersArchitectureDesignServicesComponent,
   ],
   imports: [    
     BrowserModule,
