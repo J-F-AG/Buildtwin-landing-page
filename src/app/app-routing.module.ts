@@ -30,6 +30,7 @@ import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-u
 import { SectorComponent } from './pages/sector/sector.component';
 import { BuildingCodeComponent } from './pages/building-code/sector.component';
 import { DataCenterSectorComponent } from './pages/sector-data-center/sector.component';
+import { ArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector.component';
 
 
 
@@ -190,10 +191,21 @@ const routes: Routes = [
     //     pathMatch: 'full'
     // },
     {path: 'sector', 
-        component: SectorComponent
+        redirectTo: '/sector/data-centre',
+        pathMatch: 'full'
+        // component: SectorComponent
     },
     {path: 'building-code',
         component: BuildingCodeComponent
+    },
+    {path: 'software/architecture-design-services',
+        component: ArchitectureDesignServicesComponent,
+        data: {
+            title: 'Architecture Design Software Comparison Autodesk Revit vs ALLPLAN',
+            description: "Detailed comparison of Autodesk Revit and ALLPLAN architecture & structural design software. Explore their features, strengths, pricing, and ideal use cases to make the right choice for your project.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/software/architecture-design-services'
+        }
     },
     {path: 'sector/data-centre', component: DataCenterSectorComponent,
         data: {

@@ -10,7 +10,6 @@
 /services/steel-detailing-services
 /ai-project-management
 /business-intelligence
-/sector
 /sector/data-centre
 /training
 /pricing
@@ -39,3 +38,4 @@
 /partners/clove-technologies-private-limited
 /partners/tritech-corporation
 /building-code
+/software/architecture-design-services
