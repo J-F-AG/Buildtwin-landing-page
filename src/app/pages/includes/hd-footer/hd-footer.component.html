@@ -23,38 +23,13 @@
     <div class="list-item-link-svg"></div>
     <div class="list-item-link-svg1"></div>
     <div class="list-item-link-svg2"></div>
-    <div class="home-link">
-      <div class="app-banner">
-        <a class="navbar-brand" [routerLink]="_languageService.currentLanguage || '/'">
-            <img src="assets/images/logo2.png" alt="logo">
-            <!-- <span>Beta</span> ! -->
-        </a>
-        <div class="call-schedule">
-          <div class="call-line">
-            <a class="item-link" routerLink="{{_languageService.currentLanguage}}/contact">Contact</a>
-            <a class="item-link" routerLink="{{_languageService.currentLanguage}}/privacy-policy">Privacy Policy</a>
-            <a class="item-link1" routerLink="{{_languageService.currentLanguage}}/terms-conditions">Imprint</a>
-          </div>
-        </div>
-      </div>
-    </div>
     <section class="u-s-a-header">
-      <div class="country-link">
-        <h3 class="app-root-app-online-meeting-">Let’s talk</h3>
-        <div class="item-link2">
-          From custom demos to customization - we are here to delight you.
-        </div>
-      </div>
-      <div class="divider-line">
-        <div class="sub-menu-frame" (click)="call()">
-          <a  class="schedule-call-button" href="javascript:void(0)">
-            <div class="schedule-call">Schedule call</div>
-          </a>
-          <div class="middle-frame"></div>
-        </div>
-      </div>
       <div class="europe-header">
         <div class="e-u-link">
+          <a class="navbar-brand" [routerLink]="_languageService.currentLanguage || '/'">
+              <img src="assets/images/logo2.png" alt="logo">
+              <!-- <span>Beta</span> ! -->
+          </a>
           <div class="item-link3">
             Get pre-qualified for the BuildTwin Marketplace.
           </div>
@@ -138,6 +113,52 @@
       </div>
       <div class="frame-line1"></div>
     </section>
+    <div class="home-link">
+      <div class="app-banner">
+        <div class="left">
+          <div class="country-link">
+            <h3 class="app-root-app-online-meeting-">Let’s talk</h3>
+            <div class="item-link2">
+              From custom demos to customization - we are here to delight you.
+            </div>
+          </div>
+          <div class="divider-line">
+            <div class="sub-menu-frame" (click)="call()">
+              <a  class="schedule-call-button" href="javascript:void(0)">
+                <div class="schedule-call">Schedule call</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="call-schedule">
+            <h5>Services</h5>
+            <div class="call-line">
+              <a class="item-link" routerLink="/services/pre-cast-detailing-services"> Precast Detailing </a>
+              <a class="item-link" routerLink="/services/steel-detailing-services">Structural Steel Detailing</a>
+              <a class="item-link1" routerLink="/services/rebar-detailing-services">Rebar Detailing</a>
+              <a class="item-link1" routerLink="/services/bim-services">BIM Services</a>
+            </div>
+          </div>
+          <div class="call-schedule">
+            <!-- <h5>Blog</h5> -->
+            <div class="call-line">
+              <a class="item-link" href="https://www.buildtwin.com/blog" target="_blank">Blog</a>
+            </div>
+          </div>
+          <div class="call-schedule">
+            <!-- <h5>Get in Touch</h5> -->
+            <div class="call-line">
+              <a class="item-link" routerLink="{{_languageService.currentLanguage}}/contact">Contact</a>
+              <a class="item-link" routerLink="{{_languageService.currentLanguage}}/privacy-policy">Privacy Policy</a>
+              <a class="item-link1" routerLink="{{_languageService.currentLanguage}}/terms-conditions">Imprint</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="middle-frame"></div>
     <footer class="item-link5" [ngClass]="{'block':(_footerService['companyDetail'] && _footerService['companyDetail']['name'])}">
       <ng-container *ngIf="_footerService['companyDetail'] && _footerService['companyDetail']['name']">
         The information provided on this business listing page is based solely on the details shared by the company {{_footerService['companyDetail']['name']}}. While we strive to ensure that the information is accurate and up-to-date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information provided.
