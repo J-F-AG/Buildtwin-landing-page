@@ -11,6 +11,7 @@
 /ai-project-management
 /business-intelligence
 /sector/data-centre
+/sector/power-plant
 /training
 /pricing
 /good-reason
@@ -38,4 +39,5 @@
 /partners/clove-technologies-private-limited
 /partners/tritech-corporation
 /building-code
+/building-code/aisc
 /software/architecture-design-services
