@@ -10,7 +10,6 @@
 /services/steel-detailing-services
 /ai-project-management
 /business-intelligence
-/sector
 /sector/data-centre
 /sector/power-plant
 /training
@@ -41,3 +40,4 @@
 /partners/tritech-corporation
 /building-code
 /building-code/aisc
+/software/architecture-design-services

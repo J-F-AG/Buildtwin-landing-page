@@ -346,6 +346,13 @@ import { PowerPlantHdDiscoverProjectsComponent } from './pages/sector-power-plan
 import { PowerPlantSectorCategoryComponent } from './pages/sector-power-plant/sector-category/service-category.component';
 import { PowerPlantSpecialProjectComponent } from './pages/sector-power-plant/special-project/special-project.component';
 import { PowerPlantTtPartnersComponent } from './pages/sector-power-plant/tt-partners/tt-partners.component';
+import { ArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector.component';
+import { FaqBuildtwinArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/faq-buildtwin/faq-buildtwin.component';
+import { HdDiscoverProjectsArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/hd-discover-projects/hd-discover-projects.component';
+import { TtPartnersArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/tt-partners/tt-partners.component';
+import { SpecialProjectArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/special-project/special-project.component';
+import { SectorCategoryArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector-category/service-category.component';
+import { HdServicesArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/hd-services/hd-services.component';
 
 
 
@@ -662,7 +669,14 @@ import { PowerPlantTtPartnersComponent } from './pages/sector-power-plant/tt-par
    PowerPlantHdDiscoverProjectsComponent,
    PowerPlantSectorCategoryComponent,
    PowerPlantSpecialProjectComponent,
-   PowerPlantTtPartnersComponent
+   PowerPlantTtPartnersComponent,
+   ArchitectureDesignServicesComponent,
+   FaqBuildtwinArchitectureDesignServicesComponent,
+   HdDiscoverProjectsArchitectureDesignServicesComponent,
+   HdServicesArchitectureDesignServicesComponent,
+   SectorCategoryArchitectureDesignServicesComponent,
+   SpecialProjectArchitectureDesignServicesComponent,
+   TtPartnersArchitectureDesignServicesComponent,
   ],
   imports: [    
     BrowserModule,

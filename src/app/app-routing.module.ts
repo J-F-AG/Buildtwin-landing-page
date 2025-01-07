@@ -32,6 +32,7 @@ import { BuildingCodeComponent } from './pages/building-code/sector.component';
 import { DataCenterSectorComponent } from './pages/sector-data-center/sector.component';
 import { BuildingCodeAiscComponent } from './pages/building-code-aisc/sector.component';
 import { SectorPowerPlantComponent } from './pages/sector-power-plant/sector.component';
+import { ArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector.component';
 
 
 
@@ -192,7 +193,9 @@ const routes: Routes = [
     //     pathMatch: 'full'
     // },
     {path: 'sector', 
-        component: SectorComponent
+        redirectTo: '/sector/data-centre',
+        pathMatch: 'full'
+        // component: SectorComponent
     },
     {path: 'building-code',
         component: BuildingCodeComponent
@@ -203,6 +206,15 @@ const routes: Routes = [
             description: 'Explore the importance of the AISC Building Code for safe, durable, and efficient steel construction. Connect with AISC-compliant service providers on BuildTwin',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/building-code/aisc'
+        }
+    },
+    {path: 'software/architecture-design-services',
+        component: ArchitectureDesignServicesComponent,
+        data: {
+            title: 'Architecture Design Software Comparison Autodesk Revit vs ALLPLAN',
+            description: "Detailed comparison of Autodesk Revit and ALLPLAN architecture & structural design software. Explore their features, strengths, pricing, and ideal use cases to make the right choice for your project.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/software/architecture-design-services'
         }
     },
     {path: 'sector/data-centre', component: DataCenterSectorComponent,
