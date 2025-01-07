@@ -240,6 +240,21 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        .child-block {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            h4 {
+                margin: 0;
+                font-weight: 700;
+            }
+        }
+        h5 + .child-block {
+            border-top: none;
+            padding-top: 0;
+        }
         .list {
             display: flex;
             flex-direction: column;
@@ -267,6 +282,27 @@
                     border-left: 2px solid var(--themeColor);
                     border-bottom: 2px solid var(--themeColor);
                     transform: rotate(-45deg);
+                }
+                &.cross {
+                    &::after,
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        border: none;
+                        left: 0;
+                        top: 50%;
+                        width: 17px;
+                        height: 4px;
+                        background-color: red;
+                        transform: translateY(-50%) rotate(45deg);
+                        border: 1px solid black;
+                    }
+                    &::before {
+                        transform: translateY(-50%) rotate(-45deg);
+                    }
+                }
+                .block-str {
+                    display: block;
                 }
             }
         }
