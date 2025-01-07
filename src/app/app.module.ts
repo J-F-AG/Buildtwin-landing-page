@@ -333,6 +333,13 @@ import { TtPartnersArchitectureDesignServicesComponent } from './pages/software/
 import { SpecialProjectArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/special-project/special-project.component';
 import { SectorCategoryArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector-category/service-category.component';
 import { HdServicesArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/hd-services/hd-services.component';
+import { TtPartnersStructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/tt-partners/tt-partners.component';
+import { SpecialProjectStructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/special-project/special-project.component';
+import { SectorCategoryStructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/sector-category/service-category.component';
+import { HdServicesStructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/hd-services/hd-services.component';
+import { HdDiscoverProjectsStructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/hd-discover-projects/hd-discover-projects.component';
+import { FaqBuildtwinStructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/faq-buildtwin/faq-buildtwin.component';
+import { StructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/sector.component';
 
 
 
@@ -635,6 +642,13 @@ import { HdServicesArchitectureDesignServicesComponent } from './pages/software/
    SectorCategoryArchitectureDesignServicesComponent,
    SpecialProjectArchitectureDesignServicesComponent,
    TtPartnersArchitectureDesignServicesComponent,
+   StructuralSteelDetailingSoftwareComponent,
+   FaqBuildtwinStructuralSteelDetailingSoftwareComponent,
+   HdDiscoverProjectsStructuralSteelDetailingSoftwareComponent,
+   HdServicesStructuralSteelDetailingSoftwareComponent,
+   SectorCategoryStructuralSteelDetailingSoftwareComponent,
+   SpecialProjectStructuralSteelDetailingSoftwareComponent,
+   TtPartnersStructuralSteelDetailingSoftwareComponent
   ],
   imports: [    
     BrowserModule,

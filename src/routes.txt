@@ -39,3 +39,4 @@
 /partners/tritech-corporation
 /building-code
 /software/architecture-design-services
+/software/structural-steel-detailing

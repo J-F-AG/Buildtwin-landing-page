@@ -31,6 +31,7 @@ import { SectorComponent } from './pages/sector/sector.component';
 import { BuildingCodeComponent } from './pages/building-code/sector.component';
 import { DataCenterSectorComponent } from './pages/sector-data-center/sector.component';
 import { ArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector.component';
+import { StructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/sector.component';
 
 
 
@@ -205,6 +206,15 @@ const routes: Routes = [
             description: "Detailed comparison of Autodesk Revit and ALLPLAN architecture & structural design software. Explore their features, strengths, pricing, and ideal use cases to make the right choice for your project.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/software/architecture-design-services'
+        }
+    },
+    {path: 'software/structural-steel-detailing',
+        component: StructuralSteelDetailingSoftwareComponent,
+        data: {
+            title: 'Structural Steel Detailing Software Comparison: Tekla Structures vs SDS/2',
+            description: "Detailed comparison of Tekla Structures and SDS/2 for structural steel detailing. Explore their features, strengths, pricing, and ideal use cases to choose the right software for your project.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/software/structural-steel-detailing'
         }
     },
     {path: 'sector/data-centre', component: DataCenterSectorComponent,

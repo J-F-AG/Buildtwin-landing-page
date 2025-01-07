@@ -23,6 +23,7 @@ Disallow: /blog-details5
 Disallow: /sector
 Disallow: /building-code
 Disallow: /software/architecture-design-services
+Disallow: /software/structural-steel-detailing
 
 Allow: /services/bim-service-provider-in-usa
 
