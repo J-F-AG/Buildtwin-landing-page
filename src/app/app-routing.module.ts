@@ -198,6 +198,11 @@ const routes: Routes = [
         pathMatch: 'full'
         // component: SectorComponent
     },
+    {path: 'software', 
+        redirectTo: '/software/architecture-design-services',
+        pathMatch: 'full'
+        // component: SectorComponent
+    },
     {path: 'building-code',
         redirectTo: '/building-code/aisc',
         pathMatch: 'full'
