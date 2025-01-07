@@ -56,12 +56,12 @@
   .item-link,
   .item-link1 {
     position: relative;
-    text-decoration: underline;
+    // text-decoration: underline;
     line-height: 140%;
     font-weight: 600;
     z-index: 1;
     color: #808080;
-    &:hover{text-decoration: none;}
+    &:hover{text-decoration: none; color: black;}
   }
   .call-line,
   .call-schedule {
@@ -70,12 +70,12 @@
   }
   .call-line {
     align-self: stretch;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
+    flex-direction: column;
+    // justify-content: space-between;
+    gap: 10px;
   }
   .call-schedule {
-    width: 250px;
+    // width: 250px;
     flex-direction: column;
     justify-content: flex-start;
     padding: 0 0 2px;
@@ -91,9 +91,26 @@
   }
   .app-banner {
     flex: 1;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 50px;
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 350px;
+    }
+    .right {
+      max-width: calc(100% - 400px);
+      flex-grow: 1;
+      display: flex;
+      // justify-content: space-between;
+      justify-content: flex-end;
+      gap: 130px;
+      > div {
+        // flex: 1;
+      }
+    }
   }
   .home-link {
     align-self: stretch;
@@ -205,11 +222,12 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 20px 0;
+    padding: 0;
     gap: 12px 0;
+    align-self: flex-start;
   }
   .frame-line {
-    height: 124px;
+    // height: 124px;
     width: 1px;
     position: relative;
     border-right: 1px solid #d1d1d1;
@@ -401,7 +419,7 @@
   .frame-frame {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    // align-items: center;
     justify-content: flex-start;
   }
   .frame-frame {
