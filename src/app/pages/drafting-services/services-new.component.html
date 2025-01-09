@@ -1,0 +1,31 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="mainContainer">
+    <div class="maincontent">
+        <app-drafting-banner></app-drafting-banner>
+        <app-drafting-three-cards></app-drafting-three-cards>
+        <app-drafting-trust-by></app-drafting-trust-by>
+        <!-- <app-drafting-sample-drawing></app-drafting-sample-drawing> -->
+        <app-drafting-precast-service></app-drafting-precast-service>
+        <app-drafting-top-vendors></app-drafting-top-vendors>
+
+        <app-drafting-how-it-worksNew></app-drafting-how-it-worksNew>
+        <app-drafting-live-trackingNew></app-drafting-live-trackingNew>
+
+        <app-service-category [category]="8" ></app-service-category>
+        <app-drafting-plug-play></app-drafting-plug-play>
+        <app-drafting-services-offered></app-drafting-services-offered>
+        <app-drafting-e2e-encryption></app-drafting-e2e-encryption>
+        <!-- <app-drafting-faq-buildtwin></app-drafting-faq-buildtwin> -->
+    </div>
+    <div class="toggle-sidebar" (click)="toggleSidebar()">Start Enquiry</div>
+    <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+        <span class="cross" (click)="toggleSidebar()"></span>
+        <aside class="Stickyform">
+            <app-free-offer-form class="formWrapper"></app-free-offer-form>
+        </aside>
+    </div>
+</div>
+
+<app-drafting-drawing-freelancers></app-drafting-drawing-freelancers> 
+<app-hd-footer></app-hd-footer>

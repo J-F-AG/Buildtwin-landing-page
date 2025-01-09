@@ -1,0 +1,28 @@
+.drawingFreelancers{ background-color: white; position: relative; z-index: 2;
+    padding-top: 60px;
+    .container{
+        .threeColWrapper {padding-bottom: 10px;
+        h3{font-size: 24px; color: black; margin-bottom: 20px;}
+        .threeColList{ display: flex; flex-wrap: wrap;
+            li{color: #3f3f3f; width: 33%; margin-bottom: 10px; font-size: 14px;
+            a{color: #3f3f3f;}
+            }
+        }
+        }
+    }
+}
+@media only screen and (max-width : 767px) {
+    .drawingFreelancers {
+        padding-top: 0;
+    }
+    .drawingFreelancers .container .threeColWrapper h3 {
+        font-size: 22px;
+    }
+    .drawingFreelancers .container .threeColWrapper .threeColList {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .drawingFreelancers .container .threeColWrapper .threeColList li {
+        width: auto;
+    }
+}

@@ -1,0 +1,126 @@
+.faqWrapper{
+    padding: 0 0;
+    position: relative;
+
+    .container{ position: relative;
+        &::before{ content: "";
+            background: url(../../../../assets/images/faqBG.png) left top no-repeat ;
+            position: absolute;
+            width: 229px;
+            height: 160px;
+            left: -100px;
+            top: 156px;
+        }
+    }
+
+    .heading{
+        // padding-bottom: 40px;
+        h2{font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            strong{ position: relative;
+                &::after{ content : url(../../../../assets/images/faqTitleIcon.png); position: absolute; right: -47px; top: -30px;}
+            }
+        }
+    }
+
+}
+.faq-accordion {
+
+    .mat-accordion {
+        .mat-expansion-panel {
+            box-shadow: unset;
+            // padding: 22px 100px 22px 20px;
+            color: var(--blackColor);
+            background: var(--whiteColor);
+            transition: var(--transition);
+            border-bottom: 2px solid var(--borderColor);
+            position: relative;
+
+            .mat-expansion-panel-header {
+                border-radius: 0;
+                display: block;
+                height: auto;
+            }
+            .mat-expansion-panel-header-title {
+                display: block;
+                margin-right: 0;
+                color: var(--blackColor);
+                transition: var(--transition);
+                padding: 22px 100px 22px 20px;
+
+                font-size: 16px;
+                font-weight: 500;
+            }
+            &:not(.mat-expanded) {
+                .mat-expansion-panel-header {
+                    padding: 0;
+                    &:not([aria-disabled=true]) {
+                        transition: var(--transition);
+
+                        &:hover {
+                            background: transparent;
+                        }
+                    } 
+                }
+            }
+
+            &::before {content : url(../../../../assets/images/Plus.png); position: absolute; right: 20px; top: 20px; }
+
+            &.mat-expanded {
+                box-shadow: unset;
+                margin-bottom: 0;
+
+                .mat-expansion-panel-header {
+                    padding: 0;
+                }
+
+                &::before {content : url(../../../../assets/images/Minus.png);}
+
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+// .mat-expansion-panel-header-title{padding: 22px 100px 22px 20px;}
+// .mat-expansion-panel-body{padding: 22px 100px 22px 20px;}
+
+        }
+    }
+}
+::ng-deep {
+    .mat-expansion-panel, .mat-expansion-panel-header.mat-expanded:focus, .mat-expansion-panel-header.mat-expanded:hover{background: transparent !important;}
+    .faq-accordion {
+        .mat-accordion {
+            .mat-expansion-panel {
+                .mat-expansion-indicator {
+                    display: none;
+                }
+                .mat-content {
+                    overflow: unset;
+                    display: block;
+                }
+                .mat-expansion-panel-body {
+                    padding: 0px 100px 22px 20px;
+                    p {
+                        font-size: 14px;
+                        color: #0C0E1E;
+                    }
+                }
+            }
+        }
+    }
+}
+
+mat-expansion-panel ul {
+    list-style-type: disc; /* Ensure the unordered list has bullet points */
+    padding-left: 20px; /* Add some padding for the bullets to appear properly */
+  }
+  
+  mat-expansion-panel li {
+    margin-bottom: 5px; /* Optional: Adds some space between the list items */
+  }
+
+  b {
+    font-weight: 500; /* You can choose a weight between 400 (normal) and 700 (bold) */
+}

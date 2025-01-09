@@ -34,6 +34,9 @@ import { BuildingCodeAiscComponent } from './pages/building-code-aisc/sector.com
 import { SectorPowerPlantComponent } from './pages/sector-power-plant/sector.component';
 import { ArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector.component';
 import { StructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/sector.component';
+import { DraftingServicesNewComponent } from './pages/drafting-services/services-new.component';
+import { CadServicesNewComponent } from './pages/cad-services/services-new.component';
+import { BuildingCodeEuroComponent } from './pages/building-code-euro/sector.component';
 
 
 
@@ -44,8 +47,8 @@ const routes: Routes = [
     {
         path: '', component: HelpDeskHomeComponent,
         data: {
-            title: 'Buildtwin | Marketplace for Structural Engineering Services',
-            description: 'Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform.',
+            title: 'Find Structural Engineering Services & Solutions | BuildTwin Marketplace',
+            description: 'Find professional structural engineering services and solutions at BuildTwin Marketplace. Connect with top structural engineering firms & companies offering consultation and expert services across the USA, EU, Middle East, UK, Australia, and India.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com'
         }
@@ -215,6 +218,14 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/building-code/aisc'
         }
     },
+    {path: 'building-code/eurocode', component: BuildingCodeEuroComponent,
+        data: {
+            title: 'Understanding the Eurocode | BuildTwin Marketplace',
+            description: 'Discover essential guidelines for Eurocode design standards to enhance your engineering projects. Read the article for practical insights and clarity.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/building-code/eurocode'
+        }
+    },
     {path: 'software/architecture-design-services',
         component: ArchitectureDesignServicesComponent,
         data: {
@@ -260,8 +271,8 @@ const routes: Routes = [
     {
         path: 'services/pre-cast-detailing-services', component: ServicesNewComponent,
         data: {
-            title: 'Precast Detailing Services by Pre-Qualified Vendors | BuildTwin',
-            description: "Streamline your projects with BuildTwin's precast detailing services. Select from hundreds of pre-qualified vendors, monitor progress live, and receive internationally compliant drawings",
+            title: 'Precast Detailing Services | Precast Panel & Concrete Detailing | BuildTwin',
+            description: "Explore BuildTwin Marketplace for precast detailing services, including precast panel, concrete, and wall detailing. Serving the USA, EU, Middle East, UK, Australia, and India. Optimize your projects with our experienced precast detailers.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/pre-cast-detailing-services'
         }
@@ -270,8 +281,8 @@ const routes: Routes = [
     {
         path: 'services/rebar-detailing-services', component: RebarServicesNewComponent,
         data: {
-            title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
-            description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
+            title: 'Rebar Detailing Services | Rebar Shop Drawings & Design | BuildTwin',
+            description: "BuildTwin Marketplace offers rebar detailing and shop drawing services, catering to clients in the USA, EU, Middle East, UK, Australia, and India. Partner with top rebar design & detailing services companies.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/rebar-detailing-services'
         }
@@ -280,8 +291,8 @@ const routes: Routes = [
     {
         path: 'services/bim-services', component: BimServicesNewComponent,
         data: {
-            title: 'BIM (Building Information Modeling) Services For AEC Projects | BuildTwin',
-            description: "BuildTwin Marketplace offers comprehensive BIM services to streamline your AEC projects. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
+            title: 'BIM Services | BIM Modeling Consulting | BIM MEP Outsourcing | BuildTwin',
+            description: "Explore BIM services at BuildTwin Marketplace. Offering BIM outsourcing and consulting services for architectural, structural and engineering. Trusted Building Information Modeling service providers in USA, EU, Middle East, UK, Australia & India.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/bim-services'
         }
@@ -290,8 +301,8 @@ const routes: Routes = [
     {
         path: 'services/steel-detailing-services', component: StructuralSteelServicesNewComponent,
         data: {
-            title: 'Structural Steel Detailing Services for AEC Project | BuildTwin',
-            description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects. Our services include shop drawings, erection drawings, 2D and 3D modelling, connection design, and miscellaneous steel detailing.",
+            title: 'Steel Detailing Services | Marketplace for Structural Steel Detailing | BuildTwin',
+            description: "BuildTwin Marketplace offers a comprehensive platform for steel detailing services. Trusted by structural steel detailing companies, we serve clients across the USA, Middle East, EU, UK, Australia and India.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/steel-detailing-services'
         }
@@ -314,6 +325,25 @@ const routes: Routes = [
             description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects in the USA. Our services include shop drawings, erection drawings, 2D and 3D modeling, connection design, and miscellaneous steel detailing.",
             image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
             canonical: 'https://www.buildtwin.com/services/steel-detailing-services-in-usa'
+        }
+    },
+
+    {
+        path: 'services/drafting-services', component: DraftingServicesNewComponent,
+        data: {
+            title: 'Drafting Services for AEC Projects',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your drafting services for construction and engineering projects.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/drafting-services'
+        }
+    },
+    {
+        path: 'services/cad-services', component: CadServicesNewComponent,
+        data: {
+            title: 'Cad Services for AEC Projects',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your cad services for construction and engineering projects.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/cad-services'
         }
     },
 

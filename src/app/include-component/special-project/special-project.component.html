@@ -1,6 +1,6 @@
 <section class="specialProjectsSection global-mb">
     <div class="containerWrap">
-        <div class="sectionHeader">
+        <div class="sectionHeader" *ngIf="heading">
             <div class="heading">
                 <div class="title" *ngIf="!page; else other_content">Discover Sectors</div>
                 <ng-template #other_content>

@@ -360,6 +360,41 @@ import { HdServicesStructuralSteelDetailingSoftwareComponent } from './pages/sof
 import { HdDiscoverProjectsStructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/hd-discover-projects/hd-discover-projects.component';
 import { FaqBuildtwinStructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/faq-buildtwin/faq-buildtwin.component';
 import { StructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/sector.component';
+import { DraftingServicesNewComponent } from './pages/drafting-services/services-new.component';
+import { DraftingBannerComponent } from './pages/drafting-services/banner/banner.component';
+import { DraftingDrawingFreelancersComponent } from './pages/drafting-services/drawing-freelancers/drawing-freelancers.component';
+import { DraftingE2eEncryptionComponent } from './pages/drafting-services/e2e-encryption/e2e-encryption.component';
+import { DraftingFaqBuildtwinComponent } from './pages/drafting-services/faq-buildtwin/faq-buildtwin.component';
+import { DraftingHowItWorksNewComponent } from './pages/drafting-services/how-it-works/how-it-works.component';
+import { DraftingLiveTrackingNewComponent } from './pages/drafting-services/live-tracking/live-tracking.component';
+import { DraftingPlugPlayNewComponent } from './pages/drafting-services/plug-play/plug-play.component';
+import { DraftingSampleDrawingComponent } from './pages/drafting-services/sample-drawing/sample-drawing.component';
+import { DraftingPrecastServiceComponent } from './pages/drafting-services/precast-service/precast-service.component';
+import { DraftingServicesOfferedComponent } from './pages/drafting-services/services-offered/services-offered.component';
+import { DraftingThreeCardsComponent } from './pages/drafting-services/three-cards/three-cards.component';
+import { DraftingTopVendorsComponent } from './pages/drafting-services/top-vendors/top-vendors.component';
+import { DraftingTrustByNewComponent } from './pages/drafting-services/trust-by/trust-by.component';
+import { CadServicesNewComponent } from './pages/cad-services/services-new.component';
+import { CadBannerComponent } from './pages/cad-services/banner/banner.component';
+import { CadDrawingFreelancersComponent } from './pages/cad-services/drawing-freelancers/drawing-freelancers.component';
+import { CadE2eEncryptionComponent } from './pages/cad-services/e2e-encryption/e2e-encryption.component';
+import { CadFaqBuildtwinComponent } from './pages/cad-services/faq-buildtwin/faq-buildtwin.component';
+import { CadHowItWorksNewComponent } from './pages/cad-services/how-it-works/how-it-works.component';
+import { CadLiveTrackingNewComponent } from './pages/cad-services/live-tracking/live-tracking.component';
+import { CadPlugPlayNewComponent } from './pages/cad-services/plug-play/plug-play.component';
+import { CadServiceComponent } from './pages/cad-services/cad-service/cad-service.component';
+import { CadSampleDrawingComponent } from './pages/cad-services/sample-drawing/sample-drawing.component';
+import { CadServicesOfferedComponent } from './pages/cad-services/services-offered/services-offered.component';
+import { CadThreeCardsComponent } from './pages/cad-services/three-cards/three-cards.component';
+import { CadTopVendorsComponent } from './pages/cad-services/top-vendors/top-vendors.component';
+import { CadTrustByNewComponent } from './pages/cad-services/trust-by/trust-by.component';
+import { BuildingCodeEuroComponent } from './pages/building-code-euro/sector.component';
+import { FaqBuildtwinBuildingCodeEuroComponent } from './pages/building-code-euro/faq-buildtwin/faq-buildtwin.component';
+import { HdDiscoverProjectsBuildingCodeEuroComponent } from './pages/building-code-euro/hd-discover-projects/hd-discover-projects.component';
+import { HdServicesBuildingCodeEuroComponent } from './pages/building-code-euro/hd-services/hd-services.component';
+import { SectorCategoryBuildingCodeEuroComponent } from './pages/building-code-euro/sector-category/service-category.component';
+import { SpecialProjectBuildingCodeEuroComponent } from './pages/building-code-euro/special-project/special-project.component';
+import { TtPartnersBuildingCodeEuroComponent } from './pages/building-code-euro/tt-partners/tt-partners.component';
 
 
 
@@ -640,6 +675,37 @@ import { StructuralSteelDetailingSoftwareComponent } from './pages/software/stru
    SteelDetailingUsaTopVendorsComponent,
    SteelDetailingUsaTrustByNewComponent,
    SteelDetailingUsaServicesNewComponent,
+
+   DraftingServicesNewComponent,
+   DraftingBannerComponent,
+   DraftingDrawingFreelancersComponent,
+   DraftingE2eEncryptionComponent,
+   DraftingFaqBuildtwinComponent,
+   DraftingHowItWorksNewComponent,
+   DraftingLiveTrackingNewComponent,
+   DraftingPlugPlayNewComponent,
+   DraftingPrecastServiceComponent,
+   DraftingSampleDrawingComponent,
+   DraftingServicesOfferedComponent,
+   DraftingThreeCardsComponent,
+   DraftingTopVendorsComponent,
+   DraftingTrustByNewComponent,
+
+   CadServicesNewComponent,
+   CadBannerComponent,
+   CadDrawingFreelancersComponent,
+   CadE2eEncryptionComponent,
+   CadFaqBuildtwinComponent,
+   CadHowItWorksNewComponent,
+   CadLiveTrackingNewComponent,
+   CadPlugPlayNewComponent,
+   CadServiceComponent,
+   CadSampleDrawingComponent,
+   CadServicesOfferedComponent,
+   CadThreeCardsComponent,
+   CadTopVendorsComponent,
+   CadTrustByNewComponent,
+
    SpecialProjectComponent,
    ServiceCategoryComponent,
    SectorCategoryComponent,
@@ -670,6 +736,14 @@ import { StructuralSteelDetailingSoftwareComponent } from './pages/software/stru
    SpecialProjectBuildingCodeAiscComponent,
    TtPartnersBuildingCodeAiscComponent,
    BuildingCodeAiscComponent,
+
+   BuildingCodeEuroComponent,
+   FaqBuildtwinBuildingCodeEuroComponent,
+   HdDiscoverProjectsBuildingCodeEuroComponent,
+   HdServicesBuildingCodeEuroComponent,
+   SectorCategoryBuildingCodeEuroComponent,
+   SpecialProjectBuildingCodeEuroComponent,
+   TtPartnersBuildingCodeEuroComponent,
 
    SectorPowerPlantComponent,
    PowerPlantFaqBuildtwinComponent,

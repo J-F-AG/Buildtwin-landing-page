@@ -289,10 +289,10 @@
             <div class="list-type-wrapper bottom-space-big">
                 <div class="block cursor" [routerLink]="'/services/pre-cast-detailing-services'">
                     <h5>
-                        <figure>
+                        <!-- <figure>
                             <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
                             
-                        </figure>
+                        </figure> -->
                         Structural Services 
                     </h5>
                     <!-- <p>
@@ -307,10 +307,10 @@
                 </div>
                 <div class="block cursor" [routerLink]="'/services/steel-detailing-services'">
                     <h5>
-                        <figure>
+                        <!-- <figure>
                             <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
                             
-                        </figure>
+                        </figure> -->
                         MEP Services 
                     </h5>
                     <!-- <p>
@@ -324,10 +324,10 @@
                 </div>
                 <div class="block cursor" [routerLink]="'/services/bim-services'">
                     <h5>
-                        <figure>
+                        <!-- <figure>
                             <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
                             
-                        </figure>
+                        </figure> -->
                         BIM Services 
                     </h5>
                     <!-- <p>
@@ -341,10 +341,10 @@
                 </div>
                 <div class="block">
                     <h5>
-                        <figure>
+                        <!-- <figure>
                             <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
                             
-                        </figure>
+                        </figure> -->
                         Detailing Services 
                     </h5>
                     <!-- <p>
@@ -655,7 +655,18 @@
 
     </div>
 
-    <app-data-center-special-project [page]="'sector'"></app-data-center-special-project>
+    <div class="container">
+        <div class="main-head">
+            <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+                <div class="heading">
+                    <div class="title">Other Sectors We Serve</div>
+                    <div class="subTitle">Unified Engineering Excellence, across diverse industries, delivered by pre-qualified expert teams</div>
+                </div>
+            </div>
+            <!-- <button mat-button class="default-btn align-self-end">Explore Case studies</button> -->
+        </div>
+    </div>
+<app-special-project [heading]="false" [hideItem]="1"></app-special-project>
 
     <app-data-center-faq-buildtwin [fullScreen]="true"></app-data-center-faq-buildtwin>
     <!-- <div class="container">

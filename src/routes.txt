@@ -8,6 +8,8 @@
 /services/bim-service-provider-in-usa
 /services/steel-detailing-services-in-usa
 /services/steel-detailing-services
+/services/drafting-services
+/services/cad-services
 /ai-project-management
 /business-intelligence
 /sector/data-centre
@@ -39,5 +41,6 @@
 /partners/clove-technologies-private-limited
 /partners/tritech-corporation
 /building-code/aisc
+/building-code/eurocode
 /software/architecture-design-services
 /software/structural-steel-detailing

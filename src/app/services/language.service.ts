@@ -17,6 +17,8 @@ export class LanguageService {
     "steel-detailing-services" : 12,  //this has to be updated later
     "bim-service-provider-in-usa" : 13,  //this has to be updated later
     "steel-detailing-services-in-usa" : 14,  //this has to be updated later
+    "drafting-services" : 15,  //this has to be updated later
+    "cad-services" : 16  //this has to be updated later
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
@@ -36,6 +38,12 @@ export class LanguageService {
     },
     "steel-detailing-services-in-usa" : {
       name: 'Structural Steel Detailing Services'
+    },
+    "drafting-services" : {
+      name: "Drafting Services"
+    },
+    "cad-services" : {
+      name: "CAD Services"
     }
   }
   isBrowser: boolean;
@@ -963,6 +971,52 @@ export class LanguageService {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The appropriate Level of Development (LOD) for your project depends on various factors, including the project's phase, complexity, and specific requirements. LOD levels range from 100 to 500: LOD 100 (Conceptual Design): Basic massing models representing overall project intent. LOD 200 (Schematic Design): Generalized systems and assemblies with approximate quantities, size, shape, and location. LOD 300 (Detailed Design): Precise modeling with specific assemblies, accurate quantities, and dimensions suitable for coordination. LOD 350 (Construction Documentation): Includes interfaces between building elements, supporting detailed coordination. LOD 400 (Fabrication and Assembly): Models include complete fabrication and assembly information. LOD 500 (As-Built): Represents the project as constructed, useful for operations and maintenance. How BuildTwin Assists: Our vendors can deliver BIM models at any LOD required for your project. We recommend: Early Phases: Start with LOD 100-200 for conceptual and schematic designs. Design Development: Progress to LOD 300-350 for detailed coordination and construction documentation. Construction and Fabrication: Utilize LOD 400 for fabrication details. Facility Management: Employ LOD 500 for as-built models for long-term maintenance. Our experts can guide you in selecting the appropriate LOD to meet your project's needs and objectives."
+        }
+      }]
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForCADServices(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What types of CAD services are offered through BuildTwin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our marketplace has vendors offering a diverse range of CAD services through our platform. ●2D Drafting: Drafting for floor plans, sections, and layouts ●3D Modeling: Advanced 3D models for architectural, structural, and mechanical designs ●BIM Integration: BIM coordination and clash detection ●Steel Detailing: Detailing for structural steel components ●Rebar Detailing: Drawings and schedules for reinforcing steel ●MEP Drafting: Drafting for mechanical, electrical, and plumbing systems."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does BuildTwin ensure the quality of CAD services provided by vendors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The vendors listed in BuildTwin marketplace are vetted by experts. All our vendors adhere to globally recognized standards in CAD services. Here are some of the compliances standards we follow. ●ISO 19650: Standards for managing information using BIM throughout the project lifecycle. ●ASME Y14.5: Guidelines for Geometric Dimensioning and Tolerancing (GD&T). ●AISC Standards: Specifications for structural steel detailing. ●BS 8888: British standards for technical product documentation. ●DIN Standards: German standards for precision in mechanical and structural CAD design."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I choose from pre-qualified vendors for CAD Services on BuildTwin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. At BuildTwin, we offer access to a pool of pre-qualified vendors specializing in CAD services. Our marketplace lets you ●Browse Vendor Profiles: View detailed profiles, including past projects, client reviews, and areas of expertise. ●Compare Bids: Receive and compare bids from multiple vendors to find the best fit for your project budget and timeline. ●Select Based on Expertise: Choose vendors with specific experience relevant to your project's requirements. ●Get Global Access: Connect with vendors worldwide, giving you access to a broader talent pool and competitive pricing. Our platform simplifies the vendor selection process, ensuring you find the right partner for your project."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does BuildTwin's AI technology enhance CAD services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At BuildTwin, we leverage AI to enhance CAD services in several ways: ●AI Design Manager: Assists with project management tasks, automates routine processes, and helps in maintaining compliance with industry standards. ●Automated Quality Checks: AI algorithms review drawings and models for errors, ensuring high-quality outputs. ●Efficient Communication: AI-powered tools facilitate streamlined communication between clients and vendors, reducing delays. ●Data Management: Our AI manages project data securely, providing easy access and version control. ●Predictive Insights: AI provides insights into project timelines and potential bottlenecks, allowing for proactive management. By integrating AI, we help you achieve greater efficiency, accuracy, and productivity in your CAD projects."
         }
       }]
     };
@@ -2230,6 +2284,150 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(faqSchema);
   }
+
+
+  injectFAQSchemaForBuildingCodeEuro(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What are Eurocodes?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Eurocodes are a comprehensive set of European standards governing structural design of buildings and other civil structures and, promoting safety, efficiency, and sustainability." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What is the role of EN 1990 in the design of structures Eurocodes?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "EN 1990 outlines the principles, supplementary rules and general rules of structural design, providing the framework and general rules for safety, reliability, and durability in construction of steel and concrete structures." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What challenges do Eurocodes address in the construction sector?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Eurocodes mitigate risks from structural elements of construction products like material failure, structural instability, and environmental impacts during construction works, ensuring robust project outcomes." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Are Eurocodes suitable for small projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Absolutely. Even small projects benefit from the structured approach and resource efficiency promoted by Eurocodes." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How can Eurocodes improve cost efficiency?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Eurocodes optimize material usage and streamline processes, reducing waste, rework, and overall project costs." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Are Eurocodes mandatory? ", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "While not mandatory in all regions, Eurocodes are widely recognized as best practices and are often required for international projects." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do Eurocodes enhance sustainability?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "By encouraging material efficiency, recycling, and eco-friendly design principles, Eurocodes align with green building goals and reduce environmental impacts." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure vendor compliance?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin rigorously mine technical specifications and vets construction products and vendors to ensure adherence to Eurocode standards, offering clients confidence in their project’s quality and compliance with national standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Why Choose BuildTwin for Eurocode-Compliant Projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Access to Expertise: Our platform offers a network of vendors who specialize in Eurocode adherence. Integrated Tools: Manage bids, track progress, and streamline communication with our ERP solutions. Quality Assurance: Vendors vetted for compliance and capability, ensuring consistent results." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
 
   injectFAQSchemaForSectorPowerPlant(renderer) {
     // Create the FAQ schema for the FAQ page

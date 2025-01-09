@@ -36,7 +36,7 @@
                                                 Seismic Design
                                             </li>
                                         </ul> -->
-                                        <a [routerLink]="image.link || null" class="link-text">
+                                        <a *ngIf="image.link" [routerLink]="image.link" class="link-text">
                                             Learn More
                                         </a>
                                     </div>
