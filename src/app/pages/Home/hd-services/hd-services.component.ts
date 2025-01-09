@@ -62,6 +62,18 @@ export class HdServicesComponent implements OnInit, OnDestroy {
       // textColor: "#2e7159",
       description: "Connect with professional vendors offering <strong>Steel Detailing Services</strong> on BuildTwin. Obtain detailed shop and erection drawings for steel structures to enhance fabrication and installation efficiency, reducing errors and saving time on your projects."
     },
+    {
+      id: '9',
+      name: 'CAD Services',
+      img: '/assets/images/drafting-image.png',
+      width: '151',
+      height: '137',
+      serviceId: 16,
+      color: "#FFE2E1",
+      // color: "#5dd8ad",
+      // textColor: "#2e7159",
+      description: "Connect with CAD Services providers on BuildTwin. Get accurate computer aided design deliverables – 2D and 3D modeling to detailed renderings to boost workflow, reduce errors and drive innovation across all phases of your project."
+    },
 
     {
       id: '4',
@@ -88,6 +100,18 @@ export class HdServicesComponent implements OnInit, OnDestroy {
       serviceId: 11,
       description: "Explore BuildTwin's marketplace for top <strong>BIM Services</strong> vendors. Access advanced 3D modeling, clash detection, and coordination services that improve collaboration, reduce errors, and enhance efficiency across all project phases."
     },
+    {
+      id: '8',
+      name: 'Drafting Services',
+      img: '/assets/images/drafting-image.png',
+      width: '151',
+      height: '137',
+      color: "#FFE8CB",
+      // color: "#fcf477",
+      // textColor: "#a8a23d",
+      serviceId: 15,
+      description: "Get the best Drafting Services on BuildTwin. Get precise industry compliant technical drawings to plan, reduce revisions and ensure smooth project execution from start to finish."
+    },
 
     // { id: '3', name: 'Structural Solutions', img: '/assets/images/structuralSoultion.png', width:'151', height: '137', color: "#FFE8CB" },
     // { id: '5', name: 'As-built Documentation', img: '/assets/images/documentation.png', width:'151', height: '137', color: "#FFE2E1" },
@@ -98,7 +122,9 @@ export class HdServicesComponent implements OnInit, OnDestroy {
     9: '/services/pre-cast-detailing-services',
     10: '/services/rebar-detailing-services',
     11: '/services/bim-services',
-    12: '/services/steel-detailing-services'
+    12: '/services/steel-detailing-services',
+    15: '/services/drafting-services',
+    16: '/services/cad-services'
     // Add more serviceId to route mappings here
   };
 

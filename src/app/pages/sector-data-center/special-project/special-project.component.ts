@@ -35,6 +35,8 @@ export class DataCenterSpecialProjectComponent {
   slides = [
     {
       images: [
+        // { src: 'assets/images/services/Sector_datacenter.png', title: 'Data Center', description: 'Specialized structural engineering services for mission-critical data center facilities.', link: '/sector/data-centre' },
+        { src: 'assets/images/services/Sector_powerplant.png', title: 'Power plant', description: 'Advanced structural engineering for resilient and efficient power plant facilities.', link: '/sector/power-plant' },
         {
           src: 'assets/images/services/Sector_Airports.png',
           title: 'AIRPORTS',
@@ -47,7 +49,6 @@ export class DataCenterSpecialProjectComponent {
           description: 'Comprehensive engineering solutions for modern and dynamic commercial building projects.',
           link: ''
         },
-        // { src: 'assets/images/services/Sector_datacenter.png', title: 'Data Center', description: 'Specialized structural engineering services for mission-critical data center facilities.', link: '/sector/data-centre' },
         { src: 'assets/images/services/Sector_industrialbulidings.png', title: 'INDUSTRIAL BUILDINGS', description: 'Tailored structural designs for efficient and robust industrial building facilities.', link: '' },
         { src: 'assets/images/services/Sector_powerplant.png', title: 'Power plant', description: 'Advanced structural engineering for resilient and efficient power plant facilities.', link: '/sector/power-plant' },
         { src: 'assets/images/services/Sector_pre-cast.png', title: 'PRE-CAST', description: 'Expert detailing and engineering services for precision-driven precast industry projects.', link: '' },

@@ -9,6 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class SpecialProjectComponent implements OnInit {
   @Input() page: string = ''; //sector
   @Input() hideItem: number = 0; //sector
+  @Input() heading: boolean = true; //sector
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
