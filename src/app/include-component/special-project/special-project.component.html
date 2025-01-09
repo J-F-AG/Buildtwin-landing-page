@@ -15,17 +15,17 @@
             <owl-carousel-o [options]="customOptions">
                     <ng-container *ngFor="let image of slides[0]['images']">
                         <ng-template carouselSlide>
-                            <div *ngIf="!image['link']" class="image-container">
+                            <div class="image-container">
                                 <figure>
                                     <img [src]="image.src" width="185" height="245" />
                                 </figure>
-                                <div class="image-caption" [ngClass]="{'page':page}">
+                                <div class="image-caption page">
                                     <h3>{{ image.title }}</h3>
-                                    <div class="sector-detail" *ngIf="page">
+                                    <div class="sector-detail">
                                         <p>
-                                            Specialized structural engineering services for mission-critical data center facilities.
+                                            {{image.description}}
                                         </p>
-                                        <ul>
+                                        <!-- <ul>
                                             <li>
                                                 Structural Analysis
                                             </li>
@@ -35,40 +35,13 @@
                                             <li>
                                                 Seismic Design
                                             </li>
-                                        </ul>
-                                        <a href="" class="link-text">
+                                        </ul> -->
+                                        <a [routerLink]="image.link || null" class="link-text" *ngIf="image['link']">
                                             Learn More
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                            <a *ngIf="image['link']" class="image-container cursor" [routerLink]="image.link || null">
-                                <figure>
-                                    <img [src]="image.src" width="185" height="245" />
-                                </figure>
-                                <div class="image-caption" [ngClass]="{'page':page}">
-                                    <h3>{{ image.title }}</h3>
-                                    <div class="sector-detail" *ngIf="page">
-                                        <p>
-                                            Specialized structural engineering services for mission-critical data center facilities.
-                                        </p>
-                                        <ul>
-                                            <li>
-                                                Structural Analysis
-                                            </li>
-                                            <li>
-                                                MEP Integration
-                                            </li>
-                                            <li>
-                                                Seismic Design
-                                            </li>
-                                        </ul>
-                                        <button class="link-text">
-                                            Learn More
-                                        </button>
-                                    </div>
-                                </div>
-                            </a>
+                            </div>  
                         </ng-template>
                     </ng-container>
             </owl-carousel-o>
