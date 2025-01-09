@@ -1,4 +1,7 @@
 User-agent: *
+
+Allow: /services/bim-service-provider-in-usa
+
 Disallow: /source/*
 Disallow: /en/*
 Disallow: /vender-details
@@ -20,9 +23,6 @@ Disallow: /blog-details2
 Disallow: /blog-details3
 Disallow: /blog-details4
 Disallow: /blog-details5
-Disallow: /sector
-Disallow: /building-code
 
-Allow: /services/bim-service-provider-in-usa
 
 Sitemap: https://www.buildtwin.com/sitemap.xml

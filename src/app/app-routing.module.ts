@@ -340,8 +340,8 @@ const routes: Routes = [
     {
         path: 'services/cad-services', component: CadServicesNewComponent,
         data: {
-            title: 'Cad Services for AEC Projects',
-            description: "BuildTwin Marketplace offers a comprehensive platform for all your cad services for construction and engineering projects.",
+            title: 'CAD Services for AEC Projects',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your CAD services for construction and engineering projects.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/cad-services'
         }
