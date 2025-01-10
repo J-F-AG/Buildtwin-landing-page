@@ -337,7 +337,6 @@ import { FaqBuildtwinBuildingCodeAiscComponent } from './pages/building-code-ais
 import { HdDiscoverProjectsBuildingCodeAiscComponent } from './pages/building-code-aisc/hd-discover-projects/hd-discover-projects.component';
 import { HdServicesBuildingCodeAiscComponent } from './pages/building-code-aisc/hd-services/hd-services.component';
 import { SectorCategoryBuildingCodeAiscComponent } from './pages/building-code-aisc/sector-category/service-category.component';
-import { SpecialProjectBuildingCodeAiscComponent } from './pages/building-code-aisc/special-project/special-project.component';
 import { TtPartnersBuildingCodeAiscComponent } from './pages/building-code-aisc/tt-partners/tt-partners.component';
 import { BuildingCodeAiscComponent } from './pages/building-code-aisc/sector.component';
 import { SectorPowerPlantComponent } from './pages/sector-power-plant/sector.component';
@@ -393,7 +392,6 @@ import { FaqBuildtwinBuildingCodeEuroComponent } from './pages/building-code-eur
 import { HdDiscoverProjectsBuildingCodeEuroComponent } from './pages/building-code-euro/hd-discover-projects/hd-discover-projects.component';
 import { HdServicesBuildingCodeEuroComponent } from './pages/building-code-euro/hd-services/hd-services.component';
 import { SectorCategoryBuildingCodeEuroComponent } from './pages/building-code-euro/sector-category/service-category.component';
-import { SpecialProjectBuildingCodeEuroComponent } from './pages/building-code-euro/special-project/special-project.component';
 import { TtPartnersBuildingCodeEuroComponent } from './pages/building-code-euro/tt-partners/tt-partners.component';
 import { SoftwareListComponent } from './include-component/software-list/software-list.component';
 
@@ -734,7 +732,6 @@ import { SoftwareListComponent } from './include-component/software-list/softwar
    HdDiscoverProjectsBuildingCodeAiscComponent,
    HdServicesBuildingCodeAiscComponent,
    SectorCategoryBuildingCodeAiscComponent,
-   SpecialProjectBuildingCodeAiscComponent,
    TtPartnersBuildingCodeAiscComponent,
    BuildingCodeAiscComponent,
 
@@ -743,7 +740,6 @@ import { SoftwareListComponent } from './include-component/software-list/softwar
    HdDiscoverProjectsBuildingCodeEuroComponent,
    HdServicesBuildingCodeEuroComponent,
    SectorCategoryBuildingCodeEuroComponent,
-   SpecialProjectBuildingCodeEuroComponent,
    TtPartnersBuildingCodeEuroComponent,
 
    SectorPowerPlantComponent,

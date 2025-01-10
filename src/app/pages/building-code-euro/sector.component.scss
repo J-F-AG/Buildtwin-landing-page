@@ -8,3 +8,18 @@
         // color: #333; /* Optional: Change bullet color */
       }
 }
+
+.ulClass{
+  list-style-type: circle !important;
+  padding-left: 20px !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.liClass{
+  padding-left: 0 !important;
+  position: static !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}

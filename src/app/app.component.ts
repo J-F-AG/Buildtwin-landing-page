@@ -31,6 +31,7 @@ export class AppComponent {
     breadcrumbs: any[] = [];
     breadcrumbSchemaHtml: SafeHtml;
     langHtml: SafeHtml;
+    schemaCode: SafeHtml;
     faqSchemaHtml: SafeHtml;
     testimonialSchemaHtml: SafeHtml;
     constructor(
@@ -174,6 +175,7 @@ injectBreadcrumbScript(url) {
         existingScripts.forEach(script => {
             this.breadcrumbSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
             this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+            this.schemaCode = this.sanitizer.bypassSecurityTrustHtml('');
         });
     } catch (error) {
         
@@ -197,6 +199,17 @@ injectBreadcrumbScript(url) {
       
       // Append new script to head
     //   this.renderer.appendChild(document.head, jsonLdScriptTag);
+    }
+    if(this.router.url === '/'){
+      const faqSchema = this._languageService.injectSchemaCodeForHomePage(this.renderer);
+      this.schemaCode = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+      const testimonialSchema = this._languageService.injectTestimonialSchemaForHomePage(this.renderer);
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
+      );
     }
     if(url.includes('/provide-service')){
         const faqSchema = this._languageService.injectFaqSchema(this.renderer);

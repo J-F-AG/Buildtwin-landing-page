@@ -112,7 +112,10 @@
     }
 }
 
-
+mat-expansion-panel ul {
+    list-style-type: disc; /* Ensure the unordered list has bullet points */
+    padding-left: 20px; /* Add some padding for the bullets to appear properly */
+}
 @media only screen and (max-width: 767px) {
     .faqWrapper .heading h2 {
         font-size: 25px;

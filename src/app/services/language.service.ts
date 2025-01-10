@@ -22,7 +22,7 @@ export class LanguageService {
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
-      name: 'Structural Detailing Pre-Cast'
+      name: 'Structural Detailing PreCast'
     },
     "rebar-detailing-services" : {
       name: 'Rebar Detailing Services'
@@ -249,6 +249,126 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
   }
 
+  injectSchemaCodeForHomePage(renderer) {
+
+
+    const faqSchema = { 
+      "@context": "https://schema.org", 
+      "@type": "Organization", 
+      "name": "Buildtwin", 
+      "url": "https://www.buildtwin.com/", 
+      "logo": "https://www.buildtwin.com/assets/images/logo@2x.png" 
+    };
+    return JSON.stringify(faqSchema);
+    // Create the JSON-LD script tag
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+    // // Append the script tag to the document head
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+  }
+
+  injectTestimonialSchemaForHomePage(renderer) {
+
+    const HomePageTestimonialSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "Product", 
+    
+      "name": "BuildTwin", 
+    
+      "image": " https://www.buildtwin.com/assets/images/logo@2x.png ", 
+    
+      "description": " Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform.", 
+    
+        "review": [ 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Kumar Sankaranarayanan" 
+    
+          }, 
+    
+          "reviewBody": "Through BuildTwin, we have gained access to relevant international projects and clients. At the same time, we can showcase our services transparently and ensure high-quality management with the support of AI.", 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5" 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Regina Vögtle" 
+    
+          }, 
+    
+          "reviewBody": "Thanks to BuildTwin, we as a German engineering firm have gained access to international, highly qualified teams. The collaboration works seamlessly and integrates effortlessly into our existing systems. This has made our structures significantly more efficient and opened up new opportunities for us to plan large-scale projects.", 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5" 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Javier Garcia" 
+    
+          }, 
+    
+          "reviewBody": "With BuildTwin, we have the ability to seamlessly coordinate our partners and efficiently manage the entire project workflow. The platform simplifies communication, optimizes collaboration, and ensures that all stakeholders always have access to the most up-to-date information. This allows us to save time and costs while significantly improving the quality and transparency of our projects.", 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5" 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    return JSON.stringify(HomePageTestimonialSchema);
+  }
+
   injectForMarketplaceSchema(renderer) {
     // Create the Marketplace schema for the marketplace page
     const MarketplaceSchema = {
@@ -301,7 +421,7 @@ export class LanguageService {
 
   injectForMarketplaceTestimonialSchema(renderer) {
 
-    const MarketplaceTestimonialSchema = {
+    const MarketplaceTestimonialSchema = { 
 
       "@context": "https://schema.org", 
     
@@ -477,7 +597,7 @@ export class LanguageService {
 
   injectForAIProjectManagementTestimonialSchema(renderer) {
 
-    const AIProjectManagementSchema = {
+    const AIProjectManagementSchema = { 
 
       "@context": "https://schema.org", 
     
@@ -686,13 +806,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "Why should I choose a vendor from BuildTwin?",
+        "name": "Why should I choose vendors from BuildTwin for precast detailing services?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin is a one-stop platform that gives you ready access to multiple global vendors from around the world for pre-cast detailing services. These vendors are pre-qualified and aggregated onto the platform to instantly invite the best bids, thereby completely eliminating the laborious task of searching for vendors everywhere. BuildTwin automates your entire project, by giving you remote access to every single update for close monitoring.Not only that, you can even plug in your own workflow portal with BuildTwin for seamless integration."
+          "text": "BuildTwin is a one-stop platform that connects you with pre-qualified precast detailers who specialize in providing high-quality precast detailing services. Our vendors are carefully vetted to ensure they have the necessary extensive experience, adhere to industry standards, and deliver precise precast shop drawings and fabrication drawings. BuildTwin eliminates the hassle of vendor searching and offers live tracking for seamless project execution."
 
         }
 
@@ -700,13 +820,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "What software do vendors on BuildTwin use for precast detailing?",
+        "name": "What software do BuildTwin’s vendors use for precast detailing?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin’s vendors stay up to date on the latest industry trends when it comes to their choice of software, AutoCAD and Revit."
+          "text": "Vendors on BuildTwin use industry-standard software such as AutoCAD, Revit, and other advanced tools to generate accurate bar bending schedules, shop drawings, and precast panel detailing. These tools ensure compliance with international standards and enhance the quality of precast concrete detailing."
 
         }
 
@@ -720,7 +840,7 @@ export class LanguageService {
 
           "@type": "Answer",
 
-          "text": "Our AI-driven project management platform is meticulously designed with industry-leading privacy protocols to ensure that your data remains confidential, secure, and under your control. Our embedded trust system is integrated into every workflow, automating compliance tasks and reducing manual work, allowing you to focus on engineering while we ensure your operations remain compliant and secure."
+          "text": "Our platform is built on secure AI-driven systems that prioritize data privacy and confidentiality. With quality control measures embedded at every step, BuildTwin ensures your precast detailing project remains secure, compliant, and accessible only to authorized personnel."
 
         }
 
@@ -728,13 +848,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "What is the process for BuildTwin pre-qualifying its vendors?",
+        "name": "What type of precast detailing services can I expect from BuildTwin's vendors?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin aggregates the best-in-industry vendors by conducting a thorough background check and verification of a proven track record in pre-cast detailing services. The vendors are chosen based on experience, reliability, and a line of successful projects to their name."
+          "text": "BuildTwin’s vendors provide a wide range of services, including: Cladding panel detailing drawings Wall panel detailing for structural stability Detailed fabrication drawings Rebar detailing for structural components Erection drawings for seamless assembly Comprehensive precast connection details Handling of lifting leg locations and grout ferrule locations These services cater to a variety of building projects, including residential buildings, commercial buildings, and industrial buildings."
 
         }
 
@@ -742,13 +862,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "How can I compare vendors listed on BuildTwin?",
+        "name": "How does BuildTwin pre-qualify its vendors?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin provides you with a list of the top vendors categorized based on their sectors, experience, delivered projects, and locations. You can easily compare them against these parameters by selecting your required filters."
+          "text": "BuildTwin follows a stringent pre-qualification process by verifying the vendor's proven track record, adherence to industry standards, and ability to deliver accurate quantity take-offs and high-quality precast detailing drawings. Vendors are selected based on their expertise, project history, and compliance with global standards like ACI, CRSI, and ASTM."
 
         }
 
@@ -762,7 +882,7 @@ export class LanguageService {
 
           "@type": "Answer",
 
-          "text": "The vendors listed on BuildTwin are experienced in handling pre-cast detailing services for airports, residential, commercial and industrial buildings, data centers, power plants, chemical plants, manufacturing plants, parking structures, schools, hospitals, warehouses, bridges, tunnels, water & waste, metros, roadways, retaining walls, and foundations, among others."
+          "text": "The vendors listed on BuildTwin specialize in handling a wide range of projects, including: Residential buildings and complexes Commercial buildings such as malls and offices Industrial buildings, including chemical plants and factories Infrastructure like bridges, tunnels, and metros Specialized projects for double tee detailing, water tanks, and retaining walls"
 
         }
 
@@ -770,13 +890,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "How does BuildTwin ensure the quality of the services provided by vendors?",
+        "name": "How can I compare vendors listed on BuildTwin?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "By having a systematic step-by-step process in place and strict adherence to international compliance codes, BuildTwin makes sure you have direct access to every stage of the project. Right from erection drawings to cast-in components, quantity take-offs to assembling and production, and for every step in between, BuiltTwin ensures detailed reviews and stringent quality control in its pre-cast detailing services."
+          "text": "Our platform provides a detailed comparison tool that categorizes vendors by: Experience in precast detailing services Expertise in delivering specific fabrication drawings Successful project completions in diverse sectors Geographic reach and specialization in industrial buildings or residential buildings By applying these filters, you can select the best vendor for your precast detailing project."
 
         }
 
@@ -784,13 +904,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "How quickly can I expect a response from vendors on BuildTwin?",
+        "name": "What is the timeline for receiving responses from vendors?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "As soon as you sign up on BuildTwin, you can access our ready list of vendors for pre-cast detailing services from around the globe. All you need to do is invite 5+ vendors to bid on your project, and they will reach out to you with their best offers in X hours/days."
+          "text": "Once you invite vendors to bid on your precast detailing project, responses are typically received within 48–72 hours. Our platform ensures vendors are notified promptly, expediting the bidding process for your project."
 
         }
 
@@ -798,13 +918,97 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "What support does BuildTwin offer during the project?",
+        "name": "How does BuildTwin ensure adherence to industry standards?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin automates your entire project, by doing most of your work behind the scenes for you. From vendor selection to quality control, digitalized documentation to live updates, BuildTwin gives you the freedom to manage your project from anywhere with the best resources and practices."
+          "text": "BuildTwin's vendors strictly follow global industry standards like ACI, ASTM, BS, and CRSI for all precast concrete detailing projects. This ensures durability, structural integrity, and compliance with regional and international codes. Additionally, every stage undergoes quality control checks to maintain excellence."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "How does BuildTwin handle project tracking?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin offers a LIVE Track feature that allows you to monitor your project progress in real-time. This includes updates on precast panel detailing, erection drawings, and delivery timelines. With live tracking, you gain complete transparency and control over your precast detailing project."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "Can BuildTwin’s vendors assist with custom design requirements?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Yes, vendors on BuildTwin are experienced in handling custom precast connection details, beam column detailing, and unique building projects. They offer tailored solutions to meet specific project requirements while maintaining accuracy and efficiency."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "What are cast-in components, and how are they handled by BuildTwin’s vendors?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Cast-in components are essential structural elements like precast concrete walls, beams, and slabs. BuildTwin's vendors provide a comprehensive list of these components, including their precise lifting leg locations and grout ferrule locations, ensuring proper integration and installation."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "How do vendors on BuildTwin optimize resources for precast projects?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Through systematic quantity take-offs, BuildTwin's vendors ensure accurate estimation of materials and resources required for precast detailing projects. These include detailed measurements, volumes, and material specifications, reducing waste and optimizing costs."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "Can BuildTwin assist with large-scale industrial or infrastructure projects?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Yes, BuildTwin’s platform is designed to cater to large-scale projects, including chemical plants, power plants, metros, and other infrastructure developments. Our vendors specialize in double tee detailing, bar bending schedules, and complex structural designs, making them ideal for large-scale industrial buildings."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "What support does BuildTwin provide during the project lifecycle?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin offers end-to-end support, including: Vendor selection and bidding facilitation Real-time project updates through LIVE Track Automated handling of fabrication drawings and shop drawings Quality assurance checks for industry standards compliance Our platform ensures seamless coordination, minimizing manual efforts and maximizing project efficiency."
 
         }
 
@@ -2301,7 +2505,7 @@ export class LanguageService {
 
       "@type": "Answer", 
 
-      "text": "Eurocodes are a comprehensive set of European standards governing structural design of buildings and other civil structures and, promoting safety, efficiency, and sustainability." 
+      "text": "Eurocodes are a comprehensive set of European standards for the structural design of buildings and civil engineering works. They promote safety, reliability, and sustainability in construction works, providing a unified framework for designing steel structures, masonry structures, and steel and concrete structures together." 
 
     } 
 
@@ -2309,13 +2513,13 @@ export class LanguageService {
 
     "@type": "Question", 
 
-    "name": "What is the role of EN 1990 in the design of structures Eurocodes?", 
+    "name": "What is the role of EN 1990 in the design of structures?", 
 
     "acceptedAnswer": { 
 
       "@type": "Answer", 
 
-      "text": "EN 1990 outlines the principles, supplementary rules and general rules of structural design, providing the framework and general rules for safety, reliability, and durability in construction of steel and concrete structures." 
+      "text": "EN 1990 defines the basis of structural design, outlining the general and general structural rules, and supplementary rules for structural behaviour, ensuring safety, serviceability, and durability. It serves as the foundation for all other Eurocode parts, establishing reliability principles for structural elements in construction products." 
 
     } 
 
@@ -2329,7 +2533,7 @@ export class LanguageService {
 
       "@type": "Answer", 
 
-      "text": "Eurocodes mitigate risks from structural elements of construction products like material failure, structural instability, and environmental impacts during construction works, ensuring robust project outcomes." 
+      "text": "Eurocodes tackle critical issues such as: Material failure and structural instability in steel structures and plated structural elements. Environmental impacts on construction works during actions on structures like wind and snow loads. Geotechnical risks and earthquake resistance for foundations and temporary structures. These standards ensure robust outcomes and minimize risks in construction products and civil engineering works." 
 
     } 
 
@@ -2343,7 +2547,7 @@ export class LanguageService {
 
       "@type": "Answer", 
 
-      "text": "Absolutely. Even small projects benefit from the structured approach and resource efficiency promoted by Eurocodes." 
+      "text": "Yes, Eurocodes are highly beneficial for projects of all sizes. Even small projects gain from the structured approach, simplified calculation methods optimized material usage, and technical specifications offered by Eurocodes, ensuring efficiency and quality." 
 
     } 
 
@@ -2357,7 +2561,7 @@ export class LanguageService {
 
       "@type": "Answer", 
 
-      "text": "Eurocodes optimize material usage and streamline processes, reducing waste, rework, and overall project costs." 
+      "text": "Eurocodes streamline the structural design of buildings by: Optimizing material use for construction products like composite steel and concrete. Reducing waste and rework through standardized processes. Minimizing project delays by addressing imposed loads, thermal actions, and accidental actions early in the design phase." 
 
     } 
 
@@ -2365,12 +2569,12 @@ export class LanguageService {
 
     "@type": "Question", 
 
-    "name": "Are Eurocodes mandatory? ", 
+    "name": "Are Eurocodes mandatory?", 
 
     "acceptedAnswer": {
       "@type": "Answer", 
 
-      "text": "While not mandatory in all regions, Eurocodes are widely recognized as best practices and are often required for international projects." 
+      "text": "While not mandatory in all regions, Eurocodes are widely regarded as best practices and are often required for international projects. They are especially critical for projects involving geotechnical design, seismic actions, or masonry structures in compliance with European standards." 
 
     } 
 
@@ -2384,7 +2588,7 @@ export class LanguageService {
 
       "@type": "Answer", 
 
-      "text": "By encouraging material efficiency, recycling, and eco-friendly design principles, Eurocodes align with green building goals and reduce environmental impacts." 
+      "text": "Eurocodes promote eco-friendly practices by: Encouraging efficient material usage and recycling in construction works. Aligning with green building principles for reduced environmental impacts. Supporting the use of sustainable materials like timber structures and stainless steels." 
 
     } 
 
@@ -2398,7 +2602,7 @@ export class LanguageService {
 
       "@type": "Answer", 
 
-      "text": "BuildTwin rigorously mine technical specifications and vets construction products and vendors to ensure adherence to Eurocode standards, offering clients confidence in their project’s quality and compliance with national standards." 
+      "text": "BuildTwin rigorously evaluates vendors against technical specifications and ensures adherence to Eurocode parts. Our platform vets vendors based on their expertise in national standards and compliance with Eurocodes, providing clients confidence in quality and reliability." 
 
     } 
 
@@ -2406,13 +2610,13 @@ export class LanguageService {
 
     "@type": "Question", 
 
-    "name": "Why Choose BuildTwin for Eurocode-Compliant Projects?", 
+    "name": "What role does EN 1997 play in construction?", 
 
     "acceptedAnswer": { 
 
       "@type": "Answer", 
 
-      "text": "Access to Expertise: Our platform offers a network of vendors who specialize in Eurocode adherence. Integrated Tools: Manage bids, track progress, and streamline communication with our ERP solutions. Quality Assurance: Vendors vetted for compliance and capability, ensuring consistent results." 
+      "text": "EN 1997 focuses on geotechnical aspects of design, covering foundation stability, soil-structure interaction, and ground improvement techniques. It is crucial for ensuring the stability of civil engineering works in diverse geological conditions." 
 
     } 
 
