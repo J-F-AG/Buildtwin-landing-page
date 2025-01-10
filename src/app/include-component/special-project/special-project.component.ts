@@ -8,7 +8,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class SpecialProjectComponent implements OnInit {
   @Input() page: string = ''; //sector
-  @Input() hideItem: number = 0; //sector
+  @Input() hideItem: number[] = []; // Array of IDs to hide
   @Input() heading: boolean = true; //sector
   customOptions: OwlOptions = {
     loop: true,
@@ -20,7 +20,7 @@ export class SpecialProjectComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 1,
+        items: 2,
       },
       400: {
         items: 2
@@ -72,8 +72,8 @@ export class SpecialProjectComponent implements OnInit {
   ];
   
   ngOnInit(): void {
-    if(this.hideItem) {
-      this.slides[0].images = this.slides[0].images.filter(image => image.id !== this.hideItem); 
+    if (this.hideItem && this.hideItem.length > 0) {
+      this.slides[0].images = this.slides[0].images.filter(image => !this.hideItem.includes(image.id));
     }
   }
 }

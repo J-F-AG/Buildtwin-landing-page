@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   // standalone: true,
   // imports: [],
   templateUrl: './precast-service.component.html',
-  styleUrl: './precast-service.component.scss'
+  styleUrls: ['../../bim/precast-service/precast-service.component.scss','./precast-service.component.scss']
 })
 export class DraftingPrecastServiceComponent implements OnInit {
   

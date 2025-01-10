@@ -111,3 +111,21 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 767px) {
+    .faqWrapper .heading h2 {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .faq-accordion .mat-accordion .mat-expansion-panel .mat-expansion-panel-header-title {
+        padding: 15px 60px 15px 15px;
+        font-size: 14px;
+    }
+    :host ::ng-deep .faq-accordion .mat-accordion .mat-expansion-panel .mat-expansion-panel-body {
+        padding: 0 60px 15px 15px;
+    }
+    .faq-accordion .mat-accordion .mat-expansion-panel::before {
+        top: 14px;
+    }
+}

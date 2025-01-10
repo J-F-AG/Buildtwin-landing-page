@@ -1,0 +1,18 @@
+<div class="list-type-wrapper">
+    <div 
+      class="block cursor" 
+      *ngFor="let section of sections" 
+      [routerLink]="section.routerLink" 
+      [id]="'section-' + section.id"
+    >
+      <h5>
+        {{ section.title }}
+      </h5>
+      <ul class="list">
+        <li *ngFor="let item of section.items">
+          {{ item }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  
