@@ -36,7 +36,7 @@ export class ServicesOfferedComponent {
         { img: 'assets/images/home/Sector_Bridges.png', projectTitle: 'Bridges, tunnels, water & waste', link: ''},
         { img: 'assets/images/home/Sector_Metros.png', projectTitle: 'Metros', link: ''},
         { img: 'assets/images/home/Sector_Roads.png', projectTitle: 'Roadways', link: ''},
-        { img: 'assets/images/home/pre-cast.png', projectTitle: 'PRE-CAST', link: ''},
+        { img: 'assets/images/home/pre-cast.png', projectTitle: 'PRECAST', link: ''},
         { img: 'assets/images/home/residential buildings.png', projectTitle: 'Residential Buildings', link: ''},
     
       ]
