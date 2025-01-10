@@ -89,12 +89,13 @@ export class AppComponent {
                 this._seoService.updateTwitterCardType('summary_large_image');
                 this._seoService.updateTwitterImage(event['image']);
                 this._seoService.setCanonicalURL(event['canonical'], this.renderer);
+                this._seoService.setLanguageTags(event['canonical'], this.renderer);
             }
             if(event['canonical']){
             }
             // let url = this.router.url;
-            this._languageService.setLanguageTags(url);
-            this.injectLang();
+            // this._languageService.setLanguageTags(url);
+            // this.injectLang();
             this.breadcrumbService.generateBreadcrumbs(url);
             this.breadcrumbs = this.breadcrumbService.breadcrumbs;
             this.injectBreadcrumbScript(url);

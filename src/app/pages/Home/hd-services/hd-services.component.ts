@@ -13,8 +13,9 @@ import { LanguageService } from 'src/app/services/language.service';
  
 export class HdServicesComponent implements OnInit, OnDestroy {
   @Input() page: string = '';
+  @Input() heading: boolean = true; //sector 
   activeClass: boolean = false;
-  showPopup = false;
+  showPopup = false; 
   interval: any;
   serviceSlider: OwlOptions | null = null;
   
@@ -65,11 +66,11 @@ export class HdServicesComponent implements OnInit, OnDestroy {
     {
       id: '9',
       name: 'CAD Services',
-      img: '/assets/images/drafting-image.png',
+      img: '/assets/images/cad-drafting-image.png',
       width: '151',
       height: '137',
       serviceId: 16,
-      color: "#FFE2E1",
+      color: "#dfffbc",
       // color: "#5dd8ad",
       // textColor: "#2e7159",
       description: "Connect with CAD Services providers on BuildTwin. Get accurate computer aided design deliverables – 2D and 3D modeling to detailed renderings to boost workflow, reduce errors and drive innovation across all phases of your project."
@@ -106,7 +107,7 @@ export class HdServicesComponent implements OnInit, OnDestroy {
       img: '/assets/images/drafting-image.png',
       width: '151',
       height: '137',
-      color: "#FFE8CB",
+      color: "#e0ffcc",
       // color: "#fcf477",
       // textColor: "#a8a23d",
       serviceId: 15,
@@ -166,6 +167,9 @@ export class HdServicesComponent implements OnInit, OnDestroy {
         },
         400: {
           items: 1  // 1 item for slightly larger screens
+        },
+        600: {
+          items: 2  // 2 items for medium screens
         },
         768: {
           items: 3  // 2 items for medium screens

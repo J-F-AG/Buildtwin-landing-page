@@ -1,10 +1,10 @@
 .trustedByWrapper{background: rgba(240, 244, 251, 0.60);
     backdrop-filter: blur(10px); padding: 40px 0; position: relative;}
 
-.trustedByWrapper h2{font-size: 32px; font-weight: 600; margin-bottom: 0;}
-.trustedByWrapper p{font-size: 14px; font-weight: 400;}
+// .trustedByWrapper h2{font-size: 32px; font-weight: 600; margin-bottom: 0;}
+// .trustedByWrapper p{font-size: 14px; font-weight: 400;}
 
-.trustedBrands{padding: 25px 25px 0 0; display: flex; justify-content: space-between; width: 100%; gap: 30px;}
+.trustedBrands{padding: 0 25px 0 0; display: flex; width: 100%; flex-wrap: wrap; row-gap: 10px; column-gap: 30px;}
 .trustedBrands strong{font-size: 38px; font-family:  "Alumni Sans", sans-serif;
     color: #747474;font-weight: 900;letter-spacing: 1.9px;}
 

@@ -104,44 +104,31 @@
     display: grid;
     grid-template-columns: 1fr max-content;
     gap: 24px;
-    margin-block-end: 41px;
+    margin-block-end: 0;
     padding-right: 100px;
-  }
-  .main-title {
-    font-family: var(--fontFamily);
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--themeColor);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 17px;
-    &:after {
-      content: '';
-      width: 85px;
-      height: 2px;
-      border: 1px solid var(--themeColor);
+    .align-self-end {
+      margin-bottom: 40px;
     }
   }
-  .heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .title{
-    font-size: 44px;
-    font-family: var(--fontFamily);
-    font-weight: 500;
-    color: var(--newButtonColor);
-    margin: 0 0 2px;
-  }
+  // .heading {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  // }
+  // .title{
+  //   font-size: 44px;
+  //   font-family: var(--fontFamily);
+  //   font-weight: 500;
+  //   color: var(--newButtonColor);
+  //   margin: 0 0 2px;
+  // }
 
-  .subTitle{
-    font-size: 18px;
-    color: var(--lightTextColor);
-    font-weight: 400;
-    letter-spacing: .35px;
-  }
+  // .subTitle{
+  //   font-size: 18px;
+  //   color: var(--lightTextColor);
+  //   font-weight: 400;
+  //   letter-spacing: .35px;
+  // }
 
   .align-self-end {
     align-self: end;
@@ -302,6 +289,14 @@
 .default-btn {
 
 }
+@media only screen and (max-width : 1300px) {
+  .services .service__items__title--main {
+    font-size: 28px;
+  }
+  .services .service__items__sub__title {
+    font-size: 22px;
+  }
+}
 @media only screen and (max-width : 1200px) {
   .services {
       padding-left: 30px;
@@ -361,20 +356,20 @@
 }
 
 @media (max-width: 767px) {
-  .services .main-title {
-    font-size: 16px;
-  }
-  .services .title {
-    font-size: 24px;
-  }
-  .services .subTitle {
-    font-size: 14px;
-  }
+  // .services .main-title {
+  //   font-size: 16px;
+  // }
+  // .services .title {
+  //   font-size: 24px;
+  // }
+  // .services .subTitle {
+  //   font-size: 14px;
+  // }
   .services .service__items__title--main {
-    font-size: 24px;
+    font-size: 20px;
   }
   .services .service__items__sub__title {
-    font-size: 24px;
+    font-size: 20px;
   }
   .services .main-head, .slider {
     padding-right: 0;

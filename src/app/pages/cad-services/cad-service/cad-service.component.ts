@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   // standalone: true,
   // imports: [],
   templateUrl: './cad-service.component.html',
-  styleUrl: './cad-service.component.scss'
+  styleUrls: ['../../bim/precast-service/precast-service.component.scss','./cad-service.component.scss']
 })
 export class CadServiceComponent implements OnInit {
   

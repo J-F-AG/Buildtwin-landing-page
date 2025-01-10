@@ -109,6 +109,23 @@ export class SeoService {
   // // Add the new canonical tag
   // this.metaService.addTag({ rel: 'canonical', href: url });
   }
+  setLanguageTags(url: string, renderer: any) {
+    const link: HTMLLinkElement = renderer.createElement('link');
+    link.setAttribute('rel', 'alternate');
+    link.setAttribute('hreflang', 'en');
+    link.setAttribute('href', url);
+
+    // // Remove any existing canonical tags to avoid duplicates
+    try {
+      const existingLinks = this.doc.head.querySelectorAll('link[rel="alternate"]');
+      existingLinks.forEach((existingLink) => renderer.removeChild(this.doc.head, existingLink));
+    } catch (error) {
+      
+    }
+
+    // Append the new canonical tag to the head
+    renderer.appendChild(this.doc.head, link);
+  }
   getChild(route: ActivatedRoute): ActivatedRoute {
     if (route.firstChild) {
       return this.getChild(route.firstChild);

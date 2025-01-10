@@ -393,6 +393,7 @@ import { HdDiscoverProjectsBuildingCodeEuroComponent } from './pages/building-co
 import { HdServicesBuildingCodeEuroComponent } from './pages/building-code-euro/hd-services/hd-services.component';
 import { SectorCategoryBuildingCodeEuroComponent } from './pages/building-code-euro/sector-category/service-category.component';
 import { TtPartnersBuildingCodeEuroComponent } from './pages/building-code-euro/tt-partners/tt-partners.component';
+import { SoftwareListComponent } from './include-component/software-list/software-list.component';
 
 
 
@@ -760,7 +761,8 @@ import { TtPartnersBuildingCodeEuroComponent } from './pages/building-code-euro/
    HdServicesStructuralSteelDetailingSoftwareComponent,
    SectorCategoryStructuralSteelDetailingSoftwareComponent,
    SpecialProjectStructuralSteelDetailingSoftwareComponent,
-   TtPartnersStructuralSteelDetailingSoftwareComponent
+   TtPartnersStructuralSteelDetailingSoftwareComponent,
+   SoftwareListComponent
   ],
   imports: [    
     BrowserModule,

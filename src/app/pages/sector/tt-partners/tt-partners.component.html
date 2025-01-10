@@ -1,24 +1,22 @@
 <div class="container global-mb" id="peek-into-buildtwin-solution-providers">
     <div class="story">
-        <div class="head" *ngIf="!page; else other_content">
-            
-            <h2>Peek into BuildTwin Solution Providers</h2>
-            <p>
+        
+        <div class="heading center" *ngIf="!page; else other_content">
+            <h2 class="title">Peek into BuildTwin Solution Providers</h2>
+            <span class="subTitle">
                 
-            Meet few selected solution providers, each exemplifying different technical capabilities. 
-            <br>The solution providers bring tailored expertise, cutting-edge solutions, and a commitment 
-            <br>to quality that enhances every project they touch.
-            </p>
-        </div>
-        <ng-template #other_content>
-            <div class="head left">
-                
-                <h2>Our Verified Vendors</h2>
-                <p>
-                    Partner with pre-qualified engineering firms trusted by industry leaders
-                </p>
-            </div>
-        </ng-template>
+                Meet few selected solution providers, each exemplifying different technical capabilities. 
+                <br>The solution providers bring tailored expertise, cutting-edge solutions, and a commitment 
+                <br>to quality that enhances every project they touch.</span>
+          </div> 
+          <ng-template #other_content>
+          <div class="heading">
+              <h2 class="title">Our Verified Vendors</h2>
+              <span class="subTitle">
+                Partner with pre-qualified engineering firms trusted by industry leaders
+            </span>
+            </div> 
+            </ng-template>
         <div class="listItem">
             <ng-container *ngIf="!showPageLoader">
                 <ng-container *ngIf="!page">
