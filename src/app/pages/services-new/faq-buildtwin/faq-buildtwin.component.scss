@@ -15,7 +15,7 @@
 
     .heading{
         // padding-bottom: 40px;
-        h2{font-size: 32px;
+        .faq-heading-main{font-size: 32px;
             font-weight: 600;
             margin-bottom: 20px;
             strong{ position: relative;
@@ -48,7 +48,7 @@
                 color: var(--blackColor);
                 transition: var(--transition);
                 padding: 22px 100px 22px 20px;
-
+                font-family: var(--poppinsFontFamily);
                 font-size: 16px;
                 font-weight: 500;
             }
@@ -125,7 +125,7 @@ mat-expansion-panel ul {
     padding-left: 20px; /* Add some padding for the bullets to appear properly */
 }
 @media only screen and (max-width: 767px) {
-    .faqWrapper .heading h2 {
+    .faqWrapper .heading .faq-heading-main {
         font-size: 25px;
         margin-bottom: 10px;
     }

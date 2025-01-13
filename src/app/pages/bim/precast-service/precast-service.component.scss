@@ -64,6 +64,8 @@
             }
         //   }
         .tab{padding: 10px; cursor: pointer; font-size: 15px; color: #B3B3B3;
+            margin: 0;
+            font-family: inherit;
             &.activeContainer {
                 color: #886de0;
                 font-weight: 600;
