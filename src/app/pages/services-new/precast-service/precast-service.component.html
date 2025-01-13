@@ -22,7 +22,24 @@
                         </div>
                 </ng-container>
         </div>
-        <div class="tabContent" *ngFor="let detail of activeContent.details">
+        <ng-container *ngFor="let item of precastArray; let i = index">
+            <ng-container *ngIf="activeTab == i">
+                <div class="tabContent" *ngFor="let detail of item.details">
+                    <p>{{ detail.mainContent }}</p>
+                    <h3>{{ detail.header }}</h3>
+                    <div class="subContent">
+                        <p><small>{{ detail.subContent }}</small></p>
+                    </div>
+                    <div class="dataList">
+                        <div *ngFor="let item of detail['items']">
+                            <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
+                            <span>{{item}}</span>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+        <!-- <div class="tabContent" *ngFor="let detail of activeContent.details">
             <p>{{ detail.mainContent }}</p>
             <h3>{{ detail.header }}</h3>
             <div class="subContent">
@@ -34,8 +51,7 @@
                     <span>{{item}}</span>
                 </div>
             </div>
-        </div>
-        
+        </div> -->
     </div>
         </div>
     </div>
