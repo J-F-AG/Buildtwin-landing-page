@@ -1,0 +1,52 @@
+<div class="sectionContainer">
+    <div class="container">
+        <div class="container-with-right">
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <h2>
+                A Complete Range of Drafting Services at Your Disposal
+            </h2>
+
+            <p>
+                Our platform connects you with pre-approved vendors providing full range
+                of CAD drafting services for design engineering and construction projects. 
+                From 2D and 3D drawings to CAD conversions, our vendors deliver 
+                detailed drafts for architectural, structural and mechanical designs. Using 
+                tools like AutoCAD, SolidWorks and Revit, they ensure accuracy, cost and 
+                compatibility with latest technologies like AR/VR and global standards for 
+                perfect project execution.
+<br><br>
+            </p>
+        </div>
+        <!-- tabs -->
+
+    <div class="sectionMidContainer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <div class="precastTabs">
+                <ng-container *ngFor="let item of precastArray; let i = index">
+                        <div class="tab" [class.active]="activeTab === i" (click)="setActiveTab(i)"
+                        [ngClass]="{ 'activeContainer': activeTab === i }">
+                            {{ item.name }}
+                        </div>
+                </ng-container>
+        </div>
+        <div class="tabContent" *ngFor="let detail of activeContent.details">
+            <p>{{ detail.mainContent }}</p>
+             <!-- Updated list section -->
+        <ul class="service-list">
+            <li *ngFor="let listItem of detail.listItems">{{ listItem }}</li>
+        </ul>
+            <h3>{{ detail.header }}</h3>
+            <div class="subContent">
+                <p><small>{{ detail.subContent }}</small></p>
+            </div>
+            <div class="dataList">
+                <div *ngFor="let item of detail['items']">
+                    <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
+                    <span>{{item}}</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+        </div>
+    </div>
+</div>

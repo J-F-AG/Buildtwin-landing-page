@@ -109,7 +109,7 @@ export class TtPartnersComponent {
         740: {
           items: 3
         },
-        940: {
+        1200: {
           items: 4
         }
       },

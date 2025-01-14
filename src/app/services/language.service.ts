@@ -17,10 +17,12 @@ export class LanguageService {
     "steel-detailing-services" : 12,  //this has to be updated later
     "bim-service-provider-in-usa" : 13,  //this has to be updated later
     "steel-detailing-services-in-usa" : 14,  //this has to be updated later
+    "drafting-services" : 15,  //this has to be updated later
+    "cad-services" : 16  //this has to be updated later
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
-      name: 'Structural Detailing Pre-Cast'
+      name: 'Structural Detailing PreCast'
     },
     "rebar-detailing-services" : {
       name: 'Rebar Detailing Services'
@@ -36,6 +38,12 @@ export class LanguageService {
     },
     "steel-detailing-services-in-usa" : {
       name: 'Structural Steel Detailing Services'
+    },
+    "drafting-services" : {
+      name: "Drafting Services"
+    },
+    "cad-services" : {
+      name: "CAD Services"
     }
   }
   isBrowser: boolean;
@@ -241,6 +249,126 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
   }
 
+  injectSchemaCodeForHomePage(renderer) {
+
+
+    const faqSchema = { 
+      "@context": "https://schema.org", 
+      "@type": "Organization", 
+      "name": "Buildtwin", 
+      "url": "https://www.buildtwin.com/", 
+      "logo": "https://www.buildtwin.com/assets/images/logo@2x.png" 
+    };
+    return JSON.stringify(faqSchema);
+    // Create the JSON-LD script tag
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+    // // Append the script tag to the document head
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+  }
+
+  injectTestimonialSchemaForHomePage(renderer) {
+
+    const HomePageTestimonialSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "Product", 
+    
+      "name": "BuildTwin", 
+    
+      "image": " https://www.buildtwin.com/assets/images/logo@2x.png ", 
+    
+      "description": " Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform.", 
+    
+        "review": [ 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Kumar Sankaranarayanan" 
+    
+          }, 
+    
+          "reviewBody": "Through BuildTwin, we have gained access to relevant international projects and clients. At the same time, we can showcase our services transparently and ensure high-quality management with the support of AI.", 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5" 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Regina Vögtle" 
+    
+          }, 
+    
+          "reviewBody": "Thanks to BuildTwin, we as a German engineering firm have gained access to international, highly qualified teams. The collaboration works seamlessly and integrates effortlessly into our existing systems. This has made our structures significantly more efficient and opened up new opportunities for us to plan large-scale projects.", 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5" 
+    
+          } 
+    
+        }, 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Javier Garcia" 
+    
+          }, 
+    
+          "reviewBody": "With BuildTwin, we have the ability to seamlessly coordinate our partners and efficiently manage the entire project workflow. The platform simplifies communication, optimizes collaboration, and ensures that all stakeholders always have access to the most up-to-date information. This allows us to save time and costs while significantly improving the quality and transparency of our projects.", 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5" 
+    
+          } 
+    
+        } 
+    
+      ] 
+    
+    };
+
+    return JSON.stringify(HomePageTestimonialSchema);
+  }
+
   injectForMarketplaceSchema(renderer) {
     // Create the Marketplace schema for the marketplace page
     const MarketplaceSchema = {
@@ -293,7 +421,7 @@ export class LanguageService {
 
   injectForMarketplaceTestimonialSchema(renderer) {
 
-    const MarketplaceTestimonialSchema = {
+    const MarketplaceTestimonialSchema = { 
 
       "@context": "https://schema.org", 
     
@@ -469,7 +597,7 @@ export class LanguageService {
 
   injectForAIProjectManagementTestimonialSchema(renderer) {
 
-    const AIProjectManagementSchema = {
+    const AIProjectManagementSchema = { 
 
       "@context": "https://schema.org", 
     
@@ -678,13 +806,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "Why should I choose a vendor from BuildTwin?",
+        "name": "Why should I choose vendors from BuildTwin for precast detailing services?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin is a one-stop platform that gives you ready access to multiple global vendors from around the world for pre-cast detailing services. These vendors are pre-qualified and aggregated onto the platform to instantly invite the best bids, thereby completely eliminating the laborious task of searching for vendors everywhere. BuildTwin automates your entire project, by giving you remote access to every single update for close monitoring.Not only that, you can even plug in your own workflow portal with BuildTwin for seamless integration."
+          "text": "BuildTwin is a one-stop platform that connects you with pre-qualified precast detailers who specialize in providing high-quality precast detailing services. Our vendors are carefully vetted to ensure they have the necessary extensive experience, adhere to industry standards, and deliver precise precast shop drawings and fabrication drawings. BuildTwin eliminates the hassle of vendor searching and offers live tracking for seamless project execution."
 
         }
 
@@ -692,13 +820,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "What software do vendors on BuildTwin use for precast detailing?",
+        "name": "What software do BuildTwin’s vendors use for precast detailing?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin’s vendors stay up to date on the latest industry trends when it comes to their choice of software, AutoCAD and Revit."
+          "text": "Vendors on BuildTwin use industry-standard software such as AutoCAD, Revit, and other advanced tools to generate accurate bar bending schedules, shop drawings, and precast panel detailing. These tools ensure compliance with international standards and enhance the quality of precast concrete detailing."
 
         }
 
@@ -712,7 +840,7 @@ export class LanguageService {
 
           "@type": "Answer",
 
-          "text": "Our AI-driven project management platform is meticulously designed with industry-leading privacy protocols to ensure that your data remains confidential, secure, and under your control. Our embedded trust system is integrated into every workflow, automating compliance tasks and reducing manual work, allowing you to focus on engineering while we ensure your operations remain compliant and secure."
+          "text": "Our platform is built on secure AI-driven systems that prioritize data privacy and confidentiality. With quality control measures embedded at every step, BuildTwin ensures your precast detailing project remains secure, compliant, and accessible only to authorized personnel."
 
         }
 
@@ -720,13 +848,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "What is the process for BuildTwin pre-qualifying its vendors?",
+        "name": "What type of precast detailing services can I expect from BuildTwin's vendors?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin aggregates the best-in-industry vendors by conducting a thorough background check and verification of a proven track record in pre-cast detailing services. The vendors are chosen based on experience, reliability, and a line of successful projects to their name."
+          "text": "BuildTwin’s vendors provide a wide range of services, including: Cladding panel detailing drawings Wall panel detailing for structural stability Detailed fabrication drawings Rebar detailing for structural components Erection drawings for seamless assembly Comprehensive precast connection details Handling of lifting leg locations and grout ferrule locations These services cater to a variety of building projects, including residential buildings, commercial buildings, and industrial buildings."
 
         }
 
@@ -734,13 +862,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "How can I compare vendors listed on BuildTwin?",
+        "name": "How does BuildTwin pre-qualify its vendors?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin provides you with a list of the top vendors categorized based on their sectors, experience, delivered projects, and locations. You can easily compare them against these parameters by selecting your required filters."
+          "text": "BuildTwin follows a stringent pre-qualification process by verifying the vendor's proven track record, adherence to industry standards, and ability to deliver accurate quantity take-offs and high-quality precast detailing drawings. Vendors are selected based on their expertise, project history, and compliance with global standards like ACI, CRSI, and ASTM."
 
         }
 
@@ -754,7 +882,7 @@ export class LanguageService {
 
           "@type": "Answer",
 
-          "text": "The vendors listed on BuildTwin are experienced in handling pre-cast detailing services for airports, residential, commercial and industrial buildings, data centers, power plants, chemical plants, manufacturing plants, parking structures, schools, hospitals, warehouses, bridges, tunnels, water & waste, metros, roadways, retaining walls, and foundations, among others."
+          "text": "The vendors listed on BuildTwin specialize in handling a wide range of projects, including: Residential buildings and complexes Commercial buildings such as malls and offices Industrial buildings, including chemical plants and factories Infrastructure like bridges, tunnels, and metros Specialized projects for double tee detailing, water tanks, and retaining walls"
 
         }
 
@@ -762,13 +890,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "How does BuildTwin ensure the quality of the services provided by vendors?",
+        "name": "How can I compare vendors listed on BuildTwin?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "By having a systematic step-by-step process in place and strict adherence to international compliance codes, BuildTwin makes sure you have direct access to every stage of the project. Right from erection drawings to cast-in components, quantity take-offs to assembling and production, and for every step in between, BuiltTwin ensures detailed reviews and stringent quality control in its pre-cast detailing services."
+          "text": "Our platform provides a detailed comparison tool that categorizes vendors by: Experience in precast detailing services Expertise in delivering specific fabrication drawings Successful project completions in diverse sectors Geographic reach and specialization in industrial buildings or residential buildings By applying these filters, you can select the best vendor for your precast detailing project."
 
         }
 
@@ -776,13 +904,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "How quickly can I expect a response from vendors on BuildTwin?",
+        "name": "What is the timeline for receiving responses from vendors?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "As soon as you sign up on BuildTwin, you can access our ready list of vendors for pre-cast detailing services from around the globe. All you need to do is invite 5+ vendors to bid on your project, and they will reach out to you with their best offers in X hours/days."
+          "text": "Once you invite vendors to bid on your precast detailing project, responses are typically received within 48–72 hours. Our platform ensures vendors are notified promptly, expediting the bidding process for your project."
 
         }
 
@@ -790,13 +918,97 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "What support does BuildTwin offer during the project?",
+        "name": "How does BuildTwin ensure adherence to industry standards?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin automates your entire project, by doing most of your work behind the scenes for you. From vendor selection to quality control, digitalized documentation to live updates, BuildTwin gives you the freedom to manage your project from anywhere with the best resources and practices."
+          "text": "BuildTwin's vendors strictly follow global industry standards like ACI, ASTM, BS, and CRSI for all precast concrete detailing projects. This ensures durability, structural integrity, and compliance with regional and international codes. Additionally, every stage undergoes quality control checks to maintain excellence."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "How does BuildTwin handle project tracking?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin offers a LIVE Track feature that allows you to monitor your project progress in real-time. This includes updates on precast panel detailing, erection drawings, and delivery timelines. With live tracking, you gain complete transparency and control over your precast detailing project."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "Can BuildTwin’s vendors assist with custom design requirements?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Yes, vendors on BuildTwin are experienced in handling custom precast connection details, beam column detailing, and unique building projects. They offer tailored solutions to meet specific project requirements while maintaining accuracy and efficiency."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "What are cast-in components, and how are they handled by BuildTwin’s vendors?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Cast-in components are essential structural elements like precast concrete walls, beams, and slabs. BuildTwin's vendors provide a comprehensive list of these components, including their precise lifting leg locations and grout ferrule locations, ensuring proper integration and installation."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "How do vendors on BuildTwin optimize resources for precast projects?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Through systematic quantity take-offs, BuildTwin's vendors ensure accurate estimation of materials and resources required for precast detailing projects. These include detailed measurements, volumes, and material specifications, reducing waste and optimizing costs."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "Can BuildTwin assist with large-scale industrial or infrastructure projects?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "Yes, BuildTwin’s platform is designed to cater to large-scale projects, including chemical plants, power plants, metros, and other infrastructure developments. Our vendors specialize in double tee detailing, bar bending schedules, and complex structural designs, making them ideal for large-scale industrial buildings."
+
+        }
+
+      }, {
+
+        "@type": "Question",
+
+        "name": "What support does BuildTwin provide during the project lifecycle?",
+
+        "acceptedAnswer": {
+
+          "@type": "Answer",
+
+          "text": "BuildTwin offers end-to-end support, including: Vendor selection and bidding facilitation Real-time project updates through LIVE Track Automated handling of fabrication drawings and shop drawings Quality assurance checks for industry standards compliance Our platform ensures seamless coordination, minimizing manual efforts and maximizing project efficiency."
 
         }
 
@@ -963,6 +1175,52 @@ export class LanguageService {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The appropriate Level of Development (LOD) for your project depends on various factors, including the project's phase, complexity, and specific requirements. LOD levels range from 100 to 500: LOD 100 (Conceptual Design): Basic massing models representing overall project intent. LOD 200 (Schematic Design): Generalized systems and assemblies with approximate quantities, size, shape, and location. LOD 300 (Detailed Design): Precise modeling with specific assemblies, accurate quantities, and dimensions suitable for coordination. LOD 350 (Construction Documentation): Includes interfaces between building elements, supporting detailed coordination. LOD 400 (Fabrication and Assembly): Models include complete fabrication and assembly information. LOD 500 (As-Built): Represents the project as constructed, useful for operations and maintenance. How BuildTwin Assists: Our vendors can deliver BIM models at any LOD required for your project. We recommend: Early Phases: Start with LOD 100-200 for conceptual and schematic designs. Design Development: Progress to LOD 300-350 for detailed coordination and construction documentation. Construction and Fabrication: Utilize LOD 400 for fabrication details. Facility Management: Employ LOD 500 for as-built models for long-term maintenance. Our experts can guide you in selecting the appropriate LOD to meet your project's needs and objectives."
+        }
+      }]
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForCADServices(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What types of CAD services are offered through BuildTwin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our marketplace has vendors offering a diverse range of CAD services through our platform. ●2D Drafting: Drafting for floor plans, sections, and layouts ●3D Modeling: Advanced 3D models for architectural, structural, and mechanical designs ●BIM Integration: BIM coordination and clash detection ●Steel Detailing: Detailing for structural steel components ●Rebar Detailing: Drawings and schedules for reinforcing steel ●MEP Drafting: Drafting for mechanical, electrical, and plumbing systems."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does BuildTwin ensure the quality of CAD services provided by vendors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The vendors listed in BuildTwin marketplace are vetted by experts. All our vendors adhere to globally recognized standards in CAD services. Here are some of the compliances standards we follow. ●ISO 19650: Standards for managing information using BIM throughout the project lifecycle. ●ASME Y14.5: Guidelines for Geometric Dimensioning and Tolerancing (GD&T). ●AISC Standards: Specifications for structural steel detailing. ●BS 8888: British standards for technical product documentation. ●DIN Standards: German standards for precision in mechanical and structural CAD design."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I choose from pre-qualified vendors for CAD Services on BuildTwin?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. At BuildTwin, we offer access to a pool of pre-qualified vendors specializing in CAD services. Our marketplace lets you ●Browse Vendor Profiles: View detailed profiles, including past projects, client reviews, and areas of expertise. ●Compare Bids: Receive and compare bids from multiple vendors to find the best fit for your project budget and timeline. ●Select Based on Expertise: Choose vendors with specific experience relevant to your project's requirements. ●Get Global Access: Connect with vendors worldwide, giving you access to a broader talent pool and competitive pricing. Our platform simplifies the vendor selection process, ensuring you find the right partner for your project."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does BuildTwin's AI technology enhance CAD services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "At BuildTwin, we leverage AI to enhance CAD services in several ways: ●AI Design Manager: Assists with project management tasks, automates routine processes, and helps in maintaining compliance with industry standards. ●Automated Quality Checks: AI algorithms review drawings and models for errors, ensuring high-quality outputs. ●Efficient Communication: AI-powered tools facilitate streamlined communication between clients and vendors, reducing delays. ●Data Management: Our AI manages project data securely, providing easy access and version control. ●Predictive Insights: AI provides insights into project timelines and potential bottlenecks, allowing for proactive management. By integrating AI, we help you achieve greater efficiency, accuracy, and productivity in your CAD projects."
         }
       }]
     };
@@ -1963,6 +2221,577 @@ export class LanguageService {
       ] 
     
     };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+
+  injectFAQSchemaForSectorDataCenter(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What are the key considerations in data center design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Location: Proximity to power sources, climate, and risk of natural disasters. Scalability: Design flexibility to accommodate future growth and technology upgrades. Energy Efficiency: Implementation of systems that minimize energy consumption, such as advanced cooling solutions and energy-efficient power systems." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does site selection influence data center performance and security?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "The choice of location impacts risk management, operational efficiency, and connectivity. Factors such as proximity to energy grids, risk of natural disasters, and local data protection laws play significant roles." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can you explain the difference between Tier 3 and Tier 4 data centers?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Tier 3 data centers offer N+1 redundancy, allowing any component to be maintained without affecting operations, whereas Tier 4 provides 2N+1 redundancy, ensuring fault tolerance and no downtime even during system failures." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the advantages of using a modular data center design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Modular designs allow for faster deployment and scalability. They are prefabricated off site, reducing on-site construction time and potentially lowering costs." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do I find the right vendor for my data center project?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin’s marketplace uses an intelligent matching system to connect you with vendors based on your project’s specific needs, including expertise in cooling technologies, energy efficiency, and scalable infrastructure." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Is BuildTwin capable of handling global data center projects?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Yes, BuildTwin’s platform is designed for global use, with vendors from multiple countries, ensuring that your project meets international standards while catering to local compliance and regulations." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What makes BuildTwin’s ERP system different from other project management tools?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin’s ERP system is tailored specifically for the AEC industry, offering comprehensive tools for managing everything from budgeting and scheduling to resource allocation and vendor communications, all in real-time." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do I get started with my data center project on BuildTwin?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Simply visit our website and explore our marketplace or schedule a consultation to discuss your project’s needs, filling the form on Contact us. Our team is ready to help you get started!" 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin assist with the retrofitting or upgrading of existing data centers?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Absolutely. BuildTwin offers solutions not just for new constructions but also for upgrading or expanding existing facilities. Our network includes vendors who specialize in retrofitting and can integrate the latest technologies into your current data center." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForBuildingCodeAisc(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What is the purpose of the AISC Building Code?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "The AISC code is for designing and building safe, durable, and efficient steel structures.  AISC covers buildings, bridges, industrial facilities, and other steel structures. These guidelines ensure structural safety, stability and performance of buildings, bridges and industrial facilities." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Is AISC mandatory for all projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "AISC is not required for all projects. However, many jurisdictions, agencies, and clients require AISC compliance as a condition of project approval for steel and other structures. Where it is not required, it’s often used as a best practice." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How often is the AISC code updated?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "The AISC Building Code is updated every 5 years to reflect new technology, industry changes and professional feedback. These updates keep the code relevant with new materials, techniques and design methods." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can small projects benefit from AISC compliance?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes, small projects can benefit greatly from AISC. Following AISC will mean better material utilization, cost savings, and easier project approvals, worth the investment." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does AISC address sustainability?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "AISC addresses sustainability by promoting material efficiency, recycling of steel and energy efficiency in construction. It emphasizes life cycle assessments to ensure structures are environmentally friendly. AISC also promotes local sourcing to reduce the carbon footprint of steel production and transportation." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure that vendors adhere to the AISC Building Code?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "We do a rigorous check before listing a vendor on our platform. You can select from a wide range of vendors who strictly adhere to the AISC Building Code." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Why should I choose vendors from BuilTwin?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "If you select a vendor from our platform, your project will benefit from experts who follow the AISC standards. By choosing reliable vendors, you will also reduce risks and optimize project timelines and costs." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+
+  injectFAQSchemaForBuildingCodeEuro(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What are Eurocodes?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Eurocodes are a comprehensive set of European standards for the structural design of buildings and civil engineering works. They promote safety, reliability, and sustainability in construction works, providing a unified framework for designing steel structures, masonry structures, and steel and concrete structures together." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What is the role of EN 1990 in the design of structures?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "EN 1990 defines the basis of structural design, outlining the general and general structural rules, and supplementary rules for structural behaviour, ensuring safety, serviceability, and durability. It serves as the foundation for all other Eurocode parts, establishing reliability principles for structural elements in construction products." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What challenges do Eurocodes address in the construction sector?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Eurocodes tackle critical issues such as: Material failure and structural instability in steel structures and plated structural elements. Environmental impacts on construction works during actions on structures like wind and snow loads. Geotechnical risks and earthquake resistance for foundations and temporary structures. These standards ensure robust outcomes and minimize risks in construction products and civil engineering works." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Are Eurocodes suitable for small projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes, Eurocodes are highly beneficial for projects of all sizes. Even small projects gain from the structured approach, simplified calculation methods optimized material usage, and technical specifications offered by Eurocodes, ensuring efficiency and quality." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How can Eurocodes improve cost efficiency?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Eurocodes streamline the structural design of buildings by: Optimizing material use for construction products like composite steel and concrete. Reducing waste and rework through standardized processes. Minimizing project delays by addressing imposed loads, thermal actions, and accidental actions early in the design phase." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Are Eurocodes mandatory?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "While not mandatory in all regions, Eurocodes are widely regarded as best practices and are often required for international projects. They are especially critical for projects involving geotechnical design, seismic actions, or masonry structures in compliance with European standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do Eurocodes enhance sustainability?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Eurocodes promote eco-friendly practices by: Encouraging efficient material usage and recycling in construction works. Aligning with green building principles for reduced environmental impacts. Supporting the use of sustainable materials like timber structures and stainless steels." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure vendor compliance?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin rigorously evaluates vendors against technical specifications and ensures adherence to Eurocode parts. Our platform vets vendors based on their expertise in national standards and compliance with Eurocodes, providing clients confidence in quality and reliability." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What role does EN 1997 play in construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "EN 1997 focuses on geotechnical aspects of design, covering foundation stability, soil-structure interaction, and ground improvement techniques. It is crucial for ensuring the stability of civil engineering works in diverse geological conditions." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+
+  injectFAQSchemaForSectorPowerPlant(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What types of power plants does BuildTwin support?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin facilitates connections with vendors specializing in thermal, hydroelectric, nuclear, renewable, and hybrid energy plants, tailored for diverse energy requirements." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure vendor quality for power plant projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Vendors undergo a rigorous qualification process, assessing expertise in design, compliance, and project execution to ensure they meet global standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin support remote or challenging project locations?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes, BuildTwin’s network includes vendors experienced in managing projects across diverse terrains and climates, ensuring efficient solutions in any location." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How are safety and compliance managed in power plant construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our vendors prioritize designs that meet international safety protocols, regulatory standards, and environmental guidelines to ensure secure operations and sustainability." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What role does advanced technology play in modern power plants?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Technologies like Building Information Modeling (BIM), predictive maintenance tools, and energy management systems optimize plant efficiency and reduce operational risks." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the advantages of modular power plant designs?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Modular designs allow for faster deployment, scalability, and cost-efficiency. They are ideal for meeting urgent energy needs or expanding existing capacity." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How is grid connectivity ensured in power plant projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Projects are designed to integrate seamlessly with local and national grids, ensuring efficient power transmission and distribution." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What sustainability practices are implemented in power plant projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Vendors focus on reducing carbon footprints through waste heat recovery, emissions control, and the use of sustainable building materials." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin’s ERP system enhance project management?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our ERP tools streamline project oversight, enabling real-time collaboration, resource tracking, and milestone management for efficient and timely delivery." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What types of renewable power plants are supported?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin connects you with experts in solar, wind, geothermal, and biomass energy projects, ensuring compliance and efficiency." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin facilitate cost control in power plant projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Through vendor selection, integrated ERP systems, and real-time budget monitoring, BuildTwin ensures projects remain within financial limits." 
+
+    } 
+
+  }]};
 
     // Create the script element
     // const jsonLdScriptTag = renderer.createElement('script');

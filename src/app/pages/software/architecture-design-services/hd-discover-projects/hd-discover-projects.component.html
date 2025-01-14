@@ -1,0 +1,47 @@
+<div class="project-providers global-mb">
+        <div class="heading">
+          <h2 class="title">Featured Architecture Design Projects</h2>
+          <span class="subTitle">Projects completed by our certified vendors using industry-leading softwares, showcasing the architectural excellence.</span>
+        </div>  
+    <div class="project-providers__carousel squareButtonWrapper">
+      <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
+            <ng-container *ngFor="let item of projectsArray">
+                <ng-template carouselSlide>
+                    <div class="item">
+                        <div class="d-flex col-gap factories">
+                            <div class="d-flex factory-box">
+                                <div class="bg-image" [style]="{'background-image': 'url(' + item.img + ')'}">
+                                    <div class="country-bg">
+                                        <img src={{item.locationFlag}} [alt]="item.alt" class="cntry-img">
+                                        <span class="cntry-txt">{{item.company}}</span>
+                                    </div>
+                                </div>
+                                <div class="factory-detail">
+                                    <h5 class="fact-title">{{item.projectTitle}}</h5>
+                                    <span> <ng-container *ngIf="page"> Commercial building | </ng-container> {{item['category']}}</span>
+                                    <p class="fact-desc">{{item.serviceDescription}}
+                                        
+                                    </p>
+                                    <span *ngIf="page" class="duration">
+                                        Duration: 6 months
+                                    </span>
+                                    <a target="_blank" [routerLink]="_languageService.currentLanguage+item.link" class="cmpny-logo">
+                                        <span class="logo-img">
+                                            <img src={{item.serviceCompanyIcon}} alt="">
+                                        </span>
+                                        <span class="heading-slide">vendor
+                                            <br>
+                                            <span class="heading-1">{{item.serviceCompany}}</span>
+                                        </span>
+                                        <img src="assets/images/home/vector.svg" alt="" class="arrow-vector">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+      </owl-carousel-o>
+    </div>
+    
+  </div>

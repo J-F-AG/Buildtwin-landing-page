@@ -1,3 +1,4 @@
+
 .componentWrapper {
     display: flex;
     flex-direction: column;
@@ -139,17 +140,6 @@
       .icon {
         padding-top: 0;
       }
-      .title {
-        font-size: 44px;
-        font-family: var(--medium-global);
-        font-weight: 500;
-      }
-      .subTitle {
-        margin: 5px 0;
-        font-size: 18px;
-        font-weight: 400;
-        color: #668189;
-      }
     }
     .sectionContent {
       width: 100%;
@@ -216,17 +206,6 @@
       align-items: center;
       .icon {
         padding-top: 25px;
-      }
-      .title {
-        font-size: 44px;
-        font-family: var(--medium-global);
-        font-weight: 500;
-      }
-      .subTitle {
-        margin: 5px 0;
-        font-size: 18px;
-        font-weight: 400;
-        color: #668189;
       }
     }
     .sectionContent {
@@ -636,17 +615,6 @@
       .icon {
         padding-top: 0;
       }
-      .title {
-        font-size: 44px;
-        font-family: var(--medium-global);
-        font-weight: 500;
-      }
-      .subTitle {
-        margin: 5px 0;
-        font-size: 18px;
-        font-weight: 400;
-        color: #668189;
-      }
     }
     .sectionContent {
       // height: 614px;
@@ -831,12 +799,6 @@
           }
         }
         .companyDetails {
-          .title {
-            font-family: var(--medium-global);
-            font-weight: 500;
-            font-size: 14px;
-            color: #6E6E6E;
-          }
           .service {
             font-weight: 400;
             font-size: 14px;
@@ -865,17 +827,6 @@
       align-items: center;
       .icon {
         padding-top: 25px;
-      }
-      .title {
-        font-size: 44px;
-        font-family: var(--medium-global);
-        font-weight: 500;
-      }
-      .subTitle {
-        margin: 5px 0;
-        font-size: 18px;
-        font-weight: 400;
-        color: #668189;
       }
     }
   }
@@ -1061,10 +1012,6 @@
   }
   .sectionTop .heading {
     font-size: 24px;
-  }
-  .discoverProjectsSection .sectionHeader .title,
-  .helpSection .sectionHeader .title {
-    font-size: 22px;
   }
   .headerSection,
   .discoverProjectsSection {

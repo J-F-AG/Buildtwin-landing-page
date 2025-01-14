@@ -1,0 +1,25 @@
+.core-elements-bullets{
+    list-style: disc;
+    margin-bottom: 5px;
+    padding-left: 35px;
+    li::marker {
+        font-size: 22px; /* Increase bullet size */
+        font-weight: bold; /* Make bullets bold */
+        // color: #333; /* Optional: Change bullet color */
+      }
+}
+
+.ulClass{
+  list-style-type: circle !important;
+  padding-left: 20px !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.liClass{
+  padding-left: 0 !important;
+  position: static !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}

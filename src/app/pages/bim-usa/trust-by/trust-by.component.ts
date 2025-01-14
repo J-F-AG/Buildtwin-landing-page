@@ -6,7 +6,7 @@ import { LanguageService } from 'src/app/services/language.service';
   // standalone: true,
   // imports: [],
   templateUrl: './trust-by.component.html',
-  styleUrl: './trust-by.component.scss'
+  styleUrls: ['./trust-by.component.scss']
 })
 export class BimUsaTrustByNewComponent {
   constructor(public _languageService:LanguageService) { }

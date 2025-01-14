@@ -7,22 +7,6 @@
   }
 }
 
-.main-title {
-  font-family: var(--fontFamily);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--themeColor);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 17px;
-  &:after {
-    content: '';
-    width: 85px;
-    height: 2px;
-    border: 1px solid var(--themeColor);
-  }
-}
 
 .title {
     font-family: var(--fontFamily);
@@ -53,21 +37,6 @@
     .icon {
       padding-top: 25px;
     }
-    .heading {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .title {
-      font-size: 27px;
-      font-family: var(--fontFamily);
-      margin: 0;
-    }
-    .subTile {
-      margin: 5px 0;
-      font-size: 14px;
-      font-weight: 400;
-    }
   }
   .main-head {
     display: grid;
@@ -75,27 +44,13 @@
     gap: 24px;
   }
   .default-btn.align-self-end {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .align-self-end {
     align-self: end;
   }
   .sectionHead {
     text-align: start;
-      .title{
-      font-size: 44px;
-      font-family: var(--fontFamily);
-      font-weight: 500;
-      line-height: 56.01px;
-      color: var(--newButtonColor);
-      margin-bottom: 8px;
-      }
-      .subTitle{
-        font-size: 18px;
-        color: var(--lightTextColor);
-        font-weight: 400;
-        letter-spacing: 0.35px;
-      }
   }
   .bodyWrapper {
     // margin: 15px 0 0 0;
@@ -307,21 +262,6 @@
   }
 }
 @media only screen and (max-width : 767px) { 
-  .main-title {
-    font-size: 15px;
-  }
-  .sectionHead .title {
-    font-size: 24px;
-  }
-  .sectionHead .subTitle {
-    font-size: 14px;
-  }
-  .sectionHead {
-    .heading {
-      text-align: left;
-      padding: 0;
-    }
-  }
 
   .bodyWrapper {
     background: none;

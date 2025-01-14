@@ -30,44 +30,11 @@
     gap: 24px;
 }
 
-.main-title {
-  font-family: var(--fontFamily);
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--themeColor);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 17px;
-  &:after {
-    content: '';
-    width: 85px;
-    height: 2px;
-    border: 1px solid var(--themeColor);
-  }
-}
-.heading {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.title{
-    font-size: 40px;
-    font-family: var(--fontFamily);
-    font-weight: 600;
-    color: var(--newButtonColor);
-    margin: 0 0 8px;
-}
 
-.subTitle{
-    font-size: 18px;
-    color: var(--lightTextColor);
-    font-weight: 400;
-    letter-spacing: 0.35px;
-}
 
 .align-self-end {
   align-self: end;
+  margin-bottom: 40px;
 }
 .testimonial-slides {
   border-radius: 0 12px 12px 12px;
@@ -214,7 +181,7 @@ ul.partner li {
     list-style: none;
     gap: 71px;
     justify-content: center;
-    margin: 54px 0 0;
+    margin: 0 0 0;
 }
 
 .profile-card {
@@ -331,7 +298,7 @@ ul.partner li {
         list-style: none;
         gap: 10px;
         justify-content: center;
-        margin: 44px 0 0;
+        margin: 0 0 0;
         flex-wrap: wrap;
         padding: 0;
     }
@@ -361,12 +328,6 @@ ul.partner li {
 }
   }
   @media only screen and (max-width : 767px) {
-    .title {
-      font-size: 24px;
-    }
-    .subTitle {
-      font-size: 14px;
-    }
     .testimonial-slides ::ng-deep .owl-nav {
       position: absolute;
       right: 50%;

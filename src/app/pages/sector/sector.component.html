@@ -13,7 +13,7 @@
                     </p>
                     <div class="button-wrapper">
                         <a href="" class="default-btn mdc-button">
-                            Book a service
+                            Book a Service
                         </a>
                         <a href="" class="default-btn mdc-button border">
                             Learn more
@@ -24,10 +24,10 @@
         </div>
         
      <!-- <div class="bottom-space-gap"> -->
-        <app-special-project [page]="'sector'"></app-special-project>
+        <app-special-project-sector [page]="'sector'"></app-special-project-sector>
    <!-- </div> -->
-   <app-tt-partners [page]="'sector'"></app-tt-partners>
-        <app-hd-discover-projects [hideTitle]="true" [page]="'sector'"></app-hd-discover-projects>
+   <app-tt-partners-sector [page]="'sector'"></app-tt-partners-sector>
+        <app-hd-discover-projects-sector [hideTitle]="true" [page]="'sector'"></app-hd-discover-projects-sector>
    <div class="container">
     <div class="count-wrapper global-mb">
         <div class="block">
@@ -58,7 +58,7 @@
    </div>
 
    <div class="bottom-space-gap">
-    <app-sector-category [category]="8" [page]="'sector'"></app-sector-category>
+    <app-sector-category-sector [category]="8" [page]="'sector'"></app-sector-category-sector>
 </div>
 
 <div class="global-mb container">
@@ -318,9 +318,58 @@
         </div>
 
     </div>
-    <app-faq-buildtwin [fullScreen]="true"></app-faq-buildtwin>
+    <app-faq-buildtwin-sector [fullScreen]="true"></app-faq-buildtwin-sector>
     <div class="container">
+        <div class="bt-flex form-wrap">
+            <div class="flex-grow-1">
+        <h2>
+            Ready to Start Your Engineering Project?
+        </h2>
+        <p>
+            Connect with our pre-qualified vendors and get your project started today. Our experts are ready to assist you.
+        </p>
+        <ul class="list">
+            <li>
+                <h5>
+                    Verified Vendors
+                </h5>
+                <span>
+                    Access to pre-qualified engineering teams
+                </span>
+            </li>
+            <li>
+                <h5>
+                    Dedicated Support
+                </h5>
+                <span>
+                    24/7 project management assistance
+                </span>
+            </li>
+            <li>
+                <h5>
+                    Secure Platform
+                </h5>
+                <span>
+                    Protected data and communication channels
+                </span>
+            </li>
+        </ul>
+        <div class="logo-wrapper">
+            <div class="block">
+                <img src="assets/images/qualityBuildtwin.png" alt="Quality Badge" width="54" height="48">
+            </div>
+            <div class="block">
+                <img src="assets/images/trustedBy-gbc.jpg" alt="Partner Logo" width="78" height="48">
+            </div>
+            <div class="block">
+                <img src="assets/images/trustedBy-caldim.jpg" alt="Partner Logo" width="114" height="48">
+            </div>
+        </div>
+            </div>
+        <div class="flex-grow-1">
         <app-free-offer-form [page]="'sector'"></app-free-offer-form>
+        </div>
+        </div>
     </div>
     <!-- <div class="bottom-space-big">
         <app-drawing-freelancers></app-drawing-freelancers>

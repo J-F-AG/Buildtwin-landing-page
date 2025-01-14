@@ -1,6 +1,43 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+import { HelpDeskHomeComponent } from './pages/Home/help-desk-home/help-desk-home.component';
+import { OnlineMeetingHomeComponent } from './pages/co-pilot-for/co-pilot/online-meeting-home/online-meeting-home.component';
+import { OnlineMeetingHomeFreelanceComponent } from './pages/co-pilot-for/digital-self-management/online-meeting-home-freelance/online-meeting-home-freelance.component';
+import { ProvideServiceComponent } from './pages/marketplace/provide-service/provide-service.component';
+import { TimeTrackingHomeComponent } from './pages/marketplace/marketPlace/time-tracking-home/time-tracking-home.component';
+import { ElearningSchoolComponent } from './pages/training/training/elearning-school/elearning-school.component';
+import { FaqPageTrainingComponent } from './pages/training/faq/faq-page-training/faq-page.component';
+import { PricingPageComponent } from './pages/price/pricing-page/pricing-page.component';
+import { EmailMarketingHomeComponent } from './pages/whybuildtwin/why-buildtwin/email-marketing-home/email-marketing-home.component';
+import { BlogPageComponent } from './pages/whybuildtwin/customer-sucess/blog-page/blog-page.component';
+import { FaqPageComponent } from './pages/whybuildtwin/faq/faq-page/faq-page.component';
+import { DataSafetyComponent } from './pages/whybuildtwin/data-safety/data-safety.component';
+import { IntegrationsPageComponent } from './pages/whybuildtwin/integrations-page/integrations-page.component';
+import { ContactPageComponent } from './pages/whybuildtwin/contact-page/contact-page.component';
+import { AboutPageComponent } from './pages/whybuildtwin/about-page/about-page.component';
+import { DataPrivacyComponent } from './pages/data-privacy/data-safety.component';
+import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
+import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
+import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
+import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
+import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
+import { ServicesNewComponent } from './pages/services-new/services-new.component';
+import { RebarServicesNewComponent } from './pages/rebar/services-new.component';
+import { BimServicesNewComponent } from './pages/bim/services-new.component';
+import { StructuralSteelServicesNewComponent } from './pages/structural-steel/services-new.component';
+import { BimUsaServicesNewComponent } from './pages/bim-usa/services-new.component';
+import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
+import { SectorComponent } from './pages/sector/sector.component';
+import { BuildingCodeComponent } from './pages/building-code/sector.component';
+import { DataCenterSectorComponent } from './pages/sector-data-center/sector.component';
+import { BuildingCodeAiscComponent } from './pages/building-code-aisc/sector.component';
+import { SectorPowerPlantComponent } from './pages/sector-power-plant/sector.component';
+import { ArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector.component';
+import { StructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/sector.component';
+import { DraftingServicesNewComponent } from './pages/drafting-services/services-new.component';
+import { CadServicesNewComponent } from './pages/cad-services/services-new.component';
+import { BuildingCodeEuroComponent } from './pages/building-code-euro/sector.component';
+import { ComingSoonModule } from './pages/coming-soon/coming-soon.module';
 
 
 
@@ -13,8 +50,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/Home/help-desk-home/help-desk-home.module').then(m => m.HelpDeskHomeModule),
         // component: HelpDeskHomeComponent,
         data: {
-            title: 'Buildtwin | Marketplace for Structural Engineering Services',
-            description: 'Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform.',
+            title: 'Find Structural Engineering Services & Solutions | BuildTwin Marketplace',
+            description: 'Find professional structural engineering services and solutions at BuildTwin Marketplace. Connect with top structural engineering firms & companies offering consultation and expert services across the USA, EU, Middle East, UK, Australia, and India.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com'
         }
@@ -184,10 +221,77 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/terms-conditions'
         }
     },
-    {
-        path: 'training-faq',
+    {path: 'training-faq', 
         loadChildren: () => import('./pages/training/faq/faq-page-training/faq-page-training.module').then(m => m.FaqPageTrainingModule),
-        // component: FaqPageTrainingComponent
+    },
+    {path: 'pricing', component: PricingPageComponent},
+    // {path: 'engineering-services/services',
+    //     redirectTo: '/explore-services',
+    //     pathMatch: 'full'
+    // },
+    {path: 'sector', 
+        redirectTo: '/sector/data-centre',
+        pathMatch: 'full'
+        // component: SectorComponent
+    },
+    {path: 'software', 
+        redirectTo: '/software/architecture-design-services',
+        pathMatch: 'full'
+        // component: SectorComponent
+    },
+    {path: 'building-code',
+        redirectTo: '/building-code/aisc',
+        pathMatch: 'full'
+    },
+    {path: 'building-code/aisc', component: BuildingCodeAiscComponent,
+        data: {
+            title: 'Find AISC-Compliant Service Providers for Your Next Project',
+            description: 'Explore the importance of the AISC Building Code for safe, durable, and efficient steel construction. Connect with AISC-compliant service providers on BuildTwin',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/building-code/aisc'
+        }
+    },
+    {path: 'building-code/eurocode', component: BuildingCodeEuroComponent,
+        data: {
+            title: 'Understanding the Eurocode | BuildTwin Marketplace',
+            description: 'Discover essential guidelines for Eurocode design standards to enhance your engineering projects. Read the article for practical insights and clarity.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/building-code/eurocode'
+        }
+    },
+    {path: 'software/architecture-design-services',
+        component: ArchitectureDesignServicesComponent,
+        data: {
+            title: 'Architecture Design Software Comparison Autodesk Revit vs ALLPLAN',
+            description: "Detailed comparison of Autodesk Revit and ALLPLAN architecture & structural design software. Explore their features, strengths, pricing, and ideal use cases to make the right choice for your project.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/software/architecture-design-services'
+        }
+    },
+    {path: 'software/structural-steel-detailing',
+        component: StructuralSteelDetailingSoftwareComponent,
+        data: {
+            title: 'Structural Steel Detailing Software Comparison: Tekla Structures vs SDS/2',
+            description: "Detailed comparison of Tekla Structures and SDS/2 for structural steel detailing. Explore their features, strengths, pricing, and ideal use cases to choose the right software for your project.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/software/structural-steel-detailing'
+        }
+    },
+    {path: 'sector/data-centre', component: DataCenterSectorComponent,
+        data: {
+            title: 'Connect with Expert Data Center Designers | BuildTwin Marketplace',
+            description: 'Unlock expert data center construction solutions with BuildTwin. From modular to hyperscale data centers, we offer tailored design, compliance, and management with a global vendor network.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/data-centre'
+        }
+    },
+    {path: 'sector/power-plant', component: SectorPowerPlantComponent,
+        data: {
+            title: 'Connect with Expert Power Plant Engineering Designers | BuildTwin Marketplace',
+            description: 'Connecting Global Expertise with Advanced ERP Solutions for Power Plant Design and Development',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/power-plant'
+        }
     },
     {
         path: 'pricing',
@@ -215,8 +319,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/services-new/services-new.module').then(m => m.ServicesNewModule),
         // component: ServicesNewComponent,
         data: {
-            title: 'Precast Detailing Services by Pre-Qualified Vendors | BuildTwin',
-            description: "Streamline your projects with BuildTwin's precast detailing services. Select from hundreds of pre-qualified vendors, monitor progress live, and receive internationally compliant drawings",
+            title: 'Precast Detailing Services | Precast Panel & Concrete Detailing | BuildTwin',
+            description: "Explore BuildTwin Marketplace for precast detailing services, including precast panel, concrete, and wall detailing. Serving the USA, EU, Middle East, UK, Australia, and India. Optimize your projects with our experienced precast detailers.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/pre-cast-detailing-services'
         }
@@ -227,8 +331,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/rebar/services-new.module').then(m => m.RebarServicesNewModule),
         // component: RebarServicesNewComponent,
         data: {
-            title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
-            description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
+            title: 'Rebar Detailing Services | Rebar Shop Drawings & Design | BuildTwin',
+            description: "BuildTwin Marketplace offers rebar detailing and shop drawing services, catering to clients in the USA, EU, Middle East, UK, Australia, and India. Partner with top rebar design & detailing services companies.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/rebar-detailing-services'
         }
@@ -239,8 +343,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/bim/services-new.module').then(m => m.BimServicesNewModule),
         // component: BimServicesNewComponent,
         data: {
-            title: 'BIM (Building Information Modeling) Services For AEC Projects | BuildTwin',
-            description: "BuildTwin Marketplace offers comprehensive BIM services to streamline your AEC projects. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
+            title: 'BIM Services | BIM Modeling Consulting | BIM MEP Outsourcing | BuildTwin',
+            description: "Explore BIM services at BuildTwin Marketplace. Offering BIM outsourcing and consulting services for architectural, structural and engineering. Trusted Building Information Modeling service providers in USA, EU, Middle East, UK, Australia & India.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/bim-services'
         }
@@ -251,8 +355,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/structural-steel/services-new.module').then(m => m.StructuralSteelServicesNewModule),
         // component: StructuralSteelServicesNewComponent,
         data: {
-            title: 'Structural Steel Detailing Services for AEC Project | BuildTwin',
-            description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects. Our services include shop drawings, erection drawings, 2D and 3D modelling, connection design, and miscellaneous steel detailing.",
+            title: 'Steel Detailing Services | Marketplace for Structural Steel Detailing | BuildTwin',
+            description: "BuildTwin Marketplace offers a comprehensive platform for steel detailing services. Trusted by structural steel detailing companies, we serve clients across the USA, Middle East, EU, UK, Australia and India.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/steel-detailing-services'
         }
@@ -283,10 +387,25 @@ const routes: Routes = [
     },
 
     {
-        path: 'notfound',
-        loadChildren: () => import('./pages/coming-soon/coming-soon.module').then(m => m.ComingSoonModule),
-        // component: ComingSoonComponent
+        path: 'services/drafting-services', component: DraftingServicesNewComponent,
+        data: {
+            title: 'Drafting Services for AEC Projects',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your drafting services for construction and engineering projects.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/drafting-services'
+        }
     },
+    {
+        path: 'services/cad-services', component: CadServicesNewComponent,
+        data: {
+            title: 'CAD Services for AEC Projects',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your CAD services for construction and engineering projects.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/cad-services'
+        }
+    },
+
+    { path: 'notfound', loadChildren: () => import('./pages/coming-soon/coming-soon.module').then(m => m.ComingSoonModule) },
 
 
     {

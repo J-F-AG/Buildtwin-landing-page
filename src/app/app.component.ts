@@ -31,6 +31,7 @@ export class AppComponent {
     breadcrumbs: any[] = [];
     breadcrumbSchemaHtml: SafeHtml;
     langHtml: SafeHtml;
+    schemaCode: SafeHtml;
     faqSchemaHtml: SafeHtml;
     testimonialSchemaHtml: SafeHtml;
     constructor(
@@ -88,12 +89,13 @@ export class AppComponent {
                 this._seoService.updateTwitterCardType('summary_large_image');
                 this._seoService.updateTwitterImage(event['image']);
                 this._seoService.setCanonicalURL(event['canonical'], this.renderer);
+                this._seoService.setLanguageTags(event['canonical'], this.renderer);
             }
             if(event['canonical']){
             }
             // let url = this.router.url;
-            this._languageService.setLanguageTags(url);
-            this.injectLang();
+            // this._languageService.setLanguageTags(url);
+            // this.injectLang();
             this.breadcrumbService.generateBreadcrumbs(url);
             this.breadcrumbs = this.breadcrumbService.breadcrumbs;
             this.injectBreadcrumbScript(url);
@@ -173,6 +175,7 @@ injectBreadcrumbScript(url) {
         existingScripts.forEach(script => {
             this.breadcrumbSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
             this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+            this.schemaCode = this.sanitizer.bypassSecurityTrustHtml('');
         });
     } catch (error) {
         
@@ -196,6 +199,17 @@ injectBreadcrumbScript(url) {
       
       // Append new script to head
     //   this.renderer.appendChild(document.head, jsonLdScriptTag);
+    }
+    if(this.router.url === '/'){
+      const faqSchema = this._languageService.injectSchemaCodeForHomePage(this.renderer);
+      this.schemaCode = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+      const testimonialSchema = this._languageService.injectTestimonialSchemaForHomePage(this.renderer);
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
+      );
     }
     if(url.includes('/provide-service')){
         const faqSchema = this._languageService.injectFaqSchema(this.renderer);
@@ -269,8 +283,38 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
-    }else if(url.includes('/services/bim-service-provider-in-usa')){
+    }else if(url.includes('/cad-services')){
+      const faqSchema = this._languageService.injectFAQSchemaForCADServices(this.renderer)
+
+    this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+      `<script type="application/ld+json">${faqSchema}</script>`
+    );
+  }else if(url.includes('/services/bim-service-provider-in-usa')){
       const faqSchema = this._languageService.injectFAQSchemaForBimServiceProvider(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/sector/data-centre')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorDataCenter(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/building-code/aisc')){
+      const faqSchema = this._languageService.injectFAQSchemaForBuildingCodeAisc(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/building-code/eurocode')){
+      const faqSchema = this._languageService.injectFAQSchemaForBuildingCodeEuro(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/sector/power-plant')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorPowerPlant(this.renderer)
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`

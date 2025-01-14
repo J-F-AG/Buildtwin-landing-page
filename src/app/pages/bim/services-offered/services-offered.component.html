@@ -1,4 +1,4 @@
-<div class="sectionContainer">
+<!-- <div class="sectionContainer">
     <div class="container">
         <div class="container-with-right">
             <div class="relativeContainer">
@@ -14,10 +14,12 @@
 
                         <owl-carousel-o [options]="customOptions">
                             <ng-template carouselSlide *ngFor=" let item of projectsArray">
-                                <div class="projectItem" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-                                    <div class="projectImage"><img src="{{item.img}}" alt="cardImage"></div>
-                                    <h3 class="projectTitle">{{item.projectTitle}}</h3>
-                                </div>
+                                <a [routerLink]="item.link || null">
+                                    <div class="projectItem" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                                        <div class="projectImage"><img src="{{item.img}}" alt="cardImage"></div>
+                                        <h3 class="projectTitle">{{item.projectTitle}}</h3>
+                                    </div>
+                                </a>
                             </ng-template>
                         </owl-carousel-o>
 
@@ -26,4 +28,17 @@
             </div>
         </div>
     </div>
+</div> -->
+
+<div class="container-with-right">
+    <div class="container">
+        <div class="heading">
+            <h2 class="title">Sectors where we offer BIM services</h2>
+            <span class="subTitle">
+                Take a look at sectors that most commonly benefit from our platform when it 
+                        comes to BIM services.
+            </span>
+          </div>  
+    </div>
+    <app-special-project [heading]="false"></app-special-project>
 </div>

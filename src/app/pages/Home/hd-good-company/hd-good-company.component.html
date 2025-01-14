@@ -1,5 +1,5 @@
-<div class="good-company global-mb" *ngIf="allBlogs.length">
-    <div class="main-head">
+<div class="good-company container global-mb" *ngIf="allBlogs.length">
+    <div class="main-head" *ngIf="heading">
         <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
             <!-- <div class="main-title" *ngIf="!hideTitle">Discover top-tier solutions tailored to your project needs</div> -->
             <div class="heading" *ngIf="!page">
@@ -85,7 +85,7 @@
                     </ng-container>
                 </div>
             </div>
-            <div class="right-block">
+            <!-- <div class="right-block">
                 <h4>
                     Industry Updates
                 </h4>
@@ -115,7 +115,7 @@
                         </span>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
