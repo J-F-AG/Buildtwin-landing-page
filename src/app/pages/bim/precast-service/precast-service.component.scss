@@ -6,6 +6,10 @@
     p{font-size: 16px;}
 
     .tabContent{ padding-top: 30px; padding-right: 40px;
+        display: none;
+        &.show {
+            display: block;
+        }
         h3{
             font-size: 22px;
             font-weight: 600;

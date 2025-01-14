@@ -22,9 +22,8 @@
                         </h4>
                 </ng-container>
         </div>
-        <ng-container *ngFor="let item of precastArray; let i = index">
-            <ng-container *ngIf="activeTab == i">
-                <div class="tabContent" *ngFor="let detail of item.details">
+        <ng-container *ngFor="let item of precastArray; let i = index"> 
+                <div class="tabContent" *ngFor="let detail of item.details" [ngClass]="{'show':activeTab == i}">
                     <p>{{ detail.mainContent }}</p>
                     <h3>{{ detail.header }}</h3>
                     <div class="subContent">
@@ -37,7 +36,6 @@
                         </div>
                     </div>
                 </div>
-            </ng-container>
         </ng-container>
         <!-- <div class="tabContent" *ngFor="let detail of activeContent.details">
             <p>{{ detail.mainContent }}</p>

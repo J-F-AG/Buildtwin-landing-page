@@ -22,33 +22,35 @@
                         </h4>
                 </ng-container>
         </div>
-        <div class="tabContent" *ngFor="let detail of activeContent.details">
-            <!-- <p style="font-size: 15px;"><b>{{ detail.mainContentHead }}</b></p> -->
-            <p>{{ detail.mainContent }}</p>
-            <h3>{{ detail.header }}</h3>
-            <div class="subContent" style="margin-bottom: 10px;">
-                <p>{{ detail.subContent }}</p>
-            </div>
-            <!-- <div class="subContent" style="margin-bottom: 8px;">
-                <ul>
-                    <li><p>The synergy of experience and expertise results in superior outcomes.</p></li>
-                    <li><p>With a deep understanding of both national and international compliances.</p></li>
-                    <li><p>An economical choice for BIM Services that adhere to USA standards.</p></li>
-                    <li><p>Trusted by the best architects, contractors, AEC firms, and design build firms in the USA.</p></li>
-                </ul>
-            </div> -->
-            <!-- <div class="subContent" style="margin-bottom: 8px;">
-                <br>
-                <p>The adherence to quality forms a cornerstone of our company's success. For this, we adhere to the following US standard code:</p>
-            </div> -->
-            
-            <div class="dataList">
-                <div *ngFor="let item of detail['items']">
-                    <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
-                    <span>{{item}}</span>
+        <ng-container *ngFor="let item of precastArray; let i = index"> 
+            <div class="tabContent" *ngFor="let detail of item.details" [ngClass]="{'show':activeTab == i}">
+                <!-- <p style="font-size: 15px;"><b>{{ detail.mainContentHead }}</b></p> -->
+                <p>{{ detail.mainContent }}</p>
+                <h3>{{ detail.header }}</h3>
+                <div class="subContent" style="margin-bottom: 10px;">
+                    <p>{{ detail.subContent }}</p>
+                </div>
+                <!-- <div class="subContent" style="margin-bottom: 8px;">
+                    <ul>
+                        <li><p>The synergy of experience and expertise results in superior outcomes.</p></li>
+                        <li><p>With a deep understanding of both national and international compliances.</p></li>
+                        <li><p>An economical choice for BIM Services that adhere to USA standards.</p></li>
+                        <li><p>Trusted by the best architects, contractors, AEC firms, and design build firms in the USA.</p></li>
+                    </ul>
+                </div> -->
+                <!-- <div class="subContent" style="margin-bottom: 8px;">
+                    <br>
+                    <p>The adherence to quality forms a cornerstone of our company's success. For this, we adhere to the following US standard code:</p>
+                </div> -->
+                
+                <div class="dataList">
+                    <div *ngFor="let item of detail['items']">
+                        <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
+                        <span>{{item}}</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </ng-container>
         
     </div>
         </div>
