@@ -16,6 +16,8 @@ import { BimServicesOfferedComponent } from './services-offered/services-offered
 import { BimThreeCardsComponent } from './three-cards/three-cards.component';
 import { BimTopVendorsComponent } from './top-vendors/top-vendors.component';
 import { TrustByModule } from './trust-by/trust-by.module';
+import { HdNavbarModule } from '../includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from '../includes/hd-footer/hd-footer.module';
 
 const routes: Routes = [
   {
@@ -44,6 +46,8 @@ const routes: Routes = [
     CommonModule,
     SharedModuleModule,
     TrustByModule,
+    HdNavbarModule,
+        HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

@@ -18,6 +18,8 @@ import { SteelDetailingUsaTopVendorsComponent } from './top-vendors/top-vendors.
 import { SteelDetailingUsaTrustByNewComponent } from './trust-by/trust-by.component';
 import { ServiceCategoryModule } from 'src/app/include-component/service-category/service-category.module';
 import { TrustByModule } from '../bim/trust-by/trust-by.module';
+import { HdNavbarModule } from '../includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from '../includes/hd-footer/hd-footer.module';
 
 const routes: Routes = [
   {
@@ -48,6 +50,8 @@ const routes: Routes = [
     SharedModuleModule,
     ServiceCategoryModule,
     TrustByModule,
+        HdNavbarModule,
+        HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

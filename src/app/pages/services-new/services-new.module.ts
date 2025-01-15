@@ -15,6 +15,8 @@ import { ThreeCardsComponent } from './three-cards/three-cards.component';
 import { TopVendorsComponent } from './top-vendors/top-vendors.component';
 import { TrustByNewComponent } from './trust-by/trust-by.component';
 import { TrustByModule } from '../bim/trust-by/trust-by.module';
+import { HdNavbarModule } from '../includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from '../includes/hd-footer/hd-footer.module';
 
 const routes: Routes = [
   {
@@ -42,6 +44,8 @@ const routes: Routes = [
     CommonModule,
     SharedModuleModule,
     TrustByModule,
+        HdNavbarModule,
+        HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

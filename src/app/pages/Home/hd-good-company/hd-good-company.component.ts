@@ -13,7 +13,7 @@ import { BlogService } from 'src/app/services/blog.service';
 export class HdGoodCompanyComponent {
   @Input() page: string = ''; //sector
   @Input() heading: boolean = true; //sector
-  @Input() category: number = 0;
+  @Input() category: any = 0;
   @Input() defaultVisible: number = 3;
   @Input() hideTitle: boolean = false;
   @Input() count: number = 0;
@@ -26,7 +26,7 @@ export class HdGoodCompanyComponent {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
   ngOnInit(): void {
-    if(!this.category) {
+    if(!this.page) {
       this.fetchAllBlogs();
     }else {
       this.fetchCategoryBlogs();

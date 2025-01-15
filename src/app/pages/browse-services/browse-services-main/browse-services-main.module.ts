@@ -7,6 +7,8 @@ import { WhyBuildtwinComponent } from 'src/app/include-component/why-buildtwin/w
 import { HdServicesModule } from '../../Home/hd-services/hd-services.module';
 import { HdIntegrationsModule } from '../../includes/hd-integrations/hd-integrations.module';
 import { SoftwareListComponent } from 'src/app/include-component/software-list/software-list.component';
+import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
 
 const routes: Routes = [
   {
@@ -26,6 +28,8 @@ const routes: Routes = [
     SharedModuleModule,
     HdServicesModule,
     HdIntegrationsModule,
+    HdNavbarModule,
+        HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

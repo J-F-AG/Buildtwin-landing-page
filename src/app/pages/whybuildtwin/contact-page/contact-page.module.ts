@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { ContactPageComponent } from './contact-page.component';
+import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
 
 const routes: Routes = [
   {
@@ -18,6 +20,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+        HdNavbarModule,
+        HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

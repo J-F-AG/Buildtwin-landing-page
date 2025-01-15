@@ -31,7 +31,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { BtSelectGroupModule } from 'buildtwin-library-ux/bt-select-group';//buildtwin-library-ux
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
-import { HdFooterModule } from '../pages/includes/hd-footer/hd-footer.module';
+//import { HdFooterModule } from '../pages/includes/hd-footer/hd-footer.module';
 import { RouterModule } from '@angular/router';
 import { FreeOfferFormComponent } from '../pages/services-new/free-offer-form/free-offer-form.component';
 import { GlobalBannerModule } from '../include-component/global-banner/global-banner.module';
@@ -57,7 +57,7 @@ import { EmPartnersComponent } from '../pages/whybuildtwin/why-buildtwin/em-part
 import { SpecialProjectComponent } from '../include-component/special-project/special-project.component';
 import { FaqBuildtwinComponent } from '../pages/services-new/faq-buildtwin/faq-buildtwin.component';
 import { DrawingFreelancersComponent } from '../pages/services-new/drawing-freelancers/drawing-freelancers.component';
-import { HdNavbarModule } from '../pages/includes/hd-navbar/hd-navbar.module';
+// import { HdNavbarModule } from '../pages/includes/hd-navbar/hd-navbar.module';
 
 @NgModule({
   declarations: [
@@ -120,8 +120,8 @@ import { HdNavbarModule } from '../pages/includes/hd-navbar/hd-navbar.module';
     GlobalBannerModule,
     HubspotModule,
     GetStartedModule,
-    HdNavbarModule,
-    HdFooterModule
+    //HdNavbarModule,
+   //HdFooterModule
   ],
   exports: [
     // BrowserAnimationsModule,
@@ -155,8 +155,8 @@ import { HdNavbarModule } from '../pages/includes/hd-navbar/hd-navbar.module';
     BtSelectGroupModule,
     NzDropDownModule,
     NzUploadModule,
-    HdNavbarModule,
-    HdFooterModule,
+    //HdNavbarModule,
+    //HdFooterModule,
     // HdGoodCompanyComponent,
     // HdIntegrationsComponent,
     RouterModule,

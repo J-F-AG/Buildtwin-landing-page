@@ -7,6 +7,8 @@ import { OmBannerFreelanceComponent } from '../om-banner-freelance/om-banner-fre
 import { OmAboutComponent } from '../om-about/om-about.component';
 import { OmIntegrationsFreelanceComponent } from '../om-integrations-freelance/om-integrations-freelance.component';
 import { TaskManagementBusinessIntelligenceComponent } from '../task-management-business-intelligence/task-management-business-intelligence.component';
+import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
 
 const routes: Routes = [
   {
@@ -26,6 +28,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    HdNavbarModule,
+    HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

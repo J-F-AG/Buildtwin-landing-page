@@ -10,6 +10,8 @@ import { TtAboutComponent } from '../tt-about/tt-about.component';
 import { TtFaqComponent } from '../tt-faq/tt-faq.component';
 import { SocialsMediaInfoComponent } from '../socials-media-info/socials-media-info.component';
 import { HdIntegrationsModule } from 'src/app/pages/includes/hd-integrations/hd-integrations.module';
+import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
 
 const routes: Routes = [
   {
@@ -32,6 +34,8 @@ const routes: Routes = [
     CommonModule,
     SharedModuleModule,
     HdIntegrationsModule,
+    HdNavbarModule,
+    HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })
