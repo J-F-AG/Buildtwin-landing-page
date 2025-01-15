@@ -14,18 +14,18 @@ export class ContactPageComponent {
 
     ngOnInit() {
         // this.titleService.setTitle(this.title);
-        const script = document.createElement('script');
-        script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
-        script.async = true;
-        script.charset = 'utf-8';
+        // const script = document.createElement('script');
+        // script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+        // script.async = true;
+        // script.charset = 'utf-8';
 
-        // Append script to the document body
-        document.body.appendChild(script);
+        // // Append script to the document body
+        // document.body.appendChild(script);
 
-        // Initialize HubSpot form after the script is loaded
-        script.onload = () => {
-            this.initHubSpotForm();
-        };
+        // // Initialize HubSpot form after the script is loaded
+        // script.onload = () => {
+        // };
+        this.initHubSpotForm();
     }
     private initHubSpotForm() {
         // Create the HubSpot form

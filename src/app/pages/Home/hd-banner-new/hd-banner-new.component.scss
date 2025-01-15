@@ -4,6 +4,10 @@
 .integration-box111:not(.ng-star-inserted) {
     display: none!important;
 }
+.banner-area--item + .banner-area--item,
+.integration-box + .integration-box {
+    display: none!important;
+}
 .banner-area {
     padding: 150px 100px 24px 76px;
 
@@ -455,6 +459,12 @@
             transform: translateX(-50%);
         }
     }
+}
+
+.bannerr-area-item-image {
+    aspect-ratio: 772 / 413; /* Automatically maintains the ratio */
+    background-size: cover;
+    background-position: center;
 }
 @media only screen and (max-width : 1300px) {
     .banner-area--item--title {

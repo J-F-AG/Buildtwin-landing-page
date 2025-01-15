@@ -33,6 +33,7 @@ export class HdBannerNewComponent {
   buildingCodeArray = [];
   toggleSidebarStatus = false;
   isBrowser: boolean;
+  loadLater: boolean = false;
   constructor(private _http: HttpClient, private message: NzMessageService, private fb: FormBuilder, private globalService: GlobalService, public _languageService:LanguageService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
@@ -56,9 +57,12 @@ export class HdBannerNewComponent {
     //   }
     // });
     this.updateServiceId()
+    // setTimeout(() => {
+    //   this.loadLater = true;
+    // }, 2000);
   }
   sliderInit(){
-    if (this.isBrowser) {
+    // if (this.isBrowser) {
       this.integrationsList = {
         nav: true,
         loop: true,
@@ -111,7 +115,7 @@ export class HdBannerNewComponent {
           }
         },
       }
-    }
+    // }
   }
   getGlobalValue(): string {
     return this.globalService.getGlobalValue();

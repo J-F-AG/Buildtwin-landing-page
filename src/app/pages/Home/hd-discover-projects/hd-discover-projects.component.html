@@ -35,13 +35,13 @@
                                     </span>
                                     <a target="_blank" [routerLink]="_languageService.currentLanguage+item.link" class="cmpny-logo">
                                         <span class="logo-img">
-                                            <img src={{item.serviceCompanyIcon}} alt="">
+                                            <img src={{item.serviceCompanyIcon}} alt="" [width]="item.width" [height]="item.height">
                                         </span>
                                         <span class="heading-slide">vendor
                                             <br>
                                             <span class="heading-1">{{item.serviceCompany}}</span>
                                         </span>
-                                        <img src="assets/images/home/vector.svg" alt="" class="arrow-vector">
+                                        <img src="assets/images/home/vector.svg" alt="" class="arrow-vector" width="14" height="14">
                                     </a>
                                 </div>
                             </div>
