@@ -3,7 +3,7 @@
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
-    h5 {
+    h5, .block-heading {
         font-size: 22px;
         margin-bottom: 0;
         font-weight: 700;
@@ -110,7 +110,7 @@
     min-width: 0;
     max-width: 100%;
   }
-  .list-type-wrapper h5 {
+  .list-type-wrapper h5, .list-type-wrapper .block-heading {
     font-size: 20px;
   }
   .list-type-wrapper .block {

@@ -23,3 +23,15 @@
   min-width: 100% !important;
   max-width: 100% !important;
 }
+
+.heading-p{
+  font-size: 18px; font-weight: 400; color: var(--lightTextColor);
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.list-heading{
+  padding-bottom: 10px;
+  // font-weight: bolder;
+}

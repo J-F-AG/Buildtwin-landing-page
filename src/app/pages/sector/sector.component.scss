@@ -209,7 +209,7 @@
         font-weight: 500;
         margin-bottom: -10px;
     }
-    h5 {
+    h5, .block-heading {
         font-size: 22px;
         margin-bottom: 0;
         font-weight: 700;
@@ -252,7 +252,7 @@
                 font-weight: 700;
             }
         }
-        h5 + .child-block {
+        h5 + .child-block, .block-heading + .child-block {
             border-top: none;
             padding-top: 0;
         }
@@ -388,7 +388,7 @@
       flex-direction: column;
       gap: 24px;
       margin-bottom: 48px;
-      h5 {
+      h5, .block-heading {
         margin-bottom: 0;
         font-weight: bold;
       }
@@ -536,7 +536,7 @@
     min-width: 0;
     max-width: 100%;
 }
-.list-type-wrapper h5 {
+.list-type-wrapper h5, .list-type-wrapper .block-heading {
     font-size: 20px;
 }
 .list-type-wrapper .block {

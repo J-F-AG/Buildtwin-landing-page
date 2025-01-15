@@ -6,6 +6,10 @@
     p{font-size: 16px;}
 
     .tabContent{ padding-top: 30px; padding-right: 40px;
+        display: none;
+        &.show {
+            display: block;
+        }
         h3{
             font-size: 22px;
             font-weight: 600;
@@ -64,6 +68,8 @@
             }
         //   }
         .tab{padding: 10px; cursor: pointer; font-size: 15px; color: #B3B3B3;
+            margin: 0;
+            font-family: inherit;
             &.activeContainer {
                 color: #886de0;
                 font-weight: 600;

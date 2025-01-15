@@ -22,29 +22,31 @@
     <div class="sectionMidContainer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
         <div class="precastTabs">
                 <ng-container *ngFor="let item of precastArray; let i = index">
-                        <div class="tab" [class.active]="activeTab === i" (click)="setActiveTab(i)"
+                        <h4 class="tab" [class.active]="activeTab === i" (click)="setActiveTab(i)"
                         [ngClass]="{ 'activeContainer': activeTab === i }">
                             {{ item.name }}
-                        </div>
+                        </h4>
                 </ng-container>
         </div>
-        <div class="tabContent" *ngFor="let detail of activeContent.details">
-            <p>{{ detail.mainContent }}</p>
-             <!-- Updated list section -->
-        <ul class="service-list">
-            <li *ngFor="let listItem of detail.listItems">{{ listItem }}</li>
-        </ul>
-            <h3>{{ detail.header }}</h3>
-            <div class="subContent">
-                <p><small>{{ detail.subContent }}</small></p>
-            </div>
-            <div class="dataList">
-                <div *ngFor="let item of detail['items']">
-                    <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
-                    <span>{{item}}</span>
+        <ng-container *ngFor="let item of precastArray; let i = index"> 
+            <div class="tabContent" *ngFor="let detail of item.details" [ngClass]="{'show':activeTab == i}">
+                <p>{{ detail.mainContent }}</p>
+                <!-- Updated list section -->
+                <ul class="service-list">
+                    <li *ngFor="let listItem of detail.listItems">{{ listItem }}</li>
+                </ul>
+                <h3>{{ detail.header }}</h3>
+                <div class="subContent">
+                    <p><small>{{ detail.subContent }}</small></p>
+                </div>
+                <div class="dataList">
+                    <div *ngFor="let item of detail['items']">
+                        <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
+                        <span>{{item}}</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </ng-container>
         
     </div>
         </div>
