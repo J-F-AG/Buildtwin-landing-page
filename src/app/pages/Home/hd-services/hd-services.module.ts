@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HdServicesComponent } from './hd-services.component';
 import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -13,7 +14,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   imports: [
     CommonModule,
     RouterModule,
-    CarouselModule
+    CarouselModule,
+    MatButtonModule
   ],
   exports: [
     HdServicesComponent

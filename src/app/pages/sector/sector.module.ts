@@ -16,6 +16,8 @@ import { TtPartnersSectorComponent } from './tt-partners/tt-partners.component';
 import { SpecialProjectSectorComponent } from './special-project/special-project.component';
 import { SectorCategorySectorComponent } from './sector-category/service-category.component';
 import { FaqBuildtwinSectorComponent } from './faq-buildtwin/faq-buildtwin.component';
+import { HdNavbarModule } from '../includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from '../includes/hd-footer/hd-footer.module';
 // import { SectorCategorySectorComponent } from './sector-category/service-category.component';
 
 const routes: Routes = [
@@ -45,6 +47,8 @@ const routes: Routes = [
     HdGoodCompanyModule,
     HdIntegrationsModule,
     HdDiscoverProjectsSectorModule,
+        HdNavbarModule,
+        HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

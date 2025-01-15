@@ -17,6 +17,8 @@ import { RebarBannerComponent } from './banner/banner.component';
 import { RebarDrawingFreelancersComponent } from './drawing-freelancers/drawing-freelancers.component';
 import { RebarFaqBuildtwinComponent } from './faq-buildtwin/faq-buildtwin.component';
 import { TrustByModule } from '../bim/trust-by/trust-by.module';
+import { HdNavbarModule } from '../includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from '../includes/hd-footer/hd-footer.module';
 // import { BannerComponent } from './banner/banner.component';
 // import { E2eEncryptionComponent } from './e2e-encryption/e2e-encryption.component';
 // import { HowItWorksNewComponent } from './how-it-works/how-it-works.component';
@@ -57,6 +59,8 @@ const routes: Routes = [
     CommonModule,
     SharedModuleModule,
     TrustByModule,
+        HdNavbarModule,
+        HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

@@ -26,6 +26,7 @@
     "@angular/platform-server": "^17.0.7",
     "@angular/router": "^17.0.7",
     "@angular/ssr": "^17.3.10",
+    "@ctrl/tinycolor": "^4.1.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "boxicons": "^2.1.4",

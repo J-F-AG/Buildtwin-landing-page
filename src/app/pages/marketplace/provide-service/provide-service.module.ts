@@ -8,6 +8,8 @@ import { ExperenceComponent } from './experence/experence.component';
 import { OpenMarketTabListComponent } from './open-market-tab-list/open-market-tab-list.component';
 import { CountryDetailsComponent } from './country-details/country-details.component';
 import { ServiceProvideComponent } from './service-provide/service-provide.component';
+import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
+import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
 
 const routes: Routes = [
   {
@@ -28,6 +30,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    HdNavbarModule,
+    HdFooterModule,
     RouterModule.forChild(routes),
   ],
 })

@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './sector-category.component.scss'
 })
 export class DataCenterSectorCategoryComponent {
-  @Input() category: number = 0;
+  @Input() category: any = '';
   @Input() page: string = ''; //sector
 }
