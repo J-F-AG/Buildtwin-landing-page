@@ -16,6 +16,7 @@ import { BimUsaServicesOfferedComponent } from './services-offered/services-offe
 import { BimUsaThreeCardsComponent } from './three-cards/three-cards.component';
 import { BimUsaTopVendorsComponent } from './top-vendors/top-vendors.component';
 import { BimUsaTrustByNewComponent } from './trust-by/trust-by.component';
+import { TrustByModule } from '../bim/trust-by/trust-by.module';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    TrustByModule,
     RouterModule.forChild(routes),
   ],
 })

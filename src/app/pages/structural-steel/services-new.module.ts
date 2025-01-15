@@ -17,6 +17,7 @@ import { StructuralSteelThreeCardsComponent } from './three-cards/three-cards.co
 import { StructuralSteelTopVendorsComponent } from './top-vendors/top-vendors.component';
 import { StructuralSteelTrustByNewComponent } from './trust-by/trust-by.component';
 import { ServiceCategoryModule } from 'src/app/include-component/service-category/service-category.module';
+import { TrustByModule } from '../bim/trust-by/trust-by.module';
 
 const routes: Routes = [
   {
@@ -46,6 +47,7 @@ const routes: Routes = [
     CommonModule,
     SharedModuleModule,
     ServiceCategoryModule,
+    TrustByModule,
     RouterModule.forChild(routes),
   ],
 })

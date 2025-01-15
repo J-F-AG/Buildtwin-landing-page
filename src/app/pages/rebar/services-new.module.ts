@@ -16,6 +16,7 @@ import { RebarE2eEncryptionComponent } from './e2e-encryption/e2e-encryption.com
 import { RebarBannerComponent } from './banner/banner.component';
 import { RebarDrawingFreelancersComponent } from './drawing-freelancers/drawing-freelancers.component';
 import { RebarFaqBuildtwinComponent } from './faq-buildtwin/faq-buildtwin.component';
+import { TrustByModule } from '../bim/trust-by/trust-by.module';
 // import { BannerComponent } from './banner/banner.component';
 // import { E2eEncryptionComponent } from './e2e-encryption/e2e-encryption.component';
 // import { HowItWorksNewComponent } from './how-it-works/how-it-works.component';
@@ -55,6 +56,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    TrustByModule,
     RouterModule.forChild(routes),
   ],
 })

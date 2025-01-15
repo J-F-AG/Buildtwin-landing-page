@@ -6,6 +6,7 @@ import { BrowseServicesMainComponent } from './browse-services-main.component';
 import { WhyBuildtwinComponent } from 'src/app/include-component/why-buildtwin/why-buildtwin.component';
 import { HdServicesModule } from '../../Home/hd-services/hd-services.module';
 import { HdIntegrationsModule } from '../../includes/hd-integrations/hd-integrations.module';
+import { SoftwareListComponent } from 'src/app/include-component/software-list/software-list.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
   declarations: [
     BrowseServicesMainComponent,
     WhyBuildtwinComponent,
+    SoftwareListComponent
   ],
   imports: [
     CommonModule,

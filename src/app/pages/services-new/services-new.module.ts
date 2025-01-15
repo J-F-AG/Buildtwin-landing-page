@@ -14,6 +14,7 @@ import { ServicesOfferedComponent } from './services-offered/services-offered.co
 import { ThreeCardsComponent } from './three-cards/three-cards.component';
 import { TopVendorsComponent } from './top-vendors/top-vendors.component';
 import { TrustByNewComponent } from './trust-by/trust-by.component';
+import { TrustByModule } from '../bim/trust-by/trust-by.module';
 
 const routes: Routes = [
   {
@@ -40,6 +41,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModuleModule,
+    TrustByModule,
     RouterModule.forChild(routes),
   ],
 })

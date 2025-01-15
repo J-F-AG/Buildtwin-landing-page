@@ -15,7 +15,7 @@ import { BimSampleDrawingComponent } from './sample-drawing/sample-drawing.compo
 import { BimServicesOfferedComponent } from './services-offered/services-offered.component';
 import { BimThreeCardsComponent } from './three-cards/three-cards.component';
 import { BimTopVendorsComponent } from './top-vendors/top-vendors.component';
-import { BimTrustByNewComponent } from './trust-by/trust-by.component';
+import { TrustByModule } from './trust-by/trust-by.module';
 
 const routes: Routes = [
   {
@@ -39,11 +39,11 @@ const routes: Routes = [
     BimServicesOfferedComponent,
     BimThreeCardsComponent,
     BimTopVendorsComponent,
-    BimTrustByNewComponent,
   ],
   imports: [
     CommonModule,
     SharedModuleModule,
+    TrustByModule,
     RouterModule.forChild(routes),
   ],
 })

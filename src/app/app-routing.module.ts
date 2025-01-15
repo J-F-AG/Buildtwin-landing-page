@@ -1,43 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HelpDeskHomeComponent } from './pages/Home/help-desk-home/help-desk-home.component';
-import { OnlineMeetingHomeComponent } from './pages/co-pilot-for/co-pilot/online-meeting-home/online-meeting-home.component';
-import { OnlineMeetingHomeFreelanceComponent } from './pages/co-pilot-for/digital-self-management/online-meeting-home-freelance/online-meeting-home-freelance.component';
-import { ProvideServiceComponent } from './pages/marketplace/provide-service/provide-service.component';
-import { TimeTrackingHomeComponent } from './pages/marketplace/marketPlace/time-tracking-home/time-tracking-home.component';
-import { ElearningSchoolComponent } from './pages/training/training/elearning-school/elearning-school.component';
-import { FaqPageTrainingComponent } from './pages/training/faq/faq-page-training/faq-page.component';
-import { PricingPageComponent } from './pages/price/pricing-page/pricing-page.component';
-import { EmailMarketingHomeComponent } from './pages/whybuildtwin/why-buildtwin/email-marketing-home/email-marketing-home.component';
-import { BlogPageComponent } from './pages/whybuildtwin/customer-sucess/blog-page/blog-page.component';
-import { FaqPageComponent } from './pages/whybuildtwin/faq/faq-page/faq-page.component';
-import { DataSafetyComponent } from './pages/whybuildtwin/data-safety/data-safety.component';
-import { IntegrationsPageComponent } from './pages/whybuildtwin/integrations-page/integrations-page.component';
-import { ContactPageComponent } from './pages/whybuildtwin/contact-page/contact-page.component';
-import { AboutPageComponent } from './pages/whybuildtwin/about-page/about-page.component';
-import { DataPrivacyComponent } from './pages/data-privacy/data-safety.component';
-import { PrivacyPolicyPageComponent } from './pages/privacy-policy-page/privacy-policy-page.component';
-import { TermsConditionsPageComponent } from './pages/terms-conditions-page/terms-conditions-page.component';
-import { ComingSoonComponent } from './pages/coming-soon/coming-soon.component';
-import { VenderDetailsAarbeeComponent } from './pages/vender/vender-details-aarbee/vender-details-aarbee.component';
-import { BrowseServicesMainComponent } from './pages/browse-services/browse-services-main/browse-services-main.component';
-import { ServicesNewComponent } from './pages/services-new/services-new.component';
-import { RebarServicesNewComponent } from './pages/rebar/services-new.component';
-import { BimServicesNewComponent } from './pages/bim/services-new.component';
-import { StructuralSteelServicesNewComponent } from './pages/structural-steel/services-new.component';
-import { BimUsaServicesNewComponent } from './pages/bim-usa/services-new.component';
-import { SteelDetailingUsaServicesNewComponent } from './pages/steel-detailing-usa/services-new.component';
-import { SectorComponent } from './pages/sector/sector.component';
-import { BuildingCodeComponent } from './pages/building-code/sector.component';
-import { DataCenterSectorComponent } from './pages/sector-data-center/sector.component';
-import { BuildingCodeAiscComponent } from './pages/building-code-aisc/sector.component';
-import { SectorPowerPlantComponent } from './pages/sector-power-plant/sector.component';
-import { ArchitectureDesignServicesComponent } from './pages/software/architecture-design-services/sector.component';
-import { StructuralSteelDetailingSoftwareComponent } from './pages/software/structural-steel-detailing/sector.component';
-import { DraftingServicesNewComponent } from './pages/drafting-services/services-new.component';
-import { CadServicesNewComponent } from './pages/cad-services/services-new.component';
-import { BuildingCodeEuroComponent } from './pages/building-code-euro/sector.component';
-import { ComingSoonModule } from './pages/coming-soon/coming-soon.module';
 
 
 
@@ -224,7 +186,10 @@ const routes: Routes = [
     {path: 'training-faq', 
         loadChildren: () => import('./pages/training/faq/faq-page-training/faq-page-training.module').then(m => m.FaqPageTrainingModule),
     },
-    {path: 'pricing', component: PricingPageComponent},
+    {path: 'pricing', 
+        loadChildren: () => import('./pages/price/pricing-page/pricing-page.module').then(m => m.PricingPageModule),
+        // component: PricingPageComponent
+    },
     // {path: 'engineering-services/services',
     //     redirectTo: '/explore-services',
     //     pathMatch: 'full'
@@ -243,7 +208,9 @@ const routes: Routes = [
         redirectTo: '/building-code/aisc',
         pathMatch: 'full'
     },
-    {path: 'building-code/aisc', component: BuildingCodeAiscComponent,
+    {path: 'building-code/aisc', 
+        // component: BuildingCodeAiscComponent,
+        loadChildren: () => import('./pages/building-code-aisc/sector.module').then(m => m.BuildingCodeAiscModule),
         data: {
             title: 'Find AISC-Compliant Service Providers for Your Next Project',
             description: 'Explore the importance of the AISC Building Code for safe, durable, and efficient steel construction. Connect with AISC-compliant service providers on BuildTwin',
@@ -251,7 +218,9 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/building-code/aisc'
         }
     },
-    {path: 'building-code/eurocode', component: BuildingCodeEuroComponent,
+    {path: 'building-code/eurocode', 
+        // component: BuildingCodeEuroComponent,
+        loadChildren: () => import('./pages/building-code-euro/sector.module').then(m => m.BuildingCodeEuroModule),
         data: {
             title: 'Understanding the Eurocode | BuildTwin Marketplace',
             description: 'Discover essential guidelines for Eurocode design standards to enhance your engineering projects. Read the article for practical insights and clarity.',
@@ -260,7 +229,9 @@ const routes: Routes = [
         }
     },
     {path: 'software/architecture-design-services',
-        component: ArchitectureDesignServicesComponent,
+        // component: ArchitectureDesignServicesComponent,
+        loadChildren: () => import('./pages/software/architecture-design-services/sector.module').then(m => m.ArchitectureDesignServicesModule),
+        
         data: {
             title: 'Architecture Design Software Comparison Autodesk Revit vs ALLPLAN',
             description: "Detailed comparison of Autodesk Revit and ALLPLAN architecture & structural design software. Explore their features, strengths, pricing, and ideal use cases to make the right choice for your project.",
@@ -269,7 +240,8 @@ const routes: Routes = [
         }
     },
     {path: 'software/structural-steel-detailing',
-        component: StructuralSteelDetailingSoftwareComponent,
+        // component: StructuralSteelDetailingSoftwareComponent,
+        loadChildren: () => import('./pages/software/structural-steel-detailing/sector.module').then(m => m.StructuralSteelDetailingSoftwareModule),
         data: {
             title: 'Structural Steel Detailing Software Comparison: Tekla Structures vs SDS/2',
             description: "Detailed comparison of Tekla Structures and SDS/2 for structural steel detailing. Explore their features, strengths, pricing, and ideal use cases to choose the right software for your project.",
@@ -277,7 +249,9 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/software/structural-steel-detailing'
         }
     },
-    {path: 'sector/data-centre', component: DataCenterSectorComponent,
+    {path: 'sector/data-centre', 
+        // component: DataCenterSectorComponent,
+        loadChildren: () => import('./pages/sector-data-center/sector.module').then(m => m.DataCenterSectorModule),
         data: {
             title: 'Connect with Expert Data Center Designers | BuildTwin Marketplace',
             description: 'Unlock expert data center construction solutions with BuildTwin. From modular to hyperscale data centers, we offer tailored design, compliance, and management with a global vendor network.',
@@ -285,7 +259,10 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/sector/data-centre'
         }
     },
-    {path: 'sector/power-plant', component: SectorPowerPlantComponent,
+    {path: 'sector/power-plant', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-power-plant/sector.module').then(m => m.SectorPowerPlantModule),
         data: {
             title: 'Connect with Expert Power Plant Engineering Designers | BuildTwin Marketplace',
             description: 'Connecting Global Expertise with Advanced ERP Solutions for Power Plant Design and Development',
@@ -387,7 +364,9 @@ const routes: Routes = [
     },
 
     {
-        path: 'services/drafting-services', component: DraftingServicesNewComponent,
+        path: 'services/drafting-services', 
+        // component: DraftingServicesNewComponent,
+        loadChildren: () => import('./pages/drafting-services/services-new.module').then(m => m.DraftingServicesNewModule),
         data: {
             title: 'Drafting Services for AEC Projects',
             description: "BuildTwin Marketplace offers a comprehensive platform for all your drafting services for construction and engineering projects.",
@@ -396,7 +375,9 @@ const routes: Routes = [
         }
     },
     {
-        path: 'services/cad-services', component: CadServicesNewComponent,
+        path: 'services/cad-services', 
+        // component: CadServicesNewComponent,
+        loadChildren: () => import('./pages/cad-services/services-new.module').then(m => m.CadServicesNewModule),
         data: {
             title: 'CAD Services for AEC Projects',
             description: "BuildTwin Marketplace offers a comprehensive platform for all your CAD services for construction and engineering projects.",

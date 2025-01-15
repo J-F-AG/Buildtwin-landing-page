@@ -11,6 +11,12 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { HdDiscoverProjectsModule } from '../Home/hd-discover-projects/hd-discover-projects.module';
 import { HdGoodCompanyModule } from '../Home/hd-good-company/hd-good-company.module';
 import { HdIntegrationsModule } from '../includes/hd-integrations/hd-integrations.module';
+import { HdDiscoverProjectsSectorModule } from './hd-discover-projects/hd-discover-projects.module';
+import { TtPartnersSectorComponent } from './tt-partners/tt-partners.component';
+import { SpecialProjectSectorComponent } from './special-project/special-project.component';
+import { SectorCategorySectorComponent } from './sector-category/service-category.component';
+import { FaqBuildtwinSectorComponent } from './faq-buildtwin/faq-buildtwin.component';
+// import { SectorCategorySectorComponent } from './sector-category/service-category.component';
 
 const routes: Routes = [
   {
@@ -26,7 +32,11 @@ const routes: Routes = [
     sectorMeetingStandardsComponent,
     DcEuropeComponent,
     SectorCategoryComponent,
-    GetStartedComponent
+    GetStartedComponent,
+    TtPartnersSectorComponent,
+    SpecialProjectSectorComponent,
+    SectorCategorySectorComponent,
+    FaqBuildtwinSectorComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +44,7 @@ const routes: Routes = [
     HdDiscoverProjectsModule,
     HdGoodCompanyModule,
     HdIntegrationsModule,
+    HdDiscoverProjectsSectorModule,
     RouterModule.forChild(routes),
   ],
 })
