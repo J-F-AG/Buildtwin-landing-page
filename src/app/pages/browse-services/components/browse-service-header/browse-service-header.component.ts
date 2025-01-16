@@ -26,7 +26,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '1',
       name: 'Precast Detailing',
-      img: '/assets/images/structuralSoultion.png',
+      img: '/assets/images/structuralSoultion.webp',
       width: '151',
       height: '137',
       serviceId: 9,
@@ -39,7 +39,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '2',
       name: 'Structural Steel Detailing',
-      img: '/assets/images/structuralDesign.png',
+      img: '/assets/images/structuralDesign.webp',
       width: '151',
       height: '137',
       serviceId: 12,
@@ -51,7 +51,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '9',
       name: 'CAD Services',
-      img: '/assets/images/cad-drafting-image.png',
+      img: '/assets/images/cad-drafting-image.webp',
       width: '151',
       height: '137',
       serviceId: 16,
@@ -64,7 +64,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '4',
       name: 'Rebar Detailing',
-      img: '/assets/images/rebar.png',
+      img: '/assets/images/rebar.webp',
       width: '151',
       height: '137',
       serviceId: 10,
@@ -77,7 +77,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '6',
       name: 'BIM Services',
-      img: '/assets/images/modelling.png',
+      img: '/assets/images/modelling.webp',
       width: '151',
       height: '137',
       color: "#FFE8CB",
@@ -89,7 +89,7 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '8',
       name: 'Drafting Services',
-      img: '/assets/images/drafting-image.png',
+      img: '/assets/images/drafting-image.webp',
       width: '151',
       height: '137',
       color: "#e0ffcc",
