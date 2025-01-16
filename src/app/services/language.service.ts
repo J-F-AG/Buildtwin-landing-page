@@ -257,7 +257,7 @@ export class LanguageService {
       "@type": "Organization", 
       "name": "Buildtwin", 
       "url": "https://www.buildtwin.com/", 
-      "logo": "https://www.buildtwin.com/assets/images/logo@2x.png" 
+      "logo": "https://www.buildtwin.com/assets/images/logo@2x.webp" 
     };
     return JSON.stringify(faqSchema);
     // Create the JSON-LD script tag
@@ -278,7 +278,7 @@ export class LanguageService {
     
       "name": "BuildTwin", 
     
-      "image": " https://www.buildtwin.com/assets/images/logo@2x.png ", 
+      "image": " https://www.buildtwin.com/assets/images/logo@2x.webp ", 
     
       "description": " Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform.", 
     
