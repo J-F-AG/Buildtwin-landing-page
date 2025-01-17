@@ -8,7 +8,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./language-change.component.scss'] // Corrected property name
 })
 export class LanguageChangeComponent {
-  selectedLang: string = 'en';
+  selectedLang: string = '';
   selectedLangObj: any = {};
   isBrowser: boolean;
 

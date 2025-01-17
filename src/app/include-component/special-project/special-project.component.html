@@ -17,7 +17,16 @@
                         <ng-template carouselSlide>
                             <div class="image-container">
                                 <figure>
-                                    <img [src]="image.src" width="185" height="245" />
+                                    <!-- <img [src]="image.src" width="185" height="245" loading="lazy" /> -->
+                                    <picture>
+                                        <source [srcset]="image.src.webp" type="image/webp">
+                                        <source [srcset]="image.src.fallback" type="image/png">
+                                        <img [src]="image.src.fallback" 
+                                             [alt]="image.title"
+                                             width="185" 
+                                             height="245" 
+                                             loading="lazy">
+                                    </picture>
                                 </figure>
                                 <div class="image-caption page">
                                     <h3>{{ image.title }}</h3>

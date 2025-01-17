@@ -26,7 +26,10 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '1',
       name: 'Precast Detailing',
-      img: '/assets/images/structuralSoultion.webp',
+      img: {
+        webp: '/assets/images/structuralSoultion.webp',
+        fallback: '/assets/images/structuralSoultion.png'
+      },
       width: '151',
       height: '137',
       serviceId: 9,
@@ -39,7 +42,10 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '2',
       name: 'Structural Steel Detailing',
-      img: '/assets/images/structuralDesign.webp',
+      img: {
+        webp: '/assets/images/structuralDesign.webp',
+        fallback: '/assets/images/structuralDesign.png'
+      },
       width: '151',
       height: '137',
       serviceId: 12,
@@ -51,7 +57,10 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '9',
       name: 'CAD Services',
-      img: '/assets/images/cad-drafting-image.webp',
+      img: {
+        webp: '/assets/images/cad-drafting-image.webp',
+        fallback: '/assets/images/cad-drafting-image.png'
+      },
       width: '151',
       height: '137',
       serviceId: 16,
@@ -64,7 +73,10 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '4',
       name: 'Rebar Detailing',
-      img: '/assets/images/rebar.webp',
+      img: {
+        webp: '/assets/images/rebar.webp',
+        fallback: '/assets/images/rebar.png'
+      },
       width: '151',
       height: '137',
       serviceId: 10,
@@ -77,7 +89,10 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '6',
       name: 'BIM Services',
-      img: '/assets/images/modelling.webp',
+      img: {
+        webp: '/assets/images/modelling.webp',
+        fallback: '/assets/images/modelling.png'
+      },
       width: '151',
       height: '137',
       color: "#FFE8CB",
@@ -89,7 +104,10 @@ export class BrowseServiceHeaderComponent implements OnInit {
     {
       id: '8',
       name: 'Drafting Services',
-      img: '/assets/images/drafting-image.webp',
+      img: {
+        webp: '/assets/images/drafting-image.webp',
+        fallback: '/assets/images/drafting-image.png'
+      },
       width: '151',
       height: '137',
       color: "#e0ffcc",

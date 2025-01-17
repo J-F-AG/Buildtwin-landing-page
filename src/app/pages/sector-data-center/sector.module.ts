@@ -5,7 +5,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HdNavbarModule } from '../includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from '../includes/hd-footer/hd-footer.module';
 import { DataCenterSectorComponent } from './sector.component';
-import { DataCenterSpecialProjectComponent } from './special-project/special-project.component';
 import { DataCenterTtPartnersComponent } from './tt-partners/tt-partners.component';
 import { DataCenterHdDiscoverProjectsComponent } from './hd-discover-projects/hd-discover-projects.component';
 import { DataCenterSectorCategoryComponent } from './sector-category/service-category.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
 @NgModule({
     declarations: [
         DataCenterSectorComponent,
-        DataCenterSpecialProjectComponent,
         DataCenterTtPartnersComponent,
         DataCenterHdDiscoverProjectsComponent,
         DataCenterSectorCategoryComponent,
@@ -42,7 +40,6 @@ const routes: Routes = [
     exports: [
 
         DataCenterSectorComponent,
-        DataCenterSpecialProjectComponent,
         DataCenterTtPartnersComponent,
         DataCenterHdDiscoverProjectsComponent,
         DataCenterSectorCategoryComponent,
