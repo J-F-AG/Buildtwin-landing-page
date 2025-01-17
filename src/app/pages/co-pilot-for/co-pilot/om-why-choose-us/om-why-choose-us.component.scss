@@ -314,8 +314,8 @@
     }
     &.active-2{
         margin-bottom: -30px;
-        margin-right: 100px;
-        margin-left: 100px;
+        margin-right: var(--padding-left-right);
+        margin-left: var(--padding-left-right);
     }
     &.active {
         max-height: 560px;

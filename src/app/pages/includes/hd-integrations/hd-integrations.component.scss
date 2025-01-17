@@ -81,8 +81,8 @@
 // }
 
 .integrations-area {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
 }
 // .integrations-area.ptb-75 {
 //     padding-bottom: 40px;

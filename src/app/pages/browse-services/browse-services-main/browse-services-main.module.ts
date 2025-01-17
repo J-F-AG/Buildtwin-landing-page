@@ -9,6 +9,10 @@ import { HdIntegrationsModule } from '../../includes/hd-integrations/hd-integrat
 import { SoftwareListComponent } from 'src/app/include-component/software-list/software-list.component';
 import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
+import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
+import { CompanyListModule } from 'src/app/include-component/company-list/company-list.module';
+import { ServiceListModule } from 'src/app/include-component/service-list/service-list.module';
+import { GlobalStandardsModule } from 'src/app/include-component/global-standards/global-standards.module';
 
 const routes: Routes = [
   {
@@ -30,6 +34,10 @@ const routes: Routes = [
     HdIntegrationsModule,
     HdNavbarModule,
         HdFooterModule,
+        ProjectListModule,
+        CompanyListModule,
+        ServiceListModule,
+        GlobalStandardsModule,
     RouterModule.forChild(routes),
   ],
 })
