@@ -25,7 +25,7 @@
                     <div class="card__image card__image--first">
                         <img [src]="list['jetpack_featured_media_url']" alt="company">
                     </div>
-                    <p class="card__title">{{list['title']['rendered']}}</p>
+                    <p class="card__title" [innerHtml]="list['title']['rendered']"></p>
                     <p class="card__description" [innerHtml]="list['excerpt']['rendered']"></p>
                     <a [href]="list['link']" target="_blank" class="card__footer">
                         <span>Read more</span>
