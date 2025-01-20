@@ -212,7 +212,7 @@ const routes: Routes = [
         // component: BuildingCodeAiscComponent,
         loadChildren: () => import('./pages/building-code-aisc/sector.module').then(m => m.BuildingCodeAiscModule),
         data: {
-            title: 'Find AISC-Compliant Service Providers for Your Next Project',
+            title: 'AISC Building Code Services for Steel Structures',
             description: 'Explore the importance of the AISC Building Code for safe, durable, and efficient steel construction. Connect with AISC-compliant service providers on BuildTwin',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/building-code/aisc'
@@ -222,8 +222,8 @@ const routes: Routes = [
         // component: BuildingCodeEuroComponent,
         loadChildren: () => import('./pages/building-code-euro/sector.module').then(m => m.BuildingCodeEuroModule),
         data: {
-            title: 'Understanding the Eurocode | BuildTwin Marketplace',
-            description: 'Discover essential guidelines for Eurocode design standards to enhance your engineering projects. Read the article for practical insights and clarity.',
+            title: 'Understanding the Eurocode For Structural | BuildTwin Marketplace',
+            description: 'Explore Eurocode standards for structural and civil engineering. Enhance safety, sustainability, and compliance in your projects with expert guidance.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/building-code/eurocode'
         }
@@ -233,7 +233,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/software/architecture-design-services/sector.module').then(m => m.ArchitectureDesignServicesModule),
         
         data: {
-            title: 'Architecture Design Software Comparison Autodesk Revit vs ALLPLAN',
+            title: 'Architecture & Structural Design Software Comparison Autodesk Revit vs ALLPLAN',
             description: "Detailed comparison of Autodesk Revit and ALLPLAN architecture & structural design software. Explore their features, strengths, pricing, and ideal use cases to make the right choice for your project.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/software/architecture-design-services'
@@ -244,7 +244,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/software/structural-steel-detailing/sector.module').then(m => m.StructuralSteelDetailingSoftwareModule),
         data: {
             title: 'Structural Steel Detailing Software Comparison: Tekla Structures vs SDS/2',
-            description: "Detailed comparison of Tekla Structures and SDS/2 for structural steel detailing. Explore their features, strengths, pricing, and ideal use cases to choose the right software for your project.",
+            description: "Compare Tekla Structures and SDS/2 for structural steel detailing. Discover their features, advantages, pricing, and the best use cases for precise and efficient project delivery.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/software/structural-steel-detailing'
         }
@@ -253,8 +253,8 @@ const routes: Routes = [
         // component: DataCenterSectorComponent,
         loadChildren: () => import('./pages/sector-data-center/sector.module').then(m => m.DataCenterSectorModule),
         data: {
-            title: 'Connect with Expert Data Center Designers | BuildTwin Marketplace',
-            description: 'Unlock expert data center construction solutions with BuildTwin. From modular to hyperscale data centers, we offer tailored design, compliance, and management with a global vendor network.',
+            title: 'Expert Data Center Construction Services | BuildTwin Marketplace',
+            description: 'Find expert vendors for data center projects. Get customized designs for colocation, hyperscale, and cloud data centers with BuildTwin’s global network.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/data-centre'
         }
@@ -264,8 +264,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-power-plant/sector.module').then(m => m.SectorPowerPlantModule),
         data: {
-            title: 'Connect with Expert Power Plant Engineering Designers | BuildTwin Marketplace',
-            description: 'Connecting Global Expertise with Advanced ERP Solutions for Power Plant Design and Development',
+            title: 'Expert Power Plant Engineering Solutions | BuildTwin Marketplace',
+            description: 'Discover expert vendors for power plant projects and power plant engineering services in thermal, nuclear, and renewable energy. Enhance efficiency with BuildTwin’s ERP solutions.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/power-plant'
         }
@@ -368,8 +368,8 @@ const routes: Routes = [
         // component: DraftingServicesNewComponent,
         loadChildren: () => import('./pages/drafting-services/services-new.module').then(m => m.DraftingServicesNewModule),
         data: {
-            title: 'Drafting Services for AEC Projects',
-            description: "BuildTwin Marketplace offers a comprehensive platform for all your drafting services for construction and engineering projects.",
+            title: 'Expert Drafting Services for Construction Projects | BuildTwin',
+            description: "Access top-tier drafting services for architectural, structural, and MEP designs. Compare quotes and manage your AEC projects with BuildTwin’s integrated platform.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/drafting-services'
         }
@@ -379,8 +379,8 @@ const routes: Routes = [
         // component: CadServicesNewComponent,
         loadChildren: () => import('./pages/cad-services/services-new.module').then(m => m.CadServicesNewModule),
         data: {
-            title: 'CAD Services for AEC Projects',
-            description: "BuildTwin Marketplace offers a comprehensive platform for all your CAD services for construction and engineering projects.",
+            title: 'CAD Services for AEC Projects | BuildTwin Marketplace',
+            description: "Find expert CAD service providers for 2D drafting, 3D modeling, and BIM solutions. Streamline your construction projects with BuildTwin’s global vendor network.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/cad-services'
         }

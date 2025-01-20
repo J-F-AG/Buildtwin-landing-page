@@ -100,6 +100,7 @@ export class HdBannerNewComponent {
         autoplayTimeout: 5100,
         // smartSpeed: 2000,
         autoplayHoverPause: false,
+        startPosition: 0,
         responsive: {
           0: {
             items: 1

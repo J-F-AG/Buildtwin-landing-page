@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   // standalone: true,
   // imports: [],
   templateUrl: './faq-buildtwin.component.html',
-  styleUrl: './faq-buildtwin.component.scss'
+  styleUrls: ['../../services-new/faq-buildtwin/faq-buildtwin.component.scss','./faq-buildtwin.component.scss']
 })
 export class RebarFaqBuildtwinComponent {
   isFirst = true;

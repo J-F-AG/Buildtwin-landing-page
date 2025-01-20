@@ -2375,6 +2375,137 @@ export class LanguageService {
     return JSON.stringify(faqSchema);
   }
 
+  injectSectorDataCenterTestimonialSchema(renderer) {
+
+    const StructuralSteelDetailingTestimonialSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "ItemList", 
+    
+      "itemListElement": [
+
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Michael Smith"
+        
+        },
+        
+        "reviewBody": "BuildTwin transformed how we approach data center construction. Their comprehensive marketplace and ERP solution streamlined most of our designing and QC processes.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "David V."
+        
+        },
+        
+        "reviewBody": "Thanks to BuildTwin, we connected with the best vendors for our needs and significantly improved our project execution.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Peter Brown"
+        
+        },
+        
+        "reviewBody": "BuildTwin helped us streamline our data center construction. The vendor matching was quick, and the project management system kept us on track from start to finish.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        }
+        
+        ]  
+    
+    };
+
+    return JSON.stringify(StructuralSteelDetailingTestimonialSchema);
+  }
+
   injectFAQSchemaForBuildingCodeAisc(renderer) {
     // Create the FAQ schema for the FAQ page
     const faqSchema = {
@@ -2802,5 +2933,660 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(faqSchema);
   }
+
+  injectSectorPowerPlantTestimonialSchema(renderer) {
+
+    const StructuralSteelDetailingTestimonialSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "ItemList", 
+    
+      "itemListElement": [
+
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Emily R."
+        
+        },
+        
+        "reviewBody": "With Tekla Structures’ detailed outputs and BuildTwin’s pre-qualified vendor network, our projects run smoothly. BuildTwin’s project tracking tools help us monitor progress while ensuring compliance with global standards.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Laura M."
+        
+        },
+        
+        "reviewBody": "BuildTwin’s platform helped us connect with industry-leading vendors for our hydroelectric project. The process was seamless, and the outcome exceeded our expectations.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "James"
+        
+        },
+        
+        "reviewBody": "The vendors we found through BuildTwin delivered cutting-edge designs for our thermal plant, ensuring efficiency and compliance with global standards.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Maria Taylor"
+        
+        },
+        
+        "reviewBody": "Thanks to BuildTwin, we streamlined every phase of our renewable energy facility, from site selection to final commissioning.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        }
+        
+        ]  
+    
+    };
+
+    return JSON.stringify(StructuralSteelDetailingTestimonialSchema);
+  }
+
+
+  injectForArchitecturalDesignServicesSchema(renderer) {
+    // Create the Marketplace schema for the marketplace page
+    const ArchitecturalDesignServicesSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the primary purpose of Autodesk Revit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Autodesk Revit is a powerful tool designed for Building Information Modeling (BIM), enabling architects, engineers, and contractors to design, visualize, and collaborate on building projects in a comprehensive 3D environment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the hardware requirements for Autodesk Revit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Revit requires high-performance hardware with substantial RAM, a dedicated GPU, and significant processing power to handle large models and projects effectively."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes ALLPLAN unique compared to other design software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ALLPLAN excels in structural detailing and reinforcement modeling, making it an excellent choice for civil engineers and architects working on complex designs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which software is better for small businesses, Revit or ALLPLAN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ALLPLAN is often considered more accessible for small businesses due to its ease of use and focus on structural detailing, while Revit offers broader collaboration tools for larger teams."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ALLPLAN support Building Information Modeling (BIM)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, ALLPLAN is fully compatible with BIM workflows, offering tools for both architectural and engineering projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there free trials available for Revit and ALLPLAN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Autodesk Revit offers a free trial for users, while ALLPLAN’s trial availability may vary based on location and vendor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What file formats are supported by both Revit and ALLPLAN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both platforms support common file formats like IFC, DWG, and DXF, ensuring interoperability with other design software."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which industries can benefit most from using ALLPLAN?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Industries like civil engineering, infrastructure development, and architectural firms specializing in detailed structural projects benefit greatly from ALLPLAN."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What ERP features does BuildTwin provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildTwin’s ERP includes bid management, real-time project tracking, integrated communication tools, and robust vendor management features."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BuildTwin improve project schedules?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildTwin uses predictive tools to dynamically adjust schedules, provide visibility on unresolved RFIs, and prioritize submissions to keep projects on track."
+          }
+        }
+      ]
+    };
+
+    // Create the JSON-LD script tag
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(MarketplaceSchema);
+    // // Append the script tag to the document head
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(ArchitecturalDesignServicesSchema);
+  }
+
+  injectArchitecturalDesignServicesTestimonialSchema(renderer) {
+
+    const ArchitecturalDesignServicesTestimonialSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "ItemList", 
+    
+      "itemListElement": [ 
+
+        { 
+      
+          "@context": "https://schema.org", 
+      
+          "@type": "Review", 
+      
+          "reviewRating": { 
+      
+            "@type": "Rating", 
+      
+            "ratingValue": "5", 
+      
+            "bestRating": "5" 
+      
+          }, 
+      
+          "author": { 
+      
+            "@type": "Person", 
+      
+            "name": "Michael Smith" 
+      
+          }, 
+      
+          "reviewBody": "The steel detailing services through Buildtwin have significantly improved our project efficiency. The Tekla expertise of their vendors is outstanding.", 
+      
+          "publisher": { 
+      
+            "@type": "Organization", 
+      
+            "name": "BuildTwin" 
+      
+          }, 
+      
+          "datePublished": "2025-01-17" 
+      
+        }, 
+      
+        { 
+      
+          "@context": "https://schema.org", 
+      
+          "@type": "Review", 
+      
+          "reviewRating": { 
+      
+            "@type": "Rating", 
+      
+            "ratingValue": "5", 
+      
+            "bestRating": "5" 
+      
+          }, 
+      
+          "author": { 
+      
+            "@type": "Person", 
+      
+            "name": "David V." 
+      
+          }, 
+      
+          "reviewBody": "Finding skilled steel detailers was challenging until we discovered Buildtwin. Their vendor certification process ensures top-quality deliverables.", 
+      
+          "publisher": { 
+      
+            "@type": "Organization", 
+      
+            "name": "BuildTwin" 
+      
+          }, 
+      
+          "datePublished": "2025-01-17" 
+      
+        }, 
+      
+        { 
+      
+          "@context": "https://schema.org", 
+      
+          "@type": "Review", 
+      
+          "reviewRating": { 
+      
+            "@type": "Rating", 
+      
+            "ratingValue": "5", 
+      
+            "bestRating": "5" 
+      
+          }, 
+      
+          "author": { 
+      
+            "@type": "Person", 
+      
+            "name": "Peter Brown" 
+      
+          }, 
+      
+          "reviewBody": "The combination of SDS/2 and Tekla expertise available through Buildtwin's platform has been invaluable for our international projects.", 
+      
+          "publisher": { 
+      
+            "@type": "Organization", 
+      
+            "name": "BuildTwin" 
+      
+          }, 
+      
+          "datePublished": "2025-01-17" 
+      
+        } 
+      
+      ]  
+    
+    };
+
+    return JSON.stringify(ArchitecturalDesignServicesTestimonialSchema);
+  }
+
+  injectForStructuralSteelDetailingSchema(renderer) {
+    // Create the Marketplace schema for the marketplace page
+    const ArchitecturalDesignServicesSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the primary focuses of Tekla Structures and SDS/2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tekla Structures emphasizes advanced 3D modeling and BIM integration, ideal for large-scale international projects. SDS/2 specializes in automated connection design and efficient workflows tailored for steel fabrication projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which software offers better connection design automation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SDS/2 excels in automated connection design, ensuring compliance with AISC and other standards. Tekla Structures requires third-party plugins for similar functionality."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which software is more user-friendly for beginners?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SDS/2 is often regarded as more intuitive, particularly for users with steel detailing experience. Tekla Structures has a steeper learning curve but offers extensive customization."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BIM integration compare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tekla Structures provides seamless BIM integration, making it ideal for multi-stakeholder collaboration. SDS/2 integrates with BIM but focuses more on steel fabrication workflows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the system requirements for both tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both require high-performance systems with advanced GPUs and substantial memory. Tekla Structures may demand slightly higher specs for complex modeling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is BuildTwin, and how does it complement these tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildTwin is a marketplace with integrated ERP, connecting buyers with pre-qualified vendors. It complements both software by offering vendor access and project management tools tailored for AEC projects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can BuildTwin users find Tekla or SDS/2 experts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, BuildTwin hosts certified vendors proficient in Tekla Structures and SDS/2, ensuring high-quality project execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which software is better for international projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tekla Structures is the preferred choice for international projects due to its multi-material support and global compliance standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do they manage fabrication outputs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SDS/2 is tailored for direct-to-fabrication outputs, optimizing workflows for fabricators. Tekla Structures supports fabrication but may require additional tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does BuildTwin enhance project management for Tekla and SDS/2 users?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildTwin provides integrated ERP features like bid management, live tracking, and vendor coordination, streamlining projects for both tools."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which tool offers better clash detection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tekla Structures provides advanced clash detection, ideal for complex projects. SDS/2 includes basic clash-free modeling features as part of its connection design."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do they handle licensing for small businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SDS/2’s perpetual licensing option is more accessible for small businesses. Tekla Structures’ subscription model is better suited for enterprises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What role do BuildTwin vendors play in project success?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BuildTwin vendors bring expertise in Tekla Structures and SDS/2, ensuring high-quality detailing and compliance with project requirements, supported by the platform’s project management tools."
+          }
+        }
+      ]
+    };
+
+    // Create the JSON-LD script tag
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(MarketplaceSchema);
+    // // Append the script tag to the document head
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(ArchitecturalDesignServicesSchema);
+  }
+
+
+  injectStructuralSteelDetailingTestimonialSchema(renderer) {
+
+    const StructuralSteelDetailingTestimonialSchema = { 
+
+      "@context": "https://schema.org", 
+    
+      "@type": "ItemList", 
+    
+      "itemListElement": [
+
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Emily R."
+        
+        },
+        
+        "reviewBody": "With Tekla Structures’ detailed outputs and BuildTwin’s pre-qualified vendor network, our projects run smoothly. BuildTwin’s project tracking tools help us monitor progress while ensuring compliance with global standards.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Laura M."
+        
+        },
+        
+        "reviewBody": "SDS/2 simplifies steel detailing with automated connection design, and BuildTwin’s ERP features make vendor coordination a breeze. The platform’s live tracking tools keep us on schedule and ensure consistent quality.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Michael P."
+        
+        },
+        
+        "reviewBody": "BuildTwin bridges the gap between software and execution. With SDS/2’s fabrication-ready designs and BuildTwin’s real-time tracking tools, we’ve improved project transparency and on-time delivery.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        }
+        
+        ]  
+    
+    };
+
+    return JSON.stringify(StructuralSteelDetailingTestimonialSchema);
+  }
+
+
 
 }

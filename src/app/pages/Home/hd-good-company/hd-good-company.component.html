@@ -23,7 +23,7 @@
             <ng-template carouselSlide *ngFor="let list of allBlogs">
                 <div class="card">
                     <div class="card__image card__image--first">
-                        <img [src]="list['jetpack_featured_media_url']" alt="company">
+                        <img [src]="list['jetpack_featured_media_url']" alt="company" loading="lazy">
                     </div>
                     <p class="card__title" [innerHtml]="list['title']['rendered']"></p>
                     <p class="card__description" [innerHtml]="list['excerpt']['rendered']"></p>

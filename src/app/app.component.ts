@@ -301,6 +301,12 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
+
+      const testimonialSchema = this._languageService.injectSectorDataCenterTestimonialSchema(this.renderer);
+
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
+      );
     }else if(url.includes('/building-code/aisc')){
       const faqSchema = this._languageService.injectFAQSchemaForBuildingCodeAisc(this.renderer)
 
@@ -318,6 +324,37 @@ injectBreadcrumbScript(url) {
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+      const testimonialSchema = this._languageService.injectSectorPowerPlantTestimonialSchema(this.renderer);
+
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
+      );
+
+    }else if(url.includes('/software/architecture-design-services')){
+      const faqSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+      const testimonialSchema = this._languageService.injectArchitecturalDesignServicesTestimonialSchema(this.renderer);
+
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
+      );
+    }else if(url.includes('/software/structural-steel-detailing')){
+      const faqSchema = this._languageService.injectForStructuralSteelDetailingSchema(this.renderer);
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+      const testimonialSchema = this._languageService.injectStructuralSteelDetailingTestimonialSchema(this.renderer);
+
+      this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${testimonialSchema}</script>`
       );
     }
   }

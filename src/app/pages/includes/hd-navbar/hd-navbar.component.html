@@ -3,7 +3,14 @@
         <nav class="navbar navbar-expand-lg" [class.active]="classApplied">
             <!-- <span (click)="call()">test</span> -->
             <a class="navbar-brand" [routerLink]="_languageService.currentLanguage || '/'">
-                <img src="assets/images/logo@2x.png" alt="logo" width="156" height="27.5">
+                <picture>
+                    <source srcset="assets/images/logo@2x.webp" type="image/webp">
+                    <source srcset="assets/images/logo@2x.png" type="image/png">
+                    <img src="assets/images/logo@2x.png" 
+                         alt="logo" 
+                         width="156" 
+                         height="27.5">
+                </picture>
                 <!-- <span>Beta</span> -->
             </a>
             <button class="navbar-toggler" type="button" (click)="toggleClass()">
@@ -281,7 +288,7 @@
                                             Get in touch with us for any inquiries or support needs.
                                         </p>
                                         </a>
-
+                                        <!-- 
                                         <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'ai-project-management']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column menu_copilot__text">
@@ -316,6 +323,8 @@
                                             <br>(Plug & Play)
                                         </p>
                                     </a>
+                                    -->
+                                    <!-- 
                                     <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'business-intelligence']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column menu_copilot__text">
@@ -339,6 +348,9 @@
                                             <br>(Plug & Play)
                                         </p>
                                     </a>
+                                    -->
+
+                                    <!-- 
                                     <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'training']" routerLinkActive="active"
                                         [routerLinkActiveOptions]="{exact: true}"
                                         class="flex-grow flex-column menu_copilot__text">
@@ -380,8 +392,9 @@
                                             Skill-building courses for engineers at all levels.    
                                         </p>
                                     </a>
-
-                                        </div>
+                                    -->
+                                    
+                                    </div>
                                     </section>
                                 </div>
                                 <aside class="flex-column">
