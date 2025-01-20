@@ -1,4 +1,5 @@
 import { Component, Injector, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { LanguageService } from 'src/app/services/language.service';
@@ -35,6 +36,7 @@ export class BrowseServicesMainComponent implements OnInit {
       }
     },
   }
+  emailForm: FormGroup;
   discoverProjectsOption: OwlOptions = {
     loop: true,
     mouseDrag: false,
@@ -66,7 +68,11 @@ export class BrowseServicesMainComponent implements OnInit {
   constructor(
     private injector: Injector,
     public _languageService:LanguageService,
+    private fb: FormBuilder
   ) {
+    this.emailForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]]
+    });
     // document.body.classList.add('add-top-space');
   }
 
@@ -291,6 +297,16 @@ export class BrowseServicesMainComponent implements OnInit {
     }
     if(!type){
       this.AvailableServicesToggle = !this.AvailableServicesToggle;
+    }
+  }
+  get email() {
+    return this.emailForm.get('email');
+  }
+  onSubmit() {
+    if (this.emailForm.valid) {
+      const email = this.emailForm.value.email;
+      const redirectUrl = `https://www.buildtwin.com/get-started/set-password?admin=true&email=${encodeURIComponent(email)}`;
+      window.location.href = redirectUrl; // Redirect to the URL
     }
   }
   ngOnDestroy() {

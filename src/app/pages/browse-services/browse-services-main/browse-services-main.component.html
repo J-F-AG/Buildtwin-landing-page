@@ -12,11 +12,18 @@
                     pre-qualified independent vendors with wide range of services with
                     unmatched visibility in project quality and on time delivery
                 </p>
-                <div class="get-started-banner">
-                    <input type="text" placeholder="Enter your email ID">
-                    <button class="button-v2">
-                        Get started for FREE
-                    </button>
+                <div>
+                    <form class="get-started-banner" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+                        <input 
+                          type="text" 
+                          formControlName="email" 
+                          placeholder="Enter your email ID" 
+                          [ngClass]="{'invalid': email.invalid && email.touched}"
+                        />
+                        <button class="button-v2" type="submit" [disabled]="emailForm.invalid">
+                          Get started for FREE
+                        </button>
+                      </form>
                 </div>
 
                 <div class="banner-time">

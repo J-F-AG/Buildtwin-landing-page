@@ -52,6 +52,9 @@
           font-size: 14px;
           border-radius: 4px;
           width: 295px;
+          &.ng-invalid.invalid.ng-touched {
+            border-color: red;
+          }
         }
       }
       .banner-time {

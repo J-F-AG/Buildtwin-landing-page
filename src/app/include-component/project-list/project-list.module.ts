@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectListComponent } from './project-list.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 
 
 
@@ -11,7 +12,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   ],
   imports: [
     CommonModule,
-    CarouselModule
+    CarouselModule,
+    NzToolTipModule
   ],
   exports: [
     ProjectListComponent

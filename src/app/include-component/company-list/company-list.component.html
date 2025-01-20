@@ -1,34 +1,20 @@
 <div class="company-list-wrapper">
     <!-- <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
         <ng-template carouselSlide> -->
-            <div class="block">
-                <figure>
-                    <img src="assets/images/company-slide-test.png" width="96" height="96" alt="">
-                </figure>
-            </div>
-            <div class="block">
-                <figure>
-                    <img src="assets/images/company-slide-test.png" width="96" height="96" alt="">
-                </figure>
-            </div>
-            <div class="block">
-                <figure>
-                    <img src="assets/images/company-slide-test.png" width="96" height="96" alt="">
-                </figure>
-            </div>
-            <div class="block">
-                <figure>
-                    <img src="assets/images/company-slide-test.png" width="96" height="96" alt="">
-                </figure>
-            </div>
-            <div class="block">
-                <figure>
-                    <img src="assets/images/company-slide-test.png" width="96" height="96" alt="">
-                </figure>
-            </div>
+            <ng-container *ngFor="let c of companyList; let i = index">
+                <div class="block" *ngIf="i < 5" nz-tooltip nzTooltipTitle="{{c['company_name']}}">
+                    <a 
+                                    class="cursor"
+                                    [routerLink]="[_languageService.currentLanguage + '/partners/' + (c.linking)]">
+                    <figure>
+                        <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="96" height="96">
+                    </figure>
+                    </a>
+                </div>
+            </ng-container>
         <!-- </ng-template>
     </owl-carousel-o> -->
-    <div class="total-project-listed">
+    <a class="total-project-listed"  [routerLink]="[_languageService.currentLanguage,'use-cases']">
         400+ projects listed
-    </div>
+    </a>
 </div>

@@ -3,151 +3,35 @@
         <div class="filter-slider">
 
             <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
-                <ng-template carouselSlide>
-                    <div class="block">
+                <ng-template carouselSlide *ngFor="let sectorArrayList of sectorArray">
+                    <div class="block" [ngClass]="{'active': sectorArrayList['service_name'] === selectedCategory}" (click)="filterProject('category',sectorArrayList['service_name'])">
                         <figure>
-                            <img src="assets/images/icon-road.png" width="32" height="32" alt="">
+                            <img src="{{sectorArrayList['service_icon']}}" width="32" height="32" alt="">
                         </figure>
-                        <span>
-                            Transportation Infrastructure
+                        <span  nz-tooltip nzTooltipTitle="{{sectorArrayList['service_name']}}">
+                            {{sectorArrayList['service_name']}}
                         </span>
                     </div>
                 </ng-template>
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-cargo-ship.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Marine and water Infrastructure
-                        </span>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-utilities.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Energy and Utilities
-                        </span>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-factory.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Commercial and Industrial
-                        </span>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-apartment.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Residential and mixed -use
-                        </span>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-stadium.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Sports and recreation
-                        </span>
-                    </div>
-                </ng-template>
-                <!-- <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-university.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Education and public facilities
-                        </span>
-                    </div>
-                </ng-template> -->
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-medical.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Healthcare and wellness
-                        </span>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-building.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Hospitality and Leisure
-                        </span>
-                    </div>
-                </ng-template>
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-defence.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Government and Defence
-                        </span>
-                    </div>
-                </ng-template>
-                <!-- <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-village.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Agriculture and rural infrastructure
-                        </span>
-                    </div>
-                </ng-template> -->
-                <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-church.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Cultural and religious
-                        </span>
-                    </div>
-                </ng-template>
-                <!-- <ng-template carouselSlide>
-                    <div class="block">
-                        <figure>
-                            <img src="assets/images/icon-smart-cities.png" width="32" height="32" alt="">
-                        </figure>
-                        <span>
-                            Digital and smart infrastructure
-                        </span>
-                    </div>
-                </ng-template> -->
             </owl-carousel-o>
         </div>
+        <div class="verified-partner disabled filter-btn">
+            <i class="filter-icon"></i>
+            Filters
+        </div>
         <label class="verified-partner">
-            <input type="checkbox">
+            <input type="checkbox" (change)="onCheckboxChange($event)">
             <span></span>
             Verified Partners
         </label>
     </div>
     <div class="project-list-wrapper">
-        <div class="block">
+        <div class="block" *ngFor="let list of projectList">
             <div class="figure-wrapper">
                 <figure>
-
+                    <img src="{{list['project_logo'][0]?list['project_logo'][0]:''}}" alt="">
                 </figure>
-                <div class="verified-vendor">
+                <div class="verified-vendor" *ngIf="list['pre_qualified_company']">
                     Verified
                     <img 
                     src="assets/images/verified-vendor-icon.png" 
@@ -157,349 +41,24 @@
                     alt="Verified Vendor Icon">
                     Vendor
                 </div>
-                <div class="project-rating">
+                <!-- <div class="project-rating">
                     <img src="assets/images/star.png" width="11" height="11" alt="">
                     4.8 Review
-                </div>
+                </div> -->
                 <div class="project-country">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.395 17.5H12.531C13.1801 16.9204 13.7922 16.3007 14.3638 15.6445C16.5083 13.1781 17.645 10.5781 17.645 8.125C17.645 6.30164 16.9207 4.55295 15.6314 3.26364C14.3421 1.97433 12.5934 1.25 10.77 1.25C8.94666 1.25 7.19797 1.97433 5.90866 3.26364C4.61935 4.55295 3.89502 6.30164 3.89502 8.125C3.89502 10.5781 5.02861 13.1781 7.17627 15.6445C7.74784 16.3007 8.35998 16.9204 9.00908 17.5H5.14502C4.97926 17.5 4.82029 17.5658 4.70308 17.6831C4.58587 17.8003 4.52002 17.9592 4.52002 18.125C4.52002 18.2908 4.58587 18.4497 4.70308 18.5669C4.82029 18.6842 4.97926 18.75 5.14502 18.75H16.395C16.5608 18.75 16.7198 18.6842 16.837 18.5669C16.9542 18.4497 17.02 18.2908 17.02 18.125C17.02 17.9592 16.9542 17.8003 16.837 17.6831C16.7198 17.5658 16.5608 17.5 16.395 17.5ZM10.77 5.625C11.2645 5.625 11.7478 5.77162 12.1589 6.04633C12.5701 6.32103 12.8905 6.71148 13.0797 7.16829C13.2689 7.62511 13.3184 8.12777 13.222 8.61273C13.1255 9.09768 12.8874 9.54314 12.5378 9.89277C12.1882 10.2424 11.7427 10.4805 11.2577 10.577C10.7728 10.6734 10.2701 10.6239 9.81331 10.4347C9.3565 10.2455 8.96605 9.92505 8.69135 9.51393C8.41664 9.1028 8.27002 8.61945 8.27002 8.125C8.27002 7.46196 8.53341 6.82607 9.00225 6.35723C9.47109 5.88839 10.107 5.625 10.77 5.625Z" fill="#0053FA"></path></svg>
+                    
                     <span class="county-name">
-                        Geramny
+                        {{list['project_region']}}
                     </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
+                    <!-- <img src="assets/images/flag-de.png" width="23" height="23" alt=""> -->
                 </div>
             </div>
-            <h3>
-                High-Rise Building FOUR
+            <h3 [innerHtml]="list['project_name']">
             </h3>
-            <span class="company-name">
-                GBC Engineer
+            <span class="company-name" [innerHtml]="list['company_name']">
             </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-
-                </figure>
-                <div class="verified-vendor">
-                    Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
-                    Vendor
-                </div>
-                <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="">
-                </div>
-            </div>
-            <h3>
-                High-Rise Building FOUR
-            </h3>
-            <span class="company-name">
-                GBC Engineer
-            </span>
-            <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
+            <p class="project-des" [innerHtml]="list['project_description']">
             </p>
         </div>
     </div>
