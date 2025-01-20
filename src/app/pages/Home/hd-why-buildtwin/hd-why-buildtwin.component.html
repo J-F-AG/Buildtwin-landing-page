@@ -69,7 +69,7 @@
                 <div class="rightChild">
                     <div class="contentWrapper" *ngFor="let detail of activeContent.details">
                         <div class="content-top">
-                            <img src="{{activeContent.displayIcon}}" alt="icons" class="content-top__icon" [width]="activeContent.displayIconWidth" [height]="activeContent.displayIconHeight">
+                            <img src="{{activeContent.displayIcon}}" alt="icons" class="content-top__icon" [width]="activeContent.displayIconWidth" [height]="activeContent.displayIconHeight" loading="lazy">
                             <span class="content-top__title">
                                 {{ activeContent.name }}
                             </span>

@@ -15,7 +15,7 @@
                             <ng-template carouselSlide *ngFor=" let item of projectsArray">
                                 <div class="projectCard"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
                                     <div class="projectImg">
-                                        <img src="{{item.img}}" class="projectImage" alt="cardImage">
+                                        <img src="{{item.img}}" class="projectImage" alt="cardImage" loading="lazy">
                                     
                                         <div class="imgOverlay">
                                             <div class="projectCategory">{{item.category}}</div>

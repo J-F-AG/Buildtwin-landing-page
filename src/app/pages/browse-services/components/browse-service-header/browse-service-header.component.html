@@ -27,7 +27,15 @@
             <owl-carousel-o [options]="customOptions">
                 <ng-template *ngFor="let item of servicesArray" carouselSlide>
                     <div class="cardWrapper" *ngIf="!item['serviceId']">
-                        <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                        <picture>
+                            <source [srcset]="item.img.webp" type="image/webp">
+                            <source [srcset]="item.img.fallback" type="image/png">
+                            <img [src]="item.img.fallback" 
+                                 alt="cardImage"
+                                 [attr.width]="item.width" 
+                                 [attr.height]="item.height"
+                                 loading="lazy">
+                        </picture>
                         <div class="detail">
                             {{item.name}}
                         </div>

@@ -12,7 +12,7 @@ export class BookServicesHeaderComponent implements OnInit {
 
   countryArray = [
     {
-      image: 'assets/images/us-flag.webp',
+      image: 'assets/images/us-flag.png',
       label: 'United States',
       value: 'UnitedStates',
       currency: 'IBC',
