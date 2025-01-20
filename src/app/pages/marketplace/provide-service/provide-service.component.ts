@@ -60,7 +60,7 @@ tabHead:any
     this.fixedElement = document.getElementById('scrollActivated');
     // inside active 
     if (this.FixedDiv < 200 && totalScroll > topscroll - 400) {
-      this.fixedElement.classList.add("fixed2")
+      // this.fixedElement.classList.add("fixed2")
 
       let activeELe = document.querySelectorAll('[data-ele]');
       activeELe.forEach((item, index) => {
@@ -80,7 +80,7 @@ tabHead:any
           this.fixedElement1 = document.getElementById('scrollActivated2');
 
           if (this.fixedElement1) {
-            this.fixedElement1.classList.add("fixed");
+            // this.fixedElement1.classList.add("fixed");
           }
 
           for (let i = 11; i <= 16; i++) {
@@ -113,7 +113,7 @@ let HideMenu = document.getElementById('tabContent');
         }
         else {
           this.fixedElement1 = document.getElementById('scrollActivated2');
-          this.fixedElement1.classList.remove("fixed")
+          // this.fixedElement1.classList.remove("fixed")
         }
 
         if (this.activeState === 3) {
@@ -156,7 +156,7 @@ let HideMenu = document.getElementById('tabContent');
 
     }
     else {
-      this.fixedElement.classList.remove("fixed2")
+      // this.fixedElement.classList.remove("fixed2")
 
      
 
