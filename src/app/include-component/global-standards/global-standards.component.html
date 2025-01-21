@@ -19,30 +19,30 @@ by working with  <span>global standards</span>
     <div class="list round-button-owl">
         <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
             <ng-template carouselSlide>
-            <div class="block">
-                <div>
-                    <h3>
-                        Structural Steel
-    Detailing
-                    </h3>
-                    <p>
-                        Collaborate with leading structural
-    steel detailers using Tekla Structures
-    and SDS/2
-                    </p>
-                </div>
-                <figure>
-                    <img 
-                    src="assets/images/global-standards1.png" 
-                    srcset="assets/images/global-standards1.png, assets/images/global-standards1@2x.png 2x" 
-                    width="346" 
-                    height="430" 
-                    alt="Structural Steel Detailing">
-                </figure>
-            </div>
+                <a class="block" [routerLink]="[_languageService.currentLanguage + 'software/structural-steel-detailing']">
+                        <div>
+                            <h3>
+                                Structural Steel
+            Detailing
+                            </h3>
+                            <p>
+                                Collaborate with leading structural
+            steel detailers using Tekla Structures
+            and SDS/2
+                            </p>
+                        </div>
+                        <figure>
+                            <img 
+                            src="assets/images/global-standards1.png" 
+                            srcset="assets/images/global-standards1.png, assets/images/global-standards1@2x.png 2x" 
+                            width="346" 
+                            height="430" 
+                            alt="Structural Steel Detailing">
+                        </figure>
+                </a>
             </ng-template>
             <ng-template carouselSlide>
-            <div class="block">
+            <a class="block" [routerLink]="[_languageService.currentLanguage + 'software/architecture-design-services']">
                 <div>
                     <h3>
                         Architecture &
@@ -62,10 +62,10 @@ Revit and ALLPLAN
                     height="430" 
                     alt="Architecture & Structural Design">
                 </figure>
-            </div>
+            </a>
             </ng-template>
             <ng-template carouselSlide>
-            <div class="block active">
+            <a class="block active" [routerLink]="[_languageService.currentLanguage + 'building-code/aisc']">
                 <div>
                     <h3>
                         AISC
@@ -84,10 +84,10 @@ Steel Industry
                     height="430" 
                     alt="AISC Building Code">
                 </figure>
-            </div>
+            </a>
             </ng-template>
             <ng-template carouselSlide>
-            <div class="block green">
+            <a class="block green" [routerLink]="[_languageService.currentLanguage + 'building-code/eurocode']">
                 <div>
                     <h3>
                         Eurocodes
@@ -107,7 +107,7 @@ Eurocode standards.
                     height="430" 
                     alt="Eurocodes Building Standards">
                 </figure>
-            </div>
+            </a>
             </ng-template>
         </owl-carousel-o>
     </div>

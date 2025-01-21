@@ -1,6 +1,7 @@
 import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-global-standards',
@@ -10,7 +11,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class GlobalStandardsComponent {
 factorySlider: OwlOptions | null = null;
  isBrowser: boolean;
-  constructor( @Inject(PLATFORM_ID) private platformId: Object) {
+  constructor( @Inject(PLATFORM_ID) private platformId: Object, public _languageService:LanguageService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 ngOnInit(): void {

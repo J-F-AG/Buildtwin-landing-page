@@ -22,19 +22,19 @@
         }
     }
     .block {
-        margin-right: -10px;
-        margin-left: -10px;
+        margin-right: -20px;
+        margin-left: -20px;
         position: relative;
         z-index: 3;
     }
     .block:nth-child(1),
     .block:nth-child(5) {
-        width: 65px;
+        // width: 65px;
         z-index: 1;
     }
     .block:nth-child(2),
     .block:nth-child(4) {
-        width: 79px;
+        // width: 79px;
         z-index: 2;
     }
 }
@@ -55,4 +55,10 @@
     align-items: center;
     display: flex;
     color: #5dd7ad;
+}
+
+@media (max-width: 767px) {
+    .total-project-listed {
+        white-space: nowrap;
+    }
 }

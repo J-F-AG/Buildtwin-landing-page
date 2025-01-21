@@ -3,6 +3,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HttpClient } from '@angular/common/http';
 import { catchError, forkJoin, of } from 'rxjs';
+import { LanguageService } from 'src/app/services/language.service';
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
@@ -21,7 +22,7 @@ factorySlider: OwlOptions | null = null;
  projectList = [];
  selectedCategory = '';
  verifiedStatus: boolean = false;
-  constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient) {
+  constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient, public _languageService: LanguageService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.fetchData()
     this.getProjectData()
@@ -44,19 +45,25 @@ sliderInit() {
       "<i class='ti ti-chevron-right'></i>",
     ],
     stagePadding: 0,  // Adjust padding for the "half" item effect
+    autoWidth: true,
+    // width: 123
     responsive: {
       0: {
-        items: 1  // 1 item for small screens
+        // items: 1  // 1 item for small screens
+        margin: 10,
+        loop: true,
       },
       600: {
-        items: 2  // 1 item for slightly larger screens
+        // items: 2  // 1 item for slightly larger screens
+        margin: 32,
+        loop: false,
       },
-      740: {
-        items: 5  // 2 items for medium screens
-      },
-      940: {
-        items: 4  // 2 full items and a half item for larger screens
-      }
+      // 740: {
+      //   items: 5  // 2 items for medium screens
+      // },
+      // 940: {
+      //   items: 4  // 2 full items and a half item for larger screens
+      // }
     }
   };
 }
@@ -146,10 +153,10 @@ sliderInit() {
           // })
           // console.log(this.projectList)
           // Process the response as needed
-          setTimeout(() => {
+          // setTimeout(() => {
             
-            console.log(this.projectList)
-          }, 5000);
+          //   console.log(this.projectList)
+          // }, 5000);
         },
         error: (err) => {
           console.error("Error in subscription:", err);
@@ -199,6 +206,17 @@ sliderInit() {
         // Update project_logo in the item
         item.project_logo = logos;
 
+
+        if (this._languageService.customMapping[item['company_name']]) {
+          item['route'] = this._languageService.customMapping[item['company_name']];
+          item['linking'] = this._languageService.customMapping[item['company_name']];
+        }else {
+          item['route'] = item['company_name'].replace(/ /g, '');
+          item['linking'] = item['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+          .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+          .toLowerCase();
+        }
+
         // Push the updated item to projectList
         this.projectList.push(item);
     });
@@ -230,4 +248,7 @@ sliderInit() {
     this.getProjectData();
   }
   
+  redirect(domain, company_name) {
+    localStorage.setItem("domain", domain);
+  }
 }

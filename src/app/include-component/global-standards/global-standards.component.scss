@@ -48,7 +48,7 @@
     justify-content: space-between;
     padding: 33px 24px 0;
     position: relative;
-    width: 349px; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
     aspect-ratio: 349 / 435; /* Maintain the ratio */
     &.active {
         background: #002E3B;
@@ -93,6 +93,39 @@
             object-fit: cover;
             object-position: center;
             border-radius: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .list {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+        &::after, &::before {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    :host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-] {
+        left: -1px;
+        background: white;
+        border-radius: 4px 4px 0 0;
+    }
+    :host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-].owl-next {
+        right: -1px;
+        left: auto;
+        border-radius: 4px 4px 0 0;
+    }
+
+}
+
+@media only screen and (max-width : 900px) {
+    .block {
+        padding: 24px 20px 0;
+        h3 {
+            font-size: 22px;
         }
     }
 }

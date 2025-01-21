@@ -17,6 +17,7 @@
   }
   .banner-global {
     margin-bottom: 42px;
+    overflow: hidden;
     .banner-main {
       display: flex;
       align-items: center;
@@ -1014,6 +1015,14 @@
         align-self: center;
     }
 }
+@media only screen and (max-width : 1300px) {
+  .banner-global .banner-content h1 {
+    font-size: 30px;
+  }
+  .banner-global .banner-content p {
+    font-size: 16px;
+  }
+}
 @media only screen and (max-width : 1200px) {
   .containerWrap {
     padding-left: 30px;
@@ -1057,6 +1066,12 @@
 }
 .sticky-bottom .bg-sticky {
     flex-wrap: wrap;
+}
+.banner-global .banner-content .banner-time .banner-time-detail {
+  font-size: 14px;
+  .time {
+    font-size: 20px;
+  }
 }
 }
 @media only screen and (max-width : 767px) {
@@ -1216,5 +1231,24 @@
   .whyBuildtwinSection {
     padding: 0;
   }
-  
+  .banner-global .banner-main {
+    flex-direction: column;
+    gap: 10px;
+    .banner-content {
+      order: 2;
+    }
+    .banner-image {
+      order: 1;
+      width: 100%;
+      min-width: 100%;
+      margin-right: 0;
+    }
+  }
+  .banner-global .banner-content h1 {
+    font-size: 25px;
+  }
+  .banner-global .banner-content .get-started-banner input {
+    flex-grow: 1;
+    width: auto;
+  }
 }
