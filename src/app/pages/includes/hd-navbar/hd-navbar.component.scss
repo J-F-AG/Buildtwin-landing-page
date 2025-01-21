@@ -7,8 +7,8 @@
     right: 0;
     left: 0;
     top: 0;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
 
     .navbar {
         justify-content: space-between;

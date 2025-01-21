@@ -1,145 +1,200 @@
-<div class="mainFooter">
-<div>
-<div class="main-frame">
-
-    <!-- 
-    <div class="wrapper-ellipse-3249">
-      <img
-        class="wrapper-ellipse-3249-child"
-        loading="lazy"
-        alt=""
-        src="assets/images/ellipse-3249.svg"
-      />
+<div id="footer">
+  <div class="lets-talk block">
+    <div class="container">
+        <div class="lets-talk-content">
+          <h4>
+            Let’s talk
+          </h4>
+          <p>
+            From custom demos to customization - we are here to delight you
+          </p>
+        </div>
+        <button class="button-v2" (click)="call()">Schedule call</button>
     </div>
-    <div class="bg2">
-        <img
-          class="wrapper-ellipse-3249-child"
-          loading="lazy"
-          alt=""
-          src="assets/images/ellipse-3249.svg"
-        />
+  </div>
+  <div class="locations block">
+    <div class="container">
+      <div class="left">
+        <h6>
+          BuildTwin Marketplace Worldwide
+        </h6>
+
+    <a href="https://www.buildtwin.com/get-started">Get started today</a>
       </div>
-    -->
-    <div class="list-item-link-svg"></div>
-    <div class="list-item-link-svg1"></div>
-    <div class="list-item-link-svg2"></div>
-    <div class="home-link">
-      <div class="app-banner">
-        <a class="navbar-brand" [routerLink]="_languageService.currentLanguage || '/'">
-            <img src="assets/images/logo2.png" alt="logo" width="165" height="45" loading="lazy">
-            <!-- <span>Beta</span> ! -->
-        </a>
-        <div class="call-schedule">
-          <div class="call-line">
-            <a class="item-link" href="https://www.buildtwin.com/blog" target="_blank">Blog</a>
-            <a class="item-link" routerLink="{{_languageService.currentLanguage}}/contact">Contact</a>
-            <a class="item-link" routerLink="{{_languageService.currentLanguage}}/privacy-policy">Privacy Policy</a>
-            <a class="item-link1" routerLink="{{_languageService.currentLanguage}}/terms-conditions">Imprint</a>
+      <div class="right">
+        <div class="frame-frame3">
+          <div class="region-frame">
+            <img
+              class="heading-link-icon"
+              loading="lazy"
+              alt=""
+              src="assets/images/usa.svg"
+            />
+
+            <div class="heading-3">USA</div>
+          </div>
+          <div class="region-frame">
+            <img
+              class="eu-icon"
+              loading="lazy"
+              alt=""
+              src="assets/images/eu.svg"
+            />
+
+            <div class="heading-31">EU</div>
+          </div>
+          <div class="region-frame">
+            <img
+              class="middle-east-icon"
+              loading="lazy"
+              alt=""
+              src="assets/images/middle-east.svg"
+            />
+
+            <div class="heading-32">Middle East</div>
+          </div>
+          <div class="region-frame">
+            <img
+              class="region-frame-child"
+              loading="lazy"
+              alt=""
+              src="assets/images/uk.png"
+            />
+
+            <div class="heading-33">UK</div>
+          </div>
+          <div class="region-frame">
+            <img
+              class="region-frame-item"
+              loading="lazy"
+              alt=""
+              src="assets/images/australia.svg"
+            />
+
+            <div class="heading-34">Australia</div>
+          </div>
+          <div class="region-frame">
+            <img
+              class="region-frame-inner"
+              loading="lazy"
+              alt=""
+              src="assets/images/india.png"
+            />
+
+            <div class="heading-35">India</div>
           </div>
         </div>
       </div>
     </div>
-    <section class="u-s-a-header">
-      <div class="country-link">
-        <h3 class="app-root-app-online-meeting-">Let’s talk</h3>
-        <div class="item-link2">
-          From custom demos to customization - we are here to delight you.
-        </div>
+  </div>
+  <div class="service-list block">
+    <div class="container">
+      <div class="list-block">
+        <h5>
+          Sectors
+        </h5>
+        <ul>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/sector/data-centre">
+              Data center
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/sector/power-plant">
+              Drafting Services
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="divider-line">
-        <div class="sub-menu-frame" (click)="call()">
-          <a  class="schedule-call-button" href="javascript:void(0)">
-            <div class="schedule-call">Schedule call</div>
-          </a>
-          <div class="middle-frame"></div>
-        </div>
+      <div class="list-block">
+        <h5>
+          Services
+        </h5>
+        <ul>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/services/pre-cast-detailing-services">
+              Precast Detailing Services
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/services/rebar-detailing-services">
+              Rebar Detailing Services
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/services/bim-services">
+              BIM Services
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/services/steel-detailing-services">
+              Steel Detailing Services
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/services/drafting-services">
+              Drafting Services
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/services/cad-services">
+              CAD Services
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="europe-header">
-        <div class="e-u-link">
-          <div class="item-link3">
-            Get pre-qualified for the BuildTwin Marketplace.
-          </div>
-          <a href="https://www.buildtwin.com/get-started" class="item-link4">Get started today</a>
-        </div>
-        <div class="frame-line"></div>
-        <div class="frame-frame">
-          <div class="link-frame">
-            <div class="frame-frame1">
-              <div class="item-link-container2">
-                <span>BuildTwin Marketplace </span>
-                <span class="for">for</span>
-                <span> </span>
-              </div>
-              <div class="frame-frame2"></div>
-            </div>
-            <div class="frame-frame3">
-              <div class="region-frame">
-                <img
-                  class="heading-link-icon"
-                  loading="lazy"
-                  alt=""
-                  src="assets/images/usa.svg"
-                />
-
-                <div class="heading-3">USA</div>
-              </div>
-              <div class="region-frame1">
-                <img
-                  class="eu-icon"
-                  loading="lazy"
-                  alt=""
-                  src="assets/images/eu.svg"
-                />
-
-                <div class="heading-31">EU</div>
-              </div>
-              <div class="region-frame2">
-                <img
-                  class="middle-east-icon"
-                  loading="lazy"
-                  alt=""
-                  src="assets/images/middle-east.svg"
-                />
-
-                <div class="heading-32">Middle East</div>
-              </div>
-              <div class="region-frame3">
-                <img
-                  class="region-frame-child"
-                  loading="lazy"
-                  alt=""
-                  src="assets/images/uk.png"
-                />
-
-                <div class="heading-33">UK</div>
-              </div>
-              <div class="region-frame4">
-                <img
-                  class="region-frame-item"
-                  loading="lazy"
-                  alt=""
-                  src="assets/images/australia.svg"
-                />
-
-                <div class="heading-34">Australia</div>
-              </div>
-              <div class="region-frame5">
-                <img
-                  class="region-frame-inner"
-                  loading="lazy"
-                  alt=""
-                  src="assets/images/india.png"
-                />
-
-                <div class="heading-35">India</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="list-block">
+        <h5>
+          Softwares
+        </h5>
+        <ul>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/software/architecture-design-services">
+              Architecture Design Software
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/software/structural-steel-detailing">
+              Structural Steel Detailing Software
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="frame-line1"></div>
-    </section>
-    <footer class="item-link5" [ngClass]="{'block':(_footerService['companyDetail'] && _footerService['companyDetail']['name'])}">
+      <div class="list-block">
+        <h5>
+          Building Code
+        </h5>
+        <ul>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/building-code/aisc">
+              AISC
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/building-code/eurocode">
+              Eurocode
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="block footer-menu-wrapper">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="_languageService.currentLanguage || '/'">
+        <img src="assets/images/logo2.png" alt="logo" width="165" height="45" loading="lazy">
+        <!-- <span>Beta</span> ! -->
+    </a>
+    <div class="call-schedule">
+      <div class="call-line">
+        <a class="item-link" href="https://www.buildtwin.com/blog" target="_blank">Blog</a>
+        <a class="item-link" routerLink="{{_languageService.currentLanguage}}/contact">Contact</a>
+        <a class="item-link" routerLink="{{_languageService.currentLanguage}}/privacy-policy">Privacy Policy</a>
+        <a class="item-link1" routerLink="{{_languageService.currentLanguage}}/terms-conditions">Imprint</a>
+      </div>
+    </div>
+    </div>
+    <div class="container footer-content">
       <ng-container *ngIf="_footerService['companyDetail'] && _footerService['companyDetail']['name']">
         The information provided on this business listing page is based solely on the details shared by the company {{_footerService['companyDetail']['name']}}. While we strive to ensure that the information is accurate and up-to-date, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information provided.
         All images and related intellectual property rights displayed on this page are the property of {{_footerService['companyDetail']['name']}} or licensed by {{_footerService['companyDetail']['name']}}.<br><br>
@@ -148,30 +203,9 @@
       <ng-container *ngIf="!_footerService['companyDetail'] || (_footerService['companyDetail'] && !_footerService['companyDetail']['name'])">
         The images of projects displayed on this website are not owned by our company and may be subject to third-party copyrights. We disclaim any liability for copyright infringement related to these images. The data provided on this site is for informational purposes only, based on our internal estimates. This information is not intended to serve as an indication of Key Performance Indicators (KPIs) and is provided "as is" without any warranties, either express or implied, regarding its accuracy, completeness, or reliability.
       </ng-container>
-    </footer>
+    </div>
   </div>
 </div>
-</div>
+
 
 <app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
-
-<!-- <div class="popUP" [ngClass]="{'active':showPopup}" *ngIf="showPopup">
-  <div class="coverPopup">
-    <i class="closeIcon" (click)="closePopup()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-        <g clip-path="url(#clip0_2773_1184811)">
-        <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_2773_11848">
-        <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
-        </clipPath>
-        </defs>
-        </svg>
-    </i>
-  <div class="coverPopupData">
-  
-<iframe src="https://success.buildtwin.com/meetings/buildtwin?embed=true" width="100%" height="700px" frameborder="0"></iframe>
-</div>
-</div>
-</div> -->

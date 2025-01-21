@@ -5,12 +5,86 @@
     // row-gap: 30px;
     // background: #fafafa;
   }
+  figure {
+    margin: 0;
+  }
   .aboutSlider {
     margin-left: -5px;
   }
   .containerWrap {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
+  }
+  .banner-global {
+    margin-bottom: 42px;
+    .banner-main {
+      display: flex;
+      align-items: center;
+      padding-top: 82px;
+    }
+    .banner-content {
+      flex-grow: 1;
+      // padding-top: 114px;
+      h1 {
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        span {
+          background: #5dd7ad;
+        }
+      }
+      p {
+        font-size: 18px;
+        opacity: .7;
+        line-height: 1.4;
+        margin-bottom: 27px;
+      }
+      .get-started-banner {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 39px;
+        input {
+          border: 1px solid #cbd6e2;
+          height: 47px;
+          padding: 16px;
+          font-size: 14px;
+          border-radius: 4px;
+          width: 295px;
+          &.ng-invalid.invalid.ng-touched {
+            border-color: red;
+          }
+        }
+      }
+      .banner-time {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        .banner-time-detail {
+          display: flex;
+          flex-direction: column;
+          // gap: 10px;
+          font-size: 16px;
+          font-weight: 600;
+          .label {
+            display: block;
+            letter-spacing: .3px;
+          }
+          .time {
+            color: #0053fa;
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+          }
+        }
+      }
+    }
+    .banner-image {
+      width: calc(49.84% + 35px);
+      min-width: calc(49.84% + 35px);
+      margin-right: -35px;
+    }
   }
   #explore-service-banner {
     ::ng-deep .owl-nav  {
@@ -895,7 +969,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 30px 100px 20px;
+    padding: 30px var(--padding-left-right) 20px;
     display: flex;
     flex-direction: column;
     background: white;

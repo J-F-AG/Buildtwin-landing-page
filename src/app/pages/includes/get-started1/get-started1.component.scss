@@ -34,7 +34,7 @@
         a {
             border-radius: 4px;
             background: var(--color-green-button, #FFF);
-            display: flex;
+            display: inline-flex;
             padding: 12px 24px;
             justify-content: center;
             align-items: center;
@@ -45,7 +45,7 @@
             font-weight: 500;
             line-height: 140%;
             /* 19.6px */
-            max-width: 156px;
+            // max-width: 156px;
         }
     }
 }

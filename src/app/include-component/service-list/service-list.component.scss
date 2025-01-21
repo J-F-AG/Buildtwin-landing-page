@@ -1,0 +1,85 @@
+.bg {
+    padding-top: 104px;
+}
+.list {
+    padding-right: calc(175px + var(--padding-left-right));
+    padding-left: var(--padding-left-right);
+    margin-left: -92px;
+    margin-right: -92px;
+    overflow: hidden;
+    position: relative;
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        background: linear-gradient(to left, transparent, #f6f7f9);
+        content: "";
+        z-index: 2;
+        pointer-events: none;
+    }
+    &::after {
+        background: linear-gradient(to right, transparent, #f6f7f9);
+        left: auto;
+        right: 0;
+    }
+}
+:host ::ng-deep .owl-carousel .owl-stage-outer {
+    overflow: visible;
+}
+:host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-]{
+    left: -51px;
+}
+:host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-].owl-next {
+    right: -229px;
+    left: auto;
+}
+.block {
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 33px 24px 0;
+    position: relative;
+    width: 349px; /* Adjust as needed */
+    aspect-ratio: 349 / 435; /* Maintain the ratio */
+    &.active {
+        background: #002E3B;
+        color: white;
+        h3 {
+            color: inherit;
+        }
+        p {
+            color: white;
+        }
+    }
+    h3 {
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: -.35px;
+        margin-bottom: 7px;
+    }
+    p {
+        color: #515151;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+    figure {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+    }
+}

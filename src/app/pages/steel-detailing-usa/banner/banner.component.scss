@@ -6,8 +6,8 @@
 }
 .container {
     max-width: none;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
 }
 .bannerWrapper > img{width: 100%; display: block;}
 

@@ -86,7 +86,7 @@ export class TimeTrackingHomeComponent {
   
       // inside active 
       if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
-        this.fixedElement.classList.add("fixed")
+        // this.fixedElement.classList.add("fixed")
         let activeELe = document.querySelectorAll('[data-ele]');
         activeELe.forEach((item, index) => {
           if (item.getBoundingClientRect().top < 500) {
@@ -101,7 +101,7 @@ export class TimeTrackingHomeComponent {
   
       }
       else {
-        this.fixedElement.classList.remove("fixed")
+        // this.fixedElement.classList.remove("fixed")
   
       }
     }

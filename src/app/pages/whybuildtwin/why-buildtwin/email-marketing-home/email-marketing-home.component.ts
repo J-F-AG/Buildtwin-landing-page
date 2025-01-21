@@ -88,7 +88,7 @@ element:any
   
       // inside active 
       if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
-        this.fixedElement.classList.add("fixedData")
+        // this.fixedElement.classList.add("fixedData")
         let activeELe = document.querySelectorAll('[data-ele]');
         activeELe.forEach((item, index) => {
           if (item.getBoundingClientRect().top < 500) {
@@ -103,7 +103,7 @@ element:any
   
       }
       else {
-        this.fixedElement.classList.remove("fixedData")
+        // this.fixedElement.classList.remove("fixedData")
   
       }
     }
