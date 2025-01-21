@@ -7,7 +7,7 @@
                                     class="cursor"
                                     [routerLink]="[_languageService.currentLanguage + '/partners/' + (c.linking)]">
                     <figure>
-                        <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="96" height="96">
+                        <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="96" height="96" alt="{{c['company_name']}}">
                     </figure>
                     </a>
                 </div>

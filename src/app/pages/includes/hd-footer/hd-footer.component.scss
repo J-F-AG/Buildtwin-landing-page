@@ -129,3 +129,49 @@
   line-height: 2;
   text-align: center;
 }
+
+@media only screen and (max-width : 900px) {
+  .lets-talk .lets-talk-content h4 {
+    font-size: 34px;
+  }
+  .lets-talk .lets-talk-content p {
+    font-size: 16px;
+  }
+  .locations .right .frame-frame3 .region-frame {
+    font-size: 16px;
+  }
+  .footer-menu-wrapper .container a {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width : 767px) {
+  .lets-talk .container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .locations .container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .locations .left {
+    width: 100%;
+    border: none;
+    padding: 0;
+    gap: 10px;
+  }
+  .locations .right .frame-frame3 .region-frame {
+    font-size: 14px;
+  }
+  .service-list .container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .footer-menu-wrapper .container:first-child {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
