@@ -171,7 +171,18 @@ sliderInit() {
         let logos = [];
         try {
             // Attempt to parse the project_logo field as JSON
-            const parsed = JSON.parse(item.project_logo);
+            // const parsed = JSON.parse(item.project_logo);
+            let parsed;
+            if (typeof item.project_logo === 'string') {
+              try {
+                parsed = JSON.parse(item.project_logo);
+              } catch (error) {
+                console.error('Failed to parse project_logo:', error);
+                parsed = item.project_logo; // Keep it as is if parsing fails
+              }
+            } else {
+              parsed = item.project_logo; // Use as is if it's not a string
+            }
 
             if (Array.isArray(parsed)) {
                 // If parsed is an array, add all items to logos
