@@ -1,0 +1,247 @@
+<section class="footerSection container">
+    <!-- The footer section container -->
+    <!-- 
+    <div class="footerSectionHeader">
+        <div class="footerTitle">
+            the BuildTwin Experience
+        </div>
+        <div class="footerSubtitle">
+            The BuildTwin pre-qualification program helps you to meet global requirements.
+        </div>
+    </div> 
+    -->
+    <div class="footerSectionWrapper">
+        <!-- Quality section displaying BuildTwin information -->
+        <div class="qualitySectionContainer">
+            <div class="header">
+                <h2><strong>Build</strong>Twin</h2>
+                <p class="paraHead">BuildTwin offers a tailored experience</p>
+            </div>
+            <div class="main-card">
+                <!-- Iterate over the qualityArray to create cards dynamically -->
+                <div *ngFor="let item of qualityArray" class="card {{item['addClass']}}">
+                    <!-- 
+                    <div class="icon">
+                        <img [src]="item.icon" alt="icon" height="73" width="73" />
+                    </div> 
+                    -->
+                    <div class="details">
+                        <span>{{item.title}}</span>
+                        <!-- 
+                        <p [innerHtml]="item.description"></p> 
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel for BuildTwin and Legacy Tools -->
+        <nz-carousel [nzEffect]="effect" [nzDots]="false">
+            <!-- BuildTwin carousel content -->
+            <div class="bt-flex gap-big" nz-carousel-content>
+                <div class="availableVendors">
+                    <div class="availableVendorsList">
+                        <div class="header">
+                            <!-- 
+                            <img src="assets/images/for-text.png" width="43" height="46" alt=""> 
+                            -->
+                            <h2><strong>Build</strong>Twin</h2>
+                        </div>
+                        <div class="main-card">
+                            <div class="card v2">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card v2">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card v2">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card v2">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card v2">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card v2">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/tick.png" width="58" height="57" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legacy Tools carousel content -->
+            <div class="bt-flex gap-big" nz-carousel-content>
+                <div class="availableVendors">
+                    <div class="availableVendorsList">
+                        <div class="header">
+                            <h2>Legacy Tools</h2>
+                        </div>
+                        <div class="main-card">
+                            <div class="card v2">
+                                Exchange, own-Email Server
+                            </div>
+                            <div class="card">
+                                Manual                            
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card v2">
+                                Sharepoint, Active Directory & Manual management
+                            </div>
+                            <div class="card">
+                                Manual upload & manage
+                            </div>
+                            <div class="card">
+                                Not available if not uploaded
+                            </div>
+                            <div class="card">
+                                Local IT infrastructure required
+                            </div>
+                            <div class="card">
+                                <img src="assets/images/vendor/red-tick.png" width="58" height="57" alt="">
+                            </div>
+                            <div class="card v2">
+                                No software available
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card v2">
+                                Mostly not specifically designed for engineering
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card">
+                                Manual
+                            </div>
+                            <div class="card v2">
+                            </div>
+                            <div class="card">
+                                Manual HR Function
+                            </div>
+                            <div class="card">
+                                Manual HR Function
+                            </div>
+                            <div class="card">
+                                Manual HR Function
+                            </div>
+                            <div class="card">
+                                Manual HR Function
+                            </div>
+                            <div class="card">
+                                Manual HR Function
+                            </div>
+                            <div class="card v2">
+                                
+                            </div>
+                            <div class="card">
+                                Manual HR Function
+                            </div>
+                            <div class="card">
+                                Extra Software, not integreated / AI powered
+                            </div>
+                            <div class="card">
+                                Extra HCM Software
+                            </div>
+                            <div class="card">
+                                Extra HCM Software
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nz-carousel>
+
+        <!-- Navigation buttons for carousel -->
+        <span class="prev-btn" *ngIf="prevNav" (click)="prev()"></span>
+        <span class="next-btn" *ngIf="nextNav" (click)="next()"></span>
+    </div>
+</section>

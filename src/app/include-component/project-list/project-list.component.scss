@@ -415,16 +415,35 @@
     }
 }
 @media (max-width: 767px) {
+    .filter-wrapper {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .filter-wrapper .carousel-btn {
+        display: none;
+    }
+    .filter-wrapper .filter-slider .carousel-track {
+        overflow: auto;
+    }
     .filter-wrapper .verified-partner {
-        flex-direction: column;
         margin-bottom: 0;
-        padding: 13px 15px 13px 15px;
+        padding: 8px 10px 8px 10px;
+        font-size: 12px;
+        margin-right: 0;
+    }
+    .filter-wrapper .verified-partner span {
+        width: 40px;
+        height: 20px;
+    }
+    .filter-wrapper .verified-partner span::after {
+        width: 15px;
+        height: 15px;
     }
     .filter-wrapper .verified-partner.filter-btn {
-        padding: 30.5px 15px;
+        padding: 10px 12px;
         text-indent: -9999px;
         gap: 0;
-        margin: 0;
+        margin: 0 0 0 auto;
         font-size: 0;
     }
     .filter-wrapper .filter-slider {
@@ -449,6 +468,8 @@
     .filter-wrapper .filter-slider::after {
         right: 0;
         width: 40px;
+        opacity: 0;
+        visibility: hidden;
     }
     .project-list-wrapper {
         row-gap: 30px;
