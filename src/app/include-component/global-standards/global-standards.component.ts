@@ -81,6 +81,9 @@ sliderInit() {
         items: 3  // 2 items for medium screens
       },
       940: {
+        items: 3  // 2 full items and a half item for larger screens
+      },
+      1024: {
         items: 4  // 2 full items and a half item for larger screens
       },
       1500: {

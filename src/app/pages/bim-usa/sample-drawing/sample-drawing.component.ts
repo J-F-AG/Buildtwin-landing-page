@@ -56,8 +56,14 @@ export class BimUsaSampleDrawingComponent{
       600:{
           items:1
       },
-      1000:{
-          items:1
+      800:{
+          items:2
+      },
+      900:{
+          items:2
+      },
+      1200:{
+          items:3
       }
   }      
   }

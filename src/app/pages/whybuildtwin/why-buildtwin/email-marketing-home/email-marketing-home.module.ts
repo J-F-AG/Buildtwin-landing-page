@@ -6,6 +6,8 @@ import { EmailMarketingHomeComponent } from './email-marketing-home.component';
 import { HereSectionComponent } from '../here-section/here-section.component';
 import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
+import { CanDoForYouComponent } from './can-do-for-you/can-do-for-you.component';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 
 const routes: Routes = [
   {
@@ -17,13 +19,15 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     EmailMarketingHomeComponent,
-    HereSectionComponent
+    HereSectionComponent,
+    CanDoForYouComponent
   ],
   imports: [
     CommonModule,
     SharedModuleModule,
     HdNavbarModule,
     HdFooterModule,
+    NzCarouselModule,
     RouterModule.forChild(routes),
   ],
 })
