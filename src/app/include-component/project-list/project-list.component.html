@@ -1,19 +1,25 @@
 <div class="container project-list">
     <div class="filter-wrapper">
-        <div class="filter-slider">
+        <div class="filter-slider" [ngClass]="{'hideBefore':isAtStart,'hideAfter': isAtEnd}">
 
-            <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
-                <ng-template carouselSlide *ngFor="let sectorArrayList of sectorArray" [width]="123">
-                    <div class="block" [ngClass]="{'active': sectorArrayList['service_name'] === selectedCategory}" (click)="filterProject('category',sectorArrayList['service_name'])">
-                        <figure>
-                            <img src="{{sectorArrayList['service_icon']}}" width="32" height="32" alt="{{sectorArrayList['service_name']}}">
-                        </figure>
-                        <span  nz-tooltip nzTooltipTitle="{{sectorArrayList['service_name']}}">
-                            {{sectorArrayList['service_name']}}
-                        </span>
+            <!-- <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
+                <ng-template carouselSlide *ngFor="let sectorArrayList of sectorArray" [width]="56"> -->
+                    <div class="carousel">
+                        <div class="carousel-track" #carouselTrack>
+                            <div class="block" *ngFor="let sectorArrayList of sectorArray" [ngClass]="{'active': sectorArrayList['service_name'] === selectedCategory}" (click)="filterProject('category',sectorArrayList['service_name'])">
+                                <figure>
+                                    <img src="{{sectorArrayList['service_icon']}}" width="32" height="32" alt="{{sectorArrayList['service_name']}}">
+                                </figure>
+                                <span  nz-tooltip nzTooltipTitle="{{sectorArrayList['service_name']}}">
+                                    {{sectorArrayList['service_name']}}
+                                </span>
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" (click)="scrollPrev()" *ngIf="!isAtStart"></button>
+                        <button class="carousel-btn next" (click)="scrollNext()" *ngIf="!isAtEnd"></button>
                     </div>
-                </ng-template>
-            </owl-carousel-o>
+                <!-- </ng-template>
+            </owl-carousel-o> -->
         </div>
         <div class="verified-partner disabled filter-btn">
             <i class="filter-icon"></i>
@@ -76,23 +82,15 @@
                 </figure>
                 <div class="verified-vendor">
                     Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
                     Vendor
                 </div>
                 <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="star">
                     4.8 Review
                 </div>
                 <div class="project-country">
                     <span class="county-name">
                         Geramny
                     </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="flag de">
                 </div>
             </div>
             <h3>
@@ -112,23 +110,15 @@
                 </figure>
                 <div class="verified-vendor">
                     Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
                     Vendor
                 </div>
                 <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="star">
                     4.8 Review
                 </div>
                 <div class="project-country">
                     <span class="county-name">
                         Geramny
                     </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="flag de">
                 </div>
             </div>
             <h3>
@@ -148,23 +138,15 @@
                 </figure>
                 <div class="verified-vendor">
                     Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
                     Vendor
                 </div>
                 <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="star">
                     4.8 Review
                 </div>
                 <div class="project-country">
                     <span class="county-name">
                         Geramny
                     </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="flag de">
                 </div>
             </div>
             <h3>
@@ -184,23 +166,15 @@
                 </figure>
                 <div class="verified-vendor">
                     Verified
-                    <img 
-                    src="assets/images/verified-vendor-icon.png" 
-                    srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                    width="36" 
-                    height="36" 
-                    alt="Verified Vendor Icon">
                     Vendor
                 </div>
                 <div class="project-rating">
-                    <img src="assets/images/star.png" width="11" height="11" alt="star">
                     4.8 Review
                 </div>
                 <div class="project-country">
                     <span class="county-name">
                         Geramny
                     </span>
-                    <img src="assets/images/flag-de.png" width="23" height="23" alt="flag de">
                 </div>
             </div>
             <h3>

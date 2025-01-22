@@ -1,4 +1,4 @@
-import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, Inject, Input, PLATFORM_ID, ViewChild } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HttpClient } from '@angular/common/http';
@@ -10,6 +10,11 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './project-list.component.scss'
 })
 export class ProjectListComponent {
+
+@ViewChild('carouselTrack') carouselTrack!: ElementRef;
+currentPosition = 0;
+isAtStart = true;
+isAtEnd = false;
 factorySlider: OwlOptions | null = null;
  isBrowser: boolean;
 
@@ -27,10 +32,52 @@ factorySlider: OwlOptions | null = null;
     this.fetchData()
     this.getProjectData()
   }
-ngOnInit(): void {
+  ngOnInit(): void {
 
-  this.sliderInit()
-}
+    this.sliderInit()
+  }
+
+  private getTotalWidth(): number {
+    const track = this.carouselTrack.nativeElement as HTMLElement;
+    return Array.from(track.children).reduce((sum: number, item: HTMLElement) => {
+      const itemStyle = window.getComputedStyle(item);
+      const marginRight = parseInt(itemStyle.marginRight, 10) || 0;
+      return sum + item.offsetWidth + marginRight;
+    }, 0);
+  }
+
+  private getMaxScrollPosition(): number {
+    const totalWidth = this.getTotalWidth();
+    const visibleWidth = this.carouselTrack.nativeElement.parentElement.offsetWidth;
+    return Math.max(totalWidth - visibleWidth, 0);
+  }
+
+  private updateCarousel(): void {
+    const track = this.carouselTrack.nativeElement;
+    track.style.transform = `translateX(-${this.currentPosition}px)`;
+    this.updateButtonsState();
+  }
+
+  private updateButtonsState(): void {
+    const maxScrollPosition = this.getMaxScrollPosition();
+    this.isAtStart = this.currentPosition === 0;
+    this.isAtEnd = this.currentPosition >= maxScrollPosition;
+  }
+
+  scrollPrev(): void {
+    const visibleWidth = this.carouselTrack.nativeElement.parentElement.offsetWidth;
+    this.currentPosition -= visibleWidth / 2;
+    this.currentPosition = Math.max(this.currentPosition, 0);
+    this.updateCarousel();
+  }
+
+  scrollNext(): void {
+    const visibleWidth = this.carouselTrack.nativeElement.parentElement.offsetWidth;
+    const maxScrollPosition = this.getMaxScrollPosition();
+    this.currentPosition += visibleWidth / 2;
+    this.currentPosition = Math.min(this.currentPosition, maxScrollPosition);
+    this.updateCarousel();
+  }
 
 sliderInit() {
   this.factorySlider = {
@@ -111,6 +158,9 @@ sliderInit() {
         //   };
         //   this.sectorArray.push(obj);
         // });
+          setTimeout(() => {
+            this.updateCarousel();
+          }, 5000);
       })
   }
 

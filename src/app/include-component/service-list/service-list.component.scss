@@ -2,7 +2,7 @@
     padding-top: 104px;
 }
 .list {
-    padding-right: calc(175px + var(--padding-left-right));
+    padding-right: var(--padding-left-right);
     padding-left: var(--padding-left-right);
     margin-left: -92px;
     margin-right: -92px;
@@ -13,7 +13,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 100px;
+        width: var(--padding-left-right);
         height: 100%;
         background: linear-gradient(to left, transparent, #f6f7f9);
         content: "";
@@ -29,11 +29,15 @@
 :host ::ng-deep .owl-carousel .owl-stage-outer {
     overflow: visible;
 }
+:host ::ng-deep .owl-carousel {
+    z-index: auto;
+}
 :host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-]{
     left: -51px;
+    z-index: 3;
 }
 :host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-].owl-next {
-    right: -229px;
+    right: -51px;
     left: auto;
 }
 .block {
@@ -81,6 +85,19 @@
             object-position: center;
             border-radius: 12px;
         }
+    }
+}
+
+@media only screen and (min-width : 1500px) {
+    .list.below-6 ::ng-deep .owl-stage {
+        display: flex;
+        gap: 16px;
+    }
+    .list.below-6 ::ng-deep .owl-item {
+        width: calc(20%)!important;
+        max-width: calc(20%)!important;
+        flex: 1;
+        margin-right: 0!important;
     }
 }
 @media only screen and (max-width : 1200px) {
