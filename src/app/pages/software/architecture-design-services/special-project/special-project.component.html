@@ -17,7 +17,7 @@
                         <ng-template carouselSlide>
                             <div *ngIf="!image['link']" class="image-container">
                                 <figure>
-                                    <img [src]="image.src" width="185" height="245" />
+                                    <img [src]="image.src" [alt]="image.title || 'Image'" width="185" height="245" />
                                 </figure>
                                 <div class="image-caption" [ngClass]="{'page':page}">
                                     <h3>{{ image.title }}</h3>
@@ -44,7 +44,7 @@
                             </div>
                             <a *ngIf="image['link']" class="image-container cursor" [routerLink]="image.link || null">
                                 <figure>
-                                    <img [src]="image.src" width="185" height="245" />
+                                    <img [src]="image.src" [alt]="image.title || 'Image'" width="185" height="245" />
                                 </figure>
                                 <div class="image-caption" [ngClass]="{'page':page}">
                                     <h3>{{ image.title }}</h3>

@@ -26,7 +26,7 @@
                             [routerLink]="[_languageService.currentLanguage + '/partners/' + (c.linking)]" 
                             [queryParams]="paramsStatus ? { status: 'unpublished' } : null" >
                             <div class="imgwRap">
-                                <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="145" height="74">
+                                <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="145" height="74" [alt]="c.company_name || 'Company icon'">
                             </div>
                            
                             <strong>
@@ -78,7 +78,7 @@
                                 [routerLink]="[_languageService.currentLanguage + '/partners/' + (c.linking)]" 
                                 [queryParams]="paramsStatus ? { status: 'unpublished' } : null" >
                                 <div class="imgwRap">
-                                    <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="145" height="74">
+                                    <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" width="145" height="74" [alt]="c.company_name || 'Company icon'">
                                 </div>
                             
                                 <strong>
