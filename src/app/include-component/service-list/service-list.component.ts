@@ -15,6 +15,20 @@ factorySlider: OwlOptions | null = null;
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
   servicesArray = [
+
+    {
+      id: '4',
+      name: 'Rebar Detailing',
+      img: 'assets/images/rebar-detailingv2',
+      width: '151',
+      height: '137',
+      serviceId: 10,
+      color: "#C3EEFF",
+      active: true,
+      // color: "#5c6a6e",
+      // textColor: "#2f3739",
+      description: "Discover skilled vendors for <strong>Rebar Detailing Services</strong> on BuildTwin. Get precise bar bending schedules, placement drawings, and material take-offs to ensure accuracy and compliance for efficient, cost-effective reinforcement projects."
+    },
     {
       id: '1',
       name: 'Precast Detailing',
@@ -51,20 +65,6 @@ factorySlider: OwlOptions | null = null;
       // color: "#5dd8ad",
       // textColor: "#2e7159",
       description: "Connect with CAD Services providers on BuildTwin. Get accurate computer aided design deliverables – 2D and 3D modeling to detailed renderings to boost workflow, reduce errors and drive innovation across all phases of your project."
-    },
-
-    {
-      id: '4',
-      name: 'Rebar Detailing',
-      img: 'assets/images/rebar-detailingv2',
-      width: '151',
-      height: '137',
-      serviceId: 10,
-      color: "#C3EEFF",
-      active: true,
-      // color: "#5c6a6e",
-      // textColor: "#2f3739",
-      description: "Discover skilled vendors for <strong>Rebar Detailing Services</strong> on BuildTwin. Get precise bar bending schedules, placement drawings, and material take-offs to ensure accuracy and compliance for efficient, cost-effective reinforcement projects."
     },
 
     {
@@ -135,7 +135,10 @@ sliderInit() {
         items: 3  // 2 items for medium screens
       },
       940: {
-        items: 3  // 2 full items and a half item for larger screens
+        items: 4  // 2 full items and a half item for larger screens
+      },
+      1500: {
+        items: 5  // 2 full items and a half item for larger screens
       }
     }
   };

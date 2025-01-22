@@ -16,34 +16,58 @@
         // display: flex;
         // align-items: center;
         // gap: 32px;
-        padding-right: 80px;
+        margin-right: 20px;
         overflow: hidden;
         flex-grow: 1;
-        padding-left: 49px;
-        margin-left: -49px;
+        // padding-left: 49px;
+        // margin-left: -49px;
         position: relative;
         &::after {
             content: "";
             position: absolute;
-            right: 70px;
+            right: 0px;
             top: 0;
             height: 100%;
-            width: 50px;
+            width: 90px;
             background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
             z-index: 9;
             pointer-events: none;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0;
+            height: 100%;
+            width: 90px;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+            z-index: 9;
+            pointer-events: none;
+        }
+        &.hideBefore::before,
+        &.hideAfter::after {
+            display: none;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+            // gap: 32px;
         }
         .block {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 123px;
-            border-bottom: 2px solid #002B34;
+            // width: 123px;
+            border-bottom: 2px solid transparent;
             padding-bottom: 10px;
             cursor: pointer;
+            padding-right: 32px;
+            &:last-child {
+                padding-right: 0;
+            }
             &.active {
-                border-bottom-color: var(--themeColor);
-                color: var(--themeColor);
+                border-bottom-color: #002B34;
+                // color: var(--themeColor);
                 span {
                     color: inherit;
                 }
@@ -71,7 +95,7 @@
     ::ng-deep .owl-theme .owl-nav {
         margin: 0;
     }
-    ::ng-deep .owl-theme .owl-nav [class*=owl-] {
+    ::ng-deep .owl-theme .owl-nav [class*=owl-],.carousel-btn {
         border-radius: 16px;
         border: 1px solid #000;
         display: flex;
@@ -85,16 +109,17 @@
         background: none;
         margin: 0;
         position: absolute;
-        left: -49px;
+        left: 0;
         top: 50%;
         transform: translateY(-50%) rotate(90deg);
+        z-index: 99;
         &.disabled {
             opacity: 0;
             visibility: hidden;
         }
-        &.owl-next {
+        &.owl-next, &.next {
             left: auto;
-            right: -49px;
+            right: 0;
             transform: translateY(-50%) rotate(-90deg);
         }
         &::after {
@@ -185,6 +210,7 @@
     position: relative;
     overflow: hidden;
     &.blur {
+        justify-content: center;
         .block {
             filter: blur(8px);
             -webkit-filter: blur(8px);

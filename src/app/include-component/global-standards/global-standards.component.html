@@ -16,99 +16,27 @@ by working with  <span>global standards</span>
         </div>
     </div>
 
-    <div class="list round-button-owl">
+    <div class="list round-button-owl below-6">
         <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
-            <ng-template carouselSlide>
-                <a class="block" [routerLink]="[_languageService.currentLanguage + 'software/structural-steel-detailing']">
-                        <div>
-                            <h3>
-                                Structural Steel
-            Detailing
-                            </h3>
-                            <p>
-                                Collaborate with leading structural
-            steel detailers using Tekla Structures
-            and SDS/2
-                            </p>
-                        </div>
-                        <figure>
-                            <img 
-                            src="assets/images/global-standards1.png" 
-                            srcset="assets/images/global-standards1.png, assets/images/global-standards1@2x.png 2x" 
+            <ng-template carouselSlide *ngFor="let item of carouselData">
+                <a class="block {{item.class}}" [routerLink]="[_languageService.currentLanguage + item.route]">
+                  <div>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                  </div>
+                  <figure>
+                    <picture>
+                        <source srcset="{{item.img}}.webp, {{item.img}}@2x.webp 2x" type="image/webp">
+                        <img 
+                            src="{{item.img}}.png" 
+                            srcset="{{item.img}}.png, {{item.img}}@2x.png 2x" 
                             width="346" 
-                            height="430" 
-                            alt="Structural Steel Detailing">
-                        </figure>
+                            height="346" 
+                            alt="{{item['alt']}}">
+                    </picture>
+                  </figure>
                 </a>
-            </ng-template>
-            <ng-template carouselSlide>
-            <a class="block" [routerLink]="[_languageService.currentLanguage + 'software/architecture-design-services']">
-                <div>
-                    <h3>
-                        Architecture &
-Structural Design
-                    </h3>
-                    <p>
-                        Collaborate with expert architecture &
-structural designers using Autodesk
-Revit and ALLPLAN
-                    </p>
-                </div>
-                <figure>
-                    <img 
-                    src="assets/images/global-standards2.png" 
-                    srcset="assets/images/global-standards2.png, assets/images/global-standards2@2x.png 2x" 
-                    width="346" 
-                    height="430" 
-                    alt="Architecture & Structural Design">
-                </figure>
-            </a>
-            </ng-template>
-            <ng-template carouselSlide>
-            <a class="block active" [routerLink]="[_languageService.currentLanguage + 'building-code/aisc']">
-                <div>
-                    <h3>
-                        AISC
-                        Building Code
-                    </h3>
-                    <p>
-                        Code of Standard Practice for the
-Steel Industry
-                    </p>
-                </div>
-                <figure>
-                    <img 
-                    src="assets/images/global-standards3.png" 
-                    srcset="assets/images/global-standards3.png, assets/images/global-standards3@2x.png 2x" 
-                    width="346" 
-                    height="430" 
-                    alt="AISC Building Code">
-                </figure>
-            </a>
-            </ng-template>
-            <ng-template carouselSlide>
-            <a class="block green" [routerLink]="[_languageService.currentLanguage + 'building-code/eurocode']">
-                <div>
-                    <h3>
-                        Eurocodes
-Building Standards
-                    </h3>
-                    <p>
-                        Streamline your project compliance
-with trusted vendors well-versed in
-Eurocode standards. 
-                    </p>
-                </div>
-                <figure>
-                    <img 
-                    src="assets/images/global-standards4.png" 
-                    srcset="assets/images/global-standards4.png, assets/images/global-standards4@2x.png 2x" 
-                    width="346" 
-                    height="430" 
-                    alt="Eurocodes Building Standards">
-                </figure>
-            </a>
-            </ng-template>
+              </ng-template>
         </owl-carousel-o>
     </div>
 </div>

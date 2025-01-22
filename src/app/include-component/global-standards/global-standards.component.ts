@@ -11,6 +11,44 @@ import { LanguageService } from 'src/app/services/language.service';
 export class GlobalStandardsComponent {
 factorySlider: OwlOptions | null = null;
  isBrowser: boolean;
+ carouselData = [
+  {
+    route: '/software/structural-steel-detailing',
+    title: 'Structural Steel Detailing',
+    description: 'Collaborate with leading structural steel detailers using Tekla Structures and SDS/2',
+    img: 'assets/images/global-standards1',
+    img2x: 'assets/images/global-standards1@2x',
+    alt: 'Structural Steel Detailing',
+    class: ''
+  },
+  {
+    route: '/software/architecture-design-services',
+    title: 'Architecture & Structural Design',
+    description: 'Collaborate with expert architecture & structural designers using Autodesk Revit and ALLPLAN',
+    img: 'assets/images/global-standards2',
+    img2x: 'assets/images/global-standards2@2x',
+    alt: 'Architecture & Structural Design',
+    class: ''
+  },
+  {
+    route: '/building-code/aisc',
+    title: 'AISC Building Code',
+    description: 'Code of Standard Practice for the Steel Industry',
+    img: 'assets/images/global-standards3',
+    img2x: 'assets/images/global-standards3@2x',
+    alt: 'AISC Building Code',
+    class: 'active'
+  },
+  {
+    route: '/building-code/eurocode',
+    title: 'Eurocodes Building Standards',
+    description: 'Streamline your project compliance with trusted vendors well-versed in Eurocode standards.',
+    img: 'assets/images/global-standards4',
+    img2x: 'assets/images/global-standards4@2x',
+    alt: 'Eurocodes Building Standards',
+    class: 'green'
+  }
+];
   constructor( @Inject(PLATFORM_ID) private platformId: Object, public _languageService:LanguageService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -43,7 +81,10 @@ sliderInit() {
         items: 3  // 2 items for medium screens
       },
       940: {
-        items: 3  // 2 full items and a half item for larger screens
+        items: 4  // 2 full items and a half item for larger screens
+      },
+      1500: {
+        items: 5  // 2 full items and a half item for larger screens
       }
     }
   };
