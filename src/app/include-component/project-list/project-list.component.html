@@ -60,18 +60,14 @@
                         <span class="county-name">
                             {{list['project_region']}}
                         </span>
-                        <!-- <div style="position: absolute; right: 100%; white-space: nowrap; bottom: 100%; background: white; font-size: 10px;">{{list['locationUpdated'] | json}}</div> -->
-                        <ng-container *ngIf="(list['locationUpdated'] && list['locationUpdated'].length && countries[list['locationUpdated'][list['locationUpdated'].length-1]]); else showSvg">
-                            <img src="{{countries[list['locationUpdated'][list['locationUpdated'].length-1]]['flag']}}" width="23" height="23" alt="">
-                        </ng-container>
-                        <!-- <ng-template #first>
-                            <ng-container *ngIf="(list['locationUpdated'] && list['locationUpdated'].length && countries[list['locationUpdated'][0]]); else showSvg">
-                                <img src="{{countries[list['locationUpdated'][0]]['flag']}}" width="23" height="23" alt="">
-                            </ng-container>
-                        </ng-template> -->
-                        <ng-template #showSvg>
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.395 17.5H12.531C13.1801 16.9204 13.7922 16.3007 14.3638 15.6445C16.5083 13.1781 17.645 10.5781 17.645 8.125C17.645 6.30164 16.9207 4.55295 15.6314 3.26364C14.3421 1.97433 12.5934 1.25 10.77 1.25C8.94666 1.25 7.19797 1.97433 5.90866 3.26364C4.61935 4.55295 3.89502 6.30164 3.89502 8.125C3.89502 10.5781 5.02861 13.1781 7.17627 15.6445C7.74784 16.3007 8.35998 16.9204 9.00908 17.5H5.14502C4.97926 17.5 4.82029 17.5658 4.70308 17.6831C4.58587 17.8003 4.52002 17.9592 4.52002 18.125C4.52002 18.2908 4.58587 18.4497 4.70308 18.5669C4.82029 18.6842 4.97926 18.75 5.14502 18.75H16.395C16.5608 18.75 16.7198 18.6842 16.837 18.5669C16.9542 18.4497 17.02 18.2908 17.02 18.125C17.02 17.9592 16.9542 17.8003 16.837 17.6831C16.7198 17.5658 16.5608 17.5 16.395 17.5ZM10.77 5.625C11.2645 5.625 11.7478 5.77162 12.1589 6.04633C12.5701 6.32103 12.8905 6.71148 13.0797 7.16829C13.2689 7.62511 13.3184 8.12777 13.222 8.61273C13.1255 9.09768 12.8874 9.54314 12.5378 9.89277C12.1882 10.2424 11.7427 10.4805 11.2577 10.577C10.7728 10.6734 10.2701 10.6239 9.81331 10.4347C9.3565 10.2455 8.96605 9.92505 8.69135 9.51393C8.41664 9.1028 8.27002 8.61945 8.27002 8.125C8.27002 7.46196 8.53341 6.82607 9.00225 6.35723C9.47109 5.88839 10.107 5.625 10.77 5.625Z" fill="#0053FA"></path></svg>
-                        </ng-template>
+                        <!-- <div style="position: absolute; right: 100%; white-space: nowrap; bottom: 100%; background: white; font-size: 10px;">{{list['locationUpdated'][list['locationUpdated'].length - 1]}}</div> -->
+                        <ng-container *ngIf="list['flag']; else showSvg">
+                            <img [src]="list['flag']" width="23" height="23" alt="Country Flag">
+                          </ng-container>
+                          <ng-template #showSvg>
+                            <svg width="23" height="23" role="img" aria-label="Default flag">
+                            </svg>
+                          </ng-template>
                     </div>
                 </div>
                 <h3 [innerHtml]="list['project_name']" nz-tooltip nzTooltipTitle="{{list['project_name']}}">
