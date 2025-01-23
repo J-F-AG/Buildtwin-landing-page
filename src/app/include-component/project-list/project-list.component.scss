@@ -208,7 +208,7 @@
     row-gap: 48px;
     margin-bottom: 60px;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     &.blur {
         justify-content: center;
         .block {
@@ -311,6 +311,13 @@
             right: 14px;
             bottom: 9px;
             gap: 10px;
+            img {
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
             .county-name {
                 position: absolute;
                 left: 50%;
@@ -330,6 +337,7 @@
                 transition: all .3s ease;
                 box-shadow: 0 0 5px rgba(0,0,0,.1);
                 white-space: nowrap;
+                z-index: 9;
                 &::after {
                     content: "";
                     width: 10px;
