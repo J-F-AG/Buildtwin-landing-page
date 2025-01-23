@@ -63,7 +63,7 @@ $buildtwin-theme: mat.define-light-theme(
   --orangeColor: #ec764b;
   --themeColor: #0053fa;
   --themeColorOpposite: #fff;
-  --blackColor: #002E3B;
+  --blackColor: #002e3b;
   --lightColor: #808080;
   --extraLightColor: #d0d0d0;
   --whiteColor: #ffffff;
@@ -76,7 +76,7 @@ $buildtwin-theme: mat.define-light-theme(
   --newThemeColor: #0053fa; //newThemeColor
   --newButtonColor: #002e3b; //newButtonColor
   --newBorderColor: #cbd6e2; //newBorderColor
-  --lightTextColor: #668189;
+  --lightTextColor: #6f7f85;
   --newBackgroundColor: #F3F8FF;
 
   // cockpitStylesVar
@@ -201,6 +201,7 @@ h2 + h4 {
   margin-top: 10px;
 }
 p {
+  color: var(--lightTextColor);
   // color: var(--paragraphColor);
   line-height: 1.5;
   margin: {
@@ -396,11 +397,16 @@ display:flex;
   font-weight: bold;
   color: white;
   text-align: center;
-  height: 47px;
-  padding: 0 31px;
-  line-height: 47px;
+  height: 45px;
+  padding: 0 30px;
+  line-height: 45px;
   border-radius: 4px;
   white-space: nowrap;
+  border: 1px solid #002e3b;
+  &:hover {
+    color: #002e3b;
+    background: white;
+  }
 }
 .button-wrap {
   display: flex;
@@ -1050,7 +1056,7 @@ display:flex;
         line-height: 1.2;
         margin-bottom: 30px;
         span {
-          background: #5dd7ad;
+          background: #e6eced;
           padding: 0 12px;
           border-radius: 4px;
         }
@@ -1536,6 +1542,9 @@ display:flex;
   }
 }
 @media (max-width:1199px){
+  :root {
+    --padding-left-right: 30px;
+  }
   .container {
       padding-left: 30px;
       padding-right: 30px;
@@ -1553,6 +1562,10 @@ display:flex;
   }
 }
 @media (max-width:767px){
+
+  :root {
+    --padding-left-right: 15px;
+  }
   h3 {
     font-size: 16px;
   }
@@ -1577,15 +1590,15 @@ display:flex;
     }
   }
   .container {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
   }
   // h2 {
   //   font-size: 22px !important;
   // }
-  .container {
-    padding: 0 15px;
-  }
+  // .container {
+  //   padding: 0 15px;
+  // }
 }
 
 .center {
@@ -1918,3 +1931,13 @@ body {
 .pdR30 {
   padding-right: 25%;
 }
+
+
+
+// body {
+//   background: url(./assets/images/layout.jpg) center top no-repeat;
+//   background-size: 100% auto;
+//   > * {
+//     opacity: .5;
+//   }
+// }

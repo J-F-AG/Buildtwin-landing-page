@@ -29,6 +29,10 @@
         right: 0;
     }
 }
+:host ::ng-deep .owl-carousel .owl-stage {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 :host ::ng-deep .owl-carousel .owl-stage-outer {
     overflow: visible;
 }
@@ -81,7 +85,7 @@
         margin-bottom: 7px;
     }
     p {
-        color: #515151;
+        color: var(--lightTextColor);
         line-height: 1.4;
         font-weight: 400;
     }

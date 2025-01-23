@@ -32,7 +32,8 @@
         line-height: 1.2;
         margin-bottom: 20px;
         span {
-          background: #5dd7ad;
+          background: #eff4f5;
+          border-radius: 4px;
         }
       }
       p {
@@ -85,6 +86,25 @@
       width: calc(49.84% + 35px);
       min-width: calc(49.84% + 35px);
       margin-right: -35px;
+      figure {
+        position: relative;
+        .link-abs  {
+          position: absolute;
+          left: 14.4%;
+          top: 32.5%;
+          width: 18%; /* Adjust as needed */
+          aspect-ratio: 119 / 299; /* Maintain the ratio */
+          &.link2 {
+            left: 32%;
+            top: 26.7%;
+            width: 35.9%;
+            aspect-ratio: 238 / 359; /* Maintain the ratio */
+          }
+          &.link3 {
+            left: 68%;
+          }
+        }
+      }
     }
   }
   #explore-service-banner {
