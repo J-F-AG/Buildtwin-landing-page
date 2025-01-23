@@ -6,12 +6,17 @@
     background-size: 100% auto;
 }
 .filter-wrapper {
-    padding: 24px 0 16px;
+    padding: 29px 0 20px;
     display: flex;
     justify-content: space-between;
     gap: 16px;
     align-items: center;
     margin-bottom: 21px;
+    background: #f6f7f9;
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
+    margin-left: calc(-1 * (var(--padding-left-right)));
+    margin-right: calc(-1 * (var(--padding-left-right)));
     .filter-slider {
         // display: flex;
         // align-items: center;
@@ -29,7 +34,7 @@
             top: 0;
             height: 100%;
             width: 90px;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #f6f7f9 75%, #f6f7f9 100%);
             z-index: 9;
             pointer-events: none;
         }
@@ -40,7 +45,7 @@
             top: 0;
             height: 100%;
             width: 90px;
-            background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+            background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #f6f7f9 75%, #f6f7f9 100%);
             z-index: 9;
             pointer-events: none;
         }
@@ -58,22 +63,30 @@
             flex-direction: column;
             align-items: center;
             // width: 123px;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
             cursor: pointer;
             padding-right: 32px;
+            position: relative;
             &:last-child {
                 padding-right: 0;
             }
             &.active {
-                border-bottom-color: #002B34;
+                &::after {
+                    background: #002B34;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: calc(100% - 32px);
+                    height: 2px;
+                }
                 // color: var(--themeColor);
                 span {
                     color: inherit;
                 }
             }
             figure {
-                margin: 0;
+                margin: 0 0 6px;
                 width: 32px;
             }
             span {
@@ -97,7 +110,7 @@
     }
     ::ng-deep .owl-theme .owl-nav [class*=owl-],.carousel-btn {
         border-radius: 16px;
-        border: 1px solid #000;
+        border: 1px solid #D7D7D7;
         display: flex;
         width: 32px;
         height: 32px;
@@ -199,7 +212,7 @@
     }
 }
 .project-list {
-    border-top: 1px solid #E9E9E9;
+    // border-top: 1px solid #E9E9E9;
 }
 .project-list-wrapper {
     display: flex;
@@ -214,6 +227,14 @@
         .block {
             filter: blur(8px);
             -webkit-filter: blur(8px);
+            opacity: .6;
+            overflow: hidden;
+            border-radius: 26px;
+        }
+
+        .block:nth-child(5),
+        .block:nth-child(6) {
+            display: none;
         }
     }
     .block {
@@ -227,7 +248,7 @@
             margin-bottom: 16px;
             width: 100%; /* Adjust as needed */
             aspect-ratio: 482 / 465; /* Maintain the ratio */
-            border-radius: 10px;
+            border-radius: 12px;
         }
         figure {
             margin: 0;
@@ -246,14 +267,20 @@
         h3 {
             font-size: 16px;
             font-weight: bold;
-            margin-bottom: 0px;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .company-name {
             color: #738288;
             font-size: 16px;
             font-weight: 500;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
             display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .project-des {
             font-size: 13px;
@@ -263,6 +290,8 @@
             -webkit-line-clamp: 2; /* Limits the content to 2 lines */
             text-overflow: ellipsis; /* Adds ellipsis ('...') at the end of the text */
             white-space: normal; /* Allows text to wrap to the next line */
+            font-weight: 400;
+            color: #738288;
         }
         .verified-vendor {
             position: absolute;
@@ -270,8 +299,8 @@
             top:0px;
             width: 100%;
             height: 28px;
-            background: #54cda3;
-            border-radius: 10px 10px 0 0;
+            background: #002e3b;
+            border-radius: 12px 12px 0 0;
             font-size: 11px;
             text-transform: uppercase;
             align-items: center;
@@ -317,6 +346,7 @@
                 border-radius: 50%;
                 object-fit: cover;
                 object-position: center;
+                border: 1.5px solid white;
             }
             .county-name {
                 position: absolute;
@@ -361,7 +391,7 @@
 }
 .message {
     background: white;
-    border-radius: 0 20px 20px 20px;
+    border-radius: 0 15px 15px 15px;
     padding: 33px 50px 33px 43px;
     display: flex;
     align-items: center;
@@ -370,12 +400,16 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 40%;
     width: 877px;
+    p {
+        color: var(--lightTextColor);
+        line-height: normal;
+    }
     h4 {
         font-size: 25px;
         font-weight: 500;
-        margin-bottom: 3px;
+        margin-bottom: 8px;
     }
 }
 
@@ -385,6 +419,10 @@
             width: calc(16.666% - 10px);
         }
     }
+    .project-list-wrapper.blur .block:nth-child(5),
+    .project-list-wrapper.blur .block:nth-child(6) {
+        display: block;
+    }
 }
 // @media (min-width: 1500px) {
 //     .project-list-wrapper {
@@ -393,6 +431,11 @@
 //         }
 //     }
 // }
+@media (max-width: 1100px) {
+    .project-list {
+        overflow: hidden;
+    }
+}
 @media (max-width: 900px) {
     .project-list-wrapper {
         .block {

@@ -33,7 +33,7 @@
     </div>
     <div class="project-list-wrapper">
         <ng-container *ngFor="let list of projectList; let i = index">
-            <a class="block" *ngIf="i<24"
+            <a class="block" target="_blank" *ngIf="i<24"
                             (click)="redirect(list.domain, list.company_name)" 
                             [routerLink]="[_languageService.currentLanguage + '/partners/' + (list.linking)]" 
                             >
@@ -74,9 +74,9 @@
                         </ng-template>
                     </div>
                 </div>
-                <h3 [innerHtml]="list['project_name']">
+                <h3 [innerHtml]="list['project_name']" nz-tooltip nzTooltipTitle="{{list['project_name']}}">
                 </h3>
-                <span class="company-name" [innerHtml]="list['company_name']">
+                <span class="company-name" [innerHtml]="list['company_name']" nz-tooltip nzTooltipTitle="{{list['company_name']}}">
                 </span>
                 <p class="project-des" [innerHtml]="list['project_description']">
                 </p>
@@ -88,12 +88,12 @@
         <div class="block">
             <div class="figure-wrapper">
                 <figure>
-
+                    <img src="assets/images/blured-images/blur1.jpg" width="482" height="48" alt="blur">
                 </figure>
-                <div class="verified-vendor">
+                <!-- <div class="verified-vendor">
                     Verified
                     Vendor
-                </div>
+                </div> -->
                 <div class="project-rating">
                     4.8 Review
                 </div>
@@ -104,24 +104,24 @@
                 </div>
             </div>
             <h3>
-                High-Rise Building FOUR
+                &nbsp;
             </h3>
             <span class="company-name">
-                GBC Engineer
+                &nbsp;
             </span>
             <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
+                &nbsp;
             </p>
         </div>
         <div class="block">
             <div class="figure-wrapper">
                 <figure>
-
+                    <img src="assets/images/blured-images/blur2.jpg" width="482" height="48" alt="blur">
                 </figure>
-                <div class="verified-vendor">
+                <!-- <div class="verified-vendor">
                     Verified
                     Vendor
-                </div>
+                </div> -->
                 <div class="project-rating">
                     4.8 Review
                 </div>
@@ -132,24 +132,24 @@
                 </div>
             </div>
             <h3>
-                High-Rise Building FOUR
+                &nbsp;
             </h3>
             <span class="company-name">
-                GBC Engineer
+                &nbsp;
             </span>
             <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
+                &nbsp;
             </p>
         </div>
         <div class="block">
             <div class="figure-wrapper">
                 <figure>
-
+                    <img src="assets/images/blured-images/blur3.jpg" width="482" height="48" alt="blur">
                 </figure>
-                <div class="verified-vendor">
+                <!-- <div class="verified-vendor">
                     Verified
                     Vendor
-                </div>
+                </div> -->
                 <div class="project-rating">
                     4.8 Review
                 </div>
@@ -160,24 +160,24 @@
                 </div>
             </div>
             <h3>
-                High-Rise Building FOUR
+                &nbsp;
             </h3>
             <span class="company-name">
-                GBC Engineer
+                &nbsp;
             </span>
             <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
+                &nbsp;
             </p>
         </div>
         <div class="block">
             <div class="figure-wrapper">
                 <figure>
-
+                    <img src="assets/images/blured-images/blur4.jpg" width="482" height="48" alt="blur">
                 </figure>
-                <div class="verified-vendor">
+                <!-- <div class="verified-vendor">
                     Verified
                     Vendor
-                </div>
+                </div> -->
                 <div class="project-rating">
                     4.8 Review
                 </div>
@@ -188,13 +188,69 @@
                 </div>
             </div>
             <h3>
-                High-Rise Building FOUR
+                &nbsp;
             </h3>
             <span class="company-name">
-                GBC Engineer
+                &nbsp;
             </span>
             <p class="project-des">
-                1 mio. € construction costs electrical • approx. 22,000 m²
+                &nbsp;
+            </p>
+        </div>
+        <div class="block">
+            <div class="figure-wrapper">
+                <figure>
+                    <img src="assets/images/blured-images/blur5.jpg" width="482" height="48" alt="blur">
+                </figure>
+                <!-- <div class="verified-vendor">
+                    Verified
+                    Vendor
+                </div> -->
+                <div class="project-rating">
+                    4.8 Review
+                </div>
+                <div class="project-country">
+                    <span class="county-name">
+                        Geramny
+                    </span>
+                </div>
+            </div>
+            <h3>
+                &nbsp;
+            </h3>
+            <span class="company-name">
+                &nbsp;
+            </span>
+            <p class="project-des">
+                &nbsp;
+            </p>
+        </div>
+        <div class="block">
+            <div class="figure-wrapper">
+                <figure>
+                    <img src="assets/images/blured-images/blur6.jpg" width="482" height="48" alt="blur">
+                </figure>
+                <!-- <div class="verified-vendor">
+                    Verified
+                    Vendor
+                </div> -->
+                <div class="project-rating">
+                    4.8 Review
+                </div>
+                <div class="project-country">
+                    <span class="county-name">
+                        Geramny
+                    </span>
+                </div>
+            </div>
+            <h3>
+                &nbsp;
+            </h3>
+            <span class="company-name">
+                &nbsp;
+            </span>
+            <p class="project-des">
+                &nbsp;
             </p>
         </div>
         <div class="message">

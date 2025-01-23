@@ -46,7 +46,7 @@
     transform: translateX(-50%);
     height: 51px;
     border-radius: 47px;
-    border: 2px solid #5dd7ad;
+    border: 2px solid var(--blackColor);
     font-size: 15px;
     font-weight: bold;
     padding: 0 31px;
@@ -54,7 +54,11 @@
     background: white;
     align-items: center;
     display: flex;
-    color: #5dd7ad;
+    color: var(--blackColor);
+    gap: 5px;
+    strong {
+        font-weight: 800;
+    }
 }
 
 @media (max-width: 767px) {
