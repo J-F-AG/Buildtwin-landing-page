@@ -4,6 +4,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HttpClient } from '@angular/common/http';
 import { catchError, forkJoin, of } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
+import { findFlagUrlByNationality, findFlagUrlByIso2Code, findFlagUrlByCountryName } from "country-flags-svg";
+
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
@@ -34,25 +36,25 @@ factorySlider: OwlOptions | null = null;
     this.getProjectData()
   }
   ngOnInit(): void {
-
     this.sliderInit()
-
-    this._http.get('https://restcountries.com/v3.1/all').subscribe((data: any[]) => {
-      this.countries = data.reduce((acc: any, country: any) => {
-        const countryName = country.name.official;
-        acc[countryName] = {
-          flag: country.flags.svg,
-          // population: country.population,
-        };
-        const countryNamecommon = country.name.common;
-        acc[countryNamecommon] = {
-          flag: country.flags.svg,
-          // population: country.population,
-        };
-        return acc;
-      }, {});
-      // console.log(this.countries)
-    });
+    // const flagUrl3 = findFlagUrlByCountryName('Malaysia')
+    // console.log(flagUrl3)
+    // this._http.get('https://restcountries.com/v3.1/all').subscribe((data: any[]) => {
+    //   this.countries = data.reduce((acc: any, country: any) => {
+    //     const countryName = country.name.official;
+    //     acc[countryName] = {
+    //       flag: country.flags.svg,
+    //       // population: country.population,
+    //     };
+    //     const countryNamecommon = country.name.common;
+    //     acc[countryNamecommon] = {
+    //       flag: country.flags.svg,
+    //       // population: country.population,
+    //     };
+    //     return acc;
+    //   }, {});
+    //   // console.log(this.countries)
+    // });
   }
 
   private getTotalWidth(): number {
@@ -309,6 +311,28 @@ sliderInit() {
           console.warn('Invalid project_region:', item['project_region']);
           item['locationUpdated'] = [];
         }
+        let flagUrl = ''
+        try {
+          if(item['locationUpdated'].length) {
+            // console.log(item['locationUpdated'][item['locationUpdated'].length - 1]);
+            let country = item['locationUpdated'][item['locationUpdated'].length - 1]
+            if(country == 'United States of America') {
+              country = 'United States'
+            }else if(country == 'United States of America.') {
+              country = 'United States'
+            }else if(country == 'Chennai') {
+              country = 'India'
+            }else if(country == 'Leipzig Germany') {
+              country = 'Germany'
+            }else if(country == 'Malaysian') {
+              country = 'Malaysia'
+            }
+            flagUrl = this.getFlag(country)
+          }
+        } catch (error) {
+          
+        }
+        item['flag'] = flagUrl
         // Push the updated item to projectList
         this.projectList.push(item);
     });
@@ -316,6 +340,9 @@ sliderInit() {
     console.log("Updated Data:", data);
 }
 
+getFlag(country) {
+  return findFlagUrlByCountryName(country)
+}
     
   
   
