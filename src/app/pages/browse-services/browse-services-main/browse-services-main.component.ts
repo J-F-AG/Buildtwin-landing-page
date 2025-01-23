@@ -305,8 +305,10 @@ export class BrowseServicesMainComponent implements OnInit {
   onSubmit() {
     if (this.emailForm.valid) {
       const email = this.emailForm.value.email;
-      const redirectUrl = `https://www.buildtwin.com/get-started/set-password?admin=true&email=${encodeURIComponent(email)}`;
-      window.location.href = redirectUrl; // Redirect to the URL
+      const redirectUrl = `https://www.buildtwin.com/get-started/set-password?isCockpit=true&autoFill=true&emailUpdate=${encodeURIComponent(email)}`;
+      window.open(redirectUrl, '_blank'); // Open the URL in a new tab
+
+      this.emailForm.reset(); // Clear the form
     }
   }
   ngOnDestroy() {
