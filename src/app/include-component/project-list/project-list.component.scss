@@ -311,6 +311,13 @@
             right: 14px;
             bottom: 9px;
             gap: 10px;
+            img {
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
             .county-name {
                 position: absolute;
                 left: 50%;

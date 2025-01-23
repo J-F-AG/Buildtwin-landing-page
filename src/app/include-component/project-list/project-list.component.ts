@@ -27,7 +27,8 @@ factorySlider: OwlOptions | null = null;
  projectList = [];
  selectedCategory = '';
  verifiedStatus: boolean = false;
-  constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient, public _languageService: LanguageService) {
+ countries: { [key: string]: { flag: string; population: number } } = {};
+ constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient, public _languageService: LanguageService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.fetchData()
     this.getProjectData()
@@ -35,6 +36,23 @@ factorySlider: OwlOptions | null = null;
   ngOnInit(): void {
 
     this.sliderInit()
+
+    this._http.get('https://restcountries.com/v3.1/all').subscribe((data: any[]) => {
+      this.countries = data.reduce((acc: any, country: any) => {
+        const countryName = country.name.official;
+        acc[countryName] = {
+          flag: country.flags.svg,
+          // population: country.population,
+        };
+        const countryNamecommon = country.name.common;
+        acc[countryNamecommon] = {
+          flag: country.flags.svg,
+          // population: country.population,
+        };
+        return acc;
+      }, {});
+      // console.log(this.countries)
+    });
   }
 
   private getTotalWidth(): number {
@@ -279,7 +297,18 @@ sliderInit() {
           .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
           .toLowerCase();
         }
-
+        // item['locationUpdated'] = item['project_region'].split(',');
+        // item['locationUpdated'][0] = item['locationUpdated'][0].trim()
+        // if(item['locationUpdated'][1]) {
+        //   item['locationUpdated'][1] = item['locationUpdated'][1].trim()
+        // }
+        if (typeof item['project_region'] === 'string') {
+          const locationParts = item['project_region'].split(',').map(part => part.trim());
+          item['locationUpdated'] = locationParts.length > 1 ? locationParts : [locationParts[0]];
+        } else {
+          console.warn('Invalid project_region:', item['project_region']);
+          item['locationUpdated'] = [];
+        }
         // Push the updated item to projectList
         this.projectList.push(item);
     });
