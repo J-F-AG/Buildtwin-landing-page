@@ -208,7 +208,7 @@
     row-gap: 48px;
     margin-bottom: 60px;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     &.blur {
         justify-content: center;
         .block {
@@ -337,6 +337,7 @@
                 transition: all .3s ease;
                 box-shadow: 0 0 5px rgba(0,0,0,.1);
                 white-space: nowrap;
+                z-index: 9;
                 &::after {
                     content: "";
                     width: 10px;
