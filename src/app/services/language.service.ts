@@ -2763,6 +2763,120 @@ export class LanguageService {
     return JSON.stringify(faqSchema);
   }
 
+  injectFAQSchemaForBuildingCodeBS(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What are British Standards, and why do they matter?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "British Standards are recommendations by BSI to ensure quality, safety, and efficiency in construction. They play a major role in consistency and enabling best practice in the industry." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Are British Standards required for all projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "British codes are not a legal or statutory requirement. They are mainly required by law-bound bodies or registered building control approvers who follow them because the customer requests them." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are approved documents? Are they same as British Standards?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Approved Documents provide guidance on how to meet the building regulations. These are given legal status by the Building Act 1984. Like British standards, there are divided into multiple parts. For example, Part J of the approved documents focuses on combustion appliances and fuel storage systems. However, they are not same as the British Standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "If the Approved Documents conflict with the British standards, which one should I follow?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "If there is a conflict between the Approved document and the British standards it is important to follow the Approved documents because they are statutory documents and are binding, not the British Standards which are voluntary guidelines and not enforced by building control bodies." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure vendors follow BS codes?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin checks its vendors through a rigorous process and identifies those who have a good track record of following British Standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin help contractors prove they follow BS codes?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "BuildTwin connects contractors with project owners and provides a platform for the contractor to demonstrate their competence and adherence to industry standards including BS codes." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What do BS codes do for building safety?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BS codes cover a wide range of safety aspects, like fire safety, structural integrity, adoption of safe materials, and best construction practices. It plays a major role in the safety of buildings." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
 
   injectFAQSchemaForSectorPowerPlant(renderer) {
     // Create the FAQ schema for the FAQ page
