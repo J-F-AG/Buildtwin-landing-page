@@ -8,7 +8,7 @@
             Navigate services with confidence and connect with top professionals effortlessly
         </div>
     </div>
-    <div class="list round-button-owl" [ngClass]="{'below-6': servicesArray.length<6}">
+    <div class="list squareButtonWrapper top-right" [ngClass]="{'below-6': servicesArray.length<6}">
         <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
         <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
             <a class="service__items__sub" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
