@@ -42,5 +42,6 @@
 /partners/tritech-corporation
 /building-code/aisc
 /building-code/eurocode
+/building-code/british-standards
 /software/architecture-design-services
 /software/structural-steel-detailing

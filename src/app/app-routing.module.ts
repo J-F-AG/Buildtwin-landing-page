@@ -228,6 +228,16 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/building-code/eurocode'
         }
     },
+    {path: 'building-code/british-standards', 
+        // component: BuildingCodeEuroComponent,
+        loadChildren: () => import('./pages/building-code-bs/sector.module').then(m => m.BuildingCodeBSModule),
+        data: {
+            title: 'Understanding the British Building Standards For Structural | BuildTwin Marketplace',
+            description: 'Explore British Building standards for structural and civil engineering. Enhance safety, sustainability, and compliance in your projects with expert guidance.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/building-code/british-standards'
+        }
+    },
     {path: 'software/architecture-design-services',
         // component: ArchitectureDesignServicesComponent,
         loadChildren: () => import('./pages/software/architecture-design-services/sector.module').then(m => m.ArchitectureDesignServicesModule),
