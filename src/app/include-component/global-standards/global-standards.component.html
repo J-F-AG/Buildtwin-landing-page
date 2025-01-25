@@ -16,7 +16,7 @@ by working with  <span>global standards</span>
         </div>
     </div>
 
-    <div class="list round-button-owl below-6">
+    <div class="list below-6 squareButtonWrapper top-right">
         <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
             <ng-template carouselSlide *ngFor="let item of carouselData">
                 <a class="block {{item.class}}" [routerLink]="[_languageService.currentLanguage + item.route]">

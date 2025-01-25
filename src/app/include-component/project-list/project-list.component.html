@@ -31,7 +31,7 @@
             Verified Partners
         </label>
     </div>
-    <div class="project-list-wrapper">
+    <div class="project-list-wrapper" *ngIf="projectList.length && projectList.length>6">
         <ng-container *ngFor="let list of projectList; let i = index">
             <a class="block" target="_blank" *ngIf="i<24"
                             (click)="redirect(list.domain, list.company_name)" 
@@ -259,7 +259,7 @@
 projects and connect with top-reated experts
                 </p>
             </div>
-            <a href="#" class="button-v2">
+            <a href="https://www.buildtwin.com/get-started" class="button-v2">
                 Get started for FREE
             </a>
 
