@@ -2377,7 +2377,7 @@ export class LanguageService {
 
   injectSectorDataCenterTestimonialSchema(renderer) {
 
-    const StructuralSteelDetailingTestimonialSchema = { 
+    const SectorDataCenterTestimonialSchema = { 
 
       "@context": "https://schema.org", 
     
@@ -2503,7 +2503,7 @@ export class LanguageService {
     
     };
 
-    return JSON.stringify(StructuralSteelDetailingTestimonialSchema);
+    return JSON.stringify(SectorDataCenterTestimonialSchema);
   }
 
   injectFAQSchemaForBuildingCodeAisc(renderer) {
@@ -3050,7 +3050,7 @@ export class LanguageService {
 
   injectSectorPowerPlantTestimonialSchema(renderer) {
 
-    const StructuralSteelDetailingTestimonialSchema = { 
+    const SectorPowerPlantTestimonialSchema = { 
 
       "@context": "https://schema.org", 
     
@@ -3214,7 +3214,7 @@ export class LanguageService {
     
     };
 
-    return JSON.stringify(StructuralSteelDetailingTestimonialSchema);
+    return JSON.stringify(SectorPowerPlantTestimonialSchema);
   }
 
 
@@ -3324,123 +3324,123 @@ export class LanguageService {
     
       "@type": "ItemList", 
     
-      "itemListElement": [ 
+      "itemListElement": [
 
-        { 
-      
-          "@context": "https://schema.org", 
-      
-          "@type": "Review", 
-      
-          "reviewRating": { 
-      
-            "@type": "Rating", 
-      
-            "ratingValue": "5", 
-      
-            "bestRating": "5" 
-      
-          }, 
-      
-          "author": { 
-      
-            "@type": "Person", 
-      
-            "name": "Michael Smith" 
-      
-          }, 
-      
-          "reviewBody": "The steel detailing services through Buildtwin have significantly improved our project efficiency. The Tekla expertise of their vendors is outstanding.", 
-      
-          "publisher": { 
-      
-            "@type": "Organization", 
-      
-            "name": "BuildTwin" 
-      
-          }, 
-      
-          "datePublished": "2025-01-17" 
-      
-        }, 
-      
-        { 
-      
-          "@context": "https://schema.org", 
-      
-          "@type": "Review", 
-      
-          "reviewRating": { 
-      
-            "@type": "Rating", 
-      
-            "ratingValue": "5", 
-      
-            "bestRating": "5" 
-      
-          }, 
-      
-          "author": { 
-      
-            "@type": "Person", 
-      
-            "name": "David V." 
-      
-          }, 
-      
-          "reviewBody": "Finding skilled steel detailers was challenging until we discovered Buildtwin. Their vendor certification process ensures top-quality deliverables.", 
-      
-          "publisher": { 
-      
-            "@type": "Organization", 
-      
-            "name": "BuildTwin" 
-      
-          }, 
-      
-          "datePublished": "2025-01-17" 
-      
-        }, 
-      
-        { 
-      
-          "@context": "https://schema.org", 
-      
-          "@type": "Review", 
-      
-          "reviewRating": { 
-      
-            "@type": "Rating", 
-      
-            "ratingValue": "5", 
-      
-            "bestRating": "5" 
-      
-          }, 
-      
-          "author": { 
-      
-            "@type": "Person", 
-      
-            "name": "Peter Brown" 
-      
-          }, 
-      
-          "reviewBody": "The combination of SDS/2 and Tekla expertise available through Buildtwin's platform has been invaluable for our international projects.", 
-      
-          "publisher": { 
-      
-            "@type": "Organization", 
-      
-            "name": "BuildTwin" 
-      
-          }, 
-      
-          "datePublished": "2025-01-17" 
-      
-        } 
-      
-      ]  
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Michael Smith"
+        
+        },
+        
+        "reviewBody": "The steel detailing services through Buildtwin have significantly improved our project efficiency. The Tekla expertise of their vendors is outstanding.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "David V."
+        
+        },
+        
+        "reviewBody": "Finding skilled steel detailers was challenging until we discovered Buildtwin. Their vendor certification process ensures top-quality deliverables.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        },
+        
+        {
+        
+        "@context": "https://schema.org",
+        
+        "@type": "Review",
+        
+        "reviewRating": {
+        
+        "@type": "Rating",
+        
+        "ratingValue": "5",
+        
+        "bestRating": "5"
+        
+        },
+        
+        "author": {
+        
+        "@type": "Person",
+        
+        "name": "Peter Brown"
+        
+        },
+        
+        "reviewBody": "The combination of SDS/2 and Tekla expertise available through Buildtwin's platform has been invaluable for our international projects.",
+        
+        "publisher": {
+        
+        "@type": "Organization",
+        
+        "name": "BuildTwin"
+        
+        },
+        
+        "datePublished": "2025-01-17"
+        
+        }
+        
+        ]  
     
     };
 

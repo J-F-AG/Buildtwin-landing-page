@@ -232,8 +232,8 @@ const routes: Routes = [
         // component: BuildingCodeEuroComponent,
         loadChildren: () => import('./pages/building-code-bs/sector.module').then(m => m.BuildingCodeBSModule),
         data: {
-            title: 'Understanding the British Building Standards For Structural | BuildTwin Marketplace',
-            description: 'Explore British Building standards for structural and civil engineering. Enhance safety, sustainability, and compliance in your projects with expert guidance.',
+            title: 'British Standards in Construction – Codes, Benefits & Services - Buildtwin',
+            description: 'Understand British Building standards or codes for structural and civil engineering. Enhance safety and sustainability in your projects with expert guidance.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/building-code/british-standards'
         }
@@ -243,7 +243,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/software/architecture-design-services/sector.module').then(m => m.ArchitectureDesignServicesModule),
         
         data: {
-            title: 'Architecture & Structural Design Software Comparison Autodesk Revit vs ALLPLAN',
+            title: 'Architecture & Structural Design  Software Comparison Autodesk Revit vs ALLPLAN',
             description: "Detailed comparison of Autodesk Revit and ALLPLAN architecture & structural design software. Explore their features, strengths, pricing, and ideal use cases to make the right choice for your project.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/software/architecture-design-services'
