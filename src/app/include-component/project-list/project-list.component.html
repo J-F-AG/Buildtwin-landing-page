@@ -1,269 +1,325 @@
 <div class="container project-list">
-    <div class="filter-wrapper">
-        <div class="filter-slider" [ngClass]="{'hideBefore':isAtStart,'hideAfter': isAtEnd}">
-
-            <!-- <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
-                <ng-template carouselSlide *ngFor="let sectorArrayList of sectorArray" [width]="56"> -->
-                    <div class="carousel">
-                        <div class="carousel-track" #carouselTrack>
-                            <div class="block" *ngFor="let sectorArrayList of sectorArray" [ngClass]="{'active': sectorArrayList['service_name'] === selectedCategory}" (click)="filterProject('category',sectorArrayList['service_name'])">
-                                <figure>
-                                    <img src="{{sectorArrayList['service_icon']}}" width="32" height="32" alt="{{sectorArrayList['service_name']}}">
-                                </figure>
-                                <span  nz-tooltip nzTooltipTitle="{{sectorArrayList['service_name']}}">
-                                    {{sectorArrayList['service_name']}}
-                                </span>
+    <ng-container *ngIf="!slider">
+        <div class="filter-wrapper">
+            <div class="filter-slider" [ngClass]="{'hideBefore':isAtStart,'hideAfter': isAtEnd}">
+    
+                <!-- <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
+                    <ng-template carouselSlide *ngFor="let sectorArrayList of sectorArray" [width]="56"> -->
+                        <div class="carousel">
+                            <div class="carousel-track" #carouselTrack>
+                                <div class="block" *ngFor="let sectorArrayList of sectorArray" [ngClass]="{'active': sectorArrayList['service_name'] === selectedCategory}" (click)="filterProject('category',sectorArrayList['service_name'])">
+                                    <figure>
+                                        <img src="{{sectorArrayList['service_icon']}}" width="32" height="32" alt="{{sectorArrayList['service_name']}}">
+                                    </figure>
+                                    <span  nz-tooltip nzTooltipTitle="{{sectorArrayList['service_name']}}">
+                                        {{sectorArrayList['service_name']}}
+                                    </span>
+                                </div>
                             </div>
+                            <button class="carousel-btn prev" (click)="scrollPrev()" *ngIf="!isAtStart"></button>
+                            <button class="carousel-btn next" (click)="scrollNext()" *ngIf="!isAtEnd"></button>
                         </div>
-                        <button class="carousel-btn prev" (click)="scrollPrev()" *ngIf="!isAtStart"></button>
-                        <button class="carousel-btn next" (click)="scrollNext()" *ngIf="!isAtEnd"></button>
+                    <!-- </ng-template>
+                </owl-carousel-o> -->
+            </div>
+            <div class="verified-partner disabled filter-btn">
+                <i class="filter-icon"></i>
+                Filters
+            </div>
+            <label class="verified-partner">
+                <input type="checkbox" (change)="onCheckboxChange($event)">
+                <span></span>
+                Verified Partners
+            </label>
+        </div>
+        <div class="project-list-wrapper" *ngIf="projectList.length && projectList.length>6">
+            <ng-container *ngFor="let list of projectList; let i = index">
+                <a class="block" target="_blank" *ngIf="i<24"
+                                (click)="redirect(list.domain, list.company_name)" 
+                                [routerLink]="[_languageService.currentLanguage + '/partners/' + (list.linking)]" 
+                                >
+                    <div class="figure-wrapper">
+                        <figure>
+                            <img src="{{list['project_logo'][0]?list['project_logo'][0]:'assets/images/image2.png'}}" alt="{{list['project_name']}}">
+                        </figure>
+                        <div class="verified-vendor" *ngIf="list['pre_qualified_company']">
+                            Verified
+                            <img 
+                            src="assets/images/verified-vendor-icon.png" 
+                            srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
+                            width="36" 
+                            height="36" 
+                            alt="Verified Vendor Icon">
+                            Vendor
+                        </div>
+                        <!-- <div class="project-rating">
+                            <img src="assets/images/star.png" width="11" height="11" alt="">
+                            4.8 Review
+                        </div> -->
+                        <div class="project-country">
+                            
+                            <span class="county-name">
+                                {{list['project_region']}}
+                            </span>
+                            <!-- <div style="position: absolute; right: 100%; white-space: nowrap; bottom: 100%; background: white; font-size: 10px;">{{list['locationUpdated'][list['locationUpdated'].length - 1]}}</div> -->
+                            <ng-container *ngIf="list['flag']; else showSvg">
+                                <img [src]="list['flag']" width="23" height="23" alt="Country Flag">
+                              </ng-container>
+                              <ng-template #showSvg>
+                                <svg width="23" height="23" role="img" aria-label="Default flag">
+                                </svg>
+                              </ng-template>
+                        </div>
                     </div>
-                <!-- </ng-template>
-            </owl-carousel-o> -->
+                    <h3 [innerHtml]="list['project_name']" nz-tooltip nzTooltipTitle="{{list['project_name']}}">
+                    </h3>
+                    <span class="company-name" [innerHtml]="list['company_name']" nz-tooltip nzTooltipTitle="{{list['company_name']}}">
+                    </span>
+                    <p class="project-des" [innerHtml]="list['project_description']">
+                    </p>
+                </a>
+            </ng-container>
         </div>
-        <div class="verified-partner disabled filter-btn">
-            <i class="filter-icon"></i>
-            Filters
-        </div>
-        <label class="verified-partner">
-            <input type="checkbox" (change)="onCheckboxChange($event)">
-            <span></span>
-            Verified Partners
-        </label>
-    </div>
-    <div class="project-list-wrapper" *ngIf="projectList.length && projectList.length>6">
-        <ng-container *ngFor="let list of projectList; let i = index">
-            <a class="block" target="_blank" *ngIf="i<24"
-                            (click)="redirect(list.domain, list.company_name)" 
-                            [routerLink]="[_languageService.currentLanguage + '/partners/' + (list.linking)]" 
-                            >
+    
+        <div class="project-list-wrapper blur">
+            <div class="block">
                 <div class="figure-wrapper">
                     <figure>
-                        <img src="{{list['project_logo'][0]?list['project_logo'][0]:'assets/images/image2.png'}}" alt="{{list['project_name']}}">
+                        <img src="assets/images/blured-images/blur1.jpg" width="482" height="48" alt="blur">
                     </figure>
-                    <div class="verified-vendor" *ngIf="list['pre_qualified_company']">
+                    <!-- <div class="verified-vendor">
                         Verified
-                        <img 
-                        src="assets/images/verified-vendor-icon.png" 
-                        srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
-                        width="36" 
-                        height="36" 
-                        alt="Verified Vendor Icon">
                         Vendor
-                    </div>
-                    <!-- <div class="project-rating">
-                        <img src="assets/images/star.png" width="11" height="11" alt="">
-                        4.8 Review
                     </div> -->
+                    <div class="project-rating">
+                        4.8 Review
+                    </div>
                     <div class="project-country">
-                        
                         <span class="county-name">
-                            {{list['project_region']}}
+                            Geramny
                         </span>
-                        <!-- <div style="position: absolute; right: 100%; white-space: nowrap; bottom: 100%; background: white; font-size: 10px;">{{list['locationUpdated'][list['locationUpdated'].length - 1]}}</div> -->
-                        <ng-container *ngIf="list['flag']; else showSvg">
-                            <img [src]="list['flag']" width="23" height="23" alt="Country Flag">
-                          </ng-container>
-                          <ng-template #showSvg>
-                            <svg width="23" height="23" role="img" aria-label="Default flag">
-                            </svg>
-                          </ng-template>
                     </div>
                 </div>
-                <h3 [innerHtml]="list['project_name']" nz-tooltip nzTooltipTitle="{{list['project_name']}}">
+                <h3>
+                    &nbsp;
                 </h3>
-                <span class="company-name" [innerHtml]="list['company_name']" nz-tooltip nzTooltipTitle="{{list['company_name']}}">
+                <span class="company-name">
+                    &nbsp;
                 </span>
-                <p class="project-des" [innerHtml]="list['project_description']">
-                </p>
-            </a>
-        </ng-container>
-    </div>
-
-    <div class="project-list-wrapper blur">
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-                    <img src="assets/images/blured-images/blur1.jpg" width="482" height="48" alt="blur">
-                </figure>
-                <!-- <div class="verified-vendor">
-                    Verified
-                    Vendor
-                </div> -->
-                <div class="project-rating">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                </div>
-            </div>
-            <h3>
-                &nbsp;
-            </h3>
-            <span class="company-name">
-                &nbsp;
-            </span>
-            <p class="project-des">
-                &nbsp;
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-                    <img src="assets/images/blured-images/blur2.jpg" width="482" height="48" alt="blur">
-                </figure>
-                <!-- <div class="verified-vendor">
-                    Verified
-                    Vendor
-                </div> -->
-                <div class="project-rating">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                </div>
-            </div>
-            <h3>
-                &nbsp;
-            </h3>
-            <span class="company-name">
-                &nbsp;
-            </span>
-            <p class="project-des">
-                &nbsp;
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-                    <img src="assets/images/blured-images/blur3.jpg" width="482" height="48" alt="blur">
-                </figure>
-                <!-- <div class="verified-vendor">
-                    Verified
-                    Vendor
-                </div> -->
-                <div class="project-rating">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                </div>
-            </div>
-            <h3>
-                &nbsp;
-            </h3>
-            <span class="company-name">
-                &nbsp;
-            </span>
-            <p class="project-des">
-                &nbsp;
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-                    <img src="assets/images/blured-images/blur4.jpg" width="482" height="48" alt="blur">
-                </figure>
-                <!-- <div class="verified-vendor">
-                    Verified
-                    Vendor
-                </div> -->
-                <div class="project-rating">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                </div>
-            </div>
-            <h3>
-                &nbsp;
-            </h3>
-            <span class="company-name">
-                &nbsp;
-            </span>
-            <p class="project-des">
-                &nbsp;
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-                    <img src="assets/images/blured-images/blur5.jpg" width="482" height="48" alt="blur">
-                </figure>
-                <!-- <div class="verified-vendor">
-                    Verified
-                    Vendor
-                </div> -->
-                <div class="project-rating">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                </div>
-            </div>
-            <h3>
-                &nbsp;
-            </h3>
-            <span class="company-name">
-                &nbsp;
-            </span>
-            <p class="project-des">
-                &nbsp;
-            </p>
-        </div>
-        <div class="block">
-            <div class="figure-wrapper">
-                <figure>
-                    <img src="assets/images/blured-images/blur6.jpg" width="482" height="48" alt="blur">
-                </figure>
-                <!-- <div class="verified-vendor">
-                    Verified
-                    Vendor
-                </div> -->
-                <div class="project-rating">
-                    4.8 Review
-                </div>
-                <div class="project-country">
-                    <span class="county-name">
-                        Geramny
-                    </span>
-                </div>
-            </div>
-            <h3>
-                &nbsp;
-            </h3>
-            <span class="company-name">
-                &nbsp;
-            </span>
-            <p class="project-des">
-                &nbsp;
-            </p>
-        </div>
-        <div class="message">
-            <div class="content">
-                <h4>
-                    Unlock <strong>more vendors</strong> tailored for you
-                </h4>
-                <p>
-                    Get started now with BuildTwin to explore a wide range of industry-specific
-projects and connect with top-reated experts
+                <p class="project-des">
+                    &nbsp;
                 </p>
             </div>
-            <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
-                Get started for FREE
-            </a>
-
+            <div class="block">
+                <div class="figure-wrapper">
+                    <figure>
+                        <img src="assets/images/blured-images/blur2.jpg" width="482" height="48" alt="blur">
+                    </figure>
+                    <!-- <div class="verified-vendor">
+                        Verified
+                        Vendor
+                    </div> -->
+                    <div class="project-rating">
+                        4.8 Review
+                    </div>
+                    <div class="project-country">
+                        <span class="county-name">
+                            Geramny
+                        </span>
+                    </div>
+                </div>
+                <h3>
+                    &nbsp;
+                </h3>
+                <span class="company-name">
+                    &nbsp;
+                </span>
+                <p class="project-des">
+                    &nbsp;
+                </p>
+            </div>
+            <div class="block">
+                <div class="figure-wrapper">
+                    <figure>
+                        <img src="assets/images/blured-images/blur3.jpg" width="482" height="48" alt="blur">
+                    </figure>
+                    <!-- <div class="verified-vendor">
+                        Verified
+                        Vendor
+                    </div> -->
+                    <div class="project-rating">
+                        4.8 Review
+                    </div>
+                    <div class="project-country">
+                        <span class="county-name">
+                            Geramny
+                        </span>
+                    </div>
+                </div>
+                <h3>
+                    &nbsp;
+                </h3>
+                <span class="company-name">
+                    &nbsp;
+                </span>
+                <p class="project-des">
+                    &nbsp;
+                </p>
+            </div>
+            <div class="block">
+                <div class="figure-wrapper">
+                    <figure>
+                        <img src="assets/images/blured-images/blur4.jpg" width="482" height="48" alt="blur">
+                    </figure>
+                    <!-- <div class="verified-vendor">
+                        Verified
+                        Vendor
+                    </div> -->
+                    <div class="project-rating">
+                        4.8 Review
+                    </div>
+                    <div class="project-country">
+                        <span class="county-name">
+                            Geramny
+                        </span>
+                    </div>
+                </div>
+                <h3>
+                    &nbsp;
+                </h3>
+                <span class="company-name">
+                    &nbsp;
+                </span>
+                <p class="project-des">
+                    &nbsp;
+                </p>
+            </div>
+            <div class="block">
+                <div class="figure-wrapper">
+                    <figure>
+                        <img src="assets/images/blured-images/blur5.jpg" width="482" height="48" alt="blur">
+                    </figure>
+                    <!-- <div class="verified-vendor">
+                        Verified
+                        Vendor
+                    </div> -->
+                    <div class="project-rating">
+                        4.8 Review
+                    </div>
+                    <div class="project-country">
+                        <span class="county-name">
+                            Geramny
+                        </span>
+                    </div>
+                </div>
+                <h3>
+                    &nbsp;
+                </h3>
+                <span class="company-name">
+                    &nbsp;
+                </span>
+                <p class="project-des">
+                    &nbsp;
+                </p>
+            </div>
+            <div class="block">
+                <div class="figure-wrapper">
+                    <figure>
+                        <img src="assets/images/blured-images/blur6.jpg" width="482" height="48" alt="blur">
+                    </figure>
+                    <!-- <div class="verified-vendor">
+                        Verified
+                        Vendor
+                    </div> -->
+                    <div class="project-rating">
+                        4.8 Review
+                    </div>
+                    <div class="project-country">
+                        <span class="county-name">
+                            Geramny
+                        </span>
+                    </div>
+                </div>
+                <h3>
+                    &nbsp;
+                </h3>
+                <span class="company-name">
+                    &nbsp;
+                </span>
+                <p class="project-des">
+                    &nbsp;
+                </p>
+            </div>
+            <div class="message">
+                <div class="content">
+                    <h4>
+                        Unlock <strong>more vendors</strong> tailored for you
+                    </h4>
+                    <p>
+                        Get started now with BuildTwin to explore a wide range of industry-specific
+    projects and connect with top-reated experts
+                    </p>
+                </div>
+                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+                    Get started for FREE
+                </a>
+    
+            </div>
         </div>
-    </div>
+    </ng-container>
+    <ng-container *ngIf="slider">
+        <div class="project-list-wrapper slider nav-lr">
+            <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
+                <ng-template carouselSlide  *ngFor="let list of projectList; let i = index">
+            <ng-container>
+                <a class="block" target="_blank" *ngIf="i<24"
+                                (click)="redirect(list.domain, list.company_name)" 
+                                [routerLink]="[_languageService.currentLanguage + '/partners/' + (list.linking)]" 
+                                >
+                    <div class="figure-wrapper">
+                        <figure>
+                            <img src="{{list['project_logo'][0]?list['project_logo'][0]:'assets/images/image2.png'}}" alt="{{list['project_name']}}">
+                        </figure>
+                        <div class="verified-vendor" *ngIf="list['pre_qualified_company']">
+                            Verified
+                            <img 
+                            src="assets/images/verified-vendor-icon.png" 
+                            srcset="assets/images/verified-vendor-icon.png, assets/images/verified-vendor-icon@2x.png 2x" 
+                            width="36" 
+                            height="36" 
+                            alt="Verified Vendor Icon">
+                            Vendor
+                        </div>
+                        <!-- <div class="project-rating">
+                            <img src="assets/images/star.png" width="11" height="11" alt="">
+                            4.8 Review
+                        </div> -->
+                        <div class="project-country">
+                            
+                            <span class="county-name">
+                                {{list['project_region']}}
+                            </span>
+                            <!-- <div style="position: absolute; right: 100%; white-space: nowrap; bottom: 100%; background: white; font-size: 10px;">{{list['locationUpdated'][list['locationUpdated'].length - 1]}}</div> -->
+                            <ng-container *ngIf="list['flag']; else showSvg">
+                                <img [src]="list['flag']" width="23" height="23" alt="Country Flag">
+                              </ng-container>
+                              <ng-template #showSvg>
+                                <svg width="23" height="23" role="img" aria-label="Default flag">
+                                </svg>
+                              </ng-template>
+                        </div>
+                    </div>
+                    <h3 [innerHtml]="list['project_name']" nz-tooltip nzTooltipTitle="{{list['project_name']}}">
+                    </h3>
+                    <span class="company-name" [innerHtml]="list['company_name']" nz-tooltip nzTooltipTitle="{{list['company_name']}}">
+                    </span>
+                    <p class="project-des" [innerHtml]="list['project_description']">
+                    </p>
+                </a>
+            </ng-container>
+            </ng-template>
+            </owl-carousel-o>
+        </div>
+    </ng-container>
 
 </div>
