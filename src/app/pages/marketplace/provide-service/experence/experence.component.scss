@@ -1,129 +1,119 @@
 :host ::ng-deep {
-    .experience {
-        background-color: var(--secondary, #F3F8FF);
-        padding: 68px 0;
-        margin: 0px 0 93px;
-        .container, .container-with-right {
-            
-            display: flex;
-            flex-direction: column;
-          
-            max-width:1296px;
-        }
-
-        .title {
-            color: #0e0e28;
-            text-align: center;
-            font-weight: 600;
-            font-size: 40px;
-            line-height: 130%;
-        }
-
-        .subtitle {
-            color: var(--Black, #000);
-            text-align: center;
-            align-self: center;
-            margin-top: 12px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 160%;
-        }
-
-        .info-container {
-            display: flex;
-            margin-top: 48px;
-        }
-
-        .info-box {
-            border-radius: 8px 0px 0px 8px;
-            background-color: var(--color-green-button, #fff);
-            display: flex;
-            gap: 12px;
-            padding: 20px;
-            width: 260px;
-            height: 150px;
-            align-items: center;
-        }
-
-        .divider {
-            background: linear-gradient(316deg, #0053fa -0.82%, #e3d9ff 51.4%);
-            width: 1px;
-            height: 62px;
-        }
-
-        .rating-box {
-            justify-content: space-between;
-            background-color: var(--color-green-button, #fff);
-            display: flex;
-            gap: 12px;
-            padding: 20px;
-            width: 260px;
-            height: 150px;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .rating-info {
-            display: flex;
-            flex-direction: column;
-            margin: auto 0;
-        }
-
-        .rating {
-            color: var(--primary, #0053fa);
-            align-self: center;
-            font-weight: 600;
-            font-size: 27px;
-            line-height: 100%;
-        }
-
-        .rating-text {
-            color: var(--grey, var(--grey, #808080));
-            margin-top: 12px;
-            font-weight: 500;
-            font-size: 16px;
-            text-align: center;
-        }
-    }
-}
-
-
-@media (max-width:1200px){
-   :host ::ng-deep  .experience .rating {
-        text-align: center;
-    }
-}
-
-@media (max-width:767px){
-   :host ::ng-deep .experience .info-container {
+    .company-list-wrapper {
         display: flex;
-        margin-top: 48px;
-        flex-direction: column;
-    }
-    :host ::ng-deep .experience .rating-box {
-        justify-content: space-between;
-        margin-bottom: 8px;
-    }
-    :host ::ng-deep .experience .rating-box {
-        width: 100%;
-        height: auto;
-    }
-    :host ::ng-deep  .experience .info-box {
-        width: 100%;
-        margin-bottom: 10px;
-        height: auto;
-    }
-    :host ::ng-deep  .experience .divider {
-       
-        display: none;
-    }
-    :host ::ng-deep .experience .rating-info {
         align-items: center;
-        width: 100%;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 30px;
+        figure {
+            margin: 0;
+            border: 4px solid white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .block {
+            width: 96px;
+            height: 96px;
+            margin-right: -15px;
+            margin-left: -15px;
+            position: relative;
+            z-index: 3;
+        }
+        .block:nth-child(1),
+        .block:nth-child(5) {
+            width: 65px;
+            height: 65px;
+            z-index: 1;
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+        .block:nth-child(2),
+        .block:nth-child(4) {
+            width: 79px;
+            height: 79px;
+            z-index: 2;
+        }
     }
-    :host ::ng-deep  .experience {
-        padding: 30px 0;
-        margin: 0px 0 40px;
-    
+
+    .info-container {
+        display: flex;
+        .rating-box {
+            flex: 1;
+            position: relative;
+            &::after {
+                background: linear-gradient(to bottom, #e3d9ff, #1b5cfa);
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 1px;
+                height: 100%;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+            .rating-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                padding: 6px 30px;
+                text-align: center;
+                .rating {
+                    font-size: 30px;
+                    color: #0053fa;
+                    font-weight: 600;
+                }
+                .rating-text {
+                    font-size: 16px;
+                }
+                .star {
+                    padding-top: 8px;
+                    padding-bottom: 6px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width : 900px) {
+    :host ::ng-deep .info-container {
+        flex-wrap: wrap;
+        .rating-box {
+            .rating-info {
+                padding: 6px 10px;
+                .rating {
+                    font-size: 20px;
+                }
+                .rating-text {
+                    font-size: 14px;
+                }
+                .star {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    :host ::ng-deep .info-container {
+        row-gap: 10px;
+        .rating-box {
+            flex: auto;
+            width: 50%;
+            max-width: 50%;
+        }
     }
 }
