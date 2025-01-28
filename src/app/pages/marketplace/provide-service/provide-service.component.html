@@ -245,9 +245,10 @@
 
     <app-project-list [slider]="true"></app-project-list>
     <div class="flex-justify-center global-mb">
-        <a href="javascript:;" class="button-v2 disabled">
+        <a class="button-v2" 
+        [routerLink]="[_languageService.currentLanguage, 'use-cases']" 
+        fragment="peek-into-buildtwin-solution-providers">
             Match your Portfolio for FREE
-            <span class="coming-soon">Coming Soon</span>
         </a>
     </div>
 
