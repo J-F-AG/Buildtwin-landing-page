@@ -10,6 +10,7 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
 import { ServiceProvideComponent } from './service-provide/service-provide.component';
 import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
+import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 
 const routes: Routes = [
   {
@@ -25,7 +26,7 @@ const routes: Routes = [
     ExperenceComponent,
     OpenMarketTabListComponent,
     CountryDetailsComponent,
-    ServiceProvideComponent,
+    ServiceProvideComponent
   ],
   imports: [
     CommonModule,
@@ -33,6 +34,7 @@ const routes: Routes = [
     HdNavbarModule,
     HdFooterModule,
     RouterModule.forChild(routes),
+    ProjectListModule
   ],
 })
 export class ProvideServiceModule { }
