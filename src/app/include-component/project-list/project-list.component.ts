@@ -2,10 +2,12 @@ import { Component, ElementRef, Inject, Input, PLATFORM_ID, ViewChild } from '@a
 import { isPlatformBrowser } from '@angular/common';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HttpClient } from '@angular/common/http';
-import { catchError, forkJoin, of } from 'rxjs';
+import { catchError, forkJoin, map, Observable, of } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
 import { ProjectListService } from './project-list.service';
-
+import { findFlagUrlByCountryName } from 'country-flags-svg';
+import { TransferState, makeStateKey } from '@angular/platform-browser';
+const PROJECTS_STATE_KEY = makeStateKey('projectData'); // Unique key for storing API data
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
@@ -31,6 +33,7 @@ factorySlider: OwlOptions | null = null;
  verifiedStatus: boolean = false;
  countries: { [key: string]: { flag: string; population: number } } = {};
  constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient, public _languageService: LanguageService,
+ private transferState: TransferState,
 private _projectListService: ProjectListService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.fetchData()
@@ -38,6 +41,7 @@ private _projectListService: ProjectListService) {
   }
   ngOnInit(): void {
     this.sliderInit()
+    this.getProjectData()
     // const flagUrl3 = findFlagUrlByCountryName('Malaysia')
     // console.log(flagUrl3)
     // this._http.get('https://restcountries.com/v3.1/all').subscribe((data: any[]) => {
@@ -194,14 +198,7 @@ sliderInit() {
     this.projectList = []; // Reset the project list before fetching
   
     // Call the service and subscribe to the returned Observable
-    this._projectListService.getProjectData(payload).subscribe({
-      next: (data: any[]) => {
-        this.projectList = data; // Assign the fetched data to projectList
-      },
-      error: (err) => {
-        console.error('Error fetching project data:', err);
-      },
-    });
+    this.getProjectDataApi(payload);
   }
   
   
@@ -230,5 +227,135 @@ sliderInit() {
   
   redirect(domain, company_name) {
     localStorage.setItem("domain", domain);
+  }
+
+
+  // Fetch Project Data
+  getProjectDataApi(payloadData: { category?: string; verified?: boolean }) {
+    const payload: any = this.buildPayload(payloadData);
+
+    // Remove preloaded state (force fresh API call)
+    if (isPlatformBrowser(this.platformId)) {
+      this.transferState.remove(PROJECTS_STATE_KEY);
+    }
+
+    forkJoin([
+      this._http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/featured-projects', {
+        params: { ...payload }
+      })
+    ])
+    .pipe(
+      catchError(err => {
+        console.error(err);
+        return []; // Return empty array to prevent app crash
+      })
+    )
+    .subscribe(async res => {
+      const data = res[0]?.data || [];
+      console.log(data);
+      let dataMapped = await this.updateProjectLogos(data);
+      this.projectList = dataMapped;
+      console.log(dataMapped);
+    });
+  }
+  
+
+  // Build Payload for API
+  private buildPayload(payloadData) {
+    let params = {
+      page: 1,
+      mode: 'filter_project'
+    }
+    if(payloadData?.category){
+      params['category'] = payloadData?.category
+    }
+    if(payloadData?.verified){
+      params['verified'] = payloadData?.verified
+    }
+    return params;
+  }
+
+  // Update Project Logos and Additional Fields
+  private updateProjectLogos(data: any[]) {
+    return data.map((item) => {
+      const logos = this.parseProjectLogo(item.project_logo);
+      item.project_logo = logos;
+
+      item.route = this.buildRoute(item.company_name);
+      item.linking = this.buildLinking(item.company_name);
+
+      item.locationUpdated = this.parseProjectRegion(item.project_region);
+      item.flag = this.getFlag(item.locationUpdated.at(-1) || '');
+
+      return item;
+    });
+  }
+
+  // Parse Project Logo
+  private parseProjectLogo(projectLogo: string) {
+    let logos = [];
+    try {
+      const parsed = typeof projectLogo === 'string' ? JSON.parse(projectLogo) : projectLogo;
+
+      if (Array.isArray(parsed)) {
+        logos = parsed;
+      } else if (typeof parsed === 'object') {
+        logos = Object.values(parsed)
+          .flatMap((value) => {
+            try {
+              if (typeof value === 'string') { // Check type explicitly
+                const nested = JSON.parse(value);
+                return nested.imageurls || [];
+              }
+              return [];
+            } catch {
+              return [];
+            }
+          })
+          .filter(Boolean);
+      } else if (typeof parsed === 'string') {
+        logos.push(parsed);
+      }
+    } catch {
+      // Extract URLs using regex as a fallback
+      const regex = /https?:\/\/[^\s"]+/g;
+      logos = (projectLogo.match(regex) || []).map((url) => url.replace(/\\+$/, '').trim());
+    }
+    return Array.from(new Set(logos)); // Remove duplicates
+  }
+
+  // Build Route
+  private buildRoute(companyName: string) {
+    return companyName.replace(/ /g, '');
+  }
+
+  // Build Linking
+  private buildLinking(companyName: string) {
+    return companyName
+      .replace(/[\s&.]/g, '-')
+      .replace(/-{2,}/g, '-')
+      .toLowerCase();
+  }
+
+  // Parse Project Region
+  private parseProjectRegion(projectRegion: string) {
+    if (typeof projectRegion === 'string') {
+      return projectRegion.split(',').map((part) => part.trim());
+    }
+    console.warn('Invalid project_region:', projectRegion);
+    return [];
+  }
+
+  // Get Flag URL
+  private getFlag(country: string) {
+    const countryMapping = {
+      'United States of America': 'United States',
+      Chennai: 'India',
+      'Leipzig Germany': 'Germany',
+      Malaysian: 'Malaysia',
+    };
+
+    const normalizedCountry = countryMapping[country] || country;
+    return findFlagUrlByCountryName(normalizedCountry) || '';
   }
 }
