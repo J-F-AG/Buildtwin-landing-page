@@ -274,15 +274,73 @@ export class LanguageService {
 
       "@context": "https://schema.org", 
     
-      "@type": "Product", 
+      "@type": "Organization", 
     
       "name": "BuildTwin", 
     
-      "image": " https://www.buildtwin.com/assets/images/logo@2x.png ", 
+      "url": "https://www.buildtwin.com/", 
     
-      "description": " Buildtwin is a marketplace for structural engineering services in the AEC industry. Connect with pre-qualified vendors, manage projects, and streamline tendering and bidding with our SaaS platform.", 
+      "address": { 
     
-        "review": [ 
+        "@type": "PostalAddress", 
+    
+        "streetAddress": "123 Business Street", 
+    
+        "addressLocality": "Johannesstrasse", 
+    
+        "addressRegion": "Giessen", 
+    
+        "postalCode": "12345", 
+    
+        "addressCountry": "Germany" 
+    
+      }, 
+    
+      "aggregateRating": { 
+    
+        "@type": "AggregateRating", 
+    
+        "ratingValue": "5", 
+    
+        "reviewCount": "6", 
+    
+        "bestRating": "5", 
+    
+        "worstRating": "1" 
+    
+      }, 
+    
+      "review": [ 
+    
+        { 
+    
+          "@type": "Review", 
+    
+          "author": { 
+    
+            "@type": "Person", 
+    
+            "name": "Javier Garcia" 
+    
+          }, 
+    
+          "datePublished": "2025-01-23", 
+    
+          "reviewBody": "With BuildTwin, we have the ability to seamlessly coordinate our partners and efficiently manage the entire project workflow. The platform simplifies communication, optimizes collaboration, and ensures that all stakeholders always have access to the most up-to-date information. This allows us to save time and costs while significantly improving the quality and transparency of our projects.", 
+    
+          "reviewRating": { 
+    
+            "@type": "Rating", 
+    
+            "ratingValue": "5", 
+    
+            "bestRating": "5", 
+    
+            "worstRating": "1" 
+    
+          } 
+    
+        }, 
     
         { 
     
@@ -296,6 +354,8 @@ export class LanguageService {
     
           }, 
     
+          "datePublished": "2025-01-24", 
+    
           "reviewBody": "Through BuildTwin, we have gained access to relevant international projects and clients. At the same time, we can showcase our services transparently and ensure high-quality management with the support of AI.", 
     
           "reviewRating": { 
@@ -304,7 +364,9 @@ export class LanguageService {
     
             "ratingValue": "5", 
     
-            "bestRating": "5" 
+            "bestRating": "5", 
+    
+            "worstRating": "1" 
     
           } 
     
@@ -322,6 +384,8 @@ export class LanguageService {
     
           }, 
     
+          "datePublished": "2025-01-25", 
+    
           "reviewBody": "Thanks to BuildTwin, we as a German engineering firm have gained access to international, highly qualified teams. The collaboration works seamlessly and integrates effortlessly into our existing systems. This has made our structures significantly more efficient and opened up new opportunities for us to plan large-scale projects.", 
     
           "reviewRating": { 
@@ -330,33 +394,9 @@ export class LanguageService {
     
             "ratingValue": "5", 
     
-            "bestRating": "5" 
+            "bestRating": "5", 
     
-          } 
-    
-        }, 
-    
-        { 
-    
-          "@type": "Review", 
-    
-          "author": { 
-    
-            "@type": "Person", 
-    
-            "name": "Javier Garcia" 
-    
-          }, 
-    
-          "reviewBody": "With BuildTwin, we have the ability to seamlessly coordinate our partners and efficiently manage the entire project workflow. The platform simplifies communication, optimizes collaboration, and ensures that all stakeholders always have access to the most up-to-date information. This allows us to save time and costs while significantly improving the quality and transparency of our projects.", 
-    
-          "reviewRating": { 
-    
-            "@type": "Rating", 
-    
-            "ratingValue": "5", 
-    
-            "bestRating": "5" 
+            "worstRating": "1" 
     
           } 
     
@@ -421,124 +461,184 @@ export class LanguageService {
 
   injectForMarketplaceTestimonialSchema(renderer) {
 
-    const MarketplaceTestimonialSchema = { 
+    const MarketplaceTestimonialSchema = {
 
-      "@context": "https://schema.org", 
-    
-      "@type": "ItemList", 
-    
-      "itemListElement": [ 
-    
-        { 
-    
-          "@type": "Review", 
-    
-          "reviewBody": "BuildTwin has transformed the way our team operates.", 
-    
-          "author": { 
-    
-            "@type": "Person", 
-    
-            "name": "Elena Rodriguez" 
-    
-          }, 
-    
-          "reviewRating": { 
-    
-            "@type": "Rating", 
-    
-            "ratingValue": "5", 
-    
-            "bestRating": "5", 
-    
-            "worstRating": "1" 
-    
-          }, 
-    
-          "publisher": { 
-    
-            "@type": "Organization", 
-    
-            "name": "BuildTwin" 
-    
-          } 
-    
-        }, 
-    
-        { 
-    
-          "@type": "Review", 
-    
-          "reviewBody": "The level of detail and accuracy provided by BuildTwin's AI Design Manager has made a noticeable difference in our quality control processes.", 
-    
-          "author": { 
-    
-            "@type": "Person", 
-    
-            "name": "Ralf Kipping" 
-    
-          }, 
-    
-          "reviewRating": { 
-    
-            "@type": "Rating", 
-    
-            "ratingValue": "5", 
-    
-            "bestRating": "5", 
-    
-            "worstRating": "1" 
-    
-          }, 
-    
-          "publisher": { 
-    
-            "@type": "Organization", 
-    
-            "name": "BuildTwin" 
-    
-          } 
-    
-        }, 
-    
-        { 
-    
-          "@type": "Review", 
-    
-          "reviewBody": "BuildTwin allows us to achieve the work of a larger team with limited resources.", 
-    
-          "author": { 
-    
-            "@type": "Person", 
-    
-            "name": "Takahiro Fujimoto" 
-    
-          }, 
-    
-          "reviewRating": { 
-    
-            "@type": "Rating", 
-    
-            "ratingValue": "5", 
-    
-            "bestRating": "5", 
-    
-            "worstRating": "1" 
-    
-          }, 
-    
-          "publisher": { 
-    
-            "@type": "Organization", 
-    
-            "name": "BuildTwin" 
-    
-          } 
-    
-        } 
-    
-      ] 
-    
+      "@context": "https://schema.org",
+      
+      "@type": "ItemList",
+      
+      "itemListElement": [
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": "Elena Rodriguez"
+      
+      },
+      
+      "datePublished": "2025-01-20",
+      
+      "reviewBody": "BuildTwin has transformed the way our team operates.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      },
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": "Ralf Kipping"
+      
+      },
+      
+      "datePublished": "2025-01-21",
+      
+      "reviewBody": "The level of detail and accuracy provided by BuildTwin's AI Design Manager has made a noticeable difference in our quality control processes.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      },
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": "Takahiro Fujimoto"
+      
+      },
+      
+      "datePublished": "2025-01-22",
+      
+      "reviewBody": "Buildtwin allows us to achieve the work of a larger team with limited resources.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      }
+      
+      ]
+      
     };
 
     return JSON.stringify(MarketplaceTestimonialSchema);
@@ -597,124 +697,184 @@ export class LanguageService {
 
   injectForAIProjectManagementTestimonialSchema(renderer) {
 
-    const AIProjectManagementSchema = { 
+    const AIProjectManagementSchema = {
 
-      "@context": "https://schema.org", 
-    
-      "@type": "ItemList", 
-    
-      "itemListElement": [ 
-    
-        { 
-    
-          "@type": "Review", 
-    
-          "reviewBody": "With BuildTwin I get access to specialized vendors in MEP works. This solved our core issue of continuously having a shortage of skilled technical engineers.", 
-    
-          "author": { 
-    
-            "@type": "Person", 
-    
-            "name": "Elena Rodriguez" 
-    
-          }, 
-    
-          "reviewRating": { 
-    
-            "@type": "Rating", 
-    
-            "ratingValue": "5", 
-    
-            "bestRating": "5", 
-    
-            "worstRating": "1" 
-    
-          }, 
-    
-          "publisher": { 
-    
-            "@type": "Organization", 
-    
-            "name": "BuildTwin" 
-    
-          } 
-    
-        }, 
-    
-        { 
-    
-          "@type": "Review", 
-    
-          "reviewBody": "BuildTwin does a lot of the heavy lifting for me. The AI Design Manager especially helps me to track what is happening, are we on track for project delivery and keeps my attention on the most important things for me.", 
-    
-          "author": { 
-    
-            "@type": "Person", 
-    
-            "name": "Takahiro Fujimoto" 
-    
-          }, 
-    
-          "reviewRating": { 
-    
-            "@type": "Rating", 
-    
-            "ratingValue": "5", 
-    
-            "bestRating": "5", 
-    
-            "worstRating": "1" 
-    
-          }, 
-    
-          "publisher": { 
-    
-            "@type": "Organization", 
-    
-            "name": "BuildTwin" 
-    
-          } 
-    
-        }, 
-    
-        { 
-    
-          "@type": "Review", 
-    
-          "reviewBody": "The BuildTwin marketplace opens new horizons for us. We get access to global markets, materials to train our staff according to specific requirements and the ability to bid and win projects with new clients.", 
-    
-          "author": { 
-    
-            "@type": "Person", 
-    
-            "name": "Ralf Kipping" 
-    
-          }, 
-    
-          "reviewRating": { 
-    
-            "@type": "Rating", 
-    
-            "ratingValue": "5", 
-    
-            "bestRating": "5", 
-    
-            "worstRating": "1" 
-    
-          }, 
-    
-          "publisher": { 
-    
-            "@type": "Organization", 
-    
-            "name": "BuildTwin" 
-    
-          } 
-    
-        } 
-    
-      ] 
-    
+      "@context": "https://schema.org",
+      
+      "@type": "ItemList",
+      
+      "itemListElement": [
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": "Elena Rodriguez"
+      
+      },
+      
+      "datePublished": "2025-01-20",
+      
+      "reviewBody": "With BuildTwin I get access to specialised vendors in MEP works. This solved our core issue of continuously having a shortage of skilled technical engineers.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      },
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": "Ralf Kipping"
+      
+      },
+      
+      "datePublished": "2025-01-21",
+      
+      "reviewBody": "The BuildTwin marketplace opens new horizons for us. We get access to global markets, materials to train our staff according to specific requirements, and the ability to bid and win projects with new clients.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      },
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": "Takahiro Fujimoto"
+      
+      },
+      
+      "datePublished": "2025-01-22",
+      
+      "reviewBody": "BuildTwin does a lot of the heavy lifting for me. The AI Design Manager especially helps me to track what is happening, ensure we are on track for project delivery, and keeps my attention on the most important things for me.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      }
+      
+      ]
+      
     };
 
     return JSON.stringify(AIProjectManagementSchema);
@@ -3318,130 +3478,184 @@ export class LanguageService {
 
   injectArchitecturalDesignServicesTestimonialSchema(renderer) {
 
-    const ArchitecturalDesignServicesTestimonialSchema = { 
+    const ArchitecturalDesignServicesTestimonialSchema = {
 
-      "@context": "https://schema.org", 
-    
-      "@type": "ItemList", 
-    
+      "@context": "https://schema.org",
+      
+      "@type": "ItemList",
+      
       "itemListElement": [
-
-        {
-        
-        "@context": "https://schema.org",
-        
-        "@type": "Review",
-        
-        "reviewRating": {
-        
-        "@type": "Rating",
-        
-        "ratingValue": "5",
-        
-        "bestRating": "5"
-        
-        },
-        
-        "author": {
-        
-        "@type": "Person",
-        
-        "name": "Michael Smith"
-        
-        },
-        
-        "reviewBody": "The steel detailing services through Buildtwin have significantly improved our project efficiency. The Tekla expertise of their vendors is outstanding.",
-        
-        "publisher": {
-        
-        "@type": "Organization",
-        
-        "name": "BuildTwin"
-        
-        },
-        
-        "datePublished": "2025-01-17"
-        
-        },
-        
-        {
-        
-        "@context": "https://schema.org",
-        
-        "@type": "Review",
-        
-        "reviewRating": {
-        
-        "@type": "Rating",
-        
-        "ratingValue": "5",
-        
-        "bestRating": "5"
-        
-        },
-        
-        "author": {
-        
-        "@type": "Person",
-        
-        "name": "David V."
-        
-        },
-        
-        "reviewBody": "Finding skilled steel detailers was challenging until we discovered Buildtwin. Their vendor certification process ensures top-quality deliverables.",
-        
-        "publisher": {
-        
-        "@type": "Organization",
-        
-        "name": "BuildTwin"
-        
-        },
-        
-        "datePublished": "2025-01-17"
-        
-        },
-        
-        {
-        
-        "@context": "https://schema.org",
-        
-        "@type": "Review",
-        
-        "reviewRating": {
-        
-        "@type": "Rating",
-        
-        "ratingValue": "5",
-        
-        "bestRating": "5"
-        
-        },
-        
-        "author": {
-        
-        "@type": "Person",
-        
-        "name": "Peter Brown"
-        
-        },
-        
-        "reviewBody": "The combination of SDS/2 and Tekla expertise available through Buildtwin's platform has been invaluable for our international projects.",
-        
-        "publisher": {
-        
-        "@type": "Organization",
-        
-        "name": "BuildTwin"
-        
-        },
-        
-        "datePublished": "2025-01-17"
-        
-        }
-        
-        ]  
-    
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": " Michael Smith"
+      
+      },
+      
+      "datePublished": "2025-01-20",
+      
+      "reviewBody": " The steel detailing services through Buildtwin have significantly improved our project efficiency. The Tekla expertise of their vendors is outstanding. ",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      },
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": " David V. "
+      
+      },
+      
+      "datePublished": "2025-01-21",
+      
+      "reviewBody": " Finding skilled steel detailers was challenging until we discovered Buildtwin. Their vendor certification process ensures top-quality deliverables. ",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      },
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": " Peter Brown "
+      
+      },
+      
+      "datePublished": "2025-01-22",
+      
+      "reviewBody": "The combination of SDS/2 and Tekla expertise available through Buildtwin's platform has been invaluable for our international projects.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      }
+      
+      ]
+      
     };
 
     return JSON.stringify(ArchitecturalDesignServicesTestimonialSchema);
@@ -3572,130 +3786,183 @@ export class LanguageService {
 
   injectStructuralSteelDetailingTestimonialSchema(renderer) {
 
-    const StructuralSteelDetailingTestimonialSchema = { 
+    const StructuralSteelDetailingTestimonialSchema = {
 
-      "@context": "https://schema.org", 
-    
-      "@type": "ItemList", 
-    
+      "@context": "https://schema.org",
+      
+      "@type": "ItemList",
+      
       "itemListElement": [
-
-        {
-        
-        "@context": "https://schema.org",
-        
-        "@type": "Review",
-        
-        "reviewRating": {
-        
-        "@type": "Rating",
-        
-        "ratingValue": "5",
-        
-        "bestRating": "5"
-        
-        },
-        
-        "author": {
-        
-        "@type": "Person",
-        
-        "name": "Emily R."
-        
-        },
-        
-        "reviewBody": "With Tekla Structures’ detailed outputs and BuildTwin’s pre-qualified vendor network, our projects run smoothly. BuildTwin’s project tracking tools help us monitor progress while ensuring compliance with global standards.",
-        
-        "publisher": {
-        
-        "@type": "Organization",
-        
-        "name": "BuildTwin"
-        
-        },
-        
-        "datePublished": "2025-01-17"
-        
-        },
-        
-        {
-        
-        "@context": "https://schema.org",
-        
-        "@type": "Review",
-        
-        "reviewRating": {
-        
-        "@type": "Rating",
-        
-        "ratingValue": "5",
-        
-        "bestRating": "5"
-        
-        },
-        
-        "author": {
-        
-        "@type": "Person",
-        
-        "name": "Laura M."
-        
-        },
-        
-        "reviewBody": "SDS/2 simplifies steel detailing with automated connection design, and BuildTwin’s ERP features make vendor coordination a breeze. The platform’s live tracking tools keep us on schedule and ensure consistent quality.",
-        
-        "publisher": {
-        
-        "@type": "Organization",
-        
-        "name": "BuildTwin"
-        
-        },
-        
-        "datePublished": "2025-01-17"
-        
-        },
-        
-        {
-        
-        "@context": "https://schema.org",
-        
-        "@type": "Review",
-        
-        "reviewRating": {
-        
-        "@type": "Rating",
-        
-        "ratingValue": "5",
-        
-        "bestRating": "5"
-        
-        },
-        
-        "author": {
-        
-        "@type": "Person",
-        
-        "name": "Michael P."
-        
-        },
-        
-        "reviewBody": "BuildTwin bridges the gap between software and execution. With SDS/2’s fabrication-ready designs and BuildTwin’s real-time tracking tools, we’ve improved project transparency and on-time delivery.",
-        
-        "publisher": {
-        
-        "@type": "Organization",
-        
-        "name": "BuildTwin"
-        
-        },
-        
-        "datePublished": "2025-01-17"
-        
-        }
-        
-        ]  
-    
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": " Emily R. "
+      
+      },
+      
+      "datePublished": "2025-01-20",
+      
+      "reviewBody": "With Tekla Structures’ detailed outputs and BuildTwin’s pre-qualified vendor network, our projects run smoothly. BuildTwin’s project tracking tools help us monitor progress while ensuring compliance with global standards.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      },
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      
+      },
+      
+      "datePublished": "2025-01-21",
+      
+      "reviewBody": "SDS/2 simplifies steel detailing with automated connection design, and BuildTwin’s ERP features make vendor coordination a breeze. The platform’s live tracking tools keep us on schedule and ensure consistent quality.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      },
+      
+      {
+      
+      "@type": "Review",
+      
+      "author": {
+      
+      "@type": "Person",
+      
+      "name": " Michael P."
+      
+      },
+      
+      "datePublished": "2025-01-22",
+      
+      "reviewBody": "BuildTwin bridges the gap between software and execution. With SDS/2’s fabrication-ready designs and BuildTwin’s real-time tracking tools, we’ve improved project transparency and on-time delivery.",
+      
+      "reviewRating": {
+      
+      "@type": "Rating",
+      
+      "ratingValue": "5",
+      
+      "bestRating": "5",
+      
+      "worstRating": "1"
+      
+      },
+      
+      "itemReviewed": {
+      
+      "@type": "Organization",
+      
+      "name": "BuildTwin",
+      
+      "url": "https://www.buildtwin.com/",
+      
+      "address": {
+      
+      "@type": "PostalAddress",
+      
+      "streetAddress": "123 Business Street",
+      
+      "addressLocality": "Johannesstrasse",
+      
+      "addressRegion": "Giessen",
+      
+      "postalCode": "12345",
+      
+      "addressCountry": "Germany"
+      
+      }
+      
+      }
+      
+      }
+      
+      ]
+      
     };
 
     return JSON.stringify(StructuralSteelDetailingTestimonialSchema);
