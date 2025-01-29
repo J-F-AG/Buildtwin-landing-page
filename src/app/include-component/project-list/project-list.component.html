@@ -1,5 +1,5 @@
 <div class="container project-list">
-    <ng-container *ngIf="!slider">
+    <ng-container *ngIf="!slider && isBrowser">
         <div class="filter-wrapper">
             <div class="filter-slider" [ngClass]="{'hideBefore':isAtStart,'hideAfter': isAtEnd}">
     
