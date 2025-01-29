@@ -17,7 +17,9 @@ factorySlider: OwlOptions | null = null;
  companyList = [];
   constructor( @Inject(PLATFORM_ID) private platformId: Object, public _languageService:LanguageService, private _http: HttpClient) {
     this.isBrowser = isPlatformBrowser(this.platformId);
-    this.getListOfCompany()
+    if(this.isBrowser){
+      this.getListOfCompany()
+    }
   }
 ngOnInit(): void {
 

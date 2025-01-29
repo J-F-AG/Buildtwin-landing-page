@@ -343,7 +343,9 @@ export class VenderDetailsAarbeeComponent {
     this.domain = this.route.snapshot.params['id'];
     this.isIframe = this.route.snapshot.queryParams['isiframe'] ? true : false;
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
-    this.getBusinessListing();
+    if(this.isBrowser){
+      this.getBusinessListing();
+    }
     this.getCompanyDetail()
     if(this.route.snapshot.queryParams['isiframe']){
       document.body.classList.add('iframeEmbed');
