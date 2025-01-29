@@ -6,8 +6,7 @@ import { catchError, forkJoin, map, Observable, of } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
 import { ProjectListService } from './project-list.service';
 import { findFlagUrlByCountryName } from 'country-flags-svg';
-import { TransferState, makeStateKey } from '@angular/platform-browser';
-const PROJECTS_STATE_KEY = makeStateKey('projectData'); // Unique key for storing API data
+
 @Component({
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
@@ -33,15 +32,15 @@ factorySlider: OwlOptions | null = null;
  verifiedStatus: boolean = false;
  countries: { [key: string]: { flag: string; population: number } } = {};
  constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient, public _languageService: LanguageService,
- private transferState: TransferState,
 private _projectListService: ProjectListService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.fetchData()
-    this.getProjectData()
+    if(this.isBrowser){
+      this.getProjectData()
+    }
   }
   ngOnInit(): void {
     this.sliderInit()
-    this.getProjectData()
     // const flagUrl3 = findFlagUrlByCountryName('Malaysia')
     // console.log(flagUrl3)
     // this._http.get('https://restcountries.com/v3.1/all').subscribe((data: any[]) => {
@@ -198,7 +197,14 @@ sliderInit() {
     this.projectList = []; // Reset the project list before fetching
   
     // Call the service and subscribe to the returned Observable
-    this.getProjectDataApi(payload);
+    this.getProjectDataApi(payload).subscribe({
+      next: (data: any[]) => {
+        this.projectList = data; // Assign the fetched data to projectList
+      },
+      error: (err) => {
+        console.error('Error fetching project data:', err);
+      },
+    });
   }
   
   
@@ -231,32 +237,26 @@ sliderInit() {
 
 
   // Fetch Project Data
-  getProjectDataApi(payloadData: { category?: string; verified?: boolean }) {
-    const payload: any = this.buildPayload(payloadData);
-
-    // Remove preloaded state (force fresh API call)
-    if (isPlatformBrowser(this.platformId)) {
-      this.transferState.remove(PROJECTS_STATE_KEY);
-    }
-
-    forkJoin([
-      this._http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/featured-projects', {
-        params: { ...payload }
-      })
-    ])
-    .pipe(
-      catchError(err => {
-        console.error(err);
-        return []; // Return empty array to prevent app crash
-      })
-    )
-    .subscribe(async res => {
-      const data = res[0]?.data || [];
-      console.log(data);
-      let dataMapped = await this.updateProjectLogos(data);
-      this.projectList = dataMapped;
-      console.log(dataMapped);
-    });
+  getProjectDataApi(payloadData: { category?: string; verified?: boolean }): Observable<any[]> {
+    // Build the payload
+    const payload = this.buildPayload(payloadData);
+    return this._http
+      .get<{ data: any[] }>(
+        'https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/featured-projects',
+        { params: payload }
+      )
+      .pipe(
+        map((res: { data?: any[] }) => {
+          // Ensure `res.data` is an array
+          const data = res?.data || [];
+          return this.updateProjectLogos(data);
+        }),
+        catchError((err) => {
+          // Log the error and return an empty array
+          console.error('Error occurred while fetching data:', err);
+          return of([]); // Fallback to an empty array
+        })
+      );
   }
   
 
