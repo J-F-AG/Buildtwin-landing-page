@@ -207,7 +207,7 @@ export class FreeOfferFormComponent {
 
     let payloadInvite = {
       "booked_service_id": data['id'],
-      "is_private": false,
+      "is_private": true,
     }
     
     
