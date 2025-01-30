@@ -12,9 +12,9 @@ export class TtTestimonialsComponent {
         items: 1,
 		nav: true,
 		margin: 25,
-		dots: true,
+		dots: false,
 		loop: true,
-		autoplay: true,
+		autoplay: false,
 		autoplayHoverPause: true,
 		navText: [
 			"<i class='ti ti-chevron-left'></i>",

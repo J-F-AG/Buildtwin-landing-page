@@ -1,61 +1,108 @@
-<div class="banner-area position-relative z-1">
-    <div class="container">
-        <div class="row ">
-            <div class="col-lg-6 col-md-12 container-flex">
-                <section class="content-container">
-                    <div class="highlights-container">
-                        <!-- <span class="highlight">The</span>
-                        <span class="highlight-emphasis">best</span>
-                        <span class="highlight">way to procure <br>pre-qualified vendors</span> -->
-                        <h1 class="heading-h1">Find <span class="highlight-emphasis">Specialized</span> AEC Services and Pre-Qualified Vendors on Buildtwin's Marketplace</h1>
-                    </div>
-                    <p class="description">BuildTwin connects you to solution providers across the globe - while the BuildTwin AI supports the heavy lifting of managing 
-                        the team and project</p>
-                    <div class="other-options d-flex align-items-center">
-                        <a class="btnNew" href="https://www.buildtwin.com/get-started" target="_blank">
-                            Get started NOW <i class="ti ti-arrow-narrow-right"></i>
-                        </a>
-                        <a class="btnNew vidBtn" href="javascript:void(0)">
-                            Schedule Call <span class="vid"><i class="ti ti-player-play"></i></span>
-                        </a>   
-                    </div>
-                </section>
-            </div>
-            <div class="col-lg-6 col-md-12 animation_img">
-                <img src="assets/images/marketPlace.png" alt="shape6">
+<div class="banner-global container global-mb"> 
+    <div class="banner-main">
+        <div class="banner-content">
+            <div>
+              <h1>
+                Get Competitive Quotes 
+                from the  <span>
+                    right Engineering
+                </span> 
+                Providers - Fast
+              </h1>
+              <p>
+                Leverage BuildTwin’s AI to ensure on-time, high-quality 
+                delivery while you focus on what truly matters.
+              </p>
+              <div>
+                <div class="v-center-flex gap-medium">
+                  <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+                    Get started NOW
+                  </a>
+                  <!-- (click)="call()"  -->
+                  <a class="button-v2 border" href="javascript:void(0)">
+                    <picture>
+                      <source 
+                        srcset="assets/images/icons/call@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                      <img 
+                        src="assets/images/icons/call.png" 
+                        alt="call" 
+                        width="21" 
+                        height="22">
+                    </picture>
+                    Schedule Call
+                  </a>
+                </div>
+              </div>
             </div>
         </div>
+        <div class="banner-image">
+            <figure>
+                <picture>
+                    <!-- WebP format -->
+                    <source 
+                      srcset="assets/images/buyer-banner.webp, assets/images/buyer-banner@2x.webp 2x" 
+                      type="image/webp">
+                  
+                    <!-- Fallback to JPEG -->
+                    <source 
+                      srcset="assets/images/buyer-banner.jpg, assets/images/buyer-banner@2x.jpg 2x" 
+                      type="image/jpeg">
+                  
+                    <!-- Default img tag as fallback -->
+                    <img 
+                      src="assets/images/buyer-banner.jpg" 
+                      alt="Buyer Banner" 
+                      width="672" 
+                      height="534">
+                  </picture>                      
+            </figure>
+        </div>
     </div>
-    <!-- <div class="shape1 position-absolute z-n1 pe-none">
-        <img src="assets/images/shapes/shape6.png" alt="shape6">
-    </div>
-    <div class="shape2 position-absolute z-n1 pe-none">
-        <img src="assets/images/shapes/shape7.png" alt="shape7">
-    </div>
-    <div class="shape3 position-absolute z-n1 pe-none">
-        <img src="assets/images/shapes/shape8.png" alt="shape8">
-    </div>
-    <div class="shape4 position-absolute z-n1 pe-none">
-        <img src="assets/images/shapes/shape9.png" alt="shape9">
-    </div> -->
-
+  </div>
+<div class="container">
     <div class="partnerWrap">
         <ul class="partner"> 
             <li>
-                <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers"><img src="assets/images/trustedBy-gbc.jpg" alt="GBC Engineers" width="86" height="60" loading="lazy"></a>
-              </li>
-              <li>
-                <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant"><img src="assets/images/patner2.png" alt="Durchgeplant" width="191" height="80" loading="lazy"></a>
-              </li>
-              <li>
-                <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited"><img src="assets/images/trustedBy-aarbee.jpg" alt="AARBEE" width="89" height="60" loading="lazy"></a>
-              </li>
-              <li>
-                <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india"><img src="assets/images/patner4.png" alt="J&F" width="191" height="80" loading="lazy"></a>
-              </li>
-              <li>
-                <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering"><img src="assets/images/trustedBy-caldim.jpg" alt="CALDIM" width="143" height="60" loading="lazy"></a>
-              </li>
-        </ul>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers">
+                    <picture>
+                        <source srcset="assets/images/trustedBy-gbc@2x.webp 2x, assets/images/trustedBy-gbc.webp 1x" type="image/webp">
+                        <img src="assets/images/trustedBy-gbc.jpg" alt="GBC Engineers" width="70" height="33" loading="lazy">
+                    </picture>
+                </a>
+            </li>
+            <li>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant">
+                    <picture>
+                        <source srcset="assets/images/patner2@2x.webp 2x, assets/images/patner2.webp 1x" type="image/webp">
+                        <img src="assets/images/patner2.jpg" alt="Durchgeplant" width="138" height="22" loading="lazy">
+                    </picture>
+                </a>
+            </li>
+            <li>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited">
+                    <picture>
+                        <source srcset="assets/images/trustedBy-aarbee@2x.webp 2x, assets/images/trustedBy-aarbee.webp 1x" type="image/webp">
+                        <img src="assets/images/trustedBy-aarbee.jpg" alt="AARBEE" width="75" height="49" loading="lazy">
+                    </picture>
+                </a>
+            </li>
+            <li>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india">
+                    <picture>
+                        <source srcset="assets/images/patner4@2x.webp 2x, assets/images/patner4.webp 1x" type="image/webp">
+                        <img src="assets/images/patner4.jpg" alt="J&F" width="46" height="23" loading="lazy">
+                    </picture>
+                </a>
+            </li>
+            <li>
+                <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering">
+                    <picture>
+                        <source srcset="assets/images/trustedBy-caldim@2x.webp 2x, assets/images/trustedBy-caldim.webp 1x" type="image/webp">
+                        <img src="assets/images/trustedBy-caldim.jpg" alt="CALDIM" width="104" height="18" loading="lazy">
+                    </picture>
+                </a>
+            </li>
+        </ul>    
     </div>
 </div>
