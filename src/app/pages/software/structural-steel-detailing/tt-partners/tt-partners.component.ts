@@ -1,5 +1,6 @@
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
+import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { catchError, retry } from 'rxjs';
@@ -17,20 +18,24 @@ export class TtPartnersStructuralSteelDetailingSoftwareComponent {
   companyList = [];
   showPageLoader = false;
   paramsStatus = false;
-  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, private globalService: GlobalService, public _languageService:LanguageService) {
-     // Extract status
-     this.route.queryParams.subscribe(params => {
-      const status = params['status'];
-
-      // Check if both parameters are available
-      if (status === 'unpublished') {
-        this.paramsStatus = true;
-        this.getListOfCompany('Unpublished')
-      }else {
-        this.getListOfCompany()
+      isBrowser: boolean;
+        constructor( @Inject(PLATFORM_ID) private platformId: Object,private http: HttpClient, private router: Router, private route: ActivatedRoute, private globalService: GlobalService, public _languageService:LanguageService) {
+         // Extract status
+          this.isBrowser = isPlatformBrowser(this.platformId);
+         this.route.queryParams.subscribe(params => {
+          const status = params['status'];
+    
+          // Check if both parameters are available
+          if(this.isBrowser){
+            if (status === 'unpublished') {
+              this.paramsStatus = true;
+              this.getListOfCompany('Unpublished')
+            }else {
+              this.getListOfCompany()
+            }
+          }
+        });
       }
-    });
-  }
   getListOfCompany(type?) {
     this.showPageLoader = true;
     // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
