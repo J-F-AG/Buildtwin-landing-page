@@ -6,6 +6,7 @@
         padding-top: 50px;
         transition: all ease 0.5s;
         padding-bottom: 64px;
+        margin-bottom: 30px;
 
         h2 {
             color: #0E0E28;
@@ -25,11 +26,15 @@
             text-align: center;
         }
 
-        margin-bottom: 64px;
     }
 
     .tabContent {
         display: flex;
+        width: 486px;
+        max-width: 486px;
+        min-width: 486px;
+        position: sticky;
+        top: 108px;
 
         .tabLeft {
             min-width: 350px;
@@ -93,7 +98,7 @@
         // padding: 32px 38px;
         padding-bottom: 0;
         overflow: hidden;
-        margin-left: 350px;
+        // margin-left: 350px;
 
         .flex {
             gap: 50px;
@@ -221,9 +226,6 @@
         margin-bottom: 10px;
     }
 
-    .staticData {
-        padding-top: 318px;
-    }
 
 }
 
@@ -233,22 +235,22 @@
 
 
 :host ::ng-deep {
-    .fixed{
-        div#onScrollAnimation{
-            position: fixed;
-            top: 100px;
-            z-index: 99;
-            .headSection{
-                background: #fff;
-                padding-left: 0;
-                padding-bottom: 0;
-                text-align: center;
-                padding-bottom: 0;
-            }
+//     .fixed{
+//         div#onScrollAnimation{
+//             position: fixed;
+//             top: 100px;
+//             z-index: 99;
+//             .headSection{
+//                 background: #fff;
+//                 padding-left: 0;
+//                 padding-bottom: 0;
+//                 text-align: center;
+//                 padding-bottom: 0;
+//             }
     
-        } 
+//         } 
     
-    }
+//     }
     
     .tabRIght > div {
         margin-bottom: 100px;
@@ -261,23 +263,25 @@
     }
     .tabRIght > div.active{
         opacity: 1;
-        transform: translateY(8%);
+        transform: translateY(0%);
     }
     
     
     
-    div#onScrollAnimation {
-        position: absolute;
-        top: 0;
-        // max-width: 1320px;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-    }
+    // div#onScrollAnimation {
+    //     position: absolute;
+    //     top: 0;
+    //     // max-width: 1320px;
+    //     margin: 0 auto;
+    //     left: 0;
+    //     right: 0;
+    // }
     .staticData {
-        padding-top: 173px;
+        padding-top: 0;
         max-width: 1320px;
         margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
     }
 }
 
@@ -285,7 +289,7 @@
     background: #f9f9f9;
 
  .tabRIght {
-        margin-left: 464px;
+        // margin-left: 464px;
     }
 }
 
@@ -340,14 +344,17 @@ font-size: 30px !important;
      
         margin-left: 0;
     }
-    :host ::ng-deep .fixed div#onScrollAnimation {
-        top: 102px!important;
-    }
+    // :host ::ng-deep .fixed div#onScrollAnimation {
+    //     top: 102px!important;
+    // }
    
 }
 
 
 @media (max-width:767px){
+    :host ::ng-deep .buildtwinHelps .tabContent {
+        display: none;
+    }
     :host ::ng-deep .buildtwinHelps {
         margin: 0;
 
@@ -362,13 +369,13 @@ font-size: 30px !important;
         margin-bottom: 80px;
     }
 
-    :host ::ng-deep .fixed div#onScrollAnimation {
-        top: 194px!important;
-        // position: static;
-    }
-    :host ::ng-deep div#onScrollAnimation {
-        // position: static;
-    }
+    // :host ::ng-deep .fixed div#onScrollAnimation {
+    //     top: 194px!important;
+    //     // position: static;
+    // }
+    // :host ::ng-deep div#onScrollAnimation {
+    //     // position: static;
+    // }
 
     :host ::ng-deep   .buildtwinHelps .tabRIght {
         padding-right: 0;
@@ -404,7 +411,7 @@ font-size: 30px !important;
         padding: 10px;
         margin-bottom: 40px;
     }
-    :host ::ng-deep  .fixed div#onScrollAnimation .headSection {
-        padding-left: 20px;
-    }    
+    // :host ::ng-deep  .fixed div#onScrollAnimation .headSection {
+    //     padding-left: 20px;
+    // }    
 }
