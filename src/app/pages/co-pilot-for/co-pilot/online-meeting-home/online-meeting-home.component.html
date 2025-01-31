@@ -29,12 +29,14 @@
                         <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 4}">
                             <i></i> AI Quality Control
                         </li>
+                        <!-- 
                         <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 5}">
                             <i></i>Did we check everything?
                         </li>
                         <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 6}">
                             <i></i>Delivering results
                         </li>
+                        -->
                     </ul>
                 </div>
                
@@ -146,6 +148,124 @@
 
 
 
+<app-buildtwin-services id="hdFaq">
+    <div class="buildtwinService forTraning ptb-100">
+
+        <div class="container">
+            <div class="headSection">
+                <h2>The definition of<span> done</span>
+                </h2>
+                <p>
+                    Use A.I. to make your day-to-day tasks easier, faster and more streamlined.
+                </p>
+            </div>
+            <div class="tabContent">
+                <div class="tabLeft">
+                    <ul>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(10)"
+                            [ngClass]="{'active':activeState2 === 10}">
+                            <div class="flex-center">
+                                <i>1</i>AI Quality Control 
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    No extra work required. Connect BuildTwin to your email account and get an AI to
+                                    process your emails and extract what needs to be done, compose emails, and document
+                                    everything into an operable cockpit. Such as what deliverables need to be delivered
+                                    by when or what RFIs are still open.
+                                </p>
+                                <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
+                            </div>
+
+                        </li>
+
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(11)"
+                            [ngClass]="{'active':activeState2 === 11}">
+                            <div class="flex-center">
+                                <i>2</i>AI based project documentation
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    The DSM system helps you to stay on top of things and provides meaningful insight into project performance and how it can be improved. With our anonymized (opt-in) benchmark feature, you also get insight into how you perform against peers.
+                                </p>
+                                <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
+                            </div>
+
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(12)"
+                            [ngClass]="{'active':activeState2 === 12}">
+                            <div class="flex-center">
+                                <i>3</i>AI based project management & -forecast 
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    We manage files for you, between your team and your client. By uploading the deliverables in the right name convention to CDE and internally tracking each revision.It is as easy as saving your file locally.
+                                </p>
+                                <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
+                            </div>
+
+                        </li>
+                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(13)"
+                            [ngClass]="{'active':activeState2 === 13}">
+                            <div class="flex-center">
+                                <i>4</i> Time tracking
+                            </div>
+                            <div class="content">
+
+                                <p>
+                                    BuildTwin tracks all RFIs across all channels and shows the discussion and result of each discussion in an easy-to-understand overview.Coming soon: Based on building code, technical standards, and trained data on constructability, BuildTwin AI will provide suggested answers to technical questions.
+                                </p>
+                                <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
+                            </div>
+
+                        </li>
+                    </ul>
+
+                    <a mat-button id="scrollSecond" routerLink="{{_languageService.currentLanguage}}/good-reason" [fragment]="'features'" class="default-btn" style="width: 180px;">See All Features</a>
+                </div>
+                <div class="tabRIght">
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">
+                        <img src="assets/images/ui/service1.png" alt="Service" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 11">
+                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 12">
+                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 13">
+                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</app-buildtwin-services>
+
+
+
+
+
+
+<!-- Use Cases -->
+
+<app-om-why-choose-us [listFaq]="listFaq"></app-om-why-choose-us>
+
+
+<!-- trusted by marketplace -->
+<app-om-partners></app-om-partners>
+
+
+
+
+<!-- <app-om-features></app-om-features> !-->
+
 <!-- CTA -->
 
 <app-signup-component>
@@ -215,142 +335,6 @@
 
 
 
-
-
-
-<!-- Testimmonials -->
-<app-em-testimonials></app-em-testimonials>
-
-
-
-
-
-
-
-
-<app-buildtwin-services id="hdFaq">
-    <div class="buildtwinService forTraning ptb-100">
-
-        <div class="container">
-            <div class="headSection">
-                <h2><span>included</span> powerful Features
-                </h2>
-                <p>
-                    Use A.I. to make your day-to-day tasks easier, faster and more streamlined.
-                </p>
-            </div>
-            <div class="tabContent">
-                <div class="tabLeft">
-                    <ul>
-                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(10)"
-                            [ngClass]="{'active':activeState2 === 10}">
-                            <div class="flex-center">
-                                <i>1</i>Collaboration
-                            </div>
-                            <div class="content">
-
-                                <p>
-                                    No extra work required. Connect BuildTwin to your email account and get an AI to
-                                    process your emails and extract what needs to be done, compose emails, and document
-                                    everything into an operable cockpit. Such as what deliverables need to be delivered
-                                    by when or what RFIs are still open.
-                                </p>
-                                <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
-                            </div>
-
-                        </li>
-
-                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(11)"
-                            [ngClass]="{'active':activeState2 === 11}">
-                            <div class="flex-center">
-                                <i>2</i>BIM / IFC / PDF Viewer
-                            </div>
-                            <div class="content">
-
-                                <p>
-                                    The DSM system helps you to stay on top of things and provides meaningful insight into project performance and how it can be improved. With our anonymized (opt-in) benchmark feature, you also get insight into how you perform against peers.
-                                </p>
-                                <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
-                            </div>
-
-                        </li>
-                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(12)"
-                            [ngClass]="{'active':activeState2 === 12}">
-                            <div class="flex-center">
-                                <i>3</i>Project planing and schedueling
-                            </div>
-                            <div class="content">
-
-                                <p>
-                                    We manage files for you, between your team and your client. By uploading the deliverables in the right name convention to CDE and internally tracking each revision.It is as easy as saving your file locally.
-                                </p>
-                                <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
-                            </div>
-
-                        </li>
-                        <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(13)"
-                            [ngClass]="{'active':activeState2 === 13}">
-                            <div class="flex-center">
-                                <i>4</i> Time tracking
-                            </div>
-                            <div class="content">
-
-                                <p>
-                                    BuildTwin tracks all RFIs across all channels and shows the discussion and result of each discussion in an easy-to-understand overview.Coming soon: Based on building code, technical standards, and trained data on constructability, BuildTwin AI will provide suggested answers to technical questions.
-                                </p>
-                                <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
-                            </div>
-
-                        </li>
-                    </ul>
-
-                    <a mat-button id="scrollSecond" routerLink="{{_languageService.currentLanguage}}/good-reason" [fragment]="'features'" class="default-btn" style="width: 180px;">See All Features</a>
-                </div>
-                <div class="tabRIght">
-                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">
-                        <img src="assets/images/ui/service1.png" alt="Service" width="" height="">
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 11">
-                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 12">
-                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 13">
-                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-</app-buildtwin-services>
-
-
-
-
-
-
-<!-- Use Cases -->
-
-<app-om-why-choose-us [listFaq]="listFaq">
-</app-om-why-choose-us>
-
-
-<!-- trusted by marketplace -->
-<app-om-partners></app-om-partners>
-
-
-
-
-<!-- <app-om-features></app-om-features> !-->
-
-
-
-
-
 <div class="container">
 <app-three-col-market>
     <div class="cdeSection_wrap">
@@ -403,19 +387,18 @@
   </app-three-col-market>
 </div>
 
-  
+
 
 <!-- FAQ-->
 
 <app-hd-faq></app-hd-faq>
 
-
-
 <!--
 <app-om-blog></app-om-blog>
 -->
 
-
-
+<!-- Testimmonials 
+<app-em-testimonials></app-em-testimonials>
+-->
 
 <app-hd-footer></app-hd-footer>
