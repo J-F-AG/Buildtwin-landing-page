@@ -22,20 +22,22 @@
                             <i></i>Plug & Play
                         </li>
                         <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"   [ngClass]="{'active':activeState3 === 2}">
-                            <i></i>What to do? 
+                            <i></i>LIVE Tracking
                         </li>
                         <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 3}">
-                            <i></i>What is the progress?
+                            <i></i>AI Design Manager 
                         </li>
                         <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 4}">
-                            <i></i> What are the bottle necks?
+                            <i></i> AI Quality Control
                         </li>
+                        <!-- 
                         <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 5}">
                             <i></i>Did we check everything?
                         </li>
                         <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 6}">
                             <i></i>Delivering results
                         </li>
+                        -->
                     </ul>
                 </div>
                
@@ -142,104 +144,16 @@
 </app-how-buildtwin-helps>
 
 
-<!-- Integration -->
-
-<app-om-integrations></app-om-integrations>
-
-
-
-
-<!-- CTA -->
-
-<app-signup-component>
-    <div class="signUp">
-        <div class="container">
-          <div class="flex">
-            <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <rect width="48" height="48" rx="24" fill="#0053fa"/>
-                    <path d="M24 12C21.6266 12 19.3066 12.7038 17.3332 14.0224C15.3598 15.3409 13.8217 17.2151 12.9135 19.4078C12.0052 21.6005 11.7676 24.0133 12.2306 26.3411C12.6936 28.6689 13.8365 30.807 15.5147 32.4853C17.193 34.1635 19.3311 35.3064 21.6589 35.7694C23.9867 36.2324 26.3995 35.9948 28.5922 35.0865C30.7849 34.1783 32.6591 32.6402 33.9776 30.6668C35.2962 28.6934 36 26.3734 36 24C35.9966 20.8184 34.7313 17.7681 32.4816 15.5184C30.2319 13.2687 27.1816 12.0034 24 12ZM24 34.1538C21.9918 34.1538 20.0286 33.5583 18.3588 32.4426C16.689 31.3269 15.3876 29.7411 14.6191 27.8857C13.8506 26.0303 13.6495 23.9887 14.0413 22.0191C14.4331 20.0494 15.4001 18.2402 16.8202 16.8201C18.2402 15.4001 20.0494 14.433 22.0191 14.0413C23.9887 13.6495 26.0303 13.8505 27.8857 14.6191C29.7411 15.3876 31.3269 16.689 32.4426 18.3588C33.5583 20.0286 34.1538 21.9918 34.1538 24C34.1508 26.692 33.08 29.2729 31.1765 31.1765C29.2729 33.08 26.692 34.1508 24 34.1538ZM31.3846 24C31.3846 24.2448 31.2874 24.4796 31.1143 24.6527C30.9411 24.8258 30.7064 24.9231 30.4615 24.9231H24C23.7552 24.9231 23.5204 24.8258 23.3473 24.6527C23.1742 24.4796 23.0769 24.2448 23.0769 24V17.5385C23.0769 17.2936 23.1742 17.0589 23.3473 16.8857C23.5204 16.7126 23.7552 16.6154 24 16.6154C24.2448 16.6154 24.4796 16.7126 24.6527 16.8857C24.8258 17.0589 24.9231 17.2936 24.9231 17.5385V23.0769H30.4615C30.7064 23.0769 30.9411 23.1742 31.1143 23.3473C31.2874 23.5204 31.3846 23.7552 31.3846 24Z" fill="white"/>
-                    </svg>
-                   <h3>Sign up in 60 seconds</h3> 
-                   <p>
-                    All you have to do is click the get started button
-                   </p>
-            </div>
-
-
-            <div class="col">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <rect width="48" height="48" rx="24" fill="#0053fa"/>
-                    <path d="M34 17.8182C34 16.8182 33.1818 16 32.1818 16H15.8182C14.8182 16 14 16.8182 14 17.8182V29.6364C14 30.6364 14.8182 31.4545 15.8182 31.4545H32.1818C33.1818 31.4545 34 30.6364 34 29.6364V17.8182ZM32.1818 17.8182L24 22.3636L15.8182 17.8182H32.1818ZM32.1818 29.6364H15.8182V19.6364L24 24.1818L32.1818 19.6364V29.6364Z" fill="white"/>
-                    </svg>
-                   <h3>Get started instantly</h3> 
-                   <p>
-                    BuildTwin Copilot will set-up your projects and pending tasks.
-                   </p>
-            </div>
-
-
-            <div class="col">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="48" height="48" rx="24" fill="#0053fa"/>
-                    <g clip-path="url(#clip0_6873_24823)">
-                    <g clip-path="url(#clip1_6873_24823)">
-                    <path d="M20.5008 30.9965C20.3682 31.1291 20.1884 31.2036 20.0008 31.2036C19.8133 31.2036 19.6334 31.1291 19.5008 30.9965L17.5008 28.9965C17.3682 28.8639 17.2937 28.6841 17.2937 28.4965C17.2937 28.309 17.3682 28.1291 17.5008 27.9965C17.6334 27.8639 17.8133 27.7894 18.0008 27.7894C18.1884 27.7894 18.3682 27.8639 18.5008 27.9965L20.5008 29.9965C20.6334 30.1291 20.7079 30.309 20.7079 30.4965C20.7079 30.6841 20.6334 30.8639 20.5008 30.9965ZM26.0008 22.4965C26.1492 22.6449 26.3382 22.7459 26.5439 22.7868C26.7497 22.8277 26.9629 22.8067 27.1567 22.7265C27.3505 22.6462 27.5162 22.5102 27.6327 22.3358C27.7493 22.1614 27.8115 21.9563 27.8115 21.7465C27.8115 21.5368 27.7493 21.3317 27.6327 21.1573C27.5162 20.9828 27.3505 20.8469 27.1567 20.7666C26.9629 20.6863 26.7497 20.6653 26.5439 20.7063C26.3382 20.7472 26.1492 20.8482 26.0008 20.9965C25.8019 21.1954 25.6902 21.4652 25.6902 21.7465C25.6902 22.0278 25.8019 22.2976 26.0008 22.4965ZM29.2377 31.2122L24.9883 33.9165C24.7866 34.045 24.5555 34.1202 24.3168 34.1351C24.0781 34.15 23.8395 34.1041 23.6233 34.0017C23.4072 33.8993 23.2205 33.7437 23.0808 33.5496C22.9412 33.3554 22.853 33.129 22.8246 32.8915L22.4077 29.9034L18.5952 26.0909L15.6058 25.6728C15.3683 25.6444 15.1419 25.5562 14.9478 25.4165C14.7536 25.2768 14.5981 25.0902 14.4957 24.874C14.3933 24.6579 14.3474 24.4193 14.3623 24.1805C14.3772 23.9418 14.4524 23.7108 14.5808 23.509L17.2852 19.2597C17.4016 19.0777 17.558 18.9246 17.7424 18.8121C17.9269 18.6996 18.1345 18.6306 18.3496 18.6103L22.2758 18.254C23.1227 17.527 24.0763 16.9347 25.1033 16.4978C27.9308 15.2828 30.6427 15.4584 31.6796 15.5928C31.9907 15.6322 32.2799 15.774 32.5016 15.9958C32.7234 16.2175 32.8651 16.5067 32.9046 16.8178C33.0371 17.8528 33.2146 20.5665 31.9996 23.394C31.5627 24.421 30.9703 25.3747 30.2433 26.2215L29.8871 30.1478C29.8668 30.3629 29.7978 30.5705 29.6853 30.7549C29.5727 30.9394 29.4197 31.0957 29.2377 31.2122ZM19.7152 25.2109L23.2865 28.7822C26.9527 27.7559 29.4458 25.7565 30.7002 22.8359C31.8077 20.2584 31.594 17.7147 31.5008 16.9965C30.7815 16.9022 28.2377 16.6884 25.6602 17.7959C22.7408 19.0515 20.7415 21.5447 19.7152 25.2109ZM18.4121 24.639C18.9621 22.7432 19.7556 21.133 20.7927 19.8084L18.4783 20.019L15.7733 24.269L15.7927 24.2722L18.4121 24.639ZM28.4783 30.019L28.689 27.7047C27.3681 28.7405 25.7587 29.5349 23.8608 30.0878L24.2265 32.7034L24.2296 32.7228L28.4783 30.019Z" fill="white" stroke="white" stroke-width="0.4"/>
-                    </g>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_6873_24823">
-                    <rect width="24" height="24" fill="white" transform="translate(12 13)"/>
-                    </clipPath>
-                    <clipPath id="clip1_6873_24823">
-                    <rect width="22.6274" height="22.6274" fill="white" transform="translate(25 7.49609) rotate(45)"/>
-                    </clipPath>
-                    </defs>
-                    </svg>
-                   <h3>Get benefitted from AI today</h3> 
-                   <p>
-                    We got you. BuildTwin tracks, process & documents things for you.
-                   </p>
-            </div>
-
-
-
-
-          </div>
-
-          <div class="btnCover">
-            <a href="https://www.buildtwin.com/get-started" target="_blank">
-                FREE 14 Days Trial
-            </a>
-          </div>
-        </div>
-    </div>
-</app-signup-component>
-
-
-
-
-
-
-<!-- Testimmonials -->
-<app-em-testimonials></app-em-testimonials>
-
-
-
-
-
-
-
 
 <app-buildtwin-services id="hdFaq">
     <div class="buildtwinService forTraning ptb-100">
 
         <div class="container">
             <div class="heading center v2">
-                <h2 class="title"><span>included</span> powerful Features
+                <h2 class="title"><span>The definition of</span> done
                 </h2>
                 <div class="small-title">
-                    Use A.I. to make your day-to-day tasks easier, faster and more streamlined.
+                    Work with the one of a kind BuildTwin AI Quality Check to ensure quality and compliance.
                 </div>
             </div>
             <div class="tabContent">
@@ -248,7 +162,7 @@
                         <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(10)"
                             [ngClass]="{'active':activeState2 === 10}">
                             <div class="flex-center">
-                                <i>1</i>Collaboration
+                                <i>1</i>Formal quality Checks 
                             </div>
                             <div class="content">
 
@@ -266,7 +180,7 @@
                         <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(11)"
                             [ngClass]="{'active':activeState2 === 11}">
                             <div class="flex-center">
-                                <i>2</i>BIM / IFC / PDF Viewer
+                                <i>2</i>Tracked changes and discussions Checks 
                             </div>
                             <div class="content">
 
@@ -280,7 +194,7 @@
                         <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(12)"
                             [ngClass]="{'active':activeState2 === 12}">
                             <div class="flex-center">
-                                <i>3</i>Project planing and schedueling
+                                <i>3</i>Code and Standards Checks
                             </div>
                             <div class="content">
 
@@ -294,7 +208,7 @@
                         <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(13)"
                             [ngClass]="{'active':activeState2 === 13}">
                             <div class="flex-center">
-                                <i>4</i> Time tracking
+                                <i>4</i> Calculation and Geometry Checks 
                             </div>
                             <div class="content">
 
@@ -307,7 +221,10 @@
                         </li>
                     </ul>
 
-                    <a mat-button id="scrollSecond" routerLink="{{_languageService.currentLanguage}}/good-reason" [fragment]="'features'" class="default-btn" style="width: 180px;">See All Features</a>
+
+                    <!-- 
+                    <a mat-button id="scrollSecond" routerLink="{{_languageService.currentLanguage}}/good-reason" [fragment]="'features'" class="default-btn" style="width: 180px;">LIVE DEMO</a>
+                    --> 
                 </div>
                 <div class="tabRIght">
                     <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">
@@ -332,24 +249,116 @@
 </app-buildtwin-services>
 
 
+<!-- CTA -->
+
+<app-signup-component>
+    <div class="signUp">
+        <div class="container">
+          <div class="flex">
+            <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <rect width="48" height="48" rx="24" fill="#0053fa"/>
+                    <path d="M24 12C21.6266 12 19.3066 12.7038 17.3332 14.0224C15.3598 15.3409 13.8217 17.2151 12.9135 19.4078C12.0052 21.6005 11.7676 24.0133 12.2306 26.3411C12.6936 28.6689 13.8365 30.807 15.5147 32.4853C17.193 34.1635 19.3311 35.3064 21.6589 35.7694C23.9867 36.2324 26.3995 35.9948 28.5922 35.0865C30.7849 34.1783 32.6591 32.6402 33.9776 30.6668C35.2962 28.6934 36 26.3734 36 24C35.9966 20.8184 34.7313 17.7681 32.4816 15.5184C30.2319 13.2687 27.1816 12.0034 24 12ZM24 34.1538C21.9918 34.1538 20.0286 33.5583 18.3588 32.4426C16.689 31.3269 15.3876 29.7411 14.6191 27.8857C13.8506 26.0303 13.6495 23.9887 14.0413 22.0191C14.4331 20.0494 15.4001 18.2402 16.8202 16.8201C18.2402 15.4001 20.0494 14.433 22.0191 14.0413C23.9887 13.6495 26.0303 13.8505 27.8857 14.6191C29.7411 15.3876 31.3269 16.689 32.4426 18.3588C33.5583 20.0286 34.1538 21.9918 34.1538 24C34.1508 26.692 33.08 29.2729 31.1765 31.1765C29.2729 33.08 26.692 34.1508 24 34.1538ZM31.3846 24C31.3846 24.2448 31.2874 24.4796 31.1143 24.6527C30.9411 24.8258 30.7064 24.9231 30.4615 24.9231H24C23.7552 24.9231 23.5204 24.8258 23.3473 24.6527C23.1742 24.4796 23.0769 24.2448 23.0769 24V17.5385C23.0769 17.2936 23.1742 17.0589 23.3473 16.8857C23.5204 16.7126 23.7552 16.6154 24 16.6154C24.2448 16.6154 24.4796 16.7126 24.6527 16.8857C24.8258 17.0589 24.9231 17.2936 24.9231 17.5385V23.0769H30.4615C30.7064 23.0769 30.9411 23.1742 31.1143 23.3473C31.2874 23.5204 31.3846 23.7552 31.3846 24Z" fill="white"/>
+                    </svg>
+                   <h3>Save time</h3> 
+                   <p>
+                    All you have to do is click the get started button
+                   </p>
+            </div>
 
 
+            <div class="col">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                    <rect width="48" height="48" rx="24" fill="#0053fa"/>
+                    <path d="M34 17.8182C34 16.8182 33.1818 16 32.1818 16H15.8182C14.8182 16 14 16.8182 14 17.8182V29.6364C14 30.6364 14.8182 31.4545 15.8182 31.4545H32.1818C33.1818 31.4545 34 30.6364 34 29.6364V17.8182ZM32.1818 17.8182L24 22.3636L15.8182 17.8182H32.1818ZM32.1818 29.6364H15.8182V19.6364L24 24.1818L32.1818 19.6364V29.6364Z" fill="white"/>
+                    </svg>
+                   <h3>Save cost</h3> 
+                   <p>
+                    BuildTwin Copilot will set-up your projects and pending tasks.
+                   </p>
+            </div>
 
 
-<!-- Use Cases -->
+            <div class="col">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" rx="24" fill="#0053fa"/>
+                    <g clip-path="url(#clip0_6873_24823)">
+                    <g clip-path="url(#clip1_6873_24823)">
+                    <path d="M20.5008 30.9965C20.3682 31.1291 20.1884 31.2036 20.0008 31.2036C19.8133 31.2036 19.6334 31.1291 19.5008 30.9965L17.5008 28.9965C17.3682 28.8639 17.2937 28.6841 17.2937 28.4965C17.2937 28.309 17.3682 28.1291 17.5008 27.9965C17.6334 27.8639 17.8133 27.7894 18.0008 27.7894C18.1884 27.7894 18.3682 27.8639 18.5008 27.9965L20.5008 29.9965C20.6334 30.1291 20.7079 30.309 20.7079 30.4965C20.7079 30.6841 20.6334 30.8639 20.5008 30.9965ZM26.0008 22.4965C26.1492 22.6449 26.3382 22.7459 26.5439 22.7868C26.7497 22.8277 26.9629 22.8067 27.1567 22.7265C27.3505 22.6462 27.5162 22.5102 27.6327 22.3358C27.7493 22.1614 27.8115 21.9563 27.8115 21.7465C27.8115 21.5368 27.7493 21.3317 27.6327 21.1573C27.5162 20.9828 27.3505 20.8469 27.1567 20.7666C26.9629 20.6863 26.7497 20.6653 26.5439 20.7063C26.3382 20.7472 26.1492 20.8482 26.0008 20.9965C25.8019 21.1954 25.6902 21.4652 25.6902 21.7465C25.6902 22.0278 25.8019 22.2976 26.0008 22.4965ZM29.2377 31.2122L24.9883 33.9165C24.7866 34.045 24.5555 34.1202 24.3168 34.1351C24.0781 34.15 23.8395 34.1041 23.6233 34.0017C23.4072 33.8993 23.2205 33.7437 23.0808 33.5496C22.9412 33.3554 22.853 33.129 22.8246 32.8915L22.4077 29.9034L18.5952 26.0909L15.6058 25.6728C15.3683 25.6444 15.1419 25.5562 14.9478 25.4165C14.7536 25.2768 14.5981 25.0902 14.4957 24.874C14.3933 24.6579 14.3474 24.4193 14.3623 24.1805C14.3772 23.9418 14.4524 23.7108 14.5808 23.509L17.2852 19.2597C17.4016 19.0777 17.558 18.9246 17.7424 18.8121C17.9269 18.6996 18.1345 18.6306 18.3496 18.6103L22.2758 18.254C23.1227 17.527 24.0763 16.9347 25.1033 16.4978C27.9308 15.2828 30.6427 15.4584 31.6796 15.5928C31.9907 15.6322 32.2799 15.774 32.5016 15.9958C32.7234 16.2175 32.8651 16.5067 32.9046 16.8178C33.0371 17.8528 33.2146 20.5665 31.9996 23.394C31.5627 24.421 30.9703 25.3747 30.2433 26.2215L29.8871 30.1478C29.8668 30.3629 29.7978 30.5705 29.6853 30.7549C29.5727 30.9394 29.4197 31.0957 29.2377 31.2122ZM19.7152 25.2109L23.2865 28.7822C26.9527 27.7559 29.4458 25.7565 30.7002 22.8359C31.8077 20.2584 31.594 17.7147 31.5008 16.9965C30.7815 16.9022 28.2377 16.6884 25.6602 17.7959C22.7408 19.0515 20.7415 21.5447 19.7152 25.2109ZM18.4121 24.639C18.9621 22.7432 19.7556 21.133 20.7927 19.8084L18.4783 20.019L15.7733 24.269L15.7927 24.2722L18.4121 24.639ZM28.4783 30.019L28.689 27.7047C27.3681 28.7405 25.7587 29.5349 23.8608 30.0878L24.2265 32.7034L24.2296 32.7228L28.4783 30.019Z" fill="white" stroke="white" stroke-width="0.4"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_6873_24823">
+                    <rect width="24" height="24" fill="white" transform="translate(12 13)"/>
+                    </clipPath>
+                    <clipPath id="clip1_6873_24823">
+                    <rect width="22.6274" height="22.6274" fill="white" transform="translate(25 7.49609) rotate(45)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                   <h3>Reliable quality</h3> 
+                   <p>
+                    We got you. BuildTwin tracks, process & documents things for you.
+                   </p>
+            </div>
+          </div>
 
-<app-om-why-choose-us [listFaq]="listFaq">
-</app-om-why-choose-us>
+          <div class="btnCover">
+            <a href="https://www.buildtwin.com/get-started" target="_blank">
+                LIVE Demo
+            </a>
+          </div>
+        </div>
+    </div>
+</app-signup-component>
 
 
 <!-- trusted by marketplace -->
-<app-om-partners></app-om-partners>
 
+<div class="container">
 
+    <h2 class="title d-block text-center font-archivo" data-aos="fade-up" data-aos-duration="500">
+        Start today and work with one of our hundreds of vendors.
+    </h2>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers"><img src="assets/images/trustedBy-gbc.jpg" alt="GBC Engineers" width="86" height="60" loading="lazy"></a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant"><img src="assets/images/Durchgeplant.png" alt="partner-image"></a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited"><img src="assets/images/trustedBy-aarbee.jpg" alt="AARBEE" width="89" height="60" loading="lazy"></a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india"><img src="assets/images/J&F.png" alt="partner-image"></a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering"><img src="assets/images/trustedBy-caldim.jpg" alt="CALDIM" width="143" height="60" loading="lazy"></a>
+            </div>
+        </div>
+    </div>
+    <div class="border-bottom pt-75"></div>
+</div>
 
 
 <!-- <app-om-features></app-om-features> !-->
 
+
+<!-- Use Cases -->
+
+
+
+<app-om-why-choose-us [listFaq]="listFaq"></app-om-why-choose-us>
 
 
 
@@ -406,19 +415,18 @@
   </app-three-col-market>
 </div>
 
-  
+
 
 <!-- FAQ-->
 
 <app-hd-faq></app-hd-faq>
 
-
-
 <!--
 <app-om-blog></app-om-blog>
 -->
 
-
-
+<!-- Testimmonials 
+<app-em-testimonials></app-em-testimonials>
+-->
 
 <app-hd-footer></app-hd-footer>
