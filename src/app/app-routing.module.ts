@@ -13,7 +13,7 @@ const routes: Routes = [
         // component: HelpDeskHomeComponent,
         data: {
             title: 'Find Structural Engineering Services & Solutions | BuildTwin Marketplace',
-            description: 'Find professional structural engineering services and solutions at BuildTwin Marketplace. Connect with top structural engineering firms & companies offering consultation and expert services across the USA, EU, Middle East, UK, Australia, and India.',
+            descriptionnp: 'Find professional structural engineering services and solutions at BuildTwin Marketplace. Connect with top structural engineering firms & companies offering consultation and expert services across the USA, EU, Middle East, UK, Australia, and India.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com'
         }
