@@ -97,6 +97,17 @@
 .squareButtonWrapper.top-right ::ng-deep .owl-nav {
     top: -60px;
 }
+.hover-show {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+}
+.block:hover {
+    .hover-show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
 @media only screen and (min-width : 1500px) {
     .list.below-6 ::ng-deep .owl-stage {
         display: flex;
