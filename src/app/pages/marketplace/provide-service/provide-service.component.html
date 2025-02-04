@@ -84,7 +84,7 @@
                 </h3>
                 <p>Are you ready? Get your business pre-qualified
                     and get invited to submit bids for private projects</p>
-                <a href="javascript:void(0)" (click)="callStatus()" class="button-v2">
+                <a routerLink="{{_languageService.currentLanguage}}/pre-qualified" class="button-v2 cursor">
                     Get pre-qualified
                 </a>
             </div>
@@ -311,7 +311,31 @@
                     </div>
         
                     <div class="contentBody">
-            
+                        <div class="gap80">
+                            <div class="colData flexVCenter">
+                                <h2>Your competitive advantage</h2>
+                                <p>
+                                    Work with BuildTwin Co-Pilot and DSM get pre-qualified. 
+                                    <br><br>
+                                    BuildTwin Co-Pilot <u>ensures</u> clients that your team meets project requirements 
+                                    out-of-the-box and decreases the barrier to working with new service providers.
+                
+                                    Features include automated quality control, integration into clients' workflows, and much more.
+                                    <br><br>
+                                    <a class="btnNew" routerLink="{{_languageService.currentLanguage}}/ai-project-management">
+                                         Schedule DEMO &nbsp;  <i class="ti ti-arrow-narrow-right"></i>
+                                      </a>
+                                </p>
+                            </div>
+                            <div class="colData">
+                                <img
+                                    src="assets/images/ui/service/market2.png"
+                                    alt="Market"
+                                    width="651"
+                                    height="386"
+                                />
+                            </div>
+                        </div>
 
 
                     </div>
@@ -509,36 +533,7 @@
          </div>
         </div>
         </app-qualified>
-        
-        <app-how-buildtwin-helps>
-
-            <div class="gap80">
-                <div class="colData flexVCenter">
-                    <h2>Your competitive advantage</h2>
-                    <p>
-                        Work with BuildTwin Co-Pilot and DSM get pre-qualified. 
-                        <br><br>
-                        BuildTwin Co-Pilot <u>ensures</u> clients that your team meets project requirements 
-                        out-of-the-box and decreases the barrier to working with new service providers.
-
-                        Features include automated quality control, integration into clients' workflows, and much more.
-                        <br><br>
-                        <a class="btnNew" routerLink="{{_languageService.currentLanguage}}/ai-project-management">
-                             Schedule DEMO &nbsp;  <i class="ti ti-arrow-narrow-right"></i>
-                          </a>
-                    </p>
-                </div>
-                <div class="colData">
-                    <img
-                        src="assets/images/ui/service/market2.png"
-                        alt="Market"
-                        width="651"
-                        height="386"
-                    />
-                </div>
-            </div>
-
-            
+        <!-- <app-how-buildtwin-helps>
             <div class="buildtwinHelps provideService container bg" id="scrollActivated2" data-ele="2">
                     <div class="" id="onScrollAnimation">
                         <div class="heading v2 center">
@@ -753,7 +748,7 @@
                     </div>
         
             </div>
-        </app-how-buildtwin-helps>
+        </app-how-buildtwin-helps> -->
         
      
         

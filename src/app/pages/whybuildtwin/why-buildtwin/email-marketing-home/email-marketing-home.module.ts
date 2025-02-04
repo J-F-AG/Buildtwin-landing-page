@@ -7,7 +7,8 @@ import { HereSectionComponent } from '../here-section/here-section.component';
 import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
 import { CanDoForYouComponent } from './can-do-for-you/can-do-for-you.component';
-import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+// import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 const routes: Routes = [
   {
@@ -27,7 +28,7 @@ const routes: Routes = [
     SharedModuleModule,
     HdNavbarModule,
     HdFooterModule,
-    NzCarouselModule,
+    CarouselModule,
     RouterModule.forChild(routes),
   ],
 })

@@ -1,0 +1,271 @@
+.first-screen {
+    min-height: 100vh;
+    display: flex;
+}
+.portfolioBanner {
+    flex-grow: 1;
+}
+.requestForm {
+    background: #fff;
+    border-left: 1px #cccccc solid;
+    width: 450px;
+    position: relative;
+}
+.requestForm .registerLabel{
+    background: #fff;
+    border: 2px var(--themeColor) solid;
+    position: absolute;
+    font-size: 20px;
+    padding: 10px 15px 10px 25px;
+    width: 382px;
+    left: -353px;
+    top: 97px;
+}
+.requestForm .registerLabel:before {
+    border-top: 10px transparent solid;
+    border-bottom: 10px transparent solid;
+    border-left: 10px #fff solid;
+    right: -7px;
+    top: 18px;
+    content: "";
+    position: absolute;
+}
+.requestForm .registerLabel:after {
+    border-top: 2px var(--themeColor) solid;
+    border-right: 2px var(--themeColor) solid;
+    width: 10px;
+    height: 10px;
+    right: -7px;
+    top: 23px;
+    transform: rotate(45deg);
+    content: "";
+    position: absolute;
+}
+.requestForm .requestFormData {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    // height: 100vh;
+    // overflow: auto;
+    // -webkit-overflow-scrolling: touch;
+}
+.requestForm .formContainer {
+    width: 305px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 98px;
+}
+.form-group {
+    padding-bottom: 12px;
+}
+.requestForm .form-group label {
+    margin-bottom: 3px;
+}
+.requestForm .form-group label i {
+    color: #fd0100;
+}
+.requestForm .form-group input {
+    height: 37px;
+    background: #f8f8f8;
+    border-radius: 0;
+    border: 1px #f8f8f8 solid;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #000;
+    width: 100%;
+}
+.requestForm .subjectList {
+    padding: 10px 0 8px;
+}
+.requestForm .subjectList strong {
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    margin-right: -10px;
+}
+.requestForm .subjectList ul {
+    margin-right: -10px;
+}
+.requestForm .subjectList li {
+    margin-bottom: 8px;
+}
+.radio {
+    font-size: 14px;
+    color: #000;
+    line-height: 1.143;
+    padding-left: 26px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}
+.terms-accept input, .radio input {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+}
+.terms-accept span, .radio span {
+    background-color: #fff;
+    border: 1px #cccccc solid;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+.radio span {
+    border-color: #000;
+}
+.terms-accept span:before, .radio span:before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #000;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.terms-accept input:checked~span:before, .radio input:checked~span:before {
+    opacity: 1;
+}
+.requestForm .terms-accept {
+    margin-top: 14px;
+    margin-right: -10px;
+}
+.terms-accept {
+    position: relative;
+    font-size: 11px;
+    line-height: 1.364;
+    padding-left: 26px;
+    color: #9a9a9a;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+    em {
+        font-style: normal;
+    }
+}
+.serviceList {
+    width: 218px;
+    min-width: 218px;
+    max-width: 218px;
+    margin-right: 20px;
+    padding-bottom: 50px;
+}
+.serviceList ul {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.serviceList li {
+    text-align: center;
+    margin-top: 15px;
+    // white-space: nowrap;
+}
+.serviceList li:nth-child(1), .serviceList li:nth-child(2) {
+    margin-bottom: 88px;
+}
+.serviceList li:nth-child(odd) {
+    width: 95px;
+}
+.serviceList li i {
+    background: url(../../../assets/images/service-sprite.png) no-repeat;
+    background-size: 250px auto;
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 35px;
+    opacity: .5;
+    margin-bottom: 5px;
+}
+.serviceList li i.bridge {
+    background-position: 0 0;
+}
+.serviceList li span {
+    font-size: 11.5px;
+    display: block;
+    color: #000;
+}
+.serviceList li:nth-child(even), .serviceList li:last-child {
+    width: 122px;
+}
+
+.serviceList li i.bridge {
+    background-position: 0 0
+}
+
+.serviceList li i.tunnel {
+    background-position: -42px 0
+}
+
+.serviceList li i.structure {
+    background-position: -84px 0
+}
+
+.serviceList li i.roads {
+    background-position: -126px 0
+}
+
+.serviceList li i.rail {
+    background-position: -168px 0
+}
+
+.serviceList li i.speed-rail {
+    background-position: -210px 0
+}
+
+.serviceList li i.city {
+    background-position: 0 -37px
+}
+
+.serviceList li i.power {
+    background-position: -42px -37px
+}
+
+.serviceList li i.station {
+    background-position: -84px -37px
+}
+
+.serviceList li i.commercial {
+    background-position: -126px -37px
+}
+
+.serviceList li i.residential {
+    background-position: -168px -37px
+}
+
+.serviceList li i.www {
+    background-position: -210px -37px
+}
+
+.serviceList li i.hospitality {
+    background-position: 0 -74px
+}
+
+.serviceList li i.healthcare {
+    background-position: -42px -74px
+}
+
+.serviceList li i.public {
+    background-position: -84px -74px
+}
+
+.serviceList li i.airport {
+    background-position: -126px -74px
+}
+
+.serviceList li i.treatment {
+    background-position: -168px -74px
+}
+
+.serviceList li i.school {
+    background-position: -210px -74px
+}
+
+.serviceList li i.industrial {
+    background-position: 0px -111px
+}

@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
 declare global {
   interface Window {
@@ -25,12 +25,18 @@ export class HdNavbarComponent {
     togglePopup: boolean = false;
     showDropdownStatus: boolean = false;
     showPopup1=false;
-
+    currentUrl: string = '';
     constructor(
       public _languageService:LanguageService,
 
         public router: Router
-    ) { }
+    ) { 
+      this.router.events.subscribe(event => {
+        if (event instanceof NavigationEnd) {
+          this.currentUrl = event.urlAfterRedirects;
+        }
+      });
+    }
 
     classApplied = false;
     toggleClass() {
@@ -99,6 +105,16 @@ export class HdNavbarComponent {
         closePopup1(){
           this.showPopup1 =false
         
+          }
+          isDropdownLinkActive(): boolean {
+            return this.currentUrl.includes('good-reason') || 
+                   this.currentUrl.includes('ai-project-management') || 
+                   this.currentUrl.includes('integrations') || 
+                   this.currentUrl.includes('use-cases') || 
+                   this.currentUrl.includes('faq') || 
+                   this.currentUrl.includes('contact') || 
+                   this.currentUrl.includes('about') || 
+                   this.currentUrl.includes('data-safety');
           }
 
 }

@@ -1,0 +1,221 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="threeSection" id="scrollActivated">
+<app-how-buildtwin-helps>
+    <div class="buildtwinHelps provideService container bg" id="scrollActivated2" data-ele="2">
+            <div class="" id="onScrollAnimation">
+                <div class="heading v2 center">
+                    <h2 class="title">
+                        How to get pre-qualified in 5 easy steps.
+                    </h2>
+                    <span class="small-title">
+                        The BuildTwin pre-qualification program hinges on the collective technical proficiency of your team. Our assessment 
+                        <br>measures the depth and breadth of your company’s capabilities to ensure they meet our marketplace's rigorous standards:
+                    </span>
+                </div>
+            </div>
+            <div class="staticData">
+
+                  
+                    <div class="tabContent" id="tabContent">
+                        <div class="tabLeft">
+                            <ul>
+                                <li
+                                    (click)="scrollToSection('section1')"
+                                    data-aos="fade-up"
+                                    data-aos-duration="500"
+                                    [ngClass]="{ active: activeState2 === 11 }"
+                                >
+                                    <i></i> Technical Capabilities
+                                </li>
+                                <li
+                                    (click)="scrollToSection('section2')"
+                                    data-aos="fade-up"
+                                    data-aos-duration="500"
+                                    [ngClass]="{ active: activeState2 === 12 }"
+                                >
+                                    <i></i>Team 
+                                </li>
+                                <li
+                                    (click)="scrollToSection('section3')"
+                                    data-aos="fade-up"
+                                    data-aos-duration="500"
+                                    [ngClass]="{ active: activeState2 === 13 }"
+                                >
+                                    <i></i> Commercial & Insurance
+                                </li>
+                                <li
+                                    (click)="scrollToSection('section4')"
+                                    data-aos="fade-up"
+                                    data-aos-duration="500"
+                                    [ngClass]="{ active: activeState2 === 14 }"
+                                >
+                                    <i></i> Work with AI Design Manager 
+                                </li>
+                                <li
+                                    (click)="scrollToSection('section5')"
+                                    data-aos="fade-up"
+                                    data-aos-duration="500"
+                                    [ngClass]="{ active: activeState2 === 15 }"
+                                >
+                                    <i></i> AI based quality management
+                                </li>
+                                <li
+                                    (click)="scrollToSection('section6')"
+                                    data-aos="fade-up"
+                                    data-aos-duration="500"
+                                    [ngClass]="{ active: activeState2 === 16 }"
+                                >
+                                    <i></i> Business Listing 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                <div class="tabRIght">
+                    <div id="section1" data-ele="11" [ngClass]="{ active: activeState2 >= 11 }">
+                        <div class="flex">
+                            <div class="imgWrap">
+                                <img
+                                    src="assets/images/ui/whyBuildService1.png"
+                                    alt="Buildtwin"
+                                    title="" 
+                                />
+                            </div>
+                            <div class="contentWrap">
+                                <h3>Technical Capabilities</h3>
+                                <p>
+                                    Team Expertise: We evaluate the aggregate qualifications and certifications of 
+                                    your personnel, emphasizing the strength of your team in delivering  
+                                    technical solutions.
+                                    
+                                    <br><br>
+    
+                                    Portfolio Review: A thorough analysis of your company’s previous projects 
+                                    assesses your capacity to handle a range of technical challenges and deliver 
+                                    innovative solutions effectively.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section2" data-ele="12" [ngClass]="{ active: activeState2 >= 12 }">
+                        <div class="flex">
+                            <div class="imgWrap">
+                                <img
+                                    src="assets/images/ui/whyBuildService2.png"
+                                    alt="Buildtwin"
+                                    title=""
+                                />
+                            </div>
+                            <div class="contentWrap">
+                                <h3>Team</h3>
+                                <p>
+                                    We assess the communication skills, leadership abilities, and client engagement strategies of your 
+                                    project managers to ensure they can facilitate seamless collaboration and maintain clear channels 
+                                    of communication.
+    
+                                    <br><br>
+                                    Client Satisfaction Record: Past client testimonials and project outcomes are examined to 
+                                    understand the track record of your project managers in delivering client satisfaction.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section3" data-ele="13" [ngClass]="{ active: activeState2 >= 13 }">
+                        <div class="flex">
+                            <div class="imgWrap">
+                                <img
+                                    src="assets/images/ui/whyBuildService3.png"
+                                    alt="Buildtwin"
+                                    title=""
+                                />
+                            </div>
+                            <div class="contentWrap">
+                                <h3>Commercial & Insurance</h3>
+                                <p>
+    
+                                    The financial viability and risk management strategies of your company are of paramount 
+                                    importance. As part of our pre-qualification process, we conduct an review to ensure that 
+                                    your company is commercially robust. 
+    
+                                    <br><br>
+    
+                                    Liability Insurance Verification: We check for comprehensive liability insurance coverage 
+                                    that aligns with the scope of the services you offer. This is to ensure that both your
+                                    company and our clients are protected against potential risks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section4" data-ele="14" [ngClass]="{ active: activeState2 >= 14 }">
+                        <div class="flex">
+                            <div class="imgWrap">
+                                <img
+                                    src="assets/images/ui/whyBuildService4.png"
+                                    alt="Buildtwin"
+                                    title=""
+                                />
+                            </div>
+                            <div class="contentWrap">
+                                <h3>Work with AI Design Manager </h3>
+                                <p>
+                                    To meet our pre-qualification standards, your team must complete at least 
+                                    <br><u>two live projects</u> with the AI Design Manager. 
+                                    
+                                    <br><br>
+                                    This requirement ensures that you are well-versed in contemporary 
+                                    AI-assisted project management techniques and prepared to deliver the highest standards of service 
+                                    to clients on the BuildTwin Marketplace.
+    
+                                    <br><br>
+                                    Engage with the AI Design Manager to not only streamline your design process but also yields you 
+                                    significant efficiency gains and a competitive advantage. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section5" data-ele="15" [ngClass]="{ active: activeState2 >= 15 }">
+                        <div class="flex">
+                            <div class="imgWrap">
+                                <img
+                                    src="assets/images/ui/whyBuildService5.png"
+                                    alt="Buildtwin"
+                                    title=""
+                                />
+                            </div>
+                            <div class="contentWrap">
+                                <h3>AI Based Quality Management</h3>
+                                <p>
+                                A core aspect of the BuildTwin pre-qualification program is ensuring that your team maintain the highest
+                                quality standards. This is where our AI Quality Manager comes into play, a sophisticated tool designed 
+                                to work alongside your team to oversee and enhance the quality management of your projects
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section6" data-ele="16" [ngClass]="{ active: activeState2 >= 16 }">
+                        <div class="flex">
+                            <div class="imgWrap">
+                                <img
+                                    src="assets/images/ui/whyBuildService6.png"
+                                    alt="Buildtwin"
+                                    title=""
+                                />
+                            </div>
+                            <div class="contentWrap">
+                                <h3>Finalizing Your Business Profile Listing</h3>
+                                <p>
+                                    Upon successful completion of the pre-qualification process, your service offering will be showcased with 
+                                    a comprehensive business profile listing on the BuildTwin Marketplace. This profile is not just 
+                                    a listing; it is a testament to your company's dedication and capability, crafted to enhance your 
+                                    visibility and appeal to potential clients. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</app-how-buildtwin-helps>
+</div>
+<app-hd-footer></app-hd-footer>

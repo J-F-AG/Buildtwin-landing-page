@@ -52,6 +52,17 @@ const routes: Routes = [
         }
     },
     {
+        path: 'pre-qualified',
+        loadChildren: () => import('./pages/pre-qualified//provide-service.module').then(m => m.PreQualifiedModule),
+        // component: ProvideServiceComponent,
+        // data: {
+        //     title: 'Offer Your Structural Engineering Services Worldwide | Buildtwin',
+        //     description: 'Provide your structural engineering services worldwide with Buildtwin. Access global projects and clients through our trusted platform.',
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/provide-service'
+        // }
+    },
+    {
         path: 'marketplace',
         loadChildren: () => import('./pages/marketplace/marketPlace/time-tracking-home/time-tracking-home.module').then(m => m.TimeTrackingHomeModule),
         // component: TimeTrackingHomeComponent,
@@ -105,6 +116,17 @@ const routes: Routes = [
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/faq'
         }
+    },
+    {
+        path: 'ai-faq',
+        loadChildren: () => import('./pages/whybuildtwin/ai-faq/faq-page/faq-page.module').then(m => m.AiFaqPageModule),
+        // component: FaqPageComponent,
+        // data: {
+        //     title: 'Frequently Asked Questions | Buildtwin',
+        //     description: "Find answers to common questions about Buildtwin's structural engineering marketplace, AI project management tools, data safety, integrations, training programs, and more.",
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/ai-faq'
+        // }
     },
     {
         path: 'data-safety',
@@ -393,6 +415,17 @@ const routes: Routes = [
             description: "Find expert CAD service providers for 2D drafting, 3D modeling, and BIM solutions. Streamline your construction projects with BuildTwin’s global vendor network.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/cad-services'
+        }
+    },
+    {
+        path: 'customer-success', 
+        // component: CadServicesNewComponent,
+        loadChildren: () => import('./pages/customer-success/customer-success.module').then(m => m.CustomerSuccessModule),
+        data: {
+            // title: 'CAD Services for AEC Projects | BuildTwin Marketplace',
+            // description: "Find expert CAD service providers for 2D drafting, 3D modeling, and BIM solutions. Streamline your construction projects with BuildTwin’s global vendor network.",
+            // image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            // canonical: 'https://www.buildtwin.com/services/cad-services'
         }
     },
 

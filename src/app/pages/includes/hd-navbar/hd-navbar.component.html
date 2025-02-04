@@ -44,7 +44,7 @@
                 </li>
 
 
-                <li class="nav-item " [ngClass]="{'showDropdown':showDropdownStatus}">
+                <li class="nav-item " [ngClass]="{'showDropdown':showDropdownStatus, 'active': isDropdownLinkActive()}">
                     <a href="javascript:void(0)" class="dropdown-toggle nav-link" (click)="toggleshowDropdownStatus()">
                         BuildTwin Pro
                     </a>
