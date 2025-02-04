@@ -77,9 +77,11 @@ private _projectListService: ProjectListService) {
   }
 
   private updateCarousel(): void {
-    const track = this.carouselTrack.nativeElement;
-    track.style.transform = `translateX(-${this.currentPosition}px)`;
-    this.updateButtonsState();
+    if(this.slider && this.carouselTrack){
+      const track = this.carouselTrack.nativeElement;
+      track.style.transform = `translateX(-${this.currentPosition}px)`;
+      this.updateButtonsState();
+    }
   }
 
   private updateButtonsState(): void {
