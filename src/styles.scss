@@ -1647,7 +1647,9 @@ display:flex;
 .curserDefault {
   cursor: default !important;
 }
-
+.first-screen {
+  padding-top: 88px;
+}
 .container {
   max-width: none;
   padding-left: var(--padding-left-right);

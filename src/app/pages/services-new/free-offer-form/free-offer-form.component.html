@@ -98,7 +98,7 @@
             </div>
 
             <div class="formRow">
-                <div class="selectBox"
+                <div class="selectBox without-arrow"
                     [ngClass]="{'error-border': (myForm.get('email')?.touched && myForm.get('email')?.invalid)}">
                     <div class="normal">
                         <span *ngIf="style == 'secondary'" class="title">Email <span class="red">*</span></span>
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div class="formRow">
-                <div class="selectBox"
+                <div class="selectBox without-arrow"
                     [ngClass]="{'error-border': (myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid)}">
                     <div class="normal">
                         <span *ngIf="style == 'secondary'" class="title">Project Name <span class="red">*</span></span>
@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div class="formRow">
-                <div class="selectBox">
+                <div class="selectBox without-arrow">
                     <div class="normal">
                         <textarea class="textarea-description" formControlName="description"
                             placeholder="Description"></textarea>
