@@ -1,0 +1,68 @@
+.contactTab {
+    background: #002e3b;
+    border-radius: 0 0 4px 4px;
+    font-size: 15px;
+    position: fixed;
+    padding: 8px 15px;
+    color: #fff;
+    right: 0;
+    top: calc(50% + 59px);
+    transform: translateY(-50%) rotate(90deg);
+    transform-origin: right top;
+    z-index: 99;
+}
+
+#wrapper.blur {
+    opacity: 0.7;
+    filter: blur(10px);
+}
+
+#sideForm {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 460px;
+    height: 100%;
+    z-index: 110;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: all .5s ease;
+
+    .cross {
+        background: #fff;
+        border: 1px solid #CBD6E2;
+        border-radius: 4px;
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        cursor: pointer;
+        right: 20px;
+        top: 24px;
+        z-index: 3;
+
+        &:before,
+        &:after {
+            content: '';
+            background: #7e7e7f;
+            width: 18px;
+            height: 2px;
+            position: absolute;
+            left: 7px;
+            top: 15px;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+#sideForm.show {
+    visibility: visible;
+    transform: none;
+}
+
+#sideForm ::ng-deep .formContainer {
+    height: 100%;
+}

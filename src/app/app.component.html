@@ -1,8 +1,15 @@
-<div class="bread" [innerHTML]="breadcrumbSchemaHtml"></div>
-<div class="faqSchema" [innerHTML]="faqSchemaHtml"></div>
-<div class="schemaCode" [innerHTML]="schemaCode"></div>
-<div class="testimonialSchema" [innerHTML]="testimonialSchemaHtml"></div>
-<div class="langHref" [innerHTML]="langHtml"></div>
-<router-outlet></router-outlet>
-<ngx-scrolltop></ngx-scrolltop>
-<lib-svg-defination></lib-svg-defination>
+<div id="wrapper" [ngClass]="{'blur': showHideForm}">
+    <div class="bread" [innerHTML]="breadcrumbSchemaHtml"></div>
+    <div class="faqSchema" [innerHTML]="faqSchemaHtml"></div>
+    <div class="schemaCode" [innerHTML]="schemaCode"></div>
+    <div class="testimonialSchema" [innerHTML]="testimonialSchemaHtml"></div>
+    <div class="langHref" [innerHTML]="langHtml"></div>
+    <router-outlet></router-outlet>
+    <ngx-scrolltop></ngx-scrolltop>
+    <lib-svg-defination></lib-svg-defination>
+</div>
+<a class="contactTab" (click)="toggleSideForm()">Get in Touch</a>
+<div id="sideForm" [ngClass]="{'show': showHideForm}">
+    <span class="cross" (click)="toggleSideForm()"></span>
+    <app-free-offer-form [type]="'outside'" [normalBtn]="true"></app-free-offer-form>
+</div>
