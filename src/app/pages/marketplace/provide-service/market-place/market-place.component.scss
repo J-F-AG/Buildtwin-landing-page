@@ -1,7 +1,11 @@
 :host ::ng-deep .marketPlace {
-    background: #0053fa;
+    background: #f9f9f9;
     padding-bottom: 80px;
     margin-bottom: 80px;
+    border-radius: 4px;
+    &.white {
+        background: white;
+    }
 
     .container {
         max-width: 1296px;
@@ -12,7 +16,7 @@
             padding-top: 80px;
 
             h2 {
-                color: var(--color-green-button, #FFF);
+                // color: var(--color-green-button, #FFF);
 
                 font-size: 40px;
                 font-style: normal;
@@ -22,7 +26,7 @@
             }
 
             span {
-                color: var(--color-green-button, #FFF);
+                // color: var(--color-green-button, #FFF);
 
                 text-align: center;
                 font-size: 16px;
@@ -52,14 +56,14 @@
                         position: relative;
 
                         i {
-                            border: 3px solid #fff;
+                            border: 3px solid #000;
                             width: 24px;
                             height: 24px;
                             border-radius: 100px;
                         }
 
                         span {
-                            color: #FFF;
+                            // color: #FFF;
 
                             font-size: 16px;
                             font-style: normal;
@@ -70,7 +74,7 @@
 
                         &.active {
                             i {
-                                background: #fff;
+                                background: #000;
 
                             }
 
@@ -113,7 +117,7 @@
                 justify-content: center;
 
                 h3 {
-                    color: var(--white, var(--color-green-button, #FFF));
+                    // color: var(--white, var(--color-green-button, #FFF));
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 600;
@@ -125,7 +129,7 @@
 
                 .sub {
                     display: block;
-                    color: var(--white, var(--color-green-button, #FFF));
+                    // color: var(--white, var(--color-green-button, #FFF));
                     font-size: 20px;
                     font-style: normal;
                     font-weight: 600;
@@ -134,7 +138,7 @@
                 }
 
                 p {
-                    color: var(--grey-dark, #ECECEC);
+                    // color: var(--grey-dark, #ECECEC);
                     font-size: 18px;
                     font-style: normal;
                     font-weight: 400;
@@ -150,7 +154,7 @@
                     align-items: center;
                     gap: 10px;
                     border-radius: 4px;
-                    background: var(--color-green-button, #FFF);
+                    // background: var(--color-green-button, #FFF);
                     color: #0053fa;
 
                     font-size: 14px;

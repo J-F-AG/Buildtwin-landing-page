@@ -140,10 +140,10 @@ sliderInit() {
 
   fetchData() {
     forkJoin([
-//       this._http.patch(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService
-// `, { "mode": "building_code" }),
       this._http.patch(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService
-`, { "mode": "pre_cast_services" })
+`, { "mode": "pre_cast_services" }),
+  //     this._http.patch(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService
+  // `, { "mode": "building_code" })
     ])
       .pipe(
         catchError(err => {
@@ -152,7 +152,7 @@ sliderInit() {
       )
       .subscribe(res => {
         console.log(res);
-        // let localbuildingCodeArray = res[0]['data'];
+        // let localbuildingCodeArray = res[1]['data'];
         let localserviceArray = res[0]['data'][0]['services'];
         let localsectorArray = res[0]['data'][0]['sectors'];
         // localbuildingCodeArray.filter(e => {
@@ -163,23 +163,23 @@ sliderInit() {
         //   };
         //   this.buildingCodeArray.push(obj);
         // });
-        // localserviceArray.filter(e => {
-        //   this.serviceObj[e.id] = e;
-        //   let obj = {
-        //     label: e['service_name'],
-        //     value: e['id']
-        //   };
-        //   this.serviceArray.push(obj)
-        // });
+        localserviceArray.filter(e => {
+          this.serviceObj[e.id] = e;
+          let obj = {
+            label: e['service_name'],
+            value: e['id']
+          };
+          this.serviceArray.push(obj)
+        });
         this.sectorArray = localsectorArray
-        // localsectorArray.filter(e => {
-        //   this.sectorObj[e.id] = e;
-        //   let obj = {
-        //     label: e['service_name'],
-        //     value: e['id']
-        //   };
-        //   this.sectorArray.push(obj);
-        // });
+        localsectorArray.filter(e => {
+          this.sectorObj[e.id] = e;
+          let obj = {
+            label: e['service_name'],
+            value: e['id']
+          };
+          this.sectorArray.push(obj);
+        });
           setTimeout(() => {
             this.updateCarousel();
           }, 5000);

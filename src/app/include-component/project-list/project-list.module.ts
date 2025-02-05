@@ -4,6 +4,7 @@ import { ProjectListComponent } from './project-list.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { RouterModule } from '@angular/router';
+import { BtSelectModule } from 'buildtwin-library-ux/bt-select';
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     CarouselModule,
     NzToolTipModule,
-    RouterModule
+    RouterModule,
+    BtSelectModule
   ],
   exports: [
     ProjectListComponent
