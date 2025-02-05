@@ -84,6 +84,7 @@
         top: 0;
         width: 100%;
         height: 100%;
+        transition: all .3s ease;
         img {
             width: 100%;
             height: 100%;
@@ -98,14 +99,22 @@
     top: -60px;
 }
 .hover-show {
-    opacity: 0;
-    visibility: hidden;
-    transition: all .5s ease;
+    transition: all .3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--blackColor);
 }
 .block:hover {
     .hover-show {
-        opacity: 1;
-        visibility: visible;
+        -webkit-line-clamp: unset; /* Show all lines on hover */
+        overflow: visible;
+        white-space: normal; /* Ensure text wraps normally */
+    }
+    figure {
+        opacity: .3;
     }
 }
 @media only screen and (min-width : 1500px) {
