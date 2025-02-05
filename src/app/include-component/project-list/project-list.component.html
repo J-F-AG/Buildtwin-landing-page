@@ -1,5 +1,42 @@
 <div class="container project-list">
     <ng-container *ngIf="!slider && isBrowser">
+        <!-- <div class="dropdown-filter">
+            <div class="middlePart">
+                <div class="formRow">
+                    <div class="selectBox precastField">
+                        <div>
+                            <span class="title">Service</span>
+                            <span class="selectedValue">
+                                Select service
+                            </span>
+                            <app-bt-select [options]="serviceArray" (selectedTabChange)="selectService($event)"></app-bt-select>
+                        </div>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <div class="selectBox precastField">
+                        <div>
+                            <span class="title">Sector</span>
+                            <span class="selectedValue">
+                                Select sector
+                            </span>
+                            <app-bt-select [options]="sectorArray" (selectedTabChange)="selectSector($event)"></app-bt-select>
+                        </div>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <div class="selectBox precastField">
+                        <div>
+                            <span class="title">Building Code</span>
+                            <span class="selectedValue">
+                                Select Building code
+                            </span>
+                            <app-bt-select [options]="buildingCodeArray" (selectedTabChange)="selectBuildingCode($event)"></app-bt-select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <div class="filter-wrapper">
             <div class="filter-slider" [ngClass]="{'hideBefore':isAtStart,'hideAfter': isAtEnd}">
     
