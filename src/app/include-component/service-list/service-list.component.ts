@@ -9,6 +9,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './service-list.component.scss'
 })
 export class ServiceListComponent {
+  @Input() hideTitle = false;
 factorySlider: OwlOptions | null = null;
  isBrowser: boolean;
   constructor( @Inject(PLATFORM_ID) private platformId: Object, public _languageService: LanguageService) {

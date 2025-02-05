@@ -36,7 +36,20 @@
 
 <app-hd-integrations></app-hd-integrations>
 <app-heavy-lifting></app-heavy-lifting>
-<app-service-list></app-service-list>
+<div>
+    <div class="container">
+        <div class="heading center v2">
+                <h2 class="title">
+                    Discover specialists & top-tier<br>
+                    solution providers  <span>tailored to your project needs</span>
+                </h2>
+                <p class="small-title">
+                    From complex Design to Detailing – book services from a single vendor or manage joint-bids
+                </p>
+        </div>
+    </div>
+    <app-service-list [hideTitle]="true"></app-service-list>
+</div>
 <app-tt-testimonials></app-tt-testimonials>
 <app-hd-good-company [count]="5"></app-hd-good-company>
 <!-- <div  #HdGoodCompanyComp></div> -->
