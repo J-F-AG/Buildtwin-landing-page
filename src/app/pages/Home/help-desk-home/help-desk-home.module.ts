@@ -17,6 +17,7 @@ import { CompanyLogosSliderModule } from '../company-logos-slider/company-logos-
 import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 import { TtTestimonialsModule } from '../../marketplace/marketPlace/tt-testimonials/tt-testimonials.module';
 import { HeavyLiftingModule } from '../heavy-lifting/heavy-lifting.module';
+import { ServiceListModule } from 'src/app/include-component/service-list/service-list.module';
 
 const routes: Routes = [
   {
@@ -46,6 +47,7 @@ const routes: Routes = [
     ProjectListModule,
     TtTestimonialsModule,
     HeavyLiftingModule,
+    ServiceListModule,
     RouterModule.forChild(routes),
   ],
 })
