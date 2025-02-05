@@ -1,217 +1,209 @@
-<div class="banner-area global-mb">
-
-  <div class="left">
-    
-    <div class="sliderCover relative">
-      <owl-carousel-o [options]="aboutSlider">
-        <ng-template carouselSlide>
-          <div class="banner-area--item">
-            <div class="banner-area--item--step">
-              Step 1
-              <div class="line-container">
-                <div class="line"></div>
-              </div>
-            </div>
-            <h2 class="banner-area--item--title">
-              Invite independent <br>engineering vendors
-            </h2>
-            <div class="banner-area--item--desc">
-              Trusted by over 10.000+ of Structural Professionals across The Globe
-            </div>
-            <div class="bannerr-area-item-image" style="background-image: url('assets/images/home/step1.webp')">
-              <!-- <picture>
-                <source srcset="assets/images/home/step1.webp 1x, assets/images/home/step1@2x.webp 2x" 
-                        type="image/webp" 
-                        sizes="(max-width: 772px) 100vw, 772px">
-                <source srcset="assets/images/home/step1.jpg 1x, assets/images/home/step1@2x.jpg 2x" 
-                        type="image/jpeg" 
-                        sizes="(max-width: 772px) 100vw, 772px">
-                <img src="assets/images/home/step1.jpg" 
-                     srcset="assets/images/home/step1.jpg 1x, assets/images/home/step1@2x.jpg 2x" 
-                     alt="Step 1" 
-                     width="772" height="413" 
-                     loading="eager">
-            </picture> -->
-            <!-- <img src="assets/images/home/placeholder.jpg" alt="Step 1" width="772" height="413" > -->
-            </div>
+<div class="banner-area" id="home-banner">
+  <owl-carousel-o #owlCarousel [options]="aboutSlider" (translated)="onTranslated($event)">
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide1-left.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide1-right.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h1>
+              A new Engineering Experience.
+      Focus on  <span>what matters</span>
+            </h1>
+            <p class="small-title">
+              BuildTwin simplifies how you outsource, manage and ensure your projects meet time 
+      and quality goals. Get started in minutes and focus on what matters!
+            </p>
           </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="banner-area--item">
-            <div class="banner-area--item--step">
-              Step 2
-              <div class="line-container">
-                <div class="line"></div>
-              </div>
-            </div>
-            <h2 class="banner-area--item--title">
-              Get competitive bids
-            </h2>
-            <div class="banner-area--item--desc">
-              Trusted by over 10.000+ of Structural Professionals across The Globe<br class="hidemobile"><br class="hidemobile">
-            </div>
-            <div class="bannerr-area-item-image" style="background-image: url('assets/images/home/step2.webp')">
-              <!-- <picture>
-                <source srcset="assets/images/home/step2.webp 1x, assets/images/home/step2@2x.webp 2x" type="image/webp">
-                <source srcset="assets/images/home/step2.jpg 1x, assets/images/home/step2@2x.jpg 2x" type="image/jpeg"> 
-                <img src="assets/images/home/step2.jpg" 
-                     srcset="assets/images/home/step2.jpg 1x, assets/images/home/step2@2x.jpg 2x" 
-                     alt="Step 2" 
-                     width="900" height="481" 
-                     loading="lazy">
-              </picture> -->
-              <!-- <img src="assets/images/home/placeholder.jpg" alt="Step 1" width="772" height="413" > -->
-          </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="banner-area--item">
-            <div class="banner-area--item--step">
-              Step 3
-              <div class="line-container">
-                <div class="line"></div>
-              </div>
-            </div>
-            <h2 class="banner-area--item--title">
-              Assisted project delivery with the AI Design Manager
-            </h2>
-            <div class="banner-area--item--desc">
-              Trusted by over 10.000+ of Structural Professionals across The Globe
-            </div>
-            <div class="bannerr-area-item-image" style="background-image: url('assets/images/home/step3.webp')">
-              <!-- <picture>
-                <source srcset="assets/images/home/step3.webp 1x, assets/images/home/step3@2x.webp 2x" type="image/webp">
-                <source srcset="assets/images/home/step3.jpg 1x, assets/images/home/step3@2x.jpg 2x" type="image/jpeg"> 
-                <img src="assets/images/home/step3.jpg" 
-                     srcset="assets/images/home/step3.jpg 1x, assets/images/home/step3@2x.jpg 2x" 
-                     alt="Step 3" 
-                     width="900" height="481" 
-                     loading="lazy">
-              </picture>            -->
-            <!-- <img src="assets/images/home/placeholder.jpg" alt="Step 1" width="772" height="413" > -->
-            </div>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="banner-area--item">
-            <div class="banner-area--item--step">
-              Step 4
-              <div class="line-container">
-                <div class="line"></div>
-              </div>
-            </div>
-            <h2 class="banner-area--item--title">
-              Get started within minutes
-            </h2>
-            <div class="banner-area--item--desc">
-              Trusted by over 10.000+ of Structural Professionals across The Globe<br class="hidemobile"><br class="hidemobile">
-            </div>
-            <div class="bannerr-area-item-image" style="background-image: url('assets/images/home/step4.webp')">
-              <!-- <picture>
-                <source srcset="assets/images/home/step4.webp 1x, assets/images/home/step4@2x.webp 2x" type="image/webp">
-                <source srcset="assets/images/home/step4.jpg 1x, assets/images/home/step4@2x.jpg 2x" type="image/jpeg"> 
-                <img src="assets/images/home/step4.jpg" 
-                     srcset="assets/images/home/step4.jpg 1x, assets/images/home/step4@2x.jpg 2x" 
-                     alt="Step 4" 
-                     width="900" height="481" 
-                     loading="lazy">
-              </picture> -->
-            <!-- <img src="assets/images/home/placeholder.jpg" alt="Step 1" width="772" height="413" > -->
-            </div>
-          </div>
-        </ng-template>
-      </owl-carousel-o>
-      <div class="integrationsList roundButtonWrapper">
-        <owl-carousel-o [options]="integrationsList">
-          <ng-template carouselSlide>
-            <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers">
-                  <picture>
-                    <source srcset="assets/images/gbc_black.webp" type="image/webp">
-                    <source srcset="assets/images/gbc_black.png" type="image/png">
-                    <img src="assets/images/gbc_black.png" 
-                         alt="Gbc" 
-                         style="width: 100px;" 
-                         width="100" 
-                         height="57">
-                  </picture>
-                  <!-- <img src="assets/images/gbc_black.webp" alt="Gbc" style="width: 100px;" width="100" height="57"> -->
-                </a>
-            </div>
-        </ng-template>
-        <ng-template carouselSlide>
-            <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india">
-                  <picture>
-                    <source srcset="assets/images/jf_black.webp" type="image/webp">
-                    <source srcset="assets/images/jf_black.png" type="image/png">
-                    <img src="assets/images/jf_black.png" 
-                         alt="J&F" 
-                         style="width: 68.522px;" 
-                         width="68.522" 
-                         height="34.731">
-                  </picture>
-                  <!-- <img src="assets/images/jf_black.webp" alt="J&F" style="width: 68.522px;" width="68.522" height="34.731"> -->
-                </a>
-            </div>
-        </ng-template>
-        <ng-template carouselSlide>
-            <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant">
-                  <picture>
-                    <source srcset="assets/images/durchgeplant_black.webp" type="image/webp">
-                    <source srcset="assets/images/durchgeplant_black.png" type="image/png">
-                    <img src="assets/images/durchgeplant_black.png" 
-                         alt="durchgeplant" 
-                         style="width: 217.053px;" 
-                         width="217.053" 
-                         height="34.729">
-                  </picture>
-                  <!-- <img src="assets/images/durchgeplant_black.webp" alt="durchgeplant" style="width: 217.053px;" width="217.053" height="34.729"> -->
-                </a>
-            </div>
-        </ng-template>
-        <ng-template carouselSlide>
-            <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited">
-                  <picture>
-                    <source srcset="assets/images/aarbee_black.webp" type="image/webp">
-                    <source srcset="assets/images/aarbee_black.png" type="image/png">
-                    <img src="assets/images/aarbee_black.png" 
-                         alt="Aarbee" 
-                         style="width: 399.985px;" 
-                         width="399.985" 
-                         height="50.847">
-                </picture>
-                </a>
-            </div>
-        </ng-template>
-        <ng-template carouselSlide>
-            <div class="integration-box text-center">
-                <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering">
-                  <picture>
-                    <source srcset="assets/images/caldim_black.webp" type="image/webp">
-                    <source srcset="assets/images/caldim_black.png" type="image/png">
-                    <img src="assets/images/caldim_black.png" 
-                         alt="Caldim" 
-                         style="width: 134.489px;" 
-                         width="134.489" 
-                         height="56.627">
-                  </picture>
-                  <!-- <img src="assets/images/caldim_black.webp" alt="Caldim" style="width: 134.489px;" width="134.489" height="56.627"> -->
-                </a>
-            </div>
-        </ng-template>
-      </owl-carousel-o>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+        </div>
       </div>
-      <div class="scroll-next cursor"  (click)="scrollToSection('targetSection')">
-        <span></span>
-        Scroll down to explore our service provider and details
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide2-left.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide2-right.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Get 5+ free  <span>competitive offers</span>
+    from 100s of pre-qualified vendors
+            </h2>
+            <p class="small-title">
+              Trusted, Reliable and Efficient – Access pre-qualified engineers 
+    who deliver on time, within budget and to your standards.
+            </p>
+          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+        </div>
       </div>
-    </div>
-
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide3-left.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide3-right.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Less stress. More progress.
+    Meet your  <span>AI Design Manager</span>
+            </h2>
+            <p class="small-title">
+              Your AI-powered Design Manager simplifies project coordination, ensuring timelines, quality
+    and budget are on track. Achieve more with intelligent automation.
+            </p>
+          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide4-left.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide4-right.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Relax! Let AI check every
+    detail and  <span>ensure quality</span>
+            </h2>
+            <p class="small-title">
+              AI tracks all changes, conversations, and revisions, ensuring every drawing 
+    meets compliance with your requirement.
+            </p>
+          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+        </div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+  <div class="container slide-tab-wrapper">
+    <ul class="slide-tab">
+      <li (click)="goToSlide(0)" [ngClass]="{'active': currentIndex==0}">
+        1 | Marketplace + AI Design Manager
+      </li>
+      <li (click)="goToSlide(1)" [ngClass]="{'active': currentIndex==1}">
+        2 | Get competetive quotes
+      </li>
+      <li (click)="goToSlide(2)" [ngClass]="{'active': currentIndex==2}">
+        3 | Meet your AI Design Manager
+      </li>
+      <li (click)="goToSlide(3)" [ngClass]="{'active': currentIndex==3}">
+        4 | Assisted AI Project Delivery
+      </li>
+    </ul>
   </div>
-  <div class="toggle-sidebar" (click)="toggleSidebar()">
+</div>
+<ng-template #buttonTemplate>
+  <div class="button-wrapper flex-justify-center">
+    <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+      Get started NOW
+    </a>
+    <a (click)="call()" href="javascript:void(0)" class="button-v2 border">
+      <img src="assets/images/icons/icon1.png" width="23" height="23" alt="Schedule DEMO">
+      Schedule DEMO
+    </a>
+  </div>
+</ng-template>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+
+
+  <!-- <div class="integrationsList roundButtonWrapper">
+    <owl-carousel-o [options]="integrationsList">
+      <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers">
+              <picture>
+                <source srcset="assets/images/gbc_black.webp" type="image/webp">
+                <source srcset="assets/images/gbc_black.png" type="image/png">
+                <img src="assets/images/gbc_black.png" 
+                     alt="Gbc" 
+                     style="width: 100px;" 
+                     width="100" 
+                     height="57">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india">
+              <picture>
+                <source srcset="assets/images/jf_black.webp" type="image/webp">
+                <source srcset="assets/images/jf_black.png" type="image/png">
+                <img src="assets/images/jf_black.png" 
+                     alt="J&F" 
+                     style="width: 68.522px;" 
+                     width="68.522" 
+                     height="34.731">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant">
+              <picture>
+                <source srcset="assets/images/durchgeplant_black.webp" type="image/webp">
+                <source srcset="assets/images/durchgeplant_black.png" type="image/png">
+                <img src="assets/images/durchgeplant_black.png" 
+                     alt="durchgeplant" 
+                     style="width: 217.053px;" 
+                     width="217.053" 
+                     height="34.729">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited">
+              <picture>
+                <source srcset="assets/images/aarbee_black.webp" type="image/webp">
+                <source srcset="assets/images/aarbee_black.png" type="image/png">
+                <img src="assets/images/aarbee_black.png" 
+                     alt="Aarbee" 
+                     style="width: 399.985px;" 
+                     width="399.985" 
+                     height="50.847">
+            </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering">
+              <picture>
+                <source srcset="assets/images/caldim_black.webp" type="image/webp">
+                <source srcset="assets/images/caldim_black.png" type="image/png">
+                <img src="assets/images/caldim_black.png" 
+                     alt="Caldim" 
+                     style="width: 134.489px;" 
+                     width="134.489" 
+                     height="56.627">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+  </owl-carousel-o>
+  </div> -->
+  <!-- <div class="toggle-sidebar" (click)="toggleSidebar()">
     Start Enquiry
   </div>
   <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
@@ -219,5 +211,4 @@
     <span class="cross" (click)="toggleSidebar()"></span>
     <app-free-offer-form [type]="'outside'" [normalBtn]="true"></app-free-offer-form>
 </div>
-  </div>
-</div>
+  </div> -->

@@ -124,106 +124,6 @@
             }
         }
     }
-    /*default-btn*/
-    .default-btn {
-        border: none;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        overflow: hidden;
-        z-index: 1;
-        color: var(--whiteColor);
-        background-color: var(--mainColor);
-        transition: var(--transition);
-        border-radius: 5px;
-        font: {
-            weight: 700;
-            size: var(--fontSize);
-        }
-        padding: {
-            left: 55px;
-            right: 30px;
-            top: 11px;
-            bottom: 11px;
-        }
-        cursor: pointer;
-
-        // span {
-        //     position: absolute;
-        //     display: block;
-        //     width: 0;
-        //     height: 0;
-        //     border-radius: 50%;
-        //     background-color: var(--blackColor);
-        //     transition:
-        //         width 0.5s ease-in-out,
-        //         height 0.5s ease-in-out;
-        //     transform: translate(-50%, -50%);
-        //     z-index: -1;
-        //     border-radius: 5px;
-        // }
-        i {
-            position: absolute;
-            left: 30px;
-            top: 10px;
-        }
-        &:hover {
-            color: var(--whiteColor);
-
-            span {
-                width: 225%;
-                height: 562.5px;
-            }
-        }
-    }
-    .default-btn-style-two {
-        border: none;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-        overflow: hidden;
-        z-index: 1;
-        color: var(--whiteColor);
-        background-color: transparent;
-        transition: var(--transition);
-        border-radius: 30px;
-        border: 1px dashed var(--mainColor);
-        font: {
-            weight: 700;
-            size: var(--fontSize);
-        }
-        padding: {
-            left: 60px;
-            right: 35px;
-            top: 15px;
-            bottom: 15px;
-        }
-        i {
-            position: absolute;
-            left: 35px;
-            top: 14px;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background-color: var(--mainColor);
-            z-index: -1;
-            border-radius: 30px;
-            margin: 4px;
-            transition: 0.3s;
-        }
-        &:hover {
-            color: var(--whiteColor);
-
-            &::before {
-                margin: 0;
-            }
-        }
-    }
     /*form-control*/
     .form-control {
         height: 50px;
@@ -4795,18 +4695,6 @@ Responsive CSS
         .pb-70 {
             padding-bottom: 30px;
         }
-        .default-btn {
-            font-size: 14px;
-            padding: {
-                left: 50px;
-                right: 25px;
-                top: 10px;
-                bottom: 10px;
-            }
-            i {
-                left: 25px;
-            }
-        }
         .section-title {
             max-width: 100%;
             margin: {
@@ -4843,22 +4731,6 @@ Responsive CSS
         .form-control {
             height: 48px;
             font-size: 14.5px;
-        }
-        .default-btn-style-two {
-            font-size: 14px;
-            padding: {
-                left: 50px;
-                right: 25px;
-                top: 13px;
-                bottom: 13px;
-            }
-            i {
-                left: 25px;
-                top: 13px;
-            }
-            &::before {
-                margin: 2px;
-            }
         }
 
         .banner-shape1,
@@ -5780,25 +5652,10 @@ Responsive CSS
                 max-width: 515px;
             }
         }
-        .default-btn {
-            font-size: 15px;
-
-            i {
-                top: 11px;
-            }
-        }
         .mtb-100 {
             margin: {
                 top: 0;
                 bottom: 0;
-            }
-        }
-        .default-btn-style-two {
-            font-size: 15px;
-
-            i {
-                left: 35px;
-                top: 15px;
             }
         }
 
@@ -6802,9 +6659,6 @@ Responsive CSS
     .training-wrapper .ptb-100 {
         padding-top: 80px;
         padding-bottom: 60px;
-    }
-    .training-wrapper .default-btn {
-        font-size: 11px;
     }
     .page-title-area {
         margin-bottom: 0;

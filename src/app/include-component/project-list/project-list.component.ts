@@ -14,6 +14,7 @@ import { findFlagUrlByCountryName } from 'country-flags-svg';
 })
 export class ProjectListComponent {
 @Input() slider : boolean = false;
+@Input() hideMessageBox = false;
 @ViewChild('carouselTrack') carouselTrack!: ElementRef;
 currentPosition = 0;
 isAtStart = true;

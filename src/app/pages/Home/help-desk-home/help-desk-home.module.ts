@@ -13,6 +13,12 @@ import { HdWhyBuildtwinModule } from '../hd-why-buildtwin/hd-why-buildtwin.modul
 import { HdDiscoverProjectsModule } from '../hd-discover-projects/hd-discover-projects.module';
 import { HdProvidersModule } from '../hd-providers/hd-providers.module';
 import { HdServicesModule } from '../hd-services/hd-services.module';
+import { CompanyLogosSliderModule } from '../company-logos-slider/company-logos-slider.module';
+import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
+import { TtTestimonialsModule } from '../../marketplace/marketPlace/tt-testimonials/tt-testimonials.module';
+import { HeavyLiftingModule } from '../heavy-lifting/heavy-lifting.module';
+import { ServiceListModule } from 'src/app/include-component/service-list/service-list.module';
+import { HomeBannerModule } from '../home-banner/home-banner.module';
 
 const routes: Routes = [
   {
@@ -38,6 +44,12 @@ const routes: Routes = [
     HdIntegrationsModule,
     HdTestimonialsModule,
     HdGoodCompanyModule,
+    CompanyLogosSliderModule,
+    ProjectListModule,
+    TtTestimonialsModule,
+    HeavyLiftingModule,
+    ServiceListModule,
+    HomeBannerModule,
     RouterModule.forChild(routes),
   ],
 })

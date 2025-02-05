@@ -1,0 +1,182 @@
+<div class="container maine-banner">
+    <div class="heading center v2">
+        <h1 class="title">
+            The Definition of Done.
+        </h1>
+        <span class="small-title">
+            <u>AI system</u> for engineering project execution, and delivery.
+        </span>
+    </div>
+    <ul class="tab-nav">
+        <li (click)="tab(1)" [ngClass]="{'active': activeTab == 1}">
+            <figure>
+                <img src="assets/images/ai/software.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/software-hover.svg" width="48" height="48" alt="">
+            </figure>
+            Software
+        </li>
+        <li (click)="tab(2)" [ngClass]="{'active': activeTab == 2}">
+            <figure>
+                <img src="assets/images/ai/prod-management.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/prod-management-hover.svg" width="48" height="48" alt="">
+            </figure>
+            Product management
+        </li>
+        <li (click)="tab(3)" [ngClass]="{'active': activeTab == 3}">
+            <figure>
+                <img src="assets/images/ai/marketing.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/marketing-hover.svg" width="48" height="48" alt="">
+            </figure>
+            Marketing
+        </li>
+        <li (click)="tab(4)" [ngClass]="{'active': activeTab == 4}">
+            <figure>
+                <img src="assets/images/ai/proj-management.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/proj-management-hover.svg" width="48" height="48" alt="">
+            </figure>
+            Project management
+        </li>
+        <li (click)="tab(5)" [ngClass]="{'active': activeTab == 5}">
+            <figure>
+                <img src="assets/images/ai/design.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/design-hover.svg" width="48" height="48" alt="">
+            </figure>
+            Design
+        </li>
+        <li (click)="tab(6)" [ngClass]="{'active': activeTab == 6}">
+            <figure>
+                <img src="assets/images/ai/it.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/it-hover.svg" width="48" height="48" alt="">
+            </figure>
+            IT
+        </li>
+    </ul>
+    <div class="tab-change-wrapper">
+        <div class="block" *ngIf="activeTab == 1">
+            <figure><img src="assets/images/ai/wac-hero-jpd-1156977422.png" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        <div class="block" *ngIf="activeTab == 2">
+            <figure><img src="assets/images/ai/wac-hero-jpd-1156977422.png" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        <div class="block" *ngIf="activeTab == 3">
+            <figure><img src="assets/images/ai/wac-hero-jpd-1156977422.png" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        <div class="block" *ngIf="activeTab == 4">
+            <figure><img src="assets/images/ai/wac-hero-jpd-1156977422.png" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        <div class="block" *ngIf="activeTab == 5">
+            <figure><img src="assets/images/ai/wac-hero-jpd-1156977422.png" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        <div class="block" *ngIf="activeTab == 6">
+            <figure><img src="assets/images/ai/wac-hero-jpd-1156977422.png" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container global-mb scroll-effect">
+    <div class="heading center v2">
+        <h2 class="title">
+            Teamwork solutions for high-performing teams
+        </h2>
+    </div>
+    <div class="text-section">
+        <div class="text">
+          <div class="block" *ngFor="let item of contentData" #textBlock>
+            <div class="content">
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
+              <div class="button-wrapper">
+                <a href="{{ item.getItFreeLink }}" class="button-v2">Get it free</a>
+                <a href="{{ item.exploreLink }}" class="button-v2 border">Explore</a>
+              </div>
+            </div>
+            <div class="note-box">
+              <img [src]="item.imageSrc" width="68" height="68" alt="">
+              <p>
+                <strong>{{ item.noteTitle }}</strong> {{ item.noteDescription }}
+                <a href="{{ item.noteLink }}" class="link-text">Read their story</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <span class="bg-style {{'style-color'+(activeIndex+1)}}"></span>
+          <figure *ngFor="let img of contentData; let i = index" [class.active]="i === activeIndex">
+            <img [src]="img.targetImage" width="584" height="328" alt="">
+          </figure>
+        </div>
+      </div>
+</div>
+
+<div class="container global-mb">
+    <div class="black-bg-wrapperai">
+        <div class="background"></div>
+        <div class="content-wrappee">
+            <div class="content">
+                <div class="heading center v2">
+                    <span class="subTitle">
+                        Atlassian Intelligence
+                    </span>
+                    <h2 class="title">
+                        Transform teamwork with human-AI collaboration
+                    </h2>
+                </div>
+                <figure>
+                    <img src="assets/images/ai/CSD-10721_WAC__AI-3298633667.webp" width="946" height="532" alt="">
+                </figure>
+                <a href="" class="button-v2 border">
+                    Explore Atlassian Intelligence
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container bg3">
+    <!-- <div class=""> -->
+        <div class="left">
+            <div class="block">
+                <div>
+                    <h2>
+                        Teams across the globe run on Atlassian
+                    </h2>
+                    <span class="count">
+                        300,000+
+                    </span>
+                    <p>
+                        companies power team collaboration with Atlassian
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="child-block">
+                    <span class="count small">
+                        200+
+                    </span>
+                    <p>
+                        countries have companies that use Atlassian
+                    </p>
+                </div>
+                <div class="child-block">
+                    <span class="count small">
+                        80%
+                    </span>
+                    <p>
+                        of Fortune 500 companies use Atlassian products
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <figure>
+                <img src="assets/images/ai/earth_1.png" width="278" height="278" alt="">
+            </figure>
+        </div>
+    <!-- </div> -->
+</div>
