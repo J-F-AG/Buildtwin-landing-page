@@ -1,6 +1,7 @@
 <app-hd-navbar></app-hd-navbar>
 <!-- <div  #HdNavbarComp></div> -->
-<app-hd-banner-new></app-hd-banner-new> 
+<!-- <app-hd-banner-new></app-hd-banner-new>  -->
+<app-home-banner></app-home-banner>
 <app-company-logos-slider></app-company-logos-slider>
 <!-- <div  #HdBannerNewComp></div> -->
 <!-- <app-hd-banner-tabs></app-hd-banner-tabs> -->
@@ -17,34 +18,49 @@
     <div class="container">
         <div class="heading center v2">
                 <h2 class="title">
-                    Discover specialists & top-tier<br>
-                    solution providers  <span>tailored to your project needs</span>
+                    Explore the largest portfolio of<br>
+                    private and public  <span>engineering projects</span>
                 </h2>
                 <p class="small-title">
-                    From complex Design to Detailing – book services from a single vendor or manage joint-bids
+                    Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
                 </p>
         </div>
     </div>
-    <app-project-list [slider]="true"></app-project-list>
-    <div class="flex-justify-center global-mb">
-        <a class="button-v2" 
-        [routerLink]="[_languageService.currentLanguage,'explore-services']">
-            Explore Services
-        </a>
-    </div>
+    <app-project-list [slider]="true" [hideMessageBox]="true">
+        <div class="message">
+            <div class="content">
+                <h4>
+                    Unlock <strong>more vendors</strong> tailored for you
+                </h4>
+                <p>
+                    Get started now with BuildTwin to explore a wide range of industry-specific
+projects and connect with top-reated experts
+                </p>
+            </div>
+            <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+                Get started for FREE
+            </a>
+        </div>
+    </app-project-list>
 </div>
 
-<app-hd-integrations></app-hd-integrations>
 <app-heavy-lifting></app-heavy-lifting>
+<app-hd-integrations></app-hd-integrations>
+<div class="flex-justify-center global-mb">
+    <a class="button-v2">
+        <img src="assets/images/icons/icon2.png" width="23" height="23" alt="BuildTwin Pro DEMO">
+        BuildTwin Pro DEMO
+    </a>
+</div>
+
 <div class="global-mb">
     <div class="container">
         <div class="heading center v2">
                 <h2 class="title">
-                    Discover specialists & top-tier<br>
-                    solution providers  <span>tailored to your project needs</span>
+                    Explore  <span>Engineering Services</span>
                 </h2>
                 <p class="small-title">
-                    From complex Design to Detailing – book services from a single vendor or manage joint-bids
+                    Navigate services and connect with top professionals with ease
                 </p>
         </div>
     </div>

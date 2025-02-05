@@ -225,6 +225,9 @@
     &.slider {
         display: block;
     }
+    &.blurBox {
+        margin-bottom: 0;
+    }
     &.blur {
         justify-content: center;
         .block {
@@ -396,29 +399,33 @@
         }
     }
 }
-.message {
-    background: white;
-    border-radius: 0 15px 15px 15px;
-    padding: 33px 50px 33px 43px;
-    display: flex;
-    align-items: center;
-    gap: 34px;
-    box-shadow: 0 0 8px rgba(0,0,0,.1);
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 40%;
-    width: 877px;
-    p {
-        color: var(--lightTextColor);
-        line-height: normal;
-    }
-    h4 {
-        font-size: 25px;
-        font-weight: 500;
-        margin-bottom: 8px;
+
+:host ::ng-deep {
+    .message {
+        background: white;
+        border-radius: 0 15px 15px 15px;
+        padding: 33px 50px 33px 43px;
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        box-shadow: 0 0 8px rgba(0,0,0,.1);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 40%;
+        width: 877px;
+        p {
+            color: var(--lightTextColor);
+            line-height: normal;
+        }
+        h4 {
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
     }
 }
+
 
 .middlePart {
     padding: 0;
