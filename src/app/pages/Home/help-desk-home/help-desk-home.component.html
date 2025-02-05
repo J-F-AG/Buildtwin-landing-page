@@ -1,20 +1,45 @@
 <app-hd-navbar></app-hd-navbar>
 <!-- <div  #HdNavbarComp></div> -->
 <app-hd-banner-new></app-hd-banner-new> 
+<app-company-logos-slider></app-company-logos-slider>
 <!-- <div  #HdBannerNewComp></div> -->
 <!-- <app-hd-banner-tabs></app-hd-banner-tabs> -->
 <!-- <app-hd-trusted-by></app-hd-trusted-by> -->
-<app-hd-services></app-hd-services>
+<!-- <app-hd-services></app-hd-services> -->
 <!-- <div  #HdServicesComp></div> -->
 <!-- <app-happier-customers></app-happier-customers> -->
-<app-hd-discover-projects></app-hd-discover-projects>
+<!-- <app-hd-discover-projects></app-hd-discover-projects> -->
 <!-- <div  #HdDiscoverProjectsComp></div> -->
-<app-hd-providers></app-hd-providers> 
+<!-- <app-hd-providers></app-hd-providers>  -->
 <!-- <div  #HdProvidersComp></div> -->
 <!-- <app-hd-solution-provider></app-hd-solution-provider> -->
+<div class="bg global-mb">
+    <div class="container">
+        <div class="heading center v2">
+                <h2 class="title">
+                    Discover specialists & top-tier<br>
+                    solution providers  <span>tailored to your project needs</span>
+                </h2>
+                <p class="small-title">
+                    From complex Design to Detailing – book services from a single vendor or manage joint-bids
+                </p>
+        </div>
+    </div>
+    <app-project-list [slider]="true"></app-project-list>
+    <div class="flex-justify-center global-mb">
+        <a class="button-v2" 
+        [routerLink]="[_languageService.currentLanguage,'explore-services']">
+            Explore Services
+        </a>
+    </div>
+</div>
+
+<app-hd-integrations></app-hd-integrations>
+<app-heavy-lifting></app-heavy-lifting>
+<app-tt-testimonials></app-tt-testimonials>
 <app-hd-good-company [count]="5"></app-hd-good-company>
 <!-- <div  #HdGoodCompanyComp></div> -->
-<app-hd-why-buildtwin></app-hd-why-buildtwin>
+<!-- <app-hd-why-buildtwin></app-hd-why-buildtwin> -->
 <!-- <div  #HdWhyBuildtwinComp></div> -->
 <!-- 
 <app-how-process>
@@ -252,10 +277,9 @@
 
 <!-- Testimmonial-->
 
-<app-hd-integrations></app-hd-integrations>
 <!-- <div  #HdIntegrationsComp></div> -->
 
-<app-hd-testimonials></app-hd-testimonials>
+<!-- <app-hd-testimonials></app-hd-testimonials> -->
 <!-- <div  #HdTestimonialsComp></div> -->
 
 <app-hd-footer></app-hd-footer>
