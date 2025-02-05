@@ -11,6 +11,7 @@ import { HdFaqComponent } from '../hd-faq/hd-faq.component';
 import { OmBannerFooterComponent } from '../om-banner/om-banner-footer/om-banner-footer.component';
 import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
+import { AiProjectManagementHeroComponent } from '../ai-project-management-hero/ai-project-management-hero.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,8 @@ const routes: Routes = [
     OmIntegrationsComponent,
     SignupComponentComponent,
     OmWhyChooseUsComponent,
-    HdFaqComponent
+    HdFaqComponent,
+    AiProjectManagementHeroComponent
   ],
   imports: [
     CommonModule,

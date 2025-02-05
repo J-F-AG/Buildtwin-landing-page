@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HdBannerNewComponent } from './hd-banner-new.component';
-import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { RouterModule } from '@angular/router';
+import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module';
+
 // import { ResizeService } from 'ngx-owl-carousel-o/lib/services/resize.service';
 
 
@@ -12,7 +15,9 @@ import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
   ],
   imports: [
     CommonModule,
-    SharedModuleModule
+    CarouselModule,
+    RouterModule,
+    HubspotModule
   ],
   exports: [
     HdBannerNewComponent
