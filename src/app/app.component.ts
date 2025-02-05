@@ -34,7 +34,6 @@ export class AppComponent {
     schemaCode: SafeHtml;
     faqSchemaHtml: SafeHtml;
     testimonialSchemaHtml: SafeHtml;
-    showHideForm:boolean = false;
     constructor(
         private breadcrumbService: BreadcrumbService,
         private _languageService:LanguageService,
@@ -56,10 +55,6 @@ export class AppComponent {
             localStorage.setItem("appVersion", "0.0.12");
         }
         // AOS.init();
-    }
-
-    toggleSideForm() {
-      this.showHideForm = !this.showHideForm;
     }
 
     ngOnInit() {
