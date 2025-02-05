@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hd-pricing.component.scss']
 })
 export class HdPricingComponent {
-
+  activeState: number = 1
 }

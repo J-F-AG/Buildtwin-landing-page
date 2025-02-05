@@ -53,17 +53,66 @@
                                 Get Started
                             </a>
                         </div>
-                        <div class="basic-Details">
+                        <div class="basic-price">
+                            <div class="basic-info">
+                                <h2>BuildTwin Pro</h2>
+                                <ul>
+                                    <li>
+                                        Ideal for technical teams who need get started quickly.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="javascript:void(0)" class="btn">
+                                30 USD / Month
+                            </a>
+                        </div>
+                        <div class="basic-price">
+                            <div class="basic-info">
+                                <h2>BuildTwin AI</h2>
+                                <ul>
+                                    <li>
+                                        Ideal for large teams
+                                        who need customization
+                                        and support
+                                    </li>
+                                </ul>
+
+                                <ul>
+                                    <li>
+                                        Enterprise support (business hours)
+                                    </li>
+                                    <li>
+                                        Customization
+                                    </li>
+                                    <li>
+                                        While Label Solution
+                                    </li>
+                                    <li>
+                                        Fastest deployment (dedicaded servers)
+                                        
+                                    </li>
+                                    <li>
+                                        Access to BETA builds
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="javascript:void(0)" class="btn">
+                                Talk to Sales
+                            </a>
+                        </div>
+                        <!-- <div class="basic-Details">
                             <div class="coverDiv">
                                 <span><strong> $30 </strong>/ Month</span>
                                 <p>
                                     Ideal for technical teams who need get started quickly.
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="basicLeft right">
+                    <!-- <div class="basicLeft right">
                         <div class="basic-price">
                             <div class="basic-info right">
                                 <h2>Enterprise</h2>
@@ -91,7 +140,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
             </app-price-basic>
@@ -159,7 +208,80 @@
 
             </app-price-monthly>
 
-
+            <app-market-place>
+                <div class="marketPlace white"  id="scrollActivated">
+                    <div class="container">
+            
+                  
+                    <div class="head">
+                        <h2>
+                            Why BuildTwin
+                        </h2>
+                        <span>
+                            BuildTwin supercharges engineering teams - across the globe. 
+                        </span>
+            
+                        <div class="pagination">
+                           
+                                <ul >
+                                    <li class="active"  [ngClass]="{active: activeState === 1 }">
+                                        <i class="cirlce"></i>
+                                        <span>Why</span>
+                                    </li>
+                                    <li [ngClass]="{active: activeState === 2 }">
+                                        <i class="cirlce"></i>
+                                        <span>How</span>
+                                    </li>
+                                    <li [ngClass]="{ active: activeState === 3 }">
+                                        <i class="cirlce"></i>
+                                        <span>What</span>
+                                    </li>
+                                </ul>
+                             
+                        </div>
+                    </div>
+            
+                    <div class="slide" data-ele="1">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/slide1.png" alt="Slider" width="630" height="270">
+                        </div> 
+                        <div class="contentWrap">
+                            <h3>Why - the largest portfolio on the</h3>
+                            <p> 
+            
+                                AI unlocks a new level of productivity of engineers. And allows to 
+                                automate tedious tasks and knowlege transfer. 
+                               
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide" data-ele="2">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/slide2.png" alt="Slider" width="630" height="270">
+                        </div> 
+                        <div class="contentWrap">
+                            <h3>How - Delivered with the help of AI</h3>
+                            <p>
+                                BuildTwin AI helps engineers to develiver projects while meeting 
+                                the requirements. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide" data-ele="3">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/slide3.png" alt="Slider" width="630" height="270">
+                        </div> 
+                        <div class="contentWrap">
+                            <h3>What - Engineering Services</h3>
+                            <p>
+                                BuildTwin combines all data - to create a AI based checklist for each submission. And 
+                                enables Trust with / in AI - to work with a global community. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </app-market-place>
 
             <app-price-co-pilot>
                 <div class="coPilot">
