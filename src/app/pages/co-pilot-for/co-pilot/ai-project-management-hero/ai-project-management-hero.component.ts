@@ -18,7 +18,7 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'Lumen',
       noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
       noteLink: '',
-      targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
+      targetImage: 'assets/images/ai-activity.jpg'
     },
     {
       title: 'Dream it, plan it, launch it',
@@ -29,30 +29,30 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'Lumen',
       noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
       noteLink: '',
-      targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
+      targetImage: 'assets/images/rfi.jpg'
     },
-    {
-      title: 'Dream it, plan it, launch it',
-      description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
-      getItFreeLink: '',
-      exploreLink: '',
-      imageSrc: 'assets/images/ai/lumen.svg',
-      noteTitle: 'Lumen',
-      noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
-      noteLink: '',
-      targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
-    },
-    {
-      title: 'Dream it, plan it, launch it',
-      description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
-      getItFreeLink: '',
-      exploreLink: '',
-      imageSrc: 'assets/images/ai/lumen.svg',
-      noteTitle: 'Lumen',
-      noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
-      noteLink: '',
-      targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
-    }
+    // {
+    //   title: 'Dream it, plan it, launch it',
+    //   description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
+    //   getItFreeLink: '',
+    //   exploreLink: '',
+    //   imageSrc: 'assets/images/ai/lumen.svg',
+    //   noteTitle: 'Lumen',
+    //   noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
+    //   noteLink: '',
+    //   targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
+    // },
+    // {
+    //   title: 'Dream it, plan it, launch it',
+    //   description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
+    //   getItFreeLink: '',
+    //   exploreLink: '',
+    //   imageSrc: 'assets/images/ai/lumen.svg',
+    //   noteTitle: 'Lumen',
+    //   noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
+    //   noteLink: '',
+    //   targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
+    // }
   ];
 
   activeIndex = 0; // Tracks the currently active figure index
