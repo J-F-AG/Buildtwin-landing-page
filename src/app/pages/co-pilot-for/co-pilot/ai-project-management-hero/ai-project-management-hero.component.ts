@@ -10,7 +10,7 @@ export class AiProjectManagementHeroComponent {
   activeTab = 1;
   contentData = [
     {
-      title: 'Dream it, plan it, launch it',
+      title: 'AI Activity Stream',
       description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
       getItFreeLink: '',
       exploreLink: '',
@@ -21,7 +21,7 @@ export class AiProjectManagementHeroComponent {
       targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
     },
     {
-      title: 'Dream it, plan it, launch it',
+      title: 'AI RFI Register',
       description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
       getItFreeLink: '',
       exploreLink: '',
@@ -32,7 +32,7 @@ export class AiProjectManagementHeroComponent {
       targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
     },
     {
-      title: 'Dream it, plan it, launch it',
+      title: 'AI Project Management',
       description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
       getItFreeLink: '',
       exploreLink: '',
@@ -43,7 +43,7 @@ export class AiProjectManagementHeroComponent {
       targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
     },
     {
-      title: 'Dream it, plan it, launch it',
+      title: 'AI Quality Control',
       description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
       getItFreeLink: '',
       exploreLink: '',
