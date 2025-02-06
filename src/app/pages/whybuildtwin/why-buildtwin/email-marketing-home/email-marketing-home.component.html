@@ -45,7 +45,7 @@
             <div class="overlay position-absolute z-n1"></div>
         </div>
 </app-here-section>
-<app-market-place (marketplaceNumber)="marketplaceNumber($event)">
+<app-market-place>
     <div class="marketPlace "  id="scrollActivated">
         <div class="container">
 
@@ -58,27 +58,27 @@
                 BuildTwin supercharges engineering teams - across the globe. 
             </span>
 
-        </div>
-        <div class="pagination stickyTop">
-           
-                <ul >
-                    <li class="active"  [ngClass]="{active: marketPlace === 1 }">
-                        <i class="cirlce"></i>
-                        <span>Why</span>
-                    </li>
-                    <li [ngClass]="{active: marketPlace === 2 }">
-                        <i class="cirlce"></i>
-                        <span>How</span>
-                    </li>
-                    <li [ngClass]="{ active: marketPlace === 3 }">
-                        <i class="cirlce"></i>
-                        <span>What</span>
-                    </li>
-                </ul>
-             
+            <div class="pagination">
+               
+                    <ul >
+                        <li class="active"  [ngClass]="{active: activeState === 1 }">
+                            <i class="cirlce"></i>
+                            <span>Why</span>
+                        </li>
+                        <li [ngClass]="{active: activeState === 2 }">
+                            <i class="cirlce"></i>
+                            <span>How</span>
+                        </li>
+                        <li [ngClass]="{ active: activeState === 3 }">
+                            <i class="cirlce"></i>
+                            <span>What</span>
+                        </li>
+                    </ul>
+                 
+            </div>
         </div>
 
-        <div class="slide" data-ele="1" [ngClass]="{ active: marketPlace == 1 }">
+        <div class="slide" data-ele="1">
             <div class="imgWrap">
                 <img src="assets/images/ui/slide1.png" alt="Slider" width="630" height="270">
             </div> 
@@ -92,7 +92,7 @@
                 </p>
             </div>
         </div>
-        <div class="slide" data-ele="2" [ngClass]="{ active: marketPlace == 2 }">
+        <div class="slide" data-ele="2">
             <div class="imgWrap">
                 <img src="assets/images/ui/slide2.png" alt="Slider" width="630" height="270">
             </div> 
@@ -104,7 +104,7 @@
                 </p>
             </div>
         </div>
-        <div class="slide" data-ele="3" [ngClass]="{ active: marketPlace == 3 }">
+        <div class="slide" data-ele="3">
             <div class="imgWrap">
                 <img src="assets/images/ui/slide3.png" alt="Slider" width="630" height="270">
             </div> 

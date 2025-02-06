@@ -12,6 +12,7 @@
 
         .head {
             text-align: center;
+            padding: 0 0 80px;
             padding-top: 80px;
 
             h2 {
@@ -35,68 +36,65 @@
                 /* 25.6px */
             }
 
-        }
-        .pagination {
-            margin: 28px 0 0;
-            display: flex;
-            justify-content: center;
-            padding: 16px 0 20px;
-            margin-bottom: 60px;
-            top: 84px;
-
-            ul {
+            .pagination {
+                margin: 44px 0 0;
                 display: flex;
-                gap: 72px;
-                list-style: none;
-                margin: 0;
+                justify-content: center;
 
-                padding: 0;
-
-                li {
+                ul {
                     display: flex;
-                    gap: 12px;
-                    align-items: center;
-                    position: relative;
+                    gap: 72px;
+                    list-style: none;
+                    margin: 0;
 
-                    i {
-                        border: 3px solid #000;
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 100px;
-                    }
+                    padding: 0;
 
-                    span {
-                        // color: #FFF;
+                    li {
+                        display: flex;
+                        gap: 12px;
+                        align-items: center;
+                        position: relative;
 
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 145%;
-                        /* 20.3px */
-                    }
-
-                    &.active {
                         i {
-                            background: #000;
-
+                            border: 3px solid #000;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 100px;
                         }
 
                         span {
-                            font-weight: 600;
+                            // color: #FFF;
+
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 145%;
+                            /* 20.3px */
                         }
-                    }
 
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        right: -59px;
-                        width: 46px;
-                        height: 2px;
-                        background: #ECECEC;
-                    }
+                        &.active {
+                            i {
+                                background: #000;
 
-                    &:last-child::after {
-                        display: none;
+                            }
+
+                            span {
+                                font-weight: 600;
+                            }
+                        }
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            right: -59px;
+                            width: 46px;
+                            height: 2px;
+                            background: #ECECEC;
+                        }
+
+                        &:last-child::after {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -107,18 +105,7 @@
             padding-right: 39px;
             display: flex;
             gap: 63px;
-            transition: all .3s ease;
-            transform: translateY(-200px);
-            opacity: 0;
-            visibility: hidden;
-            &.active {
-                transform: translateY(0px);
-                opacity: 1;
-                visibility: visible;
-                & ~ .slide {
-                    transform: translateY(200px);
-                }
-            }
+
             .imgWrap {
                 min-width: 651px;
             }
@@ -184,13 +171,6 @@
             }
         }
     }
-    .stickyTop {
-        position: sticky;
-        top: 0;
-        background: #f9f9f9;
-        box-shadow: 0 0 50px 20px rgb(249, 249, 249);
-        z-index: 9;
-    }
 
 }
 
@@ -211,7 +191,6 @@
             .head {
                 text-align: center;
                 padding: 0 0 0px;
-                margin-bottom: 0;
                 padding-top: 40px;
                 // position: static !important;
                 .pagination ul {

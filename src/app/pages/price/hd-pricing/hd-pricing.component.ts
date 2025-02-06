@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./hd-pricing.component.scss']
 })
 export class HdPricingComponent {
-  marketPlace: number = 1
-
-  marketplaceNumber(event) {
-    this.marketPlace = event
-  }
+  activeState: number = 1
 }

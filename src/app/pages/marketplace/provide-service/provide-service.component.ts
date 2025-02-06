@@ -10,7 +10,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './provide-service.component.scss'
 })
 export class ProvideServiceComponent {
-  marketPlace: number = 1;
+
   showPopup1=false;
   showPopup=false;
   activeState: number = 1
@@ -226,8 +226,6 @@ let HideMenu = document.getElementById('tabContent');
             this.showPopup = false;
           }
 
-  marketplaceNumber(event) {
-    this.marketPlace = event
-  }
+
   
 }
