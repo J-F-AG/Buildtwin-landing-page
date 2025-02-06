@@ -18,7 +18,7 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'J&F',
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
-      targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
+      targetImage: 'assets/images/ai-activity.jpg'
     },
     {
       title: 'AI RFI Register',
@@ -29,19 +29,19 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'J&F',
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
-      targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
+      targetImage: 'assets/images/rfi.jpg'
     },
-    {
-      title: 'AI Project Management',
-      description: 'AI Project Management auto-updates your software with AI-driven insights, streamlining everything from documentation to organization. Simplify collaboration, maintain real-time progress tracking, and let your projects run effortlessly.',
-      getItFreeLink: '',
-      exploreLink: '',
-      imageSrc: 'assets/images/ai/lumen.svg',
-      noteTitle: 'J&F',
-      noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
-      noteLink: '/customer-success',
-      targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
-    },
+    // {
+    //   title: 'AI Project Management',
+    //   description: 'AI Project Management auto-updates your software with AI-driven insights, streamlining everything from documentation to organization. Simplify collaboration, maintain real-time progress tracking, and let your projects run effortlessly.',
+    //   getItFreeLink: '',
+    //   exploreLink: '',
+    //   imageSrc: 'assets/images/ai/lumen.svg',
+    //   noteTitle: 'J&F',
+    //   noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
+    //   noteLink: '/customer-success',
+    //   targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
+    // },
     {
       title: 'AI Quality Control',
       description: 'AI Quality Control streamlines your review process by tracking all RFIs, requirements, and more. Using a dynamic checklist, it automatically verifies each submission against evolving quality standards.',
@@ -51,7 +51,7 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'J&F',
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
-      targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
+      targetImage: 'assets/images/manual-qc.jpg'
     }
   ];
 
