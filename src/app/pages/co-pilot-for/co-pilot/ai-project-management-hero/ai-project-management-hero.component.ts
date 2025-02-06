@@ -11,46 +11,46 @@ export class AiProjectManagementHeroComponent {
   contentData = [
     {
       title: 'AI Activity Stream',
-      description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
+      description: 'AI Activity consolidates all your information in one place, enabling effortless task creation and tracking across team members, projects, and stakeholders. Simplify workflows and enhance collaboration with centralized insights and streamlined management.',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/ai/lumen.svg',
-      noteTitle: 'Lumen',
-      noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
-      noteLink: '',
+      noteTitle: 'J&F',
+      noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
+      noteLink: '/customer-success',
       targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
     },
     {
       title: 'AI RFI Register',
-      description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
+      description: 'AI RFI Tracker harnesses the power of AI to monitor and manage RFIs across all channels with real-time insights and seamless integration. Experience comprehensive cross-channel visibility and streamline your RFI management process for maximum efficiency.',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/ai/lumen.svg',
-      noteTitle: 'Lumen',
-      noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
-      noteLink: '',
+      noteTitle: 'J&F',
+      noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
+      noteLink: '/customer-success',
       targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
     },
     {
       title: 'AI Project Management',
-      description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
+      description: 'AI Project Management auto-updates your software with AI-driven insights, streamlining everything from documentation to organization. Simplify collaboration, maintain real-time progress tracking, and let your projects run effortlessly.',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/ai/lumen.svg',
-      noteTitle: 'Lumen',
-      noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
-      noteLink: '',
+      noteTitle: 'J&F',
+      noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
+      noteLink: '/customer-success',
       targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
     },
     {
       title: 'AI Quality Control',
-      description: 'The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.',
+      description: 'AI Quality Control streamlines your review process by tracking all RFIs, requirements, and more. Using a dynamic checklist, it automatically verifies each submission against evolving quality standards.',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/ai/lumen.svg',
-      noteTitle: 'Lumen',
-      noteDescription: 'used Jira to reduce cycle time and increase throughput by 200%.',
-      noteLink: '',
+      noteTitle: 'J&F',
+      noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
+      noteLink: '/customer-success',
       targetImage: 'assets/images/ai/CSD-10721_WAC_Jira-4003614779.webp'
     }
   ];
