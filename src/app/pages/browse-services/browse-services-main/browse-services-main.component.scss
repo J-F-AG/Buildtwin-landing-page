@@ -13,12 +13,16 @@
     padding-right: var(--padding-left-right);
   }
   .banner-global {
-    margin-bottom: 42px;
+    // margin-bottom: 42px;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     .banner-main {
       display: flex;
       align-items: center;
       padding-top: 88px;
+      flex: 1;
     }
     .banner-content {
       flex-grow: 1;

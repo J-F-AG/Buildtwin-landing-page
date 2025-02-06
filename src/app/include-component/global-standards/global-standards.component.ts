@@ -47,7 +47,16 @@ factorySlider: OwlOptions | null = null;
     img2x: 'assets/images/global-standards4@2x',
     alt: 'Eurocodes Building Standards',
     class: 'green'
-  }
+  },
+  {
+    route: '/software/architecture-design-services',
+    title: 'British standards',
+    description: 'Ensure compliance with British Standards (BS) for safe, efficient, and sustainable construction. Work with experts to meet UK building regulations seamlessly.',
+    img: 'assets/images/global-standards5',
+    img2x: 'assets/images/global-standards5@2x',
+    alt: 'British standards',
+    class: ''
+  },
 ];
   constructor( @Inject(PLATFORM_ID) private platformId: Object, public _languageService:LanguageService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
