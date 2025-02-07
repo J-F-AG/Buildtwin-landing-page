@@ -12,6 +12,7 @@ import { OmBannerFooterComponent } from '../om-banner/om-banner-footer/om-banner
 import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
 import { AiProjectManagementHeroComponent } from '../ai-project-management-hero/ai-project-management-hero.component';
+import { Style3Module } from 'src/app/pages/style3/style3.module';
 
 const routes: Routes = [
   {
@@ -36,6 +37,7 @@ const routes: Routes = [
     SharedModuleModule,
     HdNavbarModule,
     HdFooterModule,
+    Style3Module,
     RouterModule.forChild(routes),
   ],
 })
