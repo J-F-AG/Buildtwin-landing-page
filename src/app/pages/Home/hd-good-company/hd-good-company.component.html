@@ -23,7 +23,7 @@
       }">
         <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
             <ng-template carouselSlide *ngFor="let list of allBlogs">
-                <div class="card">
+                <div class="card" [ngStyle]="{'background-image': 'url(' + list['jetpack_featured_media_url'] + ')', 'background-size': 'cover', 'background-position': 'center'}">
                     <!-- <div class="card__image card__image--first">
                         <img [src]="list['jetpack_featured_media_url']" alt="company" loading="lazy">
                     </div> -->
