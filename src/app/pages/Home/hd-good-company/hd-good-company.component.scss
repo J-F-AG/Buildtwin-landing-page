@@ -33,7 +33,7 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: 40px;
-        transition: background .5s ease-out;
+        // transition: background .5s ease-out;
         &::before {
             content: "";
             position: absolute;
@@ -42,18 +42,20 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0); /* No overlay initially */
-            transition: background 0.3s ease-in-out;
+            transition: background-color .5s ease-out .5s;
         }
         &:hover {
             &::before {
                 background: rgba(0, 0, 0, 0.5); /* Darker overlay on hover */
             }
             .card__description {
-                max-height: 300px;
+                max-height: 96px;
             }
             .card__footer {
                 span {
-                    display: block;
+                    // max-width: 100%;
+                    text-indent: 0;
+                    // display: block;
                 }
             }
         }
@@ -100,7 +102,7 @@
             line-height: 1.5;
             margin: 0 0 20px;
             max-height: 0;
-            transition: all .5s ease-out .15s;
+            transition: max-height .5s ease-out .15s;
             overflow: hidden;
             display: -webkit-box; /* Enables the flexible box model */
             -webkit-box-orient: vertical; /* Sets the box orientation to vertical */
@@ -125,12 +127,17 @@
             position: relative;
             z-index: 2;
             span {
-                display: none;
+                display: inline-block;
+                // max-width: 0;
+                overflow: hidden;
+                transition: all 0.5s ease-out;
+                white-space: nowrap;
+                text-indent: -110px;
             }
             .arrow-icon {
                 width: 15px;
                 height: 2px;
-                background: black;
+                background: white;
                 display: block;
                 position: relative;
                 &::after {
