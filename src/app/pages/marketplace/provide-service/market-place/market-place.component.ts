@@ -27,7 +27,7 @@ tabHead:any
       const rect = section.getBoundingClientRect();
       const sectionId = section.getAttribute('data-ele');
 
-      if (rect.top >= 0 && rect.top < window.innerHeight - 300) {
+      if (rect.top >= 0 && rect.top < window.innerHeight - 100) {
         this.marketPlace = sectionId ? parseInt(sectionId, 10) : null;
         this.marketplaceNumber.emit(this.marketPlace);
       }

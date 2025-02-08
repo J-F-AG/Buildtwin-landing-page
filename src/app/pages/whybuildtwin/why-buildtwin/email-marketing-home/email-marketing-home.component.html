@@ -50,7 +50,7 @@
         <div class="container">
 
       
-        <div class="head">
+        <div class="head stickyTop">
             <h2>
                 Why BuildTwin
             </h2>
@@ -58,24 +58,24 @@
                 BuildTwin supercharges engineering teams - across the globe. 
             </span>
 
-        </div>
-        <div class="pagination stickyTop">
-           
-                <ul >
-                    <li class="active"  [ngClass]="{active: marketPlace === 1 }">
-                        <i class="cirlce"></i>
-                        <span>Why</span>
-                    </li>
-                    <li [ngClass]="{active: marketPlace === 2 }">
-                        <i class="cirlce"></i>
-                        <span>How</span>
-                    </li>
-                    <li [ngClass]="{ active: marketPlace === 3 }">
-                        <i class="cirlce"></i>
-                        <span>What</span>
-                    </li>
-                </ul>
-             
+            <div class="pagination">
+               
+                    <ul >
+                        <li class="active"  [ngClass]="{active: marketPlace === 1 }">
+                            <i class="cirlce"></i>
+                            <span>Why</span>
+                        </li>
+                        <li [ngClass]="{active: marketPlace === 2 }">
+                            <i class="cirlce"></i>
+                            <span>How</span>
+                        </li>
+                        <li [ngClass]="{ active: marketPlace === 3 }">
+                            <i class="cirlce"></i>
+                            <span>What</span>
+                        </li>
+                    </ul>
+                 
+            </div>
         </div>
 
         <div class="slide" data-ele="1" [ngClass]="{ active: marketPlace == 1 }">

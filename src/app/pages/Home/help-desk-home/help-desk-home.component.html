@@ -15,7 +15,7 @@
 <!-- <div  #HdProvidersComp></div> -->
 <!-- <app-hd-solution-provider></app-hd-solution-provider> -->
 <div class="bg global-mb">
-    <div class="container">
+    <div class="container heading-sticky">
         <div class="heading center v2">
                 <h2 class="title">
                     Explore the largest portfolio of<br>
@@ -47,7 +47,7 @@ projects and connect with top-reated experts
 <app-heavy-lifting></app-heavy-lifting>
 <app-hd-integrations></app-hd-integrations>
 <div class="global-mb">
-    <div class="container">
+    <div class="container heading-sticky">
         <div class="heading center v2">
                 <h2 class="title">
                     Explore  <span>Engineering Services</span>
@@ -58,6 +58,17 @@ projects and connect with top-reated experts
         </div>
     </div>
     <app-service-list [hideTitle]="true"></app-service-list>
+</div>
+<div class="global-mb">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+            <h2 class="title">Find Structural Specialist & Solutions Provider</h2>
+            <span class="subTitle">Buildtwin connects you with expert providers for data centres, bridges, tunnels,
+                <br>
+                road, precast structures, industrial buildings, airports and hospitals.</span>
+        </div>  
+    </div>
+    <app-special-project [heading]="true"></app-special-project>
 </div>
 <app-tt-testimonials></app-tt-testimonials>
 <app-hd-good-company [count]="5"></app-hd-good-company>

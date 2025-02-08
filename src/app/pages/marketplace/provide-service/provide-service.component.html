@@ -317,12 +317,12 @@
     </app-experence>
 
     <app-project-list [slider]="true"></app-project-list>
-    <div class="flex-justify-center global-mb">
+    <!-- <div class="flex-justify-center global-mb">
         <a class="button-v2" 
         href="https://www.buildtwin.com/get-started" target="_blank">
             Match your Portfolio for FREE
         </a>
-    </div>
+    </div> -->
 
     <div class="threeSection" id="scrollActivated">
 
@@ -421,7 +421,7 @@
                 <div class="container">
         
               
-                <div class="head">
+                <div class="head stickyTop">
                     <h2>
                         How to get new projects. 
                     </h2>
@@ -430,8 +430,7 @@
                         <br>the BuildTwin marketplace, where opportunity meets readiness.
                     </span>
         
-                </div>
-                <div class="pagination stickyTop">
+                    <div class="pagination">
                    
                         <ul >
                             <li  [ngClass]="{active: marketPlace === 1 }">
@@ -447,6 +446,7 @@
                                 <span>Get invited / started</span>
                             </li>
                         </ul>
+                </div>
                 </div>
         
                 <div class="slide"  data-ele="1" [ngClass]="{ active: marketPlace === 1 }">

@@ -493,6 +493,16 @@
         }
     }
 }
+@media (min-width: 1100px) {
+    .project-list-wrapper {
+        .block {
+            width: calc(20% - 10px);
+        }
+    }
+    .project-list-wrapper.blur .block:nth-child(5) {
+        display: block;
+    }
+}
 @media (min-width: 1600px) {
     .project-list-wrapper {
         .block {

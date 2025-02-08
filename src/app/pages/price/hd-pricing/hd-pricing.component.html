@@ -136,9 +136,11 @@
                 </div>
 
             </app-price-basic>
-
+        </div>
+        </div>
             <app-price-monthly>
                 <div class="planDetails">
+                    <div class="container">
                     <div class="item">
                         <h4>Pre-qualification & Performance</h4>
                         <p>
@@ -194,18 +196,18 @@
                         </div>
 
                     </div>
-
+                </div>
                 </div>
 
 
             </app-price-monthly>
-
+<div class="container">
             <app-market-place (marketplaceNumber)="marketplaceNumber($event)">
-                <div class="marketPlace white"  id="scrollActivated">
+                <div class="marketPlace"  id="scrollActivated">
                     <div class="container">
             
                   
-                    <div class="head">
+                    <div class="head stickyTop">
                         <h2>
                             Why BuildTwin Pro
                         </h2>
@@ -213,24 +215,24 @@
                             BuildTwin supercharges engineering teams - across the globe. 
                         </span>
             
-                    </div>
-                    <div class="pagination stickyTop">
-                       
-                            <ul >
-                                <li class="active"  [ngClass]="{active: marketPlace === 1 }">
-                                    <i class="cirlce"></i>
-                                    <span>Verified Profil</span>
-                                </li>
-                                <li [ngClass]="{active: marketPlace === 2 }">
-                                    <i class="cirlce"></i>
-                                    <span>Portfolio Match</span>
-                                </li>
-                                <li [ngClass]="{ active: marketPlace === 3 }">
-                                    <i class="cirlce"></i>
-                                    <span>BuildTwin Pro Software</span>
-                                </li>
-                            </ul>
-                         
+                        <div class="pagination">
+                           
+                                <ul >
+                                    <li class="active"  [ngClass]="{active: marketPlace === 1 }">
+                                        <i class="cirlce"></i>
+                                        <span>Verified Profil</span>
+                                    </li>
+                                    <li [ngClass]="{active: marketPlace === 2 }">
+                                        <i class="cirlce"></i>
+                                        <span>Portfolio Match</span>
+                                    </li>
+                                    <li [ngClass]="{ active: marketPlace === 3 }">
+                                        <i class="cirlce"></i>
+                                        <span>BuildTwin Pro Software</span>
+                                    </li>
+                                </ul>
+                             
+                        </div>
                     </div>
             
                     <div class="slide"  data-ele="1" [ngClass]="{ active: marketPlace == 1 }">
@@ -714,5 +716,5 @@
 
 
 
-    </div>
+    <!-- </div> -->
 </div>
