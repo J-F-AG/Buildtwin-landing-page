@@ -67,10 +67,10 @@ export class OnlineMeetingHomeFreelanceComponent {
         activeELe.forEach((item, index) => {
           if (item.getBoundingClientRect().top < 500) {
             this.activeState = index + 1;
-            item.classList.add("active")
+            // item.classList.add("active")
           }
           else {
-            item.classList.remove("active")
+            // item.classList.remove("active")
           }
   
         })

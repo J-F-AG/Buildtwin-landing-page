@@ -1,59 +1,53 @@
-<section class="specialProjectsSection global-mb">
-    <div class="containerWrap">
-        <div class="sectionHeader" *ngIf="heading">
-            <div class="heading">
-                <div class="title" *ngIf="!page; else other_content">Discover Sectors</div>
-                <ng-template #other_content>
-                    <div class="title">
-                        Engineering Sectors We Serve
-                    </div>
-                    <div class="subTitle">Specialized engineering solutions across diverse industries, delivered by pre-qualified expert teams</div>
-                </ng-template>
+<div class="container" [ngClass]="{'bg': !heading}">
+    <div class="heading" *ngIf="!heading">
+        <div class="title" *ngIf="!page; else other_content">Discover Sectors</div>
+        <ng-template #other_content>
+            <div class="title">
+                Engineering Sectors We Serve
             </div>
-        </div>
-        <div class="carousel squareButtonWrapper">
-            <owl-carousel-o [options]="customOptions">
-                    <ng-container *ngFor="let image of slides[0]['images']">
-                        <ng-template carouselSlide>
-                            <div class="image-container">
-                                <figure>
-                                    <!-- <img [src]="image.src" width="185" height="245" loading="lazy" /> -->
-                                    <picture>
-                                        <source [srcset]="image.src.webp" type="image/webp">
-                                        <source [srcset]="image.src.fallback" type="image/png">
-                                        <img [src]="image.src.fallback" 
-                                             [alt]="image.title"
-                                             width="185" 
-                                             height="245" 
-                                             loading="lazy">
-                                    </picture>
-                                </figure>
-                                <div class="image-caption page">
-                                    <h3>{{ image.title }}</h3>
-                                    <div class="sector-detail">
-                                        <p>
-                                            {{image.description}}
-                                        </p>
-                                        <!-- <ul>
-                                            <li>
-                                                Structural Analysis
-                                            </li>
-                                            <li>
-                                                MEP Integration
-                                            </li>
-                                            <li>
-                                                Seismic Design
-                                            </li>
-                                        </ul> -->
-                                        <a [routerLink]="image.link || null" class="link-text" *ngIf="image['link']">
-                                            Learn More
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>  
-                        </ng-template>
-                    </ng-container>
-            </owl-carousel-o>
-        </div>
+            <div class="subTitle">Specialized engineering solutions across diverse industries, delivered by pre-qualified expert teams</div>
+        </ng-template>
     </div>
-</section>
+    <div class="list squareButtonWrapper top-right" [ngClass]="{'below-6': slides[0]['images'].length<6}">
+        <owl-carousel-o [options]="customOptions">
+            <!-- *ngIf="isBrowser" -->
+        <ng-template carouselSlide *ngFor="let image of slides[0]['images']; let i = index">
+            <a class="service__items__sub" target="_blank" [routerLink]="image['link'] ? image['link'] : ''">
+                <div class="block" [ngClass]="{'active': image['active']}">
+                    <div>
+                        <h3 [innerHtml]="image['title']">
+                            
+                        </h3>
+                        <p class="hover-show" [innerHtml]="image['description']">
+                        </p>
+                    </div>
+                    <figure>
+                        <!-- <picture>
+                            <source srcset="{{item.img}}.webp, {{item.img}}@2x.webp 2x" type="image/webp">
+                            <img 
+                                src="{{item.img}}.png" 
+                                srcset="{{item.img}}.png, {{item.img}}@2x.png 2x" 
+                                width="349" 
+                                height="435" 
+                                alt="{{item['name']}}">
+                        </picture> -->
+                        <picture>
+                            <source [srcset]="image.src.webp" type="image/webp">
+                            <source [srcset]="image.src.fallback" type="image/png">
+                            <img [src]="image.src.fallback" 
+                                 [alt]="image.title"
+                                 width="349" 
+                                 height="435" 
+                                 loading="lazy">
+                        </picture>
+                    </figure>
+                </div>
+            </a>
+        </ng-template>
+        </owl-carousel-o>
+    </div>
+</div>
+
+<!-- <a [routerLink]="image.link || null" class="link-text" *ngIf="image['link']">
+    Learn More
+</a> -->

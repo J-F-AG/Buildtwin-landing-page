@@ -13,9 +13,9 @@
     padding-right: var(--padding-left-right);
   }
   .banner-global {
-    // margin-bottom: 42px;
+    margin-bottom: 42px;
     overflow: hidden;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     .banner-main {
@@ -112,7 +112,11 @@
       }
     }
   }
-  
+// @media (min-height: 800px) {
+//   .banner-global {
+//     // min-height: calc(100vh - 150px);
+//   }
+// }
 @media only screen and (max-width : 1300px) {
   .banner-global .banner-content h1 {
     font-size: 30px;

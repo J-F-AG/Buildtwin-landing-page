@@ -2,12 +2,14 @@
     .planDetails {
         border-radius: 4px;
         background: var(--color-green-button, #FFF);
-        display: flex;
-        max-width: 1296px;
-        padding: 24px;
+        padding: 24px 0;
         justify-content: space-between;
         align-items: center;
         margin: 0 auto 40px;
+        .container {
+            display: flex;
+            // max-width: 1296px;
+        }
 
         .item{
             text-align: left;

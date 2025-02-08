@@ -6,34 +6,12 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   templateUrl: './special-project.component.html',
   styleUrl: './special-project.component.scss'
 })
-export class SpecialProjectComponent implements OnInit {
+export class SpecialProjectComponent implements OnInit { 
   @Input() page: string = ''; //sector
   @Input() hideItem: number[] = []; // Array of IDs to hide
   @Input() heading: boolean = true; //sector
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 2,
-      },
-      400: {
-        items: 2
-      },
-      740: {
-        items: 3
-      },
-      940: {
-        items: 4
-      }
-    },
-    nav: true
-  }
+  customOptions: OwlOptions | null = null;
+  
   slides = [
     {
       
@@ -171,5 +149,42 @@ export class SpecialProjectComponent implements OnInit {
     if (this.hideItem && this.hideItem.length > 0) {
       this.slides[0].images = this.slides[0].images.filter(image => !this.hideItem.includes(image.id));
     }
+    this.sliderInit();
+  }
+
+  sliderInit() {
+    this.customOptions = {
+      nav: true,
+      margin: 16,  // Adjust as needed
+      dots: false,
+      // loop: true,
+      // autoplay: true,
+      autoplayHoverPause: false,
+      navText: [
+        "<i class='ti ti-chevron-left'></i>",
+        "<i class='ti ti-chevron-right'></i>",
+      ],
+      stagePadding: 0,  // Adjust padding for the "half" item effect
+      responsive: {
+        0: {
+          items: 1  // 1 item for small screens
+        },
+        600: {
+          items: 2  // 1 item for slightly larger screens
+        },
+        740: {
+          items: 3  // 2 items for medium screens
+        },
+        940: {
+          items: 3  // 2 full items and a half item for larger screens
+        },
+        1024: {
+          items: 4  // 2 full items and a half item for larger screens
+        },
+        1500: {
+          items: 5  // 2 full items and a half item for larger screens
+        }
+      }
+    };
   }
 }

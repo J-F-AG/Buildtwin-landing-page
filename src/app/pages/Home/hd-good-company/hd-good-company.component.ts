@@ -14,7 +14,7 @@ export class HdGoodCompanyComponent {
   @Input() page: string = ''; //sector
   @Input() heading: boolean = true; //sector
   @Input() category: any = 0;
-  @Input() defaultVisible: number = 3;
+  @Input() defaultVisible: number = 4;
   @Input() hideTitle: boolean = false;
   @Input() count: number = 0;
   allBlogs: any[] = [];
@@ -38,10 +38,10 @@ export class HdGoodCompanyComponent {
   sliderInit() {
     this.factorySlider = {
       nav: true,
-      margin: 30,  // Adjust as needed
+      margin: 0,  // Adjust as needed
       dots: false,
-      // loop: true,
-      // autoplay: true,
+      loop: true,
+      autoplay: true,
       autoplayHoverPause: false,
       navText: [
         "<i class='ti ti-chevron-left'></i>",

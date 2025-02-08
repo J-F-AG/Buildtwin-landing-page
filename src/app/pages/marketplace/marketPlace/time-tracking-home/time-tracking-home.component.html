@@ -3,7 +3,7 @@
 <!-- Logos -->
 <app-tt-banner></app-tt-banner>
 
-<div class="pt-100">
+<!-- <div class="pt-100"> -->
 <app-get-started-block>
     <div class="heading center v2">
        <h2 class="title">
@@ -123,7 +123,7 @@
     </div>
     
 </app-get-started-block>
-</div>
+<!-- </div> -->
 <!-- Testimmonials -->
 <app-tt-testimonials></app-tt-testimonials>
 
@@ -134,7 +134,7 @@
 
 <app-how-buildtwin-helps>
     <div class="buildtwinHelps container" id="scrollActivated">
-        <div class="" id="onScrollAnimation">
+        <div class="heading-sticky" id="onScrollAnimation">
             <div class="heading center v2">
                 <h2 class="title">How BuildTwin Pro 
                     <br>helps you <span>the job DONE</span>.
@@ -168,7 +168,7 @@
 
             </div>
             <div class="tabRIght">
-                <div id="section1" class="active" data-ele="one">
+                <div id="section1" data-ele="one" [ngClass]="{'active':activeState === 1}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild1.png" alt="Buildtwin" title="">
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section4" data-ele="four">
+                <div id="section4" data-ele="four" [ngClass]="{'active':activeState === 2}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild4.png" alt="Buildtwin" title="">
@@ -202,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section5" data-ele="five">
+                <div id="section5" data-ele="five" [ngClass]="{'active':activeState === 3}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild5.png" alt="Buildtwin" title="">
@@ -219,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section6" data-ele="three">
+                <div id="section6" data-ele="three" [ngClass]="{'active':activeState === 4}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild3.png" alt="Buildtwin" title="">
