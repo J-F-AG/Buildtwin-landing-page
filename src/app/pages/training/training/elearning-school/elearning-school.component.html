@@ -150,7 +150,7 @@
     <app-how-buildtwin-helps>
         <div class="buildtwinHelps forTraning" id="scrollActivated">
 
-            <div id="onScrollAnimation">
+            <div id="onScrollAnimation" class="heading-sticky">
                 <div class="heading center v2">
                     <span class="sub-title">End-to-End Training</span>
                     <h2 class="title">Co-developed with BuildTwin Clients
@@ -185,7 +185,7 @@
                    
                 </div>
                 <div class="tabRIght">
-                    <div id="section1" class="active" data-ele="one">
+                    <div id="section1" data-ele="one" [ngClass]="{'active':activeState === 1}">
                         <div class="flex ">
                             <div class="imgWrap">
                                 <img src="assets/images/ui/whytraning1.png" alt="Training" title="">
@@ -204,7 +204,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="section2"    data-ele="two">
+                    <div id="section2"    data-ele="two" [ngClass]="{'active':activeState === 2}">
                         <div class="flex">
                             <div class="imgWrap">
                                 <img src="assets/images/ui/whytraning2.png" alt="Training" title="">
@@ -226,7 +226,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="section3"    data-ele="three">
+                    <div id="section3"    data-ele="three" [ngClass]="{'active':activeState === 3}">
                         <div class="flex ">
                             <div class="imgWrap">
                                 <img src="assets/images/ui/whytraning3.png" alt="Training" title="">
@@ -246,7 +246,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="section4"    data-ele="four">
+                    <div id="section4"    data-ele="four" [ngClass]="{'active':activeState === 4}">
                         <div class="flex ">
                             <div class="imgWrap">
                                 <img src="assets/images/ui/whytraning4.png" alt="Training" title="">
@@ -266,7 +266,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="section5"    data-ele="five">
+                    <div id="section5"    data-ele="five" [ngClass]="{'active':activeState === 5}">
                         <div class="flex ">
                             <div class="imgWrap">
                                 <img src="assets/images/ui/whytraning4.png" alt="Training" title="">
