@@ -34,8 +34,20 @@
         justify-content: flex-end;
         padding: 40px;
         transition: background .5s ease-out;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0); /* No overlay initially */
+            transition: background 0.3s ease-in-out;
+        }
         &:hover {
-            background: rgba(0,0,0,.3);
+            &::before {
+                background: rgba(0, 0, 0, 0.5); /* Darker overlay on hover */
+            }
             .card__description {
                 max-height: 300px;
             }
@@ -73,13 +85,17 @@
             }
         }
         &__title {
-            color: var(--newButtonColor);
+            // color: var(--newButtonColor);
+            color: white;
             margin-bottom: 0;
             font-size: 32px;
             font-weight: 400;
             line-height: 1.25;
+            position: relative;
+            z-index: 2;
         }
         &__description {
+            color: white;
             font-size: 16px;
             line-height: 1.5;
             margin: 0 0 20px;
@@ -91,6 +107,8 @@
             overflow: hidden; /* Ensures content outside the box is hidden */
             -webkit-line-clamp: 4; /* Limits the content to 2 lines */
             text-overflow: ellipsis; /* Adds ellipsis ('...') at the end of the text */
+            position: relative;
+            z-index: 2;
         }
         &__footer {
             display: flex;
@@ -100,9 +118,12 @@
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
-            color: var(--newButtonColor);
+            // color: var(--newButtonColor);
+            color: white;
             align-self: flex-start;
             gap: 10px;
+            position: relative;
+            z-index: 2;
             span {
                 display: none;
             }
@@ -116,8 +137,8 @@
                     content: "";
                     width: 9px;
                     height: 9px;
-                    border-right: 2px solid black;
-                    border-bottom: 2px solid black;
+                    border-right: 2px solid white;
+                    border-bottom: 2px solid white;
                     position: absolute;
                     right: 0;
                     top: 50%;

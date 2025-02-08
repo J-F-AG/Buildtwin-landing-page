@@ -42,7 +42,7 @@ export class HdGoodCompanyComponent {
       dots: false,
       loop: true,
       autoplay: true,
-      autoplayHoverPause: false,
+      autoplayHoverPause: true,
       navText: [
         "<i class='ti ti-chevron-left'></i>",
         "<i class='ti ti-chevron-right'></i>",
