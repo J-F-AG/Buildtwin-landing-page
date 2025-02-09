@@ -5,7 +5,10 @@
             <br>The definition of done.
         </h1>
         <span class="small-title">
-            <u>AI system</u> for engineering project execution, and delivery.
+           
+                Show your clients that you <u>deliver on time and in quality</u>, get 
+                <br>your BuildTwin Pro Badge and gain more reach and trust. 
+
         </span>
     </div>
     <ul class="tab-nav">
@@ -14,22 +17,23 @@
                 <img src="assets/images/ai/software.svg" width="48" height="48" alt="">
                 <img class="hover" src="assets/images/ai/software-hover.svg" width="48" height="48" alt="">
             </figure>
-            LIVE Drawing Register
+            Drawing Register
         </li>
         <li (click)="tab(2)" [ngClass]="{'active': activeTab == 2}">
             <figure>
                 <img src="assets/images/ai/prod-management.svg" width="48" height="48" alt="">
                 <img class="hover" src="assets/images/ai/prod-management-hover.svg" width="48" height="48" alt="">
             </figure>
-            Quality Control (Human)
+            Quality Management
         </li>
         <li (click)="tab(3)" [ngClass]="{'active': activeTab == 3}">
             <figure>
                 <img src="assets/images/ai/marketing.svg" width="48" height="48" alt="">
                 <img class="hover" src="assets/images/ai/marketing-hover.svg" width="48" height="48" alt="">
             </figure>
-            AI Activity
+            RIF Tracker 
         </li>
+        <!-- 
         <li (click)="tab(4)" [ngClass]="{'active': activeTab == 4}">
             <figure>
                 <img src="assets/images/ai/proj-management.svg" width="48" height="48" alt="">
@@ -51,20 +55,28 @@
             </figure>
             AI Quality Control
         </li>
+        -->
     </ul>
+
+    
     <div class="tab-change-wrapper">
+
         <div class="block" *ngIf="activeTab == 1">
             <figure><img src="assets/images/submittal.jpg" width="1920" height="1080" alt=""></figure>
             <div class="design"></div>
         </div>
+        
         <div class="block" *ngIf="activeTab == 2">
             <figure><img src="assets/images/manual-qc.jpg" width="1920" height="1080" alt=""></figure>
             <div class="design"></div>
         </div>
+        
         <div class="block" *ngIf="activeTab == 3">
             <figure><img src="assets/images/submittal.jpg" width="1920" height="1080" alt=""></figure>
             <div class="design"></div>
         </div>
+        
+        
         <div class="block" *ngIf="activeTab == 4">
             <figure><img src="assets/images/manual-qc.jpg" width="1920" height="1080" alt=""></figure>
             <div class="design"></div>
@@ -115,7 +127,7 @@
         </div>
       </div>
 </div>
-<ng-content></ng-content>
+
 <div class="container global-mb">
     <div class="black-bg-wrapperai">
         <div class="background"></div>
@@ -140,4 +152,7 @@
         </div>
     </div>
 </div>
- 
+
+<!-- 
+<ng-content></ng-content>
+-->

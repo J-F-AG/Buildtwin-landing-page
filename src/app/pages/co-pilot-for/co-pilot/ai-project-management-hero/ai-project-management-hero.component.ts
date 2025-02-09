@@ -10,7 +10,7 @@ export class AiProjectManagementHeroComponent {
   activeTab = 1;
   contentData = [
     {
-      title: 'AI Activity Stream',
+      title: 'Drawing Register',
       description: 'AI Activity consolidates all your information in one place, enabling effortless task creation and tracking across team members, projects, and stakeholders. Simplify workflows and enhance collaboration with centralized insights and streamlined management.',
       getItFreeLink: '',
       exploreLink: '',
@@ -21,7 +21,7 @@ export class AiProjectManagementHeroComponent {
       targetImage: 'assets/images/ai-activity.jpg'
     },
     {
-      title: 'AI RFI Register',
+      title: 'Quality Management',
       description: 'AI RFI Tracker harnesses the power of AI to monitor and manage RFIs across all channels with real-time insights and seamless integration. Experience comprehensive cross-channel visibility and streamline your RFI management process for maximum efficiency.',
       getItFreeLink: '',
       exploreLink: '',
@@ -31,6 +31,7 @@ export class AiProjectManagementHeroComponent {
       noteLink: '/customer-success',
       targetImage: 'assets/images/rfi.jpg'
     },
+    /*,
     {
       title: 'AI Project Management',
       description: 'AI Project Management auto-updates your software with AI-driven insights, streamlining everything from documentation to organization. Simplify collaboration, maintain real-time progress tracking, and let your projects run effortlessly.',
@@ -41,9 +42,9 @@ export class AiProjectManagementHeroComponent {
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
       targetImage: 'assets/images/ai-activity.jpg'
-    },
+    },*/
     {
-      title: 'AI Quality Control',
+      title: 'RFI Tracker',
       description: 'AI Quality Control streamlines your review process by tracking all RFIs, requirements, and more. Using a dynamic checklist, it automatically verifies each submission against evolving quality standards.',
       getItFreeLink: '',
       exploreLink: '',
