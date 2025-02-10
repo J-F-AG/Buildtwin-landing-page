@@ -10,8 +10,8 @@ export class AiProjectManagementHeroComponent {
   activeTab = 1;
   contentData = [
     {
-      title: 'AI Activity Stream',
-      description: 'AI Activity consolidates all your information in one place, enabling effortless task creation and tracking across team members, projects, and stakeholders. Simplify workflows and enhance collaboration with centralized insights and streamlined management.',
+      title: 'Drawing Register',
+      description: 'An easy-to-use tool for managing project drawings. Simply drag and drop your Excel file to instantly create and organize your register—no manual input needed. Get started in seconds!',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/jf-icon.jpg',
@@ -21,8 +21,8 @@ export class AiProjectManagementHeroComponent {
       targetImage: 'assets/images/ai-activity.jpg'
     },
     {
-      title: 'AI RFI Register',
-      description: 'AI RFI Tracker harnesses the power of AI to monitor and manage RFIs across all channels with real-time insights and seamless integration. Experience comprehensive cross-channel visibility and streamline your RFI management process for maximum efficiency.',
+      title: 'Quality Management',
+      description: 'A super easy-to-use and fast markup tool with pre-defined checklists for seamless quality control. Streamline reviews, ensure compliance, and keep projects on track—effortlessly!',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/jf-icon.jpg',
@@ -31,6 +31,7 @@ export class AiProjectManagementHeroComponent {
       noteLink: '/customer-success',
       targetImage: 'assets/images/rfi.jpg'
     },
+    /*,
     {
       title: 'AI Project Management',
       description: 'AI Project Management auto-updates your software with AI-driven insights, streamlining everything from documentation to organization. Simplify collaboration, maintain real-time progress tracking, and let your projects run effortlessly.',
@@ -41,10 +42,10 @@ export class AiProjectManagementHeroComponent {
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
       targetImage: 'assets/images/ai-activity.jpg'
-    },
+    },*/
     {
-      title: 'AI Quality Control',
-      description: 'AI Quality Control streamlines your review process by tracking all RFIs, requirements, and more. Using a dynamic checklist, it automatically verifies each submission against evolving quality standards.',
+      title: 'RFI Tracker',
+      description: 'Effortlessly manage RFIs with AI-powered tracking. Connect to CDE, email, and other sources, letting AI organize and track RFIs for you—saving time and ensuring nothing gets missed.',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/jf-icon.jpg',
