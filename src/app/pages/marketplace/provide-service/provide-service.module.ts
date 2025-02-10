@@ -12,6 +12,7 @@ import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
 import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 import { Style3Module } from '../../style3/style3.module';
+import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module';
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ const routes: Routes = [
     HdNavbarModule,
     HdFooterModule,
     Style3Module,
+    HubspotModule,
     RouterModule.forChild(routes),
     ProjectListModule
   ],
