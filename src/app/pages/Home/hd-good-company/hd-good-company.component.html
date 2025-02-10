@@ -21,9 +21,13 @@
         'desktop3col': (defaultVisible === 3 && allBlogs.length <= 3),
         'desktop2col': (defaultVisible === 2 && allBlogs.length <= 2)
       }">
-        <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
-            <ng-template carouselSlide *ngFor="let list of allBlogs">
-                <div class="card" [ngStyle]="{'background-image': 'url(' + list['jetpack_featured_media_url'] + ')', 'background-size': 'cover', 'background-position': 'center'}">
+        <ng-container *ngFor="let list of allBlogs; let i = index">
+            <div class="bg-style" [ngStyle]="{'background-image': 'url(' + list['jetpack_featured_media_url'] + ')', 'background-size': 'cover', 'background-position': 'center'}" [ngClass]="{'active': startPosition === list['id']}"></div>
+        </ng-container>
+        <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser" (changed)="onSlideChange($event)">
+            <ng-template carouselSlide *ngFor="let list of allBlogs; let i = index">
+                <!-- {{list | json}} -->
+                <div class="card" [ngClass]="{'show-active': startPosition === list['id']}" (mouseover)="onSlideHover(list)">
                     <!-- <div class="card__image card__image--first">
                         <img [src]="list['jetpack_featured_media_url']" alt="company" loading="lazy">
                     </div> -->

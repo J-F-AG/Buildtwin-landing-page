@@ -1,0 +1,238 @@
+.teamPage {
+    padding-top: 161px;
+    padding-bottom: 74px;
+
+    h1 {
+        i {
+            color: var(--themeColor);
+            font-style: normal;
+        }
+    }
+
+    .heading {
+        margin-bottom: 160px;
+    }
+}
+
+.aboutTeamBanner {
+    position: relative;
+
+    .imageBg {
+        img {
+            width: 100%;
+        }
+    }
+
+    .aboutBanner {
+        width: 41.004%;
+        position: absolute;
+        left: 50%;
+        top: -143px;
+        transform: translateX(-50%);
+        mix-blend-mode: darken;
+
+        img {
+            width: 100%;
+        }
+
+        .bt-thumb {
+            position: absolute;
+            width: 117px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -43%);
+        }
+    }
+
+    [class^="leftImage-"],
+    [class^="rightImage-"] {
+        position: absolute;
+        margin-bottom: 0;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+
+    .blueTick {
+        position: absolute;
+        margin-bottom: 0;
+    }
+
+    .leftImage-1 {
+        left: 70px;
+        top: -42px;
+    }
+
+    .leftImage-2 {
+        left: 269px;
+        top: -55px;
+    }
+
+    .leftImage-3 {
+        left: 60px;
+        top: 30%;
+    }
+
+    .leftImage-4 {
+        left: 198px;
+        top: 17%;
+
+        .blueTick {
+            right: -12px;
+            top: -12px;
+        }
+    }
+
+    .leftImage-5 {
+        left: 111px;
+        bottom: 8.8%;
+
+        .blueTick {
+            right: -7px;
+            top: -7px;
+        }
+    }
+
+    .leftImage-6 {
+        left: 305px;
+        bottom: -23px;
+    }
+
+    .rightImage-1 {
+        right: 243px;
+        top: 10.3%;
+
+        .blueTick {
+            right: -7px;
+            top: -7px;
+        }
+    }
+
+    .rightImage-2 {
+        right: 249px;
+        top: 44.8%;
+
+        .blueTick {
+            left: -11px;
+            bottom: -11px;
+        }
+    }
+
+    .rightImage-3 {
+        right: 22px;
+        top: -66px;
+    }
+
+    .rightImage-4 {
+        right: 100px;
+        top: 28.3%;
+    }
+
+    .rightImage-5 {
+        right: 78px;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .teamPage {
+        padding-top: 130px;
+
+        .heading {
+            margin-bottom: 80px;
+
+            h1 br {
+                display: none;
+            }
+        }
+    }
+
+    .aboutTeamBanner {
+        background: #e8eff0;
+        border-radius: 15px;
+        padding: 430px 0 500px;
+        .imageBg {
+            display: none;
+        }
+
+        .aboutBanner {
+            position: relative;
+            left: auto;
+            top: 0;
+            width: 330px;
+            transform: none;
+            margin: 0 auto;
+
+            .bt-thumb {
+                width: 82px;
+            }
+        }
+
+        .leftImage-1 {
+            left: 50px;
+            top: -42px;
+        }
+
+        .leftImage-2 {
+            left: auto;
+            right: 41px;
+            top: 25px;
+        }
+
+        .leftImage-3 {
+            left: 40px;
+            top: 110px;
+        }
+
+        .leftImage-4 {
+            left: auto;
+            right: 35px;
+            top: 150px;
+        }
+
+        .leftImage-5 {
+            left: 20px;
+            bottom: auto;
+            top: 250px;
+        }
+
+        .leftImage-6 {
+            left: auto;
+            bottom: auto;
+            right: 30px;
+            top: 325px;
+        }
+
+        .rightImage-1 {
+            right: auto;
+            left: 50px;
+            top: auto;
+            bottom: 310px;
+        }
+
+        .rightImage-2 {
+            right: auto;
+            left: 20px;
+            top: auto;
+            bottom: 115px;
+        }
+
+        .rightImage-3 {
+            right: 25px;
+            top: auto;
+            bottom: 340px;
+        }
+
+        .rightImage-4 {
+            right: 50px;
+            top: auto;
+            bottom: 200px;
+        }
+
+        .rightImage-5 {
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+}

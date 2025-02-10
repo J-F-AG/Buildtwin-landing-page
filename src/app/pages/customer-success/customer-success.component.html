@@ -130,44 +130,47 @@
         </div>
         <div class="requestFormData">
             <div class="formContainer">
-                <form>
+                <form [formGroup]="portfolioForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <label>
                             Company <i>*</i>
                         </label>
-                        <input type="text">
+                        <input type="text" formControlName="Company">
                     </div>
                     <div class="form-group">
                         <label>
                             Name <i>*</i>
                         </label>
-                        <input type="text">
+                        <input type="text" formControlName="Name">
                     </div>
                     <div class="form-group">
                         <label>
                             Phone <i>*</i>
                         </label>
-                        <input type="text">
+                        <input type="text" formControlName="Telephone">
                     </div>
                     <div class="form-group">
                         <label>
                             Email address <i>*</i>
                         </label>
-                        <input type="text">
+                        <input type="text" formControlName="E-mail">
                     </div>
                     <div class="subjectList">
                         <strong>
                             I am interested in following subjects
                         </strong>
                         <ul>
-                            <li>
+                            <li *ngFor="let item of subjectList">
                                 <label class="radio">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" [value]="item" formControlName="subject" (change)="onChange($event)" [ngClass]="{'not-valid': !portfolioForm.controls['subject']['value']}">
                                     <span></span>
-                                    Accessing private portfolios
+                                    {{item}}
+                                    <!-- <input type="checkbox" name="" id="">
+                                    <span></span>
+                                    Accessing private portfolios -->
                                 </label>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <label class="radio">
                                     <input type="checkbox" name="" id="">
                                     <span></span>
@@ -201,15 +204,15 @@
                                     <span></span>
                                     AI Features
                                 </label>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <label class="terms-accept">
-                        <input type="checkbox" name="" id="">
+                        <input type="checkbox" formControlName="Term" [ngClass]="{'not-valid': !portfolioForm.controls['Term']['value']}">
                         <span></span>
                         <em>
                             I have taken note of the 
-                            <a href="">
+                            <a routerLink="/privacy-policy">
                                 privacy policy
                             </a>
                             . I agree to electronic storage and processing of my entered data.

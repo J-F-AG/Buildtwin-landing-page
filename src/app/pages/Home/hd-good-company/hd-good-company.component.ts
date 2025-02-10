@@ -17,6 +17,7 @@ export class HdGoodCompanyComponent {
   @Input() defaultVisible: number = 4;
   @Input() hideTitle: boolean = false;
   @Input() count: number = 0;
+  startPosition: number = 0;
   allBlogs: any[] = [];
   featuredBlogs: any = {};
 
@@ -41,7 +42,7 @@ export class HdGoodCompanyComponent {
       margin: 0,  // Adjust as needed
       dots: false,
       loop: true,
-      autoplay: true,
+      autoplay: false,
       autoplayHoverPause: true,
       navText: [
         "<i class='ti ti-chevron-left'></i>",
@@ -68,6 +69,9 @@ export class HdGoodCompanyComponent {
     this.blogService.getAllBlogs().subscribe({
       next: (data) => {
         this.allBlogs = data
+        // if(this.allBlogs.length) {
+          // this.startPosition = this.allBlogs.length>1?this.allBlogs[1]['id']:this.allBlogs[0]['id']
+        // }
         if(this.count>0 && this.allBlogs.length>this.count){ 
           this.allBlogs = this.allBlogs.slice(0, this.count)
         }
@@ -122,5 +126,21 @@ export class HdGoodCompanyComponent {
       },
       error: (err) => console.error('Error fetching all blogs', err),
     });
+  }
+  onSlideChange(event: any) {
+    console.log(event)
+    if(this.allBlogs.length) {
+      if(this.allBlogs.length === event['startPosition']+1) {
+        this.startPosition = this.allBlogs[0]['id']
+      }else{
+        this.startPosition = this.allBlogs.length>1?this.allBlogs[event['startPosition']+1]['id']:this.allBlogs[0]['id']
+      }
+    }
+    
+    // console.log("Current Slide Index:", event.item.index);
+    // console.log("Total Slides:", event.item.count);
+  }
+  onSlideHover(event: any) {
+    this.startPosition = event['id']
   }
 }
