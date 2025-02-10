@@ -11,7 +11,7 @@ export class AiProjectManagementHeroComponent {
   contentData = [
     {
       title: 'Drawing Register',
-      description: 'AI Activity consolidates all your information in one place, enabling effortless task creation and tracking across team members, projects, and stakeholders. Simplify workflows and enhance collaboration with centralized insights and streamlined management.',
+      description: 'An easy-to-use tool for managing project drawings. Simply drag and drop your Excel file to instantly create and organize your register—no manual input needed. Get started in seconds!',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/jf-icon.jpg',
@@ -22,7 +22,7 @@ export class AiProjectManagementHeroComponent {
     },
     {
       title: 'Quality Management',
-      description: 'AI RFI Tracker harnesses the power of AI to monitor and manage RFIs across all channels with real-time insights and seamless integration. Experience comprehensive cross-channel visibility and streamline your RFI management process for maximum efficiency.',
+      description: 'A super easy-to-use and fast markup tool with pre-defined checklists for seamless quality control. Streamline reviews, ensure compliance, and keep projects on track—effortlessly!',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/jf-icon.jpg',
@@ -45,7 +45,7 @@ export class AiProjectManagementHeroComponent {
     },*/
     {
       title: 'RFI Tracker',
-      description: 'AI Quality Control streamlines your review process by tracking all RFIs, requirements, and more. Using a dynamic checklist, it automatically verifies each submission against evolving quality standards.',
+      description: 'Effortlessly manage RFIs with AI-powered tracking. Connect to CDE, email, and other sources, letting AI organize and track RFIs for you—saving time and ensuring nothing gets missed.',
       getItFreeLink: '',
       exploreLink: '',
       imageSrc: 'assets/images/jf-icon.jpg',
