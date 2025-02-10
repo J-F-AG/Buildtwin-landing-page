@@ -174,4 +174,13 @@
     gap: 10px;
     align-items: flex-start;
   }
+
+  .footer-menu-wrapper .container .call-line {
+    flex-wrap: wrap;
+    gap: 12px;
+
+    a {
+      margin-right: 20px;
+    }
+  }
 }
