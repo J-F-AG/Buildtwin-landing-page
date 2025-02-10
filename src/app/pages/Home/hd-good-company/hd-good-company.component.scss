@@ -18,6 +18,7 @@
         // grid-template-columns: repeat(3, 1fr);
         // gap: 12px;
         margin-top: 0;
+        position: relative;
         ::ng-deep .owl-nav {
             left: auto;
             right: var(--padding-left-right);
@@ -33,6 +34,7 @@
         flex-direction: column;
         justify-content: flex-end;
         padding: 40px;
+        position: relative;
         // transition: background .5s ease-out;
         &::before {
             content: "";
@@ -43,6 +45,18 @@
             height: 100%;
             background: rgba(0, 0, 0, 0); /* No overlay initially */
             transition: background-color .5s ease-out .5s;
+        }
+        &.show-active {
+            .card__description {
+                max-height: 96px;
+            }
+            .card__footer {
+                span {
+                    // max-width: 100%;
+                    text-indent: 0;
+                    // display: block;
+                }
+            }
         }
         &:hover {
             &::before {
@@ -302,6 +316,40 @@
         }
     }
 }
+
+    .bg-style {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all .5s ease-out .5s;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+// :host ::ng-deep {
+//     .active {
+//         .bg-style {
+//             opacity: 1;
+//             visibility: visible;
+//         }
+//     }
+//     .active + .active {
+//         .bg-style {
+//             opacity: 0;
+//             visibility: hidden;
+//         }
+//     }
+//     .owl-carousel .owl-item {
+//         position: static;
+//         transform: none;
+//     }
+// }
 @media only screen and (min-width: 740px) {
     .desktop3col {
         ::ng-deep .owl-item {
