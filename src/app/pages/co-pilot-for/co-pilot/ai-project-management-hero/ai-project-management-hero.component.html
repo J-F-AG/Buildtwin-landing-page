@@ -1,7 +1,12 @@
 <div class="container maine-banner">
     <div class="heading center v2">
+        <div class="bt-thumb">
+            <img src="assets/images/bt-thumb.png" width="113" height="115" alt="">
+            <small>PRO</small>
+            <span><i><img src="assets/images/curv-line.png" width="49" height="34" alt=""></i>by Project Delivery</span>
+        </div>
         <h1 class="title">
-            BuildTwin Pro
+            BuildTwin <span>Pro</span>
             <br>The definition of done.
         </h1>
         <span class="small-title">
@@ -14,22 +19,20 @@
     <ul class="tab-nav">
         <li (click)="tab(1)" [ngClass]="{'active': activeTab == 1}">
             <figure>
-                <img src="assets/images/ai/software.svg" width="48" height="48" alt="">
-                <img class="hover" src="assets/images/ai/software-hover.svg" width="48" height="48" alt="">
+                <img src="assets/images/ai/draw-icon.png" width="54" height="57" alt="">
             </figure>
             Drawing Register
         </li>
         <li (click)="tab(2)" [ngClass]="{'active': activeTab == 2}">
             <figure>
-                <img src="assets/images/ai/prod-management.svg" width="48" height="48" alt="">
-                <img class="hover" src="assets/images/ai/prod-management-hover.svg" width="48" height="48" alt="">
+                <img src="assets/images/ai/quality-check-icon.png" width="45" height="57" alt="">
             </figure>
             Quality Management
         </li>
         <li (click)="tab(3)" [ngClass]="{'active': activeTab == 3}">
             <figure>
-                <img src="assets/images/ai/marketing.svg" width="48" height="48" alt="">
-                <img class="hover" src="assets/images/ai/marketing-hover.svg" width="48" height="48" alt="">
+                <img src="assets/images/ai/tracker-icon.png" width="63" height="57" alt="">
+                <i>4</i>
             </figure>
             RIF Tracker 
         </li>
@@ -72,7 +75,7 @@
         </div>
         
         <div class="block" *ngIf="activeTab == 3">
-            <figure><img src="assets/images/submittal.jpg" width="1920" height="1080" alt=""></figure>
+            <figure><img src="assets/images/rfi.jpg" width="1920" height="1080" alt=""></figure>
             <div class="design"></div>
         </div>
         

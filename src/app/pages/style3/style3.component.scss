@@ -55,3 +55,40 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    :host ::ng-deep {
+        .bg3 {
+            padding-bottom: 185px;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+
+            .left {
+                flex-direction: column;
+                
+                h2 {
+                    font-size: 22px;
+                }
+
+                .count {
+                    font-size: 32px;
+                    &.small {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            &.fixed-width {
+                .left {
+                    .block {
+                        width: 100%;
+                        max-width: 100%;
+                        min-width: 100%;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
