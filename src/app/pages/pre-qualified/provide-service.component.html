@@ -1,5 +1,194 @@
 <app-hd-navbar></app-hd-navbar>
 
+
+<!-- 
+<app-open-market-tab-list>
+    <div class="tabCover">
+        <div class="tabHead" id="tabHead">
+            <div class="tabItems">
+                <div class="tabItem"  [ngClass]="{ active: activeState === 1 }">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+                        <g clip-path="url(#clip0_6175_37876)">
+                        <path d="M18.3628 1.59276C17.7205 0.930575 16.6612 0.919875 16.0056 1.56895L10 7.51514L8.33563 5.85077C7.94373 5.45887 7.30786 5.46045 6.91791 5.8543L1.67424 11.1504C1.02478 11.8064 1.02741 12.8638 1.68013 13.5165C2.33859 14.175 3.4074 14.171 4.06095 13.5077L7.625 9.89014L9.29289 11.558C9.68342 11.9486 10.3166 11.9486 10.7071 11.558L18.3451 3.92006C18.9858 3.27939 18.9936 2.24312 18.3628 1.59276ZM1.6875 17.0151C1.03166 17.0151 0.5 17.5468 0.5 18.2026C0.5 18.8585 1.03166 19.3901 1.6875 19.3901H18.3125C18.9683 19.3901 19.5 18.8585 19.5 18.2026C19.5 17.5468 18.9683 17.0151 18.3125 17.0151H1.6875Z" fill="#0053fa"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_6175_37876">
+                        <rect width="19" height="19" fill="white" transform="translate(0.5 0.00012207)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        
+                    <div class="label">Get matched</div>
+                </div>
+                <div class="tabItem"  [ngClass]="{ active: activeState === 2 }">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                        <path d="M16.922 10.3907C16.3282 13.3595 14.0898 16.1549 10.9489 16.7795C9.41698 17.0846 7.82789 16.8986 6.40787 16.248C4.98785 15.5974 3.80928 14.5153 3.03999 13.1559C2.2707 11.7966 1.94989 10.2291 2.12326 8.67679C2.29662 7.12447 2.95532 5.66642 4.00555 4.51024C6.15968 2.13762 9.79699 1.48449 12.7657 2.67199" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.82788 9.20325L9.79663 12.172L16.9216 4.45325" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    <div class="label">Pre-Qualification</div>
+                </div>
+                <div class="tabItem"  [ngClass]="{ active: activeState === 3 }">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path d="M18.3334 7.02393H16.5238C16.5238 4.4906 14.5334 2.50012 12 2.50012C9.4667 2.50012 7.47623 4.4906 7.47623 7.02393H5.6667C4.67146 7.02393 3.85718 7.83822 3.85718 8.83346V19.6906C3.85718 20.6858 4.67146 21.5001 5.6667 21.5001H18.3334C19.3286 21.5001 20.1429 20.6858 20.1429 19.6906V8.83346C20.1429 7.83822 19.3286 7.02393 18.3334 7.02393ZM12 4.30965C13.5381 4.30965 14.7143 5.48584 14.7143 7.02393H9.28575C9.28575 5.48584 10.4619 4.30965 12 4.30965ZM18.3334 19.6906H5.6667V8.83346H18.3334V19.6906ZM12 12.4525C10.4619 12.4525 9.28575 11.2763 9.28575 9.73822H7.47623C7.47623 12.2716 9.4667 14.262 12 14.262C14.5334 14.262 16.5238 12.2716 16.5238 9.73822H14.7143C14.7143 11.2763 13.5381 12.4525 12 12.4525Z" fill="black"/>
+                        </svg>
+                        
+                    <div class="label">Private Tender</div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="tab-content" data-ele="1">
+            <div class="head">
+                <div class="div">
+    
+            <div class="div-2"></div>
+                    <div class="div-3">
+                        Our open access program gives you a comprehensive and actionable leads list for projects across the globe.                    </div>
+                </div>
+            </div>
+
+            <div class="contentBody">
+                <div class="gap80">
+                    <div class="colData flexVCenter">
+                        <h2>Your competitive advantage</h2>
+                        <p>
+                            Work with BuildTwin Co-Pilot and DSM get pre-qualified. 
+                            <br><br>
+                            BuildTwin Co-Pilot <u>ensures</u> clients that your team meets project requirements 
+                            out-of-the-box and decreases the barrier to working with new service providers.
+        
+                            Features include automated quality control, integration into clients' workflows, and much more.
+                            <br><br>
+                            <a class="btnNew" routerLink="{{_languageService.currentLanguage}}/ai-project-management">
+                                 Schedule DEMO &nbsp;  <i class="ti ti-arrow-narrow-right"></i>
+                              </a>
+                        </p>
+                    </div>
+                    <div class="colData">
+                        <img
+                            src="assets/images/ui/service/market2.png"
+                            alt="Market"
+                            width="651"
+                            height="386"
+                        />
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</app-open-market-tab-list>
+
+-->
+
+<app-qualified>
+    <div class="qualified">
+
+                    
+ <div class="heading center v2">
+    <h2 class="title">
+        Get pre-qualified 
+        <br>& increase your reach.
+    </h2>
+    <span class="small-title">
+        With the BuildTwin pre-qualification program, you ensure you meet project requirements for different markets.
+    </span>
+ </div>
+
+ <div class="itemFLex">
+    <div class="item">
+        <div class="svgCover">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="59" viewBox="0 0 60 59" fill="none">
+                <circle cx="30" cy="29.3901" r="27.6667" fill="#0053fa" stroke="white" stroke-width="3.33333"/>
+                <path d="M30.4414 41.7383H20V18H39.8828V29.3691" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="30.2666" cy="31.8526" r="5.16506" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M34.3008 35.7891L38.2756 39.5041" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+        </div>
+
+        
+            <h3>
+                Work with Co-Pilot<br>
+               
+            </h3>
+            <p>
+                Work with AI to track project 
+                <br> progress.
+            </p>
+    </div>
+    <div class="item">
+        <div class="svgCover">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="59" viewBox="0 0 60 59" fill="none">
+                <circle cx="30" cy="29.3901" r="27.6667" fill="#0053fa" stroke="white" stroke-width="3.33333"/>
+                <ellipse cx="29.6895" cy="25.6901" rx="8.6895" ry="8.69011" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <ellipse cx="29.6928" cy="25.6931" rx="4.17326" ry="4.17355" stroke="white" stroke-width="1.69398" stroke-linecap="round"/>
+                <path d="M23.1289 31.6914L19.5145 38.5397L23.3412 37.8988L24.9711 41.4205L28.5856 34.5722" stroke="white" stroke-width="1.69398" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M36.832 31.6914L40.4465 38.5397L36.6197 37.8988L34.9898 41.4205L31.3754 34.5722" stroke="white" stroke-width="1.69398" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+        </div>
+
+        
+            <h3>
+                Meet Quality requirements               
+            </h3>
+            <p>
+                Make sure with AI that <br>all inputs are considered.
+            </p>
+    </div>
+
+    <div class="item">
+        <div class="svgCover">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="59" viewBox="0 0 60 59" fill="none">
+                <circle cx="30" cy="29.3901" r="27.6667" fill="#0053fa" stroke="white" stroke-width="3.33333"/>
+                <rect x="19.0424" y="38.4755" width="17.1122" height="3.11131" rx="0.861582" stroke="white" stroke-width="1.72316"/>
+                <rect x="22.1537" y="35.3641" width="10.8896" height="3.11131" rx="0.861582" stroke="white" stroke-width="1.72316"/>
+                <rect x="26.423" y="24.0608" width="7.48189" height="5.00983" rx="0.861582" transform="rotate(-40.8666 26.423 24.0608)" stroke="white" stroke-width="1.72316"/>
+                <rect width="2.50492" height="7.51475" rx="0.861582" transform="matrix(-0.756235 0.6543 0.6543 0.756235 25.6018 23.1151)" stroke="white" stroke-width="1.72316"/>
+                <rect width="2.50492" height="7.51475" rx="0.861582" transform="matrix(-0.756235 0.6543 0.6543 0.756235 33.0431 16.6768)" stroke="white" stroke-width="1.72316"/>
+                <rect width="2.50492" height="11.6674" rx="0.861582" transform="matrix(-0.756235 0.6543 0.6543 0.756235 33.4301 24.8517)" stroke="white" stroke-width="1.72316"/>
+                </svg>
+        </div>
+
+        
+            <h3>
+                Meet liability requirements
+               
+            </h3>
+            <p>
+                Provide your PI, which covers <br>your rendered services.
+            </p>
+    </div>
+    <div class="item">
+        <div class="svgCover">
+            <svg width="60" height="59" viewBox="0 0 60 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="30" cy="29.3901" r="27.6667" fill="#0053fa" stroke="white" stroke-width="3.33333"/>
+                <path d="M37.5833 22.5H35.4167C35.4167 19.4667 33.0333 17.0834 30 17.0834C26.9667 17.0834 24.5833 19.4667 24.5833 22.5H22.4167C21.225 22.5 20.25 23.475 20.25 24.6667V37.6667C20.25 38.8584 21.225 39.8334 22.4167 39.8334H37.5833C38.775 39.8334 39.75 38.8584 39.75 37.6667V24.6667C39.75 23.475 38.775 22.5 37.5833 22.5ZM30 19.25C31.8417 19.25 33.25 20.6584 33.25 22.5H26.75C26.75 20.6584 28.1583 19.25 30 19.25ZM37.5833 37.6667H22.4167V24.6667H37.5833V37.6667ZM30 29C28.1583 29 26.75 27.5917 26.75 25.75H24.5833C24.5833 28.7834 26.9667 31.1667 30 31.1667C33.0333 31.1667 35.4167 28.7834 35.4167 25.75H33.25C33.25 27.5917 31.8417 29 30 29Z" fill="white"/>
+                </svg>
+                
+        </div>
+
+        
+            <h3>
+                Access to Closed <br>Markets
+               
+            </h3>
+            <p>
+                As pre-qualified service provider <br>get access to the BuildTwin marketplace. 
+            </p>
+    </div>
+ </div>
+</div>
+</app-qualified>
+
 <div class="threeSection" id="scrollActivated">
 <app-how-buildtwin-helps>
     <div class="buildtwinHelps provideService container bg" id="scrollActivated2" data-ele="2">
