@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CustomerSuccessComponent } from './customer-success.component';
 import { HdNavbarModule } from '../includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from '../includes/hd-footer/hd-footer.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
     CommonModule,
     HdNavbarModule,
     HdFooterModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes),
   ]
 })
