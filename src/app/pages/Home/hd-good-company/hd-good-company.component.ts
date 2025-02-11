@@ -54,7 +54,7 @@ export class HdGoodCompanyComponent {
           items: 1  // 1 item for small screens
         },
         600: {
-          items: 2  // 1 item for slightly larger screens
+          items: 3  // 1 item for slightly larger screens
         },
         740: {
           items: this.defaultVisible  // 2 items for medium screens
