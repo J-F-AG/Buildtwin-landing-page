@@ -57,7 +57,7 @@ sliderInit() {
 }
 
 getListOfCompany() {
-  let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`
+  let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=Published`
   this._http.get(url)
   .pipe(
     catchError(err => {

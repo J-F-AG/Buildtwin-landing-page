@@ -206,13 +206,14 @@
             padding-bottom: 30px;
             margin-bottom: 40px;
         .container {
-            padding: 0;
+            // padding: 0;
 
             .head {
                 text-align: center;
                 padding: 0 0 0px;
                 margin-bottom: 0;
                 padding-top: 40px;
+                top: 40px;
                 // position: static !important;
                 .pagination ul {
                     display: none;

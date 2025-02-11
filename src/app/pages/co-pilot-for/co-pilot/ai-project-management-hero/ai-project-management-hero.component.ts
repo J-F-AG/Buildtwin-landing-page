@@ -1,4 +1,4 @@
-import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-ai-project-management-hero',
@@ -29,7 +29,7 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'J&F',
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
-      targetImage: 'assets/images/rfi.jpg'
+      targetImage: 'assets/images/manual-qc.jpg'
     },
     /*,
     {
@@ -52,42 +52,63 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'J&F',
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
-      targetImage: 'assets/images/manual-qc.jpg'
+      targetImage: 'assets/images/rfi.jpg'
     }
   ];
 
   activeIndex = 0; // Tracks the currently active figure index
   private observer!: IntersectionObserver;
-
-  constructor() {}
+  // private debounceTimeout: any;
+  activeState2: number = 1
+  constructor(private el: ElementRef) {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.setupIntersectionObserver();
+    // this.setupIntersectionObserver();
   }
 
-  setupIntersectionObserver(): void {
-    const options = {
-      root: null, // Use the viewport as the root
-      rootMargin: '0px',
-      threshold: 0.5 // Trigger when 50% of the element is visible
-    };
+  // setupIntersectionObserver(): void {
+  //   const options = {
+  //     root: null,
+  //     rootMargin: '50px',
+  //     threshold: 0.3
+  //   };
+  
+  //   this.observer = new IntersectionObserver((entries) => {
+  //     entries.forEach(entry => {
+  //       if (entry.isIntersecting) {
+  //         requestAnimationFrame(() => {
+  //           const index = this.textBlocks.toArray().findIndex(block => block.nativeElement === entry.target);
+  //           if (index !== -1) {
+  //             this.activeIndex = index;
+  //           }
+  //         });
+  //       }
+  //     });
+  //   }, options);
+  
+  //   this.textBlocks.forEach(block => this.observer.observe(block.nativeElement));
+  // }
 
-    this.observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const index = this.textBlocks.toArray().findIndex(block => block.nativeElement === entry.target);
-          if (index !== -1) {
-            this.activeIndex = index;
-          }
+    @HostListener('window:scroll', ['$event'])
+    handleScroll(event: any) {
+      const sections = this.el.nativeElement.querySelectorAll('.scroll-event .block');
+      // let activeSection: number | null = null;
+  
+      sections.forEach((section: HTMLElement) => {
+        const rect = section.getBoundingClientRect();
+        const sectionId = section.getAttribute('data-ele');
+  
+        if (rect.top >= 0 && rect.top < window.innerHeight - 200) {
+          this.activeState2 = sectionId ? parseInt(sectionId, 10) : null;
         }
       });
-    }, options);
-
-    // Observe each text block
-    this.textBlocks.forEach(block => this.observer.observe(block.nativeElement));
-  }
+  
+      // if (activeSection !== this.activeState2) {
+      //   this.activeState2 = activeSection;
+      // }
+    }
   tab(index){
     this.activeTab = index;
   }

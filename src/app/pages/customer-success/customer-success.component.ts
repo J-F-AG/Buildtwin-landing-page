@@ -61,7 +61,7 @@ export class CustomerSuccessComponent {
       const data = {
         'toEmail': ['hello@buildtwin.com'],//['hello@buildtwin.com'],
         'from': 'no-reply@buildtwin.com',
-        'subject': 'this is a test mail',
+        'subject': 'New Customer Inquiry: Request for Success Stories',
         'ignoreField': ['Term'],
         'formField': this.portfolioForm.value
       };
