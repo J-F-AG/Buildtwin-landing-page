@@ -277,3 +277,87 @@
 .serviceList li i.industrial {
     background-position: 0px -111px
 }
+
+@media (max-width: 767px) {
+    .first-screen {
+        flex-direction: column;
+        position: relative;
+        padding: 170px 20px 0;
+    }
+
+    .serviceList {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        padding-bottom: 0;
+        margin-right: 0;
+        margin-bottom: -40px;
+        z-index: 2;
+        
+    }
+
+    .portfolioBanner {
+        order: 2;
+        margin: 0 -20px;
+    }
+
+    .requestForm {
+        order: 3;
+        border: none;
+        position: static;
+        width: 100%;
+        padding: 30px 0px 0px;
+
+        .registerLabel {
+            width: calc(100% - 40px);
+            padding: 10px 15px 10px 15px;
+            text-align: center;
+            font-size: 18px;
+            left: 20px;
+
+            &:after {
+                right: auto;
+                left: 50%;
+                top: 40px;
+                transform: rotate(135deg);
+            }
+
+            &:before {
+                right: auto;
+                left: 50%;
+                top: 35px;
+                transform: rotate(90deg);
+            }
+        }
+
+        .formContainer {
+            width: 100%;
+        }
+    }
+
+    .serviceList ul {
+        justify-content: space-between;
+    }
+
+    .serviceList li {
+        margin-top: 20px;
+    }
+
+    .serviceList li:nth-child(1), 
+    .serviceList li:nth-child(2) {
+        margin-bottom: 0;
+    }
+
+    .serviceList li:nth-child(3n+1) {
+        width: 85px;
+    }
+
+    .serviceList li:nth-child(3n+2) {
+        width: 112px;
+    }
+
+    .serviceList li:nth-child(3n+0) {
+        width: 80px;
+    }
+}
