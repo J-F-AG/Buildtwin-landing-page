@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['../../../browse-services/browse-services-main/browse-services-main.component.scss','./om-banner-freelance2.component.scss']
 })
 export class OmBannerFreelance2Component {
-  showPopup1=false;
+  showPopup=false;
   ngOnInit(): void {
  
     // const script = document.createElement('script');
@@ -20,26 +20,26 @@ export class OmBannerFreelance2Component {
     // // Initialize HubSpot form after the script is loaded
     // script.onload = () => {
     // };
-    this.initHubSpotForm();
+    // this.initHubSpotForm();
   }
 
 
-    private initHubSpotForm() {
-      // Create the HubSpot form
-      window.hbspt.forms.create({
-        region: "eu1",
-        portalId: "144368007",
-        formId: "4f09f05d-b46d-4497-b49e-4bf67f826066",
-        target: '#hubspotFormContainer2'
-      });
+    // private initHubSpotForm() {
+    //   // Create the HubSpot form
+    //   window.hbspt.forms.create({
+    //     region: "eu1",
+    //     portalId: "144368007",
+    //     formId: "4f09f05d-b46d-4497-b49e-4bf67f826066",
+    //     target: '#hubspotFormContainer2'
+    //   });
     
-        }
+    //     }
 
-    call(){
-      this.showPopup1 =true
-      }
-      closePopup1(){
-        this.showPopup1 =false
-      
-        }
+    
+  call(){
+    this.showPopup =true
+    }
+    closePopupStatus($event) {
+      this.showPopup = false;
+    }
 }
