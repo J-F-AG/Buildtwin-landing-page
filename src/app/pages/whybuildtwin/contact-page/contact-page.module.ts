@@ -5,6 +5,7 @@ import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { ContactPageComponent } from './contact-page.component';
 import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
     SharedModuleModule,
         HdNavbarModule,
         HdFooterModule,
+        ReactiveFormsModule,
     RouterModule.forChild(routes),
   ],
 })

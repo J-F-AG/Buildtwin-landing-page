@@ -103,8 +103,10 @@
         </h2>
     </div>
     <div class="text-section">
-        <div class="text">
-          <div class="block" *ngFor="let item of contentData" #textBlock>
+        <div class="text scroll-event">
+          <div class="block" *ngFor="let item of contentData; let i = index;"  
+            [attr.data-ele]="i + 1" 
+            [ngClass]="{ 'active': activeState2 === (i + 1) }">
             <div class="content">
               <h3>{{ item.title }}</h3>
               <p>{{ item.description }}</p>
@@ -123,8 +125,9 @@
           </div>
         </div>
         <div class="image">
-          <span class="bg-style {{'style-color'+(activeIndex+1)}}"></span>
-          <figure *ngFor="let img of contentData; let i = index" [class.active]="i === activeIndex">
+          <span class="bg-style {{'style-color'+(activeState2)}}"></span>
+          <figure *ngFor="let img of contentData; let i = index"  
+            [ngClass]="{ 'active': activeState2 === (i + 1) }">
             <img [src]="img.targetImage" width="584" height="328" alt="">
           </figure>
         </div>

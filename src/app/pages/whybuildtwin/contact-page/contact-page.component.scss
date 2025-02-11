@@ -1,3 +1,48 @@
+
+form {
+    max-width: 400px;
+    margin: 0 auto 50px;
+}
+.form-group {
+    padding-bottom: 12px;
+}
+.form-group label {
+    margin-bottom: 3px;
+}
+.form-group label i {
+    color: #fd0100;
+}
+.form-group input {
+    height: 37px;
+    background: #f8f8f8;
+    border-radius: 0;
+    border: 1px #f8f8f8 solid;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #000;
+    width: 100%;
+    &.ng-invalid.ng-touched {
+        box-shadow: 0 0 2px red;
+    }
+}
+.form-group textarea {
+    height: 80px;
+    background: #f8f8f8;
+    border-radius: 0;
+    border: 1px #f8f8f8 solid;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #000;
+    width: 100%;
+    &.ng-invalid.ng-touched {
+        box-shadow: 0 0 2px red;
+    }
+}
+
+.no-click {
+    opacity: .5;
+    pointer-events: none;
+}
 #hubspotFormContainer21 {
     max-width: 500px;
     margin-bottom: 80px;

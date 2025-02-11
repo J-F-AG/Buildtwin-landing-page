@@ -1893,6 +1893,9 @@ display:flex;
 }
 
 @media (max-width: 767px) {
+  .button-wrapper {
+    flex-wrap: wrap;
+  }
   .container {
     padding: 0 15px;
   }
