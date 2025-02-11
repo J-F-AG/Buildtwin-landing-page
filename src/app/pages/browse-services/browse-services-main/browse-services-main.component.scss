@@ -173,7 +173,8 @@
   }
 
   .banner-global .banner-content  div.v-center-flex {
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .banner-global .banner-content .get-started-banner input {
     flex-grow: 1;
