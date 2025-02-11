@@ -804,7 +804,7 @@ export class VenderDetailsAarbeeComponent {
 
   getBusinessListing() {
 
-    let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies`
+    let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=All`
     this.route.queryParams.subscribe(params => {
       const status = params['status'];
       // Check if both parameters are available

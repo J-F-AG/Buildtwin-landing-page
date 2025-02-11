@@ -75,6 +75,9 @@
             display: flex;
             justify-content: space-between;
             position: relative;
+            svg {
+              min-width: 24px;
+            }
           }
           &.parent {
             // justify-content: space-between;
@@ -283,5 +286,40 @@
     &.disabled {
       display: none;
     }
+  }
+}
+@media (max-width:767px){
+  .footerSection .footerSectionWrapper {
+    gap: 0;
+  }
+  .footerSection .qualitySectionContainer .header {
+    padding: 20px 10px;
+  }
+  .footerSection .qualitySectionContainer .header h2 {
+    font-size: 32px;
+  }
+  .footerSection .qualitySectionContainer .header p {
+    font-size: 16px;
+  }
+  .footerSection .footerSectionWrapper .main-card {
+    padding: 10px;
+  }
+  .footerSection .footerSectionWrapper .main-card .card.parent {
+    font-size: 16px;
+  }
+  .footerSection .availableVendorsList .header {
+    padding-left: 0;
+  }
+  .footerSection .availableVendorsList .header h2 {
+    font-size: 32px;
+  }
+  .footerSection .footerSectionWrapper .main-card .card .abs {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: none;
+    font-size: 12px;
+    white-space: normal;
+    transform: translateY(-50%);
   }
 }
