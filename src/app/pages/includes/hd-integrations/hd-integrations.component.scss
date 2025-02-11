@@ -138,7 +138,16 @@
     .integrations-area {
         .plugWrapper {
             gap: 20px;
-            // flex-direction: column;
+            flex-direction: column;
+
+            .integrations-area-list {
+                width: 100%;
+                margin: 0;
+
+                > * {
+                    padding: 0;
+                }
+            }
         }
         & ::ng-deep {
             .plugWrapper .owl-stage-outer::after, .plugWrapper .owl-stage-outer::before {

@@ -168,6 +168,13 @@
   .banner-global .banner-content h1 {
     font-size: 25px;
   }
+  .banner-global .banner-content p br {
+    display: none;
+  }
+
+  .banner-global .banner-content  div.v-center-flex {
+    flex-direction: column;
+  }
   .banner-global .banner-content .get-started-banner input {
     flex-grow: 1;
     width: auto;

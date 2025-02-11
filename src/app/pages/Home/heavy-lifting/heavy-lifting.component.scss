@@ -61,3 +61,22 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .list-wrapper {
+        flex-direction: column;
+
+        .block {
+            width: auto;
+            padding-bottom: 50px;
+        }
+    }
+
+    .heading {
+        .small-title {
+            br {
+                display: none;
+            }
+        }
+    }
+}

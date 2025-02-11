@@ -9,3 +9,14 @@
         gap: 30px;
     }
 }
+
+@media (max-width: 767px) {
+    :host ::ng-deep {
+        .startedData {
+            flex-direction: column;
+            text-align: center;
+            padding: 45px 25px 55px;
+            gap: 0;
+        }
+    }
+}

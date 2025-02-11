@@ -7,6 +7,7 @@
     [class^="rightImage-"],
     .blueTick {
         position: absolute;
+        margin-bottom: 0;
     }
 
     .leftImage-1 {
@@ -115,5 +116,133 @@
             display: inline-block;
             vertical-align: top;
         }
+    }
+}
+
+@media (max-width: 767px) {
+    .homeBanner {
+        padding: 400px 0;
+
+        .leftImage-1 {
+            width: 105px;
+            left: -20px;
+            top: 80px;
+        }
+    
+        .leftImage-2 {
+            left: auto;
+            right: -20px;
+            top: 80px;
+        }
+    
+        .leftImage-3 {
+            left: 55%;
+            top: 250px;
+            transform: translateX(-50%);
+        }
+    
+        .leftImage-4 {
+            left: 50%;
+            top: 95px;
+            width: 130px;
+            transform: translateX(-50%);
+    
+            .blueTick {
+                right: -11px;
+                top: -11px;
+                width: 35px;
+            }
+        }
+    
+        .leftImage-5 {
+            top: 248px;
+            width: 130px;
+    
+            .blueTick {
+                width: 24px;
+                right: -7px;
+                top: -7px;
+            }
+        }
+    
+        .leftImage-6 {
+            left: auto;
+            right: -20px;
+            top: 220px;
+            width: 105px;
+        }
+
+        .rightImage-1 {
+            right: 50px;
+            bottom: 240px;
+            top: auto;
+    
+            .blueTick {
+                right: -11px;
+                top: -11px;
+            }
+        }
+    
+        .rightImage-2 {
+            right: auto;
+            top: auto;
+            left: 45px;
+            bottom: 228px;
+            width: 130px;
+    
+            .blueTick {
+                width: 35px;
+                left: -11px;
+                bottom: -11px;
+            }
+        }
+    
+        .rightImage-3 {
+            right: auto;
+            left: -20px;
+            width: 115px;
+            top: auto;
+            bottom: 70px;
+        }
+    
+        .rightImage-4 {
+            right: 50%;
+            top: auto;
+            bottom: 55px;
+            transform: translateX(50%);
+        }
+    
+        .rightImage-5 {
+            right: -25px;
+            top: auto;
+            bottom: 40px;
+            width: 120px;
+        }
+    }
+
+    .bannerContent {
+        padding: 0 15px;
+
+        h1 {
+            font-size: 22px;
+
+            strong {
+                font-size: 35px;
+            }
+
+            span {
+                padding-top: 7px;
+            }
+        }
+
+        p br {
+            display: none;
+        }
+    }
+
+    .button-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
     }
 }

@@ -202,3 +202,42 @@
         }
     }
   }
+
+  @media (max-width: 767px) {
+    .reviews-slides {
+        .content-wrapper {
+            flex-direction: column-reverse;
+            gap: 35px;
+
+            &:after {
+                left: auto;
+                right: 20px;
+                top: auto;
+                bottom: 280px;
+                transform: none;
+            }
+        }
+
+        figure {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            margin-top: 0;
+        }
+
+        .content {
+            text-align: center;
+            padding: 65px 20px 0;
+
+            .fw-medium {
+                flex-direction: column-reverse;
+                gap: 15px;
+            }
+        }
+    }
+
+    :host ::ng-deep .owl-nav {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+  }
