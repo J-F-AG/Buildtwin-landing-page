@@ -277,7 +277,10 @@
 .serviceList li i.industrial {
     background-position: 0px -111px
 }
-
+.no-click {
+    opacity: .5;
+    pointer-events: none;
+}
 @media (max-width: 767px) {
     .first-screen {
         flex-direction: column;

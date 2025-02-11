@@ -18,3 +18,14 @@
     margin-bottom: 40px;
     // margin-bottom: 60px;
 }
+@media only screen and (max-width : 767px) {
+    .partnerWrap {
+        height: auto;
+        background: none;
+        padding-left: 0;
+        padding-right: 0;
+        .partner {
+            gap: 22px;
+        }
+    }
+}

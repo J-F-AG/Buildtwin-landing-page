@@ -249,6 +249,91 @@
         &:hover {
             color: inherit;
         }
+        .lock-project-trigger, .blur-project-trigger {
+            display: none;
+        }
+        &.blur-project {
+            figure {
+                position: relative;
+                img {
+                    filter: blur(6px);
+                }
+                .blur-project-trigger {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 71px;
+                    height: 71px;
+                    background: url(../../../assets/images/blur-screen-logo.png) center center no-repeat;
+                    background-size: 100% 100%;
+                    display: block;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: -2px;
+                        bottom: 2px;
+                        border: 1px solid white;
+                        border-radius: 12px;
+                    }
+                }
+            }
+        }
+        &.lock-project {
+            figure {
+                position: relative;
+                img {
+                    filter: blur(6px);
+                    // mix-blend-mode: multiply;
+                    // background-color: red;
+                }
+                .blur-project-trigger {
+                    display: none;
+                }
+                .lock-project-trigger {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 71px;
+                    height: 71px;
+                    background: url(../../../assets/images/lock-screen-logo.png) center center no-repeat;
+                    background-size: 100% 100%;
+                    display: block;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: -2px;
+                        bottom: 2px;
+                        border: 1px solid red;
+                        border-radius: 12px;
+                    }
+                    .left, .right {
+                        position: absolute;
+                        right: 100%;
+                        top: calc(50% - 2px);
+                        transform: translateY(-50%);
+                        white-space: nowrap;
+                        font-size: 9px;
+                        color: white;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        background: #fa0041;
+                        padding: 2px 8px;
+                        border-radius: 10px 0 0 10px;
+                    }
+                    .right {
+                        border-radius: 0 10px 10px 0;
+                        right: auto;
+                        left: 100%;
+                    }
+                }
+            }
+        }
         .figure-wrapper {
             position: relative;
             margin-bottom: 16px;
