@@ -541,14 +541,17 @@
             }
         }
     }
-    .message {
-        max-width: 80%;
-        flex-direction: column;
-        text-align: center;
-        gap: 24px;
-        h4 {
-            font-size: 22px;
-            margin-bottom: 6px;
+
+    :host ::ng-deep {
+        .message {
+            max-width: 80%;
+            flex-direction: column;
+            text-align: center;
+            gap: 24px;
+            h4 {
+                font-size: 22px;
+                margin-bottom: 6px;
+            }
         }
     }
     .project-list-wrapper.blur .block:nth-child(4) {
