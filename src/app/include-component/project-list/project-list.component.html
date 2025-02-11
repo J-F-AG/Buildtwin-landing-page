@@ -72,12 +72,18 @@
         <div class="project-list-wrapper" *ngIf="projectList.length && projectList.length>6">
             <ng-container *ngFor="let list of projectList; let i = index">
                 <a class="block" target="_blank" *ngIf="i<24"
+                                [ngClass]="{'blur-project':!list['is_claimed'],'lock-project':list['type'] === 'private'}"
                                 (click)="redirect(list.domain, list.company_name)" 
                                 [routerLink]="[_languageService.currentLanguage + '/partners/' + (list.linking)]" 
                                 >
                     <div class="figure-wrapper">
                         <figure>
                             <img src="{{list['project_logo'][0]?list['project_logo'][0]:'assets/images/image2.png'}}" alt="{{list['project_name']}}">
+                            <div class="blur-project-trigger"></div>
+                            <div class="lock-project-trigger">
+                                <span class="left">PROJECT</span>
+                                <span class="right">LOCKED</span>
+                            </div>
                         </figure>
                         <div class="verified-vendor" *ngIf="list['pre_qualified_company']">
                             Verified
@@ -310,12 +316,18 @@
                 <ng-template carouselSlide  *ngFor="let list of projectList; let i = index">
             <ng-container>
                 <a class="block" target="_blank" *ngIf="i<24"
+                                [ngClass]="{'blur-project':!list['is_claimed'],'lock-project':list['type'] === 'private'}"
                                 (click)="redirect(list.domain, list.company_name)" 
                                 [routerLink]="[_languageService.currentLanguage + '/partners/' + (list.linking)]" 
                                 >
                     <div class="figure-wrapper">
                         <figure>
                             <img src="{{list['project_logo'][0]?list['project_logo'][0]:'assets/images/image2.png'}}" alt="{{list['project_name']}}">
+                            <div class="blur-project-trigger"></div>
+                            <div class="lock-project-trigger">
+                                <span class="left">PROJECT</span>
+                                <span class="right">LOCKED</span>
+                            </div>
                         </figure>
                         <div class="verified-vendor" *ngIf="list['pre_qualified_company']">
                             Verified

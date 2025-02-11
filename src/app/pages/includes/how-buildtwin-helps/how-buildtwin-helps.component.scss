@@ -398,6 +398,12 @@ font-size: 30px !important;
         transform: none;
         opacity: 1;
         margin-bottom: 15px;
+        visibility: visible;
+    }
+    :host ::ng-deep .tabRIght > div.active ~ div {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
     }
     :host ::ng-deep .buildtwinHelps .tabRIght .contentWrap {
         padding-right: 0;

@@ -1632,6 +1632,10 @@ display:flex;
   .nav-lr .owl-nav .owl-next.owl-next {
     transform: translateX(50%);
   }
+
+  .heading-sticky {
+    top: 53px;
+  }
 }
 
 .center {
@@ -1897,9 +1901,13 @@ display:flex;
     right: auto;
     left: 6px;
   }
+  .squareButtonWrapper .owl-nav {
+    right: 10px;
+  }
   .squareButtonWrapper .owl-nav .owl-prev, .squareButtonWrapper .owl-nav .owl-next {
     width: 38px;
     height: 38px;
+    box-shadow: 0 0 8px rgba(0,0,0,.15);
   }
   .squareButtonWrapper .owl-nav .owl-prev::after, .squareButtonWrapper .owl-nav .owl-next::after {
     left: 16px;
