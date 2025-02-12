@@ -8,7 +8,7 @@
     <ngx-scrolltop></ngx-scrolltop>
     <lib-svg-defination></lib-svg-defination>
 </div>
-<a class="contactTab" (click)="toggleSideForm()" *ngIf="hideSideButton">Get Free quote</a>
+<a class="contactTab" (click)="toggleSideForm()" *ngIf="hideSideButton">Claim Your Free Estimate</a>
 <div id="sideForm" [ngClass]="{'show': showHideForm}" *ngIf="hideSideButton">
     <span class="cross" (click)="toggleSideForm()"></span>
     <app-free-offer-form [type]="'outside'" [normalBtn]="true"></app-free-offer-form>

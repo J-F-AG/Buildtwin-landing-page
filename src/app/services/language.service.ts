@@ -12,13 +12,13 @@ export class LanguageService {
   currentLanguage = '';
   serviceId: any = {
     "pre-cast-detailing-services": 9,
-    "rebar-detailing-services" : 10,  //this has to be updated later
-    "bim-services" : 11,  //this has to be updated later
-    "steel-detailing-services" : 12,  //this has to be updated later
-    "bim-service-provider-in-usa" : 13,  //this has to be updated later
-    "steel-detailing-services-in-usa" : 14,  //this has to be updated later
-    "drafting-services" : 15,  //this has to be updated later
-    "cad-services" : 16  //this has to be updated later
+    "rebar-detailing-services" : 12,  //this has to be updated later
+    "bim-services" : 1,  //this has to be updated later
+    "steel-detailing-services" : 8,  //this has to be updated later
+    "bim-service-provider-in-usa" : 1,  //this has to be updated later
+    "steel-detailing-services-in-usa" : 8,  //this has to be updated later
+    "drafting-services" : 12,  //this has to be updated later
+    "cad-services" : 12  //this has to be updated later
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
