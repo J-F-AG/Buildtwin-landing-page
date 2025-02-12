@@ -652,6 +652,9 @@ export class VenderDetailsAarbeeComponent {
   }
 
   ngOnInit() {
+    setTimeout(() => {
+      console.log(this.highlightImges)
+    }, 10000);
     this.sliderInit()
     this.myForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]], // Email field validation

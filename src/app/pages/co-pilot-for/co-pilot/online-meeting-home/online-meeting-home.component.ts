@@ -98,7 +98,7 @@ export class OnlineMeetingHomeComponent {
             this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
             console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
           } else {
-            console.error('Element with ID scrollActivated not found');
+            // console.error('Element with ID scrollActivated not found');
           }
           
         }, 2000);

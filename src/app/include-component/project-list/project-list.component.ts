@@ -78,7 +78,7 @@ private _projectListService: ProjectListService) {
   }
 
   private updateCarousel(): void {
-    if(this.slider && this.carouselTrack){
+    if(!this.slider && this.carouselTrack){
       const track = this.carouselTrack.nativeElement;
       track.style.transform = `translateX(-${this.currentPosition}px)`;
       this.updateButtonsState();
