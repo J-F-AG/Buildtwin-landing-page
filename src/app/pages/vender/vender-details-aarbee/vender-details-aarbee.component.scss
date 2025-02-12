@@ -323,6 +323,11 @@ ul {
             width: calc(25% - 5.55px);
         }
     }
+    .lock-project {
+        img {
+            filter: blur(6px);
+        }
+    }
     figure {
         background: #ccc;
         position: relative;
