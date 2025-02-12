@@ -1,0 +1,140 @@
+.faq-search-box {
+    border-radius: 8px;
+    padding: 55px 130px;
+    background-color: #f8f8f8;
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    form {
+        .input-search {
+            border: 0;
+            width: 100%;
+            height: 70px;
+            border-radius: 8px;
+            color: var(--blackColor);
+            background-color: var(--whiteColor);
+            padding: {
+                left: 25px;
+                right: 70px;
+                bottom: 4px;
+            };
+            font: {
+                size: 20px;
+                weight: 500;
+                family: var(--fontFamily);
+            };
+            &::placeholder {
+                transition: var(--transition);
+                color: #666666;
+            }
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+        button {
+            top: 50%;
+            border: 0;
+            right: 21px;
+            padding: 4px;
+            margin-top: 1px;
+            cursor: pointer;
+            position: absolute;
+            transform: translateY(-50%);
+            background-color: transparent;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .faq-search-box {
+        padding: 25px 20px;
+    
+        h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        form {
+            .input-search {
+                height: 50px;
+                font-size: 18px;
+                padding: {
+                    left: 15px;
+                    right: 45px;
+                };
+            }
+            button {
+                right: 15px;
+                margin-top: 1px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .faq-search-box {
+        padding: 50px;
+
+        form {
+            .input-search {
+                height: 60px;
+                font-size: 19px;
+                padding: {
+                    left: 20px;
+                    right: 50px;
+                };
+            }
+            button {
+                right: 20px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .faq-search-box {
+        padding: 55px 80px;
+    
+        form {
+            .input-search {
+                height: 65px;
+            }
+            button {
+                right: 25px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .faq-search-box {
+        padding: 55px 80px;
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .faq-search-box {
+        padding: 55px var(--padding-left-right);
+    }
+
+}

@@ -14,6 +14,7 @@ import { findFlagUrlByCountryName } from 'country-flags-svg';
 })
 export class ProjectListComponent {
 @Input() slider : boolean = false;
+@Input() hideMessageBox = false;
 @ViewChild('carouselTrack') carouselTrack!: ElementRef;
 currentPosition = 0;
 isAtStart = true;
@@ -77,9 +78,11 @@ private _projectListService: ProjectListService) {
   }
 
   private updateCarousel(): void {
-    const track = this.carouselTrack.nativeElement;
-    track.style.transform = `translateX(-${this.currentPosition}px)`;
-    this.updateButtonsState();
+    if(this.slider && this.carouselTrack){
+      const track = this.carouselTrack.nativeElement;
+      track.style.transform = `translateX(-${this.currentPosition}px)`;
+      this.updateButtonsState();
+    }
   }
 
   private updateButtonsState(): void {
@@ -125,7 +128,10 @@ sliderInit() {
       800: {
         items: 4  // 2 full items and a half item for larger screens
       },
-      1600: {
+      1000: {
+        items: 5  // 2 full items and a half item for larger screens
+      },
+      1416: {
         items: 6  // 1 item for slightly larger screens
       },
       // 740: {
@@ -138,10 +144,10 @@ sliderInit() {
 
   fetchData() {
     forkJoin([
-//       this._http.patch(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService
-// `, { "mode": "building_code" }),
       this._http.patch(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService
-`, { "mode": "pre_cast_services" })
+`, { "mode": "pre_cast_services" }),
+  //     this._http.patch(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService
+  // `, { "mode": "building_code" })
     ])
       .pipe(
         catchError(err => {
@@ -150,7 +156,7 @@ sliderInit() {
       )
       .subscribe(res => {
         console.log(res);
-        // let localbuildingCodeArray = res[0]['data'];
+        // let localbuildingCodeArray = res[1]['data'];
         let localserviceArray = res[0]['data'][0]['services'];
         let localsectorArray = res[0]['data'][0]['sectors'];
         // localbuildingCodeArray.filter(e => {
@@ -161,23 +167,23 @@ sliderInit() {
         //   };
         //   this.buildingCodeArray.push(obj);
         // });
-        // localserviceArray.filter(e => {
-        //   this.serviceObj[e.id] = e;
-        //   let obj = {
-        //     label: e['service_name'],
-        //     value: e['id']
-        //   };
-        //   this.serviceArray.push(obj)
-        // });
+        localserviceArray.filter(e => {
+          this.serviceObj[e.id] = e;
+          let obj = {
+            label: e['service_name'],
+            value: e['id']
+          };
+          this.serviceArray.push(obj)
+        });
         this.sectorArray = localsectorArray
-        // localsectorArray.filter(e => {
-        //   this.sectorObj[e.id] = e;
-        //   let obj = {
-        //     label: e['service_name'],
-        //     value: e['id']
-        //   };
-        //   this.sectorArray.push(obj);
-        // });
+        localsectorArray.filter(e => {
+          this.sectorObj[e.id] = e;
+          let obj = {
+            label: e['service_name'],
+            value: e['id']
+          };
+          this.sectorArray.push(obj);
+        });
           setTimeout(() => {
             this.updateCarousel();
           }, 5000);

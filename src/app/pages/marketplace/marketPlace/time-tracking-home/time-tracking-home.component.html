@@ -3,13 +3,11 @@
 <!-- Logos -->
 <app-tt-banner></app-tt-banner>
 
-<div class="pt-100">
+<!-- <div class="pt-100"> -->
 <app-get-started-block>
     <div class="heading center v2">
        <h2 class="title">
-        3 ways to get started  <span>
-            today
-        </span>
+        3 reasons to get started  <span>NOW</span>
        </h2> 
        <!-- <div class="subTitle">
 
@@ -28,39 +26,6 @@
         </div>
     </div>
     <div class="block-wrapper">
-        <div class="block">
-            <div class="note">
-                in less than 5 min.
-            </div>
-            <figure>
-                <picture>
-                    <source 
-                        srcset="assets/images/buyer1@2x.webp" 
-                        type="image/webp" 
-                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-                    <source 
-                        srcset="assets/images/buyer1.webp" 
-                        type="image/webp">
-                    <source 
-                        srcset="assets/images/buyer1@2x.png" 
-                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-                    <img 
-                        src="assets/images/buyer1.png" 
-                        alt="buyer1" 
-                        width="388" 
-                        height="253">
-                </picture>
-            </figure>
-            <div class="content">
-                <h3>Get 5+ competitive offers for your
-                    project today</h3>
-                <p>Work with BuildTwin to find the most competitive
-                    bid for your projects from <u>pre-qualified</u> vendors.</p>
-                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
-                    Get started for FREE
-                </a>
-            </div>
-        </div>
         <div class="block">
             <figure>
                 <picture>
@@ -92,6 +57,40 @@
             </div>
         </div>
         <div class="block">
+            <div class="note">
+                in less than 5 min.
+            </div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer1@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer1.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer1@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer1.png" 
+                        alt="buyer1" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>Get 5+ competitive offers 
+                    <br>for your project today
+                </h3>
+                <p>Work with BuildTwin to find the most competitive
+                    bid for your projects from <u>pre-qualified</u> vendors.</p>
+                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+                    Get started for FREE
+                </a>
+            </div>
+        </div>
+        <div class="block">
             <figure>
                 <picture>
                     <source 
@@ -112,8 +111,8 @@
                 </picture>
             </figure>
             <div class="content">
-                <h3>Let’s Talk Growth: Our Global Sales 
-                    Advisors Are Here for You</h3>
+                <h3>Let’s Talk Growth: 
+                    <br>Our Global Sales  Advisors Are Here for You</h3>
                 <p>Schedule a call with our global Sales team to 
                     see how BuildTwin can fuel your growth.</p>
                 <a href="javascript:void(0)" (click)="callStatus()" class="button-v2">
@@ -124,32 +123,23 @@
     </div>
     
 </app-get-started-block>
-</div>
+<!-- </div> -->
 <!-- Testimmonials -->
 <app-tt-testimonials></app-tt-testimonials>
-<!-- 3 Businesslines BuildTwin -->
-<app-tt-services></app-tt-services>
 
-<!-- Plug & Play -->
-<app-hd-integrations></app-hd-integrations>
-
-<!-- Services -->
-<app-socials-media-info></app-socials-media-info>
 
 <!-- Digital Procurement -->
 <app-task-management></app-task-management>
 
-<!-- Plug & Play -->
- <div class="global-mb">
-     <app-tt-about></app-tt-about>
- </div>
 
 <app-how-buildtwin-helps>
     <div class="buildtwinHelps container" id="scrollActivated">
-        <div class="" id="onScrollAnimation">
+        <div class="heading-sticky" id="onScrollAnimation">
             <div class="heading center v2">
-                <h2 class="title">How BuildTwin helps you to <span>get projects DONE</span>.
+                <h2 class="title">How BuildTwin Pro 
+                    <br>helps you <span>the job DONE</span>.
                 </h2>
+                <h3>work with pre-qualified solution providers</h3>
             </div>
         </div>
 
@@ -178,7 +168,7 @@
 
             </div>
             <div class="tabRIght">
-                <div id="section1" class="active" data-ele="one">
+                <div id="section1" data-ele="one" [ngClass]="{'active':activeState === 1}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild1.png" alt="Buildtwin" title="">
@@ -195,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section4" data-ele="four">
+                <div id="section4" data-ele="four" [ngClass]="{'active':activeState === 2}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild4.png" alt="Buildtwin" title="">
@@ -212,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section5" data-ele="five">
+                <div id="section5" data-ele="five" [ngClass]="{'active':activeState === 3}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild5.png" alt="Buildtwin" title="">
@@ -229,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section6" data-ele="three">
+                <div id="section6" data-ele="three" [ngClass]="{'active':activeState === 4}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild3.png" alt="Buildtwin" title="">
@@ -254,8 +244,6 @@
 
 
 
-<!-- Partner  -->
-<app-tt-partners></app-tt-partners>
 
 
 <!-- Large Tender -->

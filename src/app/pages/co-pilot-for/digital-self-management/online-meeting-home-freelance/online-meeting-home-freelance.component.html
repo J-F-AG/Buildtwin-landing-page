@@ -4,7 +4,7 @@
 
 <app-how-buildtwin-helps>
     <div class="buildtwinHelps container bg" id="scrollActivated">
-        <div class=""id="onScrollAnimation">
+        <div class="heading-sticky"id="onScrollAnimation">
             <div class="heading center v2">
                 <h2 class="title">Business Intelligence<br>with actionable Insights
                 </h2>
@@ -38,7 +38,7 @@
                
             </div>
             <div class="tabRIght">
-                <div id="section1" class="active" data-ele="one"  >
+                <div id="section1" data-ele="one" [ngClass]="{'active':activeState === 1}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild1.png" alt="Buildtwin" title="">
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section2"    data-ele="two">
+                <div id="section2"    data-ele="two" [ngClass]="{'active':activeState === 2}">
                     <div class="flex">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild2.png" alt="Buildtwin" title="">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section3" data-ele="three" >
+                <div id="section3" data-ele="three" [ngClass]="{'active':activeState === 3}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild3.png" alt="Buildtwin" title="">
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="section4" data-ele="four"  >
+                <div id="section4" data-ele="four" [ngClass]="{'active':activeState === 4}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild4.png" alt="Buildtwin" title="">
@@ -104,7 +104,7 @@
                                 The consolidated LIVE view shows you the LIVE project view of your project progress and whether your project is on track or not.                            </div>
                     </div>
                 </div>
-                <div id="section5"  data-ele="five"  >
+                <div id="section5"  data-ele="five" [ngClass]="{'active':activeState === 5}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild5.png" alt="Buildtwin" title="">
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                <div  id="section6" data-ele="six" >
+                <div  id="section6" data-ele="six" [ngClass]="{'active':activeState === 6}">
                     <div class="flex ">
                         <div class="imgWrap">
                             <img src="assets/images/ui/whyBuild6.png" alt="Buildtwin" title="">
@@ -163,7 +163,7 @@
 <p>
     Link BuildTwin DSM to BuildTwin Copilot and Third-Party <br> business process tools and get actionable insights
 </p>
-<a mat-button href="https://www.buildtwin.com" class="default-btn">Get Started</a>
+<a href="https://www.buildtwin.com" class="button-v2">Get Started</a>
             </div>
 
           

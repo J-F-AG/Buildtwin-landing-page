@@ -1,0 +1,248 @@
+.homeBanner {
+    position: relative;
+    overflow: hidden;
+    padding: 190px 0 150px;
+
+    [class^="leftImage-"],
+    [class^="rightImage-"],
+    .blueTick {
+        position: absolute;
+        margin-bottom: 0;
+    }
+
+    .leftImage-1 {
+        left: -56px;
+        top: 158px;
+    }
+
+    .leftImage-2 {
+        left: 117px;
+        top: 122px;
+    }
+
+    .leftImage-3 {
+        left: -22px;
+        top: 331px;
+    }
+
+    .leftImage-4 {
+        left: 117px;
+        top: 262px;
+
+        .blueTick {
+            right: -16px;
+            top: -16px;
+        }
+    }
+
+    .leftImage-5 {
+        left: -21px;
+        top: 471px;
+
+        .blueTick {
+            right: -12px;
+            top: -12px;
+        }
+    }
+
+    .leftImage-6 {
+        left: 186px;
+        top: 471px;
+    }
+
+    .rightImage-1 {
+        right: 152px;
+        top: 262px;
+
+        .blueTick {
+            right: -11px;
+            top: -11px;
+        }
+    }
+
+    .rightImage-2 {
+        right: 152px;
+        top: 401px;
+
+        .blueTick {
+            left: -14px;
+            bottom: -14px;
+        }
+    }
+
+    .rightImage-3 {
+        right: -56px;
+        top: 123px;
+    }
+
+    .rightImage-4 {
+        right: -21px;
+        top: 332px;
+    }
+
+    .rightImage-5 {
+        right: -56px;
+        top: 506px;
+    }
+}
+
+.bannerContent {
+    h1 {
+        strong {
+            display: block;
+            font-size: 70px;
+            font-weight: 500;
+            color: #0053fa;
+            line-height: 1.2;
+            padding-bottom: 3px;
+        }
+
+        span {
+            padding-top: 12px;
+            padding-bottom: 5px;
+        }
+    }
+
+    p {
+        color: rgba(0,46,59,0.7);
+    }
+}
+
+.button-wrapper {
+    padding-top: 52px;
+    a {
+        &:first-child {
+            min-width: 190px;
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .homeBanner {
+        padding: 400px 0;
+
+        .leftImage-1 {
+            width: 105px;
+            left: -20px;
+            top: 80px;
+        }
+    
+        .leftImage-2 {
+            left: auto;
+            right: -20px;
+            top: 80px;
+        }
+    
+        .leftImage-3 {
+            left: 55%;
+            top: 250px;
+            transform: translateX(-50%);
+        }
+    
+        .leftImage-4 {
+            left: 50%;
+            top: 95px;
+            width: 130px;
+            transform: translateX(-50%);
+    
+            .blueTick {
+                right: -11px;
+                top: -11px;
+                width: 35px;
+            }
+        }
+    
+        .leftImage-5 {
+            top: 248px;
+            width: 130px;
+    
+            .blueTick {
+                width: 24px;
+                right: -7px;
+                top: -7px;
+            }
+        }
+    
+        .leftImage-6 {
+            left: auto;
+            right: -20px;
+            top: 220px;
+            width: 105px;
+        }
+
+        .rightImage-1 {
+            right: 50px;
+            bottom: 240px;
+            top: auto;
+    
+            .blueTick {
+                right: -11px;
+                top: -11px;
+            }
+        }
+    
+        .rightImage-2 {
+            right: auto;
+            top: auto;
+            left: 45px;
+            bottom: 228px;
+            width: 130px;
+    
+            .blueTick {
+                width: 35px;
+                left: -11px;
+                bottom: -11px;
+            }
+        }
+    
+        .rightImage-3 {
+            right: auto;
+            left: -20px;
+            width: 115px;
+            top: auto;
+            bottom: 70px;
+        }
+    
+        .rightImage-4 {
+            right: 50%;
+            top: auto;
+            bottom: 55px;
+            transform: translateX(50%);
+        }
+    
+        .rightImage-5 {
+            right: -25px;
+            top: auto;
+            bottom: 40px;
+            width: 120px;
+        }
+    }
+
+    .bannerContent {
+        padding: 0 15px;
+
+        h1 {
+            font-size: 22px;
+
+            strong {
+                font-size: 35px;
+            }
+
+            span {
+                padding-top: 7px;
+            }
+        }
+
+        p br {
+            display: none;
+        }
+    }
+
+    .button-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+}

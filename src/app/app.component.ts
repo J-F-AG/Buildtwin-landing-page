@@ -34,6 +34,9 @@ export class AppComponent {
     schemaCode: SafeHtml;
     faqSchemaHtml: SafeHtml;
     testimonialSchemaHtml: SafeHtml;
+    showHideForm:boolean = false;
+    hideSideButton: boolean = true;
+    hideOnThisUrl: string[] = ['/partners', '/services', '/software', '/building-code','/sector'];
     constructor(
         private breadcrumbService: BreadcrumbService,
         private _languageService:LanguageService,
@@ -55,6 +58,10 @@ export class AppComponent {
             localStorage.setItem("appVersion", "0.0.12");
         }
         // AOS.init();
+    }
+
+    toggleSideForm() {
+      this.showHideForm = !this.showHideForm;
     }
 
     ngOnInit() {
@@ -100,7 +107,13 @@ export class AppComponent {
             this.breadcrumbs = this.breadcrumbService.breadcrumbs;
             this.injectBreadcrumbScript(url);
             console.log(event)
+
+            this.checkUrl(this.router.url);
         })
+    }
+
+    checkUrl(url: string): void {
+      this.hideSideButton = !this.hideOnThisUrl.some(path => url.includes(path));
     }
 
   injectFaqSchema(data) {

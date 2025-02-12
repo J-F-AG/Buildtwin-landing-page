@@ -15,10 +15,14 @@
   .banner-global {
     margin-bottom: 42px;
     overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
     .banner-main {
       display: flex;
       align-items: center;
       padding-top: 88px;
+      flex: 1;
     }
     .banner-content {
       flex-grow: 1;
@@ -108,7 +112,11 @@
       }
     }
   }
-  
+// @media (min-height: 800px) {
+//   .banner-global {
+//     // min-height: calc(100vh - 150px);
+//   }
+// }
 @media only screen and (max-width : 1300px) {
   .banner-global .banner-content h1 {
     font-size: 30px;
@@ -159,6 +167,14 @@
   }
   .banner-global .banner-content h1 {
     font-size: 25px;
+  }
+  .banner-global .banner-content p br {
+    display: none;
+  }
+
+  .banner-global .banner-content  div.v-center-flex {
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .banner-global .banner-content .get-started-banner input {
     flex-grow: 1;

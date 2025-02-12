@@ -1,6 +1,7 @@
 import { Component, ComponentFactoryResolver, HostListener, ViewChild, ViewContainerRef } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-help-desk-home',
@@ -45,7 +46,7 @@ export class HelpDeskHomeComponent {
   scrolledDivHeight: any
   fixedElement: any
 
-  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver) { 
+  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver, public _languageService: LanguageService) { 
 
     router.events.subscribe((val) => {
       setTimeout(() => {

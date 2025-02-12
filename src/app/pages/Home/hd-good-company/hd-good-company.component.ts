@@ -14,9 +14,10 @@ export class HdGoodCompanyComponent {
   @Input() page: string = ''; //sector
   @Input() heading: boolean = true; //sector
   @Input() category: any = 0;
-  @Input() defaultVisible: number = 3;
+  @Input() defaultVisible: number = 4;
   @Input() hideTitle: boolean = false;
   @Input() count: number = 0;
+  startPosition: number = 0;
   allBlogs: any[] = [];
   featuredBlogs: any = {};
 
@@ -38,11 +39,11 @@ export class HdGoodCompanyComponent {
   sliderInit() {
     this.factorySlider = {
       nav: true,
-      margin: 30,  // Adjust as needed
+      margin: 0,  // Adjust as needed
       dots: false,
-      // loop: true,
-      // autoplay: true,
-      autoplayHoverPause: false,
+      loop: true,
+      autoplay: false,
+      autoplayHoverPause: true,
       navText: [
         "<i class='ti ti-chevron-left'></i>",
         "<i class='ti ti-chevron-right'></i>",
@@ -53,7 +54,7 @@ export class HdGoodCompanyComponent {
           items: 1  // 1 item for small screens
         },
         600: {
-          items: 2  // 1 item for slightly larger screens
+          items: 3  // 1 item for slightly larger screens
         },
         740: {
           items: this.defaultVisible  // 2 items for medium screens
@@ -68,6 +69,9 @@ export class HdGoodCompanyComponent {
     this.blogService.getAllBlogs().subscribe({
       next: (data) => {
         this.allBlogs = data
+        // if(this.allBlogs.length) {
+          // this.startPosition = this.allBlogs.length>1?this.allBlogs[1]['id']:this.allBlogs[0]['id']
+        // }
         if(this.count>0 && this.allBlogs.length>this.count){ 
           this.allBlogs = this.allBlogs.slice(0, this.count)
         }
@@ -122,5 +126,21 @@ export class HdGoodCompanyComponent {
       },
       error: (err) => console.error('Error fetching all blogs', err),
     });
+  }
+  onSlideChange(event: any) {
+    console.log(event)
+    if(this.allBlogs.length) {
+      if(this.allBlogs.length === event['startPosition']+1) {
+        this.startPosition = this.allBlogs[0]['id']
+      }else{
+        this.startPosition = this.allBlogs.length>1?this.allBlogs[event['startPosition']+1]['id']:this.allBlogs[0]['id']
+      }
+    }
+    
+    // console.log("Current Slide Index:", event.item.index);
+    // console.log("Total Slides:", event.item.count);
+  }
+  onSlideHover(event: any) {
+    this.startPosition = event['id']
   }
 }

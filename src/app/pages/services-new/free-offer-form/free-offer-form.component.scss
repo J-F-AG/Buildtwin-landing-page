@@ -193,6 +193,8 @@ a {
       bottom: 60px;
       padding: 0;
       right: 50px;
+      background: #ffffff;
+      box-shadow: 0 0 10px 5px #ffffff;
       &::after {
         content: "";
         position: absolute;
@@ -209,6 +211,8 @@ a {
         bottom: 0;
         padding-bottom: 20px;
         padding-top: 40px;
+        box-shadow: none;
+        background: none;
         &::after {
           display: none;
         }
@@ -268,6 +272,13 @@ a {
   border: 1px solid #cbd6e2;
   background: #fff;
   position: relative;
+  &.without-arrow {
+    & > div {
+      &::after {
+        display: none;
+      }
+    }
+  }
   .textarea-description {
     height: 100px;
     resize: none;

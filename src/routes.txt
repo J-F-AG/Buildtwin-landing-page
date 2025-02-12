@@ -1,6 +1,7 @@
 /
 /explore-services
 /provide-service
+/pre-qualified
 /marketplace
 /services/pre-cast-detailing-services
 /services/rebar-detailing-services
@@ -19,8 +20,10 @@
 /good-reason
 /data-safety
 /use-cases
+/customer-success
 /integrations
 /faq
+/ai-faq
 /contact
 /about
 /terms-of-service

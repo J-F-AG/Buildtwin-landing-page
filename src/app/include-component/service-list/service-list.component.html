@@ -1,5 +1,5 @@
-<div class="container bg">
-    <div class="heading center v2">
+<div class="container" [ngClass]="{'bg': !hideTitle}">
+    <div class="heading center v2" *ngIf="!hideTitle">
         <h2 class="title">
             Discover your ideal partner and expert<br>
             solutions for  <span>all your service needs</span>
@@ -17,7 +17,7 @@
                         <h3 [innerHtml]="item['name']">
                             
                         </h3>
-                        <p [innerHtml]="item['description']">
+                        <p class="hover-show" [innerHtml]="item['description']">
                         </p>
                     </div>
                     <figure>
