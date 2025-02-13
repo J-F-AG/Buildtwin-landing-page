@@ -4,6 +4,7 @@ import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { map } from 'rxjs';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
     selector: 'app-contact-page',
@@ -13,11 +14,26 @@ import { map } from 'rxjs';
 export class ContactPageComponent {
     notAllow: boolean = true;
     // title = 'Contact Us - Buildtwin';
-
+    queryForList: any = [
+      {
+        text: 'Getting new projects',
+        value: 'buyer'
+      },
+      {
+        text: 'Finding new vendors',
+        value: 'seller'
+      },
+      {
+        text: 'Getting access to AI Tools',
+        value: 'regular'
+      }
+    ]
+    queryForSelected: string = '';
     portfolioForm = this.fb.group({
         Message: ['', []],
         Name: ['', []],
         Telephone: ['', [Validators.pattern('^[0-9]*$')]],
+        queryFor: ['', [Validators.required]],
         'E-mail': ['', [Validators.required, Validators.email]],
       })
       URL = 'https://aunjlali04.execute-api.eu-central-1.amazonaws.com/dev/';
@@ -25,6 +41,7 @@ export class ContactPageComponent {
         private fb: UntypedFormBuilder,
         private http: HttpClient,
         private message: NzMessageService,
+        public _languageService:LanguageService
     ) { }
 
     ngOnInit() {
@@ -53,34 +70,40 @@ export class ContactPageComponent {
 
     // }
     onSubmit(): any {
-        this.notAllow = false;
-        if (this.portfolioForm.invalid) {
-          let key = Object.keys(this.portfolioForm.controls);
-          let failData = key.filter(data => {
-            if (this.portfolioForm.controls[data].errors != null) {
-              this.portfolioForm.controls[data].markAsTouched();
+      this.notAllow = false;
+      if (this.portfolioForm.invalid) {
+        Object.keys(this.portfolioForm.controls).forEach(key => {
+          if (this.portfolioForm.controls[key].errors) {
+            this.portfolioForm.controls[key].markAsTouched();
+          }
+        });
+        this.notAllow = true;
+      } else {
+        this.portfolioForm.value.queryFor = this.queryForSelected;
+        const data = {
+          'toEmail': ['hello@buildtwin.com'],
+          'from': 'no-reply@buildtwin.com',
+          'subject': 'Customer Query Regarding BuildTwin Services',
+          'formField': this.portfolioForm.value
+        };
+    
+        return this.http.post<any>(`${this.URL}sendmail`, data, { 
+          headers: new HttpHeaders({ 'Content-Type': 'application/json' }) 
+        }).pipe(
+          map((res: any) => {
+            if (res.statusCode === 200) {
+              this.portfolioForm.reset();
+              this.queryForSelected = '';
+              this.message.create('success', `Form submitted successfully!`);
+              this.notAllow = true;
             }
-          });
-          this.notAllow = true;
-        } else {
-          const data = {
-            'toEmail': ['hello@buildtwin.com'],//['hello@buildtwin.com'],
-            'from': 'no-reply@buildtwin.com',
-            'subject': 'Customer Query Regarding BuildTwin Services',
-            // 'ignoreField': ['Term'],
-            'formField': this.portfolioForm.value
-          };
-          return this.http.post<any>(`${this.URL}sendmail`, data, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).pipe(
-            map((res: any) => {
-              if (res.statusCode === 200) {
-                this.portfolioForm.reset(); // Reset form after successful submission
-                this.message.create('success', `Form submitted successfully!`);
-                this.notAllow = true;
-                // this.router.navigateByUrl(`/${this.pg.responder[this.languageStatus].moduleLink}`)
-              } else if (res.statusCode === 401) {
-              }
-            })
-          ).subscribe((data: any) => { });
-        }
+          })
+        ).subscribe();
+      }
+    }
+
+
+      onChange(e: any, value:any) {
+        this.queryForSelected = value;
       }
 }

@@ -27,14 +27,16 @@ export class HdGoodCompanyComponent {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
   ngOnInit(): void {
-    if(!this.page) {
-      this.fetchAllBlogs();
-    }else {
-      this.fetchCategoryBlogs();
-      this.fetchFeaturedBlogs()
-    }
+    if(this.isBrowser){
+      if(!this.page) {
+        this.fetchAllBlogs();
+      }else {
+        this.fetchCategoryBlogs();
+        this.fetchFeaturedBlogs()
+      }
   
-    this.sliderInit()
+      this.sliderInit()
+    }
   }
   sliderInit() {
     this.factorySlider = {
