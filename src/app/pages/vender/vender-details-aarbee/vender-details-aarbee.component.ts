@@ -345,8 +345,8 @@ export class VenderDetailsAarbeeComponent {
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
     if(this.isBrowser){
       this.getBusinessListing();
+      this.getCompanyDetail()
     }
-    this.getCompanyDetail()
     if(this.route.snapshot.queryParams['isiframe']){
       document.body.classList.add('iframeEmbed');
     }
@@ -652,9 +652,9 @@ export class VenderDetailsAarbeeComponent {
   }
 
   ngOnInit() {
-    setTimeout(() => {
-      console.log(this.highlightImges)
-    }, 10000);
+    // setTimeout(() => {
+    //   console.log(this.highlightImges)
+    // }, 10000);
     this.sliderInit()
     this.myForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]], // Email field validation
@@ -666,9 +666,9 @@ export class VenderDetailsAarbeeComponent {
     });
     
     this.loadScript();
-    setTimeout(() => {
-      console.log(this.formData)
-    }, 10000);
+    // setTimeout(() => {
+    //   console.log(this.formData)
+    // }, 10000);
   }
   sliderInit(){
     if (this.isBrowser) {

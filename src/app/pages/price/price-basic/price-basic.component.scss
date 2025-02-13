@@ -173,6 +173,9 @@
                 }
 
                 &:nth-child(3) {
+                    .basic-info {
+                        position: relative;
+                    }
                     .priceInfo {
                         padding-top: 31px;
                         > div {
@@ -181,6 +184,20 @@
                         strong {
                             font-size: 30px;
                         }
+                    }
+                    .proSeats {
+                        background: #b0e020;
+                        border-radius: 0 0 12px 12px;
+                        display: block;
+                        font-size: 14px;
+                        font-weight: 700;
+                        width: 100%;
+                        color: #fff;
+                        text-align: center;
+                        position: absolute;
+                        padding: 9px 0;
+                        left: 0;
+                        bottom: 0;
                     }
                 }
             }
