@@ -11,7 +11,7 @@
     transform-origin: right top;
     z-index: 99;
     display: flex;
-    gap: 10px;
+    gap: 2px;
     align-items: center;
     overflow: hidden;
     &::before {
@@ -84,7 +84,8 @@
     height: 100%;
 }
 .arrow-slide-wrapper {
-    transform: scale(.6);
+    transform: scale(.5) rotate(-135deg);
+    margin-right: -18px;
 }
 .arrow-slide {
 	position:relative;
