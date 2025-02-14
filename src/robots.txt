@@ -21,9 +21,9 @@ Disallow: /blog-details2
 Disallow: /blog-details3
 Disallow: /blog-details4
 Disallow: /blog-details5
-Disallow: /blog/tag
-Disallow: /blog/category
-Disallow: /blog/author
+Disallow: /blog/tag/
+Disallow: /blog/category/
+Disallow: /blog/author/
 
 
 Sitemap: https://www.buildtwin.com/sitemap.xml
