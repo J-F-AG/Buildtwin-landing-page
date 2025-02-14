@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, OnInit } from '@angular/core';
+import { Component, ElementRef, Renderer2, OnInit, Input } from '@angular/core';
 import { FooterService } from './footer.service';
 import { LanguageService } from 'src/app/services/language.service';
 
@@ -8,6 +8,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./hd-footer.component.scss']
 })
 export class HdFooterComponent implements OnInit {
+  @Input() isclaimed: any = false;
   constructor(private elRef: ElementRef, private renderer: Renderer2, public _footerService: FooterService, public _languageService:LanguageService) { 
 
 

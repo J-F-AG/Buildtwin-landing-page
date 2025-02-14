@@ -123,11 +123,15 @@
     }
   }
 }
-.footer-content {
+.footer-menu-wrapper .container.footer-content {
   color: #668189;
   font-size: 12px;
   line-height: 2;
   text-align: center;
+  a {
+    font-size: inherit;
+    color: inherit;
+  }
 }
 
 @media only screen and (max-width : 900px) {
