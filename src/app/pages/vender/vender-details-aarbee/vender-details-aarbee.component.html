@@ -1,5 +1,5 @@
 <!-- <div class="faqSchemaPartner" [innerHTML]="faqSchemaHtml"></div> -->
-<app-modal #modal>
+<!-- <app-modal #modal>
     <div parent>
         <div class="flex">
             <div class="flex">
@@ -104,11 +104,11 @@
                 </div>
             </app-modal>
         </ng-container>
-        <!-- <button (click)="openModal(html, true, true)">Open Modal</button> -->
+        <button (click)="openModal(html, true, true)">Open Modal</button>
     </div>
-</app-modal>
+</app-modal> -->
 
-<div class="subline page-wrapper" *ngIf="!showPageLoader">
+<div class="subline page-wrapper" *ngIf="!showPageLoader && isBrowser">
     <app-hd-navbar *ngIf="!isIframe"></app-hd-navbar>
 
     <div class="main">
@@ -1424,7 +1424,7 @@
 </div>
 
 <!-- <nz-spin [nzSize]="'large'" nzTip="Loading..." *ngIf="showPageLoader"> </nz-spin> -->
-<nz-skeleton *ngIf="showPageLoader"></nz-skeleton>
+<nz-skeleton *ngIf="showPageLoader || !isBrowser"></nz-skeleton>
 <ng-template #reusableTemplate>
     <div class="icon">
         <svg width="429" height="61" viewBox="0 0 429 61" fill="none" xmlns="http://www.w3.org/2000/svg">
