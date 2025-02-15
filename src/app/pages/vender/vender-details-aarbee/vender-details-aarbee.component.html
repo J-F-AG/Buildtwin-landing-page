@@ -1,5 +1,5 @@
 <!-- <div class="faqSchemaPartner" [innerHTML]="faqSchemaHtml"></div> -->
-<app-modal #modal>
+<!-- <app-modal #modal>
     <div parent>
         <div class="flex">
             <div class="flex">
@@ -104,11 +104,11 @@
                 </div>
             </app-modal>
         </ng-container>
-        <!-- <button (click)="openModal(html, true, true)">Open Modal</button> -->
+        <button (click)="openModal(html, true, true)">Open Modal</button>
     </div>
-</app-modal>
+</app-modal> -->
 
-<div class="subline page-wrapper" *ngIf="!showPageLoader">
+<div class="subline page-wrapper" *ngIf="!showPageLoader && isBrowser">
     <app-hd-navbar *ngIf="!isIframe"></app-hd-navbar>
 
     <div class="main">
@@ -147,7 +147,7 @@
                                         *ngIf="i < (formData.onsite.length - 1) && i > (formData.onsite.length - 3)">&nbsp;and&nbsp;</ng-container> </span>
                                 </div>                                
                             </div>
-                            <div class="projects-count">
+                            <div class="projects-count" *ngIf="verifiedReview.rating">
                                 <span>
                                     {{verifiedReview.rating}}
                                 </span>
@@ -278,7 +278,8 @@
                                 <!-- <img [src]="pimg" alt="project.project_name" width="325" height="258"
                                             class="abs-image"> -->
                                 <figcaption class="abs-caption">
-                                    +{{imageLeftOutCount+1}} Projects
+                                    <!-- +{{imageLeftOutCount+1}} Projects -->
+                                    View All
                                 </figcaption>
                             </figure>
                         </ng-container>
@@ -432,7 +433,7 @@
                         {{companyName}}
                     </div>
 
-                    <div class="rating">
+                    <div class="rating" *ngIf="formData.companyDetails.rating">
                         <nz-rate [ngModel]="formData.companyDetails.rating" nzDisabled></nz-rate>
                     </div>
 
@@ -481,7 +482,7 @@
                                 <!-- </ng-container> -->
                             </figure>
                         </div>
-                        <div>
+                        <div *ngIf="formData.engineeringData.length">
                             <h6>Engineering project for</h6>
                             <div *ngFor="let e of formData.engineeringData" class="engineeringData">
                                 <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" width="130"
@@ -890,7 +891,7 @@
     </div>
 
 
-    <div class="block-section" *ngIf="formData?.highlightServices?.length">
+    <div class="block-section" *ngIf="formData?.highlightServices?.length || formData.companyDetails?.company_description">
         <div class="main">
             <h2>
                 {{companyName}} Services
@@ -1373,7 +1374,7 @@
 
 
 
-    <app-hd-footer *ngIf="!isIframe"></app-hd-footer>
+    <app-hd-footer *ngIf="!isIframe" [isclaimed]="formData['is_claimed']"></app-hd-footer>
 
 
     <div class="popUP" [ngClass]="{'active':showPopup}">
@@ -1424,7 +1425,7 @@
 </div>
 
 <!-- <nz-spin [nzSize]="'large'" nzTip="Loading..." *ngIf="showPageLoader"> </nz-spin> -->
-<nz-skeleton *ngIf="showPageLoader"></nz-skeleton>
+<nz-skeleton *ngIf="showPageLoader || !isBrowser"></nz-skeleton>
 <ng-template #reusableTemplate>
     <div class="icon">
         <svg width="429" height="61" viewBox="0 0 429 61" fill="none" xmlns="http://www.w3.org/2000/svg">

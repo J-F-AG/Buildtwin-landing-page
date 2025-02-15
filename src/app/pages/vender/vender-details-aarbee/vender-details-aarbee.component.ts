@@ -18,6 +18,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-aarbee.component.scss']
 })
 export class VenderDetailsAarbeeComponent {
+  isclaimed:boolean = false;
   toggleContentIndex:number= -1
   ourEngineers = [
     {
@@ -183,6 +184,7 @@ export class VenderDetailsAarbeeComponent {
   companyHighlights: '';
 
   formData = {
+    is_claimed:false,
     about: [],
     onsite: '',
     directors: [],
@@ -492,7 +494,7 @@ export class VenderDetailsAarbeeComponent {
     sections.forEach(section => {
       const rect = section.getBoundingClientRect();
       if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-        console.log(98888)
+        // console.log(98888)
         this.activeSection = section['id'];
       }
     });
@@ -799,8 +801,14 @@ export class VenderDetailsAarbeeComponent {
   selectedProjectCategor(idx) {
     this.filterSelectedProjectCategorIndex = idx;
     this.selectedProjectCategory = this.categorisedProjectImages[idx];
+    if(this.selectedProjectCategory['imageUrls'] && this.selectedProjectCategory['imageUrls'].length) {
+      this.selectedProjectCategory['imageUrls'] = this.removeDuplicates(this.selectedProjectCategory['imageUrls'])
+    }
   }
-
+  removeDuplicates(arr: any) {
+    const uniqueMap = new Map(arr.map(item => [item.id, item]));
+    return Array.from(uniqueMap.values());
+  }
   add() {
     this.isAddon = true;
   }
@@ -1065,7 +1073,7 @@ export class VenderDetailsAarbeeComponent {
                     label: a.name
                   })
                 });
-                console.log(this.listOfSoftware)
+                // console.log(this.listOfSoftware)
                 this.addons = res[0]['data']['addons'];
                 const reviewArr = [];
                 let revieCount = 0;
@@ -1148,6 +1156,7 @@ export class VenderDetailsAarbeeComponent {
                 this.companyName = fieldData? formData['basic_form_fields']['company_name']: '';
                 this._footerService['companyDetail']['name'] = this.companyName;
                 this.formData.companyDetails.rating = fieldData ? formData['basic_form_fields']['rating']: 0;
+                this.formData.is_claimed = fieldData ? formData['basic_form_fields']['is_claimed']: false;
                 this.formData.services = res[0]['data']['services']
                 this.formData.directors = fieldData ? formData['basic_form_fields']['managing_director']: this.formData.directors;
                 this.formData.premium_partner = fieldData ? formData['basic_form_fields']['premium_partner']: this.formData.premium_partner;
