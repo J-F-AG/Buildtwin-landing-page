@@ -154,37 +154,28 @@ export class SpecialProjectComponent implements OnInit {
 
   sliderInit() {
     this.customOptions = {
-      nav: true,
-      margin: 16,  // Adjust as needed
+      loop: true,
+      mouseDrag: false,
+      touchDrag: false,
+      pullDrag: false,
       dots: false,
-      // loop: true,
-      // autoplay: true,
-      autoplayHoverPause: false,
-      navText: [
-        "<i class='ti ti-chevron-left'></i>",
-        "<i class='ti ti-chevron-right'></i>",
-      ],
-      stagePadding: 0,  // Adjust padding for the "half" item effect
+      navSpeed: 700,
+      navText: ['', ''],
       responsive: {
         0: {
-          items: 1  // 1 item for small screens
+          items: 2,
         },
-        600: {
-          items: 2  // 1 item for slightly larger screens
+        400: {
+          items: 2
         },
         740: {
-          items: 3  // 2 items for medium screens
+          items: 3
         },
         940: {
-          items: 3  // 2 full items and a half item for larger screens
-        },
-        1024: {
-          items: 4  // 2 full items and a half item for larger screens
-        },
-        1500: {
-          items: 5  // 2 full items and a half item for larger screens
+          items: 4
         }
-      }
+      },
+      nav: true
     };
   }
 }
