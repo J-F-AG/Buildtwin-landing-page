@@ -33,6 +33,7 @@ export class AppComponent {
     langHtml: SafeHtml;
     schemaCode: SafeHtml;
     faqSchemaHtml: SafeHtml;
+    serviceSchemaHtml: SafeHtml;
     testimonialSchemaHtml: SafeHtml;
     showHideForm:boolean = false;
     hideSideButton: boolean = true;
@@ -249,6 +250,13 @@ injectBreadcrumbScript(url) {
         `<script type="application/ld+json">${faqSchema}</script>`
       );
 
+
+      const serviceSchema = this._languageService.injectForAIProjectManagementServiceSchema(this.renderer);
+
+      this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${serviceSchema}</script>`
+      );
+
       const testimonialSchema = this._languageService.injectForAIProjectManagementTestimonialSchema(this.renderer);
 
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
@@ -315,6 +323,11 @@ injectBreadcrumbScript(url) {
         `<script type="application/ld+json">${faqSchema}</script>`
       );
 
+      const serviceSchema = this._languageService.injectServiceSchemaForSectorDataCenter(this.renderer);
+
+      this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${serviceSchema}</script>`
+      );
       const testimonialSchema = this._languageService.injectSectorDataCenterTestimonialSchema(this.renderer);
 
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
@@ -356,6 +369,11 @@ injectBreadcrumbScript(url) {
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
+      );
+      const serviceSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
+
+      this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${serviceSchema}</script>`
       );
 
       const testimonialSchema = this._languageService.injectArchitecturalDesignServicesTestimonialSchema(this.renderer);

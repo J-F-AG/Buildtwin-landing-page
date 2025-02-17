@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, forkJoin } from 'rxjs';
@@ -20,6 +20,7 @@ export class FreeOfferFormComponent {
   @Input() companyId: string = '';
   @Input() companyEmail: string = '';
   @Input() normalBtn: boolean = false;
+  @ViewChild('formContainer') formContainer!: ElementRef;
   showdropDown: boolean = true;
 
   // enquiryPayload = {
@@ -198,6 +199,35 @@ export class FreeOfferFormComponent {
         })
 
     } else {
+      // const firstInvalidControl: HTMLElement = this.formContainer.nativeElement.querySelector('.error-border');
+      // if (firstInvalidControl) {
+      //   firstInvalidControl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // }
+      setTimeout(() => {
+        const formContainer = document.getElementById('formContainer'); // The scrollable div
+        const topPart = document.querySelector('.topPart') as HTMLElement; // The fixed top part
+        
+        if (!formContainer) return;
+      
+        // Get the first element with class '.error-border' inside the formContainer
+        const firstInvalidControl = formContainer.querySelector('.error-border') as HTMLElement;
+        if (firstInvalidControl) {
+          const containerRect = formContainer.getBoundingClientRect();
+          const elementRect = firstInvalidControl.getBoundingClientRect();
+      
+          // Get height of '.topPart' (default to 0 if not found)
+          const topPartHeight = topPart ? topPart.offsetHeight : 0;
+      
+          // Calculate the scroll position relative to the formContainer, adjusting for topPart
+          const scrollTop = (formContainer.scrollTop + (elementRect.top - containerRect.top) - topPartHeight) - 20;
+      
+          formContainer.scrollTo({
+            top: scrollTop,
+            behavior: 'smooth',
+          });
+        }
+      }, 100);
+      
       console.log('Form is invalid');
       this.myForm.markAllAsTouched(); // Mark all fields as touched to show errors
     }

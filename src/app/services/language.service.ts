@@ -694,6 +694,101 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(AIProjectManagementSchema);
   }
+  injectForAIProjectManagementServiceSchema(renderer) {
+    // Create the AIProjectManagement schema for the AI Project Management page
+    const AIProjectManagementSchema = { 
+      "@context": "https://schema.org", 
+      "@type": "Service", 
+      "name": "BuildTwin", 
+      "aggregateRating": { 
+        "@type": "AggregateRating", 
+        "ratingValue": "4.8", 
+        "reviewCount": 5, 
+        "bestRating": "5" 
+      }, 
+      "review": [ 
+        { 
+          "@type": "Review", 
+          "author": { 
+            "@type": "Person", 
+            "name": "Charles Brown" 
+          }, 
+          "datePublished": "2025-02-14", 
+          "reviewBody": "BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters.", 
+          "reviewRating": { 
+            "@type": "Rating", 
+            "ratingValue": "5", 
+            "bestRating": "5" 
+          } 
+        }, 
+        { 
+          "@type": "Review", 
+          "author": { 
+            "@type": "Person", 
+            "name": "Marquees Lee" 
+          }, 
+          "datePublished": "2025-02-14", 
+          "reviewBody": "BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.", 
+          "reviewRating": { 
+            "@type": "Rating", 
+            "ratingValue": "5", 
+            "bestRating": "5" 
+          } 
+        }, 
+        { 
+          "@type": "Review", 
+          "author": { 
+            "@type": "Person", 
+            "name": "Rajdeep Sharma" 
+          }, 
+          "datePublished": "2025-02-14", 
+          "reviewBody": "BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.", 
+          "reviewRating": { 
+            "@type": "Rating", 
+            "ratingValue": "5", 
+            "bestRating": "5" 
+          } 
+        }, 
+        { 
+          "@type": "Review", 
+          "author": { 
+            "@type": "Person", 
+            "name": "Owen Weah" 
+          }, 
+          "datePublished": "2025-02-14", 
+          "reviewBody": "BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.", 
+          "reviewRating": { 
+            "@type": "Rating", 
+            "ratingValue": "5", 
+            "bestRating": "5" 
+          } 
+        }, 
+        { 
+          "@type": "Review", 
+          "author": { 
+            "@type": "Person", 
+            "name": "Katrina Paine" 
+          }, 
+          "datePublished": "2025-02-14", 
+          "reviewBody": "BuildTwin for technical Teams is tailored to significantly improve the workflow of technical teams. BuildTwin automates meaningful manual work and enables technical teams to focus on what matters - technical queries while BuildTwin helps to manage the project in background.", 
+          "reviewRating": { 
+            "@type": "Rating", 
+            "ratingValue": "5", 
+            "bestRating": "5" 
+          } 
+        } 
+      ] 
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(AIProjectManagementSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(AIProjectManagementSchema);
+  }
 
   injectForAIProjectManagementTestimonialSchema(renderer) {
 
@@ -2534,6 +2629,73 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(faqSchema);
   }
+  injectServiceSchemaForSectorDataCenter(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "BuildTwin ",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": 3,
+        "bestRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Michael Smith"
+          },
+          "datePublished": "2025-02-14",
+          "reviewBody": "BuildTwin transformed how we approach data center construction. Their comprehensive marketplace and ERP solution streamlined most of our designing and QC processes.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "David V"
+          },
+          "datePublished": "2025-02-14",
+          "reviewBody": "Thanks to BuildTwin, we connected with the best vendors for our needs and significantly improved our project execution.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Peter Brown"
+          },
+          "datePublished": "2025-02-14",
+          "reviewBody": "BuildTwin helped us streamline our data center construction. The vendor matching was quick, and the project management system kept us on track from start to finish.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        }
+      ]
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
 
   injectSectorDataCenterTestimonialSchema(renderer) {
 
@@ -3474,6 +3636,72 @@ export class LanguageService {
     // // Append the script tag to the document head
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(ArchitecturalDesignServicesSchema);
+  }
+  injectForArchitecturalDesignServicesService(renderer) {
+    // Create the Marketplace schema for the marketplace page
+    const ArchitecturalDesignServicesService = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "BuildTwin",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": 3,
+        "bestRating": "5"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Michael Smith"
+          },
+          "datePublished": "2025-02-14",
+          "reviewBody": "The steel detailing services through BuildTwin have significantly improved our project efficiency. The Tekla expertise of their vendors is outstanding.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "David V"
+          },
+          "datePublished": "2025-02-14",
+          "reviewBody": "Finding skilled steel detailers was challenging until we discovered BuildTwin. Their vendor certification process ensures top-quality deliverables.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Peter Brown"
+          },
+          "datePublished": "2025-02-14",
+          "reviewBody": "The combination of SDS/2 and Tekla expertise available through BuildTwin's platform has been invaluable for our international projects.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          }
+        }
+      ]
+    };
+
+    // Create the JSON-LD script tag
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(MarketplaceSchema);
+    // // Append the script tag to the document head
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(ArchitecturalDesignServicesService);
   }
 
   injectArchitecturalDesignServicesTestimonialSchema(renderer) {
