@@ -256,7 +256,7 @@ export class LanguageService {
       "@context": "https://schema.org", 
       "@type": "Organization", 
       "name": "Buildtwin", 
-      "url": "https://www.buildtwin.com/", 
+      "url": "https://www.buildtwin.com", 
       "logo": "https://www.buildtwin.com/assets/images/logo@2x.png" 
     };
     return JSON.stringify(faqSchema);
@@ -278,7 +278,7 @@ export class LanguageService {
     
       "name": "BuildTwin", 
     
-      "url": "https://www.buildtwin.com/", 
+      "url": "https://www.buildtwin.com", 
     
       "address": { 
     
@@ -503,7 +503,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -559,7 +559,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -615,7 +615,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -834,7 +834,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -890,7 +890,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -946,7 +946,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -3748,7 +3748,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -3804,7 +3804,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -3860,7 +3860,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -4056,7 +4056,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -4111,7 +4111,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       
@@ -4167,7 +4167,7 @@ export class LanguageService {
       
       "name": "BuildTwin",
       
-      "url": "https://www.buildtwin.com/",
+      "url": "https://www.buildtwin.com",
       
       "address": {
       

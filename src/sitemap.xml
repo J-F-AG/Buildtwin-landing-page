@@ -5,7 +5,7 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://www.buildtwin.com/</loc>
+  <loc>https://www.buildtwin.com</loc>
   <lastmod>2025-01-24T11:42:30+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
@@ -287,7 +287,7 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://www.buildtwin.com/get-started/</loc>
+  <loc>https://www.buildtwin.com/get-started</loc>
   <lastmod>2025-01-24T11:42:30+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
