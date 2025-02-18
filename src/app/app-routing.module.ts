@@ -55,12 +55,12 @@ const routes: Routes = [
         path: 'pre-qualified',
         loadChildren: () => import('./pages/pre-qualified//provide-service.module').then(m => m.PreQualifiedModule),
         // component: ProvideServiceComponent,
-        // data: {
-        //     title: 'Offer Your Structural Engineering Services Worldwide | Buildtwin',
-        //     description: 'Provide your structural engineering services worldwide with Buildtwin. Access global projects and clients through our trusted platform.',
-        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-        //     canonical: 'https://www.buildtwin.com/provide-service'
-        // }
+        data: {
+            title: 'Get pre-qualified & increase your reach.',
+            description: 'With the BuildTwin pre-qualification program, you ensure you meet project requirements for different markets.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/pre-qualified'
+        }
     },
     {
         path: 'marketplace',
@@ -121,12 +121,12 @@ const routes: Routes = [
         path: 'ai-faq',
         loadChildren: () => import('./pages/whybuildtwin/ai-faq/faq-page/faq-page.module').then(m => m.AiFaqPageModule),
         // component: FaqPageComponent,
-        // data: {
-        //     title: 'Frequently Asked Questions | Buildtwin',
-        //     description: "Find answers to common questions about Buildtwin's structural engineering marketplace, AI project management tools, data safety, integrations, training programs, and more.",
-        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-        //     canonical: 'https://www.buildtwin.com/ai-faq'
-        // }
+        data: {
+            title: 'Frequently Asked Questions | Buildtwin',
+            description: "FAQs: How Buildtwin Connects Buyers and Vendors",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/ai-faq'
+        }
     },
     {
         path: 'data-safety',
@@ -182,6 +182,12 @@ const routes: Routes = [
         path: 'terms-of-service',
         loadChildren: () => import('./pages/data-privacy/data-safety.module').then(m => m.DataPrivacyModule),
         // component: DataPrivacyComponent
+        data: {
+            title: 'terms-of-service',
+            description: "terms-of-service",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/terms-of-service'
+        }
     },
     {
         path: 'privacy-policy',
@@ -207,9 +213,21 @@ const routes: Routes = [
     },
     {path: 'training-faq', 
         loadChildren: () => import('./pages/training/faq/faq-page-training/faq-page-training.module').then(m => m.FaqPageTrainingModule),
+        data: {
+            title: 'Frequently Asked Questions - answered',
+            description: "Frequently Asked Questions - answered",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/training-faq'
+        }
     },
     {path: 'pricing', 
         loadChildren: () => import('./pages/price/pricing-page/pricing-page.module').then(m => m.PricingPageModule),
+        data: {
+            title: 'BuildTwin ProPricing',
+            description: "BuildTwin bundles and integrates different software solutions in one. BuildTwin 'pays for itself' - with its high degree of efficiency gains.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/pricing'
+        }
         // component: PricingPageComponent
     },
     // {path: 'engineering-services/services',
@@ -302,16 +320,22 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/sector/power-plant'
         }
     },
-    {
-        path: 'pricing',
-        loadChildren: () => import('./pages/price/pricing-page/pricing-page.module').then(m => m.PricingPageModule),
-        // component: PricingPageComponent
-    },
-    {
-        path: 'sector',
-        loadChildren: () => import('./pages/sector/sector.module').then(m => m.SectorModule),
-        // component: SectorComponent
-    },
+    // {
+    //     path: 'pricing',
+    //     loadChildren: () => import('./pages/price/pricing-page/pricing-page.module').then(m => m.PricingPageModule),
+    //     // component: PricingPageComponent
+    //     data: {
+    //         title: 'BuildTwin ProPricing',
+    //         description: "BuildTwin bundles and integrates different software solutions in one. BuildTwin 'pays for itself' - with its high degree of efficiency gains.",
+    //         image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+    //         canonical: 'https://www.buildtwin.com/pricing'
+    //     }
+    // },
+    // {
+    //     path: 'sector',
+    //     loadChildren: () => import('./pages/sector/sector.module').then(m => m.SectorModule),
+    //     // component: SectorComponent
+    // },
     {
         path: 'explore-services',
         loadChildren: () => import('./pages/browse-services/browse-services-main/browse-services-main.module').then(m => m.BrowseServicesMainModule),
@@ -422,14 +446,21 @@ const routes: Routes = [
         // component: CadServicesNewComponent,
         loadChildren: () => import('./pages/customer-success/customer-success.module').then(m => m.CustomerSuccessModule),
         data: {
-            // title: 'CAD Services for AEC Projects | BuildTwin Marketplace',
-            // description: "Find expert CAD service providers for 2D drafting, 3D modeling, and BIM solutions. Streamline your construction projects with BuildTwin’s global vendor network.",
-            // image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            // canonical: 'https://www.buildtwin.com/services/cad-services'
+            title: 'Request customer success stories.',
+            description: "Request customer success stories.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/customer-success'
         }
     },
 
-    { path: 'notfound', loadChildren: () => import('./pages/coming-soon/coming-soon.module').then(m => m.ComingSoonModule) },
+    { path: 'notfound', loadChildren: () => import('./pages/coming-soon/coming-soon.module').then(m => m.ComingSoonModule),
+        data: {
+            title: 'Oops! Page Not Found',
+            description: "We are sorry about this but the page you were looking for does not exist.",
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/services/notfound'
+        }
+    },
 
 
     {
