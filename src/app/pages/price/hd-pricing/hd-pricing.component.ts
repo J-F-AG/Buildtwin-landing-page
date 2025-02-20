@@ -7,8 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HdPricingComponent {
   marketPlace: number = 1
-
+  showPopup = false;
   marketplaceNumber(event) {
     this.marketPlace = event
+  }
+
+  call() {
+    this.showPopup = true
+  }
+
+  closePopupStatus($event) {
+    this.showPopup = false;
   }
 }

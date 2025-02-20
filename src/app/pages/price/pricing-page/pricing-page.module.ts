@@ -9,6 +9,7 @@ import { PriceCoPilotComponent } from '../price-co-pilot/price-co-pilot.componen
 import { PriceBasicComponent } from '../price-basic/price-basic.component';
 import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
+import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module';
 
 const routes: Routes = [
   {
@@ -30,6 +31,7 @@ const routes: Routes = [
     SharedModuleModule,
         HdNavbarModule,
         HdFooterModule,
+        HubspotModule,
     RouterModule.forChild(routes),
   ],
 })
