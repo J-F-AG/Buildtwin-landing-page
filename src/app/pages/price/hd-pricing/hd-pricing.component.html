@@ -34,7 +34,7 @@
                                     </div>
                                     <span>Free forever</span>
                                 </div>
-                                <a href="javascript:void(0)" class="btn">
+                                <a href="https://www.buildtwin.com/get-started" target="_blank" class="btn">
                                     <img src="assets/images/icons/icon2.png" width="23" height="23" alt="Get Started">
                                     Get Started
                                 </a>
@@ -65,7 +65,7 @@
                                     </div>
                                     <span>Billed monthly</span>
                                 </div>
-                                <a href="javascript:void(0)" class="btn">
+                                <a href="https://www.buildtwin.com/get-started" target="_blank" class="btn">
                                     14 day free trial
                                  </a>
                                 <ul>
@@ -92,7 +92,7 @@
                                     </div>
                                     <span>On Request (Contact Sales)</span>
                                 </div>
-                                <a href="javascript:void(0)" class="btn">
+                                <a href="javascript:void(0)" (click)="call()" class="btn">
                                     Talk to Sales
                                 </a>
                                 <ul>
@@ -728,3 +728,5 @@
 
     <!-- </div> -->
 </div>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}"
+    (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
