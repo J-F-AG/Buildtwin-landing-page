@@ -183,8 +183,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/data-privacy/data-safety.module').then(m => m.DataPrivacyModule),
         // component: DataPrivacyComponent
         data: {
-            title: 'terms-of-service',
-            description: "terms-of-service",
+            title: 'BuildTwin Terms of Service – Usage, Policies & Guidelines',
+            description: "Read BuildTwin's Terms of Service. Understand our policies, user responsibilities, and guidelines for using our structural marketplace and software.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/terms-of-service'
         }
@@ -223,8 +223,8 @@ const routes: Routes = [
     {path: 'pricing', 
         loadChildren: () => import('./pages/price/pricing-page/pricing-page.module').then(m => m.PricingPageModule),
         data: {
-            title: 'BuildTwin ProPricing',
-            description: "BuildTwin bundles and integrates different software solutions in one. BuildTwin 'pays for itself' - with its high degree of efficiency gains.",
+            title: 'BuildTwin Pro Pricing For  RFI Tracker & Construction Software - Buildtwin',
+            description: "Explore BuildTwin Pro pricing. Streamline RFIs, manage projects, and win more bids with our construction RFI software. Boost visibility & trust with AI tools",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/pricing'
         }
@@ -446,8 +446,8 @@ const routes: Routes = [
         // component: CadServicesNewComponent,
         loadChildren: () => import('./pages/customer-success/customer-success.module').then(m => m.CustomerSuccessModule),
         data: {
-            title: 'Request customer success stories.',
-            description: "Request customer success stories.",
+            title: 'Request BuildTwin Customer Success Stories & Case Studies',
+            description: "See how BuildTwin delivers results. Request customer success stories and explore case studies showcasing project success.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/customer-success'
         }
