@@ -129,7 +129,7 @@
             </div>              
             <div class="left">
                 <div class="left-child">
-                    <div class="head-company-logo" *ngIf="formData['companyDetails'] && formData['companyDetails']['icon']">
+                    <div class="head-company-logo" *ngIf="formData['companyDetails'] && formData['companyDetails']['icon'] && formData.is_claimed">
                         <img [src]="formData['companyDetails']['icon']" alt="Company logo">
                     </div>
                     <div class="head-compant-detail">
@@ -1000,7 +1000,7 @@
                 </small>
             </h2>
             <div class="company-detail-review">
-                <figure *ngIf="formData['companyDetails'] && formData['companyDetails']['icon']">
+                <figure *ngIf="formData['companyDetails'] && formData['companyDetails']['icon'] && formData.is_claimed">
                     <img [src]="formData['companyDetails']['icon']" alt="Company icon">
                 </figure>
                 <div class="extra">
