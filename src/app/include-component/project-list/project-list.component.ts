@@ -41,6 +41,9 @@ private _projectListService: ProjectListService) {
     }
   }
   ngOnInit(): void {
+    setTimeout(() => {
+      console.log(this.sectorArray)
+    }, 10000);
     this.sliderInit()
     // const flagUrl3 = findFlagUrlByCountryName('Malaysia')
     // console.log(flagUrl3)
@@ -176,14 +179,14 @@ sliderInit() {
           this.serviceArray.push(obj)
         });
         this.sectorArray = localsectorArray
-        localsectorArray.filter(e => {
-          this.sectorObj[e.id] = e;
-          let obj = {
-            label: e['service_name'],
-            value: e['id']
-          };
-          this.sectorArray.push(obj);
-        });
+        // localsectorArray.filter(e => {
+        //   this.sectorObj[e.id] = e;
+        //   let obj = {
+        //     label: e['service_name'],
+        //     value: e['id']
+        //   };
+        //   this.sectorArray.push(obj);
+        // });
           setTimeout(() => {
             this.updateCarousel();
           }, 5000);
