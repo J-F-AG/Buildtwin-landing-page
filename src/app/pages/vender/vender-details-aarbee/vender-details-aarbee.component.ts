@@ -18,7 +18,7 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-aarbee.component.scss']
 })
 export class VenderDetailsAarbeeComponent {
-  claimListing = 'http://cockpit.buildtwin.com:4209/signin?claimListing=true&companyName='
+  claimListing = 'https://cockpit.buildtwin.com/signin?claimListing=true&companyName='
   isclaimed:boolean = false;
   toggleContentIndex:number= -1
   ourEngineers = [
