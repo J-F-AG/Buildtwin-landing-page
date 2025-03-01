@@ -183,7 +183,7 @@
                     <div class="left" [ngClass]="{'twoItem':highlightImges.length<3}">
                         <ng-container *ngFor="let project of highlightImges; let i = index">
                             <figure *ngIf="i<2" [ngClass]="{'lock-project':project['type'] === 'private'}" 
-                            (click)="project['type'] === 'public' && showModal('child', project)">
+                            (click)="showModal('child', project)">
                                 <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
                                     <div *ngIf="ci == 0">
                                         <img src="assets/images/image1.png" alt="image1" width="402" height="207">
@@ -218,7 +218,7 @@
                     <div class="right" *ngIf="highlightImges?.length > 2">
                         <ng-container *ngFor="let project of highlightImges; let i = index">
                             <figure *ngIf="i==2"  [ngClass]="{'lock-project':project['type'] === 'private'}" 
-                                (click)="project['type'] === 'public' && showModal('child', project)">
+                                (click)="showModal('child', project)">
                                 <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
                                     <div *ngIf="ci == 0">
                                         <img src="assets/images/image2.png" alt="image2" width="402" height="425">
@@ -255,7 +255,7 @@
                     <ng-container *ngIf="highlightImges?.length > 3">
                         <ng-container *ngFor="let project of highlightImges; let i = index">
                             <figure *ngIf="i>2 && i<6"  [ngClass]="{'lock-project':project['type'] === 'private'}" 
-                                (click)="project['type'] === 'public' && showModal('child', project)">
+                                (click)="showModal('child', project)">
                                 <ng-container *ngFor="let pimg of project?.project_logo; let ci = index">
                                     <div *ngIf="ci == 0">
                                         <img src="assets/images/image3.png" alt="image3" width="196" height="240">
@@ -476,7 +476,7 @@
                                     <div [ngClass]="{'lock-project':project['type'] === 'private'}">
                                         <img src="assets/images/image4.png"  alt="image3" width="244" height="190">
                                         <img [src]="project.imageUrl" width="244" height="190" class="abs-image" [alt]="project.project_name || 'Project Picture'"
-                                        (click)="project['type'] === 'public' && showModal('child',project)" />
+                                        (click)="showModal('child',project)" />
                                         <figcaption>
                                             {{project.project_name}} in {{
                                             project.project_region }}
@@ -836,6 +836,12 @@
                                     {{selectedProject?.project_description}}
                                 </p>
                             </div>
+                            
+                        <div class="button-wrap content">
+                            <a href="{{ndaRequest}}" class="button-v2 mdc-button" target="_blank" *ngIf="selectedProject['type'] === 'private'">
+                                Request to view project
+                            </a>
+                        </div>
                         </div>
                     </div>
                 </div>

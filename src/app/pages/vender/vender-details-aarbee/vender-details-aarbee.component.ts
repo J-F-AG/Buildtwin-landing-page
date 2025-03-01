@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { isPlatformBrowser } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { LanguageService } from 'src/app/services/language.service';
+import { CryptoService } from 'buildtwin-library-ux/core';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -19,6 +20,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class VenderDetailsAarbeeComponent {
   claimListing = 'https://cockpit.buildtwin.com/signin?claimListing=true&companyName='
+  ndaRequest = ''
   isclaimed:boolean = false;
   toggleContentIndex:number= -1
   ourEngineers = [
@@ -329,6 +331,7 @@ export class VenderDetailsAarbeeComponent {
   faqSchemaHtml: SafeHtml;
   AvailableServicesToggleStatusHoverStatus:boolean = true;
   constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService,
+    private _cryptoService: CryptoService,
     @Inject(PLATFORM_ID) private platformId: Object,
     private sanitizer: DomSanitizer,
     private _languageService: LanguageService
@@ -626,6 +629,17 @@ export class VenderDetailsAarbeeComponent {
     if(project){
       this.filterIndex = 0;
       this.selectedProject = project;
+      // let obj = `${this.selectedProject['id']+'___'+this.selectedProject['project_name']+'___'+this.selectedProject['project_region']+'___'+this.selectedProject['service']+'___'+this.selectedProject['company_id']}`
+      let obj = {
+        project_id:this.selectedProject['id'],
+        project_name: this.selectedProject['project_name'],
+        project_region: this.selectedProject['project_region'],
+        service: this.selectedProject['service'],
+        company_id: this.selectedProject['company_id']
+      }
+      let decryptobj = encodeURIComponent(this._cryptoService.set(JSON.stringify(obj)));
+      let companyNameEncoded = encodeURIComponent(this.companyName);
+      this.ndaRequest = `https://cockpit.buildtwin.com/signin?nda=true&obj=${decryptobj}&company_name=${companyNameEncoded}`;
       if (type === 'child') {
         this.selectCategory(0);
       }
