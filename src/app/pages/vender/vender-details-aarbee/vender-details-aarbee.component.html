@@ -837,8 +837,8 @@
                                 </p>
                             </div>
                             
-                        <div class="button-wrap content">
-                            <a href="{{ndaRequest}}" class="button-v2 mdc-button" target="_blank" *ngIf="selectedProject['type'] === 'private'">
+                        <div class="button-wrap content" *ngIf="selectedProject['type'] === 'private'">
+                            <a href="{{ndaRequest}}" class="button-v2 mdc-button" target="_blank">
                                 Request to view project
                             </a>
                         </div>
