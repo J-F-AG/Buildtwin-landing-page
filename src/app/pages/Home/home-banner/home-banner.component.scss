@@ -1,7 +1,13 @@
 .homeBanner {
     position: relative;
     overflow: hidden;
-    padding: 190px 0 150px;
+    padding: 0 0 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: calc(100vh - 110px);
+    overflow: hidden;
 
     [class^="leftImage-"],
     [class^="rightImage-"],
