@@ -485,7 +485,7 @@
                                 <!-- </ng-container> -->
                             </figure>
                         </div>
-                        <div *ngIf="formData.engineeringData.length">
+                        <div *ngIf="formData.engineeringData && formData.engineeringData.length">
                             <h6>Engineering project for</h6>
                             <div *ngFor="let e of formData.engineeringData" class="engineeringData">
                                 <img [src]="e.logo ? e.logo : 'assets/images/placeholder-logo.png'" width="130"
@@ -704,7 +704,7 @@
                             </div>
                         </div>
 
-                        <div class="block review-section">
+                        <div class="block review-section" *ngIf="formData.clientReviews && formData.clientReviews.length">
                             <header class="head">
                                 Reviews
                             </header>
@@ -728,7 +728,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="block">
+                        <div class="block" *ngIf="formData.reviews && formData.reviews.length">
                             <header class="head">
                                 Rating
                             </header>

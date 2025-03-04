@@ -1,11 +1,15 @@
 .integrationsList {
     display: flex;
     // gap: 30px;
-    gap: 70px;
+    gap: 40px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .container.bg {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 0;
+}
+.head {
+    color: #9a9a9b;
+    font-size: 16px;
 }
