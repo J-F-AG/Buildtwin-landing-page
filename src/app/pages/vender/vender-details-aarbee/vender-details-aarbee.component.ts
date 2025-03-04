@@ -1351,12 +1351,14 @@ export class VenderDetailsAarbeeComponent {
       }),
       retry(2)
     ).subscribe(companies => {
-      debugger
       companies['data'].forEach(company => {
         if (this._languageService.customMapping[company['name']]) {
           company['route'] = this._languageService.customMapping[company['name']];
           company['linking'] = this._languageService.customMapping[company['name']];
         }else {
+          if(!company['name']){
+            company['name'] = '*****'
+          }
           company['route'] = company['name'].replace(/ /g, '');
           company['linking'] = company['name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
           .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
