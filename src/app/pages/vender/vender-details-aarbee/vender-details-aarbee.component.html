@@ -451,7 +451,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="flex company-overview child">
+                <div class="flex company-overview child 111">
                     <div class="image-wrapper">
                         <div class="thumbnails" *ngIf="categorisedProjectImages.length">
                             <ng-container *ngFor="let category of categorisedProjectImages; let i = index">
@@ -769,7 +769,7 @@
                     </div>
                     <div></div>
                 </div>
-                <div class="flex company-overview child">
+                <div class="flex company-overview child 222">
                     <div class="image-wrapper">
                         <div class="thumbnails">
                             <ng-container *ngFor="let cat of selectedProject?.categorylist; let idx = index" >
@@ -792,7 +792,7 @@
 
                         </div>
                         <div class="top">
-                            <div class="left fullImage">
+                            <div class="left fullImage" [ngClass]="{'lock-project':selectedProject['type'] === 'private'}">
                                 <ng-container *ngFor="let pimg of selectedProject?.project_logo; let i = index">
                                     <figure *ngIf="i === 0">
                                             <img src="assets/images/image5.jpg" alt="image3" width="759" height="394">
