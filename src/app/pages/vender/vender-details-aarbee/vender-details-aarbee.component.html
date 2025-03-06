@@ -496,7 +496,7 @@
                     <div class="company-detail in-popup">
 
                         <div class="block user-detail-wrapper">
-                            <figure class="company-figure">
+                            <figure class="company-figure" *ngIf="formData.is_claimed">
                                 <img [src]="formData?.companyDetails.icon" alt="Company icon" width="64" height="33">
                             </figure>
                             <div class="user-detail-child" *ngFor="let dir of formData.directors">
