@@ -364,6 +364,62 @@ injectBreadcrumbScript(url) {
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
 
+    }else if(url.includes('/sector/bridge')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorBridge(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/stadium')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorStadium(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/roads')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorRoads(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/water-and-waste')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorWaterAndWaste(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/hospital')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorHospital(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/manufacturing-plant')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorManufacturingPlant(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/theaters')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorTheaters(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/commercial-building')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorCommercialBuilding(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
     }else if(url.includes('/software/architecture-design-services')){
       const faqSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
 

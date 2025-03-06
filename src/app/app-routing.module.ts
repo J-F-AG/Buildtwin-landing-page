@@ -320,6 +320,94 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/sector/power-plant'
         }
     },
+    {path: 'sector/bridge', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-bridge/sector.module').then(m => m.SectorBridgeModule),
+        data: {
+            title: 'Find Expert Bridge Engineering Services | BuildTwin Marketplace',
+            description: 'Connecting Global Expertise with Advanced AEC Solutions for Complex Bridge Design and Development Projects.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/bridge'
+        }
+    },
+    {path: 'sector/stadium', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-stadium/sector.module').then(m => m.SectorStadiumModule),
+        data: {
+            title: 'Find Expert Stadium Structural Vendors | BuildTwin Marketplace',
+            description: 'Advance structural and AEC solutions for stadium construction with BuildTwin. Connect with pre-qualified vendors to design safe, efficient stadium facilities.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/stadium'
+        }
+    },
+    {path: 'sector/roads', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-roadways/sector.module').then(m => m.SectorRoadwaysModule),
+        data: {
+            title: 'Find Expert Road and Highway Structural Vendors | BuildTwin Marketplace',
+            description: 'Advance structural and AEC solutions for roads and highways construction with BuildTwin. Connect with pre-qualified teams for road structural engineering.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/roads'
+        }
+    },
+    {path: 'sector/water-and-waste', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-water-and-waste/sector.module').then(m => m.SectorWaterAndWasteModule),
+        data: {
+            title: 'Expert Water & Waste Management Plant Designers | BuildTwin Marketplace',
+            description: 'BuildTwin connects you with expert vendors for industrial water waste treatment, sewage backup management, and water recycling.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/water-and-waste'
+        }
+    },
+    {path: 'sector/hospital', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-hospital/sector.module').then(m => m.SectorHospitalModule),
+        data: {
+            title: 'Find Expert Hospital Infrastructure Vendors | BuildTwin Marketplace',
+            description: 'BuildTwin provides access to a global network of hospital designers and AEC experts, ensuring you find the right expertise for your project needs.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/hospital'
+        }
+    },
+    {path: 'sector/manufacturing-plant', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-manufacturing-plant/sector.module').then(m => m.SectorManufacturingPlantModule),
+        data: {
+            title: 'Top Structural Engineering Vendors For Manufacturing Plant Projects | BuildTwin Marketplace',
+            description: 'AEC solutions for manufacturing plant construction with BuildTwin. Connect with pre-qualified structural engineering teams for manufacturing plant projects.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/manufacturing-plant'
+        }
+    },
+    {path: 'sector/theaters', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-theaters/sector.module').then(m => m.SectorTheatersModule),
+        data: {
+            title: 'Expert Structural Engineering Vendors For Theaters | BuildTwin Marketplace',
+            description: 'Advance structural and AEC solutions for theater construction with BuildTwin. Connect with pre-qualified teams for structural engineering services.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/theatres'
+        }
+    },
+    {path: 'sector/commercial-building', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-commercial-building/sector.module').then(m => m.SectorCommercialBuildingModule),
+        data: {
+            title: 'Structural Engineering Vendors For Commercial Building Projects | BuildTwin Marketplace',
+            description: 'AEC solutions for Commercial Building Projects with BuildTwin. Connect with pre-qualified structural engineering teams for your commercial building projects.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/commercial-building'
+        }
+    },
     // {
     //     path: 'pricing',
     //     loadChildren: () => import('./pages/price/pricing-page/pricing-page.module').then(m => m.PricingPageModule),

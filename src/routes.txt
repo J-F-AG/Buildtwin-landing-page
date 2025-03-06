@@ -15,6 +15,14 @@
 /business-intelligence
 /sector/data-centre
 /sector/power-plant
+/sector/bridge
+/sector/stadium
+/sector/roads
+/sector/water-and-waste
+/sector/hospital
+/sector/manufacturing-plant
+/sector/theaters
+/sector/commercial-building
 /training
 /pricing
 /good-reason

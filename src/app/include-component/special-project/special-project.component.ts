@@ -30,6 +30,59 @@ export class SpecialProjectComponent implements OnInit {
           },
           title: 'Power plant', description: 'Advanced structural engineering for resilient and efficient power plant facilities.', link: '/sector/power-plant' },
 
+          { id: 10,
+            src: {
+              webp: 'assets/images/services/Sector_Bridges.webp',
+              fallback: 'assets/images/services/Sector_Bridges.png'
+            },
+            title: 'Bridge', description: 'Expert bridge engineering services for durable and load-bearing infrastructure.', link: '/sector/bridge' },
+
+            { id: 15,
+              src: {
+                webp: 'assets/images/services/Sector_Roads.webp',
+                fallback: 'assets/images/services/Sector_Roads.png'
+              },
+              title: 'Road ways', description: 'Structural designs for durable and high-capacity roadway systems.', link: '/sector/roads' },
+
+              { id: 16,
+                src: {
+                  webp: 'assets/images/services/Sector_Waterwaste.webp',
+                  fallback: 'assets/images/services/Sector_Waterwaste.png'
+                }, 
+                title: 'Water & waste', description: 'Sustainable engineering for essential water and waste management facilities.', link: '/sector/water-and-waste' },
+
+                { id: 12,
+                  src: {
+                    webp: 'assets/images/services/Sector_Hospitals.webp',
+                    fallback: 'assets/images/services/Sector_Hospitals.png'
+                  },
+                  title: 'HOSPITALS', description: 'Structural solutions ensuring safety and adaptability in hospital building designs.', link: '/sector/hospital' },
+
+                  { id: 13,
+                    src: {
+                      webp: 'assets/images/services/Sector_ManufacturingPlants.webp',
+                      fallback: 'assets/images/services/Sector_ManufacturingPlants.png'
+                    },
+                    title: 'Manufacturing plants', description: 'Engineering expertise for robust and streamlined manufacturing plant structures.', link: '/sector/manufacturing-plant' },
+
+                    { id: 9,
+                      src: {
+                        webp: 'assets/images/services/Sector_theaters.webp',
+                        fallback: 'assets/images/services/Sector_theaters.png'
+                      },
+                      title: 'Theaters', description: 'Creative structural solutions for iconic and immersive theater complex projects.', link: '/sector/theaters' },
+
+                      {
+                        id: 4,
+                        src: {
+                          webp: 'assets/images/services/Sector_commercialBuilding.webp',
+                          fallback: 'assets/images/services/Sector_commercialBuilding.png'
+                        },
+                        title: 'Commercial building',
+                        description: 'Comprehensive engineering solutions for modern and dynamic commercial building projects.',
+                        link: '/sector/commercial-building'
+                      },
+
         {
           id:3,
           src: {
@@ -41,16 +94,7 @@ export class SpecialProjectComponent implements OnInit {
           link: ''
         },
 
-        {
-          id: 4,
-          src: {
-            webp: 'assets/images/services/Sector_commercialBuilding.webp',
-            fallback: 'assets/images/services/Sector_commercialBuilding.png'
-          },
-          title: 'Commercial building',
-          description: 'Comprehensive engineering solutions for modern and dynamic commercial building projects.',
-          link: ''
-        },
+        
 
         { id: 5,
           src: {
@@ -79,19 +123,9 @@ export class SpecialProjectComponent implements OnInit {
           },
           title: 'Schools', description: 'Optimized engineering solutions for functional and future-ready school building infrastructures.', link: '' },
 
-        { id: 9,
-          src: {
-            webp: 'assets/images/services/Sector_theaters.webp',
-            fallback: 'assets/images/services/Sector_theaters.png'
-          },
-          title: 'Theaters', description: 'Creative structural solutions for iconic and immersive theater complex projects.', link: '' },
+        
 
-        { id: 10,
-          src: {
-            webp: 'assets/images/services/Sector_Bridges.webp',
-            fallback: 'assets/images/services/Sector_Bridges.png'
-          },
-          title: 'Bridge', description: 'Expert bridge engineering services for durable and load-bearing infrastructure.', link: '' },
+        
 
         { id: 11,
           src: {
@@ -100,19 +134,9 @@ export class SpecialProjectComponent implements OnInit {
           },
           title: 'Chemical plants', description: 'Specialized designs for safe and efficient chemical plant facilities.', link: '' },
 
-        { id: 12,
-          src: {
-            webp: 'assets/images/services/Sector_Hospitals.webp',
-            fallback: 'assets/images/services/Sector_Hospitals.png'
-          },
-          title: 'HOSPITALS', description: 'Structural solutions ensuring safety and adaptability in hospital building designs.', link: '' },
+        
 
-        { id: 13,
-          src: {
-            webp: 'assets/images/services/Sector_ManufacturingPlants.webp',
-            fallback: 'assets/images/services/Sector_ManufacturingPlants.png'
-          },
-          title: 'Manufacturing plants', description: 'Engineering expertise for robust and streamlined manufacturing plant structures.', link: '' },
+        
 
         { id: 14,
           src: {
@@ -121,19 +145,9 @@ export class SpecialProjectComponent implements OnInit {
           },
           title: 'Metros', description: 'Precise engineering solutions for complex and efficient metro infrastructure projects.', link: '' },
 
-        { id: 15,
-          src: {
-            webp: 'assets/images/services/Sector_Roads.webp',
-            fallback: 'assets/images/services/Sector_Roads.png'
-          },
-          title: 'Road ways', description: 'Structural designs for durable and high-capacity roadway systems.', link: '' },
+        
 
-        { id: 16,
-          src: {
-            webp: 'assets/images/services/Sector_Waterwaste.webp',
-            fallback: 'assets/images/services/Sector_Waterwaste.png'
-          }, 
-          title: 'Water & waste', description: 'Sustainable engineering for essential water and waste management facilities.', link: '' },
+        
 
         { id: 17,
           src: {

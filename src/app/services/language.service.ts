@@ -3539,6 +3539,1169 @@ export class LanguageService {
     return JSON.stringify(SectorPowerPlantTestimonialSchema);
   }
 
+  injectFAQSchemaForSectorBridge(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What types of bridge projects does BuildTwin support, Does it support retrofitting or upgrading existing bridges?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin caters to all bridge projects—from new construction (beam, suspension, arch, cantilever, cable‐stayed) to retrofitting and upgrading existing bridges—ensuring tailored engineering solutions for every project need." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure the quality of its bridge vendors?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Every vendor on BuildTwin undergoes a rigorous inspection and qualification process that includes a full inspection, review of past projects, adherence to global and regional standards, and verification of their expertise in structural engineering and bridge design." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do engineers determine the optimal bridge design for a project?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Optimal design is based on factors such as span length, site conditions, load requirements, and environmental impact. Our vendors use advanced analysis and BIM tools to evaluate these parameters." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do digital twins improve bridge project outcomes?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Digital twins offer real-time monitoring and simulation of bridge performance, enabling proactive maintenance and repairs, efficient design revisions, and a reduction in costly rework and repairs during construction and post-construction phases." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How can BuildTwin help reduce the overall cost of bridge construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "By connecting clients with pre-qualified, expert vendors and integrating advanced digital planning tools like BIM and ERP, BuildTwin streamlines the design-to-construction process, reduces rework, and optimizes resource allocation to lower project costs." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What is the significance of load evaluations in bridge design?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Load evaluations determine the forces acting on elements of a bridge, ensuring that the design—whether beam, suspension, or arch—meets safety requirements and the structures can withstand expected traffic and environmental loads." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin support international bridge building projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes. With a global network of vetted vendors and compliance with both international and regional standards, BuildTwin is fully equipped to manage and deliver bridge projects across different geographies and regulatory environments." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin assist with vendor selection for bridge projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our intelligent matching system connects you with pre-qualified vendors based on project needs, ensuring you work with experts who have proven track records in bridge design, construction, bridge inspection, and maintenance." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What environmental considerations are integral to modern bridge design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Modern bridge projects focus on all aspects of sustainability by optimizing material use, reducing emissions during the construction process, and designing structures that minimize ecological disruption—ensuring safety, longevity, and environmental compliance." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForSectorStadium(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What types of stadium projects does BuildTwin support?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin connects you with vendors specializing in new stadium construction, renovation of current stadium facilities, and innovative upgrades like smart stadium technology integration. Whether you’re designing an NFL stadium, a ballpark, a multi-purpose arena, soccer side, or a community stadium, our platform ensures access to structural engineering experts, MEP designers, architects, and contractors who adhere to global standards like IBC and Eurocode." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure quality in stadium design and construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our vendors undergo rigorous qualification checks, focusing on expertise in structural steel frameworks, concrete engineering, and safety compliance. The AI Quality Control (QC) tool automates reviews of stadium architecture plans, flagging discrepancies in roof geometry, seating loads, or electrical systems before construction begins." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin help with cost-effective solutions for stadium projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "While costs vary based on scale (e.g., new Nissan Stadium vs. community stadium retrofits), our vendors provide tailored solutions prioritizing cost-efficiency. The platform’s ERP system enables real-time budget tracking, and vendors leverage modular designs or sustainable materials to optimize expenses." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How are modern stadiums designed for sustainability and fan experience?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin’s vendors integrate innovation with sustainability practices like solar-powered HVAC systems, rainwater harvesting, and LEED-certified materials. For fan experience, specialists design smart stadium features such as IoT-enabled crowd management, Wi-Fi infrastructure, and retractable seating for multi-use sports arenas." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What role does technology play in stadium construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "From BIM modeling for clash detection to AI-driven risk prevention, technology streamlines stadium construction. Vendors use tools like Tekla Structures for structural steel detailing and ANSYS for dynamic load simulations, ensuring precision in roof assemblies or seismic reinforcements." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Who typically builds and funds today’s stadium projects?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Stadiums are often developed through partnerships between teams (e.g., Tennessee Titans), cities, and private investors. BuildTwin’s marketplace simplifies collaboration by connecting stakeholders and owners with pre-vetted engineers, architects, and contractors, while our ERP tools manage bid processes and payment workflows." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How long does stadium construction take?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Timelines depend on project scope—e.g., new stadium builds may take 2–4 years to complete, while renovation projects (like Orchard Park upgrades) can be faster. Vendors on BuildTwin optimize schedules using precast concrete components and digital planning tools to accelerate construction phases." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin support stadium projects in challenging locations?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes. Our global network includes vendors experienced in diverse terrains, from urban sites like York State to coastal zones. The platform ensures compliance with local codes, safety protocols, and environmental guidelines, whether the site is for football stadiums or concert venues." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the key considerations for retrofitting an older Stadium?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Key focuses include ADA compliance, structural reinforcements for seismic safety, and updating electrical systems or HVAC for energy efficiency. BuildTwin’s vendors excel in blending historic preservation with modern innovation, such as adding modular seating or solar panel roofs." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin handle large-scale projects like the Intuit Dome or Nissan Stadium?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "For mega-projects, we connect buyers with a team of vendors experienced in Nissan Stadium-scale structural engineering, steel fabrication, and project management. The ERP system centralizes tasks like tender management, live tracking, and vendor and design team communications, ensuring seamless execution even in complex construction and development phases." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForSectorRoads(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin assist with vendor selection for road construction projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our intelligent matching system connects you with pre-qualified vendors based on your project’s specific requirements—ensuring you work with experts who have a proven track record in roadway design, construction, and maintenance." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What factors determine the use of flexible versus rigid pavements?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Material selection depends on traffic load and demand, climate conditions, subgrade quality, and expected maintenance requirements. Flexible pavements (asphalt) are often used for lower traffic volumes, while rigid pavements (concrete slabs) are chosen for high-volume, high-speed corridors." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do transportation engineers evaluate road load ratings and performance?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Engineers conduct detailed load evaluations and structural analyses using digital tools like BIM. They assess factors such as traffic volume, dynamic loads, and environmental stresses to offer solutions that ensure the roadway meets rigorous safety and performance standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure effective communication and coordination among stakeholders?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our integrated ERP system and BIM tools provide real-time updates, centralized documentation, and transparent communication channels. This ensures that all stakeholders—engineers, contractors, and clients—remain aligned throughout the project lifecycle to completion." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What sustainability considerations are integral to modern roadway design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Sustainable design includes optimizing material use, incorporating recycled materials, designing efficient drainage and water management systems, and reducing construction emissions—all while meeting safety and performance standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How are advanced materials chosen for roadway construction?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Material selection is based on engineering analysis, load requirements, and site conditions. High-quality asphalt, reinforced concrete, and steel are chosen to optimize durability, cost, and environmental performance." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What role does structural engineering play in highway design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Structural engineering ensures that roads and highways can withstand vehicular loads, environmental conditions, and long-term wear. It encompasses pavement design, reinforcement detailing, and the integration of drainage and safety features." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin support the retrofitting or upgrading of existing roads?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes. BuildTwin connects you with vendors experienced in road rehabilitation projects, including overlay design, subgrade stabilization, and drainage improvements, ensuring that older infrastructure is upgraded to meet current safety and performance standards." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForSectorWaterAndWaste(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "How do wastewater treatment plants operate?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Wastewater treatment plants process sewer, sewer backup, and industrial wastewater through physical, chemical, and biological treatment processes to remove pollutants. This ensures that treated water meets safety standards before discharge or reuse, reducing health risks and preventing property damage caused by untreated raw sewage." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the key considerations in designing a treatment plant?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Designing a treatment plant involves assessing the type and volume of wastewater, regulatory requirements, site conditions, and future scalability. Proper sewer systems and plumbing system design ensure efficiency, while durable sewer line materials help prevent sewer backups and further damage." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin facilitate the design and construction of water and waste management plants?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin connects clients with pre-qualified vendors specializing in sewer, wastewater treatment facilities, and water plant structural designing, offering services such as structural steel detailing, civil engineers expertise, and electrical systems integration for optimal efficiency." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does digital twin technology benefit storm water well management?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Digital twins create virtual replicas of physical assets, enabling real-time monitoring, predictive maintenance, and operational optimization in storm water and sewer systems. This helps reduce the impact of rain storms, mitigating sewer backups and overflow risks." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the common causes of sewer line cracks, and how are they addressed?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Sewer line cracks often result from shifting soil, tree roots intrusion, or aging cast iron pipes. Addressing them involves regular inspections, sewer line relining, or replacing damaged sections of the main sewer line to prevent sanitary sewer backups and leaks." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What is the significance of hydraulic and piping system designs in treatment plants?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Efficient hydraulic and piping designs ensure optimal flow rates, minimize energy consumption, and prevent issues like pressure drops, sewer backups, or pipe bursts. Proper integration with electrical systems, sump pumps, and floor drains enhances system performance." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do environmental and civil engineers contribute to wastewater treatment projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Environmental engineers design treatment processes, ensure compliance with regulations, and develop sustainable solutions for managing and treating wastewater. Civil engineers oversee the structural integrity of sewer systems, preventing aging sewage systems failures and structural damage." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What is the role of structural steel detailing in water treatment plant construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Structural steel detailing ensures precise fabrication and assembly of steel components in raw sewage treatment plants. This prevents extensive damage during operations and enhances wastewater treatment plant durability." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure compliance with regional and global standards in wastewater treatment projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin collaborates with vendors who adhere to international and regional standards, ensuring high-quality execution in sewer, wastewater, and waste management facilities. This includes properly dispose guidelines for hazardous waste and adherence to environmental regulations." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the benefits of using simulation software in wastewater treatment plant design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Simulation software allows engineers to model wastewater treatment processes, predict system behavior under various conditions, and optimize treatment plant designs. This reduces operating costs, improves effluent quality, and prevents sanitary sewer backups." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForSectorHospital(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What types of hospital projects does BuildTwin support?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin’s marketplace connects you with experts in designing and constructing hospitals—ranging from general hospitals to specialized and modular facilities—ensuring that every project meets rigorous engineering, quality, and safety standards while streamlining processes for efficient delivery." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do your vendors ensure high-quality hospital design and construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our pre-qualified vendors have highly qualified experience in hospital engineering and design. They follow internationally recognized standards and mission statement AEC services to deliver quality work, reduce costs, and successfully meet construction objectives, ensuring that every facility is built to serve patients and local communities." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do your vendors handle complex hospital projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our vendors have successfully undertaken increasingly larger and difficult projects by collaborating as a cohesive unit. They apply valuable knowledge, advanced materials, and innovative design-build solutions to overcome challenges, ensuring that each hospital facility meets high-profile quality and safety benchmarks." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What role does digital planning play in hospital construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Digital planning through 3D BIM and integrated ERP systems is central to our approach. It increases efficiency by streamlining processes, ensuring real-time project management, and enabling precise load evaluations and quality work from initial design through to project completion." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How are hospital construction projects managed to reduce costs?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our platform connects you with vendors who offer competitive pricing and efficient management practices. By leveraging digital tools and a firm’s experienced management team, projects are delivered on time and within budget, reducing overall costs while maintaining high quality and safety standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin support both new hospital construction and the upgrading of existing facilities?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Yes, our marketplace serves local governments and private companies by providing a full range of AEC services for both design-build of new hospitals and upgrades to existing facilities, ensuring that every project is completed with efficiency and in accordance with modern healthcare requirements." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What sustainability practices are integrated into hospital engineering projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our vendors focus on sustainable design by using energy-efficient materials, optimizing concrete and asphalt mixes, and integrating renewable systems. These practices help reduce environmental impact and ensure that hospitals are built with safety, longevity, and operational efficiency in mind." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How are accessibility and patient safety addressed in hospital design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Designs incorporate ADA compliance, universal design principles, and patient-centric layouts that enhance safety and accessibility while promoting efficient workflow and quality care." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What project management tools does BuildTwin provide to hospital projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our integrated ERP system and digital twin technology streamline project management by tracking milestones, managing budgets, and facilitating real-time collaboration among AEC services, ensuring that even complex hospital projects are efficiently coordinated from start to finish." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin streamline complex hospital projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our platform facilitates collaboration between a firm's experienced management team and specialized vendors, ensuring that intricate construction procedures, from equipment installation to design finish, are efficiently managed. This collaborative approach reduces costs, increases efficiency, and delivers quality hospital facilities that support modern healthcare and surgery requirements." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForSectorManufacturingPlant(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What types of manufacturing plant construction projects does BuildTwin support?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin supports a diverse range of manufacturing plant construction projects—from discrete facilities tailored for high‑precision assembly to continuous process plants designed for uninterrupted industrial production. Our platform connects businesses with experts who deliver complete engineering solutions, ensuring each facility is constructed to exacting standards and achieves long‑term success." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin help reduce construction costs and accelerate project completion?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin streamlines project management by connecting you with pre‑qualified contractors specializing in advanced design build solutions. Our integrated ERP and BIM tools aid in precise scheduling and strict budget tracking, reducing equipment downtime and lowering overall construction costs. This approach drives business success in the competitive construction industry." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What engineering services are available for manufacturing plants through BuildTwin?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our marketplace offers comprehensive engineering services covering structural design, MEP integration, and detailed BIM modeling. These services include structural precast design, cast‑in‑situ construction, PEB detailing, and HVAC system optimization to help customers create reliable facilities for efficient industrial production." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do BuildTwin’s solutions enhance industrial operations in manufacturing plants?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin’s digital platform integrates ERP and BIM tools to coordinate every phase of the construction process—from foundation planning to equipment installation and HVAC system design. This integration enhances industrial operations, ensuring that production machines run smoothly while our tools aid in reducing downtime." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What advantages does modular or pre‑engineered construction offer for manufacturing facilities?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Modular and pre‑engineered construction minimizes on‑site labor by producing standardized components off‑site, which speeds up equipment installation and ensures components are produced with consistent quality. This method benefits industrial efficiency and supports rapid construction while enhancing HVAC integration for seamless facility performance." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure quality and safety in manufacturing plant construction?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "BuildTwin connects you with vendors who adhere to global safety standards and local building codes. Our platform facilitates rigorous quality control—from HVAC integration to detailed structural steel detailing—ensuring that every manufacturing facility is built safely and meets strict quality benchmarks. This commitment guarantees that our customers receive top‑notch solutions that foster long‑term success." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What role does structural design play in manufacturing plant construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Structural design is the backbone of every manufacturing facility, ensuring that heavy equipment is properly supported and dynamic loads are managed. BuildTwin connects you with vendors who excel in advanced structural design and PEB detailing—crucial for safe construction and smooth industrial operations that drive long‑term success." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How can I contact BuildTwin for manufacturing plant project support?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "To get started, book a service or learn more on our platform. For further information, please contact BuildTwin directly." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForSectorTheaters(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What are BuildTwin’s theater engineering services?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin’s theater engineering services cover structural design, MEP integration, and digital planning—from the stage floor to the roof. Our comprehensive approach ensures that every theater meets global quality standards for performing arts and innovative entertainment worldwide." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin support innovative theatre design?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "We blend traditional artistry with modern technology. Our network of top architects and engineers transforms creative ideas into functional performance spaces—whether a classic proscenium theatre or a dynamic thrust stage—elevating live productions and cultural entertainment globally." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What makes BuildTwin a global leader in theater projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin connects you with a worldwide network of architects, engineers, and planners who specialize in theater projects. From bustling cities like Manhattan to regional centers, our marketplace ensures that every hall and performance venue is constructed to the highest engineering and artistic standards for the arts and entertainment." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do BuildTwin’s vendors enhance the aesthetics of performance halls?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Our vendors combine technical precision with creative vision. They design elegant roof systems, acoustically optimized auditoria, and dynamic stage configurations with attention to walls, interiors, and stage scenery—ensuring each hall becomes a vibrant center for entertainment and performing arts, perfect for films, ballet, and live drama." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does sustainable design impact modern theater projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Sustainable design is vital in modern theater construction. By using eco-friendly materials and energy-efficient systems, projects achieve reduced carbon footprints and lower operating costs. This sustainable approach not only supports the performing arts but also aligns with global trends toward green architecture and resilient cultural venues." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin integrate digital planning into theater construction?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Using ERP and BIM solutions, BuildTwin enables seamless digital planning for theater projects. Our integrated tools help architects and engineers model every detail—from floor to roof—ensuring efficient execution and adherence to rigorous safety and design standards for live and recorded performances." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the key challenges in theater engineering services?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "In theater engineering services, challenges include designing auditoria with optimal acoustics, ensuring structural integrity for dynamic stages, and integrating advanced MEP systems. These theater engineering services must balance artistic vision with rigorous safety, accessibility, and energy standards to support diverse live entertainment worldwide." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What role do architects play in BuildTwin’s theater projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Architects are crucial to our projects. BuildTwin connects you with leading architects who specialize in theater design for performing arts. They bring imaginative ideas and technical expertise to every project—from grand auditoria to modern, accessible venues—ensuring the overall architecture balances aesthetics and safety worldwide." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What makes theater projects in major cities unique?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Theater projects in major cities, such as Manhattan, combine historic architecture with modern innovation. In these urban centers, creative ideas transform traditional performance halls into cultural landmarks. The dynamic blend of artistic design, advanced engineering, and vibrant interiors makes city theaters powerful centers for performing arts and live entertainment that resonate with diverse audiences worldwide." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can BuildTwin transform historical theaters and modern venues?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes. Our experts work with both century-old theaters and new venues. Whether restoring a historic hall with classic architecture or designing a contemporary performance space with innovative elements, our vendors deliver solutions that respect tradition and embrace modern engineering, serving cities and cultural centers across the world." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure theater projects are accessible and compliant?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "We ensure projects meet ADA and Universal Design Guidelines so every theater—auditorium, stage, and interior—is safe and fully accessible. This commitment guarantees that the arts reach a diverse, global audience." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForSectorCommercialBuilding(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What is the difference between commercial building construction and residential projects like house or apartment buildings?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Commercial building construction focuses on functional spaces for businesses, retail, or multi-use properties, prioritizing durability, compliance, and scalability. Unlike residential projects (e.g., houses or apartments), commercial structures like office buildings or retail spaces require specialized design development to meet zoning laws, safety codes (e.g., fire exits), and tenant-specific layouts. BuildTwin connects clients with architects and structural vendors experienced in these complex requirements." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What types of commercial structures does BuildTwin cater to?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin covers a wide range of structures, including office buildings, retail spaces, mixed-use and multi use property developments, industrial facilities, and modular apartment complexes. Our network of experts—comprising experienced architects, contractors, and engineers—ensures every structure is designed and constructed with high security and quality, offering significant benefits for every owner." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How can architects and client collaborate effectively during the design development phase?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Architects and structural engineers must align on the client’s vision, budget, and compliance needs early in the design development process. BuildTwin’s platform facilitates seamless coordination through integrated BIM tools, ensuring structural plans, floor layouts, and material specifications are optimized. For example, our vendors use 3D modeling to resolve clashes between MEP systems and architectural elements before construction begins." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What is the vendor selection process on BuildTwin?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "The vendor selection process is streamlined and transparent. Our platform lets owners easily compare different types of vendors—from architects and contractors to structural engineers—ensuring that each project is backed by experts responsible for every phase of construction. This secure process helps save money while delivering quality structures at the right location." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure compliance with contracts between clients and vendors?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Our platform track milestones, payments, and deliverables. For example, if a contractor misses a deadline for a retail space’s schematic design, the system alerts both parties and suggests solutions, ensuring accountability." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What should a company consider when planning their next project in commercial real estate?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Evaluate location, tenant needs, and scalability. A multi-use property in a downtown area might prioritize foot traffic, while an industrial building requires proximity to highways." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What roles do architects play in ensuring a commercial property operates efficiently post-construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Architects design spaces for functionality and future adaptability. In retail spaces, this could mean flexible floor plans for seasonal displays; in office buildings, efficient HVAC systems reduce energy costs. BuildTwin’s pre-vetted vendors also incorporate sustainable materials, lowering long-term operational expenses for owners." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What is the difference between BuildTwin’s digital process and traditional methods?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "The biggest difference is our fully digital process that integrates design development and construction management. By unifying pre-qualified architects, engineers, and contractors, BuildTwin reduces timelines and money spent while enhancing security and quality. This innovative approach transforms every commercial project into a seamless, efficient operation." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
 
   injectForArchitecturalDesignServicesSchema(renderer) {
     // Create the Marketplace schema for the marketplace page
