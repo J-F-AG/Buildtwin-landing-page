@@ -610,7 +610,13 @@ export class VenderDetailsAarbeeComponent {
     if (type === 'parent') {
       this.isVisible = true;
       if (!this.selectedProjectCategory.imageUrls.length) {
-        this.selectedProjectCategor(0);
+        let selectedVal = false;
+        this.categorisedProjectImages.forEach((res: any, index: number) => {
+          if (!selectedVal && res['imageUrls'].length) {
+            selectedVal = true;
+            this.selectedProjectCategor(index);
+          }
+        });        
       }
     }
     if (type === 'child') {
