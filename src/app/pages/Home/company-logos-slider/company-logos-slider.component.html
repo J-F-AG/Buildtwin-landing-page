@@ -1,77 +1,21 @@
-<div class="container bg">
+<div class="container" [ngClass]="{'bg': bg, 'global-mb': !bg}">
     <div class="integrationsList roundButtonWrapper">
         <span class="head">Worked with</span>
-        <!-- <owl-carousel-o [options]="aboutSlider">
-          <ng-template carouselSlide> -->
-            <div class="integration-box text-center">
-                <!-- <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers"> -->
-                    <img src="assets/images/partner/logo1.png" width="50" height="42" alt="logo">
-                    <!-- <picture>
-                        <source srcset="assets/images/trustedBy-gbc@2x.webp 2x, assets/images/trustedBy-gbc.webp 1x" type="image/webp">
-                        <img src="assets/images/trustedBy-gbc@2x.png" srcset="assets/images/trustedBy-gbc@2x.png 2x, assets/images/trustedBy-gbc.png 1x" 
-                            alt="GBC Engineers" width="70" height="33" loading="lazy">
-                    </picture> -->
-                <!-- </a> -->
-            </div>
-        <!-- </ng-template>
-        <ng-template carouselSlide> -->
-            <div class="integration-box text-center">
-                <img src="assets/images/partner/logo2.png" width="43" height="43" alt="logo">
-                <!-- <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant">
-                    <picture>
-                        <source srcset="assets/images/patner2@2x.webp 2x, assets/images/patner2.webp 1x" type="image/webp">
-                        <img src="assets/images/patner2@2x.png" srcset="assets/images/patner2@2x.png 2x, assets/images/patner2.png 1x" 
-                            alt="Durchgeplant" width="138" height="22" loading="lazy">
-                    </picture>
-                </a> -->
-            </div>
-        <!-- </ng-template>
-        <ng-template carouselSlide> -->
-            <div class="integration-box text-center">
-                <img src="assets/images/partner/logo3.png" width="114" height="30" alt="logo">
-                <!-- <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited">
-                    <picture>
-                        <source srcset="assets/images/trustedBy-aarbee@2x.webp 2x, assets/images/trustedBy-aarbee.webp 1x" type="image/webp">
-                        <img src="assets/images/trustedBy-aarbee@2x.png" srcset="assets/images/trustedBy-aarbee@2x.png 2x, assets/images/trustedBy-aarbee.png 1x" 
-                            alt="AARBEE" width="75" height="49" loading="lazy">
-                    </picture>
-                </a> -->
-            </div>
-        <!-- </ng-template>
-        <ng-template carouselSlide> -->
-            <div class="integration-box text-center">
-                <img src="assets/images/partner/logo4.png" width="94" height="35" alt="logo">
-                <!-- <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india">
-                    <picture>
-                        <source srcset="assets/images/patner4@2x.webp 2x, assets/images/patner4.webp 1x" type="image/webp">
-                        <img src="assets/images/patner4@2x.png" srcset="assets/images/patner4@2x.png 2x, assets/images/patner4.png 1x" 
-                            alt="J&F" width="46" height="23" loading="lazy">
-                    </picture>
-                </a> -->
-            </div>
-        <!-- </ng-template>
-        <ng-template carouselSlide> -->
-            <div class="integration-box text-center">
-                <img src="assets/images/partner/logo5.png" width="100" height="44" alt="logo">
-                <!-- <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering">
-                    <picture>
-                        <source srcset="assets/images/trustedBy-caldim@2x.webp 2x, assets/images/trustedBy-caldim.webp 1x" type="image/webp">
-                        <img src="assets/images/trustedBy-caldim@2x.png" srcset="assets/images/trustedBy-caldim@2x.png 2x, assets/images/trustedBy-caldim.png 1x" 
-                            alt="CALDIM" width="104" height="18" loading="lazy">
-                    </picture>
-                </a> -->
-            </div>
-            <div class="integration-box text-center">
-                <img src="assets/images/partner/logo6.png" width="120" height="41" alt="logo">
-                <!-- <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering">
-                    <picture>
-                        <source srcset="assets/images/trustedBy-caldim@2x.webp 2x, assets/images/trustedBy-caldim.webp 1x" type="image/webp">
-                        <img src="assets/images/trustedBy-caldim@2x.png" srcset="assets/images/trustedBy-caldim@2x.png 2x, assets/images/trustedBy-caldim.png 1x" 
-                            alt="CALDIM" width="104" height="18" loading="lazy">
-                    </picture>
-                </a> -->
-            </div>
-        <!-- </ng-template>
-      </owl-carousel-o> -->
+        <div #carouselParent class="partners-carousel-wrapper">
+            <div class="partners-carousel-flex" [ngClass]="{'animation':isAnimationEnabled}">
+                <div class="partners-carousel-child">
+                    <div #carousel class="partners-carousel">
+                        <div class="integration-box text-center" *ngFor="let partner of partners" [ngStyle]="{'min-width.px': partner.width}">
+                          <img [src]="partner.logo" [width]="partner.width" [height]="partner.height" [alt]="partner.alt">
+                        </div>
+                      </div>
+                      <div class="partners-carousel" *ngIf="isAnimationEnabled">
+                        <div class="integration-box text-center" *ngFor="let partner of partners" [ngStyle]="{'min-width.px': partner.width}">
+                          <img [src]="partner.logo" [width]="partner.width" [height]="partner.height" [alt]="partner.alt">
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
       </div>
 </div>

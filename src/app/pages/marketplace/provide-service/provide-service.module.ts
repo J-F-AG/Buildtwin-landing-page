@@ -13,6 +13,7 @@ import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
 import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 import { Style3Module } from '../../style3/style3.module';
 import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module';
+import { CompanyLogosSliderModule } from '../../Home/company-logos-slider/company-logos-slider.module';
 
 const routes: Routes = [
   {
@@ -37,6 +38,7 @@ const routes: Routes = [
     HdFooterModule,
     Style3Module,
     HubspotModule,
+    CompanyLogosSliderModule,
     RouterModule.forChild(routes),
     ProjectListModule
   ],
