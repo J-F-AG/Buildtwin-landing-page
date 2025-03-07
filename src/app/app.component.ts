@@ -420,6 +420,62 @@ injectBreadcrumbScript(url) {
         `<script type="application/ld+json">${faqSchema}</script>`
       );
 
+    }else if(url.includes('/sector/industrial-building')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorIndustrialBuilding(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/residential-building')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorResidentialBuilding(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/chemical-plant')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorChemicalPlant(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/schools')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorSchools(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/airports')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorAirports(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/tunnels')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorTunnels(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/metro')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorMetro(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/defense')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorDefense(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
     }else if(url.includes('/software/architecture-design-services')){
       const faqSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
 

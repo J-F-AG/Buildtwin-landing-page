@@ -408,6 +408,94 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/sector/commercial-building'
         }
     },
+    {path: 'sector/industrial-building', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-industrial-building/sector.module').then(m => m.SectorIndustrialBuildingModule),
+        data: {
+            title: 'Find Expert Industrial Building Structural Vendors | BuildTwin Marketplace',
+            description: 'Advance structural and AEC solutions for Industrial Building Construction Projects with BuildTwin. Connect with pre-qualified structural engineering vendors.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/industrial-building'
+        }
+    },
+    {path: 'sector/residential-building', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-residential-building/sector.module').then(m => m.SectorResidentialBuildingModule),
+        data: {
+            title: 'Expert Structural Vendors for Residential Buildings | BuildTwin Marketplace',
+            description: 'BuildTwin connects you with expert structural engineering vendors for residential buildings projects for structural engineering and architecture services.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/residential-building'
+        }
+    },
+    {path: 'sector/chemical-plant', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-chemical-plant/sector.module').then(m => m.SectorChemicalPlantModule),
+        data: {
+            title: 'Structural Engineering Vendors For Chemical Plant Projects | BuildTwin Marketplace',
+            description: 'AEC solutions for Chemical Plant Projects with BuildTwin. Connect with pre-qualified structural engineering teams for your complex chemical plant projects.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/chemical-plant'
+        }
+    },
+    {path: 'sector/schools', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-schools/sector.module').then(m => m.SectorSchoolsModule),
+        data: {
+            title: 'Expert Structural Vendors for Schools Building | BuildTwin Marketplace',
+            description: 'BuildTwin connects you with expert structural engineering vendors and architectural firms for School/Educational Building Projects.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/schools'
+        }
+    },
+    {path: 'sector/airports', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-airports/sector.module').then(m => m.SectorAirportsModule),
+        data: {
+            title: 'Expert Structural Vendors for Airport Projects | BuildTwin Marketplace',
+            description: 'BuildTwin connects you with expert structural engineering vendors and architectural firms for Airport Projects success.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/airports'
+        }
+    },
+    {path: 'sector/tunnels', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-tunnels/sector.module').then(m => m.SectorTunnelsModule),
+        data: {
+            title: 'Top Structural Engineering Firms For Tunnel Projects | BuildTwin Marketplace',
+            description: 'AEC solutions for tunnel construction projects with BuildTwin. Connect with pre-qualified structural engineering teams for tunnel engineering.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/tunnels'
+        }
+    },
+    {path: 'sector/metro', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-metro/sector.module').then(m => m.SectorMetroModule),
+        data: {
+            title: 'Structural Engineering Services for Metro & Railway Projects | BuildTwin Marketplace',
+            description: 'Connecting Global Expertise with Advanced AEC Solutions for Complex Metro & Railway Projects - Structural Design and Development Projects.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/metro'
+        }
+    },
+    {path: 'sector/defense', 
+        // component: SectorPowerPlantComponent,
+        
+        loadChildren: () => import('./pages/sector-defense/sector.module').then(m => m.SectorDefenseModule),
+        data: {
+            title: 'Expert Structural Vendors for Defense Infrastructure | BuildTwin Marketplace',
+            description: 'BuildTwin connects you with expert structural engineering vendors and architectural firms for your defense infrastructure projects success.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/sector/defense'
+        }
+    },
     // {
     //     path: 'pricing',
     //     loadChildren: () => import('./pages/price/pricing-page/pricing-page.module').then(m => m.PricingPageModule),

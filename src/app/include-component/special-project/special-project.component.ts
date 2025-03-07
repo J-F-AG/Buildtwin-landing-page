@@ -83,6 +83,35 @@ export class SpecialProjectComponent implements OnInit {
                         link: '/sector/commercial-building'
                       },
 
+                      { id: 5,
+                        src: {
+                          webp: 'assets/images/services/Sector_industrialbulidings.webp',
+                          fallback: 'assets/images/services/Sector_industrialbulidings.png'
+                        },
+                        title: 'INDUSTRIAL BUILDINGS', description: 'Tailored structural designs for efficient and robust industrial building facilities.', link: '/sector/industrial-building' },
+
+                        { id: 7,
+                          src: {
+                            webp: 'assets/images/services/Sector_residentialbuildings.webp',
+                            fallback: 'assets/images/services/Sector_residentialbuildings.png'
+                          },
+                          title: 'Residential Buildings', description: 'End-to-end structural services for safe and sustainable residential building designs.', link: '/sector/residential-building' },
+
+                          { id: 11,
+                            src: {
+                              webp: 'assets/images/services/Sector_ChemicalPlants.webp',
+                              fallback: 'assets/images/services/Sector_ChemicalPlants.png'
+                            },
+                            title: 'Chemical plants', description: 'Specialized designs for safe and efficient chemical plant facilities.', link: '/sector/chemical-plant' },
+
+
+                            { id: 8,
+                              src: {
+                                webp: 'assets/images/services/Sector_schools.webp',
+                                fallback: 'assets/images/services/Sector_schools.png'
+                              },
+                              title: 'Schools', description: 'Optimized engineering solutions for functional and future-ready school building infrastructures.', link: '/sector/schools' },
+
         {
           id:3,
           src: {
@@ -91,70 +120,54 @@ export class SpecialProjectComponent implements OnInit {
           },
           title: 'AIRPORTS',
           description: 'Tailored structural services for expansive and modern airport infrastructure.',
-          link: ''
+          link: '/sector/airports'
         },
 
-        
-
-        { id: 5,
-          src: {
-            webp: 'assets/images/services/Sector_industrialbulidings.webp',
-            fallback: 'assets/images/services/Sector_industrialbulidings.png'
-          },
-          title: 'INDUSTRIAL BUILDINGS', description: 'Tailored structural designs for efficient and robust industrial building facilities.', link: '' },
-
-        { id: 6,
-          src: {
-            webp: 'assets/images/services/Sector_pre-cast.webp',
-            fallback: 'assets/images/services/Sector_pre-cast.png'
-          },
-          title: 'PRE-CAST', description: 'Expert detailing and engineering services for precision-driven precast industry projects.', link: '' },
-        { id: 7,
-          src: {
-            webp: 'assets/images/services/Sector_residentialbuildings.webp',
-            fallback: 'assets/images/services/Sector_residentialbuildings.png'
-          },
-          title: 'Residential Buildings', description: 'End-to-end structural services for safe and sustainable residential building designs.', link: '' },
-
-        { id: 8,
-          src: {
-            webp: 'assets/images/services/Sector_schools.webp',
-            fallback: 'assets/images/services/Sector_schools.png'
-          },
-          title: 'Schools', description: 'Optimized engineering solutions for functional and future-ready school building infrastructures.', link: '' },
-
-        
-
-        
-
-        { id: 11,
-          src: {
-            webp: 'assets/images/services/Sector_ChemicalPlants.webp',
-            fallback: 'assets/images/services/Sector_ChemicalPlants.png'
-          },
-          title: 'Chemical plants', description: 'Specialized designs for safe and efficient chemical plant facilities.', link: '' },
-
-        
-
-        
-
-        { id: 14,
-          src: {
-              webp: 'assets/images/services/Sector_Metros.webp',
-              fallback: 'assets/images/services/Sector_Metros.png'
-          },
-          title: 'Metros', description: 'Precise engineering solutions for complex and efficient metro infrastructure projects.', link: '' },
-
-        
-
-        
 
         { id: 17,
           src: {
             webp: 'assets/images/services/Sector_tunnel.webp',
             fallback: 'assets/images/services/Sector_tunnel.png'
           },
-          title: 'Tunnel', description: 'Comprehensive solutions for safe and long-lasting tunnel engineering projects.', link: '' },
+          title: 'Tunnel', description: 'Comprehensive solutions for safe and long-lasting tunnel engineering projects.', link: '/sector/tunnels' },
+        
+
+        
+          { id: 14,
+            src: {
+                webp: 'assets/images/services/Sector_Metros.webp',
+                fallback: 'assets/images/services/Sector_Metros.png'
+            },
+            title: 'Metros', description: 'Precise engineering solutions for complex and efficient metro infrastructure projects.', link: '/sector/metro' },
+
+
+        // { id: 6,
+        //   src: {
+        //     webp: 'assets/images/services/Sector_pre-cast.webp',
+        //     fallback: 'assets/images/services/Sector_pre-cast.png'
+        //   },
+        //   title: 'PRE-CAST', description: 'Expert detailing and engineering services for precision-driven precast industry projects.', link: '' },
+        
+
+        
+
+        
+
+        
+
+       
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
       ],
     },
   ];

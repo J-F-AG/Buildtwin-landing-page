@@ -286,7 +286,21 @@
      <!-- <div class="bottom-space-gap"> -->
         <!-- <app-power-plant-special-project [page]="'sector'"></app-power-plant-special-project> -->
    <!-- </div> -->
-        <app-water-and-waste-hd-discover-projects [hideTitle]="true" [page]="'sector'"></app-water-and-waste-hd-discover-projects>
+        <!-- <app-water-and-waste-hd-discover-projects [hideTitle]="true" [page]="'sector'"></app-water-and-waste-hd-discover-projects> -->
+
+        <div class="global-mb container">
+            <div class="heading">
+                    <h2 class="title">
+                        Featured Projects
+                    </h2>
+                    <p class="subTitle">
+                        Explore our portfolio of successful engineering projects across various sectors
+                    </p>
+            </div>
+            <app-project-list [sectorName]="'Water & Waste'"></app-project-list>
+        </div>
+
+
    <div class="container">
     <div class="count-wrapper global-mb">
         <div class="block">

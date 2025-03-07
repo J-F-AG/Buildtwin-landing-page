@@ -11,6 +11,7 @@ import { WaterAndWasteSectorCategoryComponent } from './sector-category/service-
 import { WaterAndWasteTtPartnersComponent } from './tt-partners/tt-partners.component';
 import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { HdGoodCompanyModule } from '../Home/hd-good-company/hd-good-company.module';
+import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 const routes: Routes = [
     {
         path: '',
@@ -33,6 +34,7 @@ const routes: Routes = [
         HdFooterModule,
         SharedModuleModule,
         HdGoodCompanyModule,
+        ProjectListModule,
         RouterModule.forChild(routes),
     ],
     exports: [

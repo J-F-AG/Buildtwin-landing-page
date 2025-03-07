@@ -12,6 +12,7 @@ import { DataCenterFaqBuildtwinComponent } from './faq-buildtwin/faq-buildtwin.c
 import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { HdGoodCompanyModule } from '../Home/hd-good-company/hd-good-company.module';
+import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 const routes: Routes = [
     {
         path: '',
@@ -35,6 +36,7 @@ const routes: Routes = [
         HdFooterModule,
         SharedModuleModule,
         HdGoodCompanyModule,
+        ProjectListModule,
         RouterModule.forChild(routes),
     ],
     exports: [
