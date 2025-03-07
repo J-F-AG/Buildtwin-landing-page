@@ -610,7 +610,13 @@ export class VenderDetailsAarbeeComponent {
     if (type === 'parent') {
       this.isVisible = true;
       if (!this.selectedProjectCategory.imageUrls.length) {
-        this.selectedProjectCategor(0);
+        let selectedVal = false;
+        this.categorisedProjectImages.forEach((res: any, index: number) => {
+          if (!selectedVal && res['imageUrls'].length) {
+            selectedVal = true;
+            this.selectedProjectCategor(index);
+          }
+        });        
       }
     }
     if (type === 'child') {
@@ -870,7 +876,8 @@ export class VenderDetailsAarbeeComponent {
           }
         });
         if (company.length || this.isIframe) {
-          let queryParam = company.length ? company[0].domain: this.cockpitDomain;
+          // let queryParam = company.length ? company[0].domain: this.cockpitDomain;
+          let queryParam = company.length ? company[0].company_id: '';
           if (this.isIframe) {
             company = [{
               domain: company[0].domain
@@ -879,7 +886,7 @@ export class VenderDetailsAarbeeComponent {
           // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
           forkJoin([
             this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
-            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?domain=${queryParam}`)
+            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?company=${queryParam}`)
           ])
             .pipe(
               catchError(err => {
