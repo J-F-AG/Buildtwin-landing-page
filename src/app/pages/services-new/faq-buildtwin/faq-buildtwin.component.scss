@@ -51,6 +51,11 @@
                 font-family: var(--poppinsFontFamily);
                 font-size: 16px;
                 font-weight: 500;
+                h3, .faq-heading{
+                    font-size: inherit;
+                    font-weight: inherit;
+                    margin: 0px;
+                }
             }
 
             .faq-heading {

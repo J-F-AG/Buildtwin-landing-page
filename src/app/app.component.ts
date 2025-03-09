@@ -364,6 +364,118 @@ injectBreadcrumbScript(url) {
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
 
+    }else if(url.includes('/sector/bridge')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorBridge(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/stadium')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorStadium(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/roads')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorRoads(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/water-and-waste')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorWaterAndWaste(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/hospital')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorHospital(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/manufacturing-plant')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorManufacturingPlant(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/theaters')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorTheaters(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/commercial-building')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorCommercialBuilding(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/industrial-building')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorIndustrialBuilding(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/residential-building')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorResidentialBuilding(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/chemical-plant')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorChemicalPlant(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/schools')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorSchools(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/airports')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorAirports(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/tunnels')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorTunnels(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/metro')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorMetro(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
+    }else if(url.includes('/sector/defense')){
+      const faqSchema = this._languageService.injectFAQSchemaForSectorDefense(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+
     }else if(url.includes('/software/architecture-design-services')){
       const faqSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
 

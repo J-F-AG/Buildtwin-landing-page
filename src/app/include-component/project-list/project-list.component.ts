@@ -13,6 +13,7 @@ import { findFlagUrlByCountryName } from 'country-flags-svg';
   styleUrl: './project-list.component.scss'
 })
 export class ProjectListComponent {
+@Input() sectorName: string = '';
 @Input() slider : boolean = false;
 @Input() hideMessageBox = false;
 @ViewChild('carouselTrack') carouselTrack!: ElementRef;
@@ -36,15 +37,24 @@ factorySlider: OwlOptions | null = null;
 private _projectListService: ProjectListService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.fetchData()
-    if(this.isBrowser){
-      this.getProjectData()
-    }
+    // if(this.isBrowser){
+    //   this.getProjectData()
+    // }
   }
   ngOnInit(): void {
     setTimeout(() => {
       console.log(this.sectorArray)
     }, 10000);
     this.sliderInit()
+
+    // Set the selectedCategory to the provided sectorName if it exists
+    if (this.sectorName !== '') {
+      this.selectedCategory = this.sectorName;
+    }
+
+    if(this.isBrowser){
+      this.getProjectData()
+    }
     // const flagUrl3 = findFlagUrlByCountryName('Malaysia')
     // console.log(flagUrl3)
     // this._http.get('https://restcountries.com/v3.1/all').subscribe((data: any[]) => {
