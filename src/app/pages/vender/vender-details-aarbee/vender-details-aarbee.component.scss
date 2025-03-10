@@ -1740,6 +1740,13 @@ ul {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        
+        max-width: calc(100vw - 200px);
+        max-height: calc(100vh - 200px);
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        display: block;
     }
 }
 
