@@ -628,9 +628,15 @@ export class VenderDetailsAarbeeComponent {
       if (parentName === 'parent') {
         image = this.selectedProjectCategory.imageUrls.filter((a, i) => i === imageIndx);
       } else {
-        image = this.selectedProject.categorylist[this.filterIndex].imageurls.filter((a, i) => i === imageIndx);
+        if(this.selectedProject.categorylist.length){
+          image = this.selectedProject.categorylist[this.filterIndex].imageurls.filter((a, i) => i === imageIndx);
+        }
       }
-      this.selectedPrimaryImage = image[0];
+      if(image.length) {
+        this.selectedPrimaryImage = image[0];
+      }else {
+        this.selectedPrimaryImage = this.selectedProject['imageUrl']
+      }
     }
     if(project){
       this.filterIndex = 0;
@@ -834,6 +840,9 @@ export class VenderDetailsAarbeeComponent {
     this.isAddon = true;
   }
 
+  removeTrailingDash(str) {
+    return str.replace(/-$/, ''); // Removes '-' only if it's at the end
+  }
   getBusinessListing() {
 
     let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=All`
@@ -860,14 +869,15 @@ export class VenderDetailsAarbeeComponent {
         companies['data']['details'] = [companies['data']['company_data']['basic_form_fields']]
       }
       if (companies && companies['data'] && companies['data']['details'] && companies['data']['details'].length) {
-        // debugger
         let company = companies['data']['details'].filter(a => {
-          if (this._languageService.customMapping[a['company_name']]) {
-            a['route'] = this._languageService.customMapping[a['company_name']];
-            a['linking'] = this._languageService.customMapping[a['company_name']];
+          const cleanCompanyName = a['company_name'].replace(/[()]/g, '-'); // Remove '(' and ')'
+          if (this._languageService.customMapping[cleanCompanyName]) {
+            a['route'] = this._languageService.customMapping[cleanCompanyName];
+            a['linking'] = this._languageService.customMapping[cleanCompanyName];
           }else {
-            a['route'] = a['company_name'].replace(/ /g, '');
-            a['linking'] = a['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+            let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
+            a['route'] = cleanCompanyName.replace(/ /g, '');
+            a['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
             .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
             .toLowerCase();
           }
@@ -1359,15 +1369,18 @@ export class VenderDetailsAarbeeComponent {
       retry(2)
     ).subscribe(companies => {
       companies['data'].forEach(company => {
-        if (this._languageService.customMapping[company['name']]) {
-          company['route'] = this._languageService.customMapping[company['name']];
-          company['linking'] = this._languageService.customMapping[company['name']];
+        let cleanCompanyName = company['name'].replace(/[()]/g, '-'); // Remove '(' and ')'
+        if (this._languageService.customMapping[cleanCompanyName]) {
+          company['route'] = this._languageService.customMapping[cleanCompanyName];
+          company['linking'] = this._languageService.customMapping[cleanCompanyName];
         }else {
           if(!company['name']){
             company['name'] = '*****'
+            cleanCompanyName = '*****'
           }
-          company['route'] = company['name'].replace(/ /g, '');
-          company['linking'] = company['name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+          let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
+          company['route'] = cleanCompanyName.replace(/ /g, '');
+          company['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
           .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
           .toLowerCase();
         }
