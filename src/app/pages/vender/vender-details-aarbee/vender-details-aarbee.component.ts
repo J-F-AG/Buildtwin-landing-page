@@ -617,6 +617,10 @@ export class VenderDetailsAarbeeComponent {
             this.selectedProjectCategor(index);
           }
         });        
+      }else {
+        if(this.selectedProjectCategory['imageUrls'] && this.selectedProjectCategory['imageUrls'].length) {
+          this.selectedProjectCategory['imageUrls'] = this.removeDuplicates(this.selectedProjectCategory['imageUrls'])
+        }
       }
     }
     if (type === 'child') {
@@ -630,6 +634,8 @@ export class VenderDetailsAarbeeComponent {
       } else {
         if(this.selectedProject.categorylist.length){
           image = this.selectedProject.categorylist[this.filterIndex].imageurls.filter((a, i) => i === imageIndx);
+        }else if (this.selectedProject['project_logo'] && this.selectedProject['project_logo'].length) {
+          image = this.selectedProject.project_logo.filter((a, i) => i === imageIndx);
         }
       }
       if(image.length) {
@@ -681,9 +687,10 @@ export class VenderDetailsAarbeeComponent {
   }
 
   ngOnInit() {
-    // setTimeout(() => {
-    //   console.log(this.highlightImges)
-    // }, 10000);
+    setTimeout(() => {
+      console.log(this.selectedProjectCategory)
+      console.log(this.categorisedProjectImages)
+    }, 10000);
     this.sliderInit()
     this.myForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]], // Email field validation
@@ -1296,7 +1303,9 @@ export class VenderDetailsAarbeeComponent {
                   this.formData.serviceType = this.serviceTypes.join(',');
                 }
                 this.formData.faq = formData['basic_form_fields'] ? formData['basic_form_fields']['faq']: this.formData.faq;
-                this.updateSchema(this.formData.faq)
+                if(this.formData.faq){
+                  this.updateSchema(this.formData.faq)
+                }
                 if (formData['building_codes'] && formData['building_codes'].length) {
                   formData['building_codes'].forEach((b: any) => {
                     obj = {
@@ -1369,6 +1378,7 @@ export class VenderDetailsAarbeeComponent {
       retry(2)
     ).subscribe(companies => {
       companies['data'].forEach(company => {
+        if(!company['name']) return;
         let cleanCompanyName = company['name'].replace(/[()]/g, '-'); // Remove '(' and ')'
         if (this._languageService.customMapping[cleanCompanyName]) {
           company['route'] = this._languageService.customMapping[cleanCompanyName];
