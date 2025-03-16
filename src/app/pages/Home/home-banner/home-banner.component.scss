@@ -128,7 +128,8 @@
 @media (max-width: 767px) {
     .homeBanner {
         padding: 400px 0;
-
+        max-height: none;
+        height: auto;
         .leftImage-1 {
             width: 105px;
             left: -20px;
