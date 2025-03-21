@@ -309,7 +309,7 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/sector/data-centre'
         }
     },
-    {path: 'sector/power-plant', 
+    {path: 'sector/powerplant', 
         // component: SectorPowerPlantComponent,
         
         loadChildren: () => import('./pages/sector-power-plant/sector.module').then(m => m.SectorPowerPlantModule),
@@ -317,7 +317,7 @@ const routes: Routes = [
             title: 'Expert Power Plant Engineering Solutions | BuildTwin Marketplace',
             description: 'Discover expert vendors for power plant projects and power plant engineering services in thermal, nuclear, and renewable energy. Enhance efficiency with BuildTwin’s ERP solutions.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/sector/power-plant'
+            canonical: 'https://www.buildtwin.com/sector/powerplant'
         }
     },
     {path: 'sector/bridge', 
@@ -572,14 +572,14 @@ const routes: Routes = [
     },
 
     {
-        path: 'services/bim-service-provider-in-usa',
+        path: 'services/bim-outsourcing-services-in-usa',
         loadChildren: () => import('./pages/bim-usa/services-new.module').then(m => m.BimUsaServicesNewModule),
         // component: BimUsaServicesNewComponent,
         data: {
             title: 'Connect with BIM Modeling Services Providers for AEC Projects Across the USA | BuildTwin',
             description: "Connect top-tier BIM service providers across the USA. Our BIM services provider specialize in BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM.",
             image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
-            canonical: 'https://www.buildtwin.com/services/bim-service-provider-in-usa'
+            canonical: 'https://www.buildtwin.com/services/bim-outsourcing-services-in-usa'
         }
     },
 

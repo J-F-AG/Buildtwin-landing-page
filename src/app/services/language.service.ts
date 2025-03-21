@@ -15,7 +15,7 @@ export class LanguageService {
     "rebar-detailing-services" : 12,  //this has to be updated later
     "bim-services" : 1,  //this has to be updated later
     "steel-detailing-services" : 8,  //this has to be updated later
-    "bim-service-provider-in-usa" : 1,  //this has to be updated later
+    "bim-outsourcing-services-in-usa" : 1,  //this has to be updated later
     "steel-detailing-services-in-usa" : 8,  //this has to be updated later
     "drafting-services" : 12,  //this has to be updated later
     "cad-services" : 12  //this has to be updated later
@@ -33,7 +33,7 @@ export class LanguageService {
     "steel-detailing-services" : {
       name: 'Structural Steel Detailing Services'
     },
-    "bim-service-provider-in-usa" : {
+    "bim-outsourcing-services-in-usa" : {
       name: 'BIM Services'
     },
     "steel-detailing-services-in-usa" : {

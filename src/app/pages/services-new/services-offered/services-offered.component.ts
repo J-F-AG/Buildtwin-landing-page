@@ -26,7 +26,7 @@ export class ServicesOfferedComponent {
         { img: 'assets/images/home/Airports.png', projectTitle: 'Airports', link: ''},
         { img: 'assets/images/home/commercial building.png', projectTitle: 'Residential, commercial and industrial buildings', link: ''},
         { img: 'assets/images/home/data center.png', projectTitle: 'Data centers', link: '/sector/data-centre'},
-        { img: 'assets/images/home/power plant.png', projectTitle: 'Power plants', link: '/sector/power-plant'},
+        { img: 'assets/images/home/power plant.png', projectTitle: 'Power plants', link: '/sector/powerplant'},
         { img: 'assets/images/home/Sector_ChemicalPlants.png', projectTitle: 'Chemical plants', link: ''},
         { img: 'assets/images/home/Sector_ManufacturingPlants.png', projectTitle: 'Manufacturing plants', link: ''},
         //{ img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Parking structures', link: ''},

@@ -6,7 +6,7 @@
 /services/pre-cast-detailing-services
 /services/rebar-detailing-services
 /services/bim-services
-/services/bim-service-provider-in-usa
+/services/bim-outsourcing-services-in-usa
 /services/steel-detailing-services-in-usa
 /services/steel-detailing-services
 /services/drafting-services
@@ -14,7 +14,7 @@
 /ai-project-management
 /business-intelligence
 /sector/data-centre
-/sector/power-plant
+/sector/powerplant
 /sector/bridge
 /sector/stadium
 /sector/roads
