@@ -28,7 +28,7 @@ export class SpecialProjectComponent implements OnInit {
             webp: 'assets/images/services/Sector_powerplant.webp',
             fallback: 'assets/images/services/Sector_powerplant.png'
           },
-          title: 'Power plant', description: 'Advanced structural engineering for resilient and efficient power plant facilities.', link: '/sector/power-plant' },
+          title: 'Power plant', description: 'Advanced structural engineering for resilient and efficient power plant facilities.', link: '/sector/powerplant' },
 
           { id: 10,
             src: {

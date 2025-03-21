@@ -280,7 +280,7 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
-    }else if(url.includes('/services/bim-service-provider-in-usa')){
+    }else if(url.includes('/services/bim-outsourcing-services-in-usa')){
       const faqSchema = this._languageService.injectFAQSchemaForBimServiceProvider(this.renderer)
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
@@ -310,7 +310,7 @@ injectBreadcrumbScript(url) {
     this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
       `<script type="application/ld+json">${faqSchema}</script>`
     );
-  }else if(url.includes('/services/bim-service-provider-in-usa')){
+  }else if(url.includes('/services/bim-outsourcing-services-in-usa')){
       const faqSchema = this._languageService.injectFAQSchemaForBimServiceProvider(this.renderer)
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
@@ -351,7 +351,7 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
-    }else if(url.includes('/sector/power-plant')){
+    }else if(url.includes('/sector/powerplant')){
       const faqSchema = this._languageService.injectFAQSchemaForSectorPowerPlant(this.renderer)
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(

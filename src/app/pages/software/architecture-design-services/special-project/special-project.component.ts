@@ -50,7 +50,7 @@ export class SpecialProjectArchitectureDesignServicesComponent {
         },
         { src: 'assets/images/services/Sector_datacenter.png', title: 'Data Center', description: '10+ Vendors', link: '/sector/data-centre' },
         { src: 'assets/images/services/Sector_industrialbulidings.png', title: 'INDUSTRIAL BUILDINGS', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_powerplant.png', title: 'Power plant', description: '10+ Vendors', link: '/sector/power-plant' },
+        { src: 'assets/images/services/Sector_powerplant.png', title: 'Power plant', description: '10+ Vendors', link: '/sector/powerplant' },
         { src: 'assets/images/services/Sector_pre-cast.png', title: 'PRE-CAST', description: '10+ Vendors', link: '' },
         { src: 'assets/images/services/Sector_residentialbuildings.png', title: 'Residential Buildings', description: '10+ Vendors', link: '' },
         { src: 'assets/images/services/Sector_schools.png', title: 'Schools', description: '10+ Vendors', link: '' },
