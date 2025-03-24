@@ -344,7 +344,7 @@
                                     </svg>
                                 </i>
                                 <span>
-                                    {{formData.companyDetails.years_in_business}}+ in Business
+                                    {{formData.companyDetails.years_in_business}} in Business
                                 </span>
                             </li>
                             <li>
@@ -354,7 +354,7 @@
                                     </svg>                                       
                                 </i>
                                 <span>
-                                    {{formData.companyDetails.employees_count}}+ Employees
+                                    {{formData.companyDetails.employees_count}} Employees
                                 </span>
                             </li>
                             <li>
@@ -364,7 +364,7 @@
                                     </svg>                                        
                                 </i>
                                 <span>
-                                    {{formData.companyDetails.reference_projects}}+ projects
+                                    {{formData.companyDetails.reference_projects}} projects
                                     <!-- <span
                                         class="color">(Verified)</span> -->
                                 </span>
@@ -929,7 +929,7 @@
                     </h3>
                     <p [innerHtml]="formData.companyDetails?.company_description ">
                     </p>
-                    <div class="digitalised-operation">
+                    <div class="digitalised-operation" *ngIf="formData?.operations?.lengtth">
                         <h6>
                             Digitalised Operation
                         </h6>
