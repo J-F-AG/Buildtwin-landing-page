@@ -83,12 +83,14 @@ getListOfCompany() {
         }
       })
       res['data']['details'].filter(res2=>{
-        if (this._languageService.customMapping[res2['company_name']]) {
-          res2['route'] = this._languageService.customMapping[res2['company_name']];
-          res2['linking'] = this._languageService.customMapping[res2['company_name']];
+        const cleanCompanyName = res2['company_name'].replace(/[()]/g, '-'); // Remove '(' and ')'
+        if (this._languageService.customMapping[cleanCompanyName]) {
+          res2['route'] = this._languageService.customMapping[cleanCompanyName];
+          res2['linking'] = this._languageService.customMapping[cleanCompanyName];
         }else {
-          res2['route'] = res2['company_name'].replace(/ /g, '');
-          res2['linking'] = res2['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+          let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
+          res2['route'] = cleanCompanyName.replace(/ /g, '');
+          res2['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
           .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
           .toLowerCase();
         }
@@ -97,5 +99,8 @@ getListOfCompany() {
       console.log(this.companyList)
     }
   })
+}
+removeTrailingDash(str) {
+    return str.replace(/-$/, ''); // Removes '-' only if it's at the end
 }
 }

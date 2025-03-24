@@ -299,9 +299,9 @@ sliderInit() {
     return data.map((item) => {
       const logos = this.parseProjectLogo(item.project_logo);
       item.project_logo = logos;
-
-      item.route = this.buildRoute(item.company_name);
-      item.linking = this.buildLinking(item.company_name);
+      const cleanCompanyName = item.company_name.replace(/[()]/g, '-'); // Remove '(' and ')'
+      item.route = this.buildRoute(cleanCompanyName);
+      item.linking = this.buildLinking(cleanCompanyName);
 
       item.locationUpdated = this.parseProjectRegion(item.project_region);
       item.flag = this.getFlag(item.locationUpdated.at(-1) || '');
@@ -350,12 +350,16 @@ sliderInit() {
 
   // Build Linking
   private buildLinking(companyName: string) {
+    let cleanCompanyNameChild = this.removeTrailingDash(companyName)
     return companyName
       .replace(/[\s&.]/g, '-')
       .replace(/-{2,}/g, '-')
       .toLowerCase();
   }
 
+  removeTrailingDash(str) {
+    return str.replace(/-$/, ''); // Removes '-' only if it's at the end
+  }
   // Parse Project Region
   private parseProjectRegion(projectRegion: string) {
     if (typeof projectRegion === 'string') {
