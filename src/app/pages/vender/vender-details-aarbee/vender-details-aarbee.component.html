@@ -299,7 +299,7 @@
                         <img [src]="formData?.companyDetails.icon" alt="" width="64" height="33">
                     </figure> -->
                     <div class="user-detail-child" *ngFor="let dir of formData.directors">
-                        <figure>
+                        <figure *ngIf="formData.is_claimed">
                             <img [src]="dir.logo?dir.logo:'assets/images/default_profile_pic.png'" height="40" width="40" [alt]="dir.name || 'Director profile picture'" />
                         </figure>
                         <div class="user-detail">
@@ -500,7 +500,7 @@
                                 <img [src]="formData?.companyDetails.icon" alt="Company icon" width="64" height="33">
                             </figure>
                             <div class="user-detail-child" *ngFor="let dir of formData.directors">
-                                <figure>
+                                <figure *ngIf="formData.is_claimed">
                                     <img [src]="dir.logo?dir.logo:'assets/images/default_profile_pic.png'" height="28" width="28" alt="Profile picture" />
                                 </figure>
                                 <div class="user-detail">
