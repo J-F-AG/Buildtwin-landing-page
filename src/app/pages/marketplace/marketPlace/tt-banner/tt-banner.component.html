@@ -1,62 +1,48 @@
 <div class="banner-global container"> 
     <div class="banner-main">
-        <div class="banner-content">
+        <div class="banner-content center">
             <div>
               <h1>
                 Get competitive quotes 
-                <br>from compliant
-                <br><span>engineering providers</span>
+                from <span>the right</span>
+                <br><small class="big">Engineering Providers</small>
               </h1>
               <p>
                 Leverage our project delivery AI to ensure on-time, high-quality 
                 <br>delivery while you focus on what truly matters.
               </p>
               <div>
-                <div class="v-center-flex gap-medium">
-                  <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 mark_page_get_quote_banner">
-                    Get quote NOW
-                  </a>
-                  <a class="button-v2 border mark_page_schedule_call_banner" href="javascript:void(0)" (click)="call()">
-                    <picture>
-                      <source 
-                        srcset="assets/images/icons/call@2x.png" 
-                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
-                      <img 
-                        src="assets/images/icons/call.png" 
-                        alt="call" 
-                        width="21" 
-                        height="22">
-                    </picture>
-                    Schedule Call
-                  </a>
+                <div class="v-center-flex gap-medium looking-for-super-wrapper">
+                  <div class="label">
+                    I am looking for
+                  </div>
+                  <div class="looking-for-wrapper">
+                    <span>
+                      who worked on highrise pre-cast projects in UK with 25m beams ...
+                    </span>
+                    <a href="https://www.buildtwin.com/get-started" target="_blank" class="secondary-button mark_page_get_quote_banner">
+                      Sign in
+                    </a>
+                    <a class="secondary-button v2 mark_page_schedule_call_banner" href="javascript:void(0)" (click)="call()">
+                      <!-- <picture>
+                        <source 
+                          srcset="assets/images/icons/call@2x.png" 
+                          media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                          src="assets/images/icons/call.png" 
+                          alt="call" 
+                          width="21" 
+                          height="22">
+                      </picture> -->
+                      Get a DEMO
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
         </div>
-        <div class="banner-image">
-            <figure>
-                <picture>
-                    <!-- WebP format -->
-                    <source 
-                      srcset="assets/images/buyer-banner.webp, assets/images/buyer-banner@2x.webp 2x" 
-                      type="image/webp">
-                  
-                    <!-- Fallback to JPEG -->
-                    <source 
-                      srcset="assets/images/buyer-banner.jpg, assets/images/buyer-banner@2x.jpg 2x" 
-                      type="image/jpeg">
-                  
-                    <!-- Default img tag as fallback -->
-                    <img 
-                      src="assets/images/buyer-banner.jpg" 
-                      alt="Buyer Banner" 
-                      width="672" 
-                      height="534">
-                  </picture>                      
-            </figure>
-        </div>
     </div>
-    <div class="partnerWrap">
+    <!-- <div class="partnerWrap">
         <ul class="partner"> 
             <li>
               <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers">
@@ -104,6 +90,6 @@
               </a>
           </li>        
         </ul>    
-    </div>
+    </div> -->
   </div>
   <app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

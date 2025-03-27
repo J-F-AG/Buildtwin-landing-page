@@ -195,6 +195,18 @@ h1, h2 {
     padding: 0 12px;
     border-radius: 4px;
   }
+  .big {
+    font-size: 70px;
+    color: var(--themeColor);
+    font-weight: 600;
+    line-height: 1.1;
+  }
+}
+h1 {
+  margin-bottom: 34px;
+}
+.banner-content p {
+  font-size: 18px;
 }
 .small-title {
   font-family: var(--fontFamily);
@@ -219,7 +231,7 @@ h2 + h4 {
 p {
   color: var(--lightTextColor);
   // color: var(--paragraphColor);
-  line-height: 1.5;
+  line-height: 1.3;
   margin: {
     top: 0;
     bottom: 20px;
@@ -410,17 +422,17 @@ display:flex;
 .button-v2, .button-v2.mdc-button {
   background: #002e3b;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 600;
   color: white;
   text-align: center;
-  height: 45px;
-  padding: 0 30px;
-  line-height: 45px;
+  height: 49px;
+  padding: 0 28px;
+  line-height: 49px;
   border-radius: 4px;
   white-space: nowrap;
   border: 1px solid #002e3b;
   display: inline-flex;
-  gap: 20px;
+  gap: 14px;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -449,6 +461,32 @@ display:flex;
   &:hover {
     color: #002e3b;
     background: white;
+  }
+  &.white {
+    background: white;
+    color: var(--themeColor);
+    border-color: white;
+  }
+  &.white-border {
+    background: none;
+    color: white;
+    border-color: white;
+  }
+}
+.secondary-button {
+  height: 42px;
+  border-radius: 42px;
+  padding: 0 24px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  line-height: 42px;
+  background: var(--themeColor);
+  &:hover {
+    color: white;
+  }
+  &.v2 {
+    background: var(--newButtonColor);
   }
 }
 .button-wrap {
@@ -762,6 +800,9 @@ display:flex;
 .flex-justify-center {
   display: flex;
   justify-content: center;
+}
+.flex-direction-col {
+  flex-direction: column;
 }
 
 .roundButtonWrapper .owl-nav {
@@ -1103,7 +1144,7 @@ display:flex;
 
 .heading-sticky {
   position: sticky;
-  top: 84px;
+  top: 63px;
   padding-top: 20px;
   background: linear-gradient(180deg, white 80%, hsla(0, 0%, 100%, 0));
   margin-bottom: 30px;
@@ -1596,6 +1637,12 @@ display:flex;
   :root {
     --padding-left-right: 15px;
   }
+  h1 {
+    font-size: 34px;
+  }
+  h1 .big, h2 .big {
+    font-size: 50px;
+  }
   h3 {
     font-size: 16px;
   }
@@ -1954,3 +2001,11 @@ body {
 //     opacity: .5;
 //   }
 // }
+body:not(.white-show-wrapper) .white-show {
+  display: none;
+}
+.white-show-wrapper {
+  .normal-show {
+    display: none;
+  }
+}

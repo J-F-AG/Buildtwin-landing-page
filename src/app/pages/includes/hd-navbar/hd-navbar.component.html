@@ -3,13 +3,20 @@
         <nav class="navbar navbar-expand-lg" [class.active]="classApplied">
             <!-- <span (click)="call()">test</span> -->
             <a class="navbar-brand" [routerLink]="_languageService.currentLanguage || '/'">
-                <picture>
+                <picture class="normal-show">
                     <source srcset="assets/images/logo@2x.webp" type="image/webp">
                     <source srcset="assets/images/logo@2x.png" type="image/png">
                     <img src="assets/images/logo@2x.png" 
                          alt="logo" 
                          width="156" 
                          height="27.5">
+                </picture>
+                <picture class="white-show">
+                    <img src="assets/images/white-logo.png" 
+                    srcset="assets/images/white-logo.png 1x, assets/images/white-logo@2x.png 2x" 
+                    alt="logo" 
+                    width="156" 
+                    height="27.5">
                 </picture>
                 <!-- <span>Beta</span> -->
             </a>
