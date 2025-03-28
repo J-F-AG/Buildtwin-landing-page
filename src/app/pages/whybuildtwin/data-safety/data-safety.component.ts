@@ -24,7 +24,7 @@ export class DataSafetyComponent {
   certificateSlide: OwlOptions = {
     nav: true,
     margin: 25,
-    loop: true,
+    loop: false,
     dots: false,
     autoplay: false,
     autoplayHoverPause: true,
