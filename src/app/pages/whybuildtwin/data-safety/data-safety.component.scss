@@ -21,8 +21,8 @@ img {
 }
 
 .container {
-    max-width: 1296px;
-    padding: 0;
+    // max-width: 1296px;
+    // padding: 0;
 }
 
 .topBanner {
@@ -182,14 +182,14 @@ img {
 .fullyEncryp {
     position: relative;
     // margin-bottom: 80px;
-    max-width: 1100px;
+    // max-width: 1100px;
     margin: 0 auto 80px;
     border: 1px solid #0053fa;
     border-radius: 0 15px 15px;
     overflow: hidden;
     .fullyEncryp-head {
         background: url(../../../../assets/images/data-safety/seafty-bg.jpg) no-repeat;
-        background-size: cover;
+        background-size: 110% 100%;
         height: 60px;
         display: flex;
         align-items: center;
@@ -461,6 +461,10 @@ img {
         }
     }
 }
+.comply-with-wrapper {
+    display: flex;
+    justify-content: center;
+}
 .comply-with {
     display: flex;
     align-items: center;
@@ -468,6 +472,7 @@ img {
     font-size: 16px;
     color: #5c6a72;
     margin-bottom: 111px;
+    justify-content: center;
     ul {
         flex-grow: 1;
         align-items: center;
@@ -662,7 +667,7 @@ img {
         padding-top: 90px;
         .content {
             padding-top: 49px;
-            padding-left: 15px;
+            padding-left: 0;
             padding-right: 30px;
             h1 {
                 font-size: 35px;
@@ -722,7 +727,7 @@ img {
         gap: 35px;
         white-space: nowrap;
         margin-bottom: 50px;
-        padding-left: 15px;
+        padding-left: 0;
         padding-right: 30px;
     }   
     .comply-with ul {
@@ -733,7 +738,7 @@ img {
         width: 150px;
     }
     .heading.space-right-left {
-        padding: 0 30px 0 15px;
+        padding: 0 30px 0 0;
     }
     .certificate {
         padding-bottom: 50px;
@@ -748,7 +753,7 @@ img {
         gap: 0;
         padding-top: 0;
         flex-direction: column;
-        padding: 0 30px 0 15px;
+        padding: 0 30px 0 0;
     }
 
     .head {
