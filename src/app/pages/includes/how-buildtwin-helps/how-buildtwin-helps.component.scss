@@ -297,13 +297,17 @@
     }
 }
 :host ::ng-deep {
-
+.comply-with-wrapper {
+    display: flex;
+    justify-content: center;
+}
 .comply-with {
     display: flex;
     align-items: center;
     gap: 125px;
     font-size: 16px;
     color: #5c6a72;
+    justify-content: center;
     ul {
         flex-grow: 1;
         align-items: center;
