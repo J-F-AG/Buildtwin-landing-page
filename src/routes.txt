@@ -72,5 +72,7 @@
 /building-code/aisc
 /building-code/eurocode
 /building-code/british-standards
+/building-code/australian-standards
+/building-code/iso-standards
 /software/architecture-design-services
 /software/structural-steel-detailing

@@ -278,6 +278,26 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/building-code/british-standards'
         }
     },
+    {path: 'building-code/australian-standards', 
+        // component: BuildingCodeEuroComponent,
+        loadChildren: () => import('./pages/building-code-as/sector.module').then(m => m.BuildingCodeASModule),
+        data: {
+            title: 'Australian Standards in Construction: Ensuring Safety and Quality',
+            description: 'Discover how Australian standards in construction enhance safety and quality. Learn key regulations and best practices to ensure compliance. Read more.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/building-code/australian-standards'
+        }
+    },
+    {path: 'building-code/iso-standards', 
+        // component: BuildingCodeEuroComponent,
+        loadChildren: () => import('./pages/building-code-iso/sector.module').then(m => m.BuildingCodeISOModule),
+        data: {
+            title: 'ISO Standard in Construction: Ensuring Safety and Quality',
+            description: 'Ensure safety, quality & sustainability in construction with ISO certified vendors. BuildTwin connects you to trusted partners for global compliance.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/building-code/iso-standards'
+        }
+    },
     {path: 'software/architecture-design-services',
         // component: ArchitectureDesignServicesComponent,
         loadChildren: () => import('./pages/software/architecture-design-services/sector.module').then(m => m.ArchitectureDesignServicesModule),
