@@ -5,6 +5,7 @@ import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { DataSafetyComponent } from './data-safety.component';
 import { HdNavbarModule } from '../../includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
+import { DataSafetyFaqComponent } from './data-safety-faq/data-safety-faq.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    DataSafetyComponent
+    DataSafetyComponent,
+    DataSafetyFaqComponent
   ],
   imports: [
     CommonModule,
