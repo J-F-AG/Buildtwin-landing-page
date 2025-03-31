@@ -3199,6 +3199,218 @@ export class LanguageService {
     return JSON.stringify(faqSchema);
   }
 
+  injectFAQSchemaForBuildingCodeAS(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "Are Australian Standards legally binding?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "No, they are not legally binding. Nevertheless, following the standards is seen as the most competent system of practice in the industry." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Who makes Australian Standards?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Standards are developed by Standards Australia with various stakeholders during a collaborative process: the people in the industry that ultimately will be affected, representatives from government departments, and independent experts." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Why should vendors comply with Australian Standards?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Compliance with standards fosters credibility, assures product quality, and, thus, provides market opportunities to satisfy industry expectations." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Where do I get Australian Standards?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Australian Standards can be accessed on Standards Australia's website or by their authorized distributors. Many industry associations also provide assistance when it comes to standards." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What advantages are awarded to project owners with compliance?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "For project owners, choosing vendors who apply Australian Standards will ensure better project outcomes, safety, and overall quality." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What is the difference between the National Construction Code NCC and AS?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "The Australian building codes board ABCB, on behalf of the state and territory government and Australian government defines NCC 2022. Australian Standards (AS) provide technical details that ensure the quality, performance and safety of construction materials and methods. They tell you how to build, including testing procedures, product specifications and best practice. Australian Standards are often referenced in the NCC but can also exist independently and guide industry professionals in areas not covered by the NCC." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForBuildingCodeISO(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{ 
+
+    "@type": "Question", 
+
+    "name": "What does ISO stand for, and why is it important in construction?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "ISO stands for the International Organization for Standardization. Its criteria guarantee safety, quality, and sustainability which are of paramount importance for trustworthy building practices." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Which ISO standards are most important for the construction industry?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Main (International Organisation for Standardization) standards are ISO 19650, ISO 9001 (Quality Management), ISO 14001 (Environmental Management) and ISO 45001 (Occupational Health and Safety)." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does ISO certification benefit construction projects?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "ISO certification leads to increased efficiency, improved safety, and compliance, resulting in a successful project completion." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How does BuildTwin ensure vendors maintain their ISO certifications over time?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "BuildTwin requires vendors to submit updated ISO certifications and undergo periodic compliance checks. Our platform integrates with certification bodies to validate statuses and flags expired credentials, ensuring only actively certified vendors remain visible in search results." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "Can I filter vendors based on specific certifications on BuildTwin?", 
+
+    "acceptedAnswer": { 
+
+      "@type": "Answer", 
+
+      "text": "Yes, our platform is also capable of filtering vendors based on standard, e.g., ISO, AS, Eurocode, etc." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "What are the benefits of selecting ISO-certified vendors on BuildTwin?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "Vendors, ISO-certified, ensure quality, safety, and efficiency, thereby minimizing risks and delivering a successful result for the project." 
+
+    } 
+
+  },{ 
+
+    "@type": "Question", 
+
+    "name": "How do ISO standards align with local building codes and regulations?", 
+
+    "acceptedAnswer": {
+      "@type": "Answer", 
+
+      "text": "ISO standards provide a global framework for quality, safety, and sustainability, while local codes address region-specific risks (e.g., seismic rules). Companies integrate ISO guidelines with local regulations by mapping overlaps, ensuring compliance with both. For example, ISO 45001’s safety protocols can enhance compliance with OSHA (U.S.) or CDM (UK) requirements." 
+
+    } 
+
+  }]};
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
 
   injectFAQSchemaForSectorPowerPlant(renderer) {
     // Create the FAQ schema for the FAQ page

@@ -351,6 +351,18 @@ injectBreadcrumbScript(url) {
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
+    }else if(url.includes('/building-code/australian-standards')){
+      const faqSchema = this._languageService.injectFAQSchemaForBuildingCodeAS(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
+    }else if(url.includes('/building-code/iso-standards')){
+      const faqSchema = this._languageService.injectFAQSchemaForBuildingCodeISO(this.renderer)
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }else if(url.includes('/sector/powerplant')){
       const faqSchema = this._languageService.injectFAQSchemaForSectorPowerPlant(this.renderer)
 

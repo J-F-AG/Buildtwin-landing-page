@@ -1,0 +1,59 @@
+.core-elements-bullets{
+    list-style: disc;
+    margin-bottom: 5px;
+    padding-left: 35px;
+    li::marker {
+        font-size: 22px; /* Increase bullet size */
+        font-weight: bold; /* Make bullets bold */
+        // color: #333; /* Optional: Change bullet color */
+      }
+}
+
+.ulClass{
+  list-style-type: circle !important;
+  padding-left: 20px !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.liClass{
+  padding-left: 0 !important;
+  position: static !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+.heading-p{
+  font-size: 18px; font-weight: 400; color: var(--lightTextColor);
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.list-heading{
+  padding-bottom: 10px;
+  // font-weight: bolder;
+}
+
+.p-margin-bottom{
+  margin-bottom: 0px;
+}
+
+.h3-margin-padding-bottom{
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.p-margin-top{
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
+.ul-margin-top{
+  margin-top: 0px;
+}
+
+.h4-font-size{
+  font-size: 16px !important;
+}
