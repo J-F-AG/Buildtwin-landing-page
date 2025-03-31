@@ -142,8 +142,14 @@
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
+      <url>
+  <loc>https://www.buildtwin.com/blog/the-essential-role-of-submittal-logs-and-checklists-in-construction-project-success/</loc>
+  <lastmod>2025-03-31T11:42:32+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
      <url>
-  <loc>https://www.buildtwin.com/blog/digital-safeguards-unraveling-the-golden-thread-in-the-uk-building-safety-act/</loc>
+      <loc>https://www.buildtwin.com/blog/digital-safeguards-unraveling-the-golden-thread-in-the-uk-building-safety-act/</loc>
   <lastmod>2025-03-18T11:42:32+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
