@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { catchError, forkJoin, map, Observable, of } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
 import { ProjectListService } from './project-list.service';
-import { findFlagUrlByCountryName } from 'country-flags-svg';
+import { findFlagUrlByCountryName, findFlagUrlByIso2Code } from 'country-flags-svg';
 
 @Component({
   selector: 'app-project-list',
@@ -14,6 +14,8 @@ import { findFlagUrlByCountryName } from 'country-flags-svg';
 })
 export class ProjectListComponent {
 @Input() sectorName: string = '';
+@Input() countryName: string = '';
+@Input() showFilters: boolean = true;
 @Input() slider : boolean = false;
 @Input() hideMessageBox = false;
 @ViewChild('carouselTrack') carouselTrack!: ElementRef;
@@ -31,6 +33,7 @@ factorySlider: OwlOptions | null = null;
  sectorObj = {};
  projectList = [];
  selectedCategory = '';
+ selectedCountry = '';
  verifiedStatus: boolean = false;
  countries: { [key: string]: { flag: string; population: number } } = {};
  constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient, public _languageService: LanguageService,
@@ -50,6 +53,9 @@ private _projectListService: ProjectListService) {
     // Set the selectedCategory to the provided sectorName if it exists
     if (this.sectorName !== '') {
       this.selectedCategory = this.sectorName;
+    }
+    if (this.countryName !== '') {
+      this.selectedCountry = this.countryName;
     }
 
     if(this.isBrowser){
@@ -206,9 +212,14 @@ sliderInit() {
 
   async getProjectData() {
     const payload: { [key: string]: any } = {};
+    if (this.selectedCountry) {
+      payload['country'] = this.selectedCountry;
+    }
+
     if (this.selectedCategory) {
       payload['category'] = this.selectedCategory;
     }
+    
     if (this.verifiedStatus) {
       payload['verified'] = this.verifiedStatus;
     }
@@ -239,6 +250,14 @@ sliderInit() {
       }
       this.getProjectData();
     }
+    if(type == 'country') {
+      if(this.selectedCountry == value) {
+        this.selectedCountry = ''
+      }else {
+        this.selectedCountry = value
+      }
+      this.getProjectData();
+    }
   }
   onCheckboxChange(event: Event): void {
     const isChecked = (event.target as HTMLInputElement).checked;
@@ -256,7 +275,7 @@ sliderInit() {
 
 
   // Fetch Project Data
-  getProjectDataApi(payloadData: { category?: string; verified?: boolean }): Observable<any[]> {
+  getProjectDataApi(payloadData: { category?: string; country?: string; verified?: boolean }): Observable<any[]> {
     // Build the payload
     const payload = this.buildPayload(payloadData);
     return this._http
@@ -288,6 +307,9 @@ sliderInit() {
     if(payloadData?.category){
       params['category'] = payloadData?.category
     }
+    if(payloadData?.country){
+      params['country'] = payloadData?.country
+    }
     if(payloadData?.verified){
       params['verified'] = payloadData?.verified
     }
@@ -305,6 +327,8 @@ sliderInit() {
 
       item.locationUpdated = this.parseProjectRegion(item.project_region);
       item.flag = this.getFlag(item.locationUpdated.at(-1) || '');
+
+      // item.flag = findFlagUrlByIso2Code(item.country_code);
 
       return item;
     });
@@ -375,6 +399,7 @@ sliderInit() {
     };
 
     const normalizedCountry = countryMapping[country] || country;
+    if(normalizedCountry === 'United Kingdom' || normalizedCountry === 'UK') return 'https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1280px-Flag_of_the_United_Kingdom.svg.png';
     return findFlagUrlByCountryName(normalizedCountry) || '';
   }
 }

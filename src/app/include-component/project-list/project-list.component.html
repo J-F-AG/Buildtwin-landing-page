@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div> -->
-        <div class="filter-wrapper" *ngIf="sectorName === ''">
+        <div class="filter-wrapper" *ngIf="showFilters === true">
             <div class="filter-slider" [ngClass]="{'hideBefore':isAtStart,'hideAfter': isAtEnd}">
     
                 <!-- <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
