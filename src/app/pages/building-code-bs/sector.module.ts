@@ -13,6 +13,8 @@ import { TtPartnersBuildingCodeBSComponent } from './tt-partners/tt-partners.com
 import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { HdGoodCompanyModule } from '../Home/hd-good-company/hd-good-company.module';
 import { HdServicesModule } from '../Home/hd-services/hd-services.module';
+import { ServiceListModule } from 'src/app/include-component/service-list/service-list.module';
+import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 const routes: Routes = [
     {
         path: '',
@@ -37,6 +39,8 @@ const routes: Routes = [
         SharedModuleModule,
         HdGoodCompanyModule,
         HdServicesModule,
+        ServiceListModule,
+        ProjectListModule,
         RouterModule.forChild(routes),
     ],
     exports: [

@@ -158,6 +158,19 @@
 
     
     <app-hd-discover-projects-building-code-aisc [hideTitle]="true" [page]="'sector'"></app-hd-discover-projects-building-code-aisc>
+    <!-- <div class="global-mb container">
+        <div class="heading">
+                <h2 class="title">
+                    Featured Projects
+                </h2>
+                <p class="subTitle">
+                    Explore our portfolio of successful engineering projects across various sectors
+                </p>
+        </div>
+        <app-project-list [sectorName]="'Airports'"></app-project-list>
+    </div> -->
+
+
     <app-tt-partners-building-code-aisc [page]="'sector'" id="targetSection1"></app-tt-partners-building-code-aisc>
 
     
@@ -167,15 +180,13 @@
     
 
 
-    <div class="bottom-space-gap">
-        <app-sector-category-building-code-aisc [category]="8" [page]="'sector'"></app-sector-category-building-code-aisc>
-    </div>
+    
     <!-- <div class="bottom-space-gap"> -->
         <div class="container">
             <div class="main-head">
                 <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
                     <div class="heading">
-                        <div class="title">Other Sectors We Serve</div>
+                        <div class="title">Sectors We Serve</div>
                         <div class="subTitle">Specialized engineering excellence across diverse industries, delivered by pre-qualified vendors</div>
                     </div>
                 </div>
@@ -183,6 +194,10 @@
             </div>
         </div>
     <app-special-project [heading]="false"></app-special-project>
+
+    <div class="bottom-space-gap">
+        <app-sector-category-building-code-aisc [category]="8" [page]="'sector'"></app-sector-category-building-code-aisc>
+    </div>
 
 
 

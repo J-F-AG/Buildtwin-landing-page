@@ -2,8 +2,10 @@
         <div class="heading">
           <h2 class="title">Successful ISO Standards Projects</h2>
           <span class="subTitle">Explore our vendor's portfolio of completed projects following ISO standards</span>
-        </div>  
-    <div class="project-providers__carousel squareButtonWrapper">
+        </div>
+
+        <app-project-list [showFilters]="false" [countryName]="'IN'"></app-project-list>  
+    <!-- <div class="project-providers__carousel squareButtonWrapper">
       <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
             <ng-container *ngFor="let item of projectsArray">
                 <ng-template carouselSlide>
@@ -42,6 +44,6 @@
                 </ng-template>
             </ng-container>
       </owl-carousel-o>
-    </div>
+    </div> -->
     
   </div>
