@@ -53,27 +53,27 @@
         border-radius: 0 20px 20px;
     }
     figure {
-        width: 325px;
-        min-width: 325px;
-        max-width: 325px;
-        margin: -75px 0 0 0;
+        width: 150px;
+        min-width: 150px;
+        max-width: 150px;
+        margin: 0 0 0 0;
         position: relative;
         z-index: 2;
     }
     .content-wrapper {
         display: flex;
         // min-height: 258px;
-        align-items: center;
+        align-items: flex-end;
         position: relative;
         gap: 96px;
         &::after {
             content: "„";
-            font-size: 343px;
+            font-size: 200px;
             color: #f4f5f8;
             font-family: Arial, Helvetica, sans-serif;
             position: absolute;
-            left: 230px;
-            top: 140px;
+            left: 100px;
+            top: 80px;
             line-height: 1;
             transform: translateY(-100%);
             z-index: 1;
@@ -85,6 +85,8 @@
         flex-direction: column;
         gap: 26px;
         padding-right: 50px;
+        min-height: 200px;
+        justify-content: center;
         .fw-medium {
             font-size: 25px;
             font-weight: 600;
@@ -207,7 +209,7 @@
   @media (max-width: 767px) {
     .reviews-slides {
         .content-wrapper {
-            flex-direction: column-reverse;
+            flex-direction: column;
             gap: 35px;
 
             &:after {
@@ -220,15 +222,15 @@
         }
 
         figure {
-            width: 100%;
-            max-width: 100%;
-            min-width: 100%;
-            margin-top: 0;
+            width: 200px;
+            max-width: 200px;
+            min-width: 200px;
+            margin: 30px auto 0;
         }
 
         .content {
             text-align: center;
-            padding: 65px 20px 0;
+            padding: 15px 20px 30px;
 
             .fw-medium {
                 flex-direction: column-reverse;
