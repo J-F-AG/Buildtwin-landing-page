@@ -14,7 +14,6 @@ export class TtTestimonialsComponent {
 		this.isBrowser = isPlatformBrowser(this.platformId);
 	}
 	ngOnInit(): void {
-
 		this.sliderInit()
 	}
 	sliderInit() {
