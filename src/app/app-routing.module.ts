@@ -184,7 +184,7 @@ const routes: Routes = [
         // component: DataPrivacyComponent
         data: {
             title: 'BuildTwin Terms of Service – Usage, Policies & Guidelines',
-            description: "Read BuildTwin's Terms of Service. Understand our policies, user responsibilities, and guidelines for using our structural marketplace and software.",
+            description: "Read BuildTwin's Terms of Service. Understand our policies, user responsibilities, and guidelines for using our construction marketplace and software.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/terms-of-service'
         }
@@ -548,8 +548,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/services-new/services-new.module').then(m => m.ServicesNewModule),
         // component: ServicesNewComponent,
         data: {
-            title: 'Precast Detailing Services | Precast Panel & Concrete Detailing | BuildTwin',
-            description: "Explore BuildTwin Marketplace for precast detailing services, including precast panel, concrete, and wall detailing. Serving the USA, EU, Middle East, UK, Australia, and India. Optimize your projects with our experienced precast detailers.",
+            title: 'Precast Detailing Services | One-stop Platform for Precast Solutions by BuildTwin',
+            description: "BuildTwin is your one-stop platform offering comprehensive precast detailing services to streamline construction projects. From shop drawings to machine files, we cover all your structural precast detailing requirements.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/pre-cast-detailing-services'
         }
@@ -560,8 +560,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/rebar/services-new.module').then(m => m.RebarServicesNewModule),
         // component: RebarServicesNewComponent,
         data: {
-            title: 'Rebar Detailing Services | Rebar Shop Drawings & Design | BuildTwin',
-            description: "BuildTwin Marketplace offers rebar detailing and shop drawing services, catering to clients in the USA, EU, Middle East, UK, Australia, and India. Partner with top rebar design & detailing services companies.",
+            title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
+            description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/rebar-detailing-services'
         }
@@ -572,8 +572,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/bim/services-new.module').then(m => m.BimServicesNewModule),
         // component: BimServicesNewComponent,
         data: {
-            title: 'BIM Services | BIM Modeling Consulting | BIM MEP Outsourcing | BuildTwin',
-            description: "Explore BIM services at BuildTwin Marketplace. Offering BIM outsourcing and consulting services for architectural, structural and engineering. Trusted Building Information Modeling service providers in USA, EU, Middle East, UK, Australia & India.",
+            title: 'BIM (Building Information Modeling) Services For AEC Projects | BuildTwin',
+            description: "BuildTwin Marketplace offers comprehensive BIM services to streamline your AEC projects. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/bim-services'
         }
@@ -584,8 +584,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/structural-steel/services-new.module').then(m => m.StructuralSteelServicesNewModule),
         // component: StructuralSteelServicesNewComponent,
         data: {
-            title: 'Steel Detailing Services | Marketplace for Structural Steel Detailing | BuildTwin',
-            description: "BuildTwin Marketplace offers a comprehensive platform for steel detailing services. Trusted by structural steel detailing companies, we serve clients across the USA, Middle East, EU, UK, Australia and India.",
+            title: 'Structural Steel Detailing Services for AEC Project | BuildTwin',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects. Our services include shop drawings, erection drawings, 2D and 3D modelling, connection design, and miscellaneous steel detailing.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/steel-detailing-services'
         }
@@ -645,7 +645,7 @@ const routes: Routes = [
             title: 'Request BuildTwin Customer Success Stories & Case Studies',
             description: "See how BuildTwin delivers results. Request customer success stories and explore case studies showcasing project success.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/services/customer-success'
+            canonical: 'https://www.buildtwin.com/customer-success'
         }
     },
 
