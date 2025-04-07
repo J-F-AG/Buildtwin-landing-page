@@ -15,37 +15,44 @@ export class BimTrustByNewComponent {
     {
       "id": 1,
       "routerLink": "/partners/gbc-engineers",
-      "name": "GBC"
+      "name": "GBC",
+      icon: "assets/images/trustedBy-gbc"
     },
     {
       "id": 2,
       "routerLink": "/partners/j-f-india",
-      "name": "J&F"
+      "name": "J&F",
+      icon: "assets/images/trustedBy-gbc"
     },
     {
       "id": 3,
       "routerLink": "/partners/durchgeplant",
-      "name": "DURCHGEPLANT"
+      "name": "DURCHGEPLANT",
+      icon: "assets/images/trustedBy-gbc"
     },
     {
       "id": 4,
       "routerLink": "/partners/aarbee-structures-private-limited",
-      "name": "AARBEE"
+      "name": "AARBEE",
+      icon: "assets/images/trustedBy-gbc"
     },
     {
       "id": 5,
       "routerLink": "/partners/caldim-engineering",
-      "name": "CALDIM"
+      "name": "CALDIM",
+      icon: "assets/images/trustedBy-caldim"
     },
     {
       id: 6,
       routerLink: '/partners/mold-tek-technologies-limited',
-      name: 'Mold-Tek'
+      name: 'Mold-Tek',
+      icon: "assets/images/trustedBy-gbc"
     },
     {
       id: 7,
       routerLink: '/partners/clove-technologies-private-limited',
-      name: 'Clove'
+      name: 'Clove',
+      icon: "assets/images/trustedBy-gbc"
     }
   ]
   constructor(public _languageService:LanguageService) { }

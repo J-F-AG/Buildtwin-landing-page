@@ -18,6 +18,7 @@ export class ProjectListComponent {
 @Input() showFilters: boolean = true;
 @Input() slider : boolean = false;
 @Input() hideMessageBox = false;
+@Input() hideLockScreen = false;
 @ViewChild('carouselTrack') carouselTrack!: ElementRef;
 currentPosition = 0;
 isAtStart = true;

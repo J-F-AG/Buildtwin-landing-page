@@ -566,6 +566,17 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/services/rebar-detailing-services'
         }
     },
+    {
+        path: 'services/service-dynamic',
+        loadChildren: () => import('./pages/service-dynamic/services-new.module').then(m => m.ServiceDynamicModule),
+        // component: RebarServicesNewComponent,
+        // data: {
+        //     title: 'Rebar Detailing Services | Rebar Shop Drawings & Design | BuildTwin',
+        //     description: "BuildTwin Marketplace offers rebar detailing and shop drawing services, catering to clients in the USA, EU, Middle East, UK, Australia, and India. Partner with top rebar design & detailing services companies.",
+        //     image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+        //     canonical: 'https://www.buildtwin.com/services/rebar-detailing-services'
+        // }
+    },
 
     {
         path: 'services/bim-services',

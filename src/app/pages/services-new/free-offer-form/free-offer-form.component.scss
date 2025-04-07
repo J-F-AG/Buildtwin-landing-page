@@ -1,31 +1,37 @@
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+}
 .formHeader {
   margin-bottom: 20px;
 
   strong {
     display: block;
-    font-size: 22px;
+    font-size: 18px;
     color: #0053fa;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 1.4;
     margin: 0;
   }
 
   div {
-    font-size: 22px;
+    font-size: 15px;
+    line-height: 1;
   }
 }
 a {
   text-decoration: underline;
 }
 .formContainer {
-  border-radius: 8px;
+  // border-radius: 8px;
   background-color: white;
-  border: 1px solid #CBD6E2;
+  // border: 1px solid #CBD6E2;
   flex-grow: 1;
   overflow: auto;
   &.secondary {
@@ -144,9 +150,9 @@ a {
     color: #0053fa;
     font-size: 18px;
     font-weight: 700;
-    padding: 29px 52px 29px 18px;
-    background: #F1F4F5;
-    border-radius: 8px 8px 0 0;
+    // padding: 29px 52px 29px 18px;
+    background: #fff;
+    // border-radius: 8px 8px 0 0;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -156,7 +162,7 @@ a {
   }
 
   .middlePart {
-    padding: 18px 20px;
+    padding: 18px 0;
 
     .formRow {
       margin-bottom: 12px;
@@ -168,7 +174,7 @@ a {
 
   .bottomPart {
     border-top: none;
-    padding: 5px 20px 20px;
+    padding: 5px 0 20px;
 
     h5 {
       font-size: 16px;
@@ -189,10 +195,10 @@ a {
     }
     .buttonContainer {
       position: absolute;
-      left: 50px;
-      bottom: 60px;
+      left: 42px;
+      bottom: 59px;
       padding: 0;
-      right: 50px;
+      right: 42px;
       background: #ffffff;
       box-shadow: 0 0 10px 5px #ffffff;
       &::after {
@@ -260,7 +266,7 @@ a {
           padding: 0;
           white-space: nowrap;
           gap: 4px;
-          padding: 4px 12px;
+          padding: 4px 12px 4px 0;
         }
       }
     }

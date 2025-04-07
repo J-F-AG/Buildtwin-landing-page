@@ -369,7 +369,7 @@
             </ng-template>
             </owl-carousel-o>
         </div>
-        <div class="project-list-wrapper blur" [ngClass]="{'blurBox': hideMessageBox}">
+        <div class="project-list-wrapper blur" [ngClass]="{'blurBox': hideMessageBox}" *ngIf="!hideLockScreen">
             <!-- *ngIf="hideMessageBox" -->
             <div class="block">
                 <div class="figure-wrapper">

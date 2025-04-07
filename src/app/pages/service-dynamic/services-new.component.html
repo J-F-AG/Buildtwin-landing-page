@@ -1,0 +1,85 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="mainContainer">
+    <div class="maincontent">
+        <app-rebar-banner></app-rebar-banner>
+        <div class="container-with-right">
+            <app-company-logos-slider [bg]="false"></app-company-logos-slider>
+        </div>
+        <app-good-reason></app-good-reason>
+        <app-rebar-trust-by></app-rebar-trust-by>
+        <app-rebar-sample-drawing></app-rebar-sample-drawing>
+        <app-rebar-precast-service></app-rebar-precast-service>
+        <div class="bg global-mb container-with-right">
+            <div class="container">
+                <div class="heading center v2">
+                        <h2 class="title">
+                            Explore the largest portfolio of<br>
+                            private and public  <span>engineering projects</span>
+                        </h2>
+                        <p class="small-title">
+                            Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
+                        </p>
+                </div>
+            </div>
+            <app-project-list [slider]="true" [hideMessageBox]="true" [hideLockScreen]="true">
+                <div class="message">
+                    <div class="content">
+                        <h4>
+                            Find the<strong> right</strong> engineering consultancies.
+                        </h4>
+                        <p>
+                            Get started now with BuildTwin to explore a wide range of industry-specific
+        projects and connect with top-reated experts
+                        </p>
+                    </div>
+                    <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 home_get_started_for_free">
+                        Get started for FREE
+                    </a>
+                </div>
+            </app-project-list>
+        </div>
+        <div class="global-mb container-with-right">
+            <div class="container">
+                <div class="heading center v2">
+                        <h2 class="title">
+                            Sectors where we offer<br>
+    <span>Rebar Detailing Services</span>
+                        </h2>
+                        <p class="small-title">
+                            Take a look at sectors that most commonly benefit from our platform<br>
+    when it comes to Rebar Detailing Services.
+                        </p>
+                </div>
+            </div>
+            <app-special-project [heading]="false"></app-special-project>
+        </div>
+        <app-greate-vendor></app-greate-vendor>
+        <div class="global-mb">
+            <app-quality-management></app-quality-management>
+        </div>
+        <div class="global-mb container-with-right">
+            <app-tt-testimonials></app-tt-testimonials>
+        </div>
+        <div class="container-with-right">
+            <app-service-heavy-lifting></app-service-heavy-lifting>
+        </div>
+        <div class="global-mb container-with-right">
+            <app-hd-integrations></app-hd-integrations>
+        </div>
+        <div class="global-mb">
+            <app-rebar-e2e-encryption></app-rebar-e2e-encryption>
+        </div>
+         <app-rebar-faq-buildtwin></app-rebar-faq-buildtwin>
+    </div>
+    <div class="toggle-sidebar" (click)="toggleSidebar()">Start Enquiry</div>
+    <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+        <span class="cross" (click)="toggleSidebar()"></span>
+        <aside class="Stickyform">
+            <app-free-offer-form class="formWrapper"></app-free-offer-form>
+        </aside>
+    </div>
+</div>
+
+<app-rebar-drawing-freelancers></app-rebar-drawing-freelancers> 
+<app-hd-footer></app-hd-footer>

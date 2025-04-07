@@ -1,17 +1,24 @@
 .sectionContainer{padding: 30px 0 60px; position: relative;
 
-    h2{font-size: 32px;
-        font-weight: 600;}
+    // h2{font-size: 32px;
+    //     font-weight: 600;}
+    .heading {
+        margin-bottom: 40px;
+    }
+    p{font-size: 15px; line-height: 22px; color: var(--lightTextColor); text-align: left;}
 
-    p{font-size: 16px;}
-
-    .tabContent{ padding-top: 30px; padding-right: 40px;
+    .tabContent{ 
+        
         display: none;
+        .tabContentChild {
+            border: 1px solid #0000fa;
+            border-radius: 0 10px 10px 10px;
+        }
         &.show {
             display: block;
         }
         h3{
-            font-size: 22px;
+            font-size: 25px;
             font-weight: 600;
         }
         p{font-size: 15px;
@@ -19,6 +26,16 @@
         }
         .subContent{width: 70%; margin-bottom: 25px;}
     }
+}
+.space {
+    margin: 60px 0 50px; 
+    height: 1px;
+    background: #002e3b;
+    opacity: .3;
+}
+.tab-main-content {
+    padding: 22px 35px;
+    text-align: left;
 }
 .service-list {
     margin-bottom: 1.5rem;
@@ -31,12 +48,13 @@
         font-weight: 600;
     }
 }
-.dataList{display: flex; gap: 20px; color: #5941A7; flex-wrap: wrap;
-& > div {display: flex; gap: 4px; }
+.dataList{display: flex; gap: 15px; color: #0053fa; flex-wrap: wrap; font-size: 15px;
+& > div {display: flex; gap: 4px; border-radius: 5px; box-shadow: 0 3px 10px rgba(0,0,0,.12); padding: 3px 11px;}
 }
 
 .sectionMidContainer{
-    .precastTabs{display: flex; border-bottom: 1px solid #DEDEDE; justify-content: space-between; white-space: nowrap; overflow: auto;
+    .precastTabs{display: flex; border-bottom: none; justify-content: space-between; overflow: auto;
+        margin-bottom: 10px;
         &::-webkit-scrollbar {
             width: 2px;
             height: 4px;
@@ -67,15 +85,76 @@
                 background: #555; 
             }
         //   }
-        .tab{padding: 10px; cursor: pointer; font-size: 15px; color: #B3B3B3;
+        .tab{
+            border: 1.5px solid #eff4f5;
+            border-radius: 5px;
+            width: 105px;
+            height: 115px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 21px 0 16px;
+            font-size: 14px;
+            font-weight: 600;
+            gap: 8px;
             margin: 0;
-            font-family: inherit;
+            position: relative;
+            &:after,&::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #0053fa;
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%, -9px);  
+                z-index: 1;     
+                opacity: 0;     
+            }
+            &::before {
+                z-index: 2;
+                border-bottom-color: white;
+                border-bottom-width: 8.5px;
+                border-left-width: 8.5px;
+                border-right-width: 8.5px;
+                transform: translate(-50%, -7px);
+                opacity: 0;
+            }
+            .active-show {
+                opacity: 0;
+            }
             &.activeContainer {
-                color: #0053fa;
-                font-weight: 600;
+                border-color: #0053fa;
+                &:after,&::before {
+                    opacity: 1;
+                }
+                .active-show {
+                    opacity: 1;
+                }
+                // font-weight: 600;
                 // border-bottom: 2px solid #0053fa;
             }
         }
+    }
+    .head {
+        background-image: url(../../../../assets/images/service-images/bg.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #0053fa;
+        background-blend-mode: multiply;
+        border-radius: 0 10px 0 0;
+        font-size: 25px;
+        color: white;
+        font-weight: 600;
+        height: 60px;
+        padding: 0 35px;
+        display: flex;
+        align-items: center;
     }
 }
 @media (max-width:767px){

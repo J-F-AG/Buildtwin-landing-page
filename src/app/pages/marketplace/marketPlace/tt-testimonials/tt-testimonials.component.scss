@@ -72,6 +72,8 @@
         padding-right: 30px;
         position: relative;
         gap: 46px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         // &::after {
         //     content: "„";
         //     font-size: 200px;
@@ -231,6 +233,7 @@
             width: 200px;
             max-width: 200px;
             min-width: 200px;
+            height: 200px;
             margin: 30px auto 0;
         }
 

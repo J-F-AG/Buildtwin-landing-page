@@ -1,0 +1,95 @@
+.mainContainer{
+    display: block;
+    position: relative;
+    .StickyPosition{position: absolute; height: 100%; width: 357px; right: 0; top: 0; z-index: 9;}
+}
+
+.Stickyform{position: sticky; display: flex; right: 0; top: 0; padding-top: 63px; height: 100vh; width: 357px; background: white;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 65px;
+        right: 100%;
+        width: 100vw;
+        height: 100px;
+        box-shadow: -3px 5px 7px rgba(0, 0, 0, 0.1) inset;
+        z-index: 1;
+        border-radius: 0 30px 0 0;
+    }
+    &::before {
+        content: "";
+        width: 7px;
+        height: 100px;
+        position: absolute;
+        top: 65px;
+        right: 100%;
+        background: white;
+        z-index: 1;
+    }
+}
+.formWrapper{padding: 29px 42px 40px; flex: 1; overflow: auto; display: flex; flex-direction: column; box-shadow: 0 10px 5px rgba(0,0,0,.1);     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 0 10px; position: relative;
+}
+app-company-logos-slider ::ng-deep .global-mb {
+    margin-bottom: 48px;
+}
+@media (max-width:1199px){
+    /* Define the keyframes for the animation */
+    @keyframes marginLoop {
+        0% {
+        margin-left: 7px;
+        }
+        50% {
+        margin-left: 9px;
+        }
+        100% {
+        margin-left: 7px;
+        }
+    }
+    .mainContainer .StickyPosition {
+        position: fixed;
+        width: 0;
+        overflow: clip;
+        background-color: rgba(0,0,0,.7);
+        z-index: 999;
+        transition: all .5s ease-in-out;
+    }
+    .mainContainer .StickyPosition.show {
+        width: 100%;
+    }
+    .Stickyform {
+        float: right;
+    }
+    .Stickyform {
+        max-width: calc(100vw - 50px);
+        padding-top: 0;
+    }
+    .cross {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px 0 0 5px;
+        background: white;
+        position: absolute;
+        right: 440px;
+        top: 30px;
+        &::after, &::before {
+            content: "";
+            width: 2px;
+            height: 20px;
+            background: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}
+@media (max-width:767px){
+    .cross {
+        right: auto;
+        left: 6px;
+    }
+}

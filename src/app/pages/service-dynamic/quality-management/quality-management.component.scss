@@ -1,0 +1,37 @@
+.logo-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.content-wrapper {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 30px;
+    h4 {
+        font-weight: 600;
+        font-size: 25px;
+        white-space: nowrap;
+    }
+    .content {
+        flex-grow: 1;
+    }
+    p {
+    }
+}
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 60px;
+    background: url(../../../../assets/images/service-images/bg.png) center bottom no-repeat;
+    background-size: 100% auto;
+    justify-content: center;
+    margin-left: -92px;
+    margin-right: -92px;
+    position: relative;
+    .abs {
+        position: absolute;
+        left: 50%;
+        bottom: -46px;
+        transform: translateX(-50%);
+    }
+}

@@ -15,12 +15,21 @@
 
     .heading{
         // padding-bottom: 40px;
-        .faq-heading-main{font-size: 32px;
-            font-weight: 600;
+        .faq-heading-main{font-size: 44px;
+            font-weight: 500;
             margin-bottom: 20px;
-            strong{ position: relative;
-                &::after{ content : url(../../../../assets/images/faqTitleIcon.png); position: absolute; right: -47px; top: -30px;}
+            text-align: center;
+            span {
+                background: #e6eced;
+                padding: 0 12px;
+                border-radius: 4px;
             }
+            strong{ position: relative;
+                // &::after{ content : url(../../../../assets/images/faqTitleIcon.png); position: absolute; right: -47px; top: -30px;}
+            }
+        }
+        p {
+            text-align: center;
         }
     }
 
@@ -47,17 +56,18 @@
                 margin-right: 0;
                 color: var(--blackColor);
                 transition: var(--transition);
-                padding: 22px 100px 22px 20px;
+                padding: 17px 20px 17px 60px;
                 font-family: var(--poppinsFontFamily);
-                font-size: 16px;
-                font-weight: 500;
+                font-size: 18px;
+                font-weight: 600;
+                border: 1px solid rgba(0, 46, 59, 0.1);
+                border-radius: 10px;
                 h3, .faq-heading{
                     font-size: inherit;
                     font-weight: inherit;
                     margin: 0px;
                 }
             }
-
             .faq-heading {
                 font-size: inherit;
                 font-weight: inherit;
@@ -78,17 +88,33 @@
                 }
             }
 
-            &::before {content : url(../../../../assets/images/Plus.png); position: absolute; right: 20px; top: 20px; }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 30px;
+                top: 24px;
+                width: 12px;
+                height: 12px;
+                background-image: url(../../../../assets/images/Plus.png);
+                background-size: cover; /* or contain, depending on your need */
+                background-repeat: no-repeat;
+            }
 
+            border: none;
+            margin-bottom: 10px;
             &.mat-expanded {
                 box-shadow: unset;
-                margin-bottom: 0;
 
                 .mat-expansion-panel-header {
                     padding: 0;
                 }
 
-                &::before {content : url(../../../../assets/images/Minus.png);}
+                &::before {
+                    width: 10px;
+                    height: 3px;
+                    top: 30px;
+                    background-image: url(../../../../assets/images/Minus.png);
+                }
 
             }
             &:last-child {
@@ -99,6 +125,12 @@
 // .mat-expansion-panel-body{padding: 22px 100px 22px 20px;}
 
         }
+    }
+}
+:host ::ng-deep {
+
+    .mat-expanded .mat-expansion-panel-content {
+        padding: 25px 25px;
     }
 }
 ::ng-deep {
@@ -114,10 +146,10 @@
                     display: block;
                 }
                 .mat-expansion-panel-body {
-                    padding: 0px 100px 22px 20px;
+                    padding: 0px;
                     p {
-                        font-size: 14px;
-                        color: #0C0E1E;
+                        font-size: 15px;
+                        color: #5c6a72;
                     }
                 }
             }
@@ -127,7 +159,9 @@
 
 mat-expansion-panel ul {
     list-style-type: disc; /* Ensure the unordered list has bullet points */
-    padding-left: 20px; /* Add some padding for the bullets to appear properly */
+    padding-left: 13px; /* Add some padding for the bullets to appear properly */
+    font-size: 15px;
+    color: #5c6a72;
 }
 @media only screen and (max-width: 767px) {
     .faqWrapper .heading .faq-heading-main {
