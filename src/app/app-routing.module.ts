@@ -184,7 +184,7 @@ const routes: Routes = [
         // component: DataPrivacyComponent
         data: {
             title: 'BuildTwin Terms of Service – Usage, Policies & Guidelines',
-            description: "Read BuildTwin's Terms of Service. Understand our policies, user responsibilities, and guidelines for using our structural marketplace and software.",
+            description: "Read BuildTwin's Terms of Service. Understand our policies, user responsibilities, and guidelines for using our construction marketplace and software.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/terms-of-service'
         }
@@ -345,8 +345,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-bridge/sector.module').then(m => m.SectorBridgeModule),
         data: {
-            title: 'Find Expert Bridge Engineering Services | BuildTwin Marketplace',
-            description: 'Connecting Global Expertise with Advanced AEC Solutions for Complex Bridge Design and Development Projects.',
+            title: 'Bridge Structural Engineering Experts & Vendors | BuildTwin',
+            description: 'Discover expert solutions for bridge precast, design software, and structure development. BuildTwin connects global expertise for complex bridge engineering projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/bridge'
         }
@@ -356,8 +356,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-stadium/sector.module').then(m => m.SectorStadiumModule),
         data: {
-            title: 'Find Expert Stadium Structural Vendors | BuildTwin Marketplace',
-            description: 'Advance structural and AEC solutions for stadium construction with BuildTwin. Connect with pre-qualified vendors to design safe, efficient stadium facilities.',
+            title: 'Stadium Structural Design Solutions & Vendors | BuildTwin',
+            description: 'Find top stadium structural design, steel structure, and roof design experts. BuildTwin connects you with pre-qualified vendors for safe and innovative stadium projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/stadium'
         }
@@ -367,8 +367,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-roadways/sector.module').then(m => m.SectorRoadwaysModule),
         data: {
-            title: 'Find Expert Road and Highway Structural Vendors | BuildTwin Marketplace',
-            description: 'Advance structural and AEC solutions for roads and highways construction with BuildTwin. Connect with pre-qualified teams for road structural engineering.',
+            title: 'Road & Highway Structural Engineering Design Experts | BuildTwin',
+            description: 'Find top road design software, highway design solutions, and structural engineering experts. BuildTwin connects you with global AEC teams for efficient projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/roads'
         }
@@ -378,8 +378,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-water-and-waste/sector.module').then(m => m.SectorWaterAndWasteModule),
         data: {
-            title: 'Expert Water & Waste Management Plant Designers | BuildTwin Marketplace',
-            description: 'BuildTwin connects you with expert vendors for industrial water waste treatment, sewage backup management, and water recycling.',
+            title: 'Water & Waste Management Plant Structural Design Vendors | BuildTwin',
+            description: 'Explore water treatment plant design, wastewater solutions, and structural engineering. BuildTwin connects expert vendors for efficient and sustainable projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/water-and-waste'
         }
@@ -389,8 +389,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-hospital/sector.module').then(m => m.SectorHospitalModule),
         data: {
-            title: 'Find Expert Hospital Infrastructure Vendors | BuildTwin Marketplace',
-            description: 'BuildTwin provides access to a global network of hospital designers and AEC experts, ensuring you find the right expertise for your project needs.',
+            title: 'Hospital Structural Engineering & Infrastructure Vendors | BuildTwin',
+            description: 'Access top hospital BIM and structural engineering experts for efficient designs. BuildTwin connects global AEC professionals for your healthcare projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/hospital'
         }
@@ -401,7 +401,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/sector-manufacturing-plant/sector.module').then(m => m.SectorManufacturingPlantModule),
         data: {
             title: 'Top Structural Engineering Vendors For Manufacturing Plant Projects | BuildTwin Marketplace',
-            description: 'AEC solutions for manufacturing plant construction with BuildTwin. Connect with pre-qualified structural engineering teams for manufacturing plant projects.',
+            description: 'Explore BIM manufacturing, factory structural solutions, and plant engineering. BuildTwin connects you with vetted vendors for efficient manufacturing projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/manufacturing-plant'
         }
@@ -411,8 +411,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-theaters/sector.module').then(m => m.SectorTheatersModule),
         data: {
-            title: 'Expert Structural Engineering Vendors For Theaters | BuildTwin Marketplace',
-            description: 'Advance structural and AEC solutions for theater construction with BuildTwin. Connect with pre-qualified teams for structural engineering services.',
+            title: 'Theater & Entertainment Venue Structural Engineering & Venue | BuildTwin',
+            description: 'Find expert theater structural vendors for cinema design, engineering, and AEC solutions. BuildTwin connects you with trusted teams for innovative projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/theatres'
         }
@@ -422,8 +422,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-commercial-building/sector.module').then(m => m.SectorCommercialBuildingModule),
         data: {
-            title: 'Structural Engineering Vendors For Commercial Building Projects | BuildTwin Marketplace',
-            description: 'AEC solutions for Commercial Building Projects with BuildTwin. Connect with pre-qualified structural engineering teams for your commercial building projects.',
+            title: 'Commercial Building Structural Design Engineers & Vendors | BuildTwin',
+            description: 'Explore building structural design, steel structure solutions, and commercial engineering expertise. BuildTwin connects you with top vendors for efficient projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/commercial-building'
         }
@@ -433,8 +433,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-industrial-building/sector.module').then(m => m.SectorIndustrialBuildingModule),
         data: {
-            title: 'Find Expert Industrial Building Structural Vendors | BuildTwin Marketplace',
-            description: 'Advance structural and AEC solutions for Industrial Building Construction Projects with BuildTwin. Connect with pre-qualified structural engineering vendors.',
+            title: 'Industrial Building Structural Design Marketplace | BuildTwin Marketplace',
+            description: 'Discover industrial design software, structural engineering, and building solutions. BuildTwin connects expert vendors for efficient industrial construction projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/industrial-building'
         }
@@ -444,8 +444,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-residential-building/sector.module').then(m => m.SectorResidentialBuildingModule),
         data: {
-            title: 'Expert Structural Vendors for Residential Buildings | BuildTwin Marketplace',
-            description: 'BuildTwin connects you with expert structural engineering vendors for residential buildings projects for structural engineering and architecture services.',
+            title: 'Structural engineering vendors for residential buildings construction | BuildTwin Marketplace',
+            description: 'Find expert residential structural engineers for homes, drawings, and architecture. BuildTwin connects you with trusted vendors for safe and efficient projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/residential-building'
         }
@@ -456,7 +456,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/sector-chemical-plant/sector.module').then(m => m.SectorChemicalPlantModule),
         data: {
             title: 'Structural Engineering Vendors For Chemical Plant Projects | BuildTwin Marketplace',
-            description: 'AEC solutions for Chemical Plant Projects with BuildTwin. Connect with pre-qualified structural engineering teams for your complex chemical plant projects.',
+            description: 'Discover chemical infrastructure solutions for plant projects. BuildTwin connects you with expert teams specializing in structural and engineering innovations.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/chemical-plant'
         }
@@ -466,8 +466,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-schools/sector.module').then(m => m.SectorSchoolsModule),
         data: {
-            title: 'Expert Structural Vendors for Schools Building | BuildTwin Marketplace',
-            description: 'BuildTwin connects you with expert structural engineering vendors and architectural firms for School/Educational Building Projects.',
+            title: 'Structural Engineering and Precast Services Vendors for Schools and Education Building | BuildTwin',
+            description: 'Find expert vendors for school structural facility design, campus infrastructure solutions, and innovative engineering services for safe educational buildings.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/schools'
         }
@@ -477,8 +477,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-airports/sector.module').then(m => m.SectorAirportsModule),
         data: {
-            title: 'Expert Structural Vendors for Airport Projects | BuildTwin Marketplace',
-            description: 'BuildTwin connects you with expert structural engineering vendors and architectural firms for Airport Projects success.',
+            title: 'Airport Structural Engineering & Infrastructure Experts | BuildTwin',
+            description: 'Find airport structural design, MEP solutions, and engineering vendors. BuildTwin connects experts for terminals, runways, hangars, and aviation facilities.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/airports'
         }
@@ -488,8 +488,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-tunnels/sector.module').then(m => m.SectorTunnelsModule),
         data: {
-            title: 'Top Structural Engineering Firms For Tunnel Projects | BuildTwin Marketplace',
-            description: 'AEC solutions for tunnel construction projects with BuildTwin. Connect with pre-qualified structural engineering teams for tunnel engineering.',
+            title: 'Top Precast Concrete structural engineering vendors for Tunnel Projects| BuildTwin',
+            description: 'Discover precast concrete tunnel solutions, tunnel structural engineering, and advanced designs. BuildTwin connects experts for efficient underground projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/tunnels'
         }
@@ -499,8 +499,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-metro/sector.module').then(m => m.SectorMetroModule),
         data: {
-            title: 'Structural Engineering Services for Metro & Railway Projects | BuildTwin Marketplace',
-            description: 'Connecting Global Expertise with Advanced AEC Solutions for Complex Metro & Railway Projects - Structural Design and Development Projects.',
+            title: 'BIM Structural Experts and Vendors for Metro & Railway Projects| BuildTwin',
+            description: 'Discover metro structural design, Rail BIM solutions, and advanced engineering for transit projects. BuildTwin provides expert vendors for efficient infrastructure development.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/metro'
         }
@@ -510,8 +510,8 @@ const routes: Routes = [
         
         loadChildren: () => import('./pages/sector-defense/sector.module').then(m => m.SectorDefenseModule),
         data: {
-            title: 'Expert Structural Vendors for Defense Infrastructure | BuildTwin Marketplace',
-            description: 'BuildTwin connects you with expert structural engineering vendors and architectural firms for your defense infrastructure projects success.',
+            title: 'Defense Infrastructure Structural EngineeringExperts and Vendors | BuildTwin',
+            description: 'Explore advanced defense structural solutions for secure infrastructure. Access expert vendors specializing in engineering for military bases, facilities, and utilities.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/sector/defense'
         }
@@ -548,8 +548,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/services-new/services-new.module').then(m => m.ServicesNewModule),
         // component: ServicesNewComponent,
         data: {
-            title: 'Precast Detailing Services | Precast Panel & Concrete Detailing | BuildTwin',
-            description: "Explore BuildTwin Marketplace for precast detailing services, including precast panel, concrete, and wall detailing. Serving the USA, EU, Middle East, UK, Australia, and India. Optimize your projects with our experienced precast detailers.",
+            title: 'Precast Detailing Services | One-stop Platform for Precast Solutions by BuildTwin',
+            description: "BuildTwin is your one-stop platform offering comprehensive precast detailing services to streamline construction projects. From shop drawings to machine files, we cover all your structural precast detailing requirements.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/pre-cast-detailing-services'
         }
@@ -583,8 +583,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/bim/services-new.module').then(m => m.BimServicesNewModule),
         // component: BimServicesNewComponent,
         data: {
-            title: 'BIM Services | BIM Modeling Consulting | BIM MEP Outsourcing | BuildTwin',
-            description: "Explore BIM services at BuildTwin Marketplace. Offering BIM outsourcing and consulting services for architectural, structural and engineering. Trusted Building Information Modeling service providers in USA, EU, Middle East, UK, Australia & India.",
+            title: 'BIM (Building Information Modeling) Services For AEC Projects | BuildTwin',
+            description: "BuildTwin Marketplace offers comprehensive BIM services to streamline your AEC projects. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/bim-services'
         }
@@ -595,8 +595,8 @@ const routes: Routes = [
         loadChildren: () => import('./pages/structural-steel/services-new.module').then(m => m.StructuralSteelServicesNewModule),
         // component: StructuralSteelServicesNewComponent,
         data: {
-            title: 'Steel Detailing Services | Marketplace for Structural Steel Detailing | BuildTwin',
-            description: "BuildTwin Marketplace offers a comprehensive platform for steel detailing services. Trusted by structural steel detailing companies, we serve clients across the USA, Middle East, EU, UK, Australia and India.",
+            title: 'Structural Steel Detailing Services for AEC Project | BuildTwin',
+            description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects. Our services include shop drawings, erection drawings, 2D and 3D modelling, connection design, and miscellaneous steel detailing.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
             canonical: 'https://www.buildtwin.com/services/steel-detailing-services'
         }
@@ -656,7 +656,7 @@ const routes: Routes = [
             title: 'Request BuildTwin Customer Success Stories & Case Studies',
             description: "See how BuildTwin delivers results. Request customer success stories and explore case studies showcasing project success.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/services/customer-success'
+            canonical: 'https://www.buildtwin.com/customer-success'
         }
     },
 
