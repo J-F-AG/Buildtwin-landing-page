@@ -1,7 +1,10 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, OnInit, Input, Output, ViewChild , OnChanges, SimpleChanges} from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { getDate } from 'date-fns';
 import { LanguageService } from 'src/app/services/language.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { MarkdownService } from 'ngx-markdown';
+import { marked } from 'marked';
 
 
 @Component({
@@ -11,7 +14,99 @@ import { LanguageService } from 'src/app/services/language.service';
   templateUrl: './sample-drawing.component.html',
   styleUrl: './sample-drawing.component.scss'
 })
-export class RebarSampleDrawingComponent{
+export class RebarSampleDrawingComponent implements OnChanges{
+
+  @Input() sectionHeading: any = '';
+  @Input() sectionSubHeading: any = '';
+  @Input() drawingsInfo: any = [];
+  processedHeading: SafeHtml;
+  processedSubHeading: SafeHtml;
+
+
+  ngOnChanges(changes: SimpleChanges) {
+      if (changes['sectionHeading'] && this.sectionHeading) {
+        // console.log("Original heading:", this.sectionHeading);
+        const textWithBreaks = this.sectionHeading.replace(/\n/g, '<br>');
+        let html = marked(textWithBreaks);
+  
+      // Create temporary DOM element
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = html;
+      
+      // Check if we have a p tag as first child
+      if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+        // Properly cast to Element to access innerHTML
+        const pElement = tempDiv.firstChild as Element;
+        html = pElement.innerHTML;
+      }
+  
+        // console.log('html after removing p tag: ', html);
+        this.processedHeading = this.sanitizer.bypassSecurityTrustHtml(html);
+      }
+
+
+      if(changes['sectionSubHeading'] && this.sectionSubHeading) {
+        // console.log("Original sub heading:", this.sectionSubHeading);
+        const textWithBreaks = this.sectionSubHeading.replace(/\n/g, '<br>');
+        let html = marked(textWithBreaks);
+  
+       // Create temporary DOM element
+       const tempDiv = document.createElement('div');
+       tempDiv.innerHTML = html;
+     
+       // Check if we have a p tag as first child
+       if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+         // Properly cast to Element to access innerHTML
+         const pElement = tempDiv.firstChild as Element;
+         html = pElement.innerHTML;
+       }
+  
+        this.processedSubHeading = this.sanitizer.bypassSecurityTrustHtml(html);
+      }
+      
+      
+      if(changes['drawingsInfo']) {
+        // console.log("First condition met: changes['drawingsInfo']");
+        
+        if(this.drawingsInfo) {
+          // console.log("Second condition met: this.drawingsInfo exists");
+          
+          if(this.drawingsInfo.length > 0) {
+            // console.log("Third condition met: array has items");
+            
+            // Process the array
+            this.drawingsInfo.forEach((item, index) => {
+              // console.log(`Processing item ${index}:`, item);
+              
+              if(item.serviceDescription) {
+                // console.log(`Item ${index} has serviceDescription:`, item.serviceDescription);
+                // Process the service description as before...
+                const textWithBreaks = item.serviceDescription.replace(/\n/g, '<br>');
+                let html = marked(textWithBreaks);
+    
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+                
+                if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+                  const pElement = tempDiv.firstChild as Element;
+                  html = pElement.innerHTML;
+                }
+    
+                item.serviceDescription = this.sanitizer.bypassSecurityTrustHtml(html);
+              } else {
+                console.log(`Item ${index} does not have serviceDescription property`);
+              }
+            });
+          } else {
+            console.log("Third condition failed: array is empty");
+          }
+        } else {
+          console.log("Second condition failed: this.drawingsInfo does not exist");
+        }
+      } else {
+        console.log("First condition failed: changes['drawingsInfo'] does not exist");
+      }
+    }
 
 
   splitArray(dataArray: any[], x: number) {
@@ -219,7 +314,7 @@ export class RebarSampleDrawingComponent{
   selectEndDate: number;
   selectEndYear: number;
 
-  constructor(public _languageService:LanguageService) { }
+  constructor(public _languageService:LanguageService, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     // if(window.innerWidth < 767) {

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HdFooterComponent } from './hd-footer.component';
 import { RouterModule } from '@angular/router';
 import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -13,7 +14,8 @@ import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module'
   imports: [
     CommonModule,
     RouterModule,
-    HubspotModule
+    HubspotModule,
+    HttpClientModule
   ],
   exports: [
     HdFooterComponent

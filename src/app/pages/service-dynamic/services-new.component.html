@@ -2,23 +2,30 @@
 
 <div class="mainContainer">
     <div class="maincontent">
-        <app-rebar-banner></app-rebar-banner>
-        <div class="container-with-right">
+        <app-rebar-banner [bannerObject]="headerObject"></app-rebar-banner>
+        <!-- <div class="container-with-right">
             <app-company-logos-slider [bg]="false"></app-company-logos-slider>
-        </div>
-        <app-good-reason></app-good-reason>
-        <app-rebar-trust-by></app-rebar-trust-by>
-        <app-rebar-sample-drawing></app-rebar-sample-drawing>
-        <app-rebar-precast-service></app-rebar-precast-service>
+        </div> -->
+        <app-bim-trust-by [hideItem]="[6,7]" [heading]="false" [slider]="companiesInfo"></app-bim-trust-by>
+        <app-good-reason [serviceName]="this.serviceData.data[0].service_name"></app-good-reason>
+        <app-rebar-trust-by [heading]="this.serviceData.data[0].trusted_by_section_heading" [companiesInfo]="companiesInfo"></app-rebar-trust-by>
+        <app-rebar-sample-drawing [sectionHeading]="this.serviceData.data[0].turn_your_vision_section_heading" [sectionSubHeading]="this.serviceData.data[0].turn_your_vision_section_sub_heading" [drawingsInfo]="drawingsInfo"></app-rebar-sample-drawing>
+        <app-rebar-precast-service [sectionHeading]="this.serviceData.data[0].all_in_one_section_heading" [sectionSubHeading]="this.serviceData.data[0].all_in_one_section_sub_heading" [precastArray]="precastArray" ></app-rebar-precast-service>
         <div class="bg global-mb container-with-right">
             <div class="container">
                 <div class="heading center v2">
-                        <h2 class="title">
+                        <!-- <h2 class="title">
                             Explore the largest portfolio of<br>
                             private and public  <span>engineering projects</span>
+                        </h2> -->
+                        <h2 class="title" [innerHTML]="this.serviceData.data[0].project_section_heading">
+                            
                         </h2>
-                        <p class="small-title">
+                        <!-- <p class="small-title">
                             Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
+                        </p> -->
+                        <p class="small-title" [innerHTML]="this.serviceData.data[0].project_section_sub_heading">
+                            
                         </p>
                 </div>
             </div>
@@ -42,13 +49,17 @@
         <div class="global-mb container-with-right">
             <div class="container">
                 <div class="heading center v2">
-                        <h2 class="title">
+                        <!-- <h2 class="title">
                             Sectors where we offer<br>
     <span>Rebar Detailing Services</span>
+                        </h2> -->
+                        <h2 class="title" [innerHTML]="this.serviceData.data[0].sector_section_heading">
                         </h2>
-                        <p class="small-title">
+                        <!-- <p class="small-title">
                             Take a look at sectors that most commonly benefit from our platform<br>
     when it comes to Rebar Detailing Services.
+                        </p> -->
+                        <p class="small-title" [innerHTML]="this.serviceData.data[0].sector_section_sub_heading">
                         </p>
                 </div>
             </div>
@@ -70,7 +81,7 @@
         <div class="global-mb">
             <app-rebar-e2e-encryption></app-rebar-e2e-encryption>
         </div>
-         <app-rebar-faq-buildtwin></app-rebar-faq-buildtwin>
+         <app-rebar-faq-buildtwin [sectionHeading]="this.serviceData.data[0].faq_section_heading" [sectionSubHeading]="this.serviceData.data[0].faq_section_sub_heading" [questionAndAnswers]="this.serviceData.data[0].faqs"></app-rebar-faq-buildtwin>
     </div>
     <div class="toggle-sidebar" (click)="toggleSidebar()">Start Enquiry</div>
     <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
@@ -81,5 +92,5 @@
     </div>
 </div>
 
-<app-rebar-drawing-freelancers></app-rebar-drawing-freelancers> 
+<app-rebar-drawing-freelancers [sectionHeading]="this.serviceData.data[0].sub_category_service_section_heading" [subCategoryServices]="this.serviceData.data[0].sub_category_services"></app-rebar-drawing-freelancers> 
 <app-hd-footer></app-hd-footer>

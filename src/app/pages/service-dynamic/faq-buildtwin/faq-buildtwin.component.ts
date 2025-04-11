@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rebar-faq-buildtwin',
@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class RebarFaqBuildtwinComponent {
   isFirst = true;
+  @Input() sectionHeading: any = '';
+  @Input() sectionSubHeading: any = '';
+  @Input() questionAndAnswers: any = [];
 }

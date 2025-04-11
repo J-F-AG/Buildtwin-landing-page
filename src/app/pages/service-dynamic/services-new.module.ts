@@ -24,6 +24,9 @@ import { ProjectListModule } from 'src/app/include-component/project-list/projec
 import { SpecialProjectModule } from 'src/app/include-component/special-project/special-project.module';
 import { TtTestimonialsModule } from '../marketplace/marketPlace/tt-testimonials/tt-testimonials.module';
 import { HdIntegrationsModule } from '../includes/hd-integrations/hd-integrations.module';
+import { HttpClientModule } from '@angular/common/http';
+// import { MarkdownModule } from 'ngx-markdown';
+
 
 const routes: Routes = [
   {
@@ -58,6 +61,8 @@ const routes: Routes = [
         TtTestimonialsModule,
         ServiceHeavyLiftingModule,
         HdIntegrationsModule,
+        HttpClientModule,
+        // MarkdownModule.forRoot(),
     RouterModule.forChild(routes),
   ],
 })

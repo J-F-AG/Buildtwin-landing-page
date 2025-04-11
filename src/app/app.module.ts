@@ -12,7 +12,7 @@ import { BtIconModule } from 'projects/bt-icon/bt-icon.module';
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModuleModule } from './shared-module/shared-module.module';
-
+// import { MarkdownModule } from 'ngx-markdown';
 
 
 @NgModule({
@@ -28,7 +28,8 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
     BtIconModule,
     NgxScrollTopModule,
     HttpClientModule,
-    SharedModuleModule
+    SharedModuleModule,
+    // MarkdownModule.forRoot()
   ],
   providers: [
     Title,

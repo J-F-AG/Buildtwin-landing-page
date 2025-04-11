@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-rebar-drawing-freelancers',
@@ -9,4 +10,7 @@ import { Component } from '@angular/core';
 })
 export class RebarDrawingFreelancersComponent {
 
+  constructor(public _languageService: LanguageService,){}
+@Input() sectionHeading: any = '';
+@Input() subCategoryServices: any = [];
 }

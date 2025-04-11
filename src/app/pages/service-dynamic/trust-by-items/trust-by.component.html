@@ -9,14 +9,18 @@
                 <ng-content select=".heading-import"></ng-content>
             </div>
 
-            <div class="trustedBrands">
+            <!-- <div class="trustedBrands">
                     <a *ngFor="let item of slider; let i = index"
                         [routerLink]="_languageService.currentLanguage+item.routerLink"
                         [id]="'partner-' + item.id"
                     >
-                        <!-- <strong>{{ item.name }}</strong> -->
                         <img src="{{item['icon']}}" width="{{item['width']}}" height="{{item['height']}}" alt="{{ item.name }}">
                     </a>  
+            </div> -->
+            <div class="trustedBrands">
+                <a *ngFor="let item of slider; let i = index" [id]="item.id">
+                    <img src="{{item['icon']}}" width="{{item['width']}}" height="{{item['height']}}" alt="{{ item.name }}" [routerLink]="_languageService.currentLanguage + '/' + item.company_page_url">
+                </a>
             </div>
         </div>
     </div>

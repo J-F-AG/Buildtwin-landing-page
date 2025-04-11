@@ -18,10 +18,17 @@
             </ul> -->
         <!-- </div> -->
         <div class="threeColWrapper" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-            <h3>Rebar Detailing Service includes:</h3>
+            <h3>{{sectionHeading}}</h3>
             <ul class="threeColList">
-                <li>Rebar Detailing Services</li>
-                <li>Rebar Detailing for Beam</li>
+                <li *ngFor="let item of subCategoryServices" 
+                    [routerLink]="item.sub_category_service_page_url ? [_languageService.currentLanguage, item.sub_category_service_page_url] : null">
+                  {{item.sub_category_service_name}}
+                </li>
+              </ul>
+            <!-- <ul class="threeColList" *ngFor="let item of subCategoryServices">
+                <li routerLink="item.sub_category_service_page_url ? {{_languageService.currentLanguage}}/{{item.sub_category_service_page_url}}">{{item.sub_category_service_name}}</li> -->
+                <!-- <li>Rebar Detailing Services</li> -->
+                <!-- <li>Rebar Detailing for Beam</li>
                 <li>Concrete masonry detailing</li>
                 <li>Rebar Foundation Detailing</li>
                 <li>Rebar Placement Drawings</li>
@@ -44,7 +51,7 @@
                 <li>Rebar Detailing with ideCAD</li>
                 <li>Rebar Numbering</li>
                 <li>Roof truss and joint details</li>
-                <li>Bar List Schedules</li>
+                <li>Bar List Schedules</li> -->
 
                 <!-- <li>Rebar Footing detailing</li>
                 <li>Retaining Wall Detailing</li>
@@ -56,7 +63,7 @@
                 <li>Retaining walls detailing</li>
                 <li>3D modeling of Rebar using Tekla Structures</li> -->
 
-            </ul>
+            <!-- </ul> -->
         </div>
         <!-- <div class="threeColWrapper" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600"> -->
             <!-- <h3>Steel Detailing Service includes:</h3> -->
