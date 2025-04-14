@@ -81,16 +81,16 @@ export class RebarSampleDrawingComponent implements OnChanges{
               if(item.serviceDescription) {
                 // console.log(`Item ${index} has serviceDescription:`, item.serviceDescription);
                 // Process the service description as before...
-                const textWithBreaks = item.serviceDescription.replace(/\n/g, '<br>');
-                let html = marked(textWithBreaks);
+                // const textWithBreaks = item.serviceDescription.replace(/\n/g, '<br>');
+                let html = marked(item.serviceDescription);
     
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = html;
+                // const tempDiv = document.createElement('div');
+                // tempDiv.innerHTML = html;
                 
-                if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-                  const pElement = tempDiv.firstChild as Element;
-                  html = pElement.innerHTML;
-                }
+                // if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+                //   const pElement = tempDiv.firstChild as Element;
+                //   html = pElement.innerHTML;
+                // }
     
                 item.serviceDescription = this.sanitizer.bypassSecurityTrustHtml(html);
               } else {

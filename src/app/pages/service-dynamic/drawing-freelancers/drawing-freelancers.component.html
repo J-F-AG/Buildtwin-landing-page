@@ -21,7 +21,8 @@
             <h3>{{sectionHeading}}</h3>
             <ul class="threeColList">
                 <li *ngFor="let item of subCategoryServices" 
-                    [routerLink]="item.sub_category_service_page_url ? [_languageService.currentLanguage, item.sub_category_service_page_url] : null">
+                [routerLink]="item.sub_category_service_page_url ? (_languageService.currentLanguage + '/' + item.sub_category_service_page_url) : null"
+                >
                   {{item.sub_category_service_name}}
                 </li>
               </ul>

@@ -13,7 +13,7 @@ export class ServiceMappingService {
   servicesData: any = [];
   private readonly CACHE_KEY = 'services_cache_data';
   private readonly CACHE_TIMESTAMP_KEY = 'services_cache_timestamp';
-//   private readonly CACHE_EXPIRY_TIME = 12000; //  12 sec
+  // private readonly CACHE_EXPIRY_TIME = 12000; //  
   private readonly CACHE_EXPIRY_TIME = 3600000; // 1 hour in milliseconds
   
   constructor(private http: HttpClient) {

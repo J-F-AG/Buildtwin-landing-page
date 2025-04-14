@@ -12,6 +12,7 @@ import { marked } from 'marked';
 })
 export class RebarBannerComponent implements OnInit, OnChanges{
   @Input() bannerObject: any = {}
+  @Input() background_image_url: string = '';
   processedHeading: SafeHtml;
   processedSubHeading: SafeHtml;
   constructor(private sanitizer: DomSanitizer){}

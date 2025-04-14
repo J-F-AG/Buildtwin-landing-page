@@ -9,6 +9,8 @@ import { LanguageService } from './services/language.service';
 import { BreadcrumbService } from './services/breadcrumb.service';
 import { SeoService } from './services/seo.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Injector } from '@angular/core';
+import { ServiceMappingService } from './services/service-mapping.service';
 declare let $: any;
 
 @Component({
@@ -46,6 +48,7 @@ export class AppComponent {
         private _seoService: SeoService,
         private activatedRoute: ActivatedRoute,
         private sanitizer: DomSanitizer,
+        private injector: Injector,
         @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
       this._languageService.faqSchemaSubject.subscribe((data) => {
@@ -66,6 +69,15 @@ export class AppComponent {
     }
 
     ngOnInit() {
+
+      // Reset all schema HTML variables at the beginning
+    this.breadcrumbSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+    this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+    this.schemaCode = this.sanitizer.bypassSecurityTrustHtml('');
+    this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+    this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+
+
         if (isPlatformBrowser(this.platformId)) {
         localStorage.setItem('appVerionId', '0.0.2');
         }
@@ -518,6 +530,55 @@ injectBreadcrumbScript(url) {
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
     }
+
+    else {
+      // Check if this URL corresponds to a service page in your service mapping
+      let normalizedUrl = url.replace(/^\/+|\/+$/g, ''); // Remove leading/trailing slashes
+      
+      console.log("normalized url to check for service page schema injection :", normalizedUrl);
+      
+      // Import and inject your ServiceMappingService
+      const serviceMappingService = this.injector.get(ServiceMappingService);
+      
+      // Get service data for the current URL
+      serviceMappingService.getServicePageDataByUrl(normalizedUrl).subscribe(
+        response => {
+          if (response && response.data && response.data[0]) {
+            const serviceData = response.data[0];
+            
+            // Check if service has FAQ schema data
+            if (serviceData.faq_and_testimonial_schemas) {
+              const schemas = serviceData.faq_and_testimonial_schemas;
+              
+              // Handle FAQ schema
+              if (schemas.faq) {
+                this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+                  `<script type="application/ld+json">${JSON.stringify(schemas.faq)}</script>`
+                );
+              }
+              
+              // Handle testimonial schema
+              if (schemas.testimonial) {
+                this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+                  `<script type="application/ld+json">${JSON.stringify(schemas.testimonial)}</script>`
+                );
+              }
+              
+              // Handle service schema
+              // if (schemas.service) {
+              //   this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+              //     `<script type="application/ld+json">${JSON.stringify(schemas.service)}</script>`
+              //   );
+              // }
+            }
+          }
+        },
+        error => {
+          console.error('Error fetching service data for schema injection:', error);
+        }
+      );
+    }
+
   }
    
 }
