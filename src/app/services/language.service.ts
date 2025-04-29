@@ -975,6 +975,47 @@ export class LanguageService {
     return JSON.stringify(AIProjectManagementSchema);
   }
 
+  injectForAIProjectManagementProductSchema(renderer) {
+
+    const AIProjectManagementSchema = {
+
+      "@context": "https://schema.org/",  
+
+      "@type": "Product",  
+    
+      "name": "Simplify Structural Engineering Projects with AI Design Manager", 
+    
+      "image": "https://www.buildtwin.com/assets/images/bt-thumb.png", 
+    
+      "description": "BuildTwin's AI Design Manager simplifies structural engineering projects with AI assistance at every step. Features collaboration and planning tools. Trusted by over 5,000 engineers", 
+    
+      "brand": { 
+    
+        "@type": "Brand", 
+    
+        "name": "Buildtwin" 
+    
+      }, 
+    
+      "aggregateRating": { 
+    
+        "@type": "AggregateRating", 
+    
+        "ratingValue": "4.9", 
+    
+        "bestRating": "5", 
+    
+        "worstRating": "1", 
+    
+        "ratingCount": "3" 
+    
+      }
+    };
+
+    return JSON.stringify(AIProjectManagementSchema);
+
+  }
+
   injectFAQSchemaForFaqPage(renderer) {
     // Create the FAQ schema for the FAQ page
     const faqSchema = {
@@ -2828,6 +2869,45 @@ export class LanguageService {
     return JSON.stringify(SectorDataCenterTestimonialSchema);
   }
 
+  injectSectorDataCenterProductSchema(renderer) {
+
+    const sectorDataCenterProductSchema = {
+      "@context": "https://schema.org/",  
+
+      "@type": "Product",  
+    
+      "name": "Expert Data Center Construction Services | BuildTwin Marketplace", 
+    
+      "image": "https://www.buildtwin.com/assets/images/sector-banner/data-center.jpg", 
+    
+      "description": "Find expert vendors for data center projects. Get customized designs for colocation, hyperscale, and cloud data centers with BuildTwin’s global network.", 
+    
+      "brand": { 
+    
+        "@type": "Brand", 
+    
+        "name": "Buildtwin" 
+    
+      }, 
+    
+      "aggregateRating": { 
+    
+        "@type": "AggregateRating", 
+    
+        "ratingValue": "4.9", 
+    
+        "bestRating": "5", 
+    
+        "worstRating": "1", 
+    
+        "ratingCount": "3" 
+    
+      }
+    }
+
+    return JSON.stringify(sectorDataCenterProductSchema);
+  }
+
   injectFAQSchemaForBuildingCodeAisc(renderer) {
     // Create the FAQ schema for the FAQ page
     const faqSchema = {
@@ -3749,6 +3829,46 @@ export class LanguageService {
     };
 
     return JSON.stringify(SectorPowerPlantTestimonialSchema);
+  }
+
+  injectSectorPowerPlantProductSchema(renderer) {
+
+    const SectorPowerPlantProductSchema = {
+      "@context": "https://schema.org/",  
+
+      "@type": "Product",  
+    
+      "name": "Expert Power Plant Engineering Solutions | BuildTwin Marketplace", 
+    
+      "image": "https://www.buildtwin.com/assets/images/sector-banner/power-plant.jpg", 
+    
+      "description": "Discover expert vendors for power plant projects and power plant engineering services in thermal, nuclear, and renewable energy. Enhance efficiency with BuildTwin’s ERP solutions.", 
+    
+      "brand": { 
+    
+        "@type": "Brand", 
+    
+        "name": "Buildtwin" 
+    
+      }, 
+    
+      "aggregateRating": { 
+    
+        "@type": "AggregateRating", 
+    
+        "ratingValue": "4.9", 
+    
+        "bestRating": "5", 
+    
+        "worstRating": "1", 
+    
+        "ratingCount": "3" 
+    
+      } 
+    };
+
+    return JSON.stringify(SectorPowerPlantProductSchema);
+
   }
 
   injectFAQSchemaForSectorBridge(renderer) {
@@ -6733,6 +6853,32 @@ export class LanguageService {
     };
 
     return JSON.stringify(StructuralSteelDetailingTestimonialSchema);
+  }
+
+  injectStructuralSteelDetailingProductSchema(renderer) {
+
+    const StructuralSteelDetailingProductSchema = {
+      "@context": "https://schema.org/",  
+
+      "@type": "Product",  
+    
+      "name": "Structural Steel Detailing Software Comparison: Tekla Structures vs SDS/2", 
+    
+      "image": "https://www.buildtwin.com/assets/images/serviceBanner.jpg", 
+    
+      "description": "Compare Tekla Structures and SDS/2 for structural steel detailing. Discover their features, advantages, pricing, and the best use cases for precise and efficient project delivery.", 
+    
+      "brand": { 
+    
+        "@type": "Brand", 
+    
+        "name": "Buildtwin" 
+    
+      }
+    }
+
+    return JSON.stringify(StructuralSteelDetailingProductSchema);
+
   }
 
 
