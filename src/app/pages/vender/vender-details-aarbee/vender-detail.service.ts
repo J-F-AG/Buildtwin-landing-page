@@ -41,6 +41,12 @@ export class VenderDetailService {
       image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
       canonical: 'https://www.buildtwin.com/partners/gbc-engineers'
     },
+    'gbcengineers': {
+      title: 'GBC Engineers |  Structural Engineering & Design Solutions | Buildtwin Partner',
+      description: "GBC Engineers is a leading provider of high-quality structural engineering and design solutions for projects worldwide. Our expertise includes civil engineering, geotechnical engineering, value engineering design, and project management services.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/gbcengineers'
+    },
     'aarbee-structures-private-limited': {
       title: 'Aarbee Structures | Structural Steel Designing & Detailing | Buildtwin Partner',
       description: "Aarbee Structures is a trusted partner for all your structural design and steel detailing needs in residential, commercial, and industrial projects. Work with us and experience top-notch services from Buildtwin.",
@@ -59,17 +65,35 @@ export class VenderDetailService {
       image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
       canonical: 'https://www.buildtwin.com/partners/repl-infosystems'
     },
+    'replinfosystems': {
+      title: 'REPL infosystems | Detailed Engineering, BIM Modelling, MEP | Buildtwin Partner',
+      description: "REPL infosystems is a trusted partner for detailed engineering, BIM modeling, and MEP services in the AEC and Mechanical sectors. Our expertise includes architecture software, construction project management, BIM, 3D modeling software.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/replinfosystems'
+    },
     'precision-precast-solutions-private-limited': {
       title: 'Precision Precast Solutions | Civil/Structural, MEP Engineering Services | Buildtwin Partner',
       description: "Precision Precast Solutions is a trusted partner for civil/structural and MEP engineering services. Our services includes design and detailing, BIM modeling, MEP, project management, and precast detailing. Partner with us for precision and efficient precast solutions.",
       image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
       canonical: 'https://www.buildtwin.com/partners/precision-precast-solutions-private-limited'
     },
+    'precisionprecastsolutionsprivatelimited': {
+      title: 'Precision Precast Solutions | Civil/Structural, MEP Engineering Services | Buildtwin Partner',
+      description: "Precision Precast Solutions is a trusted partner for civil/structural and MEP engineering services. Our services includes design and detailing, BIM modeling, MEP, project management, and precast detailing. Partner with us for precision and efficient precast solutions.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/precisionprecastsolutionsprivatelimited'
+    },
     'oriole-design-tech-solutions-llp': {
       title: 'Oriole | BIM Solutions For AEC Industry | Buildtwin Partner',
       description: "Oriole is a leading BIM service provider offering end-to-end solutions to architects, engineers, and construction professionals in the AEC industry. Partnered with Buildtwin, we deliver BIM solutions to streamline your projects and enhance collaboration.",
       image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
       canonical: 'https://www.buildtwin.com/partners/oriole-design-tech-solutions-llp'
+    },
+    'orioledesigntechsolutionsllp': {
+      title: 'Oriole | BIM Solutions For AEC Industry | Buildtwin Partner',
+      description: "Oriole is a leading BIM service provider offering end-to-end solutions to architects, engineers, and construction professionals in the AEC industry. Partnered with Buildtwin, we deliver BIM solutions to streamline your projects and enhance collaboration.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/orioledesigntechsolutionsllp'
     },
     'innowell-engineering-international-pvt-ltd': {
       title: 'Innowell Engineering  | MEP, BIM & Sustainability Services | Buildtwin Partner',
@@ -82,6 +106,12 @@ export class VenderDetailService {
       description: "Clove Technologies is a leading BIM modeling service provider specializing in the AEC industry, partnering with Buildtwin. Our comprehensive expertise includes design, detailing, digital construction, mapping, measurement, and transformation services.",
       image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
       canonical: 'https://www.buildtwin.com/partners/clove-technologies-private-limited'
+    },
+    'clovetechnologiesprivatelimited': {
+      title: 'Clove Technologies | BIM Modelling for AEC Industries | Buildtwin Partner',
+      description: "Clove Technologies is a leading BIM modeling service provider specializing in the AEC industry, partnering with Buildtwin. Our comprehensive expertise includes design, detailing, digital construction, mapping, measurement, and transformation services.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/clovetechnologiesprivatelimited'
     },
     'tritech-corporation': {
       title: 'TRITECH ENGINEERING | BIM & MEP Engineering Solutions | Buildtwin Partner',
