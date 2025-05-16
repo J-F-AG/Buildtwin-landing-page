@@ -35,6 +35,7 @@ export class AppComponent {
     faqSchemaHtml: SafeHtml;
     serviceSchemaHtml: SafeHtml;
     testimonialSchemaHtml: SafeHtml;
+    productSchemaHtml: SafeHtml;
     showHideForm:boolean = false;
     hideSideButton: boolean = true;
     hideOnThisUrl: string[] = ['/partners', '/services', '/software', '/building-code','/sector'];
@@ -262,6 +263,13 @@ injectBreadcrumbScript(url) {
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
+
+      const productSchema = this._languageService.injectForAIProjectManagementProductSchema(this.renderer);
+
+      this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${productSchema}</script>`
+      );
+
     }else if(url.includes('/faq')){
         const faqSchema = this._languageService.injectFAQSchemaForFaqPage(this.renderer)
 
@@ -333,6 +341,13 @@ injectBreadcrumbScript(url) {
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
+      
+      const productSchema = this._languageService.injectSectorDataCenterProductSchema(this.renderer);
+
+      this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${productSchema}</script>`
+      );
+
     }else if(url.includes('/building-code/aisc')){
       const faqSchema = this._languageService.injectFAQSchemaForBuildingCodeAisc(this.renderer)
 
@@ -375,6 +390,13 @@ injectBreadcrumbScript(url) {
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
+
+      const productSchema = this._languageService.injectSectorPowerPlantProductSchema(this.renderer);
+
+      this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${productSchema}</script>`
+      );
+
 
     }else if(url.includes('/sector/bridge')){
       const faqSchema = this._languageService.injectFAQSchemaForSectorBridge(this.renderer)
@@ -516,6 +538,12 @@ injectBreadcrumbScript(url) {
 
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${testimonialSchema}</script>`
+      );
+
+      const productSchema = this._languageService.injectStructuralSteelDetailingProductSchema(this.renderer);
+
+      this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${productSchema}</script>`
       );
     }
   }
