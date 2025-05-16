@@ -58,6 +58,124 @@
 app-company-logos-slider ::ng-deep .global-mb {
     margin-bottom: 48px;
 }
+:host ::ng-deep {
+    .container.project-list, .specialProjectsSection {
+        overflow: hidden;
+        position: relative;
+        &::after, &::before {
+            content: "";
+            width: 92px;
+            background: #f6f7f9;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+        &::before {
+            left: 0;
+            right: auto;
+        }
+    }
+    .container.project-list div.project-list-wrapper, .specialProjectsSection .containerWrap div.carousel  {
+        position: static;
+        width: calc(100% - 198px);
+        .owl-carousel {
+            position: static;
+            .owl-nav {
+                left: 0;
+                right: 0;
+                z-index: 9;
+                padding: 0;
+                overflow: visible;
+                top: 50%;
+            }
+            .owl-nav .owl-prev, .owl-nav .owl-next {
+                text-indent: 110%;
+                overflow: hidden;
+                transition: background-color 0.2s ease;
+                width: 66px;
+                height: 66px;
+                border-radius: 50%;
+                border: none;
+                background-color: white;
+                position: absolute;
+                right: 20px;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+                margin: 0;
+                left: auto;
+                transform: none;
+            }
+            .owl-nav .owl-prev {
+                left: 20px;
+                right: auto;
+            }
+            .owl-nav .owl-prev::before, .owl-nav .owl-next::before {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                border: solid 2px black;
+                position: absolute;
+                transform: translate(-50%, -50%) rotate(45deg);
+                left: 50%;
+                top: 50%;
+                margin-top: 0;
+            }
+            .owl-nav .owl-prev::before {
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+            }
+            .owl-nav .owl-next::before {
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                margin-left: -2px;
+            }
+            .owl-nav .owl-prev::after, .owl-nav .owl-next::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-72%, -50%);
+                width: 14px;
+                height: 2px;
+                background: black;
+                    border-color: black;
+            }
+            .owl-nav .owl-next:hover
+            .owl-nav .owl-prev:hover{
+                
+                 &:after{
+                    background: black;
+                        border-color: black;
+                }
+            }
+            .owl-nav .owl-prev::after {
+                transform: translate(-39%, -50%);
+            }
+        }
+        .owl-carousel .owl-stage-outer {
+            overflow: visible;
+        }
+        .owl-carousel .owl-stage-outer::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 198px;
+            right: -198px;
+            top: 0;
+            background: linear-gradient(to right, rgba(246, 247, 249, 0) 0%, rgba(246, 247, 249, 0.5) 50%, rgb(246, 247, 249) 100%);
+        }
+    }
+    .specialProjectsSection .containerWrap div.carousel {
+        width: calc(100% - 100px);
+        .owl-carousel .owl-stage-outer::after {
+            width: 100px;
+            right: -100px;
+        }
+    }
+}
 @media (max-width:1199px){
     /* Define the keyframes for the animation */
     @keyframes marginLoop {

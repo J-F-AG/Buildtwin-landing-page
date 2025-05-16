@@ -11,6 +11,7 @@ export class SpecialProjectComponent implements OnInit {
   @Input() count: number = 4; 
   @Input() hideItem: number[] = []; // Array of IDs to hide
   @Input() heading: boolean = true; //sector
+  @Input() sliderCount = {};
   customOptions: OwlOptions | null = null;
   
   slides = [
@@ -191,16 +192,16 @@ export class SpecialProjectComponent implements OnInit {
       navText: ['', ''],
       responsive: {
         0: {
-          items: 2,
+          items: this.sliderCount['mobile']?this.sliderCount['mobile']:2,
         },
         400: {
-          items: 2
+          items: this.sliderCount['mobile']?this.sliderCount['mobile']:2
         },
         740: {
-          items: 3
+          items: this.sliderCount['ipad']?this.sliderCount['ipad']:3
         },
         940: {
-          items: this.count
+          items: this.sliderCount['desktop']?this.sliderCount['desktop']:4
         }
       },
       nav: true
