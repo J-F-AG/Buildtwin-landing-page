@@ -2,6 +2,9 @@
 <div class="formHeader" *ngIf="type != 'outside' && style != 'secondary' && !page">
     <strong>Get a FREE offer for </strong>
     <h3>{{data['name']}}</h3>
+    <span class="service-name" *ngIf="serviceData['service_name']">
+        {{serviceData['service_name']}}
+    </span>
     <div>from 5+ pre-qualified vendors</div>
 </div>
 
@@ -37,7 +40,7 @@
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="middlePart">
 
-            <div class="formRow" *ngIf="type == 'outside' && showdropDown">
+            <div class="formRow" *ngIf="type == 'outside' && showdropDown && !serviceData['service_name']">
 
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid)}">
@@ -55,7 +58,7 @@
                 </div>
 
             </div>
-            <div class="formRow" *ngIf="showdropDown">
+            <div class="formRow" *ngIf="showdropDown && !serviceData['service_name']">
 
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid)}">
@@ -75,7 +78,7 @@
 
             </div>
 
-            <div class="formRow" *ngIf="(showdropDown && type != 'outside') || style == 'secondary'">
+            <div class="formRow" *ngIf="((showdropDown && type != 'outside') || style == 'secondary') && !serviceData['service_name']">
 
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid)}">
@@ -110,7 +113,7 @@
                     <span *ngIf="myForm.get('email')?.errors?.['email']">Invalid email format.</span>
                 </div>
             </div>
-            <div class="formRow">
+            <div class="formRow" *ngIf="!serviceData['service_name']">
                 <div class="selectBox without-arrow"
                     [ngClass]="{'error-border': (myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid)}">
                     <div class="normal">
@@ -123,7 +126,7 @@
                     <span *ngIf="myForm.get('projectName')?.errors?.['required']">Project Name is required.</span>
                 </div>
             </div>
-            <div class="formRow">
+            <div class="formRow" *ngIf="!serviceData['service_name']">
                 <div class="selectBox without-arrow">
                     <div class="normal">
                         <textarea class="textarea-description" formControlName="description"
@@ -142,11 +145,24 @@
             <p *ngIf="style != 'secondary'">Take a quick minute to fill this out—BuildTwin’s success advisor will handle the rest.</p>
 
             <div class="buttonContainer" [ngClass]="{'pt-none' : style == 'secondary', 'normalBtn':normalBtn}">
-                <button class="button-v2 floating_form_submit_enquiry" type="submit" [disabled]="myForm.invalid && disableButton"> Get Free quote
+                <button *ngIf="serviceData['service_name']" class="button-v2 floating_form_submit_enquiry"> Sign up for FREE
+                </button>
+                <button class="button-v2 border border-none floating_form_submit_enquiry" type="submit" [disabled]="myForm.invalid && disableButton"> Get Free quote
                 </button>
             </div>
 
-            <div class="integrationsContainer" *ngIf="style != 'secondary'">
+            <div class="for-vendor" *ngIf="serviceData['service_name']" >
+                <h6>
+                    For vendors
+                </h6>
+                <p>
+                    Looking for working with BuildTwin to
+promote your Engineering Services?
+                </p>
+                <a href="https://www.buildtwin.com/get-started" target="_blank">Register NOW</a>
+            </div>
+
+            <div class="integrationsContainer" *ngIf="style != 'secondary' && !serviceData['service_name']">
                 <ng-container *ngIf="!page">
                     <strong>Additional Feature:</strong>
                     <div class="integrationsList">

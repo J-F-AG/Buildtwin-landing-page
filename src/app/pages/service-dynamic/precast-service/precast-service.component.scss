@@ -202,6 +202,22 @@
 .tab-main-content {
     padding: 22px 35px;
     text-align: left;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--lightTextColor);
+    ::ng-deep {
+        p {
+            line-height: inherit;
+        }
+        ul {
+        list-style: disc;
+        margin-left: 17px;
+        }
+        ol {
+            list-style: decimal;
+            margin-left: 17px;
+        }
+    }
 }
 .service-list {
     margin-bottom: 1.5rem;
@@ -219,7 +235,7 @@
 }
 
 .sectionMidContainer{
-    .precastTabs{display: flex; border-bottom: none; justify-content: space-between; overflow: auto;
+    .precastTabs{display: flex; border-bottom: none; justify-content: space-between; gap: 6px; overflow: auto;
         margin-bottom: 10px;
         &::-webkit-scrollbar {
             width: 2px;

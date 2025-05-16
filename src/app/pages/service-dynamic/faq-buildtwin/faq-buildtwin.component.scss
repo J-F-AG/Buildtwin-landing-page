@@ -231,6 +231,10 @@ mat-expansion-panel ul {
                 display: block;
                 height: auto;
             }
+            &.mat-expanded .mat-expansion-panel-header-title {
+                background: #eff4f5;
+                border-color: #eff4f5;
+            }
             .mat-expansion-panel-header-title {
                 display: block;
                 margin-right: 0;
@@ -278,6 +282,7 @@ mat-expansion-panel ul {
                 background-image: url(../../../../assets/images/Plus.png);
                 background-size: cover; /* or contain, depending on your need */
                 background-repeat: no-repeat;
+                z-index: 2;
             }
 
             border: none;

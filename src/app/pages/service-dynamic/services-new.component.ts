@@ -32,6 +32,9 @@ export class ServiceDynamicComponent implements OnInit {
   ) {}
   
   ngOnInit(): void {
+    setTimeout(() => {
+      console.log(this.serviceData)
+    }, 5000);
     console.log('Services component initialized');
   
     // Get the parameter from route

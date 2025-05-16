@@ -19,6 +19,7 @@ export class ProjectListComponent {
 @Input() slider : boolean = false;
 @Input() hideMessageBox = false;
 @Input() hideLockScreen = false;
+@Input() sliderCount = {};
 @ViewChild('carouselTrack') carouselTrack!: ElementRef;
 currentPosition = 0;
 isAtStart = true;
@@ -143,16 +144,16 @@ sliderInit() {
     // width: 123
     responsive: {
       0: {
-        items: 2  // 1 item for small screens
+        items: this.sliderCount['mobile']?this.sliderCount['mobile']:2  // 1 item for small screens
       },
       800: {
-        items: 4  // 2 full items and a half item for larger screens
+        items: this.sliderCount['ipad']?this.sliderCount['ipad']:4  // 2 full items and a half item for larger screens
       },
       1000: {
-        items: 5  // 2 full items and a half item for larger screens
+        items: this.sliderCount['desktop']?this.sliderCount['desktop']:5  // 2 full items and a half item for larger screens
       },
       1416: {
-        items: 6  // 1 item for slightly larger screens
+        items: this.sliderCount['big']?this.sliderCount['big']:6  // 1 item for slightly larger screens
       },
       // 740: {
       //   items: 5  // 2 items for medium screens

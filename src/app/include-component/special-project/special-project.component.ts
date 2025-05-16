@@ -8,6 +8,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class SpecialProjectComponent implements OnInit { 
   @Input() page: string = ''; //sector
+  @Input() count: number = 4; 
   @Input() hideItem: number[] = []; // Array of IDs to hide
   @Input() heading: boolean = true; //sector
   customOptions: OwlOptions | null = null;
@@ -199,7 +200,7 @@ export class SpecialProjectComponent implements OnInit {
           items: 3
         },
         940: {
-          items: 4
+          items: this.count
         }
       },
       nav: true

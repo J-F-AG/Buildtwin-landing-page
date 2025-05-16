@@ -2,18 +2,18 @@
 .bannerContainer{
     
 }
-.container-with-right {
+.banner-space {
     min-height: 645px;
     padding-bottom: 70px;
 }
-.container,.container-with-right{
+.container,.banner-space{
     // min-height: 100vh;
     height: 100%; 
     display: flex; flex-direction: column; justify-content: center;
     text-align: center;
     align-items: center;
 }
-.container-with-right {
+.banner-space {
     padding-top: 59px;
 }
 .container {
@@ -73,6 +73,10 @@
     top: 0px;
     width: 100%;
     height: 100%;
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
 }
 .bannerContainer {
     position: relative;
@@ -189,7 +193,7 @@
     .container {
         min-height: 0;
     }
-    .container-with-right {
+    .banner-space {
         justify-content: flex-end;
         padding-bottom: 130px;   
         min-height: 0;
@@ -208,7 +212,7 @@
         padding-left: 30px;
         padding-right: 30px;
     }
-    .container-with-right {
+    .banner-space {
         padding-bottom: 110px;
     }
     .bannerWrapper {
@@ -216,11 +220,11 @@
             padding-right: 200px;
         }
     }
-    .container-with-right h1::before {
+    .banner-space h1::before {
         bottom: calc(100% + 10px);
         height: 70px;
     }
-    .container-with-right h1::after {
+    .banner-space h1::after {
         top: -10px;
         width: 200px;
     }
@@ -229,7 +233,7 @@
     .bannerWrapper {
         padding-top: 65px;
     }
-    .container-with-right {
+    .banner-space {
         h1:after, h1:before {
             display: none;
         }
@@ -255,10 +259,10 @@
         font-size: 22px;
         padding-right: 0;
     }
-    .container,.container-with-right {
+    .container,.banner-space {
         padding-bottom: 0;
     }
-    .container-with-right {
+    .banner-space {
         justify-content: center;
         padding-top: 64px;
     }

@@ -11,7 +11,7 @@
         <app-rebar-trust-by [heading]="this.serviceData.data[0].trusted_by_section_heading" [companiesInfo]="companiesInfo"></app-rebar-trust-by>
         <app-rebar-sample-drawing [sectionHeading]="this.serviceData.data[0].turn_your_vision_section_heading" [sectionSubHeading]="this.serviceData.data[0].turn_your_vision_section_sub_heading" [drawingsInfo]="drawingsInfo"></app-rebar-sample-drawing>
         <app-rebar-precast-service [sectionHeading]="this.serviceData.data[0].all_in_one_section_heading" [sectionSubHeading]="this.serviceData.data[0].all_in_one_section_sub_heading" [precastArray]="precastArray" ></app-rebar-precast-service>
-        <div class="bg global-mb container-with-right">
+        <div class="bg global-mb">
             <div class="container">
                 <div class="heading center v2">
                         <!-- <h2 class="title">
@@ -29,7 +29,7 @@
                         </p>
                 </div>
             </div>
-            <app-project-list [slider]="true" [hideMessageBox]="true" [hideLockScreen]="true">
+            <app-project-list [slider]="true" [hideMessageBox]="true" [hideLockScreen]="true" [sliderCount]="{'big':4, 'desktop':3}">
                 <div class="message">
                     <div class="content">
                         <h4>
@@ -46,7 +46,7 @@
                 </div>
             </app-project-list>
         </div>
-        <div class="global-mb container-with-right">
+        <div class="global-mb ">
             <div class="container">
                 <div class="heading center v2">
                         <!-- <h2 class="title">
@@ -63,19 +63,19 @@
                         </p>
                 </div>
             </div>
-            <app-special-project [heading]="false"></app-special-project>
+            <app-special-project [heading]="false" [count]="3"></app-special-project>
         </div>
         <app-greate-vendor></app-greate-vendor>
         <div class="global-mb">
             <app-quality-management></app-quality-management>
         </div>
-        <div class="global-mb container-with-right">
+        <div class="global-mb ">
             <app-tt-testimonials></app-tt-testimonials>
         </div>
-        <div class="container-with-right">
+        <div class="">
             <app-service-heavy-lifting></app-service-heavy-lifting>
         </div>
-        <div class="global-mb container-with-right">
+        <div class="global-mb ">
             <app-hd-integrations></app-hd-integrations>
         </div>
         <div class="global-mb">
@@ -87,7 +87,17 @@
     <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
         <span class="cross" (click)="toggleSidebar()"></span>
         <aside class="Stickyform">
-            <app-free-offer-form class="formWrapper"></app-free-offer-form>
+            <svg width="300" height="250" viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg" style="
+                position: absolute;
+                right: 100%;
+                top: 63px;
+                width: 27px;
+                height: auto;
+                z-index: 9;
+            ">
+            <path d="M 0 0 L 300 0 L 300 250 C 300 250 200 40 0 0 Z" fill="white"></path>
+            </svg>
+            <app-free-offer-form class="formWrapper" [serviceData]="serviceData.data[0]" [normalBtn]="true"></app-free-offer-form>
         </aside>
     </div>
 </div>
