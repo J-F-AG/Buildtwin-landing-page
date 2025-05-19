@@ -53,7 +53,7 @@
         border-radius: 4px;
     }
 }
-.color {
+.color, h1 ::ng-deep strong {
     display: block;
     color: #0053fa;
     font-size: 60px;
