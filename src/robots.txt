@@ -1,5 +1,4 @@
 User-agent: *
-
 Disallow: /source/*
 Disallow: /en/*
 Disallow: /vender-details
@@ -21,9 +20,8 @@ Disallow: /blog-details2
 Disallow: /blog-details3
 Disallow: /blog-details4
 Disallow: /blog-details5
-Disallow: /blog/tag/
-Disallow: /blog/category/
+Disallow: /blog/tag/*
+Disallow: /blog/category/*
 Disallow: /blog/author/
-
-
 Sitemap: https://www.buildtwin.com/sitemap.xml
+Sitemap: https://www.buildtwin.com/images_sitemap.xml
