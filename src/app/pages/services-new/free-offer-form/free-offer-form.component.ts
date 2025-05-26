@@ -15,6 +15,7 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class FreeOfferFormComponent {
   @Input() serviceData: any = {}; //sector
+  @Input() serviceQuery: boolean = true; //sector
   @Input() page: string = ''; //sector
   @Input() type: string = '';
   @Input() style: string = '';
@@ -99,6 +100,9 @@ export class FreeOfferFormComponent {
     }else if(url.includes('cad-services')){
       this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['cad-services']);
       this.data = this._languageService['serviceData']['cad-services'];
+    }else if(url.includes('shop-drawing-services')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['shop-drawing-services']);
+      this.data = this._languageService['serviceData']['shop-drawing-services'];
     }
   }
   selectSector(selectedOption: any) {
@@ -290,5 +294,37 @@ export class FreeOfferFormComponent {
     }
     closePopupStatus($event) {
       this.showPopup = false;
+    }
+    toggleQueryButton() {
+      this.serviceQuery = !this.serviceQuery
+      return false
+    }
+    getStarted() {
+      debugger
+      console.log(this.myForm.get('email')?.valid)
+      if (this.myForm.get('email')?.valid) {
+        const email = this.myForm.get('email')?.value;
+        const redirectUrl = `https://www.buildtwin.com/get-started/set-password?isCockpit=true&autoFill=true&emailUpdate=${encodeURIComponent(email)}`;
+        window.open(redirectUrl, '_blank'); // Open the URL in a new tab
+  
+        this.myForm.reset(); // Reset form values
+        this.myForm.markAsPristine();
+        this.myForm.markAsUntouched();
+        // this.myForm.clearValidators(); // Temporarily clear validators
+        // this.myForm.updateValueAndValidity(); // Update validity
+        // // Reapply validators after reset
+        // this.myForm.setValidators([
+        //   this.fb.group({
+        //     email: ['', [Validators.required, Validators.email]],
+        //     projectName: ['', Validators.required],
+        //     selectedPrecastServices: [null],
+        //     buildingCodeId: [null],
+        //     serviceId: [null, Validators.required],
+        //     description: ['']
+        //   }).validator
+        // ]);
+        // this.myForm.updateValueAndValidity();
+        // this.updateServiceId()
+      }
     }
 }

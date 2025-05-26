@@ -1,0 +1,23 @@
+<div class="service-nav-bar">
+    <ul>
+      <li 
+        [class.active]="isActive('step1')" 
+        (click)="scrollTo('step1')" 
+        data-id="step1">
+        <strong>Why</strong> work with BuildTwin
+      </li>
+      <li 
+        [class.active]="isActive('step2')" 
+        (click)="scrollTo('step2')" 
+        data-id="step2">
+        What All-In-One {{ serviceName }}
+      </li>
+      <li 
+        [class.active]="isActive('step3')" 
+        (click)="scrollTo('step3')" 
+        data-id="step3">
+        <strong>How</strong> Save not only money but also time
+      </li>
+    </ul>
+  </div>
+  

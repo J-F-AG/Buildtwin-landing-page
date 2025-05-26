@@ -1,7 +1,7 @@
 
 <div class="formHeader" *ngIf="type != 'outside' && style != 'secondary' && !page">
     <strong>Get a FREE offer for </strong>
-    <h3>{{data['name']}}</h3>
+    <h3 *ngIf="!serviceData['service_name']">{{data['name']}}</h3>
     <span class="service-name" *ngIf="serviceData['service_name']">
         {{serviceData['service_name']}}
     </span>
@@ -39,102 +39,117 @@
     </div>
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="middlePart">
+            <ng-container *ngIf="serviceQuery">
+                <div class="formRow" *ngIf="type == 'outside' && showdropDown">
 
-            <div class="formRow" *ngIf="type == 'outside' && showdropDown && !serviceData['service_name']">
-
-                <div class="selectBox precastField"
-                    [ngClass]="{'error-border': (myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid)}">
-                    <div>
-                        <span *ngIf="style == 'secondary'" class="title">Service <span class="red">*</span></span>
-                        <span class="selectedValue">
-                            {{ (myForm.get('serviceId')?.value && serviceObj[myForm.get('serviceId').value]) ?
-                            serviceObj[myForm.get('serviceId').value]['service_name'] : 'Select service' }}
-                        </span>
+                    <div class="selectBox precastField"
+                        [ngClass]="{'error-border': (myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid)}">
+                        <div>
+                            <span *ngIf="style == 'secondary'" class="title">Service <span class="red">*</span></span>
+                            <span class="selectedValue">
+                                {{ (myForm.get('serviceId')?.value && serviceObj[myForm.get('serviceId').value]) ?
+                                serviceObj[myForm.get('serviceId').value]['service_name'] : 'Select service' }}
+                            </span>
+                        </div>
+                        <app-bt-select [options]="serviceArray" (selectedTabChange)="selectService($event)"></app-bt-select>
                     </div>
-                    <app-bt-select [options]="serviceArray" (selectedTabChange)="selectService($event)"></app-bt-select>
-                </div>
-                <div *ngIf="myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid" class="error-message">
-                    <span>Service selection is required.</span>
-                </div>
-
-            </div>
-            <div class="formRow" *ngIf="showdropDown && !serviceData['service_name']">
-
-                <div class="selectBox precastField"
-                    [ngClass]="{'error-border': (myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid)}">
-                    <div>
-                        <span *ngIf="style == 'secondary'" class="title">Sector</span>
-                        <span class="selectedValue">
-                            {{ myForm.get('selectedPrecastServices')?.value ?
-                            sectorObj[myForm.get('selectedPrecastServices').value]['service_name'] : 'Select sector' }}
-                        </span>
+                    <div *ngIf="myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid" class="error-message">
+                        <span>Service selection is required.</span>
                     </div>
-                    <app-bt-select [options]="sectorArray" (selectedTabChange)="selectSector($event)"></app-bt-select>
+
                 </div>
-                <div *ngIf="myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid"
-                    class="error-message">
-                    <span>Sector selection is required.</span>
-                </div>
+                <div class="formRow" *ngIf="showdropDown">
 
-            </div>
-
-            <div class="formRow" *ngIf="((showdropDown && type != 'outside') || style == 'secondary') && !serviceData['service_name']">
-
-                <div class="selectBox precastField"
-                    [ngClass]="{'error-border': (myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid)}">
-                    <div>
-                        <span *ngIf="style == 'secondary'" class="title">Building Code</span>
-                        <span class="selectedValue">
-                            {{ myForm.get('buildingCodeId')?.value ?
-                            buildingCodeObj[myForm.get('buildingCodeId').value]['building_code'] : 'Select Building
-                            code' }}
-                        </span>
+                    <div class="selectBox precastField"
+                        [ngClass]="{'error-border': (myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid)}">
+                        <div>
+                            <span *ngIf="style == 'secondary'" class="title">Sector</span>
+                            <span class="selectedValue">
+                                {{ myForm.get('selectedPrecastServices')?.value ?
+                                sectorObj[myForm.get('selectedPrecastServices').value]['service_name'] : 'Select sector' }}
+                            </span>
+                        </div>
+                        <app-bt-select [options]="sectorArray" (selectedTabChange)="selectSector($event)"></app-bt-select>
                     </div>
-                    <app-bt-select [options]="buildingCodeArray"
-                        (selectedTabChange)="selectBuildingCode($event)"></app-bt-select>
-                </div>
-                <div *ngIf="myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid"
-                    class="error-message">
-                    <span>Building code selection is required.</span>
-                </div>
-
-            </div>
-
-            <div class="formRow">
-                <div class="selectBox without-arrow"
-                    [ngClass]="{'error-border': (myForm.get('email')?.touched && myForm.get('email')?.invalid)}">
-                    <div class="normal">
-                        <span *ngIf="style == 'secondary'" class="title">Email <span class="red">*</span></span>
-                        <input class="input-text" type="text" placeholder="Enter Email" formControlName="email">
+                    <div *ngIf="myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid"
+                        class="error-message">
+                        <span>Sector selection is required.</span>
                     </div>
+
                 </div>
-                <div *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid" class="error-message">
-                    <span *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</span>
-                    <span *ngIf="myForm.get('email')?.errors?.['email']">Invalid email format.</span>
+
+                <div class="formRow" *ngIf="((showdropDown && type != 'outside') || style == 'secondary')">
+
+                    <div class="selectBox precastField"
+                        [ngClass]="{'error-border': (myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid)}">
+                        <div>
+                            <span *ngIf="style == 'secondary'" class="title">Building Code</span>
+                            <span class="selectedValue">
+                                {{ myForm.get('buildingCodeId')?.value ?
+                                buildingCodeObj[myForm.get('buildingCodeId').value]['building_code'] : 'Select Building
+                                code' }}
+                            </span>
+                        </div>
+                        <app-bt-select [options]="buildingCodeArray"
+                            (selectedTabChange)="selectBuildingCode($event)"></app-bt-select>
+                    </div>
+                    <div *ngIf="myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid"
+                        class="error-message">
+                        <span>Building code selection is required.</span>
+                    </div>
+
                 </div>
-            </div>
-            <div class="formRow" *ngIf="!serviceData['service_name']">
-                <div class="selectBox without-arrow"
-                    [ngClass]="{'error-border': (myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid)}">
-                    <div class="normal">
-                        <span *ngIf="style == 'secondary'" class="title">Project Name <span class="red">*</span></span>
-                    <input class="input-text" type="text" placeholder="Project Name" formControlName="projectName">
+
+                <div class="formRow">
+                    <div class="selectBox without-arrow"
+                        [ngClass]="{'error-border': (myForm.get('email')?.touched && myForm.get('email')?.invalid)}">
+                        <div class="normal">
+                            <span *ngIf="style == 'secondary'" class="title">Email <span class="red">*</span></span>
+                            <input class="input-text" type="text" placeholder="Enter Email" formControlName="email">
+                        </div>
+                    </div>
+                    <div *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid" class="error-message">
+                        <span *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</span>
+                        <span *ngIf="myForm.get('email')?.errors?.['email']">Invalid email format.</span>
                     </div>
                 </div>
-                <div *ngIf="myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid"
-                    class="error-message">
-                    <span *ngIf="myForm.get('projectName')?.errors?.['required']">Project Name is required.</span>
-                </div>
-            </div>
-            <div class="formRow" *ngIf="!serviceData['service_name']">
-                <div class="selectBox without-arrow">
-                    <div class="normal">
-                        <textarea class="textarea-description" formControlName="description"
-                            placeholder="Description"></textarea>
+                <div class="formRow">
+                    <div class="selectBox without-arrow"
+                        [ngClass]="{'error-border': (myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid)}">
+                        <div class="normal">
+                            <span *ngIf="style == 'secondary'" class="title">Project Name <span class="red">*</span></span>
+                        <input class="input-text" type="text" placeholder="Project Name" formControlName="projectName">
+                        </div>
+                    </div>
+                    <div *ngIf="myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid"
+                        class="error-message">
+                        <span *ngIf="myForm.get('projectName')?.errors?.['required']">Project Name is required.</span>
                     </div>
                 </div>
-            </div>
-            
+                <div class="formRow">
+                    <div class="selectBox without-arrow">
+                        <div class="normal">
+                            <textarea class="textarea-description" formControlName="description"
+                                placeholder="Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="!serviceQuery">
+                <div class="formRow">
+                    <div class="selectBox without-arrow"
+                        [ngClass]="{'error-border': (myForm.get('email')?.touched && myForm.get('email')?.invalid)}">
+                        <div class="normal">
+                            <span *ngIf="style == 'secondary'" class="title">Email <span class="red">*</span></span>
+                            <input class="input-text" type="text" placeholder="Enter Email" formControlName="email">
+                        </div>
+                    </div>
+                    <div *ngIf="myForm.get('email')?.touched && myForm.get('email')?.invalid" class="error-message">
+                        <span *ngIf="myForm.get('email')?.errors?.['required']">Email is required.</span>
+                        <span *ngIf="myForm.get('email')?.errors?.['email']">Invalid email format.</span>
+                    </div>
+                </div>
+            </ng-container>
             <!-- <div class="formRow" *ngIf="showdropDown">
                 <app-file-upload-service [data]="isTenderWork" (fileUploadedStatus)="fileUploadedStatus($event)"></app-file-upload-service>
             </div> -->
@@ -145,9 +160,9 @@
             <p *ngIf="style != 'secondary'">Take a quick minute to fill this out—BuildTwin’s success advisor will handle the rest.</p>
 
             <div class="buttonContainer" [ngClass]="{'pt-none' : style == 'secondary', 'normalBtn':normalBtn}">
-                <button *ngIf="serviceData['service_name']" class="button-v2 floating_form_submit_enquiry"> Sign up for FREE
+                <button *ngIf="serviceData['service_name']" class="button-v2 floating_form_submit_enquiry" [ngClass]="{'border border-none':serviceQuery}" (click)="serviceQuery?toggleQueryButton():getStarted()"> Sign up for FREE
                 </button>
-                <button class="button-v2 border border-none floating_form_submit_enquiry" type="submit" [disabled]="myForm.invalid && disableButton"> Get Free quote
+                <button class="button-v2 floating_form_submit_enquiry" [ngClass]="{'border border-none':!serviceQuery}" type="submit" [disabled]="myForm.invalid && disableButton" (click)="!serviceQuery?toggleQueryButton():null"> Get Free quote
                 </button>
             </div>
 

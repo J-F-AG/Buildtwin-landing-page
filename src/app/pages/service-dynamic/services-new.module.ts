@@ -25,6 +25,7 @@ import { SpecialProjectModule } from 'src/app/include-component/special-project/
 import { TtTestimonialsModule } from '../marketplace/marketPlace/tt-testimonials/tt-testimonials.module';
 import { HdIntegrationsModule } from '../includes/hd-integrations/hd-integrations.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ServiceNavBarComponent } from './service-nav-bar/service-nav-bar.component';
 // import { MarkdownModule } from 'ngx-markdown';
 
 
@@ -47,7 +48,8 @@ const routes: Routes = [
     RebarTrustByNewComponent,
     GoodReasonComponent,
     GreateVendorComponent,
-    QualityManagementComponent
+    QualityManagementComponent,
+    ServiceNavBarComponent
   ],
   imports: [
     CommonModule,

@@ -230,6 +230,22 @@ app-company-logos-slider ::ng-deep .global-mb {
         }
     }
 }
+::ng-deep {
+    .dynamic-service-page #navBar {
+        &.navbar-area.sticky {
+            box-shadow: none;
+        }
+        &.navbar-area .navbar-expand-lg {
+            min-height: 49px;
+        }
+        &.navbar-area .navbar-expand-lg .navbar-collapse {
+            display: none!important;
+        }
+        &.navbar-area .navbar .navbar-brand {
+            margin-bottom: 0;
+        }
+    }
+}
 @media (max-width:767px){
     .cross {
         right: auto;

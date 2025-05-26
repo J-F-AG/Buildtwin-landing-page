@@ -29,12 +29,12 @@ export class ServiceDynamicComponent implements OnInit {
     private route: ActivatedRoute,
     public serviceMappingService: ServiceMappingService,
     private sanitizer: DomSanitizer
-  ) {}
+  ) {
+    // add class on body tag
+    document.body.classList.add('dynamic-service-page');
+  }
   
   ngOnInit(): void {
-    setTimeout(() => {
-      console.log(this.serviceData)
-    }, 5000);
     console.log('Services component initialized');
   
     // Get the parameter from route
@@ -297,5 +297,9 @@ export class ServiceDynamicComponent implements OnInit {
         return of([]); // Return empty array in case of error
       })
     );
+  }
+  ngOnDestroy(): void {
+    // Remove class from body tag when component is destroyed
+    document.body.classList.remove('dynamic-service-page');
   }
 }

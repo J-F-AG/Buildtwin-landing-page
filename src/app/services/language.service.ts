@@ -18,7 +18,8 @@ export class LanguageService {
     "bim-outsourcing-services-in-usa" : 1,  //this has to be updated later
     "steel-detailing-services-in-usa" : 8,  //this has to be updated later
     "drafting-services" : 12,  //this has to be updated later
-    "cad-services" : 12  //this has to be updated later
+    "cad-services" : 12,  //this has to be updated later
+    "shop-drawing-services" : 1  //this has to be updated later
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
@@ -44,6 +45,9 @@ export class LanguageService {
     },
     "cad-services" : {
       name: "CAD Services"
+    },
+    "shop-drawing-services" : {
+      name: "Shop Drawing Services"
     }
   }
   isBrowser: boolean;

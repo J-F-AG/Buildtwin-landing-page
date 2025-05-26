@@ -1,5 +1,5 @@
 <app-hd-navbar></app-hd-navbar>
-
+<app-service-nav-bar [serviceName]="this.serviceData.data[0].service_name"></app-service-nav-bar>
 <div class="mainContainer">
     <div class="maincontent">
         <app-rebar-banner [bannerObject]="headerObject" [background_image_url]="this.serviceData.data[0].banner_section_background_image_url"></app-rebar-banner>
@@ -7,10 +7,14 @@
             <app-company-logos-slider [bg]="false"></app-company-logos-slider>
         </div> -->
         <app-bim-trust-by [hideItem]="[6,7]" [heading]="false" [slider]="companiesInfo"></app-bim-trust-by>
-        <app-good-reason [serviceName]="this.serviceData.data[0].service_name"></app-good-reason>
+        <div id="step1">
+            <app-good-reason [serviceName]="this.serviceData.data[0].service_name"></app-good-reason>
+        </div>
         <app-rebar-trust-by [heading]="this.serviceData.data[0].trusted_by_section_heading" [companiesInfo]="companiesInfo"></app-rebar-trust-by>
         <app-rebar-sample-drawing [sectionHeading]="this.serviceData.data[0].turn_your_vision_section_heading" [sectionSubHeading]="this.serviceData.data[0].turn_your_vision_section_sub_heading" [drawingsInfo]="drawingsInfo"></app-rebar-sample-drawing>
-        <app-rebar-precast-service [sectionHeading]="this.serviceData.data[0].all_in_one_section_heading" [sectionSubHeading]="this.serviceData.data[0].all_in_one_section_sub_heading" [precastArray]="precastArray" ></app-rebar-precast-service>
+        <div id="step2">
+            <app-rebar-precast-service [sectionHeading]="this.serviceData.data[0].all_in_one_section_heading" [sectionSubHeading]="this.serviceData.data[0].all_in_one_section_sub_heading" [precastArray]="precastArray" ></app-rebar-precast-service>
+        </div>
         <div class="bg global-mb">
             <div class="container">
                 <div class="heading center v2">
@@ -66,7 +70,7 @@
             <app-special-project [heading]="false" [sliderCount]="{'desktop':3, 'ipad':3}"></app-special-project>
         </div>
         <app-greate-vendor></app-greate-vendor>
-        <div class="global-mb">
+        <div class="global-mb" id="step3">
             <app-quality-management></app-quality-management>
         </div>
         <div class="global-mb ">
