@@ -67,7 +67,8 @@ phases:
   build:
     commands:
       - echo testing...
-      - ng build --output-hashing=all --configuration production --build-optimizer --aot
+      # - ng build --output-hashing=all --configuration production --build-optimizer --aot
+      - node --max-old-space-size=4096 ./node_modules/@angular/cli/bin/ng run buildtwin:prerender
       - ls
        
   post_build:
