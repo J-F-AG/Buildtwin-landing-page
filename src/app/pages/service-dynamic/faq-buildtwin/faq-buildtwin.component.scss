@@ -375,4 +375,9 @@ mat-expansion-panel ul {
     .faq-accordion .mat-accordion .mat-expansion-panel::before {
         top: 14px;
     }
+    :host ::ng-deep {
+        .mat-expanded .mat-expansion-panel-content {
+            padding: 25px 0;
+        }
+    }
 }
