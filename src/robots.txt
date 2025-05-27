@@ -1,4 +1,3 @@
 User-agent: *
-Disallow: /
 
-Sitemap: https://www.buildtwin.com/sitemap.xml
+Disallow: /
