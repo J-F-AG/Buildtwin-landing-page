@@ -51,7 +51,11 @@ export class AppComponent {
         private injector: Injector,
         @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
-      localStorage.setItem('version','0.0.1')
+      try {
+        localStorage.setItem('version','0.0.1')
+      } catch (error) {
+        
+      }
       this._languageService.faqSchemaSubject.subscribe((data) => {
         const faqSchema = this.injectFaqSchema(data['data']);
         this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
@@ -60,7 +64,11 @@ export class AppComponent {
       });
         // Directly assign the breadcrumbs array from the service
         if (isPlatformBrowser(this.platformId)) {
-            localStorage.setItem("appVersion", "0.0.12");
+            try {
+              localStorage.setItem("appVersion", "0.0.12");
+            } catch (error) {
+              
+            }
         }
         // AOS.init();
     }
@@ -80,7 +88,11 @@ export class AppComponent {
 
 
         if (isPlatformBrowser(this.platformId)) {
-        localStorage.setItem('appVerionId', '0.0.2');
+        try {
+          localStorage.setItem('appVerionId', '0.0.2');
+        } catch (error) {
+          
+        }
         }
         this.recallJsFuntions();
 

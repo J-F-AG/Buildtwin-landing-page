@@ -194,12 +194,17 @@ export class FileUploadServiceComponent implements OnInit {
 
 // ***************** API all methods start *****************//
 getHeader() {
-  var httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': localStorage.getItem("IdToken") ? String(localStorage.getItem("IdToken")) : ''
-    })
-  };
+
+  try {
+    var httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': localStorage.getItem("IdToken") ? String(localStorage.getItem("IdToken")) : ''
+      })
+    };
+  } catch (error) {
+    
+  }
   return httpOptions;
 }
 }
