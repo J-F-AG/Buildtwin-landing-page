@@ -70,9 +70,9 @@ phases:
       # - ng build --output-hashing=all --configuration production --build-optimizer --aot
       - node --max-old-space-size=4096 ./node_modules/@angular/cli/bin/ng run buildtwin:prerender
       - ls
-      - ls dist/
-      - ls dist/buildtwin/
-      - ls dist/buildtwin/browser/
+      # - ls dist/
+      # - ls dist/buildtwin/
+      # - ls dist/buildtwin/browser/
        
   post_build:
     commands:
