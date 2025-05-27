@@ -144,16 +144,24 @@ sliderInit() {
     // width: 123
     responsive: {
       0: {
-        items: this.sliderCount['mobile']?this.sliderCount['mobile']:2  // 1 item for small screens
+        items: this.sliderCount['mobile']?this.sliderCount['mobile']:2,  // 1 item for small screens
+        autoplay: true,
+        loop: true,
       },
       800: {
-        items: this.sliderCount['ipad']?this.sliderCount['ipad']:4  // 2 full items and a half item for larger screens
+        items: this.sliderCount['ipad']?this.sliderCount['ipad']:4,  // 2 full items and a half item for larger screens
+        autoplay: false,
+        loop: false,
       },
       1000: {
-        items: this.sliderCount['desktop']?this.sliderCount['desktop']:5  // 2 full items and a half item for larger screens
+        items: this.sliderCount['desktop']?this.sliderCount['desktop']:5,  // 2 full items and a half item for larger screens
+        autoplay: false,
+        loop: false,
       },
       1416: {
-        items: this.sliderCount['big']?this.sliderCount['big']:6  // 1 item for slightly larger screens
+        items: this.sliderCount['big']?this.sliderCount['big']:6,  // 1 item for slightly larger screens
+        autoplay: false,
+        loop: false,
       },
       // 740: {
       //   items: 5  // 2 items for medium screens

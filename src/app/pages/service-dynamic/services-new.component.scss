@@ -331,8 +331,41 @@ app-company-logos-slider ::ng-deep .global-mb {
     }
 }
 @media (max-width:767px){
+    :host ::ng-deep {
+        h1, h2 {
+            font-size: 22px;
+            strong {
+                font-size: 30px;
+            }
+        }
+    }
     .cross {
         right: auto;
         left: 6px;
     }
+    :host ::ng-deep {
+        .container.project-list {
+            padding-left: 20px;
+            padding-right: 20px;
+            &::after, &::before {
+                display: none;
+            }
+        }
+        .specialProjectsSection::before,
+        .specialProjectsSection::after {
+            display: none;
+        }
+        .specialProjectsSection .containerWrap {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    :host ::ng-deep .container.project-list div.project-list-wrapper, :host ::ng-deep .specialProjectsSection .containerWrap div.carousel {
+        width: 100%;
+        margin-bottom: 0;
+        .owl-nav {
+            display: none;
+        }
+    }
+    
 }

@@ -146,19 +146,29 @@ export class RebarSampleDrawingComponent implements OnChanges{
     nav: true,
     responsive:{
       0:{
-          items:1
+          items:1,
+          autoplay: true,
+          loop: true,
       },
       600:{
-          items:1
+          items:1,
+          autoplay: false,
+          loop: false,
       },
       800:{
-          items:2
+          items:2,
+          autoplay: false,
+          loop: false,
       },
       900:{
-          items:2
+          items:2,
+          autoplay: false,
+          loop: false,
       },
       1200:{
-          items:3
+          items:3,
+          autoplay: false,
+          loop: false,
       }
   }      
   }

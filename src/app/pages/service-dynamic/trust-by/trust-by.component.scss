@@ -19,11 +19,19 @@
 }
 @media (max-width:767px){
    .trustedBrands {
-       flex-wrap: wrap;
-       justify-content: flex-start;
-       gap: 0px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 20px;
+        overflow: auto;
+        a {
+            display: block;
+            min-width: 70px;
+        }
        strong {
            margin-right: 20px;
        }
+   }
+   :host ::ng-deep .heading-import {
+    margin-bottom: 26px;
    }
 }

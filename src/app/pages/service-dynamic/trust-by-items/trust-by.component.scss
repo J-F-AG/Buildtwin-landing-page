@@ -12,11 +12,17 @@
 }
 @media (max-width:767px){
     .trustedBrands {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: flex-start;
-        gap: 0px;
-        strong {
-            margin-right: 20px;
+        gap: 20px;
+        overflow: auto;
+        a {
+            display: block;
+            min-width: 70px;
+            padding: 10px 0;
         }
+       strong {
+           margin-right: 20px;
+       }
     }
 }

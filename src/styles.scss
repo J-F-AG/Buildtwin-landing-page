@@ -1672,6 +1672,17 @@ display:flex;
       font-size: 18px;
     }
   }
+  .bg {
+    padding-top: 50px;
+    padding-bottom: 57px;
+  }
+  .container.bg {
+    padding-top: 50px;
+    padding-bottom: 57px;
+    &.global-mb {
+      margin-bottom: 0;
+    }
+  }
   .container {
       padding-left: 15px;
       padding-right: 15px;

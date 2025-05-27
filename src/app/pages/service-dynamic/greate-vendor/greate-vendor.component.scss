@@ -16,3 +16,13 @@ figure {
         font-weight: 500;
     }
 }
+
+@media only screen and (max-width: 767px) {
+
+    .heading {
+        margin-bottom: -40px;
+    }
+    figure figcaption {
+        font-size: 13px;
+    }
+}

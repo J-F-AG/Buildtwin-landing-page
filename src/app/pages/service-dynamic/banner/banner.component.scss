@@ -272,13 +272,21 @@
     .bannerWrapper h1 {
         font-size: 22px;
         padding-right: 0;
+        margin-bottom: 20px;
+        ::ng-deep strong {
+            font-size: 30px;
+        }
     }
     .container,.banner-space {
         padding-bottom: 0;
     }
     .banner-space {
         justify-content: center;
-        padding-top: 64px;
+        padding: 30px 50px 0;
+        .button-wrapper {
+            align-items: center;
+            justify-content: center;
+        }
     }
     .container {
         padding-left: 20px;
@@ -287,5 +295,6 @@
     .bannerWrapper p {
         font-size: 14px;
         padding-right: 0;
+        margin-bottom: 30px;
     }
 }

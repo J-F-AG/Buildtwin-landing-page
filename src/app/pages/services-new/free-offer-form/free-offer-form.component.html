@@ -160,9 +160,11 @@
             <p *ngIf="style != 'secondary'">Take a quick minute to fill this out—BuildTwin’s success advisor will handle the rest.</p>
 
             <div class="buttonContainer" [ngClass]="{'pt-none' : style == 'secondary', 'normalBtn':normalBtn}">
+                <button *ngIf="serviceQuery" class="button-v2 floating_form_submit_enquiry" [ngClass]="{'border border-none':!serviceQuery}" type="submit" [disabled]="myForm.invalid && disableButton" (click)="!serviceQuery?toggleQueryButton():null"> Get Free quote
+                </button>
                 <button *ngIf="serviceData['service_name']" class="button-v2 floating_form_submit_enquiry" [ngClass]="{'border border-none':serviceQuery}" (click)="serviceQuery?toggleQueryButton():getStarted()"> Sign up for FREE
                 </button>
-                <button class="button-v2 floating_form_submit_enquiry" [ngClass]="{'border border-none':!serviceQuery}" type="submit" [disabled]="myForm.invalid && disableButton" (click)="!serviceQuery?toggleQueryButton():null"> Get Free quote
+                <button *ngIf="!serviceQuery" class="button-v2 floating_form_submit_enquiry" [ngClass]="{'border border-none':!serviceQuery}" type="submit" [disabled]="myForm.invalid && disableButton" (click)="!serviceQuery?toggleQueryButton():null"> Get Free quote
                 </button>
             </div>
 

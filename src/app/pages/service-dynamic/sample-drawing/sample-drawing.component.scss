@@ -402,9 +402,38 @@
 @media (max-width:767px){
   .sectionContainer .sectionTop .heading {
     font-size: 22px;
-    padding-right: 90px;
+    padding-right: 0;
   }
-  .drawingCarouselWrapper .drawingCarousel {
+  ::ng-deep .drawingCarouselWrapper .drawingCarousel {
     width: 100%;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  ::ng-deep .drawingCarouselWrapper {
+    margin-right: 0;
+    padding-right: 10px;
+    margin-left: 0;
+    padding-left: 10px;
+    &::after , &::before {
+      display: none;
+    }
+    .owl-nav {
+      display: none;
+    }
+  }
+  .projectCard {
+    flex-direction: column;
+    gap: 10px;
+    .projectImg {
+      width: 100%;
+    }
+    .slideContent {
+      width: 100%;
+    }
+  }
+  .sectionContainer {
+    padding-bottom: 0;
   }
 }

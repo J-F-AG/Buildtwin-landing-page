@@ -707,7 +707,8 @@
         width: calc(50% - 6px);
     }
     .project-list-wrapper .block .verified-vendor {
-        gap: 10px;
+        gap: 4px;
+        font-size: 10px;
     }
     .project-list-wrapper.blur .block:nth-child(4) {
         display: block;

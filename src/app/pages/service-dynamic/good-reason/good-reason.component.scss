@@ -84,3 +84,8 @@
         font-size: 14px;
     }
 }
+@media (max-width:767px){
+    .block-wrapper {
+        flex-direction: column;
+    }
+}

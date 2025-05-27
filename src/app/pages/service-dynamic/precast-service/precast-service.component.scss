@@ -106,17 +106,18 @@
         .tab{
             border: 1.5px solid #eff4f5;
             border-radius: 10px;
-            width: 110px;
-            min-height: 115px;
+            width: 120px;
+            min-width: 120px;
+            // min-height: 115px;
             display: flex;
             flex-direction: column;
             // justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 10px 5px;
+            padding: 20px 5px;
             font-size: 14px;
             font-weight: 600;
-            gap: 8px;
+            gap: 15px;
             margin: 0;
             position: relative;
             &:after,&::before {
@@ -181,5 +182,19 @@
     }
     .sectionContainer .tabContent {
         padding-right: 0;
+    }
+    .sectionMidContainer .precastTabs .tab {
+        min-width: 110px;
+        margin-bottom: 10px;
+    }
+    .sectionMidContainer .head {
+        padding: 0 15px;
+        font-size: 19px;
+    }
+    .tab-main-content {
+        padding: 22px 15px;
+    }
+    .sectionContainer .tabContent h3 {
+        font-size: 22px;
     }
 }
