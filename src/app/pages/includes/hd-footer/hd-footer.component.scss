@@ -178,7 +178,7 @@
   .service-list .container {
     display: flex;
     gap: 20px;
-    flex-direction: column;
+    // flex-direction: column;
   }
   .footer-menu-wrapper .container:first-child {
     flex-direction: column;
@@ -193,5 +193,8 @@
     a {
       margin-right: 20px;
     }
+  }
+  .locations .right .frame-frame3 {
+    flex-wrap: wrap;
   }
 }

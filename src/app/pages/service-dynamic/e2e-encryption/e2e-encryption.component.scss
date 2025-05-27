@@ -59,3 +59,14 @@
     min-width: 100px;
 }
 }
+@media (max-width:767px){
+    .e2eWrapper .e2eSection .content {
+        flex-direction: column-reverse;
+        gap: 25px;
+        text-align: center;
+    }
+    .e2eIcon {
+        display: flex;
+        justify-content: center;
+    }
+}
