@@ -3,6 +3,12 @@
     text-transform: uppercase;
     position: relative;
     padding-right: 12px;
+    margin-right: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    svg {
+        margin-right: 4px;
+    }
     &::after{
         content: "";
         position: absolute;
@@ -16,4 +22,8 @@
 }
 .tt {
     text-transform: uppercase;
+    &.active {
+        color: #1890ff;
+        background-color: #e6f7ff;
+    }
 }

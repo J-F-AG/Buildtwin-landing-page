@@ -43,30 +43,34 @@ showPopup=false;
   }
   playVideo() {
    let video2 = <HTMLVideoElement>document.getElementById('video1');
-    video2.pause();
-    video2.play();
+   if(video2){
+     video2.pause();
+     video2.play();
+   }
   }
   pauseVideo() {
     let video2 = <HTMLVideoElement>document.getElementById('video1');
-    video2.pause();
+    if(video2){
+      video2.pause();
+    }
   }   
     ngOnInit(): void {
     //   let video2 = <HTMLVideoElement>document.getElementById('video1');
     // video2.pause();
     // Initialize HubSpot form
   // Load HubSpot Form Script
-  const script = document.createElement('script');
-  script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
-  script.async = true;
-  script.charset = 'utf-8';
+  // const script = document.createElement('script');
+  // script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+  // script.async = true;
+  // script.charset = 'utf-8';
 
-  // Append script to the document body
-  document.body.appendChild(script);
+  // // Append script to the document body
+  // document.body.appendChild(script);
 
-  // Initialize HubSpot form after the script is loaded
-  script.onload = () => {
-    this.initHubSpotForm();
-  };
+  // // Initialize HubSpot form after the script is loaded
+  // script.onload = () => {
+  // };
+  this.initHubSpotForm();
 }
 
 private initHubSpotForm() {

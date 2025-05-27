@@ -1,4 +1,5 @@
 import { Component, Injector, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { LanguageService } from 'src/app/services/language.service';
@@ -9,7 +10,34 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./browse-services-main.component.scss']
 })
 export class BrowseServicesMainComponent implements OnInit {
-  customOptions: OwlOptions = {
+  aboutSlider: OwlOptions = {
+    items: 1,
+    // nav: true,
+    margin: 0,
+    dots: true,
+    loop: true,
+    autoplay: false,
+    autoplayTimeout: 5100,
+    // smartSpeed: 2000,
+    autoplayHoverPause: false,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
+    },
+  }
+  emailForm: FormGroup;
+  discoverProjectsOption: OwlOptions = {
     loop: true,
     mouseDrag: false,
     touchDrag: false,
@@ -17,6 +45,7 @@ export class BrowseServicesMainComponent implements OnInit {
     dots: false,
     navSpeed: 700,
     navText: ['', ''],
+    margin: 37,
     responsive: {
       0: {
         items: 1,
@@ -25,19 +54,25 @@ export class BrowseServicesMainComponent implements OnInit {
         items: 2
       },
       740: {
-        items: 3
+        items: 2
       },
-      940: {
-        items: 5
+      1500: {
+        items: 3
       }
     },
     nav: true
   }
   _jfOneHeaderService:any;
+  AvailableServicesToggle : boolean = false;
+  AvailableServicesToggleStatusHoverStatus:boolean = true;
   constructor(
     private injector: Injector,
     public _languageService:LanguageService,
+    private fb: FormBuilder
   ) {
+    this.emailForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]]
+    });
     // document.body.classList.add('add-top-space');
   }
 
@@ -54,10 +89,10 @@ export class BrowseServicesMainComponent implements OnInit {
 
   // discoverProjectSection
   projectsArray = [
-    { img: 'assets/images/Tesla-002.jpg', category: 'Structural', projectTitle: 'TESLA Gigafactory', company: 'Grünheide, Germany', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'GPC Engineering', serviceCompanyIcon: 'assets/images/gbcEngineering.png', width:'57', height:'30', serviceDescription: "Structural Design, work stage 1-6 (LP1-6) | Steel Structure Design...", linkTitle: 'Learn More about GPC Engineering', link: '/partners/GBCEngineers' },
-    { img: 'assets/images/high-building.png', category: 'Structural', projectTitle: 'High-Rise Buildings', company: 'FOURFrankfurt', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'J&F India', serviceCompanyIcon: 'assets/images/jf-icon.jpg', width:'59', height:'30', serviceDescription: "1 million € construction costs electrical | approx. 22,000 m²", linkTitle: 'Learn More about J&F India', link: '/partners/J&FIndia' },
-    { img: 'assets/images/Jim-Bridger-SCR-Plate-Flues-Ducts.jpg', category: 'Structural', projectTitle: 'Jim Bridger SCR Plate', company: 'Wyoming, US.', locationFlag: 'assets/images/us-flag.png', serviceCompany: 'Aarbee Structures', serviceCompanyIcon: 'assets/images/aarbee-icon.jpg', width:'46', height:'30', serviceDescription: "Type of building: Duct | Tonnage: 3,800 Tons", linkTitle: 'Learn More about Aarbee', link: '/partners/AarbeeStructuresPrivateLimited' },
-    { img: 'assets/images/Gillette-Stadium.jpg', category: 'Structural', projectTitle: 'Gillette Stadium North end zone renovation', company: 'Foxborough, MA', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'Mold-Tek Technologies', serviceCompanyIcon: 'assets/images/moldtek-icon.jpg', width:'60', height:'30', serviceDescription: "Tonnage: 2,800 Tons", linkTitle: 'Learn More about MoldTek', link: '/partners/Mold-TekTechnologiesLimited' }
+    { img: 'assets/images/Tesla-002.jpg', category: 'Structural', projectTitle: 'TESLA Gigafactory', company: 'Grünheide, Germany', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'GBC Engineering', serviceCompanyIcon: 'assets/images/gbcEngineering.png', width:'68', height:'36', serviceDescription: "Structural Design, work stage 1-6 (LP1-6) | Steel Structure Design...", linkTitle: 'Learn More about GBC Engineering', link: '/partners/gbc-engineers', alt: 'Germany Flag' },
+    { img: 'assets/images/high-building.png', category: 'Structural', projectTitle: 'High-Rise Buildings', company: 'FOURFrankfurt', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'J&F India', serviceCompanyIcon: 'assets/images/jf-icon.jpg', width:'68', height:'35', serviceDescription: "1 million € construction costs electrical | approx. 22,000 m²", linkTitle: 'Learn More about J&F India', link: '/partners/j-f-india', alt: 'Germany Flag' },
+    { img: 'assets/images/Jim-Bridger-SCR-Plate-Flues-Ducts.jpg', category: 'Structural', projectTitle: 'Jim Bridger SCR Plate', company: 'Wyoming, US.', locationFlag: 'assets/images/us-flag.png', serviceCompany: 'Aarbee Structures', serviceCompanyIcon: 'assets/images/aarbee-icon.jpg', width:'58', height:'38', serviceDescription: "Type of building: Duct | Tonnage: 3,800 Tons", linkTitle: 'Learn More about Aarbee', link: '/partners/aarbee-structures-private-limited', alt: 'US Flag' },
+    { img: 'assets/images/Gillette-Stadium.jpg', category: 'Structural', projectTitle: 'Gillette Stadium North end zone renovation', company: 'Foxborough, MA', locationFlag: 'assets/images/ui/germany.png', serviceCompany: 'Mold-Tek Technologies', serviceCompanyIcon: 'assets/images/moldtek-icon.jpg', width:'68', height:'17', serviceDescription: "Tonnage: 2,800 Tons", linkTitle: 'Learn More about MoldTek', link: '/partners/mold-tek-technologies-limited', alt: 'Germany Flag' }
   ]
 
   discoverProjects = this.splitArray(this.projectsArray, 4);
@@ -87,56 +122,7 @@ export class BrowseServicesMainComponent implements OnInit {
 
 
   //specialProjectsSection
-  slides = [
-    {
-      images: [
-        {
-          src: 'assets/images/solutionProvider1.jpg',
-          title: 'AIRPORTS',
-          description: '50+ Vendors',
-        },
-        {
-          src: 'assets/images/solutionProvider2.jpg',
-          title: 'Commercial building',
-          description: '20+ Vendors',
-        },
-        { src: 'assets/images/solutionProvider3.jpg', title: 'Data Center', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider4.jpg', title: 'INDUSTRIAL BUILDINGS', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider5.jpg', title: 'Power plant', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider6.jpg', title: 'PRE-CAST', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider7.jpg', title: 'Residential Buildings', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider8.jpg', title: 'Schools', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider9.jpg', title: 'Theaters', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider10.jpg', title: 'Bridge', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider11.jpg', title: 'Chemical plants', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider12.jpg', title: 'HOSPITALS', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider13.jpg', title: 'Manufacturing plants', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider14.jpg', title: 'Metros', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider15.jpg', title: 'Road ways', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider16.jpg', title: 'Water & waste', description: '10+ Vendors' },
-        { src: 'assets/images/solutionProvider17.jpg', title: 'Tunnel', description: '10+ Vendors' },
-      ],
-    },
-    // {
-    //   images: [
-    //     {
-    //       src: 'assets/images/data-center.jpg',
-    //       title: 'Another Data Center',
-    //       description: '60+ Vendors',
-    //     },
-    //     {
-    //       src: 'assets/images/power-plant.jpg',
-    //       title: 'Another Power Plant',
-    //       description: '25+ Vendors',
-    //     },
-    //     {
-    //       src: 'assets/images/data-center.jpg',
-    //       title: 'Another Factory',
-    //       description: '15+ Vendors',
-    //     },
-    //   ],
-    // },
-  ];
+ 
 
   currentIndex = 0;
 
@@ -144,15 +130,6 @@ export class BrowseServicesMainComponent implements OnInit {
     return `translateX(-${this.currentIndex * 100}%)`;
   }
 
-  prevSlide() {
-    this.currentIndex =
-      this.currentIndex > 0 ? this.currentIndex - 1 : this.slides.length - 1;
-  }
-
-  nextSlide() {
-    this.currentIndex =
-      this.currentIndex < this.slides.length - 1 ? this.currentIndex + 1 : 0;
-  }
 
   goToSlide(index: number) {
     this.currentIndex = index;
@@ -164,37 +141,43 @@ export class BrowseServicesMainComponent implements OnInit {
       image: 'assets/images/us-flag.png',
       label: 'United States',
       value: 'UnitedStates',
-      currency: 'IBC'
+      currency: 'IBC',
+      alt: 'US Flag'
     },
     {
       image: 'assets/images/aus-flag.png',
       label: 'Australia',
       value: 'Australia',
-      currency: 'NCC'
+      currency: 'NCC',
+      alt: 'AUS Flag'
     },
     {
       image: 'assets/images/eu-flag.png',
       label: 'European Union',
       value: 'EuropeanUnion',
-      currency: 'EC'
+      currency: 'EC',
+      alt: 'EU Flag'
     },
     {
       image: 'assets/images/uk-flag.png',
       label: 'United Kingdom',
       value: 'UK',
-      currency: 'BS'
+      currency: 'BS',
+      alt: 'UK Flag'
     },
     {
       image: 'assets/images/canada-flag.png',
       label: 'Canada',
       value: 'Canada',
-      currency: 'CBC'
+      currency: 'CBC',
+      alt: 'Canada Flag'
     },
     {
       image: 'assets/images/india-flag.png',
       label: 'India',
       value: 'India',
-      currency: 'INR'
+      currency: 'INR',
+      alt: 'India Flag'
     }
   ]
   selectedCountry = this.countryArray[0];
@@ -301,6 +284,32 @@ export class BrowseServicesMainComponent implements OnInit {
 
   selectPrecast(selectedOption: any) {
     this.selectedPrecast = this.precastList.find(e => e.value === selectedOption);
+  }
+  AvailableServicesToggleStatusHover(){
+    if(this.AvailableServicesToggleStatusHoverStatus){
+      this.AvailableServicesToggleStatusHoverStatus = false;
+      this.AvailableServicesToggleStatus(true)
+    }
+  }
+  AvailableServicesToggleStatus(type?){
+    if(type && !this.AvailableServicesToggle) {
+      this.AvailableServicesToggle = type
+    }
+    if(!type){
+      this.AvailableServicesToggle = !this.AvailableServicesToggle;
+    }
+  }
+  get email() {
+    return this.emailForm.get('email');
+  }
+  onSubmit() {
+    if (this.emailForm.valid) {
+      const email = this.emailForm.value.email;
+      const redirectUrl = `https://www.buildtwin.com/get-started/set-password?isCockpit=true&autoFill=true&emailUpdate=${encodeURIComponent(email)}`;
+      window.open(redirectUrl, '_blank'); // Open the URL in a new tab
+
+      this.emailForm.reset(); // Clear the form
+    }
   }
   ngOnDestroy() {
     // document.body.classList.remove('add-top-space');

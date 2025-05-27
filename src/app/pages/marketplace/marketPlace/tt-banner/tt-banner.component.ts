@@ -7,5 +7,13 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./tt-banner.component.scss']
 })
 export class TtBannerComponent {
+  showPopup=false;
   constructor(public _languageService:LanguageService) { }
+
+  call(){
+    this.showPopup =true
+    }
+    closePopupStatus($event) {
+      this.showPopup = false;
+    }
 }

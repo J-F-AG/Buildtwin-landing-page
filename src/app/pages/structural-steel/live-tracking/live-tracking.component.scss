@@ -1,0 +1,23 @@
+.liveTrackingWrapper{ position: relative;
+    background: 
+    #fbfbfb url(../../../../assets/images/serviceMapBG.jpg) center bottom repeat-x;
+    
+    .container{
+        background: url(../../../../assets//images/liveTrackingBGNew.png) left bottom no-repeat;
+        
+        .centerBG{padding-bottom: 490px; padding-top: 30px;
+        background: url(../../../../assets/images/liveTrackingHeaderBGX.png) left top repeat-x,
+        url(../../../../assets/images/liveTrackingHeaderBG.png) center 30px no-repeat;
+        }
+    
+        .heading{text-align: center;
+            h2{font-size: 32px; line-height: 1.3;
+                font-weight: 600;}
+                p{font-size: 16px;
+                    font-weight: 400;}
+        }
+
+    }
+    
+    
+}

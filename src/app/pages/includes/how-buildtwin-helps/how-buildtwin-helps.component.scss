@@ -6,6 +6,7 @@
         padding-top: 50px;
         transition: all ease 0.5s;
         padding-bottom: 64px;
+        margin-bottom: 30px;
 
         h2 {
             color: #0E0E28;
@@ -25,11 +26,15 @@
             text-align: center;
         }
 
-        margin-bottom: 64px;
     }
 
     .tabContent {
         display: flex;
+        width: 456px;
+        max-width: 456px;
+        min-width: 456px;
+        position: sticky;
+        top: 280px;
 
         .tabLeft {
             min-width: 350px;
@@ -48,7 +53,7 @@
                     width: 24px;
                     height: 24px;
                     border-radius: 100px;
-                    border: 1px solid #886DE0;
+                    border: 1px solid #0053fa;
                 }
 
                 color: #0E0E28;
@@ -65,7 +70,7 @@
                 }
 
                 &.active i {
-                    background: #886DE0;
+                    background: #0053fa;
                 }
 
                 &:after {
@@ -89,23 +94,23 @@
     }
     .tabRIght {
         border-radius: 8px;
-        // background: #F6F3FF;
+        // background: #F3F8FF;
         // padding: 32px 38px;
         padding-bottom: 0;
         overflow: hidden;
-        margin-left: 350px;
+        // margin-left: 350px;
 
         .flex {
-            gap: 50px;
+            gap: 30px;
             align-items: center;
         }
 
         .imgWrap {
-            min-width: 432px;
+            min-width: 412px;
     display: flex;
     align-items: flex-end;
     /* height: 400px; */
-    max-width: 432px;
+    max-width: 412px;
 
         }
 
@@ -115,25 +120,21 @@
         }
 
         .contentWrap {
-            padding-right: 57px;
+            padding-right: 40px;
             
             h3 {
-                color: #0E0E28;
-
-                font-size: 20px;
-                font-style: normal;
+                font-size: 25px;
                 font-weight: 600;
-                line-height: 140%;
-                /* 28px */
+                letter-spacing: -0.35px;
+                margin-bottom: 7px;
             }
 
             p {
-                color: var(--grey, var(--grey, #808080));
-                font-size: 14px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 160%;
-                /* 22.4px */
+                margin-bottom: 24px;
             }
         }
     }
@@ -175,7 +176,7 @@
     }
 
     .sub-title {
-        color: #886DE0;
+        color: #0053fa;
 
         text-align: center;
         font-size: 16px;
@@ -208,7 +209,7 @@
         gap: 10px;
     }
     .newBtn{
-        color: #886DE0;
+        color: #0053fa;
         font-size: 14px;
         font-style: normal;
         font-weight: 600;
@@ -221,9 +222,6 @@
         margin-bottom: 10px;
     }
 
-    .staticData {
-        padding-top: 318px;
-    }
 
 }
 
@@ -233,51 +231,61 @@
 
 
 :host ::ng-deep {
-    .fixed{
-        div#onScrollAnimation{
-            position: fixed;
-            top: 100px;
-            z-index: 99;
-            .headSection{
-                background: #fff;
-                padding-left: 0;
-                padding-bottom: 0;
-                text-align: center;
-                padding-bottom: 0;
-            }
+//     .fixed{
+//         div#onScrollAnimation{
+//             position: fixed;
+//             top: 100px;
+//             z-index: 99;
+//             .headSection{
+//                 background: #fff;
+//                 padding-left: 0;
+//                 padding-bottom: 0;
+//                 text-align: center;
+//                 padding-bottom: 0;
+//             }
     
-        } 
+//         } 
     
-    }
+//     }
     
     .tabRIght > div {
         margin-bottom: 100px;
-        background: #F6F3FF;
+        background: #F3F8FF;
         opacity: 0.2;
         display: flex;
         // padding: 32px 38px;
-        transform: translateY(40%);
-        transition: all ease 0.5s;
+        // transform: translateY(40%);
+        // transition: all ease 0.5s;
+        transition: all 0.3s ease;
+        transform: translateY(-200px);
+        opacity: 0;
+        visibility: hidden;
     }
     .tabRIght > div.active{
+        transform: translateY(0px);
         opacity: 1;
-        transform: translateY(8%);
+        visibility: visible;
+    }
+    .tabRIght > div.active ~ div{
+        transform: translateY(200px);
     }
     
     
     
-    div#onScrollAnimation {
-        position: absolute;
-        top: 0;
-        // max-width: 1320px;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-    }
+    // div#onScrollAnimation {
+    //     position: absolute;
+    //     top: 0;
+    //     // max-width: 1320px;
+    //     margin: 0 auto;
+    //     left: 0;
+    //     right: 0;
+    // }
     .staticData {
-        padding-top: 173px;
+        padding-top: 0;
         max-width: 1320px;
         margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
     }
 }
 
@@ -285,10 +293,55 @@
     background: #f9f9f9;
 
  .tabRIght {
-        margin-left: 464px;
+        // margin-left: 464px;
     }
 }
-
+:host ::ng-deep {
+.comply-with-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.comply-with {
+    display: flex;
+    align-items: center;
+    gap: 125px;
+    font-size: 16px;
+    color: #5c6a72;
+    justify-content: center;
+    ul {
+        flex-grow: 1;
+        align-items: center;
+        display: flex;
+        white-space: nowrap;
+        gap: 70px;
+        margin: 0;
+        li {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            position: relative;
+            &::before {
+                content: '';
+                width: 19px;
+                height: 19px;
+                border-radius: 100px;
+                background: #002e3b;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 5px;
+                top: 7px;
+                width: 8px;
+                height: 4px;
+                border-left: 1px solid white;
+                border-bottom: 1px solid white;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+}
 @media (min-width: 1700px){
     :host ::ng-deep .staticData {
         max-width: 1520px;
@@ -340,14 +393,17 @@ font-size: 30px !important;
      
         margin-left: 0;
     }
-    :host ::ng-deep .fixed div#onScrollAnimation {
-        top: 70px;
-    }
+    // :host ::ng-deep .fixed div#onScrollAnimation {
+    //     top: 102px!important;
+    // }
    
 }
 
 
 @media (max-width:767px){
+    :host ::ng-deep .buildtwinHelps .tabContent {
+        display: none;
+    }
     :host ::ng-deep .buildtwinHelps {
         margin: 0;
 
@@ -362,13 +418,13 @@ font-size: 30px !important;
         margin-bottom: 80px;
     }
 
-    :host ::ng-deep .fixed div#onScrollAnimation {
-        top: 70px;
-        position: static;
-    }
-    :host ::ng-deep div#onScrollAnimation {
-        position: static;
-    }
+    // :host ::ng-deep .fixed div#onScrollAnimation {
+    //     top: 194px!important;
+    //     // position: static;
+    // }
+    // :host ::ng-deep div#onScrollAnimation {
+    //     // position: static;
+    // }
 
     :host ::ng-deep   .buildtwinHelps .tabRIght {
         padding-right: 0;
@@ -387,6 +443,12 @@ font-size: 30px !important;
         transform: none;
         opacity: 1;
         margin-bottom: 15px;
+        visibility: visible;
+    }
+    :host ::ng-deep .tabRIght > div.active ~ div {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
     }
     :host ::ng-deep .buildtwinHelps .tabRIght .contentWrap {
         padding-right: 0;
@@ -404,7 +466,20 @@ font-size: 30px !important;
         padding: 10px;
         margin-bottom: 40px;
     }
-    :host ::ng-deep  .fixed div#onScrollAnimation .headSection {
-        padding-left: 20px;
-    }    
+    // :host ::ng-deep  .fixed div#onScrollAnimation .headSection {
+    //     padding-left: 20px;
+    // } 
+    :host ::ng-deep  {
+        .comply-with {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            white-space: nowrap;
+            margin-bottom: 50px;
+        }   
+        .comply-with ul {
+            gap: 20px;
+            overflow: auto;
+        }
+    }
 }

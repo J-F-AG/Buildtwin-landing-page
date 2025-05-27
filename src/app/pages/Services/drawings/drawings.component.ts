@@ -28,10 +28,10 @@ export class DrawingsComponent implements OnInit {
 
     // discoverProjectSection
     projectsArray = [
-      { img: 'assets/images/drawing1.jpg', category: 'MEP', projectTitle: 'Logistics Hall Construction', company: 'HBM Darmstadt', companyIcon: 'assets/images/gpcEngineering.png', serviceCompany: 'GPC Engineering', serviceCompanyIcon: 'assets/images/drawingLogoImg2.png', width:'84', height:'44', serviceDescription: "Structural Design, work stage 1-6 (LP1-6) | Steel Structure Design...", linkTitle: 'Learn More about GPC Engineering', link: '/partners/GBCEngineers' },
-      { img: 'assets/images/drawing2.jpg', category: 'Structural', projectTitle: 'High-Rise Buildings', company: 'FOURFrankfurt', companyIcon: 'assets/images/cpbContractors.png', serviceCompany: 'AARBEE', serviceCompanyIcon: 'assets/images/drawingLogoImg1.png', width:'70', height:'45', serviceDescription: "Type of building: Duct | Tonnage: 3,800 Tons", linkTitle: 'Learn More about Aarbee', link: '/partners/AarbeeStructuresPrivateLimited' },
-      { img: 'assets/images/drawing3.jpg', category: 'MEP', projectTitle: 'Construction Modular Dormitory', company: 'FOURFrankfurt', companyIcon: 'assets/images/gpcEngineering.png', serviceCompany: 'J&F India', serviceCompanyIcon: 'assets/images/jf-icon.jpg', width:'84', height:'44', serviceDescription: "1 million € construction costs electrical | approx. 22,000 m²", linkTitle: 'Learn More about J&F India', link: '/partners/J&FIndia' },
-      { img: 'assets/images/drawing1.jpg', category: 'MEP', projectTitle: 'Logistics Hall Construction', company: 'HBM Darmstadt', companyIcon: 'assets/images/cpbContractors.png', serviceCompany: 'MoldTek', serviceCompanyIcon: 'assets/images/moldtek-icon.jpg', width:'70', height:'45', serviceDescription: "Tonnage: 2,800 Tons", linkTitle: 'Learn More about MoldTek', link: '/partners/Mold-TekTechnologiesLimited' }
+      { img: 'assets/images/drawing1.jpg', category: 'MEP', projectTitle: 'Logistics Hall Construction', company: 'HBM Darmstadt', companyIcon: 'assets/images/gpcEngineering.png', serviceCompany: 'GBC Engineering', serviceCompanyIcon: 'assets/images/drawingLogoImg2.png', width:'84', height:'44', serviceDescription: "Structural Design, work stage 1-6 (LP1-6) | Steel Structure Design...", linkTitle: 'Learn More about GBC Engineering', link: '/partners/gbc-engineers' },
+      { img: 'assets/images/drawing2.jpg', category: 'Structural', projectTitle: 'High-Rise Buildings', company: 'FOURFrankfurt', companyIcon: 'assets/images/cpbContractors.png', serviceCompany: 'AARBEE', serviceCompanyIcon: 'assets/images/drawingLogoImg1.png', width:'70', height:'45', serviceDescription: "Type of building: Duct | Tonnage: 3,800 Tons", linkTitle: 'Learn More about Aarbee', link: '/partners/aarbee-structures-private-limited' },
+      { img: 'assets/images/drawing3.jpg', category: 'MEP', projectTitle: 'Construction Modular Dormitory', company: 'FOURFrankfurt', companyIcon: 'assets/images/gpcEngineering.png', serviceCompany: 'J&F India', serviceCompanyIcon: 'assets/images/jf-icon.jpg', width:'84', height:'44', serviceDescription: "1 million € construction costs electrical | approx. 22,000 m²", linkTitle: 'Learn More about J&F India', link: '/partners/j-f-india' },
+      { img: 'assets/images/drawing1.jpg', category: 'MEP', projectTitle: 'Logistics Hall Construction', company: 'HBM Darmstadt', companyIcon: 'assets/images/cpbContractors.png', serviceCompany: 'MoldTek', serviceCompanyIcon: 'assets/images/moldtek-icon.jpg', width:'70', height:'45', serviceDescription: "Tonnage: 2,800 Tons", linkTitle: 'Learn More about MoldTek', link: '/partners/mold-tek-technologies-limited' }
   
     ]
   
@@ -71,37 +71,43 @@ export class DrawingsComponent implements OnInit {
         image: 'assets/images/us-flag.png',
         label: 'United States',
         value: 'UnitedStates',
-        currency: 'IBC'
+        currency: 'IBC',
+        alt: 'US Flag'
       },
       {
         image: 'assets/images/aus-flag.png',
         label: 'Australia',
         value: 'Australia',
-        currency: 'NCC'
+        currency: 'NCC',
+        alt: 'AUS Flag'
       },
       {
         image: 'assets/images/eu-flag.png',
         label: 'European Union',
         value: 'EuropeanUnion',
-        currency: 'EC'
+        currency: 'EC',
+        alt: 'EU Flag'
       },
       {
         image: 'assets/images/uk-flag.png',
         label: 'United Kingdom',
         value: 'UK',
-        currency: 'BS'
+        currency: 'BS',
+        alt: 'UK Flag'
       },
       {
         image: 'assets/images/canada-flag.png',
         label: 'Canada',
         value: 'Canada',
-        currency: 'CBC'
+        currency: 'CBC',
+        alt: 'Canada Flag'
       },
       {
         image: 'assets/images/india-flag.png',
         label: 'India',
         value: 'India',
-        currency: 'INR'
+        currency: 'INR',
+        alt: 'India Flag'
       }
     ]
   

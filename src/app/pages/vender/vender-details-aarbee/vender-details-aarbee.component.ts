@@ -1,10 +1,17 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, ElementRef, HostListener, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
+import { ActivatedRoute, NavigationCancel, NavigationEnd, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { catchError, forkJoin, retry } from 'rxjs';
+import { catchError, filter, forkJoin, map, mergeMap, retry } from 'rxjs';
 import { ModalPopupService } from './modal/modal.service';
 import { FooterService } from '../../includes/hd-footer/footer.service';
+import { SeoService } from 'src/app/services/seo.service';
+import { VenderDetailService } from './vender-detail.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { isPlatformBrowser } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { LanguageService } from 'src/app/services/language.service';
+import { CryptoService } from 'buildtwin-library-ux/core';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -12,31 +19,10 @@ import { FooterService } from '../../includes/hd-footer/footer.service';
   styleUrls: ['../vender-detail-common-style.component.scss', './vender-details-aarbee.component.scss']
 })
 export class VenderDetailsAarbeeComponent {
+  claimListing = 'https://cockpit.buildtwin.com/signin?claimListing=true&companyName='
+  ndaRequest = ''
+  isclaimed:boolean = false;
   toggleContentIndex:number= -1
-  serviceSlider: OwlOptions = {
-    loop: false,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    navSpeed: 700,
-    navText: ['', ''],
-    responsive: {
-      0: {
-        items: 1,
-      },
-      400: {
-        items: 1
-      },
-      740: {
-        items: 2
-      },
-      940: {
-        items: 3
-      }
-    },
-    nav: true
-  }
   ourEngineers = [
     {
       img: "assets/images/aarbee/profile1.jpg",
@@ -201,6 +187,7 @@ export class VenderDetailsAarbeeComponent {
   companyHighlights: '';
 
   formData = {
+    is_claimed:false,
     about: [],
     onsite: '',
     directors: [],
@@ -254,6 +241,18 @@ export class VenderDetailsAarbeeComponent {
     sectors: [],
     premium_partner: false,
   } as any;
+
+
+  listOfBuildingCodeList = [
+    {
+      value: '',
+      label: 'Select Building Code'
+    }
+  ];
+  selectedBuildingCode = {
+    value: '',
+    label: 'Select Building Code'
+  };
   isLoaded = false;
   selectedServices = [] as any;
   listOfBuildingCode = [] as any;
@@ -299,6 +298,16 @@ export class VenderDetailsAarbeeComponent {
   isAddon = false;
   selectedAddon = '';
   listOfSoftware = [];
+  listOfSoftwareList = [
+    {
+      value: '',
+      label: 'Select Software'
+    }
+  ];
+  selectedSoftware = {
+    value: '',
+    label: 'Select Software'
+  };
   highlightImges = [];
   imageLeftOutCount = 0;
   currentFaq: any = 'faq0'
@@ -307,15 +316,89 @@ export class VenderDetailsAarbeeComponent {
   filterIndex = 0;
   filterSelectedProjectCategorIndex = 0;
   categorisedProjectImages = [];
-  constructor(private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService) {
 
-    this.getBusinessListing();
+  selectedPrecastServices = {
+    value: '',
+    label: 'Select services'
+  };
+  precastServices = []
+  AvailableServicesToggle : boolean = false;
+  myForm: FormGroup;
+  companyId = '';
+  companyEmail = '';
+  // companyAllDetail = {};
+  isBrowser: boolean;
+  faqSchemaHtml: SafeHtml;
+  AvailableServicesToggleStatusHoverStatus:boolean = true;
+  constructor(private _venderDetailService : VenderDetailService, private fb: FormBuilder, private router: Router, private _seoService: SeoService,private elRef: ElementRef, private renderer: Renderer2, private http: HttpClient, private route: ActivatedRoute, private modalService: ModalPopupService, private _footerService: FooterService,
+    private _cryptoService: CryptoService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private sanitizer: DomSanitizer,
+    private _languageService: LanguageService
+  ) {
+    // First, remove all existing breadcrumb scripts
+    try {
+      const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+      existingScripts.forEach(script => {
+          this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
+      });
+  } catch (error) {
+      
+  }
+    this.isBrowser = isPlatformBrowser(this.platformId);
     this.domain = this.route.snapshot.params['id'];
-    this.isIframe = this.route.snapshot.queryParams['isIframe'] ? true : false;
+    this.isIframe = this.route.snapshot.queryParams['isiframe'] ? true : false;
     this.cockpitDomain = this.route.snapshot.queryParams['domain'] || '';
-    if(this.route.snapshot.queryParams['isIframe']){
+    if(this.isBrowser){
+      this.getBusinessListing();
+      this.getCompanyDetail()
+    }
+    if(this.route.snapshot.queryParams['isiframe']){
       document.body.classList.add('iframeEmbed');
     }
+
+    // this.router.events.pipe(
+    //   filter((event) => event instanceof NavigationEnd),
+    //   map(() => this.route),
+    //   map((route) => {
+    //     while (route.firstChild) route = route.firstChild;
+    //     return route;
+    //   }),
+    //   filter((route) => route.outlet === 'primary'),
+    //   mergeMap((route) => route.data)
+    // )
+    //   .subscribe((event) => {
+    //     console.log(event)
+    //           // this._seoService.updateTitle(event['title']);
+    //           // this._seoService.updateDescription(event['description']);
+    //           // // Update OG tags
+    //           // this._seoService.updateOGUrl(this.router.url);
+    //           // this._seoService.updateOGImage(event['image']);
+
+    //           // // Update Twitter card tags
+    //           // this._seoService.updateTwitterCardType('summary_large_image');
+    //           // this._seoService.updateTwitterImage(event['image']);
+    //           // this._seoService.setCanonicalURL(event['canonical']);
+    //   })
+
+
+      // let url = this.router.url;
+      // console.log(url)
+      const urlSegments = this.router.url.split('/');
+      let url = urlSegments[urlSegments.length - 1];
+      url = url.toLowerCase();
+        if(this._venderDetailService['detalMeta'][url]){
+          this._seoService.updateTitle(this._venderDetailService['detalMeta'][url]['title']);
+          this._seoService.updateDescription(this._venderDetailService['detalMeta'][url]['description']);
+          // Update OG tags
+          this._seoService.updateOGUrl(this.router.url);
+          this._seoService.updateOGImage(this._venderDetailService['detalMeta'][url]['image']);
+  
+          // Update Twitter card tags
+          this._seoService.updateTwitterCardType('summary_large_image');
+          this._seoService.updateTwitterImage(this._venderDetailService['detalMeta'][url]['image']);
+          this._seoService.setCanonicalURL(this._venderDetailService['detalMeta'][url]['canonical'], this.renderer);
+        }
   }
   showPopup = false;
   openModal(html: HTMLElement | string = "", isParent: boolean, isChild: boolean, project) {
@@ -389,15 +472,11 @@ export class VenderDetailsAarbeeComponent {
 
 
   
-  aboutSlider: OwlOptions = {
-    items: 1,
-    nav: true,
-    margin: 0,
-    dots: true,
-    loop: true,
-    autoplay: false,
-    autoplayHoverPause: false,
-  }
+  
+  serviceSlider: OwlOptions | null = null;
+  aboutSlider: OwlOptions | null = null;
+  sectorsSlider: OwlOptions | null = null;
+  
 
 
 
@@ -419,7 +498,7 @@ export class VenderDetailsAarbeeComponent {
     sections.forEach(section => {
       const rect = section.getBoundingClientRect();
       if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-        console.log(98888)
+        // console.log(98888)
         this.activeSection = section['id'];
       }
     });
@@ -531,7 +610,17 @@ export class VenderDetailsAarbeeComponent {
     if (type === 'parent') {
       this.isVisible = true;
       if (!this.selectedProjectCategory.imageUrls.length) {
-        this.selectedProjectCategor(0);
+        let selectedVal = false;
+        this.categorisedProjectImages.forEach((res: any, index: number) => {
+          if (!selectedVal && res['imageUrls'].length) {
+            selectedVal = true;
+            this.selectedProjectCategor(index);
+          }
+        });        
+      }else {
+        if(this.selectedProjectCategory['imageUrls'] && this.selectedProjectCategory['imageUrls'].length) {
+          this.selectedProjectCategory['imageUrls'] = this.removeDuplicates(this.selectedProjectCategory['imageUrls'])
+        }
       }
     }
     if (type === 'child') {
@@ -543,13 +632,32 @@ export class VenderDetailsAarbeeComponent {
       if (parentName === 'parent') {
         image = this.selectedProjectCategory.imageUrls.filter((a, i) => i === imageIndx);
       } else {
-        image = this.selectedProject.categorylist[this.filterIndex].imageurls.filter((a, i) => i === imageIndx);
+        if(this.selectedProject.categorylist.length){
+          image = this.selectedProject.categorylist[this.filterIndex].imageurls.filter((a, i) => i === imageIndx);
+        }else if (this.selectedProject['project_logo'] && this.selectedProject['project_logo'].length) {
+          image = this.selectedProject.project_logo.filter((a, i) => i === imageIndx);
+        }
       }
-      this.selectedPrimaryImage = image[0];
+      if(image.length) {
+        this.selectedPrimaryImage = image[0];
+      }else {
+        this.selectedPrimaryImage = this.selectedProject['imageUrl']
+      }
     }
     if(project){
       this.filterIndex = 0;
       this.selectedProject = project;
+      // let obj = `${this.selectedProject['id']+'___'+this.selectedProject['project_name']+'___'+this.selectedProject['project_region']+'___'+this.selectedProject['service']+'___'+this.selectedProject['company_id']}`
+      let obj = {
+        project_id:this.selectedProject['id'],
+        project_name: this.selectedProject['project_name'],
+        project_region: this.selectedProject['project_region'],
+        service: this.selectedProject['service'],
+        company_id: this.selectedProject['company_id']
+      }
+      let decryptobj = encodeURIComponent(this._cryptoService.set(JSON.stringify(obj)));
+      let companyNameEncoded = encodeURIComponent(this.companyName);
+      this.ndaRequest = `https://cockpit.buildtwin.com/signin?nda=true&obj=${decryptobj}&company_name=${companyNameEncoded}`;
       if (type === 'child') {
         this.selectCategory(0);
       }
@@ -579,10 +687,88 @@ export class VenderDetailsAarbeeComponent {
   }
 
   ngOnInit() {
-    this.loadScript();
     setTimeout(() => {
-      console.log(this.formData?.highlightServices)
+      console.log(this.selectedProjectCategory)
+      console.log(this.categorisedProjectImages)
     }, 10000);
+    this.sliderInit()
+    this.myForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]], // Email field validation
+      projectName: ['', Validators.required], // Project Name validation
+      selectedSoftware: [null], // Validation for selectedSoftware
+      buildingCodeId: [null], // Static building code
+      serviceId: [null, Validators.required], // New control for service ID
+      description: [''], // Description validation
+    });
+    
+    this.loadScript();
+    // setTimeout(() => {
+    //   console.log(this.formData)
+    // }, 10000);
+  }
+  sliderInit(){
+    if (this.isBrowser) {
+      this.sectorsSlider = {
+        items: 1,
+        nav: true,
+        margin: 0,
+        dots: false,
+        loop: false,
+        autoplay: false,
+        autoplayHoverPause: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          768: {
+            items: 4
+          },
+          990: {
+            items: 4
+          },
+          1400: {
+            items: 4
+          }
+        }
+      }
+      this.aboutSlider = {
+        items: 1,
+        nav: true,
+        margin: 0,
+        dots: true,
+        loop: true,
+        autoplay: false,
+        autoplayHoverPause: false,
+      }
+
+      this.serviceSlider = {
+        loop: false,
+        mouseDrag: true,
+        touchDrag: true,
+        pullDrag: true,
+        dots: false,
+        navSpeed: 700,
+        navText: ['', ''],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          400: {
+            items: 1
+          },
+          740: {
+            items: 2
+          },
+          940: {
+            items: 3
+          }
+        },
+        nav: true
+      }
+    }
   }
   loadScript() {
     // Create script element
@@ -649,15 +835,36 @@ export class VenderDetailsAarbeeComponent {
   selectedProjectCategor(idx) {
     this.filterSelectedProjectCategorIndex = idx;
     this.selectedProjectCategory = this.categorisedProjectImages[idx];
+    if(this.selectedProjectCategory['imageUrls'] && this.selectedProjectCategory['imageUrls'].length) {
+      this.selectedProjectCategory['imageUrls'] = this.removeDuplicates(this.selectedProjectCategory['imageUrls'])
+    }
   }
-
+  removeDuplicates(arr: any) {
+    const uniqueMap = new Map(arr.map(item => [item.id, item]));
+    return Array.from(uniqueMap.values());
+  }
   add() {
     this.isAddon = true;
   }
 
+  removeTrailingDash(str) {
+    return str.replace(/-$/, ''); // Removes '-' only if it's at the end
+  }
   getBusinessListing() {
+
+    let url = `https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies?status=All`
+    this.route.queryParams.subscribe(params => {
+      const status = params['status'];
+      // Check if both parameters are available
+      if (status === 'unpublished') {
+        url = `https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies?status=${'Unpublished'}`
+      }
+    });
+    if(this.isIframe) {
+      url = `https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?mode=company_data`
+    }
     this.showPageLoader = true;
-    this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`)
+    this.http.get(url)
     .pipe(
       catchError(err => {
         this.showPageLoader = false;
@@ -665,19 +872,38 @@ export class VenderDetailsAarbeeComponent {
       }),
       retry(2)
     ).subscribe(companies => {
+      if(this.isIframe){
+        companies['data']['details'] = [companies['data']['company_data']['basic_form_fields']]
+      }
       if (companies && companies['data'] && companies['data']['details'] && companies['data']['details'].length) {
-        let company = companies['data']['details'].filter(a => a.company_name.replace(/ /g,'') === this.domain);
+        let company = companies['data']['details'].filter(a => {
+          const cleanCompanyName = a['company_name'].replace(/[()]/g, '-'); // Remove '(' and ')'
+          if (this._languageService.customMapping[cleanCompanyName]) {
+            a['route'] = this._languageService.customMapping[cleanCompanyName];
+            a['linking'] = this._languageService.customMapping[cleanCompanyName];
+          }else {
+            let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
+            a['route'] = cleanCompanyName.replace(/ /g, '');
+            a['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+            .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+            .toLowerCase();
+          }
+          if(a.company_name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase() || a.linking === this.domain.toLowerCase()){
+            return a
+          }
+        });
         if (company.length || this.isIframe) {
-          let queryParam = company.length ? company[0].domain: this.cockpitDomain;
+          // let queryParam = company.length ? company[0].domain: this.cockpitDomain;
+          let queryParam = company.length ? company[0].company_id: '';
           if (this.isIframe) {
             company = [{
-              domain: this.domain
+              domain: company[0].domain
             }]
           }
           // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
           forkJoin([
             this.http.get('https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields'),
-            this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?domain=${queryParam}`)
+            this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?company=${queryParam}`)
           ])
             .pipe(
               catchError(err => {
@@ -715,7 +941,11 @@ export class VenderDetailsAarbeeComponent {
                   if (form.field_group_name === 'On-Site Available(own office)') {
                     // form.fields = JSON.parse(form.fields);
                     form.fields.forEach((f: any) => {
-                      this.formData.onsite = formData[bKey] ? JSON.parse(formData[bKey][f.field_key]): this.formData.onsite;
+                      if(typeof formData[bKey][f.field_key] === 'string') {
+                        this.formData.onsite = formData[bKey] ? JSON.parse(formData[bKey][f.field_key]): this.formData.onsite;
+                      }else {
+                        this.formData.onsite = formData[bKey] ? formData[bKey][f.field_key]: this.formData.onsite;
+                      }
                     });
                   }
                   if (form.field_group_name === 'Bio' || form.field_group_name === 'About') {
@@ -746,78 +976,92 @@ export class VenderDetailsAarbeeComponent {
                     let isImage = false;
                     if (formData['featured_projects']) {
                       formData['featured_projects'].forEach(a => {
-                        if (!a.project_logo.includes("name")) {
-                          a.project_logo = a.project_logo.replace('{', '[');
-                          a.project_logo = a.project_logo.replace('}', ']');
-                          a.project_logo = JSON.parse(a.project_logo);
-                          a.categorylist = [];
-                          let arrayy = [];
-                          this.categorisedProjectImages = [];
-                          
-                          a.project_logo.forEach(p => {
-                            arrayy.push({
-                              imageUrl: p,
-                              ...a
+                        if (typeof a.project_logo === 'string') {
+                          if (!a.project_logo.includes("name")) {
+                            a.project_logo = a.project_logo.replace('{', '[');
+                            a.project_logo = a.project_logo.replace('}', ']');
+                            a.project_logo = JSON.parse(a.project_logo);
+                          }else {
+                            a.project_logo = a.project_logo.replace('{', '[');
+                            a.project_logo = a.project_logo.replace(/.$/, "]");
+                            a.project_logo = JSON.parse(a.project_logo);
+                          }
+
+                        }
+                          if (typeof a.project_logo[0] === 'string' && !a.project_logo[0].includes("name")) {
+                            // a.project_logo = a.project_logo.replace('{', '[');
+                            // a.project_logo = a.project_logo.replace('}', ']');
+                            // a.project_logo = JSON.parse(a.project_logo);
+                            a.categorylist = [];
+                            let arrayy = [];
+                            this.categorisedProjectImages = [];
+                            
+                            a.project_logo.forEach(p => {
+                              arrayy.push({
+                                imageUrl: p,
+                                ...a
+                              })
+                              // if (!this.categorisedProjectImages.length) {
+                                this.selectedProjectCategory.imageUrls.push(...arrayy)
+                              // }
                             })
-                            // if (!this.categorisedProjectImages.length) {
-                              this.selectedProjectCategory.imageUrls.push(...arrayy)
-                            // }
-                          })
-                        } else {
-                          a.project_logo = a.project_logo.replace('{', '[');
-                          a.project_logo = a.project_logo.replace(/.$/,"]");
-                          a.project_logo = JSON.parse(a.project_logo);
-                          let arr = [];
-                          let cat = [];
-                          isImage = true;
-                          a.project_logo.forEach(p => {
-                            p = JSON.parse(p);
-                            cat.push(p);
-                            arr.push(...p.imageurls);
-                            if (!this.categorisedProjectImages.length) {
-                              let arr = [];
-                              p.imageurls.forEach(im => {
-                                arr.push({
-                                  imageUrl: im,
-                                  ...a
-                                 })
-                              })
-                              this.categorisedProjectImages.push({
-                                 name: p.name,
-                                 imageUrls: arr
-                              })
-                            } else {
-                              let indx = this.categorisedProjectImages.findIndex(a => a.name === p.name);
-                              if (indx === -1) {
-                              let arr = [];
-                                p.imageurls.forEach(im => {
-                                  arr.push({
-                                    imageUrl: im,
-                                    ...a
-                                   })
-                                  })
-                                  this.categorisedProjectImages.push({
-                                     name: p.name,
-                                     imageUrls: arr
-                                  })
-                              } else {
+                          } else {
+                            // a.project_logo = a.project_logo.replace('{', '[');
+                            // a.project_logo = a.project_logo.replace(/.$/,"]");
+                            // a.project_logo = JSON.parse(a.project_logo);
+                            let arr = [];
+                            let cat = [];
+                            isImage = true;
+                            a.project_logo.forEach(p => {
+                              if(typeof p === 'string') {
+                                p = JSON.parse(p);
+                              }
+                              cat.push(p);
+                              arr.push(...p.imageurls);
+                              if (!this.categorisedProjectImages.length) {
                                 let arr = [];
                                 p.imageurls.forEach(im => {
                                   arr.push({
                                     imageUrl: im,
                                     ...a
-                                   })
                                   })
-                                this.categorisedProjectImages[indx].imageUrls.push(
-                                  ...arr
-                                )
+                                })
+                                this.categorisedProjectImages.push({
+                                  name: p.name,
+                                  imageUrls: arr
+                                })
+                              } else {
+                                let indx = this.categorisedProjectImages.findIndex(a => a.name === p.name);
+                                if (indx === -1) {
+                                let arr = [];
+                                  p.imageurls.forEach(im => {
+                                    arr.push({
+                                      imageUrl: im,
+                                      ...a
+                                    })
+                                    })
+                                    this.categorisedProjectImages.push({
+                                      name: p.name,
+                                      imageUrls: arr
+                                    })
+                                } else {
+                                  let arr = [];
+                                  p.imageurls.forEach(im => {
+                                    arr.push({
+                                      imageUrl: im,
+                                      ...a
+                                    })
+                                    })
+                                  this.categorisedProjectImages[indx].imageUrls.push(
+                                    ...arr
+                                  )
+                                }
                               }
-                            }
-                          });
-                          a.categorylist = cat;
-                          a.project_logo = arr;
-                          // a.project_logo = a.project_logo.map(a => a.logo);
-                        }
+                            });
+                            a.categorylist = cat;
+                            a.project_logo = arr;
+                            // a.project_logo = a.project_logo.map(a => a.logo);
+                          }
                       });
                     }
                     if (this.categorisedProjectImages.length) {
@@ -827,10 +1071,14 @@ export class VenderDetailsAarbeeComponent {
                           b.categorylist = [];
                           if (isImage) {
                             b.project_logo.forEach(c => {
-
-                              b.categorylist.push(JSON.parse(c));
-                              let bb = (JSON.parse(c)).imageurls.map(a1 => a1);
-                              arr.push(...bb);
+                              if(typeof c === 'string') {
+                                b.categorylist.push(JSON.parse(c));
+                                let bb = (JSON.parse(c)).imageurls.map(a1 => a1);
+                                arr.push(...bb);
+                              }else {
+                                b.categorylist.push(c);
+                                arr.push(...c.imageurls);
+                              }
                             });
                           } else {
                             arr = b.project_logo
@@ -849,9 +1097,22 @@ export class VenderDetailsAarbeeComponent {
                   }
                 });
                 this.formData.buildingCode = res[0]['data']['building_codes'];
+                this.formData.buildingCode.forEach(a => {
+                  this.listOfBuildingCodeList.push({
+                    value: a.id,
+                    label: a.name
+                  })
+                });
                 this.formData.engineers = formData['our_engineers'];
                 this.formData.clientReviews = formData['reviews'];
                 this.listOfSoftware = res[0]['data']['softwares'];
+                this.listOfSoftware.forEach(a => {
+                  this.listOfSoftwareList.push({
+                    value: a.id,
+                    label: a.name
+                  })
+                });
+                // console.log(this.listOfSoftware)
                 this.addons = res[0]['data']['addons'];
                 const reviewArr = [];
                 let revieCount = 0;
@@ -859,21 +1120,32 @@ export class VenderDetailsAarbeeComponent {
                 if (this.formData.clientReviews && this.formData.clientReviews.length) {
                   this.formData.clientReviews.forEach(rev => {
                     revieCount += rev.ratings.length;
-                    rev.reviesSum = rev.ratings.reduce((a, b) => a + b.score, 0);
-                    reviewRatCount += rev.reviesSum;
+                    if(rev.reviesSum) {
+                      reviewRatCount += rev.reviesSum;
+                    }else {
+                      rev.reviesSum = rev.ratings.reduce((a, b) => a + b.score, 0);
+                      reviewRatCount += rev.reviesSum;
+                    }
                     reviewArr.push(...rev.ratings)
                   });
                 }
                 const groupReviewArr = [];
                 reviewArr.forEach(r => {
-                  let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
-                  if (indx === -1 || !groupReviewArr.length) {
-                    r.count = 1;
-                    groupReviewArr.push(r)
-                  } else {
-                    let ridx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
-                    groupReviewArr[ridx].count++;
-                    groupReviewArr[ridx].score += r.score;
+                  if(!reviewArr[0]['percentRating']) {
+                    let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                    if (indx === -1 || !groupReviewArr.length) {
+                      r.count = 1;
+                      groupReviewArr.push(r)
+                    } else {
+                      let ridx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                      groupReviewArr[ridx].count++;
+                      groupReviewArr[ridx].score += r.score;
+                    }
+                  }else {
+                    let indx = groupReviewArr.findIndex(a => a.title_id === r.title_id);
+                    if (indx === -1 || !groupReviewArr.length) {
+                      groupReviewArr.push(r)
+                    }
                   }
                 });
                 if (this.highlightImges && this.highlightImges.length > 7) {
@@ -923,6 +1195,7 @@ export class VenderDetailsAarbeeComponent {
                 this.companyName = fieldData? formData['basic_form_fields']['company_name']: '';
                 this._footerService['companyDetail']['name'] = this.companyName;
                 this.formData.companyDetails.rating = fieldData ? formData['basic_form_fields']['rating']: 0;
+                this.formData.is_claimed = fieldData ? formData['basic_form_fields']['is_claimed']: false;
                 this.formData.services = res[0]['data']['services']
                 this.formData.directors = fieldData ? formData['basic_form_fields']['managing_director']: this.formData.directors;
                 this.formData.premium_partner = fieldData ? formData['basic_form_fields']['premium_partner']: this.formData.premium_partner;
@@ -961,7 +1234,11 @@ export class VenderDetailsAarbeeComponent {
                     s.addon_titles = arrAddon;
                    }
                    if (s.service_segments) {
-                     s.service_segments = JSON.parse(s.service_segments);
+                    if (typeof s.service_segments === 'string') {
+                      s.service_segments = JSON.parse(s.service_segments);
+                    }else {
+                      s.service_segments = s.service_segments;
+                    }
                    }
                    let exist = this.formData.highlightServices.findIndex(a => a.id === s.id);
                    if (s.service_featured && exist === -1) {
@@ -1010,6 +1287,12 @@ export class VenderDetailsAarbeeComponent {
                       })
                     }
                   });
+                  this.serviceTypes.forEach((s: any) => {
+                    this.precastServices.push({
+                      value: s.id,
+                      label: s.name
+                    });
+                  });
                 }
                 let obj = {
                   code: '',
@@ -1020,6 +1303,9 @@ export class VenderDetailsAarbeeComponent {
                   this.formData.serviceType = this.serviceTypes.join(',');
                 }
                 this.formData.faq = formData['basic_form_fields'] ? formData['basic_form_fields']['faq']: this.formData.faq;
+                if(this.formData.faq){
+                  this.updateSchema(this.formData.faq)
+                }
                 if (formData['building_codes'] && formData['building_codes'].length) {
                   formData['building_codes'].forEach((b: any) => {
                     obj = {
@@ -1067,6 +1353,56 @@ export class VenderDetailsAarbeeComponent {
       }
     })
   }
+
+  getCompanyDetail() {
+    let payload = {
+      status: "Published"
+    }
+    let url = `https://8d26kljxt6.execute-api.ap-southeast-1.amazonaws.com/production/onboarding/get-requests`
+
+    if(this.isIframe) {
+      url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?mode=company_data`
+    }
+    this.route.queryParams.subscribe(params => {
+      const status = params['status'];
+      // Check if both parameters are available
+      if (status === 'unpublished') {
+        payload['status'] = "Unpublished";
+      }
+    });
+    this.http.post(url, payload)
+    .pipe(
+      catchError(err => {
+        return err;
+      }),
+      retry(2)
+    ).subscribe(companies => {
+      companies['data'].forEach(company => {
+        if(!company['name']) return;
+        let cleanCompanyName = company['name'].replace(/[()]/g, '-'); // Remove '(' and ')'
+        if (this._languageService.customMapping[cleanCompanyName]) {
+          company['route'] = this._languageService.customMapping[cleanCompanyName];
+          company['linking'] = this._languageService.customMapping[cleanCompanyName];
+        }else {
+          if(!company['name']){
+            company['name'] = '*****'
+            cleanCompanyName = '*****'
+          }
+          let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
+          company['route'] = cleanCompanyName.replace(/ /g, '');
+          company['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+          .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+          .toLowerCase();
+        }
+        if(company.name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase() || company.linking === this.domain.toLowerCase()){
+          this.companyId = company.id;
+          this.companyEmail = company.email;
+        }
+        // if (company.name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase()) {
+        // }
+      });
+    })
+  }
   tabbing2(index){
     if(this.currentFaq == index){
       this.currentFaq = ''
@@ -1079,6 +1415,33 @@ export class VenderDetailsAarbeeComponent {
       this.toggleContentIndex = -1;
     }else {
       this.toggleContentIndex = i;
+    }
+  }
+  updateSchema(data) {
+    this._languageService.faqSchemaSubject.next({data: data, type: 'faq'})
+  }
+  selectService(selectedOption: any) {
+    this.selectedPrecastServices = this.precastServices.find(e => e.value === selectedOption);
+  }
+  selectSoftware(selectedOption: any) {
+    this.selectedSoftware = this.listOfSoftwareList.find(e => e.value === selectedOption);
+  }
+  selectBuildingCode(selectedOption: any) {
+    this.selectedBuildingCode = this.listOfBuildingCodeList.find(e => e.value === selectedOption);
+    // this.selectedSoftware = this.listOfSoftwareList.find(e => e.value === selectedOption);
+  }
+  AvailableServicesToggleStatusHover(){
+    if(this.AvailableServicesToggleStatusHoverStatus){
+      this.AvailableServicesToggleStatusHoverStatus = false;
+      this.AvailableServicesToggleStatus(true)
+    }
+  }
+  AvailableServicesToggleStatus(type?){
+    if(type && !this.AvailableServicesToggle) {
+      this.AvailableServicesToggle = type
+    }
+    if(!type){
+      this.AvailableServicesToggle = !this.AvailableServicesToggle;
     }
   }
   ngOnDestroy() {

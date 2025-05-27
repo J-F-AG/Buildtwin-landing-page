@@ -1,126 +1,54 @@
+<div class="time-tracking-wrapper">
+    
 <app-hd-navbar></app-hd-navbar>
 
 <!-- Logos -->
 <app-tt-banner></app-tt-banner>
 
-<div class="ptb-100">
-    <app-get-started-block>
-        <h2>
-            Get started <span>today</span>
-        </h2>
-        <div class="block-wrapper">
-            <div class="block">
-                <figure>
-                    <img src="assets/images/buyer1.png" alt="" width="388" height="253">
-                </figure>
-                <div class="content">
-                    <h3>
-                        Get 5+ competitive offer for your project today. 
-                    </h3>
-                    <p>
-                        Work with BuildTwin to find the most competitive bid for your projects from <u>pre-qualified</u> vendors. 
-                    </p>
-                    <a href="https://www.buildtwin.com/get-started" class="btnNew">
-                        Get started for FREE
-                        <i class="ti ti-arrow-narrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="block">
-                <figure>
-                    <img src="assets/images/buyer2.png" alt="" width="388" height="253">
-                </figure>
-                <div class="content">
-                    <h3>
-                        Explore engineering services 
-                    </h3>
-                    <p>
-                        Browse engineering services offered by 100s of pre-qualified vendors across the world. 
-                    </p>
-                    <a routerLink="{{_languageService.currentLanguage}}/explore-services" class="btnNew">
-                        Explore Services
-                        <i class="ti ti-arrow-narrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="block">
-                <figure>
-                    <img src="assets/images/buyer3.png" alt="" width="388" height="253">
-                </figure>
-                <div class="content">
-                    <h3>
-                        Take to our Sales Advisor (all timezones) 
-                    </h3>
-                    <p>
-                        Talk to our dedicated sales team to start your journey with BuildTwin. 
-                    </p>
-                    <a href="javascript:;" (click)="callStatus()" class="btnNew">
-                        Schedule Call
-                        <i class="ti ti-arrow-narrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </app-get-started-block>
-</div>
-<!-- Testimmonials -->
-<app-tt-testimonials></app-tt-testimonials>
-<!-- 3 Businesslines BuildTwin -->
-<app-tt-services></app-tt-services>
-
-<!-- Plug & Play -->
-<app-hd-integrations></app-hd-integrations>
-
-<!-- Services -->
-<app-socials-media-info></app-socials-media-info>
-
-<!-- Digital Procurement -->
 <app-task-management></app-task-management>
 
-<!-- Plug & Play -->
-<app-tt-about></app-tt-about>
+
 
 <app-how-buildtwin-helps>
-    <div class="buildtwinHelps" id="scrollActivated">
-        <div class="" id="onScrollAnimation">
-            <div class="headSection">
-                <h2>How BuildTwin helps you to get projects DONE.<br>
+    <div class="buildtwinHelps container" id="scrollActivated">
+        <div class="heading-sticky" id="onScrollAnimation">
+            <div class="heading center v2">
+                <h2 class="title">How BuildTwin Pro 
+                    <br>helps you get the job DONE.
                 </h2>
-            </div>
-            <div class="container">
-               
-                <div class="tabContent">
-                    <div class="tabLeft">
-                        <ul>
-                            <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"
-                                [ngClass]="{'active':activeState === 1}">
-                                <i></i> Quality Management
-                            </li>
-                            <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"
-                                [ngClass]="{'active':activeState === 4}">
-                                <i></i> Live Project Progress
-                            </li>
-                            <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"
-                                [ngClass]="{'active':activeState === 5}">
-                                <i></i> Live RFI Tracking
-                            </li>
-                            <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"
-                            [ngClass]="{'active':activeState === 6}">
-                            <i></i> File Management
-                        </li>
-                        </ul>
-                    </div>
-
-                </div>
+                <span class="small-title">work with pre-qualified solution providers</span>
             </div>
         </div>
 
         <div class="staticData">
+            <div class="tabContent">
+                <div class="tabLeft">
+                    <ul>
+                        <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"
+                            [ngClass]="{'active':activeState === 1}">
+                            <i></i> Quality Management
+                        </li>
+                        <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"
+                            [ngClass]="{'active':activeState === 2}">
+                            <i></i> Live Project Progress
+                        </li>
+                        <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"
+                            [ngClass]="{'active':activeState === 3}">
+                            <i></i> Live RFI Tracking
+                        </li>
+                        <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"
+                        [ngClass]="{'active':activeState === 4}">
+                        <i></i> File Management
+                    </li>
+                    </ul>
+                </div>
+
+            </div>
             <div class="tabRIght">
-                <div id="section1" class="active" data-ele="one">
+                <div id="section1" data-ele="one" [ngClass]="{'active':activeState === 1}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild1.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild1.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -134,10 +62,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="section4" data-ele="four">
+                <div id="section4" data-ele="four" [ngClass]="{'active':activeState === 2}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild4.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild4.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -151,10 +79,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="section5" data-ele="five">
+                <div id="section5" data-ele="five" [ngClass]="{'active':activeState === 3}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild5.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild5.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -168,10 +96,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="section6" data-ele="three">
+                <div id="section6" data-ele="three" [ngClass]="{'active':activeState === 4}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild3.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild3.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -187,14 +115,186 @@
 
             </div>
         </div>
-
+        <div class="comply-with-wrapper">
+            <div class="comply-with">
+                <span>
+                    Comply with
+                </span>
+                <ul>
+                    <li>
+                        ISO 19650 Series
+                    </li>
+                    <li>
+                        BIM Level 2
+                    </li>
+                    <li>
+                        BIM 7D
+                    </li>
+                    <li>
+                        IFC
+                    </li>
+                    <li>
+                        SmartBIM
+                    </li>
+                    <li>
+                        COBie
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </app-how-buildtwin-helps>
 
+<app-tt-testimonials></app-tt-testimonials>
+
+<!-- <div class="pt-100"> -->
+<app-get-started-block>
+    <div class="heading center v2">
+       <h2 class="title">
+        3 reasons to get started  <span>NOW</span>
+       </h2> 
+       <!-- <div class="subTitle">
+
+       </div> -->
+    </div>
+    
+    <div class="block-wrapper-arrow">
+        <div class="block">
+            <img src="assets/images/seller1-arrow.png" alt="arrow" width="29" height="59">
+        </div>
+        <div class="block">
+            <img src="assets/images/seller2-arrow.png" alt="arrow" width="24" height="61">
+        </div>
+        <div class="block">
+            <img src="assets/images/seller3-arrow.png" alt="arrow" width="29" height="59">
+        </div>
+    </div>
+    <div class="block-wrapper">
+        <div class="block">
+            <div class="note">
+                in less than 5 min.
+            </div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer1@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer1.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer1@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer1.png" 
+                        alt="buyer1" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>Get 5+ competitive offers 
+                    <br>for your project today
+                </h3>
+                <p>Work with BuildTwin to find the most competitive
+                    bid for your projects from <u>pre-qualified</u> vendors.</p>
+                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 mark_page_get_started_free_3_reason_btn">
+                    Get started for FREE
+                </a>
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer2@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer2.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer2@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer2.png" 
+                        alt="buyer2" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>Explore<br>
+                    engineering services</h3>
+                <p>Browse engineering services offered by 100s
+                    of pre-qualified vendors across the world.</p>
+                <a routerLink="{{_languageService.currentLanguage}}/explore-services" class="button-v2 mark_page_explore_3_reason">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/sellers3@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/sellers3.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/sellers3@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/sellers3.png" 
+                        alt="Sellers3" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>Let’s Talk Growth: 
+                    <br>Our Global Sales  Advisors Are Here for You</h3>
+                <p>Schedule a call with our global Sales team to 
+                    see how BuildTwin can fuel your growth.</p>
+                <a href="javascript:void(0)" (click)="callStatus()" class="button-v2 mark_page_schedule_call_3_reason_btn">
+                    <picture class="normal">
+                        <source 
+                          srcset="assets/images/icons/call-white@2x.png" 
+                          media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                          src="assets/images/icons/call-white.png" 
+                          alt="call" 
+                          width="21" 
+                          height="22">
+                      </picture>
+                    <picture class="hover">
+                        <source 
+                          srcset="assets/images/icons/call@2x.png" 
+                          media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                          src="assets/images/icons/call.png" 
+                          alt="call" 
+                          width="21" 
+                          height="22">
+                      </picture>
+                    Schedule Call
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</app-get-started-block>
+<!-- </div> -->
+<!-- Testimmonials -->
 
 
-<!-- Partner  -->
-<app-tt-partners></app-tt-partners>
+<!-- Digital Procurement -->
+
+
+
 
 
 <!-- Large Tender -->
@@ -232,4 +332,6 @@
   </div>
   </div>
 </div>
-<app-hubspot [ngClass]="{'active':showPopup}" [name]="'arun'" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}"  (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+
+</div>

@@ -1,11 +1,395 @@
-<app-hd-navbar></app-hd-navbar>
-<app-data-center-section></app-data-center-section>
-<app-about-data-center-section></app-about-data-center-section>
-<app-dc-europe></app-dc-europe>
-<app-sector-ample-projects></app-sector-ample-projects>
-<app-right-team></app-right-team>
-<app-sector-meeting-standards></app-sector-meeting-standards>
-<app-hd-integrations></app-hd-integrations>
-<app-sector-direct-booking></app-sector-direct-booking>
-<app-sector-solution-provider></app-sector-solution-provider>
-<app-get-started></app-get-started>
+<div class="bottom-space">
+    <app-hd-navbar></app-hd-navbar>
+    
+        <div class="common-bannerWrapper global-mb">
+            <img src="../../../../assets/images/serviceBanner.jpg" alt="">
+            <div class="bannerContainer">
+                <div class="containerbn">
+                    <h1>
+                        Find Structural Engineering Services & Solutions
+                    </h1>
+                    <p>
+                        Buildtwin connects you with expert providers for data centres, bridges, tunnels, road, precast structures, industrial buildings, airports and hospitals.
+                    </p>
+                    <div class="button-wrapper">
+                        <a href="" class="button-v2 mdc-button">
+                            Book a Service
+                        </a>
+                        <a href="" class="button-v2 mdc-button border">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+     <!-- <div class="bottom-space-gap"> -->
+        <app-special-project-sector [page]="'sector'"></app-special-project-sector>
+   <!-- </div> -->
+   <app-tt-partners-sector [page]="'sector'"></app-tt-partners-sector>
+        <app-hd-discover-projects-sector [hideTitle]="true" [page]="'sector'"></app-hd-discover-projects-sector>
+   <div class="container">
+    <div class="count-wrapper global-mb">
+        <div class="block">
+            <strong>
+                200+
+            </strong>
+            Projects Completed
+        </div>
+        <div class="block">
+            <strong>
+                15+
+            </strong>
+            Countries Served
+        </div>
+        <div class="block">
+            <strong>
+                50+
+            </strong>
+            Expert Vendors
+        </div>
+        <div class="block">
+            <strong>
+                98%
+            </strong>
+            Client Satisfaction
+        </div>
+    </div>
+   </div>
+
+   <div class="bottom-space-gap">
+    <app-sector-category-sector [category]="8" [page]="'sector'"></app-sector-category-sector>
+</div>
+
+<div class="global-mb container">
+    <div class="heading">
+        <div class="title">
+            Global Implementation Areas
+        </div>
+        <div class="subTitle">
+            Our engineering solutions are implemented across major regions worldwide
+        </div>
+    </div>
+    <div class="implementation-area">
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/usa.svg" alt="" width="48" height="48">
+            </figure>
+            <h3>
+                USA
+            </h3>
+            <div class="location">
+                Data Centers & Industrial
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/eu.svg" alt="" width="48" height="48">
+            </figure>
+            <h3>
+                EU
+            </h3>
+            <div class="location">
+                Infrastructure & Commercial
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/middle-east.svg" alt="" width="48" height="48">
+            </figure>
+            <h3>
+                Middle East
+            </h3>
+            <div class="location">
+                High-Rise & Retail
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/uk.png" alt="" width="48" height="48">
+            </figure>
+            <h3>
+                UK
+            </h3>
+            <div class="location">
+                Healthcare & Education
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/australia.svg" alt="" width="48" height="48">
+            </figure>
+            <h3>
+                Australia
+            </h3>
+            <div class="location">
+                Mining & Industrial
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/india.png" alt="" width="48" height="48">
+            </figure>
+            <h3>
+                India
+            </h3>
+            <div class="location">
+                IT Parks & Residential
+            </div>
+        </div>
+    </div>
+
+    <div class="list-type-wrapper">
+        <div class="block">
+            <h5>
+                Global Standards
+            </h5>
+            <ul class="list">
+                <li>
+                    ISO 9001:2015 Certified 
+                </li>
+                <li>
+                    International Building Codes
+                </li>
+                <li>
+                    Regional Compliance
+                </li>
+            </ul>
+        </div>
+        <div class="block">
+            <h5>
+                Project Types
+            </h5>
+            <ul class="list">
+                <li>
+                    Commercial & Industrial
+                </li>
+                <li>
+                    Infrastructure Development
+                </li>
+                <li>
+                    Residential Complexes
+                </li>
+            </ul>
+        </div>
+        <div class="block">
+            <h5>
+                Service Coverage
+            </h5>
+            <ul class="list">
+                <li>
+                    24/7 Support
+                </li>
+                <li>
+                    Multi-timezone Operations
+                </li>
+                <li>
+                    Local Expert Teams
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+      <!-- <div class="child-pb-none">
+          <app-sector-meeting-standards></app-sector-meeting-standards>
+      </div>
+     <app-hd-integrations></app-hd-integrations>
+    <div class="bottom-space-big">
+        <app-dc-europe></app-dc-europe>
+    </div> -->
+    <div class="global-mb container">
+        <div class="heading">
+            <div class="title">
+                Success Stories
+            </div>
+            <div class="subTitle">
+                Hear from our clients about their experience working with BuildTwin vendors
+            </div>
+        </div>
+        <div class="success-story">
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="" width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name">Robert Johnson</span>
+                        <span class="position">
+                            Project Manager, GBC Engineering
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    "BuildTwin's vendor network helped us complete our data center project ahead of schedule. The quality of work and communication was exceptional."
+                </p>
+                <div class="location">
+                    Data Center Project, USA
+                </div>
+            </div>
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="" width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name">Robert Johnson</span>
+                        <span class="position">
+                            Project Manager, GBC Engineering
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    "BuildTwin's vendor network helped us complete our data center project ahead of schedule. The quality of work and communication was exceptional."
+                </p>
+                <div class="location">
+                    Data Center Project, USA
+                </div>
+            </div>
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="" width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name">Robert Johnson</span>
+                        <span class="position">
+                            Project Manager, GBC Engineering
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    "BuildTwin's vendor network helped us complete our data center project ahead of schedule. The quality of work and communication was exceptional."
+                </p>
+                <div class="location">
+                    Data Center Project, USA
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-faq-buildtwin-sector [fullScreen]="true"></app-faq-buildtwin-sector>
+    <div class="container">
+        <div class="bt-flex form-wrap">
+            <div class="flex-grow-1">
+        <h2>
+            Ready to Start Your Engineering Project?
+        </h2>
+        <p>
+            Connect with our pre-qualified vendors and get your project started today. Our experts are ready to assist you.
+        </p>
+        <ul class="list">
+            <li>
+                <h5>
+                    Verified Vendors
+                </h5>
+                <span>
+                    Access to pre-qualified engineering teams
+                </span>
+            </li>
+            <li>
+                <h5>
+                    Dedicated Support
+                </h5>
+                <span>
+                    24/7 project management assistance
+                </span>
+            </li>
+            <li>
+                <h5>
+                    Secure Platform
+                </h5>
+                <span>
+                    Protected data and communication channels
+                </span>
+            </li>
+        </ul>
+        <div class="logo-wrapper">
+            <div class="block">
+                <img src="assets/images/qualityBuildtwin.png" alt="Quality Badge" width="54" height="48" loading="lazy">
+            </div>
+            <div class="block">
+                <img src="assets/images/trustedBy-gbc.jpg" alt="Partner Logo" width="78" height="48" loading="lazy">
+            </div>
+            <div class="block">
+                <img src="assets/images/trustedBy-caldim.jpg" alt="Partner Logo" width="114" height="48" loading="lazy">
+            </div>
+        </div>
+            </div>
+        <div class="flex-grow-1">
+        <app-free-offer-form [page]="'sector'"></app-free-offer-form>
+        </div>
+        </div>
+    </div>
+    <!-- <div class="bottom-space-big">
+        <app-drawing-freelancers></app-drawing-freelancers>
+    </div> -->
+    <!-- <app-get-started></app-get-started> -->
+    <app-hd-footer></app-hd-footer>
+    <!-- <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle,'active': AvailableServicesToggle}"
+        (mouseover)="AvailableServicesToggleStatusHover()"
+        (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
+        <div class="toggle" [ngClass]="{'active':AvailableServicesToggle}"
+            (click)="AvailableServicesToggleStatus(); $event.stopPropagation()">
+
+        </div>
+        <h3>
+            Available Service for Direct Booking
+            <small>
+                Unlock the BuildTwin advantage
+            </small>
+        </h3>
+        <div class="flex bg-sticky" *ngIf="AvailableServicesToggle">
+        </div>
+    </div> -->
+</div>

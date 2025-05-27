@@ -38,6 +38,13 @@ export class SocialsMediaInfoComponent {
 			}
 		}
     }
+	showPopup=false;
 	constructor(public _languageService:LanguageService) { }
 
+	call(){
+		this.showPopup =true
+		}
+		closePopupStatus($event) {
+		  this.showPopup = false;
+		}
 }

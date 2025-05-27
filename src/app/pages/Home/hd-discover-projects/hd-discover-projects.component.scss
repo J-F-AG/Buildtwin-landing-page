@@ -1,184 +1,489 @@
 
-  //discoverProjects
+.item111:not(.ng-star-inserted) {
+  display: none;
+}
+//   //discoverProjects
   
-  .discoverProjectsSection ::ng-deep {
-    .slick-list, .slick-slide, .slick-track, .slick-slide {
-      // max-height: 600px;
-    }
+//   .discoverProjectsSection ::ng-deep {
+//     .slick-list, .slick-slide, .slick-track, .slick-slide {
+//       // max-height: 600px;
+//     }
+//   }
+//   .discoverProjectsSection {
+//     padding: 82px 0 65px;
+//     background: var(--assistantBackgroundColor-global);
+  
+//     .sectionHeader {
+//       display: flex;
+//       align-items: flex-start;
+//       margin-bottom: 35px;
+//       .icon {
+//         padding-top: 0;
+//       }
+//       .title {
+//         font-size: 40px;
+//         font-family: var(--semibold-global);
+//       }
+//       .subTitle {
+//         display: block;
+//         font-size: 16px;
+//       }
+//       .subTile {
+//         margin: 5px 0;
+//         font-size: 14px;
+//         font-weight: 400;
+//       }
+//     }
+//     .sectionContent { 
+//       height: 550px;
+//       overflow: hidden;
+//       .cardContainer {
+//         display: flex;
+//         // gap: 23px;
+//         justify-content: space-between;
+//         position: relative;
+  
+//         .leftslideButton {
+//           position: absolute;
+//           top: 95px;
+//           left: -15px;
+//           transform: rotate(180deg);
+//           cursor: pointer;
+//           z-index: 1;
+//         }
+//         .rightslideButton {
+//           position: absolute;
+//           top: 95px;
+//           right: -15px;
+//           cursor: pointer;
+//         }
+//       }
+//       .projectCard {
+//         width: 312px;
+//         min-width: 312px;
+//         margin-right: 16px;
+//         background: #ffffff;
+//         border-radius: 7px;
+//         box-shadow: 0px 12.022px 17.174px 0px rgba(44, 44, 44, 0.06);
+//       }
+//       .projectImage {
+//         width: 100%;
+//         border-top-left-radius: 7px;
+//         border-top-right-radius: 7px;
+//       }
+//       .projectHighlight {
+//         padding: 9px 16px;
+//         position: relative;
+//         bottom: 30px;
+//         width: calc(100% - 24px);
+//         margin: 0 auto;
+//         border-radius: 6px;
+//         background: #fff;
+//         box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.05);
+//         img {
+//           height: 14px;
+//           width: 14px;
+//         }
+//         .projectCategory {
+//           font-weight: 400;
+//           font-size: 14px;
+//           color: #0053fa;
+//         }
+//         .projectName {
+//           font-family: var(--semibold-global);
+//           font-size: 18px;
+//         }
+//         .company {
+//           display: flex;
+//           font-weight: 400;
+//           font-size: 14px;
+//           margin-top: 7px;
+//           align-items: center;
+//           gap: 5px;
+//         }
+//         .companyIcon {
+//           margin-top: -4px;
+//           margin-left: -8px;
+//         }
+//       }
+//       .serviceCompanyDetails {
+//         display: flex;
+//         flex-direction: column;
+//         row-gap: 18px;
+//         padding: 10px 16px;
+//         .serviceCompany {
+//           display: flex;
+//           justify-content: flex-start;
+//           column-gap: 10px;
+//           align-items: center;
+//           .companyIcon {
+//             height: 30px;
+//             width: 57px;
+//             align-self: flex-start;
+//           }
+//           .companyName {
+//             font-family: var(--medium-global);
+//             font-size: 18px;
+//           }
+//         }
+//         .companyDetails {
+//           .title {
+//             font-family: var(--medium-global);
+//             font-size: 14px;
+//             color: #6E6E6E;
+//           }
+//           .service {
+//             font-weight: 400;
+//             font-size: 14px;
+//           }
+//         }
+//         .cardFooter {
+//           border-radius: 6px;
+//           background: #f8f6ff;
+//           padding: 12px;
+//           color: #0053fa;
+//           font-family: var(--semibold-global);
+//           font-size: 14px;
+//           display: flex;
+//           justify-content: space-between;
+//           a{color: var(--color-theme)}
+//         }
+//       }
+//     }
+//   }
+  
+
+// @media only screen and (max-width : 767px) {
+//   .discoverProjectsSection {
+//     padding: 60px 0;
+
+//     .sectionHeader {
+//       .title {
+//         font-size: 35px;
+//         margin-bottom: 10px;
+//       }
+//     }
+
+//     .sectionContent {
+//       .projectCard {
+//         width: 100%;
+//         min-width: 100%;
+//         margin-right: 15px;
+//       }
+
+//       .cardContainer {
+//         .leftslideButton {
+//           top: 100px;
+//           left: -12px;
+//         }
+        
+//         .rightslideButton {
+//           right: -12px;
+//           top: 100px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.project-providers {
+  padding: 0 0 0 100px;
+  gap: 40px;
+  opacity: 0px;
+  position: relative;
+  .heading {
+    
   }
-  .discoverProjectsSection {
-    padding: 82px 0 65px;
-    background: var(--assistantBackgroundColor-global);
-  
-    .sectionHeader {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 35px;
-      .icon {
-        padding-top: 0;
-      }
-      .title {
-        font-size: 40px;
-        font-family: var(--semibold-global);
-      }
-      .subTitle {
-        display: block;
-        font-size: 16px;
-      }
-      .subTile {
-        margin: 5px 0;
-        font-size: 14px;
-        font-weight: 400;
-      }
-    }
-    .sectionContent { 
-      height: 550px;
-      overflow: hidden;
-      .cardContainer {
+  .col-gap {
+    column-gap: 30px;
+  }
+  .factories {
+    display: grid;
+    row-gap: 40px;
+    padding: 0 0 0;
+    .factory-box {
+      width: 100%;
+      height: auto;
+      padding: 8px;
+      gap: 12px;
+      border-radius: 12px;
+      border: 1px;
+      opacity: 0px;
+      background: linear-gradient(180deg, #ffffff 0%, #f4f6fa 100%);
+      border: 1px solid #e9e9e9;
+      .bg-image {
+        // background-image: url(../../../../assets/images/home/Telsa.png);
+        background-size: cover;
+        width: 50%;
+        height: 214px;
+        gap: 0px;
+        border-radius: 8px;
         display: flex;
-        // gap: 23px;
-        justify-content: space-between;
+        align-items: flex-start;
+        justify-content: flex-start;
         position: relative;
-  
-        .leftslideButton {
-          position: absolute;
-          top: 95px;
-          left: -15px;
-          transform: rotate(180deg);
-          cursor: pointer;
-          z-index: 1;
-        }
-        .rightslideButton {
-          position: absolute;
-          top: 95px;
-          right: -15px;
-          cursor: pointer;
-        }
-      }
-      .projectCard {
-        width: 312px;
-        min-width: 312px;
-        margin-right: 16px;
-        background: #ffffff;
-        border-radius: 7px;
-        box-shadow: 0px 12.022px 17.174px 0px rgba(44, 44, 44, 0.06);
-      }
-      .projectImage {
-        width: 100%;
-        border-top-left-radius: 7px;
-        border-top-right-radius: 7px;
-      }
-      .projectHighlight {
-        padding: 9px 16px;
-        position: relative;
-        bottom: 30px;
-        width: calc(100% - 24px);
-        margin: 0 auto;
-        border-radius: 6px;
-        background: #fff;
-        box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.05);
-        img {
-          height: 14px;
-          width: 14px;
-        }
-        .projectCategory {
-          font-weight: 400;
-          font-size: 14px;
-          color: #886de0;
-        }
-        .projectName {
-          font-family: var(--semibold-global);
-          font-size: 18px;
-        }
-        .company {
-          display: flex;
-          font-weight: 400;
-          font-size: 14px;
-          margin-top: 7px;
-          align-items: center;
-          gap: 5px;
-        }
-        .companyIcon {
-          margin-top: -4px;
-          margin-left: -8px;
+        .country-bg {
+          padding: 2px 6px 2px 2px;
+          gap: 4px;
+          border-radius: 100px;
+          opacity: 0px;
+          background: #00000080;
+          backdrop-filter: blur(14px);
+          margin: 8px;
+          justify-self: start;
+          .owl-carousel .owl-item img {
+            width: auto !important;
+            display: inline !important;
+          }
+          .cntry-img{
+            vertical-align: sub;
+            margin-inline-end: 4px;
+            width: 18px !important;
+            height: 18px !important;
+            display: inline !important;
+          }
+          .cntry-txt{
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15.26px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #ffffff;            
+          }
         }
       }
-      .serviceCompanyDetails {
+      .factory-detail{
+        width: 50%;
         display: flex;
         flex-direction: column;
-        row-gap: 18px;
-        padding: 10px 16px;
-        .serviceCompany {
-          display: flex;
-          justify-content: flex-start;
-          column-gap: 10px;
+        padding: 10px 0;
+        position: relative;
+        .fact-title{
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 25.46px;
+          text-align: left;     
+          margin-bottom: -3px;  
+          & + span {
+            display: block;
+            margin-bottom: 5px;
+          }   
+        }
+        .fact-desc{
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 18px;
+          letter-spacing: 0.02em;
+          text-align: left;    
+          flex-grow: 1;      
+        }
+        .duration {
+          color: var(--lightColor);
+          display: block;
+          padding-bottom: 5px;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        .cmpny-logo{
+          gap: 4px;
+          display: inline-flex;
           align-items: center;
-          .companyIcon {
+          .logo-img{
+            border-radius: 100px;
+            overflow: hidden;
+            width: 40px;
             height: 30px;
-            width: 57px;
-            align-self: flex-start;
           }
-          .companyName {
-            font-family: var(--medium-global);
-            font-size: 18px;
+          .heading-slide{
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 15.28px;
+            letter-spacing: 0.02em;
+            text-align: left;       
+            color: #0053FA;     
+            margin-bottom: 0;
+            .heading-1{
+              font-size: 14.707px;
+              font-weight: 600;
+              line-height: 18.72px;
+              letter-spacing: 0.02em;
+              text-align: left;  
+              color: #002E3B;            
+            }
           }
-        }
-        .companyDetails {
-          .title {
-            font-family: var(--medium-global);
-            font-size: 14px;
-            color: #6E6E6E;
+          .arrow-vector{
+            width: auto !important;
+            margin-left: auto;
+            margin-right: 30px;
           }
-          .service {
-            font-weight: 400;
-            font-size: 14px;
-          }
-        }
-        .cardFooter {
-          border-radius: 6px;
-          background: #f8f6ff;
-          padding: 12px;
-          color: #886de0;
-          font-family: var(--semibold-global);
-          font-size: 14px;
-          display: flex;
-          justify-content: space-between;
-          a{color: var(--color-theme)}
         }
       }
     }
   }
   
+}
 
-@media only screen and (max-width : 767px) {
-  .discoverProjectsSection {
-    padding: 60px 0;
+.heading {
+  padding-right: 230px;
+}
+:host ::ng-deep .project-providers .owl-nav {
+  right: 100px;
+  top: -63px;
+  margin: 0;
+  left: auto;
+}
+@media only screen and (max-width : 1300px) {
+  
+}
+@media only screen and (max-width : 1200px) {
+  .project-providers {
+      padding-left: 30px;
+  }
+  :host ::ng-deep .project-providers .owl-nav {
+    right: 30px;
+  }
+}
 
-    .sectionHeader {
-      .title {
-        font-size: 35px;
-        margin-bottom: 10px;
+@media only screen and (max-width : 992px) {
+  .project-providers {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .heading {
+    padding-right: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .heading {
+    padding-right: 0;
+  }
+  .project-providers .factories {
+    padding: 0 0 40px;
+  }
+  :host ::ng-deep .project-providers .owl-nav {
+    padding: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+  }
+}
+@media (max-width: 520px) {
+  .project-providers {
+    padding: 0 40px 0;
+    gap: 40px;
+    opacity: 0px;
+    .heading {
+    }
+    .col-gap {
+      column-gap: 20px;
+    }
+    .factories {
+      display: grid;
+      row-gap: 20px;
+      padding: 0 0 30px;
+      .factory-box {
+        width: 100%;
+        height: 230px;
+        padding: 8px;
+        gap: 12px;
+        border-radius: 12px;
+        border: 1px;
+        opacity: 0px;
+        background: linear-gradient(180deg, #ffffff 0%, #f4f6fa 100%);
+        border: 1px solid #e9e9e9;
+        .bg-image {
+          // background-image: url(../../../../assets/images/home/Telsa.png);
+          background-size: cover;
+          width: 50%;
+          height: 214px;
+          gap: 0px;
+          border-radius: 8px;
+          .country-bg {
+            padding: 5px 10px 8px 6px;
+            gap: 4px;
+            border-radius: 100px;
+            opacity: 0px;
+            background: #00000080;
+            backdrop-filter: blur(14px);
+            margin: 10px;
+            justify-self: start;
+            .owl-carousel .owl-item img {
+              width: auto !important;
+              display: inline !important;
+            }
+            .cntry-img{
+              vertical-align: sub;
+              padding: 0 5px;
+              width: 18px !important;
+              height: 18px !important;
+              display: inline !important;
+            }
+            .cntry-txt{
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 15.26px;
+              letter-spacing: 0.02em;
+              text-align: left;
+              color: #ffffff;            
+            }
+          }
+        }
+        .factory-detail{
+          width: 50%;
+          display: grid;
+          padding: 10px 0;
+          .fact-title{
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 25.46px;
+            text-align: left;          
+          }
+          .fact-desc{
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            text-align: left;          
+          }
+          .cmpny-logo{
+            gap: 16px;
+            display: inline-flex;
+            align-items: center;
+            .logo-img{
+              border-radius: 100px;
+              width: 30px !important;
+              height: 30px !important;
+            }
+            .heading-slide{
+              font-size: 10px;
+              font-weight: 500;
+              line-height: 15.28px;
+              letter-spacing: 0.02em;
+              text-align: left;            
+              .heading-1{
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 18.72px;
+                letter-spacing: 0.02em;
+                text-align: left;              
+              }
+            }
+            .arrow-vector{
+              width: auto !important;
+            }
+          }
+        }
       }
     }
+    
+  }
+}
 
-    .sectionContent {
-      .projectCard {
-        width: 100%;
-        min-width: 100%;
-        margin-right: 15px;
-      }
-
-      .cardContainer {
-        .leftslideButton {
-          top: 100px;
-          left: -12px;
-        }
-        
-        .rightslideButton {
-          right: -12px;
-          top: 100px;
-        }
-      }
+@media only screen and (max-width: 576px) {
+  .project-providers {
+    padding-inline: 10px;
+    &__carousel {
+      margin-block-start: 30px;
     }
   }
 }

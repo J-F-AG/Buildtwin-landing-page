@@ -1,0 +1,105 @@
+.service-nav-bar {
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    padding-left: 250px;
+    strong {
+        font-weight: 600;
+    }
+    ul {
+        display: flex;
+        margin: 0;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 100%;
+            width: 100%;
+            height: 1px;
+            background-color: #0053fa;
+        }
+        li {
+            padding: 0 29px;
+            color: #5c6a72;
+            opacity: .5;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            cursor: pointer;
+            padding-top: 24px;
+            padding-bottom: 15px;
+            position: relative;
+            min-height: 63.2px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: #0053fa;
+                transition: all .3s ease;
+                width: 0;
+                transition: width 0.3s ease;
+                cursor: pointer;
+                display: block;
+            }
+            &.active {
+                opacity: 1;
+                gap: 5px;
+                cursor: pointer;
+                &::after {
+                    width: 100%;
+                }
+                strong {
+                    background: #0053fa;
+                    color: white;
+                    padding: 3px 9px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1199px){
+    .service-nav-bar {
+        padding-left: 200px;
+        ul {
+            li {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+@media (max-width:991px){
+    .service-nav-bar {
+        padding-left: 200px;
+        width: 100%;
+        ul {
+            overflow: auto;
+            &::before {
+                display: none;
+            }
+            li {
+                white-space: nowrap;
+            &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .heading
+        {
+            padding-right: 0;
+        }
+}
+@media (max-width:767px){
+    .service-nav-bar {
+        padding-left: 0;
+        left: 0;
+    }
+}

@@ -1,11 +1,22 @@
-.ptb-100 {
+.pt-100 {
     padding-top: 100px;
-    padding-bottom: 100px;
 }
+// .time-tracking-wrapper {
+//     background: url(../../../../../assets/images/layout.jpg) center top no-repeat;
+//     background-size: 100% auto;
+//     &>* {
+//         opacity: .5;
+//     }
+// }
 
-.coverPopupData {
-    position: relative;
-    height: 422px;
-    overflow: hidden;
-    width: 500px;
+.hover {
+    display: none;
+}
+a:hover {
+    .hover {
+        display: block;
+    }
+    .normal {
+        display: none;
+    }
 }

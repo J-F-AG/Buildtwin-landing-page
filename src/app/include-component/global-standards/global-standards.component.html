@@ -1,0 +1,42 @@
+<div class="container bg">
+    <div class="heading center v2">
+        <img 
+        class="centerimage"
+        src="assets/images/bt-logo2.png" 
+        srcset="assets/images/bt-logo2.png, assets/images/bt-logo2@2x.png 2x" 
+        width="250" 
+        height="152" 
+        alt="bt-logo2">
+        <h2 class="title">
+            BuildTwin extends your team –<br>
+by working with  <span>global standards</span>
+        </h2>
+        <div class="subTitle">
+            From building codes to industry-specific software and automation—we’ve got you covered.
+        </div>
+    </div>
+
+    <div class="list below-6 squareButtonWrapper top-right">
+        <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
+            <ng-template carouselSlide *ngFor="let item of carouselData">
+                <a class="block {{item.class}}" [routerLink]="[_languageService.currentLanguage + item.route]">
+                  <div>
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.description }}</p>
+                  </div>
+                  <figure>
+                    <picture>
+                        <source srcset="{{item.img}}.webp, {{item.img}}@2x.webp 2x" type="image/webp">
+                        <img 
+                            src="{{item.img}}.png" 
+                            srcset="{{item.img}}.png, {{item.img}}@2x.png 2x" 
+                            width="346" 
+                            height="346" 
+                            alt="{{item['alt']}}">
+                    </picture>
+                  </figure>
+                </a>
+              </ng-template>
+        </owl-carousel-o>
+    </div>
+</div>

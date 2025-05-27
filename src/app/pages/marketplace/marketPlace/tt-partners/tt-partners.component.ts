@@ -1,7 +1,10 @@
+import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { catchError, retry } from 'rxjs';
+import { GlobalService } from 'src/app/services/GlobalService';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -10,16 +13,36 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrls: ['./tt-partners.component.scss']
 })
 export class TtPartnersComponent {
+  @Input() page: string = ''; //sector
   companyList = [];
   showPageLoader = false;
-
-  constructor(private http: HttpClient, private router: Router, public _languageService:LanguageService) {
-    this.getListOfCompany()
-  }
-  getListOfCompany() {
+  paramsStatus = false;
+      isBrowser: boolean;
+        constructor( @Inject(PLATFORM_ID) private platformId: Object,private http: HttpClient, private router: Router, private route: ActivatedRoute, private globalService: GlobalService, public _languageService:LanguageService) {
+         // Extract status
+          this.isBrowser = isPlatformBrowser(this.platformId);
+         this.route.queryParams.subscribe(params => {
+          const status = params['status'];
+    
+          // Check if both parameters are available
+          if(this.isBrowser){
+            if (status === 'unpublished') {
+              this.paramsStatus = true;
+              this.getListOfCompany('Unpublished')
+            }else {
+              this.getListOfCompany()
+            }
+          }
+        });
+      }
+  getListOfCompany(type?) {
     this.showPageLoader = true;
     // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
-    this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies`)
+    let url = `https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies?status=Published`
+    if(type){
+      url = `https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies?status=${type}`
+    }
+    this.http.get(url)
     .pipe(
       catchError(err => {
         this.showPageLoader = false;
@@ -31,7 +54,9 @@ export class TtPartnersComponent {
       this.showPageLoader = false;
       if (res['data'] && res['data']['details'] && res['data']['details'].length) {
         res['data']['details'].forEach(d => {
-          d.office_location = JSON.parse(d.office_location);
+          if(typeof d.office_location === 'string'){
+            d.office_location = JSON.parse(d.office_location);
+          }
           if (d.service_types.length) {
             let str = '';
             if (d.service_types[0]) {
@@ -43,13 +68,61 @@ export class TtPartnersComponent {
             d.service_type_name = str;
           }
         })
-        this.companyList = res['data']['details'];
+        res['data']['details'].filter(res=>{
+          if (this._languageService.customMapping[res['company_name']]) {
+            res['route'] = this._languageService.customMapping[res['company_name']];
+            res['linking'] = this._languageService.customMapping[res['company_name']];
+          }else {
+            res['route'] = res['company_name'].replace(/ /g, '');
+            res['linking'] = res['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+            .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+            .toLowerCase();
+          }
+          this.companyList.push(res)
+        })
       }
     })
   }
 
   redirect(domain, company_name) {
     localStorage.setItem("domain", domain);
-    this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
+    // if(this.paramsStatus){
+    //   this.router.navigate(
+    //     [`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g, '')}`], 
+    //     { queryParams: { status: 'unpublished' } }
+    //   );
+    // }else {
+    //   this.router.navigate([`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g,'')}`]);
+    // }
+  }
+  customOptions: OwlOptions = {
+      loop: true,
+      margin: 0,
+      mouseDrag: false,
+      touchDrag: false,
+      pullDrag: false,
+      dots: false,
+      navSpeed: 700,
+      navText: ['', ''],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        400: {
+          items: 2
+        },
+        740: {
+          items: 3
+        },
+        1200: {
+          items: 4
+        }
+      },
+      nav: true
+    }
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.globalService.scroll()
+    }, 2000);
   }
 }

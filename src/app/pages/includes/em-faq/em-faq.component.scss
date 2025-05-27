@@ -29,7 +29,7 @@
     }
 }
 .faq-accordion {
-    padding-left: 160px;
+    padding-right: 30px;
 
     .mat-accordion {
         .mat-expansion-panel {
@@ -137,7 +137,7 @@
         }
     }
     .faq-accordion {
-        padding-left: 0;
+        padding-right: 0;
     
         .mat-accordion {
             .mat-expansion-panel {
@@ -196,7 +196,7 @@
         }
     }
     .faq-accordion {
-        padding-left: 0;
+        padding-right: 0;
     
         .mat-accordion {
             .mat-expansion-panel {
@@ -248,7 +248,7 @@
         }
     }
     .faq-accordion {
-        padding-left: 0;
+        padding-right: 0;
     
         .mat-accordion {
             .mat-expansion-panel {
@@ -316,8 +316,8 @@
             }
         }
     }
-    .faq-accordion {
-        padding-left: 50px;
-    }
+    // .faq-accordion {
+    //     padding-left: 50px;
+    // }
 
 }

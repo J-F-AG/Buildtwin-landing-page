@@ -1,7 +1,9 @@
+.testimonial-slides__profile111:not(.ng-star-inserted) {
+  display: none!important;
+}
 .testimonial-container {
-    width: 100%;
-    margin-top: 80px;
-    text-align: center;
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
   }
 
   .testimonial-title {
@@ -22,11 +24,150 @@
     font-size: 16px;
   }
 
+.main-head {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 24px;
+}
+
+
+
+.align-self-end {
+  align-self: end;
+  margin-bottom: 40px;
+}
+.testimonial-slides {
+  border-radius: 0 12px 12px 12px;
+  border: 1px solid #0053FA;
+  background: #FFF;
+  .testimonial-slides__profile {
+    display: flex;
+    gap: 15px;
+    figure {
+      min-width: 465px;
+      max-width: 465px;
+      position: relative;
+      border-radius: 0 0 0 12px;
+      overflow: hidden;
+      margin: 0;
+      .abs {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 70%;
+        transform: translateY(-26%) translateX(20%);
+      }
+    }
+    .testimonial-slides__profile--user {
+      flex-grow: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .testimonial-slides__profile--user--footer--name {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 1px;
+    }
+    .testimonial-slides__profile--user--footer--org {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--lightTextColor);
+      margin-bottom: 9px;
+    }
+    .testimonial-slides__profile--user--description {
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 40px;
+      line-height: 1.3;
+    }
+  }
+  ::ng-deep {
+    
+      .owl-nav {
+          position: absolute;
+          right: 92px;
+          top: -52px;
+          margin: 0;
+          padding: 20px;
+          background: white;
+          display: flex;
+          gap: 14px;
+      }
+      .owl-prev {
+          position: relative;
+          width: 48px;
+          height: 48px;
+          border-radius: 8px;
+          background: rgba(0, 0, 0, 0.10);
+          backdrop-filter: blur(5px);
+          font-size: 0;
+          &::after {
+              top: 50%;
+              content: "";
+              position: absolute;
+              left: 50%;
+              width: 15px;
+              height: 15px;
+              margin-left: 5px;
+              border-top: 2.5px solid #002E3B;
+              border-right: 2.5px solid #002E3B;
+              transform: translate(-50%, -50%) rotate(-135deg);
+          }
+      }
+      .owl-next {
+          position: relative;
+          width: 48px;
+          height: 48px;
+          border-radius: 8px;
+          background: rgba(0, 0, 0, 0.10);
+          backdrop-filter: blur(5px);
+          font-size: 0;
+          &::after {
+              top: 50%;
+              content: "";
+              position: absolute;
+              left: 50%;
+              width: 15px;
+              height: 15px;
+              margin-left: -5px;
+              border-top: 2.5px solid #002E3B;
+              border-right: 2.5px solid #002E3B;
+              transform: translate(-50%, -50%) rotate(45deg);
+          }
+      }
+      .owl-dots {
+          display: inline-flex;
+          height: 6px;
+          margin-top: 0;
+          position: absolute;
+          right: 30px;
+          bottom: 29px;
+          gap: 10px;
+      }
+      .owl-theme .owl-dots .owl-dot span {
+          display: none;
+      }
+      .owl-theme .owl-dots .owl-dot {
+          width: 16px;
+          height: 6px;
+          border-radius: 100px;
+          display: block;
+          background: #E4EAF5;
+          &.active {
+              width: 40px;
+              background: #0053fa;
+          }
+      }
+  }
+}
 
 
 .partnerWrap{
     width: 100%;
-height: 128px;
+// height: 128px;
 flex-shrink: 0;
 background: #FFF;
 
@@ -40,7 +181,7 @@ ul.partner li {
     list-style: none;
     gap: 71px;
     justify-content: center;
-    margin: 44px 0;
+    margin: 0 0 0;
 }
 
 .profile-card {
@@ -129,23 +270,24 @@ ul.partner li {
 }
 
 
+@media only screen and (max-width : 1200px) {
+  .testimonial-container {
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+}
 @media (max-width: 991px) {
     .testimonial-title {
       max-width: 100%;
     }
-  }
-  @media (max-width: 991px) {
     .testimonial-text {
       max-width: 100%;
     }
-  }
-
-  @media (max-width:1200px){
     .testimonial-container {
-      margin-top: 50px;
-  
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
-}
   @media (max-width: 767px) {
     .colWrapper {
         flex-direction: column;
@@ -156,7 +298,7 @@ ul.partner li {
         list-style: none;
         gap: 10px;
         justify-content: center;
-        margin: 44px 0;
+        margin: 0 0 0;
         flex-wrap: wrap;
         padding: 0;
     }
@@ -169,13 +311,58 @@ ul.partner li {
     height: auto;
 }
 
-.testimonial-container {
-  padding: 0 20px;
+// .testimonial-container {
+//   padding: 0 20px;
 
-  p {
-    br {
-      display: none;
+//   p {
+//     br {
+//       display: none;
+//     }
+//   }
+// }
+.testimonial-slides .testimonial-slides__profile {
+  flex-direction: column;
+}
+.testimonial-slides .testimonial-slides__profile .testimonial-slides__profile--user {
+  padding: 20px;
+}
+  }
+  @media only screen and (max-width : 767px) {
+    .testimonial-slides ::ng-deep .owl-nav {
+      position: absolute;
+      right: 50%;
+      top: -40px;
+      margin: 0;
+      padding: 4px 14px;
+      background: white;
+      display: flex;
+      gap: 14px;
+      transform: translateX(50%);
     }
   }
-}
+
+  @media only screen and (max-width: 576px){
+    .container {
+      width: 100%;
+    }
+    .main-head{
+      grid-template-columns: unset;
+    }
+
+    .testimonial-slides {
+      &__profile {
+        grid-template-columns: 1fr;
+        &--image {
+          // height: 300px;
+          // width: 300px;
+          // border-radius: 50%;
+        }
+        &--user {
+          margin-block-start: 20px;
+          &--description{
+            padding: 10px 0;
+          }
+        }
+      }
+    }
   }

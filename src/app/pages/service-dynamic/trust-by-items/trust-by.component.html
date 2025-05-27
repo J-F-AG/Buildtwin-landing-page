@@ -1,0 +1,27 @@
+<div class="trustedByWrapper">
+    <div class="container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+        <div>
+            <div class="heading" *ngIf="heading">
+                <h2 class="title">Trusted by over 100s</h2>
+                <div class="subTitle">of structural professionals across the globe</div>
+            </div>
+            <div>
+                <ng-content select=".heading-import"></ng-content>
+            </div>
+
+            <!-- <div class="trustedBrands">
+                    <a *ngFor="let item of slider; let i = index"
+                        [routerLink]="_languageService.currentLanguage+item.routerLink"
+                        [id]="'partner-' + item.id"
+                    >
+                        <img src="{{item['icon']}}" width="{{item['width']}}" height="{{item['height']}}" alt="{{ item.name }}">
+                    </a>  
+            </div> -->
+            <div class="trustedBrands">
+                <a *ngFor="let item of slider; let i = index" [id]="item.id">
+                    <img src="{{item['icon']}}" width="{{item['width']}}" height="{{item['height']}}" alt="{{ item.name }}" [routerLink]="_languageService.currentLanguage + '/' + item.company_page_url">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

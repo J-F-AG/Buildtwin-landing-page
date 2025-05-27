@@ -1,99 +1,137 @@
 <app-hd-navbar></app-hd-navbar>
 
 <!-- Page Title -->
-<div class="page-title-area position-relative z-1">
-    <div class="container">
-        <div class="page-title-content text-center" data-aos="fade-up" data-aos-duration="500">
-            <ul class="ps-0 mt-0 font-syne fw-semibold list-unstyled">
-            </ul>
-            <h1 class="mb-0 ms-auto me-auto">
-                BuildTwin Contact
-            </h1>
-        </div>
-    </div>
-    <div class="pt-shape1 position-absolute z-n1 pe-none">
-        <img src="assets/images/shapes/shape1.png" alt="shape1">
-    </div>
-    <div class="pt-shape2 position-absolute z-n1 pe-none">
-        <img src="assets/images/shapes/shape27.png" alt="shape27">
-    </div>
-</div>
-<!-- End Page Title -->
+    <div class="container bg">
+        <div class="two-col-contact">
+            <div class="left">
+                <div class="heading" data-aos="fade-up" data-aos-duration="500">
+                    <h1 class="title">
+                        Need Assistance?
+                    </h1>
+                    <span class="small-title">
+                        Email or complete the form to learn how Buildtwin can solve your problem.
+                    </span>
+                </div>
+                <a href="mailto:hello&#64;buildtwin.com" class="mailId">
+                    <strong>
+                        hello&#64;buildtwin.com
+                    </strong>
+                </a>
 
-<!-- Contact Info -->
-<div class="contact-info-area pt-100 pb-75">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-xl-3 col-sm-6" data-aos="fade-up" data-aos-duration="500">
-                <div class="contact-info-box">
-                    <!-- <div class="text-end number font-syne fw-bold">
-                        1
-                    </div> -->
-                    <span class="sub-title d-block">
-                        BuildTwin Germany
-                        <br><br>Johannesstrasse 17
-                        <br>35390 Giessen
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                <div class="contact-info-box">
-                    <!-- <div class="text-end number font-syne fw-bold">
-                        2
-                    </div> -->
-                    <span class="sub-title d-block">
-                       Locations: 
-                       <br>BuildTwin India 
-                       <br>BuildTwin AUS 
-                       <br>BuildTwin US 
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-3 col-sm-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                <div class="contact-info-box">
-                    <!-- <div class="text-end number font-syne fw-bold">
-                        3
-                    </div> -->
-                    <span class="sub-title d-block">
-                        EMAIL
-                    </span>
-                    <div class="info">
-                        <a href="mailto:hello&#64;buildtwin.com" class="d-block font-syne fw-semibold">
-                            hello&#64;buildtwin.com
-                        </a>
+                 <div class="block-x">
+                    <div class="block-single">
+                        <h6>
+                            Customer Support
+                        </h6>
+                        <p>
+                            Our support team is available around the clock to address any concerns or queries you may have.
+                        </p>
                     </div>
-                </div>
+                    <div class="block-single">
+                        <h6>
+                            Feedback and Suggestions
+                        </h6>
+                        <p>
+                            We value your feedback and are continuously working to improve Buildtwin. Your input is crucial in shaping the future of Buildtwin.
+                        </p>
+                    </div>
+                    <div class="block-single">
+                        <h6>
+                            Media Inquiries
+                        </h6>
+                        <p>
+                            For media-related questions or press inquiries, please contact us at
+                            <a href="mailto:hello&#64;buildtwin.com">
+                                <strong>hello&#64;buildtwin.com</strong>
+                            </a>
+                        </p>
+                    </div>
+                 </div>
+
+                 <div class="block-x">
+                    <!-- <div class="block-single">
+                        <strong>Locations:</strong><br>
+                        <span>
+                            BuildTwin India
+                        </span><br>
+                        <span>
+                            BuildTwin AUS
+                        </span><br>
+                        <span>
+                            BuildTwin US 
+                        </span>
+                    </div> -->
+                    <div class="block-single">
+                        <h6>
+                            Address
+                        </h6>
+                        <p>BuildTwin Germany<br>
+                            Johannesstrasse 17<br>
+                            35390 Giessen
+                        </p>
+                    </div>
+                 </div>
             </div>
-            <!-- <div class="col-lg-4 col-xl-3 col-sm-6" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                <div class="contact-info-box">
-                    <div class="text-end number font-syne fw-bold">
-                        4
+            <div class="right">
+                <form [formGroup]="portfolioForm" (ngSubmit)="onSubmit()">
+                    <h3>
+                        Contact Buildtwin
+                    </h3>
+                    <div class="form-group">
+                        <!-- <label>
+                            Email <i>*</i>
+                        </label> -->
+                        <input type="text" formControlName="E-mail" placeholder="Email">
                     </div>
-                    <span class="sub-title d-block">
-                        SOCIAL MEDIA
-                    </span>
-                    <div class="info">
-                        <div class="socials font-syne">
-                            <a href="#" class="d-inline-block fw-semibold" target="_blank" matTooltip="Facebook" matTooltipPosition="above">
-                                fb
-                            </a>
-                            <a href="#" class="d-inline-block fw-semibold" target="_blank" matTooltip="Twitter" matTooltipPosition="above">
-                                tw
-                            </a>
-                            <a href="#" class="d-inline-block fw-semibold" target="_blank" matTooltip="Linkedin" matTooltipPosition="above">
-                                ln
-                            </a>
-                            <a href="#" class="d-inline-block fw-semibold" target="_blank" matTooltip="Instagram" matTooltipPosition="above">
-                                in
-                            </a>
-                        </div>
+                    <div class="form-group">
+                        <!-- <label>
+                            Name
+                        </label> -->
+                        <input type="text" formControlName="Name" placeholder="Name">
                     </div>
-                </div>
-            </div> -->
+                    <div class="form-group">
+                        <!-- <label>
+                            Mobile/Phone
+                        </label> -->
+                        <input type="text" formControlName="Telephone" placeholder="Mobile/Phone">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label>
+                            Message
+                        </label> -->
+                        <textarea formControlName="Message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form-group quearyList">
+                        <strong>
+                            I have query related to…
+                        </strong>
+                        <ul>
+                            <li *ngFor="let item of queryForList">
+                              <label class="radio">
+                                <input type="radio" [value]="item['value']" formControlName="queryFor" (change)="onChange($event, item['value'])" 
+                                       [ngClass]="{'not-valid': !portfolioForm.controls['queryFor'].value}">
+                                <span></span>
+                                {{item['text']}}
+                              </label>
+                            </li>
+                          </ul>
+                    </div>
+                    <!-- <div class="flex-justify-center"> -->
+                        <button class="button-v2 contact_page_form_submit_btn" [ngClass]="{'no-click':!notAllow}">
+                            Submit
+                        </button>
+                    <!-- </div> -->
+                     <div class="note">
+                        By Signing up, you agree with the
+                        <a routerLink="{{_languageService.currentLanguage}}/terms-of-service">Terms of Service</a>
+ and 
+ <a routerLink="{{_languageService.currentLanguage}}/privacy-policy">Privacy Policy</a>
+                     </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<!-- End Contact Info -->
+
 
 
 <app-hd-footer></app-hd-footer>

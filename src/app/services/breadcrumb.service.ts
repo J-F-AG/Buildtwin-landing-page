@@ -15,12 +15,12 @@ export class BreadcrumbService {
         this.breadcrumbs = [];
         const paths: any = url.split('/').filter(path => path);
         let language = '';
-        if (paths.length) {
-            if (paths[0] === 'de') {
-                paths.shift()
-                language = '/de';
-            }
-        }
+        // if (paths.length) {
+        //     if (paths[0] === 'de') {
+        //         paths.shift()
+        //         language = '/de';
+        //     }
+        // }
 
         if (!paths.length) {
             this.breadcrumbs.push({
@@ -42,7 +42,7 @@ export class BreadcrumbService {
                 "@type": "ListItem",
                 "position": 2,
                 "name": this.getDisplayName(paths),
-                "item": `https://www.buildtwin.com${url}`
+                "item": `https://www.buildtwin.com${paths.includes('partners')?url.toLowerCase():url}`
             });
         }
         // paths.forEach((path, index) => {
@@ -61,10 +61,8 @@ export class BreadcrumbService {
             'explore-services': 'Explore Services',
             'provide-service': 'Provide Service',
             'marketplace': 'Marketplace',
-            'partners/J&FIndia': 'J&F India',
-            'engineering-services/services': 'Engineering Services - Services',
-            'engineering-services/sector': 'Engineering Services - Sector',
-            'AI-project-management': 'AI Project Management',
+            'partners/j-f-india': 'J&F India',
+            'ai-project-management': 'AI Project Management',
             'business-intelligence': 'Business Intelligence',
             'training': 'Training',
             'pricing': 'Pricing',
@@ -82,6 +80,14 @@ export class BreadcrumbService {
             'services': 'Services',
             // 'servicesNew': 'Services New'
         };
-        return names[path] || path;
+        let pathUpdated = path;
+        if (Array.isArray(path) && path[0] === 'partners') {
+            // Update all elements in the array to lowercase
+            for (let i = 0; i < path.length; i++) {
+              path[i] = path[i].toLowerCase();
+            }
+            pathUpdated = path
+        }
+        return names[path] || pathUpdated;
     }
 }

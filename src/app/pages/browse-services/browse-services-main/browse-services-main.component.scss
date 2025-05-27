@@ -1,967 +1,183 @@
+
 .componentWrapper {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
-    background: #fafafa;
+    // row-gap: 30px;
+    // background: #fafafa;
   }
-  
-  //header
-  .headerSection {
-    padding: 73px 40px 30px;
-    background: linear-gradient(82deg, #FBFAFF -3.26%, #F5F4FF 121.32%);
-    box-shadow: 0px 0px 9px 0px rgba(208, 208, 208, 0.12);
+  figure {
+    margin: 0;
   }
-  //help
-  .helpSection {
-    padding: 0 24px;
-    background: none;
-    .sectionHeader {
-      display: flex;
-      align-items: flex-start;
-      .icon {
-        padding-top: 0;
-      }
-      .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
-      }
-      .subTile {
-        margin: 5px 0;
-        font-size: 14px;
-        font-weight: 400;
-      }
-    }
-    .sectionContent {
-      width: 100%;
-      padding: 20px;
-      .helpGridContainer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        height: 100%;
-        width: 100%;
-        gap: 10px;
-      }
-  
-      .column {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .row {
-        img {
-          width: 100%;
-        }
-      }
-      .gridItemWrapper {
-        position: relative;
-        .helpDetails {
-          text-align: center;
-          background: #fff;
-          padding: 14px 24px;
-          position: absolute;
-          left: 12px;
-          right: 12px;
-          margin: auto;
-          bottom: 10px;
-          border-radius: 7px;
-          .header {
-            font-size: 20px;
-            font-family: var(--semibold-global);
-          }
-          .details {
-            margin: 5px 0;
-            font-size: 16px;
-            font-weight: 400;
-          }
-        }
-      }
-  
-      img {
-        width: 100%;
-        border-radius: 7px;
-      }
-    }
-    //global
-    .icon {
-      padding-top: 25px;
-    }
+  .containerWrap {
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
   }
-  //solution provider
-  .solutionProviderSection {
-    padding: 0 24px;
-    background: none;
-    .sectionHeader {
+  .banner-global {
+    margin-bottom: 42px;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    .banner-main {
       display: flex;
       align-items: center;
-      .icon {
-        padding-top: 25px;
-      }
-      .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
-      }
-      .subTile {
-        margin: 5px 0;
-        font-size: 14px;
-        font-weight: 400;
-      }
+      padding-top: 88px;
+      flex: 1;
     }
-    .sectionContent {
-      margin: 28px 20px 23px 20px;
-      width: 100%;
+    .banner-content {
+      flex-grow: 1;
+      // padding-top: 114px;
       display: flex;
-      gap: 10px;
-      .leftSection {
+      flex-direction: column;
+      gap: 39px;
+      h1 {
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        span {
+          background: #eff4f5;
+          border-radius: 4px;
+        }
+      }
+      p {
+        font-size: 18px;
+        opacity: .7;
+        line-height: 1.4;
+        margin-bottom: 27px;
+      }
+      .get-started-banner {
         display: flex;
-        flex-direction: column;
-        gap: 18px;
-        align-items: flex-start;
-        width: 30%;
-        padding: 25px;
-        border-radius: 7px;
-        background: #fff;
-        box-shadow: 0px 9px 36px 0px rgba(44, 44, 44, 0.04);
-        .bookService {
-          background: var(--background-white);
-          box-shadow: 0px 9px 36px 0px #2c2c2c0a;
-          border-radius: 8px;
-          padding: 22px 22px 40px;
-  
-          h2 {
-            font-size: 27px;
-            margin-bottom: 25px;
-          }
-  
-          .smallHeading {
-            font-family: var(--medium-global);
-            font-size: 13px;
-            display: block;
-            margin-bottom: 12px;
-          }
-        }
-  
-        .bookServiceForm {
-          gap: 30px;
-          padding-bottom: 12px;
-  
-          > div {
-            width: 50%;
-          }
-  
-          .groupField {
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 18px;
-  
-            > div {
-              width: 50%;
-            }
-          }
-        }
-  
-        .selectBox {
-          background: var(--assistantBackgroundColor-global);
-          border: 1px var(--border-color) solid;
-          border-radius: 6px;
-          position: relative;
-          width: 100%;
-          app-bt-select {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            opacity: 0;
-  
-            ::ng-deep {
-              .ant-select {
-                width: 100%;
-              }
-            }
-          }
-  
-          > div {
-            position: relative;
-  
-            &:after {
-              content: "";
-              border-right: 2px var(--color-theme) solid;
-              border-bottom: 2px var(--color-theme) solid;
-              width: 8px;
-              height: 8px;
-              position: absolute;
-              right: 13px;
-              top: 50%;
-              transform: rotate(45deg) translateY(-50%);
-              transform-origin: top right;
-            }
-          }
-  
-          &.countryField {
-            > div {
-              padding: 9px 20px 9px 7px;
-              gap: 8px;
-            }
-  
-            ::ng-deep {
-              .ant-select-single:not(.ant-select-customize-input)
-                .ant-select-selector {
-                height: 52px;
-              }
-            }
-  
-            small {
-              display: block;
-              font-family: var(--semibold-global);
-              font-size: 11px;
-            }
-          }
-  
-          &.precastField {
-            ::ng-deep {
-              .ant-select-single:not(.ant-select-customize-input)
-                .ant-select-selector {
-                height: 74px;
-              }
-            }
-          }
-  
-          &.precastField,
-          &.dateField {
-            > div {
-              padding: 9px 35px 8px 10px;
-              min-height: 74px;
-            }
-          }
-  
-          &.dateField {
-            > div {
-              &:after {
-                display: none;
-              }
-  
-              lib-svg-icon {
-                position: absolute;
-                right: 9px;
-                top: 50%;
-                transform: translateY(-50%);
-              }
-            }
-  
-            nz-date-picker {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              left: 0;
-              top: 0;
-              opacity: 0;
-            }
-          }
-  
-          .title {
-            display: block;
-            font-family: var(--semibold-global);
-            font-size: 13px;
-            color: var(--color-theme);
-          }
-  
-          .selectedValue {
-            display: flex;
-            font-size: var(--font-size-h6);
-            line-height: 1.2;
-            gap: 7px;
-  
-            &.day {
-              color: var(--color-theme);
-            }
-          }
-        }
-  
-        .preQualified {
-          font-family: var(--medium-global);
-          font-size: 13px;
-          position: relative;
-          gap: 10px;
-          cursor: pointer;
-  
-          span {
-            background: var(--color-theme);
-            border-radius: 4px;
-            position: relative;
-            width: 22px;
-            height: 22px;
-  
-            &:after {
-              content: "\2713";
-              font-size: 14px;
-              line-height: 1;
-              color: white;
-              position: absolute;
-              left: 6px;
-              top: 4px;
-              opacity: 0;
-              transition: all 0.5s ease;
-            }
-          }
-  
-          input {
-            width: 22px;
-            height: 22px;
-            position: absolute;
-            opacity: 0;
-            left: 0;
-            top: 0;
-  
-            &:checked {
-              + span {
-                &:after {
-                  opacity: 1;
-                }
-              }
-            }
-          }
-        }
-  
-        .timeFrame {
-          padding-top: 41px;
-        }
-  
-        .bookServiceFormBottom {
-          align-items: center;
-        }
-  
-        .projectStartIn {
-          > span {
-            margin-bottom: 15px;
-          }
-          ul {
-            margin: 0;
-            gap: 25px;
-          }
-  
-          li {
-            label {
-              display: flex;
-              align-items: center;
-              margin: 0;
-              gap: 7px;
-              position: relative;
-              cursor: pointer;
-  
-              input {
-                position: absolute;
-                left: 0;
-                top: 0;
-                opacity: 0;
-              }
-  
-              span {
-                background: #f9f8f6;
-                border: 0.55px solid var(--border-color);
-                border-radius: 50%;
-                width: 18px;
-                height: 18px;
-                position: relative;
-                transition: all 0.5s ease;
-  
-                &:after {
-                  content: "";
-                  background: var(--color-theme);
-                  border-radius: 50%;
-                  width: 9px;
-                  height: 9px;
-                  position: absolute;
-                  left: 50%;
-                  top: 50%;
-                  opacity: 0;
-                  transform: translate(-50%, -50%);
-                  transition: all 0.5s ease;
-                }
-              }
-  
-              input {
-                &:checked {
-                  + span {
-                    border-color: var(--color-theme);
-  
-                    &:after {
-                      opacity: 1;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-  
-        .tenderBtn {
-          background: var(--color-theme);
-          border-radius: 6px;
-          font-family: var(--medium-global);
-          font-size: 16px;
-          color: #fff;
-          width: 188px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 6px;
-          height: 45px;
-        }
-        .moreFilters {
-          margin: 30px 0 74px 0;
-          color: #886de0;
-          font-size: 16px;
-          text-decoration: underline;
-          &:hover {
-            text-decoration: none;
+        align-items: center;
+        gap: 6px;
+        input {
+          border: 1px solid #cbd6e2;
+          height: 47px;
+          padding: 16px;
+          font-size: 14px;
+          border-radius: 4px;
+          width: 295px;
+          &.ng-invalid.invalid.ng-touched {
+            border-color: red;
           }
         }
       }
-      .rightSection {
-        width: 70%;
-        > div {
-          display: flex;
-          border-radius: 7px;
-        }
-        .companyCriterias {
+      .banner-time {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        .banner-time-detail {
           display: flex;
           flex-direction: column;
-          background: linear-gradient(170deg, #9c7efd 0.97%, #886de0 97.09%);
-          color: #fff;
-          padding: 25px 25px 0px 25px;
-          width: 25%;
-          .company {
-            height: 84px;
-            font-family: var(--medium-global);
-            font-size: 16px;
-            align-items: flex-start;
-            display: flex;
-            align-items: center;
+          // gap: 10px;
+          font-size: 16px;
+          font-weight: 600;
+          .label {
+            display: block;
+            letter-spacing: .3px;
           }
-          .columnWrapper {
-            display: flex;
-            padding-top: 25px;
-            flex-direction: column;
-            align-items: center;
-            color: #fff;
-            width: 25%;
-          }
-          .companyWrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 84px;
-            font-family: var(--medium-global);
-            font-size: 16px;
-            align-items: center;
-          }
-          .company {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-          }
-          .companyImage {
-            width: 46px;
-            height: 30px;
-          }
-          .name {
-            font-family: var(--semibold-global);
-            font-size: 16px;
-            color: #000;
-          }
-          .companyLocation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f6f3ff;
-            width: 100%;
-            height: 84px;
-            font-family: var(--medium-global);
-            font-size: 16px;
-            align-items: center;
+          .time {
+            color: #0053fa;
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
           }
         }
       }
     }
-  }
-  //carousel
-  .specialProjectsSection {
-    padding: 0 24px;
-    background: none;
-    .sectionHeader {
-      display: flex;
-      align-items: center;
-      .icon {
-        padding-top: 25px;
-      }
-      .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
-      }
-      .subTile {
-        margin: 5px 0;
-        font-size: 14px;
-        font-weight: 400;
-      }
-    }
-  
-    .carousel {
-      margin: 10px 0 0;
-      position: relative;
-      width: 100%;
-      max-width: calc(100vw - 313px);
-      overflow: hidden;
-      padding: 22px 20px 14px;
-      // background: linear-gradient(
-      //   180deg,
-      //   #fafafa 28.14%,
-      //   rgba(250, 250, 250, 0) 100%
-      // );
-      ::ng-deep .owl-item {
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-      ::ng-deep owl-stage > div {
-        padding-top: 20px;
-      }
-      ::ng-deep .owl-carousel .owl-nav .owl-next,::ng-deep .owl-carousel .owl-nav .owl-prev {
-        width: 37px;
-        height: 37px;
-        position: absolute;
-        left: -12px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: white;
-        border-radius: 50%;
-        box-shadow: 0px 2.205px 12.64px rgba(0, 0, 0, 0.2);
-        &::after {
-          position: absolute;
-          left: 53%;
-          top: 50%;
-          transform: translate(-50%, -50%) rotate(135deg);
-          width: 10px;
-          height: 10px;
-          border-right: 2px solid #000;
-          border-bottom: 2px solid #000;
-          content: "";
-        }
-      }
-      ::ng-deep .owl-carousel .owl-nav .owl-next {
-        right: -12px;
-        left: auto;
-        &::after {
-          left: 45%;
-          transform: translate(-50%, -50%) rotate(-45deg);
-        }
-      }
-    }
-  
-    .carousel-wrapper {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      gap: 20px;
-    }
-  
-    .carousel-item {
-      position: relative;
-      min-width: 100%;
-      box-sizing: border-box;
-    }
-  
-    .carousel-item img {
-      width: 400px;
-      height: 500px;
-      display: block;
-    }
-  
-    .carousel-caption {
-      position: absolute;
-      top: 40px;
-      left: 50px;
-      color: black;
-      padding: 10px;
-    }
-  
-    .carousel-control {
-      position: absolute;
-      transform: translateY(-50%);
-      border: none;
-      color: white;
-      font-size: 2em;
-      cursor: pointer;
-      padding: 10px;
-      z-index: 1000;
-    }
-  
-    .carousel-control.prev {
-      left: 10px;
-      top: 134px;
-      transform: rotate(180deg);
-    }
-  
-    .carousel-control.next {
-      right: 10px;
-      top: 200px;
-    }
-  
-    .image-container {
-      position: relative;
-      flex: 1;
-      width: 192px;
-      // cursor: pointer;
+    .banner-image {
+      width: calc(49.84% + 35px);
+      min-width: calc(49.84% + 35px);
+      margin-right: -35px;
       figure {
-        border: 3.526px solid #FFF;
-        box-shadow: 0px 3.205px 25.64px rgba(0, 0, 0, 0.2);
-        margin-bottom: 14px;
-      }
-    }
-  
-    .image-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-  
-    .image-caption {
-      color: #000;
-      font-size: 16px;
-      font-style: normal;
-      font-family: var(--semibold-global);
-      line-height: 31.025px; /* 193.904% */
-      text-transform: uppercase;
-      text-align: center;
-    }
-  
-    .image-caption h3 {
-      margin: 0;
-      font-size: 16px;
-    }
-  
-    .image-caption p {
-      margin: 0;
-      font-size: 14px;
-    }
-  }
-  
-  //discoverProjects
-  
-  .discoverProjectsSection ::ng-deep {
-    .slick-list, .slick-slide, .slick-track, .slick-slide {
-      max-height: 600px;
-    }
-  }
-  .discoverProjectsSection {
-    padding: 30px 22px 0;
-    background: #fafafa;
-  
-    .sectionHeader {
-      display: flex;
-      align-items: flex-start;
-      .icon {
-        padding-top: 0;
-      }
-      .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
-      }
-      .subTitle {
-        padding-top: 4px;
-        display: block;
-      }
-      .subTile {
-        margin: 5px 0;
-        font-size: 14px;
-        font-weight: 400;
-      }
-    }
-    .sectionContent {
-      height: 614px;
-      .cardContainer {
-        display: flex;
-        // gap: 23px;
-        justify-content: space-between;
-        padding: 20px;
         position: relative;
-  
-        .leftslideButton {
-          position: absolute;
-          top: 95px;
-          left: 0;
-          transform: rotate(180deg);
-          cursor: pointer;
-          z-index: 1;
-        }
-        .rightslideButton {
-          position: absolute;
-          top: 95px;
-          right: 0;
-          cursor: pointer;
-        }
-      }
-      .projectCard {
-        width: 365px;
-        min-width: 365px;
-        margin-right: 16px;
-        background: #ffffff;
-        border-radius: 7px;
-        box-shadow: 0px 12.022px 17.174px 0px rgba(44, 44, 44, 0.06);
-      }
-      .projectImage {
-        width: 100%;
-        border-top-left-radius: 7px;
-        border-top-right-radius: 7px;
-      }
-      .projectHighlight {
-        padding: 9px 16px;
-        position: relative;
-        bottom: 30px;
-        width: calc(100% - 24px);
-        margin: 0 auto;
-        border-radius: 6px;
-        background: #fff;
-        box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.05);
-        img {
-          height: 14px;
-          width: 14px;
-        }
-        .projectCategory {
-          font-weight: 400;
-          font-size: 14px;
-          color: #886de0;
-        }
-        .projectName {
-          font-family: var(--semibold-global);
-          font-size: 18px;
-        }
-        .company {
-          display: flex;
-          font-weight: 400;
-          font-size: 14px;
-          margin-top: 7px;
-          align-items: center;
-          gap: 5px;
-        }
-        .companyIcon {
-          margin-top: -4px;
-          margin-left: -8px;
-        }
-      }
-      .serviceCompanyDetails {
         display: flex;
-        flex-direction: column;
-        row-gap: 18px;
-        padding: 10px 16px;
-        .serviceCompany {
-          display: flex;
-          justify-content: flex-start;
-          column-gap: 10px;
-          // align-items: center;
-          .companyIcon {
-            height: 30px;
-            width: 57px;
-            align-self: flex-start;
+        justify-content: center;
+        .link-abs  {
+          position: absolute;
+          left: 14.4%;
+          top: 32.5%;
+          width: 18%; /* Adjust as needed */
+          aspect-ratio: 119 / 299; /* Maintain the ratio */
+          &.link2 {
+            left: 32%;
+            top: 26.7%;
+            width: 35.9%;
+            aspect-ratio: 238 / 359; /* Maintain the ratio */
           }
-          .companyName {
-            font-family: var(--medium-global);
-            font-size: 18px;
+          &.link3 {
+            left: 68%;
           }
-        }
-        .companyDetails {
-          .title {
-            font-family: var(--medium-global);
-            font-size: 14px;
-            color: #6E6E6E;
-          }
-          .service {
-            font-weight: 400;
-            font-size: 14px;
-          }
-        }
-        .cardFooter {
-          border-radius: 6px;
-          background: #f8f6ff;
-          padding: 12px;
-          color: #886de0;
-          font-family: var(--semibold-global);
-          font-size: 14px;
-          display: flex;
-          justify-content: space-between;
         }
       }
     }
   }
-  
-  //whyBuildtwin
-  .whyBuildtwinSection {
-    padding: 0 24px;
-    background: none;
-    .sectionHeader {
-      display: flex;
-      align-items: center;
-      .icon {
-        padding-top: 25px;
-      }
-      .title {
-        font-size: 27px;
-        font-family: var(--semibold-global);
-      }
-      .subTile {
-        margin: 5px 0;
-        font-size: 14px;
-        font-weight: 400;
-      }
-    }
+// @media (min-height: 800px) {
+//   .banner-global {
+//     // min-height: calc(100vh - 150px);
+//   }
+// }
+@media only screen and (max-width : 1300px) {
+  .banner-global .banner-content h1 {
+    font-size: 30px;
   }
-  :host ::ng-deep .ant-carousel .slick-slider {
-    width: calc(100vw - 373px);
+  .banner-global .banner-content p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width : 1200px) {
+  .containerWrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+}
+@media only screen and (max-width : 900px) {
+
+  .containerWrap {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  // unnique CSS
-  .headerSection {
-    padding-top: 123px;
+.banner-global .banner-content .banner-time .banner-time-detail {
+  font-size: 14px;
+  .time {
+    font-size: 20px;
   }
-  :host ::ng-deep .ant-carousel .slick-slider {
-    width: 100%;
-  }
-  .discoverProjectsSection .sectionContent .projectCard {
-    min-width: 0;
-    max-width: calc(25% - 16px);
-  }
-  .discoverProjectsSection .sectionContent .cardContainer .leftslideButton {
-    z-index: 2;
-  }
-  .specialProjectsSection .carousel {
-    max-width: 100%;
-  }
-
-
+}
+}
 @media only screen and (max-width : 767px) {
-  .headerSection,
-  .discoverProjectsSection {
-    padding-left: 0;
-    padding-right: 0;
+  .containerWrap {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-
-  .discoverProjectsSection {
-    .sectionHeader {
-      .icon {
-        margin-left: -15px;
-      }
+  .banner-global .banner-main {
+    flex-direction: column;
+    gap: 10px;
+    .banner-content {
+      order: 2;
     }
-
-    .sectionContent {
-      margin: 0 -15px;
-      .projectCard {
-        width: 100%;
-        min-width: 100%;
-        margin-right: 15px;
-      }
-
-      .cardContainer {
-        padding: 20px 15px 15px;
-        .leftslideButton {
-          top: 100px;
-          left: -12px;
-        }
-        
-        .rightslideButton {
-          right: -12px;
-          top: 100px;
-        }
-      }
+    .banner-image {
+      order: 1;
+      width: 100%;
+      min-width: 100%;
+      margin-right: 0;
     }
   }
-
-  .helpSection {
-    padding: 0;
-    
-    .sectionHeader {
-      .icon {
-        margin-left: -15px;
-      }
-    }
-
-    .sectionContent {
-      padding: 20px 0;
-
-      .helpGridContainer {
-        grid-template-columns: repeat(1, 1fr);
-      }
-
-      .column {
-        gap: 10px;
-      }
-    }
+  .banner-global .banner-content h1 {
+    font-size: 25px;
+  }
+  .banner-global .banner-content p br {
+    display: none;
   }
 
-  .solutionProviderSection {
-    padding: 0;
-
-    .sectionHeader {
-      .icon {
-        margin-left: -15px;
-      }
-    }
-
-    .sectionContent {
-      margin: 30px 0;
-      flex-direction: column;
-
-      .leftSection {
-        width: auto;
-
-        .moreFilters {
-          margin: 10px 0;
-        }
-      }
-
-      .rightSection {
-        width: auto;
-        overflow: auto;
-        -webkit-overflow-scrolling: touch;
-        > div {
-          width: 900px;
-        }
-      }
-    }
+  .banner-global .banner-content  div.v-center-flex {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-
-  .specialProjectsSection {
-    padding: 0;
-    .sectionHeader {
-      .icon {
-        margin-left: -15px;
-      }
-    }
-
-    .carousel {
-      padding: 15px 0;
-      margin: 0;
-
-      ::ng-deep {
-        .owl-carousel {
-          .owl-nav {
-            .owl-prev {
-              left: 10px;
-            }
-
-            .owl-next {
-              right: 10px;
-            }
-          }
-        }
-      }
-    }
-
-    .image-container {
-      margin: 0 auto;
-    }
+  .banner-global .banner-content .get-started-banner input {
+    flex-grow: 1;
+    width: auto;
   }
-
-  .whyBuildtwinSection {
-    padding: 0;
-  }
-  
 }

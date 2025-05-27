@@ -11,7 +11,8 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class ElearningSchoolComponent implements OnInit {
     activeState: number = 1
-    title = 'BuildTwin - Marketplace for global engineering projects';    FixedDiv: any
+    // title = 'BuildTwin - Marketplace for global engineering projects';    
+    FixedDiv: any
     FixedDivPositionTop: any
     fixedDIvOffsetTop: any
     scrollPosition: any
@@ -59,11 +60,15 @@ export class ElearningSchoolComponent implements OnInit {
     constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
 
       router.events.subscribe((val) => {
-        this.scrollActivated = document.getElementById('scrollActivated');
         setTimeout(() => {
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          this.scrollActivated = document.getElementById('scrollActivated');
+          if(this.scrollActivated){
+            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+            console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          } else {
+            console.error('Element with ID scrollActivated not found');
+          }
           
         }, 2000);
     });
@@ -90,10 +95,10 @@ export class ElearningSchoolComponent implements OnInit {
         activeELe.forEach((item, index) => {
           if (item.getBoundingClientRect().top < 500) {
             this.activeState = index + 1;
-            item.classList.add("active")
+            // item.classList.add("active")
           }
           else {
-            item.classList.remove("active")
+            // item.classList.remove("active")
           }
   
         })

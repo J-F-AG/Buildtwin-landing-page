@@ -2,14 +2,15 @@
     gap: 10px;
 }
 .navbar-area {
-    box-shadow: 0px 4px 15px 0px rgba(177, 188, 236, 0.10);
+    // box-shadow: 0px 4px 15px 0px rgba(177, 188, 236, 0.10);
     background-color: var(--whiteColor);
     position: absolute;
     height: auto;
-    z-index: 2;
+    z-index: 10;
     right: 0;
     left: 0;
     top: 0;
+    padding: 7px var(--padding-left-right);
 
     .navbar {
         justify-content: space-between;
@@ -20,12 +21,13 @@
 
         .navbar-brand {
             line-height: 1;
-            margin-right: 15px;
+            margin-right: 47px;
             white-space: nowrap;
             position: relative;
-
+            // padding-left: 9px;
+            margin-bottom: 7px;
             span {
-                background: #886de0;
+                background: #0053fa;
                 font-size: 10px;
                 color: #fff;
                 padding: 5px 8px 3px;
@@ -64,6 +66,7 @@
             margin: {
                 left: auto;
                 right: auto;
+                bottom: 4px;
             }
 
             ;
@@ -72,7 +75,7 @@
 
                 margin: {
                     left: 17px;
-                    right: 17px;
+                    right: 16px;
                 }
 
                 ;
@@ -84,8 +87,8 @@
                     transition: var(--transition);
 
                     font: {
-                        weight: 400;
-                        size: 16px;
+                        weight: 600;
+                        size: 15px;
                     }
 
                     ;
@@ -93,8 +96,8 @@
                     padding: {
                         left: 0;
                         right: 0;
-                        top: 38px;
-                        bottom: 38px;
+                        top: 5px;
+                        bottom: 0;
                     }
 
                     ;
@@ -126,7 +129,7 @@
                         content: '\ea5f';
                         line-height: 1;
                         right: -2px;
-                        top: 43px;
+                        top: 8px;
 
                         font: {
                             family: "tabler-icons";
@@ -153,7 +156,7 @@
 
                         &::before {
                             color: var(--themeColor);
-                            transform: rotate(180deg);
+                            // transform: rotate(180deg);
                         }
                     }
 
@@ -343,21 +346,33 @@
             .default-btn {
                 &.mdc-button {
                     background-color: var(--themeColor);
-                    border: 2px solid var(--themeColor);
+                    border-color: var(--themeColor);
+                    color: white;
+                    border-radius: 10px;
 
                     padding: {
-                        top: 9px;
-                        bottom: 9px;
+                        top: 13px;
+                        bottom: 13px;
                     }
 
                     ;
 
                     &:hover {
                         background-color: #fff;
-                        border: 2px solid var(--themeColor);
+                        border-color: var(--themeColor);
                         color: #000 !important;
                     }
                 }
+            }
+            .text-btn {
+                background-color: transparent !important;
+                border-color: var(--newButtonColor) !important;
+                color: var(--newButtonColor) !important;
+                margin-inline: 11px;
+                border-radius: 10px;
+            }
+            .button-v2 {
+                border-radius: 10px;
             }
         }
 
@@ -394,6 +409,10 @@
         }
 
     }
+
+    .mis-auto {
+        margin-inline-start: auto;
+    }
 }
 
 .collapse {
@@ -406,7 +425,7 @@
     .navbar-area {
         padding: {
             top: 7px;
-            bottom: 7px;
+            bottom: 9px;
         }
 
         .navbar {
@@ -482,7 +501,7 @@
 }
 
 .mainHeading {
-    color: var(--primary, #886DE0);
+    color: var(--primary, #0053fa);
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -500,7 +519,7 @@
 }
 
 .makrketPlaceMenuInner section.padding-24.background-white.left {
-    background: #F6F3FF;
+    background: #F3F8FF;
     border-radius: 12px 0 0 12px;
     // opacity: 1;
 }
@@ -513,6 +532,33 @@
     opacity: 1;
 }
 
+@media only screen and (max-width : 1200px) {
+    .navbar-area {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media only screen and (min-width : 992px) and (max-width : 1024px) {
+    .navbar-area {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item .nav-link {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item .dropdown-toggle::before {
+        top: 23px;
+    }
+}
+@media only screen and (max-width : 992px) {
+    .navbar-area {
+        padding: 20px;
+    }
+    ::ng-deep .menuToggle .navbar-area {
+        z-index: 999!important;
+    }
+}
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
 
@@ -523,7 +569,7 @@
                 display: block;
                 max-height: 50vh;
                 flex-direction: unset;
-                background-color: #f8f8f8;
+                background-color: none;
 
                 overflow: {
                     y: scroll;
@@ -978,21 +1024,87 @@
     visibility: visible;
 
 }
-
+.nav-item {
+    /* width */
+    ::-webkit-scrollbar {
+        width: 4px;
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+       
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: var(--themeColor); 
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--themeColor); 
+      }
+}
 .menu_copilot {
-    border-radius: 12px;
+    border-radius: 2px 16px 16px 16px;
+    border: 1px solid var(--themeColor);
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
-    max-width: 897px;
+    max-width: 320px;
     margin: auto;
-    width: 897px;
+    width: 320px;
     position: absolute;
-    left: -30%;
-    top: 102px;
+    // left: -30%;
+    top: 28px;
     z-index: 99;
     background: #fff;
     transition: all 0.5s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    overflow: hidden;
+    .container {
+        height: 450px;
+        overflow-y: auto;
+    }
+    .mi--12 {
+        margin-inline: -12px;
+    }
+    &__text {
+        width: 100%;
+        padding: 0px 12px;
+        &:hover {
+          padding-block: 10px;
+          background-color: var(--backgroundColor);
+          border-radius: 8px;
+          .menu_copilot__text--sub {
+            max-height: 100px;
+            margin-top: 8px;
+          }
+          .menu_copilot__text--head {
+            color: var(--newThemeColor);
+            path, ellipse, circle {
+                stroke: var(--themeColor);
+            }
+          }
+          .menu_copilot__text--arrow {
+            display: none;
+          }
+          .menu_copilot__text--arrow-up {
+            display: block;
+          }
+        }
+    
+        &--arrow-up {
+          display: none;
+        }
+    
+        &--sub {
+            display: block; 
+            margin-inline-start: 28px;
+            max-height: 0;
+            transition: all .3s ease;
+            overflow: hidden;
+        }
+      }
 }
 
 .menu_copilot .container {
@@ -1045,6 +1157,7 @@
 
 .menu_copilot .background-secondary {
     background-color: #ececec;
+    margin-inline: -24px;
 }
 
 .menu_copilot .margin-top-24 {
@@ -1059,7 +1172,7 @@
 }
 
 .menu_copilot .flex-grow {
-    flex-basis: 227px;
+    // flex-basis: 227px;
 
 }
 
@@ -1084,7 +1197,7 @@
 .menu_copilot .cta-button {
     justify-content: center;
     border-radius: 4px;
-    background-color: #886de0;
+    background-color: #0053fa;
     margin-top: 24px;
     color: #fff;
     font-weight: 500;
@@ -1254,7 +1367,7 @@ a.flex-grow.flex-column.active em svg path {
         align-items: center;
 
         span {
-            color: var(--primary, #886DE0);
+            color: var(--primary, #0053fa);
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -1270,7 +1383,7 @@ a.flex-grow.flex-column.active em svg path {
             justify-content: center;
             align-items: center;
             border-radius: 4px;
-            background: #886DE0;
+            background: #0053fa;
             color: var(--color-green-button, #FFF);
 
             font-size: 14px;
@@ -1433,7 +1546,33 @@ form {
 
 
 @media (max-width:991px) {
+
     .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item.showDropdown .menu_copilot {
+        opacity: 1;
+        visibility: visible;
+        padding: 0 10px;
+        margin-top: 10px;
+        border: none;
+        background: #f8f8f8;
+        border-radius: 4px;
+        height: auto;
+        position: static;
+        border: none;
+        box-shadow: none;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: auto;
+        max-width: none;
+        display: block;
+        .container {
+            height: auto;
+        }
+    }
+    .navbar-area .navbar .navbar-nav .nav-item.showDropdown .menu_copilot {
 
         position: static;
     margin-left: 0;
@@ -1446,7 +1585,8 @@ form {
 
         .flex-column {
             width: 100% !important;
-            margin-bottom: 12px;
+            margin-bottom: 18px;
+            background: none;
 
         }
         .makrketPlaceMenuInner .flex-row{
@@ -1455,7 +1595,7 @@ form {
 
         }
         .makrketPlaceMenuInner section.padding-24.background-white.left {
-            background: #F6F3FF;
+            background: #F3F8FF;
             border-radius: 12px 0 0 12px;
             min-width: 40%;
         }
@@ -1576,9 +1716,27 @@ form {
         width: 100%;
         padding: 11px;
     }
-
-    .navbar-area .navbar .navbar-nav .nav-item:hover .menu_copilot {
-        margin-left: 0;
+    a.flex-grow.flex-column em > svg {
+        width: 15px;
+        height: 15px;
+    }
+    .navbar-area .navbar .navbar-nav .nav-item.showDropdown .menu_copilot {
+        padding: 0 10px;
+        margin-top: 10px;
+        border: none;
+        background: #f8f8f8;
+        border-radius: 4px;
+        height: auto;
+        position: static;
+        border: none;
+        box-shadow: none;
+        margin-left: -10px;
+        margin-right: -10px;
+        width: auto;
+        max-width: none;
+        .container {
+            height: auto;
+        }
     }
 
     span.text {
@@ -1625,27 +1783,20 @@ form {
     }  
 
     .menu_copilot {
-        left: -45%;
+        // left: -45%;
     }
 }
 
 @media (max-width:950px){
     .navbar-area {
-        padding-top: 11px;
-        padding-bottom: 11px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
     .navbar-area .navbar {
         padding-right: 10px;
+        align-items: flex-start;
     }
     .menu_copilot .font-bold {
         font-size: 13px !important;
     }
 }
-
-
-
-
-
-
-
-

@@ -1,129 +1,207 @@
-:host ::ng-deep {
-    .experience {
-        background-color: var(--secondary, #f6f3ff);
-        padding: 68px 0;
-        margin: 0px 0 93px;
-        .container {
-            
-            display: flex;
-            flex-direction: column;
-          
-            max-width:1296px;
-        }
-
-        .title {
-            color: #0e0e28;
-            text-align: center;
-            font-weight: 600;
-            font-size: 40px;
-            line-height: 130%;
-        }
-
-        .subtitle {
-            color: var(--Black, #000);
-            text-align: center;
-            align-self: center;
-            margin-top: 12px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 160%;
-        }
-
-        .info-container {
-            display: flex;
-            margin-top: 48px;
-        }
-
-        .info-box {
-            border-radius: 8px 0px 0px 8px;
-            background-color: var(--color-green-button, #fff);
-            display: flex;
-            gap: 12px;
-            padding: 20px;
-            width: 260px;
-            height: 150px;
-            align-items: center;
-        }
-
-        .divider {
-            background: linear-gradient(316deg, #886de0 -0.82%, #e3d9ff 51.4%);
-            width: 1px;
-            height: 62px;
-        }
-
-        .rating-box {
-            justify-content: space-between;
-            background-color: var(--color-green-button, #fff);
-            display: flex;
-            gap: 12px;
-            padding: 20px;
-            width: 260px;
-            height: 150px;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .rating-info {
-            display: flex;
-            flex-direction: column;
-            margin: auto 0;
-        }
-
-        .rating {
-            color: var(--primary, #886de0);
-            align-self: center;
-            font-weight: 600;
-            font-size: 27px;
-            line-height: 100%;
-        }
-
-        .rating-text {
-            color: var(--grey, var(--grey, #808080));
-            margin-top: 12px;
-            font-weight: 500;
+:host ::ng-deep { 
+    .global-mb {
+        margin-bottom: 46px;
+    }
+    .head {
+        .pre-filled {
+            position: absolute;
+            left: calc(100% - 55px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 175px;
+            height: 132px;
+            border-radius: 0 132px 132px 0;
+            background: #b0e020;
+            z-index: 1;
             font-size: 16px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 36px;
         }
-    }
-}
-
-
-@media (max-width:1200px){
-   :host ::ng-deep  .experience .rating {
-        text-align: center;
-    }
-}
-
-@media (max-width:767px){
-   :host ::ng-deep .experience .info-container {
+        width: 992px;
+        height: 184px;
+        position: relative;
         display: flex;
-        margin-top: 48px;
-        flex-direction: column;
-    }
-    :host ::ng-deep .experience .rating-box {
-        justify-content: space-between;
-        margin-bottom: 8px;
-    }
-    :host ::ng-deep .experience .rating-box {
-        width: 100%;
-        height: auto;
-    }
-    :host ::ng-deep  .experience .info-box {
-        width: 100%;
-        margin-bottom: 10px;
-        height: auto;
-    }
-    :host ::ng-deep  .experience .divider {
-       
-        display: none;
-    }
-    :host ::ng-deep .experience .rating-info {
         align-items: center;
-        width: 100%;
+        color: white;
+        font-size: 23px;
+        font-weight: 600;
+        margin: 0 auto;
+        top: 29px;
+        margin-bottom: 165px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 92px;
+            background: url(../../../../../assets/images/for-seller/head-bg.jpg) no-repeat;
+            background-size: cover;
+            z-index: 2;
+        }
+        .center {
+            width: 246px;
+            height: 246px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #002e3b;
+            position: relative;
+            z-index: 3;
+            &::after {
+                content: "";
+                position: absolute;
+                left: -10px;
+                top: -10px;
+                bottom: -10px;
+                right: -10px;
+                background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='266' ry='266' stroke='black' stroke-width='1' stroke-dasharray='10%2c 15' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+            }
+        }
+        span {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
     }
-    :host ::ng-deep  .experience {
-        padding: 30px 0;
-        margin: 0px 0 40px;
-    
+
+    .info-container {
+        display: flex;
+        .rating-box {
+            flex: 1;
+            position: relative;
+            &::after {
+                background: linear-gradient(to bottom, #e3d9ff, #1b5cfa);
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 1px;
+                height: 100%;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+            .rating-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                padding: 6px 30px;
+                text-align: center;
+                .rating {
+                    font-size: 30px;
+                    color: #0053fa;
+                    font-weight: 600;
+                }
+                .rating-text {
+                    font-size: 16px;
+                }
+                .star {
+                    padding-top: 8px;
+                    padding-bottom: 6px;
+                }
+            }
+        }
+    }
+    .block-wrapper {
+        display: flex;
+        gap: 17px;
+        .block {
+            flex: 1;
+            width: calc(25% - 12.80px);
+            border: 1px solid #d5d9db;
+            border-radius: 23px;
+            padding: 39px 38px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 317px;
+            .count {
+                display: block;
+                font-size: 45px;
+                font-weight: 600;
+                color: #0053fa;
+                margin-bottom: 0;
+            }
+            p {
+                font-size: 16px;
+                color: #002e3b;
+                margin-bottom: 0;
+            }
+            img {
+                margin-top: auto;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width : 900px) {
+    :host ::ng-deep .info-container {
+        flex-wrap: wrap;
+        .rating-box {
+            .rating-info {
+                padding: 6px 10px;
+                .rating {
+                    font-size: 20px;
+                }
+                .rating-text {
+                    font-size: 14px;
+                }
+                .star {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    :host ::ng-deep {
+        .info-container {
+            row-gap: 10px;
+            .rating-box {
+                flex: auto;
+                width: 50%;
+                max-width: 50%;
+            }
+        }
+        .head {
+            width: 350px;
+            flex-direction: column;
+            gap: 60px;
+            padding: 100px 0;
+            height: auto;
+            &::after {
+                border-radius: 262px;
+            }
+            .pre-filled {
+                left: 50%;
+                top: calc(100% - 30px);
+                transform: translateX(-50%);
+                border-radius: 0 0 132px 132px;
+                padding-left: 0;
+                padding-top: 30px;
+            }
+        }
+        .block-wrapper  {
+            flex-direction: column;
+            .block {
+                width: auto;
+                gap: 30px;
+            }
+        }
     }
 }

@@ -21,14 +21,14 @@ img {
 .content {
     text-align: center;
     h1 {
-        font-size: 40px;
+        font-size: 60px;
         font-weight: 600;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: var(--themeColor);
         line-height: 1.2;
     }
     p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.6;
     }
 
@@ -67,4 +67,7 @@ img {
     .content .btnGroup a {
         padding: 15px 10px;
     }
+  }
+  .default-btn {
+    white-space: nowrap;
   }

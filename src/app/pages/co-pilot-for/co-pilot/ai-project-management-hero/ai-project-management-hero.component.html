@@ -1,0 +1,167 @@
+<div class="container maine-banner">
+    <div class="heading center v2">
+        <div class="bt-thumb">
+            <img src="assets/images/bt-thumb.png" width="113" height="115" alt="">
+            <small>PRO</small>
+            <span><i><img src="assets/images/curv-line.png" width="49" height="34" alt=""></i>by Project Delivery</span>
+        </div>
+        <h1 class="title">
+            BuildTwin <span>Pro</span>
+            <br>The definition of done.
+        </h1>
+        <span class="small-title">
+           
+                Show your clients that you <u>deliver on time and in quality</u>, get 
+                <br>your BuildTwin Pro Badge and gain more reach and trust. 
+
+        </span>
+    </div>
+    <ul class="tab-nav">
+        <li (click)="tab(1)" [ngClass]="{'active': activeTab == 1}">
+            <figure>
+                <img src="assets/images/ai/draw-icon.png" width="54" height="57" alt="">
+            </figure>
+            Drawing Register
+        </li>
+        <li (click)="tab(2)" [ngClass]="{'active': activeTab == 2}">
+            <figure>
+                <img src="assets/images/ai/quality-check-icon.png" width="45" height="57" alt="">
+            </figure>
+            Quality Management
+        </li>
+        <li (click)="tab(3)" [ngClass]="{'active': activeTab == 3}">
+            <figure>
+                <img src="assets/images/ai/tracker-icon.png" width="63" height="57" alt="">
+                <i>4</i>
+            </figure>
+            RFI Tracker 
+        </li>
+        <!-- 
+        <li (click)="tab(4)" [ngClass]="{'active': activeTab == 4}">
+            <figure>
+                <img src="assets/images/ai/proj-management.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/proj-management-hover.svg" width="48" height="48" alt="">
+            </figure>
+            AI RFI 
+        </li>
+        <li (click)="tab(5)" [ngClass]="{'active': activeTab == 5}">
+            <figure>
+                <img src="assets/images/ai/design.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/design-hover.svg" width="48" height="48" alt="">
+            </figure>
+            AI Project Management 
+        </li>
+        <li (click)="tab(6)" [ngClass]="{'active': activeTab == 6}">
+            <figure>
+                <img src="assets/images/ai/it.svg" width="48" height="48" alt="">
+                <img class="hover" src="assets/images/ai/it-hover.svg" width="48" height="48" alt="">
+            </figure>
+            AI Quality Control
+        </li>
+        -->
+    </ul>
+
+    
+    <div class="tab-change-wrapper">
+
+        <div class="block" *ngIf="activeTab == 1">
+            <figure><img src="assets/images/submittal.jpg" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        
+        <div class="block" *ngIf="activeTab == 2">
+            <figure><img src="assets/images/manual-qc.jpg" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        
+        <div class="block" *ngIf="activeTab == 3">
+            <figure><img src="assets/images/rfi.jpg" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        
+        
+        <div class="block" *ngIf="activeTab == 4">
+            <figure><img src="assets/images/manual-qc.jpg" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        <div class="block" *ngIf="activeTab == 5">
+            <figure><img src="assets/images/submittal.jpg" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+        <div class="block" *ngIf="activeTab == 6">
+            <figure><img src="assets/images/manual-qc.jpg" width="1920" height="1080" alt=""></figure>
+            <div class="design"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container global-mb scroll-effect">
+    <div class="heading center v2">
+        <h2 class="title">
+            Automate tedious tasks and focus on 
+            <br>what matters to you: engineering! 
+        </h2>
+    </div>
+    <div class="text-section">
+        <div class="text scroll-event">
+          <div class="block" *ngFor="let item of contentData; let i = index;"  
+            [attr.data-ele]="i + 1" 
+            [ngClass]="{ 'active': activeState2 === (i + 1) }">
+            <div class="content">
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.description }}</p>
+              <div class="button-wrapper">
+                <a href="{{ item.getItFreeLink }}" class="button-v2">Get it free</a>
+                <a href="{{ item.exploreLink }}" class="button-v2 border">Explore</a>
+              </div>
+            </div>
+            <div class="note-box">
+              <img [src]="item.imageSrc" width="68" height="68" alt="">
+              <p>
+                <strong>{{ item.noteTitle }}</strong> {{ item.noteDescription }}
+                <!-- <a href="{{ item.noteLink }}" class="link-text">Read their story</a>. -->
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <span class="bg-style {{'style-color'+(activeState2)}}"></span>
+          <figure *ngFor="let img of contentData; let i = index"  
+            [ngClass]="{ 'active': activeState2 === (i + 1) }">
+            <img [src]="img.targetImage" width="584" height="328" alt="">
+          </figure>
+        </div>
+      </div>
+</div>
+
+<div class="container global-mb">
+    <div class="black-bg-wrapperai">
+        <div class="background"></div>
+        <div class="content-wrappee">
+            <div class="content">
+                <div class="heading center v2">
+
+                    <h2 class="title">
+                        Transform teamwork with human-AI collaboration
+                    </h2>
+                    <span class="subTitle">
+                       Supercharge all activities with AI. From keeping your drawing register up to date to without 
+                       <br>manual input, to tracking RFIs and processing quality control fully 
+                       <br>automatically. Get access to on of a kind tools. 
+                    </span>
+                </div>
+                <figure>
+                    <img src="assets/images/single.png" width="946" height="755" alt="">
+                    <!-- <img src="assets/images/one.jpg" width="946" height="1371" alt=""> -->
+                </figure>
+                <a href="javascript:;" class="button-v2 border ai_project_page_join_waitlist_btn">
+                    Join the waitlist
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+<ng-content></ng-content>
+-->

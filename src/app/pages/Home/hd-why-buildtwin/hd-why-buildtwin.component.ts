@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GlobalService } from 'src/app/services/GlobalService';
+import { LanguageService } from 'src/app/services/language.service';
+
 
 @Component({
   selector: 'app-hd-why-buildtwin',
@@ -7,9 +10,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HdWhyBuildtwinComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _languageService:LanguageService, private globalService: GlobalService) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.globalService.scroll()
+    }, 2000);
   }
   @Input() isBrowseService: boolean = false;
 
@@ -20,6 +26,8 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 18,
       icon: 'quality-icon',
       displayIcon: 'assets/images/qualityBuildtwin.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Our tools ensure superior quality and durability, enhancing efficiency and reducing maintenance costs. <br><br>Experience precise workmanship and long-lasting performance with every project.',
       details: [
@@ -41,6 +49,8 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 16.55,
       icon: 'onTime-icon',
       displayIcon: 'assets/images/on time.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Timely delivery is our promise. We value your time and ensure that projects are completed within the agreed timeframe without compromising on quality.',
       details: [
@@ -62,11 +72,13 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 16.38,
       icon: 'plugAndPlay-icon',
       displayIcon: 'assets/images/plug and play.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Our solutions are designed for easy integration, allowing you to quickly implement and start using them with minimal setup time.',
       details: [
         {
-          header: 'Plug & Play',
+          header: '',
           content: 'No additional workflow required - just connect BuildTwin to your existing tools and get access to 100s of technical teams. ',
           items: [
             'Supports all major CDEs ',
@@ -83,11 +95,13 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 16.77,
       icon: 'payments-icon',
       displayIcon: 'assets/images/Easy payment.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Flexible payment options to suit your needs. We offer multiple payment methods and plans to make transactions smooth and hassle-free.',
       details: [
         { 
-          header: 'Easy payment', 
+          header: '', 
           content: 'BuildTwin provides (optional) easy to use payment methods - including methods to withhold payment / keeping money in trust. ',
           items: [
             'Optional: third party trust available  ',
@@ -104,11 +118,13 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 18.39,
       icon: 'additionalServices-icon',
       displayIcon: 'assets/images/live video rec.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'Enhance your experience with our additional services tailored to meet your specific needs and provide extra value.',
       details: [
         {
-          header: 'Additional services',
+          header: '',
           content: 'Customise your BuildTwin experience with tailored services as per your requirements. ',
           items: [
             'On-Site support ',
@@ -125,11 +141,13 @@ export class HdWhyBuildtwinComponent implements OnInit {
       height: 18.39,
       icon: 'support-icon',
       displayIcon: 'assets/images/support.png',
+      displayIconWidth: 90,
+      displayIconHeight: 90,
       content:
         'We provide exceptional support to ensure your satisfaction. Our dedicated team is available to assist you with any queries or issues.',
       details: [
         {
-          header: 'Support',
+          header: '',
           content: 'BuildTwin Supports resolves issue when it matters - including support in finding solutions once schedules / quality requirements are not met. ',
           items: [
             'Support from BuildTwin in terms of escalation ',
@@ -150,6 +168,11 @@ export class HdWhyBuildtwinComponent implements OnInit {
 
   get activeContent() {
     return this.whyBuildTwinArray[this.activeTab];
+  }
+
+
+  scrollToSection(sectionId: string) {
+    this.globalService.scrollToSection(sectionId);
   }
 
 }

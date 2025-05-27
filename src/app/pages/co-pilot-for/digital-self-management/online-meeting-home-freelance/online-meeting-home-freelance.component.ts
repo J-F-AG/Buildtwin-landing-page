@@ -12,7 +12,7 @@ export class OnlineMeetingHomeFreelanceComponent {
 
   activeState3:number = 1
   activeState2:number = 10 
-    title = 'BuildTwin - Software for Freelancer / small Teams';
+    // title = 'BuildTwin - Software for Freelancer / small Teams';
     activeState: number = 1
     FixedDiv: any
     FixedDivPositionTop: any
@@ -29,11 +29,15 @@ export class OnlineMeetingHomeFreelanceComponent {
     constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
 
       router.events.subscribe((val) => {
-        this.scrollActivated = document.getElementById('scrollActivated');
         setTimeout(() => {
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          this.scrollActivated = document.getElementById('scrollActivated');
+          if(this.scrollActivated){
+            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+            console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          } else {
+            console.error('Element with ID scrollActivated not found');
+          }
           
         }, 2000);
     });
@@ -43,7 +47,7 @@ export class OnlineMeetingHomeFreelanceComponent {
     ngOnInit() {
      
       
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
 
     
     }
@@ -63,10 +67,10 @@ export class OnlineMeetingHomeFreelanceComponent {
         activeELe.forEach((item, index) => {
           if (item.getBoundingClientRect().top < 500) {
             this.activeState = index + 1;
-            item.classList.add("active")
+            // item.classList.add("active")
           }
           else {
-            item.classList.remove("active")
+            // item.classList.remove("active")
           }
   
         })

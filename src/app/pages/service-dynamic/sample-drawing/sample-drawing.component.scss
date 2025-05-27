@@ -1,0 +1,439 @@
+.sectionContainer{  position: relative;
+  padding: 21px 0 60px;
+  .sectionTop{
+    .heading{
+      font-size: 25px; 
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.4;
+      padding-right: 0;
+      text-align: center;
+    }
+    p{font-size: 15px;
+      text-align: center;
+      font-weight: 400;}
+  }
+}
+
+
+.relativeContainer{position: relative;}
+
+::ng-deep .drawingCarousel {
+  .owl-carousel{position: static;}
+.owl-nav {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9;
+  .owl-prev,
+  .owl-next {
+    text-indent: 110%;
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    position: absolute;
+    right: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+    margin: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border: solid 2px black;
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(45deg);
+      left: 50%;
+      top: 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-72%, -50%);
+      width: 14px;
+      height: 2px;
+      background: black;
+  }
+
+    &:hover {
+      background-color: white;
+    }
+  }
+  .owl-prev {
+    left: 20px;
+    right: auto;
+    &::after {
+      transform: translate(-39%, -50%);
+    }
+  }
+
+  .owl-prev::before {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    margin-left: 2px;
+    left: 45%;
+  }
+
+  .owl-next::before {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    margin-left: -2px;
+  }
+}
+
+.owl-dots{ margin-left: 60px;
+  .owl-dot{
+    span{width: 16px;
+      height: 8px; transition: all 0.2s ease 0;}
+      &.active{
+        span{width: 30px; background: #0053fa;}
+      }
+  }
+}
+}
+
+::ng-deep .drawingCarouselWrapper{overflow: hidden;
+  padding-top: 35px;
+  margin-right: -90px;
+  padding-right: 90px;
+  margin-left: -90px;
+  padding-left: 90px;
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    width: 90px;
+    background: white;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+  &::before {
+    left: 0;
+    right: auto
+  }
+  .drawingCarousel{width: calc(100% - 298px); 
+    .owl-carousel .owl-stage-outer{ overflow: visible; padding-bottom: 40px;
+      &::after{ content: ""; display: block; position: absolute; height: 100%; width: 298px; right: -298px; top: 0;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) 50%,rgba(255,255,255,1) 100%);
+      }
+    }
+    .owl-item{
+      border-radius: 12px;
+      overflow: hidden;
+    min-height: 277px;
+    display: flex;
+    transition: box-shadow 0.2s ease 0.2s;
+    box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.12);
+  }
+    .owl-item.active{
+      background: #ffffff;
+      // box-shadow: 99px 65px 33px 0px rgba(191, 191, 191, 0.00), 63px 41px 30px 0px rgba(191, 191, 191, 0.01), 36px 23px 26px 0px rgba(191, 191, 191, 0.05), 16px 10px 19px 0px rgba(191, 191, 191, 0.09), 4px 3px 10px 0px rgba(191, 191, 191, 0.10);
+    }
+    
+    }
+}
+
+
+.projectCard {
+  display: flex;
+  
+ 
+
+  .projectImg {
+    position: relative;
+    width: 50%;
+    display: flex;
+
+    .varifiedTag {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 600;
+      padding: 6px 20px 6px 12px;
+      border-radius: 17.5px;
+      border: 1px solid #86DC89;
+      background: #EEFFF0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .slideContent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .projectHighlight {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    padding: 10px 16px;
+
+    img{
+      width: 68px;
+    }
+
+    .serviceCompany {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+
+      // align-items: center;
+      .companyIcon {
+        height: 30px;
+        width: 57px;
+        align-self: flex-start;
+      }
+
+      .companyName {
+        font-family: var(--medium-global);
+        font-size: 14.7px;
+
+        small {
+          font-size: 12px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .serviceCompanyDetails {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    padding: 10px 16px;
+    flex: 1;
+
+    .companyDetails { flex: 1;
+      .title {
+        font-family: var(--medium-global);
+        font-size: 14px;
+        color: var(--color-theme)
+      }
+
+      .service {
+        color: black;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+
+    .cardFooter {
+      color: #0053fa;
+      font-family: var(--semibold-global);
+      font-size: 14px;
+      display: flex;
+      gap: 10px;
+
+      a {
+        color: var(--color-theme)
+      }
+    }
+  }
+
+}
+
+
+.selectBoxWrapper { display: flex; gap: 10px; margin-bottom: 40px;
+  label{border-radius: 8px 0px 0px 8px;
+    background: #0053fa; color: white; padding: 17px 11px 17px 0; display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+}
+
+
+::ng-deep .selectBoxWrapper .selectBox {
+  position: relative; 
+  width: 240px;
+
+  app-bt-select {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+
+    ::ng-deep {
+      .ant-select {
+        width: 100%;
+      }
+    }
+  }
+
+  > div {
+    position: relative;
+
+    &:after {
+      content: '';
+      border-right: 2px var(--color-theme) solid;
+      border-bottom: 2px var(--color-theme) solid;
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      right: 13px;
+      top: 50%;
+      transform: rotate(45deg) translateY(-50%);
+      transform-origin: top right;
+    }
+  }
+
+  &.countryField {
+    > div {
+      padding: 9px 20px 9px 7px;
+      gap: 8px;
+    }
+
+    ::ng-deep {
+      .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+        height: 52px;
+      }
+    }
+
+    small {
+      display: block;
+      font-family: var(--semibold-global);
+      font-size: 11px;
+    }
+  }
+
+  &.precastField {
+    ::ng-deep {
+      .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+        height: 74px;
+      }
+    }
+  }
+
+  &.precastField,
+  &.dateField {
+    >div {
+      padding: 9px 35px 8px 10px;
+      min-height: 74px;
+    }
+  }
+
+  &.dateField {
+    > div {
+      &:after {
+        display: none;
+      }
+
+      lib-svg-icon {
+        position: absolute;
+        right: 9px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    nz-date-picker {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
+
+  .title {
+    display: block;
+    font-family: var(--semibold-global);
+    color: black;
+    font-size: 18px; 
+    font-weight: 600;
+  }
+
+  .selectedValue {
+    display: flex;
+    font-size: var(--font-size-h6);
+    line-height: 1.2;
+    gap: 7px;
+
+    &.day {
+      color: var(--color-theme);
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+      max-width: 100%;
+      padding-left : var(--padding-left-right);
+      padding-right : var(--padding-left-right);
+  }
+  ::ng-deep {
+    .drawingCarouselWrapper .drawingCarousel {
+      width: calc(100% - 150px);
+    }
+    .drawingCarouselWrapper .drawingCarousel .owl-carousel .owl-stage-outer::after {
+      width: 150px;
+      right: -150px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    padding-left: 90px;
+    padding-right: 90px;
+}
+}
+@media (max-width:767px){
+  .sectionContainer .sectionTop .heading {
+    font-size: 22px;
+    padding-right: 0;
+  }
+  ::ng-deep .drawingCarouselWrapper .drawingCarousel {
+    width: 100%;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  ::ng-deep .drawingCarouselWrapper {
+    margin-right: 0;
+    padding-right: 10px;
+    margin-left: 0;
+    padding-left: 10px;
+    &::after , &::before {
+      display: none;
+    }
+    .owl-nav {
+      display: none;
+    }
+  }
+  .projectCard {
+    flex-direction: column;
+    gap: 10px;
+    .projectImg {
+      width: 100%;
+    }
+    .slideContent {
+      width: 100%;
+    }
+  }
+  .sectionContainer {
+    padding-bottom: 0;
+  }
+}

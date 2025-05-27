@@ -3,56 +3,55 @@
         <img src="assets/images/dots.png" width="269" height="306" alt="">
     </div>
     <div class="sectionTop">
-        <h1 class="heading">Services</h1>
+        <h1 class="heading-h1">Find Specialized Structural Engineering <br> Services Across All Sectors</h1>
         <div class="assistant">
             <img src="assets/images/jenoy.png" alt="avatar" width="42" height="42">
             <div class="assitWrapper">
                 <div>Need help?</div>
-                <a href="javascript:;" (click)="call()" class="link">Talk to our Advisors</a>
+                <a href="javascript:void(0)" (click)="call()" class="link">Talk to our Advisors</a>
             </div>
 
         </div>
     </div>
     <div class="sectionMid">
-        <div class="content">
+        <!-- <div class="content">
             The Best way to procure<br>
             Technical Teams across The Globe
-        </div>
+        </div> -->
         <a class="themeButton bookServicesButton" target="_blank" href="https://cockpit.buildtwin.com/signin">
             Book Services
         </a>
     </div>
     <div class="sectionBottom">
-        <div class="headerCarousel">
-            <nz-carousel [nzDots]="false">
-                <div nz-carousel-content *ngFor="let subServiceArray of discoverServices">
-
-                    <div class="carouselWrapper">
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
-                        <!-- <div class="cardWrapper" routerLink="/engineering-services/services">
-                            <img src="assets/images/structuralDesign.png" alt="cardImage" width="151" height="137">
-                            <div class="detail">Structural Design</div>
-                        </div> -->
-                        <ng-container *ngFor="let item of subServiceArray">
-                            <div class="cardWrapper">
-                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
-                                <div class="detail">
-                                    {{item.name}}
-                                </div>
-                            </div>
-                        </ng-container>
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
+        <div class="headerCarousel" [ngClass]="{'single-desktop': servicesArray.length<7}">
+            <owl-carousel-o [options]="customOptions">
+                <ng-template *ngFor="let item of servicesArray" carouselSlide>
+                    <div class="cardWrapper" *ngIf="!item['serviceId']">
+                        <picture>
+                            <source [srcset]="item.img.webp" type="image/webp">
+                            <source [srcset]="item.img.fallback" type="image/png">
+                            <img [src]="item.img.fallback" 
+                                 alt="cardImage"
+                                 [attr.width]="item.width" 
+                                 [attr.height]="item.height"
+                                 loading="lazy">
+                        </picture>
+                        <div class="detail">
+                            {{item.name}}
+                        </div>
                     </div>
-                </div>
-            </nz-carousel>
+                    <a class="cardWrapper cursor" *ngIf="item['serviceId']" [routerLink]="getServiceRoute(item.serviceId)">
+                        <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
+                        <div class="detail">
+                            {{item.name}}
+                        </div>
+                    </a>
+                </ng-template>
+            </owl-carousel-o>
 
 
 
         </div>
     </div>
 </div>
-<app-hubspot [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

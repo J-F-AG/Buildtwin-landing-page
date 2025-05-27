@@ -14,10 +14,8 @@
                 </defs>
             </svg>
         </i>
-        <div class="coverPopupData">
-
-            <div class="meetings-iframe-container"
-                [attr.data-src]="path"></div> 
+        <div class="coverPopupData" *ngIf="path">
+            <iframe [attr.src]="path" width="100%" height="700px" frameborder="0"></iframe>
         </div>
     </div>
 </div>

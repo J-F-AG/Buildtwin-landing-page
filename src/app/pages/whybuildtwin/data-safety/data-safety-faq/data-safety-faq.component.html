@@ -1,0 +1,36 @@
+<div class="faq-area pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="faq-accordion" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <mat-accordion>
+                        <mat-expansion-panel *ngFor="let list of dataCenterFAQ; let i = index" [expanded]="i === 0 ? isFirst : false">
+                          <mat-expansion-panel-header>
+                            <mat-panel-title>
+                              {{ list['question'] }}
+                            </mat-panel-title>
+                          </mat-expansion-panel-header>
+                          <p>
+                            {{ list['answer'] }}
+                          </p>
+                        </mat-expansion-panel>
+                    </mat-accordion>                      
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 top-sticky">
+                <div class="faq-content" data-aos="fade-up" data-aos-duration="500">
+                  
+                    <!-- <h2>
+                        Frequently asked questions
+                    </h2> -->
+                    <div class="image position-relative text-center">
+                        <img src="assets/images/faq.png" alt="faq-image">
+                        <!-- <img src="assets/images/faq2.jpg" alt="faq-image"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,659 @@
+<div class="bottom-space">
+    <app-hd-navbar></app-hd-navbar>
+    
+        <div class="common-bannerWrapper global-mb">
+            <img src="../../../../assets/images/sector-banner/commercial-building.jpg" alt="Expert Commercial Building Engineering Solutions">
+            <div class="bannerContainer">
+                <div class="containerbn">
+                    <h1>
+                        Find Specialized Expertise for Commercial Building Projects
+                    </h1>
+                    <p>
+                        BuildTwin connects you with global architects, engineers, and construction experts specializing in commercial building projects and multi-use developments, ensuring the right expertise for every project to meet strict quality standards.
+                    </p>
+                    <div class="button-wrapper">
+                        <button class="button-v2 mdc-button" (click)="scrollToSection('targetSection2')">
+                            Book a Service
+                        </button>
+                        <button class="button-v2 mdc-button border" (click)="scrollToSection('targetSection1')">
+                            Learn more
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="global-mb container">
+            <div class="heading">
+                <h2 class="title">
+                    Tailored Solutions for Every Business Need
+                </h2>
+                <div class="subTitle">
+                    Commercial buildings vary significantly in purpose and complexity. Our vendors deliver precision engineering and architectural services for
+                </div>
+            </div>
+    
+            <div class="list-type-wrapper bottom-space-big flex-wrap col-3-big">
+                <div class="block">
+                    <h3 class="block-heading">
+                        Office Buildings
+                    </h3>
+                    <p>
+                        Corporate towers, co-working spaces, and business parks designed for efficiency, tenant comfort, and scalability.
+                    </p>
+                    
+                </div>
+                <div class="block">
+                    <h3 class="block-heading">
+                        Retail Spaces
+                    </h3>
+                    <p>
+                        High-traffic environments like big-box stores, strip malls, and standalone retail stores, prioritizing customer flow and brand appeal.
+                    </p>
+                </div>
+                <div class="block">
+                    <h3 class="block-heading">
+                        Mixed-Use Properties
+                    </h3>
+                    <p>
+                        Integrated complexes combining offices, retail, and residential units, balancing aesthetics with functional zoning.
+                    </p>
+                </div>
+                <div class="block">
+                    <h3 class="block-heading">
+                        Hospitality & Leisure
+                    </h3>
+                    <p>
+                        Hotels, restaurants, and conference centers with robust structural systems and MEP integrations.
+                    </p>
+                </div>
+                <div class="block">
+                    <h3 class="block-heading">
+                        Industrial Commercial
+                    </h3>
+                    <p>
+                        Warehouses and logistics hubs engineered for heavy equipment, storage, and operational safety.
+                    </p>
+                </div>
+                <div class="block">
+                    <h3 class="block-heading">
+                        Modular Buildings
+                    </h3>
+                    <p>
+                        Prefabricated structures for rapid deployment, ideal for temporary offices or scalable retail spaces.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="global-mb container">
+            <div class="heading">
+                <div class="title">
+                    Diverse Infrastructure Solutions
+                </div>
+                <div class="subTitle">
+                    Optimized Designs for Every Business Requirement
+                </div>
+            </div>
+    
+            <div class="list-type-wrapper bottom-space-big">
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            <h4>Colocation Data Centers</h4>
+                        </figure>
+                        Shared Facilities, Individual Control 
+                    </h5>
+                    <p>
+                        Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
+                    </p>
+                </div>
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            <h4>Enterprise Data Centers</h4>
+                        </figure>
+                        Tailored Architecture for Business Criticality
+                    </h5>
+                    <p>
+                        Custom facilities designed to support specific business operations, enhanced control over data management and security.
+                    </p>
+                </div>
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            <h4>Managed Services Data Centers</h4>
+                        </figure>
+                        Streamlined Operations by Experts 
+                    </h5>
+                    <p>
+                        Third-party managed infrastructures providing specialized maintenance and operations, freeing up your resources for core business tasks.
+                    </p>
+                </div>
+            </div>
+            <div class="list-type-wrapper bottom-space-big">
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            <h4>Cloud Data Centers</h4>
+                        </figure>
+                        Dynamic Scaling and High Elasticity 
+                    </h5>
+                    <p>
+                        Flexible, scalable solutions for businesses needing dynamic capacity and minimal physical infrastructure investment.
+                    </p>
+                </div>
+                <div class="block">
+                    <h5>
+                        <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            <h4>Hyperscale Data Centers</h4>
+                        </figure>
+                        Robust Structures for Massive Scale Operations 
+                    </h5>
+                    <p>
+                        Built for large-scale operations, these centers support extensive data demands with high efficiency and robust architecture.
+                    </p>
+                </div>
+            </div>
+        </div> -->
+
+        <app-commercial-building-tt-partners [page]="'sector'" id="targetSection1"></app-commercial-building-tt-partners>
+        <div class="global-mb container">
+            <div class="heading">
+                <h2 class="title">
+                    Engineering Services for Commercial Buildings
+                </h2>
+                <p class="subTitle">
+                    Structural and architectural services designed to meet quality, security, and efficiency goals for your commercial property projects
+                </p>
+            </div>
+    
+            <div class="list-type-wrapper bottom-space-big">
+                <div class="block cursor" [routerLink]="'/services/pre-cast-detailing-services'">
+                    <h3 class="block-heading">
+                        <!-- <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            
+                        </figure> -->
+                        Structural Services 
+                    </h3>
+                    <!-- <p>
+                        Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
+                    </p> -->
+                    <ul class="list">
+                        <li>Structural Design</li>
+                        <li>Structural Precast Design</li>
+                        <li>Cast-in-situ Design</li>
+                        <li>PEB Design and Detailing</li>
+                    </ul>
+                </div>
+                <div class="block cursor" [routerLink]="'/services/steel-detailing-services'">
+                    <h3 class="block-heading">
+                        <!-- <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            
+                        </figure> -->
+                        MEP Services 
+                    </h3>
+                    <!-- <p>
+                        Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
+                    </p> -->
+                    <ul class="list">
+                        <li>MEP to Structural Integration</li>
+                        <li>Detailed Engineering</li>
+                        <li>Duct Detailing</li>
+                        <li>BoQ/QS Services</li>
+                    </ul>
+                </div>
+                <div class="block cursor" [routerLink]="'/services/bim-services'">
+                    <h3 class="block-heading">
+                        <!-- <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            
+                        </figure> -->
+                        BIM Services 
+                    </h3>
+                    <!-- <p>
+                        Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
+                    </p> -->
+                    <ul class="list">
+                        <li>BIM Modeling </li>
+                        <li>Estimodeling</li>
+                        <li>Digital Planning </li>
+                    </ul>
+                </div>
+                <div class="block">
+                    <h3 class="block-heading">
+                        <!-- <figure>
+                            <img src="assets/images/qualityBuildtwin.png" alt="" width="40" height="40">
+                            
+                        </figure> -->
+                        Detailing Services 
+                    </h3>
+                    <!-- <p>
+                        Lease space for your hardware in facilities that offer comprehensive support services, streamlining cost management and scalability
+                    </p> -->
+                    <ul class="list">
+                        <li>Structural Steel Detailing</li>
+                        <li>Precast Detailing</li>
+                        <li>Cast-in-situ Detailing</li>
+                        <li>Miscellaneous Steel Detailing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     <!-- <div class="bottom-space-gap"> -->
+        <!-- <app-power-plant-special-project [page]="'sector'"></app-power-plant-special-project> -->
+   <!-- </div> -->
+
+
+    <!-- <app-commercial-building-hd-discover-projects [hideTitle]="true" [page]="'sector'"></app-commercial-building-hd-discover-projects> -->
+    <div class="global-mb container">
+        <div class="heading">
+                <h2 class="title">
+                    Featured Projects
+                </h2>
+                <p class="subTitle">
+                    Explore our portfolio of successful engineering projects across various sectors
+                </p>
+        </div>
+        <app-project-list [showFilters]="false" [sectorName]="'Commercial Buildings'"></app-project-list>
+    </div>
+
+
+   <div class="container">
+    <div class="count-wrapper global-mb">
+        <div class="block">
+            <strong>
+                200+
+            </strong>
+            Projects Completed
+        </div>
+        <div class="block">
+            <strong>
+                15+
+            </strong>
+            Countries Served
+        </div>
+        <div class="block">
+            <strong>
+                50+
+            </strong>
+            Expert Vendors
+        </div>
+        <div class="block">
+            <strong>
+                98%
+            </strong>
+            Client Satisfaction
+        </div>
+    </div>
+   </div>
+
+   <div class="bottom-space-gap">
+    <app-commercial-building-sector-category [category]="8" [page]="'sector'"></app-commercial-building-sector-category>
+</div>
+
+<div class="global-mb container">
+    <div class="heading">
+        <h2 class="title">
+            Global Implementation Areas
+        </h2>
+        <p class="subTitle">
+            Our engineering solutions are implemented across major regions worldwide
+        </p>
+    </div>
+    <div class="implementation-area">
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/usa.svg" alt="USA" width="48" height="48">
+            </figure>
+            <h3>
+                USA
+            </h3>
+            <div class="location">
+                Data Centers & Industrial
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/eu.svg" alt="Europe" width="48" height="48">
+            </figure>
+            <h3>
+                EU
+            </h3>
+            <div class="location">
+                Infrastructure & Commercial
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/middle-east.svg" alt="Middle East" width="48" height="48">
+            </figure>
+            <h3>
+                Middle East
+            </h3>
+            <div class="location">
+                High-Rise & Retail
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/uk.png" alt="United Kingdom" width="48" height="48">
+            </figure>
+            <h3>
+                UK
+            </h3>
+            <div class="location">
+                Healthcare & Education
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/australia.svg" alt="Australia" width="48" height="48">
+            </figure>
+            <h3>
+                Australia
+            </h3>
+            <div class="location">
+                Mining & Industrial
+            </div>
+        </div>
+        <div class="block">
+            <figure>
+                <img src="https://www.buildtwin.com/assets/images/india.png" alt="India" width="48" height="48">
+            </figure>
+            <h3>
+                India
+            </h3>
+            <div class="location">
+                IT Parks & Residential
+            </div>
+        </div>
+    </div>
+
+    <div class="heading">
+        <h2 class="title">
+            Global & Regional Standards
+        </h2>
+    </div>
+    <div class="list-type-wrapper">
+        <div class="block">
+            <h3 class="block-heading">
+                Safety & Design Codes
+            </h3>
+            <ul class="list">
+                <li>
+                    IBC
+                </li>
+                <li>
+                    Eurocode
+                </li>
+                <li>
+                    AS 3600
+                </li>
+                <li>
+                    AISC 360
+                </li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3 class="block-heading">
+                Sustainability Certifications
+            </h3>
+            <ul class="list">
+                <li>
+                    LEED
+                </li>
+                <li>
+                    BREEAM
+                </li>
+                <li>
+                    ISO 14001
+                </li>
+            </ul>
+        </div>
+        <div class="block">
+            <h3 class="block-heading">
+                Regional Guidelines
+            </h3>
+            <ul class="list">
+                <li>
+                    BS 5950 (UK)
+                </li>
+                <li>
+                    NBC (India)
+                </li>
+                <li>
+                    GB 50010 (China)
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+      <!-- <div class="child-pb-none">
+          <app-sector-meeting-standards></app-sector-meeting-standards>
+      </div>
+     <app-hd-integrations></app-hd-integrations>
+    <div class="bottom-space-big">
+        <app-dc-europe></app-dc-europe>
+    </div> -->
+    <div class="global-mb container">
+        <div class="heading">
+            <h2 class="title">
+                Hear From Our Satisfied Clients
+            </h2>
+            <p class="subTitle">
+                See how BuildTwin is empowering commercial property projects worldwide
+            </p>
+        </div>
+        <div class="success-story">
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="Carlos M." width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name">Carlos M.</span>
+                        <span class="position">
+                            Director, UK
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    “Our retail space transformation—from a strip mall upgrade to a modern big box store design—was completed on schedule and within budget thanks to BuildTwin. Their network of experts delivered cutting-edge schematic design and precise material specifications.”
+                </p>
+                <!-- <div class="location">
+                    Data Center Project, USA
+                </div> -->
+            </div>
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="Sarah L." width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name">Sarah L.</span>
+                        <span class="position">
+                            Project Owner, USA
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    “BuildTwin’s vendors transformed our schematic design for a downtown office tower into a reality, ensuring flawless coordination between architects and contractors.”
+                </p>
+                <!-- <div class="location">
+                    Data Center Project, USA
+                </div> -->
+            </div>
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="Elena M." width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name">Elena M.</span>
+                        <span class="position">
+                            Structural Engineer, Germany
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    “The platform’s QC flagged critical design conflicts in our warehouse project early, preventing costly rework.”
+                </p>
+                <!-- <div class="location">
+                    Data Center Project, USA
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="main-head">
+            <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+                <div class="heading">
+                    <h2 class="title">Other Sectors We Serve</h2>
+                    <p class="subTitle">Unified Engineering Excellence, across diverse industries, delivered by pre-qualified expert teams</p>
+                </div>
+            </div>
+            <!-- <button mat-button class="button-v2 align-self-end">Explore Case studies</button> -->
+        </div>
+    </div>
+<app-special-project [heading]="false" [hideItem]="[4]"></app-special-project>
+
+    <app-commercial-building-faq-buildtwin [fullScreen]="true"></app-commercial-building-faq-buildtwin>
+    <!-- <div id="targetSection2"></div> -->
+    <!-- <div class="container">
+        <app-free-offer-form [page]="'sector'"></app-free-offer-form>
+    </div> -->
+    
+    <div class="container" id="targetSection2">
+        <div class="bt-flex form-wrap">
+            <div class="flex-grow-1">
+        <h2>
+            Why Choose BuildTwin?
+        </h2>
+        <p>
+            Your Partner in Commercial Excellence
+        </p>
+        <ul class="list">
+            <li>
+                <h3 class="block-heading">
+                    Global Network
+                </h3>
+                <span>
+                    Access 10,000+ vendors skilled in office buildings, retail spaces, and industrial facilities.
+                </span>
+            </li>
+            <li>
+                <h3 class="block-heading">
+                    Integrated ERP Tools
+                </h3>
+                <span>
+                    Manage tenders, track milestones, and collaborate in real time.
+                </span>
+            </li>
+            <li>
+                <h3 class="block-heading">
+                    Sustainability Focus
+                </h3>
+                <span>
+                    Prioritize energy-efficient materials and green building practices.
+                </span>
+            </li>
+            <li>
+                <h3 class="block-heading">
+                    Cost Efficiency
+                </h3>
+                <span>
+                    Streamline financing, leases, and repairs with transparent project management.
+                </span>
+            </li>
+        </ul>
+            </div>
+        <div class="flex-grow-1">
+        <app-free-offer-form [page]="'sector'"></app-free-offer-form>
+        </div>
+        </div>
+    </div>
+    <!-- <div class="bottom-space-big">
+        <app-drawing-freelancers></app-drawing-freelancers>
+    </div> -->
+    <!-- <app-get-started></app-get-started> -->
+    <app-hd-footer></app-hd-footer>
+    <!-- <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle,'active': AvailableServicesToggle}"
+        (mouseover)="AvailableServicesToggleStatusHover()"
+        (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
+        <div class="toggle" [ngClass]="{'active':AvailableServicesToggle}"
+            (click)="AvailableServicesToggleStatus(); $event.stopPropagation()">
+
+        </div>
+        <h3>
+            Available Service for Direct Booking
+            <small>
+                Unlock the BuildTwin advantage
+            </small>
+        </h3>
+        <div class="flex bg-sticky" *ngIf="AvailableServicesToggle">
+        </div>
+    </div> -->
+</div>

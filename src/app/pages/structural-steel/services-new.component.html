@@ -1,0 +1,31 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="mainContainer">
+    <div class="maincontent">
+        <app-structural-steel-banner></app-structural-steel-banner>
+        <app-structural-steel-three-cards></app-structural-steel-three-cards>
+        <app-structural-steel-trust-by></app-structural-steel-trust-by>
+        <app-structural-steel-sample-drawing></app-structural-steel-sample-drawing>
+        <app-structural-steel-precast-service></app-structural-steel-precast-service>
+        <app-structural-steel-top-vendors></app-structural-steel-top-vendors>
+
+        <app-structural-steel-how-it-worksNew></app-structural-steel-how-it-worksNew>
+        <app-structural-steel-live-trackingNew></app-structural-steel-live-trackingNew>
+
+        <app-service-category [category]="8" ></app-service-category>
+        <app-structural-steel-plug-play></app-structural-steel-plug-play>
+        <app-structural-steel-services-offered></app-structural-steel-services-offered>
+        <app-structural-steel-e2e-encryption></app-structural-steel-e2e-encryption>
+        <app-structural-steel-faq-buildtwin></app-structural-steel-faq-buildtwin>
+    </div>
+    <div class="toggle-sidebar" (click)="toggleSidebar()">Start Enquiry</div>
+    <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+        <span class="cross" (click)="toggleSidebar()"></span>
+        <aside class="Stickyform">
+            <app-free-offer-form class="formWrapper"></app-free-offer-form>
+        </aside>
+    </div>
+</div>
+
+<app-structural-steel-drawing-freelancers></app-structural-steel-drawing-freelancers> 
+<app-hd-footer></app-hd-footer>

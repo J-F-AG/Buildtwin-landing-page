@@ -1,0 +1,119 @@
+.fileUpload {
+    // background: #fff;
+    // border-radius: 6px;
+    // box-shadow: 0px 10.91px 43.64px 0px #2C2C2C0A;
+    // padding: 40px 20px 25px;
+    // margin-bottom: 25px;
+
+    .head {
+        text-align: center;
+        padding-bottom: 25px;
+
+        h1 {
+            font-family: var(--medium-global);
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: var(--secondary-textColor-global);
+            line-height: 1.4;
+        }
+    }
+
+    ::ng-deep {
+        .ant-upload.ant-upload-drag {
+            border: 1px var(--color-theme) dashed;
+            border-radius: 4px;
+        }
+        .ant-upload.ant-upload-drag .ant-upload {
+            height: 120px;
+        }
+
+        .ant-upload.ant-upload-drag p.ant-upload-drag-icon {
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 10px;
+        }
+
+        .ant-upload.ant-upload-drag p.ant-upload-text {
+            font-size: var(--font-size-base);
+            font-family: var(--medium-global);
+            color: var(--color-theme);
+        }
+    }
+}
+
+.youKnow {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 10.91px 43.64px 0px #2C2C2C0A;
+    padding: 16px;
+    gap: 16px;
+    align-items: center;
+    
+    figure {
+        margin: 0;
+    }
+
+    strong {
+        display: block;
+        font-family: var(--semibold-global);
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    a {
+        &:hover {
+            color: var(--color-theme);
+        }
+    }
+}
+.attachment-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    .block {
+        background: var(--backgroundColor-global);
+        border: 1px solid var(--borderColor-global);
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-size: 12px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+    .true-false-icon {
+        display: flex;
+        width: 20px; /* Adjust as needed */
+        height: 20px; /* Adjust as needed */
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .true-false-icon.cross::before, .true-false-icon.cross::after {
+    content: '';
+    position: absolute;
+    width: 11px; /* Adjust as needed */
+    height: 2px; /* Adjust as needed */
+    background-color: red;
+    top: 10px;
+    left: 4px;
+    }
+
+    .true-false-icon.cross::before {
+    transform: rotate(45deg);
+    }
+
+    .true-false-icon.cross::after {
+    transform: rotate(-45deg);
+    }
+    }
+}
+.link {
+    color: var(--color-theme);
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}

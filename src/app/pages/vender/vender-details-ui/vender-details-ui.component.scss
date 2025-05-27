@@ -40,10 +40,10 @@ h4 {
 }
 h6 {
     border-radius: 8px;
-    background: #f6f3ff;
+    background: #F3F8FF;
     margin-bottom: 10px;
     padding: 0 16px;
-    color: #886de0;
+    color: #0053fa;
     font-family: var(--fontFamily);
     font-size: 16px;
     font-style: normal;
@@ -165,7 +165,7 @@ ul {
         gap: 11px;
         padding: 5px 9px;
         &.secondary {
-            color: #886de0;
+            color: #0053fa;
             border-color: #c9b8ff;
             background: #f7f5ff;
         }
@@ -269,7 +269,7 @@ ul {
         }
 
         .head {
-            color: #886de0;
+            color: #0053fa;
             text-align: center;
             font-family: var(--fontFamily);
             font-size: 16px;
@@ -321,7 +321,7 @@ ul {
                     gap: 12px;
                     align-items: center;
                     span.color {
-                        color: #886de0;
+                        color: #0053fa;
                     }
                 }
             }
@@ -388,11 +388,6 @@ ul {
                     font-weight: 400;
                     line-height: normal;
                     margin-bottom: 8px;
-                }
-                .buttonV2 {
-                    align-self: center;
-                    padding: 9px 20px 8px 20px;
-                    background: none;
                 }
             }
         }
@@ -496,7 +491,7 @@ ul {
         width: 100%;
         text-align: left;
         th {
-            background: #886de0;
+            background: #0053fa;
             border-right: 4px solid white;
             color: var(--white, #fff);
             font-family: var(--fontFamily);
@@ -514,7 +509,7 @@ ul {
             }
         }
         td {
-            background: #f6f3ff;
+            background: #F3F8FF;
             padding: 20px;
             border-right: 4px solid white;
             border-top: 4px solid white;
@@ -524,7 +519,7 @@ ul {
             }
             h5 {
                 margin-bottom: 20px;
-                color: var(--Color-3, #886de0);
+                color: var(--Color-3, #0053fa);
                 font-family: var(--fontFamily);
                 font-size: 18px;
                 font-style: normal;
@@ -613,7 +608,7 @@ ul {
                 margin-bottom: 4px;
             }
             .detail {
-                color: var(--Color-3, #886de0);
+                color: var(--Color-3, #0053fa);
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
@@ -659,7 +654,7 @@ ul {
                     padding: 0 14px;
                     display: block;
                     span {
-                        color: #886de0;
+                        color: #0053fa;
                     }
                 }
             }
@@ -698,7 +693,7 @@ ul {
             border-radius: 3px;
             display: block;
             &.active {
-                background: #886DE0;
+                background: #0053fa;
             }
         }
     }
@@ -721,7 +716,7 @@ ul {
             width: 70px;
             height: 62px;
             border-radius: 10px;
-            background: #886de0;
+            background: #0053fa;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -854,13 +849,13 @@ ul {
     Faq Wrapper css start
 */
 #faq-wrapper {
-    .container {
+    .container,.container-with-right {
         display: flex;
         gap: 30px;
         .left {
             width: 407px;
             min-width: 407px;
-            background: #f6f3ff;
+            background: #F3F8FF;
             border-radius: 8px;
             padding: 40px 41px;
             display: flex;
@@ -924,7 +919,7 @@ ul {
                     transform: translate(-50%, -50%) rotate(90deg);
                 }
                 &.minus::before {
-                    background: #886de0;
+                    background: #0053fa;
                 }
                 &.minus::after {
                     display: none;
@@ -939,7 +934,7 @@ ul {
 
 #software {
     h5 {
-        color: #886de0;
+        color: #0053fa;
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
@@ -967,7 +962,7 @@ ul {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f6f3ff;
+            background: #F3F8FF;
             border-radius: 50%;
         }
     }
@@ -1021,7 +1016,7 @@ ul {
             font-weight: 500;
             line-height: 30px; /* 166.667% */
             border-radius: 8px;
-            background: #F6F3FF;
+            background: #F3F8FF;
         }
     }
     .content {

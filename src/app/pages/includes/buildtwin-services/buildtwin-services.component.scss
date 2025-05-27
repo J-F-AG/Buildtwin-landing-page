@@ -14,7 +14,7 @@
 
             /* 48px */
             span {
-                color: #886DE0;
+                color: #0053fa;
                 font-family: "Jeff Script";
                 font-size: 48px;
                 font-style: normal;
@@ -70,10 +70,10 @@
                         margin-bottom: 7px;
 
                         i {
-                            width: 24px;
-                            height: 24px;
-                            background: #ECECEC;
-                            border-radius: 100px;
+                            width: 28px;
+                            height: 28px;
+                            // background: #ECECEC;
+                            // border-radius: 100px;
                             color: var(--grey, var(--grey, #808080));
                             font-size: 14px;
                             font-style: normal;
@@ -100,7 +100,7 @@
                         }
 
                         .newBtn {
-                            color: var(--primary, #886DE0);
+                            color: var(--primary, #0053fa);
                             text-align: center;
                             font-size: 14px;
                             font-style: normal;
@@ -117,7 +117,7 @@
                             bottom: -23px;
                             width: 54%;
                             height: 3px;
-                            background: #886DE0;
+                            background: #8CE258;
                             display: block;
                             left: -24px;
                         }
@@ -140,7 +140,7 @@
             justify-content: flex-end;
             align-items: center;
             border-radius: 8px;
-            background: var(--secondary, #F6F3FF);
+            background: var(--secondary, #F3F8FF);
         }
     }
 }

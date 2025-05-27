@@ -1,7 +1,7 @@
 .coverPopupData {
     position: relative;
-    height: 637px;
-    overflow: hidden;
+    height: 100%;
+    overflow: auto;
     width: 859px;
 }
 
@@ -9,6 +9,7 @@
     background: #fff;
     padding: 20px;
     border-radius: 10px;
+    height: 100%;
 }
 
 .popUP {
@@ -18,7 +19,7 @@
     z-index: 99999;
     width: 100%;
     left: 0;
-    height: 100vh;
+    height: 100%;
     align-items: center;
     justify-content: center;
     left: 0;
@@ -62,5 +63,26 @@
 }
 
 .coverPopup {
-    position: relative;
+    max-width: 100%;
+    // position: relative;
+    // width: 100%;
+    // padding: 20px 0;
+    // border: 20px solid white;
+    // border-top: 0;
+    // border-bottom: 0;
+    // // overflow: auto;
+}
+
+@media only screen and (max-width : 767px) {
+    .coverPopup {
+        overflow: auto;
+        padding-top: 36px;
+    }
+    .popUP i.closeIcon {
+        position: fixed;
+        right: 40px;
+        top: 35px;
+        box-shadow: none;
+        border-radius: 0;
+    }
 }

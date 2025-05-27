@@ -5,11 +5,12 @@
             <img src="assets/images/coming-soon-banner.png" width="716" height="281" alt="">
         </div>
         <div class="content">
-            <h1>Coming Soon!</h1>
-            <p>Stay Tuned! We are currently updating this section. <br>Meanwhile you can learn more about us or reach out to schedule a call.</p>
+            <h1>Oops!<br>Page Not Found</h1>
+            <p>We are sorry about this but the page you were looking for does not exist.
+            </p>
             <div class="btnGroup">
-                <a mat-button routerLink="{{_languageService.currentLanguage}}" class="default-btn">Learn More</a>
-                <a mat-button (click)="call()" class="default-btn">Schedule a Call</a>
+                <a href="https://www.buildtwin.com" class="button-v2">Learn More</a>
+                <a (click)="call()" class="button-v2" href="javascript:void(0)">Schedule a Call</a>
             </div>
         </div>
     </div>
@@ -30,8 +31,7 @@
           </svg>
       </i>
     <div class="coverPopupData">
-    
-  <div class="meetings-iframe-container" data-src="https://success.buildtwin.com/meetings/buildtwin?embed=true"></div>
+      <iframe src="https://success.buildtwin.com/meetings/buildtwin?embed=true" width="100%" height="700px" frameborder="0"></iframe>
 </div>
 </div>
 </div>

@@ -8,35 +8,12 @@
     border-bottom: 2px dashed #e8e2d7;
 }
 
-
+#peek-into-buildtwin-solution-providers {
+    // padding-top: 100px;
+}
 :host ::ng-deep {
     .story {
-        margin-bottom: 80px;
-        .head {
-            margin-bottom: 40px;
-            text-align: center;
-
-            h2 {
-                color: #0E0E28;
-
-                font-size: 40px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 120%;
-                /* 48px */
-                margin-bottom: 8px;
-            }
-
-            p {
-                color: var(--Black, #000);
-                text-align: center;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 160%;
-                /* 25.6px */
-            }
-        }
+        // margin-bottom: 80px;
 
         .listItem {
             position: relative;
@@ -56,13 +33,29 @@
                 bottom: 65px;
                 display: none;
             }
+            .owl-theme {
+                // padding: 0 20px;
+            }
+            .owl-carousel .owl-stage-outer {
+                // padding: 20px;
+                // margin: 0 -20px;
+            }
+            .owl-carousel .owl-item img {
+                width: revert-layer;
+            }
+            .owl-item {
+                .col {
+                    width: calc(100% - 20px);
+                    margin: 10px;
+                }
+            }
             .col {
-                
+                display: flex;
+                flex-direction: column;
                 border-radius: 8px;
                 background: var(--White-Fill, #FFF);
                 box-shadow: 0px 3px 20px 0px rgba(44, 44, 44, 0.06);
                 width: 24%;
-              
                 flex-shrink: 0;
                 padding: 0 31px;
                 padding-bottom: 20px;
@@ -72,7 +65,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-
+                    overflow: hidden;
                     img {
                     }
                 }
@@ -132,8 +125,11 @@
                 }
 
                 .link {
+                    background: none;
+                    outline: none;
+                    box-shadow: none;
                     display: flex;
-                    color: #886DE0;
+                    color: #0053fa;
 
                     font-size: 16px;
                     font-style: normal;
@@ -154,7 +150,77 @@ a.link.disabled {
     cursor: default;
     opacity: 0.5;
 }
-
+.owl-wrapper {
+    width: 100%;
+}
+.story .listItem .owl-wrapper .col {
+    strong {
+        padding-bottom: 0;
+    }
+    .link {
+        font-size: inherit;
+    }
+}
+:host ::ng-deep .owl-carousel .owl-stage {
+    display: flex;
+}
+:host ::ng-deep .owl-carousel .owl-item {
+    display: flex;
+    flex-direction: column;
+}
+:host ::ng-deep .listItem .owl-carousel .owl-item  .col{
+    
+    flex: 1;
+}
+.specializations {
+    flex-grow: 1;
+}
+.rating-wrapper {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 15px;
+    color: var(--lightColor);
+    font-weight: 400;
+    font-size: 14px;
+    .block {
+        position: relative;
+        &::after {
+            width: 5px;
+            height: 5px;
+            content: "";
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background: var(--lightColor);
+        }
+        &:first-child::after {
+            display: none;
+        }
+    }
+}
+.specializations {
+    h5 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        li {
+            background-color: var(--secondaryBackgroundColor);
+            border-radius: 30px;
+            padding: 4px 10px;
+            &.more {
+                background: none;
+                font-weight: bold;
+            }
+        }
+    }
+}
 @media (max-width:1200px){
     :host ::ng-deep .story .listItem .col {
         width: 293px;

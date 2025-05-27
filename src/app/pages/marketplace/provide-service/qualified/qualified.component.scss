@@ -49,7 +49,7 @@ margin-bottom: 50px;
 align-items: center;
 justify-content: center;
                 span{
-                    color: var(--primary, #886DE0);
+                    color: var(--primary, #0053fa);
 text-align: center;
 font-size: 40px;
 font-style: normal;
@@ -73,7 +73,7 @@ margin-bottom: 0;
                 position: relative;
 
                 border-radius: 8px;
-                background: #F6F3FF;
+                background: #F3F8FF;
                 margin-bottom: 48px;;
 
                 .svgCover {
@@ -124,6 +124,6 @@ margin-bottom: 0;
         margin-bottom: 20px;
     }
  :host ::ng-deep .qualified {
-        padding: 60px 0 0;
+        padding: 88px 0 0;
     }
 }

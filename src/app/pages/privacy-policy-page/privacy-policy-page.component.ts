@@ -9,12 +9,12 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class PrivacyPolicyPageComponent {
 
-    title = 'Privacy Policy - Buildtwin';
+    // title = 'Privacy Policy - Buildtwin';
  
     constructor(private titleService:Title, public _languageService:LanguageService) {}
     
     ngOnInit() {
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
     }
 
 }

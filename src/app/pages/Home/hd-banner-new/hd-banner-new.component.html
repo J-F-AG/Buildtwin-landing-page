@@ -1,231 +1,214 @@
-<div class="banner-area position-relative z-1">
-
-
-
-  <div class="sliderCover">
-    <owl-carousel-o [options]="aboutSlider">
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Hospital</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
+<div class="banner-area" id="home-banner">
+  <owl-carousel-o #owlCarousel [options]="aboutSlider" (translated)="onTranslated($event)">
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide1-left.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide1-right.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h1>
+              A new Engineering Experience.
+      Focus on  <span>what matters</span>
+            </h1>
+            <p class="small-title">
+              BuildTwin simplifies how you outsource, manage and ensure your projects meet time 
+      and quality goals. Get started in minutes and focus on what matters!
+            </p>
           </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner1.jpg" alt="" width="1440" height="622.07">
-          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
         </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Airport</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide2-left.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide2-right.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Get 5+ free  <span>competitive offers</span>
+    from 100s of pre-qualified vendors
+            </h2>
+            <p class="small-title">
+              Trusted, Reliable and Efficient – Access pre-qualified engineers 
+    who deliver on time, within budget and to your standards.
+            </p>
           </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner2.jpg" alt="" width="1440" height="622.07">
-          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
         </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Bridges</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide3-left.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide3-right.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Less stress. More progress.
+    Meet your  <span>AI Design Manager</span>
+            </h2>
+            <p class="small-title">
+              Your AI-powered Design Manager simplifies project coordination, ensuring timelines, quality
+    and budget are on track. Achieve more with intelligent automation.
+            </p>
           </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner3.jpg" alt="" width="1440" height="622.07">
-          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
         </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Data</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide4-left.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide4-right.jpg" width="482" height="473" alt="slide">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Relax! Let AI check every
+    detail and  <span>ensure quality</span>
+            </h2>
+            <p class="small-title">
+              AI tracks all changes, conversations, and revisions, ensuring every drawing 
+    meets compliance with your requirement.
+            </p>
           </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner4.jpg" alt="" width="1440" height="622.07">
-          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
         </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Industrial</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
-          </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner5.jpg" alt="" width="1440" height="622.07">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Metros</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
-          </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner6.jpg" alt="" width="1440" height="622.07">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Tunnel</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
-          </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner7.jpg" alt="" width="1440" height="622.07">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>School</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
-          </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner8-2.jpg" alt="" width="1440" height="622.07">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Pre cast</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
-          </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner9.jpg" alt="" width="1440" height="622.07">
-          </div>
-        </div>
-      </ng-template>
-      <!-- <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>School</strong></h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
-          </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner10.jpg" alt="" width="1440" height="622.07">
-          </div>
-        </div>
-      </ng-template> -->
-      <ng-template carouselSlide>
-        <div class="item">
-          <div class="container banner-content-wrapper">
-            <div class="banner-content">              
-              <h2  data-aos="fade-up" data-aos-duration="500" ><strong>Power plant</strong> Datecenter</h2>
-              <p  data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">100s of independent consultancy, specialised in data center with one <br>unified delivery process</p>
-              
-              <a mat-button href="" class="default-btn arrow-btn" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Learn More 
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.34304 10.1839L5.44815 9.29901L8.5554 6.19176H0.75V4.89915H8.5554L5.44815 1.79688L6.34304 0.90696L10.9815 5.54545L6.34304 10.1839Z" fill="white"/>
-                </svg>
-              </a>
-            </div>
-
-          </div>
-          <div class="bannerImg"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <img src="../../../../assets/images/banner11.jpg" alt="" width="1440" height="622.07">
-          </div>
-        </div>
-      </ng-template>
-
-    </owl-carousel-o>
-
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+  <div class="container slide-tab-wrapper">
+    <ul class="slide-tab">
+      <li (click)="goToSlide(0)" [ngClass]="{'active': currentIndex==0}">
+        1 | Marketplace + AI Design Manager
+      </li>
+      <li (click)="goToSlide(1)" [ngClass]="{'active': currentIndex==1}">
+        2 | Get competetive quotes
+      </li>
+      <li (click)="goToSlide(2)" [ngClass]="{'active': currentIndex==2}">
+        3 | Meet your AI Design Manager
+      </li>
+      <li (click)="goToSlide(3)" [ngClass]="{'active': currentIndex==3}">
+        4 | Assisted AI Project Delivery
+      </li>
+    </ul>
   </div>
 </div>
+<ng-template #buttonTemplate>
+  <div class="button-wrapper flex-justify-center">
+    <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+      Get started NOW
+    </a>
+    <a (click)="call()" href="javascript:void(0)" class="button-v2 border">
+      <img src="assets/images/icons/icon1.png" width="23" height="23" alt="Schedule DEMO">
+      Schedule DEMO
+    </a>
+  </div>
+</ng-template>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+
+
+  <!-- <div class="integrationsList roundButtonWrapper">
+    <owl-carousel-o [options]="integrationsList">
+      <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers">
+              <picture>
+                <source srcset="assets/images/gbc_black.webp" type="image/webp">
+                <source srcset="assets/images/gbc_black.png" type="image/png">
+                <img src="assets/images/gbc_black.png" 
+                     alt="Gbc" 
+                     style="width: 100px;" 
+                     width="100" 
+                     height="57">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india">
+              <picture>
+                <source srcset="assets/images/jf_black.webp" type="image/webp">
+                <source srcset="assets/images/jf_black.png" type="image/png">
+                <img src="assets/images/jf_black.png" 
+                     alt="J&F" 
+                     style="width: 68.522px;" 
+                     width="68.522" 
+                     height="34.731">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant">
+              <picture>
+                <source srcset="assets/images/durchgeplant_black.webp" type="image/webp">
+                <source srcset="assets/images/durchgeplant_black.png" type="image/png">
+                <img src="assets/images/durchgeplant_black.png" 
+                     alt="durchgeplant" 
+                     style="width: 217.053px;" 
+                     width="217.053" 
+                     height="34.729">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited">
+              <picture>
+                <source srcset="assets/images/aarbee_black.webp" type="image/webp">
+                <source srcset="assets/images/aarbee_black.png" type="image/png">
+                <img src="assets/images/aarbee_black.png" 
+                     alt="Aarbee" 
+                     style="width: 399.985px;" 
+                     width="399.985" 
+                     height="50.847">
+            </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering">
+              <picture>
+                <source srcset="assets/images/caldim_black.webp" type="image/webp">
+                <source srcset="assets/images/caldim_black.png" type="image/png">
+                <img src="assets/images/caldim_black.png" 
+                     alt="Caldim" 
+                     style="width: 134.489px;" 
+                     width="134.489" 
+                     height="56.627">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+  </owl-carousel-o>
+  </div> -->
+  <!-- <div class="toggle-sidebar" (click)="toggleSidebar()">
+    Start Enquiry
+  </div>
+  <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+  <div class="formContainer">
+    <span class="cross" (click)="toggleSidebar()"></span>
+    <app-free-offer-form [type]="'outside'" [normalBtn]="true"></app-free-offer-form>
+</div>
+  </div> -->

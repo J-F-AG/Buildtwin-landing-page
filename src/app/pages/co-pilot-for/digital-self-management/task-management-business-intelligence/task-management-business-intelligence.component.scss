@@ -78,12 +78,12 @@
     }
 }
 .line span.active strong {
-    background: #886DE0;
+    background: #0053fa;
     color: #fff;
 }
 
 .line span.active em {
- color:  #886DE0;
+ color:  #0053fa;
 }
 .line span:nth-child(2) em{
     left: -54px;
@@ -112,7 +112,7 @@
     p {
         color: var(--grey, var(--grey, #808080));
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.6;

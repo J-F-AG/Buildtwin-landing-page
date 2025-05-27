@@ -3,14 +3,15 @@
 <app-om-banner-freelance></app-om-banner-freelance>
 
 <app-how-buildtwin-helps>
-    <div class="buildtwinHelps" id="scrollActivated">
-        <div class=""id="onScrollAnimation">
-            <div class="headSection">
-                <h2>Business Intelligence<br>with actionable Insights
+    <div class="buildtwinHelps container bg" id="scrollActivated">
+        <div class="heading-sticky"id="onScrollAnimation">
+            <div class="heading center v2">
+                <h2 class="title">Business Intelligence<br>with actionable Insights
                 </h2>
             </div>
-        <div class="container">
-          
+        </div>
+
+        <div class="staticData">
             <div class="tabContent">
                 <div class="tabLeft">
                     <ul>
@@ -36,15 +37,11 @@
                 </div>
                
             </div>
-        </div>
-        </div>
-
-        <div class="staticData">
             <div class="tabRIght">
-                <div id="section1" class="active" data-ele="one"  >
+                <div id="section1" data-ele="one" [ngClass]="{'active':activeState === 1}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild1.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild1.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -58,10 +55,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="section2"    data-ele="two">
+                <div id="section2"    data-ele="two" [ngClass]="{'active':activeState === 2}">
                     <div class="flex">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild2.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild2.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -75,10 +72,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="section3" data-ele="three" >
+                <div id="section3" data-ele="three" [ngClass]="{'active':activeState === 3}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild3.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild3.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -92,10 +89,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="section4" data-ele="four"  >
+                <div id="section4" data-ele="four" [ngClass]="{'active':activeState === 4}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild4.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild4.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -107,10 +104,10 @@
                                 The consolidated LIVE view shows you the LIVE project view of your project progress and whether your project is on track or not.                            </div>
                     </div>
                 </div>
-                <div id="section5"  data-ele="five"  >
+                <div id="section5"  data-ele="five" [ngClass]="{'active':activeState === 5}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild5.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild5.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -123,10 +120,10 @@
                         </div>
                     </div>
                 </div>
-                <div  id="section6" data-ele="six" >
+                <div  id="section6" data-ele="six" [ngClass]="{'active':activeState === 6}">
                     <div class="flex ">
                         <div class="imgWrap">
-                            <img src="assets/images/ui/whyBuild6.png" alt="" title="">
+                            <img src="assets/images/ui/whyBuild6.png" alt="Buildtwin" title="">
                         </div>
                         <div class="contentWrap">
                             <h3>
@@ -158,22 +155,22 @@
 <app-om-about></app-om-about>
 
 <app-om-integrations-freelance>
-<div class="workflow">
-    <div class="container">
+<div class="workflow container">
+    <div>
         <div class="flex">
             <div class="leftPart">
 <h2>Integration with your <br> workflow</h2>
 <p>
     Link BuildTwin DSM to BuildTwin Copilot and Third-Party <br> business process tools and get actionable insights
 </p>
-<a mat-button routerLink="{{_languageService.currentLanguage}}" class="default-btn">Get Started</a>
+<a href="https://www.buildtwin.com" class="button-v2">Get Started</a>
             </div>
 
           
         </div>
     </div>
     <div class="rightPart">
-        <img src="assets/images/ui/workflow.png" width="870" height="220">
+        <img src="assets/images/ui/workflow.png" alt="workflow" width="870" height="220">
                   </div>
 </div>
 
@@ -187,10 +184,10 @@
     <div class="buildtwinService forTraning ptb-100">
 
         <div class="container">
-            <div class="headSection">
-                <h2><span>Actionable</span> Business Insight
+            <div class="heading center v2">
+                <h2 class="title"><span>Actionable</span> Business Insight
                 </h2>
-                <p>
+                <p class="small-title">
                     Earn real money with tangible business insights.
                 </p>
             </div>
@@ -209,7 +206,7 @@
                                     from clients, and equips you with an automated assistant to claim extra work. Save time 
                                     and money by letting AI identify, compose, and document claims at your fingertips.
                                 </p>
-                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                                <!-- <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
                             </div>
 
                         </li>
@@ -226,7 +223,7 @@
                                     activities, creating a comprehensive understanding of the time budget for projects, training, and 
                                     more.
                                 </p>
-                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                                <!-- <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
                             </div>
 
                         </li>
@@ -241,7 +238,7 @@
                                     Get deep understanding where to apply automatisation in your engineering projects and use trends to develop 
                                     your automatisation strategy.
                                 </p>
-                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                                <!-- <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
                             </div>
 
                         </li>
@@ -257,7 +254,7 @@
                                     improve and how to continuously meet business objectives. Develop bonus schemes which bridge the gap between 
                                     constantly raising salaries and business objectives in the most aligned way.
                                 </p>
-                                <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a>
+                                <!-- <a routerLink="" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
                             </div>
 
                         </li>
@@ -265,16 +262,16 @@
                 </div>
                 <div class="tabRIght">
                     <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">
-                        <img src="assets/images/ui/service1.png" alt="" width="" height="">
+                        <img src="assets/images/ui/service1.png" alt="Service" width="" height="">
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 11">
-                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 12">
-                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
                     </div>
                     <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 13">
-                        <img src="assets/images/ui/service2.png" alt="" width="" height="">
+                        <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
                     </div>
 
 
@@ -315,13 +312,13 @@
               <h2>Business Intelligence</h2>
               <span>Gain Business Insights</span>
             </div>
-              <img src="assets/images/email1.png">
+              <img src="assets/images/email1.png" alt="Email">
             
               <p>Let AI Draft, track and process your Inbox, 
                 while you focus on what matters</p>
                 <i class="icon1">
                   <svg width="32" height="228" viewBox="0 0 32 228" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M32 1V1C23.1634 1 16 8.16345 16 17V211C16 219.837 8.83656 227 0 227V227" stroke="#886DE0" stroke-dasharray="2"/>
+                    <path d="M32 1V1C23.1634 1 16 8.16345 16 17V211C16 219.837 8.83656 227 0 227V227" stroke="#0053fa" stroke-dasharray="2"/>
                     <path d="M8 89L16 99L24 89" stroke="#A692E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     
@@ -332,11 +329,11 @@
               <h2>Claims</h2>
               <span>Unlock missed earnings</span>
               </div>
-              <img src="assets/images/email2.png">
+              <img src="assets/images/email2.png" alt="Email">
               <p>Save  files locally - and done. From re-naming, QC to uploading to third-party CDE. BuildTwin takes care of it.</p>
               <i class="icon1">
                 <svg width="32" height="228" viewBox="0 0 32 228" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M-7.3346e-07 1V1C8.83655 1 16 8.16345 16 17V211C16 219.837 23.1634 227 32 227V227" stroke="#886DE0" stroke-dasharray="2"/>
+                  <path d="M-7.3346e-07 1V1C8.83655 1 16 8.16345 16 17V211C16 219.837 23.1634 227 32 227V227" stroke="#0053fa" stroke-dasharray="2"/>
                   <path d="M24 89L16 99L8 89" stroke="#A692E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   
@@ -348,7 +345,7 @@
               <h2>Benchmark </h2>
               <span>Understand how to improve</span>
               </div>
-              <img src="assets/images/email3.png">
+              <img src="assets/images/email3.png" alt="Email">
               <p>A new revision or an unanswered technical question - BuildTwin keeps track of what happens with the right 360° context</p>
             </div>
           </div>

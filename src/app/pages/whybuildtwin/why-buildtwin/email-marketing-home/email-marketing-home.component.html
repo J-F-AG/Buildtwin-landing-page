@@ -11,17 +11,15 @@
             <div class="item">
                 <div class="container">
                 <div class="banner-content text-center ms-auto me-auto">
-                  
-                    <h1 class="ms-auto me-auto" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">                      
-                        The BuildTwin Mission.
+
+                    <h1 class="mb-0 ms-auto me-auto">
+                        A better experience. Today.  
                     </h1>
-                    <h1 class="font-poppins" data-aos="fade-up" data-aos-duration="500">
+                    <h2>
+                        <span class="jeffStyle">for</span> outsourcing engineering, execution, and delivery.
+                    </h2>
 
-                    „Sourcing, matching and utilizing <span class="jeffStyle">engineering</span>
-                    teams efficiently, while <u>meeting</u> project, cost
-                    and quality requirements.“
 
-                  </h1>
                   <div class="btn-box" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                   </div>
                   <ul class="features-list ps-0 mb-0 list-unstyled" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
@@ -47,12 +45,12 @@
             <div class="overlay position-absolute z-n1"></div>
         </div>
 </app-here-section>
-<app-market-place>
+<app-market-place (marketplaceNumber)="marketplaceNumber($event)">
     <div class="marketPlace "  id="scrollActivated">
         <div class="container">
 
       
-        <div class="head">
+        <div class="head stickyTop">
             <h2>
                 Why BuildTwin
             </h2>
@@ -63,15 +61,15 @@
             <div class="pagination">
                
                     <ul >
-                        <li class="active"  [ngClass]="{active: activeState === 1 }">
+                        <li class="active"  [ngClass]="{active: marketPlace === 1 }">
                             <i class="cirlce"></i>
                             <span>Why</span>
                         </li>
-                        <li [ngClass]="{active: activeState === 2 }">
+                        <li [ngClass]="{active: marketPlace === 2 }">
                             <i class="cirlce"></i>
                             <span>How</span>
                         </li>
-                        <li [ngClass]="{ active: activeState === 3 }">
+                        <li [ngClass]="{ active: marketPlace === 3 }">
                             <i class="cirlce"></i>
                             <span>What</span>
                         </li>
@@ -80,57 +78,42 @@
             </div>
         </div>
 
-        <div class="slide" data-ele="1">
+        <div class="slide" data-ele="1" [ngClass]="{ active: marketPlace == 1 }">
             <div class="imgWrap">
-                <img src="assets/images/ui/slide1.png" width="630" height="270">
+                <img src="assets/images/ui/slide1.png" alt="Slider" width="630" height="270">
             </div> 
             <div class="contentWrap">
-                <h3>Why </h3>
+                <h3>Why - the largest portfolio on the</h3>
                 <p> 
 
-                    It is time to maximize your technical teams potential. By cutting the noise of 
-                    coordination and project management - engineers are free to do what they do best. 
-
+                    AI unlocks a new level of productivity of engineers. And allows to 
+                    automate tedious tasks and knowlege transfer. 
                    
-                    More <u>value</u> engineering, less hassle. 
-
                 </p>
             </div>
         </div>
-        <div class="slide" data-ele="2">
+        <div class="slide" data-ele="2" [ngClass]="{ active: marketPlace == 2 }">
             <div class="imgWrap">
-                <img src="assets/images/ui/slide2.png" width="630" height="270">
+                <img src="assets/images/ui/slide2.png" alt="Slider" width="630" height="270">
             </div> 
             <div class="contentWrap">
-                <h3>How</h3>
+                <h3>How - Delivered with the help of AI</h3>
                 <p>
-                    BuildTwin Co-Pilot is the HOW of high-performance engineering, transforming coordination 
-                    and documentation into deliverables.
-
-                    <u>BuildTwin AI</u> helps your team run technical projects efficiently by keeping track 
-                    of RFIs, timelines, and quality control.
-
+                    BuildTwin AI helps engineers to develiver projects while meeting 
+                    the requirements. 
                 </p>
-                <a href="">How Co-Pilot works</a>
             </div>
         </div>
-        <div class="slide" data-ele="3">
+        <div class="slide" data-ele="3" [ngClass]="{ active: marketPlace == 3 }">
             <div class="imgWrap">
-                <img src="assets/images/ui/slide3.png" width="630" height="270">
+                <img src="assets/images/ui/slide3.png" alt="Slider" width="630" height="270">
             </div> 
             <div class="contentWrap">
-                <h3>What</h3>
+                <h3>What - Engineering Services</h3>
                 <p>
-                    The BuildTwin Marketplace unlocks project scaling by <u>standardizing engineering 
-                    services</u> and uniting over 2,000+ engineers in a global network. 
-
-               
-                    BuildTwin is the hub for engineering expertise and scale, ensuring your projects are managed by top-tier technical teams 
-                    while Co-Pilot steers the helm of project management.
-                
-                    Plug & Play into all major workflows.
+                    BuildTwin combines all data - to create a AI based checklist for each submission. And 
+                    enables Trust with / in AI - to work with a global community. 
                 </p>
-                <a href="">Schedule a Call with Our Team</a>
             </div>
         </div>
     </div>
@@ -146,11 +129,11 @@
         <div class="row happier-customers-inner">
             <div class="hd-section-title text-center ms-auto me-auto" data-aos="fade-up" data-aos-duration="500">
                 <h2 class="mb-0 font-poppins">
-                    <h2>BuildTwin <i class="jeffStyle">Solutions</i></h2>
+                    <i class="jeffStyle">Automates</i> working with 5k+ engineers
                 </h2>
                 <p class="ms-auto me-auto">
-                    BuildTwin is the backbone of a streamlined engineering process empowering providers and procurers to focus on what they do best. 
-                    With a trio of distinct solutions, <u>Co-Pilot, Marketplace and Training</u>, BuildTwin is designed to elevate the engineering process:   
+                    Automate the set-up working with different vendors and track LIVE the project progress
+                    while BuildTwin does the heavy lifting for you in the background.
                 </p>
             </div>
             
@@ -177,7 +160,7 @@
     <div class="header-section">
         <h2 class="header-title">What 
 
-            <img src="assets/images/buildL.png" width="128" height="34">
+            <img src="assets/images/buildL.png" alt="BuildTwin" width="128" height="34">
         </h2>
         <h3 class="offer-text">can do for you</h3>
     </div>
@@ -186,20 +169,20 @@
         <div class="services-container">
             <h4 class="services-title">Procuring engineering services</h4>
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cce01dc6eca3498f0168c47d213f2e7765193ce28763768bcee719b9633f09da?apiKey=36850388eee14aa189272e3e1adf474e&"
-                alt="" class="services-img" />
+                alt="Procuring engineering services" class="services-img" />
         </div>
     </div>
 </div>
 </div>
 </section>
-
-<div class="tableWrapper">
+<app-can-do-for-you></app-can-do-for-you>
+<!-- <div class="tableWrapper">
 <div class="container">
     <div class="cover">
         <div  class="tableheader bt-flex">
             <div class="col1">Co-Pilot Features</div>
             <div class="col2">
-                <img src="assets/images/z.png" width="89" height="24">
+                <img src="assets/images/z.png" alt="BuildTwin" width="89" height="24">
             </div>
             <div class="col3">Legacy Tools</div>
             <div class="col4">Potential Saving</div>
@@ -468,7 +451,7 @@
         </div>
     </div>
 </div>
-</div>
+</div> -->
 </div>
 
 
@@ -476,3 +459,4 @@
 <app-cta></app-cta>
 
 <app-hd-footer></app-hd-footer>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

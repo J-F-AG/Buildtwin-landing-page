@@ -10,12 +10,12 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './provide-service.component.scss'
 })
 export class ProvideServiceComponent {
-
+  marketPlace: number = 1;
   showPopup1=false;
   showPopup=false;
   activeState: number = 1
   activeState2: number = 11
-  title = 'BuildTwin - Software for technical Teams';
+  // title = 'BuildTwin - Software for technical Teams';
   activeState3: number = 21
   FixedDiv: any
   FixedDivPositionTop: any
@@ -33,131 +33,56 @@ export class ProvideServiceComponent {
 
 navBar:any
 tabHead:any
-
+selectedIndex: number = 0
+  tabDetail: any =[
+    {
+      icon:'assets/images/icons/manage-portfolio.png',
+      text:'manage Portfolio',
+      target: 'assets/images/for-seller/mange-portfolio.jpg'
+    },
+    {
+      icon:'assets/images/icons/reach.png',
+      text:'Reach',
+      target: 'assets/images/for-seller/mange-portfolio.jpg'
+    },
+    {
+      icon:'assets/images/icons/match.png',
+      text:'Match',
+      target: 'assets/images/for-seller/mange-portfolio.jpg'
+    },
+    {
+      icon:'assets/images/icons/reach.png',
+      text:'Share',
+      target: 'assets/images/for-seller/mange-portfolio.jpg'
+    },
+    {
+      icon:'assets/images/icons/analyze.png',
+      text:'Analyze',
+      target: 'assets/images/for-seller/mange-portfolio.jpg'
+    }
+  ]
   constructor(private titleService: Title, private router: Router, public _languageService:LanguageService) {
     router.events.subscribe((val) => {
-      this.scrollActivated = document.getElementById('scrollActivated');
       setTimeout(() => {
-        this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-        this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-        console.log(this.scrollDivOffsettop, this.scrolledDivHeight);
+      this.scrollActivated = document.getElementById('scrollActivated');
+        if(this.scrollActivated){
+          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+          console.log(this.scrollDivOffsettop, this.scrolledDivHeight);
+        } else {
+          console.error('Element with ID scrollActivated not found');
+        }
       }, 2000);
     });
+    try {
+      document.body.classList.add('white-show-wrapper');
+    } catch (error) {
+      
+    }
+    
   }
 
 
-  @HostListener('window:scroll', ['$event'])
-  handleScroll(event: any) {
-    this.FixedDiv = document.getElementById('scrollActivated');
-    this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
-    let topscroll = this.scrollDivOffsettop - this.FixedDiv
-    let winH = window.innerHeight
-    let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
-    this.fixedElement = document.getElementById('scrollActivated');
-    // inside active 
-    if (this.FixedDiv < 200 && totalScroll > topscroll - 400) {
-      this.fixedElement.classList.add("fixed2")
-
-      let activeELe = document.querySelectorAll('[data-ele]');
-      activeELe.forEach((item, index) => {
-        if (item.getBoundingClientRect().top < 500) {
-       
-          this.activeState = index + 1;
-          item.classList.add("active")
-
-       
-        }
-        else {
-          item.classList.remove("active")
-         
-        }
-        // /////////////
-        if (this.activeState === 2) {
-          this.fixedElement1 = document.getElementById('scrollActivated2');
-
-          if (this.fixedElement1) {
-            this.fixedElement1.classList.add("fixed");
-          }
-
-          for (let i = 11; i <= 16; i++) {
-            let activeELe1 = document.querySelectorAll(`[data-ele${i}]`);
-            activeELe1.forEach((item1,indexData) => {
-              const topPosition = item1.getBoundingClientRect().top;
-              if (topPosition < 600) {
-                item1.classList.add("active");
-                const dataIndex = item1.getAttribute(`data-ele${i}`);
-                if (dataIndex) {
-                  this.activeState2 = parseInt(dataIndex, 10);
-                }
-              } else {
-                item1.classList.remove("active");
-              }
-console.log(indexData);
-let HideMenu = document.getElementById('tabContent');
-
-              if(this.activeState2 == 16){
-
-    HideMenu?.classList.add('hideMenu')
-
-                
-              }
-              else{
-                HideMenu?.classList.remove('hideMenu')
-              }
-            });
-          }
-        }
-        else {
-          this.fixedElement1 = document.getElementById('scrollActivated2');
-          this.fixedElement1.classList.remove("fixed")
-        }
-
-        if (this.activeState === 3) {
-
-          this.navBar = document.getElementById('navBar');
-          this.navBar.classList.add("removeMainNav")
-          
-
-          this.tabHead = document.getElementById('tabHead');
-          this.tabHead.classList.add("removeMainNav")
-
-
-          this.fixedElement3 = document.getElementById('scrollActivated3');
-          if (this.fixedElement3) {
-            this.fixedElement3.classList.add("fixedData");
-          }
-          for (let j = 21; j <= 24; j++) {
-            let activeELe3 = document.querySelectorAll(`[data-element${j}]`);
-            activeELe3.forEach((item3) => {
-              const topPosition = item3.getBoundingClientRect().top;
-              if (topPosition < 200) {
-                item3.classList.add("active");
-                const dataIndex = item3.getAttribute(`data-element${j}`);
-                if (dataIndex) {
-                  this.activeState3 = parseInt(dataIndex);
-                }
-              } else {
-                item3.classList.remove("active");
-              }
-            });
-          }
-        }
-        else {
-          this.fixedElement3 = document.getElementById('scrollActivated3');
-          this.fixedElement3.classList.remove("fixedData")
-          this.navBar?.classList.remove("removeMainNav")
-          this.tabHead?.classList.remove("removeMainNav")
-        }
-      })
-
-    }
-    else {
-      this.fixedElement.classList.remove("fixed2")
-
-     
-
-    }
-  }
 
   scrollToSection(sectionId: string) {
     const section = document.getElementById(sectionId);
@@ -175,19 +100,7 @@ let HideMenu = document.getElementById('tabContent');
   }
 
   ngOnInit(): void {
-    this.titleService.setTitle(this.title);
-    const script = document.createElement('script');
-    script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
-    script.async = true;
-    script.charset = 'utf-8';
-  
-    // Append script to the document body
-    document.body.appendChild(script);
-  
-    // Initialize HubSpot form after the script is loaded
-    script.onload = () => {
-      this.initHubSpotForm();
-    };
+    this.initHubSpotForm();
 
 
 
@@ -222,6 +135,17 @@ let HideMenu = document.getElementById('tabContent');
             this.showPopup = false;
           }
 
-
-  
+  marketplaceNumber(event) {
+    this.marketPlace = event
+  }
+  changeTab(index){
+    this.selectedIndex = index
+  }
+  ngOnDestroy() {
+    try {
+      document.body.classList.remove('white-show-wrapper');
+    } catch (error) {
+      
+    }
+  }
 }

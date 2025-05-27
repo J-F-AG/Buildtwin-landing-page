@@ -1,111 +1,45 @@
-<div class="banner-area position-relative z-1">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <section class="content-container">
-                    <em  class="coming">Stop relying on referals to grow</em>
-                    <div class="highlights-container">
-                        <span class="highlight">Get access to<span class="highlight-emphasis">international</span>
-                          <br>projects and clients.</span>
-                       
-                    </div>
-                    <p class="description">
-                      BuildTwin supports vendors to improve their performance, meet requirements <br>and 
-                      get pre-qualified and invited to private projects all across the globe.
-                    </p>
-                    <div class="other-options d-flex align-items-center">
-                   
-                    <a class="btnNew" (click)="call()">
-                      Talk to our Advisors   <i class="ti ti-arrow-narrow-right"></i>
-                    </a>
-                 
-                </div>
-               
-                </section>
-            </div>
-
-            <div class="col-lg-6 col-md-12">
-                <div class="banner-image videoCover">
-                    <img src="assets/images/ui/service/service1.png" width="661" height="609" alt="">
-                  
-                   
-                    <a class="hoverPopup" ><i></i></a>
-                    <!-- (click)="youTubeOpen()" -->
-                </div>
-            </div>
-        </div>
-        <!-- <div class="winning">
-          <h2>
-            Winning projects in open market <br>
-<span class="highlight-emphasis"> and </span> BuildTwin Marketplace
-          </h2>
-        </div>
-        <app-three-col-market>
-          <div class="cdeSection_wrap">
-          <div class="cdeSection">
-            <div class="cde_col">
-            
-              <img src="assets/images/ui/service/serviceProvide3.png">
-            
-              <div class="headPart">
-                <h2>Leads in Openmarkets </h2>
-                <span>Handpicked companies from open 
-                  market who are looking for oursourcing.</span>
-                </div>
-                <i class="indicationArrow"><img src="assets/images/ui/service/arrow-two.png" alt=""></i>
-            </div>
-            <div class="cde_col">
-             
-              <img src="assets/images/ui/service/serviceProvide1.png">
-              <div class="headPart">
-                <h2>Pre-Qualification </h2>
-                <span>Get pre-qualified with BuildTwin get 
-                  eligible for the BuildTwin Marketplace</span>
-                </div>
-                <i class="indicationArrow"><img src="assets/images/ui/service/arrow-one.png" alt=""></i>
-              
-            </div>
-      
-            <div class="cde_col">
-              <img src="assets/images/ui/service/serviceProvide2.png">
-              <div class="headPart">
-                <h2>BuildTwin Marketplace </h2>
-                <span>Once pre-qualified you get access to the
-                  closed BuildTwin Marketplace to bid for
-                  projects </span>
-                </div>
+<div class="banner-global container global-mb">
+  <div class="banner-main">
+      <div class="banner-content">
+          <div>
+            <h1>
+             Your Engineering Services. 
+             <br>Our <span>global reach.</span> 
+            </h1>
+            <p>
+              Find out <strong>instantly</strong> if you qualify for high-value opportunities <br>
+              worldwide, 
+              and get <u>pre-qualified</u> to unlock private tender 
+              invitations.
+            </p>
+            <div>
+              <div class="v-center-flex gap-medium flex-justify-center">
+                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 white provide_page_get_started_now_banner">
+                  Get started NOW
+                </a>
+                <a class="button-v2 white-border provide_page_talk_to_our_advisors_banner" (click)="call()" href="javascript:void(0)">
+                  <picture>
+                    <source 
+                      srcset="assets/images/icons/call-white@2x.png" 
+                      media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                      src="assets/images/icons/call-white.png" 
+                      alt="call" 
+                      width="21" 
+                      height="22">
+                  </picture>
+                  Talk to our advisors
+                </a>
+              </div>
             </div>
           </div>
-          </div>
-
-        </app-three-col-market> -->
-      
-    </div>
-
-   
+      </div>
+  </div>
 </div>
+
 
 <app-video-popup></app-video-popup>
 
 
 
-<div class="popUP" [ngClass]="{'active':showPopup1}">
-  <div class="coverPopup">
-    <i class="closeIcon" (click)="closePopup1()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-        <g clip-path="url(#clip0_2773_11848aaa)">
-        <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_2773_11848">
-        <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
-        </clipPath>
-        </defs>
-        </svg>
-    </i>
-    <div class="coverPopupData">
- 
-  <div id="hubspotFormContainer2"></div>
-</div>
-</div>
-</div>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

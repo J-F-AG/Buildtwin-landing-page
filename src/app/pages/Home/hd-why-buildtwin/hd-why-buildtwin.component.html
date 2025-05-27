@@ -1,5 +1,5 @@
-<div class="whyBuildtwinSection">
-    <div class="container">
+<div class="whyBuildtwinSection global-mb" id="schools-discover-top-tier-solutions-tailored-to-your-project-needs-why-book-with">
+    <div class="">
         <!-- <div class="sectionHeader" *ngIf="isBrowseService"  data-aos="fade-up" data-aos-duration="500" >
             <div class="sectionHeader">
                 <lib-svg-icon class="icon" [name]="'whyBuildtwin-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
@@ -16,15 +16,24 @@
                 <div class="subTitle">Explore now and get to know why you can go with us</div>
             </div>
         </div> -->
-    
-        <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+        <div class="main-head">
+            <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+                <div class="main-title">Discover top-tier solutions tailored to your project needs</div>
+                <div class="heading">
+                    <h2 class="title">Why book with BuildTwin</h2>
+                    <div class="subTitle">Explore now and get to know why you can go with us</div>
+                </div>
+            </div>
+            <button class="button-v2 align-self-end" (click)="scrollToSection('formContainer')">Book Service</button>
+        </div>
+        <!-- <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
             <div class="heading">
                 <div class="title">Why book with BuildTwin</div>
                 <div class="subTitle">Explore now and get to know why you can go with us</div>
             </div>
-        </div>
+        </div> -->
         <div class="bodyWrapper"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-            <div class="sectionMidContainer">
+            <!-- <div class="sectionMidContainer">
                 <div class="sectionMidMain">
                     <ng-container *ngFor="let item of whyBuildTwinArray; let i = index">
                         <div class="buildTwinItemsContainer" [class.active]="activeTab === i" (click)="setActiveTab(i)"
@@ -39,42 +48,52 @@
                         </div>
                     </ng-container>
                 </div>
-            </div>
+            </div> -->
             <div class="sectionContent">
                 <div class="leftChild">
-                    <div class="contentIconSection">
-                        <img src="{{activeContent.displayIcon}}" alt="icons">
-                    </div>
-                    <div class="content">
-                        <div class="contentHeader">
-                            {{ activeContent.name }}
-                        </div>
-                        <!-- <div class="contentDetails" [innerHtml]="activeContent.content">
-                        </div> -->
+                    <div class="sectionMidMain">
+                        <ng-container *ngFor="let item of whyBuildTwinArray; let i = index">
+                            <div class="buildTwinItemsContainer" [class.active]="activeTab === i" (click)="setActiveTab(i)"
+                                [ngClass]="{
+                      'activeContainer': activeTab === i
+                    }">
+                                <i><lib-svg-icon [ngClass]="{'activeIcon':activeTab === i}" class="icon" [name]="item.icon"
+                                    [size]="item.width" [sizeH]="item.height"></lib-svg-icon></i>
+                                <div class="title">
+                                    {{ item.name }}
+                                </div>
+                            </div>
+                        </ng-container>
                     </div>
                 </div>
                 <div class="rightChild">
                     <div class="contentWrapper" *ngFor="let detail of activeContent.details">
+                        <div class="content-top">
+                            <img src="{{activeContent.displayIcon}}" alt="icons" class="content-top__icon" [width]="activeContent.displayIconWidth" [height]="activeContent.displayIconHeight" loading="lazy">
+                            <span class="content-top__title">
+                                {{ activeContent.name }}
+                            </span>
+                        </div>
                         <div class="content">
-                            <div class="contentHeader">{{ detail.header }}</div>
+                            <div class="contentHeader" *ngIf="detail['header']">{{ detail.header }}</div>
                             <p class="contentcontent" *ngIf="detail['content']">{{ detail.content }}</p>
                             <div class="contentDetails">
                                 <div class="detail" *ngFor="let item of detail.items">
                                     <i>
-                                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.616 4.90623C14.8699 5.17291 14.8595 5.5949 14.5928 5.84876L6.8891 13.1821C6.75754 13.3073 6.58058 13.3735 6.39914 13.3652C6.21769 13.3569 6.04747 13.275 5.92783 13.1383L2.96487 9.75373C2.72235 9.47669 2.75032 9.05551 3.02736 8.81299C3.30439 8.57047 3.72557 8.59845 3.96809 8.87548L6.47323 11.7371L13.6735 4.88302C13.9402 4.62916 14.3622 4.63955 14.616 4.90623Z" fill="#886DE0" stroke="#886DE0" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>                                    
+                                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.8828 2.62561C10.9544 2.62561 9.06939 3.19744 7.46601 4.26878C5.86263 5.34013 4.61295 6.86287 3.87499 8.64445C3.13704 10.426 2.94395 12.3864 3.32016 14.2777C3.69637 16.1691 4.62496 17.9063 5.98853 19.2699C7.35209 20.6335 9.08937 21.5621 10.9807 21.9383C12.872 22.3145 14.8324 22.1214 16.614 21.3834C18.3956 20.6455 19.9183 19.3958 20.9896 17.7924C22.061 16.189 22.6328 14.304 22.6328 12.3756C22.6301 9.79059 21.602 7.31222 19.7741 5.48433C17.9462 3.65645 15.4678 2.62834 12.8828 2.62561ZM17.1634 10.6562L11.9134 15.9062C11.8438 15.976 11.7611 16.0313 11.67 16.069C11.579 16.1068 11.4814 16.1262 11.3828 16.1262C11.2843 16.1262 11.1867 16.1068 11.0956 16.069C11.0046 16.0313 10.9218 15.976 10.8522 15.9062L8.60219 13.6562C8.46146 13.5155 8.3824 13.3246 8.3824 13.1256C8.3824 12.9266 8.46146 12.7357 8.60219 12.595C8.74292 12.4543 8.93379 12.3752 9.13282 12.3752C9.33184 12.3752 9.52271 12.4543 9.66344 12.595L11.3828 14.3153L16.1022 9.59499C16.1719 9.5253 16.2546 9.47003 16.3456 9.43231C16.4367 9.3946 16.5343 9.37519 16.6328 9.37519C16.7314 9.37519 16.8289 9.3946 16.92 9.43231C17.011 9.47003 17.0938 9.5253 17.1634 9.59499C17.2331 9.66467 17.2884 9.74739 17.3261 9.83844C17.3638 9.92948 17.3832 10.0271 17.3832 10.1256C17.3832 10.2242 17.3638 10.3217 17.3261 10.4128C17.2884 10.5038 17.2331 10.5866 17.1634 10.6562Z" fill="#0053FA"/>
+                                        </svg>                                                                                                                      
                                     </i>
                                     <div class="detailItem detailLink">{{ item }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="rightChildFooter" *ngIf="activeContent['footer']">
+                    <!-- <div class="rightChildFooter" *ngIf="activeContent['footer']">
                         <div class="detailItem detailLink noLink">
                             {{ activeContent.footer }}
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

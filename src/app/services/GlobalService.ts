@@ -1,7 +1,8 @@
 // global.service.ts
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { Observable } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,9 @@ import { Observable } from 'rxjs';
 export class GlobalService {
   globalValue: string = '5.000';
   payload:any;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
 
   getGlobalValue(): string {
@@ -23,5 +26,37 @@ export class GlobalService {
    
     const url = 'https://6ev8zqp6l6.execute-api.eu-central-1.amazonaws.com/V1/onboarding/save-customer-type';
     return this.http.post<any>(url,payload);
+  }
+
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const topPos = element.getBoundingClientRect().top + window.scrollY - 100;
+      // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.scrollTo({ top: topPos, behavior: 'smooth' });
+    }
+    if(sectionId === 'formContainer'){
+      this.triggerSidebarToggle();
+    }
+  }
+  triggerSidebarToggle(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      // Ensure the code is only executed in the browser
+      const sidebarToggleButton = document.querySelector('.toggle-sidebar') as HTMLElement;
+      if (sidebarToggleButton) {
+        sidebarToggleButton.click(); // Safely call click() after typecasting
+      }
+    }
+  }
+  scroll(){
+    try {
+      const section = window.location.hash.split('#')[1];
+      const element = document.getElementById(section);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+    } catch (error) {
+      
+    }
   }
 }

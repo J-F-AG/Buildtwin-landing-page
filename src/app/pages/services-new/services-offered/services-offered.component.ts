@@ -23,28 +23,28 @@ export class ServicesOfferedComponent {
   
       // discoverProjectSection
       projectsArray = [
-        { img: 'assets/images/solutionProvider1.jpg', projectTitle: 'Airports'},
-        { img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Residential, commercial and industrial buildings'},
-        { img: 'assets/images/solutionProvider3.jpg', projectTitle: 'Data centers'},
-        { img: 'assets/images/solutionProvider5.jpg', projectTitle: 'Power plants'},
-        { img: 'assets/images/solutionProvider11.jpg', projectTitle: 'Chemical plants'},
-        { img: 'assets/images/solutionProvider13.jpg', projectTitle: 'Manufacturing plants'},
-        { img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Parking structures'},
-        { img: 'assets/images/solutionProvider8.jpg', projectTitle: 'Schools'},
-        { img: 'assets/images/solutionProvider12.jpg', projectTitle: 'Hospitals'},
-        { img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Warehouses'},
-        { img: 'assets/images/solutionProvider10.jpg', projectTitle: 'Bridges, tunnels, water & waste'},
-        { img: 'assets/images/solutionProvider14.jpg', projectTitle: 'Metros'},
-        { img: 'assets/images/solutionProvider15.jpg', projectTitle: 'Roadways'},
-        { img: 'assets/images/solutionProvider6.jpg', projectTitle: 'PRE-CAST'},
-        { img: 'assets/images/solutionProvider7.jpg', projectTitle: 'Residential Buildings'},
+        { img: 'assets/images/home/Airports.png', projectTitle: 'Airports', link: ''},
+        { img: 'assets/images/home/commercial building.png', projectTitle: 'Residential, commercial and industrial buildings', link: ''},
+        { img: 'assets/images/home/data center.png', projectTitle: 'Data centers', link: '/sector/data-centre'},
+        { img: 'assets/images/home/power plant.png', projectTitle: 'Power plants', link: '/sector/powerplant'},
+        { img: 'assets/images/home/Sector_ChemicalPlants.png', projectTitle: 'Chemical plants', link: ''},
+        { img: 'assets/images/home/Sector_ManufacturingPlants.png', projectTitle: 'Manufacturing plants', link: ''},
+        //{ img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Parking structures', link: ''},
+        { img: 'assets/images/home/schools.png', projectTitle: 'Schools', link: ''},
+        { img: 'assets/images/home/Sector_Hospitals.png', projectTitle: 'Hospitals', link: ''},
+        //{ img: 'assets/images/solutionProvider2.jpg', projectTitle: 'Warehouses', link: ''},
+        { img: 'assets/images/home/Sector_Bridges.png', projectTitle: 'Bridges, tunnels, water & waste', link: ''},
+        { img: 'assets/images/home/Sector_Metros.png', projectTitle: 'Metros', link: ''},
+        { img: 'assets/images/home/Sector_Roads.png', projectTitle: 'Roadways', link: ''},
+        { img: 'assets/images/home/pre-cast.png', projectTitle: 'PRECAST', link: ''},
+        { img: 'assets/images/home/residential buildings.png', projectTitle: 'Residential Buildings', link: ''},
     
       ]
     
       // discoverProjects = this.splitArray(this.projectsArray, 4);
   
     customOptions: OwlOptions = {
-      margin: 25,
+      margin: 15,
       loop: false,
       dots: true,
       autoplay: false,
@@ -53,13 +53,13 @@ export class ServicesOfferedComponent {
       nav: true,
       responsive:{
         0:{
-            items:2
+            items:1
         },
         600:{
-            items:2
+            items:3
         },
         1000:{
-            items:2
+            items:3
         }
     }      
     }

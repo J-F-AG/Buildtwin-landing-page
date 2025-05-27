@@ -22,7 +22,7 @@
                         }
 
                         span {
-                            color: #886DE0;
+                            color: #0053fa;
 
                             font-family: "Jeff Script";
                             font-size: 48px;
@@ -93,7 +93,7 @@
                                     margin-bottom: 0;
 
                                     span {
-                                        color: var(--primary, #886DE0);
+                                        color: var(--primary, #0053fa);
                                         font-weight: 400;
                                         font-size: 20px;
                                         display: inline-block;
@@ -110,7 +110,7 @@
                                     margin: 0;
                                     li {
                                         display: flex;
-                                        background: var(--secondary, #F6F3FF);
+                                        background: var(--secondary, #F3F8FF);
                                         flex-shrink: 0;
                                         width: 184px;
                                         border-radius: 4px;
@@ -123,7 +123,7 @@
                                         padding: 4px 10px;
 
                                         strong {
-                                            color: var(--primary, #886DE0);
+                                            color: var(--primary, #0053fa);
                                         }
                                     }
                                 }
@@ -152,10 +152,10 @@
             margin-right: 5px;
             border-radius: 100px;
         }::ng-deep   .owl-theme .owl-dots .owl-dot span{
-            background: #F6F3FF;
+            background: #F3F8FF;
         }
         ::ng-deep  .owl-theme .owl-dots .owl-dot.active span,::ng-deep   .owl-theme .owl-dots .owl-dot:hover span {
-            background: #886DE0;
+            background: #0053fa;
         }
 
         ::ng-deep  .owl-nav {

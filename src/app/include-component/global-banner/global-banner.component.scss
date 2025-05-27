@@ -66,7 +66,7 @@
     background: #FBFAFF;
     box-shadow: 0 0 20px 20px #FBFAFF;
     i {
-        background: #F6F3FF;
+        background: #F3F8FF;
         padding: 4px;
         border-radius: 12.501px;
     }
@@ -113,7 +113,7 @@
     // top: 92px;
     .button {
         border-radius: 12.6px;
-        background: #886DE0;
+        background: #0053fa;
         box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.03);
         display: flex;
         align-items: center;
@@ -140,10 +140,10 @@
         justify-content: center;
         flex-grow: 1;
         .theme-color {
-            fill: #886DE0;
+            fill: #0053fa;
         }
         &:hover {
-            background: #886DE0;
+            background: #0053fa;
             fill: white;
             .theme-color {
                 fill: white;
@@ -153,7 +153,7 @@
             }
         }
         .theme-color-stroke {
-            stroke: #886DE0;
+            stroke: #0053fa;
         }
     }
     .ant-select-single:not(.ant-select-customize-input) .ant-select-selector{

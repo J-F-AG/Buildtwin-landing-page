@@ -397,7 +397,7 @@
 
     i {
         border-radius: 50%;
-        background: #886DE0;
+        background: #0053fa;
         width: 90px;
         height: 90px;
         position: absolute;
@@ -447,7 +447,7 @@
     display: inline;
     margin: 0 13px;
     font-weight: 400;
-    color: #886de0;
+    color: #0053fa;
     font-size: 56px;
 }
 
@@ -505,7 +505,7 @@
 
 .btnNew {
     border-radius: 8px;
-    background: #886DE0;
+    background: #0053fa;
     border: 1px solid #936AEF;
     display: flex;
     padding: 4px 20px 4px 20px;
@@ -527,7 +527,7 @@
         margin-right: 12px;
     }
     &.light {
-        background: #F6F3FF;
+        background: #F3F8FF;
         border: 1px solid #936AEF;
         color: #936AEF;
     }
@@ -536,11 +536,11 @@
 .btnNew.vidBtn {
     border: 1px solid #E9E9E9;
     background: #fff;
-    color: #886DE0;
+    color: #0053fa;
 }
 
 i.ti.ti-player-play {
-    background: #886DE0;
+    background: #0053fa;
     border-radius: 100px;
     padding: 3px;
     font-size: 9px;
@@ -548,9 +548,9 @@ i.ti.ti-player-play {
 
 em.coming {
     border-radius: 40px;
-    border: 1px solid #886DE0;
-    background: #F6F3FF;
-    color: #886DE0;
+    border: 1px solid #0053fa;
+    background: #F3F8FF;
+    color: #0053fa;
     padding: 8px 24px;
     font-size: 14px;
     font-style: normal;
@@ -678,7 +678,7 @@ em.coming {
 }
 
 .feature-desc {
-    font-family: 'Alliance No.1', sans-serif;
+    font-family: var(--fontFamily);
     margin: auto 0;
 }
 

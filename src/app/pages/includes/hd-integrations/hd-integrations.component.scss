@@ -1,80 +1,111 @@
 
+.integration-box111:not(.ng-star-inserted) {
+    display: none;
+}
 ::ng-deep .plugWrapper .owl-carousel .owl-item img{ width: 174px; }
 
 
-:host ::ng-deep .owl-nav {
-    display: block!important;
+// :host ::ng-deep .owl-nav {
+//     position: static;
+//     margin: 0;
+//     transform: none;
+// }
+// :host ::ng-deep .owl-theme .owl-nav [class*=owl-] {
+//     position: absolute;
+//     left: -10px;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     margin: 0;
+// }
+// :host ::ng-deep .owl-theme .owl-nav [class*=owl-next] {
+//     left: auto;
+//     right: -10px;
+// }
+// :host ::ng-deep .owl-theme .owl-nav [class*=owl-] {
+//     right: 0 ;
+//     z-index: 99 ;
+//     width: 47px ;
+//     bottom: 0 ;
+//     height: 47px ;
+//     display: block ;
+//     transition: var(--transition) ;
+//     background-color: var(--whiteColor) ;
+//     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px ;
+//     cursor: pointer;
+//     border: none;
+//     border-radius: 50%;
+//     padding: 0;
+//     position: relative;
+//     .ti.ti-chevron-left,.ti.ti-chevron-right {
+//         display: none;
+//     }
+// }
+// :host ::ng-deep .owl-theme .owl-nav [class*=owl-prev]{    
+//     position: absolute;
+//     right: auto;
+//     bottom: auto;
+//     left: 10px;
+//     top: 62%;
+//     transform: translateY(-50%) rotate(-90deg);
+//     transform-origin: left;
+// }
+// :host ::ng-deep .owl-theme .owl-nav [class*=owl-next]{    
+//     position: absolute;
+//     right: 10px;
+//     bottom: auto;
+//     left: auto;
+//     top: 62%;
+//     transform: translateY(-50%) rotate(90deg);
+//     transform-origin: right;
+// }
+// :host ::ng-deep .owl-theme .owl-nav [class*=owl-]:hover {
+//     opacity: .92;
+//     background-color: var(--themeColor) ;
+//     &::before{
+//         color: var(--whiteColor);
+//     }
+// }
+// :host ::ng-deep .owl-theme .owl-nav [class*=owl-]::before {
+//     left: 0;
+//     right: 0;
+//     top: 50%;
+//     line-height: 1;
+//     content: "\ea62";
+//     margin-top: -0.5px;
+//     position: absolute;
+//     color: var(--blackColor);
+//     transform: translateY(-50%);
+//     transition: var(--transition);
+//     font-size: 25px;
+//     font-family: "tabler-icons";
+// }
+
+.integrations-area {
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
 }
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-] {
-    right: 0 ;
-    z-index: 99 ;
-    width: 47px ;
-    bottom: 0 ;
-    height: 47px ;
-    display: block ;
-    transition: var(--transition) ;
-    background-color: var(--whiteColor) ;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px ;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    padding: 0;
-    position: relative;
-    .ti.ti-chevron-left,.ti.ti-chevron-right {
-        display: none;
+// .integrations-area.ptb-75 {
+//     padding-bottom: 40px;
+//     padding-top: 50px;
+// }
+
+.head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    svg {
+        margin-left: -4px;
     }
 }
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-prev]{    
-    position: absolute;
-    right: auto;
-    bottom: auto;
-    left: 10px;
-    top: 62%;
-    transform: translateY(-50%) rotate(-90deg);
-    transform-origin: left;
-}
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-next]{    
-    position: absolute;
-    right: 10px;
-    bottom: auto;
-    left: auto;
-    top: 62%;
-    transform: translateY(-50%) rotate(90deg);
-    transform-origin: right;
-}
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-]:hover {
-    opacity: .92;
-    background-color: var(--themeColor) ;
-    &::before{
-        color: var(--whiteColor);
-    }
-}
-:host ::ng-deep .owl-theme .owl-nav [class*=owl-]::before {
-    left: 0;
-    right: 0;
-    top: 50%;
-    line-height: 1;
-    content: "\ea62";
-    margin-top: -0.5px;
-    position: absolute;
-    color: var(--blackColor);
-    transform: translateY(-50%);
-    transition: var(--transition);
-    font-size: 25px;
-    font-family: "tabler-icons";
-}
-
-
-.integrations-area.ptb-75 {
-    padding-bottom: 40px;
-    padding-top: 50px;
-}
-
-
 .integrations-area .plugWrapper{display: flex;
-    .hd-section-title { width: 157px;
-        h2{ font-size: 25px; color: #9278E3; margin-top: 25px; text-transform: uppercase;
-            strong{display: block;}
+    align-items: center;
+    gap: 45px;
+    .hd-section-title { 
+        max-width: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        h2{ font-size: 28px;margin-top: 0; font-weight: 400; text-transform: uppercase; line-height: 1;
+            strong{display: block; color: var(--themeColor); font-weight: 700; }
         }
     }
     .integrations-area-list{flex: 1; overflow: hidden;}
@@ -89,12 +120,43 @@
     }
 }
 
+@media only screen and (max-width : 1200px) {
+    .integrations-area {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .integrations-area {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 /* Max width 767px */
 @media only screen and (max-width : 767px) {
     .integrations-area {
         .plugWrapper {
+            gap: 20px;
             flex-direction: column;
+
+            .integrations-area-list {
+                width: 100%;
+                margin: 0;
+
+                > * {
+                    padding: 0;
+                }
+            }
         }
+        & ::ng-deep {
+            .plugWrapper .owl-stage-outer::after, .plugWrapper .owl-stage-outer::before {
+                opacity: 0;
+            }
+        }
+    }
+    .integrations-area.ptb-75 {
+        // padding-top: 0!important;
     }
 
     .integration-box {
@@ -102,13 +164,13 @@
         justify-content: center;
     }
 
-    :host ::ng-deep .owl-theme .owl-nav [class*=owl-prev] {
-        left: 20px;
-    }
+    // :host ::ng-deep .owl-theme .owl-nav [class*=owl-prev] {
+    //     left: 20px;
+    // }
 
-    :host ::ng-deep .owl-theme .owl-nav [class*=owl-next] {
-        right: 20px;
-    }
+    // :host ::ng-deep .owl-theme .owl-nav [class*=owl-next] {
+    //     right: 20px;
+    // }
 
 }
 
@@ -134,8 +196,16 @@
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {}
 
 
-@media (max-width:950px){
-
+@media (max-width:991px){
+    .integrations-area .plugWrapper .hd-section-title h2 {
+        font-size: 22px;
+        strong {
+            font-size: 30px;
+        }
+    }
+    .integrations-area.global-mb {
+        margin-bottom: 0;
+    }
 }
 @media  (max-width: 767px) {
 

@@ -1,9 +1,10 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, forkJoin } from 'rxjs';
 import { NzMessageModule, NzMessageService } from 'ng-zorro-antd/message';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-free-offer-form',
@@ -13,7 +14,15 @@ import { NzMessageModule, NzMessageService } from 'ng-zorro-antd/message';
   styleUrl: './free-offer-form.component.scss'
 })
 export class FreeOfferFormComponent {
-
+  @Input() serviceData: any = {}; //sector
+  @Input() serviceQuery: boolean = true; //sector
+  @Input() page: string = ''; //sector
+  @Input() type: string = '';
+  @Input() style: string = '';
+  @Input() companyId: string = '';
+  @Input() companyEmail: string = '';
+  @Input() normalBtn: boolean = false;
+  @ViewChild('formContainer') formContainer!: ElementRef;
   showdropDown: boolean = true;
 
   // enquiryPayload = {
@@ -38,8 +47,13 @@ export class FreeOfferFormComponent {
     "type": "get_quote", //static
   }
   myForm: FormGroup;
-
-  constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService) {
+  isTenderWork = {};
+  uploadedMessage = '';
+  disableButton: boolean = false;
+  thankyouMessage: boolean = false;
+  data = {};
+  showPopup=false;
+  constructor(private _http: HttpClient, private route: ActivatedRoute, private fb: FormBuilder, private message: NzMessageService, public _languageService: LanguageService) {
     this.fetchData()
   }
   ngOnInit(): void {
@@ -57,12 +71,38 @@ export class FreeOfferFormComponent {
     //     this.myForm.get('serviceId')?.setValue(serviceId);
     //   }
     // });
+    this.updateServiceId()
+  }
+  updateServiceId(){
     // Get the current URL
-    const url = new URL(window.location.href);
-    // Extract the 'service' parameter
-    const serviceId = url.searchParams.get('service');
-    if (serviceId) {
-      this.myForm.get('serviceId')?.setValue(serviceId);
+    const url = window.location.href;
+    if (url.includes('pre-cast-detailing-services')) {
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['pre-cast-detailing-services']);
+      this.data = this._languageService['serviceData']['pre-cast-detailing-services'];
+    }else if (url.includes('rebar-detailing-services')) {
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['rebar-detailing-services']);
+      this.data = this._languageService['serviceData']['rebar-detailing-services'];
+    }else if(url.includes('bim-services')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
+      this.data = this._languageService['serviceData']['bim-services'];
+    }else if(url.includes('steel-detailing-services-in-usa')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
+      this.data = this._languageService['serviceData']['steel-detailing-services'];
+    }else if(url.includes('steel-detailing-services')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
+      this.data = this._languageService['serviceData']['steel-detailing-services'];
+    }else if(url.includes('bim-outsourcing-services-in-usa')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
+      this.data = this._languageService['serviceData']['bim-services'];
+    }else if(url.includes('drafting-services')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['drafting-services']);
+      this.data = this._languageService['serviceData']['drafting-services'];
+    }else if(url.includes('cad-services')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['cad-services']);
+      this.data = this._languageService['serviceData']['cad-services'];
+    }else if(url.includes('shop-drawing-services')){
+      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['shop-drawing-services']);
+      this.data = this._languageService['serviceData']['shop-drawing-services'];
     }
   }
   selectSector(selectedOption: any) {
@@ -123,14 +163,22 @@ export class FreeOfferFormComponent {
     if (this.myForm.valid) {
       this.payload = {
         ...this.payload, // Retain existing static properties
-        buildingCodeId: this.myForm.get('buildingCodeId')?.value, // Using form value
-        serviceId: this.myForm.get('serviceId')?.value, // New service ID
-        subServiceId: this.myForm.get('selectedPrecastServices')?.value,
+        buildingCodeId: this.myForm.get('buildingCodeId')?.value?Number(this.myForm.get('buildingCodeId')?.value):null, // Using form value
+        serviceId: this.myForm.get('serviceId')?.value?Number(this.myForm.get('serviceId')?.value):null, // New service ID
+        subServiceId: this.myForm.get('selectedPrecastServices')?.value?Number(this.myForm.get('selectedPrecastServices')?.value):null,
         user_email: this.myForm.get('email')?.value,
         project_description: this.myForm.get('description')?.value,
         project_name: this.myForm.get('projectName')?.value
       };
-
+      if(this.companyId) {
+        this.payload['company_id'] = this.companyId;
+      }
+      // Remove keys with null or blank values
+      this.payload = Object.fromEntries(
+        Object.entries(this.payload)
+          .filter(([_, v]) => v !== null && v !== '' && v !== undefined) // Retain only non-null, non-blank, and defined values
+      );
+      this.disableButton = true;
       forkJoin([
         this._http.post(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService/book-service
   `, this.payload)
@@ -144,33 +192,139 @@ export class FreeOfferFormComponent {
           if(res[0]['status'] === 'success'){
             console.log(res);
             console.log('Form submitted with payload:', this.payload);
-            this.message.create('success', `${res[0]['data']['message']}`);
-            this.showdropDown = false;
-            // Reset the form after submission
-            this.myForm.reset(); // Clears the form fields
-            this.myForm.get('selectedPrecastServices')?.setValue(null); // If needed, reset the selected value specifically
-            this.myForm.get('buildingCodeId')?.setValue(null); // If needed, reset the selected value specifically
-            // this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
-
-            // Get the current URL
-            const url = new URL(window.location.href);
-            // Extract the 'service' parameter
-            const serviceId = url.searchParams.get('service');
-            if (serviceId) {
-              this.myForm.get('serviceId')?.setValue(serviceId);
+            this.isTenderWork = res[0]['data'];
+            this.uploadedMessage = res[0]['data']['message'];
+            this.fileUploadedStatus('')
+            if(this.companyId) {
+              this.inviteUser(res[0]['data'])
             }
-            setInterval(() => {
-              this.showdropDown = true;
-            }, 10);
           }else {
             this.message.create('error', `${res[0]['data']['message']}`);
           }
         })
 
     } else {
+      // const firstInvalidControl: HTMLElement = this.formContainer.nativeElement.querySelector('.error-border');
+      // if (firstInvalidControl) {
+      //   firstInvalidControl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // }
+      setTimeout(() => {
+        const formContainer = document.getElementById('formContainer'); // The scrollable div
+        const topPart = document.querySelector('.topPart') as HTMLElement; // The fixed top part
+        
+        if (!formContainer) return;
+      
+        // Get the first element with class '.error-border' inside the formContainer
+        const firstInvalidControl = formContainer.querySelector('.error-border') as HTMLElement;
+        if (firstInvalidControl) {
+          const containerRect = formContainer.getBoundingClientRect();
+          const elementRect = firstInvalidControl.getBoundingClientRect();
+      
+          // Get height of '.topPart' (default to 0 if not found)
+          const topPartHeight = topPart ? topPart.offsetHeight : 0;
+      
+          // Calculate the scroll position relative to the formContainer, adjusting for topPart
+          const scrollTop = (formContainer.scrollTop + (elementRect.top - containerRect.top) - topPartHeight) - 20;
+      
+          formContainer.scrollTo({
+            top: scrollTop,
+            behavior: 'smooth',
+          });
+        }
+      }, 100);
+      
       console.log('Form is invalid');
       this.myForm.markAllAsTouched(); // Mark all fields as touched to show errors
     }
   }
 
+  inviteUser(data){
+
+    let payloadInvite = {
+      "booked_service_id": data['id'],
+      "is_private": true,
+    }
+    
+    
+    payloadInvite['companies'] = [
+      {
+        company_id: this.companyId,
+        email: this.companyEmail
+      }
+    ];
+
+    this._http.post(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/marketplaceBookService/invite-user
+      `, payloadInvite)
+      .pipe(
+        catchError(err => {
+          return err;
+        }),
+      )
+      .subscribe(res => {
+
+      });
+  }
+
+  fileUploadedStatus($event){
+
+    this.thankyouMessage = true
+    // console.log($event);
+    this.disableButton = false;
+    // this.message.create('success', `${this.uploadedMessage}`);
+    this.showdropDown = false;
+    // Reset the form after submission
+    this.myForm.reset(); // Clears the form fields
+    this.myForm.get('selectedPrecastServices')?.setValue(null); // If needed, reset the selected value specifically
+    this.myForm.get('buildingCodeId')?.setValue(null); // If needed, reset the selected value specifically
+    // this.myForm.get('serviceId')?.setValue(null); // If needed, reset the selected value specifically
+
+    this.updateServiceId()
+    setTimeout(() => {
+      this.showdropDown = true;
+    }, 10);
+    if(!this.companyId) {
+      setTimeout(() => {
+        this.thankyouMessage = false;
+      }, 5000);
+    }
+  }
+
+  call(){
+    this.showPopup =true
+    }
+    closePopupStatus($event) {
+      this.showPopup = false;
+    }
+    toggleQueryButton() {
+      this.serviceQuery = !this.serviceQuery
+      return false
+    }
+    getStarted() {
+      debugger
+      console.log(this.myForm.get('email')?.valid)
+      if (this.myForm.get('email')?.valid) {
+        const email = this.myForm.get('email')?.value;
+        const redirectUrl = `https://www.buildtwin.com/get-started/set-password?isCockpit=true&autoFill=true&emailUpdate=${encodeURIComponent(email)}`;
+        window.open(redirectUrl, '_blank'); // Open the URL in a new tab
+  
+        this.myForm.reset(); // Reset form values
+        this.myForm.markAsPristine();
+        this.myForm.markAsUntouched();
+        // this.myForm.clearValidators(); // Temporarily clear validators
+        // this.myForm.updateValueAndValidity(); // Update validity
+        // // Reapply validators after reset
+        // this.myForm.setValidators([
+        //   this.fb.group({
+        //     email: ['', [Validators.required, Validators.email]],
+        //     projectName: ['', Validators.required],
+        //     selectedPrecastServices: [null],
+        //     buildingCodeId: [null],
+        //     serviceId: [null, Validators.required],
+        //     description: ['']
+        //   }).validator
+        // ]);
+        // this.myForm.updateValueAndValidity();
+        // this.updateServiceId()
+      }
+    }
 }

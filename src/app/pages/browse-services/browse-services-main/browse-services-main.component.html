@@ -1,409 +1,95 @@
 <app-hd-navbar></app-hd-navbar>
 <div class="componentWrapper">
-    <section class="headerSection">
-        <div class="container">
-            <app-browse-service-header></app-browse-service-header>
-        </div>
-    </section>
-    <section class="discoverProjectsSection">
-        <div class="container">
-            <div class="sectionHeader">
-                <lib-svg-icon class="icon" [name]="'discover-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
-                <div class="heading">
-                    <div class="title">Discover Projects from Vendors</div>
-                    <div class="subTitle">40+ Projects listed</div>
-                </div>
-            </div>
-            <div class="sectionContent">
-                <nz-carousel [nzDots]="false">
-                    <div nz-carousel-content *ngFor="let subProjectArray of discoverProjects">
-
-                        <div class="cardContainer">
-                            <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
-                                [sizeH]="88">
-                            </lib-svg-icon>
-                            <ng-container *ngFor=" let item of subProjectArray">
-                                <div class="projectCard">
-
-                                    <img src="{{item.img}}" class="projectImage" alt="cardImage">
-                                    <div class="projectHighlight">
-                                        <div class="projectCategory">{{item.category}}</div>
-                                        <div class="projectName">{{item.projectTitle}}</div>
-                                        <div class="company">
-                                            <img src="{{item.locationFlag}}" alt="icon" width="20" height="20">
-                                            <div class="companyName">
-                                                {{item.company}}
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="serviceCompanyDetails">
-                                        <div class="serviceCompany">
-                                            <img src="{{item.serviceCompanyIcon}}" width="{{item.width}}" height="{{item.height}}" alt="serviceCompanyIcons">
-                                            <div class="companyName">{{item.serviceCompany}}</div>
-                                        </div>
-
-                                        <div class="companyDetails">
-                                            <div class="title">Rendered Services
-                                            </div>
-                                            <div class="service">
-                                                {{item.serviceDescription}}
-                                            </div>
-                                        </div>
-
-                                        <div class="cardFooter">
-                                            <a [routerLink]="_languageService.currentLanguage+item.link">{{item.linkTitle}}</a>
-                                            <lib-svg-icon class="arrowIcon" [name]="'arrow-icon'" [size]="14"
-                                                [sizeH]="22"></lib-svg-icon>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </ng-container>
-                            <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
-                                [sizeH]="88">
-                            </lib-svg-icon>
-                        </div>
-
-                    </div>
-                </nz-carousel>
-            </div>
-        </div>
-    </section>
-    <section class="helpSection">
-        <div class="container">
-            <div class="sectionHeader">
-                <lib-svg-icon class="icon" [name]="'browse-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
-                <div class="heading">
-                    <div class="title">Help is Here</div>
-                    <div class="subTitle">Whenever and however you need it.</div>
-                </div>
-            </div>
-            <div class="sectionContent">
-                <div class="helpGridContainer">
-                    <div class="gridItem">
-                        <div class="gridItemWrapper">
-                            <img src="assets/images/masterClass.png" alt="masterClassImage">
-                            <div class="helpDetails">
-                                <div class="header">Masterclass</div>
-                                <div class="details">How to work with an external service provider</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gridItem ">
-                        <div class="gridItemWrapper">
-                            <img src="assets/images/dedicatedTeam.png" alt="dedicatedTeamImage">
-                            <div class="helpDetails">
-                                <div class="header">Hire a Dedicated Team</div>
-                                <div class="details">This is simply a dummy text of the printing and typesetting
-                                    industry</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="column">
-                        <div class="row ">
-                            <div class="gridItemWrapper">
-                                <img src="assets/images/qualifiedTeam.png" alt="qualifiedTeam">
-                                <div class="helpDetails">
-                                    <div class="header">Pre-Qualified Teams</div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="gridItemWrapper">
-                                <img src="assets/images/technicalTeam.png" alt="technicalTeam">
-                                <div class="helpDetails">
-                                    <div class="header">Find Technical Teams</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- <section class="solutionProviderSection">
-        <div class="container">
-            <div class="sectionHeader">
-                <lib-svg-icon class="icon" [name]="'solution-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
-                <div class="heading">
-                    <div class="title">Solution Providers</div>
-                    <div class="subTitle">Whenever and however you need it.</div>
-                </div>
-            </div>
-            <div class="sectionContent">
-                <div class="leftSection">
-                    <div class="selectBox countryField">
-                        <div class="v-center-flex">
-                            <img [src]="selectedCountry.image" width="29" height="29" alt="">
-                            <div>
-                                <span class="title">{{selectedCountry.label}}</span>
-                                <small>{{selectedCountry.currency}}</small>
-                            </div>
-                        </div>
-                        <app-bt-select [options]="countryArray" (selectedTabChange)="selectCountry($event)"
-                            [selectedInput]="selectedCountry"></app-bt-select>
-                    </div>
-                    <div class="selectBox precastField">
-                        <div>
-                            <span class="title">Pre-Cast</span>
-                            <span class="selectedValue">{{selectedPrecastServices.label}}</span>
-                        </div>
-                        <app-bt-select [options]="precastServices" (selectedTabChange)="selectService($event)"
-                            [selectedInput]="selectedPrecastServices"></app-bt-select>
-                    </div>
-                    <div class="selectBox precastField">
-                        <div>
-                            <span class="title">Pre-Cast</span>
-                            <span class="selectedValue v-center-flex"><lib-svg-icon [name]="selectedPrecast.svgName"
-                                    [size]="26" [sizeH]="26"></lib-svg-icon>{{selectedPrecast.label}}</span>
-                        </div>
-                        <app-bt-select [options]="precastList" (selectedTabChange)="selectPrecast($event)"
-                            [selectedInput]="selectedPrecast"></app-bt-select>
-                    </div>
-                    <button class="tenderBtn">
-                        Search Now <lib-svg-icon [name]="'arrow-icon'" [size]="16" [sizeH]="18"></lib-svg-icon>
-                    </button>
-                    <a href="#" class="moreFilters">
-                        More Filters
-                    </a>
-                </div>
-                <div class="rightSection">
+    <div class="banner-global container">
+        <div class="banner-main">
+            <div class="banner-content">
+                <div>
+                    <h1>
+                        Get free competetive quotes from
+                        <span>100s of engineering providers</span>
+                    </h1>
+                    <p>
+                        With access to one of the <u>world's largest portfolios</u> of independent 
+                    <br>engineering consultants and prequalified providers.
+                    </p>
                     <div>
-                        <div class="companyCriterias">
-                            <div class="company">Company Name</div>
-                            <div class="company">Location</div>
-                            <div class="company">No. of Employees</div>
-                            <div class="company">Timezone</div>
-                            <div class="company">Pre-Qualified</div>
-                            <div class="company"></div>
-                        </div>
-                        <div
-                            style="display: flex; padding-top: 25px; flex-direction: column;align-items: center; color: #fff;width: 25%; ">
-                            <div style="display: flex;justify-content: center;align-items: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <img src="assets/images/aarbee.png" style="width: 46px;height: 30px;">
-                                    <div class="name" style="font-family: var(--semibold-global);font-size: 14px; color: #000; text-align: center;">Aarbee Structures Pvt. Ltd.</div>
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;align-items: center; background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company" style="display: flex; gap: 10px;align-items: center;">
-    
-                                    <img src="assets/images/india-flag.png" style="width: 23px;height: 23px;">
-    
-                                    <div class="name" style="font-family: var(--medium-global);font-size: 14px; color: #000;">
-                                        <div>India</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <img src="assets/images/aarbee.png" style="width: 46px;height: 30px;">
-                                    <div class="name" style="font-family: var(--medium-global); font-size: 14px; color: #000;">800+ Employees</div>
-                                </div>
-                            </div>
-                            <div style="display: flex;flex-direction: column; align-items: center; justify-content: space-around; background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center; color: #000;"
-                                class="">
-                                <div>
-                                    <div style="font-size: 14px; text-align: center;"><span style="font-family:var(--table-th-font);">India (GMT+5:30)</span> <br>10:00 AM to 07:00 PM</div>
-    
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <img src="assets/images/check.png" alt="check" style="width: 23px; height: 23px;">
-    
-    
-                            </div>
-                            <div style="display: flex;justify-content: center;background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <a href="javascript:;"
-                                        style="border: 1px solid #886DE0;background: #FFF;border-radius: 34px;color:#886DE0 ; display: flex;padding: 6px 12px; font-size: 14px; align-items: center; gap: 10px;">Learn
-                                        More <lib-svg-icon [name]="'arrow-icon'" [size]="16"
-                                            [sizeH]="18"></lib-svg-icon></a>
-                                </div>
-                            </div>
-    
-                        </div>
-                        <div
-                            style="display: flex; padding-top: 25px; flex-direction: column;align-items: center; color: #fff;width: 25%; ">
-                            <div style="display: flex;justify-content: center;align-items: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <img src="assets/images/mac.png" style="width: 46px;height: 30px;">
-                                    <div class="name" style="font-family: var(--semibold-global);font-size: 14px; color: #000;">MAC Engineers</div>
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;align-items: center; background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company" style="display: flex; gap: 10px;align-items: center;">
-    
-                                    <img src="assets/images/ellipse.png" style="width: 23px;height: 23px;">
-    
-    
-                                    <div class="name" style="font-family: var(--medium-global);font-size: 14px; color: #000;">
-                                        <div>Vietnam, <br>Singapore and <br>Germany
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <img src="assets/images/mac.png" style="width: 46px;height: 30px;">
-                                    <div class="name" style="font-family: var(--medium-global); font-size: 14px; color: #000;">200+ Employees</div>
-                                </div>
-                            </div>
-                            <div style="display: flex;flex-direction: column; align-items: center; justify-content: space-around; background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center; color: #000;"
-                                class="">
-                                <div>
-                                    <div style="font-size: 14px; text-align: center;"><span style="font-family:var(--table-th-font);">Vietnam (GMT+7)</span> <br>10:00 AM to 07:00 PM </div>
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <img src="assets/images/check.png" alt="check" style="width: 23px; height: 23px;">
-    
-    
-                            </div>
-                            <div style="display: flex;justify-content: center;background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <a href="javascript:;"
-                                        style="border: 1px solid #886DE0;background: #FFF;border-radius: 34px;color:#886DE0 ; display: flex;padding: 6px 12px; font-size: 14px; align-items: center; gap: 10px;">Learn
-                                        More <lib-svg-icon [name]="'arrow-icon'" [size]="16"
-                                            [sizeH]="18"></lib-svg-icon></a>
-                                </div>
-                            </div>
-    
-                        </div>
-                        <div
-                            style="display: flex; padding-top: 25px; flex-direction: column;align-items: center; color: #fff;width: 25%; ">
-                            <div style="display: flex;justify-content: center;align-items: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <img src="assets/images/gbcEngineering.png" style="width: 46px;height: 30px;">
-                                    <div class="name" style="font-family: var(--semibold-global);font-size: 14px; color: #000;">GBC Engineers</div>
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;align-items: center; background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company" style="display: flex; gap: 10px;align-items: center;">
-    
-                                    <img src="assets/images/ellipse.png" style="width: 23px;height: 23px;">
-    
-                                    <div class="name" style="font-family: var(--medium-global);font-size: 14px; color: #000;">
-                                        <div>Germany and <br>Vietnam
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <img src="assets/images/gbcEngineering.png" style="width: 46px;height: 30px;">
-                                    <div class="name" style="font-family: var(--medium-global); font-size: 14px; color: #000;">300+ Employees</div>
-                                </div>
-                            </div>
-                            <div style="display: flex;flex-direction: column; align-items: center; justify-content: space-around; background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center; color: #000;"
-                                class="">
-                                <div>
-                                    <div style="font-size: 14px; text-align: center;"><span style="font-family:var(--table-th-font);">Germany (GMT+2)</span> <br>10:00 AM to 07:00 PM </div>
-                                </div>
-                            </div>
-                            <div style="display: flex;justify-content: center;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <img src="assets/images/check.png" alt="check" style="width: 23px; height: 23px;">
-    
-    
-                            </div>
-                            <div style="display: flex;justify-content: center;background: #F6F3FF; width: 100%;height: 84px;font-family: var(--medium-global);font-size: 14px; align-items: center;"
-                                class="">
-                                <div class="company"
-                                    style="display: flex; flex-direction: column;align-items: center; justify-content: space-around;">
-                                    <a href="javascript:;"
-                                        style="border: 1px solid #886DE0;background: #FFF;border-radius: 34px;color:#886DE0 ; display: flex;padding: 6px 12px; font-size: 14px; align-items: center; gap: 10px;">Learn
-                                        More <lib-svg-icon [name]="'arrow-icon'" [size]="16"
-                                            [sizeH]="18"></lib-svg-icon></a>
-                                </div>
-                            </div>
-    
-                        </div>
+                        <form class="get-started-banner" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+                            <input 
+                            type="text" 
+                            formControlName="email" 
+                            placeholder="Enter your email ID" 
+                            [ngClass]="{'invalid': email.invalid && email.touched}"
+                            />
+                            <button class="button-v2 explore_page_get_started_for_free" type="submit" [disabled]="emailForm.invalid">
+                            Get started for FREE
+                            </button>
+                        </form>
                     </div>
                 </div>
-
-            </div>
-        </div>
-    </section> -->
-    <section class="specialProjectsSection">
-        <div class="container">
-            <div class="sectionHeader">
-                <lib-svg-icon class="icon" [name]="'specialProject-icon'" [size]="80" [sizeH]="80"></lib-svg-icon>
-                <div class="heading">
-                    <div class="title">Special Projects</div>
-                    <div class="subTitle">We have some very special projects</div>
+                <div class="banner-time">
+                    <figure>
+                        
+                    <picture>
+                        <!-- WebP format -->
+                        <source 
+                          srcset="assets/images/buildtwin-logo.webp, assets/images/buildtwin-logo@2x.webp 2x" 
+                          type="image/webp">
+                      
+                        <!-- Fallback to JPEG -->
+                        <source 
+                          srcset="assets/images/buildtwin-logo.png, assets/images/buildtwin-logo@2x.png 2x" 
+                          type="image/jpeg">
+                      
+                        <!-- Default img tag as fallback -->
+                        <img 
+                          src="assets/images/buildtwin-logo.png" 
+                          alt="Buildtwin" 
+                          width="46" 
+                          height="52">
+                      </picture>    
+                    </figure>
+                    <div class="banner-time-detail">
+                        <span class="label">
+                            Fast & Secure | with signed NDA
+                        </span>
+                        <span class="time">
+                            <5 minutes
+                        </span>
+                    </div>
                 </div>
             </div>
-            <div class="carousel">
-                <!-- <lib-svg-icon [name]="'rightArrow-icon'" class="carousel-control prev" (click)="prevSlide()" [size]="88"
-                    [sizeH]="88">
-                </lib-svg-icon>
-                <div class="carousel-wrapper" [style.transform]="transformStyle">
-                    <div class="carousel-item" *ngFor="let slide of slides; let i = index"
-                        [class.active]="i === currentIndex">
-                        <div style="display: flex; gap: 20px; justify-content: space-between">
-                            <div class="image-container" *ngFor="let image of slide.images">
-                                <figure>
-                                    <img [src]="image.src" alt="Slide {{ i + 1 }}" width="185" height="245" />
-                                </figure>
-                                <div class="image-caption">
-                                    <h3>{{ image.title }}</h3>
-                                    <p>{{ image.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <owl-carousel-o [options]="customOptions">
-                    <ng-container *ngFor="let slide of slides">
-                        <ng-container *ngFor="let image of slide.images">
-                            <ng-template carouselSlide>
-                                <div class="image-container">
-                                    <figure>
-                                        <img [src]="image.src" width="185" height="245" />
-                                    </figure>
-                                    <div class="image-caption">
-                                        <h3>{{ image.title }}</h3>
-                                    </div>
-                                </div>
-                            </ng-template>
-                        </ng-container>
-                    </ng-container>
-                </owl-carousel-o>
-
-                <!-- <lib-svg-icon [name]="'rightArrow-icon'" class="carousel-control next" (click)="nextSlide()" [size]="88"
-                    [sizeH]="88"></lib-svg-icon> -->
+            <div class="banner-image">
+                <figure>
+                    <a class="link-abs link1" target="_blank" [routerLink]="'/services/pre-cast-detailing-services'"></a>
+                    <a class="link-abs link2" target="_blank" [routerLink]="'/services/rebar-detailing-services'"></a>
+                    <a class="link-abs link3" target="_blank" [routerLink]="'/services/steel-detailing-services'"></a>
+                    <picture>
+                        <!-- WebP format -->
+                        <source 
+                          srcset="assets/images/explore-banner.webp, assets/images/explore-banner@2x.webp 2x" 
+                          type="image/webp">
+                      
+                        <!-- Fallback to JPEG -->
+                        <source 
+                          srcset="assets/images/explore-banner.jpg, assets/images/explore-banner@2x.jpg 2x" 
+                          type="image/jpeg">
+                      
+                        <!-- Default img tag as fallback -->
+                        <img 
+                          src="assets/images/explore-banner.jpg" 
+                          alt="Explore Banner" 
+                          width="659" 
+                          height="556">
+                      </picture>                      
+                </figure>
             </div>
         </div>
-    </section>
-    <section class="whyBuildtwinSection">
-        <div class="container">
-            <app-why-buildtwin [isBrowseService]="true"></app-why-buildtwin>
-        </div>
-    </section>
+    </div>
+
+    <app-project-list></app-project-list>
+    <app-company-list></app-company-list>
+    <app-service-list></app-service-list>
+    <app-global-standards></app-global-standards>
+  
 </div>
 <app-hd-footer></app-hd-footer>

@@ -1,4 +1,5 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2 } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-hubspot',
@@ -8,16 +9,18 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, Renderer2 }
 export class HubspotComponent implements OnInit {
   @Output() closePopupStatus: EventEmitter<any> = new EventEmitter<any>();
   @Input() name: string = '';
-  path: any = 'https://success.buildtwin.com/meetings/buildtwin?embed=true'
+  path: any = ''
   constructor(
-    private elRef: ElementRef, private renderer: Renderer2,
+    private elRef: ElementRef, private renderer: Renderer2, private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
     if(this.name === 'arun'){
       this.path = 'https://meetings-eu1.hubspot.com/arun-vs?embed=true'
     }else {
+      this.path = 'https://success.buildtwin.com/meetings/buildtwin?embed=true'
     }
+    this.path = this.sanitizer.bypassSecurityTrustResourceUrl(this.path);
     this.loadScript();
   }
 

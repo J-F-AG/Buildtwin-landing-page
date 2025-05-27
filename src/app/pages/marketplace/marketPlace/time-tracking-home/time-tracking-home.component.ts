@@ -10,7 +10,8 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class TimeTrackingHomeComponent {
     activeState: number = 1
-    title = 'BuildTwin - Marketplace for global engineering projects';    FixedDiv: any
+    // title = 'BuildTwin - Marketplace for global engineering projects';    
+    FixedDiv: any
     FixedDivPositionTop: any
     fixedDIvOffsetTop: any
     scrollPosition: any
@@ -41,11 +42,15 @@ export class TimeTrackingHomeComponent {
     constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
 
       router.events.subscribe((val) => {
-        this.scrollActivated = document.getElementById('scrollActivated');
         setTimeout(() => {
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          this.scrollActivated = document.getElementById('scrollActivated');
+          if(this.scrollActivated){
+            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+            console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          } else {
+            console.error('Element with ID scrollActivated not found');
+          }
           
         }, 2000);
     });
@@ -53,20 +58,20 @@ export class TimeTrackingHomeComponent {
     }
     
     ngOnInit() {
-        this.titleService.setTitle(this.title);
+        // this.titleService.setTitle(this.title);
 
-        const script = document.createElement('script');
-        script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
-        script.async = true;
-        script.charset = 'utf-8';
+        // const script = document.createElement('script');
+        // script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+        // script.async = true;
+        // script.charset = 'utf-8';
       
-        // Append script to the document body
-        document.body.appendChild(script);
+        // // Append script to the document body
+        // document.body.appendChild(script);
       
-        // Initialize HubSpot form after the script is loaded
-        script.onload = () => {
-          this.initHubSpotForm();
-        };
+        // // Initialize HubSpot form after the script is loaded
+        // script.onload = () => {
+        // };
+        this.initHubSpotForm();
         
 
     }
@@ -81,22 +86,22 @@ export class TimeTrackingHomeComponent {
   
       // inside active 
       if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
-        this.fixedElement.classList.add("fixed")
+        // this.fixedElement.classList.add("fixed")
         let activeELe = document.querySelectorAll('[data-ele]');
         activeELe.forEach((item, index) => {
           if (item.getBoundingClientRect().top < 500) {
             this.activeState = index + 1;
-            item.classList.add("active")
+            // item.classList.add("active")
           }
           else {
-            item.classList.remove("active")
+            // item.classList.remove("active")
           }
   
         })
   
       }
       else {
-        this.fixedElement.classList.remove("fixed")
+        // this.fixedElement.classList.remove("fixed")
   
       }
     }

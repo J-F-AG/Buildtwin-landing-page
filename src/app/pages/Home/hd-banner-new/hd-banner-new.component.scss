@@ -1,278 +1,43 @@
-.banner-area {
-    padding: 112px 0 0 0;
-
-    .sliderCover {
-        background: linear-gradient(64.99deg, #EAE3FF -43.3%, rgba(255, 255, 255, 0.9) 200.99%);
-
-        &>.container {
-            position: relative;
-        }
-        .banner-content-wrapper {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 50%;
-            z-index: 9;
-            transform: translateY(-50%);
-        }
-        .bannerImg {
-            max-height: 600px;
-            overflow: hidden;
-        }
-        ::ng-deep .bannerImg {
-            img {
-                margin-top: -112px;
-            }
-        }
-        .banner-content {
-            h2 {
-                font-size: 38px;
-                font-weight: 500;
-                line-height: 45px;
-
-                strong {
-                    font-weight: 700;
-                }
-            }
-
-            p {
-                font-size: 18px;
-                font-weight: 400;
-            }
-        }
-
-        .item .container {
-            min-height: 423px;
-            display: flex;
-            padding: 0 40px;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        ::ng-deep .owl-nav {
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            width: 100%;
-            left: 0;
-            margin: 0;
-            max-width: 1440px;
-            margin: 0 auto;
-            right: 0;
-
-            .owl-prev,
-            .owl-next {
-                position: absolute;
-                left: -10px;
-                cursor: pointer;
-                margin: -18px 0 0 0;
-                padding: 0;
-                background: white;
-                border-radius: 4px;
-                width: 36px;
-                height: 36px;
-                font-size: 0;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: 10px;
-                    height: 10px;
-                    border: solid 2px #886DE0;
-                    left: 16px;
-                    top: 12px;
-                    border-width: 2px 0 0 2px;
-                    transform: rotate(-45deg);
-                }
-
-                &.owl-next {
-                    left: auto;
-                    right: -10px;
-
-                    &::after {
-                        border-width: 0 2px 2px 0;
-                        left: auto;
-                        right: 16px;
-                    }
-                }
-
-                &:hover {
-                    background: #886DE0;
-
-                    &::after {
-                        border-color: white;
-                    }
-                }
-            }
-        }
-
-        ::ng-deep .owl-dots {
-            position: absolute;
-            width: 100%;
-            bottom: 93px;
-            left: 0;
-
-            .owl-dot {
-                width: 27px;
-                height: 3px;
-                background-color: white;
-
-                span {
-                    display: none;
-                }
-
-                &.active {
-                    background: #886DE0;
-                }
-            }
-        }
-
-    }
-}
-
-.arrow-btn {
-    padding: 10px 15px;
-
-    svg {
-        margin-left: 40px;
-    }
-}
-
-/* Min width 992px to Max width 1199px */
-@media only screen and (min-width : 992px) and (max-width : 1199px) {
-
-    .sliderCover {
-        .banner-content {
-            // max-width: 60%;
-        }
-
-        // .bannerImg {
-        //     max-width: 40%;
-        // }
-    }
-}
-
-/* max width 992px */
-@media only screen and (max-width : 992px) {
-    .banner-area {
-        padding: 70px 0 0 0;
-
-        .sliderCover {
-            .item .container {
-                // flex-direction: column;
-                // padding-top: 80px;
-
-                .banner-content {
-                    // text-align: center;
-                }
-
-                .bannerImg {
-                    // max-width: 60%;
-                }
-            }
-        }
-    }
-    .banner-area .sliderCover .bannerImg img {
-        width: 1000px;
-        max-width: 1000px;
-        margin-top: -50px;
-    }
-    .banner-area .sliderCover .bannerImg {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-@media only screen and (max-width : 767px) {
-    .banner-area {
-        .sliderCover {
-            .item .container {
-                padding: 0px 35px 40px;
-
-                .banner-content {
-                    p {
-                        br {
-                            display: none;
-                        }
-                    }
-                }
-
-                // .bannerImg {
-                //     max-width: 100%;
-                // }
-            }
-        }
-    }
-    .banner-area .sliderCover .bannerImg {
-        display: flex;
-        justify-content: flex-end;
-        background: #f0ebfe;
-        img {
-            width: 1100px;
-            max-width: 1100px;
-            margin-top: -80px;
-            margin-right: -30px;
-            opacity: .3;
-        }
-    }
-    .banner-area .sliderCover ::ng-deep .owl-nav {
-        width: calc(100% - 25px);
-        padding: 0;
-    }
-    .banner-area .sliderCover .owl-nav .owl-prev, 
-    .banner-area .sliderCover .owl-nav .owl-next{
-        transform: scale(.7);
-        transform-origin: 0 0;
-    }
-}
-
-
-@media (min-width: 576px) {
-    .banner-area .sliderCover ::ng-deep .owl-nav {
-        // max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .banner-area .sliderCover ::ng-deep .owl-nav {
-        max-width: 720px;
-    }
-    .banner-area .sliderCover .item .container {
-        padding: 0 70px;
-        min-height: 0;
-        top: 40%;
-    }
-}
-
-@media (min-width: 992px) {
-    .banner-area .sliderCover ::ng-deep .owl-nav {
-        max-width: 960px;
-    }
-    .banner-area .sliderCover .item .container {
-        padding: 0 60px;
-        min-height: 0;
+.slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 120px;
+    position: relative;
+    .slide-content {
+        width: 742px;
+        position: absolute;
+        left: 50%;
         top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
 }
-
-@media (min-width: 1200px) {
-    .banner-area .sliderCover ::ng-deep .owl-nav {
-        max-width: 1140px;
-    }
-    .banner-area .sliderCover .item .container {
-        padding: 0 40px;
-        min-height: 423px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .banner-area .sliderCover ::ng-deep .owl-nav {
-        max-width: 1320px;
+.slide-tab {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #5c6a72;
+    padding-top: 50px;
+    li {
+        cursor: pointer;
+        &.active {
+            color: var(--themeColor);
+        }
     }
 }
-
-@media (min-width: 1700px) {
-    .banner-area .sliderCover ::ng-deep .owl-nav {
-        max-width: 1440px;
+:host ::ng-deep .owl-dots {
+    display: none;
+}
+.slide-tab-wrapper {
+    position: relative;
+    .line {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background: var(--themeColor);
     }
 }

@@ -1,0 +1,59 @@
+<section class="specialProjectsSection global-mb">
+    <div class="containerWrap">
+        <div class="sectionHeader" *ngIf="heading">
+            <div class="heading">
+                <div class="title" *ngIf="!page; else other_content">Discover Sectors</div>
+                <ng-template #other_content>
+                    <div class="title">
+                        Engineering Sectors We Serve
+                    </div>
+                    <div class="subTitle">Specialized engineering solutions across diverse industries, delivered by pre-qualified expert teams</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="carousel squareButtonWrapper">
+            <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let image of slides[0]['images']">
+                        <ng-template carouselSlide>
+                            <div class="image-container">
+                                <figure>
+                                    <!-- <img [src]="image.src" width="185" height="245" loading="lazy" /> -->
+                                    <picture>
+                                        <source [srcset]="image.src.webp" type="image/webp">
+                                        <source [srcset]="image.src.fallback" type="image/png">
+                                        <img [src]="image.src.fallback" 
+                                             [alt]="image.title"
+                                             width="185" 
+                                             height="245" 
+                                             loading="lazy">
+                                    </picture>
+                                </figure>
+                                <div class="image-caption page">
+                                    <h3>{{ image.title }}</h3>
+                                    <div class="sector-detail">
+                                        <p>
+                                            {{image.description}}
+                                        </p>
+                                        <!-- <ul>
+                                            <li>
+                                                Structural Analysis
+                                            </li>
+                                            <li>
+                                                MEP Integration
+                                            </li>
+                                            <li>
+                                                Seismic Design
+                                            </li>
+                                        </ul> -->
+                                        <a [routerLink]="image.link || null" class="link-text" *ngIf="image['link']">
+                                            Learn More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                        </ng-template>
+                    </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>

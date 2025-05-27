@@ -17,7 +17,7 @@
                       <h2>Future-Forward Curriculum</h2>
                       <span>Leap into tomorrow's skills.</span>
                     </div>
-                      <img src="assets/images/ui/traning1.png" width="346" height="250">
+                      <img src="assets/images/ui/traning1.png" alt="Training" width="346" height="250">
                     
                       <span>
                         
@@ -33,7 +33,7 @@
                       <h2>Offline Innovation Bootcamp</h2>
                       <span>Innovate beyond screens.</span>
                       </div>
-                      <img src="assets/images/ui/traning2.png" width="346" height="250">
+                      <img src="assets/images/ui/traning2.png" alt="Training" width="346" height="250">
                         <span>Engage in hands-on creativity away from digital distractions. Spark innovation in a collaborative environment.</span>
                         <i class="icon1">
                             +
@@ -45,7 +45,7 @@
                       <h2>Career Growth </h2>
                       <span>Navigate your ascent.</span>
                       </div>
-                      <img src="assets/images/ui/traning3.png" width="346" height="250">
+                      <img src="assets/images/ui/traning3.png" alt="Training" width="346" height="250">
                       <span>
                         Discover strategies for advancing your career. Elevate your path with actionable insights.
                       </span>
@@ -103,7 +103,7 @@
     
         <!-- Partner -->
             <!-- <app-partner></app-partner> -->
-    <div class="container">
+    <div class="container global-mb">
             <app-global-company>
                 <div class="partnerWrap">
                     <div class="company">
@@ -114,22 +114,22 @@
             
                     <owl-carousel-o [options]="reviewsSlides" class="partner">
                         <ng-template carouselSlide>
-                            <a routerLink="{{_languageService.currentLanguage}}/partners/GBCEngineers"><img src="assets/images/trustedBy-gbc.jpg" alt="Gbc"></a>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers"><img src="assets/images/trustedBy-gbc.jpg" alt="GBC Engineers" loading="lazy"></a>
                         </ng-template>
                         <ng-template carouselSlide>
-                            <a routerLink="{{_languageService.currentLanguage}}/partners/Durchgeplant"><img src="assets/images/trustedBy-durchgeplant.png" alt="durchgeplant"></a>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant"><img src="assets/images/trustedBy-durchgeplant.png" alt="durchgeplant"></a>
                         </ng-template>
                         <ng-template carouselSlide>
-                            <a routerLink="{{_languageService.currentLanguage}}/partners/AarbeeStructuresPrivateLimited"><img src="assets/images/trustedBy-aarbee.jpg" alt="Aarbee"></a>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited"><img src="assets/images/trustedBy-aarbee.jpg" alt="AARBEE" loading="lazy"></a>
                         </ng-template>
                         <ng-template carouselSlide>
-                            <a routerLink="{{_languageService.currentLanguage}}/partners/J&FIndia"><img src="assets/images/trustedBy-J&F.png" alt="J&F"></a>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india"><img src="assets/images/trustedBy-J&F.png" alt="J&F"></a>
                         </ng-template>
-                        <ng-template carouselSlide>
+                        <!-- <ng-template carouselSlide>
                             <a routerLink="{{_languageService.currentLanguage}}/partners/MACEngineersVietnamCO.LTD."><img src="assets/images/trustedBy-MAC.png" alt="MAC"></a>
-                        </ng-template>
+                        </ng-template> -->
                         <ng-template carouselSlide>
-                            <a routerLink="{{_languageService.currentLanguage}}/partners/Caldim"><img src="assets/images/trustedBy-caldim.jpg" alt="Caldim"></a>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering"><img src="assets/images/trustedBy-caldim.jpg" alt="CALDIM" loading="lazy"></a>
                         </ng-template>
                     </owl-carousel-o>
             
@@ -150,17 +150,17 @@
     <app-how-buildtwin-helps>
         <div class="buildtwinHelps forTraning" id="scrollActivated">
 
-            <div id="onScrollAnimation">
-                <div class="headSection">
+            <div id="onScrollAnimation" class="heading-sticky">
+                <div class="heading center v2">
                     <span class="sub-title">End-to-End Training</span>
-                    <h2>Co-developed with BuildTwin Clients
+                    <h2 class="title">Co-developed with BuildTwin Clients
                     </h2>
-                    <p>
+                    <p class="small-title">
                         Online certification courses that set you up for success. Gain industry-relevant skills with <br>cohort-based learning.
                     </p>
                 </div>
-            <div class="container">
-             
+        </div>
+            <div class="staticData">
                 <div class="tabContent">
                     <div class="tabLeft">
                         <ul>
@@ -184,15 +184,11 @@
                     </div>
                    
                 </div>
-                
-            </div>
-        </div>
-            <div class="staticData">
                 <div class="tabRIght">
-                    <div id="section1" class="active" data-ele="one">
+                    <div id="section1" data-ele="one" [ngClass]="{'active':activeState === 1}">
                         <div class="flex ">
                             <div class="imgWrap">
-                                <img src="assets/images/ui/whytraning1.png" alt="" title="">
+                                <img src="assets/images/ui/whytraning1.png" alt="Training" title="">
                             </div>
                             <div class="contentWrap">
                                 <h3>
@@ -204,14 +200,14 @@
                                     real-world insights atop an academic foundation, and access pathways to leading companies 
                                     through our marketplace.
                                 </p>
-                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
                             </div>
                         </div>
                     </div>
-                    <div id="section2"    data-ele="two">
+                    <div id="section2"    data-ele="two" [ngClass]="{'active':activeState === 2}">
                         <div class="flex">
                             <div class="imgWrap">
-                                <img src="assets/images/ui/whytraning2.png" alt="" title="">
+                                <img src="assets/images/ui/whytraning2.png" alt="Training" title="">
                             </div>
                             <div class="contentWrap">
                                 <h3>
@@ -226,14 +222,14 @@
                                     you're well-versed in the precise regulations that govern your projects, preparing 
                                     you to excel in any regulatory environment.
                                 </p>
-                                <a routerLink="" class="newBtn">Start Now<img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="" class="newBtn">Start Now<img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
                             </div>
                         </div>
                     </div>
-                    <div id="section3"    data-ele="three">
+                    <div id="section3"    data-ele="three" [ngClass]="{'active':activeState === 3}">
                         <div class="flex ">
                             <div class="imgWrap">
-                                <img src="assets/images/ui/whytraning3.png" alt="" title="">
+                                <img src="assets/images/ui/whytraning3.png" alt="Training" title="">
                             </div>
                             <div class="contentWrap">
                                 <h3>
@@ -245,15 +241,15 @@
                                     among stakeholders, propelling your projects to new heights of efficiency 
                                     and innovation.
                                 </p>
-                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
 
                             </div>
                         </div>
                     </div>
-                    <div id="section4"    data-ele="four">
+                    <div id="section4"    data-ele="four" [ngClass]="{'active':activeState === 4}">
                         <div class="flex ">
                             <div class="imgWrap">
-                                <img src="assets/images/ui/whytraning4.png" alt="" title="">
+                                <img src="assets/images/ui/whytraning4.png" alt="Training" title="">
                             </div>
                             <div class="contentWrap">
                                 <h3>
@@ -265,15 +261,15 @@
                                     challenges were overcome, equipping you with practical insights and innovative 
                                     problem-solving techniques to apply in your own work.
                                 </p>
-                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
 
                             </div>
                         </div>
                     </div>
-                    <div id="section5"    data-ele="five">
+                    <div id="section5"    data-ele="five" [ngClass]="{'active':activeState === 5}">
                         <div class="flex ">
                             <div class="imgWrap">
-                                <img src="assets/images/ui/whytraning4.png" alt="" title="">
+                                <img src="assets/images/ui/whytraning4.png" alt="Training" title="">
                             </div>
                             <div class="contentWrap">
                                 <h3>
@@ -284,7 +280,7 @@
                                     from diverse fields. Engage in hands-on projects addressing real-world technical challenges, and 
                                     contribute valuable solutions while expanding your professional network and expertise.
                                 </p>
-                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg"> </a>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
 
                             </div>
                         </div>
@@ -302,9 +298,9 @@
     <app-traning-company>
         <div class="container">
             <div class="traningCom">
-       <div class="head">
-        <span>Companies building the world are Hiring our students</span>
-        <h2>
+       <div class="heading center v2">
+        <span class="sub-title">Companies building the world are Hiring our students</span>
+        <h2 class="title">
             Global firms trust our candidates 
         </h2>
        </div>
@@ -312,157 +308,28 @@
        <div class="logo_wrap">
        <ul>
         <li>
-            <img src="assets/images/ui/patner1.png" width="142" height="66">
+            <img src="assets/images/ui/patner1.png" alt="Techture" width="142" height="66">
         </li>
         <li>
-            <img src="assets/images/ui/patner2.png" width="142" height="66">
+            <img src="assets/images/ui/patner2.png" alt="Venkataramanan Associates" width="142" height="66" loading="lazy">
         </li>
         <li>
-            <img src="assets/images/ui/patner3.png" width="142" height="66">
+            <img src="assets/images/ui/patner3.png" alt="QS System" width="142" height="66">
         </li>
         <li>
-            <img src="assets/images/ui/patner4.png" width="142" height="66">
+            <img src="assets/images/ui/patner4.png" alt="AECOM" width="142" height="66" loading="lazy">
         </li>
         <li>
-            <img src="assets/images/ui/patner5.png" width="142" height="66">
+            <img src="assets/images/ui/patner5.png" alt="Morphogensis" width="142" height="66">
         </li>
         <li>
-            <img src="assets/images/ui/patner6.png" width="142" height="66">
+            <img src="assets/images/ui/patner6.png" alt="COWI" width="142" height="66">
         </li>
         <li>
-            <img src="assets/images/ui/patner7.png" width="142" height="66">
+            <img src="assets/images/ui/patner7.png" alt="ATKINS" width="142" height="66">
         </li>
         <li>
-            <img src="assets/images/ui/patner8.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner3.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner5.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner1.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner6.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner8.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner7.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner2.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner4.png" width="142" height="66">
-        </li>
-
-        <li>
-            <img src="assets/images/ui/patner8.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner4.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner3.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner7.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner2.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner6.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner1.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner5.png" width="142" height="66">
-        </li>
-
-        <li>
-            <img src="assets/images/ui/patner6.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner2.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner7.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner5.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner3.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner4.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner8.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner1.png" width="142" height="66">
-        </li>
-
-
-
-
-        <li>
-            <img src="assets/images/ui/patner5.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner3.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner4.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner8.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner1.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner7.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner2.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner6.png" width="142" height="66">
-        </li>
-
-
-
-        <li>
-            <img src="assets/images/ui/patner4.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner7.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner6.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner1.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner2.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner5.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner3.png" width="142" height="66">
-        </li>
-        <li>
-            <img src="assets/images/ui/patner8.png" width="142" height="66">
+            <img src="assets/images/ui/patner8.png" alt="KLIMART" width="142" height="66">
         </li>
        </ul>
        </div>
@@ -479,7 +346,7 @@
        <span>Germany. UK. AUS. US. India. France. </span>
         </div>
     
-        <a href="#" class="btn">Get curriculum</a>
+        <a href="javascript:void(0)" class="btn">Get curriculum</a>
     </div> -->
 
 </div>

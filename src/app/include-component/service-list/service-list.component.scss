@@ -1,0 +1,168 @@
+.bg {
+    padding-top: 104px;
+}
+.list {
+    padding-right: var(--padding-left-right);
+    padding-left: var(--padding-left-right);
+    margin-left: -92px;
+    margin-right: -92px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 57px;
+    margin-top: -57px;
+    &::before,
+    &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: var(--padding-left-right);
+        height: 100%;
+        background: linear-gradient(to left, transparent, #f6f7f9);
+        content: "";
+        z-index: 2;
+        pointer-events: none;
+    }
+    &::after {
+        background: linear-gradient(to right, transparent, #f6f7f9);
+        left: auto;
+        right: 0;
+    }
+}
+:host ::ng-deep .owl-carousel .owl-stage {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+:host ::ng-deep .owl-carousel .owl-stage-outer {
+    overflow: visible;
+}
+:host ::ng-deep .owl-carousel {
+    z-index: auto;
+}
+// :host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-]{
+//     left: -51px;
+//     z-index: 3;
+// }
+// :host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-].owl-next {
+//     right: -51px;
+//     left: auto;
+// }
+.block {
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 33px 24px 0;
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    aspect-ratio: 349 / 435; /* Maintain the ratio */
+    &.active {
+        background: #002E3B;
+        color: white;
+        h3 {
+            color: inherit;
+        }
+        p {
+            color: white;
+        }
+    }
+    h3 {
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: -.35px;
+        margin-bottom: 7px;
+    }
+    p {
+        // color: #515151;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+    figure {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+        }
+    }
+}
+
+.squareButtonWrapper.top-right ::ng-deep .owl-nav {
+    top: -60px;
+}
+.hover-show {
+    transition: all .3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--blackColor);
+}
+.block:hover {
+    .hover-show {
+        -webkit-line-clamp: unset; /* Show all lines on hover */
+        overflow: visible;
+        white-space: normal; /* Ensure text wraps normally */
+    }
+    figure {
+        opacity: .3;
+    }
+}
+@media only screen and (min-width : 1500px) {
+    .list.below-6 ::ng-deep .owl-stage {
+        display: flex;
+        gap: 16px;
+    }
+    .list.below-6 ::ng-deep .owl-item {
+        width: calc(20%)!important;
+        max-width: calc(20%)!important;
+        flex: 1;
+        margin-right: 0!important;
+    }
+}
+@media only screen and (max-width : 1200px) {
+    .list {
+        margin-left: 0;
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 0;
+        &::after, &::before {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    // :host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-] {
+    //     left: -1px;
+    //     background: white;
+    //     border-radius: 4px 4px 0 0;
+    // }
+    // :host ::ng-deep .round-button-owl .owl-theme .owl-nav [class*=owl-].owl-next {
+    //     right: -1px;
+    //     left: auto;
+    //     border-radius: 4px 4px 0 0;
+    // }
+
+}
+@media only screen and (max-width : 900px) {
+    .block {
+        padding: 24px 20px 0;
+        h3 {
+            font-size: 22px;
+        }
+    }
+}
+@media only screen and (max-width : 767px) {
+    .squareButtonWrapper.top-right ::ng-deep .owl-nav {
+        top: -4px;
+        margin: 0;
+    }
+}

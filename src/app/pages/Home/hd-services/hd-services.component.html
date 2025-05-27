@@ -1,60 +1,49 @@
-<div class="sectionContainer">
-    <div class="container">
-    <div class="abs-d">
-        <img src="assets/images/dots.png" width="269" height="306" alt="">
-    </div>
-    <div class="sectionTop" data-aos="fade-up" data-aos-duration="500">
-        <h1 class="heading">Services</h1>
-        <div class="assistant">
-            <img src="assets/images/avatar.svg" alt="avatar">
-            <div class="assitWrapper">
-                <div>Need help?</div>
-                <a class="link" (click)="call()">Talk to our Advisors</a>
+
+<div class="services global-mb" id="targetSection">
+    <div class="main-head" *ngIf="heading">
+        <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+            <div class="main-title" *ngIf="!page">Discover top-tier solutions tailored to your project needs</div>
+            <div class="heading">
+                <h1 class="title">Find Structural Engineering Services & Solutions</h1>
+                <div class="subTitle">The best way to procure pre-qualified technical teams across the globe.</div>
             </div>
-
         </div>
+        <a *ngIf="!page" class="button-v2 align-self-end" href="javascript:void(0)" (click)="scrollToSection('formContainer')">Book a service</a>
+        <a *ngIf="page" class="button-v2 align-self-end" target="_blank" href="https://cockpit.buildtwin.com/signin">Book a service</a>
     </div>
-    <div class="sectionMid"  data-aos="fade-up" data-aos-duration="500"  data-aos-delay="100">
-        <div class="content">
-            The best way to procure pre-qualified technical teams across the globe.
-        </div>  
-        <a class="themeButton bookServicesButton" target="_blank" href="https://cockpit.buildtwin.com/signin">
-            <span>Book Services</span> <lib-svg-icon [name]="'arrow-icon'" [size]="16" [sizeH]="18"></lib-svg-icon>
-        </a>
-    </div>
-    <div class="sectionBottom" data-aos="fade-up" data-aos-duration="500"  data-aos-delay="200">
-        <div class="headerCarousel">
-            <nz-carousel [nzDots]="false">
-                <div nz-carousel-content *ngFor="let subServiceArray of discoverServices">
 
-                    <div class="carouselWrapper">
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="leftslideButton" (click)="prev()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
-                        <!-- <div class="cardWrapper" routerLink="/engineering-services/services">
-                            <img src="assets/images/structuralDesign.png" alt="cardImage" width="151" height="137">
-                            <div class="detail">Structural Design</div>
-                        </div> -->
-                        <ng-container *ngFor="let item of subServiceArray">
-                            <div class="cardWrapper">
-                                <img src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height">
-                                <div class="detail">
-                                    {{item.name}}
-                                </div>
-                            </div>
-                        </ng-container>
-                        <lib-svg-icon [name]="'rightArrow-icon'" class="rightslideButton" (click)="next()" [size]="88"
-                            [sizeH]="88">
-                        </lib-svg-icon>
-                    </div>
+
+    <div class="slider">
+        <owl-carousel-o [options]="factorySlider" (change)="getData($event)" *ngIf="isBrowser">
+            <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
+                <!-- , color: item.textColor -->
+                <a class="service__items__sub" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''" [ngStyle]="{backgroundColor: item.color}">
+                    <h2 class="service__items__sub__title">{{item.name}}</h2>
+                    <picture>
+                        <source [srcset]="item.img.webp" type="image/webp">
+                        <source [srcset]="item.img.fallback" type="image/png">
+                        <img [src]="item.img.fallback" 
+                             alt="cardImage"
+                             class="service__items__sub__image"
+                             [attr.width]="item.width" 
+                             [attr.height]="item.height"
+                             loading="lazy">
+                    </picture>
+                    <!-- <img class="service__items__sub__image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height"> -->
+                </a>
+                <div class="service__items__title">
+                    <h2 class="service__items__title--main">
+                        <a target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
+                            {{servicesArray[i]?.name}}
+                        </a>
+                    </h2>
+                    <p class="service__items__title--sub" *ngIf="servicesArray[i] && servicesArray[i]['description']" [innerHtml]="servicesArray[i]['description']"></p>
+                    <a class="link-text" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
+                        Know More
+                    </a>
                 </div>
-            </nz-carousel>
-
-
-
-        </div>
+            </ng-template>
+        </owl-carousel-o>
     </div>
-</div>
-</div>
 
-<app-hubspot [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+</div>

@@ -1,0 +1,82 @@
+<div class="homeBanner">
+    <div class="home-banner-image-wrapper">
+        <figure class="leftImage-1">
+            <picture>
+                <img src="assets/images/home-left-image1.jpg" srcset="assets/images/home-left-image1@2x.jpg 2x" width="139" height="139" alt="">
+            </picture>
+        </figure>
+        <figure class="leftImage-2">
+            <picture>
+                <img src="assets/images/home-left-image2.jpg" srcset="assets/images/home-left-image2@2x.jpg 2x" width="105" height="105" alt="">
+            </picture>
+        </figure>
+        <figure class="leftImage-3">
+            <picture>
+                <img src="assets/images/home-left-image3.jpg" srcset="assets/images/home-left-image3@2x.jpg 2x" width="105" height="105" alt="">
+            </picture>
+        </figure>
+        <figure class="leftImage-4">
+            <picture>
+                <img src="assets/images/home-left-image4.jpg" srcset="assets/images/home-left-image4@2x.jpg 2x" width="174" height="174" alt="">
+            </picture>
+            <i class="blueTick"><img src="assets/images/blue-tick.png" width="45" height="45" alt=""></i>
+        </figure>
+        <figure class="leftImage-5">
+            <picture>
+                <img src="assets/images/home-left-image5.jpg" srcset="assets/images/home-left-image5@2x.jpg 2x" width="174" height="174" alt="">
+            </picture>
+            <i class="blueTick"><img src="assets/images/blue-tick.png" width="32" height="32" alt=""></i>
+        </figure>
+        <figure class="leftImage-6">
+            <picture>
+                <img src="assets/images/home-left-image6.jpg" srcset="assets/images/home-left-image6@2x.jpg 2x" width="139" height="139" alt="">
+            </picture>
+        </figure>
+        <figure class="rightImage-1">
+            <picture>
+                <img src="assets/images/home-right-image1.jpg" srcset="assets/images/home-right-image1@2x.jpg 2x" width="105" height="105" alt="">
+            </picture>
+            <i class="blueTick"><img src="assets/images/blue-tick.png" width="31" height="31" alt=""></i>
+        </figure>
+        <figure class="rightImage-2">
+            <picture>
+                <img src="assets/images/home-right-image2.jpg" srcset="assets/images/home-right-image2@2x.jpg 2x" width="174" height="174" alt="">
+            </picture>
+            <i class="blueTick"><img src="assets/images/blue-tick.png" width="40" height="40" alt=""></i>
+        </figure>
+        <figure class="rightImage-3">
+            <picture>
+                <img src="assets/images/home-right-image3.jpg" srcset="assets/images/home-right-image3@2x.jpg 2x" width="174" height="174" alt="">
+            </picture>
+        </figure>
+        <figure class="rightImage-4">
+            <picture>
+                <img src="assets/images/home-right-image4.jpg" srcset="assets/images/home-right-image4@2x.jpg 2x" width="139" height="139" alt="">
+            </picture>
+        </figure>
+        <figure class="rightImage-5">
+            <picture>
+                <img src="assets/images/home-right-image5.jpg" srcset="assets/images/home-right-image5@2x.jpg 2x" width="174" height="174" alt="">
+            </picture>
+        </figure>
+    </div>
+    <div class="bannerContent">
+        <div class="center">
+            <h1>The World’s <strong>Structural Engineers</strong> are on <span>BuildTwin</span></h1>
+            <p class="small-title">
+                BuildTwin simplifies how to outsource, manage and ensure your projects meet time <br>and quality goals. Get started in minutes and focus on what matters!
+            </p>
+        </div>
+        <div class="button-wrapper flex-justify-center">
+            <a [routerLink]="[_languageService.currentLanguage,'explore-services']" class="button-v2 home_banner_explore_btn">
+                Explore
+            </a>
+            <a (click)="call()" href="javascript:void(0)" class="button-v2 border home_banner_schedule_demo">
+                <img src="assets/images/icons/icon1.png" width="23" height="23" alt="Schedule DEMO">
+                Schedule DEMO
+            </a>
+        </div>
+    </div>
+</div>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}"
+    (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
