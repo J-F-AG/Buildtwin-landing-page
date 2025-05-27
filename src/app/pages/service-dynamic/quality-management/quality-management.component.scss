@@ -35,3 +35,16 @@
         transform: translateX(-50%);
     }
 }
+
+@media (max-width: 1199px) {
+.image-wrapper {
+    margin-left: -30px;
+    margin-right: -30px;
+}
+}
+@media (max-width: 991px) {
+    .image-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}

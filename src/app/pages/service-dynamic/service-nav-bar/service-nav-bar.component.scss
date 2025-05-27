@@ -63,3 +63,34 @@
         }
     }
 }
+
+@media (max-width:1199px){
+    .service-nav-bar {
+        padding-left: 200px;
+        ul {
+            li {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+@media (max-width:991px){
+    .service-nav-bar {
+        padding-left: 200px;
+        width: 100%;
+        ul {
+            overflow: auto;
+            &::before {
+                display: none;
+            }
+            li {
+                white-space: nowrap;
+            }
+        }
+    }
+    .heading
+        {
+            padding-right: 0;
+        }
+}

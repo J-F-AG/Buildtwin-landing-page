@@ -134,7 +134,7 @@
   }
 }
 
-@media only screen and (max-width : 900px) {
+@media only screen and (max-width : 991px) {
   .lets-talk .lets-talk-content h4 {
     font-size: 34px;
   }
@@ -146,6 +146,13 @@
   }
   .footer-menu-wrapper .container a {
     font-size: 16px;
+  }
+  .service-list .container {
+    flex-wrap: wrap;
+  }
+  .service-list .list-block {
+    flex: auto;
+    width: 25%;
   }
 }
 @media only screen and (max-width : 767px) {

@@ -34,6 +34,9 @@ export class HdIntegrationsComponent {
         0: {
           items: 1
         },
+        400: {
+          items: 3
+        },
         515: {
           items: 3
         },

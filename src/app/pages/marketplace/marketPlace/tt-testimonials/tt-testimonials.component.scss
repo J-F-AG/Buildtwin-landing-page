@@ -214,6 +214,14 @@
     }
   }
 
+  @media (max-width: 991px) {
+    .reviews-content .rating .ti {
+        font-size: 32px;
+    }
+    .reviews-slides .content .font-mulish {
+        font-size: 15px;
+    }
+  }
   @media (max-width: 767px) {
     .reviews-slides {
         .content-wrapper {

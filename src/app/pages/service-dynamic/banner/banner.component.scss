@@ -218,11 +218,11 @@
         padding-right: 30px;
     }
     .banner-space {
-        padding-bottom: 110px;
+        padding-bottom: 50px;
     }
     .bannerWrapper {
         h1, p {
-            padding-right: 200px;
+            padding-right: 0;
         }
     }
     .banner-space h1::before {
@@ -234,7 +234,16 @@
         width: 200px;
     }
 } 
-@media (max-width:900px){
+@media (max-width:991px){
+    .bannerWrapper h1 {
+        font-size: 30px;
+        strong {
+            font-size: 45px;
+        }
+    }
+    .bannerWrapper p {
+        font-size: 15px;
+    }
     .bannerWrapper {
         padding-top: 65px;
     }

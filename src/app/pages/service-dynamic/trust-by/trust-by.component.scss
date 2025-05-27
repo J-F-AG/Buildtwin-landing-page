@@ -10,6 +10,13 @@
 :host ::ng-deep .heading-import {
    margin-bottom: 36px;
 }
+@media (max-width:991px){
+    :host ::ng-deep {
+        .heading-import {
+            padding-right: 0;
+        }
+    }
+}
 @media (max-width:767px){
    .trustedBrands {
        flex-wrap: wrap;

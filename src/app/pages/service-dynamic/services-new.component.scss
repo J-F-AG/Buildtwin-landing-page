@@ -65,13 +65,20 @@ app-company-logos-slider ::ng-deep .global-mb {
     margin-bottom: 48px;
 }
 :host ::ng-deep {
+    .bg {
+        .container.project-list {
+            &::after, &::before {
+                background: #f6f7f9;
+            }
+        }
+    }
     .container.project-list, .specialProjectsSection {
         overflow: hidden;
         position: relative;
         &::after, &::before {
             content: "";
             width: 92px;
-            background: #f6f7f9;
+            background: #ffffff;
             height: 100%;
             position: absolute;
             right: 0;
@@ -182,7 +189,38 @@ app-company-logos-slider ::ng-deep .global-mb {
         }
     }
 }
+@media (max-width:1200px){
+    :host ::ng-deep {
+        .container.project-list {
+            padding-left : var(--padding-left-right);
+            padding-right : var(--padding-left-right);
+        }
+        .specialProjectsSection .containerWrap {
+            padding-left : var(--padding-left-right);
+            padding-right : var(--padding-left-right);
+        }
+    }
+}
 @media (max-width:1199px){
+    .full-right {
+        margin-right: -0;
+        padding-right: 0;
+        max-width: calc(100%);
+        width: calc(100%);
+    }
+    :host ::ng-deep {
+        .container.project-list {
+            padding-left : 90px;
+            padding-right : 90px;
+        }
+        .specialProjectsSection .containerWrap {
+            padding-left : 90px;
+            padding-right : 90px;
+        }
+    }
+    .maincontent {
+        margin-right: 0;
+    }
     /* Define the keyframes for the animation */
     @keyframes marginLoop {
         0% {
@@ -213,13 +251,20 @@ app-company-logos-slider ::ng-deep .global-mb {
         max-width: calc(100vw - 50px);
         padding-top: 0;
     }
+    .Stickyform > svg {
+        display: none!important;
+    }
+    .Stickyform .formWrapper::before,
+    .Stickyform .formWrapper::after {
+        display: none;
+    }
     .cross {
         width: 50px;
         height: 50px;
         border-radius: 5px 0 0 5px;
         background: white;
         position: absolute;
-        right: 440px;
+        right: 357px;
         top: 30px;
         &::after, &::before {
             content: "";
@@ -249,6 +294,39 @@ app-company-logos-slider ::ng-deep .global-mb {
         }
         &.navbar-area .navbar .navbar-brand {
             margin-bottom: 0;
+        }
+    }
+}
+@media (max-width:991px){
+    :host ::ng-deep {
+        h1, h2 {
+            font-size: 34px;
+            strong {
+                font-size: 40px;
+            }
+        }
+    }
+    ::ng-deep {
+        .dynamic-service-page {
+            .navbar-toggler {
+                display: none;
+            }
+        }
+    }
+    .service-nav-bar {
+        padding-left: 200px;
+        width: 100%;
+        ul {
+            overflow: auto;
+            &::before {
+                display: none;
+            }
+            li {
+                white-space: nowrap;
+                &::after {
+                    display: none;
+                }
+            }
         }
     }
 }

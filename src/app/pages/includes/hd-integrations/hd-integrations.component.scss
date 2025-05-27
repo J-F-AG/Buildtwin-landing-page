@@ -196,8 +196,16 @@
 @media only screen and (min-width: 1400px) and (max-width: 1699px) {}
 
 
-@media (max-width:950px){
-
+@media (max-width:991px){
+    .integrations-area .plugWrapper .hd-section-title h2 {
+        font-size: 22px;
+        strong {
+            font-size: 30px;
+        }
+    }
+    .integrations-area.global-mb {
+        margin-bottom: 0;
+    }
 }
 @media  (max-width: 767px) {
 

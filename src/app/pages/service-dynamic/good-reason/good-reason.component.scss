@@ -1,6 +1,6 @@
 .container.bg {
     margin-right: -357px;
-    padding-right: 357px;
+    padding-right: 387px;
     max-width: calc(100% + 357px);
     width: calc(100% + 357px);
 }
@@ -58,5 +58,29 @@
             }
 
         }
+    }
+}
+
+@media (max-width:1199px){
+    .container.bg {
+        margin-right: -0;
+        padding-right: 30px;
+        max-width: calc(100%);
+        width: calc(100%);
+    }
+}
+@media (max-width:991px){
+    .block-wrapper .block figure {
+        width: 150px;
+        height: 150px;
+        img {
+            width: 60px;
+        }
+    }
+    .block-wrapper .block h4 {
+        font-size: 19px;
+    }
+    .block-wrapper .block p {
+        font-size: 14px;
     }
 }
