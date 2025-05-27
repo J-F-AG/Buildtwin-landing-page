@@ -86,7 +86,11 @@ export class TtPartnersBuildingCodeAiscComponent {
   }
 
   redirect(domain, company_name) {
-    localStorage.setItem("domain", domain);
+    try {
+      localStorage.setItem("domain", domain);
+    } catch (error) {
+      
+    }
     // if(this.paramsStatus){
     //   this.router.navigate(
     //     [`${this._languageService.currentLanguage}/partners/${company_name.replace(/ /g, '')}`], 

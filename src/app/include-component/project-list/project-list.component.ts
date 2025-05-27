@@ -280,7 +280,11 @@ sliderInit() {
   }
   
   redirect(domain, company_name) {
-    localStorage.setItem("domain", domain);
+    try {
+      localStorage.setItem("domain", domain);
+    } catch (error) {
+      
+    }
   }
 
 
