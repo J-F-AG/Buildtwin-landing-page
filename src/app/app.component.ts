@@ -51,6 +51,7 @@ export class AppComponent {
         private injector: Injector,
         @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
+      localStorage.setItem('version','0.0.1')
       this._languageService.faqSchemaSubject.subscribe((data) => {
         const faqSchema = this.injectFaqSchema(data['data']);
         this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
