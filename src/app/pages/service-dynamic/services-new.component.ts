@@ -1,11 +1,13 @@
-import { Component, OnInit ,  OnChanges, SimpleChanges} from '@angular/core';
+import { Component, OnInit ,  OnChanges, SimpleChanges, Renderer2} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, of } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ServiceMappingService } from 'src/app/services/service-mapping.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { MarkdownService } from 'ngx-markdown';
 import { marked } from 'marked';
+import { ServiceDetailService } from './vender-detail.service';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-service-dynamic',
@@ -28,10 +30,30 @@ export class ServiceDynamicComponent implements OnInit {
     private _http: HttpClient,
     private route: ActivatedRoute,
     public serviceMappingService: ServiceMappingService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private router: Router,
+    private _serviceDetailService: ServiceDetailService,
+    private _seoService: SeoService,
+    private renderer: Renderer2
   ) {
     // add class on body tag
     document.body.classList.add('dynamic-service-page');
+
+      const urlSegments = this.router.url.split('/');
+      let url = urlSegments[urlSegments.length - 1];
+      url = url.toLowerCase();
+        if(this._serviceDetailService['detalMeta'][url]){
+          this._seoService.updateTitle(this._serviceDetailService['detalMeta'][url]['title']);
+          this._seoService.updateDescription(this._serviceDetailService['detalMeta'][url]['description']);
+          // Update OG tags
+          this._seoService.updateOGUrl(this.router.url);
+          this._seoService.updateOGImage(this._serviceDetailService['detalMeta'][url]['image']);
+  
+          // Update Twitter card tags
+          this._seoService.updateTwitterCardType('summary_large_image');
+          this._seoService.updateTwitterImage(this._serviceDetailService['detalMeta'][url]['image']);
+          this._seoService.setCanonicalURL(this._serviceDetailService['detalMeta'][url]['canonical'], this.renderer);
+        }
   }
   
   ngOnInit(): void {
