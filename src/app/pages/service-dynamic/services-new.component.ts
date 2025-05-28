@@ -43,21 +43,6 @@ export class ServiceDynamicComponent implements OnInit {
       
     }
 
-      const urlSegments = this.router.url.split('/');
-      let url = urlSegments[urlSegments.length - 1];
-      url = url.toLowerCase();
-        if(this._serviceDetailService['detalMeta'][url]){
-          this._seoService.updateTitle(this._serviceDetailService['detalMeta'][url]['title']);
-          this._seoService.updateDescription(this._serviceDetailService['detalMeta'][url]['description']);
-          // Update OG tags
-          this._seoService.updateOGUrl(this.router.url);
-          this._seoService.updateOGImage(this._serviceDetailService['detalMeta'][url]['image']);
-  
-          // Update Twitter card tags
-          this._seoService.updateTwitterCardType('summary_large_image');
-          this._seoService.updateTwitterImage(this._serviceDetailService['detalMeta'][url]['image']);
-          this._seoService.setCanonicalURL(this._serviceDetailService['detalMeta'][url]['canonical'], this.renderer);
-        }
   }
   
   ngOnInit(): void {
@@ -83,6 +68,7 @@ export class ServiceDynamicComponent implements OnInit {
             this.serviceData = data;
             // console.log('Service data retrieved directly:', this.serviceData);
             this.processServiceData();
+            this.updateSeoData(this.serviceData)
           } else {
             console.error('Service data not found for page URL:', pageUrl);
             this.errorMessage = 'Service not found';
@@ -99,7 +85,23 @@ export class ServiceDynamicComponent implements OnInit {
   }
 
 
-
+updateSeoData(parentData) {
+        if(parentData['data'] && parentData['data'].length > 0) {
+          let data = parentData['data'][0]
+          let url = 'https://www.buildtwin.com/'+data['page_url']
+          let imageUrl = 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
+          this._seoService.updateTitle(data['meta_title']);
+          this._seoService.updateDescription(data['meta_description']);
+          // Update OG tags
+          this._seoService.updateOGUrl(url);
+          this._seoService.updateOGImage(imageUrl);
+  
+          // Update Twitter card tags
+          this._seoService.updateTwitterCardType('summary_large_image');
+          this._seoService.updateTwitterImage(imageUrl);
+          this._seoService.setCanonicalURL(url, this.renderer);
+        }
+      }
 
   
   toggleSidebar() {
