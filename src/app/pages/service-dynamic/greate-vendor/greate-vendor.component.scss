@@ -6,6 +6,9 @@
 figure {
     position: relative;
     z-index: 1;
+    display: flex
+;
+    justify-content: center;
     figcaption {
         position: absolute;
         left: 0;

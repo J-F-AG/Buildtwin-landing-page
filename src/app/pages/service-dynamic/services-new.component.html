@@ -33,7 +33,7 @@
                         </p>
                 </div>
             </div>
-            <app-project-list [slider]="true" [hideMessageBox]="true" [hideLockScreen]="true" [sliderCount]="{'big':3, 'desktop':3, 'ipad':3}">
+            <app-project-list [slider]="true" [hideMessageBox]="true" [hideLockScreen]="true" [sliderCount]="{'big':6, 'desktop':5, 'ipad':4, 'mobile':3,}">
                 <div class="message">
                     <div class="content">
                         <h4>
@@ -67,7 +67,7 @@
                         </p>
                 </div>
             </div>
-            <app-special-project [heading]="false" [sliderCount]="{'desktop':3, 'ipad':3, 'mobile':2}"></app-special-project>
+            <app-special-project [heading]="false" [sliderCount]="{'big': 5, 'desktop':4, 'ipad':3, 'mobile':2}"></app-special-project>
         </div>
         <app-greate-vendor></app-greate-vendor>
         <div class="global-mb" id="step3">
@@ -85,7 +85,6 @@
         <div class="global-mb">
             <app-rebar-e2e-encryption></app-rebar-e2e-encryption>
         </div>
-         <app-rebar-faq-buildtwin [sectionHeading]="this.serviceData.data[0].faq_section_heading" [sectionSubHeading]="this.serviceData.data[0].faq_section_sub_heading" [questionAndAnswers]="this.serviceData.data[0].faqs"></app-rebar-faq-buildtwin>
     </div>
     <div class="toggle-sidebar" (click)="toggleSidebar()">Start Enquiry</div>
     <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
@@ -105,6 +104,10 @@
         </aside>
     </div>
 </div>
-
+<div class="mainContainer">
+    <div class="maincontent">
+         <app-rebar-faq-buildtwin [sectionHeading]="this.serviceData.data[0].faq_section_heading" [sectionSubHeading]="this.serviceData.data[0].faq_section_sub_heading" [questionAndAnswers]="this.serviceData.data[0].faqs"></app-rebar-faq-buildtwin>
+    </div>
+</div>
 <app-rebar-drawing-freelancers [sectionHeading]="this.serviceData.data[0].sub_category_service_section_heading" [subCategoryServices]="this.serviceData.data[0].sub_category_services"></app-rebar-drawing-freelancers> 
 <app-hd-footer></app-hd-footer>

@@ -202,6 +202,9 @@ export class SpecialProjectComponent implements OnInit {
         },
         940: {
           items: this.sliderCount['desktop']?this.sliderCount['desktop']:4
+        },
+        1240: {
+          items: this.sliderCount['big']?this.sliderCount['big']:5
         }
       },
       nav: true

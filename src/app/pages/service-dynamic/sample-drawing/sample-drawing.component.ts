@@ -155,22 +155,27 @@ export class RebarSampleDrawingComponent implements OnChanges{
       600:{
           items:1,
           autoplay: false,
-          loop: false,
+          loop: true,
       },
       800:{
           items:2,
           autoplay: false,
-          loop: false,
+          loop: true,
       },
       900:{
           items:2,
           autoplay: false,
-          loop: false,
+          loop: true,
       },
       1200:{
           items:3,
           autoplay: false,
-          loop: false,
+          loop: true,
+      },
+      1600:{
+          items:4,
+          autoplay: false,
+          loop: true,
       }
   }      
   }
