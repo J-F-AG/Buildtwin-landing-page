@@ -37,7 +37,11 @@ export class ServiceDynamicComponent implements OnInit {
     private renderer: Renderer2
   ) {
     // add class on body tag
-    document.body.classList.add('dynamic-service-page');
+    try {
+      document.body.classList.add('dynamic-service-page');
+    } catch (error) {
+      
+    }
 
       const urlSegments = this.router.url.split('/');
       let url = urlSegments[urlSegments.length - 1];
@@ -173,105 +177,106 @@ export class ServiceDynamicComponent implements OnInit {
 
     //project section heading
             let textWithBreaks = this.serviceData.data[0].project_section_heading.replace(/\n/g, '<br>');
-            let html = marked(textWithBreaks);
+            let html = textWithBreaks//marked(textWithBreaks);
       
            // Create temporary DOM element
-           let tempDiv = document.createElement('div');
-           tempDiv.innerHTML = html;
+          //  let tempDiv = document.createElement('div');
+          //  tempDiv.innerHTML = html;
          
            // Check if we have a p tag as first child
-           if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-             // Properly cast to Element to access innerHTML
-             const pElement = tempDiv.firstChild as Element;
-             html = pElement.innerHTML;
-           }
+          //  if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+          //    // Properly cast to Element to access innerHTML
+          //    const pElement = tempDiv.firstChild as Element;
+          //    html = pElement.innerHTML;
+          //  }
       
     this.serviceData.data[0].project_section_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
     //project section sub-heading
             textWithBreaks = this.serviceData.data[0].project_section_sub_heading.replace(/\n/g, '<br>');
-            html = marked(textWithBreaks);
-      
+            html = textWithBreaks//marked(textWithBreaks);
+            // let tempDiv = document.createElement('div');
+
            // Create temporary DOM element
-           tempDiv = document.createElement('div');
-           tempDiv.innerHTML = html;
+          //  tempDiv = document.createElement('div');
+          //  tempDiv.innerHTML = html;
          
            // Check if we have a p tag as first child
-           if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-             // Properly cast to Element to access innerHTML
-             const pElement = tempDiv.firstChild as Element;
-             html = pElement.innerHTML;
-           }
+          //  if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+          //    // Properly cast to Element to access innerHTML
+          //    const pElement = tempDiv.firstChild as Element;
+          //    html = pElement.innerHTML;
+          //  }
       
            this.serviceData.data[0].project_section_sub_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
 
     //sector section heading 
            textWithBreaks = this.serviceData.data[0].sector_section_heading.replace(/\n/g, '<br>');
-            html = marked(textWithBreaks);
-      
+            html = textWithBreaks//marked(textWithBreaks);
+            // let tempDiv = document.createElement('div');
            // Create temporary DOM element
-           tempDiv = document.createElement('div');
-           tempDiv.innerHTML = html;
+          //  tempDiv = document.createElement('div');
+          //  tempDiv.innerHTML = html;
          
            // Check if we have a p tag as first child
-           if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-             // Properly cast to Element to access innerHTML
-             const pElement = tempDiv.firstChild as Element;
-             html = pElement.innerHTML;
-           }
+          //  if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+          //    // Properly cast to Element to access innerHTML
+          //    const pElement = tempDiv.firstChild as Element;
+          //    html = pElement.innerHTML;
+          //  }
       
            this.serviceData.data[0].sector_section_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
   //sector section sub-heading
       textWithBreaks = this.serviceData.data[0].sector_section_sub_heading.replace(/\n/g, '<br>');
-      html = marked(textWithBreaks);
+      html = textWithBreaks//marked(textWithBreaks);
 
      // Create temporary DOM element
-     tempDiv = document.createElement('div');
-     tempDiv.innerHTML = html;
+    //  tempDiv = document.createElement('div');
+    //  tempDiv.innerHTML = html;
    
-     // Check if we have a p tag as first child
-     if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-       // Properly cast to Element to access innerHTML
-       const pElement = tempDiv.firstChild as Element;
-       html = pElement.innerHTML;
-     }
+    //  // Check if we have a p tag as first child
+    //  if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+    //    // Properly cast to Element to access innerHTML
+    //    const pElement = tempDiv.firstChild as Element;
+    //    html = pElement.innerHTML;
+    //  }
 
      this.serviceData.data[0].sector_section_sub_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
 
 //   //faq section heading
      textWithBreaks = this.serviceData.data[0].faq_section_heading.replace(/\n/g, '<br>');
-     html = marked(textWithBreaks);
+     html = textWithBreaks//marked(textWithBreaks);
 
     // Create temporary DOM element
-    tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
+    // tempDiv = document.createElement('div');
+    // tempDiv.innerHTML = html;
   
-    // Check if we have a p tag as first child
-    if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-      // Properly cast to Element to access innerHTML
-      const pElement = tempDiv.firstChild as Element;
-      html = pElement.innerHTML;
-    }
+    // // Check if we have a p tag as first child
+    // if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+    //   // Properly cast to Element to access innerHTML
+    //   const pElement = tempDiv.firstChild as Element;
+    //   html = pElement.innerHTML;
+    // }
 
     this.serviceData.data[0].faq_section_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
 // //faq section sub-heading
     textWithBreaks = this.serviceData.data[0].faq_section_sub_heading.replace(/\n/g, '<br>');
-     html = marked(textWithBreaks);
+     html = textWithBreaks//marked(textWithBreaks);
 
     // Create temporary DOM element
-    tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
+    // tempDiv = document.createElement('div');
+    // tempDiv.innerHTML = html;
   
-    // Check if we have a p tag as first child
-    if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-      // Properly cast to Element to access innerHTML
-      const pElement = tempDiv.firstChild as Element;
-      html = pElement.innerHTML;
-    }
+    // // Check if we have a p tag as first child
+    // if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+    //   // Properly cast to Element to access innerHTML
+    //   const pElement = tempDiv.firstChild as Element;
+    //   html = pElement.innerHTML;
+    // }
 
     this.serviceData.data[0].faq_section_sub_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
@@ -322,6 +327,10 @@ export class ServiceDynamicComponent implements OnInit {
   }
   ngOnDestroy(): void {
     // Remove class from body tag when component is destroyed
-    document.body.classList.remove('dynamic-service-page');
+    try {
+      document.body.classList.remove('dynamic-service-page');
+    } catch (error) {
+      
+    }
   }
 }
