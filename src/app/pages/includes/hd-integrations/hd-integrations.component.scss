@@ -151,7 +151,8 @@
         }
         & ::ng-deep {
             .plugWrapper .owl-stage-outer::after, .plugWrapper .owl-stage-outer::before {
-                opacity: 0;
+                // opacity: 0;
+                width: 120px;
             }
         }
     }

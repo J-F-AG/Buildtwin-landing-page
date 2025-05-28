@@ -32,22 +32,22 @@ export class HdIntegrationsComponent {
       ],
       responsive: {
         0: {
-          items: 1
+          items: 3
         },
         400: {
-          items: 3
+          items: 5
         },
         515: {
-          items: 3
+          items: 5
         },
         768: {
-          items: 4
+          items: 7
         },
         990: {
-          items: 6
+          items: 9
         },
         1400: {
-          items: 6
+          items: 10
         }
       }
     }

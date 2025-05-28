@@ -418,7 +418,6 @@ display:flex;
 }
 
 // Default Btn
-
 .button-v2, .button-v2.mdc-button {
   background: #002e3b;
   font-size: 15px;
@@ -458,10 +457,6 @@ display:flex;
     background: white;
     color: #002e3b;
   }
-  &:hover {
-    color: #002e3b;
-    background: white;
-  }
   &.white {
     background: white;
     color: var(--themeColor);
@@ -473,6 +468,8 @@ display:flex;
     border-color: white;
   }
 }
+
+
 .secondary-button {
   height: 42px;
   border-radius: 42px;
@@ -482,11 +479,22 @@ display:flex;
   color: white;
   line-height: 42px;
   background: var(--themeColor);
-  &:hover {
-    color: white;
-  }
   &.v2 {
     background: var(--newButtonColor);
+  }
+}
+/* Only apply hover styles on devices that support hover with a fine pointer (e.g. mouse) */
+@media (hover: hover) and (pointer: fine) {
+  .button-v2, .button-v2.mdc-button {
+    &:hover {
+      color: #002e3b;
+      background: white;
+    }
+  }
+  .secondary-button {
+    &:hover {
+      color: white;
+    }
   }
 }
 .button-wrap {
