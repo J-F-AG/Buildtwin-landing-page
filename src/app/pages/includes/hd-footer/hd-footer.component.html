@@ -204,14 +204,7 @@
         <h5>
           Services
         </h5>
-        <ul *ngFor="let item of serviceInfoOnFooter">
-          <li>
-            <a routerLink="{{_languageService.currentLanguage}}/{{item.page_url}}">
-              {{ item.serviceName }}
-            </a>
-          </li>
-        </ul>
-        <!-- <ul>
+        <ul>
           <li>
             <a routerLink="{{_languageService.currentLanguage}}/services/bim-services">
               BIM Services
@@ -242,6 +235,13 @@
               Steel Detailing Services
             </a>
           </li>
+          <li *ngFor="let item of serviceInfoOnFooter">
+            <a routerLink="{{_languageService.currentLanguage}}/{{item.page_url}}">
+              {{ item.serviceName }}
+            </a>
+          </li>
+        </ul>
+        <!-- <ul>
         </ul> -->
       </div>
       <div class="list-block">
