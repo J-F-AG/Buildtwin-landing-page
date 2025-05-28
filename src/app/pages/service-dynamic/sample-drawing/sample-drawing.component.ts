@@ -27,7 +27,8 @@ export class RebarSampleDrawingComponent implements OnChanges{
       if (changes['sectionHeading'] && this.sectionHeading) {
         // console.log("Original heading:", this.sectionHeading);
         const textWithBreaks = this.sectionHeading.replace(/\n/g, '<br>');
-        let html = textWithBreaks//marked(textWithBreaks);
+        let html = marked(textWithBreaks);
+        html = this.cleanNestedParagraphs(html)
   
       // Create temporary DOM element
       // const tempDiv = document.createElement('div');
@@ -48,7 +49,8 @@ export class RebarSampleDrawingComponent implements OnChanges{
       if(changes['sectionSubHeading'] && this.sectionSubHeading) {
         // console.log("Original sub heading:", this.sectionSubHeading);
         const textWithBreaks = this.sectionSubHeading.replace(/\n/g, '<br>');
-        let html = textWithBreaks//marked(textWithBreaks);
+        let html = marked(textWithBreaks);
+        html = this.cleanNestedParagraphs(html)
   
        // Create temporary DOM element
       //  const tempDiv = document.createElement('div');
@@ -370,6 +372,9 @@ export class RebarSampleDrawingComponent implements OnChanges{
     this.tenderWork.emit(true)
   }
 
+  cleanNestedParagraphs(html: string): string {
+    return html.replace(/<\/?p>/gi, '');
+  }
 
 }
 

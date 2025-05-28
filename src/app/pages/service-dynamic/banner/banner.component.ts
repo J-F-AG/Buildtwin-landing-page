@@ -28,7 +28,8 @@ export class RebarBannerComponent implements OnInit, OnChanges{
     if (changes['bannerObject'] && this.bannerObject && this.bannerObject.bannerHeading) {
       // console.log("Original heading:", this.bannerObject.bannerHeading);
       const textWithBreaks = this.bannerObject.bannerHeading.replace(/\n/g, '<br>');
-      let html = textWithBreaks//marked(textWithBreaks);
+      let html = marked(textWithBreaks);
+      html = this.cleanNestedParagraphs(html)
       // console.log('html before removing p tag: ', html);
 
       // Create temporary DOM element
@@ -49,7 +50,8 @@ export class RebarBannerComponent implements OnInit, OnChanges{
     if(changes['bannerObject'] && this.bannerObject && this.bannerObject.bannerSubHeading) {
       // console.log("Original sub heading:", this.bannerObject.bannerSubHeading);
       const textWithBreaks = this.bannerObject.bannerSubHeading.replace(/\n/g, '<br>');
-      let html = textWithBreaks//marked(textWithBreaks);
+      let html = marked(textWithBreaks);
+      html = this.cleanNestedParagraphs(html)
 
      // Create temporary DOM element
     //  const tempDiv = document.createElement('div');
@@ -64,6 +66,9 @@ export class RebarBannerComponent implements OnInit, OnChanges{
 
       this.processedSubHeading = this.sanitizer.bypassSecurityTrustHtml(html);
     }
+  }
+  cleanNestedParagraphs(html: string): string {
+    return html.replace(/<\/?p>/gi, '');
   }
 
 }

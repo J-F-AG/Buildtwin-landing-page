@@ -177,7 +177,9 @@ export class ServiceDynamicComponent implements OnInit {
 
     //project section heading
             let textWithBreaks = this.serviceData.data[0].project_section_heading.replace(/\n/g, '<br>');
-            let html = textWithBreaks//marked(textWithBreaks);
+            let html = marked(textWithBreaks);
+            html = this.cleanNestedParagraphs(html)
+            console.log('HTML after marked:', html);
       
            // Create temporary DOM element
           //  let tempDiv = document.createElement('div');
@@ -194,7 +196,8 @@ export class ServiceDynamicComponent implements OnInit {
 
     //project section sub-heading
             textWithBreaks = this.serviceData.data[0].project_section_sub_heading.replace(/\n/g, '<br>');
-            html = textWithBreaks//marked(textWithBreaks);
+            html = marked(textWithBreaks);
+            html = this.cleanNestedParagraphs(html)
             // let tempDiv = document.createElement('div');
 
            // Create temporary DOM element
@@ -213,7 +216,8 @@ export class ServiceDynamicComponent implements OnInit {
 
     //sector section heading 
            textWithBreaks = this.serviceData.data[0].sector_section_heading.replace(/\n/g, '<br>');
-            html = textWithBreaks//marked(textWithBreaks);
+            html = marked(textWithBreaks);
+            html = this.cleanNestedParagraphs(html)
             // let tempDiv = document.createElement('div');
            // Create temporary DOM element
           //  tempDiv = document.createElement('div');
@@ -230,7 +234,8 @@ export class ServiceDynamicComponent implements OnInit {
 
   //sector section sub-heading
       textWithBreaks = this.serviceData.data[0].sector_section_sub_heading.replace(/\n/g, '<br>');
-      html = textWithBreaks//marked(textWithBreaks);
+      html = marked(textWithBreaks);
+      html = this.cleanNestedParagraphs(html)
 
      // Create temporary DOM element
     //  tempDiv = document.createElement('div');
@@ -248,7 +253,8 @@ export class ServiceDynamicComponent implements OnInit {
 
 //   //faq section heading
      textWithBreaks = this.serviceData.data[0].faq_section_heading.replace(/\n/g, '<br>');
-     html = textWithBreaks//marked(textWithBreaks);
+     html = marked(textWithBreaks);
+     html = this.cleanNestedParagraphs(html)
 
     // Create temporary DOM element
     // tempDiv = document.createElement('div');
@@ -265,7 +271,8 @@ export class ServiceDynamicComponent implements OnInit {
 
 // //faq section sub-heading
     textWithBreaks = this.serviceData.data[0].faq_section_sub_heading.replace(/\n/g, '<br>');
-     html = textWithBreaks//marked(textWithBreaks);
+     html = marked(textWithBreaks);
+     html = this.cleanNestedParagraphs(html)
 
     // Create temporary DOM element
     // tempDiv = document.createElement('div');
@@ -324,6 +331,9 @@ export class ServiceDynamicComponent implements OnInit {
         return of([]); // Return empty array in case of error
       })
     );
+  }
+  cleanNestedParagraphs(html: string): string {
+    return html.replace(/<\/?p>/gi, '');
   }
   ngOnDestroy(): void {
     // Remove class from body tag when component is destroyed
