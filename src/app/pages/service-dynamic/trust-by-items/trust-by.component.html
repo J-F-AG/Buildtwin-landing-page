@@ -17,10 +17,23 @@
                         <img src="{{item['icon']}}" width="{{item['width']}}" height="{{item['height']}}" alt="{{ item.name }}">
                     </a>  
             </div> -->
-            <div class="trustedBrands">
-                <a *ngFor="let item of slider; let i = index" [id]="item.id">
-                    <img src="{{item['icon']}}" width="{{item['width']}}" height="{{item['height']}}" alt="{{ item.name }}" [routerLink]="_languageService.currentLanguage + '/' + item.company_page_url">
-                </a>
+            <div class="trustedBrandsWrapper" #carouselParent [ngClass]="{'animation':isAnimationEnabled}">
+                <div class="partners-carousel-child">
+                    <div #carousel>
+                        <div class="trustedBrands">
+                            <a *ngFor="let item of slider; let i = index" [id]="item.id">
+                                <img src="{{item['icon']}}" width="{{item['width']}}" height="{{item['height']}}" alt="{{ item.name }}" [routerLink]="_languageService.currentLanguage + '/' + item.company_page_url">
+                            </a>
+                        </div>
+                    </div>
+                    <div *ngIf="isAnimationEnabled">
+                        <div class="trustedBrands">
+                            <a *ngFor="let item of slider; let i = index" [id]="item.id">
+                                <img src="{{item['icon']}}" width="{{item['width']}}" height="{{item['height']}}" alt="{{ item.name }}" [routerLink]="_languageService.currentLanguage + '/' + item.company_page_url">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
