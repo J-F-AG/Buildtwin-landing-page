@@ -26,7 +26,8 @@ export class RebarTrustByNewComponent {
     if (changes['heading'] && this.heading) {
       // console.log("Original heading:", this.heading);
       const textWithBreaks = this.heading.replace(/\n/g, '<br>');
-      let html = textWithBreaks//marked(textWithBreaks);
+      let html = marked(textWithBreaks);
+      html = this.cleanNestedParagraphs(html)
       
 
     // Create temporary DOM element
@@ -43,5 +44,8 @@ export class RebarTrustByNewComponent {
       // console.log('html after removing p tag: ', html);
       this.processedHeading = this.sanitizer.bypassSecurityTrustHtml(html);
     }
+  }
+  cleanNestedParagraphs(html: string): string {
+    return html.replace(/<\/?p>/gi, '');
   }
 }

@@ -33,7 +33,8 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
     if (changes['sectionHeading'] && this.sectionHeading) {
       // console.log("Original heading:", this.sectionHeading);
       const textWithBreaks = this.sectionHeading.replace(/\n/g, '<br>');
-      let html = textWithBreaks//marked(textWithBreaks);
+      let html = marked(textWithBreaks);
+      html = this.cleanNestedParagraphs(html)
       // console.log('html before removing p tag: ', html);
       // // Remove surrounding <p> tags
       // html = html.replace(/^<p>(.*)<\/p>$/s, '$1');
@@ -59,7 +60,8 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
     if (changes['sectionSubHeading'] && this.sectionSubHeading) {
       // console.log("Original heading:", this.sectionSubHeading);
       const textWithBreaks = this.sectionSubHeading.replace(/\n/g, '<br>');
-      let html = textWithBreaks//marked(textWithBreaks);
+      let html = marked(textWithBreaks);
+      html = this.cleanNestedParagraphs(html)
       // console.log('html before removing p tag: ', html);
       // // Remove surrounding <p> tags
       // html = html.replace(/^<p>(.*)<\/p>$/s, '$1');
@@ -109,7 +111,8 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
 
           //for industry-standard section heading
        let textWithBreaks = item.header.replace(/\n/g, '<br>');
-        html = textWithBreaks//marked(textWithBreaks);
+        html = marked(textWithBreaks);
+        html = this.cleanNestedParagraphs(html)
 
       // Create temporary DOM element
       // let tempDiv = document.createElement('div');
@@ -128,7 +131,8 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
         //for industry standard sub-heading
 
             textWithBreaks = item.subContent.replace(/\n/g, '<br>');
-        html = textWithBreaks//marked(textWithBreaks);
+        html = marked(textWithBreaks);
+        html = this.cleanNestedParagraphs(html)
 
       // Create temporary DOM element
       // tempDiv = document.createElement('div');
@@ -370,6 +374,9 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
 
   get activeContent() {
     return this.precastArray[this.activeTab];
+  }
+  cleanNestedParagraphs(html: string): string {
+    return html.replace(/<\/?p>/gi, '');
   }
 
 }
