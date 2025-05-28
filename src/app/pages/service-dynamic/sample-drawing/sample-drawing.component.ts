@@ -27,18 +27,18 @@ export class RebarSampleDrawingComponent implements OnChanges{
       if (changes['sectionHeading'] && this.sectionHeading) {
         // console.log("Original heading:", this.sectionHeading);
         const textWithBreaks = this.sectionHeading.replace(/\n/g, '<br>');
-        let html = marked(textWithBreaks);
+        let html = textWithBreaks//marked(textWithBreaks);
   
       // Create temporary DOM element
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = html;
+      // const tempDiv = document.createElement('div');
+      // tempDiv.innerHTML = html;
       
-      // Check if we have a p tag as first child
-      if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-        // Properly cast to Element to access innerHTML
-        const pElement = tempDiv.firstChild as Element;
-        html = pElement.innerHTML;
-      }
+      // // Check if we have a p tag as first child
+      // if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+      //   // Properly cast to Element to access innerHTML
+      //   const pElement = tempDiv.firstChild as Element;
+      //   html = pElement.innerHTML;
+      // }
   
         // console.log('html after removing p tag: ', html);
         this.processedHeading = this.sanitizer.bypassSecurityTrustHtml(html);
@@ -48,18 +48,18 @@ export class RebarSampleDrawingComponent implements OnChanges{
       if(changes['sectionSubHeading'] && this.sectionSubHeading) {
         // console.log("Original sub heading:", this.sectionSubHeading);
         const textWithBreaks = this.sectionSubHeading.replace(/\n/g, '<br>');
-        let html = marked(textWithBreaks);
+        let html = textWithBreaks//marked(textWithBreaks);
   
        // Create temporary DOM element
-       const tempDiv = document.createElement('div');
-       tempDiv.innerHTML = html;
+      //  const tempDiv = document.createElement('div');
+      //  tempDiv.innerHTML = html;
      
-       // Check if we have a p tag as first child
-       if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-         // Properly cast to Element to access innerHTML
-         const pElement = tempDiv.firstChild as Element;
-         html = pElement.innerHTML;
-       }
+      //  // Check if we have a p tag as first child
+      //  if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+      //    // Properly cast to Element to access innerHTML
+      //    const pElement = tempDiv.firstChild as Element;
+      //    html = pElement.innerHTML;
+      //  }
   
         this.processedSubHeading = this.sanitizer.bypassSecurityTrustHtml(html);
       }

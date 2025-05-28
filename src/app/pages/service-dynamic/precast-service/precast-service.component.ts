@@ -33,7 +33,7 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
     if (changes['sectionHeading'] && this.sectionHeading) {
       // console.log("Original heading:", this.sectionHeading);
       const textWithBreaks = this.sectionHeading.replace(/\n/g, '<br>');
-      let html = marked(textWithBreaks);
+      let html = textWithBreaks//marked(textWithBreaks);
       // console.log('html before removing p tag: ', html);
       // // Remove surrounding <p> tags
       // html = html.replace(/^<p>(.*)<\/p>$/s, '$1');
@@ -43,15 +43,15 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
     // }
 
     // Create temporary DOM element
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
+    // const tempDiv = document.createElement('div');
+    // tempDiv.innerHTML = html;
     
-    // Check if we have a p tag as first child
-    if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-      // Properly cast to Element to access innerHTML
-      const pElement = tempDiv.firstChild as Element;
-      html = pElement.innerHTML;
-    }
+    // // Check if we have a p tag as first child
+    // if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+    //   // Properly cast to Element to access innerHTML
+    //   const pElement = tempDiv.firstChild as Element;
+    //   html = pElement.innerHTML;
+    // }
 
       // console.log('html after removing p tag: ', html);
       this.processedHeading = this.sanitizer.bypassSecurityTrustHtml(html);
@@ -59,7 +59,7 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
     if (changes['sectionSubHeading'] && this.sectionSubHeading) {
       // console.log("Original heading:", this.sectionSubHeading);
       const textWithBreaks = this.sectionSubHeading.replace(/\n/g, '<br>');
-      let html = marked(textWithBreaks);
+      let html = textWithBreaks//marked(textWithBreaks);
       // console.log('html before removing p tag: ', html);
       // // Remove surrounding <p> tags
       // html = html.replace(/^<p>(.*)<\/p>$/s, '$1');
@@ -69,15 +69,15 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
     // }
 
     // Create temporary DOM element
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
+    // const tempDiv = document.createElement('div');
+    // tempDiv.innerHTML = html;
     
-    // Check if we have a p tag as first child
-    if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-      // Properly cast to Element to access innerHTML
-      const pElement = tempDiv.firstChild as Element;
-      html = pElement.innerHTML;
-    }
+    // // Check if we have a p tag as first child
+    // if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+    //   // Properly cast to Element to access innerHTML
+    //   const pElement = tempDiv.firstChild as Element;
+    //   html = pElement.innerHTML;
+    // }
 
       // console.log('html after removing p tag: ', html);
       this.processedSubHeading = this.sanitizer.bypassSecurityTrustHtml(html);
@@ -109,18 +109,18 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
 
           //for industry-standard section heading
        let textWithBreaks = item.header.replace(/\n/g, '<br>');
-        html = marked(textWithBreaks);
+        html = textWithBreaks//marked(textWithBreaks);
 
       // Create temporary DOM element
-      let tempDiv = document.createElement('div');
-      tempDiv.innerHTML = html;
+      // let tempDiv = document.createElement('div');
+      // tempDiv.innerHTML = html;
     
       // Check if we have a p tag as first child
-      if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-        // Properly cast to Element to access innerHTML
-        const pElement = tempDiv.firstChild as Element;
-        html = pElement.innerHTML;
-      }
+      // if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+      //   // Properly cast to Element to access innerHTML
+      //   const pElement = tempDiv.firstChild as Element;
+      //   html = pElement.innerHTML;
+      // }
 
         item.header = this.sanitizer.bypassSecurityTrustHtml(html);
 
@@ -128,18 +128,18 @@ export class RebarPrecastServiceComponent implements OnInit,  OnChanges{
         //for industry standard sub-heading
 
             textWithBreaks = item.subContent.replace(/\n/g, '<br>');
-        html = marked(textWithBreaks);
+        html = textWithBreaks//marked(textWithBreaks);
 
       // Create temporary DOM element
-      tempDiv = document.createElement('div');
-      tempDiv.innerHTML = html;
+      // tempDiv = document.createElement('div');
+      // tempDiv.innerHTML = html;
     
-      // Check if we have a p tag as first child
-      if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
-        // Properly cast to Element to access innerHTML
-        const pElement = tempDiv.firstChild as Element;
-        html = pElement.innerHTML;
-      }
+      // // Check if we have a p tag as first child
+      // if (tempDiv.firstChild && tempDiv.firstChild.nodeName === 'P') {
+      //   // Properly cast to Element to access innerHTML
+      //   const pElement = tempDiv.firstChild as Element;
+      //   html = pElement.innerHTML;
+      // }
 
         item.subContent = this.sanitizer.bypassSecurityTrustHtml(html);
 

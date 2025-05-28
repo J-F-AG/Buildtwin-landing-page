@@ -387,6 +387,7 @@ export class VenderDetailsAarbeeComponent {
       const urlSegments = this.router.url.split('/');
       let url = urlSegments[urlSegments.length - 1];
       url = url.toLowerCase();
+      console.log(url)
         if(this._venderDetailService['detalMeta'][url]){
           this._seoService.updateTitle(this._venderDetailService['detalMeta'][url]['title']);
           this._seoService.updateDescription(this._venderDetailService['detalMeta'][url]['description']);

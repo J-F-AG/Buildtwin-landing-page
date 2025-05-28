@@ -24,17 +24,25 @@ export class ServiceNavBarComponent implements AfterViewInit, OnDestroy {
   }
 
   scrollTo(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    try {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } catch (error) {
+      
     }
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    this.scrollDirection = scrollTop > this.lastScrollTop ? 'down' : 'up';
-    this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    try {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      this.scrollDirection = scrollTop > this.lastScrollTop ? 'down' : 'up';
+      this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    } catch (error) {
+      
+    }
   }
 
   scrollDirection: 'up' | 'down' = 'down';
@@ -63,8 +71,12 @@ export class ServiceNavBarComponent implements AfterViewInit, OnDestroy {
     }, options);
 
     this.sectionIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) this.observer.observe(el);
+      try {
+        const el = document.getElementById(id);
+        if (el) this.observer.observe(el);
+      } catch (error) {
+        
+      }
     });
   }
 
