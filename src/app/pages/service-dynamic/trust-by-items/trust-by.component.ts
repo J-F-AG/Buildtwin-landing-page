@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -12,6 +12,9 @@ export class BimTrustByNewComponent {
   @Input() hideItem: number[] = []; // Array of IDs to hide
   @Input() heading: boolean = true; //sector
   @Input() slider: any = [];
+    @ViewChild('carousel', { static: false }) carousel!: ElementRef;
+    @ViewChild('carouselParent', { static: false }) carouselParent!: ElementRef;
+    isAnimationEnabled = false;
   // slider : any = [
   //   {
   //     "id": 1,
@@ -76,5 +79,23 @@ export class BimTrustByNewComponent {
     // if (this.hideItem && this.hideItem.length > 0) {
     //   this.slider = this.slider.filter(image => !this.hideItem.includes(image.id));
     // }
+  }
+
+   ngAfterViewInit() {
+    this.checkAnimation();
+  }
+  @HostListener('window:resize')
+  onResize() {
+    this.checkAnimation();
+  }
+  checkAnimation() {
+    if (this.carousel) {
+      const carouselWidth = this.carousel.nativeElement.scrollWidth;
+      const carouselParentWidth = this.carouselParent.nativeElement.clientWidth;
+      console.log(carouselParentWidth)
+      console.log(carouselWidth)
+      // const windowWidth = window.innerWidth;
+      this.isAnimationEnabled = carouselWidth > carouselParentWidth;
+    }
   }
 }
