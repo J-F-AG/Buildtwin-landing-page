@@ -1,4 +1,4 @@
-import { Component, OnInit ,  OnChanges, SimpleChanges, Renderer2} from '@angular/core';
+import { Component, OnInit ,  OnChanges, SimpleChanges, Renderer2, Inject} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, Observable, of } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,6 +8,7 @@ import { MarkdownService } from 'ngx-markdown';
 import { marked } from 'marked';
 import { ServiceDetailService } from './vender-detail.service';
 import { SeoService } from 'src/app/services/seo.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-service-dynamic',
@@ -34,7 +35,8 @@ export class ServiceDynamicComponent implements OnInit {
     private router: Router,
     private _serviceDetailService: ServiceDetailService,
     private _seoService: SeoService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private doc: Document
   ) {
     // add class on body tag
     try {
@@ -46,6 +48,9 @@ export class ServiceDynamicComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    setTimeout(() => {
+      console.log(this.serviceData)
+    }, 5000);
     console.log('Services component initialized');
   
     // Get the parameter from route
@@ -90,16 +95,33 @@ updateSeoData(parentData) {
           let data = parentData['data'][0]
           let url = 'https://www.buildtwin.com/'+data['page_url']
           let imageUrl = 'https://www.buildtwin.com/assets/images/buildtwin.jpg'
-          this._seoService.updateTitle(data['meta_title']);
-          this._seoService.updateDescription(data['meta_description']);
-          // Update OG tags
-          this._seoService.updateOGUrl(url);
-          this._seoService.updateOGImage(imageUrl);
-  
-          // Update Twitter card tags
+          if (data['meta_title']) {
+            this._seoService.updateTitle(data['meta_title']);
+          }
+
+          if (data['meta_description']) {
+            this._seoService.updateDescription(data['meta_description']);
+          }
+
+          if (url) {
+            this._seoService.updateOGUrl(url);
+            this._seoService.setCanonicalURL(url, this.renderer);
+          }
+
+          if (imageUrl) {
+            this._seoService.updateOGImage(imageUrl);
+            this._seoService.updateTwitterImage(imageUrl);
+          }
+
           this._seoService.updateTwitterCardType('summary_large_image');
-          this._seoService.updateTwitterImage(imageUrl);
-          this._seoService.setCanonicalURL(url, this.renderer);
+
+          if (data['faq_and_testimonial_schemas']?.['faq']) {
+            this._seoService.setFaqSchemas(data['faq_and_testimonial_schemas']['faq'], this.renderer);
+          }
+
+          if (data['faq_and_testimonial_schemas']?.['testimonial']) {
+            this._seoService.setTestimonialSchemas(data['faq_and_testimonial_schemas']['testimonial'], this.renderer);
+          }
         }
       }
 
@@ -178,7 +200,7 @@ updateSeoData(parentData) {
     };
 
     //project section heading
-            let textWithBreaks = this.serviceData.data[0].project_section_heading.replace(/\n/g, '<br>');
+            let textWithBreaks = String(this.serviceData.data[0].project_section_heading).replace(/\n/g, '<br>');
             let html = marked(textWithBreaks);
             html = this.cleanNestedParagraphs(html)
             console.log('HTML after marked:', html);
@@ -197,7 +219,7 @@ updateSeoData(parentData) {
     this.serviceData.data[0].project_section_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
     //project section sub-heading
-            textWithBreaks = this.serviceData.data[0].project_section_sub_heading.replace(/\n/g, '<br>');
+            textWithBreaks = String(this.serviceData.data[0].project_section_sub_heading).replace(/\n/g, '<br>');
             html = marked(textWithBreaks);
             html = this.cleanNestedParagraphs(html)
             // let tempDiv = document.createElement('div');
@@ -217,7 +239,7 @@ updateSeoData(parentData) {
 
 
     //sector section heading 
-           textWithBreaks = this.serviceData.data[0].sector_section_heading.replace(/\n/g, '<br>');
+           textWithBreaks = String(this.serviceData.data[0].sector_section_heading).replace(/\n/g, '<br>');
             html = marked(textWithBreaks);
             html = this.cleanNestedParagraphs(html)
             // let tempDiv = document.createElement('div');
@@ -235,7 +257,7 @@ updateSeoData(parentData) {
            this.serviceData.data[0].sector_section_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
   //sector section sub-heading
-      textWithBreaks = this.serviceData.data[0].sector_section_sub_heading.replace(/\n/g, '<br>');
+      textWithBreaks = String(this.serviceData.data[0].sector_section_sub_heading).replace(/\n/g, '<br>');
       html = marked(textWithBreaks);
       html = this.cleanNestedParagraphs(html)
 
@@ -254,7 +276,7 @@ updateSeoData(parentData) {
 
 
 //   //faq section heading
-     textWithBreaks = this.serviceData.data[0].faq_section_heading.replace(/\n/g, '<br>');
+     textWithBreaks = String(this.serviceData.data[0].faq_section_heading).replace(/\n/g, '<br>');
      html = marked(textWithBreaks);
      html = this.cleanNestedParagraphs(html)
 
@@ -272,7 +294,7 @@ updateSeoData(parentData) {
     this.serviceData.data[0].faq_section_heading = this.sanitizer.bypassSecurityTrustHtml(html);
 
 // //faq section sub-heading
-    textWithBreaks = this.serviceData.data[0].faq_section_sub_heading.replace(/\n/g, '<br>');
+    textWithBreaks = String(this.serviceData.data[0].faq_section_sub_heading).replace(/\n/g, '<br>');
      html = marked(textWithBreaks);
      html = this.cleanNestedParagraphs(html)
 
@@ -341,6 +363,11 @@ updateSeoData(parentData) {
     // Remove class from body tag when component is destroyed
     try {
       document.body.classList.remove('dynamic-service-page');
+      const existingScripts = this.doc.head.querySelectorAll('script[id="faq-schema"]');
+      existingScripts.forEach((existingScript) => this.renderer.removeChild(this.doc.head, existingScript));
+      const testimonialexistingScripts = this.doc.head.querySelectorAll('script[id="testimonial-schema"]');
+      testimonialexistingScripts.forEach((existingScript) => this.renderer.removeChild(this.doc.head, existingScript));
+      
     } catch (error) {
       
     }
