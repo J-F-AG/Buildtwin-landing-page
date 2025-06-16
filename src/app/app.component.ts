@@ -545,6 +545,12 @@ injectBreadcrumbScript(url) {
       this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${productSchema}</script>`
       );
+    }else if(url.includes('/data-safety')){
+      const faqSchema = this._languageService.injectForDataSafetySchema(this.renderer);
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
+      );
     }
   }
    

@@ -10,8 +10,7 @@
                               {{ list['question'] }}
                             </mat-panel-title>
                           </mat-expansion-panel-header>
-                          <p>
-                            {{ list['answer'] }}
+                          <p [innerHtml]="list['answer']">
                           </p>
                         </mat-expansion-panel>
                     </mat-accordion>                      
