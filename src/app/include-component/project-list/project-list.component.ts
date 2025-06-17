@@ -6,6 +6,7 @@ import { catchError, forkJoin, map, Observable, of } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
 import { ProjectListService } from './project-list.service';
 import { findFlagUrlByCountryName, findFlagUrlByIso2Code } from 'country-flags-svg';
+import { CommonServiceService } from 'src/app/services/common-service.service';
 
 @Component({
   selector: 'app-project-list',
@@ -37,7 +38,7 @@ factorySlider: OwlOptions | null = null;
  verifiedStatus: boolean = false;
  countries: { [key: string]: { flag: string; population: number } } = {};
  constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient, public _languageService: LanguageService,
-private _projectListService: ProjectListService) {
+private _projectListService: ProjectListService, private _commonServiceService: CommonServiceService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.fetchData()
     // if(this.isBrowser){
@@ -324,6 +325,7 @@ sliderInit() {
 
       item.route = this.buildRoute(item.company_name);
       item.linking = this.buildLinking(item.company_name);
+      debugger
 
       item.locationUpdated = this.parseProjectRegion(item.project_region);
       item.flag = this.getFlag(item.locationUpdated.at(-1) || '');
@@ -374,10 +376,12 @@ sliderInit() {
 
   // Build Linking
   private buildLinking(companyName: string) {
-    return companyName
-      .replace(/[\s&.]/g, '-')
-      .replace(/-{2,}/g, '-')
-      .toLowerCase();
+    return this._commonServiceService.buildLinking(companyName);
+    // return companyName
+    //   .replace(/[\s&.]/g, '-')
+    //   .replace(/-{2,}/g, '-')
+    //   .replace(/-$/, '') // remove trailing hyphen
+    //   .toLowerCase();
   }
 
   // Parse Project Region
