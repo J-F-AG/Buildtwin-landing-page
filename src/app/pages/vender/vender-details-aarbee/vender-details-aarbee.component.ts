@@ -12,6 +12,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { LanguageService } from 'src/app/services/language.service';
 import { CryptoService } from 'buildtwin-library-ux/core';
+import { CommonServiceService } from 'src/app/services/common-service.service';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -334,7 +335,7 @@ export class VenderDetailsAarbeeComponent {
     private _cryptoService: CryptoService,
     @Inject(PLATFORM_ID) private platformId: Object,
     private sanitizer: DomSanitizer,
-    private _languageService: LanguageService
+    private _languageService: LanguageService, private _commonServiceService: CommonServiceService
   ) {
     // First, remove all existing breadcrumb scripts
     try {
@@ -885,9 +886,11 @@ export class VenderDetailsAarbeeComponent {
           }else {
             let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
             a['route'] = cleanCompanyName.replace(/ /g, '');
-            a['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
-            .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
-            .toLowerCase();
+            a['linking'] = this._commonServiceService.buildLinking(cleanCompanyName);
+            // cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+            // .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+            // .replace(/-$/, '') // remove trailing hyphen
+            // .toLowerCase();
           }
           if(a.company_name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase() || a.linking === this.domain.toLowerCase()){
             return a
@@ -1391,9 +1394,11 @@ export class VenderDetailsAarbeeComponent {
           }
           let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
           company['route'] = cleanCompanyName.replace(/ /g, '');
-          company['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
-          .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
-          .toLowerCase();
+          company['linking'] = this._commonServiceService.buildLinking(cleanCompanyName);
+          // cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+          // .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+          // .replace(/-$/, '') // remove trailing hyphen
+          // .toLowerCase();
         }
         if(company.name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase() || company.linking === this.domain.toLowerCase()){
           this.companyId = company.id;

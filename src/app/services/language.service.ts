@@ -6712,7 +6712,7 @@ export class LanguageService {
           "name": "Can I delete my account and data?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. To request account and data deletion, please contact our support team at support@buildtwin.com. Upon verification, all your data will be permanently deleted from our systems, including backups, within 30 days, in accordance with GDPR and other privacy standards."
+            "text": "Yes. To request account and data deletion, please contact our support team at hello@buildtwin.com. Upon verification, all your data will be permanently deleted from our systems, including backups, within 30 days, in accordance with GDPR and other privacy standards."
           }
         },
         {

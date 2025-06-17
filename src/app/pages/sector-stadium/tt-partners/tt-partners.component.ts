@@ -4,6 +4,7 @@ import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { catchError, retry } from 'rxjs';
+import { CommonServiceService } from 'src/app/services/common-service.service';
 import { GlobalService } from 'src/app/services/GlobalService';
 import { LanguageService } from 'src/app/services/language.service';
 
@@ -74,7 +75,7 @@ export class StadiumTtPartnersComponent {
     }
   }
       isBrowser: boolean;
-        constructor( @Inject(PLATFORM_ID) private platformId: Object,private http: HttpClient, private router: Router, private route: ActivatedRoute, private globalService: GlobalService, public _languageService:LanguageService) {
+        constructor( @Inject(PLATFORM_ID) private platformId: Object,private http: HttpClient, private router: Router, private route: ActivatedRoute, private globalService: GlobalService, public _languageService:LanguageService, private _commonServiceService: CommonServiceService) {
          // Extract status
           this.isBrowser = isPlatformBrowser(this.platformId);
          this.route.queryParams.subscribe(params => {
@@ -131,9 +132,11 @@ export class StadiumTtPartnersComponent {
               res['linking'] = this._languageService.customMapping[res['company_name']];
             }else {
               res['route'] = res['company_name'].replace(/ /g, '');
-              res['linking'] = res['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
-              .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
-              .toLowerCase();
+              res['linking'] = this._commonServiceService.buildLinking(res['company_name']);
+              // res['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+              // .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+              // .replace(/-$/, '') // remove trailing hyphen
+              // .toLowerCase();
             }
             this.companyList.push(res)
          }
