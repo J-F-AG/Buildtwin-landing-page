@@ -28,7 +28,7 @@ export class DataSafetyFaqComponent {
   },
   {
     question: "Can I delete my account and data?",
-    answer: "<strong>Yes.</strong><br> To request account and data deletion, please contact our support team at support@buildtwin.com. Upon verification, all your data will be permanently deleted from our systems, including backups, within 30 days, in accordance with GDPR and other privacy standards."
+    answer: "<strong>Yes.</strong><br> To request account and data deletion, please contact our support team at hello@buildtwin.com. Upon verification, all your data will be permanently deleted from our systems, including backups, within 30 days, in accordance with GDPR and other privacy standards."
   },
   {
     question: "How long is my data retained?",
