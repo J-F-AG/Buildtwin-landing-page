@@ -414,7 +414,7 @@ const routes: Routes = [
             title: 'Theater & Entertainment Venue Structural Engineering & Venue | BuildTwin',
             description: 'Find expert theater structural vendors for cinema design, engineering, and AEC solutions. BuildTwin connects you with trusted teams for innovative projects.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/sector/theatres'
+            canonical: 'https://www.buildtwin.com/sector/theaters'
         }
     },
     {path: 'sector/commercial-building', 
