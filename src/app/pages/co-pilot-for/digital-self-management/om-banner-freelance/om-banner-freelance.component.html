@@ -62,8 +62,13 @@
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="banner-image videoCover">
-                    <img src="assets/images/ui/image14.png" width="748" height="651" alt="Banner image">
-                 
+                            <picture>
+                                <source srcset="assets/images/ui/image14.webp 1x, assets/images/ui/image14@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                                <source srcset="assets/images/ui/image14.webp 1x, assets/images/ui/image14@2x.webp 2x" type="image/webp">
+                                <source srcset="assets/images/ui/image14.png 1x, assets/images/ui/image14@2x.png 767w" media="(max-width: 767px)">
+                                <source srcset="assets/images/ui/image14.png 1x, assets/images/ui/image14@2x.png 2x">
+                                <img src="assets/images/ui/image14.png" alt="Banner image" width="748" height="651">
+                            </picture>
                    
                     <a class="hoverPopup" href="javascript:void(0)"><i></i></a>
                     <!-- (click)="youTubeOpen()" -->

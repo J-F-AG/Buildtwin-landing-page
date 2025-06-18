@@ -80,7 +80,13 @@
 
         <div class="slide" data-ele="1" [ngClass]="{ active: marketPlace == 1 }">
             <div class="imgWrap">
-                <img src="assets/images/ui/slide1.png" alt="Slider" width="630" height="270">
+                            <picture>
+                                <source srcset="assets/images/ui/slide1.webp 1x, assets/images/ui/slide1@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                                <source srcset="assets/images/ui/slide1.webp 1x, assets/images/ui/slide1@2x.webp 2x" type="image/webp">
+                                <source srcset="assets/images/ui/slide1.png 1x, assets/images/ui/slide1@2x.png 767w" media="(max-width: 767px)">
+                                <source srcset="assets/images/ui/slide1.png 1x, assets/images/ui/slide1@2x.png 2x">
+                                <img src="assets/images/ui/slide1.png" alt="Slider" width="630" height="270">
+                            </picture>
             </div> 
             <div class="contentWrap">
                 <h3>Why - the largest portfolio on the</h3>
@@ -94,7 +100,13 @@
         </div>
         <div class="slide" data-ele="2" [ngClass]="{ active: marketPlace == 2 }">
             <div class="imgWrap">
-                <img src="assets/images/ui/slide2.png" alt="Slider" width="630" height="270">
+                            <picture>
+                                <source srcset="assets/images/ui/slide2.webp 1x, assets/images/ui/slide2@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                                <source srcset="assets/images/ui/slide2.webp 1x, assets/images/ui/slide2@2x.webp 2x" type="image/webp">
+                                <source srcset="assets/images/ui/slide2.png 1x, assets/images/ui/slide2@2x.png 767w" media="(max-width: 767px)">
+                                <source srcset="assets/images/ui/slide2.png 1x, assets/images/ui/slide2@2x.png 2x">
+                                <img src="assets/images/ui/slide2.png" alt="Slider" width="630" height="270">
+                            </picture>
             </div> 
             <div class="contentWrap">
                 <h3>How - Delivered with the help of AI</h3>
@@ -106,7 +118,13 @@
         </div>
         <div class="slide" data-ele="3" [ngClass]="{ active: marketPlace == 3 }">
             <div class="imgWrap">
-                <img src="assets/images/ui/slide3.png" alt="Slider" width="630" height="270">
+                            <picture>
+                                <source srcset="assets/images/ui/slide3.webp 1x, assets/images/ui/slide3@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                                <source srcset="assets/images/ui/slide3.webp 1x, assets/images/ui/slide3@2x.webp 2x" type="image/webp">
+                                <source srcset="assets/images/ui/slide3.png 1x, assets/images/ui/slide3@2x.png 767w" media="(max-width: 767px)">
+                                <source srcset="assets/images/ui/slide3.png 1x, assets/images/ui/slide3@2x.png 2x">
+                                <img src="assets/images/ui/slide3.png" alt="Slider" width="630" height="270">
+                            </picture>
             </div> 
             <div class="contentWrap">
                 <h3>What - Engineering Services</h3>
