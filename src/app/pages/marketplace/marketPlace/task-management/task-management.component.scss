@@ -236,6 +236,10 @@ img.lineSvg.active {
         overflow: hidden;
         display: flex;
         justify-content: center;
+        picture {
+            display: flex;
+            justify-content: center;
+        }
         img {
             width: 140%;
             max-width: none;

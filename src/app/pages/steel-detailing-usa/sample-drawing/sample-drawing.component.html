@@ -51,7 +51,31 @@
                                             Verified Partner
                                         </div>
                                         
-                                        <img src="{{item.img}}" class="projectImage" alt="cardImage">
+                                        <!-- <img src="{{item.img}}" class="projectImage" alt="cardImage"> -->
+                                         <picture>
+                                            <source
+                                                [attr.srcset]="item.webp + ' 1x, ' + item.webp2x + ' 767w'"
+                                                media="(max-width: 767px)"
+                                                type="image/webp"
+                                            />
+                                            <source
+                                                [attr.srcset]="item.webp + ' 1x, ' + item.webp2x + ' 2x'"
+                                                type="image/webp"
+                                            />
+                                            <source
+                                                [attr.srcset]="item.img + ' 1x, ' + item.img2x + ' 767w'"
+                                                media="(max-width: 767px)"
+                                            />
+                                            <source
+                                                [attr.srcset]="item.img + ' 1x, ' + item.img2x + ' 2x'"
+                                            />
+                                            <img
+                                                [src]="item.img"
+                                                class="projectImage"
+                                                alt="cardImage"
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         
                                     </div>
                                     <div class="slideContent">
