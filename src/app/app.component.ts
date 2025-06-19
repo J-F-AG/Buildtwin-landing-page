@@ -9,6 +9,7 @@ import { LanguageService } from './services/language.service';
 import { BreadcrumbService } from './services/breadcrumb.service';
 import { SeoService } from './services/seo.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { WebpSupportService } from './services/webp-support.service';
 declare let $: any;
 
 @Component({
@@ -47,6 +48,7 @@ export class AppComponent {
         private _seoService: SeoService,
         private activatedRoute: ActivatedRoute,
         private sanitizer: DomSanitizer,
+        private webpService: WebpSupportService,
         @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
       this._languageService.faqSchemaSubject.subscribe((data) => {
@@ -71,6 +73,12 @@ export class AppComponent {
     }
 
     ngOnInit() {
+      if (isPlatformBrowser(this.platformId)) {
+        this.webpService.isWebpSupported().then((isSupported) => {
+          const className = isSupported ? 'webp' : 'no-webp';
+          this.renderer.addClass(document.body, className);
+        });
+      }
         if (isPlatformBrowser(this.platformId)) {
         try {
           localStorage.setItem('appVerionId', '0.0.2');
