@@ -97,6 +97,9 @@ export class AppComponent {
             }
             if(event['title']){
                 this._seoService.updateTitle(event['title']);
+                // if(event['keywords']) {
+                  this._seoService.updateKeywords(event['keywords']);
+                // }
                 this._seoService.updateDescription(event['description']);
                 // Update OG tags
                 this._seoService.updateOGUrl(url);
