@@ -73,31 +73,35 @@ export class FreeOfferFormComponent {
   }
   updateServiceId(){
     // Get the current URL
-    const url = window.location.href;
-    if (url.includes('pre-cast-detailing-services')) {
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['pre-cast-detailing-services']);
-      this.data = this._languageService['serviceData']['pre-cast-detailing-services'];
-    }else if (url.includes('rebar-detailing-services')) {
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['rebar-detailing-services']);
-      this.data = this._languageService['serviceData']['rebar-detailing-services'];
-    }else if(url.includes('bim-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
-      this.data = this._languageService['serviceData']['bim-services'];
-    }else if(url.includes('steel-detailing-services-in-usa')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
-      this.data = this._languageService['serviceData']['steel-detailing-services'];
-    }else if(url.includes('steel-detailing-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
-      this.data = this._languageService['serviceData']['steel-detailing-services'];
-    }else if(url.includes('bim-outsourcing-services-in-usa')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
-      this.data = this._languageService['serviceData']['bim-services'];
-    }else if(url.includes('drafting-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['drafting-services']);
-      this.data = this._languageService['serviceData']['drafting-services'];
-    }else if(url.includes('cad-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['cad-services']);
-      this.data = this._languageService['serviceData']['cad-services'];
+    try {
+      const url = window.location.href;
+      if (url.includes('pre-cast-detailing-services')) {
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['pre-cast-detailing-services']);
+        this.data = this._languageService['serviceData']['pre-cast-detailing-services'];
+      }else if (url.includes('rebar-detailing-services')) {
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['rebar-detailing-services']);
+        this.data = this._languageService['serviceData']['rebar-detailing-services'];
+      }else if(url.includes('bim-services')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
+        this.data = this._languageService['serviceData']['bim-services'];
+      }else if(url.includes('steel-detailing-services-in-usa')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
+        this.data = this._languageService['serviceData']['steel-detailing-services'];
+      }else if(url.includes('steel-detailing-services')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
+        this.data = this._languageService['serviceData']['steel-detailing-services'];
+      }else if(url.includes('bim-outsourcing-services-in-usa')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
+        this.data = this._languageService['serviceData']['bim-services'];
+      }else if(url.includes('drafting-services')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['drafting-services']);
+        this.data = this._languageService['serviceData']['drafting-services'];
+      }else if(url.includes('cad-services')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['cad-services']);
+        this.data = this._languageService['serviceData']['cad-services'];
+      }
+    } catch (error) {
+      
     }
   }
   selectSector(selectedOption: any) {

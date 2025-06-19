@@ -57,7 +57,11 @@ export class AppComponent {
       });
         // Directly assign the breadcrumbs array from the service
         if (isPlatformBrowser(this.platformId)) {
-            localStorage.setItem("appVersion", "0.0.12");
+            try {
+              localStorage.setItem("appVersion", "0.0.12");
+            } catch (error) {
+              
+            }
         }
         // AOS.init();
     }
@@ -68,7 +72,11 @@ export class AppComponent {
 
     ngOnInit() {
         if (isPlatformBrowser(this.platformId)) {
-        localStorage.setItem('appVerionId', '0.0.2');
+        try {
+          localStorage.setItem('appVerionId', '0.0.2');
+        } catch (error) {
+          
+        }
         }
         this.recallJsFuntions();
 
@@ -178,7 +186,11 @@ export class AppComponent {
                 if (!(event instanceof NavigationEnd)) {
                     return;
                 }
-                window.scrollTo(0, 0);
+                try {
+                  window.scrollTo(0, 0);
+                } catch (error) {
+                  
+                }
             });
     }
 
