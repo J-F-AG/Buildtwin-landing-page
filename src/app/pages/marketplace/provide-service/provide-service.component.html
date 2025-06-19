@@ -15,7 +15,24 @@
             </ul>
         </div>
         <div class="tab-target-wrapper">
-            <img [src]="tabDetail[selectedIndex]?.target" width="1113" height="591" alt="">
+            <!-- <img [src]="tabDetail[selectedIndex]?.target" width="1113" height="591" alt=""> -->
+             <picture>
+                <!-- WebP for mobile or smaller screens -->
+                <source 
+                    [attr.srcset]="tabDetail[selectedIndex]?.targetwebp + ' 1x, ' + tabDetail[selectedIndex]?.targetwebp2x + ' 2x'" 
+                    type="image/webp">
+
+                <!-- Fallback (JPG/PNG) for browsers that don't support WebP -->
+                <source 
+                    [attr.srcset]="tabDetail[selectedIndex]?.target + ' 1x, ' + tabDetail[selectedIndex]?.target2x + ' 2x'">
+
+                <!-- Actual <img> tag as fallback -->
+                <img 
+                    [src]="tabDetail[selectedIndex]?.target" 
+                    width="1113" 
+                    height="591" 
+                    alt="">
+            </picture>
         </div>
     </div>    
 
