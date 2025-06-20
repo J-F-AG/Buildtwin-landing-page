@@ -33,7 +33,11 @@ export class GlobalService {
     if (element) {
       const topPos = element.getBoundingClientRect().top + window.scrollY - 100;
       // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.scrollTo({ top: topPos, behavior: 'smooth' });
+      try {
+        window.scrollTo({ top: topPos, behavior: 'smooth' });
+      } catch (error) {
+        
+      }
     }
     if(sectionId === 'formContainer'){
       this.triggerSidebarToggle();

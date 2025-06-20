@@ -9,6 +9,7 @@ import { LanguageService } from './services/language.service';
 import { BreadcrumbService } from './services/breadcrumb.service';
 import { SeoService } from './services/seo.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { WebpSupportService } from './services/webp-support.service';
 declare let $: any;
 
 @Component({
@@ -47,6 +48,7 @@ export class AppComponent {
         private _seoService: SeoService,
         private activatedRoute: ActivatedRoute,
         private sanitizer: DomSanitizer,
+        private webpService: WebpSupportService,
         @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
       this._languageService.faqSchemaSubject.subscribe((data) => {
@@ -57,7 +59,11 @@ export class AppComponent {
       });
         // Directly assign the breadcrumbs array from the service
         if (isPlatformBrowser(this.platformId)) {
-            localStorage.setItem("appVersion", "0.0.12");
+            try {
+              localStorage.setItem("appVersion", "0.0.12");
+            } catch (error) {
+              
+            }
         }
         // AOS.init();
     }
@@ -67,8 +73,18 @@ export class AppComponent {
     }
 
     ngOnInit() {
+      if (isPlatformBrowser(this.platformId)) {
+        this.webpService.isWebpSupported().then((isSupported) => {
+          const className = isSupported ? 'webp' : 'no-webp';
+          this.renderer.addClass(document.body, className);
+        });
+      }
         if (isPlatformBrowser(this.platformId)) {
-        localStorage.setItem('appVerionId', '0.0.2');
+        try {
+          localStorage.setItem('appVerionId', '0.0.2');
+        } catch (error) {
+          
+        }
         }
         this.recallJsFuntions();
 
@@ -89,6 +105,9 @@ export class AppComponent {
             }
             if(event['title']){
                 this._seoService.updateTitle(event['title']);
+                // if(event['keywords']) {
+                  this._seoService.updateKeywords(event['keywords']);
+                // }
                 this._seoService.updateDescription(event['description']);
                 // Update OG tags
                 this._seoService.updateOGUrl(url);
@@ -178,7 +197,11 @@ export class AppComponent {
                 if (!(event instanceof NavigationEnd)) {
                     return;
                 }
-                window.scrollTo(0, 0);
+                try {
+                  window.scrollTo(0, 0);
+                } catch (error) {
+                  
+                }
             });
     }
 

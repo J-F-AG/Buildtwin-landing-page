@@ -429,6 +429,7 @@
     .slider-container {
         flex-direction: column;
         gap: 30px;
+        max-width: 100%;
     }
     .slider-wrapper {
         width: 100%;
@@ -437,10 +438,17 @@
         width: 200px;
         min-width: 200px;
         margin-top: 70px;
+        display: none;
     }
     .slide.active-1, .slide.active-2, .slide.active {
-        padding: 40px 21.258px;
+        padding: 30px 21.258px;
     }
+    //  .slide.active-1 {
+    //     margin-top: -40px;
+    // }
+    // .slide.active-2 {
+    //     margin-top: -20px;
+    // }
     .slider-container .handle {
         margin-top: 0;
         flex-direction: row;

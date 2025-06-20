@@ -12,10 +12,11 @@ const routes: Routes = [
         loadChildren: () => import('./pages/Home/help-desk-home/help-desk-home.module').then(m => m.HelpDeskHomeModule),
         // component: HelpDeskHomeComponent,
         data: {
-            title: 'Find Structural Engineering Services & Solutions | BuildTwin Marketplace',
-            description: 'Find professional structural engineering services and solutions at BuildTwin Marketplace. Connect with top structural engineering firms & companies offering consultation and expert services across the USA, EU, Middle East, UK, Australia, and India.',
+            title: 'Top Structural Engineering Services, BIM Service & CAD Solutions | BuildTwin',
+            description: 'Connect with top structural engineering companies for BIM modeling, rebar detailing, precast detailing, and CAD services across the USA, EU, Middle East, UK, Australia, and India.',
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com'
+            canonical: 'https://www.buildtwin.com',
+            keywords: 'Structural Engineering Services, top structural engineering firms, BIM Modeling service'
         }
     },
     {
@@ -314,9 +315,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/software/structural-steel-detailing/sector.module').then(m => m.StructuralSteelDetailingSoftwareModule),
         data: {
             title: 'Structural Steel Detailing Software Comparison: Tekla Structures vs SDS/2',
-            description: "Compare Tekla Structures and SDS/2 for structural steel detailing. Discover their features, advantages, pricing, and the best use cases for precise and efficient project delivery.",
+            description: "Compare SDS2 vs Tekla—top structural detailing software. Find the best steel detailing software with features, pricing, and pros for your next project.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/software/structural-steel-detailing'
+            canonical: 'https://www.buildtwin.com/software/structural-steel-detailing',
+            keywords: 'steel detailing software, best structural detailing software, sds2 vs tekla, structural detailing software'
         }
     },
     {path: 'sector/data-centre', 
@@ -560,10 +562,11 @@ const routes: Routes = [
         loadChildren: () => import('./pages/rebar/services-new.module').then(m => m.RebarServicesNewModule),
         // component: RebarServicesNewComponent,
         data: {
-            title: 'Rebar Detailing Services | Shop Drawings, 3D Modeling and Footing Detail',
-            description: "Buildtwin offers rebar detailing services from pre-qualified vendors, including rebar shop drawings, 3D modeling, footing detail, and bar bending schedules for all your construction needs.",
+            title: 'Rebar Detailing Services & 3D Rebar Modeling  for Structural Engineering Projects | BuildTwin',
+            description: "BuildTwin connects you with top rebar detailing companies offering 3D rebar modeling, shop drawings, footing details and bar bending schedules for all your construction needs.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/services/rebar-detailing-services'
+            canonical: 'https://www.buildtwin.com/services/rebar-detailing-services',
+            keywords: 'rebar detailing services, rebar detailing companies, 3d rebar detailing, rebar modeling services'
         }
     },
 
@@ -572,10 +575,11 @@ const routes: Routes = [
         loadChildren: () => import('./pages/bim/services-new.module').then(m => m.BimServicesNewModule),
         // component: BimServicesNewComponent,
         data: {
-            title: 'BIM (Building Information Modeling) Services For AEC Projects | BuildTwin',
-            description: "BuildTwin Marketplace offers comprehensive BIM services to streamline your AEC projects. Our services include BIM modeling, 3D rendering, BIM coordination, Scan to BIM, MEP BIM, Architectural BIM, Structural BIM, Facade BIM, and Revit BIM. Let us help you transform your project with our top-notch BIM services.",
+            title: 'BIM Modeling & Architectural BIM Services for AEC Projects | BuildTwin',
+            description: "BuildTwin offers expert BIM services including BIM modeling, 3D BIM modeling services, architectural BIM services, and more. Trusted BIM service provider for AEC.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/services/bim-services'
+            canonical: 'https://www.buildtwin.com/services/bim-services',
+            keywords: 'bim modeling services, bim services, 3d bim modeling services, architectural bim services, bim service provider'
         }
     },
 
@@ -584,10 +588,11 @@ const routes: Routes = [
         loadChildren: () => import('./pages/structural-steel/services-new.module').then(m => m.StructuralSteelServicesNewModule),
         // component: StructuralSteelServicesNewComponent,
         data: {
-            title: 'Structural Steel Detailing Services for AEC Project | BuildTwin',
-            description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects. Our services include shop drawings, erection drawings, 2D and 3D modelling, connection design, and miscellaneous steel detailing.",
+            title: 'Structural Steel Detailing & Drafting Services for AEC | BuildTwin',
+            description: "BuildTwin connects you with trusted steel detailing companies offering structural steel detailing, drafting services, and 2D/3D modeling for AEC projects.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/services/steel-detailing-services'
+            canonical: 'https://www.buildtwin.com/services/steel-detailing-services',
+            keywords: 'structural steel detailing services, steel detailing services, steel detailing company, steel drafting services'
         }
     },
 
@@ -608,10 +613,11 @@ const routes: Routes = [
         loadChildren: () => import('./pages/steel-detailing-usa/services-new.module').then(m => m.SteelDetailingUsaServicesNewModule),
         // component: SteelDetailingUsaServicesNewComponent,
         data: {
-            title: 'Structural Steel Detailing Vendors from USA for AEC Projects',
-            description: "BuildTwin Marketplace offers a comprehensive platform for all your structural steel detailing services for construction and engineering projects in the USA. Our services include shop drawings, erection drawings, 2D and 3D modeling, connection design, and miscellaneous steel detailing.",
+            title: 'Top Steel Detailing Services & Companies in USA for AEC Projects | BuildTwin',
+            description: "Find top steel detailing companies in USA offering drafting, modeling, and shop drawings. BuildTwin connects you to expert steel detailing services for AEC.",
             image: 'https://www.buildtwin.com/assets/images/serviceBanner.jpg',
-            canonical: 'https://www.buildtwin.com/services/steel-detailing-services-in-usa'
+            canonical: 'https://www.buildtwin.com/services/steel-detailing-services-in-usa',
+            keywords: 'steel detailing services, steel detailing company, steel detailing companies in usa, steel detailing services usa'
         }
     },
 
@@ -620,10 +626,11 @@ const routes: Routes = [
         // component: DraftingServicesNewComponent,
         loadChildren: () => import('./pages/drafting-services/services-new.module').then(m => m.DraftingServicesNewModule),
         data: {
-            title: 'Expert Drafting Services for Construction Projects | BuildTwin',
-            description: "Access top-tier drafting services for architectural, structural, and MEP designs. Compare quotes and manage your AEC projects with BuildTwin’s integrated platform.",
+            title: 'Top Drafting Services and Firms for Construction Projects | BuildTwin',
+            description: "Access architect drafting services, structural drafting, and full construction drafting solutions and service from top drafting firms through BuildTwin’s integrated platform.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/services/drafting-services'
+            canonical: 'https://www.buildtwin.com/services/drafting-services',
+            keywords: 'drafting service, architect drafting services, drafting firms, construction drafting, structural drafting services, construction drafting services'
         }
     },
     {
@@ -631,10 +638,11 @@ const routes: Routes = [
         // component: CadServicesNewComponent,
         loadChildren: () => import('./pages/cad-services/services-new.module').then(m => m.CadServicesNewModule),
         data: {
-            title: 'CAD Services for AEC Projects | BuildTwin Marketplace',
-            description: "Find expert CAD service providers for 2D drafting, 3D modeling, and BIM solutions. Streamline your construction projects with BuildTwin’s global vendor network.",
+            title: 'CAD Design and Drafting Services for AEC Projects | BuildTwin Marketplace',
+            description: "Find expert CAD services including CAD drafting and design service. Access global vendors for 2D drafting, 3D modeling, and BIM solutions for AEC projects.",
             image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-            canonical: 'https://www.buildtwin.com/services/cad-services'
+            canonical: 'https://www.buildtwin.com/services/cad-services',
+            keywords: 'CAD Services, CAD Design Service, CAD Drafting Services'
         }
     },
     {

@@ -384,7 +384,7 @@ export class VenderDetailsAarbeeComponent {
 
 
       // let url = this.router.url;
-      // console.log(url)
+      console.log(this.router.url)
       const urlSegments = this.router.url.split('/');
       let url = urlSegments[urlSegments.length - 1];
       url = url.toLowerCase();

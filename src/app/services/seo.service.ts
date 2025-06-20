@@ -18,6 +18,9 @@ export class SeoService {
     this.updateOGTags('og:title', title);
     this.updateTwitterTags('twitter:title', title);
   }
+  updateKeywords(keywords: string) {
+    this.metaService.updateTag({ name: 'keywords', content: keywords?keywords:'' });
+  }
 
   updateDescription(desc: string) {
     this.metaService.updateTag({ name: 'description', content: desc })

@@ -123,7 +123,25 @@ export class VenderDetailService {
       title: 'Cosmere Technologies | Digital Engineering & Modeling Services | Buildtwin Partner',
       description: "Cosmere Technologies specializes in digital engineering and modeling services for the AEC and infrastructure industries. As a trusted Buildtwin partner, we offer comprehensive digitization solutions including BIM, geospatial, CGI, and digitization services.",
       image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
-      canonical: 'https://www.buildtwin.com/partners/cosmeretechnologies'
+      canonical: 'https://www.buildtwin.com/partners/cosmere-technologies'
+    },
+    'arsa-engineering-consultancy-services-pvt-ltd': {
+      title: 'ARSA Engineering Consultancy Services Pvt Ltd | Expert Structural Engineering Solutions',
+      description: "Discover ARSA Engineering Consultancy Services Pvt Ltd, a leading structural engineering firm based in Bengaluru, India, with offices in Dubai and Malaysia. Offering world-class design, detailing, and BIM services for diverse sectors including commercial, residential, and industrial projects. Explore our portfolio, including iconic projects like Grand Hyatt Noida and Sunway Pyramid Malaysia, and start your enquiry today for tailored engineering solutions.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/arsa-engineering-consultancy-services-pvt-ltd'
+    },
+    'design-forum-international': {
+      title: 'Design Forum International | Innovative Architectural Solutions',
+      description: "Explore Design Forum International (DFI), a premier architectural firm headquartered in Noida, India, with 28 years of excellence. Specializing in people-first architecture and urbanism, DFI delivers world-class design and detailing services across sectors like commercial, residential, and infrastructure. View our iconic projects, including Silverglades Hightown and Thiruvananthapuram Central Railway Station, and start your enquiry for tailored solutions today.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/design-forum-international'
+    },
+    'cundall': {
+      title: 'Cundall | Global Leader in Sustainable Engineering Solutions',
+      description: "Discover Cundall, a global multi-disciplinary engineering firm headquartered in Hong Kong, with 47 years of expertise in sustainable design and environmental solutions. Specializing in zero carbon strategies, Cundall delivers innovative services across data centers, infrastructure, and more. Explore projects like The Biosphere at Newcastle Helix and Sohar International Bank, and start your enquiry for world-class engineering today.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/cundall'
     },
   }
   constructor() { }
