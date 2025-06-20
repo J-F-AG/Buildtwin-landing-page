@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://www.buildtwin.com/</loc>
+  <lastmod>2025-06-19T08:04:58+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/explore-services</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/bim-services</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/cad-services</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/drafting-services</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/pre-cast-detailing-services</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/rebar-detailing-services</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/services/steel-detailing-services</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.95</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/get-started</loc>
+  <lastmod>2025-06-14T12:30:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/airports</loc>
+  <lastmod>2025-06-19T08:05:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/bridge</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/chemical-plant</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/commercial-building</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/data-centre</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/defense</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/hospital</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/industrial-building</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/manufacturing-plant</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/metro</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/powerplant</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/residential-building</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/roads</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/schools</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/stadium</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/theaters</loc>
+  <lastmod>2025-06-19T08:05:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/tunnels</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/water-and-waste</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/sector/power-plant</loc>
+  <lastmod>2025-03-18T11:33:52+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.90</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/software/architecture-design-services</loc>
+  <lastmod>2025-06-19T08:05:03+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/software/structural-steel-detailing</loc>
+  <lastmod>2025-06-19T08:05:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/building-code/aisc</loc>
+  <lastmod>2025-06-19T08:04:56+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/building-code/australian-standards</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/building-code/british-standards</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/building-code/eurocode</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/building-code/iso-standards</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/provide-service</loc>
+  <lastmod>2025-06-19T08:05:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/marketplace</loc>
+  <lastmod>2025-06-19T08:04:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/about</loc>
+  <lastmod>2025-06-19T08:03:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/pricing</loc>
+  <lastmod>2025-06-19T08:05:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/ai-project-management</loc>
+  <lastmod>2025-06-19T08:03:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/customer-success</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/data-safety</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/faq</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/contact</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/privacy-policy</loc>
+  <lastmod>2025-06-19T08:05:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/terms-conditions</loc>
+  <lastmod>2025-06-19T08:05:04+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/use-cases</loc>
+  <lastmod>2025-06-19T08:05:05+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/terms-of-service</loc>
+  <lastmod>2025-06-19T08:05:05+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/good-reason</loc>
+  <lastmod>2025-06-19T08:04:58+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/business-intelligence</loc>
+  <lastmod>2025-06-19T08:04:57+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.buildtwin.com/integrations</loc>
+  <lastmod>2025-06-19T08:04:59+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+</urlset>
