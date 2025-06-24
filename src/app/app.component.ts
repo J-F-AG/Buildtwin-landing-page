@@ -534,12 +534,12 @@ injectBreadcrumbScript(url) {
       );
 
     }else if(url.includes('/software/architecture-design-services')){
-      const faqSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
+      const faqSchema = this._languageService.injectForArchitecturalDesignServicesFaqSchema(this.renderer);
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
-      const serviceSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
+      const serviceSchema = this._languageService.injectForArchitecturalDesignServiceSchema(this.renderer);
 
       this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${serviceSchema}</script>`

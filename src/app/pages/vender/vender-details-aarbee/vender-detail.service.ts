@@ -143,6 +143,138 @@ export class VenderDetailService {
       image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
       canonical: 'https://www.buildtwin.com/partners/cundall'
     },
+    'grob-hoffmann': {
+      title: 'Grob & Hoffmann – Expert Lighting Design & Planning Solutions | Buildtwin Marketplace',
+      description: "Grob & Hoffmann offer expert lighting design plans, architectural lighting planning, and custom concepts for architects, interior designers, and planners.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/grob-hoffmann'
+    },
+    'bim-innovations': {
+      title: 'BIM Innovations – BIM Outsourcing & Architectural Services | Buildtwin Marketplace',
+      description: "BIM Innovations offers expert BIM outsourcing and architectural services, from 3D modeling to scan to BIM, MEP, rendering, and detailed BIM documentation.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/bim-innovations'
+    },
+    'asc-technology-solutions': {
+      title: 'ASC Technology – BIM Outsourcing & Virtual Design Services | Buildtwin Marketplace',
+      description: "ASC Technology is among the top BIM outsourcing companies in India, offering Virtual Design Construction services to AEC firms across USA, UK, Europe, and more.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/asc-technology-solutions'
+    },
+    'jes': {
+      title: 'JES Services – BIM Consultancy for Middle East AEC Projects | Buildtwin Marketplace',
+      description: "JES Services, a leading BIM consultancy, empowers AEC firms with expert staffing and digital construction solutions. Trusted JES company for scalable BIM delivery.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/jes'
+    },
+    'nhance': {
+      title: 'Nhance – Structural & Bridge Design Services | Buildtwin Marketplace',
+      description: "Nhance delivers structural design services and bridge structure design rooted in sustainability, local context, and long-term client collaboration for real impact.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/nhance'
+    },
+    'suisseplan': {
+      title: 'suisseplan – Specialist in structural and infrastructure planning | Buildtwin Marketplace',
+      description: "From infrastructure to environmental planning, suisseplan offers tailored, cross-sector solutions grounded in trust, innovation, and sustainable thinking.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/suisseplan'
+    },
+    'seacad': {
+      title: 'Seacad – Global Experts in Structural Steel Detailing Services | Buildtwin Marketplace',
+      description: "Since 1996, Seacad delivers precise steel detailing services with 3D modeling for efficient fabrication. Trusted by global fabricators for quality and accuracy.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/seacad'
+    },
+    'gate-precast': {
+      title: 'GATE Precast – Architectural Precast Concrete Experts | Buildtwin Marketplace',
+      description: "GATE Precast delivers top-tier architectural precast concrete with innovative finishes, expert project management, and a commitment to quality and timelines.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/gate-precast'
+    },
+    'systra-group': {
+      title: 'SYSTRA Group – Expert Infrastructure & Public Transport Solutions  Buildtwin Marketplace',
+      description: "SYSTRA Group delivers innovative public transport solutions and infrastructure for transportation worldwide, driving urban development for over 65 years.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/systra-group'
+    },
+    'united-bim': {
+      title: 'United-BIM Inc. - Find the Experts of Revit & BIM Modeling Services | Buildtwin Marketplace',
+      description: "United-BIM Inc. offers quality, fast Revit modeling services with a consultative approach for AEC professionals, delivering value and peace of mind.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/united-bim'
+    },
+    'mechciv-designers-llp': {
+      title: 'MechCiv LLP – CAD Drafting & BIM Outsourcing for AEC Projects | Buildtwin Marketplace',
+      description: "MechCiv Designers LLP provides high-quality CAD drafting and BIM outsourcing services, supporting AEC firms with architectural, structural, and MEPF solutions.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/mechciv-designers-llp'
+    },
+    'archivista-consultants-pvt-ltd': {
+      title: 'Architectural Design & Construction Services by Archivista | Buildtwin Marketplace',
+      description: "Archivista offers expert architectural design services and construction solutions, delivering excellence in structural planning and project supervision since 1975.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/archivista-consultants-pvt-ltd'
+    },
+    'obermeyer-infrastruktur-gmbh-co-kg': {
+      title: 'Leading Infrastructure Construction Company with 60+ Years Expertise by OBERMEYER Infrastructure | Buildtwin',
+      description: "With 60+ years of experience, we provide complete infrastructure construction services—planning, project management, and consulting—tailored to client needs.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/obermeyer-infrastruktur-gmbh-co-kg'
+    },
+    'mlw-ingenieure-leipzig-gmbh': {
+      title: 'Reliable Structural Engineering Service by MLW Ingenieure Leipzig | Buildtwin ',
+      description: "From concept to construction, MLW offers advanced structural engineering service using BIM for stable, sustainable, and aesthetically designed building solutions.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/mlw-ingenieure-leipzig-gmbh'
+    },
+    'dekic-krämer-elektrotechnik': {
+      title: 'Trusted electrical engineering & Renewable Energy Services by DEKIC Elektroanlagenbau | Buildtwin',
+      description: "DEKIC offers expert electrical engineering and renewable energy services across Germany—smart systems, future-ready designs, and full-service implementation.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/dekic-krämer-elektrotechnik'
+    },
+    'mac-engineers-vietnam-co-ltd': {
+      title: 'Building Construction & Consulting Service by MAC Engineers Vietnam | Buildtwin',
+      description: "German-run MAC Engineers Vietnam offers expert building construction, 3D modeling, BIM consulting, and planning with 45+ drafters serving clients across Europe and Asia.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/mac-engineers-vietnam-co-ltd'
+    },
+    'adept-engineering-solutions-private-limited': {
+      title: 'Steel Structure & Structural Design Services by Adept Engineering Solution | Buildtwin',
+      description: "Adept Engineering provides ISO-certified structural engineering services and steel structure detailing, delivering AISC-standard precision from Tamil Nadu, India.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/adept-engineering-solutions-private-limited'
+    },
+    'aecom': {
+      title: 'Structural Engineering & Infrastructure Consulting Experts by AECOM',
+      description: "AECOM is a leading infrastructure consulting firm providing innovative structural engineering services for sustainable, impactful, and large-scale global projects.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/aecom'
+    },
+    'bachmann-liebig-consulting': {
+      title: 'Structural Engineering Firm for Precast Concrete Projects by BLC | Buildtwin',
+      description: "BLC offers expert structural solutions and precast concrete construction for high-rise and complex projects, delivering quality, precision, and cost-efficiency.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/bachmann-liebig-consulting'
+    },
+    'bim-global-solutions': {
+      title: 'BIM Global Solutions | BIM Implementation & Documentation Services',
+      description: "BIM Global Solutions offers expert BIM implementation, BIM services, and documentation support to help AEC firms adopt advanced digital construction workflows.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/bim-global-solutions'
+    },
+    'cosmeretechnologies': {
+      title: 'BIM Modeling & AEC Software Expertise by Cosmere Technologies | Buildtwin',
+      description: "From Scan to BIM to modeling, Cosmere Technologies uses licensed AEC software and expert teams to deliver top-tier BIM services with quality and compliance.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/cosmeretechnologies'
+    },
+    'cresire-consultants-private-limited': {
+      title: 'Cresire’s BIM Construction & Point Cloud to BIM Solutions | Buildtwin',
+      description: "Cresire offers BIM construction management, point cloud to BIM, 3D rendering, and CAD drafting services—supporting all phases from planning to project execution.",
+      image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+      canonical: 'https://www.buildtwin.com/partners/cresire-consultants-private-limited'
+    },
   }
   constructor() { }
 }
