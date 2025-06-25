@@ -546,11 +546,11 @@
                 .title {
                     font-size: 14px;
                     color: #696969;
-                    font-weight: 400;
+                    // font-weight: 400;
                     margin-bottom: 4px;
                     display: block;
                     position: relative;
-                    font-family: var(--semibold-global);
+                    font-weight: var(--semibold-global);
                 }
                 .selectedValue {
                     display: flex;

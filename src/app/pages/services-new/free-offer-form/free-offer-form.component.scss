@@ -352,7 +352,7 @@ a {
 
     small {
       display: block;
-      font-family: var(--semibold-global);
+      font-weight: var(--semibold-global);
       font-size: 11px;
     }
   }
@@ -397,7 +397,7 @@ a {
 
   .title {
     display: block;
-    font-family: var(--semibold-global);
+    font-weight: var(--semibold-global);
     font-size: 13px;
     color: var(--color-theme);
   }
