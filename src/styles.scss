@@ -41,17 +41,12 @@ $buildtwin-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-  // --fontFamily: "Alliance No1", sans-serif;
-  // --archivoFontFamily: "Alliance No1", sans-serif;
-  // --poppinsFontFamily: "Alliance No1", sans-serif;
-  // --mulishFontFamily: "Alliance No1", sans-serif;
-  // --syneFontFamily: "Alliance No1", sans-serif;
   --fontFamily: "New Rubrik Edge", sans-serif;
   --archivoFontFamily: "New Rubrik Edge", sans-serif;
   --poppinsFontFamily: "New Rubrik Edge", sans-serif;
   --mulishFontFamily: "New Rubrik Edge", sans-serif;
   --syneFontFamily: "New Rubrik Edge", sans-serif;
-  --jeffFontFamily: "Jeff Script", sans-serif;
+  --jeffFontFamily: "jeff-script", sans-serif;
   --neonOrangeColor: #f46f49;
   --transition: all ease 0.5s;
   --paragraphColor: #000000;
@@ -83,10 +78,8 @@ $buildtwin-theme: mat.define-light-theme(
 
   --color-theme: #0053fa;
   --background-white: #ffffff;
-  // --medium-global: "alliance_no.1medium";
   --medium-global: "new_rubrik_edge_medium";
   --assistantBackgroundColor-global: #f8f8f8;
-  // --semibold-global: "alliance_no.1semibold";
   --semibold-global: "new_rubrik_edge_semibold";
   --border-color: #ececec;
   --font-size-h6: 16px;
