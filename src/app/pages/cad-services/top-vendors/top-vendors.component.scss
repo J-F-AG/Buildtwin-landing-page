@@ -134,7 +134,7 @@
   
         .projectCategory {
           color: #0053fa;
-          font-family: var(--semibold-global);
+          font-weight: var(--semibold-global);
           font-size: 14px;
         }
 
@@ -179,7 +179,7 @@
         }
   
         .companyName {
-          font-family: var(--medium-global);
+          font-weight: var(--medium-global);
           font-size: 14.7px;
   
           small {
@@ -251,7 +251,7 @@
   
       small {
         display: block;
-        font-family: var(--semibold-global);
+        font-weight: var(--semibold-global);
         font-size: 11px;
       }
     }
@@ -298,7 +298,7 @@
   
     .title {
       display: block;
-      font-family: var(--semibold-global);
+      font-weight: var(--semibold-global);
       color: black;
       font-size: 18px; 
       font-weight: 600;
@@ -323,7 +323,7 @@
     padding: 10px 16px;
     flex: 1;
     .companyDetails{flex: 1;
-      .title{    font-family: var(--medium-global);
+      .title{    font-weight: var(--medium-global);
         font-size: 14px;
         color: var(--color-theme);}
       .service{
@@ -334,7 +334,7 @@
     }
 
     .cardFooter{color: #0053fa;
-      font-family: var(--semibold-global);
+      font-weight: var(--semibold-global);
       font-size: 14px;
       display: flex;
       gap: 10px;

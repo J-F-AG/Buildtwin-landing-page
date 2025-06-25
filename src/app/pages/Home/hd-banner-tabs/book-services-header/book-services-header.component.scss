@@ -10,7 +10,7 @@
   }
 
   .smallHeading {
-    font-family: var(--medium-global);
+    font-weight: var(--medium-global);
     font-size: 13px;
     display: block;
     margin-bottom: 12px;
@@ -88,7 +88,7 @@
 
     small {
       display: block;
-      font-family: var(--semibold-global);
+      font-weight: var(--semibold-global);
       font-size: 11px;
     }
   }
@@ -135,7 +135,7 @@
 
   .title {
     display: block;
-    font-family: var(--semibold-global);
+    font-weight: var(--semibold-global);
     font-size: 13px;
     color: var(--color-theme);
   }
@@ -153,7 +153,7 @@
 }
 
 .preQualified {
-  font-family: var(--medium-global);
+  font-weight: var(--medium-global);
   font-size: 13px;
   position: relative;
   gap: 10px;
@@ -271,7 +271,7 @@
 .tenderBtn {
   background: var(--color-theme);
   border-radius: 6px;
-  font-family: var(--medium-global);
+  font-weight: var(--medium-global);
   font-size: 16px;
   color: #fff;
   width: 188px;

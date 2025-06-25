@@ -60,7 +60,7 @@ export class AppComponent {
         // Directly assign the breadcrumbs array from the service
         if (isPlatformBrowser(this.platformId)) {
             try {
-              localStorage.setItem("appVersion", "0.0.12");
+              localStorage.setItem("appVersion", "0.0.13");
             } catch (error) {
               
             }

@@ -10,7 +10,7 @@
         padding-bottom: 25px;
 
         h1 {
-            font-family: var(--medium-global);
+            font-weight: var(--medium-global);
             margin-bottom: 10px;
         }
 
@@ -37,7 +37,7 @@
 
         .ant-upload.ant-upload-drag p.ant-upload-text {
             font-size: var(--font-size-base);
-            font-family: var(--medium-global);
+            font-weight: var(--medium-global);
             color: var(--color-theme);
         }
     }
@@ -57,7 +57,7 @@
 
     strong {
         display: block;
-        font-family: var(--semibold-global);
+        font-weight: var(--semibold-global);
         font-size: 16px;
         text-transform: uppercase;
     }

@@ -41,11 +41,11 @@ $buildtwin-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --fontFamily: "New Rubrik Edge", sans-serif;
-  --archivoFontFamily: "New Rubrik Edge", sans-serif;
-  --poppinsFontFamily: "New Rubrik Edge", sans-serif;
-  --mulishFontFamily: "New Rubrik Edge", sans-serif;
-  --syneFontFamily: "New Rubrik Edge", sans-serif;
+  --fontFamily: "new-rubrik-edge", sans-serif;
+  --archivoFontFamily: "new-rubrik-edge", sans-serif;
+  --poppinsFontFamily: "new-rubrik-edge", sans-serif;
+  --mulishFontFamily: "new-rubrik-edge", sans-serif;
+  --syneFontFamily: "new-rubrik-edge", sans-serif;
   --jeffFontFamily: "jeff-script", sans-serif;
   --neonOrangeColor: #f46f49;
   --transition: all ease 0.5s;
@@ -78,9 +78,9 @@ $buildtwin-theme: mat.define-light-theme(
 
   --color-theme: #0053fa;
   --background-white: #ffffff;
-  --medium-global: "new_rubrik_edge_medium";
+  --medium-global: 500;
   --assistantBackgroundColor-global: #f8f8f8;
-  --semibold-global: "new_rubrik_edge_semibold";
+  --semibold-global: 600;
   --border-color: #ececec;
   --font-size-h6: 16px;
   --blue-color: #2c80ff;
