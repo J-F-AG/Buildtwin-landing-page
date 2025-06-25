@@ -6199,7 +6199,7 @@ export class LanguageService {
     return JSON.stringify(faqSchema);
   }
 
-  injectForArchitecturalDesignServicesSchema(renderer) {
+  injectForArchitecturalDesignServicesFaqSchema(renderer) {
     // Create the Marketplace schema for the marketplace page
     const ArchitecturalDesignServicesSchema = {
       "@context": "https://schema.org",
@@ -6296,7 +6296,7 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(ArchitecturalDesignServicesSchema);
   }
-  injectForArchitecturalDesignServicesService(renderer) {
+  injectForArchitecturalDesignServiceSchema(renderer) {
     // Create the Marketplace schema for the marketplace page
     const ArchitecturalDesignServicesService = {
       "@context": "https://schema.org",
