@@ -60,7 +60,7 @@ export class FreeOfferFormComponent {
       projectName: ['', Validators.required], // Project Name validation
       selectedPrecastServices: [null], // Validation for selectedPrecastServices
       buildingCodeId: [null], // Static building code
-      serviceId: [null, Validators.required], // New control for service ID
+      serviceId: [null], // New control for service ID
       description: [''], // Description validation
     });
     // this.route.queryParams.subscribe(params => {
