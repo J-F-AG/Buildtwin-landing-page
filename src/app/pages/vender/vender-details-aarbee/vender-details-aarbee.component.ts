@@ -699,7 +699,7 @@ export class VenderDetailsAarbeeComponent {
       projectName: ['', Validators.required], // Project Name validation
       selectedSoftware: [null], // Validation for selectedSoftware
       buildingCodeId: [null], // Static building code
-      serviceId: [null, Validators.required], // New control for service ID
+      serviceId: [null], // New control for service ID
       description: [''], // Description validation
     });
     
