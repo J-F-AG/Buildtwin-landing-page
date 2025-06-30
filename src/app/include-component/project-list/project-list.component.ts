@@ -329,7 +329,7 @@ sliderInit() {
 
       item.route = this.buildRoute(item.company_name);
       item.linking = this.buildLinking(item.company_name);
-      debugger
+      // debugger
 
       item.locationUpdated = this.parseProjectRegion(item.project_region);
       item.flag = this.getFlag(item.locationUpdated.at(-1) || '');
