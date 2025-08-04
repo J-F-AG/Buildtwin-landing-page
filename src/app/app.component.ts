@@ -341,12 +341,6 @@ injectBreadcrumbScript(url) {
     this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
       `<script type="application/ld+json">${faqSchema}</script>`
     );
-  }else if(url.includes('/drafting-services')){
-      const faqSchema = this._languageService.injectFAQSchemaForDraftingServices(this.renderer)
-
-    this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-      `<script type="application/ld+json">${faqSchema}</script>`
-    );
   }else if(url.includes('/services/bim-outsourcing-services-in-usa')){
       const faqSchema = this._languageService.injectFAQSchemaForBimServiceProvider(this.renderer)
 
