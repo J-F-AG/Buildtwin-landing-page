@@ -1,0 +1,22 @@
+.pt-100 {
+    padding-top: 100px;
+}
+// .time-tracking-wrapper {
+//     background: url(../../../../../assets/images/layout.jpg) center top no-repeat;
+//     background-size: 100% auto;
+//     &>* {
+//         opacity: .5;
+//     }
+// }
+
+.hover {
+    display: none;
+}
+a:hover {
+    .hover {
+        display: block;
+    }
+    .normal {
+        display: none;
+    }
+}

@@ -1,0 +1,217 @@
+.sectionContainer {
+  // max-height: 500px;
+  position: relative;
+}
+.sectionTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .heading {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .assistant {
+    display: flex;
+    gap: 5px;
+    position: relative;
+    // z-index: 9;
+    img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+    }
+    .assitWrapper {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .link:hover {
+      color: #0053fa;
+    }
+  }
+}
+.sectionMid {
+  text-align: start;
+  font-size: 30px;
+  font-weight: 400;
+  max-width: 491px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  .bookServicesButton {
+    padding: 10px;
+    width: 197px;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+.sectionBottom {
+  width: 100%;
+  margin: 40px 0 0;
+  position: relative;
+  bottom: 0;
+  // z-index: 10;
+  .headerCarousel {
+    // display: flex;
+    // justify-content: space-between;
+    .carouselWrapper {
+      display: flex;
+      // justify-content: space-between;
+      gap: 16px;
+      position: relative;
+      background: none;
+      .leftslideButton {
+        position: absolute;
+        left: 0;
+        top: 60px;
+        transform: rotate(180deg);
+        cursor: pointer;
+      }
+      .rightslideButton {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        cursor: pointer;
+      }
+    }
+    .cardWrapper {
+      // width: 100%;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.03);
+      padding: 10px;
+      margin: 0 8px;
+      min-height: 100%;
+      display: block;
+      // cursor: pointer;
+
+      img {
+        // height: 137px;
+        // aspect-ratio: 153 / 137;
+        background: #fff;
+      }
+      .detail {
+        margin: 20px auto 0;
+        width: auto;
+        text-align: center;
+        font-weight: var(--semibold-global);
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+//global
+.link {
+  color: #0053fa;
+}
+.themeButton {
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #0053fa;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 7.2px 12.6px 0px rgba(63, 36, 117, 0.1);
+}
+.carousel {
+}
+
+
+[nz-carousel-content] {
+  height: auto;
+}
+
+:host ::ng-deep .slick-list,
+:host ::ng-deep .slick-track,
+:host ::ng-deep .slick-slide {
+  max-height: 210px;
+}
+.abs-d {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.headerCarousel {
+  ::ng-deep .owl-stage {
+    display: flex;
+  }
+  ::ng-deep .owl-carousel .owl-nav .owl-next,::ng-deep .owl-carousel .owl-nav .owl-prev {
+    width: 37px;
+    height: 37px;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 2.205px 12.64px rgba(0, 0, 0, 0.2);
+    &::after {
+      position: absolute;
+      left: 53%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(135deg);
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #000;
+      border-bottom: 2px solid #000;
+      content: "";
+    }
+  }
+  ::ng-deep .owl-carousel .owl-nav .owl-next {
+    right: -12px;
+    left: auto;
+    &::after {
+      left: 45%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+// @media only screen and (min-width : 900px) {
+//   .single-desktop ::ng-deep {
+//     .owl-item {
+//       width: 16.66%!important;
+//     }
+//   }
+// }
+@media only screen and (max-width : 767px) {
+  .sectionContainer {
+    max-height: none;
+  }
+  .abs-d {
+    right: -15px;
+    top: -56px;
+  }
+
+  .sectionTop {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .sectionMid {
+    font-size: 28px;
+    margin-top: 0;
+  }
+
+  .sectionBottom {
+    .headerCarousel {
+      // .cardWrapper {
+      //   width: calc(50% - 5px);
+      //   flex: 0 0 auto;
+      // }
+
+      .carouselWrapper {
+        gap: 10px;
+
+        .leftslideButton {
+          left: -15px;
+        }
+
+        .rightslideButton {
+          right: -15px;
+        }
+      }
+    }
+  }
+}

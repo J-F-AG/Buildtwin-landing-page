@@ -1,0 +1,247 @@
+:host ::ng-deep .marketPlace {
+    background: #f9f9f9;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+    border-radius: 4px;
+    &.white {
+        background: white;
+    }
+
+    .container {
+        max-width: 1296px;
+
+        .head {
+            text-align: center;
+            padding-top: 80px;
+
+            h2 {
+                // color: var(--color-green-button, #FFF);
+
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                /* 48px */
+            }
+
+            span {
+                // color: var(--color-green-button, #FFF);
+
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                /* 25.6px */
+            }
+
+        }
+        .pagination {
+            margin: 28px 0 0;
+            display: flex;
+            justify-content: center;
+            padding: 16px 0 20px;
+            margin-bottom: 60px;
+            top: 84px;
+
+            ul {
+                display: flex;
+                gap: 72px;
+                list-style: none;
+                margin: 0;
+
+                padding: 0;
+
+                li {
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    position: relative;
+
+                    i {
+                        border: 3px solid #000;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 100px;
+                    }
+
+                    span {
+                        // color: #FFF;
+
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 145%;
+                        /* 20.3px */
+                    }
+
+                    &.active {
+                        i {
+                            background: #000;
+
+                        }
+
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: -59px;
+                        width: 46px;
+                        height: 2px;
+                        background: #ECECEC;
+                    }
+
+                    &:last-child::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .slide {
+            padding-bottom: 80px;
+            padding-right: 39px;
+            display: flex;
+            gap: 63px;
+            transition: all .3s ease;
+            transform: translateY(-200px);
+            opacity: 0;
+            visibility: hidden;
+            &.active {
+                transform: translateY(0px);
+                opacity: 1;
+                visibility: visible;
+                & ~ .slide {
+                    transform: translateY(200px);
+                }
+            }
+            .imgWrap {
+                min-width: 651px;
+            }
+
+            .contentWrap {
+                display: flex;
+                /* align-items: center; */
+                flex-direction: column;
+                justify-content: center;
+
+                h3 {
+                    // color: var(--white, var(--color-green-button, #FFF));
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 130%;
+                    /* 41.6px */
+                    margin-bottom: 8px;
+                    ;
+                }
+
+                .sub {
+                    display: block;
+                    // color: var(--white, var(--color-green-button, #FFF));
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    // color: var(--grey-dark, #ECECEC);
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    /* 28.8px */
+                    margin-bottom: 24px;
+                }
+
+                a {
+                    display: flex;
+                    padding: 12px 24px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    border-radius: 4px;
+                    // background: var(--color-green-button, #FFF);
+                    color: #0053fa;
+
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    max-width: 249px;
+                    /* 19.6px */
+                }
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    .stickyTop {
+        position: sticky;
+        top: 0;
+        background: #f9f9f9;
+        box-shadow: 0 0 50px 20px rgb(249, 249, 249);
+        z-index: 9;
+    }
+
+}
+
+@media (max-width:1200px) {
+    :host ::ng-deep .marketPlace .container .slide .imgWrap {
+        min-width: 439px;
+    }
+}
+
+@media (max-width:767px) {
+    :host ::ng-deep .marketPlace {
+            // background: #0053fa;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        .container {
+            // padding: 0;
+
+            .head {
+                text-align: center;
+                padding: 0 0 0px;
+                margin-bottom: 0;
+                padding-top: 40px;
+                top: 40px;
+                // position: static !important;
+                .pagination ul {
+                    display: none;
+                }
+            }
+
+            .slide {
+                padding-bottom: 0;
+                padding-right: 0;
+                display: flex;
+                gap: 30px;
+                flex-direction: column;
+                .contentWrap {
+                    padding: 0 30px;
+                    a{
+                        margin-bottom: 30px;
+                    }
+                }
+                .imgWrap{
+                    min-width: 100%;
+                }
+            }
+        }
+
+       
+
+    }
+
+   
+
+}

@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="how-it-work" id="next-section">
+        <div class="block-section fullwidth">
+            <div class="block-box-wrapper">
+                <div class="block cursor" (click)="onClickArcadeTrigger('track-submissions')">
+                    <div class="content">
+                        <h3>
+                            <i>
+                                <img src="assets/images/new-v2-icon1.png" width="23" height="25" alt="">
+                            </i>
+                            Track your submissions
+                        </h3>
+                        <p>
+                            Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.
+                        </p>
+                    </div>
+                    <figure>
+                        <img src="assets/images/new-v2-image1.png" width="220" height="85" alt="">
+                    </figure>
+                </div>
+                <div class="block cursor" (click)="onClickArcadeTrigger('view-files-comment')">
+                    <div class="content">
+                        <h3>
+                            <i>
+                                <img src="assets/images/new-v2-icon2.png" width="23" height="25" alt="">
+                            </i>
+                            View files and comment
+                        </h3>
+                        <p>
+                            Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.
+                        </p>
+                    </div>
+                    <figure>
+                        <img src="assets/images/new-v2-image2.png" width="220" height="85" alt="">
+                    </figure>
+                </div>
+                <div class="block cursor" (click)="onClickArcadeTrigger('share-with-ease')">
+                    <div class="content">
+                        <h3>
+                            <i>
+                                <img src="assets/images/new-v2-icon3.png" width="23" height="25" alt="">
+                            </i>
+                            Share <br>with ease
+                        </h3>
+                        <p>
+                            Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.
+                        </p>
+                    </div>
+                    <figure>
+                        <img src="assets/images/new-v2-image3.png" width="220" height="85" alt="">
+                    </figure>
+                </div>
+                <div class="block cursor" (click)="onClickArcadeTrigger('project-workflow')">
+                    <div class="content">
+                        <h3>
+                            <i>
+                                <img src="assets/images/new-v2-icon4.png" width="23" height="25" alt="">
+                            </i>
+                            Filters and Workflow in min.
+                        </h3>
+                        <p>
+                            Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.
+                        </p>
+                    </div>
+                    <figure>
+                        <img src="assets/images/new-v2-image4.png" width="220" height="85" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-arcade-container *ngIf="visibleArcade" [type]="arcadeType" (visibleTogggle)="visibleTogggle($event)"></app-arcade-container>

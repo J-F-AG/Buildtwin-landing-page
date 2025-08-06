@@ -1,0 +1,111 @@
+<div class="container">
+    <div class="our-specialisms">
+        <span>
+            Our Specialism
+        </span>
+        <ul>
+            <li>
+                <img src="assets/images/for-buyer/icon1.jpg" width="34" height="37" alt="">
+                Civils & Structures
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon2.jpg" width="34" height="37" alt="">
+                Transport Planning
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon3.jpg" width="34" height="37" alt="">
+                Environmental
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon4.jpg" width="34" height="37" alt="">
+                Infrastucture
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon5.jpg" width="34" height="37" alt="">
+                Geotechnical
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon6.jpg" width="34" height="37" alt="">
+                Conservation & Heritage
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="group-image">
+    <a class="message" href="https://www.buildtwin.com/get-started" target="_blank">
+        <h3>
+            Bring your own vendor
+        </h3>
+        <p>
+            Invite your supply-chain for free – and benefit from the BuildTwin delivery system
+        </p>
+    </a>
+    <!-- <img src="assets/images/for-buyer/group-image.jpg" width="1440" height="480" alt="Marketplace Banner"> -->
+    <picture>
+        <source srcset="assets/images/for-buyer/mobile-group-image.webp 1x, assets/images/for-buyer/mobile-group-image@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+        <source srcset="assets/images/for-buyer/group-image.webp 1x, assets/images/for-buyer/group-image@2x.webp 2x" type="image/webp">
+        <source srcset="assets/images/for-buyer/mobile-group-image.jpg 1x, assets/images/for-buyer/mobile-group-image@2x.jpg 767w" media="(max-width: 767px)">
+        <source srcset="assets/images/for-buyer/group-image.jpg 1x, assets/images/for-buyer/group-image@2x.jpg 2x">
+        <img src="assets/images/for-buyer/group-image.jpg" alt="Marketplace Banner" width="1440" height="480">
+    </picture>
+</div>
+<div class="container">
+
+<div class="task-management-area ptb-100">
+    <div class="heading center v2">
+<h2 class="title">Get 3+ competitive quotes today</h2>
+<span class="small-title">
+    Procuring competent technical teams for complex projects, made easy.
+</span>
+</div>
+    <div class="tabbing">
+        <div class="line">
+            <span (click)="tabinbg(1)" [ngClass]="{'active':activeState >= 1}"> <strong>1 </strong><em>Post the Job</em></span>
+            <span (click)="tabinbg(2)" [ngClass]="{'active':activeState >= 2}"><strong>2 </strong> <em>Invite Vendors</em></span>
+            <span (click)="tabinbg(3)" [ngClass]="{'active':activeState >= 3}"><strong>3 </strong> <em>Awarding</em></span>
+            <span (click)="tabinbg(4)" [ngClass]="{'active':activeState >= 4}"><strong>4 </strong> <em>Commercial Contracting</em></span>
+      <div class="svgFlex">
+        <img [ngClass]="{'active':activeState >= 2}" class="lineSvg" src="assets/images/line.svg" alt="Line">
+        <img [ngClass]="{'active':activeState >= 3}" class="lineSvg" src="assets/images/line.svg" alt="Line">
+        <img [ngClass]="{'active':activeState >= 4}"  class="lineSvg" src="assets/images/line.svg" alt="Line">
+      </div>
+        </div>
+     </div>  
+     
+     <div class="tabContent">
+        <div class="tab1"  *ngIf="activeState===1">
+           <span>Tendering</span> 
+
+           <p>
+            BuildTwin assists you in tendering your project with an easy 3-step process. You can tender in private, only <br> invite selected vendors, or tender to the open marketplace with fine granularity in data privacy settings.           </p>
+
+           <img src="assets/images/tab1.png" alt="tab1" width="" height="">
+        </div>
+        <div class="tab1" *ngIf="activeState===2">
+            <span>Invite Vendors</span> 
+ 
+            <p>
+                You are in full control. Invite selected vendors based on your requirements to submit a bid. 
+            </p>
+ 
+            <img src="assets/images/tab2.png" alt="tab2" width="" height="">
+         </div>
+         <div class="tab1" *ngIf="activeState===3">
+            <span>Awarding</span> 
+ 
+            <p>
+                BuildTwin creates an easy-to-review and compare bidding results, allowing you to dive deeper <br>into the different bids and their nuances.            </p>
+ 
+            <img src="assets/images/tab3.png" alt="tab3" width="" height="">
+         </div>
+         <div class="tab1" *ngIf="activeState===4">
+            <span>Commercial Contracting</span> 
+ 
+            <p>
+                You sign a contract directly with the vendor, while BuildTwin supports a fully digital <br>closing process that meets your compliance standards.            </p>
+ 
+            <img  src="assets/images/tab4.png" alt="tab4" width="" height="">
+         </div>
+     </div>
+</div>
+</div>

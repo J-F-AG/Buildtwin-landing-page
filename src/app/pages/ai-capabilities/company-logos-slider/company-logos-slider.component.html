@@ -1,0 +1,21 @@
+<div class="container" [ngClass]="{'bg': bg, 'global-mb': !bg}">
+    <div class="integrationsList roundButtonWrapper">
+        <span class="head">Worked with</span>
+        <div #carouselParent class="partners-carousel-wrapper">
+            <div class="partners-carousel-flex" [ngClass]="{'animation':isAnimationEnabled}">
+                <div class="partners-carousel-child">
+                    <div #carousel class="partners-carousel">
+                        <div class="integration-box text-center" *ngFor="let partner of partners" [ngStyle]="{'min-width.px': partner.width}">
+                          <img [src]="partner.logo" [width]="partner.width" [height]="partner.height" [alt]="partner.alt">
+                        </div>
+                      </div>
+                      <div class="partners-carousel" *ngIf="isAnimationEnabled">
+                        <div class="integration-box text-center" *ngFor="let partner of partners" [ngStyle]="{'min-width.px': partner.width}">
+                          <img [src]="partner.logo" [width]="partner.width" [height]="partner.height" [alt]="partner.alt">
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+      </div>
+</div>

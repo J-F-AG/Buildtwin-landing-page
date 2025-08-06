@@ -20,6 +20,29 @@ const routes: Routes = [
         }
     },
     {
+        path: 'ai-capabilities',
+        loadChildren: () => import('./pages/ai-capabilities/ai-capabilities-page/ai-capabilities-page.module').then(m => m.AiCapabilitiesPageModule),
+        // component: HelpDeskHomeComponent,
+        data: {
+            title: 'Top Structural Engineering Services, BIM Service & CAD Solutions | BuildTwin',
+            description: 'Connect with top structural engineering companies for BIM modeling, rebar detailing, precast detailing, and CAD services across the USA, EU, Middle East, UK, Australia, and India.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com',
+            keywords: 'Structural Engineering Services, top structural engineering firms, BIM Modeling service'
+        }
+    },
+    {
+        path: 'case-studies',
+        loadChildren: () => import('./pages/case-studies/case-studies-main/case-studies-main.module').then(m => m.CaseStudiesMainModule),
+        // component: BrowseServicesMainComponent,
+        data: {
+            title: 'Find Top Structural Engineering Services | BuildTwin',
+            description: 'Connect with top structural engineering service providers on BuildTwin. Collaborate globally on  precast detailing, BIM modeling, 3D rebar, structural design, and more.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/explore-services'
+        }
+    },
+    {
         path: 'ai-project-management',
         loadChildren: () => import('./pages/co-pilot-for/co-pilot/online-meeting-home/online-meeting-home.module').then(m => m.OnlineMeetingHomeModule),
         // component: OnlineMeetingHomeComponent,
@@ -53,6 +76,17 @@ const routes: Routes = [
         }
     },
     {
+        path: 'delivery-plattform',
+        loadChildren: () => import('./pages/delivery-plattform/delivery-plattform.module').then(m => m.DeliveryPlattformModule),
+        // component: ProvideServiceComponent,
+        data: {
+            title: 'Offer Your Structural Engineering Services Worldwide | Buildtwin',
+            description: 'Provide your structural engineering services worldwide with Buildtwin. Access global projects and clients through our trusted platform.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/provide-service'
+        }
+    },
+    {
         path: 'pre-qualified',
         loadChildren: () => import('./pages/pre-qualified//provide-service.module').then(m => m.PreQualifiedModule),
         // component: ProvideServiceComponent,
@@ -66,6 +100,17 @@ const routes: Routes = [
     {
         path: 'marketplace',
         loadChildren: () => import('./pages/marketplace/marketPlace/time-tracking-home/time-tracking-home.module').then(m => m.TimeTrackingHomeModule),
+        // component: TimeTrackingHomeComponent,
+        data: {
+            title: 'BuildTwin: Global AEC Marketplace for Structural Engineering',
+            description: 'Connect with global AEC solution providers on BuildTwin. Manage structural engineering projects with our AI platform. Register to bid and post projects today.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/marketplace'
+        }
+    },
+    {
+        path: 'how-it-works',
+        loadChildren: () => import('./pages/how-it-works/how-it-works/how-it-works.module').then(m => m.HowItWorksModule),
         // component: TimeTrackingHomeComponent,
         data: {
             title: 'BuildTwin: Global AEC Marketplace for Structural Engineering',
