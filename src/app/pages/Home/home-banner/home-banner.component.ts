@@ -61,4 +61,13 @@ export class HomeBannerComponent {
   onSlideChange(index: number): void {
     this.playVideoStatus = {}
   }
+  pauseCarousel() {
+    this.autoPlay = false;
+  }
+
+  resumeCarousel() {
+    if (Object.keys(this.playVideoStatus).length === 0) {
+      this.autoPlay = true;
+    }
+  }
 }

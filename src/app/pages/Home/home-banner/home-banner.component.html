@@ -1,6 +1,8 @@
 <div class="container">
     <div class="carousal-wrapper">
-        <div class="supper-wrapper">
+        <div class="supper-wrapper" 
+        (mouseenter)="pauseCarousel()"
+         (mouseleave)="resumeCarousel()">
             <nz-carousel [nzEffect]="effect" [nzAutoPlay]="autoPlay" (nzAfterChange)="onSlideChange($event)">
                 <div nz-carousel-content class="slide-wrapper" *ngFor="let slide of array; let i = index">
                 <h1>
