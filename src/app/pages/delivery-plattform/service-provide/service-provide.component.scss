@@ -1,0 +1,346 @@
+:host ::ng-deep {
+    .serviceProvide {
+        background: #f8f8f8f8;
+        padding: 50px 0;
+
+        .container {
+            background: #fff;
+            border-radius: 10px;
+            max-width: 1296px;;
+
+        }
+
+        .header {
+            display: flex;
+            padding: 20px;
+            gap: 16px;
+            justify-content: space-between;
+            border-bottom: 1px solid #ECECEC;
+            align-items: center;
+
+
+            h2 {
+                color: var(--Gray-900, #101828);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 28px;
+                margin-bottom: 0;
+                /* 140% */
+            }
+
+            .inputCover {
+                display: flex;
+                width: 277px;
+                padding: 9px 16px 5px 16px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-shrink: 0;
+                border-radius: 24px;
+                border: 1px solid var(--Black-1, #CFD3D4);
+                position: relative;
+
+                input {
+                    color: var(--text-icon-secondary-black, #878C99);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                    width: 100%;
+                    border: transparent;
+                    padding-left: 26px;
+
+                }
+
+                svg {
+                    position: absolute;
+                    left: 15px;
+                    top: 10px;
+                }
+            }
+        }
+
+        .tabList {
+            display: flex;
+            padding: 18px 16px;
+            align-items: center;
+            gap: 16px;
+            align-self: stretch;
+            border-bottom: 1px solid #ECECEC;
+
+
+            .list {
+                display: flex;
+                padding: 12px 40px;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                border-radius: 8px;
+                border: 1px solid var(--Grey-Grey-2, #D8DDE6);
+                background: var(--color-green-button, #FFF);
+                color: #0053fa;
+                text-align: center;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px;
+                min-width: 312px;
+                /* 146.667% */
+
+                i {
+                    border-radius: 23px;
+                    background: var(--primary, #0053fa);
+                    display: flex;
+                    padding: 2px 7px 2px 7px;
+                    color: var(--color-green-button, #FFF);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: capitalize;
+                    width: 22px;
+                    height: 22px;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+
+                &.active {
+                    background: #0053fa;
+                    color: #fff;
+
+                    i {
+                        background: #fff;
+                        color: #0053fa;
+                    }
+                }
+            }
+            .filterIcon{
+                border-radius: 24px;
+border: 1px solid var(--text-icon-primary-black, #141414);
+display: flex;
+width: 38px;
+height: 38px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+margin-left: auto;
+            }
+        }
+
+        .tableCover {
+            table {
+                width: 100%;
+            }
+
+            th {
+                border-bottom: 1px solid var(--Grey-Grey-3, #E4EAF2);
+                background: var(--Grey-Grey-4, #FCFCFC);
+                height: 44px;
+                padding: 12px 24px 12px 19px;
+                color: var(--Gray-500, #667085);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: left;
+                /* 142.857% */
+                .flex {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+            }
+
+            td {
+                height: 72px;
+                padding: 16px 12px;
+                border-bottom: 1px solid var(--Grey-Grey-3, #E4EAF2);
+                color: var(--text-icon-secondary-black, #878C99);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+                /* 157.143% */
+                text-transform: capitalize;
+                position: relative;
+                height: 72px;
+                &.placeHolder{
+                    position: relative;
+                    &:after{
+                        content: "";
+                        width: 92%;
+                        height: 13px;
+                        border-radius: 2.108px;
+                        background: var(--grey-dark, #ECECEC);
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                .new {
+                    position: absolute;
+                    left: 12px;
+                    top: 7px;
+                    display: flex;
+                    padding: 2px 4px 1px 4px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4px;
+                    border-radius: 2.743px;
+                    border: 0.686px solid #D8D8D8;
+                    background: rgba(231, 87, 87, 0.11);
+                    color: #6E6E6E;
+                    font-size: 8px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    /* 11.2px */
+                    letter-spacing: 0.16px;
+                    margin-bottom: 8px;
+                    display: block;
+                }
+
+                &:first-child {
+                    text-align: left;
+                }
+
+                .flex {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+
+                .lableCover {
+                    display: flex;
+                    gap: 8px;
+                }
+
+                .label {
+                    border-radius: 12px;
+                    display: flex;
+                    padding: 2px 8px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    color: var(--color-green-button, #FFF);
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 22px;
+                }
+
+                .green {
+                    background: #6DE0C4;
+                }
+
+                .yellow {
+                    background: #E0B96D;
+                }
+                .blue{
+                    background: #6383D8;
+                }
+
+                .darkGreen{
+                    background:#6DB7E0 ;
+                }
+                .red{
+                    background: #E06DB9;
+                }
+                
+
+                .biding {
+                    color: #64B071;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 22px;
+                    border-radius: 4px;
+                    background: var(--green-light, #DFFFE1);
+                    display: inline-block;
+                    /* width: auto; */
+                    height: 30px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4px;
+                    padding: 5px 10px;
+                    /* white-space: nowrap; */
+                    /* display: block; */
+                    min-width: 144px;
+                    text-align: center;
+                    svg{
+                 position: relative;
+    top: 4px;
+    left: 3px;
+
+                    
+                }
+                }
+                .lightGreen{
+                    background: #DFFFE1;
+                    color: #64B071;
+                }
+                .lightYellow{
+                    background: #FFFEE6;
+                    color: #A68D0C;
+                }
+            }
+            .yellowText{
+                color: #D1AB5A;
+            }
+            .greenText{
+                color: #64B071;
+            }
+        }
+    }
+}
+
+@media (max-width:1200px){
+  :host ::ng-deep   .serviceProvide .tabList .list {
+        display: flex;
+        padding: 12px 12px;
+}
+
+:host ::ng-deep  .serviceProvide .tableCover td:first-child {
+    white-space: nowrap;
+}
+:host ::ng-deep  .serviceProvide .tableCover th {
+    padding: 12px 20px 12px 15px;
+}
+:host ::ng-deep .serviceProvide .tableCover th {
+    font-size: 13px;
+}
+:host ::ng-deep .serviceProvide .tableCover td .biding{
+    height: auto;
+}
+:host ::ng-deep .serviceProvide .tableCover td .label {
+    padding: 7px 8px;
+    font-size: 12px;
+    line-height: 1.1;
+}
+}
+
+@media (max-width:1024px){
+    :host ::ng-deep .serviceProvide .container {
+        overflow: auto;
+    }
+    :host ::ng-deep .serviceProvide .tabList .filterIcon {
+        min-width: 38px;
+    }
+}
+@media (max-width:767px){
+    :host ::ng-deep .serviceProvide .header {
+        flex-direction: column;
+    }
+    :host ::ng-deep .serviceProvide .tabList {
+        flex-direction: column;
+    }
+    :host ::ng-deep .tableCover {
+        overflow: auto;
+        height: 400px;
+    }
+   
+}

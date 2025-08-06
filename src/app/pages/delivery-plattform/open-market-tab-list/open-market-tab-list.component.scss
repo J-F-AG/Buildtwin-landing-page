@@ -1,0 +1,159 @@
+:host ::ng-deep{
+    .tabCover{
+      .tabHead {
+        .tabItems {
+          box-shadow: 0px 4px 15px 0px rgba(177, 188, 236, 0.1);
+          background-color: var(--secondary, #F3F8FF);
+          display: flex;
+          /* flex-direction: column; */
+          justify-content: space-between;
+          gap: 161px;
+          font-size: 16px;
+          color: #0e0e28;
+          font-weight: 400;
+          text-align: center;
+          padding: 11px 0 11px 22px;
+          display: flex;
+          justify-content: center;
+    
+            .tabItem {
+                display: flex;
+                gap: 8px;
+                color: var(--primary, #0E0E28);
+                font-weight: 600;
+                padding: 2px 0;
+                align-items: center;
+    
+                .icon {
+                    aspect-ratio: 1;
+                    object-fit: auto;
+                    object-position: center;
+                    width: 19px;
+                }
+    
+                .label {
+                    margin: auto 0;
+                }
+
+                &.active{
+                  color: #0053fa;
+
+                  svg path{
+                    stroke: #0053fa;
+                  }
+                }
+            }
+        }
+    }
+       
+         .tab-content{
+            .head{
+                .div {
+                   
+                    background-color: var(--color-green-button, #fff);
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 0px 0px 80px;
+                  }
+               
+                  .div-2 {
+                    color: #0e0e28;
+                    margin-top: 25px;
+                    font-weight: 600;
+                    font-size: 40px;
+                    line-height: 48px;
+                  }
+                
+                  .div-3 {
+                    color: var(--grey, #808080);
+                    margin-top: 8px;
+                    width: 864px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 160%;
+                    color: #000;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 600;
+                    width: 50%;
+                    margin: 26px auto 0;
+                  }
+              
+            }
+            .contentBody{
+                max-width: 1296px;
+                margin: 0 auto;
+                .flexVCenter{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .gap80{
+                    gap: 80px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .colData {
+                        width: 46%;
+                        h2{
+                            color: #0E0E28;
+        
+                            font-size: 40px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 130%; /* 52px */
+                            margin-bottom: 8px;;
+                        }
+                        p{
+                            color: var(--grey, #808080);
+        
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 28.8px */
+                        }
+                    }
+                }
+             
+            }
+         }
+         
+    }
+}
+
+@media (max-width:1200px){
+:host ::ng-deep .tabCover .tab-content .contentBody .gap80 {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
+
+@media (max-width:767px){
+  :host ::ng-deep .tabCover .tabHead .tabItems{
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  :host ::ng-deep .tabCover .tab-content .head .div-3 {
+   
+    width: 100%;
+    font-size: 16px;
+    margin: 26px auto 0;
+    padding: 0 10px;
+}
+:host ::ng-deep .tabCover .tab-content .contentBody .gap80 {
+  flex-direction: column;
+}
+:host ::ng-deep .tabCover .tab-content .contentBody .gap80 .colData {
+  width: 100%;
+}
+:host ::ng-deep  .tabCover .tab-content .contentBody .gap80 .colData {
+  width: 100%;
+  padding: 0 15px;
+  padding-bottom: 30px;
+}
+}

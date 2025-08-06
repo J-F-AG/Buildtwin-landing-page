@@ -1,0 +1,20 @@
+.mb-100{
+  margin-bottom: 75px;
+
+    display: block;
+  }
+  @media (max-width:1200px){
+    .mb-100 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .countryTraning {
+    margin-bottom: 18px !important;
+}
+
+@media (max-width:767px){
+ :host ::ng-deep .integrations-area.ptb-75 {
+    padding-top: 30px !important;
+}
+}

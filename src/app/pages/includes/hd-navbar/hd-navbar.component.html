@@ -30,30 +30,18 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav font-poppins" >
                     <li class="nav-item " >
-                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'explore-services']" routerLinkActive="active" class="nav-link" >
-                            Explore
+                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'ai-capabilities']" routerLinkActive="active" class="nav-link" >
+                            AI Capabilities
                         </a>
                     </li>
-
-                    <li class="nav-item  traning" routerLinkActive="active">
-                            <a class="nav-link" (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'provide-service']" routerLinkActive="active"
-                            [routerLinkActiveOptions]="{exact: true}">
-                                For Sellers
-                            </a>                        
+                    <li class="nav-item " >
+                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'delivery-plattform']" routerLinkActive="active" class="nav-link" >
+                            Delivery Plattform
+                        </a>
                     </li>
-
-
-                    <li class="nav-item  traning" routerLinkActive="active">
-                        <a class=" nav-link" (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'marketplace']" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}">
-                            For Buyers
-                        </a>                    
-                </li>
-
-
                 <li class="nav-item " [ngClass]="{'showDropdown':showDropdownStatus, 'active': isDropdownLinkActive()}">
                     <a href="javascript:void(0)" class="dropdown-toggle nav-link" (click)="toggleshowDropdownStatus()">
-                        BuildTwin Pro
+                        Use Cases
                     </a>
 
                     <div class="menu_copilot" >
@@ -61,12 +49,11 @@
                             <div>
                                 <div class="flex-column">
                                     <section class="padding-24 background-white">
-                                        <div class="text-primary font-medium">BuildTwin Pro</div>
+                                        <div class="text-primary font-medium">Use Cases</div>
                                         <div class="margin-top-7 height-1 background-secondary"></div>
                                         <div class="flex-row margin-top-24 mi--12">
                                         
-                                            <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'pricing']" routerLinkActive="active"
-                                            [routerLinkActiveOptions]="{exact: true}"
+                                            <a (click)="manageToggle($event)" href="javascript:;"
                                             class="flex-grow flex-column menu_copilot__text">
                                                 <em class="flex-row font-bold menu_copilot__text--head">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -82,7 +69,7 @@
                                                         </clipPath>
                                                         </defs>
                                                         </svg>
-                                                    <span>Pricing</span>
+                                                    <span>Drawing Automation,</span>
                                                     <img
                                                         src="assets/images/home/arrowRight.svg"
                                                         alt=""
@@ -95,13 +82,12 @@
                                                     />
                                                 </em>
                                                 <p class="text-secondary font-normal menu_copilot__text--sub">
-                                                    Transparent plans tailored to your needs with true value-add.
+                                                    --
                                                 </p>
                                             </a>
 
 
-                                            <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'ai-project-management']" routerLinkActive="active"
-                                            [routerLinkActiveOptions]="{exact: true}"
+                                            <a (click)="manageToggle($event)" href="javascript:;"
                                             class="flex-grow flex-column menu_copilot__text">
                                                 <em class="flex-row font-bold menu_copilot__text--head">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -117,7 +103,7 @@
                                                         </clipPath>
                                                         </defs>
                                                         </svg>
-                                                    <span>Features</span>
+                                                    <span>AI QC</span>
                                                     <img
                                                         src="assets/images/home/arrowRight.svg"
                                                         alt=""
@@ -130,100 +116,10 @@
                                                     />
                                                 </em>
                                                 <p class="text-secondary font-normal menu_copilot__text--sub">
-                                                    Pro Features for engineering consultancy to meet project requirements.
+                                                    --
                                                 </p>
                                             </a>
-                                         
-                                            <!-- 
-                                            <a [routerLink]="[_languageService.currentLanguage,'good-reason']" routerLinkActive="active" (click)="manageToggle($event)"
-                                            [routerLinkActiveOptions]="{exact: true}"
-                                            class="flex-grow flex-column menu_copilot__text">
-                                            <em class="flex-row font-bold menu_copilot__text--head">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_5368_10660)">
-                                                    <mask id="mask0_5368_10660" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-                                                    <path d="M20 0H0V20H20V0Z" fill="white"/>
-                                                    </mask>
-                                                    <g mask="url(#mask0_5368_10660)">
-                                                    <path d="M16.1322 9.44117C15.7166 9.22938 14.7636 9.27152 14.4051 9.63593L11.5265 12.9873C11.0555 13.5193 10.7676 14.2375 10.7153 14.9822L10.516 18.3654C10.4822 18.9398 10.9389 19.4242 11.5143 19.4242H13.278C13.7634 19.4242 14.1787 19.0757 14.2629 18.5977L14.4313 17.6421C14.4574 17.5091 14.5359 17.4027 14.6406 17.3229L17.5192 15.2216C18.0426 14.8492 18.3566 14.2641 18.4089 13.6257L19.0893 4.98119C19.1113 4.86966 19.078 4.75813 19.005 4.66229C18.9763 4.62475 18.9459 4.58788 18.91 4.55731C18.8252 4.48525 18.6998 4.44922 18.5921 4.44922C18.3566 4.44922 18.1996 4.60881 18.1211 4.795L16.5353 9.47933C16.477 9.65141 16.4743 9.8359 16.481 10.0174C16.4955 10.4086 16.3653 10.7973 16.1322 11.0989L13.7771 14.1045" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    <path d="M4.06014 9.44117C4.47582 9.22938 5.42876 9.27152 5.78728 9.63593L8.66585 12.9873C9.13688 13.5193 9.42474 14.2375 9.47708 14.9822L9.67639 18.3654C9.71023 18.9398 9.25353 19.4242 8.67812 19.4242H6.91433C6.429 19.4242 6.01373 19.0757 5.92951 18.5977L5.76111 17.6421C5.73494 17.5091 5.65644 17.4027 5.55176 17.3229L2.67319 15.2216C2.14982 14.8492 1.83579 14.2641 1.78345 13.6257L1.10307 4.98119C1.08112 4.86966 1.11439 4.75813 1.18743 4.66229C1.21604 4.62475 1.24643 4.58788 1.2824 4.55731C1.36718 4.48525 1.49259 4.44922 1.60027 4.44922C1.83579 4.44922 1.9928 4.60881 2.07131 4.795L3.65708 9.47933C3.71534 9.65141 3.71812 9.8359 3.7114 10.0174C3.69692 10.4086 3.82706 10.7973 4.06014 11.0989L6.41533 14.1045" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    <path d="M11.1641 9.32071C10.772 9.71749 10.1311 9.7168 9.7399 9.31917L6.17511 5.69584C5.33114 4.85708 5.1811 3.54175 5.78126 2.58861C6.19386 1.94048 6.85028 1.5211 7.58172 1.44484C7.67549 1.42578 7.75051 1.42578 7.84428 1.42578C8.48194 1.42578 9.10085 1.6736 9.56972 2.15017L10.2074 2.7983C10.3387 2.93174 10.5825 2.93174 10.7138 2.7983L11.2952 2.20735C12.1204 1.34953 13.4145 1.19703 14.3522 1.80704C14.9899 2.22642 15.4025 2.89361 15.4775 3.63706C15.5525 4.38051 15.3087 5.12396 14.7836 5.65771L11.1641 9.32071Z" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    </g>
-                                                    </g>
-                                                    <defs>
-                                                    <clipPath id="clip0_5368_10660">
-                                                    <rect width="20" height="20" fill="white"/>
-                                                    </clipPath>
-                                                    </defs>
-                                                    </svg>
-                                                    
-                                                <span>Pricing</span>
-                                                <img
-                                                    src="assets/images/home/arrowRight.svg"
-                                                    alt="Arrow"
-                                                    class="mis-auto menu_copilot__text--arrow"
-                                                />
-                                                <img
-                                                    src="assets/images/home/arrowUpRight.svg"
-                                                    alt="Arrow"
-                                                    class="mis-auto menu_copilot__text--arrow-up"
-                                                />
-                                            </em>
-                                            <p class="text-secondary font-normal menu_copilot__text--sub">
-                                                Our singular focus on engineering excellence.
-                                            </p>
-                                        </a>
-                                        -->
-                                            <!--
-                                            <a  (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'integrations']" routerLinkActive="active"
-                                            [routerLinkActiveOptions]="{exact: true}"
-                                            class="flex-grow flex-column menu_copilot__text">
-                                            <em class="flex-row font-bold menu_copilot__text--head">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_5368_106688)">
-                                                    <mask id="mask0_5368_106688" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-                                                    <path d="M20 0H0V20H20V0Z" fill="white"/>
-                                                    </mask>
-                                                    <g mask="url(#mask0_5368_106688)">
-                                                    <path d="M8.11328 10.0177H13.0202" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    <path d="M11.2114 13.7638L14.8827 13.7822" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    <ellipse cx="15.192" cy="13.8287" rx="0.914617" ry="0.914617" fill="black"/>
-                                                    <ellipse cx="17.2447" cy="18.5591" rx="0.914617" ry="0.914617" fill="black"/>
-                                                    <ellipse cx="13.3629" cy="9.95368" rx="0.914617" ry="0.914617" fill="black"/>
-                                                    <ellipse cx="15.4156" cy="5.97321" rx="0.914617" ry="0.914617" fill="black"/>
-                                                    <ellipse cx="17.2447" cy="1.38727" rx="0.91463" ry="0.914617" fill="black"/>
-                                                    <path d="M11.2441 3.38783H14.9207C15.1915 3.38783 15.4506 3.27805 15.639 3.08358L16.7945 1.89062" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    <path d="M11.1927 6.04127H14.8825" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    <path d="M11.2544 16.2031H14.7118C15.0012 16.2031 15.2764 16.3285 15.4664 16.5469L16.7943 18.0738" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    <path d="M11.1388 2.21484C11.1388 1.66256 10.6911 1.21484 10.1388 1.21484H9.69137C9.59172 1.21484 9.08309 2.51428 8.8219 3.19923C8.72186 3.4616 8.51842 3.67087 8.25819 3.77635L7.96302 3.89599C7.71679 3.99579 7.44118 3.99346 7.19587 3.89143C6.51201 3.60699 5.14435 3.05007 5.0752 3.1161L3.69158 4.47072C3.62133 4.54032 4.19615 5.8032 4.50685 6.47C4.62732 6.72853 4.63411 7.02529 4.52357 7.28823L4.4137 7.5496C4.30816 7.80067 4.10521 7.99752 3.85175 8.09721C3.15968 8.3694 1.80469 8.91454 1.80469 9.01031V10.9248C1.80469 11.0223 3.14286 11.5238 3.84109 11.7788C4.10453 11.875 4.31642 12.0753 4.42556 12.3336L4.53545 12.5937C4.64294 12.8482 4.64057 13.135 4.53064 13.3885C4.23745 14.0644 3.68153 15.3749 3.74934 15.4421L5.1346 16.7951C5.20378 16.863 6.52203 16.2877 7.19772 15.9863C7.44886 15.8743 7.73432 15.8685 7.9891 15.9719L8.28709 16.093C8.53812 16.195 8.73666 16.3939 8.83997 16.6444C9.11939 17.3219 9.67578 18.6402 9.77387 18.6402H10.1388C10.6911 18.6402 11.1388 18.1925 11.1388 17.6402V13.8782C11.1388 13.3081 10.6563 12.8478 10.1014 12.7169C9.14454 12.4913 7.8714 11.8331 7.8714 9.92755C7.8714 8.02203 9.14454 7.3638 10.1014 7.13818C10.6563 7.00734 11.1388 6.54696 11.1388 5.97686V2.21484Z" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                    </g>
-                                                    </g>
-                                                    <defs>
-                                                    <clipPath id="clip0_5368_106688">
-                                                    <rect width="20" height="20" fill="white"/>
-                                                    </clipPath>
-                                                    </defs>
-                                                    </svg>
-                                                    
-                                                <span>Integrations</span>
-                                                <img
-                                                    src="assets/images/home/arrowRight.svg"
-                                                    alt="Arrow"
-                                                    class="mis-auto menu_copilot__text--arrow"
-                                                />
-                                                <img
-                                                    src="assets/images/home/arrowUpRight.svg"
-                                                    alt="Arrow"
-                                                    class="mis-auto menu_copilot__text--arrow-up"
-                                                />
-                                            </em>
-                                            <p class="text-secondary font-normal menu_copilot__text--sub">
-                                                Seamlessly integrate our solutions into your existing workflows.
-                                            </p>
-                                        </a>
-                                        -->
-                                            <a  (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'customer-success']" routerLinkActive="active"
-                                                [routerLinkActiveOptions]="{exact: true}"
+                                            <a  (click)="manageToggle($event)" href="javascript:;"
                                                 class="flex-grow flex-column menu_copilot__text">
                                                 <em class="flex-row font-bold menu_copilot__text--head">
                                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -245,7 +141,7 @@
                                                         </defs>
                                                         </svg>
                                                         
-                                                    <span>Customer Success</span>
+                                                    <span>Fast CDE</span>
                                                     <img
                                                         src="assets/images/home/arrowRight.svg"
                                                         alt="Arrow"
@@ -258,12 +154,11 @@
                                                     />
                                                 </em>
                                                 <p class="text-secondary font-normal menu_copilot__text--sub">
-                                                    Hear directly from our satisfied clients and partners.
+                                                    --
                                                 </p>
                                             </a>
 
-                                            <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'data-safety']" routerLinkActive="active"
-                                            [routerLinkActiveOptions]="{exact: true}"
+                                            <a (click)="manageToggle($event)" href="javascript:;"
                                             class="flex-grow flex-column menu_copilot__text">
                                             <em class="flex-row font-bold menu_copilot__text--head">
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -289,7 +184,7 @@
                                                     </clipPath>
                                                     </defs>
                                                     </svg>
-                                                <span>Data Safety & Privacy</span>
+                                                <span> Share & Trac</span>
                                                 <img
                                                     src="assets/images/home/arrowRight.svg"
                                                     alt="Arrow"
@@ -302,161 +197,36 @@
                                                 />
                                             </em>
                                             <p class="text-secondary font-normal menu_copilot__text--sub">
-                                               How we keep your data secure and private.
+                                               --
                                             </p>
                                         </a>
-                                        
-                                        <a (click)="manageToggle($event)"  [routerLink]="[_languageService.currentLanguage,'faq']" routerLinkActive="active"
-                                        [routerLinkActiveOptions]="{exact: true}"
-                                        class="flex-grow flex-column menu_copilot__text">
-                                        <em class="flex-row font-bold menu_copilot__text--head">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_5349_6106A)">
-                                                <mask id="clip0_5349_6106A" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-                                                <path d="M20 0H0V20H20V0Z" fill="white"/>
-                                                </mask>
-                                                <g mask="url(#clip0_5349_6106A)">
-                                                <circle cx="10" cy="10" r="9" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                                                <path d="M6.7627 7.36828C6.78894 6.81057 6.93329 6.33323 7.19574 5.93627C7.46148 5.53931 7.81087 5.23585 8.24392 5.02588C8.68025 4.81592 9.16415 4.71094 9.69562 4.71094C10.273 4.71094 10.775 4.82576 11.2014 5.05541C11.6312 5.28506 11.9626 5.6 12.1955 6.00024C12.4317 6.40048 12.5498 6.8565 12.5498 7.36828C12.5498 7.72916 12.494 8.05558 12.3825 8.34756C12.2742 8.63954 12.1168 8.90036 11.9101 9.13001C11.7067 9.35965 11.4606 9.56305 11.1719 9.74021C10.8832 9.92065 10.6519 10.1109 10.4781 10.311C10.3042 10.5079 10.1779 10.7425 10.0991 11.0148C10.0204 11.287 9.97776 11.6266 9.97119 12.0334V12.7853" stroke="black" stroke-width="1.6" stroke-linecap="round"/>
-                                                <circle cx="10.2407" cy="15.4648" r="0.820256" fill="black"/>
-                                                </g>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_5349_6106A">
-                                                <rect width="20" height="20" fill="white"/>
-                                                </clipPath>
-                                                </defs>
-                                                </svg>
-                                            <span>FAQ</span>
-                                            <img
-                                                src="assets/images/home/arrowRight.svg"
-                                                alt="Arrow"
-                                                class="mis-auto menu_copilot__text--arrow"
-                                            />
-                                            <img
-                                                src="assets/images/home/arrowUpRight.svg"
-                                                alt="Arrow"
-                                                class="mis-auto menu_copilot__text--arrow-up"
-                                            />
-                                        </em>
-                                        <p class="text-secondary font-normal menu_copilot__text--sub">
-                                            Quick answers to your most common questions.
-                                        </p>
-                                        </a>
-                                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'contact']" routerLinkActive="active"
-                                        [routerLinkActiveOptions]="{exact: true}"
-                                        class="flex-grow flex-column menu_copilot__text">
-                                        <em class="flex-row font-bold menu_copilot__text--head">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" 
-                                                      stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                <path d="M9.94069 7.443C9.99864 7.00548 9.79469 6.60585 9.66443 6.38496C9.51174 6.12604 9.3204 5.88771 9.17528 5.71958C9.16166 5.70361 9.14608 5.685 9.12867 5.66422C9.01018 5.52274 8.80738 5.2806 8.56775 5.0882C8.28006 4.85721 7.83389 4.60859 7.2666 4.68643L7.2639 4.68681C6.99007 4.7254 6.74926 4.80851 6.53012 4.9183C6.47993 4.9368 6.43172 4.96056 6.38652 4.98931C6.32541 5.02164 6.2716 5.06052 6.225 5.10443C6.20362 5.11939 6.18073 5.1354 6.15719 5.15187C6.13059 5.17048 6.10317 5.18965 6.07622 5.20852C5.99412 5.26599 5.89846 5.33297 5.86851 5.35531L5.85312 5.36679L5.83834 5.37903C5.58149 5.59188 5.25683 5.94999 5.07203 6.48347C4.88362 7.02741 4.86265 7.69102 5.12006 8.46558C5.46566 9.50332 6.17094 10.6647 7.08238 11.798C7.10219 11.8299 7.12467 11.8607 7.14984 11.8903C7.18178 11.9278 7.2127 11.9617 7.23525 11.9864C7.25531 12.0084 7.26937 12.0238 7.28128 12.0374C7.32002 12.0858 7.36449 12.1413 7.41206 12.1977C7.43815 12.2287 7.46624 12.257 7.496 12.2827C8.48125 13.3688 9.5375 14.2704 10.5402 14.822L10.5413 14.8226C12.0534 15.651 13.2264 15.3023 13.832 14.9377L13.8505 14.9265L13.8684 14.9143C13.8939 14.8969 14.0189 14.8081 14.1324 14.7275C14.1874 14.6885 14.2397 14.6514 14.2767 14.6251C14.3053 14.6072 14.3318 14.588 14.3561 14.5679C14.4076 14.5302 14.4527 14.4872 14.4913 14.4404C14.6626 14.2748 14.8253 14.0735 14.9457 13.8149L14.9472 13.8116C15.2038 13.2535 15.0133 12.737 14.8375 12.4258C14.688 12.1613 14.477 11.92 14.356 11.7815C14.3381 11.7611 14.3222 11.7429 14.3087 11.7271L14.3079 11.7261C14.1656 11.5608 13.9606 11.3351 13.7272 11.1397C13.5182 10.9647 13.1758 10.7174 12.7626 10.669L12.761 10.6689C12.4607 10.6344 12.203 10.725 12.0357 10.8011C11.8653 10.8786 11.705 10.9813 11.5929 11.0533C11.5766 11.0638 11.5547 11.0765 11.5226 11.0935C11.4944 11.1084 11.4649 11.1242 11.4344 11.1405C11.3864 11.1661 11.336 11.193 11.2847 11.2199C11.2603 11.2327 11.2389 11.2438 11.2209 11.2529C11.1732 11.2598 11.0983 11.2651 11.0166 11.2568C10.9641 11.2514 10.9219 11.2416 10.8915 11.2308C10.8637 11.2209 10.8526 11.2123 10.8526 11.2123C10.5865 10.9869 10.1384 10.5417 9.76349 10.1227C9.41068 9.69126 9.05106 9.19053 8.88001 8.90269C8.8788 8.89477 8.87722 8.87484 8.88267 8.8387C8.88763 8.80578 8.89717 8.77068 8.90945 8.7383C8.9116 8.73264 8.91373 8.72731 8.91582 8.72235C8.93769 8.70048 8.96416 8.6744 8.99331 8.6459C9.02369 8.61618 9.05943 8.58149 9.09327 8.54864C9.09476 8.5472 9.09624 8.54576 9.09772 8.54432C9.11587 8.53254 9.13367 8.51988 9.15107 8.50634C9.1594 8.49986 9.16812 8.4931 9.17719 8.48606C9.28033 8.40605 9.42889 8.2908 9.55304 8.16619C9.67552 8.04324 9.89376 7.79724 9.94069 7.443ZM9.94069 7.443L9.94051 7.44431" 
-                                                      stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                            </svg>
-                                                
-                                            <span>Contact Sales</span>
-                                            <img
-                                                src="assets/images/home/arrowRight.svg"
-                                                alt="Arrow"
-                                                class="mis-auto menu_copilot__text--arrow"
-                                            />
-                                            <img
-                                                src="assets/images/home/arrowUpRight.svg"
-                                                alt="Arrow"
-                                                class="mis-auto menu_copilot__text--arrow-up"
-                                            />
-                                        </em>
-                                        <p class="text-secondary font-normal menu_copilot__text--sub">
-                                            Get in touch with us for any inquiries or support needs.
-                                        </p>
-                                        </a>
-                                    <!-- 
-                                    <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'business-intelligence']" routerLinkActive="active"
-                                        [routerLinkActiveOptions]="{exact: true}"
-                                        class="flex-grow flex-column menu_copilot__text">
-                                        <em class="flex-row font-bold menu_copilot__text--head">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><g clip-path="url(#clip0_5453_7319)"><path d="M11.6663 1.66797H4.99967C4.08301 1.66797 3.34134 2.41797 3.34134 3.33464L3.33301 16.668C3.33301 17.5846 4.07467 18.3346 4.99134 18.3346H14.9997C15.9163 18.3346 16.6663 17.5846 16.6663 16.668V6.66797L11.6663 1.66797ZM14.9997 16.668H4.99967V3.33464H10.833V7.5013H14.9997V16.668ZM7.34967 10.8763L6.16634 12.0513L9.11634 15.0013L13.833 10.2846L12.658 9.10963L9.12467 12.643L7.34967 10.8763Z" fill="#0E0E28"></path></g><defs><clipPath id="clip0_5453_7319"><rect width="20" height="20" fill="white"></rect></clipPath></defs></svg>
-                                                
-                                            <span>Business Intelligence</span>
-                                            <img
-                                                src="assets/images/home/arrowRight.svg"
-                                                alt=""
-                                                class="mis-auto menu_copilot__text--arrow"
-                                            />
-                                            <img
-                                                src="assets/images/home/arrowUpRight.svg"
-                                                alt=""
-                                                class="mis-auto menu_copilot__text--arrow-up"
-                                            />
-                                        </em>
-                                        <p class="text-secondary font-normal menu_copilot__text--sub">
-                                            AI-powered Business Intelligence
-                                            <br>(Plug & Play)
-                                        </p>
-                                    </a>
-                                    -->
-
-                                    <!-- 
-                                    <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'training']" routerLinkActive="active"
-                                        [routerLinkActiveOptions]="{exact: true}"
-                                        class="flex-grow flex-column menu_copilot__text">
-                                        <em class="flex-row font-bold menu_copilot__text--head">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_5405_13760)">
-                                                <mask id="mask0_5405_13760" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
-                                                <path d="M20.0005 0H0.000488281V20H20.0005V0Z" fill="white"/>
-                                                </mask>
-                                                <g mask="url(#mask0_5405_13760)">
-                                                <path d="M14.0605 9.86035V18.1577C14.0605 18.6237 13.6828 19.0014 13.2169 19.0014H2.94085C2.47489 19.0014 2.09717 18.6237 2.09717 18.1577V3.2968C2.09717 2.83085 2.4749 2.45312 2.94085 2.45312H6.57794" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                <path d="M4.41553 13.9023H10.4209" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                <path d="M4.41553 16.4375H11.4155" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                <path d="M4.36597 5.47099C3.73578 5.16101 3.73809 4.26174 4.36985 3.95499L10.0856 1.17974C10.3193 1.0663 10.5921 1.06679 10.8254 1.18107L16.4892 3.95631C17.1173 4.26409 17.1196 5.15861 16.4931 5.46962L10.8292 8.28113C10.5939 8.39797 10.3175 8.39847 10.0817 8.28249L4.36597 5.47099Z" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                <path d="M5.43408 6.10938V8.67174C5.43408 8.99764 5.62178 9.29439 5.91623 9.43404L10.0228 11.3816C10.2526 11.4906 10.5192 11.4901 10.7486 11.3804L14.8135 9.43484C15.1065 9.29462 15.293 8.99865 15.293 8.67383V6.11051" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                <path d="M17.3544 4.92188V9.10796C17.3544 9.18956 17.3341 9.26989 17.2955 9.34177L17.1263 9.65649C17.0259 9.8431 17.1611 10.0693 17.373 10.0693V10.0693C17.582 10.0693 17.7174 9.84851 17.6226 9.66215L17.591 9.59992" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-                                                </g>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_5405_13760">
-                                                <rect width="20" height="20" fill="white"/>
-                                                </clipPath>
-                                                </defs>
-                                                </svg>
-                                                
-                                            <span>Qualification</span>
-                                            <img
-                                                src="assets/images/home/arrowRight.svg"
-                                                alt=""
-                                                class="mis-auto menu_copilot__text--arrow"
-                                            />
-                                            <img
-                                                src="assets/images/home/arrowUpRight.svg"
-                                                alt=""
-                                                class="mis-auto menu_copilot__text--arrow-up"
-                                            />
-                                        </em>
-                                        <p class="text-secondary font-normal menu_copilot__text--sub">
-                                            Skill-building courses for engineers at all levels.    
-                                        </p>
-                                    </a>
-                                    -->
-                                    
                                     </div>
                                     </section>
                                 </div>
-                                <aside class="flex-column">
-                                    <section class="padding-24 background-white">
-                                        <h2 class="font-bold">About BuildTwin</h2>
-                                        <p class="text-secondary font-normal">
-                                            Discover BuildTwin's mission and learn about our dedication to connecting global talent and 
-                                            fostering innovation in the engineering field.
-                                        </p>
-                                        <a [routerLink]="[_languageService.currentLanguage,'about']" class="cta-button" (click)="manageToggle($event)">The Company</a>
-                                    </section>
-                                </aside>
                             </div>
                         </section>
                     </div>
                 </li>
+                    <li class="nav-item " >
+                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'how-it-works']" routerLinkActive="active" class="nav-link" >
+                            How it works
+                        </a>
+                    </li>
+                    <li class="nav-item " >
+                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'case-studies']" routerLinkActive="active" class="nav-link" >
+                            Case Studies
+                        </a>
+                    </li>
+                    <li class="nav-item " >
+                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'pricing']" routerLinkActive="active" class="nav-link" >
+                            Pricing
+                        </a>
+                    </li>
+                    <li class="nav-item " >
+                        <a (click)="manageToggle($event)" [routerLink]="[_languageService.currentLanguage,'about']" routerLinkActive="active" class="nav-link" >
+                            About Us
+                        </a>
+                    </li>
             </ul>
 
 
@@ -464,10 +234,12 @@
                 <div class="other-options d-flex align-items-center">
                     <!-- <a href="javascript:void(0);"><img src="assets/images/home/GlobeSimple.svg" alt="" /></a> -->
                      <app-language-change></app-language-change>
-                    <a href="https://cockpit.buildtwin.com/" target="_blank" class="button-v2 text-btn signin_button_header">Sign in</a>
-                    <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 default-btn get_started_button_header" >
-                        Get Started
-                    </a>
+                    <!-- <a href="https://cockpit.buildtwin.com/" target="_blank" class="button-v2 text-btn signin_button_header">Sign in</a> -->
+                     <div class="get-started-wrapper">
+                         <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 default-btn get_started_button_header" >
+                             Get Started
+                         </a>
+                     </div>
 
                     <!-- <div class="loginPopup" *ngIf="togglePopup">
                         <div class="loginOverlay" (click)="loginPopup()"></div>

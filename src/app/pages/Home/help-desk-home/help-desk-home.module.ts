@@ -20,6 +20,7 @@ import { HeavyLiftingModule } from '../heavy-lifting/heavy-lifting.module';
 import { ServiceListModule } from 'src/app/include-component/service-list/service-list.module';
 import { HomeBannerModule } from '../home-banner/home-banner.module';
 import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
+import { BottomContentModule } from 'src/app/include-component/bottom-content/bottom-content.module';
 
 const routes: Routes = [
   {
@@ -52,6 +53,7 @@ const routes: Routes = [
     ServiceListModule,
     HomeBannerModule,
     SharedModuleModule,
+    BottomContentModule,
     RouterModule.forChild(routes),
   ],
 })

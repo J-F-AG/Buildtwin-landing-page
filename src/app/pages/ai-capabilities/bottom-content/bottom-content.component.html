@@ -1,0 +1,48 @@
+<div class="container">
+<div class="global-mb">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    Explore  <span>Engineering Services</span>
+                </h2>
+                <p class="small-title">
+                    Navigate services and connect with top professionals with ease
+                </p>
+        </div>
+    </div>
+<div class="how-it-work" id="next-section">
+    <div class="tab-wrapper-super">
+    <ul class="tab-wrapper">
+        <li 
+            *ngFor="let list of categoryArray"
+            [class.active]="selectedTab === list" 
+            (click)="onSelectTab(list)">
+            {{list}}
+        </li>
+    </ul>
+
+    </div>
+    <div class="block-section fullwidth">
+        <div class="block-box-wrapper">
+            <ng-container *ngFor="let feature of arcadeFeatures">
+                <div class="block cursor" (click)="onClickArcadeTrigger(feature.id)" *ngIf="!selectedTab || feature.category === selectedTab">
+                    <div class="content">
+                        <h3>
+                            <i>
+                            <img [src]="feature.icon" width="23" height="25" alt="">
+                            </i>
+                            <span [innerHTML]="feature.title"></span>
+                        </h3>
+                    <p>{{ feature.description }}</p>
+                    </div>
+                    <figure>
+                    <img [src]="feature.image" width="220" height="85" alt="">
+                    </figure>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
