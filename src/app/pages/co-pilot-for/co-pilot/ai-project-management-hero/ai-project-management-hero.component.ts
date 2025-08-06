@@ -18,7 +18,10 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'J&F',
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
-      targetImage: 'assets/images/ai-activity.jpg'
+      targetImage: 'assets/images/ai-activity.jpg',
+      targetImage2x: 'assets/images/ai-activity@2x.jpg',
+      targetImagewebp: 'assets/images/ai-activity.webp',
+      targetImagewebp2x: 'assets/images/ai-activity@2x.webp',
     },
     {
       title: 'Quality Management',
@@ -29,7 +32,10 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'J&F',
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
-      targetImage: 'assets/images/manual-qc.jpg'
+      targetImage: 'assets/images/manual-qc.jpg',
+      targetImage2x: 'assets/images/manual-qc@2x.jpg',
+      targetImagewebp: 'assets/images/manual-qc.webp',
+      targetImagewebp2x: 'assets/images/manual-qc@2x.webp',
     },
     /*,
     {
@@ -52,7 +58,10 @@ export class AiProjectManagementHeroComponent {
       noteTitle: 'J&F',
       noteDescription: 'worked with BuildTwin Pro to reduce cycle time and increase throughput by 200%.',
       noteLink: '/customer-success',
-      targetImage: 'assets/images/rfi.jpg'
+      targetImage: 'assets/images/rfi.jpg',
+      targetImage2x: 'assets/images/rfi@2x.jpg',
+      targetImagewebp: 'assets/images/rfi.webp',
+      targetImagewebp2x: 'assets/images/rfi@2x.webp',
     }
   ];
 

@@ -14,8 +14,6 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './free-offer-form.component.scss'
 })
 export class FreeOfferFormComponent {
-  @Input() serviceData: any = {}; //sector
-  @Input() serviceQuery: boolean = true; //sector
   @Input() page: string = ''; //sector
   @Input() type: string = '';
   @Input() style: string = '';
@@ -62,7 +60,7 @@ export class FreeOfferFormComponent {
       projectName: ['', Validators.required], // Project Name validation
       selectedPrecastServices: [null], // Validation for selectedPrecastServices
       buildingCodeId: [null], // Static building code
-      serviceId: [null, Validators.required], // New control for service ID
+      serviceId: [null], // New control for service ID
       description: [''], // Description validation
     });
     // this.route.queryParams.subscribe(params => {
@@ -75,34 +73,35 @@ export class FreeOfferFormComponent {
   }
   updateServiceId(){
     // Get the current URL
-    const url = window.location.href;
-    if (url.includes('pre-cast-detailing-services')) {
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['pre-cast-detailing-services']);
-      this.data = this._languageService['serviceData']['pre-cast-detailing-services'];
-    }else if (url.includes('rebar-detailing-services')) {
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['rebar-detailing-services']);
-      this.data = this._languageService['serviceData']['rebar-detailing-services'];
-    }else if(url.includes('bim-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
-      this.data = this._languageService['serviceData']['bim-services'];
-    }else if(url.includes('steel-detailing-services-in-usa')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
-      this.data = this._languageService['serviceData']['steel-detailing-services'];
-    }else if(url.includes('steel-detailing-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
-      this.data = this._languageService['serviceData']['steel-detailing-services'];
-    }else if(url.includes('bim-outsourcing-services-in-usa')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
-      this.data = this._languageService['serviceData']['bim-services'];
-    }else if(url.includes('drafting-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['drafting-services']);
-      this.data = this._languageService['serviceData']['drafting-services'];
-    }else if(url.includes('cad-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['cad-services']);
-      this.data = this._languageService['serviceData']['cad-services'];
-    }else if(url.includes('shop-drawing-services')){
-      this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['shop-drawing-services']);
-      this.data = this._languageService['serviceData']['shop-drawing-services'];
+    try {
+      const url = window.location.href;
+      if (url.includes('pre-cast-detailing-services')) {
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['pre-cast-detailing-services']);
+        this.data = this._languageService['serviceData']['pre-cast-detailing-services'];
+      }else if (url.includes('rebar-detailing-services')) {
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['rebar-detailing-services']);
+        this.data = this._languageService['serviceData']['rebar-detailing-services'];
+      }else if(url.includes('bim-services')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
+        this.data = this._languageService['serviceData']['bim-services'];
+      }else if(url.includes('steel-detailing-services-in-usa')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
+        this.data = this._languageService['serviceData']['steel-detailing-services'];
+      }else if(url.includes('steel-detailing-services')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['steel-detailing-services']);
+        this.data = this._languageService['serviceData']['steel-detailing-services'];
+      }else if(url.includes('bim-outsourcing-services-in-usa')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['bim-services']);
+        this.data = this._languageService['serviceData']['bim-services'];
+      }else if(url.includes('drafting-services')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['drafting-services']);
+        this.data = this._languageService['serviceData']['drafting-services'];
+      }else if(url.includes('cad-services')){
+        this.myForm.get('serviceId')?.setValue(this._languageService['serviceId']['cad-services']);
+        this.data = this._languageService['serviceData']['cad-services'];
+      }
+    } catch (error) {
+      
     }
   }
   selectSector(selectedOption: any) {
@@ -294,37 +293,5 @@ export class FreeOfferFormComponent {
     }
     closePopupStatus($event) {
       this.showPopup = false;
-    }
-    toggleQueryButton() {
-      this.serviceQuery = !this.serviceQuery
-      return false
-    }
-    getStarted() {
-      debugger
-      console.log(this.myForm.get('email')?.valid)
-      if (this.myForm.get('email')?.valid) {
-        const email = this.myForm.get('email')?.value;
-        const redirectUrl = `https://www.buildtwin.com/get-started/set-password?isCockpit=true&autoFill=true&emailUpdate=${encodeURIComponent(email)}`;
-        window.open(redirectUrl, '_blank'); // Open the URL in a new tab
-  
-        this.myForm.reset(); // Reset form values
-        this.myForm.markAsPristine();
-        this.myForm.markAsUntouched();
-        // this.myForm.clearValidators(); // Temporarily clear validators
-        // this.myForm.updateValueAndValidity(); // Update validity
-        // // Reapply validators after reset
-        // this.myForm.setValidators([
-        //   this.fb.group({
-        //     email: ['', [Validators.required, Validators.email]],
-        //     projectName: ['', Validators.required],
-        //     selectedPrecastServices: [null],
-        //     buildingCodeId: [null],
-        //     serviceId: [null, Validators.required],
-        //     description: ['']
-        //   }).validator
-        // ]);
-        // this.myForm.updateValueAndValidity();
-        // this.updateServiceId()
-      }
     }
 }

@@ -1,0 +1,52 @@
+<app-hd-navbar></app-hd-navbar>
+<app-ai-capabilities-banner></app-ai-capabilities-banner>
+<app-company-logos-slider></app-company-logos-slider>
+<div class="bg global-mb">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    Explore the largest portfolio of<br>
+                    private and public  <span>engineering projects</span>
+                </h2>
+                <p class="small-title">
+                    Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
+                </p>
+        </div>
+    </div>
+    <app-project-list [slider]="true" [hideMessageBox]="true">
+        <div class="message">
+            <div class="content">
+                <h4>
+                    Find the<strong> right</strong> engineering consultancies.
+                </h4>
+                <p>
+                    Get started now with BuildTwin to explore a wide range of industry-specific
+projects and connect with top-reated experts
+                </p>
+            </div>
+            <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 home_get_started_for_free">
+                Get started for FREE
+            </a>
+        </div>
+    </app-project-list>
+</div>
+<app-bottom-content></app-bottom-content>
+<app-heavy-lifting></app-heavy-lifting>
+<app-hd-integrations></app-hd-integrations>
+<div class="global-mb">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    Explore  <span>Engineering Services</span>
+                </h2>
+                <p class="small-title">
+                    Navigate services and connect with top professionals with ease
+                </p>
+        </div>
+    </div>
+    <app-service-list [hideTitle]="true"></app-service-list>
+</div>
+<app-tt-testimonials></app-tt-testimonials>
+<app-hd-good-company [count]="5"></app-hd-good-company>
+
+<app-hd-footer></app-hd-footer>

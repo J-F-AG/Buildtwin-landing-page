@@ -41,17 +41,12 @@ $buildtwin-theme: mat.define-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-  // --fontFamily: "Alliance No1", sans-serif;
-  // --archivoFontFamily: "Alliance No1", sans-serif;
-  // --poppinsFontFamily: "Alliance No1", sans-serif;
-  // --mulishFontFamily: "Alliance No1", sans-serif;
-  // --syneFontFamily: "Alliance No1", sans-serif;
-  --fontFamily: "New Rubrik Edge", sans-serif;
-  --archivoFontFamily: "New Rubrik Edge", sans-serif;
-  --poppinsFontFamily: "New Rubrik Edge", sans-serif;
-  --mulishFontFamily: "New Rubrik Edge", sans-serif;
-  --syneFontFamily: "New Rubrik Edge", sans-serif;
-  --jeffFontFamily: "Jeff Script", sans-serif;
+  --fontFamily: "new-rubrik-edge", sans-serif;
+  --archivoFontFamily: "new-rubrik-edge", sans-serif;
+  --poppinsFontFamily: "new-rubrik-edge", sans-serif;
+  --mulishFontFamily: "new-rubrik-edge", sans-serif;
+  --syneFontFamily: "new-rubrik-edge", sans-serif;
+  --jeffFontFamily: "jeff-script", sans-serif;
   --neonOrangeColor: #f46f49;
   --transition: all ease 0.5s;
   --paragraphColor: #000000;
@@ -83,11 +78,9 @@ $buildtwin-theme: mat.define-light-theme(
 
   --color-theme: #0053fa;
   --background-white: #ffffff;
-  // --medium-global: "alliance_no.1medium";
-  --medium-global: "new_rubrik_edge_medium";
+  --medium-global: 500;
   --assistantBackgroundColor-global: #f8f8f8;
-  // --semibold-global: "alliance_no.1semibold";
-  --semibold-global: "new_rubrik_edge_semibold";
+  --semibold-global: 600;
   --border-color: #ececec;
   --font-size-h6: 16px;
   --blue-color: #2c80ff;
@@ -418,6 +411,7 @@ display:flex;
 }
 
 // Default Btn
+
 .button-v2, .button-v2.mdc-button {
   background: #002e3b;
   font-size: 15px;
@@ -457,6 +451,10 @@ display:flex;
     background: white;
     color: #002e3b;
   }
+  &:hover {
+    color: #002e3b;
+    background: white;
+  }
   &.white {
     background: white;
     color: var(--themeColor);
@@ -468,8 +466,6 @@ display:flex;
     border-color: white;
   }
 }
-
-
 .secondary-button {
   height: 42px;
   border-radius: 42px;
@@ -479,22 +475,11 @@ display:flex;
   color: white;
   line-height: 42px;
   background: var(--themeColor);
+  &:hover {
+    color: white;
+  }
   &.v2 {
     background: var(--newButtonColor);
-  }
-}
-/* Only apply hover styles on devices that support hover with a fine pointer (e.g. mouse) */
-@media (hover: hover) and (pointer: fine) {
-  .button-v2, .button-v2.mdc-button {
-    &:hover {
-      color: #002e3b;
-      background: white;
-    }
-  }
-  .secondary-button {
-    &:hover {
-      color: white;
-    }
   }
 }
 .button-wrap {
@@ -1223,28 +1208,28 @@ display:flex;
 
 @media (min-width: 1200px) {
   .container-with-right {
-    padding-right: 357px;
+    padding-right: 440px;
   }
 }
 @media (min-width: 1201px) {
   .container-with-right {
     // padding-right: calc(440px - ((100vw - 1116px) / 2));
-    padding-right: 357px;
+    padding-right: 440px;
   }
   .bannerContainer .container-with-right {
     h1, p {
-      padding-right: 0;
+      padding-right: 290px;
     }
   }
 }
 @media (min-width: 1440px) {
   .container-with-right {
     // padding-right: calc(440px - ((100vw - 1440px) / 2));
-    padding-right: 357px;
+    padding-right: 440px;
   }
   .bannerContainer .container-with-right {
     h1, p {
-      padding-right: 0;
+      padding-right: 290px;
     }
   }
 }
@@ -1287,7 +1272,7 @@ display:flex;
       text-orientation: mixed;
       position: fixed;
       right: 0;
-      top: 130px;
+      top: 100px;
       font-size: 14px;
       z-index: 998;
       transform: rotate(180deg);
@@ -1680,17 +1665,6 @@ display:flex;
       font-size: 18px;
     }
   }
-  .bg {
-    padding-top: 50px;
-    padding-bottom: 57px;
-  }
-  .container.bg {
-    padding-top: 50px;
-    padding-bottom: 57px;
-    &.global-mb {
-      margin-bottom: 0;
-    }
-  }
   .container {
       padding-left: 15px;
       padding-right: 15px;
@@ -2017,10 +1991,6 @@ body {
 }
 .pdR30 {
   padding-right: 25%;
-}
-#localize-widget {
-  opacity: 0;
-  visibility: hidden;
 }
 
 

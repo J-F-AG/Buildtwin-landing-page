@@ -9,8 +9,7 @@ import { LanguageService } from './services/language.service';
 import { BreadcrumbService } from './services/breadcrumb.service';
 import { SeoService } from './services/seo.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { Injector } from '@angular/core';
-import { ServiceMappingService } from './services/service-mapping.service';
+import { WebpSupportService } from './services/webp-support.service';
 declare let $: any;
 
 @Component({
@@ -37,6 +36,7 @@ export class AppComponent {
     faqSchemaHtml: SafeHtml;
     serviceSchemaHtml: SafeHtml;
     testimonialSchemaHtml: SafeHtml;
+    productSchemaHtml: SafeHtml;
     showHideForm:boolean = false;
     hideSideButton: boolean = true;
     hideOnThisUrl: string[] = ['/partners', '/services', '/software', '/building-code','/sector'];
@@ -48,14 +48,9 @@ export class AppComponent {
         private _seoService: SeoService,
         private activatedRoute: ActivatedRoute,
         private sanitizer: DomSanitizer,
-        private injector: Injector,
+        private webpService: WebpSupportService,
         @Inject(PLATFORM_ID) private platformId: Object // Inject platform ID
     ) {
-      try {
-        localStorage.setItem('version','0.0.1')
-      } catch (error) {
-        
-      }
       this._languageService.faqSchemaSubject.subscribe((data) => {
         const faqSchema = this.injectFaqSchema(data['data']);
         this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
@@ -65,7 +60,7 @@ export class AppComponent {
         // Directly assign the breadcrumbs array from the service
         if (isPlatformBrowser(this.platformId)) {
             try {
-              localStorage.setItem("appVersion", "0.0.12");
+              localStorage.setItem("appVersion", "0.0.14");
             } catch (error) {
               
             }
@@ -78,15 +73,12 @@ export class AppComponent {
     }
 
     ngOnInit() {
-
-      // Reset all schema HTML variables at the beginning
-    this.breadcrumbSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
-    this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
-    this.schemaCode = this.sanitizer.bypassSecurityTrustHtml('');
-    this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
-    this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
-
-
+      if (isPlatformBrowser(this.platformId)) {
+        this.webpService.isWebpSupported().then((isSupported) => {
+          const className = isSupported ? 'webp' : 'no-webp';
+          this.renderer.addClass(document.body, className);
+        });
+      }
         if (isPlatformBrowser(this.platformId)) {
         try {
           localStorage.setItem('appVerionId', '0.0.2');
@@ -113,6 +105,9 @@ export class AppComponent {
             }
             if(event['title']){
                 this._seoService.updateTitle(event['title']);
+                // if(event['keywords']) {
+                  this._seoService.updateKeywords(event['keywords']);
+                // }
                 this._seoService.updateDescription(event['description']);
                 // Update OG tags
                 this._seoService.updateOGUrl(url);
@@ -202,7 +197,11 @@ export class AppComponent {
                 if (!(event instanceof NavigationEnd)) {
                     return;
                 }
-                window.scrollTo(0, 0);
+                try {
+                  window.scrollTo(0, 0);
+                } catch (error) {
+                  
+                }
             });
     }
 
@@ -287,6 +286,13 @@ injectBreadcrumbScript(url) {
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
+
+      const productSchema = this._languageService.injectForAIProjectManagementProductSchema(this.renderer);
+
+      this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${productSchema}</script>`
+      );
+
     }else if(url.includes('/faq')){
         const faqSchema = this._languageService.injectFAQSchemaForFaqPage(this.renderer)
 
@@ -335,6 +341,12 @@ injectBreadcrumbScript(url) {
     this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
       `<script type="application/ld+json">${faqSchema}</script>`
     );
+  }else if(url.includes('/drafting-services')){
+      const faqSchema = this._languageService.injectFAQSchemaForDraftingServices(this.renderer)
+
+    this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+      `<script type="application/ld+json">${faqSchema}</script>`
+    );
   }else if(url.includes('/services/bim-outsourcing-services-in-usa')){
       const faqSchema = this._languageService.injectFAQSchemaForBimServiceProvider(this.renderer)
 
@@ -358,6 +370,13 @@ injectBreadcrumbScript(url) {
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
+      
+      const productSchema = this._languageService.injectSectorDataCenterProductSchema(this.renderer);
+
+      this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${productSchema}</script>`
+      );
+
     }else if(url.includes('/building-code/aisc')){
       const faqSchema = this._languageService.injectFAQSchemaForBuildingCodeAisc(this.renderer)
 
@@ -400,6 +419,13 @@ injectBreadcrumbScript(url) {
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
+
+      const productSchema = this._languageService.injectSectorPowerPlantProductSchema(this.renderer);
+
+      this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${productSchema}</script>`
+      );
+
 
     }else if(url.includes('/sector/bridge')){
       const faqSchema = this._languageService.injectFAQSchemaForSectorBridge(this.renderer)
@@ -514,12 +540,12 @@ injectBreadcrumbScript(url) {
       );
 
     }else if(url.includes('/software/architecture-design-services')){
-      const faqSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
+      const faqSchema = this._languageService.injectForArchitecturalDesignServicesFaqSchema(this.renderer);
 
       this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${faqSchema}</script>`
       );
-      const serviceSchema = this._languageService.injectForArchitecturalDesignServicesSchema(this.renderer);
+      const serviceSchema = this._languageService.injectForArchitecturalDesignServiceSchema(this.renderer);
 
       this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${serviceSchema}</script>`
@@ -542,56 +568,19 @@ injectBreadcrumbScript(url) {
       this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
         `<script type="application/ld+json">${testimonialSchema}</script>`
       );
-    }
 
-    else {
-      // Check if this URL corresponds to a service page in your service mapping
-      let normalizedUrl = url.replace(/^\/+|\/+$/g, ''); // Remove leading/trailing slashes
-      
-      console.log("normalized url to check for service page schema injection :", normalizedUrl);
-      
-      // Import and inject your ServiceMappingService
-      const serviceMappingService = this.injector.get(ServiceMappingService);
-      
-      // Get service data for the current URL
-      serviceMappingService.getServicePageDataByUrl(normalizedUrl).subscribe(
-        response => {
-          if (response && response.data && response.data[0]) {
-            const serviceData = response.data[0];
-            
-            // Check if service has FAQ schema data
-            if (serviceData.faq_and_testimonial_schemas) {
-              const schemas = serviceData.faq_and_testimonial_schemas;
-              
-              // Handle FAQ schema
-              if (schemas.faq) {
-                this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-                  `<script type="application/ld+json">${JSON.stringify(schemas.faq)}</script>`
-                );
-              }
-              
-              // Handle testimonial schema
-              if (schemas.testimonial) {
-                this.testimonialSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-                  `<script type="application/ld+json">${JSON.stringify(schemas.testimonial)}</script>`
-                );
-              }
-              
-              // Handle service schema
-              // if (schemas.service) {
-              //   this.serviceSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
-              //     `<script type="application/ld+json">${JSON.stringify(schemas.service)}</script>`
-              //   );
-              // }
-            }
-          }
-        },
-        error => {
-          console.error('Error fetching service data for schema injection:', error);
-        }
+      const productSchema = this._languageService.injectStructuralSteelDetailingProductSchema(this.renderer);
+
+      this.productSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${productSchema}</script>`
+      );
+    }else if(url.includes('/data-safety')){
+      const faqSchema = this._languageService.injectForDataSafetySchema(this.renderer);
+
+      this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml(
+        `<script type="application/ld+json">${faqSchema}</script>`
       );
     }
-
   }
    
 }

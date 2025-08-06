@@ -89,6 +89,7 @@
   </div>
   <div class="service-list block">
     <div class="container">
+
       <div class="list-block">
         <h5>
           Sectors
@@ -139,6 +140,14 @@
               Manufacturing Plant
             </a>
           </li>
+        </ul>
+      </div>
+
+      <div class="list-block">
+        <!-- <h5>
+
+        </h5> -->
+        <ul>
           <li>
             <a routerLink="{{_languageService.currentLanguage}}/sector/metro">
               Metro
@@ -187,8 +196,6 @@
         </ul>
       </div>
 
-
-
       <div class="list-block">
         <h5>
           Services
@@ -224,32 +231,64 @@
               Steel Detailing Services
             </a>
           </li>
-          <li *ngFor="let item of serviceInfoOnFooter">
-            <a routerLink="{{_languageService.currentLanguage}}/{{item.page_url}}">
-              {{ item.serviceName }}
-            </a>
-          </li>
         </ul>
-        <!-- <ul>
-        </ul> -->
       </div>
       <div class="list-block">
         <h5>
-          Softwares
+          BuildTwin Pro
         </h5>
         <ul>
           <li>
-            <a routerLink="{{_languageService.currentLanguage}}/software/architecture-design-services">
-              Architecture Design Software
+            <a routerLink="{{_languageService.currentLanguage}}/ai-project-management">
+              Features
             </a>
           </li>
           <li>
-            <a routerLink="{{_languageService.currentLanguage}}/software/structural-steel-detailing">
-              Structural Steel Detailing Software
+            <a routerLink="{{_languageService.currentLanguage}}/customer-success">
+              Customer Success
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/data-safety">
+              Data Safety & Privacy
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/faq">
+              FAQ
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/contact">
+              Contact Sales
             </a>
           </li>
         </ul>
       </div>
+
+      <div class="list-block">
+        <h5>
+          Human Engineering
+        </h5>
+        <ul>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/explore-services">
+              Explore
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/provide-service">
+              For Sellers
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/marketplace">
+              For Buyers
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <div class="list-block">
         <h5>
           Building Code
@@ -278,6 +317,24 @@
           <li>
             <a routerLink="{{_languageService.currentLanguage}}/building-code/iso-standards">
               ISO Standards
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="list-block">
+        <h5>
+          Softwares
+        </h5>
+        <ul>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/software/architecture-design-services">
+              Architecture Design Software
+            </a>
+          </li>
+          <li>
+            <a routerLink="{{_languageService.currentLanguage}}/software/structural-steel-detailing">
+              Structural Steel Detailing Software
             </a>
           </li>
         </ul>

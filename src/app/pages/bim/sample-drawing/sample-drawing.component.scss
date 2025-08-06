@@ -161,7 +161,7 @@
       }
 
       .companyName {
-        font-family: var(--medium-global);
+        font-weight: var(--medium-global);
         font-size: 14.7px;
 
         small {
@@ -181,7 +181,7 @@
 
     .companyDetails { flex: 1;
       .title {
-        font-family: var(--medium-global);
+        font-weight: var(--medium-global);
         font-size: 14px;
         color: var(--color-theme)
       }
@@ -195,7 +195,7 @@
 
     .cardFooter {
       color: #0053fa;
-      font-family: var(--semibold-global);
+      font-weight: var(--semibold-global);
       font-size: 14px;
       display: flex;
       gap: 10px;
@@ -266,7 +266,7 @@
 
     small {
       display: block;
-      font-family: var(--semibold-global);
+      font-weight: var(--semibold-global);
       font-size: 11px;
     }
   }
@@ -313,7 +313,7 @@
 
   .title {
     display: block;
-    font-family: var(--semibold-global);
+    font-weight: var(--semibold-global);
     color: black;
     font-size: 18px; 
     font-weight: 600;

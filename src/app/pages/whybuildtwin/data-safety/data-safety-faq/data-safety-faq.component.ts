@@ -10,58 +10,43 @@ export class DataSafetyFaqComponent {
     isFirst = true;
 
     dataCenterFAQ = [
-        {
-          question: "What is the total floor area of the data center?",
-          answer: "The total floor area of the data center is 50,000 square meters."
-        },
-        {
-          question: "Where is the data center located (city, state, country)?",
-          answer: "The data center is located in Dallas, Texas, USA."
-        },
-        {
-          question: "When was the project started and completed?",
-          answer: "The project started in January 2021 and was completed in December 2022."
-        },
-        {
-          question: "What is the total power capacity of the data center in GWH, and were any energy-efficient designs or technologies implemented?",
-          answer: "The total power capacity is 120 GWh. Energy-efficient technologies such as advanced cooling systems and renewable energy integration were implemented."
-        },
-        {
-          question: "What type of structural system was used (e.g., steel frame, concrete frame, etc.)?",
-          answer: "The data center was built using a reinforced concrete frame for enhanced durability and load-bearing capacity."
-        },
-        {
-          question: "What were the most significant structural challenges in this project, and how were they addressed?",
-          answer: "The biggest challenge was ensuring seismic resilience. This was addressed by incorporating base isolators and reinforced bracing systems."
-        },
-        {
-          question: "What structural analysis and design software was used?",
-          answer: "Software such as ETABS, SAP2000, and AutoCAD were used for structural analysis and design."
-        },
-        {
-          question: "Did the project include specialized features such as raised floors, advanced cooling systems, or enhanced security measures? How did the structural design accommodate these?",
-          answer: "Yes, the project included raised floors for cabling, advanced cooling systems for energy efficiency, and reinforced security barriers. The structural design incorporated these by ensuring proper load distribution and access pathways."
-        },
-        {
-          question: "Were there any sustainability considerations, such as certifications (e.g., LEED, BREEAM) or use of sustainable materials?",
-          answer: "The project achieved LEED Gold certification and used recycled steel and low-carbon concrete."
-        },
-        {
-          question: "What was the scope of your firm’s involvement in the project (e.g., design only, design and supervision, etc.)?",
-          answer: "Our firm was responsible for both design and supervision of the structural framework."
-        },
-        {
-          question: "Was this project awarded through a public tender, private tender, or direct commission?",
-          answer: "The project was awarded through a private tender."
-        },
-        {
-          question: "What were the design floor loads, and how did the structural design accommodate them?",
-          answer: "The design floor load was 12 kN/m². The structural design incorporated reinforced concrete slabs and steel supports to handle high loads."
-        },
-        {
-          question: "Is there any other unique or innovative aspect of the structural design that you would like to highlight?",
-          answer: "A modular structural design was used to allow for future expansion without major disruptions."
-        }
-      ];
+  {
+    question: "Does BuildTwin Pro comply with industry standards for data security?",
+    answer: "<strong>Yes.</strong><br> BuildTwin Pro complies with major industry standards for data security, including ISO/IEC 27001, GDPR (for users in the EU), and other applicable regional regulations. We continuously review and update our security protocols to align with best practices in the construction and data management industries."
+  },
+  {
+    question: "Where is my data hosted?",
+    answer: "<strong>Your data is hosted within your region of use.</strong><br> BuildTwin Pro uses localized cloud infrastructure to ensure compliance with data residency laws. For example, EU users’ data stays within the EU, and the same applies for other regions (e.g., US, India, GCC). This ensures faster access and full legal compliance."
+  },
+  {
+    question: "Is my data encrypted?",
+    answer: "<strong>Yes, end-to-end.</strong><br> All data on BuildTwin Pro is encrypted in transit using TLS 1.2+ and at rest using AES-256. Whether you’re uploading, sharing, or storing files, your data remains fully protected with industry-grade encryption."
+  },
+  {
+    question: "Who can access my data?",
+    answer: "<strong>Only you and authorized users.</strong><br> Access to your files is controlled via role-based permissions and secure links. You decide who can view, comment, or edit. BuildTwin Pro staff do not have access to your data unless explicitly requested for support purposes and with your consent."
+  },
+  {
+    question: "Can I delete my account and data?",
+    answer: "<strong>Yes.</strong><br> To request account and data deletion, please contact our support team at hello@buildtwin.com. Upon verification, all your data will be permanently deleted from our systems, including backups, within 30 days, in accordance with GDPR and other privacy standards."
+  },
+  {
+    question: "How long is my data retained?",
+    answer: "We retain your data for as long as your account is active or as needed to provide you services. You can request deletion at any time. Backups are retained for disaster recovery and are automatically purged within 30 days."
+  },
+  {
+    question: "Does BuildTwin Pro support audit trails?",
+    answer: "<strong>Yes.</strong><br> Every action on BuildTwin Pro is logged and time-stamped. You get a complete audit trail for uploads, comments, status changes, and file shares—ensuring accountability and traceability for all project stakeholders."
+  },
+  {
+    question: "Is BuildTwin Pro compliant with GDPR, CCPA, and other privacy laws?",
+    answer: "<strong>Yes.</strong><br> BuildTwin Pro is fully compliant with GDPR, CCPA, and applicable data protection regulations. You can request a copy of your data, rectify inaccuracies, or ask for permanent deletion at any time."
+  },
+  {
+    question: "Does BuildTwin Pro undergo security audits?",
+    answer: "<strong>Yes.</strong><br> We conduct regular third-party security audits and penetration tests to identify and address vulnerabilities. Security is a core part of our development and operations lifecycle (DevSecOps)."
+  }
+];
+
 
 }

@@ -4,6 +4,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { LanguageService } from 'src/app/services/language.service';
 import { HttpClient } from '@angular/common/http';
 import { catchError, forkJoin, of, retry } from 'rxjs';
+import { CommonServiceService } from 'src/app/services/common-service.service';
 
 @Component({
   selector: 'app-company-list',
@@ -15,7 +16,7 @@ export class CompanyListComponent {
 factorySlider: OwlOptions | null = null;
  isBrowser: boolean;
  companyList = [];
-  constructor( @Inject(PLATFORM_ID) private platformId: Object, public _languageService:LanguageService, private _http: HttpClient) {
+  constructor( @Inject(PLATFORM_ID) private platformId: Object, public _languageService:LanguageService, private _http: HttpClient, private _commonServiceService: CommonServiceService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     if(this.isBrowser){
       this.getListOfCompany()
@@ -88,9 +89,11 @@ getListOfCompany() {
           res2['linking'] = this._languageService.customMapping[res2['company_name']];
         }else {
           res2['route'] = res2['company_name'].replace(/ /g, '');
-          res2['linking'] = res2['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
-          .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
-          .toLowerCase();
+          res2['linking'] = this._commonServiceService.buildLinking(res2['company_name']);
+          // res2['company_name'].replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+          // .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+          // .replace(/-$/, '') // remove trailing hyphen
+          // .toLowerCase();
         }
         this.companyList.push(res2)
       })

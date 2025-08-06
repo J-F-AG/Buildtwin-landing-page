@@ -177,3 +177,18 @@
         left: calc(100% + 50px);
     }
 }
+@media (max-width: 767px) {
+    #wrapper.blur {
+        overflow: hidden;
+    }
+    #sideForm {
+        width: 100%;
+    }
+    .contactTab {
+        font-size: 12px;
+        padding: 6px 11px;
+    }
+    .arrow-slide-wrapper {
+        transform: scale(0.4) rotate(-135deg);
+    }
+}

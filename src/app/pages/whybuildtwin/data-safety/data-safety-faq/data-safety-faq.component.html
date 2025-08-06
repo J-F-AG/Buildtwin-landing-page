@@ -10,8 +10,7 @@
                               {{ list['question'] }}
                             </mat-panel-title>
                           </mat-expansion-panel-header>
-                          <p>
-                            {{ list['answer'] }}
+                          <p [innerHtml]="list['answer']">
                           </p>
                         </mat-expansion-panel>
                     </mat-accordion>                      
@@ -24,7 +23,13 @@
                         Frequently asked questions
                     </h2> -->
                     <div class="image position-relative text-center">
-                        <img src="assets/images/faq.png" alt="faq-image">
+                        <picture>
+                            <source srcset="assets/images/mobile-faq.webp 1x, assets/images/mobile-faq@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                            <source srcset="assets/images/faq.webp 1x, assets/images/faq@2x.webp 2x" type="image/webp">
+                            <source srcset="assets/images/mobile-faq.jpg 1x, assets/images/mobile-faq@2x.jpg 767w" media="(max-width: 767px)">
+                            <source srcset="assets/images/faq.jpg 1x, assets/images/faq@2x.jpg 2x">
+                            <img src="assets/images/faq.jpg" alt="faq-image">
+                        </picture>
                         <!-- <img src="assets/images/faq2.jpg" alt="faq-image"> -->
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import { catchError, forkJoin, map, Observable, of } from 'rxjs';
 import { LanguageService } from 'src/app/services/language.service';
 import { ProjectListService } from './project-list.service';
 import { findFlagUrlByCountryName, findFlagUrlByIso2Code } from 'country-flags-svg';
+import { CommonServiceService } from 'src/app/services/common-service.service';
 
 @Component({
   selector: 'app-project-list',
@@ -18,8 +19,6 @@ export class ProjectListComponent {
 @Input() showFilters: boolean = true;
 @Input() slider : boolean = false;
 @Input() hideMessageBox = false;
-@Input() hideLockScreen = false;
-@Input() sliderCount = {};
 @ViewChild('carouselTrack') carouselTrack!: ElementRef;
 currentPosition = 0;
 isAtStart = true;
@@ -39,7 +38,7 @@ factorySlider: OwlOptions | null = null;
  verifiedStatus: boolean = false;
  countries: { [key: string]: { flag: string; population: number } } = {};
  constructor( @Inject(PLATFORM_ID) private platformId: Object, private _http: HttpClient, public _languageService: LanguageService,
-private _projectListService: ProjectListService) {
+private _projectListService: ProjectListService, private _commonServiceService: CommonServiceService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
     this.fetchData()
     // if(this.isBrowser){
@@ -144,24 +143,16 @@ sliderInit() {
     // width: 123
     responsive: {
       0: {
-        items: this.sliderCount['mobile']?this.sliderCount['mobile']:2,  // 1 item for small screens
-        autoplay: true,
-        loop: true,
+        items: 2  // 1 item for small screens
       },
       800: {
-        items: this.sliderCount['ipad']?this.sliderCount['ipad']:4,  // 2 full items and a half item for larger screens
-        autoplay: false,
-        loop: false,
+        items: 4  // 2 full items and a half item for larger screens
       },
       1000: {
-        items: this.sliderCount['desktop']?this.sliderCount['desktop']:5,  // 2 full items and a half item for larger screens
-        autoplay: false,
-        loop: false,
+        items: 5  // 2 full items and a half item for larger screens
       },
       1416: {
-        items: this.sliderCount['big']?this.sliderCount['big']:6,  // 1 item for slightly larger screens
-        autoplay: false,
-        loop: false,
+        items: 6  // 1 item for slightly larger screens
       },
       // 740: {
       //   items: 5  // 2 items for medium screens
@@ -338,6 +329,7 @@ sliderInit() {
 
       item.route = this.buildRoute(item.company_name);
       item.linking = this.buildLinking(item.company_name);
+      // debugger
 
       item.locationUpdated = this.parseProjectRegion(item.project_region);
       item.flag = this.getFlag(item.locationUpdated.at(-1) || '');
@@ -388,10 +380,12 @@ sliderInit() {
 
   // Build Linking
   private buildLinking(companyName: string) {
-    return companyName
-      .replace(/[\s&.]/g, '-')
-      .replace(/-{2,}/g, '-')
-      .toLowerCase();
+    return this._commonServiceService.buildLinking(companyName);
+    // return companyName
+    //   .replace(/[\s&.]/g, '-')
+    //   .replace(/-{2,}/g, '-')
+    //   .replace(/-$/, '') // remove trailing hyphen
+    //   .toLowerCase();
   }
 
   // Parse Project Region

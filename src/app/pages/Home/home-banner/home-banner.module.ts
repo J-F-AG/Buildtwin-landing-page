@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeBannerComponent } from './home-banner.component';
 import { RouterModule } from '@angular/router';
 import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 
 
 
@@ -11,7 +12,8 @@ import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module'
   imports: [
     CommonModule,
     RouterModule,
-    HubspotModule
+    HubspotModule,
+    NzCarouselModule
   ],
   exports: [HomeBannerComponent]
 })

@@ -1716,7 +1716,7 @@ ul {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        font-family: var(--medium-global);
+        font-weight: var(--medium-global);
         color: #1a1a1a;
         &.active {
             color: #0053fa;

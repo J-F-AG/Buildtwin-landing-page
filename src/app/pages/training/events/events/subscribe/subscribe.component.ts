@@ -56,10 +56,14 @@ export class SubscribeComponent implements OnInit {
               if (hdFaqElement) {
                   const topOffset = hdFaqElement.offsetTop;
                   const scrollPosition = topOffset - 100;
-                  window.scrollTo({
+                  try {
+                    window.scrollTo({
                       top: scrollPosition,
                       behavior: 'smooth' 
                   });
+                  } catch (error) {
+                    
+                  }
               } else {
                   console.error('Element with ID "hdFaq" not found.');
               }

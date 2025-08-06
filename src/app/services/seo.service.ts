@@ -18,6 +18,9 @@ export class SeoService {
     this.updateOGTags('og:title', title);
     this.updateTwitterTags('twitter:title', title);
   }
+  updateKeywords(keywords: string) {
+    this.metaService.updateTag({ name: 'keywords', content: keywords?keywords:'' });
+  }
 
   updateDescription(desc: string) {
     this.metaService.updateTag({ name: 'description', content: desc })
@@ -76,40 +79,38 @@ export class SeoService {
 
     // Append the new canonical tag to the head
     renderer.appendChild(this.doc.head, link);
-  }
-  setFaqSchemas(schema: any, renderer: any) {
-    const script: HTMLScriptElement = renderer.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    script.setAttribute('id', 'faq-schema');
-    script.textContent = JSON.stringify(schema);
+    // const childRoute = this.getChild(this.activatedRoute);
+    // childRoute.data.subscribe(data => {
+    //   const canonicalUrl = data['canonical'] || `https://www.buildtwin.com${url}`;
+    //   if (isPlatformBrowser(this.platformId)) {
+    //     // Only run this part in the browser
+    //     this.updateCanonicalUrl(canonicalUrl);
+    //   } else {
+    //     // Set canonical link during SSR before page load
+    //     this.metaService.updateTag({ rel: 'canonical', href: canonicalUrl });
+    //   }
+    // });
+    // Correctly select the canonical tag using the 'link[rel="canonical"]' selector
+  // const existingCanonical = this.metaService.getTag('link[rel="canonical"]');
 
-    // Remove any existing FAQ/Testimonial schema scripts to avoid duplicates
-    try {
-      const existingScripts = this.doc.head.querySelectorAll('script[id="faq-schema"]');
-      existingScripts.forEach((existingScript) => renderer.removeChild(this.doc.head, existingScript));
-    } catch (error) {
+  // // If the canonical tag exists, remove it
+  // if (existingCanonical) {
+  //   this.metaService.removeTag('link[rel="canonical"]');
+  // }
+  // Correctly select the canonical tag using the 'link[rel="canonical"]' selector
+    // const existingCanonical = this.metaService.getTag("meta[rel='canonical']");
+  
+    // // If the canonical tag exists, remove it
+  //   try {
+  //     this.removeCanonicalURL()
+  //   } catch (error) {
       
-    }
-
-    // Append the new schema script to the head
-    renderer.appendChild(this.doc.head, script);
-  }
-  setTestimonialSchemas(schema: any, renderer: any) {
-    const script: HTMLScriptElement = renderer.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    script.setAttribute('id', 'testimonial-schema');
-    script.textContent = JSON.stringify(schema);
-
-    // Remove any existing FAQ/Testimonial schema scripts to avoid duplicates
-    try {
-      const existingScripts = this.doc.head.querySelectorAll('script[id="testimonial-schema"]');
-      existingScripts.forEach((existingScript) => renderer.removeChild(this.doc.head, existingScript));
-    } catch (error) {
-      
-    }
-
-    // Append the new schema script to the head
-    renderer.appendChild(this.doc.head, script);
+  //   }
+  //   if(url.includes('partners')){
+  //     url = url.toLowerCase();
+  //   }
+  // // Add the new canonical tag
+  // this.metaService.addTag({ rel: 'canonical', href: url });
   }
   setLanguageTags(url: string, renderer: any) {
     const link: HTMLLinkElement = renderer.createElement('link');

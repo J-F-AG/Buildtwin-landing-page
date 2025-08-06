@@ -28,7 +28,13 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/robots.txt"
+              "src/sitemap.xml",
+              "src/sitemap-blog.xml",
+              "src/sitemap-main.xml",
+              "src/sitemap-partner.xml",
+              "src/robots.txt",
+              "src/images_sitemap.xml",
+              "src/indexnowApikey.txt"
             ],
             "styles": [
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",

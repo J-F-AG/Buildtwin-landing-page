@@ -5,7 +5,6 @@ url(../../../../assets/images/howITworksBGmain.jpg) center top no-repeat,
 url(../../../../assets/images/how-it-worksBGX.jpg) left top repeat-x;
 
 .container{
-    background: url(../../../../assets/images/howITworkImg.png) left bottom no-repeat;
     padding-top: 66px;
     padding-bottom: 414px;
 
@@ -25,6 +24,16 @@ url(../../../../assets/images/how-it-worksBGX.jpg) left top repeat-x;
 }
 
 
+}
+::ng-deep {
+    .ht-image {
+        background: url(../../../../assets/images/howITworkImg.png) left bottom no-repeat;
+    }
+    .webp {
+        .ht-image {
+            background-image: url(../../../../assets/images/howITworkImg.webp);
+        }
+    }
 }
 @media (max-width:767px){
     .howItWorksWrapper .container .content {

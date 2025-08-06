@@ -18,8 +18,7 @@ export class LanguageService {
     "bim-outsourcing-services-in-usa" : 1,  //this has to be updated later
     "steel-detailing-services-in-usa" : 8,  //this has to be updated later
     "drafting-services" : 12,  //this has to be updated later
-    "cad-services" : 12,  //this has to be updated later
-    "shop-drawing-services" : 1  //this has to be updated later
+    "cad-services" : 12  //this has to be updated later
   }
   serviceData: any = {
     "pre-cast-detailing-services": {
@@ -45,9 +44,6 @@ export class LanguageService {
     },
     "cad-services" : {
       name: "CAD Services"
-    },
-    "shop-drawing-services" : {
-      name: "Shop Drawing Services"
     }
   }
   isBrowser: boolean;
@@ -979,6 +975,47 @@ export class LanguageService {
     return JSON.stringify(AIProjectManagementSchema);
   }
 
+  injectForAIProjectManagementProductSchema(renderer) {
+
+    const AIProjectManagementSchema = {
+
+      "@context": "https://schema.org/",  
+
+      "@type": "Product",  
+    
+      "name": "Simplify Structural Engineering Projects with AI Design Manager", 
+    
+      "image": "https://www.buildtwin.com/assets/images/bt-thumb.png", 
+    
+      "description": "BuildTwin's AI Design Manager simplifies structural engineering projects with AI assistance at every step. Features collaboration and planning tools. Trusted by over 5,000 engineers", 
+    
+      "brand": { 
+    
+        "@type": "Brand", 
+    
+        "name": "Buildtwin" 
+    
+      }, 
+    
+      "aggregateRating": { 
+    
+        "@type": "AggregateRating", 
+    
+        "ratingValue": "4.9", 
+    
+        "bestRating": "5", 
+    
+        "worstRating": "1", 
+    
+        "ratingCount": "3" 
+    
+      }
+    };
+
+    return JSON.stringify(AIProjectManagementSchema);
+
+  }
+
   injectFAQSchemaForFaqPage(renderer) {
     // Create the FAQ schema for the FAQ page
     const faqSchema = {
@@ -1065,13 +1102,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "Why should I choose vendors from BuildTwin for precast detailing services?",
+        "name": "Do precast detailing services follow industry codes and standards?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin is a one-stop platform that connects you with pre-qualified precast detailers who specialize in providing high-quality precast detailing services. Our vendors are carefully vetted to ensure they have the necessary extensive experience, adhere to industry standards, and deliver precise precast shop drawings and fabrication drawings. BuildTwin eliminates the hassle of vendor searching and offers live tracking for seamless project execution."
+          "text": "Yes, professional precast detailing services adhere to industry standards like ACI, PCI, and local building codes. This ensures structural safety, regulatory compliance, and smooth approval during design review and inspections."
 
         }
 
@@ -1079,13 +1116,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "What software do BuildTwin’s vendors use for precast detailing?",
+        "name": "Can precast concrete detailing be customized for unique architectural designs?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "Vendors on BuildTwin use industry-standard software such as AutoCAD, Revit, and other advanced tools to generate accurate bar bending schedules, shop drawings, and precast panel detailing. These tools ensure compliance with international standards and enhance the quality of precast concrete detailing."
+          "text": "Absolutely. Precast concrete detailing can be fully customized to fit complex architectural styles. Drafters incorporate curves, textures, and non-standard shapes while ensuring the integrity and constructability of each prefabricated component."
 
         }
 
@@ -1093,13 +1130,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "How does BuildTwin ensure the security and confidentiality of my project data?",
+        "name": "How does precast panel detailing improve structural coordination?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "Our platform is built on secure AI-driven systems that prioritize data privacy and confidentiality. With quality control measures embedded at every step, BuildTwin ensures your precast detailing project remains secure, compliant, and accessible only to authorized personnel."
+          "text": "Precast panel detailing includes precise joinery, connection, and embedment information. It ensures all panels align perfectly during assembly, reduces on-site adjustments, and allows for seamless integration with MEP and structural systems."
 
         }
 
@@ -1107,13 +1144,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "What type of precast detailing services can I expect from BuildTwin's vendors?",
+        "name": "How do prefabrication detailing services support faster construction?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin’s vendors provide a wide range of services, including: Cladding panel detailing drawings Wall panel detailing for structural stability Detailed fabrication drawings Rebar detailing for structural components Erection drawings for seamless assembly Comprehensive precast connection details Handling of lifting leg locations and grout ferrule locations These services cater to a variety of building projects, including residential buildings, commercial buildings, and industrial buildings."
+          "text": "Prefabrication detailing services enable off-site production by providing accurate, shop-ready drawings. This minimizes on-site labor, reduces delays caused by weather, and speeds up the entire construction process while ensuring consistent quality and precision."
 
         }
 
@@ -1121,153 +1158,13 @@ export class LanguageService {
 
         "@type": "Question",
 
-        "name": "How does BuildTwin pre-qualify its vendors?",
+        "name": "Why choose structural precast modeling over traditional 2D drawings?",
 
         "acceptedAnswer": {
 
           "@type": "Answer",
 
-          "text": "BuildTwin follows a stringent pre-qualification process by verifying the vendor's proven track record, adherence to industry standards, and ability to deliver accurate quantity take-offs and high-quality precast detailing drawings. Vendors are selected based on their expertise, project history, and compliance with global standards like ACI, CRSI, and ASTM."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "What type of projects can vendors on BuildTwin handle?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "The vendors listed on BuildTwin specialize in handling a wide range of projects, including: Residential buildings and complexes Commercial buildings such as malls and offices Industrial buildings, including chemical plants and factories Infrastructure like bridges, tunnels, and metros Specialized projects for double tee detailing, water tanks, and retaining walls"
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "How can I compare vendors listed on BuildTwin?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "Our platform provides a detailed comparison tool that categorizes vendors by: Experience in precast detailing services Expertise in delivering specific fabrication drawings Successful project completions in diverse sectors Geographic reach and specialization in industrial buildings or residential buildings By applying these filters, you can select the best vendor for your precast detailing project."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "What is the timeline for receiving responses from vendors?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "Once you invite vendors to bid on your precast detailing project, responses are typically received within 48–72 hours. Our platform ensures vendors are notified promptly, expediting the bidding process for your project."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "How does BuildTwin ensure adherence to industry standards?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "BuildTwin's vendors strictly follow global industry standards like ACI, ASTM, BS, and CRSI for all precast concrete detailing projects. This ensures durability, structural integrity, and compliance with regional and international codes. Additionally, every stage undergoes quality control checks to maintain excellence."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "How does BuildTwin handle project tracking?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "BuildTwin offers a LIVE Track feature that allows you to monitor your project progress in real-time. This includes updates on precast panel detailing, erection drawings, and delivery timelines. With live tracking, you gain complete transparency and control over your precast detailing project."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "Can BuildTwin’s vendors assist with custom design requirements?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "Yes, vendors on BuildTwin are experienced in handling custom precast connection details, beam column detailing, and unique building projects. They offer tailored solutions to meet specific project requirements while maintaining accuracy and efficiency."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "What are cast-in components, and how are they handled by BuildTwin’s vendors?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "Cast-in components are essential structural elements like precast concrete walls, beams, and slabs. BuildTwin's vendors provide a comprehensive list of these components, including their precise lifting leg locations and grout ferrule locations, ensuring proper integration and installation."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "How do vendors on BuildTwin optimize resources for precast projects?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "Through systematic quantity take-offs, BuildTwin's vendors ensure accurate estimation of materials and resources required for precast detailing projects. These include detailed measurements, volumes, and material specifications, reducing waste and optimizing costs."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "Can BuildTwin assist with large-scale industrial or infrastructure projects?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "Yes, BuildTwin’s platform is designed to cater to large-scale projects, including chemical plants, power plants, metros, and other infrastructure developments. Our vendors specialize in double tee detailing, bar bending schedules, and complex structural designs, making them ideal for large-scale industrial buildings."
-
-        }
-
-      }, {
-
-        "@type": "Question",
-
-        "name": "What support does BuildTwin provide during the project lifecycle?",
-
-        "acceptedAnswer": {
-
-          "@type": "Answer",
-
-          "text": "BuildTwin offers end-to-end support, including: Vendor selection and bidding facilitation Real-time project updates through LIVE Track Automated handling of fabrication drawings and shop drawings Quality assurance checks for industry standards compliance Our platform ensures seamless coordination, minimizing manual efforts and maximizing project efficiency."
+          "text": "Structural precast modeling offers a comprehensive 3D view, revealing potential issues before construction. It improves design accuracy, enhances collaboration among teams, and supports digital fabrication—making it a more reliable solution than 2D detailing alone."
 
         }
 
@@ -1292,38 +1189,38 @@ export class LanguageService {
       "@type": "FAQPage",
       "mainEntity": [{
           "@type": "Question",
-          "name": "What steel detailing services does BuildTwin offer through its platform?",
+          "name": "What industries benefit from structural steel detailing services?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "BuildTwin provides a comprehensive range of steel detailing services to support your construction and engineering projects. Our offerings include: Shop Drawings: Detailed fabrication drawings for steel components such as beams, columns, trusses, and connections. Erection Drawings: Precise plans for the assembly and installation of steel structures on-site. 3D Modeling: Advanced 3D models using software like Tekla Structures and AutoCAD for accurate visualization. Connection Design: Detailed design and detailing of bolted and welded connections, ensuring structural integrity. Material Lists: Bill of materials (BOM) including quantities, sizes, and specifications for procurement. Clash Detection: Identifying and resolving conflicts within the steel framework and with other building systems. Miscellaneous Steel Detailing: Services for stairs, handrails, ladders, platforms, and other custom steel elements. Our pre-qualified vendors are skilled professionals who deliver high-quality steel detailing services tailored to your project's specific requirements."
+            "text": "Industries such as commercial construction, infrastructure, oil & gas, and industrial manufacturing use structural steel detailing services for precise fabrication and faster on-site assembly of steel frameworks and support structures."
           }
       },{
           "@type": "Question",
-          "name": "How does BuildTwin ensure the quality and accuracy of steel detailing services?",
+          "name": "Why are steel detailing services important for construction?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Quality and accuracy are paramount in steel detailing to ensure structural safety and project success. BuildTwin ensures this by: Pre-Qualified Vendors: All vendors undergo a rigorous vetting process to verify their expertise and track record. International Standards Compliance: Vendors adhere to global standards like AISC, BS, Eurocode, and AWS for welding. AI-Powered Quality Management: Our AI Design Manager assists in checking drawings for errors and compliance issues. Certified Workflows: We implement standardized, certified workflows to maintain consistency and reliability. Live Project Tracking: Monitor your project's progress in real-time and collaborate directly with vendors. Regular Updates and Reviews: Vendors provide frequent updates, and you can review and provide feedback at each stage. By combining experienced vendors, advanced technology, and robust processes, we ensure high-quality deliverables for your steel detailing projects."
+            "text": "Steel detailing services provide precise documentation for manufacturing and erecting steel structures. They help reduce on-site errors, save time, and support safer, code-compliant construction, especially in complex projects like industrial plants or high-rise buildings."
           }
       },{
           "@type": "Question",
-          "name": "Can I choose from pre-qualified vendors for steel detailing services on BuildTwin?",
+          "name": "How can a steel detailing company add value to my project?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, BuildTwin offers access to a network of pre-qualified vendors specializing in steel detailing services. You can: Browse Vendor Profiles: View detailed profiles, past projects, client reviews, and areas of expertise. Compare Bids: Receive proposals from multiple vendors to find the best fit for your budget and project needs. Select Based on Expertise: Choose vendors with specific experience relevant to your project's requirements. Global Access: Connect with vendors worldwide, giving you access to a broader talent pool. Our platform simplifies the vendor selection process, ensuring you find the right partner for your project."
+            "text": "A professional steel detailing company ensures your project runs efficiently by delivering clash-free drawings, reducing fabrication errors, and enhancing coordination between architects, engineers, and contractors throughout the construction lifecycle."
           }
       },{
           "@type": "Question",
-          "name": "What international codes and standards are followed in the steel detailing services offered through BuildTwin?",
+          "name": "How do steel detailing companies in the USA meet project standards?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Our vendors adhere to various international codes and standards to ensure compliance and quality, including: American Institute of Steel Construction (AISC) Standards British Standards (BS) and BS EN Series Eurocode 3 for Steel Structures Australian Standards (AS/NZS) Canadian Standards Association (CSA) Codes American Welding Society (AWS) Specifications Other Regional Codes: Depending on your project's location and requirements. Compliance with these standards ensures that your steel structures are designed and detailed to meet safety and quality benchmarks."
+            "text": "Steel detailing companies in the USA adhere to AISC, AWS, and OSHA guidelines. They follow strict quality checks, provide BIM integration, and ensure compliance with local building codes for industrial, commercial, or residential steel structures."
           }
       },{
           "@type": "Question",
-          "name": "How does BuildTwin's AI technology enhance steel detailing projects?",
+          "name": "What’s the difference between steel drafting and steel detailing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "BuildTwin leverages AI technology to enhance various aspects of steel detailing projects: AI Design Manager: Assists with project management tasks, automating routine processes and maintaining compliance. Automated Quality Checks: AI algorithms review drawings for errors, ensuring high accuracy. Efficient Communication: Streamlines communication between clients and vendors, reducing delays. Data Management: Securely manages project data with easy access and version control. Predictive Insights: Provides insights into project timelines and potential bottlenecks for proactive management. By integrating AI, we help you achieve greater efficiency, accuracy, and productivity in your steel detailing projects."
+            "text": "Steel drafting focuses on creating general 2D drawings, while steel detailing provides fabrication-level documents and erection plans. Detailing includes material specifications, welding symbols, and connection types, making it essential for production and assembly."
           }
       }]
     };
@@ -1345,42 +1242,34 @@ export class LanguageService {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What rebar detailing services does BuildTwin offer through its platform?",
+          "name": "Can rebar detailing services reduce construction costs?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At BuildTwin, we provide a comprehensive range of rebar detailing services through our one-stop platform. Our services include: Detailed Rebar Drawings: Precise and accurate drawings for the placement and installation of reinforcing steel bars in concrete structures. Bar Bending Schedules: Detailed lists specifying the shape, dimensions, and quantity of each rebar required. Quantity Take-offs: Accurate calculations of the materials needed, helping in cost estimation and procurement. Fabrication Details: Instructions and specifications for the fabrication of rebar components. 3D Modelling and BIM Integration: Advanced modelling for clash detection and seamless integration with Building Information Modelling systems. Our pre-qualified vendors are equipped to handle projects of any scale, ensuring high-quality deliverables that meet your specific requirements."
+            "text": "Absolutely. By optimizing bar lengths, minimizing waste, and ensuring correct placement the first time, rebar detailing services significantly lower rework, material costs, and construction delays—ultimately saving money on the overall project."
           }
         },
         {
           "@type": "Question",
-          "name": "How does BuildTwin ensure the quality and compliance of rebar detailing services provided by vendors?",
+          "name": "How do structural rebar modeling services support large projects?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Quality and compliance are paramount at BuildTwin. We ensure this via: Pre-Qualified Vendors: All vendors on our platform undergo a rigorous qualification process to verify their expertise and track record. Adherence to International Standards: Our vendors comply with global building codes and standards such as ACI, BS, Eurocode, and others relevant to your project location. AI-Powered Quality Management: Our AI Design Manager assists in checking drawings and documents for accuracy and compliance, reducing errors and omissions. Certified Workflows: We implement standardized workflows that are certified to meet industry best practices, ensuring consistency and reliability in all deliverables. Live Project Tracking: Clients can monitor progress in real-time, allowing for immediate feedback and adjustments as needed."
+            "text": "Structural rebar modeling services streamline the planning of reinforcement in complex structures like bridges and high-rises. These models coordinate with architectural and MEP designs, preventing conflicts and enabling smooth, fast, and cost-effective construction execution."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I choose from pre-qualified vendors for rebar detailing services on BuildTwin?",
+          "name": "Are rebar modeling services compatible with BIM platforms?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. At BuildTwin, we offer access to a network of pre-qualified vendors specializing in rebar detailing services. You can: Browse Vendor Profiles: View detailed profiles, including past projects, client reviews, and areas of expertise. Compare Bids: Receive and compare bids from multiple vendors to find the best fit for your project budget and timeline. Select Based on Expertise: Choose vendors with specific experience relevant to your project's requirements. Get Global Access: Connect with vendors worldwide, giving you access to a broader talent pool and competitive pricing. Our platform simplifies the vendor selection process, ensuring you find the right partner for your project."
+            "text": "Yes, modern rebar modeling services integrate with BIM platforms like Revit, Tekla, and AutoCAD. This enables accurate 3D modeling, clash detection, and coordination with other building systems during the pre-construction phase."
           }
         },
         {
           "@type": "Question",
-          "name": "How does BuildTwin's AI technology enhance rebar detailing services?",
+          "name": "What is 3D reinforcement detailing and how is it used?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "At BuildTwin, we leverage AI technology to enhance rebar detailing services in several ways: AI Design Manager: Assists with project management tasks, automates routine processes, and helps in maintaining compliance with industry standards. Automated Quality Checks: AI algorithms review drawings and models for errors, ensuring high-quality outputs. Efficient Communication: AI-powered tools facilitate streamlined communication between clients and vendors, reducing delays. Data Management: Our AI manages project data securely, providing easy access and version control. Predictive Insights: AI provides insights into project timelines and potential bottlenecks, allowing for proactive management. By integrating AI, we help you achieve greater efficiency, accuracy, and productivity in your rebar detailing projects."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What international codes and standards are followed in the rebar detailing services offered through BuildTwin?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Our vendors adhere to a variety of international codes and standards to ensure that all rebar detailing services meet the required compliance and quality benchmarks. These include: ASTM - American Society of Testing Materials ACI - American Concrete Institute CRSI - Concrete Reinforcing Steel Institute NZS - New Zealand Standards AS - Australian Standards BS - British Standards Eurocode (EN) - European Standards CSA - Canadian Standards Association DIN - Deutsches Institut für Normung (German Standards) IS - Indian Standards JIS - Japanese Industrial Standards SNI - Standar Nasional Indonesia (Indonesian Standards) SANS - South African National Standards Other Regional Standards: Depending on the project's location and specific requirements Compliance with these standards ensures that the rebar detailing is suitable for structural integrity, safety, and durability, meeting both local and international regulations."
+            "text": "3D reinforcement detailing uses BIM tools to generate highly detailed, clash-free models of rebar layouts. It enhances coordination between teams, minimizes errors, and ensures that reinforcement follows both structural requirements and construction tolerances."
           }
         }
       ]
@@ -1402,38 +1291,38 @@ export class LanguageService {
       "@type": "FAQPage",
       "mainEntity": [{
         "@type": "Question",
-        "name": "What BIM services does BuildTwin offer through its platform?",
+        "name": "How accurate are 3D BIM modeling services compared to traditional CAD drafting?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "BuildTwin provides comprehensive BIM (Building Information Modeling) services to streamline your architectural, engineering, and construction projects. Our offerings include: 3D Modeling and Visualization: Creation of detailed 3D models for better project visualization and decision-making. BIM Coordination and Clash Detection: Identifying and resolving conflicts between different building systems before construction begins. 4D and 5D BIM Services: Integrating time (4D) and cost (5D) data into your BIM models for enhanced project planning and budgeting. BIM Consulting and Implementation: Assisting in the adoption of BIM processes and best practices within your organization. Facility Management BIM (6D BIM): Providing models enriched with data for maintenance and operation post-construction. LOD (Level of Development) Specific Models: Developing models at various LODs (100 to 500) based on project requirements. Our pre-qualified vendors are skilled in using industry-leading BIM software like Autodesk Revit, Navisworks, and more, ensuring high-quality deliverables tailored to your project's needs."
+          "text": "3D BIM modeling services are significantly more accurate than traditional CAD drafting as they include geometry, spatial relationships, and embedded data that support better decision-making and clash detection."
         }
       }, {
         "@type": "Question",
-        "name": "Why do I need BIM for my construction projects?",
+        "name": "Why are architectural BIM services essential for modern construction?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "BIM (Building Information Modeling) offers numerous benefits for construction projects, including: Enhanced Collaboration: BIM facilitates better communication among architects, engineers, contractors, and stakeholders through a centralized 3D model. Improved Visualization: 3D models provide a clear understanding of the project, reducing misunderstandings and errors. Clash Detection: Early identification of conflicts between building systems saves time and costs associated with rework. Efficient Project Management: BIM integrates various aspects like design, materials, time, and cost, allowing for more effective project planning and execution. Cost and Time Savings: By streamlining processes and reducing errors, BIM helps in minimizing delays and budget overruns. Lifecycle Management: BIM models serve as valuable resources for facility management after construction is completed. Implementing BIM leads to more efficient, accurate, and successful project outcomes."
+          "text": "Architectural BIM services help streamline design processes, improve collaboration between architects and engineers, and ensure accurate drawings and documentation throughout a project’s lifecycle."
         }
       }, {
         "@type": "Question",
-        "name": "How does BIM differ from traditional 3D CAD?",
+        "name": "How do 3D BIM modeling services improve project outcomes?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "While both BIM and traditional 3D CAD involve creating digital representations of buildings, there are significant differences: Data Integration: BIM models are data-rich, containing detailed information about each element's properties, whereas 3D CAD models primarily represent geometry. Collaboration: BIM enables real-time collaboration among various stakeholders, whereas 3D CAD is often limited to individual disciplines. Lifecycle Management: BIM supports the entire lifecycle of a building, from design and construction to operation and maintenance. 3D CAD typically focuses on the design phase only. Clash Detection and Analysis: BIM provides advanced tools for clash detection and project analysis, which are not inherent in traditional 3D CAD. 4D, 5D, and Beyond: BIM extends to include time (4D), cost (5D), sustainability (6D), and facility management (7D), offering a more comprehensive approach than 3D CAD. In essence, BIM is a holistic process that enhances collaboration, efficiency, and decision-making throughout a project's lifecycle."
+          "text": "3D BIM modeling services provide detailed visualizations, detect design clashes early, and help reduce errors and rework during construction, improving overall efficiency and cost-effectiveness."
         }
       }, {
         "@type": "Question",
-        "name": "What are the challenges in BIM implementation, and how can BuildTwin help?",
+        "name": "What are the key benefits of structural BIM services?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Implementing BIM can present several challenges: Technical Expertise: Requires skilled professionals proficient in BIM software and processes. Initial Costs: Investment in software, hardware, and training can be substantial. Process Changes: Transitioning from traditional methods to BIM necessitates changes in workflows and collaboration practices. Data Management: Handling large amounts of data securely and efficiently can be complex. Standardization: Ensuring compliance with industry standards and project-specific requirements. How BuildTwin Helps: Access to Experts: Connect with pre-qualified BIM professionals and vendors who bring the necessary expertise to your projects. Cost-Effective Solutions: By outsourcing BIM services through BuildTwin, you can reduce the need for significant upfront investments. Training Programs: BuildTwin offers training to upskill your team in BIM practices and software. Streamlined Processes: Our platform provides AI-powered project management tools to simplify workflows and enhance collaboration. Compliance Assurance: Vendors adhere to international BIM standards and project-specific requirements, ensuring high-quality deliverables. BuildTwin simplifies BIM adoption, helping you overcome implementation challenges effectively."
+          "text": "Structural BIM services deliver accurate reinforcement detailing, load calculations, and coordinated structural models that enhance safety, performance, and seamless integration with architectural and MEP systems."
         }
       }, {
         "@type": "Question",
-        "name": "Which BIM Level of Development (LOD) is required for my AEC project?",
+        "name": "What makes Revit BIM services different from general BIM solutions?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The appropriate Level of Development (LOD) for your project depends on various factors, including the project's phase, complexity, and specific requirements. LOD levels range from 100 to 500: LOD 100 (Conceptual Design): Basic massing models representing overall project intent. LOD 200 (Schematic Design): Generalized systems and assemblies with approximate quantities, size, shape, and location. LOD 300 (Detailed Design): Precise modeling with specific assemblies, accurate quantities, and dimensions suitable for coordination. LOD 350 (Construction Documentation): Includes interfaces between building elements, supporting detailed coordination. LOD 400 (Fabrication and Assembly): Models include complete fabrication and assembly information. LOD 500 (As-Built): Represents the project as constructed, useful for operations and maintenance. How BuildTwin Assists: Our vendors can deliver BIM models at any LOD required for your project. We recommend: Early Phases: Start with LOD 100-200 for conceptual and schematic designs. Design Development: Progress to LOD 300-350 for detailed coordination and construction documentation. Construction and Fabrication: Utilize LOD 400 for fabrication details. Facility Management: Employ LOD 500 for as-built models for long-term maintenance. Our experts can guide you in selecting the appropriate LOD to meet your project's needs and objectives."
+          "text": "Revit BIM services specifically utilize Autodesk Revit, a powerful BIM software, for highly detailed modeling, documentation, scheduling, and multi-discipline coordination within a single platform."
         }
       }]
     };
@@ -1455,31 +1344,84 @@ export class LanguageService {
       "@type": "FAQPage",
       "mainEntity": [{
         "@type": "Question",
-        "name": "What types of CAD services are offered through BuildTwin?",
+        "name": "How do millwork drafting services improve interior design projects?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our marketplace has vendors offering a diverse range of CAD services through our platform. ●2D Drafting: Drafting for floor plans, sections, and layouts ●3D Modeling: Advanced 3D models for architectural, structural, and mechanical designs ●BIM Integration: BIM coordination and clash detection ●Steel Detailing: Detailing for structural steel components ●Rebar Detailing: Drawings and schedules for reinforcing steel ●MEP Drafting: Drafting for mechanical, electrical, and plumbing systems."
+          "text": "Millwork drafting ensures that all custom woodwork elements are designed to exact specifications, helping architects and interior designers communicate clearly with fabricators and reduce on-site errors."
         }
       }, {
         "@type": "Question",
-        "name": "How does BuildTwin ensure the quality of CAD services provided by vendors?",
+        "name": "Why should I outsource CAD modeling services?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The vendors listed in BuildTwin marketplace are vetted by experts. All our vendors adhere to globally recognized standards in CAD services. Here are some of the compliances standards we follow. ●ISO 19650: Standards for managing information using BIM throughout the project lifecycle. ●ASME Y14.5: Guidelines for Geometric Dimensioning and Tolerancing (GD&T). ●AISC Standards: Specifications for structural steel detailing. ●BS 8888: British standards for technical product documentation. ●DIN Standards: German standards for precision in mechanical and structural CAD design."
+          "text": "Outsourcing CAD modeling services gives you access to skilled professionals who deliver accurate 2D and 3D models, reduce overhead costs, and speed up your design-to-construction workflow."
         }
       }, {
         "@type": "Question",
-        "name": "Can I choose from pre-qualified vendors for CAD Services on BuildTwin?",
+        "name": "How do 3D modeling services benefit construction and design projects?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. At BuildTwin, we offer access to a pool of pre-qualified vendors specializing in CAD services. Our marketplace lets you ●Browse Vendor Profiles: View detailed profiles, including past projects, client reviews, and areas of expertise. ●Compare Bids: Receive and compare bids from multiple vendors to find the best fit for your project budget and timeline. ●Select Based on Expertise: Choose vendors with specific experience relevant to your project's requirements. ●Get Global Access: Connect with vendors worldwide, giving you access to a broader talent pool and competitive pricing. Our platform simplifies the vendor selection process, ensuring you find the right partner for your project."
+          "text": "3D modeling services enhance spatial visualization, detect design conflicts early, and support client presentations, enabling better communication and fewer errors during construction."
         }
       }, {
         "@type": "Question",
-        "name": "How does BuildTwin's AI technology enhance CAD services?",
+        "name": "What are structural CAD services used for?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "At BuildTwin, we leverage AI to enhance CAD services in several ways: ●AI Design Manager: Assists with project management tasks, automates routine processes, and helps in maintaining compliance with industry standards. ●Automated Quality Checks: AI algorithms review drawings and models for errors, ensuring high-quality outputs. ●Efficient Communication: AI-powered tools facilitate streamlined communication between clients and vendors, reducing delays. ●Data Management: Our AI manages project data securely, providing easy access and version control. ●Predictive Insights: AI provides insights into project timelines and potential bottlenecks, allowing for proactive management. By integrating AI, we help you achieve greater efficiency, accuracy, and productivity in your CAD projects."
+          "text": "Structural CAD services are used to create accurate 2D and 3D drawings of structural components, including beams, columns, foundations, and reinforcement details for residential, commercial, or industrial projects."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Why are shop drawings important in construction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Shop drawings translate design intent into actionable fabrication plans, providing contractors and fabricators with the exact details needed for efficient and error-free construction."
+        }
+      }]
+    };
+
+    // Create the script element
+    // const jsonLdScriptTag = renderer.createElement('script');
+    // jsonLdScriptTag.type = 'application/ld+json';
+    // jsonLdScriptTag.text = JSON.stringify(faqSchema);
+
+    // // Append the script to the head of the document
+    // renderer.appendChild(document.head, jsonLdScriptTag);
+    return JSON.stringify(faqSchema);
+  }
+
+  injectFAQSchemaForDraftingServices(renderer) {
+    // Create the FAQ schema for the FAQ page
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How do structural drafting services ensure accuracy in building design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Structural drafting services use exact measurements and advanced CAD tools to depict structural elements accurately. By reflecting real-world conditions, these drawings minimize design flaws, prevent material wastage, and support engineers in building stable, safe, and compliant structures."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Why are architectural CAD drafting services important?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Architectural CAD drafting services convert conceptual designs into professional, technical drawings. They provide clarity in space planning, dimensions, and material specifications, enabling architects and builders to collaborate effectively and construct structures according to the intended vision and regulatory standards."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do construction drafting services follow building codes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, professional construction drafting services are developed in strict adherence to local and international building codes. This ensures legal compliance, construction safety, and smooth permit approvals while reducing risks of costly design changes later in the process."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can 2D drafting services be converted to 3D models later?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. 2D drafting services provide the base for accurate 3D modeling. Engineers and designers can easily convert these drafts into interactive 3D models, enhancing design visualization, coordination, and project communication across multiple stakeholders."
         }
       }]
     };
@@ -2832,6 +2774,45 @@ export class LanguageService {
     return JSON.stringify(SectorDataCenterTestimonialSchema);
   }
 
+  injectSectorDataCenterProductSchema(renderer) {
+
+    const sectorDataCenterProductSchema = {
+      "@context": "https://schema.org/",  
+
+      "@type": "Product",  
+    
+      "name": "Expert Data Center Construction Services | BuildTwin Marketplace", 
+    
+      "image": "https://www.buildtwin.com/assets/images/sector-banner/data-center.jpg", 
+    
+      "description": "Find expert vendors for data center projects. Get customized designs for colocation, hyperscale, and cloud data centers with BuildTwin’s global network.", 
+    
+      "brand": { 
+    
+        "@type": "Brand", 
+    
+        "name": "Buildtwin" 
+    
+      }, 
+    
+      "aggregateRating": { 
+    
+        "@type": "AggregateRating", 
+    
+        "ratingValue": "4.9", 
+    
+        "bestRating": "5", 
+    
+        "worstRating": "1", 
+    
+        "ratingCount": "3" 
+    
+      }
+    }
+
+    return JSON.stringify(sectorDataCenterProductSchema);
+  }
+
   injectFAQSchemaForBuildingCodeAisc(renderer) {
     // Create the FAQ schema for the FAQ page
     const faqSchema = {
@@ -3753,6 +3734,46 @@ export class LanguageService {
     };
 
     return JSON.stringify(SectorPowerPlantTestimonialSchema);
+  }
+
+  injectSectorPowerPlantProductSchema(renderer) {
+
+    const SectorPowerPlantProductSchema = {
+      "@context": "https://schema.org/",  
+
+      "@type": "Product",  
+    
+      "name": "Expert Power Plant Engineering Solutions | BuildTwin Marketplace", 
+    
+      "image": "https://www.buildtwin.com/assets/images/sector-banner/power-plant.jpg", 
+    
+      "description": "Discover expert vendors for power plant projects and power plant engineering services in thermal, nuclear, and renewable energy. Enhance efficiency with BuildTwin’s ERP solutions.", 
+    
+      "brand": { 
+    
+        "@type": "Brand", 
+    
+        "name": "Buildtwin" 
+    
+      }, 
+    
+      "aggregateRating": { 
+    
+        "@type": "AggregateRating", 
+    
+        "ratingValue": "4.9", 
+    
+        "bestRating": "5", 
+    
+        "worstRating": "1", 
+    
+        "ratingCount": "3" 
+    
+      } 
+    };
+
+    return JSON.stringify(SectorPowerPlantProductSchema);
+
   }
 
   injectFAQSchemaForSectorBridge(renderer) {
@@ -6083,7 +6104,7 @@ export class LanguageService {
     return JSON.stringify(faqSchema);
   }
 
-  injectForArchitecturalDesignServicesSchema(renderer) {
+  injectForArchitecturalDesignServicesFaqSchema(renderer) {
     // Create the Marketplace schema for the marketplace page
     const ArchitecturalDesignServicesSchema = {
       "@context": "https://schema.org",
@@ -6180,7 +6201,7 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(ArchitecturalDesignServicesSchema);
   }
-  injectForArchitecturalDesignServicesService(renderer) {
+  injectForArchitecturalDesignServiceSchema(renderer) {
     // Create the Marketplace schema for the marketplace page
     const ArchitecturalDesignServicesService = {
       "@context": "https://schema.org",
@@ -6553,6 +6574,90 @@ export class LanguageService {
     // renderer.appendChild(document.head, jsonLdScriptTag);
     return JSON.stringify(ArchitecturalDesignServicesSchema);
   }
+  injectForDataSafetySchema(renderer) {
+    // Create the Marketplace schema for the marketplace page
+    const ArchitecturalDesignServicesSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does BuildTwin Pro comply with industry standards for data security?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. BuildTwin Pro complies with major industry standards for data security, including ISO/IEC 27001, GDPR (for users in the EU), and other applicable regional regulations. We continuously review and update our security protocols to align with best practices in the construction and data management industries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is my data hosted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your data is hosted within your region of use. BuildTwin Pro uses localized cloud infrastructure to ensure compliance with data residency laws. For example, EU users’ data stays within the EU, and the same applies for other regions (e.g., US, India, GCC). This ensures faster access and full legal compliance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data encrypted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, end-to-end. All data on BuildTwin Pro is encrypted in transit using TLS 1.2+ and at rest using AES-256. Whether you’re uploading, sharing, or storing files, your data remains fully protected with industry-grade encryption."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who can access my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only you and authorized users. Access to your files is controlled via role-based permissions and secure links. You decide who can view, comment, or edit. BuildTwin Pro staff do not have access to your data unless explicitly requested for support purposes and with your consent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I delete my account and data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. To request account and data deletion, please contact our support team at hello@buildtwin.com. Upon verification, all your data will be permanently deleted from our systems, including backups, within 30 days, in accordance with GDPR and other privacy standards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is my data retained?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We retain your data for as long as your account is active or as needed to provide you services. You can request deletion at any time. Backups are retained for disaster recovery and are automatically purged within 30 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does BuildTwin Pro support audit trails?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every action on BuildTwin Pro is logged and time-stamped. You get a complete audit trail for uploads, comments, status changes, and file shares—ensuring accountability and traceability for all project stakeholders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is BuildTwin Pro compliant with GDPR, CCPA, and other privacy laws?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. BuildTwin Pro is fully compliant with GDPR, CCPA, and applicable data protection regulations. You can request a copy of your data, rectify inaccuracies, or ask for permanent deletion at any time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does BuildTwin Pro undergo security audits?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We conduct regular third-party security audits and penetration tests to identify and address vulnerabilities. Security is a core part of our development and operations lifecycle (DevSecOps)."
+          }
+        }
+      ]
+
+    };
+
+    return JSON.stringify(ArchitecturalDesignServicesSchema);
+  }
 
 
   injectStructuralSteelDetailingTestimonialSchema(renderer) {
@@ -6737,6 +6842,32 @@ export class LanguageService {
     };
 
     return JSON.stringify(StructuralSteelDetailingTestimonialSchema);
+  }
+
+  injectStructuralSteelDetailingProductSchema(renderer) {
+
+    const StructuralSteelDetailingProductSchema = {
+      "@context": "https://schema.org/",  
+
+      "@type": "Product",  
+    
+      "name": "Structural Steel Detailing Software Comparison: Tekla Structures vs SDS/2", 
+    
+      "image": "https://www.buildtwin.com/assets/images/serviceBanner.jpg", 
+    
+      "description": "Compare Tekla Structures and SDS/2 for structural steel detailing. Discover their features, advantages, pricing, and the best use cases for precise and efficient project delivery.", 
+    
+      "brand": { 
+    
+        "@type": "Brand", 
+    
+        "name": "Buildtwin" 
+    
+      }
+    }
+
+    return JSON.stringify(StructuralSteelDetailingProductSchema);
+
   }
 
 

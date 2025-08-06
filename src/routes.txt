@@ -76,4 +76,3 @@
 /building-code/iso-standards
 /software/architecture-design-services
 /software/structural-steel-detailing
-/services/shop-drawing-services

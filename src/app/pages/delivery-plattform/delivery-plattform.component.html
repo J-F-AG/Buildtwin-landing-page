@@ -1,0 +1,305 @@
+<div class="bg-blue">
+    <app-hd-navbar></app-hd-navbar>
+    
+    <app-om-banner-freelance2></app-om-banner-freelance2>
+    
+    <div class="tab-wrapper">
+        <div>
+            <ul class="tab-trigger-wrapper">
+                <li *ngFor="let item of tabDetail; let i = index" 
+                    [ngClass]="{active: selectedIndex === i}" 
+                    (click)="changeTab(i)">
+                    <img [src]="item.icon" width="29" height="29" alt="">
+                    {{ item.text }}
+                </li>
+            </ul>
+        </div>
+        <div class="tab-target-wrapper">
+            <!-- <img [src]="tabDetail[selectedIndex]?.target" width="1113" height="591" alt=""> -->
+             <picture>
+                <!-- WebP for mobile or smaller screens -->
+                <source 
+                    [attr.srcset]="tabDetail[selectedIndex]?.targetwebp + ' 1x, ' + tabDetail[selectedIndex]?.targetwebp2x + ' 2x'" 
+                    type="image/webp">
+
+                <!-- Fallback (JPG/PNG) for browsers that don't support WebP -->
+                <source 
+                    [attr.srcset]="tabDetail[selectedIndex]?.target + ' 1x, ' + tabDetail[selectedIndex]?.target2x + ' 2x'">
+
+                <!-- Actual <img> tag as fallback -->
+                <img 
+                    [src]="tabDetail[selectedIndex]?.target" 
+                    width="1113" 
+                    height="591" 
+                    alt="">
+            </picture>
+        </div>
+    </div>    
+
+    <app-experence>
+        <div class="container">
+            <div class="heading center v2">
+                <h2 class="title">
+        
+                    <span>Your services.</span> Our Reach. 
+                    
+                </h2> 
+                <div class="subTitle">
+                    We specialied in comprehensive approach for each and every service 
+                    <br>provider, with one of the largest global footprint. 
+                </div>
+             </div>
+        </div>
+        <div class="head">
+            <div class="pre-filled">
+                Pre-filled<br>
+Tender<br>
+Application
+            </div>
+            <span>
+                Your technical<br>
+                Portfolio
+            </span>
+            <div class="center">
+                <img src="assets/images/for-seller/icon1.png" width="60" height="71" alt="">
+                Full Control over<br>
+                your portfolio
+            </div>
+            <span>
+                Match with global<br>
+                Private & Public Projects
+            </span>
+        </div>
+        <div class="container global-mb">
+            <div class="block-wrapper">
+                    <div class="block">
+                        <div class="count small">
+                            Top 3
+                        </div>
+                        <p>
+                            ranked on google on 50+ keywords
+                        </p>
+                        <img src="assets/images/ser1.png" width="57" height="53" alt="">
+                    </div>
+                    <div class="block">
+                        <div class="count small">
+                            1000+
+                        </div>
+                        <p>
+                            of engineering tenders
+                        </p>
+                        <img src="assets/images/ser2.png" width="57" height="53" alt="">
+                    </div>
+                    <div class="block">
+                        <div class="count small">
+                            50k+
+                        </div>
+                        <p>
+                            impressions
+                        </p>
+                        <img src="assets/images/ser3.png" width="57" height="53" alt="">
+                    </div>
+                    <div class="block">
+                        <div class="count small">
+                            100+
+                        </div>
+                        <p>
+                            of private clients
+                        </p>
+                        <img src="assets/images/ser4.png" width="57" height="53" alt="">
+                    </div>
+            </div>
+        </div>
+        </app-experence>
+        <app-company-logos-slider [bg]="false"></app-company-logos-slider>
+    <app-get-started-block>
+        <div class="heading center v2">
+           <h2 class="title">
+            3 reasons to get started  <span>NOW
+            </span>
+           </h2> 
+           <!-- <div class="subTitle">
+    
+           </div> -->
+        </div>
+        
+        <div class="block-wrapper-arrow">
+            <div class="block">
+                <img src="assets/images/seller1-arrow.png" alt="arrow" width="29" height="59">
+            </div>
+            <div class="block">
+                <img src="assets/images/seller2-arrow.png" alt="arrow" width="24" height="61">
+            </div>
+            <div class="block">
+                <img src="assets/images/seller3-arrow.png" alt="arrow" width="29" height="59">
+            </div>
+        </div>
+        <div class="block-wrapper">
+            <div class="block">
+                <div class="note">
+                    in less than 5 min.
+                </div>
+                <figure>
+                    <picture>
+                        <source 
+                            srcset="assets/images/sellers1@2x.webp" 
+                            type="image/webp" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <source 
+                            srcset="assets/images/sellers1.webp" 
+                            type="image/webp">
+                        <source 
+                            srcset="assets/images/sellers1@2x.png" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                            src="assets/images/sellers1.png" 
+                            alt="Sellers1" 
+                            width="388" 
+                            height="253">
+                    </picture>
+                </figure>
+                <div class="content">
+                    <h3>Get your free 
+                        <br>Business Listing</h3>
+                    <p>Claim your free business listing now to instantly 
+                        match with public tenders worldwide.</p>
+                    <a href="https://www.buildtwin.com/get-started" class="button-v2 provide_page_claim_now_3_reason" target="_blank">
+                        Get started for FREE
+                    </a>
+                </div>
+            </div>
+            <div class="block">
+                <figure>
+                    <picture>
+                        <source 
+                            srcset="assets/images/sellers2@2x.webp" 
+                            type="image/webp" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <source 
+                            srcset="assets/images/sellers2.webp" 
+                            type="image/webp">
+                        <source 
+                            srcset="assets/images/sellers2@2x.png" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                            src="assets/images/sellers2.png" 
+                            alt="Sellers2" 
+                            width="388" 
+                            height="253">
+                    </picture>
+                </figure>
+                <div class="content">
+                    <h3>Get pre-qualified and
+                        <br>invited for private tenders
+                    </h3>
+                    <p>Are you ready? Get your business pre-qualified
+                        and get invited to submit bids for private projects</p>
+                    <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 cursor provide_page_get_started_3_reason">
+                        Get pre-qualified
+                    </a>
+                </div>
+            </div>
+            <div class="block">
+                <figure>
+                    <picture>
+                        <source 
+                            srcset="assets/images/sellers3@2x.webp" 
+                            type="image/webp" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <source 
+                            srcset="assets/images/sellers3.webp" 
+                            type="image/webp">
+                        <source 
+                            srcset="assets/images/sellers3@2x.png" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                            src="assets/images/sellers3.png" 
+                            alt="Sellers3" 
+                            width="388" 
+                            height="253">
+                    </picture>
+                </figure>
+                <div class="content">
+                    <h3>Let’s talk growth! Our global Sales advisors are here for you</h3>
+                    <p>Schedule a call with our global Sales team to 
+                        see how BuildTwin can fuel your growth.</p>
+                    <a href="javascript:void(0)" (click)="callStatus()" class="button-v2 provide_page_schedule_call_3_reason">
+                        <picture class="normal">
+                            <source 
+                              srcset="assets/images/icons/call-white@2x.png" 
+                              media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                            <img 
+                              src="assets/images/icons/call-white.png" 
+                              alt="call" 
+                              width="21" 
+                              height="22">
+                          </picture>
+                        <picture class="hover">
+                            <source 
+                              srcset="assets/images/icons/call@2x.png" 
+                              media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                            <img 
+                              src="assets/images/icons/call.png" 
+                              alt="call" 
+                              width="21" 
+                              height="22">
+                          </picture>
+                        Schedule Call
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </app-get-started-block>
+    
+    
+            <!-- <app-em-faq></app-em-faq> -->
+             <app-tt-faq></app-tt-faq>
+    
+            
+         
+            
+            <app-get-started1>
+                <div class="startedData">
+                    <div class="content">
+                        <div class="heading">
+                            <h2 class="title">Get started NOW</h2>
+                            <p class="small-title">
+                                The BuildTwin Marketplace program not only covers our closed
+                                marketplace with clients from 10+ <br />
+                                countries - but gives you also access to Leads from open market.
+                            </p>
+                        </div>
+                    </div>
+                    <a  href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 provide_page_free_portfollo_Matching">Free Portfolio Matching</a>
+                </div>
+            </app-get-started1>
+            
+            
+            
+            
+            
+    
+    <app-hd-footer></app-hd-footer>
+    <div class="popUP" [ngClass]="{'active':showPopup1}">
+        <div class="coverPopup">
+          <i class="closeIcon" (click)="closePopup1()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <g clip-path="url(#clip0_2773_11848aaa)">
+              <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_2773_11848">
+              <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+              </clipPath>
+              </defs>
+              </svg>
+          </i>
+          <div class="coverPopupData">
+       
+        <div id="hubspotFormContainer21"></div>
+      </div>
+      </div>
+    </div>
+    <app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}"  (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+</div>

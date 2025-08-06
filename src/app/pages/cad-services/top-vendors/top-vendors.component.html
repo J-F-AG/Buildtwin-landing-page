@@ -15,8 +15,32 @@
                             <ng-template carouselSlide *ngFor=" let item of projectsArray">
                                 <div class="projectCard"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
                                     <div class="projectImg">
-                                        <img src="{{item.img}}" class="projectImage" alt="cardImage" loading="lazy">
+                                        <!-- <img src="{{item.img}}" class="projectImage" alt="cardImage" loading="lazy"> -->
                                     
+                                        <picture>
+                                            <source
+                                                [attr.srcset]="item.webp + ' 1x, ' + item.webp2x + ' 767w'"
+                                                media="(max-width: 767px)"
+                                                type="image/webp"
+                                            />
+                                            <source
+                                                [attr.srcset]="item.webp + ' 1x, ' + item.webp2x + ' 2x'"
+                                                type="image/webp"
+                                            />
+                                            <source
+                                                [attr.srcset]="item.img + ' 1x, ' + item.img2x + ' 767w'"
+                                                media="(max-width: 767px)"
+                                            />
+                                            <source
+                                                [attr.srcset]="item.img + ' 1x, ' + item.img2x + ' 2x'"
+                                            />
+                                            <img
+                                                [src]="item.img"
+                                                class="projectImage"
+                                                alt="cardImage"
+                                                loading="lazy"
+                                            />
+                                        </picture>
                                         <div class="imgOverlay">
                                             <div class="projectCategory">{{item.category}}</div>
                                             <div class="projectName">{{item.projectTitle}}</div>

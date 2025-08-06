@@ -37,32 +37,79 @@ export class SpecialProjectStructuralSteelDetailingSoftwareComponent {
     {
       images: [
         {
-          src: 'assets/images/services/Sector_Airports.png',
+          src: 'assets/images/services/Sector_Airports',
+          mobile: 'assets/images/services/mobile-Sector_Airports',
           title: 'AIRPORTS',
           description: '50+ Vendors',
           link: ''
         },
         {
-          src: 'assets/images/services/Sector_commercialBuilding.png',
+          src: 'assets/images/services/Sector_commercialBuilding',
+          mobile: 'assets/images/services/mobile-Sector_commercialBuilding',
           title: 'Commercial building',
           description: '20+ Vendors',
           link: ''
         },
-        { src: 'assets/images/services/Sector_datacenter.png', title: 'Data Center', description: '10+ Vendors', link: '/sector/data-centre' },
-        { src: 'assets/images/services/Sector_industrialbulidings.png', title: 'INDUSTRIAL BUILDINGS', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_powerplant.png', title: 'Power plant', description: '10+ Vendors', link: '/sector/powerplant' },
-        { src: 'assets/images/services/Sector_pre-cast.png', title: 'PRE-CAST', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_residentialbuildings.png', title: 'Residential Buildings', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_schools.png', title: 'Schools', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_theaters.png', title: 'Theaters', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_Bridges.png', title: 'Bridge', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_ChemicalPlants.png', title: 'Chemical plants', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_Hospitals.png', title: 'HOSPITALS', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_ManufacturingPlants.png', title: 'Manufacturing plants', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_Metros.png', title: 'Metros', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_Roads.png', title: 'Road ways', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_Waterwaste.png', title: 'Water & waste', description: '10+ Vendors', link: '' },
-        { src: 'assets/images/services/Sector_tunnel.png', title: 'Tunnel', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_datacenter', 
+          mobile: 'assets/images/services/mobile-Sector_datacenter', 
+          title: 'Data Center', description: '10+ Vendors', link: '/sector/data-centre' },
+        { 
+          src: 'assets/images/services/Sector_industrialbulidings', 
+          mobile: 'assets/images/services/mobile-Sector_industrialbulidings', 
+          title: 'INDUSTRIAL BUILDINGS', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_powerplant', 
+          mobile: 'assets/images/services/mobile-Sector_powerplant', 
+          title: 'Power plant', description: '10+ Vendors', link: '/sector/powerplant' },
+        { 
+          src: 'assets/images/services/Sector_pre-cast', 
+          mobile: 'assets/images/services/mobile-Sector_pre-cast', 
+          title: 'PRE-CAST', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_residentialbuildings', 
+          mobile: 'assets/images/services/mobile-Sector_residentialbuildings', 
+          title: 'Residential Buildings', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_schools', 
+          mobile: 'assets/images/services/mobile-Sector_schools', 
+          title: 'Schools', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_theaters', 
+          mobile: 'assets/images/services/mobile-Sector_theaters', 
+          title: 'Theaters', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_Bridges', 
+          mobile: 'assets/images/services/mobile-Sector_Bridges', 
+          title: 'Bridge', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_ChemicalPlants', 
+          mobile: 'assets/images/services/mobile-Sector_ChemicalPlants', 
+          title: 'Chemical plants', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_Hospitals', 
+          mobile: 'assets/images/services/mobile-Sector_Hospitals', 
+          title: 'HOSPITALS', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_ManufacturingPlants', 
+          mobile: 'assets/images/services/mobile-Sector_ManufacturingPlants', 
+          title: 'Manufacturing plants', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_Metros', 
+          mobile: 'assets/images/services/mobile-Sector_Metros', 
+          title: 'Metros', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_Roads', 
+          mobile: 'assets/images/services/mobile-Sector_Roads', 
+          title: 'Road ways', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_Waterwaste', 
+          mobile: 'assets/images/services/mobile-Sector_Waterwaste', 
+          title: 'Water & waste', description: '10+ Vendors', link: '' },
+        { 
+          src: 'assets/images/services/Sector_tunnel', 
+          mobile: 'assets/images/services/mobile-Sector_tunnel', 
+          title: 'Tunnel', description: '10+ Vendors', link: '' },
       ],
     },
   ];

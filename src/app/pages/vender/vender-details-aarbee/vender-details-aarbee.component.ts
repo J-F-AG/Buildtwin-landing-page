@@ -12,6 +12,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { LanguageService } from 'src/app/services/language.service';
 import { CryptoService } from 'buildtwin-library-ux/core';
+import { CommonServiceService } from 'src/app/services/common-service.service';
 
 @Component({
   selector: 'app-vender-details-aarbee',
@@ -334,7 +335,7 @@ export class VenderDetailsAarbeeComponent {
     private _cryptoService: CryptoService,
     @Inject(PLATFORM_ID) private platformId: Object,
     private sanitizer: DomSanitizer,
-    private _languageService: LanguageService
+    private _languageService: LanguageService, private _commonServiceService: CommonServiceService
   ) {
     // First, remove all existing breadcrumb scripts
     try {
@@ -383,11 +384,10 @@ export class VenderDetailsAarbeeComponent {
 
 
       // let url = this.router.url;
-      // console.log(url)
+      console.log(this.router.url)
       const urlSegments = this.router.url.split('/');
       let url = urlSegments[urlSegments.length - 1];
       url = url.toLowerCase();
-      console.log(url)
         if(this._venderDetailService['detalMeta'][url]){
           this._seoService.updateTitle(this._venderDetailService['detalMeta'][url]['title']);
           this._seoService.updateDescription(this._venderDetailService['detalMeta'][url]['description']);
@@ -399,6 +399,7 @@ export class VenderDetailsAarbeeComponent {
           this._seoService.updateTwitterCardType('summary_large_image');
           this._seoService.updateTwitterImage(this._venderDetailService['detalMeta'][url]['image']);
           this._seoService.setCanonicalURL(this._venderDetailService['detalMeta'][url]['canonical'], this.renderer);
+          this._seoService.setLanguageTags(this._venderDetailService['detalMeta'][url]['canonical'], this.renderer);
         }
   }
   showPopup = false;
@@ -698,7 +699,7 @@ export class VenderDetailsAarbeeComponent {
       projectName: ['', Validators.required], // Project Name validation
       selectedSoftware: [null], // Validation for selectedSoftware
       buildingCodeId: [null], // Static building code
-      serviceId: [null, Validators.required], // New control for service ID
+      serviceId: [null], // New control for service ID
       description: [''], // Description validation
     });
     
@@ -853,16 +854,16 @@ export class VenderDetailsAarbeeComponent {
   }
   getBusinessListing() {
 
-    let url = `https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies?status=All`
+    let url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=All`
     this.route.queryParams.subscribe(params => {
       const status = params['status'];
       // Check if both parameters are available
       if (status === 'unpublished') {
-        url = `https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListing/companies?status=${'Unpublished'}`
+        url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListing/companies?status=${'Unpublished'}`
       }
     });
     if(this.isIframe) {
-      url = `https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?mode=company_data`
+      url = `https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?mode=company_data`
     }
     this.showPageLoader = true;
     this.http.get(url)
@@ -885,9 +886,11 @@ export class VenderDetailsAarbeeComponent {
           }else {
             let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
             a['route'] = cleanCompanyName.replace(/ /g, '');
-            a['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
-            .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
-            .toLowerCase();
+            a['linking'] = this._commonServiceService.buildLinking(cleanCompanyName);
+            // cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+            // .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+            // .replace(/-$/, '') // remove trailing hyphen
+            // .toLowerCase();
           }
           if(a.company_name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase() || a.linking === this.domain.toLowerCase()){
             return a
@@ -903,8 +906,8 @@ export class VenderDetailsAarbeeComponent {
           }
           // https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production
           forkJoin([
-            this.http.get('https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields'),
-            this.http.get(`https://iwu00tg8mc.execute-api.eu-central-1.amazonaws.com/V1/businessListingPage/fields?company=${queryParam}`)
+            this.http.get('https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields'),
+            this.http.get(`https://zcv2dkxqof.execute-api.ap-southeast-1.amazonaws.com/production/businessListingPage/fields?company=${queryParam}`)
           ])
             .pipe(
               catchError(err => {
@@ -1391,9 +1394,11 @@ export class VenderDetailsAarbeeComponent {
           }
           let cleanCompanyNameChild = this.removeTrailingDash(cleanCompanyName)
           company['route'] = cleanCompanyName.replace(/ /g, '');
-          company['linking'] = cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
-          .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
-          .toLowerCase();
+          company['linking'] = this._commonServiceService.buildLinking(cleanCompanyName);
+          // cleanCompanyName.replace(/[\s&.]/g, '-') // Replace spaces, '&', and '.' with '-'
+          // .replace(/-{2,}/g, '-') // Replace multiple '-' with a single '-'
+          // .replace(/-$/, '') // remove trailing hyphen
+          // .toLowerCase();
         }
         if(company.name.replace(/ /g,'').toLowerCase() === this.domain.toLowerCase() || company.linking === this.domain.toLowerCase()){
           this.companyId = company.id;

@@ -9,8 +9,8 @@
         }
         .title {
             font-size: 44px;
-            font-family: var(--medium-global);
-            font-weight: 500;
+            font-weight: var(--medium-global);
+            // font-weight: 500;
         }
         .subTitle {
             margin: 5px 0;
@@ -148,7 +148,7 @@
             color: #000;
             font-size: 16px;
             font-style: normal;
-            font-family: var(--semibold-global);
+            font-weight: var(--semibold-global);
             line-height: 31.025px; /* 193.904% */
             text-transform: uppercase;
         }
@@ -254,8 +254,5 @@
         .image-container {
             margin: 0 10px 0 0;
         }
-    }
-    .specialProjectsSection .image-caption.page {
-        padding: 0 5px;
     }
 }

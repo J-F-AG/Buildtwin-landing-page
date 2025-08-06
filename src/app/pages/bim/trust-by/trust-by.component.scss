@@ -1,15 +1,13 @@
-.trustedByWrapper{
-     padding: 40px 0; position: relative;}
+.trustedByWrapper{background: rgba(240, 244, 251, 0.60);
+    backdrop-filter: blur(10px); padding: 40px 0; position: relative;}
 
 // .trustedByWrapper h2{font-size: 32px; font-weight: 600; margin-bottom: 0;}
 // .trustedByWrapper p{font-size: 14px; font-weight: 400;}
 
-.trustedBrands{padding: 0 0 0 0; justify-content: center; display: flex; width: 100%; flex-wrap: wrap; row-gap: 10px; column-gap: 30px;}
+.trustedBrands{padding: 0 25px 0 0; display: flex; width: 100%; flex-wrap: wrap; row-gap: 10px; column-gap: 30px;}
 .trustedBrands strong{font-size: 28px; font-family:  "Alumni Sans", sans-serif;
     color: #747474;font-weight: 900;letter-spacing: 1.9px;}
-:host ::ng-deep .heading-import {
-    margin-bottom: 36px;
-}
+
 @media (max-width:767px){
     .trustedBrands {
         flex-wrap: wrap;
