@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { LanguageService } from 'src/app/services/language.service';
+import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 
 @Component({
   selector: 'app-home-banner',
@@ -8,29 +9,31 @@ import { LanguageService } from 'src/app/services/language.service';
   styleUrl: './home-banner.component.scss'
 })
 export class HomeBannerComponent {
+  @ViewChild('carousel') carousel!: NzCarouselComponent;
+  
   array = [
     {
       title: `Leave it to Richard`,
-      description : `Richard is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.`,
-      placeholderImage: 'assets/images/video.webp',
+      description : `Richard is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. BuildTwin excels at various tasks in work and life, getting everything done while you rest.`,
+      placeholderImage: 'assets/images/slide1.png',
       videoLink : 'https://www.youtube.com/embed/K27diMbCsuw?autoplay=1'
     },
     {
       title: `Leave it to Thomas`,
-      description : `Thomas is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.`,
-      placeholderImage: 'assets/images/video.webp',
+      description : `Thomas is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. BuildTwin excels at various tasks in work and life, getting everything done while you rest.`,
+      placeholderImage: 'assets/images/slide2.png',
       videoLink : 'https://www.youtube.com/embed/K27diMbCsuw?autoplay=1'
     },
     {
       title: `Leave it to Lorenz`,
-      description : `Lorenz is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.`,
-      placeholderImage: 'assets/images/video.webp',
+      description : `Lorenz is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. BuildTwin excels at various tasks in work and life, getting everything done while you rest.`,
+      placeholderImage: 'assets/images/slide3.png',
       videoLink : 'https://www.youtube.com/embed/K27diMbCsuw?autoplay=1'
     },
     {
       title: `Leave it to Nizam`,
-      description : `Nizam is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. Manus excels at various tasks in work and life, getting everything done while you rest.`,
-      placeholderImage: 'assets/images/video.webp',
+      description : `Nizam is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. BuildTwin excels at various tasks in work and life, getting everything done while you rest.`,
+      placeholderImage: 'assets/images/slide4.png',
       videoLink : 'https://www.youtube.com/embed/K27diMbCsuw?autoplay=1'
     }
   ];
@@ -40,6 +43,8 @@ export class HomeBannerComponent {
   playVideoStatus  = {} ;
   videoUrl!: SafeResourceUrl;
   autoPlay = true;
+  currentSlideIndex = 0;
+  
   constructor(public _languageService: LanguageService, private sanitizer: DomSanitizer) { }
 
   call() {
@@ -49,18 +54,28 @@ export class HomeBannerComponent {
   closePopupStatus($event) {
     this.showPopup = false;
   }
+  
   playVideo() {
     this.videoEnable = true
   }
+  
   onPlayVideo(i, videoLink) {
     const url = videoLink;
     this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     this.playVideoStatus[i] = true;
     this.autoPlay = false; // 🔴 Stop the carousel autoplay
   }
+  
   onSlideChange(index: number): void {
+    this.currentSlideIndex = index;
     this.playVideoStatus = {}
   }
+  
+  goToSlide(index: number): void {
+    this.currentSlideIndex = index;
+    this.carousel.goTo(index);
+  }
+  
   pauseCarousel() {
     this.autoPlay = false;
   }

@@ -60,20 +60,11 @@
     figure {
         padding-top: 30px;
         .video-wrapper {
-            border-radius: 15px;
-            border: 1px solid rgba(0,0,0,.15);
-            box-shadow:0 0 #0000,0 0 #0000,0px 14.387px 89.916px 0px rgba(0,0,0,.2);
             position: relative;
             img {
                 width: 100%;
-                border-radius: 15px;
             }
             .play-btn {
-                width: 130px;
-                height: 130px;
-                border-radius: 50%;
-                background: rgba(255,255,255,.87);
-                padding: 24px;
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -81,11 +72,51 @@
                 transition: all .3s ease;
                 z-index: 3;
                 cursor: pointer;
+                
                 &.hide {
                     opacity: 0;
                     visibility: hidden;
                 }
+                
+                .play-button-background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+                
+                .play-button-foreground {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 2;
+                }
             }
+            
+            // Progress Bar at Bottom
+            .video-progress-bar {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 8px;
+                z-index: 4;
+                
+                .progress-dash {
+                    width: 20px;
+                    height: 3px;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 2px;
+                    transition: all 0.3s ease;
+                    
+                    &.active {
+                        background: rgba(255, 255, 255, 0.8);
+                        width: 30px;
+                    }
+                }
+            }
+            
             &:hover {
                 .play-btn {
                     transform: translate(-50%, -50%) scale(1.1);
@@ -94,6 +125,42 @@
         }
     }
 }
+
+// Slider Navigation Styles
+.slider-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+    .slider-dots {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                background: rgba(255, 255, 255, 0.8);
+                transform: scale(1.2);
+            }
+            
+            &.active {
+                background: #ffffff;
+                border-color: #ffffff;
+                transform: scale(1.3);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+}
+
 .link-wrapper {
     display: flex;
     justify-content: center;

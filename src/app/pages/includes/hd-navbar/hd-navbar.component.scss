@@ -1062,8 +1062,8 @@
     visibility: hidden;
     overflow: hidden;
     .container {
-        height: 450px;
-        overflow-y: auto;
+        height: auto;
+        overflow-y: visible;
     }
     .mi--12 {
         margin-inline: -12px;
