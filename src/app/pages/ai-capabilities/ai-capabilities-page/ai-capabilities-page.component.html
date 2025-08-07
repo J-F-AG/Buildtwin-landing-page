@@ -1,9 +1,15 @@
 <app-hd-navbar></app-hd-navbar>
+
+<!-- TEST CHANGE - THIS SHOULD BE VISIBLE -->
+<div style="background: red; color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold;">
+  TEST CHANGE - AI CAPABILITIES PAGE UPDATED!
+</div>
+
 <app-ai-capabilities-banner></app-ai-capabilities-banner>
 <app-company-logos-slider></app-company-logos-slider>
 
 <!-- AI Capabilities Carousel Section -->
-<div class="global-mb" id="ai-capabilities">
+<div class="global-mb" id="ai-capabilities" style="margin-top: 60px;">
     <div class="container heading-sticky">
         <div class="heading center v2">
                 <h2 class="title">
@@ -14,19 +20,83 @@
                     Discover how our AI-powered solutions streamline your engineering workflows and boost productivity
                 </p>
         </div>
+        
+        <!-- Category Selector -->
+        <div class="category-selector">
+            <div class="selector-tabs">
+                <button 
+                    class="selector-tab" 
+                    [class.active]="selectedCategory === 'ai-generation'"
+                    (click)="selectCategory('ai-generation')">
+                    AI Generation
+                </button>
+                <button 
+                    class="selector-tab" 
+                    [class.active]="selectedCategory === 'ai-quality-control'"
+                    (click)="selectCategory('ai-quality-control')">
+                    AI Quality Control
+                </button>
+                <button 
+                    class="selector-tab" 
+                    [class.active]="selectedCategory === 'ai-agents'"
+                    (click)="selectCategory('ai-agents')">
+                    AI Agents
+                </button>
+            </div>
+        </div>
+        
     </div>
-    <app-bottom-content (slideChanged)="onSlideChanged($event)"></app-bottom-content>
+    <app-bottom-content [selectedCategory]="selectedCategory" (slideChanged)="onSlideChanged($event)"></app-bottom-content>
     <div class="container">
         <div class="text-center" style="margin-top: 40px;">
             <a [routerLink]="[_languageService.currentLanguage,'explore-services']" class="button-v2 home_banner_explore_btn">
                 Explore
             </a>
+            <a (click)="scheduleDemo()" href="javascript:void(0)" class="button-v2 border home_banner_schedule_demo" style="margin-left: 16px;">
+                <img src="assets/images/icons/icon1.png" width="23" height="23" alt="Schedule DEMO">
+                Schedule DEMO
+            </a>
         </div>
     </div>
 </div>
 
+<!-- BuildTwin Pro Section -->
 <app-heavy-lifting></app-heavy-lifting>
+
+<!-- Plug & Play Section -->
 <app-hd-integrations></app-hd-integrations>
+
+<!-- Connect with the right consultancy section -->
+<div class="bg global-mb">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    Delivery by Humans<br>
+                    <span>engineering projects</span>
+                </h2>
+                <p class="small-title">
+                    Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
+                </p>
+        </div>
+    </div>
+    <app-project-list [slider]="true" [hideMessageBox]="true">
+        <div class="message">
+            <div class="content">
+                <h4>
+                    Delivery by Humans<strong> - TEST</strong> engineering consultancies.
+                </h4>
+                <p>
+                    Get started now with BuildTwin to explore a wide range of industry-specific
+projects and connect with top-reated experts
+                </p>
+            </div>
+            <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 home_get_started_for_free">
+                Get started for FREE
+            </a>
+        </div>
+    </app-project-list>
+</div>
+
 <div class="global-mb">
     <div class="container heading-sticky">
         <div class="heading center v2">
@@ -49,36 +119,5 @@
 </div>
 <app-tt-testimonials></app-tt-testimonials>
 <app-hd-good-company [count]="5"></app-hd-good-company>
-
-<!-- Moved to the end: Explore the largest portfolio section -->
-<div class="bg global-mb">
-    <div class="container heading-sticky">
-        <div class="heading center v2">
-                <h2 class="title">
-                    Explore the largest portfolio of<br>
-                    private and public  <span>engineering projects</span>
-                </h2>
-                <p class="small-title">
-                    Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
-                </p>
-        </div>
-    </div>
-    <app-project-list [slider]="true" [hideMessageBox]="true">
-        <div class="message">
-            <div class="content">
-                <h4>
-                    Find the<strong> right</strong> engineering consultancies.
-                </h4>
-                <p>
-                    Get started now with BuildTwin to explore a wide range of industry-specific
-projects and connect with top-reated experts
-                </p>
-            </div>
-            <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 home_get_started_for_free">
-                Get started for FREE
-            </a>
-        </div>
-    </app-project-list>
-</div>
 
 <app-hd-footer></app-hd-footer>

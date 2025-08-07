@@ -13,8 +13,159 @@
     margin-bottom: 18px !important;
 }
 
+// Button container responsive styling
+.text-center {
+    .button-v2 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        height: 49px !important;
+        min-height: 49px !important;
+        max-height: 49px !important;
+        line-height: 49px !important;
+        padding: 0 28px !important;
+        box-sizing: border-box;
+        font-size: 15px;
+        font-weight: 600;
+        vertical-align: top;
+        overflow: hidden;
+        
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
+        
+        img {
+            width: 23px;
+            height: 23px;
+            flex-shrink: 0;
+            display: block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+        }
+        
+        &.border {
+            padding: 0 25px !important;
+        }
+        
+        &.home_banner_explore_btn,
+        &.home_banner_schedule_demo {
+            height: 49px !important;
+            min-height: 49px !important;
+            max-height: 49px !important;
+            line-height: 49px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+  .text-center {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    
+    .button-v2 {
+      margin-right: 0 !important;
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+      height: 49px !important;
+      min-height: 49px !important;
+      max-height: 49px !important;
+      line-height: 49px !important;
+      padding: 0 28px !important;
+      box-sizing: border-box;
+      font-size: 15px;
+      font-weight: 600;
+      vertical-align: top;
+      
+      &.border {
+        padding: 0 25px !important;
+      }
+      
+      &.home_banner_explore_btn,
+      &.home_banner_schedule_demo {
+        height: 49px !important;
+        min-height: 49px !important;
+        max-height: 49px !important;
+        line-height: 49px !important;
+      }
+    }
+  }
+}
+
 @media (max-width:767px){
  :host ::ng-deep .integrations-area.ptb-75 {
     padding-top: 30px !important;
 }
+}
+
+// Category Selector Styling
+.category-selector {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    
+    .selector-tabs {
+        display: flex;
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 6px;
+        gap: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        
+        .selector-tab {
+            padding: 12px 24px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            cursor: pointer !important;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            
+            &:hover {
+                color: #0053fa;
+                background: rgba(0, 83, 250, 0.05);
+                cursor: pointer !important;
+            }
+            
+            &.active {
+                background: #0053fa;
+                color: white;
+                box-shadow: 0 2px 8px rgba(0, 83, 250, 0.3);
+                cursor: pointer !important;
+            }
+        }
+    }
+}
+
+// Responsive design for category selector
+@media (max-width: 767px) {
+    .category-selector {
+        margin: 30px 0;
+        
+        .selector-tabs {
+            flex-direction: column;
+            gap: 2px;
+            padding: 4px;
+            
+            .selector-tab {
+                padding: 10px 16px;
+                font-size: 13px;
+                text-align: center;
+            }
+        }
+    }
 }

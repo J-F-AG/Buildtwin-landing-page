@@ -125,6 +125,149 @@
     }
 }
 
+// KPI Cards Styling
+.kpi-cards-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.kpi-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 24px 20px;
+    min-width: 160px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    
+    &:hover {
+        transform: translateY(-4px);
+        
+        .kpi-icon {
+            transform: scale(1.05);
+            color: #0053fa;
+        }
+        
+        .kpi-value {
+            color: #0053fa;
+        }
+    }
+}
+
+.kpi-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    transition: all 0.3s ease;
+    color: #0053fa;
+    
+    svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.kpi-content {
+    .kpi-value {
+        font-size: 32px;
+        font-weight: 600;
+        color: #0E0E28;
+        margin: 0 0 8px 0;
+        line-height: 1.2;
+        transition: all 0.3s ease;
+    }
+    
+    .kpi-label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #5c6a72;
+        margin: 0;
+        line-height: 1.4;
+    }
+}
+
+// Responsive design for KPI cards
+@media (max-width: 767px) {
+    .kpi-cards-container {
+        gap: 16px;
+        padding: 0 20px;
+    }
+    
+    .kpi-card {
+        min-width: 140px;
+        padding: 20px 16px;
+        
+        &:hover {
+            transform: translateY(-4px);
+        }
+    }
+    
+    .kpi-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 12px;
+        
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    
+    .kpi-content {
+        .kpi-value {
+            font-size: 28px;
+            font-weight: 600;
+            color: #0E0E28;
+        }
+        
+        .kpi-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #5c6a72;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .kpi-cards-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .kpi-card {
+        min-width: 200px;
+        flex-direction: row;
+        text-align: left;
+        padding: 16px 20px;
+        
+        .kpi-icon {
+            margin: 0 16px 0 0;
+            flex-shrink: 0;
+        }
+        
+        .kpi-content {
+            flex: 1;
+            
+            .kpi-value {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
 @media (min-width: 768px) {
     .homeBanner .home-banner-image-wrapper {
         position: absolute;

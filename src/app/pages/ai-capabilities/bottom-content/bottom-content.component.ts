@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 import { BtWorkflowAssistanceService } from 'buildtwin-library-ux/bt-workflow-assistance';
 
 @Component({
@@ -6,8 +6,9 @@ import { BtWorkflowAssistanceService } from 'buildtwin-library-ux/bt-workflow-as
   templateUrl: './bottom-content.component.html',
   styleUrls: ['./bottom-content.component.scss']
 })
-export class BottomContentComponent implements OnInit {
+export class BottomContentComponent implements OnInit, OnChanges {
   @Input() bg: any;
+  @Input() selectedCategory: string = 'ai-generation';
   @Output() slideChanged = new EventEmitter<number>();
   currentTab:any = 0;
   currentAccordion:any;
@@ -18,37 +19,102 @@ export class BottomContentComponent implements OnInit {
   currentSlide = 0;
   itemsPerView = 4;
   
-  // AI Capabilities data
-  aiCapabilities = [
-    {
-      id: 'track-submissions',
-      icon: 'assets/images/new-v2-icon1.png',
-      title: 'AI Quality Control for Structural Drawings',
-      description: 'Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.',
-      image: 'assets/images/new-v2-image1.png'
-    },
-    {
-      id: 'view-files-comment',
-      icon: 'assets/images/new-v2-icon2.png',
-      title: 'AI generated drawings',
-      description: 'Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.',
-      image: 'assets/images/new-v2-image2.png'
-    },
-    {
-      id: 'share-with-ease',
-      icon: 'assets/images/new-v2-icon3.png',
-      title: 'AI Design Manager',
-      description: 'Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.',
-      image: 'assets/images/new-v2-image3.png'
-    },
-    {
-      id: 'project-workflow',
-      icon: 'assets/images/new-v2-icon4.png',
-      title: 'Manage and track your delivery',
-      description: 'Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.',
-      image: 'assets/images/new-v2-image4.png'
-    }
-  ];
+  // AI Capabilities data for different categories
+  aiCapabilitiesData = {
+    'ai-generation': [
+      {
+        id: 'ai-generated-drawings',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'AI Generated Drawings',
+        description: 'Automatically generate detailed engineering drawings with AI assistance, reducing manual drafting time significantly.',
+        image: 'assets/images/new-v2-image2.png'
+      },
+      {
+        id: 'ai-design-manager',
+        icon: 'assets/images/new-v2-icon3.png',
+        title: 'AI Design Manager',
+        description: 'Intelligent design management system that optimizes workflows and ensures design consistency across projects.',
+        image: 'assets/images/new-v2-image3.png'
+      },
+      {
+        id: 'ai-modeling',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'AI 3D Modeling',
+        description: 'Advanced 3D modeling capabilities powered by AI for rapid prototyping and design iteration.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'ai-documentation',
+        icon: 'assets/images/new-v2-icon4.png',
+        title: 'AI Documentation',
+        description: 'Automated generation of technical documentation and specifications with AI accuracy.',
+        image: 'assets/images/new-v2-image4.png'
+      }
+    ],
+    'ai-quality-control': [
+      {
+        id: 'quality-control-drawings',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'AI Quality Control for Structural Drawings',
+        description: 'Comprehensive quality assessment system that validates structural drawings for accuracy and compliance.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'error-detection',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'AI Error Detection',
+        description: 'Advanced error detection algorithms that identify potential issues in engineering designs before they become problems.',
+        image: 'assets/images/new-v2-image2.png'
+      },
+      {
+        id: 'compliance-checker',
+        icon: 'assets/images/new-v2-icon3.png',
+        title: 'AI Compliance Checker',
+        description: 'Automated compliance verification ensuring all designs meet industry standards and regulations.',
+        image: 'assets/images/new-v2-image3.png'
+      },
+      {
+        id: 'quality-reports',
+        icon: 'assets/images/new-v2-icon4.png',
+        title: 'AI Quality Reports',
+        description: 'Detailed quality assessment reports generated automatically with actionable insights and recommendations.',
+        image: 'assets/images/new-v2-image4.png'
+      }
+    ],
+    'ai-agents': [
+      {
+        id: 'project-agent',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'AI Project Agent',
+        description: 'Intelligent project management agent that coordinates tasks, tracks progress, and optimizes resource allocation.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'design-agent',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'AI Design Agent',
+        description: 'Specialized design agent that assists with creative decisions and design optimization throughout the project lifecycle.',
+        image: 'assets/images/new-v2-image2.png'
+      },
+      {
+        id: 'communication-agent',
+        icon: 'assets/images/new-v2-icon3.png',
+        title: 'AI Communication Agent',
+        description: 'Smart communication agent that facilitates team collaboration and stakeholder communication.',
+        image: 'assets/images/new-v2-image3.png'
+      },
+      {
+        id: 'analysis-agent',
+        icon: 'assets/images/new-v2-icon4.png',
+        title: 'AI Analysis Agent',
+        description: 'Advanced analysis agent that performs complex calculations and provides data-driven insights for decision making.',
+        image: 'assets/images/new-v2-image4.png'
+      }
+    ]
+  };
+  
+  // Current AI Capabilities based on selected category
+  aiCapabilities: any[] = [];
   
   // Create extended array with duplicates for carousel effect
   carouselItems: any[] = [];
@@ -60,8 +126,26 @@ export class BottomContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.updateCapabilities();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges triggered:', changes);
+    if (changes['selectedCategory']) {
+      console.log('Category changed from', changes['selectedCategory'].previousValue, 'to', changes['selectedCategory'].currentValue);
+      this.updateCapabilities();
+    }
+  }
+
+  updateCapabilities(): void {
+    console.log('Updating capabilities for category:', this.selectedCategory);
+    // Set current AI capabilities based on selected category
+    this.aiCapabilities = this.aiCapabilitiesData[this.selectedCategory] || this.aiCapabilitiesData['ai-generation'];
+    console.log('Updated aiCapabilities:', this.aiCapabilities);
     // Create extended array with duplicates for seamless carousel
     this.carouselItems = [...this.aiCapabilities, ...this.aiCapabilities, ...this.aiCapabilities];
+    // Reset to first slide when category changes
+    this.currentSlide = 0;
   }
   tabUpdated(index){
     this.currentTab = index;

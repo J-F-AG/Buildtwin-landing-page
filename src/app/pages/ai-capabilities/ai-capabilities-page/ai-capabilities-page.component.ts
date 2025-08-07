@@ -2,6 +2,7 @@ import { Component, ComponentFactoryResolver, HostListener, ViewChild, ViewConta
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
+import { BtWorkflowAssistanceService } from 'buildtwin-library-ux/bt-workflow-assistance';
 
 @Component({
   selector: 'app-ai-capabilities-page',
@@ -12,6 +13,103 @@ export class AiCapabilitiesPageComponent {
 
   // Carousel slide tracking
   currentSlide = 0;
+  
+  // Category selection
+  selectedCategory = 'ai-generation';
+
+  // AI Capabilities data for different categories
+  aiCapabilitiesData = {
+    'ai-generation': [
+      {
+        id: 'ai-generated-drawings',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'AI Generated Drawings',
+        description: 'Automatically generate detailed engineering drawings with AI assistance, reducing manual drafting time significantly.',
+        image: 'assets/images/new-v2-image2.png'
+      },
+      {
+        id: 'ai-design-manager',
+        icon: 'assets/images/new-v2-icon3.png',
+        title: 'AI Design Manager',
+        description: 'Intelligent design management system that optimizes workflows and ensures design consistency across projects.',
+        image: 'assets/images/new-v2-image3.png'
+      },
+      {
+        id: 'ai-modeling',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'AI 3D Modeling',
+        description: 'Advanced 3D modeling capabilities powered by AI for rapid prototyping and design iteration.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'ai-documentation',
+        icon: 'assets/images/new-v2-icon4.png',
+        title: 'AI Documentation',
+        description: 'Automated generation of technical documentation and specifications with AI accuracy.',
+        image: 'assets/images/new-v2-image4.png'
+      }
+    ],
+    'ai-quality-control': [
+      {
+        id: 'quality-control-drawings',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'AI Quality Control for Structural Drawings',
+        description: 'Comprehensive quality assessment system that validates structural drawings for accuracy and compliance.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'error-detection',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'AI Error Detection',
+        description: 'Advanced error detection algorithms that identify potential issues in engineering designs before they become problems.',
+        image: 'assets/images/new-v2-image2.png'
+      },
+      {
+        id: 'compliance-checker',
+        icon: 'assets/images/new-v2-icon3.png',
+        title: 'AI Compliance Checker',
+        description: 'Automated compliance verification ensuring all designs meet industry standards and regulations.',
+        image: 'assets/images/new-v2-image3.png'
+      },
+      {
+        id: 'quality-reports',
+        icon: 'assets/images/new-v2-icon4.png',
+        title: 'AI Quality Reports',
+        description: 'Detailed quality assessment reports generated automatically with actionable insights and recommendations.',
+        image: 'assets/images/new-v2-image4.png'
+      }
+    ],
+    'ai-agents': [
+      {
+        id: 'project-agent',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'AI Project Agent',
+        description: 'Intelligent project management agent that coordinates tasks, tracks progress, and optimizes resource allocation.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'design-agent',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'AI Design Agent',
+        description: 'Specialized design agent that assists with creative decisions and design optimization throughout the project lifecycle.',
+        image: 'assets/images/new-v2-image2.png'
+      },
+      {
+        id: 'communication-agent',
+        icon: 'assets/images/new-v2-icon3.png',
+        title: 'AI Communication Agent',
+        description: 'Smart communication agent that facilitates team collaboration and stakeholder communication.',
+        image: 'assets/images/new-v2-image3.png'
+      },
+      {
+        id: 'analysis-agent',
+        icon: 'assets/images/new-v2-icon4.png',
+        title: 'AI Analysis Agent',
+        description: 'Advanced analysis agent that performs complex calculations and provides data-driven insights for decision making.',
+        image: 'assets/images/new-v2-image4.png'
+      }
+    ]
+  };
 
   // @ViewChild('HdBannerNewComp', { read: ViewContainerRef, static: true })
   // public HdBannerNewComp: ViewContainerRef;
@@ -48,7 +146,7 @@ export class AiCapabilitiesPageComponent {
   scrolledDivHeight: any
   fixedElement: any
 
-  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver, public _languageService: LanguageService) { 
+  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver, public _languageService: LanguageService, private _btWorkflowAssistanceService: BtWorkflowAssistanceService) { 
 
     router.events.subscribe((val) => {
       setTimeout(() => {
@@ -67,6 +165,9 @@ export class AiCapabilitiesPageComponent {
   }
 
   ngOnInit() {
+    console.log('AI Capabilities Page initialized - TEST CHANGE');
+    console.log('Initial selected category:', this.selectedCategory);
+    console.log('Available categories:', Object.keys(this.aiCapabilitiesData));
     // this.loadHdNavbarComp()
     // this.loadHdFooterComp()
     // this.loadHdBannerNewComp()
@@ -85,6 +186,21 @@ export class AiCapabilitiesPageComponent {
   // Handle carousel slide changes
   onSlideChanged(slideIndex: number) {
     this.currentSlide = slideIndex;
+  }
+
+  // Category selection function
+  selectCategory(category: string) {
+    console.log('Selecting category:', category);
+    console.log('Available categories:', Object.keys(this.aiCapabilitiesData));
+    console.log('Data for selected category:', this.aiCapabilitiesData[category]);
+    this.selectedCategory = category;
+    this.currentSlide = 0; // Reset to first slide when changing category
+    console.log('Selected category updated to:', this.selectedCategory);
+  }
+
+  // Schedule Demo function
+  scheduleDemo() {
+    this._btWorkflowAssistanceService.hubspotPopup.next({});
   }
 
 
