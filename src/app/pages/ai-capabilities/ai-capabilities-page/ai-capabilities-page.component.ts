@@ -10,6 +10,8 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class AiCapabilitiesPageComponent {
 
+  // Carousel slide tracking
+  currentSlide = 0;
 
   // @ViewChild('HdBannerNewComp', { read: ViewContainerRef, static: true })
   // public HdBannerNewComp: ViewContainerRef;
@@ -61,7 +63,7 @@ export class AiCapabilitiesPageComponent {
         
       }, 2000);
   });
-  
+    
   }
 
   ngOnInit() {
@@ -80,7 +82,10 @@ export class AiCapabilitiesPageComponent {
   
   }
 
-
+  // Handle carousel slide changes
+  onSlideChanged(slideIndex: number) {
+    this.currentSlide = slideIndex;
+  }
 
 
   @HostListener('window:scroll', ['$event'])

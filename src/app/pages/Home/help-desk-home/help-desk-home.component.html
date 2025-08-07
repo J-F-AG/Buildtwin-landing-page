@@ -18,7 +18,8 @@
     <div class="container heading-sticky">
         <div class="heading center v2">
                 <h2 class="title">
-                    AI Capabilities
+                    BuildTwin <span>AI Capabilities</span><br>
+                    delivered with a Human touch
                 </h2>
                 <p class="small-title">
                     Discover how our AI-powered solutions streamline your engineering workflows and boost productivity
@@ -42,7 +43,7 @@
     <div class="container heading-sticky">
         <div class="heading center v2">
                 <h2 class="title">
-                    Explore  <span>Engineering Services</span>
+                    we deliver <span>results</span>
                 </h2>
                 <p class="small-title">
                     Navigate services and connect with top professionals with ease
@@ -50,6 +51,13 @@
         </div>
     </div>
     <app-service-list [hideTitle]="true"></app-service-list>
+    <div class="container">
+        <div class="text-center" style="margin-top: 40px;">
+            <a [routerLink]="[_languageService.currentLanguage,'how-it-works']" class="button-v2">
+                How it works
+            </a>
+        </div>
+    </div>
 </div>
 <div class="global-mb">
 
@@ -71,7 +79,7 @@
     
 </div>
 <app-tt-testimonials></app-tt-testimonials>
-<app-hd-good-company [count]="5" [page]="'insights'"></app-hd-good-company>
+<app-hd-good-company [count]="5"></app-hd-good-company>
 <div class="bg global-mb">
     <div class="container heading-sticky">
         <div class="heading center v2">

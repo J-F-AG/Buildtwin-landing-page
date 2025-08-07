@@ -1,6 +1,56 @@
 <app-hd-navbar></app-hd-navbar>
 <app-ai-capabilities-banner></app-ai-capabilities-banner>
 <app-company-logos-slider></app-company-logos-slider>
+
+<!-- AI Capabilities Carousel Section -->
+<div class="global-mb" id="ai-capabilities">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    BuildTwin <span>AI Capabilities</span><br>
+                    delivered with a Human touch
+                </h2>
+                <p class="small-title">
+                    Discover how our AI-powered solutions streamline your engineering workflows and boost productivity
+                </p>
+        </div>
+    </div>
+    <app-bottom-content (slideChanged)="onSlideChanged($event)"></app-bottom-content>
+    <div class="container">
+        <div class="text-center" style="margin-top: 40px;">
+            <a [routerLink]="[_languageService.currentLanguage,'explore-services']" class="button-v2 home_banner_explore_btn">
+                Explore
+            </a>
+        </div>
+    </div>
+</div>
+
+<app-heavy-lifting></app-heavy-lifting>
+<app-hd-integrations></app-hd-integrations>
+<div class="global-mb">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    we deliver <span>results</span>
+                </h2>
+                <p class="small-title">
+                    Navigate services and connect with top professionals with ease
+                </p>
+        </div>
+    </div>
+    <app-service-list [hideTitle]="true"></app-service-list>
+    <div class="container">
+        <div class="text-center" style="margin-top: 40px;">
+            <a [routerLink]="[_languageService.currentLanguage,'how-it-works']" class="button-v2">
+                How it works
+            </a>
+        </div>
+    </div>
+</div>
+<app-tt-testimonials></app-tt-testimonials>
+<app-hd-good-company [count]="5"></app-hd-good-company>
+
+<!-- Moved to the end: Explore the largest portfolio section -->
 <div class="bg global-mb">
     <div class="container heading-sticky">
         <div class="heading center v2">
@@ -30,23 +80,5 @@ projects and connect with top-reated experts
         </div>
     </app-project-list>
 </div>
-<app-bottom-content></app-bottom-content>
-<app-heavy-lifting></app-heavy-lifting>
-<app-hd-integrations></app-hd-integrations>
-<div class="global-mb">
-    <div class="container heading-sticky">
-        <div class="heading center v2">
-                <h2 class="title">
-                    Explore  <span>Engineering Services</span>
-                </h2>
-                <p class="small-title">
-                    Navigate services and connect with top professionals with ease
-                </p>
-        </div>
-    </div>
-    <app-service-list [hideTitle]="true"></app-service-list>
-</div>
-<app-tt-testimonials></app-tt-testimonials>
-<app-hd-good-company [count]="5"></app-hd-good-company>
 
 <app-hd-footer></app-hd-footer>

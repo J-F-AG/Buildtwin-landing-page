@@ -16,12 +16,12 @@
                              (click)="onClickArcadeTrigger(item.id)"
                              [class.fade-out]="i >= 4 && i < 8">
                             <div class="content">
-                                <h3>
+                                <div class="icon-title">
                                     <i>
                                         <img [src]="item.icon" width="23" height="25" alt="">
                                     </i>
-                                    <span [innerHTML]="item.title"></span>
-                                </h3>
+                                    <h3 [innerHTML]="item.title"></h3>
+                                </div>
                                 <p>{{ item.description }}</p>
                             </div>
                             <figure>

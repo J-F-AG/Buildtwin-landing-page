@@ -13,6 +13,9 @@
         <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
             <a class="service__items__sub" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
                 <div class="block" [ngClass]="{'active': item['active']}">
+                    <div class="delivery-type-label" [ngClass]="{'ai-human': item.deliveryType === 'AI + Human Engineering', 'human-only': item.deliveryType === 'Human Only'}">
+                        {{ item.deliveryType }}
+                    </div>
                     <div>
                         <h3 [innerHtml]="item['name']">
                             

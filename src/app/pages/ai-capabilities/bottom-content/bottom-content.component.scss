@@ -1,101 +1,241 @@
-.tab-wrapper-super {
+// Carousel container styles
+.carousel-container {
+    position: relative;
     display: flex;
-    justify-content: center;
-}
-.tab-wrapper {
-   display: flex;
-    gap: 12px;
     align-items: center;
-    margin-bottom: 30px;
-    overflow: auto;
-    white-space: nowrap;
+    gap: 20px;
     max-width: 100%;
-   li {
-        padding: 9px 16px;
-        border: 1px solid rgba(0, 0, 0, 0.12);
-        border-radius: 50px;
-        font-weight: 600;
-        font-size: 16px;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+// Teaser overlay styles
+.teaser-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 20%, rgba(255,255,255,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    pointer-events: none;
+    
+    .teaser-content {
         text-align: center;
-        cursor: pointer;
-        &:hover {
-            background: rgba(0, 0, 0, 0.12);
+        padding: 20px;
+        pointer-events: auto;
+        max-width: 280px;
+        
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0E0E28;
+            margin-bottom: 8px;
+            line-height: 1.3;
         }
-        &.active {
+        
+        p {
+            font-size: 14px;
+            color: #808080;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+        
+        .teaser-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #0053FA;
             color: white;
-            background: black;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            
             &:hover {
-                background-color: black;
+                background: #0041CC;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(0, 83, 250, 0.3);
+            }
+            
+            svg {
+                transition: transform 0.3s ease;
+            }
+            
+            &:hover svg {
+                transform: translateX(2px);
             }
         }
-   } 
+    }
 }
+
+.carousel-nav {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #e0e4e6;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #0053FA;
+    z-index: 10;
+    
+    &:hover:not(:disabled) {
+        background: #0053FA;
+        color: white;
+        border-color: #0053FA;
+    }
+    
+    &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+    
+    &.prev {
+        left: -24px;
+    }
+    
+    &.next {
+        right: -24px;
+    }
+}
+
 .block-box-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    grid-gap: 32px;
     gap: 32px;
-    justify-content: center;
+    transition: transform 0.5s ease;
+    width: fit-content;
 }
+
 .block-box-wrapper .block {
     border-radius: 10px;
     border: 1px solid #e0e4e6;
-    padding: 23px 23px 0;
+    padding: 20px 20px 0;
     min-height: 350px;
     width: 312px;
     max-width: calc(25% - 25px);
     overflow: hidden;
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    grid-gap: 30px;
-    gap: 30px;
+    align-items: stretch;
+    gap: 0;
     transition: all .3s ease;
-}
-.block-box-wrapper .block .content {
-    flex-grow: 1;
-}
-.block-box-wrapper .block h3 {
-    font-size: 23px;
-    font-weight: 600;
-    display: flex
-;
-    align-items: flex-start;
-    grid-gap: 14px;
-    gap: 14px;
-    line-height: 1.25;
-    margin-bottom: 15px;
-    min-height: 58px;
+    cursor: pointer;
+    position: relative;
+    
+    &:hover {
+        border-color: #0053FA;
+        box-shadow: 0 0 0 2px rgba(0, 83, 250, 0.2);
+        
+        figure {
+            height: 60%;
+        }
+    }
+    
+    // Fade out effect for duplicate items
+    &.fade-out {
+        opacity: 0.3;
+        filter: grayscale(50%);
+        transform: scale(0.95);
+        
+        &:hover {
+            opacity: 0.5;
+            filter: grayscale(25%);
+            transform: scale(0.98);
+        }
+    }
 }
 
-.block-box-wrapper .block h3 i {
+.block-box-wrapper .block .content {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.block-box-wrapper .block .icon-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+}
+
+.block-box-wrapper .block .icon-title i {
     width: 31px;
     height: 31px;
     border-radius: 50%;
     display: block;
     background: #002e3b;
     min-width: 31px;
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-.block-box-wrapper .block p {
-    font-size: 16px;
-    color: #5c6a72;
-    line-height: 1.375;
-}
-.block-box-wrapper .block figure
- {
-    border-radius: 11px 11px 0 0;
-    box-shadow: 0 0 60px 9px #0000001a;
-    margin-bottom : 0;
-}
-@media only screen and (max-width: 767px) {
-.block-box-wrapper .block {
-    max-width: none;
+    flex-shrink: 0;
 }
 
+.block-box-wrapper .block .icon-title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    color: #0E0E28;
+    text-align: left;
+    flex: 1;
+    white-space: normal;
+}
+
+.block-box-wrapper .block p {
+    font-size: 14px;
+    color: #5c6a72;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.block-box-wrapper .block figure {
+    border-radius: 11px 11px 0 0;
+    box-shadow: 0 0 60px 9px #0000001a;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    height: 65%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel-container {
+        gap: 10px;
+    }
+    
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .block-box-wrapper .block {
+        max-width: none;
+        width: 280px;
+    }
 }

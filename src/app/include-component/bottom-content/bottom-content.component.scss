@@ -124,7 +124,7 @@
 .block-box-wrapper .block {
     border-radius: 10px;
     border: 1px solid #e0e4e6;
-    padding: 23px 23px 0;
+    padding: 20px 20px 0;
     min-height: 350px;
     width: 312px;
     max-width: calc(25% - 25px);
@@ -132,10 +132,20 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    grid-gap: 30px;
-    gap: 30px;
+    align-items: stretch;
+    gap: 0;
     transition: all .3s ease;
+    cursor: pointer;
+    position: relative;
+    
+    &:hover {
+        border-color: #0053FA;
+        box-shadow: 0 0 0 2px rgba(0, 83, 250, 0.2);
+        
+        figure {
+            height: 60%;
+        }
+    }
     
     // Fade out effect for duplicate items
     &.fade-out {
@@ -152,21 +162,25 @@
 }
 
 .block-box-wrapper .block .content {
-    flex-grow: 1;
-}
-.block-box-wrapper .block h3 {
-    font-size: 23px;
-    font-weight: 600;
+    flex: 0 0 auto;
     display: flex;
-    align-items: flex-start;
-    grid-gap: 14px;
-    gap: 14px;
-    line-height: 1.25;
-    margin-bottom: 15px;
-    min-height: 58px;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 20px;
 }
 
-.block-box-wrapper .block h3 i {
+.block-box-wrapper .block .icon-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+}
+
+.block-box-wrapper .block .icon-title i {
     width: 31px;
     height: 31px;
     border-radius: 50%;
@@ -176,16 +190,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
+
+.block-box-wrapper .block .icon-title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    color: #0E0E28;
+    text-align: left;
+    flex: 1;
+    white-space: normal;
+}
+
 .block-box-wrapper .block p {
-    font-size: 16px;
+    font-size: 14px;
     color: #5c6a72;
-    line-height: 1.375;
+    line-height: 1.4;
+    margin: 0;
+    margin-bottom: 20px;
 }
 .block-box-wrapper .block figure {
     border-radius: 11px 11px 0 0;
     box-shadow: 0 0 60px 9px #0000001a;
-    margin-bottom : 0;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    height: 65%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
 }
 
 @media only screen and (max-width: 767px) {
