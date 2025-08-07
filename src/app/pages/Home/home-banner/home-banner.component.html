@@ -6,7 +6,8 @@
             <nz-carousel [nzEffect]="effect" [nzAutoPlay]="autoPlay" (nzAfterChange)="onSlideChange($event)">
                 <div nz-carousel-content class="slide-wrapper" *ngFor="let slide of array; let i = index">
                 <h1>
-                    {{slide['title']}}
+                    <span class="leave-it-to-text">{{slide['title'].split(' ').slice(0, 3).join(' ')}}</span>
+                    <span class="name-highlight">{{slide['title'].split(' ').slice(3).join(' ')}}</span>
                 </h1>
                 <p>
                     {{slide['description']}}

@@ -2,7 +2,7 @@
 <!-- <div  #HdNavbarComp></div> -->
 <!-- <app-hd-banner-new></app-hd-banner-new>  -->
 <app-home-banner></app-home-banner>
-<app-company-logos-slider></app-company-logos-slider>
+<app-company-logos-slider [bg]="false"></app-company-logos-slider>
 <!-- <div  #HdBannerNewComp></div> -->
 <!-- <app-hd-banner-tabs></app-hd-banner-tabs> -->
 <!-- <app-hd-trusted-by></app-hd-trusted-by> -->
@@ -20,38 +20,20 @@
                 <h2 class="title">
                     AI Capabilities
                 </h2>
-        </div>
-    </div>
-    <app-bottom-content></app-bottom-content>
-</div>
-<div class="bg global-mb">
-    <div class="container heading-sticky">
-        <div class="heading center v2">
-                <h2 class="title">
-                    Explore the largest portfolio of<br>
-                    private and public  <span>engineering projects</span>
-                </h2>
                 <p class="small-title">
-                    Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
+                    Discover how our AI-powered solutions streamline your engineering workflows and boost productivity
                 </p>
         </div>
     </div>
-    <app-project-list [slider]="true" [hideMessageBox]="true">
-        <div class="message">
-            <div class="content">
-                <h4>
-                    Find the<strong> right</strong> engineering consultancies.
-                </h4>
-                <p>
-                    Get started now with BuildTwin to explore a wide range of industry-specific
-projects and connect with top-reated experts
-                </p>
-            </div>
-            <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 home_get_started_for_free">
-                Get started for FREE
+    <app-bottom-content (slideChanged)="onSlideChanged($event)"></app-bottom-content>
+    <div class="container">
+        <div class="text-center" style="margin-top: 40px;">
+            <a [routerLink]="[_languageService.currentLanguage,'ai-capabilities']" class="button-v2" 
+               [style.display]="currentSlide > 0 ? 'none' : 'inline-block'">
+                View All AI Capabilities
             </a>
         </div>
-    </app-project-list>
+    </div>
 </div>
 
 <app-heavy-lifting></app-heavy-lifting>
@@ -89,7 +71,36 @@ projects and connect with top-reated experts
     
 </div>
 <app-tt-testimonials></app-tt-testimonials>
-<app-hd-good-company [count]="5"></app-hd-good-company>
+<app-hd-good-company [count]="5" [page]="'insights'"></app-hd-good-company>
+<div class="bg global-mb">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    Explore the largest portfolio of<br>
+                    private and public  <span>engineering projects</span>
+                </h2>
+                <p class="small-title">
+                    Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
+                </p>
+        </div>
+    </div>
+    <app-project-list [slider]="true" [hideMessageBox]="true">
+        <div class="message">
+            <div class="content">
+                <h4>
+                    Find the<strong> right</strong> engineering consultancies.
+                </h4>
+                <p>
+                    Get started now with BuildTwin to explore a wide range of industry-specific
+projects and connect with top-reated experts
+                </p>
+            </div>
+            <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 home_get_started_for_free">
+                Get started for FREE
+            </a>
+        </div>
+    </app-project-list>
+</div>
 <!-- <div  #HdGoodCompanyComp></div> -->
 <!-- <app-hd-why-buildtwin></app-hd-why-buildtwin> -->
 <!-- <div  #HdWhyBuildtwinComp></div> -->

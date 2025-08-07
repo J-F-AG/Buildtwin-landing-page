@@ -38,6 +38,9 @@ export class HelpDeskHomeComponent {
   FixedDivPositionTop: any
   fixedDIvOffsetTop: any
   scrollPosition: any
+  
+  // Carousel slide tracking
+  currentSlide = 0;
 
   // scrolled div 
 
@@ -119,18 +122,15 @@ export class HelpDeskHomeComponent {
   }
 
   scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      // Scroll the section into view smoothly
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      
-      // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
-      setTimeout(() => {
-        const offsetTop = section.getBoundingClientRect().top;
-        const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
-        window.scrollBy(0, desiredOffset);
-      }, 100); // Adjust the delay if needed
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+  
+  // Handle carousel slide changes
+  onSlideChanged(slideIndex: number) {
+    this.currentSlide = slideIndex;
   }
   // async loadHdNavbarComp(){
   //   if (this.HdNavbarComp) {

@@ -6,11 +6,19 @@
     justify-content: space-between;
     overflow: hidden;
 }
+
+// Ensure the component is not sticky and behaves normally
+:host {
+    position: static !important;
+    display: block;
+}
+
 .container.bg {
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
     display: flex;
+    position: static !important;
 }
 .head {
     color: #9a9a9b;

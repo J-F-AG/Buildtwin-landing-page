@@ -1,71 +1,55 @@
 <div class="container">
     <div class="how-it-work" id="next-section">
         <div class="block-section fullwidth">
-            <div class="block-box-wrapper">
-                <div class="block cursor" (click)="onClickArcadeTrigger('track-submissions')">
-                    <div class="content">
-                        <h3>
-                            <i>
-                                <img src="assets/images/new-v2-icon1.png" width="23" height="25" alt="">
-                            </i>
-                            Track your submissions
-                        </h3>
-                        <p>
-                            Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.
-                        </p>
+            <div class="carousel-container">
+                <!-- Navigation Arrows -->
+                <button class="carousel-nav prev" (click)="prevSlide()" [disabled]="!canGoPrev()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-wrapper">
+                    <div class="block-box-wrapper" [style.transform]="'translateX(-' + (currentSlide * 25) + '%)'">
+                        <div class="block cursor" 
+                             *ngFor="let item of carouselItems; let i = index" 
+                             (click)="onClickArcadeTrigger(item.id)"
+                             [class.fade-out]="i >= 4 && i < 8">
+                            <div class="content">
+                                <h3>
+                                    <i>
+                                        <img [src]="item.icon" width="23" height="25" alt="">
+                                    </i>
+                                    <span [innerHTML]="item.title"></span>
+                                </h3>
+                                <p>{{ item.description }}</p>
+                            </div>
+                            <figure>
+                                <img [src]="item.image" width="220" height="85" alt="">
+                            </figure>
+                        </div>
                     </div>
-                    <figure>
-                        <img src="assets/images/new-v2-image1.png" width="220" height="85" alt="">
-                    </figure>
-                </div>
-                <div class="block cursor" (click)="onClickArcadeTrigger('view-files-comment')">
-                    <div class="content">
-                        <h3>
-                            <i>
-                                <img src="assets/images/new-v2-icon2.png" width="23" height="25" alt="">
-                            </i>
-                            View files and comment
-                        </h3>
-                        <p>
-                            Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.
-                        </p>
+                    
+                    <!-- Overlay button for teasing more capabilities -->
+                    <div class="teaser-overlay" *ngIf="currentSlide > 0">
+                        <div class="teaser-content">
+                            <h4>Discover More AI Capabilities</h4>
+                            <p>Explore our complete suite of AI-powered solutions</p>
+                            <a [routerLink]="['ai-capabilities']" class="teaser-button">
+                                View All AI Capabilities
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    <figure>
-                        <img src="assets/images/new-v2-image2.png" width="220" height="85" alt="">
-                    </figure>
                 </div>
-                <div class="block cursor" (click)="onClickArcadeTrigger('share-with-ease')">
-                    <div class="content">
-                        <h3>
-                            <i>
-                                <img src="assets/images/new-v2-icon3.png" width="23" height="25" alt="">
-                            </i>
-                            Share <br>with ease
-                        </h3>
-                        <p>
-                            Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.
-                        </p>
-                    </div>
-                    <figure>
-                        <img src="assets/images/new-v2-image3.png" width="220" height="85" alt="">
-                    </figure>
-                </div>
-                <div class="block cursor" (click)="onClickArcadeTrigger('project-workflow')">
-                    <div class="content">
-                        <h3>
-                            <i>
-                                <img src="assets/images/new-v2-icon4.png" width="23" height="25" alt="">
-                            </i>
-                            Filters and Workflow in min.
-                        </h3>
-                        <p>
-                            Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.
-                        </p>
-                    </div>
-                    <figure>
-                        <img src="assets/images/new-v2-image4.png" width="220" height="85" alt="">
-                    </figure>
-                </div>
+                
+                <button class="carousel-nav next" (click)="nextSlide()" [disabled]="!canGoNext()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>

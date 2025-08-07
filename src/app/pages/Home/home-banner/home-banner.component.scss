@@ -37,6 +37,19 @@
     h1, h2 {
         font-size: 64px;
         margin-bottom: 0;
+        
+        .leave-it-to-text {
+            color: #0E0E28;
+            background: transparent;
+        }
+        
+        .name-highlight {
+            color: #0053FA;
+            text-decoration: underline;
+            text-decoration-color: #0053FA;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 8px;
+        }
     }
     p {
         text-align: center;
