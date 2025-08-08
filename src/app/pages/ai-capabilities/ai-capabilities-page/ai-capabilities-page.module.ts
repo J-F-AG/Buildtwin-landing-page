@@ -15,6 +15,7 @@ import { ServiceListModule } from 'src/app/include-component/service-list/servic
 import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { AiCapabilitiesBannerModule } from '../ai-capabilities-banner/ai-capabilities-banner.module';
 import { BottomContentModule } from '../bottom-content/bottom-content.module';
+import { EmFaqModule } from '../../includes/em-faq/em-faq.module';
 
 const routes: Routes = [
   {
@@ -42,6 +43,7 @@ const routes: Routes = [
     SharedModuleModule,
     AiCapabilitiesBannerModule,
     BottomContentModule,
+    EmFaqModule,
     RouterModule.forChild(routes),
   ],
 })

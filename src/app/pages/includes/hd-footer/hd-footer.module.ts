@@ -4,8 +4,6 @@ import { HdFooterComponent } from './hd-footer.component';
 import { RouterModule } from '@angular/router';
 import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module';
 
-
-
 @NgModule({
   declarations: [
     HdFooterComponent
@@ -19,8 +17,4 @@ import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module'
     HdFooterComponent
   ]
 })
-export class HdFooterModule { 
-  static HdFooterComponent(){
-    return HdFooterComponent;
-  }
-}
+export class HdFooterModule { }
