@@ -72,6 +72,11 @@
                 transition: all .3s ease;
                 z-index: 3;
                 cursor: pointer;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 
                 &.hide {
                     opacity: 0;
@@ -80,15 +85,17 @@
                 
                 .play-button-background {
                     position: absolute;
-                    top: 0;
-                    left: 0;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     z-index: 1;
                 }
                 
                 .play-button-foreground {
                     position: absolute;
-                    top: 10px;
-                    left: 10px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                     z-index: 2;
                 }
             }
