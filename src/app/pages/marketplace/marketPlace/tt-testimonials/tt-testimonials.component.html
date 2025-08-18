@@ -1,0 +1,120 @@
+<div class="container global-mb">
+    <div class="company-list-wrapper" data-aos="fade-up" data-aos-duration="500"> 
+        <div class="reviews-content">
+            <div class="rating">
+                <div class="ti ti-star-filled">★</div>
+                <div class="ti ti-star-filled">★</div>
+                <div class="ti ti-star-filled">★</div>
+                <div class="ti ti-star-filled">★</div>
+                <div class="ti ti-star-filled">★</div>
+            </div>
+        </div>
+    </div>
+    <div class="heading center v2" data-aos="fade-up" data-aos-duration="500">
+        <div class="title">
+           a  <span>5 star</span> experience
+        </div>
+        <div class="subTitle">
+            If there are any questions you want to ask,<br>we will answer your questions
+        </div>
+    </div>
+
+    <div class="position-relative" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+        <div class="reviews-slides">
+            <owl-carousel-o [options]="reviewsSlides" *ngIf="isBrowser">
+                <ng-template carouselSlide>
+                    <div class="content-wrapper">
+                        <figure>
+                            <picture>
+                                <source srcset="assets/images/ravikanth.webp" type="image/webp">
+                                <img src="assets/images/ravikanth.png" width="332" height="345" alt="Ravikanth">
+                            </picture>
+                        </figure>
+                        <div class="review-item content">
+                            <div>
+                                <span class="fw-medium">
+                                    Ravikanth
+                                </span>
+                                <div class="designation">
+                                    Technical CEO J&F TGA
+                                </div>
+                            </div>
+                            <p class="font-mulish">
+                                „With BuildTwin, we have the ability to seamlessly coordinate our partners and efficiently manage the entire project workflow. The platform simplifies communication, optimizes collaboration, and ensures that all stakeholders always have access to the most up-to-date information. This allows us to save time and costs while significantly improving the quality and transparency of our projects.”
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="content-wrapper">
+                        <figure>
+                            <picture>
+                                <source srcset="assets/images/regina.webp" type="image/webp">
+                                <img src="assets/images/regina.png" width="332" height="345" alt="Regina Vögtle">
+                            </picture>
+                        </figure>
+                        <div class="review-item content">
+                            <div>
+                                <span class="fw-medium">
+                                    Regina Vögtle
+                                </span>
+                                <div class="designation">
+                                    Lead Precast Detailing durchgeplant
+                                </div>
+                            </div>
+                            <p class="font-mulish">
+                                „Thanks to BuildTwin, we as a German engineering firm have gained access to international, highly qualified teams. The collaboration works seamlessly and integrates effortlessly into our existing systems. This has made our structures significantly more efficient and opened up new opportunities for us to plan large-scale projects.”
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="content-wrapper">
+                        <figure>
+                            <picture>
+                                <source srcset="assets/images/kumar.webp" type="image/webp">
+                                <img src="assets/images/kumar.png" width="332" height="345" alt="Kumar Sankaranarayanan">
+                            </picture>
+                        </figure>
+                        <div class="review-item content">
+                            <div>
+                                <span class="fw-medium">
+                                    Kumar Sankaranarayanan
+                                </span>
+                                <div class="designation">
+                                    Director J&F India
+                                </div>
+                            </div>
+                            <p class="font-mulish">
+                                „Through BuildTwin, we have gained access to relevant international projects and clients. At the same time, we can showcase our services transparently and ensure high-quality management with the support of AI.”
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="content-wrapper">
+                        <figure>
+                            <picture>
+                                <source srcset="assets/images/testimonial9.webp, assets/images/testimonial9@2x.webp 2x" type="image/webp">
+                                <img src="assets/images/testimonial9.png" srcset="assets/images/testimonial9@2x.png 2x" width="332" height="345" alt="Leia Tatucu">
+                            </picture>
+                        </figure>
+                        <div class="review-item content">
+                            <div>
+                                <span class="fw-medium">
+                                    Leia Tatucu
+                                </span>
+                                <div class="designation">
+                                    Project Manager FBW
+                                </div>
+                            </div>
+                            <p class="font-mulish">
+                                "durchgeplant has made such great progress. The cockpit is great, I no longer need to call and can see everything at a glance. There was so much chaos back in the days with the Zeiss project and now everything looks so organised"
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

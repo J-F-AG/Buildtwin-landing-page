@@ -1,0 +1,416 @@
+.pricing-area {
+    padding: 171px 0 0;
+    background: #F9F9F9;
+
+    &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        content: '';
+        position: absolute;
+        border-radius: 8px;
+        background: #f9f9f9;
+
+        margin: {
+            left: 50px;
+            right: 50px;
+        }
+
+        ;
+        display: none;
+    }
+
+    .pricing-head {
+        padding-bottom: 40px;
+
+        h1 {
+            font-size: 40px; font-weight: 600;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 16px;
+
+            span {
+                color: var(--themeColor);
+            }
+        }
+
+        p {
+            font-size: var(--paraFontSize);
+            color: #000;
+            margin-bottom: 6px;
+        }
+    }
+}
+.col4{display: none;}
+.pricing-box-group {
+    display: flex;
+
+    >div {
+        margin-bottom: 25px;
+    }
+}
+
+.pricing-box {
+    border-radius: 4px;
+    padding: 24px;
+    background-color: var(--whiteColor);
+    transition: var(--transition);
+    height: 100%;
+
+    .title {
+        line-height: 1.278;
+        font-size: 18px;
+        margin-bottom: 11px;
+        letter-spacing: 0;
+    }
+
+    h3+span {
+        display: block;
+        font-size: 14px;
+        line-height: 1.429;
+        color: var(--lightColor);
+        margin-bottom: 20px;
+        transition: var(--transition);
+    }
+
+    .price {
+        line-height: 1.25;
+        padding-bottom: 24px;
+
+        strong {
+            font-size: 40px; font-weight: 600;
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 14px;
+            color: var(--lightColor);
+            vertical-align: super;
+            padding-left: 5px;
+            transition: var(--transition);
+        }
+    }
+
+    .features-list {
+        margin-top: 32px;
+
+        li {
+            margin-bottom: 12px;
+            color: var(--paragraphColor);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19px;
+            padding: 6px 0;
+            transition: var(--transition);
+
+            span {
+                padding-left: 48px;
+
+                i {
+                    left: 0;
+                    top: 50%;
+                    width: 31px;
+                    height: 31px;
+                    font-size: 15px;
+                    line-height: 30px;
+                    text-align: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    color: var(--themeColor);
+                    transform: translateY(-50%);
+                    background-color: #F3F8FF;
+                    transition: var(--transition);
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .default-btn {
+        background-color: var(--whiteColor);
+        border: 1px solid var(--themeColor);
+        color: var(--themeColor) !important;
+        text-align: center;
+        margin-top: 0px;
+        display: block;
+        width: 100%;
+        transition: var(--transition);
+
+        padding: {
+            top: 12px;
+            bottom: 12px;
+        }
+
+        ;
+
+        &:hover {
+            background-color: var(--whiteColor);
+        }
+    }
+
+    &:hover {
+        background-color: var(--themeColor);
+        color: var(--whiteColor);
+
+        .title,
+        h3+span {
+            color: var(--whiteColor);
+        }
+
+        .price {
+            span {
+                color: var(--whiteColor);
+            }
+        }
+
+        .features-list {
+            li {
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+
+.info {
+    ul {
+        li {
+            //letter-spacing: 0.4px;
+            color: var(--paragraphColor);
+
+            margin: {
+                top: 10px;
+                left: 10px;
+                right: 10px;
+            }
+
+            ;
+
+            span {
+                font-weight: 600;
+                padding-left: 23px;
+
+                i {
+                    left: 0;
+                    top: 50%;
+                    margin-top: 0;
+                    position: absolute;
+                    transform: translateY(-50%);
+                    color: var(--themeColor);
+                    font-size: 18px;
+                }
+            }
+
+            a {
+                text-decoration: underline;
+                font-weight: 700;
+
+                &:hover {
+                    color: var(--themeColor);
+                }
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .pricing-area {
+        &::before {
+            border-radius: 0;
+
+            margin: {
+                left: 0;
+                right: 0;
+            }
+
+            ;
+        }
+    }
+
+    .pricing-box-group {
+        display: block;
+    }
+
+    .pricing-box {
+        padding: 20px;
+        height: auto;
+
+        .title {
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+
+        .features-list {
+            margin-top: 17px;
+
+            li {
+                margin-bottom: 10px;
+
+                span {
+                    padding-left: 28px;
+
+                    i {
+                        width: 18px;
+                        height: 18px;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+
+        .default-btn {
+            margin-top: 18px;
+
+            padding: {
+                top: 12px;
+                bottom: 12px;
+            }
+
+            ;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .pricing-area {
+        &::before {
+            border-radius: 0;
+
+            margin: {
+                left: 0;
+                right: 0;
+            }
+
+            ;
+        }
+    }
+
+    .pricing-box {
+        padding: 24px;
+
+        .features-list {
+            margin-top: 20px;
+
+            li {
+                span {
+                    padding-left: 28px;
+
+                    i {
+                        width: 18px;
+                        height: 18px;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+
+        .default-btn {
+            margin-top: 22px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .pricing-area {
+        &::before {
+            border-radius: 0;
+
+            margin: {
+                left: 0;
+                right: 0;
+            }
+
+            ;
+        }
+
+        .hd-section-title {
+            h2 {
+                max-width: 100%;
+            }
+
+            p {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .pricing-box {
+        padding: 24px;
+
+        .features-list {
+            margin-top: 25px;
+        }
+
+        .default-btn {
+            margin-top: 25px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .pricing-area {
+        &::before {
+            margin: {
+                left: 0;
+                right: 0;
+            }
+
+            ;
+        }
+    }
+
+    .pricing-box {
+        padding: 24px;
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .pricing-area {
+        &::before {
+            margin: {
+                left: 0;
+                right: 0;
+            }
+
+            ;
+        }
+    }
+
+    .pricing-box {
+        padding: 24px;
+    }
+
+}
+
+

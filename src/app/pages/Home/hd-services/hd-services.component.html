@@ -1,0 +1,49 @@
+
+<div class="services global-mb" id="targetSection">
+    <div class="main-head" *ngIf="heading">
+        <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+            <div class="main-title" *ngIf="!page">Discover top-tier solutions tailored to your project needs</div>
+            <div class="heading">
+                <h1 class="title">Find Structural Engineering Services & Solutions</h1>
+                <div class="subTitle">The best way to procure pre-qualified technical teams across the globe.</div>
+            </div>
+        </div>
+        <a *ngIf="!page" class="button-v2 align-self-end" href="javascript:void(0)" (click)="scrollToSection('formContainer')">Book a service</a>
+        <a *ngIf="page" class="button-v2 align-self-end" target="_blank" href="https://cockpit.buildtwin.com/signin">Book a service</a>
+    </div>
+
+
+    <div class="slider">
+        <owl-carousel-o [options]="factorySlider" (change)="getData($event)" *ngIf="isBrowser">
+            <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
+                <!-- , color: item.textColor -->
+                <a class="service__items__sub" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''" [ngStyle]="{backgroundColor: item.color}">
+                    <h2 class="service__items__sub__title">{{item.name}}</h2>
+                    <picture>
+                        <source [srcset]="item.img.webp" type="image/webp">
+                        <source [srcset]="item.img.fallback" type="image/png">
+                        <img [src]="item.img.fallback" 
+                             alt="cardImage"
+                             class="service__items__sub__image"
+                             [attr.width]="item.width" 
+                             [attr.height]="item.height"
+                             loading="lazy">
+                    </picture>
+                    <!-- <img class="service__items__sub__image" src="{{item.img}}" alt="cardImage" [attr.width]="item.width" [attr.height]="item.height"> -->
+                </a>
+                <div class="service__items__title">
+                    <h2 class="service__items__title--main">
+                        <a target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
+                            {{servicesArray[i]?.name}}
+                        </a>
+                    </h2>
+                    <p class="service__items__title--sub" *ngIf="servicesArray[i] && servicesArray[i]['description']" [innerHtml]="servicesArray[i]['description']"></p>
+                    <a class="link-text" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
+                        Know More
+                    </a>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+
+</div>

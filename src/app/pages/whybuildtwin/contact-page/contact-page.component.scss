@@ -1,0 +1,168 @@
+strong {
+    font-weight: bold;
+}
+.two-col-contact {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    .left {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        .heading {
+            margin-bottom: 0px;
+        }
+        .block {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-weight: 300;
+        }
+    }
+    .right {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        width: 400px;
+        min-width: 400px;
+        form {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            .form-group {
+                input,textarea {
+                    border: 1px solid rgba(0,0,0,.1);
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 40px;
+                    padding: 10px 15px;
+                    font-size: 14px;
+                    color: rgba(0,0,0,1);
+                    resize: none;
+                    &.ng-invalid.ng-touched {
+                        border-color: red;
+                    }
+                    &::placeholder {
+                        color: rgba(0,0,0,.4);
+                      }
+                }
+                textarea {
+                    height: 80px;
+                }
+            }
+            .button-v2 {
+                justify-content: center;
+                border-radius: 10px;
+            }
+
+            .radio {
+                font-size: 14px;
+                color: rgba(0,0,0,.4);
+                line-height: 1.143;
+                padding-left: 26px;
+                position: relative;
+                cursor: pointer;
+                display: block;
+            }
+            .terms-accept input, .radio input {
+                position: absolute;
+                opacity: 0;
+                left: 0;
+                top: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .terms-accept .ng-touched.not-valid + span,
+            .radio .ng-touched.not-valid + span {
+                box-shadow: 0 0 2px red;
+                border-color: red;
+            }
+            .terms-accept span, .radio span {
+                background-color: #fff;
+                border: 1px #cccccc solid;
+                border-radius: 50%;
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                left: 0;
+                top: -1px;
+            }
+            .radio span {
+                border-color: rgba(0,0,0,.2);
+            }
+            .terms-accept span:before, .radio span:before {
+                content: "";
+                width: 9px;
+                height: 9px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                background-color: #000;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                border-radius: 50%;
+            }
+            .terms-accept input:checked~span:before, .radio input:checked~span:before {
+                opacity: 1;
+            }
+        }
+    }
+}
+.quearyList {
+    padding: 0px 0 8px;
+    strong {
+        display: block;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+    li {
+        margin-bottom: 8px;
+    }
+}
+.no-click {
+    opacity: .5;
+    pointer-events: none;
+}
+.block-x {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    .block-single {
+        flex: 1;
+        h6 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        p{
+            font-weight: 300;
+            color: inherit;
+            a {
+                font-weight: inherit;
+                color: inherit;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                    color: var(--themeColor);
+                }
+            }
+        }
+    }
+}
+.note {
+    text-align: center;
+    color: rgba(0,0,0,.4);
+    font-size: 12px;
+    padding: 5px 30px;
+}
+.mailId {
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}

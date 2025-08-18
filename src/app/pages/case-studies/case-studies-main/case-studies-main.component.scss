@@ -1,0 +1,183 @@
+
+.componentWrapper {
+    display: flex;
+    flex-direction: column;
+    // row-gap: 30px;
+    // background: #fafafa;
+  }
+  figure {
+    margin: 0;
+  }
+  .containerWrap {
+    padding-left: var(--padding-left-right);
+    padding-right: var(--padding-left-right);
+  }
+  .banner-global {
+    margin-bottom: 42px;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    .banner-main {
+      display: flex;
+      align-items: center;
+      padding-top: 88px;
+      flex: 1;
+    }
+    .banner-content {
+      flex-grow: 1;
+      // padding-top: 114px;
+      display: flex;
+      flex-direction: column;
+      gap: 39px;
+      h1 {
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        span {
+          background: #eff4f5;
+          border-radius: 4px;
+        }
+      }
+      p {
+        font-size: 18px;
+        opacity: .7;
+        line-height: 1.4;
+        margin-bottom: 27px;
+      }
+      .get-started-banner {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        input {
+          border: 1px solid #cbd6e2;
+          height: 47px;
+          padding: 16px;
+          font-size: 14px;
+          border-radius: 4px;
+          width: 295px;
+          &.ng-invalid.invalid.ng-touched {
+            border-color: red;
+          }
+        }
+      }
+      .banner-time {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        .banner-time-detail {
+          display: flex;
+          flex-direction: column;
+          // gap: 10px;
+          font-size: 16px;
+          font-weight: 600;
+          .label {
+            display: block;
+            letter-spacing: .3px;
+          }
+          .time {
+            color: #0053fa;
+            font-size: 22px;
+            font-weight: bold;
+            display: block;
+          }
+        }
+      }
+    }
+    .banner-image {
+      width: calc(49.84% + 35px);
+      min-width: calc(49.84% + 35px);
+      margin-right: -35px;
+      figure {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        .link-abs  {
+          position: absolute;
+          left: 14.4%;
+          top: 32.5%;
+          width: 18%; /* Adjust as needed */
+          aspect-ratio: 119 / 299; /* Maintain the ratio */
+          &.link2 {
+            left: 32%;
+            top: 26.7%;
+            width: 35.9%;
+            aspect-ratio: 238 / 359; /* Maintain the ratio */
+          }
+          &.link3 {
+            left: 68%;
+          }
+        }
+      }
+    }
+  }
+// @media (min-height: 800px) {
+//   .banner-global {
+//     // min-height: calc(100vh - 150px);
+//   }
+// }
+@media only screen and (max-width : 1300px) {
+  .banner-global .banner-content h1 {
+    font-size: 30px;
+  }
+  .banner-global .banner-content p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width : 1200px) {
+  .containerWrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+}
+@media only screen and (max-width : 900px) {
+
+  .containerWrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+.banner-global .banner-content .banner-time .banner-time-detail {
+  font-size: 14px;
+  .time {
+    font-size: 20px;
+  }
+}
+}
+@media only screen and (max-width : 767px) {
+  .containerWrap {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .banner-global .banner-main {
+    flex-direction: column;
+    gap: 10px;
+    .banner-content {
+      order: 2;
+    }
+    .banner-image {
+      order: 1;
+      width: 100%;
+      min-width: 100%;
+      margin-right: 0;
+    }
+  }
+  .banner-global .banner-content h1 {
+    font-size: 25px;
+  }
+  .banner-global .banner-content p br {
+    display: none;
+  }
+
+  .banner-global .banner-content  div.v-center-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .banner-global .banner-content .get-started-banner input {
+    flex-grow: 1;
+    width: auto;
+  }
+}

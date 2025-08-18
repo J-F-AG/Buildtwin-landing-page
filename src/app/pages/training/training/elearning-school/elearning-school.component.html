@@ -1,0 +1,391 @@
+<app-hd-navbar></app-hd-navbar>
+
+
+<div class="training-wrapper">
+
+    <!-- Hero Section-->
+    <app-elearning-banner></app-elearning-banner>
+
+    <div class="banner-area position-relative z-1">
+        
+        <div class="container">
+            <app-three-col-tranee>
+                <div class="cdeSection_wrap">
+                <div class="cdeSection">
+                    <div class="cde_col">
+                      <div class="headPart">
+                      <h2>Future-Forward Curriculum</h2>
+                      <span>Leap into tomorrow's skills.</span>
+                    </div>
+                      <img src="assets/images/ui/traning1.png" alt="Training" width="346" height="250">
+                    
+                      <span>
+                        
+                        Gear up for the future with innovative learning. Lead with skills that matter tomorrow.
+        
+                      </span>
+                        <i class="icon1">
+                         +
+                        </i>
+                    </div>
+                    <div class="cde_col">
+                      <div class="headPart">
+                      <h2>Offline Innovation Bootcamp</h2>
+                      <span>Innovate beyond screens.</span>
+                      </div>
+                      <img src="assets/images/ui/traning2.png" alt="Training" width="346" height="250">
+                        <span>Engage in hands-on creativity away from digital distractions. Spark innovation in a collaborative environment.</span>
+                        <i class="icon1">
+                            +
+                           </i>
+                    </div>
+              
+                    <div class="cde_col">
+                      <div class="headPart">
+                      <h2>Career Growth </h2>
+                      <span>Navigate your ascent.</span>
+                      </div>
+                      <img src="assets/images/ui/traning3.png" alt="Training" width="346" height="250">
+                      <span>
+                        Discover strategies for advancing your career. Elevate your path with actionable insights.
+                      </span>
+                    </div>
+                  </div>
+                  </div>
+        
+             </app-three-col-tranee>
+        </div>
+ 
+     </div>
+
+     <div class="container expertData">
+      
+         <div class="expert">
+             <h2>
+                Crafted and Vetted by Global Experts
+             </h2>
+             <p>
+                BuildTwin Training meets real market demands. Co-developed by leading engineering companies the curriculum not only 
+                covers software, building-codes and technical training but also goes deep into technical solutions and feasabilities 
+                in given markets. You will learn what are the common mistakes and how to increase your productivity  
+             </p>
+             <div class="expertFlex">
+                 <div class="item">
+                     <strong>20%
+                     </strong>
+                     <span>Understanding inputs and raise RFIs</span>
+                 </div>
+                 <div class="item">
+                     <strong>25%
+                     </strong>
+                     <span>Software Training</span>
+                 </div>
+                 <div class="item">
+                     <strong>40%
+                     </strong>
+                     <span>Engineering Solutions</span>
+                 </div>
+                 <div class="item">
+                     <strong>15%
+                     </strong>
+                     <span>Delivering Quality</span>
+                 </div>
+             </div>
+         </div>
+
+
+
+
+        <!-- German Course -->
+        <div class="courses-area ptb-100">
+            <app-courses></app-courses>
+        </div>
+    
+        <!-- Partner -->
+            <!-- <app-partner></app-partner> -->
+    <div class="container global-mb">
+            <app-global-company>
+                <div class="partnerWrap">
+                    <div class="company">
+                        <strong>10+</strong>
+                        Clients on Marketplace 
+                    </div>
+            
+            
+                    <owl-carousel-o [options]="reviewsSlides" class="partner">
+                        <ng-template carouselSlide>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers"><img src="assets/images/trustedBy-gbc.jpg" alt="GBC Engineers" loading="lazy"></a>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant"><img src="assets/images/trustedBy-durchgeplant.png" alt="durchgeplant"></a>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited"><img src="assets/images/trustedBy-aarbee.jpg" alt="AARBEE" loading="lazy"></a>
+                        </ng-template>
+                        <ng-template carouselSlide>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india"><img src="assets/images/trustedBy-J&F.png" alt="J&F"></a>
+                        </ng-template>
+                        <!-- <ng-template carouselSlide>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/MACEngineersVietnamCO.LTD."><img src="assets/images/trustedBy-MAC.png" alt="MAC"></a>
+                        </ng-template> -->
+                        <ng-template carouselSlide>
+                            <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering"><img src="assets/images/trustedBy-caldim.jpg" alt="CALDIM" loading="lazy"></a>
+                        </ng-template>
+                    </owl-carousel-o>
+            
+            
+            
+                  
+                </div>
+            
+            
+            </app-global-company>
+    
+        </div>
+       
+ 
+         
+
+    <!-- Co-Developed with Clients -->
+    <app-how-buildtwin-helps>
+        <div class="buildtwinHelps forTraning" id="scrollActivated">
+
+            <div id="onScrollAnimation" class="heading-sticky">
+                <div class="heading center v2">
+                    <span class="sub-title">End-to-End Training</span>
+                    <h2 class="title">Co-developed with BuildTwin Clients
+                    </h2>
+                    <p class="small-title">
+                        Online certification courses that set you up for success. Gain industry-relevant skills with <br>cohort-based learning.
+                    </p>
+                </div>
+        </div>
+            <div class="staticData">
+                <div class="tabContent">
+                    <div class="tabLeft">
+                        <ul>
+                            <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 1}">
+                                <i></i> Co-Developed with<br> BuildTwin Clients
+                            </li>
+                            <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 2}">
+                                <i></i> Building code training
+                            </li>
+                            <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 3}">
+                                <i></i>Software Training
+                            </li>
+                            <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 4}">
+                                <i></i> Technical Highlights
+                            </li>
+                            <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState === 5}">
+                                <i></i> Innovation Campus
+                            </li>
+
+                        </ul>
+                    </div>
+                   
+                </div>
+                <div class="tabRIght">
+                    <div id="section1" data-ele="one" [ngClass]="{'active':activeState === 1}">
+                        <div class="flex ">
+                            <div class="imgWrap">
+                                <img src="assets/images/ui/whytraning1.png" alt="Training" title="">
+                            </div>
+                            <div class="contentWrap">
+                                <h3>
+                                    Co-Developed with BuildTwin Clients
+
+                                </h3>
+                                <p>
+                                    Dive into training programs co-developed with BuildTwin's global client network. Gain 
+                                    real-world insights atop an academic foundation, and access pathways to leading companies 
+                                    through our marketplace.
+                                </p>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section2"    data-ele="two" [ngClass]="{'active':activeState === 2}">
+                        <div class="flex">
+                            <div class="imgWrap">
+                                <img src="assets/images/ui/whytraning2.png" alt="Training" title="">
+                            </div>
+                            <div class="contentWrap">
+                                <h3>
+                                    Building code training
+
+                                </h3>
+                                <p>
+                                    Dive deep into the specifics of building codes with tailored programs 
+                                    for each country, including EURO Code, the International Building Code 
+                                    (IBC) for the US, Building Regulations for the UK, and the National 
+                                    Construction Code (NCC) for Australia. Our expert-led training ensures 
+                                    you're well-versed in the precise regulations that govern your projects, preparing 
+                                    you to excel in any regulatory environment.
+                                </p>
+                                <a routerLink="" class="newBtn">Start Now<img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section3"    data-ele="three" [ngClass]="{'active':activeState === 3}">
+                        <div class="flex ">
+                            <div class="imgWrap">
+                                <img src="assets/images/ui/whytraning3.png" alt="Training" title="">
+                            </div>
+                            <div class="contentWrap">
+                                <h3>
+                                    Software Training
+                                </h3>
+                                <p>
+                                    Unlock the full potential of industry-leading software with our comprehensive 
+                                    training. Learn to harness automation tools and foster seamless collaboration 
+                                    among stakeholders, propelling your projects to new heights of efficiency 
+                                    and innovation.
+                                </p>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section4"    data-ele="four" [ngClass]="{'active':activeState === 4}">
+                        <div class="flex ">
+                            <div class="imgWrap">
+                                <img src="assets/images/ui/whytraning4.png" alt="Training" title="">
+                            </div>
+                            <div class="contentWrap">
+                                <h3>
+                                    Technical Highlights
+                                </h3>
+                                <p>
+                                    Immerse yourself in the intricacies of high-profile projects through our 
+                                    Technical Highlight training. Discover firsthand how real-life technical 
+                                    challenges were overcome, equipping you with practical insights and innovative 
+                                    problem-solving techniques to apply in your own work.
+                                </p>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="section5"    data-ele="five" [ngClass]="{'active':activeState === 5}">
+                        <div class="flex ">
+                            <div class="imgWrap">
+                                <img src="assets/images/ui/whytraning4.png" alt="Training" title="">
+                            </div>
+                            <div class="contentWrap">
+                                <h3>
+                                    Innovation campus
+                                </h3>
+                                <p>
+                                    Step onto the Innovation Campus, a dynamic meeting ground for students and industry experts 
+                                    from diverse fields. Engage in hands-on projects addressing real-world technical challenges, and 
+                                    contribute valuable solutions while expanding your professional network and expertise.
+                                </p>
+                                <a routerLink="" class="newBtn">Start Now <img src="assets/images/ui/arrow.svg" alt="Arrow"> </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </app-how-buildtwin-helps>
+
+
+
+    <!-- <img src="assets/images/training/training_companies.png">
+     -->
+    <app-traning-company>
+        <div class="container">
+            <div class="traningCom">
+       <div class="heading center v2">
+        <span class="sub-title">Companies building the world are Hiring our students</span>
+        <h2 class="title">
+            Global firms trust our candidates 
+        </h2>
+       </div>
+
+       <div class="logo_wrap">
+       <ul>
+        <li>
+            <img src="assets/images/ui/patner1.png" alt="Techture" width="142" height="66">
+        </li>
+        <li>
+            <img src="assets/images/ui/patner2.png" alt="Venkataramanan Associates" width="142" height="66" loading="lazy">
+        </li>
+        <li>
+            <img src="assets/images/ui/patner3.png" alt="QS System" width="142" height="66">
+        </li>
+        <li>
+            <img src="assets/images/ui/patner4.png" alt="AECOM" width="142" height="66" loading="lazy">
+        </li>
+        <li>
+            <img src="assets/images/ui/patner5.png" alt="Morphogensis" width="142" height="66">
+        </li>
+        <li>
+            <img src="assets/images/ui/patner6.png" alt="COWI" width="142" height="66">
+        </li>
+        <li>
+            <img src="assets/images/ui/patner7.png" alt="ATKINS" width="142" height="66">
+        </li>
+        <li>
+            <img src="assets/images/ui/patner8.png" alt="KLIMART" width="142" height="66">
+        </li>
+       </ul>
+       </div>
+            </div>
+        </div>
+    </app-traning-company>
+  
+
+    <!-- Learn to plan for different partners -->
+    <!-- <div class="course_schedule">
+        <img src="assets/images/ui/call_icon.svg">
+        <div class="text">
+            <h2>Learn to plan for different countries</h2>
+       <span>Germany. UK. AUS. US. India. France. </span>
+        </div>
+    
+        <a href="javascript:void(0)" class="btn">Get curriculum</a>
+    </div> -->
+
+</div>
+ 
+
+
+
+
+<!-- 
+<app-funfacts-feedback></app-funfacts-feedback>
+-->
+
+
+<!-- Training specifically for you 
+<app-elearning-about></app-elearning-about>
+-->
+
+
+<!-- 
+<div class="blog-area ptb-100">
+    <app-blog></app-blog>
+</div>
+-->
+<div class="container">
+
+<div class="premium-access-area ptb-100">
+    <app-premium-access></app-premium-access>
+    <div class="shape3"><img src="assets/images/training/shape3.png" alt="image"></div>
+    <div class="shape4"><img src="assets/images/training/shape4.png" alt="image"></div>
+    <div class="shape8"><img src="assets/images/training/shape7.png" alt="image"></div>
+</div>
+
+</div>
+
+<!-- Testimmonial -->
+<div class="container">
+<app-elearning-about></app-elearning-about>
+
+</div>
+
+</div>
+<app-hd-footer></app-hd-footer>

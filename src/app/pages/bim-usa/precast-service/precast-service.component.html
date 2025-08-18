@@ -1,0 +1,59 @@
+<div class="sectionContainer">
+    <div class="container">
+        <div class="container-with-right">
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <h2>
+                All-in-one BIM services
+            </h2>
+
+            <p>
+                <b style="font-size: 15px;">A unique collaborative space that meets the needs of your comprehensive BIM services.</b> <br>
+                BuildTwin provides a centralized platform for AEC industry professionals, enabling them to manage all BIM services in one place. From project management to 3D modeling and cost estimation, our system offers a seamless experience across all stages of the project. The platform not only optimizes the project delivery process but also simplifies BIM implementation, ensuring smooth collaboration between all project stakeholders. This integrated approach ensures that your construction projects are executed efficiently, on time, and within budget, ultimately enhancing project outcomes.
+<br><br>
+            </p>
+        </div>
+        <!-- tabs -->
+
+    <div class="sectionMidContainer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <div class="precastTabs">
+                <ng-container *ngFor="let item of precastArray; let i = index">
+                        <h4 class="tab" [class.active]="activeTab === i" (click)="setActiveTab(i)"
+                        [ngClass]="{ 'activeContainer': activeTab === i }">
+                            {{ item.name }}
+                        </h4>
+                </ng-container>
+        </div>
+        <ng-container *ngFor="let item of precastArray; let i = index"> 
+            <div class="tabContent" *ngFor="let detail of item.details" [ngClass]="{'show':activeTab == i}">
+                <p style="font-size: 15px;"><b>{{ detail.mainContentHead }}</b></p>
+                <p>{{ detail.mainContent }}</p>
+                <h3>{{ detail.header }}</h3>
+                <div class="subContent" style="margin-bottom: 4px;">
+                    <p>{{ detail.subContent }}</p>
+                </div>
+                <div class="subContent" style="margin-bottom: 8px;">
+                    <ul>
+                        <li><p>The synergy of experience and expertise results in superior outcomes.</p></li>
+                        <li><p>With a deep understanding of both national and international compliances.</p></li>
+                        <li><p>An economical choice for BIM Services that adhere to USA standards.</p></li>
+                        <li><p>Trusted by the best architects, contractors, AEC firms, and design build firms in the USA.</p></li>
+                    </ul>
+                </div>
+                <div class="subContent" style="margin-bottom: 8px;">
+                    <br>
+                    <p>The adherence to quality forms a cornerstone of our company's success. For this, we adhere to the following US standard code:</p>
+                </div>
+                
+                <div class="dataList">
+                    <div *ngFor="let item of detail['items']">
+                        <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
+                        <span>{{item}}</span>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        
+    </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="videoPopup open" *ngIf="ytsrc">
+    <span class="closePopup" (click)="videoClose()"></span>
+    <div>
+        <iframe [src]="ytsrc" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>

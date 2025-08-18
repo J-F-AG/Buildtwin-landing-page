@@ -1,0 +1,31 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="mainContainer">
+    <div class="maincontent">
+        <app-cad-banner></app-cad-banner>
+        <app-cad-three-cards></app-cad-three-cards>
+        <app-cad-trust-by></app-cad-trust-by>
+        <!-- <app-cad-sample-drawing></app-cad-sample-drawing> -->
+        <app-cad-service></app-cad-service>
+        <app-cad-top-vendors></app-cad-top-vendors>
+
+        <app-cad-how-it-worksNew></app-cad-how-it-worksNew>
+        <app-cad-live-trackingNew></app-cad-live-trackingNew>
+
+        <app-service-category [category]="8" ></app-service-category>
+        <app-cad-plug-play></app-cad-plug-play>
+        <app-cad-services-offered></app-cad-services-offered>
+        <app-cad-e2e-encryption></app-cad-e2e-encryption>
+        <app-cad-faq-buildtwin></app-cad-faq-buildtwin>
+    </div>
+    <div class="toggle-sidebar" (click)="toggleSidebar()">Start Enquiry</div>
+    <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+        <span class="cross" (click)="toggleSidebar()"></span>
+        <aside class="Stickyform">
+            <app-free-offer-form class="formWrapper"></app-free-offer-form>
+        </aside>
+    </div>
+</div>
+
+<app-cad-drawing-freelancers></app-cad-drawing-freelancers> 
+<app-hd-footer></app-hd-footer>

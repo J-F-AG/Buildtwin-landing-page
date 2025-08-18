@@ -1,0 +1,228 @@
+.faq-accordion {
+    padding-right: 30px;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+    .mat-accordion {
+        .mat-expansion-panel {
+            box-shadow: unset;
+            margin-bottom: 20px;
+            color: var(--blackColor);
+            background: var(--whiteColor);
+            transition: var(--transition);
+            border-radius: 0 4px 4px 4px;
+            border: 2px solid var(--borderColor);
+
+            .mat-expansion-panel-header {
+                padding: 20px 25px;
+                border-radius: 0;
+                display: block;
+                height: auto;
+            }
+            .mat-expansion-panel-header-title {
+                display: block;
+                margin-right: 0;
+                color: var(--blackColor);
+                transition: var(--transition);
+                font: {
+                    size: 17px;
+                    weight: 500;
+                    family: var(--poppinsFontFamily);
+                };
+            }
+            &:not(.mat-expanded) {
+                .mat-expansion-panel-header {
+                    &:not([aria-disabled=true]) {
+                        transition: var(--transition);
+
+                        &:hover {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+            &.mat-expanded {
+                box-shadow: unset;
+
+                .mat-expansion-panel-header {
+                    background: #f9f9f9;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+::ng-deep {
+    .faq-accordion {
+        .mat-accordion {
+            .mat-expansion-panel {
+                .mat-expansion-indicator {
+                    display: none;
+                }
+                .mat-content {
+                    overflow: unset;
+                    display: block;
+                }
+                .mat-expansion-panel-body {
+                    padding: 17px 25px 22px;
+
+                    p {
+                        //letter-spacing: 0.4px;
+                        font-size: var(--fontSize);
+                        color: var(--lightColor);
+                    }
+                }
+            }
+        }
+    }
+}
+.faq-image {
+    padding-left: 64px;
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .faq-accordion {
+        padding-right: 0;
+    
+        h2 {
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+        .mat-accordion {
+            .mat-expansion-panel {
+                border-width: 1px;
+    
+                .mat-expansion-panel-header {
+                    padding: 15px;
+                }
+                .mat-expansion-panel-header-title {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .faq-accordion {
+            .mat-accordion {
+                .mat-expansion-panel {
+                    .mat-expansion-panel-body {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .faq-image {
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+    
+    .faq-accordion {
+        padding-right: 0;
+    
+        h2 {
+            font-size: 29px;
+            margin-bottom: 30px;
+        }
+        .mat-accordion {
+            .mat-expansion-panel {
+                .mat-expansion-panel-header {
+                    padding: 18px 20px;
+                }
+                .mat-expansion-panel-header-title {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .faq-accordion {
+            .mat-accordion {
+                .mat-expansion-panel {
+                    .mat-expansion-panel-body {
+                        padding: 18px 20px;
+                    }
+                }
+            }
+        }
+    }
+    .faq-image {
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .faq-accordion {
+        padding-right: 0;
+    
+        h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+        .mat-accordion {
+            .mat-expansion-panel {
+                .mat-expansion-panel-header {
+                    padding: 20px;
+                }
+                .mat-expansion-panel-header-title {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .faq-accordion {
+            .mat-accordion {
+                .mat-expansion-panel {
+                    .mat-expansion-panel-body {
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .faq-image {
+        padding-left: 15px;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .faq-accordion {
+        padding-right: 0;
+    }
+
+    .faq-image {
+        padding-left: 30px;
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .faq-image {
+        padding-left: 30px;
+    }
+
+}

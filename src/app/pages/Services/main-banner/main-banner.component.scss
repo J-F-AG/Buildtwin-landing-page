@@ -1,0 +1,76 @@
+.bannerWrapper{ margin-top: 112px; padding: 45px 0 47px;
+    background: url("../../../../assets/images/serviceBannerBG.jpg") center center no-repeat; background-size: cover;
+    .container,.container-with-right{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .ServBannerLeft{ width: 34%;
+            h1{font-size: 40px;
+                strong{font-weight: 700; display: block;}
+                span{display: block;}
+            }
+        }
+        .ServBannerRight{ width: 62%; display: flex; gap: 29px; justify-content: flex-start;
+            .bannerItems{border-radius: 10px; width: 33.33%;
+                background: #FFF;                
+                /* Drop Shadow */
+                box-shadow: 0px 4px 10px 0px rgba(136, 109, 224, 0.10);
+                padding: 16px; align-items: center; display: flex; flex-direction: column;
+                .bannerItemsImg{ flex: 1; display: flex; align-items: center;}
+                .bannerItemsInfo{ text-align: center; min-height: 70px;
+                    strong{display: block; font-size: 20px;}
+                    span{font-size: 13px; display: block; line-height: 1.4;}
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+    .bannerWrapper .container, .bannerWrapper .container-with-right{
+        flex-direction: column; align-items: center;
+        .ServBannerLeft{width: auto; text-align: center;
+            .ServBannerImg{max-width: 280px; width: 70%; display: inline-block;}
+            h1 {
+                font-size: 35px;
+            }
+        }
+        .ServBannerRight{ width: 100%; flex-direction: column;  align-items: center;
+            .bannerItems{ width: 70%;
+                .bannerItemsImg{max-width: 170px; width: 70%;}
+            }
+        }
+    }
+}
+/* Max width 991px */
+@media only screen and (max-width : 991px){
+    .bannerWrapper{margin-top: 58px;}
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+    
+    .bannerWrapper .container .ServBannerLeft { width: 30%;
+        h1{font-size: 19px;}
+    }
+    .bannerWrapper .container .ServBannerRight{ width: 66%; gap: 20px; 
+        .bannerItems .bannerItemsInfo{
+            strong{font-size: 14px;}
+            span{ font-size: 12px;}
+        }
+    }
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+    .bannerWrapper .container .ServBannerLeft h1{font-size: 32px;}
+    .bannerWrapper .container .ServBannerRight{ 
+        .bannerItems .bannerItemsInfo{
+            strong{font-size: 18px;}
+        }
+    }
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}

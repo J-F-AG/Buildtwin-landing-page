@@ -1,0 +1,306 @@
+<app-hd-navbar></app-hd-navbar>
+
+
+
+<app-ai-capabilities-banner></app-ai-capabilities-banner>
+<app-company-logos-slider></app-company-logos-slider>
+
+<!-- 3 reasons to get started NOW Section -->
+<app-get-started-block>
+    <div class="heading center v2">
+       <h2 class="title">
+        3 reasons to get started  <span>NOW</span>
+       </h2> 
+    </div>
+    
+    <div class="block-wrapper-arrow">
+        <div class="block">
+            <img src="assets/images/seller1-arrow.png" alt="arrow" width="29" height="59">
+        </div>
+        <div class="block">
+            <img src="assets/images/seller2-arrow.png" alt="arrow" width="24" height="61">
+        </div>
+        <div class="block">
+            <img src="assets/images/seller3-arrow.png" alt="arrow" width="29" height="59">
+        </div>
+    </div>
+    <div class="block-wrapper">
+        <div class="block">
+            <div class="delivery-type-label ai-human">AI + Human Engineering</div>
+            <div class="note">
+                in less than 5 min.
+            </div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer1@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer1.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer1@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer1.png" 
+                        alt="buyer1" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Capability</h3>
+                <p class="benefit-subtext">Optimize structural workflows for faster, more reliable delivery.</p>
+            </div>
+        </div>
+        <div class="block">
+            <div class="delivery-type-label ai-human">AI + Human Engineering</div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer2@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer2.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer2@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer2.png" 
+                        alt="buyer2" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Quality Control</h3>
+                <p class="benefit-subtext">Catch issues early and ensure code compliance with confidence.</p>
+            </div>
+        </div>
+        <div class="block">
+            <div class="delivery-type-label ai-human">AI + Human Engineering</div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/sellers3@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/sellers3.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/sellers3@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/sellers3.png" 
+                        alt="sellers3" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Drawing Generation</h3>
+                <p class="benefit-subtext">Produce structural drawings up to 3x faster with higher consistency.</p>
+            </div>
+        </div>
+    </div>
+    
+</app-get-started-block>
+
+<!-- AI Capabilities Carousel Section -->
+<div class="global-mb" id="ai-capabilities" style="margin-top: 20px;">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    BuildTwin <span>AI Capabilities</span>
+                </h2>
+                <p class="small-title">
+                    Discover how our AI-powered solutions streamline your engineering workflows and boost productivity
+                </p>
+        </div>
+        
+        <!-- Category Selector -->
+        <div class="category-selector">
+            <div class="selector-tabs">
+                <button 
+                    class="selector-tab" 
+                    [class.active]="selectedCategory === 'ai-generation'"
+                    (click)="selectCategory('ai-generation')">
+                    AI Drawing Generation
+                </button>
+                <button 
+                    class="selector-tab" 
+                    [class.active]="selectedCategory === 'ai-quality-control'"
+                    (click)="selectCategory('ai-quality-control')">
+                    AI Quality Control
+                </button>
+                <button 
+                    class="selector-tab" 
+                    [class.active]="selectedCategory === 'ai-capability'"
+                    (click)="selectCategory('ai-capability')">
+                    AI Capability
+                </button>
+            </div>
+        </div>
+        
+    </div>
+    <app-bottom-content [selectedCategory]="selectedCategory" (slideChanged)="onSlideChanged($event)"></app-bottom-content>
+    <div class="container">
+
+    </div>
+</div>
+
+<!-- BuildTwin Pro Section -->
+<app-heavy-lifting></app-heavy-lifting>
+
+<!-- Plug & Play Section -->
+<app-hd-integrations></app-hd-integrations>
+
+<!-- Case Studies Section -->
+<div class="case-studies-section">
+    <div class="container">
+        <div class="heading center v2">
+            <h2 class="title">
+                Featured <span>Projects</span>
+            </h2>
+            <p class="small-title">
+                See how BuildTwin AI capabilities deliver real results
+            </p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/images/Tesla-002.jpg" alt="Tesla Gigafactory" width="300" height="200">
+                </div>
+                <div class="project-content">
+                    <h3>Tesla Gigafactory</h3>
+                    <p>Structural Design with AI-powered quality control and automated drawing generation</p>
+                    <span class="category">Structural Engineering</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/images/high-building.png" alt="High-Rise Buildings" width="300" height="200">
+                </div>
+                <div class="project-content">
+                    <h3>High-Rise Buildings</h3>
+                    <p>AI Capability optimizing workflows for complex structural projects</p>
+                    <span class="category">Structural Engineering</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/images/Jim-Bridger-SCR-Plate-Flues-Ducts.jpg" alt="Jim Bridger SCR" width="300" height="200">
+                </div>
+                <div class="project-content">
+                    <h3>Jim Bridger SCR</h3>
+                    <p>AI Quality Control ensuring compliance and catching issues early</p>
+                    <span class="category">Structural Engineering</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="faq-section">
+    <div class="container">
+        <div class="faq-header">
+            <h2>Good to know...</h2>
+            <p>AI capabilities can be complex, so we've made it simple. If you still have questions, you can <a href="https://www.buildtwin.com/contact" target="_blank">contact our team</a>.</p>
+        </div>
+        
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h3>What is AI Drawing Generation?</h3>
+                <p>Our AI automatically generates structural drawings including Element GA, Rebar drawings for both Pre-Cast and Insitu applications, and detailed construction documentation. The AI learns from your project requirements and building codes to deliver accurate, compliant drawings in minutes instead of hours.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How does AI Quality Control work?</h3>
+                <p>Our AI performs comprehensive quality checks including technical validation, presentation standards, and spelling verification. It automatically detects errors, missing details, and compliance issues before delivery, ensuring your drawings meet international standards and project specifications.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What is the AI Capability?</h3>
+                <p>The AI Capability automates your entire workflow from CDE management and RFI tracking to delivery platform coordination. It learns from your project patterns to optimize efficiency, provides intelligent suggestions, and ensures consistent quality across all deliverables.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How secure is my data with BuildTwin AI?</h3>
+                <p>Your data security is our top priority. We use enterprise-grade encryption, secure cloud infrastructure, and strict access controls. Your project files, designs, and sensitive information remain completely private and under your control at all times.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>Can I integrate AI capabilities with your existing tools?</h3>
+                <p>Absolutely! BuildTwin AI integrates seamlessly with your current CAD software, project management tools, and workflow systems. We support all major platforms including AutoCAD, Revit, Tekla, and more. Setup takes less than 5 minutes.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What if I need human expertise alongside AI?</h3>
+                <p>BuildTwin combines the best of both worlds. Our AI handles repetitive tasks and quality checks, while our global network of certified engineers provides human oversight, creative problem-solving, and specialized expertise when needed. You get AI efficiency with human intelligence.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How quickly can I see results with AI capabilities?</h3>
+                <p>Most users see immediate improvements in workflow efficiency within the first week. AI Drawing Generation typically reduces drawing time by 60-80%, while AI Quality Control catches 90% of common errors automatically. Full workflow optimization is usually achieved within 2-3 weeks.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What building codes and standards are supported?</h3>
+                <p>BuildTwin AI supports all major international building codes including Eurocodes, AISC, AS, BS, ISO standards, and regional variations. The AI automatically adapts to your project's specific code requirements and ensures compliance across all deliverables.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How does AI handle complex structural calculations?</h3>
+                <p>Our AI uses advanced algorithms trained on thousands of engineering projects to perform complex structural calculations, load analysis, and design optimization. It automatically applies relevant building codes, safety factors, and engineering principles while maintaining accuracy and compliance standards.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>Can AI adapt to my company's specific drawing standards?</h3>
+                <p>Yes! BuildTwin AI learns from your existing drawings and company standards. It automatically adapts to your preferred drawing layouts, annotation styles, layer structures, and company-specific requirements. The more you use it, the better it becomes at matching your exact standards.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What happens if the AI makes an error?</h3>
+                <p>While our AI achieves 95%+ accuracy, we maintain human oversight for quality assurance. All AI-generated drawings are reviewed by certified engineers before delivery. If any issues are detected, they're automatically flagged for human review, ensuring your projects maintain the highest quality standards.</p>
+            </div>
+        </div>
+        
+        <div class="faq-footer">
+            <p>Didn't find what you were looking for?</p>
+            <a href="https://www.buildtwin.com/contact" target="_blank" class="faq-cta-button">Contact Our Team</a>
+        </div>
+    </div>
+</div>
+
+<!-- 5 Star Experience Section -->
+<app-hd-good-company [count]="5"></app-hd-good-company>
+
+<!-- Popup for Schedule Call -->
+<div class="popUP" [ngClass]="{'active':showPopup}">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3>Schedule a Call</h3>
+            <button class="close-btn" (click)="closePopupStatus($event)">
+                <i class="ti ti-x"></i>
+            </button>
+        </div>
+        <div class="popup-body">
+            <p>Our global Sales team is ready to help you grow with BuildTwin. Schedule a call to learn more about how we can fuel your growth.</p>
+            <div class="popup-actions">
+                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+                    Get Started
+                </a>
+                <button class="button-v2 border" (click)="closePopupStatus($event)">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-hd-footer></app-hd-footer>

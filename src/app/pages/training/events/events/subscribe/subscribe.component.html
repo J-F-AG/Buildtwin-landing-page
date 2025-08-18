@@ -1,0 +1,35 @@
+<div
+    class="subscribe-content"
+    [ngClass]="{'d-none': router.url === '/online-art' || router.url === '/single-instructor'}"
+>
+    <span class="sub-title">Go At Your Own Pace</span>
+    <h2>Subscribe To Our Newsletter</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <form class="newsletter-form">
+        <!-- <input type="text" class="input-newsletter" placeholder="Enter your email address" name="EMAIL" required autocomplete="off"> -->
+        <button type="submit" (click)="call()" class="button-v2"><i class="flaticon-user"></i>Subscribe Now<span></span></button>
+    
+        <div class="popUP" [ngClass]="{'active':showPopup}">
+            <div class="coverPopup">
+              <i class="closeIcon" (click)="closePopup()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                  <g clip-path="url(#clip0_2773_11848sss)">
+                  <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_2773_11848">
+                  <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+              </i>
+              <div class="coverPopupData">
+           
+            <div id="hubspotFormContainer2"></div>
+          </div>
+          </div>
+        </div>
+    </form>
+</div>
+
+

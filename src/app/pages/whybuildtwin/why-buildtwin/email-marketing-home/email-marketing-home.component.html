@@ -1,0 +1,486 @@
+<app-hd-navbar></app-hd-navbar>
+
+<!-- Hero Section -->
+
+<app-here-section>
+    <div class="banner-area position-relative z-1">
+   
+    
+
+        <div class="sliderCover">
+            <div class="item">
+                <div class="container">
+                <div class="banner-content text-center ms-auto me-auto">
+
+                    <h1 class="mb-0 ms-auto me-auto">
+                        A better experience. Today.  
+                    </h1>
+                    <h2>
+                        <span class="jeffStyle">for</span> outsourcing engineering, execution, and delivery.
+                    </h2>
+
+
+                  <div class="btn-box" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                  </div>
+                  <ul class="features-list ps-0 mb-0 list-unstyled" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                  </ul>
+                </div>
+                </div>
+              </div>
+        
+          </div>
+          
+        
+
+            <!-- 
+            <div class="shape1 position-absolute z-n1 pe-none">
+                <img src="assets/images/shapes/shape13.png" alt="shape13">
+            </div>
+            <div class="shape2 position-absolute z-n1 pe-none">
+                <img src="assets/images/shapes/shape21.png" alt="shape21">
+            </div>
+            -->
+          
+          
+            <div class="overlay position-absolute z-n1"></div>
+        </div>
+</app-here-section>
+<app-market-place (marketplaceNumber)="marketplaceNumber($event)">
+    <div class="marketPlace "  id="scrollActivated">
+        <div class="container">
+
+      
+        <div class="head stickyTop">
+            <h2>
+                Why BuildTwin
+            </h2>
+            <span>
+                BuildTwin supercharges engineering teams - across the globe. 
+            </span>
+
+            <div class="pagination">
+               
+                    <ul >
+                        <li class="active"  [ngClass]="{active: marketPlace === 1 }">
+                            <i class="cirlce"></i>
+                            <span>Why</span>
+                        </li>
+                        <li [ngClass]="{active: marketPlace === 2 }">
+                            <i class="cirlce"></i>
+                            <span>How</span>
+                        </li>
+                        <li [ngClass]="{ active: marketPlace === 3 }">
+                            <i class="cirlce"></i>
+                            <span>What</span>
+                        </li>
+                    </ul>
+                 
+            </div>
+        </div>
+
+        <div class="slide" data-ele="1" [ngClass]="{ active: marketPlace == 1 }">
+            <div class="imgWrap">
+                            <picture>
+                                <source srcset="assets/images/ui/slide1.webp 1x, assets/images/ui/slide1@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                                <source srcset="assets/images/ui/slide1.webp 1x, assets/images/ui/slide1@2x.webp 2x" type="image/webp">
+                                <source srcset="assets/images/ui/slide1.png 1x, assets/images/ui/slide1@2x.png 767w" media="(max-width: 767px)">
+                                <source srcset="assets/images/ui/slide1.png 1x, assets/images/ui/slide1@2x.png 2x">
+                                <img src="assets/images/ui/slide1.png" alt="Slider" width="630" height="270">
+                            </picture>
+            </div> 
+            <div class="contentWrap">
+                <h3>Why - the largest portfolio on the</h3>
+                <p> 
+
+                    AI unlocks a new level of productivity of engineers. And allows to 
+                    automate tedious tasks and knowlege transfer. 
+                   
+                </p>
+            </div>
+        </div>
+        <div class="slide" data-ele="2" [ngClass]="{ active: marketPlace == 2 }">
+            <div class="imgWrap">
+                            <picture>
+                                <source srcset="assets/images/ui/slide2.webp 1x, assets/images/ui/slide2@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                                <source srcset="assets/images/ui/slide2.webp 1x, assets/images/ui/slide2@2x.webp 2x" type="image/webp">
+                                <source srcset="assets/images/ui/slide2.png 1x, assets/images/ui/slide2@2x.png 767w" media="(max-width: 767px)">
+                                <source srcset="assets/images/ui/slide2.png 1x, assets/images/ui/slide2@2x.png 2x">
+                                <img src="assets/images/ui/slide2.png" alt="Slider" width="630" height="270">
+                            </picture>
+            </div> 
+            <div class="contentWrap">
+                <h3>How - Delivered with the help of AI</h3>
+                <p>
+                    BuildTwin AI helps engineers to develiver projects while meeting 
+                    the requirements. 
+                </p>
+            </div>
+        </div>
+        <div class="slide" data-ele="3" [ngClass]="{ active: marketPlace == 3 }">
+            <div class="imgWrap">
+                            <picture>
+                                <source srcset="assets/images/ui/slide3.webp 1x, assets/images/ui/slide3@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                                <source srcset="assets/images/ui/slide3.webp 1x, assets/images/ui/slide3@2x.webp 2x" type="image/webp">
+                                <source srcset="assets/images/ui/slide3.png 1x, assets/images/ui/slide3@2x.png 767w" media="(max-width: 767px)">
+                                <source srcset="assets/images/ui/slide3.png 1x, assets/images/ui/slide3@2x.png 2x">
+                                <img src="assets/images/ui/slide3.png" alt="Slider" width="630" height="270">
+                            </picture>
+            </div> 
+            <div class="contentWrap">
+                <h3>What - Engineering Services</h3>
+                <p>
+                    BuildTwin combines all data - to create a AI based checklist for each submission. And 
+                    enables Trust with / in AI - to work with a global community. 
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+</app-market-place>
+
+
+
+<!-- BuildTwin offer for Service Provider / Service Procurer -->
+
+<div class="happier-customers-area pt-75">
+    <div class="container">
+        <div class="row happier-customers-inner">
+            <div class="hd-section-title text-center ms-auto me-auto" data-aos="fade-up" data-aos-duration="500">
+                <h2 class="mb-0 font-poppins">
+                    <i class="jeffStyle">Automates</i> working with 5k+ engineers
+                </h2>
+                <p class="ms-auto me-auto">
+                    Automate the set-up working with different vendors and track LIVE the project progress
+                    while BuildTwin does the heavy lifting for you in the background.
+                </p>
+            </div>
+            
+     
+            <div class="happier-customers-image ms-auto me-auto text-center position-relative z-1">
+                <picture>
+                    <source srcset="assets/images/happier-customers2.webp 1x, assets/images/happier-customers2@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                    <source srcset="assets/images/happier-customers2.webp 1x, assets/images/happier-customers2@2x.webp 2x" type="image/webp">
+                    <source srcset="assets/images/happier-customers2.png 1x, assets/images/happier-customers2@2x.png 767w" media="(max-width: 767px)">
+                    <source srcset="assets/images/happier-customers2.png 1x, assets/images/happier-customers2@2x.png 2x">
+                    <img src="assets/images/happier-customers2.png" alt="happier-customers-image" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Partners -->
+<app-em-partners></app-em-partners>
+
+
+<!-- Product Comparision -->
+
+<div id="features" #featuresDiv >
+<section class="content-wrapper">
+    <div class="container">
+        <div class="flexData">
+    <div class="header-section">
+        <h2 class="header-title">What 
+
+            <img src="assets/images/buildL.png" alt="BuildTwin" width="128" height="34">
+        </h2>
+        <h3 class="offer-text">can do for you</h3>
+    </div>
+    <div class="services-section">
+        <div class="services-intro">I am / We are</div>
+        <div class="services-container">
+            <h4 class="services-title">Procuring engineering services</h4>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cce01dc6eca3498f0168c47d213f2e7765193ce28763768bcee719b9633f09da?apiKey=36850388eee14aa189272e3e1adf474e&"
+                alt="Procuring engineering services" class="services-img" />
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<app-can-do-for-you></app-can-do-for-you>
+<!-- <div class="tableWrapper">
+<div class="container">
+    <div class="cover">
+        <div  class="tableheader bt-flex">
+            <div class="col1">Co-Pilot Features</div>
+            <div class="col2">
+                <img src="assets/images/z.png" alt="BuildTwin" width="89" height="24">
+            </div>
+            <div class="col3">Legacy Tools</div>
+            <div class="col4">Potential Saving</div>
+        </div>
+    </div>
+  
+    <div class="group">
+        <div class="tableSubheader bt-flex">
+            <div class="col1 headingSubheader">E-Mail</div>
+            <div class="col2 bt-flex gap8"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 19 19" fill="none">
+                    <g clip-path="url(#clip0_5405_16691)">
+                        <path
+                            d="M9.49854 2C5.35854 2 1.99854 5.36 1.99854 9.5C1.99854 13.64 5.35854 17 9.49854 17C13.6385 17 16.9985 13.64 16.9985 9.5C16.9985 5.36 13.6385 2 9.49854 2ZM7.99854 13.25L4.24854 9.5L5.30604 8.4425L7.99854 11.1275L13.691 5.435L14.7485 6.5L7.99854 13.25Z"
+                            fill="#00B507" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_5405_16691">
+                            <rect width="18" height="18" fill="white" transform="translate(0.5 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg> Included</div>
+            <div class="col3">Exchange, own-Email Server</div>
+            <div class="col4">$200</div>
+
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Compliant E-Mail Inbox for Teams</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">$200</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Summarizing E-Mail and showing 360° technical context and history</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">$200</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Tracking of discussed topics, timelines, etc. and updating project management
+            </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">$200</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Drafting respond e-mails with relevant context </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">$200</div>
+        </div>
+    </div>
+    <div class="group">
+        <div class="tableSubheader bt-flex">
+            <div class="col1 headingSubheader">File Management </div>
+            <div class="col2 bt-flex gap8"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 19 19" fill="none">
+                    <g clip-path="url(#clip0_5405_16691)">
+                        <path
+                            d="M9.49854 2C5.35854 2 1.99854 5.36 1.99854 9.5C1.99854 13.64 5.35854 17 9.49854 17C13.6385 17 16.9985 13.64 16.9985 9.5C16.9985 5.36 13.6385 2 9.49854 2ZM7.99854 13.25L4.24854 9.5L5.30604 8.4425L7.99854 11.1275L13.691 5.435L14.7485 6.5L7.99854 13.25Z"
+                            fill="#00B507" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_5405_16691">
+                            <rect width="18" height="18" fill="white" transform="translate(0.5 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg> Included</div>
+            <div class="col3">Sharepoint, Active Directory & Manual management</div>
+            <div class="col4">20 Hours</div>
+
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Automated Filemanagement - Save & Done </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual upload & manage</div>
+            <div class="col4">20 Hours</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Files are available in the Cloud across different offices / for clients </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Not available if not uploaded </div>
+            <div class="col4">20 Hours</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Compliant Backup / redundant storage </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Local IT infrastructure required </div>
+            <div class="col4">20 Hours</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Automated Single Point of Truth (consolidating shared Files via E-Mails, etc. with
+                files saved locally) </div>
+            <div class="col2">Yes</div>
+            <div class="col3">No</div>
+            <div class="col4">20 Hours</div>
+        </div>
+    </div>
+    <div class="group">
+        <div class="tableSubheader bt-flex">
+            <div class="col1 headingSubheader">CDE Integration</div>
+            <div class="col2 bt-flex gap8"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 19 19" fill="none">
+                    <g clip-path="url(#clip0_5405_16691)">
+                        <path
+                            d="M9.49854 2C5.35854 2 1.99854 5.36 1.99854 9.5C1.99854 13.64 5.35854 17 9.49854 17C13.6385 17 16.9985 13.64 16.9985 9.5C16.9985 5.36 13.6385 2 9.49854 2ZM7.99854 13.25L4.24854 9.5L5.30604 8.4425L7.99854 11.1275L13.691 5.435L14.7485 6.5L7.99854 13.25Z"
+                            fill="#00B507" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_5405_16691">
+                            <rect width="18" height="18" fill="white" transform="translate(0.5 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg> Included</div>
+            <div class="col3">No software available </div>
+            <div class="col4">20%</div>
+
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Consolidate Client CDE into your workenviromment - 1 System to manage all client
+                systems</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">20%</div>
+        </div>
+
+        <div class="tableRow bt-flex">
+            <div class="col1">Automated project documentation </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">20%</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Detailed Reports of: Revisions, Type of comments, etc. </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">20%</div>
+        </div>
+    </div>
+    <div class="group">
+        <div class="tableSubheader bt-flex">
+            <div class="col1 headingSubheader">AI based Project Management System</div>
+            <div class="col2 bt-flex gap8"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                    viewBox="0 0 19 19" fill="none">
+                    <g clip-path="url(#clip0_5405_16691)">
+                        <path
+                            d="M9.49854 2C5.35854 2 1.99854 5.36 1.99854 9.5C1.99854 13.64 5.35854 17 9.49854 17C13.6385 17 16.9985 13.64 16.9985 9.5C16.9985 5.36 13.6385 2 9.49854 2ZM7.99854 13.25L4.24854 9.5L5.30604 8.4425L7.99854 11.1275L13.691 5.435L14.7485 6.5L7.99854 13.25Z"
+                            fill="#00B507" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_5405_16691">
+                            <rect width="18" height="18" fill="white" transform="translate(0.5 0.5)" />
+                        </clipPath>
+                    </defs>
+                </svg> Included</div>
+            <div class="col3">Mostly not specifically designed for engineering</div>
+            <div class="col4">$200</div>
+
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">AI based Project Planning and Scheduling</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">$200</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">AI based Resource Management & Allocation</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">$200</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">AI based Time Tracking </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual</div>
+            <div class="col4">$200</div>
+        </div>
+
+    </div>
+    <div class="cover">
+    <div  class="tableheader bt-flex">
+        <div class="col1">ERP Features  - 3 Enterprise Software in 1</div>
+        <div class="col2">
+
+        </div>
+        <div class="col3"></div>
+        <div class="col4"></div>
+    </div>
+    </div>
+    <div class="group">
+        <div class="tableSubheader bt-flex">
+            <div class="col1 headingSubheader">HCM</div>
+            <div class="col2 bt-flex gap8"></div>
+            <div class="col3"> </div>
+            <div class="col4"></div>
+
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Manage your teams, apply your policies (Holidays, etc.) while complying with local
+                law</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual HR Function</div>
+            <div class="col4">20%</div>
+        </div>
+
+        <div class="tableRow bt-flex">
+            <div class="col1">Automate Leave applications detailed  HR reports</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual HR Function</div>
+            <div class="col4">20%</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Automate Asset Management and Tracking according to your policy </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual HR Function</div>
+            <div class="col4">20%</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Resignation & Peformance Evalulation</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual HR Function</div>
+            <div class="col4">20%</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Calendar module with leaves, meetings & interview integration across platform
+            </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual HR Function</div>
+            <div class="col4">20%</div>
+        </div>
+    </div>
+    <div class="group">
+        <div class="tableSubheader bt-flex">
+            <div class="col1 headingSubheader">Jobs</div>
+            <div class="col2 bt-flex gap8"></div>
+            <div class="col3"> </div>
+            <div class="col4"></div>
+
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Manage your teams, apply your policies (Holidays, etc.) while complying with local
+                law</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Manual HR Function</div>
+            <div class="col4">20%</div>
+        </div>
+
+        <div class="tableRow bt-flex">
+            <div class="col1">Automate Leave applications detailed  HR reports</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Extra Software, not integreated / AI powered</div>
+            <div class="col4">10 Hours</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">AI based Resume Management & Interview Scheduling with video Interviews, questions
+                & answer </div>
+            <div class="col2">Yes</div>
+            <div class="col3">Extra HCM Software</div>
+            <div class="col4">15 Hours</div>
+        </div>
+        <div class="tableRow bt-flex">
+            <div class="col1">Customized Onboarding from interview to hiring</div>
+            <div class="col2">Yes</div>
+            <div class="col3">Extra HCM Software</div>
+            <div class="col4">20 Hours</div>
+        </div>
+    </div>
+</div>
+</div> -->
+</div>
+
+
+<!-- Large Tender -->
+<app-cta></app-cta>
+
+<app-hd-footer></app-hd-footer>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

@@ -1,0 +1,172 @@
+:host ::ng-deep {
+    .row {
+        background: #fff;
+padding: 64px 0;
+        .head {
+            margin-bottom: 49px;
+
+            h2 {
+                color: #0E0E28;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                /* 48px */
+                margin-bottom: 8px;
+            }
+
+            p {
+                color: var(--Black, #000);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                /* 25.6px */
+            }
+        }
+
+
+        ul {
+            display: flex;
+            gap: 40px;
+            padding: 0;
+            margin: 0;
+
+            li {
+                border-radius: 10px;
+                background: #FAFAFA;
+                width: 100%;
+                height: 72px;
+                padding: 12px;
+                display: flex;
+                gap: 16px;
+                align-items: center;
+
+                .wrapLeft {
+                    .retraingle {
+                        border-radius: 10px;
+                        border: 1px solid #0053fa;
+                        background: var(--color-green-button, #FFF);
+                        display: flex;
+                        height: 48px;
+                        width: 48px;
+                        padding: 13px 12px 12px 11px;
+                        justify-content: center;
+                        align-items: center;
+                        color: #000;
+
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                }
+
+                .content {
+                    p {
+                        color: #000;
+
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin-bottom: 4px;
+                    }
+
+                    h2{
+                        color: var(--primary, #0053fa);
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;   
+                        margin-bottom: 3px;
+                    }
+
+                    strong{
+                        color: var(--Black, #000);
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+display: block;
+                    }
+                    span{
+                        color: var(--grey, var(--grey, #808080));
+                        text-align: center;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    em{
+                        color: var(--primary, #0053fa);
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+                    }
+                }
+            }
+        }
+        .whiteBg{
+            gap: 37px;
+        }
+        .whiteBg li{
+            background: #fff;
+        }
+        .wrapdata{
+            flex-wrap: wrap;
+        }
+    }
+
+    .gray{
+        background: #f9f9f9;
+    }
+}
+
+
+@media (max-width:1200px){
+   :host ::ng-deep .row {
+        background: #fff;
+        padding: 64px 0;
+        margin: 0;
+        padding: 37px 30px;
+    }
+    :host ::ng-deep .row ul {
+        flex-wrap: wrap;
+    }
+    :host ::ng-deep .row ul li {
+        border-radius: 10px;
+        background: #FAFAFA;
+        width: 286px;
+        height: 62px;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .row {
+        padding: 30px 15px;
+        .container{
+            padding: 0;
+            ul {
+                flex-wrap: wrap;
+                gap: 10px;
+                li {
+                    padding: 6px 12px;
+                    width: 100%;
+                    height: auto;
+                    .content p{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+
+        .head{
+            margin-bottom: 30px;
+        }
+       
+    }
+    
+}

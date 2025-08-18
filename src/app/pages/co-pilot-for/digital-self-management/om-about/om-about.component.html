@@ -1,0 +1,40 @@
+<div class="about-area pb-100 pt-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="500">
+                <div class="about-content">
+                    <h2 class="font-archivo">
+                        Get started in minutes 
+                    </h2>
+                    <p>
+                        The DSM system uses different inputs to guess relevant KPIs and refines the data as you start using the plattform 
+                        more. So you get started FAST and gets improved with time
+                        <br><br>                         
+                    </p>
+                    <h3 class="font-archivo fw-semibold">
+                        Guesstimates
+                    </h3>
+                    <ul class="features-list font-archivo mt-0 ps-0 list-unstyled">
+                        <li class="position-relative">
+                            <i class="ti ti-check"></i>
+                            AI based project management.   
+                        </li>
+                        <li class="position-relative">
+                            <i class="ti ti-check"></i>
+                            Integrates with third-party CDE
+                        </li>
+                        <li class="position-relative">
+                            <i class="ti ti-check"></i>
+                           No change in workflow needed. 
+                        </li>
+                    </ul>
+                    <a class="button-v2" (click)="call()">Schedule DEMO</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                <img src="assets/images/image_auto.jpg" alt="Icon" width="" height="">
+            </div>
+        </div>
+    </div>
+</div>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

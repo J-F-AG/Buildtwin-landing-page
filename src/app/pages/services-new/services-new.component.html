@@ -1,0 +1,32 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="mainContainer">
+    <div class="maincontent">
+        <app-banner></app-banner>
+        <app-three-cards></app-three-cards>
+        <app-trust-by></app-trust-by>
+        <app-sample-drawing></app-sample-drawing>
+        <app-precast-service></app-precast-service>
+        <app-top-vendors></app-top-vendors>
+
+        <app-how-it-worksNew></app-how-it-worksNew>
+        <app-live-trackingNew></app-live-trackingNew>
+
+        <!-- <app-service-category [category]="8"></app-service-category> -->
+
+        <app-plug-play></app-plug-play>
+        <app-services-offered></app-services-offered>
+        <app-e2e-encryption></app-e2e-encryption>
+        <app-faq-buildtwin></app-faq-buildtwin>
+    </div>
+    <div class="toggle-sidebar" (click)="toggleSidebar()">Start Enquiry</div>
+    <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+        <span class="cross" (click)="toggleSidebar()"></span>
+        <aside class="Stickyform">
+            <app-free-offer-form class="formWrapper"></app-free-offer-form>
+        </aside>
+    </div>
+</div>
+
+<app-drawing-freelancers></app-drawing-freelancers> 
+<app-hd-footer></app-hd-footer>

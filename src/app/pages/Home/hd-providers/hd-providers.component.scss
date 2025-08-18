@@ -1,0 +1,122 @@
+.solution-providers {
+    gap: 40px;
+    opacity: 0px;
+    padding: 0 var(--padding-left-right);
+  
+    .buildings {
+      // display: grid;
+      row-gap: 40px;
+      padding: 0 0 0;
+      .border-img {
+        border-width: 8px; /* Adjust this value as needed */
+        border-style: solid; /* Required for border image to show */
+        border-color: transparent;
+      }
+      .image-title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.06px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: var(--newTitleColor);
+        padding: 15px 0;
+      }
+    }
+    ::ng-deep .owl-nav {
+      top: 40%;
+    }
+    ::ng-deep .owl-nav .owl-prev,
+    ::ng-deep .owl-nav .owl-next {
+      position: absolute;
+      left: -64px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    ::ng-deep .owl-nav .owl-next {
+      left: auto;
+      right: -70px;
+    }
+  }
+  .buildings-wrapper {
+    flex-wrap: wrap;
+    & > div {
+      width: calc(25% - 23px);
+    }
+  }
+  .slide {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 127px;
+      width: 0;
+      height: 141px;
+      border-left: 1.5px solid #0053FA;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: calc(100% - 9px);
+      height: 127px;
+      border: 1.5px solid #0053FA;
+      border-bottom: 0;
+      border-radius: 0 18px 0 0;
+    }
+  }
+  @media only screen and (max-width : 1200px) {
+    .solution-providers {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+  }
+  @media (max-width: 992px){
+    .solution-providers {
+      padding-left: 20px;
+      padding-right: 20px;
+      .buildings {
+        padding: 0 60px 0;
+      }
+    }
+  }
+  @media (max-width: 520px){
+    .solution-providers {
+      padding: 0 20px 0;
+      gap: 40px;
+      opacity: 0px;
+    
+      .buildings {
+        row-gap: 20px;
+        padding: 0 50px 0;
+        ::ng-deep .owl-nav .owl-next {
+          right: -60px
+        }
+        .col-gap {
+          flex-wrap: wrap;
+          justify-items: center;
+          gap: 20px;
+          & > div {
+            margin: auto;
+            width: calc(50% - 11px);
+          }
+          .border-img {
+            border-width: 10px; /* Adjust this value as needed */
+            border-style: solid; /* Required for border image to show */
+            border-image-source: url("../../../../assets/images/home/border-rect.png");
+            border-image-slice: 30; /* Adjust based on your image */
+          }
+          .image-title {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 24.06px;
+            letter-spacing: 0.02em;
+            text-align: center;
+            color: var(--newTitleColor);
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }

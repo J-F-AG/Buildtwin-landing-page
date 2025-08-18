@@ -1,0 +1,113 @@
+:host ::ng-deep {
+    .block-wrapper-arrow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 39px;
+        margin-top: -22px;
+        margin-bottom: 33px;
+        .block {
+            width: calc(33.333% - 26px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 33px;
+            &:first-child {
+                justify-content: flex-end;
+            }
+            &:last-child {
+                justify-content: flex-start;
+            }
+        }
+    }
+    .block-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 39px;
+        .block {
+            border: 1px solid #cbd6e2;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: calc(33.333% - 26px);
+            position: relative;
+            .note {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                height: 47px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 25px;
+                box-shadow: 0 5px 15px rgba(0,0,0,.13);
+                border-radius: 47px;
+                font-size: 15px;
+                font-weight: 600;
+                background: white;
+            }
+            figure {
+                margin: 0;
+                // Make images a bit bigger for better balance
+                height: 220px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px 10px 0 0;
+                }
+            }
+            .content {
+                padding: 0 33px 33px;
+                h3 {
+                    font-size: 19px;
+                    font-weight: 600;
+                    margin-bottom: 9px;
+                }
+            }
+        }
+    }
+
+}
+@media only screen and (max-width : 900px) {
+    :host ::ng-deep {
+        .block-wrapper {
+            gap: 20px;
+            .block {
+                gap: 10px;
+                figure {
+                    height: 180px;
+                }
+                .note {
+                    height: 35px;
+                    padding: 0 20px;
+                    font-size: 13px;
+                    white-space: nowrap;
+                }
+                .content {
+                    padding: 0 10px 13px;
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width : 767px) {
+    :host ::ng-deep {
+        .block-wrapper-arrow {
+            display: none;
+        }
+        .block-wrapper {
+            flex-direction: column;
+            .block {
+                width: 100%;
+                figure {
+                    height: 160px;
+                }
+            }
+        }
+    }
+}

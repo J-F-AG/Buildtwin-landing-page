@@ -1,0 +1,237 @@
+:host ::ng-deep {
+    .coPilot {
+
+        max-width: 1296px;
+        margin: 56px auto 0;
+
+        .head {
+            text-align: center;
+
+            h2 {
+                color: var(--Neutral-800, #191D23);
+                text-align: center;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 130%;
+                /* 52px */
+                margin-bottom: 16px;
+            }
+
+            span {
+                color: var(--Black, #000);
+                text-align: center;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                /* 19.6px */
+                display: block;
+                margin-bottom: 35px;
+            }
+        }
+
+        .twoCol {
+            background: #F3F8FF;
+            text-align: left;
+            display: flex;
+
+            .LeftPart {
+                border-right: 1px solid #EBE9F6;
+                min-width: 309px;
+                max-width: 309px;
+                text-align: left;
+                padding: 24px;
+
+                .imgWrap {
+                    margin-bottom: 5px;
+                }
+
+                h2 {
+                    color: var(--Black, #000);
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+
+                P {
+                    color: #000;
+
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    /* 171.429% */
+                    letter-spacing: 0.2px;
+                }
+            }
+
+            .tableData {
+                flex: 1;
+
+                .rowData {
+                    border-bottom: 1px solid #EBE9F6;
+                    display: flex;
+
+                    .colFirst {
+                        padding: 24px 16px;
+                        padding-bottom: 24px;
+                        flex: 1;
+                        border-right: 1px solid #0053fa;
+
+                        strong {
+                            color: #0A2540;
+
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 24px;
+                            /* 133.333% */
+                            letter-spacing: 0.2px;
+                            display: block;
+                            margin-bottom: 8px;
+                        }
+
+                        p {
+                            color: var(--Black, #000);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px;
+                            /* 171.429% */
+                            letter-spacing: 0.2px;
+
+                            strong {
+                                font-weight: 600;
+                                font-size: 14px;
+                            }
+                        }
+
+                        .flex {
+                            gap: 24px;
+                            display: flex;
+                            margin-top: 15px;
+                            align-items: baseline;
+                        }
+
+                        a {
+                            color: var(--primary, #0053fa);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 24px;
+                            margin-top: 8px;
+                            display: inline-block;
+                            /* 171.429% */
+
+                        }
+                    }
+
+                    .removeBorder {
+                        border-right: none !important;
+                    }
+
+                    .colLast {
+                        min-width: 417px;
+                        padding: 24px 46px 24px;
+                        background: #fff;
+
+                        strong {
+                            color: #0A2540;
+
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 24px;
+                            /* 133.333% */
+                            letter-spacing: 0.2px;
+                            display: block;
+                            margin-bottom: 8px;
+                        }
+
+                        ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            margin-bottom: 14px;
+
+                            li {
+                                color: var(--Black, #000);
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 24px;
+                                /* 171.429% */
+                                letter-spacing: 0.2px;
+                                margin-bottom: 3px;
+                            }
+                        }
+
+                        a {
+                            color: var(--primary, #0053fa);
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 24px;
+                            /* 171.429% */
+
+                        }
+
+                        .colDataWrap {
+                            margin-top: 17px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width:950px){
+:host ::ng-deep .coPilot .twoCol .tableData .rowData .colFirst {
+    min-width: 369px;
+    }
+    :host ::ng-deep .coPilot .twoCol .LeftPart {
+        min-width: 151px;
+      
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colFirst .flex {
+        flex-wrap: wrap;
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colLast {
+        min-width: 184px;
+        padding: 24px 10px 24px;
+   
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colFirst {
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep   .coPilot .twoCol .tableData .rowData {
+        flex-direction: column;
+    }
+    :host ::ng-deep  .coPilot .twoCol {
+        flex-direction: column;
+    }
+    :host ::ng-deep  .coPilot .twoCol .tableData .rowData .colFirst {
+        min-width: unset;
+        border: none;
+    }
+    :host ::ng-deep  .coPilot .twoCol .LeftPart {
+        min-width: unset;
+        border: none;
+        padding: 10px;
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colLast strong {
+        color: #0A2540;
+        font-size: 16px;
+
+    }
+    :host ::ng-deep .coPilot .twoCol .tableData .rowData .colLast span {
+        font-size: 16px;
+    }
+}

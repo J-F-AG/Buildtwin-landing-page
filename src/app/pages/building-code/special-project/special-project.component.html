@@ -1,0 +1,127 @@
+<section class="specialProjectsSection global-mb">
+    <div class="containerWrap">
+        <div class="sectionHeader">
+            <div class="heading">
+                <div class="title" *ngIf="!page; else other_content">Discover Sectors</div>
+                <ng-template #other_content>
+                    <div class="title">
+                        Industries We Serve
+                    </div>
+                    <div class="subTitle">AISC standards implementation across diverse sectors</div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="carousel squareButtonWrapper">
+            <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let image of slides[0]['images']">
+                        <ng-template carouselSlide>
+                            <div *ngIf="!image['link']" class="image-container">
+                                <figure>
+                                    <picture>
+                                        <source
+                                            [attr.srcset]="image.src + '.webp 1x, ' + image.src + '@2x.webp 767w'"
+                                            media="(max-width: 767px)"
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            [attr.srcset]="image.src + '.webp 1x, ' + image.src + '@2x.webp 2x'"
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            [attr.srcset]="image.src + '.png 1x, ' + image.src + '@2x.png 767w'"
+                                            media="(max-width: 767px)"
+                                        />
+                                        <source
+                                            [attr.srcset]="image.src + '.png 1x, ' + image.src + '@2x.png 2x'"
+                                        />
+                                        <img
+                                            [src]="image.src + '.png'"
+                                            [alt]="image.title"
+                                            width="185"
+                                            height="245"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                    <!-- <img [src]="image.src" width="185" height="245" /> -->
+                                </figure>
+                                <div class="image-caption" [ngClass]="{'page':page}">
+                                    <h3>{{ image.title }}</h3>
+                                    <div class="sector-detail" *ngIf="page">
+                                        <p>
+                                            Specialized structural engineering services for mission-critical data center facilities.
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Structural Analysis
+                                            </li>
+                                            <li>
+                                                MEP Integration
+                                            </li>
+                                            <li>
+                                                Seismic Design
+                                            </li>
+                                        </ul>
+                                        <a href="" class="link-text">
+                                            Learn More
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a *ngIf="image['link']" class="image-container cursor" [routerLink]="image.link || null">
+                                <figure>
+                                    <picture>
+                                        <source
+                                            [attr.srcset]="image.mobile + '.webp 1x, ' + image.mobile + '@2x.webp 767w'"
+                                            media="(max-width: 767px)"
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            [attr.srcset]="image.src + '.webp 1x, ' + image.src + '@2x.webp 2x'"
+                                            type="image/webp"
+                                        />
+                                        <source
+                                            [attr.srcset]="image.mobile + '.png 1x, ' + image.mobile + '@2x.png 767w'"
+                                            media="(max-width: 767px)"
+                                        />
+                                        <source
+                                            [attr.srcset]="image.src + '.png 1x, ' + image.src + '@2x.png 2x'"
+                                        />
+                                        <img
+                                            [src]="image.src + '.png'"
+                                            [alt]="image.title"
+                                            width="185"
+                                            height="245"
+                                            loading="lazy"
+                                        />
+                                    </picture>
+                                    <!-- <img [src]="image.src" width="185" height="245" /> -->
+                                </figure>
+                                <div class="image-caption" [ngClass]="{'page':page}">
+                                    <h3>{{ image.title }}</h3>
+                                    <div class="sector-detail" *ngIf="page">
+                                        <p>
+                                            Specialized structural engineering services for mission-critical data center facilities.
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Structural Analysis
+                                            </li>
+                                            <li>
+                                                MEP Integration
+                                            </li>
+                                            <li>
+                                                Seismic Design
+                                            </li>
+                                        </ul>
+                                        <button class="link-text">
+                                            Learn More
+                                        </button>
+                                    </div>
+                                </div>
+                            </a>
+                        </ng-template>
+                    </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,95 @@
+:host ::ng-deep {
+    .process {
+        display: flex;
+        padding: 0 0 80px;
+        align-items: flex-end;
+        gap: 30px;
+
+        .flex_item {
+            display: flex;
+            gap: 30px;
+        }
+
+        .itemWrap {
+            flex-basis: 25%;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+
+            .contentWrap {
+                display: flex;
+
+                padding: 24px 15px;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                flex-direction: column;
+
+                strong {
+                    color: #000;
+
+                    text-align: center;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-bottom: 14px;
+                }
+
+                p {
+                    color: var(--Black, #000);
+                    text-align: center;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140%;
+                    /* 22.4px */
+                }
+            }
+        }
+
+        @media (max-width:950px) {
+            .itemWrap .contentWrap {
+                padding: 10px 0;
+            }
+        }
+
+        @media (max-width:767px) {
+            .flex_item {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    }
+}
+@media (max-width:1200px) {
+ :host ::ng-deep  .process .itemWrap .contentWrap {
+        padding: 24px 0px;
+    }
+}
+
+@media (max-width:950px){
+   :host ::ng-deep .process {
+        padding: 63px 15px;
+    }
+
+    :host ::ng-deep .process .flex_item {
+    display: flex;
+    gap: 15px;
+}
+}
+@media (max-width:767px) {
+  :host ::ng-deep   .process {
+        display: flex;
+        padding: 0;
+        margin-bottom: 50px;
+
+        .itemWrap .contentWrap strong {
+   
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+}

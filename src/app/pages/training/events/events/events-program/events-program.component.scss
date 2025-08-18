@@ -1,0 +1,101 @@
+:host ::ng-deep .eventsManage {
+    margin: 100px 0;
+    .container {
+        .eventFlex {
+            display: flex;
+            gap: 57px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .event {
+            width: 290px;
+            box-shadow: 3px -2px 17px rgba(0,0,0,0.1);
+            border-radius: 10px;
+
+            .imgWrap {
+                background: var(--secondary, #F3F8FF);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 214px;
+              border-radius: 10px;
+              position: relative;
+                .eventData {
+                    border-radius: 12px;
+                    background: #0053fa;
+                    box-shadow: 0px 2.407px 4.813px 0px rgba(96, 97, 112, 0.16), 0px 0px 1.203px 0px rgba(40, 41, 61, 0.04);
+                    width: 92px;
+                    height: 68px;
+                    color: var(--color-green-button, #FFF);
+
+                    text-align: center;
+                    font-feature-settings: 'clig' off, 'liga' off;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    padding-top: 8px;
+                    right: 18px;
+                    bottom: -31px;
+                    position: absolute;
+
+                    /* 140.387% */
+                    strong {
+                        font-weight: 600;
+                        font-size: 24px;
+                        display: block;
+                    }
+                }
+            }
+
+            .white_box {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                padding-top: 16px;
+                padding: 22px;
+                .country {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+
+                    span {
+                        color: #0E0E28;
+
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+                }
+
+                h2 {
+                    color: var(--black-700-black, #121212);
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 140%;
+                    margin-bottom: 0;
+                    /* 28px */
+                }
+
+                span {
+                    color: var(--grey, var(--grey, #808080));
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px){
+   :host ::ng-deep .eventsManage .container .event{
+width: 100%;
+    }
+
+    :host ::ng-deep .eventsManage {
+        margin: 0;
+    }
+}

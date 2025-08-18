@@ -1,0 +1,70 @@
+<div class="container global-mb" id="peek-into-buildtwin-solution-providers">
+    <div class="story">
+        
+        <div class="heading">
+            <h2 class="title">Featured Eurocode Certified Vendors</h2>
+            <span class="subTitle"> Connect with pre-qualified vendors specializing in Eurocode standards</span>
+          </div> 
+        <div class="listItem">
+            <ng-container *ngIf="!showPageLoader">
+            <div class="owl-wrapper carousel squareButtonWrapper top-right">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-container *ngFor="let c of companyList">
+                        <ng-template carouselSlide>
+                            <a 
+                                class="col cursor"
+                                (click)="redirect(c.domain, c.company_name)" 
+                                [routerLink]="[_languageService.currentLanguage + '/partners/' + (c.linking)]" 
+                                [queryParams]="paramsStatus ? { status: 'unpublished' } : null" >
+                                <div class="imgwRap">
+                                    <img [src]="c.icon ? c.icon : 'assets/images/placeholder-image1.jpg'" [alt]="c.company_name || 'Icon'" width="145" height="74">
+                                </div>
+                            
+                                <strong>
+                                    {{c.company_name}}
+                                </strong>
+                                <div class="rating-wrapper">
+                                    <span class="block">
+                                        Top Rated Vendor
+                                    </span>
+                                    <span class="block">
+                                        4.9/5 Rating
+                                    </span>
+                                </div>
+                                <div class="specializations">
+                                    <h5>
+                                        Specializations
+                                    </h5>
+                                    <ul>
+                                        <li>
+                                            Data Centers
+                                        </li>
+                                        <li>
+                                            Industrial Buildings
+                                        </li>
+                                        <li>
+                                            Steel Detailing
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="link pointer">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_5994_22263)">
+                                    <path d="M12.4993 4.16406L11.3243 5.33906L15.141 9.16406H1.66602V10.8307H15.141L11.316 14.6557L12.4993 15.8307L18.3327 9.9974L12.4993 4.16406Z" fill="#0053fa"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_5994_22263">
+                                    <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg></button>
+                                </a>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+            </ng-container>
+            <nz-skeleton *ngIf="showPageLoader"></nz-skeleton>
+
+        </div>
+    </div>
+</div>

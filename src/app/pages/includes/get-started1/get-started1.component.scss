@@ -1,0 +1,22 @@
+:host ::ng-deep {
+    .startedData {
+        border-radius: 8px;
+        padding: 80px 80px 55px;
+        background-color: #f8f8f8;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    :host ::ng-deep {
+        .startedData {
+            flex-direction: column;
+            text-align: center;
+            padding: 45px 25px 55px;
+            gap: 0;
+        }
+    }
+}

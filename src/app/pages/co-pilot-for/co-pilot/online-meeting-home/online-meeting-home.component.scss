@@ -1,0 +1,16 @@
+.no-space{
+    margin-top: 0 !important;
+}
+
+:host ::ng-deep .banner-area {
+    padding-top: 125px !important;
+    padding-bottom: 0 !important;
+}
+
+
+
+@media (max-width:767px){
+    :host ::ng-deep .banner-area {
+        padding-top: 80px !important;
+    }
+}

@@ -1,0 +1,485 @@
+:host ::ng-deep .buildtwinHelps {
+  
+    position: relative;
+    margin-bottom: 100px;
+    .headSection {
+        padding-top: 50px;
+        transition: all ease 0.5s;
+        padding-bottom: 64px;
+        margin-bottom: 30px;
+
+        h2 {
+            color: #0E0E28;
+
+            text-align: center;
+            font-size: 40px; font-weight: 600;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+            /* 56px */
+        }
+        span{
+            text-align: center;
+            display: block;
+        }
+        h3{
+            text-align: center;
+        }
+
+    }
+
+    .tabContent {
+        display: flex;
+        width: 456px;
+        max-width: 456px;
+        min-width: 456px;
+        position: sticky;
+        top: 280px;
+
+        .tabLeft {
+            min-width: 350px;
+ ul{
+    padding: 0;
+ }
+            li {
+                display: flex;
+                gap: 12px;
+                margin-bottom: 45px;
+                position: relative;
+                cursor: pointer;
+                align-items: center;
+
+                i {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100px;
+                    border: 1px solid #0053fa;
+                }
+
+                color: #0E0E28;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+
+                /* 25.2px */
+                &.active {
+                    font-weight: 600;
+
+
+                }
+
+                &.active i {
+                    background: #0053fa;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 47px;
+                    background: #ECECEC;
+                    top: 24px;
+                    left: 12px;
+
+                }
+
+                &:last-child:after {
+                    display: none;
+                }
+            }
+        }
+
+       
+    }
+    .tabRIght {
+        border-radius: 8px;
+        // background: #F3F8FF;
+        // padding: 32px 38px;
+        padding-bottom: 0;
+        overflow: hidden;
+        // margin-left: 350px;
+
+        .flex {
+            gap: 30px;
+            align-items: center;
+        }
+
+        .imgWrap {
+            min-width: 412px;
+    display: flex;
+    align-items: flex-end;
+    /* height: 400px; */
+    max-width: 412px;
+
+        }
+
+        .imgWrap.bottomALign {
+            position: relative;
+            top: 37px;
+        }
+
+        .contentWrap {
+            padding-right: 40px;
+            
+            h3 {
+                font-size: 25px;
+                font-weight: 600;
+                letter-spacing: -0.35px;
+                margin-bottom: 7px;
+            }
+
+            p {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+ 
+}
+
+:host ::ng-deep .forTraning {
+    ul {
+        margin-top: 20px;
+    }
+
+    .tabContent .tabLeft li {
+        line-height: 1.4;
+        margin-bottom: 60px;
+    }
+
+    .tabContent .tabRIght .imgWrap {
+
+        height: 400px;
+        min-width: 343px;
+        max-width: 477px;
+    }
+
+    .tabContent .tabLeft li:after {
+        height: 90px;
+        top: 24px;
+        left: 12px;
+    }
+
+    .tabContent .tabLeft li i {
+
+        z-index: 9;
+        background: #fff;
+    }
+
+    .tabContent .tabLeft {
+        min-width: 400px
+    }
+
+    .sub-title {
+        color: #0053fa;
+
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 160%;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        /* 25.6px */
+        display: block;
+    }
+    .headSection{
+        text-align: center;
+        padding-bottom: 0;
+        padding-top: 80px;
+    }
+    .headSection p {
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        /* 25.6px */
+    }
+    .tabContent .tabRIght {
+        padding-left: 0;
+    }
+    .tabContent .tabRIght .flex {
+        gap: 10px;
+    }
+    .newBtn{
+        color: #0053fa;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+  .tabContent .tabRIght .contentWrap p {
+        margin-bottom: 10px;
+    }
+
+
+}
+
+// animation
+
+
+
+
+:host ::ng-deep {
+//     .fixed{
+//         div#onScrollAnimation{
+//             position: fixed;
+//             top: 100px;
+//             z-index: 99;
+//             .headSection{
+//                 background: #fff;
+//                 padding-left: 0;
+//                 padding-bottom: 0;
+//                 text-align: center;
+//                 padding-bottom: 0;
+//             }
+    
+//         } 
+    
+//     }
+    
+    .tabRIght > div {
+        margin-bottom: 100px;
+        background: #F3F8FF;
+        opacity: 0.2;
+        display: flex;
+        // padding: 32px 38px;
+        // transform: translateY(40%);
+        // transition: all ease 0.5s;
+        transition: all 0.3s ease;
+        transform: translateY(-200px);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .tabRIght > div.active{
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+    .tabRIght > div.active ~ div{
+        transform: translateY(200px);
+    }
+    
+    
+    
+    // div#onScrollAnimation {
+    //     position: absolute;
+    //     top: 0;
+    //     // max-width: 1320px;
+    //     margin: 0 auto;
+    //     left: 0;
+    //     right: 0;
+    // }
+    .staticData {
+        padding-top: 0;
+        max-width: 1320px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+:host ::ng-deep .provideService{
+    background: #f9f9f9;
+
+ .tabRIght {
+        // margin-left: 464px;
+    }
+}
+:host ::ng-deep {
+.comply-with-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.comply-with {
+    display: flex;
+    align-items: center;
+    gap: 125px;
+    font-size: 16px;
+    color: #5c6a72;
+    justify-content: center;
+    ul {
+        flex-grow: 1;
+        align-items: center;
+        display: flex;
+        white-space: nowrap;
+        gap: 70px;
+        margin: 0;
+        li {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            position: relative;
+            &::before {
+                content: '';
+                width: 19px;
+                height: 19px;
+                border-radius: 100px;
+                background: #002e3b;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 5px;
+                top: 7px;
+                width: 8px;
+                height: 4px;
+                border-left: 1px solid white;
+                border-bottom: 1px solid white;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+}
+@media (min-width: 1700px){
+    :host ::ng-deep .staticData {
+        max-width: 1520px;
+    }
+}
+
+@media (max-width: 1200px){
+    :host ::ng-deep .buildtwinHelps {
+      .tabRIght .imgWrap{
+        min-width: 300px;
+        max-width: 300px;
+      }
+ 
+
+    .tabContent .tabLeft {
+        min-width: 249px;
+    }
+  .tabRIght {
+      padding-right: 0;
+        margin-left: 317px;
+
+        .flex{
+            flex-direction: column;
+            padding: 20px;
+        }
+    }
+    .tabRIght > div{
+        margin-right: 10px;
+    }
+}
+
+:host ::ng-deep .buildtwinHelps .headSection h2{
+font-size: 30px !important;
+}
+:host ::ng-deep .buildtwinHelps .tabContent .tabLeft {
+    min-width: 249px;
+    margin-top: -51px;
+}
+
+:host ::ng-deep  .buildtwinHelps {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+}
+
+@media (max-width:950px){
+    :host ::ng-deep  .buildtwinHelps .tabContent .tabLeft {
+     
+        margin-left: 0;
+    }
+    // :host ::ng-deep .fixed div#onScrollAnimation {
+    //     top: 102px!important;
+    // }
+   
+}
+
+
+@media (max-width:767px){
+    :host ::ng-deep .buildtwinHelps .tabContent {
+        display: none;
+    }
+    :host ::ng-deep .buildtwinHelps {
+        margin: 0;
+
+        .headSection {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            padding: 0 20px;
+        }
+    }
+    .traningCom {
+        margin-bottom: 80px;
+    }
+
+    // :host ::ng-deep .fixed div#onScrollAnimation {
+    //     top: 194px!important;
+    //     // position: static;
+    // }
+    // :host ::ng-deep div#onScrollAnimation {
+    //     // position: static;
+    // }
+
+    :host ::ng-deep   .buildtwinHelps .tabRIght {
+        padding-right: 0;
+        margin-left: 0;
+        
+    }
+    :host ::ng-deep .forTraning .headSection {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    :host ::ng-deep .forTraning .staticData {
+        padding-top: 0;
+    }
+    :host ::ng-deep .buildtwinHelps .tabRIght > div {
+        margin-right: 10px;
+        transform: none;
+        opacity: 1;
+        margin-bottom: 15px;
+        visibility: visible;
+    }
+    :host ::ng-deep .tabRIght > div.active ~ div {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    :host ::ng-deep .buildtwinHelps .tabRIght .contentWrap {
+        padding-right: 0;
+    }
+    :host ::ng-deep  div#onScrollAnimation .container {
+        display: none;
+    }
+    :host ::ng-deep .staticData {
+        padding-top: 26px;
+    }
+    :host ::ng-deep .buildtwinHelps .tabRIght > div {
+        margin-right: 0;
+    }
+    :host ::ng-deep .buildtwinHelps .tabRIght {
+        padding: 10px;
+        margin-bottom: 40px;
+    }
+    // :host ::ng-deep  .fixed div#onScrollAnimation .headSection {
+    //     padding-left: 20px;
+    // } 
+    :host ::ng-deep  {
+        .comply-with {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            white-space: nowrap;
+            margin-bottom: 50px;
+        }   
+        .comply-with ul {
+            gap: 20px;
+            overflow: auto;
+        }
+    }
+}

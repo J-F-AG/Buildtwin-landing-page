@@ -1,0 +1,41 @@
+// Data Center
+
+.dataCenterSection{ padding: 72px 0; margin: 112px 0 0 0;
+    background: url(../../../../assets/images/dotsBG.png) left top repeat-y;
+    .twoCol{display: flex; justify-content: space-between;
+        .col{width: 48%; }
+        .leftCol{
+            p{font-size: 20px;  font-weight: 400; line-height: 28px;}
+        }
+        .rightCol{
+            p{
+                small{
+                    font-size: 16px;  font-weight: 400; line-height: 25px;
+                }
+            }
+        }
+    }
+}
+
+/* max width 992px */
+@media only screen and (max-width : 992px) {
+    .dataCenterSection {
+        margin: 70px 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .dataCenterSection {
+        h2 {
+            font-size: 40px !important;
+        }
+        .twoCol {
+            flex-direction: column;
+            gap: 40px;
+
+            .col {
+                width: auto;
+            }
+        }
+    }
+}

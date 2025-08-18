@@ -1,0 +1,152 @@
+.funfacts-box {
+    padding: 24px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 2px solid var(--borderColor);
+
+    .number {
+        line-height: 1;
+        margin-bottom: 60px;
+        color: var(--blackColor);
+        transition: var(--transition);
+        margin: {
+            top: -17px;
+            right: -15px;
+        };
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 22px;
+        letter-spacing: 1.8px;
+        color: var(--lightColor);
+    }
+    h3 {
+        line-height: 1;
+        font-size: 40px; font-weight: 600;
+        font-weight: 600;
+    }
+    &:hover {
+        .number {
+            color: var(--themeColor);
+            transform: translateX(-10px);
+        }
+    }
+}
+
+
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .funfacts-box {
+        padding: 24px;
+        border-radius: 8px;//updated-from-20-8;
+    
+        .number {
+            margin-bottom: 25px;
+            margin: {
+                top: 0;
+                right: 0;
+            };
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 12px;
+            letter-spacing: 1.5px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .funfacts-box {
+        padding: 24px;
+
+        .number {
+            margin-right: -5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .funfacts-box {
+        padding: 24;
+    
+        .number {
+            margin: {
+                top: -17px;
+                right: -8px;
+            };
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 40px; font-weight: 600;
+        }
+    }
+
+}
+
+/* Min width 1400px to Max width 1699px */
+@media only screen and (min-width: 1400px) and (max-width: 1699px) {
+
+    .funfacts-box {
+        padding: 24px;
+    
+        .number {
+            margin-right: -5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 40px; font-weight: 600;
+        }
+    }
+
+}
+
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .funfacts-box {
+        padding: 24px;
+        border-radius: 8px;
+    
+        .number {
+            margin-bottom: 15px;
+            margin: {
+                top: 0;
+                right: 0;
+            };
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            letter-spacing: 1.2px;
+        }
+        h3 {
+            font-size: 30px;
+        }
+    }
+
+}

@@ -1,0 +1,443 @@
+<div class="bottom-space">
+    <app-hd-navbar></app-hd-navbar>
+
+    <div class="common-bannerWrapper global-mb">
+        <!-- <img src="../../../../assets/images/serviceBanner.jpg" alt="Australian Standards for structural"> -->
+         <picture>
+            <source srcset="assets/images/mobile-serviceBanner.webp 1x, assets/images/mobile-serviceBanner@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+            <source srcset="assets/images/serviceBanner.webp 1x, assets/images/serviceBanner@2x.webp 2x" type="image/webp">
+            <source srcset="assets/images/mobile-serviceBanner.jpg 1x, assets/images/mobile-serviceBanner@2x.jpg 767w" media="(max-width: 767px)">
+            <source srcset="assets/images/serviceBanner.jpg 1x, assets/images/serviceBanner@2x.jpg 2x">
+            <img src="assets/images/serviceBanner.jpg" alt="Australian Standards for structural">
+        </picture>
+        <div class="bannerContainer">
+            <div class="containerbn">
+                <h1>
+                    Australian Building Standards for Safer Construction
+                </h1>
+                <h2 class="heading-p">
+                    A framework for safety, quality, and sustainability. 
+                </h2>
+                <div class="button-wrapper">
+                    <!-- <a href="" class="button-v2 mdc-button">
+
+                        Find Eurocode Vendors
+
+                    </a>
+                    <a href="" class="button-v2 mdc-button border">
+
+                        Book a Service
+
+                    </a> -->
+                    <button class="button-v2 mdc-button" (click)="scrollToSection('targetSection1')">
+                        Find Australian Standards Vendors
+                    </button>
+                    <button class="button-v2 mdc-button border" (click)="scrollToSection('targetSection2')">
+                        Book a Service
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="global-mb container">
+        <div class="heading">
+            <h3 class="title">Understanding Australian Building and Construction Standards</h3>
+            
+            <p>
+                Australian Standards are authoritative guidelines that set the benchmark for best practices across various industries, including construction. These standards contain technical provisions and processes through which safety, efficiency, and quality are ensured. Therefore, these standards have become a cornerstone of operational excellence.
+            </p>
+        </div>
+
+        <div class="list-type-wrapper bottom-space-big">
+            <div class="block">
+                <h3 class="block-heading">
+                    A Brief History
+                </h3>
+                <p style="margin-bottom: 0px; padding-bottom: 0px;">
+                    The process of standardization in the Australian construction industry began in the early 20th century with the establishment of the Commonwealth Engineering Standards Association (CESA) in 1922. Because of the rapid changes and ever-changing construction practices, CESA transformed into Standards Australia, which makes and maintains the industry standards but is not at all a governmental association. Today, Australian Standards have become the basic construction requirements in many areas and are known for the global best practices. 
+                </p>
+                <h4>
+                    Scope in Construction
+                </h4>
+                <p class="p-margin-bottom">Australian Standards in Construction cover aspects like:</p>
+                <ul class="ul-margin-top core-elements-bullets">
+                    <li>Structural design and material specifications</li>
+                    <li>Energy efficiency provisions</li>
+                    <li>Fire safety and bushfire resilience</li>
+                    <li>Electrical installations and wiring</li>
+                    <li>Environmental sustainability</li>
+                </ul>
+                <p class="p-margin-bottom">These standards are developed by experts in the construction industry, the Australian government, and independent experts to keep pace with modern challenges and technology.</p>
+                <p class="p-margin-bottom">While abiding by these Standards is not mandatory unless mentioned in contracts or legislation, following them is considered a sign of professionalism and a commitment to quality.</p>
+            </div>
+            <div class="block">
+                <h3 class="block-heading">
+                    Impact of Australian Construction Standards on the AEC Industry
+                </h3>
+                <p class="p-margin-bottom">Australian Standards have a huge impact on the AEC industry, from start to finish of construction. Here are some of the key ways they impact:</p>
+
+                <h4 class="h4-font-size">Consistency</h4>
+                <p class="p-margin-bottom">By defining strict benchmarks Australian standards have created a level playing field in how construction practices get carried out. This benefits the vendor, contractor, and project owner as they now have assurance that their project is using standardized guidelines for material, workmanship, and safety. </p>
+
+                <h4 class="h4-font-size">Enhanced Safety</h4>
+                <p class="p-margin-bottom">Safety is the baseline in the AEC Industry, and this is fully justified in Australian Standards. Fire safety regulations and structural integrity codes within these standards are amongst the few standards that prescribe how to keep the workplace accident-free, safe for workers, and secure for the public.</p>
+
+                <h4 class="h4-font-size">Global Competitiveness</h4>
+                <p class="p-margin-bottom">Incorporating best practices into Australian Standards enhances the reputation of the Australian construction sector internationally. Compliance with these standards makes vendors and contractors a trusted partner in global markets.</p>
+
+                <h4 class="h4-font-size">Industry Confidence</h4>
+                <p class="p-margin-bottom">Compliance with the standards will build confidence in all interested parties such as investors, governmental agencies, or regulatory authorities. For vendors and owners of a project, this translates into smooth working relationships, resolution of conflicts, and greater chances of the project being successful.</p>
+
+                <h4 class="h4-font-size">Environmental Impact Reduction</h4>
+                <p class="p-margin-bottom">Sustainability is a growing priority in construction. Under the mandates outlined in these standards, it is possible to meet the required parameters for footprint reduction and the conservation of resources that will be handed over to the next generations.</p>
+
+                <!-- <ul class="core-elements-bullets" style="margin-top: 0px; padding-top: 0px;">
+                    <li><b>Enhancing Safety</b>: Ensures structural stability under varying imposed loads, climatic effects, and accidental actions.</li>
+                    <li><b>Standardizing Practices</b>: Unified general rules and technical specifications enable seamless collaboration among stakeholders.</li>
+                    <li><b>Improving Resource Efficiency</b>: Optimized designs minimize material waste for construction products like composite steel and concrete.</li>
+                    <li><b>Driving Sustainability</b>: Encourages energy-efficient designs and the use of recyclable materials, aligning with European standards.</li>
+                </ul>
+                <p>BuildTwin provides access to vendors who deliver reliable, high-performance solutions aligned with Eurocodes.
+                </p> -->
+            </div>
+            <div class="block">
+                <h3 class="block-heading">
+                    Examples of Australian Construction Standards
+                </h3>
+                <h4 class="h4-font-size">AS 1684: Residential Timber Framed Construction</h4>
+                <p class="p-margin-bottom">This standard has all the details for designing and building timber-framed buildings to be durable and safe.</p>
+
+                <h4 class="h4-font-size">AS 4100: Code for Steel Structures</h4>
+                <p class="p-margin-bottom">It provides an avenue for engineers and builders to have a reliable framework for designing long-lasting steel buildings.</p>
+
+                <h4 class="h4-font-size">AS 1170: Structural Design Actions</h4>
+                <p  class="p-margin-bottom">This standard describes environmental loads such as wind, snow, and earthquake to ensure commercial and residential buildings can withstand natural forces.</p>
+
+                <h4  class="h4-font-size">AS 3000: Electrical Installations (Wiring Rules)</h4>
+                <p  class="p-margin-bottom">AS 3000 deals with technical and safety standards for the installation, testing, and maintenance of electrical systems present in buildings. It covers wiring aspects, appliance and circuit protection, earthing, and energy efficiency provisions to mitigate electrical hazards. Compliance to this standard greatly reduces and limits hazards of electrical fires, shocks, and system failures.</p>
+                
+                <h4  class="h4-font-size">AS3500: Plumbing and Drainage Work</h4>
+                <p  class="p-margin-bottom">This code of Australia for plumbing systems in a project specifies the requirements in the area of design, installation, and maintenance for the plumbing and drainage system. It sets the rules to ensure that plumbing works are safe, efficient, and environmentally sustainable while avoiding adverse situations such as those due to leakages, contaminations, and reduced water flow.                </p>
+
+                <h4  class="h4-font-size">AS 3600: Concrete Structures</h4>
+                <p  class="p-margin-bottom">AS 3600 is an important specification for determining durability and load capacities concerning the design and construction of concrete structures and infrastructure. This specification includes concrete materials, reinforcement, strength calculations, and best construction practices for livable housing provisions.</p>
+
+                <h4  class="h4-font-size">AS 3959: Construction of Buildings in Bushfire-Prone Areas</h4>
+                <p  class="p-margin-bottom">As bushfires are a significant hazard in Australia, AS 3959 sets provisions to protect buildings from fire. It assesses the bushfire risk (i.e., determines the BAL rating) of a site in order to classify bushfire risk levels, with associated requirements for materials, design, and construction techniques to enhance a building's fire resistance ability. AS 3959 defines guidelines on minimizing fire-related risk and developing building resilience.
+                </p>
+
+                <p  class="p-margin-bottom">There are multiple other codes, like the plumbing code, building code, and energy code which define the best practices to meet the minimum requirements related to the safety, quality, and sustainability of a building.</p>
+
+
+
+                <!-- <p style="margin-bottom: 0px; padding-bottom: 0px;">
+                    Eurocodes provide a robust framework for diverse construction needs:
+                </p>
+                <ol style="margin-bottom: 5px; padding-left: 35px; list-style-type: decimal;">
+                    <li style="margin-bottom: 5px;"><b>EN 1990</b>: Structural principles and the basis of structural design.</li>
+                    <li style="margin-bottom: 5px;"><b>EN 1992–1996</b>: Material-specific standards for masonry structures, timber structures, and plated structural elements.</li>
+                    <li style="margin-bottom: 5px;"><b>EN 1997</b>: Geotechnics and geotechnical design, addressing foundation stability.</li>
+                    <li style="margin-bottom: 5px;"><b>EN 1998</b>: Seismic applications ensuring earthquake resistance.</li>
+                </ol>
+                <p>These standards ensure precision, enabling professionals to meet modern construction sector demands efficiently.</p> -->
+            </div>
+        </div>
+        <div class="list-type-wrapper">
+            <div class="block">
+                <h3 class="block-heading ">
+                    Why Adhere to Australian Construction Standards?
+                </h3>
+                <p  class="p-margin-top">Compliance with construction codes such as the Australian Standards National Construction Code formed by the Australian Building Code Board has many benefits for vendors and project owners. Here are the key benefits:
+                </p>
+                <ul class="list half">
+                    <li>
+                        <h4 class="list-heading"><b>Safety</b></h4>
+                        <p>Following safety standards reduces workplace risks for workers and liability for all parties. It also reduces accidents, creates legitimate work conditions, fosters responsibility, and ensures good building. Most importantly, using certified construction materials and construction methods will make construction-related processes stronger and durable.</p>
+                        <!-- <ul class="ulClass">
+                            <li class="liClass">Clear guidelines for structural elements, load assessment, and stability.</li>
+                            <li class="liClass">Reduced risks through standardized practices.</li>
+                        </ul> -->
+                    </li>
+                    <li>
+                        <h4 class="list-heading"><b>More Vendors for Project Owners</b></h4>
+                        <p>Vendors who comply with these standards in construction are more attractive to project owners looking for reliable partners. It also allows cooperation and communication between subcontractors and suppliers to run smoothly, minimizing conflict and increasing overall workflow efficiency.
+                        </p>
+                        <!-- <ul class="ulClass">
+                            <li class="liClass">Resource-optimized designs minimize waste.</li>
+                            <li class="liClass">Early issue identification prevents rework and delays.</li>
+                        </ul> -->
+                    </li>
+                    <li>
+                        <h4 class="list-heading"><b>Cost and Time Savings</b></h4>
+                        <p>Best practices enhance construction project delivery through a streamlined process by reducing inefficiencies and improving productivity. With a reliable project timeline and better financial planning, a company can channel its resources into fruitful areas while mitigating unforeseen costs. </p>
+                    </li>
+                    <li>
+                        <h4 class="list-heading"><b>Sustainability</b></h4>
+                        <p>Standards that support environmentally friendly practices help organizations meet their sustainability goals, energy efficiency requirements, and reputation and contribute to global conservation. Compliance with such standards enhances corporate social responsibility and brand equity, thereby making projects more appealing to clients and investors with an eco-friendly conscience.</p>
+                    </li>
+                    <li>
+                        <h4 class="list-heading"><b>Credibility</b></h4>
+                        <p>Complying with standards shows professionalism and commitment to best practices and to clients and partners.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- <div class="list-type-wrapper">
+            <div class="block">
+                <h5>
+                    Benefits of Eurocode Compliance
+                </h5>
+                <div>
+                   <div style="font-size: 16px;">1. <b>Enhanced Safety and Quality</b>: </div> 
+                    <ul class="core-elements-bullets" style="list-style-type: circle;">
+                        <li>Clear guidelines for material selection, load assessment, and structural stability.</li>
+                        <li>Reduced risks through standardized design and execution practices.</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="font-size: 16px;">2. <b>Cost Efficiency</b>: </div> 
+                     <ul class="core-elements-bullets"  style="list-style-type: circle;">
+                         <li>Minimized waste with resource-optimized designs.</li>
+                         <li>Early problem identification, reducing rework and delays.</li>
+                     </ul>
+                </div>
+                <div>
+                    <div style="font-size: 16px;">3. <b>Global Collaboration</b>: </div> 
+                     <ul class="core-elements-bullets"  style="list-style-type: circle;">
+                        <li>A harmonized code base allows teams from different regions to collaborate seamlessly.</li>
+                     </ul>
+                </div>
+                <div>
+                    <div style="font-size: 16px;">4. <b>Sustainability</b>: </div> 
+                     <ul class="core-elements-bullets"  style="list-style-type: circle;">
+                         <li>Promotes the use of recyclable materials and eco-friendly construction methods.</li>
+                         <li>Encourages life-cycle assessments to optimize environmental performance.</li>
+                     </ul>
+                </div>
+                <div>
+                    <div style="font-size: 16px;">5. <b>Professional Credibility</b>: </div> 
+                     <ul class="core-elements-bullets"  style="list-style-type: circle;">
+                         <li>Compliance demonstrates a commitment to international quality standards.</li>
+                         <li>Facilitates smoother project approvals and stakeholder trust.</li>
+                     </ul>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    
+    <app-hd-discover-projects-building-code-as [hideTitle]="true" [page]="'sector'"></app-hd-discover-projects-building-code-as>
+    <app-tt-partners-building-code-as [page]="'sector'" id="targetSection1"></app-tt-partners-building-code-as>
+
+    
+    
+    <app-hd-services-building-code-as></app-hd-services-building-code-as>
+
+    
+
+
+    
+    <!-- <div class="bottom-space-gap"> -->
+        <div class="container">
+            <div class="main-head">
+                <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+                    <div class="heading">
+                        <div class="title">Sectors We Serve</div>
+                        <div class="subTitle">Specialized engineering excellence across diverse industries, delivered by pre-qualified vendors</div>
+                    </div>
+                </div>
+                <!-- <button mat-button class="button-v2 align-self-end">Explore Case studies</button> -->
+            </div>
+        </div>
+    <app-special-project [heading]="false"></app-special-project>
+
+    <div class="bottom-space-gap">
+        <app-sector-category-building-code-as [category]="8" [page]="'sector'"></app-sector-category-building-code-as>
+    </div>
+
+
+
+
+    <!-- <div class="child-pb-none">
+          <app-sector-meeting-standards></app-sector-meeting-standards>
+      </div>
+     <app-hd-integrations></app-hd-integrations>
+    <div class="bottom-space-big">
+        <app-dc-europe></app-dc-europe>
+    </div> -->
+    <app-faq-buildtwin-building-code-as [fullScreen]="true"></app-faq-buildtwin-building-code-as>
+    <div class="container" id="targetSection2">
+        <div class="bt-flex form-wrap">
+            <div class="flex-grow-1">
+        <h2>
+            Get Started with Australian Standards
+        </h2>
+        <p>
+            Connect with our experts to learn more about Australian standards implementation and certification
+        </p>
+        <h3>
+            Why Choose BuildTwin?
+        </h3>
+        <ul class="list">
+            <li>
+                <span>
+                    Pre-qualified Australian Standards vendors
+                </span>
+            </li>
+            <li>
+                <span>
+                    Streamlined implementation process
+                </span>
+            </li>
+            <li>
+                <span>
+                    Expert support and guidance
+                </span>
+            </li>
+        </ul>
+            </div>
+        <div class="flex-grow-1">
+        <app-free-offer-form [page]="'sector'"></app-free-offer-form>
+        </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="global-mb container">
+        <div class="heading">
+            <div class="title">
+                Our Satisfied Clients
+            </div>
+            <div class="subTitle">
+                See how BuildTwin is helping client's AEC projects in achieving Eurocode compliance
+            </div>
+        </div>
+        <div class="success-story">
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="" width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name">Liam Carter</span>
+                        <span class="position">
+                            Architectural Lead, United Kingdom
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    "Our high-rise design required meticulous adherence to Eurocodes to ensure structural integrity and sustainability. BuildTwin's vendors delivered exceptional results by optimizing material usage and enhancing energy efficiency. With BuildTwin's management tools, we easily secured regulatory approvals and sustainability certifications, accelerating project timelines."
+                </p>
+            </div>
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="" width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name">Noah Berg</span>
+                        <span class="position">
+                            Structural Engineer, Netherlands
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    "For our industrial facility, Eurocode-compliant designs for steel structures, aluminium structures, and concrete structures were essential. BuildTwin's vendors not only reduced waste and project costs significantly but also ensured compliance with technical specifications. The ERP tools provided seamless quality checks, and the overall service exceeded our expectations in both compliance and quality."
+                </p>
+            </div>
+            <div class="block">
+                <div class="avtar-detail">
+                    <figure>
+                        <img src="assets/images/public.png" alt="" width="48" height="48">
+                    </figure>
+                    <div class="name-detail">
+                        <span class="name"> Oliver Schmidt</span>
+                        <span class="position">
+                            Contractor, Germany
+                        </span>
+                    </div>
+                </div>
+                <div class="rating">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </div>
+                <p>
+                    “As a contractor managing diverse residential projects, adherence to Eurocodes was crucial to maintain safety and quality standards. BuildTwin’s vendors offered top-tier Eurocode-compliant services, while the platform’s integrated tracking tools ensured efficient compliance checks and streamlined project execution. BuildTwin has made managing complex projects significantly easier.”
+                </p>
+            </div>
+        </div>
+
+    </div> -->
+    
+    
+    <!-- <div class="bottom-space-big">
+        <app-drawing-freelancers></app-drawing-freelancers>
+    </div> -->
+    <!-- <app-get-started></app-get-started> -->
+    <app-hd-footer></app-hd-footer>
+    <!-- <div class="sticky-bottom" [ngClass]="{'cursor': !AvailableServicesToggle,'active': AvailableServicesToggle}"
+        (mouseover)="AvailableServicesToggleStatusHover()"
+        (click)="AvailableServicesToggle ? null : AvailableServicesToggleStatus(true)">
+        <div class="toggle" [ngClass]="{'active':AvailableServicesToggle}"
+            (click)="AvailableServicesToggleStatus(); $event.stopPropagation()">
+
+        </div>
+        <h3>
+            Available Service for Direct Booking
+            <small>
+                Unlock the BuildTwin advantage
+            </small>
+        </h3>
+        <div class="flex bg-sticky" *ngIf="AvailableServicesToggle">
+        </div>
+    </div> -->
+</div>

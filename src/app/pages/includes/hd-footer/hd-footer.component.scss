@@ -1,0 +1,190 @@
+#footer {
+  .block {
+    border-top: 1px solid #DBDBDB;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.lets-talk {
+  .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .lets-talk-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h4 {
+      font-size: 44px;
+      font-weight: 500;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      color: #668189;
+      letter-spacing: .35px;
+    }
+  }
+}
+.locations {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  .left {
+    width: 197px;
+    padding-right: 40px;
+    border-right: 1px solid #D1D1D1;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+    justify-content: space-between;
+    h6 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.4;
+    }
+    a {
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+  .right {
+    flex-grow: 1;
+    .frame-frame3 {
+      display: flex;
+      justify-content: space-around;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .region-frame {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        align-items: center;
+      }
+    }
+  }
+}
+.service-list {
+  .container {
+    display: flex;
+    gap: 38px;
+  }
+  .list-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h5 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: 300;
+      color: #668189;
+      a {
+        color: inherit;
+        font: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.footer-menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      font-size: 18px;
+      text-decoration: underline;
+    }
+    .call-line {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+}
+.footer-menu-wrapper .container.footer-content {
+  color: #668189;
+  font-size: 12px;
+  line-height: 2;
+  text-align: center;
+  a {
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+@media only screen and (max-width : 900px) {
+  .lets-talk .lets-talk-content h4 {
+    font-size: 34px;
+  }
+  .lets-talk .lets-talk-content p {
+    font-size: 16px;
+  }
+  .locations .right .frame-frame3 .region-frame {
+    font-size: 16px;
+  }
+  .footer-menu-wrapper .container a {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width : 767px) {
+  .lets-talk .container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .locations .container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .locations .left {
+    width: 100%;
+    border: none;
+    padding: 0;
+    gap: 10px;
+  }
+  .locations .right .frame-frame3 .region-frame {
+    font-size: 14px;
+  }
+  .service-list .container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .footer-menu-wrapper .container:first-child {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .footer-menu-wrapper .container .call-line {
+    flex-wrap: wrap;
+    gap: 12px;
+
+    a {
+      margin-right: 20px;
+    }
+  }
+}

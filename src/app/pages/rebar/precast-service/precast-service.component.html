@@ -1,0 +1,49 @@
+<div class="sectionContainer">
+    <div class="container">
+        <div class="container-with-right">
+        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <h2>
+                All-in-one rebar detailing services
+            </h2>
+
+            <p>
+                Our platform's pre-qualified vendors provide you with the best-in-industry rebar
+        detailing services with precise shop drawings for placements, bending, and 
+        installation of reinforcing steel for concrete structures in your construction 
+        projects. Through detailed plans, we ensure absolute accuracy and structural 
+        integrity in the project execution, while adhering to all global compliance 
+        standards.
+<br><br>
+            </p>
+        </div>
+        <!-- tabs -->
+
+    <div class="sectionMidContainer" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+        <div class="precastTabs">
+                <ng-container *ngFor="let item of precastArray; let i = index">
+                        <h4 class="tab" [class.active]="activeTab === i" (click)="setActiveTab(i)"
+                        [ngClass]="{ 'activeContainer': activeTab === i }">
+                            {{ item.name }}
+                        </h4>
+                </ng-container>
+        </div>
+        <ng-container *ngFor="let item of precastArray; let i = index"> 
+            <div class="tabContent" *ngFor="let detail of item.details" [ngClass]="{'show':activeTab == i}">
+                <p>{{ detail.mainContent }}</p>
+                <h3>{{ detail.header }}</h3>
+                <div class="subContent">
+                    <p><small>{{ detail.subContent }}</small></p>
+                </div>
+                <div class="dataList">
+                    <div *ngFor="let item of detail['items']">
+                        <lib-svg-icon [name]="'doubleArrows'" [size]="20" [sizeH]="21"></lib-svg-icon>
+                        <span>{{item}}</span>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        
+    </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<app-hd-navbar></app-hd-navbar>
+
+<div class="mainContainer">
+    <div class="maincontent">
+        <app-bim-usa-banner></app-bim-usa-banner>
+        <app-bim-usa-three-cards></app-bim-usa-three-cards>
+        <app-bim-usa-trust-by></app-bim-usa-trust-by>
+        <!-- <app-bim-usa-sample-drawing></app-bim-usa-sample-drawing> -->
+        <app-bim-usa-precast-service></app-bim-usa-precast-service>
+        <app-bim-usa-top-vendors></app-bim-usa-top-vendors>
+
+        <app-bim-usa-how-it-worksNew></app-bim-usa-how-it-worksNew>
+        <app-bim-usa-live-trackingNew></app-bim-usa-live-trackingNew>
+
+        <!-- <app-service-category [category]="8" ></app-service-category> -->
+        <app-bim-usa-plug-play></app-bim-usa-plug-play>
+        <app-bim-usa-services-offered></app-bim-usa-services-offered>
+        <app-bim-usa-e2e-encryption></app-bim-usa-e2e-encryption>
+        <app-bim-usa-faq-buildtwin></app-bim-usa-faq-buildtwin>
+    </div>
+    <div class="toggle-sidebar" (click)="toggleSidebar()">Start Enquiry</div>
+    <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+        <span class="cross" (click)="toggleSidebar()"></span>
+        <aside class="Stickyform">
+            <app-free-offer-form class="formWrapper"></app-free-offer-form>
+        </aside>
+    </div>
+</div>
+
+<app-bim-usa-drawing-freelancers></app-bim-usa-drawing-freelancers> 
+<app-hd-footer></app-hd-footer>

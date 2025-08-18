@@ -1,0 +1,37 @@
+<app-hd-navbar></app-hd-navbar>
+<div id="main">
+    <div class="container">
+        <div class="banner">
+            <img src="assets/images/coming-soon-banner.png" width="716" height="281" alt="">
+        </div>
+        <div class="content">
+            <h1>Oops!<br>Page Not Found</h1>
+            <p>We are sorry about this but the page you were looking for does not exist.
+            </p>
+            <div class="btnGroup">
+                <a href="https://www.buildtwin.com" class="button-v2">Learn More</a>
+                <a (click)="call()" class="button-v2" href="javascript:void(0)">Schedule a Call</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popUP" [ngClass]="{'active':showPopup}">
+    <div class="coverPopup">
+      <i class="closeIcon" (click)="closePopup()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <g clip-path="url(#clip0_2773_1184811)">
+          <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_2773_11848">
+          <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
+          </svg>
+      </i>
+    <div class="coverPopupData">
+      <iframe src="https://success.buildtwin.com/meetings/buildtwin?embed=true" width="100%" height="700px" frameborder="0"></iframe>
+</div>
+</div>
+</div>

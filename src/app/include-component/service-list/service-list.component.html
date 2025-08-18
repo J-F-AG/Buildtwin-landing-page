@@ -1,0 +1,42 @@
+<div class="container" [ngClass]="{'bg': !hideTitle}">
+    <div class="heading center v2" *ngIf="!hideTitle">
+        <h2 class="title">
+            Discover your ideal partner and expert<br>
+            solutions for  <span>all your service needs</span>
+        </h2>
+        <div class="subTitle">
+            Navigate services with confidence and connect with top professionals effortlessly
+        </div>
+    </div>
+    <div class="list squareButtonWrapper top-right" [ngClass]="{'below-6': servicesArray.length<6}">
+        <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
+        <ng-template carouselSlide *ngFor="let item of servicesArray; let i = index">
+            <a class="service__items__sub" target="_blank" [routerLink]="item.serviceId ? getServiceRoute(item.serviceId) : ''">
+                <div class="block" [ngClass]="{'active': item['active']}">
+                    <div class="delivery-type-label" [ngClass]="{'ai-human': item.deliveryType === 'AI + Human Engineering', 'human-only': item.deliveryType === 'Human Only'}">
+                        {{ item.deliveryType }}
+                    </div>
+                    <div>
+                        <h3 [innerHtml]="item['name']">
+                            
+                        </h3>
+                        <p class="hover-show" [innerHtml]="item['description']">
+                        </p>
+                    </div>
+                    <figure>
+                        <picture>
+                            <source srcset="{{item.img}}.webp, {{item.img}}@2x.webp 2x" type="image/webp">
+                            <img 
+                                src="{{item.img}}.png" 
+                                srcset="{{item.img}}.png, {{item.img}}@2x.png 2x" 
+                                width="349" 
+                                height="435" 
+                                alt="{{item['name']}}">
+                        </picture>
+                    </figure>
+                </div>
+            </a>
+        </ng-template>
+        </owl-carousel-o>
+    </div>
+</div>

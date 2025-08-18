@@ -1,0 +1,44 @@
+<div class="banner-global container global-mb">
+  <div class="banner-main">
+      <div class="banner-content">
+          <div>
+            <h1>
+             <span style="font-size: 0.7em;">AI Delivery Platform</span> <br><span>AI + Human Engineering</span> 
+            </h1>
+                        <p>
+              Find out <strong>instantly</strong> if you qualify for high-value opportunities <br>
+              worldwide, 
+              and get <u>pre-qualified</u> to unlock private tender 
+              invitations.
+            </p>
+            <div>
+              <div class="v-center-flex gap-medium flex-justify-center">
+                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 white provide_page_get_started_now_banner">
+                  Get started NOW
+                </a>
+                <a class="button-v2 white-border provide_page_talk_to_our_advisors_banner" (click)="call()" href="javascript:void(0)">
+                  <picture>
+                    <source 
+                      srcset="assets/images/icons/call-white@2x.png" 
+                      media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                      src="assets/images/icons/call-white.png" 
+                      alt="call" 
+                      width="21" 
+                      height="22">
+                  </picture>
+                  Talk to our advisors
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<app-video-popup></app-video-popup>
+
+
+
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

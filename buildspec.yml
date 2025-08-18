@@ -1,0 +1,77 @@
+version: 0.2
+env:
+  secrets-manager:
+    SECRET_KEY: "codepipeline:SECRET_KEY"
+    NEW_ACCESS_KEY: "codepipeline:NEW_ACCESS_KEY"
+    ACCESS_KEY: "codepipeline:ACCESS_KEY"
+    NEW_SECRET_KEY: "codepipeline:NEW_SECRET_KEY"
+    AOA_ACCESS_KEY: "codepipeline:AOA_ACCESS_KEY"
+    AOA_SECRET_KEY: "codepipeline:AOA_SECRET_KEY"
+    ACCESS_KEY_APP: "codepipeline:ACCESS_KEY_APP"
+    SECRET_KEY_APP: "codepipeline:SECRET_KEY_APP"
+
+phases:
+  install:
+    commands:
+      # - echo "Updating and upgrading system packages..."
+      # - sudo apt-get update
+      # - sudo apt-get upgrade -y
+      
+      # Clean up unnecessary packages and fix broken installs
+      # - echo "Cleaning up unnecessary packages and fixing broken installs..."
+      # - sudo apt-get autoremove -y
+      # - sudo apt-get autoclean
+      # - sudo apt-get -f install
+      
+      # Remove previous Node and npm to avoid conflicts
+      # - echo "Removing any existing Node.js and npm installations..."
+      # - sudo rm -rf /usr/local/bin/node
+      # - sudo rm -rf /usr/local/bin/npm
+      
+      # Install Node.js from NodeSource
+      # - echo "Installing Node.js from NodeSource..."
+      # - curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+      # - sudo apt-get install -y nodejs
+      
+      # Check if npm is installed, otherwise install it
+      # - echo "Checking for npm installation..."
+      # - if ! command -v npm &>/dev/null; then sudo apt-get install -y npm; fi
+      
+      # Verify installations
+      # - echo "Verifying Node.js and npm versions..."
+      # - node --version
+      # - npm --version
+      # - which npm
+      # - which node
+      
+      # Clean up existing npm dependencies if any
+      - echo "Cleaning package lock files..."
+      - rm -rf package-lock.json
+
+  pre_build:
+    commands:
+      # - echo "Installing Angular CLI and dependencies..."
+      # - npm install -g @angular/cli@17.0.0
+
+       # Clean npm cache and install project dependencies
+      - echo "Cleaning npm cache and installing project dependencies..."
+      - aws configure set aws_access_key_id $ACCESS_KEY
+      - aws configure set aws_secret_access_key $SECRET_KEY
+      - aws configure set region eu-central-1
+      - aws codeartifact login --tool npm --repository one-jf-search --domain jf-one-modules --domain-owner 188097494660
+      - npm cache clean --force
+      - export NODE_OPTIONS=--max-old-space-size=6144
+      - npm install buildtwin-library-ux@0.0.304 --legacy-peer-deps
+      - npm install --force
+
+  build:
+    commands:
+      - echo testing...
+      - ng build --output-hashing=all --configuration production --build-optimizer --aot
+      - ls
+       
+  post_build:
+    commands:
+      - aws configure set aws_access_key_id $AOA_ACCESS_KEY
+      - aws configure set aws_secret_access_key $AOA_SECRET_KEY
+      - aws s3 sync dist/ s3://beta.buildtwin.com

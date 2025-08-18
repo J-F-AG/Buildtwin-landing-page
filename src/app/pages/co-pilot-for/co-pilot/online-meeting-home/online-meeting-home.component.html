@@ -1,0 +1,371 @@
+<app-hd-navbar></app-hd-navbar>
+
+<app-ai-project-management-hero>
+    <app-buildtwin-services id="hdFaq">
+        <div class="buildtwinService forTraning ptb-100">
+    
+            <div class="container">
+                <div class="heading center v2">
+                    <h2 class="title"><span>The definition of</span> done
+                    </h2>
+                    <div class="small-title">
+                        Work with the one of a kind BuildTwin AI Quality Check to ensure quality and compliance.
+                    </div>
+                </div>
+                <div class="tabContent">
+                    <div class="tabLeft">
+                        <ul>
+                            <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(10)"
+                                [ngClass]="{'active':activeState2 === 10}">
+                                <div class="flex-center">
+                                    <i><img src="assets/images/check-mark.png" width="28" height="28" alt=""></i>Formal quality Checks 
+                                </div>
+                                <div class="content">
+    
+                                    <p>
+                                        No extra work required. Connect BuildTwin to your email account and get an AI to
+                                        process your emails and extract what needs to be done, compose emails, and document
+                                        everything into an operable cockpit. Such as what deliverables need to be delivered
+                                        by when or what RFIs are still open.
+                                    </p>
+                                    <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
+                                </div>
+    
+                            </li>
+    
+                            <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(11)"
+                                [ngClass]="{'active':activeState2 === 11}">
+                                <div class="flex-center">
+                                    <i><img src="assets/images/check-mark.png" width="28" height="28" alt=""></i>Tracked changes and discussions Checks 
+                                </div>
+                                <div class="content">
+    
+                                    <p>
+                                        The DSM system helps you to stay on top of things and provides meaningful insight into project performance and how it can be improved. With our anonymized (opt-in) benchmark feature, you also get insight into how you perform against peers.
+                                    </p>
+                                    <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
+                                </div>
+    
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(12)"
+                                [ngClass]="{'active':activeState2 === 12}">
+                                <div class="flex-center">
+                                    <i><img src="assets/images/check-mark.png" width="28" height="28" alt=""></i>Code and Standards Checks
+                                </div>
+                                <div class="content">
+    
+                                    <p>
+                                        We manage files for you, between your team and your client. By uploading the deliverables in the right name convention to CDE and internally tracking each revision.It is as easy as saving your file locally.
+                                    </p>
+                                    <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
+                                </div>
+    
+                            </li>
+                            <li data-aos="fade-up" data-aos-duration="500" (click)="tabbing2(13)"
+                                [ngClass]="{'active':activeState2 === 13}">
+                                <div class="flex-center">
+                                    <i><img src="assets/images/check-mark.png" width="28" height="28" alt=""></i> Calculation and Geometry Checks 
+                                </div>
+                                <div class="content">
+    
+                                    <p>
+                                        BuildTwin tracks all RFIs across all channels and shows the discussion and result of each discussion in an easy-to-understand overview.Coming soon: Based on building code, technical standards, and trained data on constructability, BuildTwin AI will provide suggested answers to technical questions.
+                                    </p>
+                                    <!-- <a routerLink="{{_languageService.currentLanguage}}/coming-soon" class="newBtn">Learn More<img src="assets/images/ui/arrow.svg"> </a> -->
+                                </div>
+    
+                            </li>
+                        </ul>
+    
+    
+                        <!-- 
+                        <a mat-button id="scrollSecond" routerLink="{{_languageService.currentLanguage}}/good-reason" [fragment]="'features'" class="button-v2" style="width: 180px;">LIVE DEMO</a>
+                        --> 
+                    </div>
+                    <div class="tabRIght">
+                        <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 10">
+                            <picture>
+                                <source srcset="assets/images/ui/service1.webp 1x, assets/images/ui/service1@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                                <source srcset="assets/images/ui/service1.webp 1x, assets/images/ui/service1@2x.webp 2x" type="image/webp">
+                                <source srcset="assets/images/ui/service1.png 1x, assets/images/ui/service1@2x.png 767w" media="(max-width: 767px)">
+                                <source srcset="assets/images/ui/service1.png 1x, assets/images/ui/service1@2x.png 2x">
+                                <img src="assets/images/ui/service1.png" alt="Service" width="" height="">
+                            </picture>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 11">
+                            <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 12">
+                            <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="500" *ngIf="activeState2 === 13">
+                            <img src="assets/images/ui/service2.png" alt="Service" width="" height="">
+                        </div>
+    
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </app-buildtwin-services>
+</app-ai-project-management-hero>
+
+
+
+<app-style3>
+<div class="container fixed-width bg3">
+    <!-- <div class=""> -->
+        <div class="left">
+            <div class="block">
+                <div>
+                    <h2>
+                        Save time and money with BuildTwin Pro
+                    </h2>
+                    <span class="count">
+                        10-30%
+                    </span>
+                    <p>
+                       per project by automating tedious tasks. 
+                    </p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="child-block">
+                    <span class="count small">
+                        5.000+
+                    </span>
+                    <p>
+                       of your peers already use BuildTwin Pro. 
+                    </p>
+                </div>
+                <div class="child-block">
+                    <span class="count small">
+                        10 min
+                    </span>
+                    <p>
+                        to get stated and see first results. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <figure>
+                <picture>
+                    <source srcset="assets/images/ai/earth_1.webp 1x, assets/images/ai/earth_1@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                    <source srcset="assets/images/ai/earth_1.webp 1x, assets/images/ai/earth_1@2x.webp 2x" type="image/webp">
+                    <source srcset="assets/images/ai/earth_1.png 1x, assets/images/ai/earth_1@2x.png 767w" media="(max-width: 767px)">
+                    <source srcset="assets/images/ai/earth_1.png 1x, assets/images/ai/earth_1@2x.png 2x">
+                    <img src="assets/images/ai/earth_1.png" width="278" height="278" alt="Save time and money with BuildTwin Pro">
+                </picture>
+            </figure>
+        </div>
+    <!-- </div> -->
+</div>
+</app-style3>
+
+<!-- HERO Section 
+<app-om-banner></app-om-banner> 
+-->
+
+
+<!-- Plug & Play WorkFlow 
+
+<app-how-buildtwin-helps>
+    <div class="buildtwinHelps no-space container bg" id="scrollActivated">
+        <div class=""id="onScrollAnimation">
+            <div class="heading center v2">
+                <h2 class="title">The next generation workflow <br> your <span>AI advantage TODAY</span></h2>
+            </div>
+        </div>
+
+        <div class="staticData">
+            <div class="tabContent">
+                <div class="tabLeft">
+                    <ul>
+                        <li (click)="scrollToSection('section1')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 1}">
+                            <i></i>Plug & Play
+                        </li>
+                        <li (click)="scrollToSection('section2')" data-aos="fade-up" data-aos-duration="500"   [ngClass]="{'active':activeState3 === 2}">
+                            <i></i>LIVE Tracking
+                        </li>
+                        <li (click)="scrollToSection('section3')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 3}">
+                            <i></i>AI Design Manager 
+                        </li>
+                        <li (click)="scrollToSection('section4')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 4}">
+                            <i></i> AI Quality Control
+                        </li>
+                        <li (click)="scrollToSection('section5')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 5}">
+                            <i></i>Did we check everything?
+                        </li>
+                        <li (click)="scrollToSection('section6')" data-aos="fade-up" data-aos-duration="500"  [ngClass]="{'active':activeState3 === 6}">
+                            <i></i>Delivering results
+                        </li>
+                    </ul>
+                </div>
+               
+            </div>
+            <div class="tabRIght">
+                <div id="section1" class="active" data-ele="one"  >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild7.png" alt="Buildtwin" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Consolidated Inputs - at one place
+                            </h3>
+                            <p>
+                               A single point of truth. BuildTwin consolidates CDEs, Models, E-Mails, MS-Teams <br>
+                               and more into a single point of truth. No more sticky notes and Excel to keep track on <br>
+                               what is happening. We keep your records automated updated.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section2"    data-ele="two">
+                    <div class="flex">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild2.png" alt="Buildtwin" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                What to do? - Actionable Items
+                            </h3>
+                            <p>
+                                Your outright to-do list. Buildtwin Co-Pilot presents your tasks as per your priorities. Never miss a deadline 
+                                and stay on top of your projects. We make your work easy to digest.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section3" data-ele="three" >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild3.png" alt="Buildtwin" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                What is the progress? - Tracking everything 
+                            </h3>
+                            <p>
+                                Your project cockpit. Buildtwin tracks and documents all activities across all channels and presents them easy to use and understand. No more sticky notes and Excel to keep track on what is happening.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="section4" data-ele="four"  >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild4.png" alt="Buildtwin" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                What are the bottle necks? LIVE Project Progress
+                            </h3>
+                            <p>
+                                A LIVE status report. The consolidated LIVE view shows your project progress and wether your project is on track or not. Less time consuming status meetings to make well informed decisions.
+                            </p>
+                            </div>
+                    </div>
+                </div>
+                <div id="section5"  data-ele="five"  >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild5.png" alt="Buildtwin" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Did we check everything? LIVE RFI Management
+                            </h3>
+                            <p>
+                                Your personal AI assistant. The AI RFI manager tracks all RFIs across different channels such as emails, CDE and technical meetings. Don't miss out on points to clarify to avoid changes later on.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div  id="section6" data-ele="six" >
+                    <div class="flex ">
+                        <div class="imgWrap">
+                            <img src="assets/images/ui/whyBuild6.png" alt="Buildtwin" title="">
+                        </div>
+                        <div class="contentWrap">
+                            <h3>
+                                Delivering results - Automated File Management
+                            </h3>
+                            <p>
+                                BuildTwin got you covered and manages files seamless for you. From keeping the source file compliant to uploading the latest version to Client CDE according to the name convention - fully automated. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+    </div>
+</app-how-buildtwin-helps>
+
+--> 
+
+
+<div class="container global-mb">
+
+    <h2 class="title d-block text-center font-archivo" data-aos="fade-up" data-aos-duration="500">
+        You are in good company
+    </h2>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers"><img src="assets/images/trustedBy-gbc.jpg" alt="GBC Engineers" width="86" height="60" loading="lazy"></a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant"><img src="assets/images/Durchgeplant.png" alt="partner-image"></a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited"><img src="assets/images/trustedBy-aarbee.jpg" alt="AARBEE" width="89" height="60" loading="lazy"></a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india"><img src="assets/images/J&F.png" alt="partner-image"></a>
+            </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
+            <div class="text-center mb-25">
+                <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering"><img src="assets/images/trustedBy-caldim.jpg" alt="CALDIM" width="143" height="60" loading="lazy"></a>
+            </div>
+        </div>
+    </div>
+    <div class="border-bottom pt-75"></div>
+</div>
+
+
+<!-- <app-om-features></app-om-features> !-->
+
+
+<!-- Use Cases -->
+
+
+
+<app-om-why-choose-us [listFaq]="listFaq"></app-om-why-choose-us>
+
+
+
+<!-- FAQ-->
+
+<app-hd-faq></app-hd-faq>
+
+<!--
+<app-om-blog></app-om-blog>
+-->
+
+<!-- Testimmonials 
+<app-em-testimonials></app-em-testimonials>
+-->
+
+<app-hd-footer></app-hd-footer>

@@ -1,0 +1,166 @@
+.testimonial-container {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .testimonial-title {
+    color: #0E0E28;
+    font-size: 40px; font-weight: 600;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 48px */
+  }
+
+  
+
+  .testimonial-text {
+    color: #000;
+    text-align: center;
+    margin-top: 8px;
+    width: 100%;
+    font-size: 16px;
+  }
+
+
+
+.partnerWrap{
+    width: 100%;
+height: 128px;
+flex-shrink: 0;
+background: #FFF;
+
+}
+ul.partner li {
+    display: flex;
+    align-items: center;
+}
+.partner{
+    display: flex;
+    list-style: none;
+    gap: 71px;
+    justify-content: center;
+    margin: 44px 0;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+    margin-bottom: 16px;
+  }
+
+  .profile-info {
+    display: flex;
+    gap: 8px;
+    line-height: 140%;
+  }
+
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .profile-name,
+  .profile-company {
+    white-space: nowrap;
+  }
+
+  .profile-name {
+    color: var(--Black, #000);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    margin-bottom: 0;
+  }
+
+  .profile-company {
+    color: var(--grey, var(--grey, #808080));
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 16.8px */
+  }
+
+  .profile-description {
+    margin-top: 16px;
+    color: #0e0e28;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .colWrapper{
+    display: flex;
+    gap:16px;
+    justify-content: center;
+    .col{
+        // flex-basis: 416px;
+    }
+}
+.videoWrap{
+    margin-top: 16px;
+    height: 256px;
+    overflow: hidden;
+}
+
+
+@media (max-width: 991px) {
+    .testimonial-title {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 991px) {
+    .testimonial-text {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 767px) {
+    .colWrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+    .partner {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        justify-content: center;
+        margin: 44px 0;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+ul.partner li {
+   
+    height: 55px;
+}
+.partnerWrap {
+    height: auto;
+}
+
+
+  }

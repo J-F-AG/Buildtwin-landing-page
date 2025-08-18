@@ -1,0 +1,321 @@
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+    
+.whyBuildtwinSection{
+  padding: 40px var(--padding-left-right) 0; 
+  background-color: var(--whiteColor);
+  .container {
+    margin-inline: auto;
+    // padding-inline: 24px;
+  }
+}
+
+.title {
+    font-family: var(--fontFamily);
+  }
+  .icon {
+    color: #000;
+  }
+  
+  .icon:hover {
+    color: #0053fa;
+  }
+  
+  .activeIcon {
+    color: #0053fa;
+  }
+  .activeContainer {
+    border-bottom: 2px solid #0053fa;
+    background-color: var(--newBackgroundColor);
+    color: var(--newButtonColor) !important;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-image: linear-gradient(to right, var(--newBackgroundColor), #0053fa);
+    border-image-slice: 1;
+  }
+  .sectionHeader {
+    display: flex;
+    align-items: center;
+    .icon {
+      padding-top: 25px;
+    }
+  }
+  .main-head {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 24px;
+  }
+  .align-self-end {
+    align-self: end;
+  }
+  // .bodyWrapper {
+  //   margin: 15px 0 0 0;
+  //   padding: 24px 0 0 0;
+  // }
+  .sectionMidContainer {
+    border-bottom: 2px solid #efefef;
+  }
+  .sectionMidMain {
+    display: grid;
+    align-items: center;
+    // justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    gap: 32px;
+    margin: 0px auto;
+  }
+  .buildTwinItemsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    // height: 60px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--lightTextColor);
+    font-size: 20px;
+  }
+  
+  .sectionContent {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+    // height: 450px;
+    margin: 0 auto;
+  }
+  .leftChild {
+    width: 46%;
+    min-width: 46%;
+    max-width: 46%;
+    border-radius: 9px;
+    // border: 1px solid #e3e2e0;
+    background: #fff;
+    height: 100%;
+    padding: 15px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
+    .contentIconSection {
+      // background: url(../../../../../assets/images/ellipse.svg) no-repeat
+      //   center/cover;
+      height: 60%;
+      display: flex;
+      align-items: center;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      // height: 40%;
+      width: 100%;
+      // flex-wrap: wrap;
+      align-items: center;
+      gap: 25px;
+    }
+    .contentHeader {
+      font-size: 18px;
+      font-family: var(--fontFamily);
+      // height: 30px;
+      // width: 25%;
+      font-weight: 600;
+      flex-wrap: wrap;
+      text-align: center;
+      padding-bottom: 17px;
+      border-bottom: 2px solid #0053fa;
+    }
+    .contentDetails {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 400;
+      color: #000;
+    }
+  }
+  .rightChild {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    flex-grow: 1;
+    height: 100%;
+    border-radius: 9px;
+    background: var(--newBackgroundColor);
+    .contentWrapper {
+      height: 100%;
+    }
+    .content-top {
+      display: grid;
+      gap: 20px;
+      &__icon {
+        width: 90px;
+        height: 90px;
+      }
+      &__title {
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+    .content {
+      margin: 60px 0;
+    }
+    .contentHeader {
+      font-size: 18px;
+      font-family: var(--fontFamily);
+      font-weight: 600;
+    }
+    .contentDetails {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .detail {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        // border-radius: 50%;
+        // background: var(--themeColor);
+      }
+    }
+    p {
+      margin-top: 20px;
+      font-size: 14px;
+      font-family: var(--fontFamily);
+      font-weight: 400;
+    }
+    .detailItem {
+      font-size: 14px;
+      font-weight: 400;
+      font-family: var(--fontFamily);
+    }
+    .noLink {
+      font-family: var(--fontFamily);
+      color: #0053fa;
+      cursor: pointer;
+    }
+  }
+  .detailLink {
+    // color: #0053fa;
+    // border-bottom: 1px solid #0053fa;
+  }
+  .detailText {
+    color: #000;
+  }
+  .divider { 
+    width: 100%;
+    border: 2px solid #0053fa;
+  }
+  hr {
+    margin: 10px 0;
+  }
+
+  @media only screen and (max-width : 1200px) {
+    .whyBuildtwinSection {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media only screen and (max-width : 992px) {
+  .whyBuildtwinSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sectionContent {
+    flex-direction: column;
+    .leftChild {
+      max-width: none;
+      width: auto;
+      flex-direction: row;
+      i {
+        min-width: 24px;
+      }
+    }
+    .sectionMidMain {
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      gap: 0;
+    }
+  }
+}
+@media only screen and (max-width : 767px) { 
+
+  .bodyWrapper {
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0 0 0;
+  }
+
+  .sectionMidMain {
+    width: 100%;
+    font-size: 15px;
+    overflow: auto;
+  }
+
+  .buildTwinItemsContainer {
+    white-space: nowrap;
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+
+  .sectionContent {
+    flex-direction: column;
+    height: auto;
+    margin-top: 0;
+
+    .leftChild {
+      width: auto;
+      padding: 0;
+
+      .contentIconSection {
+        width: 135px;
+      }
+    }
+
+    .rightChild {
+      width: auto;
+      padding: 20px 20px;
+
+      .content {
+        margin: 0 0 30px;
+      }
+    }
+  }
+  .rightChild .contentHeader {
+    font-size: 15px;
+  }
+  .rightChild .content-top__title {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width : 576px) {
+  .main-head {
+    grid-template-columns: unset;
+  }
+}
+  

@@ -1,0 +1,141 @@
+<section class="footerSection container">
+    <!-- The footer section container -->
+    <!-- 
+    <div class="footerSectionHeader">
+        <div class="footerTitle">
+            the BuildTwin Experience
+        </div>
+        <div class="footerSubtitle">
+            The BuildTwin pre-qualification program helps you to meet global requirements.
+        </div>
+    </div> 
+    -->
+    <div class="footerSectionWrapper">
+        <!-- Quality section displaying BuildTwin information -->
+        <div class="qualitySectionContainer">
+            <div class="header">
+                <h2><strong>Build</strong>Twin</h2>
+                <p class="paraHead">BuildTwin offers a tailored experience</p>
+            </div>
+            <div class="main-card">
+                <!-- Iterate over the qualityArray to create cards dynamically -->
+                <div *ngFor="let item of qualityArray; let i = index" class="card" [ngClass]="{'parent':item['addClass'] && item['addClass'] == 'v2'}">
+                    <!-- 
+                    <div class="icon">
+                        <img [src]="item.icon" alt="icon" height="73" width="73" />
+                    </div> 
+                    -->
+                    <div class="details cursor" (click)="toggleAccordion(i+1)" [ngClass]="{'openToggle':activeObj[i+1]}">
+                        <span>{{item.title}}</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9L12 15L18 9" stroke="#0053FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                        <!-- 
+                        <p [innerHtml]="item.description"></p> 
+                        -->
+                    </div>
+                    <div class="child" *ngIf="activeObj[i+1]">
+                        <div class="child-card" *ngFor="let childItem of item['child']">
+                            <span>{{childItem.title}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel for BuildTwin and Legacy Tools -->
+        <!-- <nz-carousel [nzEffect]="effect" [nzDots]="false" [nzAutoPlay]="false"> -->
+            <div class="flex-grow-1">
+            <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
+                <!-- BuildTwin carousel content -->
+                <ng-template carouselSlide>
+                    <!-- nz-carousel-content -->
+                <div class="bt-flex gap-big">
+                    <div class="availableVendors">
+                        <div class="availableVendorsList">
+                            <div class="header">
+                                <!-- 
+                                <img src="assets/images/for-text.png" width="43" height="46" alt=""> 
+                                -->
+                                <h2><strong>Build</strong>Twin</h2>
+                            </div>
+                            <div class="main-card">
+                                <div *ngFor="let item of qualityArray; let i = index" class="card trigger-card" [ngClass]="{'parent':item['addClass'] && item['addClass'] == 'v2'}">
+                                    <div class="details" [ngClass]="{'open':activeObj[i+1]}">
+                                        <span class="opacity" data-nosnippet>{{item.title}}</span>
+                                        <svg class="opacity" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9L12 15L18 9" stroke="#0053FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                        <span class="abs">
+                                            <img src="assets/images/vendor/tick.png" width="26" height="26" alt="">
+                                        </span>
+                                    </div>
+                                    <div class="child" *ngIf="activeObj[i+1]">
+                                        <div class="child-card" *ngFor="let childItem of item['child']">
+                                            <span class="opacity" data-nosnippet>{{childItem.title}}</span>
+                                            <svg class="opacity" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 9L12 15L18 9" stroke="#0053FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>  
+                                            <span class="abs">
+                                                <img src="assets/images/vendor/tick.png" width="26" height="26" alt="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                <!-- Legacy Tools carousel content -->
+                <!-- nz-carousel-content -->
+                <div class="bt-flex gap-big">
+                    <div class="availableVendors">
+                        <div class="availableVendorsList">
+                            <div class="header">
+                                <h2>Legacy Tools</h2>
+                            </div>
+                            <div class="main-card">
+                                <div *ngFor="let item of qualityArray; let i = index" class="card trigger-card" [ngClass]="{'parent':item['addClass'] && item['addClass'] == 'v2'}">
+                                    <div class="details" [ngClass]="{'open':activeObj[i+1]}">
+                                        <span class="opacity" data-nosnippet>{{item.title}}</span>
+                                        <svg class="opacity" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9L12 15L18 9" stroke="#0053FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>  
+                                        <span class="abs">
+                                            {{item['tools']}}
+                                        </span>
+                                    </div>
+                                    <div class="child" *ngIf="activeObj[i+1]">
+                                        <div class="child-card" *ngFor="let childItem of item['child']">
+                                            <span class="opacity" data-nosnippet>{{ childItem.title }}</span>
+                                            <svg class="opacity" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 9L12 15L18 9" stroke="#0053FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>  
+                                            <span class="abs">
+                                                <ng-container *ngIf="childItem['tools'] && childItem['tools'].toString() !== 'true' && childItem['tools'].toString() !== 'false'; else checkBoolean">
+                                                    {{ childItem['tools'] }}
+                                                </ng-container>
+                                                <ng-template #checkBoolean>
+                                                    <img *ngIf="childItem['tools'] === false" src="assets/images/vendor/red-tick.png" width="26" height="26" alt="">
+                                                    <img *ngIf="childItem['tools'] === true" src="assets/images/vendor/tick.png" width="26" height="26" alt="">
+                                                </ng-template>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </ng-template>
+            </owl-carousel-o>
+            </div>
+        <!-- </nz-carousel> -->
+
+        <!-- Navigation buttons for carousel -->
+        <!-- <span class="prev-btn" *ngIf="prevNav" (click)="prev()"></span>
+        <span class="next-btn" *ngIf="nextNav" (click)="next()"></span> -->
+    </div>
+</section>

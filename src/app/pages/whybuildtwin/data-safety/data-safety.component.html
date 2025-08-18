@@ -1,0 +1,352 @@
+<div class="data-safety-wrapper">
+<app-hd-navbar></app-hd-navbar>
+
+<!-- Hero Section with Black Background -->
+<div class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Built for <span>Institutional-Grade</span><br>Data Safety</h1>
+                <p class="hero-subtitle">
+                    BuildTwin keeps your engineering data safe with<br>
+                    world-class security and data privacy measures.
+                </p>
+                <a (click)="call()" class="hero-cta">Request Audit Report</a>
+            </div>
+            <div class="hero-image">
+                <figure>
+                    <picture>
+                        <source srcset="assets/images/data-safety/banner-image.webp 1x, assets/images/data-safety/banner-image@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+                        <source srcset="assets/images/data-safety/banner-image.webp 1x, assets/images/data-safety/banner-image@2x.webp 2x" type="image/webp">
+                        <source srcset="assets/images/data-safety/banner-image.png 1x, assets/images/data-safety/banner-image@2x.png 767w" media="(max-width: 767px)">
+                        <source srcset="assets/images/data-safety/banner-image.png 1x, assets/images/data-safety/banner-image@2x.png 2x">
+                        <img src="assets/images/data-safety/banner-image.png" width="595" height="543" alt="Data Safety Built for Compliance">
+                    </picture>
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div class="container">
+
+        <div class="certificate">
+            <div class="your-data-image">
+                <img src="assets/images/data-safety/your-data.jpg" width="230" height="153" alt="safeguarding">
+            </div>
+            <div class="heading center v2 space-right-left">
+                <h2 class="title">
+                    Let  <span>your data</span>  work for you.
+                </h2>
+                <div class="subTitle">
+                    We prioritize the safeguarding of your digital assets, incorporating advanced encryption, continuous risk assessments, and 
+customized privacy settings that align with the most stringent compliance standards.
+                </div>
+            </div>
+            <div class="certificateSlide round-button-owl">
+                <owl-carousel-o [options]="certificateSlide">
+                    <ng-template carouselSlide>
+                        <div class="certificate-item">
+                            <div class="icon-box">
+                                <picture>
+                                    <img src="assets/images/data-safety/certified-icon1.jpg"
+                                        srcset="assets/images/data-safety/certified-icon1@2x.jpg 2x" width="160"
+                                        height="149" alt="Icon">
+                                </picture>
+                            </div>
+                            <div class="icon-info">
+                                <h6>Hosted in your country</h6>
+                                <span>Your data stays in your 
+                                    country and jurisdiction </span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="certificate-item">
+                            <div class="icon-box">
+                                <picture>
+                                    <img src="assets/images/data-safety/certified-icon2.jpg"
+                                        srcset="assets/images/data-safety/certified-icon2@2x.jpg 2x" width="160"
+                                        height="149" alt="Icon">
+                                </picture>
+                            </div>
+                            <div class="icon-info">
+                                <h6>Connect to your data</h6>
+                                <span>Your instance and all transaction
+                                    is shielded by a dedicaded VPC
+                                    network.</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="certificate-item">
+                            <div class="icon-box">
+                                <picture>
+                                    <img src="assets/images/data-safety/certified-icon3.jpg"
+                                        srcset="assets/images/data-safety/certified-icon3@2x.jpg 2x" width="160"
+                                        height="149" alt="Icon">
+                                </picture>
+                            </div>
+                            <div class="icon-info">
+                                <h6>AI processing</h6>
+                                <span>All transactions and storage are
+                                    end-to-end encrypted signed by
+                                    your private key.</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="certificate-item">
+                            <div class="icon-box">
+                                <picture>
+                                    <img src="assets/images/data-safety/certified-icon4.jpg"
+                                        srcset="assets/images/data-safety/certified-icon4@2x.jpg 2x" width="160"
+                                        height="149" alt="Icon">
+                                </picture>
+                            </div>
+                            <div class="icon-info">
+                                <h6>Invite Collaborators</h6>
+                                <span>Our dedicated SecOps Teams
+                                    continuously monitor the integrity
+                                    of our systems.</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="certificate-item">
+                            <div class="icon-box">
+                                <picture>
+                                    <img src="assets/images/data-safety/certified-icon1.jpg"
+                                        srcset="assets/images/data-safety/certified-icon1@2x.jpg 2x" width="160"
+                                        height="149" alt="Icon">
+                                </picture>
+                            </div>
+                            <div class="icon-info">
+                                <h6>Automated Backups</h6>
+                                <span>Your data is continously backuped in different regions </span>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div class="certificate-item">
+                            <div class="icon-box">
+                                <picture>
+                                    <img src="assets/images/data-safety/certified-icon5.jpg"
+                                        srcset="assets/images/data-safety/certified-icon5@2x.jpg 2x" width="160"
+                                        height="149" alt="Icon">
+                                </picture>
+                            </div>
+                            <div class="icon-info">
+                                <h6>Conspicuous behavior</h6>
+                                <span>Our security algorithm monitors conspicuous behavior and alerts you about unusual internal activities.</span>
+                            </div>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+        <div class="safetyFramework">
+            <div class="heading center v2">
+                <h2 class="title">
+                    BuildTwin <br><span>Safety Framework</span>
+                </h2>
+                <!-- <div class="subTitle">
+                    We prioritize the safeguarding of your digital assets, incorporating advanced encryption, continuous risk assessments, and 
+customized privacy settings that align with the most stringent compliance standards.
+                </div> -->
+            </div>
+            <div class="pic-row">
+                <div class="picBox">
+                    <i>
+                        P
+                    </i>
+                    <h4>Privacy</h4>
+                    <p>
+                        Our 'Privacy by Design' approach not only respects personal boundaries but also ensures strict adherence to the GDPR framework. We handle personal data with exceptional care, upholding confidentiality with advanced access controls and anonymization techniques.
+                    </p>
+                </div>
+                <div class="picBox">
+                    <i>
+                        I
+                    </i>
+                    <h4>Infosec</h4>
+                    <p>
+                        Our platform secures your data within a virtual private network, creating an exclusive, closed work environment for each client. This dedicated space stands strong against intrusions, accessible to none but your team, ensuring that third parties can not compromise your data.
+                    </p>
+                </div>
+                <div class="picBox">
+                    <i>
+                        C
+                    </i>
+                    <h4>Compliance</h4>
+                    <p>
+                        Compliance is seamlessly integrated into every layer of BuildTwin. Our platform not only adheres to legal standards but enables automatic management of your compliance needs. We ensure that our system aligns with industry regulations and specific compliance requirements from client.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="fullyEncryp">
+            <!-- <picture>
+                <img src="assets/images/data-safety/fully-encryp.jpg"
+                    srcset="assets/images/data-safety/fully-encryp@2x.jpg 2x" width="1296" height="333" alt="Icon">
+            </picture> -->
+            <div class="fullyEncryp-head">
+                <img src="assets/images/data-safety/safety-logo.png" width="184" height="27" alt="Buildtwin Safety">
+            </div>
+            <div class="content">
+                <!-- <h3>End to End Fully Encrypted</h3>
+                <p>
+                    At BuildTwin, every interaction is shielded with SSL encryption, while back-end transactions are locked 
+                    down within a secure VPC network, guaranteeing your data's integrity from the inside out. Our embedded 
+                    trust system is integrated into every workflow, automating compliance tasks and reducing manual work, allowing 
+                    you to focus on engineering while we ensure your operations remain compliant and secure.        
+                </p> -->
+
+            <div class="heading-small">
+                <span class="small-title">
+                    Datenschutz und sichere Kommunikation
+                </span>
+                <h4 class="title">
+                    <small>Ende-zu-Ende-</small>Verschlüsselung gewährleistet
+                </h4>
+                <p class="subTitle">
+                    Dieser Einstiegspunkt bietet einen kompakten Überblick darüber, was Ende-zu-Ende-
+Verschlüsselung ist, ihren Zweck, ihre Vorteile und ihre Einschränkungen.
+                </p>
+            </div>
+            <figure>
+                <img src="assets/images/data-safety/image1.png" width="126" height="141" alt="">
+            </figure>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="audited">
+        <div class="container audited-data">
+            <div class="thirdPartyAudit">
+                <div class="item">
+                    <h3>Third Party Audited</h3>
+                    <p>
+                        BuildTwin stands for trust and reliability, with a commitment to excellence 
+                        that is continually verified by external experts. Our platform undergoes 
+                        rigorous and frequent audits by top-tier security, infrastructure, and data 
+                        privacy firms, ensuring that we not only meet but exceed industry standards. 
+                        <br><br>
+                        These comprehensive evaluations lead to certifications that reflect our dedication 
+                        to maintaining the highest level of security and privacy for our clients. With BuildTwin, you have 
+                        the assurance that an independent body of experts continually validates the strength 
+                        and resilience of our systems.
+
+                    </p>
+                    <div class="reportForm">
+
+                        <a (click)="call()"class="button-v2 data_safety_request_report_btn" href="javascript:void(0)">Request report</a>
+                    </div>
+                </div>
+            </div>
+            <div class="audited-lock">
+                <picture>
+                    <img src="assets/images/data-safety/lock.png" srcset="assets/images/data-safety/lock@2x.png 2x"
+                        width="467" height="535" alt="Lock">
+                </picture>
+            </div>
+        </div>
+        <div class="bg-building">
+            <img src="assets/images/data-safety/bg-building.jpg" width="418" height="552" alt="Buildtwin">
+        </div>
+    </div> -->
+    <div class="container">
+        <div class="data-confidential">
+            <div class="heading">
+                <h2 class="title">
+                    We ensure that your data
+                    remains confidential, secure
+                    and  <span>under your control.</span>
+                </h2>
+            </div>
+            <div class="content">
+                <p>
+                    Our <strong>AI-driven platform</strong> is meticulously designed with 
+    industry-leading privacy protocols.
+                </p>
+                <p>
+                    We prioritize the safeguarding of your digital assets, incorporating
+    advanced encryption, continuous risk assessments and customized
+    privacy settings that align with the <strong>most stringent Compliance
+        Standards.</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="head">
+        <span>
+            Your data
+        </span>
+        <div class="center">
+            <img src="assets/images/for-seller/icon1.png" width="60" height="71" alt="">
+            Full Control<br>
+over your data
+        </div>
+        <span>
+            powering <br>
+your AI Features
+        </span>
+    </div>
+</div>
+<app-data-safety-faq></app-data-safety-faq>
+
+<!-- Sticky Comply With Section at Bottom -->
+<div class="sticky-comply-with">
+    <div class="container">
+        <div class="comply-with">
+            <span>
+                Comply with 
+            </span>
+            <ul>
+                <li>
+                    ISO 27001
+                </li>
+                <li>
+                    SMART BIM
+                </li>
+                <li>
+                    NIS2
+                </li>
+                <li>
+                    SOC2
+                </li>
+                <li>
+                    CYBER ESSENTIALS
+                </li>
+                <li>
+                    GDPR
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<app-hd-footer></app-hd-footer>
+
+<div class="popUP" [ngClass]="{'active':showPopup}">
+    <div class="coverPopup">
+      <i class="closeIcon" (click)="closePopup()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <g clip-path="url(#clip0_2773_11848sss)">
+          <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_2773_11848">
+          <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+          </clipPath>
+          </defs>
+          </svg>
+      </i>
+      <div class="coverPopupData">
+   
+    <div id="hubspotFormContainer2"></div>
+  </div>
+  </div>
+</div>
+</div>

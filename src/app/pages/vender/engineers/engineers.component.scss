@@ -1,0 +1,245 @@
+:host ::ng-deep {
+    .slider {
+        padding-bottom: 56px;
+        .container {
+            .wrap {
+                .flex {
+                    display: flex;
+
+                    .left {
+                        min-width: 452px;
+                       
+
+                        h2 {
+                            color: #0E0E28;
+
+                            font-size: 48px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 120%;
+                            /* 57.6px */
+                            margin-bottom: 19px;
+                        }
+
+                        span {
+                            color: #0053fa;
+
+                            font-family: "jeff-script";
+                            font-size: 48px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 100%;
+                            /* 48px */
+                        }
+                    }
+
+                    .right {
+                        flex: 1;
+                        display: flex;
+                        gap: 80px;
+                        align-items: center;
+
+                        .imgWrap {
+                            img{
+                                width: 422px;
+                                border-radius: 24px;
+                            }
+                        }
+
+                        .content {
+                            h2 {
+                                color: var(--Black, #000);
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 140%;
+                                /* 44.8px */
+                            }
+
+                            span {
+                                color: var(--grey, var(--grey, #808080));
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                                /* 28px */
+                                display: block;
+                                margin-bottom: 16px;
+                            }
+                            span.position{
+                                font-size: 16px;   
+                                margin-bottom: 28px;      
+                            }
+
+                            p {
+                                color: #0E0E28;
+
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 140%;
+                                /* 22.4px */
+                            }
+
+                            .expert {
+                                margin-top: 45px;
+
+                                h3 {
+                                    color: #0E0E28;
+                                    font-size: 18px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: 140%;
+                                    margin-bottom: 0;
+
+                                    span {
+                                        color: var(--primary, #0053fa);
+                                        font-weight: 400;
+                                        font-size: 20px;
+                                        display: inline-block;
+                                        margin-bottom: 0;
+
+                                    }
+                                  
+
+                                    margin-bottom: 8px;
+                                }
+
+                                ul {
+                                    padding: 0;
+                                    margin: 0;
+                                    li {
+                                        display: flex;
+                                        background: var(--secondary, #F3F8FF);
+                                        flex-shrink: 0;
+                                        width: 184px;
+                                        border-radius: 4px;
+                                        color: #0E0E28;
+                                        font-size: 14px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 130%;
+                                        margin-bottom: 8px;
+                                        padding: 4px 10px;
+
+                                        strong {
+                                            color: var(--primary, #0053fa);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+      ::ng-deep  .owl-dots {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        
+        ::ng-deep   .owl-theme .owl-dots .owl-dot span {
+            width: 30px;
+            height: 4px;
+            margin: 0;
+            display: block;
+            -webkit-backface-visibility: visible;
+            transition: opacity 0.2s ease;
+            border-radius: 0;
+            background: none;
+            margin-right: 5px;
+            border-radius: 100px;
+        }::ng-deep   .owl-theme .owl-dots .owl-dot span{
+            background: #F3F8FF;
+        }
+        ::ng-deep  .owl-theme .owl-dots .owl-dot.active span,::ng-deep   .owl-theme .owl-dots .owl-dot:hover span {
+            background: #0053fa;
+        }
+
+        ::ng-deep  .owl-nav {
+            right: 50px;
+            top: 52px;
+            margin-top: 0;
+            transform-origin: right top;
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 36px;
+            top: auto;
+        }
+        ::ng-deep    .owl-theme .owl-nav [class*=owl-] {
+            right: 0;
+            z-index: 99;
+            width: 48px;
+            bottom: 0;
+            height: 48px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            background-color: var(--whiteColor);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            position: relative;
+        }
+        ::ng-deep    .owl-theme .owl-nav [class*=owl-] .ti.ti-chevron-left,  ::ng-deep  .owl-theme .owl-nav [class*=owl-] .ti.ti-chevron-right {
+            font-size: 28px;
+            color: #000;
+        }
+        ::ng-deep   .owl-theme .owl-nav [class*=owl-]:hover {
+            opacity: 0.92;
+            background-color: var(--themeColor);
+        }
+        ::ng-deep     .owl-theme .owl-nav [class*=owl-]:hover .ti.ti-chevron-left,  ::ng-deep  .owl-theme .owl-nav [class*=owl-]:hover .ti.ti-chevron-right {
+            color: #fff;
+        }
+       
+    }
+}
+
+@media (max-width:1200px){
+   :host ::ng-deep .slider {
+        padding-bottom: 56px;
+        padding: 0 30px;
+    }
+    :host ::ng-deep .slider .container .wrap .flex .left {
+        min-width: 177px;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .slider .container .wrap .flex {
+        flex-direction: column;
+     
+    }
+    :host ::ng-deep .slider .container .wrap .flex .right {
+        flex-direction: column;
+        align-items: baseline;
+        gap: 25px;
+    }
+    :host ::ng-deep .slider  {
+        padding: 0 15px;
+        .container {
+            padding: 0 ;
+        }
+    }
+
+    :host ::ng-deep .slider .owl-nav {
+        left: auto;
+        bottom: 33px;
+        right: 12px;
+    }
+    :host ::ng-deep .slider .owl-dots {
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        right: 0;
+    }
+}

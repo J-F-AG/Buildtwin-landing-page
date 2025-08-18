@@ -1,0 +1,210 @@
+<div class="banner-area" id="home-banner">
+  <owl-carousel-o #owlCarousel [options]="aboutSlider" (translated)="onTranslated($event)">
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide1.png" width="482" height="473" alt="BuildTwin Professional Executive">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide1.png" width="482" height="473" alt="BuildTwin Professional Executive">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h1>
+              Introducing <span>BuildTwin</span>
+            </h1>
+            <p class="small-title">
+              Meet our professional team members who are dedicated to delivering exceptional results. 
+              BuildTwin excels at various tasks in work and life, getting everything done while you rest.
+            </p>
+          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide2.png" width="482" height="473" alt="BuildTwin Company Leader Introduction">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide2.png" width="482" height="473" alt="BuildTwin Company Leader Introduction">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Meet Our <span>Leadership Team</span>
+            </h2>
+            <p class="small-title">
+              Our experienced leaders bring years of expertise and innovation to every project. 
+              Trusted, Reliable and Efficient – Access pre-qualified experts who deliver on time, within budget and to your standards.
+            </p>
+          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide3.png" width="482" height="473" alt="BuildTwin Team Member Presentation">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide3.png" width="482" height="473" alt="BuildTwin Team Member Presentation">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Our Expert <span>Team Members</span>
+            </h2>
+            <p class="small-title">
+              Our dedicated team members are here to simplify your project coordination, ensuring timelines, quality
+              and budget are on track. Achieve more with intelligent automation.
+            </p>
+          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div class="slide">
+        <figure class="left">
+          <img src="assets/images/slide4.png" width="482" height="473" alt="BuildTwin Senior Expert Introduction">
+        </figure>
+        <figure class="right">
+          <img src="assets/images/slide4.png" width="482" height="473" alt="BuildTwin Senior Expert Introduction">
+        </figure>
+        <div class="slide-content center">
+          <div>
+            <h2>
+              Senior Experts <span>Ensuring Quality</span>
+            </h2>
+            <p class="small-title">
+              Our senior experts check every detail and ensure quality across all projects. 
+              We track all changes, conversations, and revisions, ensuring every deliverable meets compliance with your requirements.
+            </p>
+          </div>
+          <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
+        </div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+  <div class="slide-navigation">
+    <ul>
+      <li (click)="goToSlide(0)" [ngClass]="{'active': currentIndex==0}">
+        1 | Introducing BuildTwin
+      </li>
+      <li (click)="goToSlide(1)" [ngClass]="{'active': currentIndex==1}">
+        2 | Meet Our Leadership Team
+      </li>
+      <li (click)="goToSlide(2)" [ngClass]="{'active': currentIndex==2}">
+        3 | Our Expert Team Members
+      </li>
+      <li (click)="goToSlide(3)" [ngClass]="{'active': currentIndex==3}">
+        4 | Senior Experts Ensuring Quality
+      </li>
+    </ul>
+  </div>
+</div>
+<ng-template #buttonTemplate>
+  <div class="button-wrapper flex-justify-center">
+    <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+      Get started NOW
+    </a>
+    <a (click)="call()" href="javascript:void(0)" class="button-v2 border">
+      <img src="assets/images/icons/icon1.png" width="23" height="23" alt="Schedule DEMO">
+      Schedule DEMO
+    </a>
+  </div>
+</ng-template>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}" (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+
+
+  <!-- <div class="integrationsList roundButtonWrapper">
+    <owl-carousel-o [options]="integrationsList">
+      <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers">
+              <picture>
+                <source srcset="assets/images/gbc_black.webp" type="image/webp">
+                <source srcset="assets/images/gbc_black.png" type="image/png">
+                <img src="assets/images/gbc_black.png" 
+                     alt="Gbc" 
+                     style="width: 100px;" 
+                     width="100" 
+                     height="57">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india">
+              <picture>
+                <source srcset="assets/images/jf_black.webp" type="image/webp">
+                <source srcset="assets/images/jf_black.png" type="image/png">
+                <img src="assets/images/jf_black.png" 
+                     alt="J&F" 
+                     style="width: 68.522px;" 
+                     width="68.522" 
+                     height="34.731">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant">
+              <picture>
+                <source srcset="assets/images/durchgeplant_black.webp" type="image/webp">
+                <source srcset="assets/images/durchgeplant_black.png" type="image/png">
+                <img src="assets/images/durchgeplant_black.png" 
+                     alt="durchgeplant" 
+                     style="width: 217.053px;" 
+                     width="217.053" 
+                     height="34.729">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited">
+              <picture>
+                <source srcset="assets/images/aarbee_black.webp" type="image/webp">
+                <source srcset="assets/images/aarbee_black.png" type="image/png">
+                <img src="assets/images/aarbee_black.png" 
+                     alt="Aarbee" 
+                     style="width: 399.985px;" 
+                     width="399.985" 
+                     height="50.847">
+            </picture>
+            </a>
+        </div>
+    </ng-template>
+    <ng-template carouselSlide>
+        <div class="integration-box text-center">
+            <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering">
+              <picture>
+                <source srcset="assets/images/caldim_black.webp" type="image/webp">
+                <source srcset="assets/images/caldim_black.png" type="image/png">
+                <img src="assets/images/caldim_black.png" 
+                     alt="Caldim" 
+                     style="width: 134.489px;" 
+                     width="134.489" 
+                     height="56.627">
+              </picture>
+            </a>
+        </div>
+    </ng-template>
+  </owl-carousel-o>
+  </div> -->
+  <!-- <div class="toggle-sidebar" (click)="toggleSidebar()">
+    Start Enquiry
+  </div>
+  <div class="StickyPosition" [ngClass]="{'show':toggleSidebarStatus}">
+  <div class="formContainer">
+    <span class="cross" (click)="toggleSidebar()"></span>
+    <app-free-offer-form [type]="'outside'" [normalBtn]="true"></app-free-offer-form>
+</div>
+  </div> -->

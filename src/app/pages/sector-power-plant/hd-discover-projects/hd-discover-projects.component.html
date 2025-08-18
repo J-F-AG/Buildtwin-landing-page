@@ -1,0 +1,55 @@
+<div class="project-providers global-mb">
+    <div class="heading" *ngIf="!page; else other_content">
+      <span class="main-title" *ngIf="!hideTitle">Discover top-tier solutions tailored to your project needs</span>
+      <hr>
+      <h2 class="title">Discover specialist projects providers</h2>
+      <span class="subTitle">From complex Design to Detailing - book services from a single vendor or manage joint-bids. </span>
+    </div>  
+    <ng-template #other_content>
+        <div class="heading">
+          <h2 class="title">Featured Projects</h2>
+          <span class="subTitle">Explore our portfolio of successful engineering projects across various sectors</span>
+        </div>  
+    </ng-template>
+    <div class="project-providers__carousel squareButtonWrapper">
+      <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser">
+            <ng-container *ngFor="let item of projectsArray">
+                <ng-template carouselSlide>
+                    <div class="item">
+                        <div class="d-flex col-gap factories">
+                            <div class="d-flex factory-box">
+                                <div class="bg-image" [style]="{'background-image': 'url(' + item.img + ')'}">
+                                    <div class="country-bg">
+                                        <img src={{item.locationFlag}} [alt]="item.alt" class="cntry-img">
+                                        <span class="cntry-txt">{{item.company}}</span>
+                                    </div>
+                                </div>
+                                <div class="factory-detail">
+                                    <h5 class="fact-title">{{item.projectTitle}}</h5>
+                                    <span> <ng-container *ngIf="page"> Commercial building | </ng-container> {{item['category']}}</span>
+                                    <p class="fact-desc">{{item.serviceDescription}}
+                                        
+                                    </p>
+                                    <span *ngIf="page" class="duration">
+                                        Duration: 6 months
+                                    </span>
+                                    <a target="_blank" [routerLink]="_languageService.currentLanguage+item.link" class="cmpny-logo">
+                                        <span class="logo-img">
+                                            <img src={{item.serviceCompanyIcon}} alt="Icon">
+                                        </span>
+                                        <span class="heading-slide">vendor
+                                            <br>
+                                            <span class="heading-1">{{item.serviceCompany}}</span>
+                                        </span>
+                                        <img src="assets/images/home/vector.svg" alt="Icon" class="arrow-vector">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </ng-container>
+      </owl-carousel-o>
+    </div>
+    
+  </div>

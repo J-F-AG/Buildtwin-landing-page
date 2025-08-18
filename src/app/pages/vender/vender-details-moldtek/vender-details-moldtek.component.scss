@@ -1,0 +1,41 @@
+
+.partnerData{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    li{
+        width: 200px;
+        span{
+            border-radius: 10px;
+    background: #f9f9f9;
+    display: flex;
+    width: 170px;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    color: #221638;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+        }
+    }
+}
+.imgWrap {
+    min-width: 422px;
+}
+:host ::ng-deep #team .slider .container .wrap .flex .right .content {
+    width: auto;
+}
+:host ::ng-deep .slider .container .wrap .flex .right {
+    padding-bottom: 100px;
+}
+
+@media (max-width:767px){
+    .partnerData                                                                                                                                                                                                                                                                    {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+    }
+}

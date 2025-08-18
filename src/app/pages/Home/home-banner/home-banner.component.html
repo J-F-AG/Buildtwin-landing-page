@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="carousal-wrapper">
+        <div class="supper-wrapper" 
+        (mouseenter)="pauseCarousel()"
+         (mouseleave)="resumeCarousel()">
+            <nz-carousel #carousel [nzEffect]="effect" [nzAutoPlay]="autoPlay" (nzAfterChange)="onSlideChange($event)">
+                <div nz-carousel-content class="slide-wrapper" *ngFor="let slide of array; let i = index">
+                <h1>
+                    <span class="leave-it-to-text">{{slide['title'].split(' ').slice(0, 3).join(' ')}}</span>
+                    <span class="name-highlight">{{slide['title'].split(' ').slice(3).join(' ')}}</span>
+                </h1>
+                <p>
+                    {{slide['description']}}
+                </p>
+                <figure>
+                    <div class="video-wrapper">
+                        <img [attr.src]="slide['placeholderImage']" width="898" height="505" alt="">
+                        <div class="play-btn" (click)="onPlayVideo(i, slide['videoLink'])" [ngClass]="{'hide':playVideoStatus[i]}">
+                            <!-- Background Play Button (White Circle) -->
+                            <div class="play-button-background">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                    <circle cx="40" cy="40" r="40" fill="white" stroke="black" stroke-width="2"/>
+                                    <path d="M55.1976 37.2922C56.4765 38.0716 56.4765 39.9284 55.1976 40.7078L34.0408 53.6013C32.708 54.4136 31 53.4543 31 51.8935L31 26.1065C31 24.5457 32.708 23.5864 34.0408 24.3987L55.1976 37.2922Z" fill="black"/>
+                                </svg>
+                            </div>
+                            <!-- Foreground Play Button (Black Circle) -->
+                            <div class="play-button-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="30" r="30" fill="black"/>
+                                    <path d="M41.3982 27.9692C42.3574 28.5537 42.3574 29.9463 41.3982 30.5308L25.5306 40.201C24.531 40.8102 23 40.0907 23 38.6703L23 19.3297C23 17.9093 24.531 17.1898 25.5306 17.799L41.3982 27.9692Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                         <iframe *ngIf="playVideoStatus[i]"
+                            width="898" height="505"
+                            [src]="videoUrl"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        <!-- Progress Bar at Bottom -->
+                        <div class="video-progress-bar">
+                            <div class="progress-dash" *ngFor="let dash of [1,2,3,4,5]; let i = index" 
+                                 [ngClass]="{'active': i === 0}"></div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+            </nz-carousel>
+    
+        </div>
+
+        <!-- Functional Slider Navigation -->
+        <div class="slider-navigation">
+            <div class="slider-dots">
+                <div class="dot" 
+                     *ngFor="let slide of array; let i = index" 
+                     [ngClass]="{'active': currentSlideIndex === i}"
+                     (click)="goToSlide(i)">
+                </div>
+            </div>
+        </div>
+    
+            <div class="link-wrapper">
+                <a href="https://www.buildtwin.com/get-started" class="banner-button">Get Started</a>
+                <a (click)="call()" href="javascript:void(0)" class="banner-button normal">Schedule DEMO</a>
+            </div>
+    </div>
+</div>
+<app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}"
+    (closePopupStatus)="closePopupStatus($event)"></app-hubspot>

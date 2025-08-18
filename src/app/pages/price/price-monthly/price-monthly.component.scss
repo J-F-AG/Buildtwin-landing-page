@@ -1,0 +1,71 @@
+:host ::ng-deep {
+    .planDetails {
+        border-radius: 4px;
+        background: var(--color-green-button, #FFF);
+        padding: 24px 0;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto 40px;
+        .container {
+            display: flex;
+            // max-width: 1296px;
+        }
+
+        .item{
+            text-align: left;
+            max-width: 261px;
+            h4{
+                color: var(--Black, #000);
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 11px;
+            }
+            P{
+                color: var(--grey, var(--grey, #808080));
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%; /* 19.6px */
+            }
+        }
+        .listCover{
+            display: flex;
+            gap:12px
+        }
+
+        .list{
+            display: flex;
+            gap:14px ;
+            color: var(--Neutral-800, #191D23);
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+align-items: center;
+span{
+    text-align: left;
+    min-width: 183px;
+}
+        }
+    }
+}
+
+@media (max-width:1200px){
+    :host ::ng-deep  .planDetails .listCover {
+       flex-wrap: wrap;
+       justify-content: end;
+    }
+}
+
+@media (max-width:767px){
+    :host ::ng-deep .planDetails {
+        flex-direction: column;
+    }
+    :host ::ng-deep .planDetails .listCover {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    
+}

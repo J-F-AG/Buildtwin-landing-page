@@ -1,0 +1,31 @@
+.e2eWrapper {
+    padding: 54px 0;
+    position: relative;
+
+    .e2eSection {
+        border-radius: 20px;
+        background: linear-gradient(90deg, #0053fa 0%, #0053fa 100%);
+        color: white;
+        padding: 40px 80px 40px 40px;
+        position: relative;
+        width: calc(100% - 50px);
+
+        .titleLogo{margin-bottom: 20px;}
+        h3{
+            color: white;
+            font-size: 32px;
+            font-weight: 600;
+        }
+        p{            
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .e2eIcon {
+            position: absolute;
+            right: -50px;
+            top: -50px;
+        }
+    }
+}
