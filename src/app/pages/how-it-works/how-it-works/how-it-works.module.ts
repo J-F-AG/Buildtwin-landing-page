@@ -12,6 +12,7 @@ import { SocialsMediaInfoComponent } from '../socials-media-info/socials-media-i
 import { HdIntegrationsModule } from 'src/app/pages/includes/hd-integrations/hd-integrations.module';
 import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
+import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 import { HIWCtaComponent } from '../hiwcta/hiwcta.component';
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
     HdIntegrationsModule,
     HdNavbarModule,
     HdFooterModule,
+    ProjectListModule,
     TtTestimonialsModule,
     RouterModule.forChild(routes),
   ],

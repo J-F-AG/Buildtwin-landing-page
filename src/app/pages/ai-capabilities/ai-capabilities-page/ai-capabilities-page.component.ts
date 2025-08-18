@@ -17,6 +17,9 @@ export class AiCapabilitiesPageComponent {
   // Category selection
   selectedCategory = 'ai-generation';
 
+  // Popup states
+  showPopup = false;
+
   // AI Capabilities data for different categories
   aiCapabilitiesData = {
     'ai-generation': [
@@ -79,33 +82,33 @@ export class AiCapabilitiesPageComponent {
         image: 'assets/images/new-v2-image4.png'
       }
     ],
-    'ai-agents': [
+    'ai-design-manager': [
       {
-        id: 'project-agent',
+        id: 'workflow-optimization',
         icon: 'assets/images/new-v2-icon1.png',
-        title: 'AI Project Agent',
-        description: 'Intelligent project management agent that coordinates tasks, tracks progress, and optimizes resource allocation.',
+        title: 'Workflow Optimization',
+        description: 'AI-powered workflow management that streamlines design processes and reduces bottlenecks.',
         image: 'assets/images/new-v2-image1.png'
       },
       {
-        id: 'design-agent',
+        id: 'design-consistency',
         icon: 'assets/images/new-v2-icon2.png',
-        title: 'AI Design Agent',
-        description: 'Specialized design agent that assists with creative decisions and design optimization throughout the project lifecycle.',
+        title: 'Design Consistency',
+        description: 'Ensure uniform design standards and maintain consistency across all project deliverables.',
         image: 'assets/images/new-v2-image2.png'
       },
       {
-        id: 'communication-agent',
+        id: 'resource-allocation',
         icon: 'assets/images/new-v2-icon3.png',
-        title: 'AI Communication Agent',
-        description: 'Smart communication agent that facilitates team collaboration and stakeholder communication.',
+        title: 'Resource Allocation',
+        description: 'Intelligent resource management for optimal team utilization and project efficiency.',
         image: 'assets/images/new-v2-image3.png'
       },
       {
-        id: 'analysis-agent',
+        id: 'project-tracking',
         icon: 'assets/images/new-v2-icon4.png',
-        title: 'AI Analysis Agent',
-        description: 'Advanced analysis agent that performs complex calculations and provides data-driven insights for decision making.',
+        title: 'Project Tracking',
+        description: 'Real-time project monitoring with AI insights for better decision making and timeline management.',
         image: 'assets/images/new-v2-image4.png'
       }
     ]
@@ -181,6 +184,14 @@ export class AiCapabilitiesPageComponent {
     // this.titleService.setTitle(this.title);
 
   
+  }
+
+  callStatus() {
+    this.showPopup = true;
+  }
+
+  closePopupStatus($event: any) {
+    this.showPopup = false;
   }
 
   // Handle carousel slide changes

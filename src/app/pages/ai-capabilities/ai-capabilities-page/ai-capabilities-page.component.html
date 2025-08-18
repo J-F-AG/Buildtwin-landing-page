@@ -8,6 +8,120 @@
 <app-ai-capabilities-banner></app-ai-capabilities-banner>
 <app-company-logos-slider></app-company-logos-slider>
 
+<!-- 3 reasons to get started NOW Section -->
+<app-get-started-block>
+    <div class="heading center v2">
+       <h2 class="title">
+        3 reasons to get started  <span>NOW</span>
+       </h2> 
+    </div>
+    
+    <div class="block-wrapper-arrow">
+        <div class="block">
+            <img src="assets/images/seller1-arrow.png" alt="arrow" width="29" height="59">
+        </div>
+        <div class="block">
+            <img src="assets/images/seller2-arrow.png" alt="arrow" width="24" height="61">
+        </div>
+        <div class="block">
+            <img src="assets/images/seller3-arrow.png" alt="arrow" width="29" height="59">
+        </div>
+    </div>
+    <div class="block-wrapper">
+        <div class="block">
+            <div class="delivery-type-label ai-human">AI + Human Engineering</div>
+            <div class="note">
+                in less than 5 min.
+            </div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer1@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer1.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer1@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer1.png" 
+                        alt="buyer1" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Design Manager</h3>
+                <p class="benefit-subtext">Optimize structural workflows for faster, more reliable delivery.</p>
+                <a href="javascript:void(0)" (click)="selectCategory('ai-generation'); scrollToSection('ai-capabilities')" class="button-v2">
+                    Explore AI Design Manager
+                </a>
+            </div>
+        </div>
+        <div class="block">
+            <div class="delivery-type-label ai-human">AI + Human Engineering</div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer2@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer2.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer2@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer2.png" 
+                        alt="buyer2" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Quality Control</h3>
+                <p class="benefit-subtext">Catch issues early and ensure code compliance with confidence.</p>
+                <a href="javascript:void(0)" (click)="selectCategory('ai-quality-control'); scrollToSection('ai-capabilities')" class="button-v2 mark_page_explore_3_reason">
+                    Explore AI Quality Control
+                </a>
+            </div>
+        </div>
+        <div class="block">
+            <div class="delivery-type-label ai-human">AI + Human Engineering</div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/sellers3@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/sellers3.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/sellers3@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/sellers3.png" 
+                        alt="sellers3" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Drawing Generation</h3>
+                <p class="benefit-subtext">Produce structural drawings up to 3x faster with higher consistency.</p>
+                <a href="javascript:void(0)" (click)="selectCategory('ai-generation'); scrollToSection('ai-capabilities')" class="button-v2">
+                    Explore AI Drawing Generation
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</app-get-started-block>
+
 <!-- AI Capabilities Carousel Section -->
 <div class="global-mb" id="ai-capabilities" style="margin-top: 60px;">
     <div class="container heading-sticky">
@@ -38,9 +152,9 @@
                 </button>
                 <button 
                     class="selector-tab" 
-                    [class.active]="selectedCategory === 'ai-agents'"
-                    (click)="selectCategory('ai-agents')">
-                    AI Agents
+                    [class.active]="selectedCategory === 'ai-design-manager'"
+                    (click)="selectCategory('ai-design-manager')">
+                    AI Design Manager
                 </button>
             </div>
         </div>
@@ -87,40 +201,34 @@
     </div>
 </div>
 
-<!-- Connect with the right consultancy section -->
-<div class="bg global-mb">
-    <div class="container heading-sticky">
-        <div class="heading center v2">
-                <h2 class="title">
-                    Delivery by Humans<br>
-                    <span>engineering projects</span>
-                </h2>
-                <p class="small-title">
-                    Explore detailed engineering projects and consultancies, and get <br>fast, competitive quotes for your next project.
-                </p>
-        </div>
-    </div>
-    <app-project-list [slider]="true" [hideMessageBox]="true">
-        <div class="message">
-            <div class="content">
-                <h4>
-                    Delivery by Humans<strong> - TEST</strong> engineering consultancies.
-                </h4>
-                <p>
-                    Get started now with BuildTwin to explore a wide range of industry-specific
-projects and connect with top-reated experts
-                </p>
-            </div>
-            <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 home_get_started_for_free">
-                Get started for FREE
-            </a>
-        </div>
-    </app-project-list>
-</div>
+
 <app-tt-testimonials></app-tt-testimonials>
 <app-hd-good-company [count]="5"></app-hd-good-company>
 
 <!-- FAQ Section -->
 <app-em-faq></app-em-faq>
+
+<!-- Popup for Schedule Call -->
+<div class="popUP" [ngClass]="{'active':showPopup}">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3>Schedule a Call</h3>
+            <button class="close-btn" (click)="closePopupStatus($event)">
+                <i class="ti ti-x"></i>
+            </button>
+        </div>
+        <div class="popup-body">
+            <p>Our global Sales team is ready to help you grow with BuildTwin. Schedule a call to learn more about how we can fuel your growth.</p>
+            <div class="popup-actions">
+                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+                    Get Started
+                </a>
+                <button class="button-v2 border" (click)="closePopupStatus($event)">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <app-hd-footer></app-hd-footer>

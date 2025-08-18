@@ -8,7 +8,7 @@ import { HdFooterModule } from '../../includes/hd-footer/hd-footer.module';
 import { HdGoodCompanyModule } from '../hd-good-company/hd-good-company.module';
 import { HdIntegrationsModule } from '../../includes/hd-integrations/hd-integrations.module';
 import { CompanyLogosSliderModule } from '../company-logos-slider/company-logos-slider.module';
-import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
+
 import { TtTestimonialsModule } from '../../marketplace/marketPlace/tt-testimonials/tt-testimonials.module';
 import { HeavyLiftingModule } from '../heavy-lifting/heavy-lifting.module';
 import { ServiceListModule } from 'src/app/include-component/service-list/service-list.module';
@@ -36,7 +36,7 @@ const routes: Routes = [
     HdIntegrationsModule,
     HdGoodCompanyModule,
     CompanyLogosSliderModule,
-    ProjectListModule,
+
     TtTestimonialsModule,
     HeavyLiftingModule,
     ServiceListModule,
