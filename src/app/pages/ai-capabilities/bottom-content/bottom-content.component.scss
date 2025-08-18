@@ -12,6 +12,7 @@
     flex: 1;
     overflow: hidden;
     position: relative;
+    z-index: 10; /* keep under the tab bar but above page bg */
 }
 
 // Teaser overlay styles
@@ -26,7 +27,7 @@
     align-items: center;
     justify-content: center;
     z-index: 5;
-    pointer-events: none;
+    pointer-events: none; /* allow clicks to pass through to tabs */
     
     .teaser-content {
         text-align: center;

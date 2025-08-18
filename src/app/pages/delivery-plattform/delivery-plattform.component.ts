@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
-
+import { ArcadeService } from 'src/app/include-component/arcade-container/arcade.service';
 
 @Component({
   selector: 'app-delivery-plattform',
@@ -34,6 +34,36 @@ export class DeliveryPlattformComponent {
 navBar:any
 tabHead:any
 selectedIndex: number = 0
+  
+  // Feature carousel options
+  featureCarouselOptions = {
+    nav: true,
+    margin: 20,
+    dots: false,
+    loop: true,
+    autoplay: false,
+    autoplayHoverPause: true,
+    navText: [
+      "<i class='ti ti-chevron-left'></i>",
+      "<i class='ti ti-chevron-right'></i>",
+    ],
+    stagePadding: 0,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      900: {
+        items: 3
+      },
+      1200: {
+        items: 4
+      }
+    }
+  };
+  
   tabDetail: any =[
     {
       icon:'assets/images/icons/manage-portfolio.png',
@@ -76,7 +106,13 @@ selectedIndex: number = 0
       targetwebp2x: 'assets/images/for-seller/mange-portfolio@2x.webp',
     }
   ]
-  constructor(private titleService: Title, private router: Router, public _languageService:LanguageService) {
+  constructor(
+    private titleService: Title,
+    private router: Router,
+    public _languageService: LanguageService,
+    private arcadeService: ArcadeService
+  ) {
+    this.titleService.setTitle('BuildTwin - Collaborate seamless with AI');
     router.events.subscribe((val) => {
       setTimeout(() => {
       this.scrollActivated = document.getElementById('scrollActivated');
@@ -155,6 +191,17 @@ selectedIndex: number = 0
   }
   changeTab(index){
     this.selectedIndex = index
+  }
+  openArcadeDemo(featureKey: string) {
+    const arcadeData = this.arcadeService.arcadeData;
+    
+    if (arcadeData[featureKey]) {
+      const url = arcadeData[featureKey].url;
+      window.open(url, '_blank');
+    } else {
+      // Fallback for features not in arcade service
+      console.log(`Arcade demo not available for: ${featureKey}`);
+    }
   }
   ngOnDestroy() {
     try {

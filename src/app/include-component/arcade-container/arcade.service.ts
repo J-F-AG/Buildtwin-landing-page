@@ -29,6 +29,26 @@ export class ArcadeService {
       url: 'https://demo.arcade.software/BUoNDbLf7WRYss33qS2J?embed&embed_custom&show_copy_link=true',
       title: 'View files and comment',
       paddingBottom: 'calc(51.724137931034484% + 41px)'
+    },
+    'ai-revision-tracking': {
+      url: 'https://demo.arcade.software/ai-revision-tracking-demo?embed&embed_custom&show_copy_link=true',
+      title: 'AI Revision Tracking',
+      paddingBottom: 'calc(52% + 41px)'
+    },
+    'ai-technical-discussions': {
+      url: 'https://demo.arcade.software/ai-discussions-demo?embed&embed_custom&show_copy_link=true',
+      title: 'AI Technical Discussions Tracking',
+      paddingBottom: 'calc(52% + 41px)'
+    },
+    'automated-task-management': {
+      url: 'https://demo.arcade.software/automated-tasks-demo?embed&embed_custom&show_copy_link=true',
+      title: 'Automated Task Management',
+      paddingBottom: 'calc(52% + 41px)'
+    },
+    'cde-integration': {
+      url: 'https://demo.arcade.software/cde-integration-demo?embed&embed_custom&show_copy_link=true',
+      title: 'Upload to Client CDE',
+      paddingBottom: 'calc(52% + 41px)'
     }
   };
   constructor() { }

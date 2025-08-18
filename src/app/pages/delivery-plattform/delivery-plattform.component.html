@@ -35,13 +35,13 @@
             </picture>
         </div>
     </div>    
-
+  
     <app-experence>
         <div class="container">
             <div class="heading center v2">
                 <h2 class="title">
         
-                    AI-Powered Structural Drawing Platform
+                    Collaborate seamless with AI
                     
                 </h2> 
                 <div class="subTitle">
@@ -57,19 +57,84 @@
                 & Validation
             </div>
             <span>
-                Automated<br>
-                Drawing Generation
+                Human<br>
+                Engineering
             </span>
             <div class="center">
                 <img src="assets/images/for-seller/icon1.png" width="60" height="71" alt="">
-                Intelligent<br>
-                Design Review
+                BuildTwin<br>
+                One
             </div>
             <span>
-                Real-time<br>
-                Collaboration & Version Control
+                AI<br>
+                Capabilities
             </span>
         </div>
+        
+        <!-- How it works Section -->
+        <div class="how-it-works-section">
+            <div class="container heading-sticky">
+                <div class="heading center v2">
+                    <h2 class="title">
+                        How it works
+                    </h2>
+                    <p class="small-title">Find out what makes BuildTwin the most trusted, efficient, and innovative marketplace
+                        <br>for finding and working with global talents.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="list-wrapper">
+                    <div class="block">
+                        <div class="step-number">1</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy6@2x.png"
+                                srcset="assets/images/icons/heavy6@2x.png 2x, assets/images/icons/heavy6.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>
+                            Set-up the AI<br>
+                            delivery system
+                        </h3>
+                        <div class="time-label">Takes less than 5 min</div>
+                        <p>Configure your AI delivery preferences and
+                            connect your existing tools for seamless
+                            integration with our platform.</p>
+                    </div>
+                    <div class="block">
+                        <div class="step-number">2</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy5@2x.png"
+                                srcset="assets/images/icons/heavy5@2x.png 2x, assets/images/icons/heavy5.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>
+                            Add AI<br>
+                            capabilities
+                        </h3>
+                        <p>Select from our comprehensive suite of
+                            AI-powered engineering tools and
+                            capabilities to enhance your workflow.</p>
+                    </div>
+                    <div class="block">
+                        <div class="step-number">3</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy4@2x.png"
+                                srcset="assets/images/icons/heavy4@2x.png 2x, assets/images/icons/heavy4.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>Insured delivery with a<br>
+                            25+ year old global business
+                        </h3>
+                        <p>Full control and visibility with industry-leading
+                            security protocols ensuring your data remains
+                            confidential and under your control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Statistics Block -->
         <div class="container global-mb">
             <div class="block-wrapper">
                     <div class="block">
@@ -110,6 +175,7 @@
                     </div>
             </div>
         </div>
+        
         </app-experence>
         
         <!-- What you can do at BuildTwin Section -->
@@ -119,51 +185,73 @@
                     <h2 class="title">What you can do with <span class="highlight">BuildTwin One</span></h2>
                 </div>
                 
-                <!-- First Row of Feature Cards -->
-                <div class="feature-cards-row">
-                    <div class="feature-card">
-                        <div class="card-icon">
-                            <img src="assets/images/icons/track-submissions.png" alt="Track submissions" width="48" height="48">
-                        </div>
-                        <h3>Track your submissions</h3>
-                        <p>Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.</p>
-                        <div class="card-screenshot">
-                            <img src="assets/images/ui/track-submissions-screenshot.png" alt="Track submissions interface" width="200" height="120">
-                        </div>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="card-icon">
-                            <img src="assets/images/icons/view-files-comment.png" alt="View files and comment" width="48" height="48">
-                        </div>
-                        <h3>View files and comment</h3>
-                        <p>Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.</p>
-                        <div class="card-screenshot">
-                            <img src="assets/images/ui/view-files-screenshot.png" alt="File viewer with comments" width="200" height="120">
-                        </div>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="card-icon">
-                            <img src="assets/images/icons/share-ease.png" alt="Share with ease" width="48" height="48">
-                        </div>
-                        <h3>Share with ease</h3>
-                        <p>Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.</p>
-                        <div class="card-screenshot">
-                            <img src="assets/images/ui/share-screenshot.png" alt="File sharing interface" width="200" height="120">
-                        </div>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="card-icon">
-                            <img src="assets/images/icons/filters-workflow.png" alt="Filters and Workflow" width="48" height="48">
-                        </div>
-                        <h3>Filters and Workflow in min.</h3>
-                        <p>Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.</p>
-                        <div class="card-screenshot">
-                            <img src="assets/images/ui/filters-screenshot.png" alt="Filters and workflow interface" width="200" height="120">
-                        </div>
-                    </div>
+                <!-- Feature Cards Carousel -->
+                <div class="feature-cards-carousel">
+                    <owl-carousel-o [options]="featureCarouselOptions">
+                        <ng-template carouselSlide>
+                            <div class="feature-card" (click)="openArcadeDemo('track-submissions')">
+                                <div class="card-icon">
+                                    <img src="assets/images/icons/icon1.png" alt="Track submissions" width="48" height="48">
+                                </div>
+                                <h3>Track your submissions</h3>
+                                <p>Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.</p>
+                                <div class="card-screenshot">
+                                    <img src="assets/images/ui/track-submissions-screenshot.png" alt="Track submissions interface" width="200" height="120">
+                                    <div class="play-overlay">
+                                        <i class="play-icon">▶</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        
+                        <ng-template carouselSlide>
+                            <div class="feature-card" (click)="openArcadeDemo('view-files-comment')">
+                                <div class="card-icon">
+                                    <img src="assets/images/icons/icon2.png" alt="View files and comment" width="48" height="48">
+                                </div>
+                                <h3>View files and comment</h3>
+                                <p>Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.</p>
+                                <div class="card-screenshot">
+                                    <img src="assets/images/ui/view-files-comment-screenshot.png" alt="File viewer with comments" width="200" height="120">
+                                    <div class="play-overlay">
+                                        <i class="play-icon">▶</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        
+                        <ng-template carouselSlide>
+                            <div class="feature-card" (click)="openArcadeDemo('share-with-ease')">
+                                <div class="card-icon">
+                                    <img src="assets/images/icons/manage-portfolio.png" alt="Share with ease" width="48" height="48">
+                                </div>
+                                <h3>Share with ease</h3>
+                                <p>Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.</p>
+                                <div class="card-screenshot">
+                                    <img src="assets/images/ui/share-with-ease-screenshot.png" alt="File sharing interface" width="200" height="120">
+                                    <div class="play-overlay">
+                                        <i class="play-icon">▶</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        
+                        <ng-template carouselSlide>
+                            <div class="feature-card" (click)="openArcadeDemo('project-workflow')">
+                                <div class="card-icon">
+                                    <img src="assets/images/icons/match.png" alt="Filters and Workflow" width="48" height="48">
+                                </div>
+                                <h3>Filters and Workflow in min.</h3>
+                                <p>Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.</p>
+                                <div class="card-screenshot">
+                                    <img src="assets/images/ui/filters-workflow-screenshot.png" alt="Filters and workflow interface" width="200" height="120">
+                                    <div class="play-overlay">
+                                        <i class="play-icon">▶</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
                 </div>
                 
                 <!-- Middle Separator -->
@@ -176,51 +264,73 @@
                     </div>
                 </div>
                 
-                <!-- Second Row of AI Feature Cards -->
-                <div class="feature-cards-row">
-                    <div class="feature-card">
-                        <div class="card-icon">
-                            <img src="assets/images/icons/ai-revision-tracking.png" alt="AI Revision Tracking" width="48" height="48">
-                        </div>
-                        <h3>AI Revision Tracking</h3>
-                        <p>Provides AI based version control, ensuring traceability and simplifying management of design iterations.</p>
-                        <div class="card-screenshot">
-                            <img src="assets/images/ui/ai-revision-screenshot.png" alt="AI revision tracking interface" width="200" height="120">
-                        </div>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="card-icon">
-                            <img src="assets/images/icons/ai-technical-discussions.png" alt="AI Technical Discussions" width="48" height="48">
-                        </div>
-                        <h3>AI Technical Discussions Tracking</h3>
-                        <p>AI based real-time collaboration on technical details, keeping discussions contextual and actionable.</p>
-                        <div class="card-screenshot">
-                            <img src="assets/images/ui/ai-discussions-screenshot.png" alt="AI technical discussions interface" width="200" height="120">
-                        </div>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="card-icon">
-                            <img src="assets/images/icons/automated-task-management.png" alt="Automated Task Management" width="48" height="48">
-                        </div>
-                        <h3>Automated Task Management</h3>
-                        <p>Reduces manual oversight by prioritizing and assigning tasks, leveraging AI for efficient workflow management.</p>
-                        <div class="card-screenshot">
-                            <img src="assets/images/ui/automated-tasks-screenshot.png" alt="Automated task management interface" width="200" height="120">
-                        </div>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="card-icon">
-                            <img src="assets/images/icons/upload-client-cde.png" alt="Upload to Client CDE" width="48" height="48">
-                        </div>
-                        <h3>Upload to Client CDE</h3>
-                        <p>Integrates with external systems for compliant and efficient handovers, critical for construction workflows.</p>
-                        <div class="card-screenshot">
-                            <img src="assets/images/ui/cde-integration-screenshot.png" alt="CDE integration interface" width="200" height="120">
-                        </div>
-                    </div>
+                <!-- Second Row of AI Feature Cards Carousel -->
+                <div class="feature-cards-carousel">
+                    <owl-carousel-o [options]="featureCarouselOptions">
+                        <ng-template carouselSlide>
+                            <div class="feature-card" (click)="openArcadeDemo('ai-revision-tracking')">
+                                <div class="card-icon">
+                                    <img src="assets/images/icons/heavy1.png" alt="AI Revision Tracking" width="48" height="48">
+                                </div>
+                                <h3>AI Revision Tracking</h3>
+                                <p>Provides AI based version control, ensuring traceability and simplifying management of design iterations.</p>
+                                <div class="card-screenshot">
+                                    <img src="assets/images/ui/ai-revision-tracking-screenshot.png" alt="AI revision tracking interface" width="200" height="120">
+                                    <div class="play-overlay">
+                                        <i class="play-icon">▶</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        
+                        <ng-template carouselSlide>
+                            <div class="feature-card" (click)="openArcadeDemo('ai-technical-discussions')">
+                                <div class="card-icon">
+                                    <img src="assets/images/icons/heavy2.png" alt="AI Technical Discussions" width="48" height="48">
+                                </div>
+                                <h3>AI Technical Discussions Tracking</h3>
+                                <p>AI based real-time collaboration on technical details, keeping discussions contextual and actionable.</p>
+                                <div class="card-screenshot">
+                                    <img src="assets/images/ui/ai-discussions-screenshot.png" alt="AI technical discussions interface" width="200" height="120">
+                                    <div class="play-overlay">
+                                        <i class="play-icon">▶</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        
+                        <ng-template carouselSlide>
+                            <div class="feature-card" (click)="openArcadeDemo('automated-task-management')">
+                                <div class="card-icon">
+                                    <img src="assets/images/icons/heavy3.png" alt="Automated Task Management" width="48" height="48">
+                                </div>
+                                <h3>Automated Task Management</h3>
+                                <p>Reduces manual oversight by prioritizing and assigning tasks, leveraging AI for efficient workflow management.</p>
+                                <div class="card-screenshot">
+                                    <img src="assets/images/ui/automated-tasks-screenshot.png" alt="Automated task management interface" width="200" height="120">
+                                    <div class="play-overlay">
+                                        <i class="play-icon">▶</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                        
+                        <ng-template carouselSlide>
+                            <div class="feature-card" (click)="openArcadeDemo('cde-integration')">
+                                <div class="card-icon">
+                                    <img src="assets/images/icons/heavy4.png" alt="Upload to Client CDE" width="48" height="48">
+                                </div>
+                                <h3>Upload to Client CDE</h3>
+                                <p>Integrates with external systems for compliant and efficient handovers, critical for construction workflows.</p>
+                                <div class="card-screenshot">
+                                    <img src="assets/images/ui/cde-integration-screenshot.png" alt="Upload to client CDE interface" width="200" height="120">
+                                    <div class="play-overlay">
+                                        <i class="play-icon">▶</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
                 </div>
             </div>
         </div>

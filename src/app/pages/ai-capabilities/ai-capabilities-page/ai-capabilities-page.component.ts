@@ -24,92 +24,64 @@ export class AiCapabilitiesPageComponent {
   aiCapabilitiesData = {
     'ai-generation': [
       {
-        id: 'ai-generated-drawings',
-        icon: 'assets/images/new-v2-icon2.png',
-        title: 'AI Generated Drawings',
-        description: 'Automatically generate detailed engineering drawings with AI assistance, reducing manual drafting time significantly.',
-        image: 'assets/images/new-v2-image2.png'
-      },
-      {
-        id: 'ai-design-manager',
-        icon: 'assets/images/new-v2-icon3.png',
-        title: 'AI Design Manager',
-        description: 'Intelligent design management system that optimizes workflows and ensures design consistency across projects.',
-        image: 'assets/images/new-v2-image3.png'
-      },
-      {
-        id: 'ai-modeling',
+        id: 'element-ga',
         icon: 'assets/images/new-v2-icon1.png',
-        title: 'AI 3D Modeling',
-        description: 'Advanced 3D modeling capabilities powered by AI for rapid prototyping and design iteration.',
+        title: 'Element GA',
+        description: 'AI-powered element generation and analysis for structural engineering projects.',
         image: 'assets/images/new-v2-image1.png'
       },
       {
-        id: 'ai-documentation',
-        icon: 'assets/images/new-v2-icon4.png',
-        title: 'AI Documentation',
-        description: 'Automated generation of technical documentation and specifications with AI accuracy.',
-        image: 'assets/images/new-v2-image4.png'
+        id: 'rebar-drawing',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'Rebar Drawing<br>(Pre-Cast & Insitu)',
+        description: 'Automated generation of both precast and insitu rebar drawings with AI precision and compliance checking.',
+        image: 'assets/images/new-v2-image2.png'
       }
     ],
     'ai-quality-control': [
       {
-        id: 'quality-control-drawings',
+        id: 'technical-checks',
         icon: 'assets/images/new-v2-icon1.png',
-        title: 'AI Quality Control for Structural Drawings',
-        description: 'Comprehensive quality assessment system that validates structural drawings for accuracy and compliance.',
+        title: 'Technical Checks',
+        description: 'Comprehensive technical validation system that ensures engineering accuracy and compliance.',
         image: 'assets/images/new-v2-image1.png'
       },
       {
-        id: 'error-detection',
+        id: 'presentation-checks',
         icon: 'assets/images/new-v2-icon2.png',
-        title: 'AI Error Detection',
-        description: 'Advanced error detection algorithms that identify potential issues in engineering designs before they become problems.',
+        title: 'Presentation Checks',
+        description: 'AI-powered presentation quality assessment for professional drawing standards and clarity.',
         image: 'assets/images/new-v2-image2.png'
       },
       {
-        id: 'compliance-checker',
+        id: 'spelling-checks',
         icon: 'assets/images/new-v2-icon3.png',
-        title: 'AI Compliance Checker',
-        description: 'Automated compliance verification ensuring all designs meet industry standards and regulations.',
+        title: 'Spelling Checks',
+        description: 'Automated spelling and terminology verification for technical documentation accuracy.',
         image: 'assets/images/new-v2-image3.png'
-      },
-      {
-        id: 'quality-reports',
-        icon: 'assets/images/new-v2-icon4.png',
-        title: 'AI Quality Reports',
-        description: 'Detailed quality assessment reports generated automatically with actionable insights and recommendations.',
-        image: 'assets/images/new-v2-image4.png'
       }
     ],
     'ai-design-manager': [
       {
-        id: 'workflow-optimization',
+        id: 'cde-management',
         icon: 'assets/images/new-v2-icon1.png',
-        title: 'Workflow Optimization',
-        description: 'AI-powered workflow management that streamlines design processes and reduces bottlenecks.',
+        title: 'CDE Management',
+        description: 'AI-powered Common Data Environment management for seamless project collaboration and data sharing.',
         image: 'assets/images/new-v2-image1.png'
       },
       {
-        id: 'design-consistency',
+        id: 'rfi-tracking',
         icon: 'assets/images/new-v2-icon2.png',
-        title: 'Design Consistency',
-        description: 'Ensure uniform design standards and maintain consistency across all project deliverables.',
+        title: 'RFI Tracking',
+        description: 'Intelligent Request for Information tracking and management system for project coordination.',
         image: 'assets/images/new-v2-image2.png'
       },
       {
-        id: 'resource-allocation',
+        id: 'delivery-platform',
         icon: 'assets/images/new-v2-icon3.png',
-        title: 'Resource Allocation',
-        description: 'Intelligent resource management for optimal team utilization and project efficiency.',
+        title: 'Delivery Platform',
+        description: 'Comprehensive delivery platform management with AI-driven insights and optimization.',
         image: 'assets/images/new-v2-image3.png'
-      },
-      {
-        id: 'project-tracking',
-        icon: 'assets/images/new-v2-icon4.png',
-        title: 'Project Tracking',
-        description: 'Real-time project monitoring with AI insights for better decision making and timeline management.',
-        image: 'assets/images/new-v2-image4.png'
       }
     ]
   };

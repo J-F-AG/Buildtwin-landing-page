@@ -1,9 +1,6 @@
 <app-hd-navbar></app-hd-navbar>
 
-<!-- TEST CHANGE - THIS SHOULD BE VISIBLE -->
-<div style="background: red; color: white; padding: 20px; text-align: center; font-size: 24px; font-weight: bold;">
-  TEST CHANGE - AI CAPABILITIES PAGE UPDATED!
-</div>
+
 
 <app-ai-capabilities-banner></app-ai-capabilities-banner>
 <app-company-logos-slider></app-company-logos-slider>
@@ -127,8 +124,7 @@
     <div class="container heading-sticky">
         <div class="heading center v2">
                 <h2 class="title">
-                    BuildTwin <span>AI Capabilities</span><br>
-                    delivered with a Human touch
+                    BuildTwin <span>AI Capabilities</span>
                 </h2>
                 <p class="small-title">
                     Discover how our AI-powered solutions streamline your engineering workflows and boost productivity
@@ -142,7 +138,7 @@
                     class="selector-tab" 
                     [class.active]="selectedCategory === 'ai-generation'"
                     (click)="selectCategory('ai-generation')">
-                    AI Generation
+                    AI Drawing Generation
                 </button>
                 <button 
                     class="selector-tab" 
@@ -162,15 +158,7 @@
     </div>
     <app-bottom-content [selectedCategory]="selectedCategory" (slideChanged)="onSlideChanged($event)"></app-bottom-content>
     <div class="container">
-        <div class="text-center" style="margin-top: 40px;">
-            <a [routerLink]="[_languageService.currentLanguage,'explore-services']" class="button-v2 home_banner_explore_btn">
-                Explore
-            </a>
-            <a (click)="scheduleDemo()" href="javascript:void(0)" class="button-v2 border home_banner_schedule_demo" style="margin-left: 16px;">
-                <img src="assets/images/icons/icon1.png" width="23" height="23" alt="Schedule DEMO">
-                Schedule DEMO
-            </a>
-        </div>
+
     </div>
 </div>
 
@@ -180,33 +168,83 @@
 <!-- Plug & Play Section -->
 <app-hd-integrations></app-hd-integrations>
 
-<div class="global-mb">
-    <div class="container heading-sticky">
-        <div class="heading center v2">
-                <h2 class="title">
-                    we deliver <span>results</span>
-                </h2>
-                <p class="small-title">
-                    Navigate services and connect with top professionals with ease
-                </p>
-        </div>
-    </div>
-    <app-service-list [hideTitle]="true"></app-service-list>
+<!-- Case Studies Section -->
+<app-case-studies></app-case-studies>
+
+<!-- FAQ Section -->
+<div class="faq-section">
     <div class="container">
-        <div class="text-center" style="margin-top: 40px;">
-            <a [routerLink]="[_languageService.currentLanguage,'how-it-works']" class="button-v2">
-                How it works
-            </a>
+        <div class="faq-header">
+            <h2>Good to know...</h2>
+            <p>AI capabilities can be complex, so we've made it simple. If you still have questions, you can <a href="https://www.buildtwin.com/contact" target="_blank">contact our team</a>.</p>
+        </div>
+        
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h3>What is AI Drawing Generation?</h3>
+                <p>Our AI automatically generates structural drawings including Element GA, Rebar drawings for both Pre-Cast and Insitu applications, and detailed construction documentation. The AI learns from your project requirements and building codes to deliver accurate, compliant drawings in minutes instead of hours.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How does AI Quality Control work?</h3>
+                <p>Our AI performs comprehensive quality checks including technical validation, presentation standards, and spelling verification. It automatically detects errors, missing details, and compliance issues before delivery, ensuring your drawings meet international standards and project specifications.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What is the AI Design Manager?</h3>
+                <p>The AI Design Manager automates your entire workflow from CDE management and RFI tracking to delivery platform coordination. It learns from your project patterns to optimize efficiency, provides intelligent suggestions, and ensures consistent quality across all deliverables.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How secure is my data with BuildTwin AI?</h3>
+                <p>Your data security is our top priority. We use enterprise-grade encryption, secure cloud infrastructure, and strict access controls. Your project files, designs, and sensitive information remain completely private and under your control at all times.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>Can I integrate AI capabilities with your existing tools?</h3>
+                <p>Absolutely! BuildTwin AI integrates seamlessly with your current CAD software, project management tools, and workflow systems. We support all major platforms including AutoCAD, Revit, Tekla, and more. Setup takes less than 5 minutes.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What if I need human expertise alongside AI?</h3>
+                <p>BuildTwin combines the best of both worlds. Our AI handles repetitive tasks and quality checks, while our global network of certified engineers provides human oversight, creative problem-solving, and specialized expertise when needed. You get AI efficiency with human intelligence.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How quickly can I see results with AI capabilities?</h3>
+                <p>Most users see immediate improvements in workflow efficiency within the first week. AI Drawing Generation typically reduces drawing time by 60-80%, while AI Quality Control catches 90% of common errors automatically. Full workflow optimization is usually achieved within 2-3 weeks.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What building codes and standards are supported?</h3>
+                <p>BuildTwin AI supports all major international building codes including Eurocodes, AISC, AS, BS, ISO standards, and regional variations. The AI automatically adapts to your project's specific code requirements and ensures compliance across all deliverables.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How does AI handle complex structural calculations?</h3>
+                <p>Our AI uses advanced algorithms trained on thousands of engineering projects to perform complex structural calculations, load analysis, and design optimization. It automatically applies relevant building codes, safety factors, and engineering principles while maintaining accuracy and compliance standards.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>Can AI adapt to my company's specific drawing standards?</h3>
+                <p>Yes! BuildTwin AI learns from your existing drawings and company standards. It automatically adapts to your preferred drawing layouts, annotation styles, layer structures, and company-specific requirements. The more you use it, the better it becomes at matching your exact standards.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What happens if the AI makes an error?</h3>
+                <p>While our AI achieves 95%+ accuracy, we maintain human oversight for quality assurance. All AI-generated drawings are reviewed by certified engineers before delivery. If any issues are detected, they're automatically flagged for human review, ensuring your projects maintain the highest quality standards.</p>
+            </div>
+        </div>
+        
+        <div class="faq-footer">
+            <p>Didn't find what you were looking for?</p>
+            <a href="https://www.buildtwin.com/contact" target="_blank" class="faq-cta-button">Contact Our Team</a>
         </div>
     </div>
 </div>
 
-
-<app-tt-testimonials></app-tt-testimonials>
-<app-hd-good-company [count]="5"></app-hd-good-company>
-
-<!-- FAQ Section -->
-<app-em-faq></app-em-faq>
+<!-- 5 Star Experience Section -->
+<!-- <app-hd-good-company [count]="5"></app-hd-good-company> -->
 
 <!-- Popup for Schedule Call -->
 <div class="popUP" [ngClass]="{'active':showPopup}">

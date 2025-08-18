@@ -16,6 +16,7 @@ import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { AiCapabilitiesBannerModule } from '../ai-capabilities-banner/ai-capabilities-banner.module';
 import { BottomContentModule } from '../bottom-content/bottom-content.module';
 import { EmFaqModule } from '../../includes/em-faq/em-faq.module';
+import { CaseStudiesModule } from '../case-studies/case-studies.module';
 
 const routes: Routes = [
   {
@@ -44,6 +45,7 @@ const routes: Routes = [
     AiCapabilitiesBannerModule,
     BottomContentModule,
     EmFaqModule,
+    CaseStudiesModule,
     RouterModule.forChild(routes),
   ],
 })
