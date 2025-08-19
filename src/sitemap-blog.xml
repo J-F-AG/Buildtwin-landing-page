@@ -12,12 +12,41 @@
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
-<url>
+      <url>
   <loc>https://www.buildtwin.com/blog/the-evolution-of-autocad-drafting-services-from-2d-to-3d/</loc>
-  <lastmod>2025-06-18T13:00:46+00:00</lastmod>
+  <lastmod>2025-08-18T13:00:46+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
+
+      <url>
+  <loc>https://www.buildtwin.com/blog/the-future-of-construction-deep-dive-into-self-healing-concrete/</loc>
+  <lastmod>2025-08-18T13:00:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+      <url>
+  <loc>https://www.buildtwin.com/blog/next-gen-free-online-file-transfer-for-aec-projects/</loc>
+  <lastmod>2025-08-18T13:00:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+      <url>
+  <loc>https://www.buildtwin.com/blog/engineering-data-management-system/</loc>
+  <lastmod>2025-08-18T13:00:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
+      <url>
+  <loc>https://www.buildtwin.com/blog/scan-to-bim-services-3d-laser-scanning-construction/</loc>
+  <lastmod>2025-08-18T13:00:46+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+
 <url>
   <loc>https://www.buildtwin.com/blog/unlocking-efficiency-the-strategic-edge-of-outsourcing-cad-drafting-services-in-aec/</loc>
   <lastmod>2025-06-18T13:00:46+00:00</lastmod>
@@ -210,4 +239,5 @@
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
+
 </urlset>
