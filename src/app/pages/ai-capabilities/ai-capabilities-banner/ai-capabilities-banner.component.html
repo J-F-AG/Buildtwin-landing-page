@@ -62,19 +62,50 @@
     </div>
     <div class="bannerContent">
         <div class="center">
-            <h1>The World’s <strong>Structural Engineers</strong> are on <span>BuildTwin</span></h1>
+            <h1>BuildTwin <strong>AI Capabilities</strong> delivered with a <span>Human touch</span></h1>
             <p class="small-title">
                 BuildTwin simplifies how to outsource, manage and ensure your projects meet time <br>and quality goals. Get started in minutes and focus on what matters!
             </p>
         </div>
         <div class="button-wrapper flex-justify-center">
-            <a [routerLink]="[_languageService.currentLanguage,'explore-services']" class="button-v2 home_banner_explore_btn">
-                Explore
-            </a>
-            <a (click)="call()" href="javascript:void(0)" class="button-v2 border home_banner_schedule_demo">
-                <img src="assets/images/icons/icon1.png" width="23" height="23" alt="Schedule DEMO">
-                Schedule DEMO
-            </a>
+            <!-- KPI Cards Section -->
+            <div class="kpi-cards-container">
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="kpi-content">
+                        <h3 class="kpi-value">85%</h3>
+                        <p class="kpi-label">Time Saved</p>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="kpi-content">
+                        <h3 class="kpi-value">3x</h3>
+                        <p class="kpi-label">Faster Delivery</p>
+                    </div>
+                </div>
+                
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="kpi-content">
+                        <h3 class="kpi-value">99.9%</h3>
+                        <p class="kpi-label">More Reliable</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

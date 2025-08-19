@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
-
+import { ArcadeService } from 'src/app/include-component/arcade-container/arcade.service';
 
 @Component({
   selector: 'app-delivery-plattform',
@@ -34,10 +34,50 @@ export class DeliveryPlattformComponent {
 navBar:any
 tabHead:any
 selectedIndex: number = 0
+  
+  // AI Capabilities carousel data
+  aiCapabilities = [
+    {
+      id: 'track-submissions',
+      icon: 'assets/images/new-v2-icon1.png',
+      title: 'AI Quality Control for Structural Drawings',
+      description: 'Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.',
+      image: 'assets/images/new-v2-image1.png'
+    },
+    {
+      id: 'view-files-comment',
+      icon: 'assets/images/new-v2-icon2.png',
+      title: 'AI generated drawings',
+      description: 'Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.',
+      image: 'assets/images/new-v2-image2.png'
+    },
+    {
+      id: 'share-with-ease',
+      icon: 'assets/images/new-v2-icon3.png',
+      title: 'AI Design Manager',
+      description: 'Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.',
+      image: 'assets/images/new-v2-image3.png'
+    },
+    {
+      id: 'project-workflow',
+      icon: 'assets/images/new-v2-icon4.png',
+      title: 'Manage and track your delivery',
+      description: 'Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.',
+      image: 'assets/images/new-v2-image4.png'
+    }
+  ];
+  
+  // Create extended array with duplicates for carousel effect
+  carouselItems: any[] = [];
+  
+  // Carousel properties
+  currentSlide = 0;
+  itemsPerView = 4;
+  
   tabDetail: any =[
     {
       icon:'assets/images/icons/manage-portfolio.png',
-      text:'manage Portfolio',
+      text:'Connectivity',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
@@ -45,7 +85,7 @@ selectedIndex: number = 0
     },
     {
       icon:'assets/images/icons/reach.png',
-      text:'Reach',
+      text:'Track with AI',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
@@ -53,7 +93,7 @@ selectedIndex: number = 0
     },
     {
       icon:'assets/images/icons/match.png',
-      text:'Match',
+      text:'Mark-UP and Collaboration',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
@@ -69,14 +109,20 @@ selectedIndex: number = 0
     },
     {
       icon:'assets/images/icons/analyze.png',
-      text:'Analyze',
+      text:'Automated Documentation',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
       targetwebp2x: 'assets/images/for-seller/mange-portfolio@2x.webp',
     }
   ]
-  constructor(private titleService: Title, private router: Router, public _languageService:LanguageService) {
+  constructor(
+    private titleService: Title,
+    private router: Router,
+    public _languageService: LanguageService,
+    private arcadeService: ArcadeService
+  ) {
+    this.titleService.setTitle('BuildTwin - Collaborate seamless with AI');
     router.events.subscribe((val) => {
       setTimeout(() => {
       this.scrollActivated = document.getElementById('scrollActivated');
@@ -116,10 +162,9 @@ selectedIndex: number = 0
 
   ngOnInit(): void {
     this.initHubSpotForm();
-
-
-
     
+    // Initialize carousel items
+    this.carouselItems = [...this.aiCapabilities, ...this.aiCapabilities, ...this.aiCapabilities];
   }
 
 
@@ -156,6 +201,46 @@ selectedIndex: number = 0
   changeTab(index){
     this.selectedIndex = index
   }
+  openArcadeDemo(featureKey: string) {
+    const arcadeData = this.arcadeService.arcadeData;
+    
+    if (arcadeData[featureKey]) {
+      const url = arcadeData[featureKey].url;
+      window.open(url, '_blank');
+    } else {
+      // Fallback for features not in arcade service
+      console.log(`Arcade demo not available for: ${featureKey}`);
+    }
+  }
+  
+  // Carousel navigation methods
+  nextSlide() {
+    if (this.currentSlide < this.aiCapabilities.length) {
+      this.currentSlide++;
+    }
+  }
+  
+  prevSlide() {
+    if (this.currentSlide > 0) {
+      this.currentSlide--;
+    }
+  }
+  
+  // Check if navigation buttons should be disabled
+  canGoNext(): boolean {
+    return this.currentSlide < this.aiCapabilities.length;
+  }
+  
+  canGoPrev(): boolean {
+    return this.currentSlide > 0;
+  }
+  
+  // Arcade trigger method for carousel items
+  onClickArcadeTrigger(type: string) {
+    // You can implement arcade functionality here if needed
+    console.log(`Arcade triggered for: ${type}`);
+  }
+  
   ngOnDestroy() {
     try {
       document.body.classList.remove('white-show-wrapper');

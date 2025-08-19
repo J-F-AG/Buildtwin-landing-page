@@ -2,6 +2,7 @@ import { Component, ComponentFactoryResolver, HostListener, ViewChild, ViewConta
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
+import { BtWorkflowAssistanceService } from 'buildtwin-library-ux/bt-workflow-assistance';
 
 @Component({
   selector: 'app-ai-capabilities-page',
@@ -10,6 +11,80 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class AiCapabilitiesPageComponent {
 
+  // Carousel slide tracking
+  currentSlide = 0;
+  
+  // Category selection
+  selectedCategory = 'ai-generation';
+
+  // Popup states
+  showPopup = false;
+
+  // AI Capabilities data for different categories
+  aiCapabilitiesData = {
+    'ai-generation': [
+      {
+        id: 'element-ga',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'Element GA',
+        description: 'AI-powered element generation and analysis for structural engineering projects.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'rebar-drawing',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'Rebar Drawing<br>(Pre-Cast & Insitu)',
+        description: 'Automated generation of both precast and insitu rebar drawings with AI precision and compliance checking.',
+        image: 'assets/images/new-v2-image2.png'
+      }
+    ],
+    'ai-quality-control': [
+      {
+        id: 'technical-checks',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'Technical Checks',
+        description: 'Comprehensive technical validation system that ensures engineering accuracy and compliance.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'presentation-checks',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'Presentation Checks',
+        description: 'AI-powered presentation quality assessment for professional drawing standards and clarity.',
+        image: 'assets/images/new-v2-image2.png'
+      },
+      {
+        id: 'spelling-checks',
+        icon: 'assets/images/new-v2-icon3.png',
+        title: 'Spelling Checks',
+        description: 'Automated spelling and terminology verification for technical documentation accuracy.',
+        image: 'assets/images/new-v2-image3.png'
+      }
+    ],
+    'ai-design-manager': [
+      {
+        id: 'cde-management',
+        icon: 'assets/images/new-v2-icon1.png',
+        title: 'CDE Management',
+        description: 'AI-powered Common Data Environment management for seamless project collaboration and data sharing.',
+        image: 'assets/images/new-v2-image1.png'
+      },
+      {
+        id: 'rfi-tracking',
+        icon: 'assets/images/new-v2-icon2.png',
+        title: 'RFI Tracking',
+        description: 'Intelligent Request for Information tracking and management system for project coordination.',
+        image: 'assets/images/new-v2-image2.png'
+      },
+      {
+        id: 'delivery-platform',
+        icon: 'assets/images/new-v2-icon3.png',
+        title: 'Delivery Platform',
+        description: 'Comprehensive delivery platform management with AI-driven insights and optimization.',
+        image: 'assets/images/new-v2-image3.png'
+      }
+    ]
+  };
 
   // @ViewChild('HdBannerNewComp', { read: ViewContainerRef, static: true })
   // public HdBannerNewComp: ViewContainerRef;
@@ -46,7 +121,7 @@ export class AiCapabilitiesPageComponent {
   scrolledDivHeight: any
   fixedElement: any
 
-  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver, public _languageService: LanguageService) { 
+  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver, public _languageService: LanguageService, private _btWorkflowAssistanceService: BtWorkflowAssistanceService) { 
 
     router.events.subscribe((val) => {
       setTimeout(() => {
@@ -61,10 +136,13 @@ export class AiCapabilitiesPageComponent {
         
       }, 2000);
   });
-  
+    
   }
 
   ngOnInit() {
+    console.log('AI Capabilities Page initialized - TEST CHANGE');
+    console.log('Initial selected category:', this.selectedCategory);
+    console.log('Available categories:', Object.keys(this.aiCapabilitiesData));
     // this.loadHdNavbarComp()
     // this.loadHdFooterComp()
     // this.loadHdBannerNewComp()
@@ -80,7 +158,33 @@ export class AiCapabilitiesPageComponent {
   
   }
 
+  callStatus() {
+    this.showPopup = true;
+  }
 
+  closePopupStatus($event: any) {
+    this.showPopup = false;
+  }
+
+  // Handle carousel slide changes
+  onSlideChanged(slideIndex: number) {
+    this.currentSlide = slideIndex;
+  }
+
+  // Category selection function
+  selectCategory(category: string) {
+    console.log('Selecting category:', category);
+    console.log('Available categories:', Object.keys(this.aiCapabilitiesData));
+    console.log('Data for selected category:', this.aiCapabilitiesData[category]);
+    this.selectedCategory = category;
+    this.currentSlide = 0; // Reset to first slide when changing category
+    console.log('Selected category updated to:', this.selectedCategory);
+  }
+
+  // Schedule Demo function
+  scheduleDemo() {
+    this._btWorkflowAssistanceService.hubspotPopup.next({});
+  }
 
 
   @HostListener('window:scroll', ['$event'])

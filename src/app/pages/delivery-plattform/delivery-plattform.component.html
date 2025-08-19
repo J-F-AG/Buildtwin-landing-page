@@ -35,82 +35,352 @@
             </picture>
         </div>
     </div>    
-
+  
     <app-experence>
         <div class="container">
             <div class="heading center v2">
                 <h2 class="title">
         
-                    <span>Your services.</span> Our Reach. 
+                    Collaborate seamless with AI
                     
                 </h2> 
                 <div class="subTitle">
-                    We specialied in comprehensive approach for each and every service 
-                    <br>provider, with one of the largest global footprint. 
+                    Intelligent automation for structural engineering drawings
+                    <br>Enhanced accuracy and efficiency in your design workflow 
                 </div>
              </div>
         </div>
         <div class="head">
             <div class="pre-filled">
-                Pre-filled<br>
-Tender<br>
-Application
+                AI Quality<br>
+                Control<br>
+                & Validation
             </div>
             <span>
-                Your technical<br>
-                Portfolio
+                Human<br>
+                Engineering
             </span>
             <div class="center">
                 <img src="assets/images/for-seller/icon1.png" width="60" height="71" alt="">
-                Full Control over<br>
-                your portfolio
+                BuildTwin<br>
+                One
             </div>
             <span>
-                Match with global<br>
-                Private & Public Projects
+                AI<br>
+                Capabilities
             </span>
         </div>
+        
+        <!-- How it works Section -->
+        <div class="how-it-works-section">
+            <div class="container heading-sticky">
+                <div class="heading center v2">
+                    <h2 class="title">
+                        How it works
+                    </h2>
+                    <p class="small-title">Find out what makes BuildTwin the most trusted, efficient, and innovative marketplace
+                        <br>for finding and working with global talents.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="list-wrapper">
+                    <div class="block">
+                        <div class="step-number">1</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy6@2x.png"
+                                srcset="assets/images/icons/heavy6@2x.png 2x, assets/images/icons/heavy6.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>
+                            Set-up the AI<br>
+                            delivery system
+                        </h3>
+                        <div class="time-label">Takes less than 5 min</div>
+                        <p>Configure your AI delivery preferences and
+                            connect your existing tools for seamless
+                            integration with our platform.</p>
+                    </div>
+                    <div class="block">
+                        <div class="step-number">2</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy5@2x.png"
+                                srcset="assets/images/icons/heavy5@2x.png 2x, assets/images/icons/heavy5.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>
+                            Add AI<br>
+                            capabilities
+                        </h3>
+                        <p>Select from our comprehensive suite of
+                            AI-powered engineering tools and
+                            capabilities to enhance your workflow.</p>
+                    </div>
+                    <div class="block">
+                        <div class="step-number">3</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy4@2x.png"
+                                srcset="assets/images/icons/heavy4@2x.png 2x, assets/images/icons/heavy4.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>Insured delivery with a<br>
+                            25+ year old global business
+                        </h3>
+                        <p>Full control and visibility with industry-leading
+                            security protocols ensuring your data remains
+                            confidential and under your control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Statistics Block -->
         <div class="container global-mb">
             <div class="block-wrapper">
                     <div class="block">
                         <div class="count small">
-                            Top 3
+                            95%
                         </div>
                         <p>
-                            ranked on google on 50+ keywords
+                            accuracy improvement
                         </p>
                         <img src="assets/images/ser1.png" width="57" height="53" alt="">
                     </div>
                     <div class="block">
                         <div class="count small">
-                            1000+
+                            80%
                         </div>
                         <p>
-                            of engineering tenders
+                            time reduction
                         </p>
                         <img src="assets/images/ser2.png" width="57" height="53" alt="">
                     </div>
                     <div class="block">
                         <div class="count small">
-                            50k+
+                            10k+
                         </div>
                         <p>
-                            impressions
+                            drawings processed
                         </p>
                         <img src="assets/images/ser3.png" width="57" height="53" alt="">
                     </div>
                     <div class="block">
                         <div class="count small">
-                            100+
+                            500+
                         </div>
                         <p>
-                            of private clients
+                            engineering firms
                         </p>
                         <img src="assets/images/ser4.png" width="57" height="53" alt="">
                     </div>
             </div>
         </div>
+        
         </app-experence>
+        
+        <!-- What you can do at BuildTwin Section -->
+        <div class="what-you-can-do-section">
+            <div class="container">
+                <div class="heading center v2">
+                    <h2 class="title">What you can do with <span class="highlight">BuildTwin One</span></h2>
+                </div>
+                
+                <!-- Feature Cards Carousel -->
+                <div class="feature-cards-carousel">
+                    <div class="carousel-container">
+                        <!-- Navigation Arrows -->
+                        <button class="carousel-nav prev" (click)="prevSlide()" [disabled]="!canGoPrev()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="carousel-wrapper">
+                            <div class="block-box-wrapper" [style.transform]="'translateX(-' + (currentSlide * 25) + '%)'">
+                                <div class="block cursor" 
+                                     *ngFor="let item of carouselItems; let i = index" 
+                                     (click)="onClickArcadeTrigger(item.id)"
+                                     [class.fade-out]="i >= 4 && i < 8">
+                                    <div class="content">
+                                        <div class="icon-title">
+                                            <i>
+                                                <img [src]="item.icon" width="23" height="25" alt="">
+                                            </i>
+                                            <h3 [innerHTML]="item.title"></h3>
+                                        </div>
+                                        <p>{{ item.description }}</p>
+                                    </div>
+                                    <figure>
+                                        <img [src]="item.image" width="220" height="85" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-nav next" (click)="nextSlide()" [disabled]="!canGoNext()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Middle Separator -->
+                <div class="ai-separator">
+                    <span>+ add</span>
+                    <div class="ai-badge">
+                        <span>AI Capabilities</span>
+                        <i class="star-icon">⭐</i>
+                        <i class="star-icon">⭐</i>
+                    </div>
+                </div>
+                
+                <!-- AI Capabilities Carousel Section -->
+                <div class="global-mb" id="ai-capabilities">
+                    
+                    <div class="container">
+                        <div class="how-it-work" id="next-section">
+                            <div class="block-section fullwidth">
+                                <div class="carousel-container">
+                                    <!-- Navigation Arrows -->
+                                    <button class="carousel-nav prev" (click)="prevSlide()" [disabled]="!canGoPrev()">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div class="carousel-wrapper">
+                                        <div class="block-box-wrapper" [style.transform]="'translateX(-' + (currentSlide * 25) + '%)'">
+                                            <div class="block cursor" 
+                                                 *ngFor="let item of carouselItems; let i = index" 
+                                                 (click)="onClickArcadeTrigger(item.id)"
+                                                 [class.fade-out]="i >= 4 && i < 8">
+                                                <div class="content">
+                                                    <div class="icon-title">
+                                                        <i>
+                                                            <img [src]="item.icon" width="23" height="25" alt="">
+                                                        </i>
+                                                        <h3 [innerHTML]="item.title"></h3>
+                                                    </div>
+                                                    <p>{{ item.description }}</p>
+                                                </div>
+                                                <figure>
+                                                    <img [src]="item.image" width="220" height="85" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Overlay button for teasing more capabilities -->
+                                        <div class="teaser-overlay" *ngIf="currentSlide > 0">
+                                            <div class="teaser-content">
+                                                <h4>Discover More AI Capabilities</h4>
+                                                <p>Explore our complete suite of AI-powered solutions</p>
+                                                <a [routerLink]="['ai-capabilities']" class="teaser-button">
+                                                    View All AI Capabilities
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="carousel-nav next" (click)="nextSlide()" [disabled]="!canGoNext()">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- BuildTwin Pro Pricing Section -->
+        <div class="pricing-section">
+            <div class="container">
+                <div class="pricing-header">
+                    <h2 class="pricing-title">BuildTwin <span class="highlight">One</span> Pricing</h2>
+                    <p class="pricing-subtitle">Effortless sharing, real-time collaboration, and audit-ready tracking keep every stakeholder on the latest drawing—seamlessly integrated with your systems.</p>
+                </div>
+                
+                <div class="pricing-cards">
+                    <!-- Free Tier Card -->
+                    <div class="pricing-card free-tier">
+                        <div class="card-header">
+                            <h3>Sharing & Tracking</h3>
+                            <p class="card-subtitle">Free for every team—smart, zero-cost file sharing.</p>
+                        </div>
+                        
+                        <div class="price-section">
+                            <div class="price">$0<span class="period">/month</span></div>
+                            <div class="billing">Free forever</div>
+                        </div>
+                        
+                        <div class="features">
+                            <ul>
+                                <li>Link never expires</li>
+                                <li>Revision Control</li>
+                                <li>Manage Workflow & Dates</li>
+                                <li>Secured Storage Up to 100 GB</li>
+                                <li>Unlimited Projects</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cta-section">
+                            <button class="btn-primary">
+                                <i class="rocket-icon">🚀</i>
+                                Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Pro Tier Card -->
+                    <div class="pricing-card pro-tier">
+                        <div class="pro-badge">
+                            <div class="bt-logo">bt</div>
+                            <div class="pro-label">PRO</div>
+                        </div>
+                        
+                        <div class="card-header">
+                            <h3>BuildTwin Pro</h3>
+                            <p class="card-subtitle">Design managers & structural teams</p>
+                        </div>
+                        
+                        <div class="price-section">
+                            <div class="price">$5<span class="period">/week</span></div>
+                            <div class="billing">Billed monthly</div>
+                        </div>
+                        
+                        <div class="features">
+                            <ul>
+                                <li>Everything in Starter, plus:</li>
+                                <li>View & Collaborate on PDF, IFC, DWG File</li>
+                                <li>Granular Permission Level for User & Customer</li>
+                                <li>Version History & Audit Trails</li>
+                                <li>Checklists, approvals, due-date reminders</li>
+                                <li>Unlimited Storage</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cta-section">
+                            <button class="btn-primary">14 day free trial</button>
+                        </div>
+                        
+                        <div class="free-trial-banner">
+                            <span>FREE Trial</span>
+                        </div>
+                        
+                        <div class="benefit-text">
+                            <p>Benefit from cutting edge best-practice and software in your industry and get pre-qualified for projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <app-company-logos-slider [bg]="false"></app-company-logos-slider>
     <app-get-started-block>
         <div class="heading center v2">
@@ -159,12 +429,12 @@ Application
                     </picture>
                 </figure>
                 <div class="content">
-                    <h3>Get your free 
-                        <br>Business Listing</h3>
-                    <p>Claim your free business listing now to instantly 
-                        match with public tenders worldwide.</p>
+                    <h3>AI Generated 
+                        <br>Structural Drawings</h3>
+                    <p>Transform your design process with AI-powered structural drawing generation. 
+                        Create accurate, detailed drawings in minutes, not hours.</p>
                     <a href="https://www.buildtwin.com/get-started" class="button-v2 provide_page_claim_now_3_reason" target="_blank">
-                        Get started for FREE
+                        Try AI Drawing Tool
                     </a>
                 </div>
             </div>
@@ -189,13 +459,13 @@ Application
                     </picture>
                 </figure>
                 <div class="content">
-                    <h3>Get pre-qualified and
-                        <br>invited for private tenders
+                    <h3>AI QC for 
+                        <br>Structural Drawings
                     </h3>
-                    <p>Are you ready? Get your business pre-qualified
-                        and get invited to submit bids for private projects</p>
+                    <p>Ensure drawing accuracy and compliance with AI-powered quality control. 
+                        Automated validation and error detection for structural designs.</p>
                     <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 cursor provide_page_get_started_3_reason">
-                        Get pre-qualified
+                        Start AI QC
                     </a>
                 </div>
             </div>
@@ -253,8 +523,7 @@ Application
     </app-get-started-block>
     
     
-            <!-- <app-em-faq></app-em-faq> -->
-             <app-tt-faq></app-tt-faq>
+            <app-tt-faq></app-tt-faq>
     
             
          

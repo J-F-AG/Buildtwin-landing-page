@@ -1,83 +1,65 @@
 <app-hd-navbar></app-hd-navbar>
 
-<div class="container teamPage">
-    <div class="heading center v2">
-        <h1 class="title">
-            The BuildTwin <span>Mission</span><br>To help 1.000.000+ engineers to focus on <br>what matters (to them): <i>Engineering</i>
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">
+            <span class="brand-text">Solving</span> the structural detailing problem
         </h1>
-        <span class="small-title">BuildTwin helps engineers and technical teams to <u>focus</u> on engineering. <br>By building trust and automating tedious tasks. </span>
+        <p class="hero-subtitle">BuildTwin helps engineers and technical teams to <u>focus</u> on engineering.<br>By building trust and automating tedious tasks.</p>
     </div>
-    <div class="aboutTeamBanner">
-        <div class="imageBg">
-            <img src="assets/images/about-bg.jpg" width="1257" height="404" alt="Background Banner">
-        </div>
-        <div class="aboutBanner">
-            <picture>
-                <img src="assets/images/about-banner.jpg" srcset="assets/images/about-banner@2x.jpg 2x" width="514" height="505" alt="engineers and technical teams">
-            </picture>
-            <div class="bt-thumb">
-                <img src="assets/images/bt-thumb.png" width="113" height="115" alt="Buildtwin Pro">
+</div>
+
+<!-- Team Section -->
+<div class="container team-section">
+    <!-- Management Row -->
+    <div class="team-row management-row">
+        <h2 class="section-title">Management</h2>
+        <div class="team-grid">
+            <div class="team-member" *ngFor="let member of managementTeam">
+                <div class="member-photo">
+                    <img [src]="member.photo" [alt]="member.name" width="120" height="120">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">{{ member.name }}</h3>
+                    <p class="member-role">{{ member.role }}</p>
+                    <div class="member-cv" [class.expanded]="member.isExpanded">
+                        <p class="cv-preview">{{ member.cvPreview }}</p>
+                        <div class="cv-full" *ngIf="member.isExpanded">
+                            <p>{{ member.fullCV }}</p>
+                        </div>
+                        <button class="expand-btn" (click)="toggleCV(member)">
+                            {{ member.isExpanded ? 'Show Less' : 'Read More' }}
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-        <figure class="leftImage-1">
-            <picture>
-                <img src="assets/images/home-left-image1.jpg" srcset="assets/images/home-left-image1@2x.jpg 2x" width="105" height="105" alt="engineering projects Image">
-            </picture>
-        </figure>
-        <figure class="leftImage-2">
-            <picture>
-                <img src="assets/images/home-left-image2.jpg" srcset="assets/images/home-left-image2@2x.jpg 2x" width="80" height="80" alt="Structural engineering projects Image">
-            </picture>
-        </figure>
-        <figure class="leftImage-3">
-            <picture>
-                <img src="assets/images/home-left-image3.jpg" srcset="assets/images/home-left-image3@2x.jpg 2x" width="80" height="80" alt="Building Projects">
-            </picture>
-        </figure>
-        <figure class="leftImage-4">
-            <picture>
-                <img src="assets/images/home-left-image4.jpg" srcset="assets/images/home-left-image4@2x.jpg 2x" width="132" height="132" alt="Flyover Engineering Projects">
-            </picture>
-            <i class="blueTick"><img src="assets/images/blue-tick.png" width="34" height="34" alt="Blue Tick"></i>
-        </figure>
-        <figure class="leftImage-5">
-            <picture>
-                <img src="assets/images/home-left-image5.jpg" srcset="assets/images/home-left-image5@2x.jpg 2x" width="132" height="132" alt="Structural engineering AEC projects">
-            </picture>
-            <i class="blueTick"><img src="assets/images/blue-tick.png" width="24" height="24" alt="Blue Tick"></i>
-        </figure>
-        <figure class="leftImage-6">
-            <picture>
-                <img src="assets/images/home-left-image6.jpg" srcset="assets/images/home-left-image6@2x.jpg 2x" width="105" height="105" alt="best Structural Projects">
-            </picture>
-        </figure>
-        <figure class="rightImage-1">
-            <picture>
-                <img src="assets/images/home-right-image1.jpg" srcset="assets/images/home-right-image1@2x.jpg 2x" width="80" height="80" alt="Top Engineering Projects">
-            </picture>
-            <i class="blueTick"><img src="assets/images/blue-tick.png" width="24" height="24" alt="Blue Tick"></i>
-        </figure>
-        <figure class="rightImage-2">
-            <picture>
-                <img src="assets/images/home-right-image2.jpg" srcset="assets/images/home-right-image2@2x.jpg 2x" width="132" height="132" alt="Commercial Structural Engineering Projects">
-            </picture>
-            <i class="blueTick"><img src="assets/images/blue-tick.png" width="31" height="31" alt="Blue Tick"></i>
-        </figure>
-        <figure class="rightImage-3">
-            <picture>
-                <img src="assets/images/home-right-image3.jpg" srcset="assets/images/home-right-image3@2x.jpg 2x" width="132" height="132" alt="Road construction Projects">
-            </picture>
-        </figure>
-        <figure class="rightImage-4">
-            <picture>
-                <img src="assets/images/home-right-image4.jpg" srcset="assets/images/home-right-image4@2x.jpg 2x" width="105" height="105" alt="Industrial and Commercial Engineering Projects">
-            </picture>
-        </figure>
-        <figure class="rightImage-5">
-            <picture>
-                <img src="assets/images/home-right-image5.jpg" srcset="assets/images/home-right-image5@2x.jpg 2x" width="132" height="132" alt="Road and Transport Structural Projects">
-            </picture>
-        </figure>
+    </div>
+
+    <!-- Advisors Row -->
+    <div class="team-row advisors-row">
+        <h2 class="section-title">Advisors</h2>
+        <div class="team-grid">
+            <div class="team-member" *ngFor="let advisor of advisorsTeam">
+                <div class="member-photo">
+                    <img [src]="advisor.photo" [alt]="advisor.name" width="120" height="120">
+                </div>
+                <div class="member-info">
+                    <h3 class="member-name">{{ advisor.name }}</h3>
+                    <p class="member-role">{{ advisor.role }}</p>
+                    <div class="member-cv" [class.expanded]="advisor.isExpanded">
+                        <p class="cv-preview">{{ advisor.cvPreview }}</p>
+                        <div class="cv-full" *ngIf="advisor.isExpanded">
+                            <p>{{ advisor.fullCV }}</p>
+                        </div>
+                        <button class="expand-btn" (click)="toggleCV(advisor)">
+                            {{ advisor.isExpanded ? 'Show Less' : 'Read More' }}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
