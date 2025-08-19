@@ -20,8 +20,8 @@
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                    </div>
-                    
+                            </div>
+
                     <div class="pricing-details">
                         <div class="price-row">
                             <div class="price-main">1.5% + €0.25</div>
@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Custom Card -->
                 <div class="pricing-card custom-card">
                     <div class="card-header">
@@ -45,8 +45,8 @@
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                    </div>
-                    
+                        </div>
+
                     <div class="custom-features">
                         <div class="feature-item">IC+ pricing</div>
                         <div class="feature-item">Volume discounts</div>
@@ -54,7 +54,7 @@
                         <div class="feature-item">Country-specific rates</div>
                     </div>
                 </div>
-            </div>
+                </div>
 
             <!-- Navigation Tabs -->
             <div class="pricing-navigation">
@@ -183,48 +183,48 @@
                     <div class="sidebar-section">
                         <h3>Global payments</h3>
                         <ul>
-                            <li>Payments</li>
-                            <li>Payment Links</li>
-                            <li>Checkout</li>
-                            <li>Terminal</li>
-                            <li>Radar</li>
-                                    </ul>
-                    </div>
+                            <li [class.active]="activeSection === 'payments'" (click)="scrollToSection('payments')">Payments</li>
+                            <li [class.active]="activeSection === 'payment-links'" (click)="scrollToSection('payment-links')">Payment Links</li>
+                            <li [class.active]="activeSection === 'checkout'" (click)="scrollToSection('checkout')">Checkout</li>
+                            <li [class.active]="activeSection === 'terminal'" (click)="scrollToSection('terminal')">Terminal</li>
+                            <li [class.active]="activeSection === 'radar'" (click)="scrollToSection('radar')">Radar</li>
+                        </ul>
+                                </div>
 
                     <div class="sidebar-section">
                         <h3>Embedded payments and finance</h3>
                         <ul>
-                            <li>Connect</li>
-                            <li>Issuing</li>
-                        </ul>
-                            </div>
+                            <li [class.active]="activeSection === 'connect'" (click)="scrollToSection('connect')">Connect</li>
+                            <li [class.active]="activeSection === 'issuing'" (click)="scrollToSection('issuing')">Issuing</li>
+                                    </ul>
+                                </div>
 
                     <div class="sidebar-section">
                         <h3>Revenue and finance automation</h3>
                         <ul>
-                            <li>Billing</li>
-                            <li>Invoicing</li>
-                            <li>Tax</li>
-                            <li>Sigma</li>
-                            <li>Data Pipeline</li>
-                            <li>Revenue Recognition</li>
+                            <li [class.active]="activeSection === 'billing'" (click)="scrollToSection('billing')">Billing</li>
+                            <li [class.active]="activeSection === 'invoicing'" (click)="scrollToSection('invoicing')">Invoicing</li>
+                            <li [class.active]="activeSection === 'tax'" (click)="scrollToSection('tax')">Tax</li>
+                            <li [class.active]="activeSection === 'sigma'" (click)="scrollToSection('sigma')">Sigma</li>
+                            <li [class.active]="activeSection === 'data-pipeline'" (click)="scrollToSection('data-pipeline')">Data Pipeline</li>
+                            <li [class.active]="activeSection === 'revenue-recognition'" (click)="scrollToSection('revenue-recognition')">Revenue Recognition</li>
                         </ul>
-                    </div>
+                            </div>
 
                     <div class="sidebar-section">
                         <h3>More</h3>
                         <ul>
-                            <li>Financial Connections</li>
-                            <li>Identity</li>
-                            <li>Atlas</li>
-                            <li>Climate</li>
+                            <li [class.active]="activeSection === 'financial-connections'" (click)="scrollToSection('financial-connections')">Financial Connections</li>
+                            <li [class.active]="activeSection === 'identity'" (click)="scrollToSection('identity')">Identity</li>
+                            <li [class.active]="activeSection === 'atlas'" (click)="scrollToSection('atlas')">Atlas</li>
+                            <li [class.active]="activeSection === 'climate'" (click)="scrollToSection('climate')">Climate</li>
                                     </ul>
                                 </div>
                             </div>
 
                 <!-- Main Content Area -->
                 <div class="pricing-main-content">
-                    <div class="product-section">
+                    <div class="product-section" id="payments">
                         <h2>Global payments</h2>
                         <p>Optimise checkout conversion, accept local payment methods, and increase acceptance rates.</p>
 
@@ -236,8 +236,8 @@
                                     <p>An online payments platform engineered for growth.</p>
                                 </div>
                                 <button class="start-now-btn">Start now</button>
-                            </div>
-                            
+                    </div>
+
                             <div class="product-features">
                                 <ul>
                                     <li>Increase customer acquisition with 100+ payment methods.</li>
@@ -249,30 +249,173 @@
 
                             <!-- Pricing Details -->
                             <div class="pricing-details-section">
+                                <!-- Domestic Cards Pricing -->
                                 <div class="pricing-item">
                                     <h4>Domestic cards</h4>
                                     <p>Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued domestically.</p>
+                                    <a href="#" class="learn-more-link">Learn more about our different card types.</a>
+                                    
+                                    <!-- Payment Method Logos -->
+                                    <div class="payment-logos">
+                                        <div class="logo-item">Visa</div>
+                                        <div class="logo-item">Mastercard</div>
+                                        <div class="logo-item">American Express</div>
+                                        <div class="logo-item">UnionPay</div>
+                                        <div class="logo-item">Apple Pay</div>
+                                        <div class="logo-item">Google Pay</div>
+                                        <div class="logo-item">JCB</div>
+                                        <div class="logo-item">Discover</div>
+                                    </div>
+
                                     <div class="price-display">
-                                        <span class="price">1.5% + €0.25</span>
-                                        <span class="price-desc">for <span class="highlight">standard European Economic Area cards</span></span>
+                                        <div class="price">1.5% + €0.25</div>
+                                        <div class="price-desc">for <span class="highlight">standard European Economic Area cards</span></div>
+                                    </div>
+                                    <div class="price-display">
+                                        <div class="price">1.9% + €0.25</div>
+                                        <div class="price-desc">for <span class="highlight">premium European Economic Area cards</span></div>
                         </div>
-                                    <div class="price-display">
-                                        <span class="price">1.9% + €0.25</span>
-                                        <span class="price-desc">for <span class="highlight">premium European Economic Area cards</span></span>
-                            </div>
                                 </div>
 
+                                <!-- International Cards Pricing -->
                                 <div class="pricing-item">
                                     <h4>International cards</h4>
+                                    <p>Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.</p>
+                                    
                                     <div class="price-display">
-                                        <span class="price">2.5% + €0.25</span>
-                                        <span class="price-desc">for UK cards</span>
+                                        <div class="price">2.5% + €0.25</div>
+                                        <div class="price-desc">for UK cards</div>
+                                    </div>
+                                    <div class="price-display">
+                                        <div class="price">+ 2%</div>
+                                        <div class="price-desc">if currency conversion is required</div>
+                                    </div>
+                                    <div class="price-display">
+                                        <div class="price">3.25% + €0.25</div>
+                                        <div class="price-desc">for international cards</div>
+                                    </div>
+                                    <div class="price-display">
+                                        <div class="price">+ 2%</div>
+                                        <div class="price-desc">if currency conversion is required</div>
+                                    </div>
+                                </div>
+
+                                <!-- Link Pricing -->
+                                <div class="pricing-item">
+                                    <h4>Link</h4>
+                                    <p>Autofill your customers' preferred payment details to deliver a frictionless checkout experience.</p>
+                                    
+                                    <div class="price-display">
+                                        <div class="price">1.5% + €0.25</div>
+                                        <div class="price-desc">for <span class="highlight">standard European Economic Area cards</span></div>
+                            </div>
+                                    <div class="price-display">
+                                        <div class="price">1.9% + €0.25</div>
+                                        <div class="price-desc">for <span class="highlight">premium European Economic Area cards</span></div>
+                                </div>
+                                </div>
+
+                                <!-- Bank-based and other payment methods -->
+                                <div class="pricing-item">
+                                    <h4>Bank-based and other payment methods</h4>
+                                    <p>Offer bank debits, bank transfers, and other locally relevant payment methods.</p>
+                                    
+                                    <div class="price-display">
+                                        <div class="price">€0.35</div>
+                                        <div class="price-desc">SEPA Direct Debit</div>
+                            </div>
+                                    <a href="#" class="see-more-link">See more payment methods</a>
+                                </div>
+
+                                <!-- Buy Now Pay Later -->
+                                <div class="pricing-item">
+                                    <h4>Buy Now Pay Later</h4>
+                                    <p>Let your customers buy something and pay for it in instalments over time.</p>
+                                    
+                                    <div class="price-display">
+                                        <div class="price">Starting at 2.99% + €0.35</div>
+                                        <div class="price-desc">per successful transaction for Klarna</div>
+                                    </div>
+                                    <a href="#" class="see-more-link">See more payment methods</a>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                                </div>
+                            </div>
+                                </div>
+                            </div>
+                            
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <div class="container">
+            <h2 class="section-title">FAQs</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-duration="500">
+                    <h3>How are payment fees calculated?</h3>
+                    <p>BuildTwin charges a per-transaction fee depending on the payment method used by the end customer. More details on fees by payment method.</p>
+                    </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                    <h3>Will I be charged tax?</h3>
+                    <p>BuildTwin is required to charge tax on certain products and services. Tax is charged based on your location and/or your business/tax status, which determines whether a product or service is subject to taxes, and the applicable tax rates.</p>
+                    <a href="#" class="read-more">Read more</a>
+                        </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                    <h3>Are there additional fees for refunds?</h3>
+                    <div class="faq-list">
+                        <p><strong>For businesses on standard pricing:</strong> There may be fees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing, connect and currency conversion fees from the original transaction are not returned.</p>
+                        <p><strong>For businesses on custom pricing:</strong> There may be fees for issuing refunds depending on your fee schedule with BuildTwin.</p>
+                    </div>
+                            </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                    <h3>Do you have setup fees or monthly fees?</h3>
+                    <p>BuildTwin does not charge setup fees, monthly fees, or any other hidden fees like closure fees. All fees for businesses on standard pricing are listed on our website.</p>
+                                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                    <h3>Do you offer any discounts?</h3>
+                    <p>BuildTwin offers custom pricing for businesses with large processing volumes. Eligibility varies by market.</p>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to get started? Get in touch or create an account.</h2>
+                <p>Access a complete payments platform with simple, pay-as-you-go pricing, or contact us to design a custom package specifically for your business.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">Start now</button>
+                    <button class="btn btn-outline" (click)="call()">Contact sales</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+    <!-- Customer Success Stories -->
+    <div class="customer-section">
+        <div class="container">
+            <h2 class="section-title">See our customers</h2>
+            <p class="section-subtitle">From startups to Fortune 500s, explore how millions of businesses use BuildTwin to start and scale their companies.</p>
+            <div class="learn-more-link">
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Documentation Section -->
+    <div class="docs-section">
+        <div class="container">
+            <h2 class="section-title">Explore the docs</h2>
+            <p class="section-subtitle">Start building your integration and accept your first payment in minutes. BuildTwin libraries are available in every language from Ruby to Go.</p>
+            <div class="learn-more-link">
+                <a href="#">Read the docs</a>
                 </div>
         </div>
     </div>
