@@ -1,144 +1,242 @@
-.teamPage {
-    padding-top: 161px;
-    padding-bottom: 74px;
+// Hero Section Styles
+.hero-section {
+    background: var(--themeColor);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+    position: relative;
+}
 
-    h1 {
-        i {
-            color: var(--themeColor);
-            font-style: normal;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    
+    .brand-text {
+        color: var(--themeColor);
+        font-weight: 800;
+        background: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-right: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        text-shadow: none;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 0;
+    
+    u {
+        color: #ffffff;
+        text-decoration: underline;
+        text-decoration-color: #ffd700;
+        text-decoration-thickness: 3px;
+    }
+}
+
+// Responsive Hero
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 100px 20px 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+// Team Section Styles
+.team-section {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding-top: 60px;
+}
+
+.team-row {
+    margin-bottom: 80px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 50px;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--themeColor);
+        border-radius: 2px;
+    }
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.member-photo {
+    text-align: center;
+    margin-bottom: 20px;
+    
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #f8f9fa;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.member-role {
+    font-size: 1.1rem;
+    color: #007bff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.member-cv {
+    .cv-preview {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .cv-full {
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        font-size: 0.95rem;
+        text-align: left;
+    }
+    
+    .expand-btn {
+        background: var(--themeColor);
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 83, 250, 0.3);
         }
         
-        .blue-text {
-            color: #007bff;
-            font-weight: 600;
+        &:active {
+            transform: translateY(0);
         }
-    }
-
-    .heading {
-        margin-bottom: 160px;
     }
 }
 
-.aboutTeamBanner {
-    position: relative;
-
-    .imageBg {
-        img {
-            width: 100%;
-        }
-    }
-
-    .aboutBanner {
-        width: 41.004%;
-        position: absolute;
-        left: 50%;
-        top: -143px;
-        transform: translateX(-50%);
-        mix-blend-mode: darken;
-
-        img {
-            width: 100%;
-        }
-
-        .bt-thumb {
-            position: absolute;
-            width: 117px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -43%);
-        }
-    }
-
-    [class^="leftImage-"],
-    [class^="rightImage-"] {
-        position: absolute;
-        margin-bottom: 0;
-
-        img {
-            border-radius: 5px;
-        }
-    }
-
-    .blueTick {
-        position: absolute;
-        margin-bottom: 0;
-    }
-
-    .leftImage-1 {
-        left: 70px;
-        top: -42px;
-    }
-
-    .leftImage-2 {
-        left: 269px;
-        top: -55px;
-    }
-
-    .leftImage-3 {
-        left: 60px;
-        top: 30%;
-    }
-
-    .leftImage-4 {
-        left: 198px;
-        top: 17%;
-
-        .blueTick {
-            right: -12px;
-            top: -12px;
-        }
-    }
-
-    .leftImage-5 {
-        left: 111px;
-        bottom: 8.8%;
-
-        .blueTick {
-            right: -7px;
-            top: -7px;
-        }
-    }
-
-    .leftImage-6 {
-        left: 305px;
-        bottom: -23px;
-    }
-
-    .rightImage-1 {
-        right: 243px;
-        top: 10.3%;
-
-        .blueTick {
-            right: -7px;
-            top: -7px;
-        }
-    }
-
-    .rightImage-2 {
-        right: 249px;
-        top: 44.8%;
-
-        .blueTick {
-            left: -11px;
-            bottom: -11px;
-        }
-    }
-
-    .rightImage-3 {
-        right: 22px;
-        top: -66px;
-    }
-
-    .rightImage-4 {
-        right: 100px;
-        top: 28.3%;
-    }
-
-    .rightImage-5 {
-        right: 78px;
-        bottom: 0;
+// Responsive Design
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 800px;
     }
 }
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+        max-width: 400px;
+    }
+    
+    .team-member {
+        padding: 25px;
+    }
+    
+    .member-photo img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .member-name {
+        font-size: 1.3rem;
+    }
+    
+    .member-role {
+        font-size: 1rem;
+    }
+}
+
+
 
 @media (max-width: 767px) {
     .teamPage {
@@ -150,94 +248,6 @@
             h1 br {
                 display: none;
             }
-        }
-    }
-
-    .aboutTeamBanner {
-        background: #e8eff0;
-        border-radius: 15px;
-        padding: 430px 0 500px;
-        .imageBg {
-            display: none;
-        }
-
-        .aboutBanner {
-            position: relative;
-            left: auto;
-            top: 0;
-            width: 330px;
-            transform: none;
-            margin: 0 auto;
-
-            .bt-thumb {
-                width: 82px;
-            }
-        }
-
-        .leftImage-1 {
-            left: 50px;
-            top: -42px;
-        }
-
-        .leftImage-2 {
-            left: auto;
-            right: 41px;
-            top: 25px;
-        }
-
-        .leftImage-3 {
-            left: 40px;
-            top: 110px;
-        }
-
-        .leftImage-4 {
-            left: auto;
-            right: 35px;
-            top: 150px;
-        }
-
-        .leftImage-5 {
-            left: 20px;
-            bottom: auto;
-            top: 250px;
-        }
-
-        .leftImage-6 {
-            left: auto;
-            bottom: auto;
-            right: 30px;
-            top: 325px;
-        }
-
-        .rightImage-1 {
-            right: auto;
-            left: 50px;
-            top: auto;
-            bottom: 310px;
-        }
-
-        .rightImage-2 {
-            right: auto;
-            left: 20px;
-            top: auto;
-            bottom: 115px;
-        }
-
-        .rightImage-3 {
-            right: 25px;
-            top: auto;
-            bottom: 340px;
-        }
-
-        .rightImage-4 {
-            right: 50px;
-            top: auto;
-            bottom: 200px;
-        }
-
-        .rightImage-5 {
-            right: 30px;
-            bottom: 30px;
         }
     }
 }

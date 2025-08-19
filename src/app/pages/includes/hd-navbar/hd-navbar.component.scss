@@ -2056,3 +2056,66 @@ form {
         font-size: 13px !important;
     }
 }
+
+// About Page Navbar Styles
+.navbar-area.about-page {
+    background-color: var(--themeColor);
+    
+    .navbar {
+        .navbar-brand {
+            .normal-show {
+                display: none;
+            }
+            .white-show {
+                display: block;
+            }
+        }
+        
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: white;
+                    
+                    &:hover {
+                        color: rgba(255, 255, 255, 0.8);
+                    }
+                    
+                    &.active {
+                        color: white;
+                    }
+                }
+            }
+        }
+        
+        .navbar-toggler {
+            .burger-menu {
+                .top-bar,
+                .middle-bar,
+                .bottom-bar {
+                    background-color: white;
+                }
+            }
+        }
+        
+        .other-options {
+            .language-selector {
+                color: white;
+                
+                .dropdown-toggle {
+                    color: white;
+                }
+            }
+            
+            .get-started-btn {
+                background-color: white;
+                color: var(--themeColor);
+                border: 2px solid white;
+                
+                &:hover {
+                    background-color: transparent;
+                    color: white;
+                }
+            }
+        }
+    }
+}
