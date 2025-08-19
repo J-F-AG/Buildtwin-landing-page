@@ -1,62 +1,67 @@
-<div class="stripe-pricing-page">
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="container">
-            <div class="hero-content text-center">
-                <h1 class="hero-title" data-aos="fade-up" data-aos-duration="500">
-                    Pricing built for businesses of all sizes
-                </h1>
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    Access a complete platform with simple, pay-as-you-go pricing. No setup fees, monthly fees, or hidden fees.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Pricing Tiers -->
-    <div class="pricing-tiers">
-        <div class="container">
-            <div class="tiers-grid">
-                <!-- Standard Tier -->
-                <div class="pricing-tier standard" data-aos="fade-up" data-aos-duration="500">
-                    <div class="tier-header">
+<!-- Stripe-style Pricing Page -->
+<div class="stripe-pricing-container">
+        <!-- Hero Section with Gradient Background -->
+    <div class="hero-gradient-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Pricing built for businesses<br>of all sizes
+            </h1>
+            
+            <!-- Pricing Cards Container -->
+            <div class="pricing-cards-container">
+                <!-- Standard Card -->
+                <div class="pricing-card standard-card">
+                    <div class="card-header">
                         <h2>Standard</h2>
-                        <p>Access a complete platform with simple, pay-as-you-go pricing. No setup fees, monthly fees, or hidden fees.</p>
-                        <a href="https://www.buildtwin.com/get-started" target="_blank" class="btn btn-primary">
+                        <p>Access a complete payments platform with simple, pay-as-you-go pricing. No setup fees, monthly fees, or hidden fees.</p>
+                        <button class="get-started-btn">
                             Get started
-                        </a>
+                            <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="tier-pricing">
-                        <div class="price-item">
-                            <div class="price-amount">€99</div>
-                            <div class="price-period">per month</div>
-                            <div class="price-description">for standard projects</div>
+                    
+                    <div class="pricing-details">
+                        <div class="price-row">
+                            <div class="price-main">1.5% + €0.25</div>
+                            <div class="price-description">for <span class="highlight-blue">standard European Economic Area cards</span></div>
                         </div>
-                        <div class="price-item">
-                            <div class="price-amount">€199</div>
-                            <div class="price-period">per month</div>
-                            <div class="price-description">for premium features</div>
+                        <div class="price-row">
+                            <div class="price-main">2.5% + €0.25</div>
+                            <div class="price-description">for UK cards</div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Custom Tier -->
-                <div class="pricing-tier custom" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <div class="tier-header">
+                
+                <!-- Custom Card -->
+                <div class="pricing-card custom-card">
+                    <div class="card-header">
                         <h2>Custom</h2>
-                        <p>Design a custom package – available for businesses with large project volumes or unique business models.</p>
-                        <a href="javascript:void(0)" (click)="call()" class="btn btn-outline">
+                        <p>Design a custom package – available for businesses with large payments volume or unique business models.</p>
+                        <button class="contact-sales-btn">
                             Contact sales
-                        </a>
+                            <svg class="arrow-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="tier-features">
-                        <ul>
-                            <li>Volume discounts</li>
-                            <li>Multi-product discounts</li>
-                            <li>Country-specific rates</li>
-                            <li>Custom integrations</li>
-                        </ul>
+                    
+                    <div class="custom-features">
+                        <div class="feature-item">IC+ pricing</div>
+                        <div class="feature-item">Volume discounts</div>
+                        <div class="feature-item">Multi-product discounts</div>
+                        <div class="feature-item">Country-specific rates</div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <div class="pricing-navigation">
+                <div class="nav-tabs">
+                    <button class="nav-tab active">Standard pricing</button>
+                    <button class="nav-tab">Custom pricing</button>
+                    <button class="nav-tab">FAQs</button>
                 </div>
             </div>
         </div>
@@ -64,185 +69,211 @@
 
     <!-- Features Section -->
     <div class="features-section">
-        <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up" data-aos-duration="500">
-                Features available out of the box:
-            </h2>
+<div class="container">
+            <h2 class="features-title">Features available out of the box:</h2>
             
             <div class="features-grid">
                 <!-- Global Access -->
-                <div class="feature-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <div class="feature-icon">
-                        <i class="ti ti-world"></i>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon global-access"></div>
                     <h3>Global access</h3>
                     <ul>
                         <li>195 countries</li>
                         <li>135+ currencies</li>
                         <li>100+ payment methods</li>
                         <li>1 integration</li>
-                    </ul>
-                </div>
-
-                <!-- Built-in Security -->
-                <div class="feature-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <div class="feature-icon">
-                        <i class="ti ti-shield-check"></i>
+                                </ul>
                     </div>
-                    <h3>Built-in security</h3>
+            
+                <!-- Built-in fraud prevention -->
+                <div class="feature-card">
+                    <div class="feature-icon fraud-prevention"></div>
+                    <h3>Built-in fraud prevention</h3>
                     <ul>
                         <li>Powerful machine learning</li>
-                        <li>Adapts to new threats</li>
+                        <li>Adapts to new fraud patterns</li>
                         <li>No integration required</li>
-                        <li>Security analytics</li>
+                        <li>Fraud analytics</li>
                     </ul>
                 </div>
 
-                <!-- Optimization Tools -->
-                <div class="feature-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                    <div class="feature-icon">
-                        <i class="ti ti-tools"></i>
-                    </div>
-                    <h3>Tools to optimize your workflow</h3>
+                <!-- Tools to optimise checkout -->
+                <div class="feature-card">
+                    <div class="feature-icon optimize-checkout"></div>
+                    <h3>Tools to optimise your checkout</h3>
                     <ul>
                         <li>Flexible UI components</li>
-                        <li>Pre-built forms</li>
-                        <li>Accelerated processes</li>
-                        <li>No-code solutions</li>
+                        <li>Pre-built payment forms</li>
+                        <li>Accelerated checkout</li>
+                        <li>No-code payments</li>
                     </ul>
                 </div>
 
-                <!-- Performance -->
-                <div class="feature-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-                    <div class="feature-icon">
-                        <i class="ti ti-chart-line"></i>
-                    </div>
-                    <h3>Performance optimizations</h3>
+                <!-- Payments optimisations -->
+                <div class="feature-card">
+                    <div class="feature-icon payment-optimizations"></div>
+                    <h3>Payments optimisations to boost revenue</h3>
                     <ul>
-                        <li>Real-time updates</li>
-                        <li>Auto-sync capabilities</li>
+                        <li>Real-time retries</li>
+                        <li>Auto-updated cards</li>
                         <li>Customer authentication</li>
-                        <li>Smart routing</li>
                     </ul>
-                </div>
-
-                <!-- Platform Features -->
-                <div class="feature-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
-                    <div class="feature-icon">
-                        <i class="ti ti-building"></i>
                     </div>
-                    <h3>Platform & marketplace features</h3>
+
+                <!-- Embedded payments -->
+                <div class="feature-card">
+                    <div class="feature-icon embedded-payments"></div>
+                    <h3>Embedded payments for platforms & marketplaces</h3>
                     <ul>
                         <li>Instant onboarding</li>
                         <li>Platform management</li>
                         <li>Embedded components</li>
-                        <li>Risk management tools</li>
+                        <li>Risk tools</li>
                     </ul>
-                </div>
+                            </div>
+
+                <!-- Fast payouts -->
+                <div class="feature-card">
+                    <div class="feature-icon fast-payouts"></div>
+                    <h3>Fast, predictable payouts to your bank accounts</h3>
+                    <ul>
+                        <li>Flexible payout options</li>
+                        <li>Like-for-like settlement</li>
+                        <li>Payout transparency</li>
+                                    </ul>
+                                </div>
 
                 <!-- Support -->
-                <div class="feature-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
-                    <div class="feature-icon">
-                        <i class="ti ti-headset"></i>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon support"></div>
                     <h3>Phone, chat, and email support</h3>
                     <ul>
                         <li>24x7 support</li>
                         <li>Industry-leading documentation</li>
-                        <li>Technical support</li>
-                        <li>Dedicated account managers</li>
+                        <li>Technical support on Discord</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="faq-section">
+                            </div>
+                            
+                <!-- Security -->
+                <div class="feature-card">
+                    <div class="feature-icon security"></div>
+                    <h3>Security, reliability and compliance</h3>
+                    <ul>
+                        <li>99.999% average historical uptime</li>
+                        <li>PCI compliant</li>
+                        <li>Regulatory licences globally</li>
+                    </ul>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            
+    <!-- Detailed Pricing Section -->
+    <div class="detailed-pricing-section">
         <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up" data-aos-duration="500">
-                Frequently Asked Questions
-            </h2>
-            
-            <div class="faq-grid">
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500">
-                    <h3>How are project fees calculated?</h3>
-                    <p>BuildTwin charges a per-project fee depending on the features and services used. More details on fees by project type.</p>
-                </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <h3>Will I be charged tax?</h3>
-                    <p>BuildTwin is required to charge tax on certain products and services. Tax is charged based on your location and business status.</p>
-                </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <h3>Are there additional fees for cancellations?</h3>
-                    <p>For businesses on standard pricing: There are no fees for cancelling projects. For custom pricing: Fees depend on your agreement.</p>
-                </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
-                    <h3>Do you have setup fees or monthly fees?</h3>
-                    <p>BuildTwin does not charge setup fees, monthly fees, or any other hidden fees. All fees are listed transparently on our website.</p>
-                </div>
-
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-                    <h3>Do you offer any discounts?</h3>
-                    <p>BuildTwin offers custom pricing for businesses with large project volumes. Eligibility varies by market and project type.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA Section -->
-    <div class="cta-section">
-        <div class="container">
-            <div class="cta-content text-center" data-aos="fade-up" data-aos-duration="500">
-                <h2>Ready to get started?</h2>
-                <p>Access a complete platform with simple, pay-as-you-go pricing, or contact us to design a custom package specifically for your business.</p>
-                <div class="cta-buttons">
-                    <a href="https://www.buildtwin.com/get-started" target="_blank" class="btn btn-primary">
-                        Start now
-                    </a>
-                    <a href="javascript:void(0)" (click)="call()" class="btn btn-outline">
-                        Contact sales
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Customer Stories -->
-    <div class="customer-stories">
-        <div class="container">
-            <h2 class="section-title text-center" data-aos="fade-up" data-aos-duration="500">
-                See our customers
-            </h2>
-            <p class="section-subtitle text-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                From startups to Fortune 500s, explore how millions of businesses use BuildTwin to start and scale their companies.
-            </p>
-            <div class="stories-grid">
-                <div class="story-card" data-aos="fade-up" data-aos-duration="500">
-                    <div class="story-logo">
-                        <img src="assets/images/logos/logo1.png" alt="Customer Logo" width="80" height="40">
+            <div class="pricing-header">
+                <span class="section-label">Standard pricing for all products</span>
+                <h2 class="section-title">Explore pricing for the full BuildTwin platform</h2>
+                <p class="section-subtitle">Online and in-person payments, recurring billing, embedded payments, and much more.</p>
+                            </div>
+                      
+            <div class="pricing-content">
+                <!-- Sidebar Navigation -->
+                <div class="pricing-sidebar">
+                    <div class="sidebar-section">
+                        <h3>Global payments</h3>
+                        <ul>
+                            <li>Payments</li>
+                            <li>Payment Links</li>
+                            <li>Checkout</li>
+                            <li>Terminal</li>
+                            <li>Radar</li>
+                                    </ul>
                     </div>
-                    <h3>Leading Engineering Firm</h3>
-                    <p>Increased project efficiency by 40% with BuildTwin's AI-powered workflow automation.</p>
-                </div>
-                <div class="story-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-                    <div class="story-logo">
-                        <img src="assets/images/logos/logo2.png" alt="Customer Logo" width="80" height="40">
+
+                    <div class="sidebar-section">
+                        <h3>Embedded payments and finance</h3>
+                        <ul>
+                            <li>Connect</li>
+                            <li>Issuing</li>
+                        </ul>
+                            </div>
+
+                    <div class="sidebar-section">
+                        <h3>Revenue and finance automation</h3>
+                        <ul>
+                            <li>Billing</li>
+                            <li>Invoicing</li>
+                            <li>Tax</li>
+                            <li>Sigma</li>
+                            <li>Data Pipeline</li>
+                            <li>Revenue Recognition</li>
+                        </ul>
                     </div>
-                    <h3>Global Construction Company</h3>
-                    <p>Streamlined operations across 50+ countries with BuildTwin's unified platform.</p>
-                </div>
-                <div class="story-card" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                    <div class="story-logo">
-                        <img src="assets/images/logos/logo3.png" alt="Customer Logo" width="80" height="40">
+
+                    <div class="sidebar-section">
+                        <h3>More</h3>
+                        <ul>
+                            <li>Financial Connections</li>
+                            <li>Identity</li>
+                            <li>Atlas</li>
+                            <li>Climate</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                <!-- Main Content Area -->
+                <div class="pricing-main-content">
+                    <div class="product-section">
+                        <h2>Global payments</h2>
+                        <p>Optimise checkout conversion, accept local payment methods, and increase acceptance rates.</p>
+
+                        <div class="product-card">
+                            <div class="product-header">
+                                <div class="product-icon"></div>
+                                <div class="product-info">
+                                    <h3>Payments</h3>
+                                    <p>An online payments platform engineered for growth.</p>
+                                </div>
+                                <button class="start-now-btn">Start now</button>
+                            </div>
+                            
+                            <div class="product-features">
+                                <ul>
+                                    <li>Increase customer acquisition with 100+ payment methods.</li>
+                                    <li>Improve conversion with Link - BuildTwin's accelerated checkout.</li>
+                                    <li>Reduce fraud and increase revenue with ML optimisations.</li>
+                                    <li>Save engineering time with pre-built UIs.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Pricing Details -->
+                            <div class="pricing-details-section">
+                                <div class="pricing-item">
+                                    <h4>Domestic cards</h4>
+                                    <p>Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued domestically.</p>
+                                    <div class="price-display">
+                                        <span class="price">1.5% + €0.25</span>
+                                        <span class="price-desc">for <span class="highlight">standard European Economic Area cards</span></span>
+                        </div>
+                                    <div class="price-display">
+                                        <span class="price">1.9% + €0.25</span>
+                                        <span class="price-desc">for <span class="highlight">premium European Economic Area cards</span></span>
+                            </div>
+                                </div>
+
+                                <div class="pricing-item">
+                                    <h4>International cards</h4>
+                                    <div class="price-display">
+                                        <span class="price">2.5% + €0.25</span>
+                                        <span class="price-desc">for UK cards</span>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Innovation Startup</h3>
-                    <p>Reduced time-to-market by 60% using BuildTwin's collaborative tools and AI capabilities.</p>
                 </div>
-            </div>
+                </div>
         </div>
     </div>
 </div>
