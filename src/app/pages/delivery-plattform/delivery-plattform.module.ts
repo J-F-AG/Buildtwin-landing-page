@@ -15,6 +15,8 @@ import { Style3Module } from '../style3/style3.module';
 import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module';
 import { CompanyLogosSliderModule } from '../Home/company-logos-slider/company-logos-slider.module';
 import { TtFaqComponent } from './tt-faq/tt-faq.component';
+import { EmFaqModule } from '../includes/em-faq/em-faq.module';
+
 
 const routes: Routes = [
   {
@@ -41,6 +43,7 @@ const routes: Routes = [
     Style3Module,
     HubspotModule,
     CompanyLogosSliderModule,
+    EmFaqModule,
     RouterModule.forChild(routes),
     ProjectListModule
   ],

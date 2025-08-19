@@ -1,0 +1,84 @@
+<div class="good-company global-mb" *ngIf="allCaseStudies.length">
+    <div class="container">
+        <div class="main-head" *ngIf="heading">
+            <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
+                <div class="heading" *ngIf="!page">
+                    <div class="title">Case Studies</div>
+                    <div class="subTitle">Discover real-world success stories and transformative outcomes achieved with BuildTwin AI capabilities</div>
+                </div>
+                <div class="heading" *ngIf="page">
+                    <div class="title">AI Capabilities Case Studies</div>
+                    <div class="subTitle">Explore how leading engineering firms are leveraging BuildTwin AI to achieve remarkable results</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-container squareButtonWrapper" 
+    *ngIf="!page"
+    [ngClass]="{
+        'desktop3col': (defaultVisible === 3 && allCaseStudies.length <= 3),
+        'desktop2col': (defaultVisible === 2 && allCaseStudies.length <= 2)
+      }">
+        <ng-container *ngFor="let list of allCaseStudies; let i = index">
+            <div class="bg-style" [ngStyle]="{'background-image': 'url(' + list['jetpack_featured_media_url'] + ')', 'background-size': 'cover', 'background-position': 'center'}" [ngClass]="{'active': startPosition === list['id']}"></div>
+        </ng-container>
+        <owl-carousel-o [options]="factorySlider" *ngIf="isBrowser" (changed)="onSlideChange($event)">
+            <ng-template carouselSlide *ngFor="let list of allCaseStudies; let i = index">
+                <div class="card" [ngClass]="{'show-active': startPosition === list['id']}" (mouseover)="onSlideHover(list)">
+                    <p class="card__title" [innerHtml]="list['title']['rendered']"></p>
+                    <!-- <p class="card__description" [innerHtml]="list['excerpt']['rendered']"></p> -->
+                    <a [href]="list['link']" target="_blank" class="card__footer">
+                        <span>Read Case Study</span>
+                        <small class="arrow-icon"></small>
+                    </a>
+                </div>
+            </ng-template>
+        </owl-carousel-o>
+    </div>
+    <div class="container" *ngIf="page">
+        <div class="feature-blog-wrapper">
+            <div class="left" *ngIf="allCaseStudies[0]">
+                <figure>
+                    <img src="{{allCaseStudies[0]['jetpack_featured_media_url']}}" alt="Featured Case Study">
+                    <span class="label">
+                        Featured
+                    </span>
+                </figure>
+                <div class="content">
+                    <h3>
+                        {{allCaseStudies[0]['title']['rendered']}}
+                    </h3>
+                    <p class="blog-description" [innerHtml]="allCaseStudies[0]['excerpt']['rendered']"></p>
+                    <div class="blog-footer">
+                        <a [href]="allCaseStudies[0]['link']" target="_blank" class="blog-cta link-text">
+                            <span>Read Full Case Study</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="right-block">
+                    <h4>
+                        More Success Stories
+                    </h4>
+                    <div class="trending-topic-list">
+                        <ng-container *ngFor="let list of allCaseStudies.slice(1); let i = index">
+                            <a [href]="list['link']" target="_blank" class="block">
+                                <span class="sq">
+                                    {{ (i + 1) | number: '2.0' }}
+                                </span>
+                                <div class="list-detail">
+                                    <h5>
+                                        {{list['title']['rendered']}}
+                                    </h5>
+                                    <p [innerHtml]="list['excerpt']['rendered']">
+                                    </p>
+                                </div>
+                            </a>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

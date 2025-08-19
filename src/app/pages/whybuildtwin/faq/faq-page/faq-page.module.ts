@@ -5,6 +5,7 @@ import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 import { FaqPageComponent } from './faq-page.component';
 import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.module';
 import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
+import { EmFaqModule } from 'src/app/pages/includes/em-faq/em-faq.module';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
     SharedModuleModule,
         HdNavbarModule,
         HdFooterModule,
+        EmFaqModule,
     RouterModule.forChild(routes),
   ],
 })

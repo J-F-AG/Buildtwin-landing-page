@@ -3,20 +3,19 @@
     <ng-template carouselSlide>
       <div class="slide">
         <figure class="left">
-          <img src="assets/images/slide1-left.jpg" width="482" height="473" alt="slide">
+          <img src="assets/images/slide1.png" width="482" height="473" alt="BuildTwin Professional Executive">
         </figure>
         <figure class="right">
-          <img src="assets/images/slide1-right.jpg" width="482" height="473" alt="slide">
+          <img src="assets/images/slide1.png" width="482" height="473" alt="BuildTwin Professional Executive">
         </figure>
         <div class="slide-content center">
           <div>
             <h1>
-              A new Engineering Experience.
-      Focus on  <span>what matters</span>
+              Introducing <span>BuildTwin</span>
             </h1>
             <p class="small-title">
-              BuildTwin simplifies how you outsource, manage and ensure your projects meet time 
-      and quality goals. Get started in minutes and focus on what matters!
+              Meet our professional team members who are dedicated to delivering exceptional results. 
+              BuildTwin excels at various tasks in work and life, getting everything done while you rest.
             </p>
           </div>
           <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
@@ -26,20 +25,19 @@
     <ng-template carouselSlide>
       <div class="slide">
         <figure class="left">
-          <img src="assets/images/slide2-left.jpg" width="482" height="473" alt="slide">
+          <img src="assets/images/slide2.png" width="482" height="473" alt="BuildTwin Company Leader Introduction">
         </figure>
         <figure class="right">
-          <img src="assets/images/slide2-right.jpg" width="482" height="473" alt="slide">
+          <img src="assets/images/slide2.png" width="482" height="473" alt="BuildTwin Company Leader Introduction">
         </figure>
         <div class="slide-content center">
           <div>
             <h2>
-              Get 5+ free  <span>competitive offers</span>
-    from 100s of pre-qualified vendors
+              Meet Our <span>Leadership Team</span>
             </h2>
             <p class="small-title">
-              Trusted, Reliable and Efficient – Access pre-qualified engineers 
-    who deliver on time, within budget and to your standards.
+              Our experienced leaders bring years of expertise and innovation to every project. 
+              Trusted, Reliable and Efficient – Access pre-qualified experts who deliver on time, within budget and to your standards.
             </p>
           </div>
           <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
@@ -49,20 +47,19 @@
     <ng-template carouselSlide>
       <div class="slide">
         <figure class="left">
-          <img src="assets/images/slide3-left.jpg" width="482" height="473" alt="slide">
+          <img src="assets/images/slide3.png" width="482" height="473" alt="BuildTwin Team Member Presentation">
         </figure>
         <figure class="right">
-          <img src="assets/images/slide3-right.jpg" width="482" height="473" alt="slide">
+          <img src="assets/images/slide3.png" width="482" height="473" alt="BuildTwin Team Member Presentation">
         </figure>
         <div class="slide-content center">
           <div>
             <h2>
-              Less stress. More progress.
-    Meet your  <span>AI Design Manager</span>
+              Our Expert <span>Team Members</span>
             </h2>
             <p class="small-title">
-              Your AI-powered Design Manager simplifies project coordination, ensuring timelines, quality
-    and budget are on track. Achieve more with intelligent automation.
+              Our dedicated team members are here to simplify your project coordination, ensuring timelines, quality
+              and budget are on track. Achieve more with intelligent automation.
             </p>
           </div>
           <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
@@ -72,20 +69,19 @@
     <ng-template carouselSlide>
       <div class="slide">
         <figure class="left">
-          <img src="assets/images/slide4-left.jpg" width="482" height="473" alt="slide">
+          <img src="assets/images/slide4.png" width="482" height="473" alt="BuildTwin Senior Expert Introduction">
         </figure>
         <figure class="right">
-          <img src="assets/images/slide4-right.jpg" width="482" height="473" alt="slide">
+          <img src="assets/images/slide4.png" width="482" height="473" alt="BuildTwin Senior Expert Introduction">
         </figure>
         <div class="slide-content center">
           <div>
             <h2>
-              Relax! Let AI check every
-    detail and  <span>ensure quality</span>
+              Senior Experts <span>Ensuring Quality</span>
             </h2>
             <p class="small-title">
-              AI tracks all changes, conversations, and revisions, ensuring every drawing 
-    meets compliance with your requirement.
+              Our senior experts check every detail and ensure quality across all projects. 
+              We track all changes, conversations, and revisions, ensuring every deliverable meets compliance with your requirements.
             </p>
           </div>
           <ng-container *ngTemplateOutlet="buttonTemplate"></ng-container>
@@ -93,19 +89,19 @@
       </div>
     </ng-template>
   </owl-carousel-o>
-  <div class="container slide-tab-wrapper">
-    <ul class="slide-tab">
+  <div class="slide-navigation">
+    <ul>
       <li (click)="goToSlide(0)" [ngClass]="{'active': currentIndex==0}">
-        1 | Marketplace + AI Design Manager
+        1 | Introducing BuildTwin
       </li>
       <li (click)="goToSlide(1)" [ngClass]="{'active': currentIndex==1}">
-        2 | Get competetive quotes
+        2 | Meet Our Leadership Team
       </li>
       <li (click)="goToSlide(2)" [ngClass]="{'active': currentIndex==2}">
-        3 | Meet your AI Design Manager
+        3 | Our Expert Team Members
       </li>
       <li (click)="goToSlide(3)" [ngClass]="{'active': currentIndex==3}">
-        4 | Assisted AI Project Delivery
+        4 | Senior Experts Ensuring Quality
       </li>
     </ul>
   </div>

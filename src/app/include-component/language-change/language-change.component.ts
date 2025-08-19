@@ -12,6 +12,37 @@ export class LanguageChangeComponent {
   selectedLangObj: any = {};
   isBrowser: boolean;
 
+  // English-speaking countries plus Germany with German
+  northAmericaCountries = [
+    { name: 'United States', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Canada', language: 'English', text: 'en', lang: '/en', value: '' }
+  ];
+
+  asiaPacificCountries = [
+    { name: 'Hong Kong', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'India', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Malaysia', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Singapore', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Australia', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'New Zealand', language: 'English', text: 'en', lang: '/en', value: '' }
+  ];
+
+  europeCountries = [
+    { name: 'Ireland', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'United Kingdom', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Germany', language: 'German', text: 'de', lang: '/de', value: '/de' }
+  ];
+
+  southAmericaCountries = [
+    { name: 'Guyana', language: 'English', text: 'en', lang: '/en', value: '' }
+  ];
+
+  middleEastCountries = [
+    { name: 'UAE', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Jordan', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Qatar', language: 'English', text: 'en', lang: '/en', value: '' }
+  ];
+
   constructor(
     public _languageService: LanguageService,
     @Inject(PLATFORM_ID) private platformId: Object // Inject PLATFORM_ID to check if in the browser

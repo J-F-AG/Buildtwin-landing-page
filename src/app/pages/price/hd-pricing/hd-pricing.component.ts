@@ -1,22 +1,18 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-hd-pricing',
-  templateUrl: './hd-pricing.component.html',
-  styleUrls: ['./hd-pricing.component.scss']
+    selector: 'app-hd-pricing',
+    templateUrl: './hd-pricing.component.html',
+    styleUrls: ['./hd-pricing.component.scss']
 })
 export class HdPricingComponent {
-  marketPlace: number = 1
-  showPopup = false;
-  marketplaceNumber(event) {
-    this.marketPlace = event
-  }
 
-  call() {
-    this.showPopup = true
-  }
+    constructor() {}
 
-  closePopupStatus($event) {
-    this.showPopup = false;
-  }
+    ngOnInit() {}
+
+    call() {
+        // Open contact sales form or redirect to contact page
+        window.open('https://www.buildtwin.com/contact', '_blank');
+    }
 }

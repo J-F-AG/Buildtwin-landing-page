@@ -20,6 +20,16 @@ const routes: Routes = [
         }
     },
     {
+        path: 'drawing-automation',
+        loadChildren: () => import('./pages/drawing-automation/drawing-automation.module').then(m => m.DrawingAutomationModule),
+        data: {
+            title: 'Drawing Automation for Structural Documentation | BuildTwin One',
+            description: 'Automate sheets, enforce building codes, and collaborate in real time. BuildTwin One accelerates drawing production from model to IFC.',
+            image: 'https://www.buildtwin.com/assets/images/buildtwin.jpg',
+            canonical: 'https://www.buildtwin.com/drawing-automation'
+        }
+    },
+    {
         path: 'ai-capabilities',
         loadChildren: () => import('./pages/ai-capabilities/ai-capabilities-page/ai-capabilities-page.module').then(m => m.AiCapabilitiesPageModule),
         // component: HelpDeskHomeComponent,

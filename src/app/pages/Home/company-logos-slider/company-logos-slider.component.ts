@@ -39,11 +39,6 @@ constructor(public _languageService:LanguageService,
     this.checkAnimation();
   }
 
-  @HostListener('window:resize')
-  onResize() {
-    this.checkAnimation();
-  }
-
   checkAnimation() {
     if (this.carousel) {
       const carouselWidth = this.carousel.nativeElement.scrollWidth;

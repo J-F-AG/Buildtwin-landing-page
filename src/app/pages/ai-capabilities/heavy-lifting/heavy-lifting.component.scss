@@ -7,7 +7,7 @@
 .list-wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 60px;
+    padding-bottom: 24px; /* reduced to tighten space above CTA */
     .block {
         width: 33.333%;
         text-align: center;
@@ -15,7 +15,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 70px;
+        padding-bottom: 36px; /* reduced to tighten vertical spacing */
+        position: relative;
         figure {
             width: 190px;
             height: 190px;
@@ -29,6 +30,38 @@
         p {
             font-size: 15px;
             color: var(--lightTextColor);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: #0053fa;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 83, 250, 0.3);
+            z-index: 10;
+        }
+        
+        .time-label {
+            background: #FF6B35;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 15px 0;
+            display: inline-block;
         }
     }
 }
@@ -60,6 +93,11 @@
             }
         }
     }
+}
+
+.how-cta {
+    margin-top: 8px; /* tighten space above CTA */
+    margin-bottom: 56px; /* add breathing room before next section */
 }
 
 @media (max-width: 767px) {
