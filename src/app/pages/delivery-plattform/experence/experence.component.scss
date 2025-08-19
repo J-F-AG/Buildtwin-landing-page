@@ -70,6 +70,12 @@
             text-align: center;
             position: relative;
             z-index: 3;
+            
+            &.human-engineering {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 1.2;
+            }
         }
     }
 
