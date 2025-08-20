@@ -19,8 +19,8 @@ export class LanguageChangeComponent {
   ];
 
   asiaPacificCountries = [
-    { name: 'Hong Kong', language: 'English', text: 'en', lang: '/en', value: '' },
     { name: 'India', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Hong Kong', language: 'English', text: 'en', lang: '/en', value: '' },
     { name: 'Malaysia', language: 'English', text: 'en', lang: '/en', value: '' },
     { name: 'Singapore', language: 'English', text: 'en', lang: '/en', value: '' },
     { name: 'Australia', language: 'English', text: 'en', lang: '/en', value: '' },
@@ -33,12 +33,9 @@ export class LanguageChangeComponent {
     { name: 'Germany', language: 'German', text: 'de', lang: '/de', value: '/de' }
   ];
 
-  southAmericaCountries = [
-    { name: 'Guyana', language: 'English', text: 'en', lang: '/en', value: '' }
-  ];
-
   middleEastCountries = [
     { name: 'UAE', language: 'English', text: 'en', lang: '/en', value: '' },
+    { name: 'Saudi Arabia', language: 'English', text: 'en', lang: '/en', value: '' },
     { name: 'Jordan', language: 'English', text: 'en', lang: '/en', value: '' },
     { name: 'Qatar', language: 'English', text: 'en', lang: '/en', value: '' }
   ];

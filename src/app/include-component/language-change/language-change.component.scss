@@ -40,7 +40,7 @@
 
 .language-grid {
     display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 0 !important;
     padding: 32px !important;
     background: white !important;
@@ -100,7 +100,7 @@
 // Additional specific selectors to ensure grid works
 .custom-language-grid {
     display: grid !important;
-    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 0 !important;
     padding: 32px !important;
     background: white !important;
@@ -168,12 +168,12 @@
     }
 
     .language-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         padding: 20px !important;
     }
 
     .custom-language-grid {
-        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         padding: 20px !important;
         min-width: 400px !important;
         width: 400px !important;
