@@ -7,7 +7,8 @@ import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 })
 export class HdPricingComponent implements OnInit, OnDestroy {
 
-    activeSection: string = 'payments';
+    activeSection: string = 'hero';
+    activeTab: string = 'hero';
 
     constructor() {}
 
@@ -23,6 +24,7 @@ export class HdPricingComponent implements OnInit, OnDestroy {
     // Handle sidebar navigation clicks
     scrollToSection(sectionId: string) {
         this.activeSection = sectionId;
+        this.activeTab = sectionId;
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ 
@@ -32,10 +34,25 @@ export class HdPricingComponent implements OnInit, OnDestroy {
         }
     }
 
-    // Track scroll position to update active sidebar item
+    // Track scroll position to update active sidebar item and navigation tabs
     @HostListener('window:scroll', ['$event'])
     onWindowScroll() {
-        // This would be used to track which section is currently in view
-        // and update the active state in the sidebar accordingly
+        const sections = ['hero', 'capability-statement', 'faq'];
+        const scrollPosition = window.scrollY + 100; // Offset for better detection
+        
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const sectionId = sections[i];
+            const element = document.getElementById(sectionId);
+            if (element) {
+                const elementTop = element.offsetTop;
+                if (scrollPosition >= elementTop) {
+                    if (this.activeTab !== sectionId) {
+                        this.activeTab = sectionId;
+                        this.activeSection = sectionId;
+                    }
+                    break;
+                }
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 <!-- Stripe-style Pricing Page -->
 <div class="stripe-pricing-container">
     <!-- Hero Section with Gradient Background -->
-    <div class="hero-gradient-section">
+    <div class="hero-gradient-section" id="hero">
         <div class="hero-content">
             <h1 class="hero-title">
                 Pricing built for businesses<br>of all sizes
@@ -55,15 +55,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Navigation Tabs -->
-            <div class="pricing-navigation">
-                <div class="nav-tabs">
-                    <button class="nav-tab active">Standard pricing</button>
-                    <button class="nav-tab">Custom pricing</button>
-                    <button class="nav-tab">FAQs</button>
-                </div>
+    <!-- Sticky Navigation Tabs -->
+    <div class="pricing-navigation">
+        <div class="nav-container">
+            <div class="nav-tabs">
+                <button class="nav-tab" [class.active]="activeTab === 'hero'" (click)="scrollToSection('hero')">Pricing</button>
+                <button class="nav-tab" [class.active]="activeTab === 'capability-statement'" (click)="scrollToSection('capability-statement')">Capabilities</button>
+                <button class="nav-tab" [class.active]="activeTab === 'faq'" (click)="scrollToSection('faq')">FAQs</button>
             </div>
+            <button class="get-started-nav-btn">Get Started</button>
         </div>
     </div>
 
@@ -173,11 +176,11 @@
     </div>
 
     <!-- Detailed Pricing Section -->
-    <div class="detailed-pricing-section">
+    <div class="detailed-pricing-section" id="capability-statement">
         <div class="container">
             <div class="pricing-header">
-                <span class="section-label">Standard pricing for all products</span>
-                <h2 class="section-title">Explore pricing for the full BuildTwin platform</h2>
+                <span class="section-label">BuildTwin</span>
+                <h2 class="section-title">Capability Statement</h2>
                 <p class="section-subtitle">AI-powered structural engineering solutions, automated drawing generation, and quality control systems.</p>
             </div>
                       
@@ -430,39 +433,63 @@
     </div>
                             
     <!-- FAQ Section -->
-    <div class="faq-section">
+    <div class="faq-section" id="faq">
         <div class="container">
-            <h2 class="section-title">FAQs</h2>
+            <div class="faq-header">
+                <h2>Good to know...</h2>
+                <p>Pricing and capabilities can be complex, so we've made it simple. If you still have questions, you can <a href="https://www.buildtwin.com/contact" target="_blank">contact our team</a>.</p>
+            </div>
             
             <div class="faq-grid">
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500">
+                <div class="faq-card">
                     <h3>How are payment fees calculated?</h3>
-                    <p>BuildTwin charges a per-transaction fee depending on the payment method used by the end customer. More details on fees by payment method.</p>
+                    <p>BuildTwin charges a per-transaction fee depending on the payment method used by the end customer. Our transparent pricing ensures you only pay for successful transactions with no hidden fees.</p>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
+                <div class="faq-card">
                     <h3>Will I be charged tax?</h3>
                     <p>BuildTwin is required to charge tax on certain products and services. Tax is charged based on your location and/or your business/tax status, which determines whether a product or service is subject to taxes, and the applicable tax rates.</p>
-                    <a href="#" class="read-more">Read more</a>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                <div class="faq-card">
                     <h3>Are there additional fees for refunds?</h3>
-                    <div class="faq-list">
-                        <p><strong>For businesses on standard pricing:</strong> There may be fees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing, connect and currency conversion fees from the original transaction are not returned.</p>
-                        <p><strong>For businesses on custom pricing:</strong> There may be fees for issuing refunds depending on your fee schedule with BuildTwin.</p>
-                    </div>
+                    <p><strong>For businesses on standard pricing:</strong> There may be fees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing fees from the original transaction are not returned.</p>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
+                <div class="faq-card">
                     <h3>Do you have setup fees or monthly fees?</h3>
                     <p>BuildTwin does not charge setup fees, monthly fees, or any other hidden fees like closure fees. All fees for businesses on standard pricing are listed on our website.</p>
                 </div>
 
-                <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                <div class="faq-card">
                     <h3>Do you offer any discounts?</h3>
-                    <p>BuildTwin offers custom pricing for businesses with large processing volumes. Eligibility varies by market.</p>
+                    <p>BuildTwin offers custom pricing for businesses with large processing volumes. Eligibility varies by market. Contact our sales team to discuss volume-based pricing options.</p>
                 </div>
+
+                <div class="faq-card">
+                    <h3>What AI capabilities are included?</h3>
+                    <p>All BuildTwin plans include access to our AI-powered quality control, automated drawing generation, and intelligent design management tools. Higher tiers offer advanced features and faster processing.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>How quickly can I get started?</h3>
+                    <p>Most clients can start using BuildTwin within 24 hours of signing up. Our onboarding team provides setup assistance and training to ensure smooth integration with your existing workflows.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Can I integrate with my existing tools?</h3>
+                    <p>Absolutely! BuildTwin integrates seamlessly with all major CAD software, project management tools, and workflow systems including AutoCAD, Revit, Tekla, and more. Setup takes less than 5 minutes.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>What support do you provide?</h3>
+                    <p>We offer 24/7 technical support, comprehensive documentation, live chat assistance, and dedicated account management for enterprise clients. Our global team ensures support across all time zones.</p>
+                </div>
+            </div>
+
+            <div class="faq-footer">
+                <p>Didn't find what you were looking for?</p>
+                <a href="https://www.buildtwin.com/contact" target="_blank" class="faq-cta-button">Contact Our Team</a>
             </div>
         </div>
     </div>

@@ -566,14 +566,8 @@
             .navbar-nav {
                 padding: 15px;
                 display: block;
-                max-height: 50vh;
                 flex-direction: unset;
                 background-color: none;
-
-                overflow: {
-                    y: scroll;
-                    x: hidden;
-                }
 
                 ;
 
@@ -760,14 +754,8 @@
             .navbar-nav {
                 padding: 25px;
                 display: block;
-                max-height: 50vh;
                 flex-direction: unset;
                 background-color: #f8f8f8;
-
-                overflow: {
-                    y: scroll;
-                    x: hidden;
-                }
 
                 ;
 
@@ -1062,8 +1050,7 @@
     visibility: hidden;
     overflow: hidden;
     .container {
-        height: 450px;
-        overflow-y: auto;
+        height: auto;
     }
     .mi--12 {
         margin-inline: -12px;

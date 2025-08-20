@@ -53,35 +53,25 @@
 
 <div class="task-management-area ptb-100">
     <div class="heading center v2">
-<h2 class="title">Get results today</h2>
+<h2 class="title">The BuildTwin Delivery System</h2>
 <span class="small-title">
     Procuring competent technical teams for complex projects, made easy.
 </span>
 </div>
     <div class="tabbing">
         <div class="line">
-            <span (click)="tabinbg(1)" [ngClass]="{'active':activeState >= 1}"> <strong>1 </strong><em>Human Delivering Manager</em></span>
-            <span (click)="tabinbg(2)" [ngClass]="{'active':activeState >= 2}"><strong>2 </strong> <em>BuildTwin One</em></span>
-            <span (click)="tabinbg(3)" [ngClass]="{'active':activeState >= 3}"><strong>3 </strong> <em>BuildTwin Duett</em></span>
-            <span (click)="tabinbg(4)" [ngClass]="{'active':activeState >= 4}"><strong>4 </strong> <em>BuildTwin Trio</em></span>
+            <span (click)="tabinbg(1)" [ngClass]="{'active':activeState >= 1}"><strong>1 </strong> <em>BuildTwin One</em></span>
+            <span (click)="tabinbg(2)" [ngClass]="{'active':activeState >= 2}"><strong>2 </strong> <em>BuildTwin Duett</em></span>
+            <span (click)="tabinbg(3)" [ngClass]="{'active':activeState >= 3}"><strong>3 </strong> <em>BuildTwin Trio</em></span>
       <div class="svgFlex">
         <img [ngClass]="{'active':activeState >= 2}" class="lineSvg" src="assets/images/line.svg" alt="Line">
         <img [ngClass]="{'active':activeState >= 3}" class="lineSvg" src="assets/images/line.svg" alt="Line">
-        <img [ngClass]="{'active':activeState >= 4}"  class="lineSvg" src="assets/images/line.svg" alt="Line">
       </div>
         </div>
      </div>  
      
      <div class="tabContent">
-        <div class="tab1"  *ngIf="activeState===1">
-           <span>Tendering</span> 
-
-           <p>
-            BuildTwin assists you in tendering your project with an easy 3-step process. You can tender in private, only <br> invite selected vendors, or tender to the open marketplace with fine granularity in data privacy settings.           </p>
-
-           <img src="assets/images/tab1.png" alt="tab1" width="" height="">
-        </div>
-        <div class="tab1" *ngIf="activeState===2">
+        <div class="tab1" *ngIf="activeState===1">
             <span>Invite Vendors</span> 
  
             <p>
@@ -90,7 +80,7 @@
  
             <img src="assets/images/tab2.png" alt="tab2" width="" height="">
          </div>
-         <div class="tab1" *ngIf="activeState===3">
+         <div class="tab1" *ngIf="activeState===2">
             <span>Awarding</span> 
  
             <p>
@@ -98,7 +88,7 @@
  
             <img src="assets/images/tab3.png" alt="tab3" width="" height="">
          </div>
-         <div class="tab1" *ngIf="activeState===4">
+         <div class="tab1" *ngIf="activeState===3">
             <span>Commercial Contracting</span> 
  
             <p>

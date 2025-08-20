@@ -87,9 +87,9 @@
                 }
 
                 p {
-                    font-size: 14px;
+        font-size: 14px;
                     line-height: 1.5;
-                    margin-bottom: 20px;
+        margin-bottom: 20px;
                     opacity: 0.9;
                     color: inherit;
                 }
@@ -99,7 +99,7 @@
                     padding: 14px 20px;
                     border-radius: 8px;
                     font-size: 14px;
-                    font-weight: 600;
+            font-weight: 600;
                     border: none;
                     cursor: pointer;
                     transition: all 0.3s ease;
@@ -139,7 +139,7 @@
 
             .pricing-details {
                             .price-row {
-                text-align: center;
+                    text-align: center;
                 margin-bottom: 16px;
                 padding: 0;
                 background: transparent;
@@ -180,50 +180,89 @@
                     &:hover {
                         background: rgba(255, 255, 255, 0.18);
                         transform: translateY(-1px);
-                    }
+            }
 
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+        }
+
+    }
+
+    // Sticky Navigation Tabs - Independent with BuildTwin Colors
+    .pricing-navigation {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 16px 0;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            position: relative;
+        }
+            
+        .nav-tabs {
+            display: flex;
+            gap: 8px;
+            background: white;
+            padding: 8px;
+            border-radius: 32px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+            .nav-tab {
+                padding: 10px 20px;
+                border: none;
+                background: transparent;
+                border-radius: 24px;
+                font-size: 13px;
+                font-weight: 500;
+                color: #6b7280;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &.active {
+                    background: #0f4c75;
+                    color: white;
+                    box-shadow: 0 3px 12px rgba(15, 76, 117, 0.4);
+                }
+
+                &:hover:not(.active) {
+                    background: #f8fafc;
+                    color: #0f4c75;
                 }
             }
         }
 
-        // Navigation Tabs
-        .pricing-navigation {
-            .nav-tabs {
-                display: flex;
-                justify-content: center;
-                gap: 8px;
-                background: white;
-                padding: 8px;
-                border-radius: 32px;
-                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-                max-width: 400px;
-                margin: 0 auto;
-
-                .nav-tab {
-                    padding: 10px 20px;
-                    border: none;
-                    background: transparent;
-                    border-radius: 24px;
-                    font-size: 13px;
-                    font-weight: 500;
-                    color: #6b7280;
-                    cursor: pointer;
-                    transition: all 0.2s ease;
-
-                    &.active {
-                        background: #635bff;
-                        color: white;
-                        box-shadow: 0 3px 12px rgba(99, 91, 255, 0.4);
-                    }
-
-                    &:hover:not(.active) {
-                        background: #f8fafc;
-                        color: #374151;
-                    }
-                }
+        .get-started-nav-btn {
+            position: absolute;
+            right: 40px;
+            background: #0f4c75;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            
+            &:hover {
+                background: #0a3d5f;
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(15, 76, 117, 0.3);
             }
         }
     }
@@ -411,11 +450,7 @@
             background: #f8fafc;
             padding: 32px 24px;
             border-radius: 12px 0 0 12px;
-            position: sticky;
-            top: 20px;
             height: fit-content;
-            max-height: calc(100vh - 40px);
-            overflow-y: auto;
 
             .sidebar-section {
                 margin-bottom: 24px;
@@ -658,10 +693,10 @@
         }
     }
 
-    // FAQ Section
+    // FAQ Section - AI Capabilities Style
     .faq-section {
         padding: 80px 0;
-        background: white;
+        background-color: #f8fafc;
 
         .container {
             max-width: 1200px;
@@ -669,49 +704,104 @@
             padding: 0 24px;
         }
 
-        .section-title {
-            font-size: 32px;
-            font-weight: 600;
-            color: #0a2540;
+        .faq-header {
             text-align: center;
             margin-bottom: 60px;
+            
+            h2 {
+                font-size: 36px;
+                font-weight: 700;
+                color: #1e293b;
+                margin-bottom: 16px;
+                font-family: inherit;
+            }
+            
+            p {
+                font-size: 18px;
+                color: #64748b;
+                line-height: 1.6;
+                max-width: 600px;
+                margin: 0 auto;
+                
+                a {
+                    color: #0053FA;
+                    text-decoration: none;
+                    font-weight: 600;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
 
         .faq-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+            
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
         }
 
-        .faq-item {
+        .faq-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+            
             h3 {
-                font-size: 16px;
-                font-weight: 600;
-                color: #0a2540;
-                margin-bottom: 12px;
+                font-size: 20px;
+                font-weight: 700;
+                color: #1e293b;
+                margin-bottom: 16px;
+                line-height: 1.3;
+                font-family: inherit;
             }
-
+            
             p {
-                font-size: 14px;
-                color: #6b7280;
-                line-height: 1.5;
-                margin-bottom: 8px;
+                font-size: 16px;
+                color: #475569;
+                line-height: 1.6;
+                margin: 0;
             }
+        }
 
-            .read-more {
-                color: #635bff;
-                text-decoration: none;
-                font-size: 14px;
+        .faq-footer {
+            text-align: center;
+            
+            p {
+                font-size: 18px;
+                color: #64748b;
+                margin-bottom: 24px;
                 font-weight: 500;
-
-                &:hover {
-                    text-decoration: underline;
-                }
             }
-
-            .faq-list {
-                p {
-                    margin-bottom: 12px;
+            
+            .faq-cta-button {
+                display: inline-block;
+                background: #0f4c75;
+                color: #ffffff;
+                border: none;
+                border-radius: 6px;
+                padding: 12px 28px;
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: background-color 0.2s ease;
+                
+                &:hover {
+                    background: #0a3d5f;
                 }
             }
         }
@@ -902,6 +992,33 @@
             .pricing-cards-container {
                 flex-direction: column;
                 max-width: 400px;
+            }
+        }
+
+        .pricing-navigation {
+            padding: 12px 0;
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+                padding: 0 20px;
+            }
+            
+            .nav-tabs {
+                max-width: 350px;
+                padding: 6px;
+                
+                .nav-tab {
+                    padding: 8px 16px;
+                    font-size: 12px;
+                }
+            }
+
+            .get-started-nav-btn {
+                position: static;
+                padding: 10px 20px;
+                font-size: 13px;
+                margin-top: 8px;
             }
         }
 
