@@ -14,25 +14,25 @@ export class HomeBannerComponent {
   array = [
     {
       title: `Leave it to Richard`,
-      description : `Richard is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. BuildTwin excels at various tasks in work and life, getting everything done while you rest.`,
+      description : `Work with experienced, trusted delivery experts—just a phone call away—who seamlessly orchestrate sophisticated AI capabilities, integrated directly <u>into your current workflow</u>.`,
       placeholderImage: 'assets/images/slide1.png',
       videoLink : 'https://www.youtube.com/embed/K27diMbCsuw?autoplay=1'
     },
     {
       title: `Leave it to Thomas`,
-      description : `Thomas is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. BuildTwin excels at various tasks in work and life, getting everything done while you rest.`,
+      description : `Work with experienced, trusted delivery experts—just a phone call away—who seamlessly orchestrate sophisticated AI capabilities, integrated directly <u>into your current workflow</u>.`,
       placeholderImage: 'assets/images/slide2.png',
       videoLink : 'https://www.youtube.com/embed/K27diMbCsuw?autoplay=1'
     },
     {
       title: `Leave it to Lorenz`,
-      description : `Lorenz is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. BuildTwin excels at various tasks in work and life, getting everything done while you rest.`,
+      description : `Work with experienced, trusted delivery experts—just a phone call away—who seamlessly orchestrate sophisticated AI capabilities, integrated directly <u>into your current workflow</u>.`,
       placeholderImage: 'assets/images/slide3.png',
       videoLink : 'https://www.youtube.com/embed/K27diMbCsuw?autoplay=1'
     },
     {
       title: `Leave it to Nizam`,
-      description : `Nizam is a general AI agent that bridges minds and actions: it doesn't just think, it delivers results. BuildTwin excels at various tasks in work and life, getting everything done while you rest.`,
+      description : `Work with experienced, trusted delivery experts—just a phone call away—who seamlessly orchestrate sophisticated AI capabilities, integrated directly <u>into your current workflow</u>.`,
       placeholderImage: 'assets/images/slide4.png',
       videoLink : 'https://www.youtube.com/embed/K27diMbCsuw?autoplay=1'
     }

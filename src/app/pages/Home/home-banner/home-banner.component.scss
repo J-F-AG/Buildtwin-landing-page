@@ -1,5 +1,5 @@
 .carousal-wrapper {
-    padding-top: 150px;
+    padding-top: 140px;
     width: 900px;
     max-width: 100%;
     margin: 0 auto;
@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 32px;
+    gap: 24px;
     h1, h2 {
         font-size: 64px;
         margin-bottom: 0;
@@ -53,12 +53,20 @@
     }
     p {
         text-align: center;
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 18px;
+        line-height: 28px;
         color: var(--lightTextColor);
+        margin-bottom: 0;
+        
+        u {
+            text-decoration: underline;
+            text-decoration-color: #0053FA;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
     }
     figure {
-        padding-top: 30px;
+        padding-top: 0;
         .video-wrapper {
             position: relative;
             img {
@@ -168,11 +176,55 @@
     }
 }
 
+// Worked With Section
+.worked-with-section {
+    text-align: center;
+    margin: 5px 0 40px 0;
+    
+    .worked-with-text {
+        font-size: 18px;
+        color: #6b7280;
+        margin-bottom: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .company-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        max-width: 100%;
+        
+        .logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            .company-logo {
+                height: 25px;
+                width: auto;
+                max-width: 80px;
+                opacity: 0.7;
+                transition: opacity 0.3s ease;
+                filter: grayscale(100%);
+                
+                &:hover {
+                    opacity: 1;
+                    filter: grayscale(0%);
+                }
+            }
+        }
+    }
+}
+
 .link-wrapper {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding-top: 40px;
+    padding-top: 20px;
     .banner-button {
         padding: 18px 24px;
         background: black;
@@ -182,9 +234,27 @@
         font-weight: 600;
         font-size: 16px;
         color: white;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+        
+        &:hover {
+            background: #0053FA;
+            color: white;
+        }
+        
         &.normal {
             background: #37352f0f;
             color: black;
+            border: 2px solid #e5e7eb;
+            
+            &:hover {
+                background: #0053FA;
+                color: white;
+                border-color: #0053FA;
+            }
         }
     }
 }
@@ -197,7 +267,7 @@
 }
 @media only screen and (max-width: 767px) {
     .carousal-wrapper {
-        padding-top: 90px;
+        padding-top: 100px;
     }
     .slide-wrapper {
         h1, h2 {
@@ -213,6 +283,25 @@
             height: 40px;
         }
     }
+    
+            .worked-with-section {
+            margin: 15px 0 30px 0;
+        
+        .worked-with-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .company-logos {
+            gap: 16px;
+            
+            .logo-item .company-logo {
+                height: 22px;
+                max-width: 70px;
+            }
+        }
+    }
+    
     .link-wrapper .banner-button {
         padding-left: 14px;
         padding-right: 14px;

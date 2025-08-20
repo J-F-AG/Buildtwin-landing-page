@@ -2,7 +2,6 @@
 <!-- <div  #HdNavbarComp></div> -->
 <!-- <app-hd-banner-new></app-hd-banner-new>  -->
 <app-home-banner></app-home-banner>
-<app-company-logos-slider [bg]="false"></app-company-logos-slider>
 <!-- <div  #HdBannerNewComp></div> -->
 <!-- <app-hd-banner-tabs></app-hd-banner-tabs> -->
 <!-- <app-hd-trusted-by></app-hd-trusted-by> -->
@@ -18,11 +17,10 @@
     <div class="container heading-sticky">
         <div class="heading center v2">
                 <h2 class="title">
-                    BuildTwin <span>AI Capabilities</span><br>
-                    delivered with a Human touch
+                    BuildTwin <span class="ai-capabilities-highlight">AI Capabilities</span>
                 </h2>
                 <p class="small-title">
-                    Discover how our AI-powered solutions streamline your engineering workflows and boost productivity
+                    Let AI handle the tedious, repetitive tasks—so your team can focus on what truly matters: engineering.
                 </p>
         </div>
     </div>
@@ -39,26 +37,16 @@
 
 <app-heavy-lifting></app-heavy-lifting>
 <app-hd-integrations></app-hd-integrations>
-<div class="global-mb">
-    <div class="container heading-sticky">
-        <div class="heading center v2">
+    <div class="global-mb">
+        <div class="container heading-sticky">
+            <div class="heading center v2">
                 <h2 class="title">
                     we deliver <span>results</span>
                 </h2>
-                <p class="small-title">
-                    Navigate services and connect with top professionals with ease
-                </p>
+            </div>
         </div>
+        <app-service-list [hideTitle]="true"></app-service-list>
     </div>
-    <app-service-list [hideTitle]="true"></app-service-list>
-    <div class="container">
-        <div class="text-center" style="margin-top: 40px;">
-            <a [routerLink]="[_languageService.currentLanguage,'how-it-works']" class="button-v2">
-                How it works
-            </a>
-        </div>
-    </div>
-</div>
 <div class="global-mb">
 
     
