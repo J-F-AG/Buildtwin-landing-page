@@ -1,6 +1,6 @@
 <!-- Stripe-style Pricing Page -->
 <div class="stripe-pricing-container">
-        <!-- Hero Section with Gradient Background -->
+    <!-- Hero Section with Gradient Background -->
     <div class="hero-gradient-section">
         <div class="hero-content">
             <h1 class="hero-title">
@@ -16,11 +16,11 @@
                         <p>Access a complete payments platform with simple, pay-as-you-go pricing. No setup fees, monthly fees, or hidden fees.</p>
                         <button class="get-started-btn">
                             Get started
-                            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 16 16" fill="none">
+                            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                            </div>
+                    </div>
 
                     <div class="pricing-details">
                         <div class="price-row">
@@ -41,11 +41,11 @@
                         <p>Design a custom package – available for businesses with large payments volume or unique business models.</p>
                         <button class="contact-sales-btn">
                             Contact sales
-                            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 16 16" fill="none">
+                            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
                                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                        </div>
+                    </div>
 
                     <div class="custom-features">
                         <div class="feature-item">IC+ pricing</div>
@@ -54,7 +54,7 @@
                         <div class="feature-item">Country-specific rates</div>
                     </div>
                 </div>
-                </div>
+            </div>
 
             <!-- Navigation Tabs -->
             <div class="pricing-navigation">
@@ -69,7 +69,7 @@
 
     <!-- Features Section -->
     <div class="features-section">
-<div class="container">
+        <div class="container">
             <h2 class="features-title">Features available out of the box:</h2>
             
             <div class="features-grid">
@@ -82,8 +82,8 @@
                         <li>135+ currencies</li>
                         <li>100+ payment methods</li>
                         <li>1 integration</li>
-                                </ul>
-                    </div>
+                    </ul>
+                </div>
             
                 <!-- Built-in fraud prevention -->
                 <div class="feature-card">
@@ -117,8 +117,9 @@
                         <li>Real-time retries</li>
                         <li>Auto-updated cards</li>
                         <li>Customer authentication</li>
+                        <li>Smart routing</li>
                     </ul>
-                    </div>
+                </div>
 
                 <!-- Embedded payments -->
                 <div class="feature-card">
@@ -130,7 +131,7 @@
                         <li>Embedded components</li>
                         <li>Risk tools</li>
                     </ul>
-                            </div>
+                </div>
 
                 <!-- Fast payouts -->
                 <div class="feature-card">
@@ -140,8 +141,9 @@
                         <li>Flexible payout options</li>
                         <li>Like-for-like settlement</li>
                         <li>Payout transparency</li>
-                                    </ul>
-                                </div>
+                        <li>Real-time tracking</li>
+                    </ul>
+                </div>
 
                 <!-- Support -->
                 <div class="feature-card">
@@ -151,9 +153,10 @@
                         <li>24x7 support</li>
                         <li>Industry-leading documentation</li>
                         <li>Technical support on Discord</li>
+                        <li>Developer resources</li>
                     </ul>
-                            </div>
-                            
+                </div>
+
                 <!-- Security -->
                 <div class="feature-card">
                     <div class="feature-icon security"></div>
@@ -162,26 +165,27 @@
                         <li>99.999% average historical uptime</li>
                         <li>PCI compliant</li>
                         <li>Regulatory licences globally</li>
+                        <li>Enterprise-grade security</li>
                     </ul>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Detailed Pricing Section -->
     <div class="detailed-pricing-section">
         <div class="container">
             <div class="pricing-header">
                 <span class="section-label">Standard pricing for all products</span>
                 <h2 class="section-title">Explore pricing for the full BuildTwin platform</h2>
-                <p class="section-subtitle">Online and in-person payments, recurring billing, embedded payments, and much more.</p>
-                            </div>
+                <p class="section-subtitle">AI-powered structural engineering solutions, automated drawing generation, and quality control systems.</p>
+            </div>
                       
             <div class="pricing-content">
                 <!-- Sidebar Navigation -->
                 <div class="pricing-sidebar">
                     <div class="sidebar-section">
-                        <h3>Global payments</h3>
+                        <h3>AI Delivery System (BT One)</h3>
                         <ul>
                             <li [class.active]="activeSection === 'payments'" (click)="scrollToSection('payments')">Payments</li>
                             <li [class.active]="activeSection === 'payment-links'" (click)="scrollToSection('payment-links')">Payment Links</li>
@@ -189,18 +193,18 @@
                             <li [class.active]="activeSection === 'terminal'" (click)="scrollToSection('terminal')">Terminal</li>
                             <li [class.active]="activeSection === 'radar'" (click)="scrollToSection('radar')">Radar</li>
                         </ul>
-                                </div>
+                    </div>
 
                     <div class="sidebar-section">
-                        <h3>Embedded payments and finance</h3>
+                        <h3>AI Quality Control (BT Duett)</h3>
                         <ul>
                             <li [class.active]="activeSection === 'connect'" (click)="scrollToSection('connect')">Connect</li>
                             <li [class.active]="activeSection === 'issuing'" (click)="scrollToSection('issuing')">Issuing</li>
-                                    </ul>
-                                </div>
+                        </ul>
+                    </div>
 
                     <div class="sidebar-section">
-                        <h3>Revenue and finance automation</h3>
+                        <h3>AI Drawing Generation (BT Trio)</h3>
                         <ul>
                             <li [class.active]="activeSection === 'billing'" (click)="scrollToSection('billing')">Billing</li>
                             <li [class.active]="activeSection === 'invoicing'" (click)="scrollToSection('invoicing')">Invoicing</li>
@@ -209,7 +213,7 @@
                             <li [class.active]="activeSection === 'data-pipeline'" (click)="scrollToSection('data-pipeline')">Data Pipeline</li>
                             <li [class.active]="activeSection === 'revenue-recognition'" (click)="scrollToSection('revenue-recognition')">Revenue Recognition</li>
                         </ul>
-                            </div>
+                    </div>
 
                     <div class="sidebar-section">
                         <h3>More</h3>
@@ -218,14 +222,15 @@
                             <li [class.active]="activeSection === 'identity'" (click)="scrollToSection('identity')">Identity</li>
                             <li [class.active]="activeSection === 'atlas'" (click)="scrollToSection('atlas')">Atlas</li>
                             <li [class.active]="activeSection === 'climate'" (click)="scrollToSection('climate')">Climate</li>
-                                    </ul>
-                                </div>
-                            </div>
+                        </ul>
+                    </div>
+                </div>
 
                 <!-- Main Content Area -->
                 <div class="pricing-main-content">
+                    <!-- AI Delivery System (BT One) Section -->
                     <div class="product-section" id="payments">
-                        <h2>Global payments</h2>
+                        <h2>AI Delivery System (BT One)</h2>
                         <p>Optimise checkout conversion, accept local payment methods, and increase acceptance rates.</p>
 
                         <div class="product-card">
@@ -236,7 +241,7 @@
                                     <p>An online payments platform engineered for growth.</p>
                                 </div>
                                 <button class="start-now-btn">Start now</button>
-                    </div>
+                            </div>
 
                             <div class="product-features">
                                 <ul>
@@ -274,7 +279,7 @@
                                     <div class="price-display">
                                         <div class="price">1.9% + €0.25</div>
                                         <div class="price-desc">for <span class="highlight">premium European Economic Area cards</span></div>
-                        </div>
+                                    </div>
                                 </div>
 
                                 <!-- International Cards Pricing -->
@@ -308,11 +313,11 @@
                                     <div class="price-display">
                                         <div class="price">1.5% + €0.25</div>
                                         <div class="price-desc">for <span class="highlight">standard European Economic Area cards</span></div>
-                            </div>
+                                    </div>
                                     <div class="price-display">
                                         <div class="price">1.9% + €0.25</div>
                                         <div class="price-desc">for <span class="highlight">premium European Economic Area cards</span></div>
-                                </div>
+                                    </div>
                                 </div>
 
                                 <!-- Bank-based and other payment methods -->
@@ -323,7 +328,7 @@
                                     <div class="price-display">
                                         <div class="price">€0.35</div>
                                         <div class="price-desc">SEPA Direct Debit</div>
-                            </div>
+                                    </div>
                                     <a href="#" class="see-more-link">See more payment methods</a>
                                 </div>
 
@@ -341,10 +346,88 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- AI Quality Control (BT Duett) Section -->
+                    <div class="product-section" id="connect">
+                        <h2>AI Quality Control (BT Duett)</h2>
+                        <p>Advanced AI-powered quality control system for structural engineering projects.</p>
+
+                        <div class="product-card">
+                            <div class="product-header">
+                                <div class="product-icon"></div>
+                                <div class="product-info">
+                                    <h3>Connect</h3>
+                                    <p>AI-powered platform for platform and marketplace payments.</p>
+                                </div>
+                                <button class="start-now-btn">Start now</button>
+                            </div>
+
+                            <div class="product-features">
+                                <ul>
+                                    <li>Instant onboarding for your platform users.</li>
+                                    <li>Comprehensive platform management tools.</li>
+                                    <li>Embedded components for seamless integration.</li>
+                                    <li>Advanced risk management and fraud prevention.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Pricing Details -->
+                            <div class="pricing-details-section">
+                                <div class="pricing-item">
+                                    <h4>Platform Fees</h4>
+                                    <p>Transparent pricing for platform transactions and marketplace operations.</p>
+                                    
+                                    <div class="price-display">
+                                        <div class="price">0.25% + €0.25</div>
+                                        <div class="price-desc">per successful transaction</div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Drawing Generation (BT Trio) Section -->
+                    <div class="product-section" id="billing">
+                        <h2>AI Drawing Generation (BT Trio)</h2>
+                        <p>Automated drawing generation and management for structural engineering workflows.</p>
+
+                        <div class="product-card">
+                            <div class="product-header">
+                                <div class="product-icon"></div>
+                                <div class="product-info">
+                                    <h3>Billing</h3>
+                                    <p>Subscription and usage-based billing platform.</p>
+                                </div>
+                                <button class="start-now-btn">Start now</button>
+                            </div>
+
+                            <div class="product-features">
+                                <ul>
+                                    <li>Flexible subscription management.</li>
+                                    <li>Usage-based billing and metering.</li>
+                                    <li>Automated invoicing and payment collection.</li>
+                                    <li>Real-time billing analytics and reporting.</li>
+                                </ul>
+                            </div>
+
+                            <!-- Pricing Details -->
+                            <div class="pricing-details-section">
+                                <div class="pricing-item">
+                                    <h4>Billing Platform</h4>
+                                    <p>Comprehensive billing solution for modern businesses.</p>
+                                    
+                                    <div class="price-display">
+                                        <div class="price">0.4% + €0.25</div>
+                                        <div class="price-desc">per successful transaction</div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
                             
     <!-- FAQ Section -->
     <div class="faq-section">
@@ -355,13 +438,13 @@
                 <div class="faq-item" data-aos="fade-up" data-aos-duration="500">
                     <h3>How are payment fees calculated?</h3>
                     <p>BuildTwin charges a per-transaction fee depending on the payment method used by the end customer. More details on fees by payment method.</p>
-                    </div>
+                </div>
 
                 <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
                     <h3>Will I be charged tax?</h3>
                     <p>BuildTwin is required to charge tax on certain products and services. Tax is charged based on your location and/or your business/tax status, which determines whether a product or service is subject to taxes, and the applicable tax rates.</p>
                     <a href="#" class="read-more">Read more</a>
-                        </div>
+                </div>
 
                 <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                     <h3>Are there additional fees for refunds?</h3>
@@ -369,20 +452,20 @@
                         <p><strong>For businesses on standard pricing:</strong> There may be fees for refunds when bank transfers are used. For all other payment methods, there are no fees for issuing refunds. The payment processing, connect and currency conversion fees from the original transaction are not returned.</p>
                         <p><strong>For businesses on custom pricing:</strong> There may be fees for issuing refunds depending on your fee schedule with BuildTwin.</p>
                     </div>
-                            </div>
+                </div>
 
                 <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                     <h3>Do you have setup fees or monthly fees?</h3>
                     <p>BuildTwin does not charge setup fees, monthly fees, or any other hidden fees like closure fees. All fees for businesses on standard pricing are listed on our website.</p>
-                                </div>
+                </div>
 
                 <div class="faq-item" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
                     <h3>Do you offer any discounts?</h3>
                     <p>BuildTwin offers custom pricing for businesses with large processing volumes. Eligibility varies by market.</p>
-                            </div>
-                        </div>
-                            </div>
-                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- CTA Section -->
     <div class="cta-section">
@@ -393,10 +476,10 @@
                 <div class="cta-buttons">
                     <button class="btn btn-primary">Start now</button>
                     <button class="btn btn-outline" (click)="call()">Contact sales</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Customer Success Stories -->
     <div class="customer-section">
@@ -416,7 +499,7 @@
             <p class="section-subtitle">Start building your integration and accept your first payment in minutes. BuildTwin libraries are available in every language from Ruby to Go.</p>
             <div class="learn-more-link">
                 <a href="#">Read the docs</a>
-                </div>
+            </div>
         </div>
     </div>
 </div>
