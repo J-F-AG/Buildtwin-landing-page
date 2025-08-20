@@ -2,6 +2,92 @@
     .small-title {
         line-height: 1.333;
     }
+    
+    .workflow-highlight {
+        background: #0053FA;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 8px;
+        display: inline-block;
+    }
+}
+
+.workflow-navigation {
+    position: sticky;
+    top: 70px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 0;
+    margin-bottom: 40px;
+    z-index: 100;
+
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .nav-tabs {
+            display: flex;
+            gap: 8px;
+
+            .nav-tab {
+                padding: 12px 24px;
+                background: transparent;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                color: #374151;
+                font-weight: 500;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #f9fafb;
+                    border-color: #d1d5db;
+                }
+
+                &.active {
+                    background: #0053FA;
+                    border-color: #0053FA;
+                    color: white;
+                    box-shadow: 0 4px 14px rgba(0, 83, 250, 0.25);
+                }
+            }
+        }
+
+        .get-started-nav-btn {
+            position: absolute;
+            right: 40px;
+            padding: 12px 24px;
+            background: #0053FA;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(0, 83, 250, 0.25);
+
+            &:hover {
+                background: #0041cc;
+                box-shadow: 0 6px 20px rgba(0, 83, 250, 0.35);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .workflow-navigation {
+        .nav-container {
+            .get-started-nav-btn {
+                position: static;
+                margin-top: 16px;
+            }
+
+            flex-direction: column;
+        }
+    }
 }
 
 .list-wrapper {

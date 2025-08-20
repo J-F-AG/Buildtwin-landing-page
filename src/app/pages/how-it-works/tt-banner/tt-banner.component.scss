@@ -1,6 +1,24 @@
 .banner-content {
     padding-top: 179px;
     padding-bottom: 108px;
+    
+    h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        
+        span {
+            background: #e6eced;
+            padding: 0 12px;
+            border-radius: 4px;
+        }
+        
+        .big {
+            font-size: 70px;
+            color: var(--themeColor);
+            font-weight: 600;
+            line-height: 1.1;
+        }
+    }
 }
 // .partner {
 //     display: flex;
@@ -32,18 +50,26 @@
         font-weight: 600;
     }
     .looking-for-wrapper {
-        height: 58px;
+        height: 48px;
         border: 1px solid #e0e4e6;
         border-radius: 12px;
         display: flex;
         align-items: center;
         gap: 10px;
-        padding: 0 10px 0 24px;
+        padding: 0 24px;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         span {
             color: #5c6a72;
             font-size: 16px;
-            margin-right: 40px;
+            margin-right: 0;
+            
+            &.dynamic-text {
+                transition: opacity 0.3s ease-in-out;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
     }
 }

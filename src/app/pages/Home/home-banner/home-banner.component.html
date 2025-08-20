@@ -9,8 +9,7 @@
                     <span class="leave-it-to-text">{{slide['title'].split(' ').slice(0, 3).join(' ')}}</span>
                     <span class="name-highlight">{{slide['title'].split(' ').slice(3).join(' ')}}</span>
                 </h1>
-                <p>
-                    {{slide['description']}}
+                <p [innerHTML]="slide['description']">
                 </p>
                 <figure>
                     <div class="video-wrapper">
@@ -57,6 +56,40 @@
                      *ngFor="let slide of array; let i = index" 
                      [ngClass]="{'active': currentSlideIndex === i}"
                      (click)="goToSlide(i)">
+                </div>
+            </div>
+        </div>
+    
+        <!-- Worked With Section -->
+        <div class="worked-with-section">
+            <p class="worked-with-text">Worked with</p>
+            <div class="company-logos">
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo1.png" alt="Partner Company" class="company-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo2.png" alt="Partner Company" class="company-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo3.png" alt="Partner Company" class="company-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo4.png" alt="Partner Company" class="company-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo5.png" alt="Partner Company" class="company-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo6.png" alt="Partner Company" class="company-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo7.png" alt="Partner Company" class="company-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo8.png" alt="Partner Company" class="company-logo">
+                </div>
+                <div class="logo-item">
+                    <img src="assets/images/partner/logo9.png" alt="Partner Company" class="company-logo">
                 </div>
             </div>
         </div>
