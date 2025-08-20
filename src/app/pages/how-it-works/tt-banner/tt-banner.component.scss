@@ -1,6 +1,24 @@
 .banner-content {
     padding-top: 179px;
     padding-bottom: 108px;
+    
+    h1 {
+        font-size: 36px;
+        line-height: 1.2;
+        
+        span {
+            background: #e6eced;
+            padding: 0 12px;
+            border-radius: 4px;
+        }
+        
+        .big {
+            font-size: 70px;
+            color: var(--themeColor);
+            font-weight: 600;
+            line-height: 1.1;
+        }
+    }
 }
 // .partner {
 //     display: flex;
