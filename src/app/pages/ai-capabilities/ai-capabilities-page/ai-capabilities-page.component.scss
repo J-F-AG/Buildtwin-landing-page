@@ -88,6 +88,64 @@
   margin: 0 0 12px 0;
 }
 
+/* Statistics Section */
+.statistics-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  margin: 40px 0;
+  
+  .statistics-wrapper {
+    display: flex;
+    gap: 17px;
+    justify-content: space-between;
+    
+    .stat-block {
+      flex: 1;
+      width: calc(25% - 12.80px);
+      border: 1px solid #d5d9db;
+      border-radius: 23px;
+      padding: 39px 38px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 317px;
+      text-align: center;
+      
+      .stat-number {
+        display: block;
+        font-size: 45px;
+        font-weight: 600;
+        color: #0053fa;
+        margin-bottom: 0;
+      }
+      
+      p {
+        font-size: 16px;
+        color: #002e3b;
+        margin-bottom: 0;
+      }
+      
+      img {
+        margin-top: auto;
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .statistics-section {
+    .statistics-wrapper {
+      flex-direction: column;
+      
+      .stat-block {
+        width: auto;
+        gap: 30px;
+      }
+    }
+  }
+}
+
 /* Insight Section */
 .insight-section {
   padding: 80px 0;

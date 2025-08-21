@@ -55,6 +55,8 @@
             background: #002e3b;
             position: relative;
             z-index: 3;
+            padding-top: 40px;
+            font-weight: 400;
             &::after {
                 content: "";
                 position: absolute;
@@ -64,18 +66,51 @@
                 right: -10px;
                 background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='266' ry='266' stroke='black' stroke-width='1' stroke-dasharray='10%2c 15' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
             }
+            
+            .cursor-icon {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                top: -40px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 4;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(-45deg);
+                    width: 0;
+                    height: 0;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-bottom: 24px solid white;
+                }
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(-45deg);
+                    width: 0;
+                    height: 0;
+                    border-left: 9px solid transparent;
+                    border-right: 9px solid transparent;
+                    border-bottom: 18px solid #002e3b;
+                }
+            }
         }
         span {
             flex: 1;
             text-align: center;
             position: relative;
             z-index: 3;
-            
-            &.human-engineering {
-                font-size: 32px;
-                font-weight: 700;
-                line-height: 1.2;
-            }
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 1.2;
         }
     }
 

@@ -37,8 +37,61 @@
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
         <div class="middlePart">
 
-            <div class="formRow" *ngIf="type == 'outside' && showdropDown">
+            <!-- First Dropdown: I am a... -->
+            <div class="formRow">
+                <div class="selectBox precastField"
+                    [ngClass]="{'error-border': (myForm.get('contractorType')?.touched && myForm.get('contractorType')?.invalid)}">
+                    <div>
+                        <span *ngIf="style == 'secondary'" class="title">I am a <span class="red">*</span></span>
+                        <span class="selectedValue">
+                            {{ getContractorTypeLabel(myForm.get('contractorType')?.value) }}
+                        </span>
+                    </div>
+                    <app-bt-select [options]="contractorTypeOptions" (selectedTabChange)="selectContractorType($event)"></app-bt-select>
+                </div>
+                <div *ngIf="myForm.get('contractorType')?.touched && myForm.get('contractorType')?.invalid" class="error-message">
+                    <span>Please select your type.</span>
+                </div>
+            </div>
 
+            <!-- Second Dropdown: Looking to... (only show if contractor type is selected) -->
+            <div class="formRow" *ngIf="myForm.get('contractorType')?.value">
+                <div class="selectBox precastField"
+                    [ngClass]="{'error-border': (myForm.get('serviceType')?.touched && myForm.get('serviceType')?.invalid)}">
+                    <div>
+                        <span *ngIf="style == 'secondary'" class="title">Looking to <span class="red">*</span></span>
+                        <span class="selectedValue">
+                            {{ getServiceTypeLabel(myForm.get('serviceType')?.value) }}
+                        </span>
+                    </div>
+                    <app-bt-select [options]="serviceTypeOptions" (selectedTabChange)="selectServiceType($event)"></app-bt-select>
+                </div>
+                <div *ngIf="myForm.get('serviceType')?.touched && myForm.get('serviceType')?.invalid" class="error-message">
+                    <span>Please select service type.</span>
+                </div>
+            </div>
+
+            <!-- Third Dropdown: Sector (only show if service type is selected) -->
+            <div class="formRow" *ngIf="myForm.get('serviceType')?.value">
+                <div class="selectBox precastField"
+                    [ngClass]="{'error-border': (myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid)}">
+                    <div>
+                        <span *ngIf="style == 'secondary'" class="title">Sector <span class="red">*</span></span>
+                        <span class="selectedValue">
+                            {{ myForm.get('selectedPrecastServices')?.value ?
+                            sectorObj[myForm.get('selectedPrecastServices').value]['service_name'] : 'Select sector' }}
+                        </span>
+                    </div>
+                    <app-bt-select [options]="sectorArray" (selectedTabChange)="selectSector($event)"></app-bt-select>
+                </div>
+                <div *ngIf="myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid"
+                    class="error-message">
+                    <span>Sector selection is required.</span>
+                </div>
+            </div>
+
+            <!-- Fourth Dropdown: Service (only if "get end-to-end service" is selected) -->
+            <div class="formRow" *ngIf="myForm.get('serviceType')?.value === 'end-to-end'">
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid)}">
                     <div>
@@ -53,30 +106,10 @@
                 <div *ngIf="myForm.get('serviceId')?.touched && myForm.get('serviceId')?.invalid" class="error-message">
                     <span>Service selection is required.</span>
                 </div>
-
-            </div>
-            <div class="formRow" *ngIf="showdropDown">
-
-                <div class="selectBox precastField"
-                    [ngClass]="{'error-border': (myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid)}">
-                    <div>
-                        <span *ngIf="style == 'secondary'" class="title">Sector</span>
-                        <span class="selectedValue">
-                            {{ myForm.get('selectedPrecastServices')?.value ?
-                            sectorObj[myForm.get('selectedPrecastServices').value]['service_name'] : 'Select sector' }}
-                        </span>
-                    </div>
-                    <app-bt-select [options]="sectorArray" (selectedTabChange)="selectSector($event)"></app-bt-select>
-                </div>
-                <div *ngIf="myForm.get('selectedPrecastServices')?.touched && myForm.get('selectedPrecastServices')?.invalid"
-                    class="error-message">
-                    <span>Sector selection is required.</span>
-                </div>
-
             </div>
 
-            <div class="formRow" *ngIf="(showdropDown && type != 'outside') || style == 'secondary'">
-
+            <!-- Building Code (only if "get end-to-end service" is selected) -->
+            <div class="formRow" *ngIf="myForm.get('serviceType')?.value === 'end-to-end'">
                 <div class="selectBox precastField"
                     [ngClass]="{'error-border': (myForm.get('buildingCodeId')?.touched && myForm.get('buildingCodeId')?.invalid)}">
                     <div>
@@ -94,10 +127,10 @@
                     class="error-message">
                     <span>Building code selection is required.</span>
                 </div>
-
             </div>
 
-            <div class="formRow">
+            <!-- Email field (show after sector is selected) -->
+            <div class="formRow" *ngIf="myForm.get('selectedPrecastServices')?.value">
                 <div class="selectBox without-arrow"
                     [ngClass]="{'error-border': (myForm.get('email')?.touched && myForm.get('email')?.invalid)}">
                     <div class="normal">
@@ -110,7 +143,21 @@
                     <span *ngIf="myForm.get('email')?.errors?.['email']">Invalid email format.</span>
                 </div>
             </div>
-            <div class="formRow">
+            
+            <!-- Phone field (show after email field is visible) -->
+            <div class="formRow" *ngIf="myForm.get('selectedPrecastServices')?.value">
+                <div class="selectBox without-arrow"
+                    [ngClass]="{'error-border': (myForm.get('phone')?.touched && myForm.get('phone')?.invalid)}">
+                    <div class="normal">
+                        <span *ngIf="style == 'secondary'" class="title">Phone <span class="red">*</span></span>
+                        <input class="input-text" type="tel" placeholder="Enter Phone Number" formControlName="phone">
+                    </div>
+                </div>
+                <div *ngIf="myForm.get('phone')?.touched && myForm.get('phone')?.invalid" class="error-message">
+                    <span *ngIf="myForm.get('phone')?.errors?.['required']">Phone is required.</span>
+                </div>
+            </div>
+            <div class="formRow" *ngIf="myForm.get('serviceType')?.value === 'end-to-end'">
                 <div class="selectBox without-arrow"
                     [ngClass]="{'error-border': (myForm.get('projectName')?.touched && myForm.get('projectName')?.invalid)}">
                     <div class="normal">
@@ -123,7 +170,8 @@
                     <span *ngIf="myForm.get('projectName')?.errors?.['required']">Project Name is required.</span>
                 </div>
             </div>
-            <div class="formRow">
+            <!-- Description field (show after contact info is provided) -->
+            <div class="formRow" *ngIf="myForm.get('selectedPrecastServices')?.value">
                 <div class="selectBox without-arrow">
                     <div class="normal">
                         <textarea class="textarea-description" formControlName="description"
@@ -138,17 +186,17 @@
 
         </div>
         <div class="bottomPart">
-            <h5 *ngIf="style != 'secondary'">Begin Your Enquiry Here</h5>
+            <h5 *ngIf="style != 'secondary'">Start Your Journey Here</h5>
             <p *ngIf="style != 'secondary'">Take a quick minute to fill this out—BuildTwin’s success advisor will handle the rest.</p>
 
             <div class="buttonContainer" [ngClass]="{'pt-none' : style == 'secondary', 'normalBtn':normalBtn}">
-                <button class="button-v2 floating_form_submit_enquiry" type="submit" [disabled]="myForm.invalid && disableButton"> Get Free quote
+                <button class="button-v2 floating_form_submit_enquiry" type="submit" [disabled]="myForm.invalid && disableButton"> Get Started
                 </button>
             </div>
 
             <div class="integrationsContainer" *ngIf="style != 'secondary'">
                 <ng-container *ngIf="!page">
-                    <strong>Additional Feature:</strong>
+                    <strong>The BuildTwin Delivery System:</strong>
                     <div class="integrationsList">
                         <div class="listItem">
                             <img src="assets/images/ai/draw-icon-blue.png" width="20" height="20" alt="Blue icon">
@@ -176,6 +224,10 @@
                             <lib-svg-icon class="integrationsIcon" [name]="'RFIManagement'" [size]="20"
                                 [sizeH]="20"></lib-svg-icon>
                             RFI Management
+                        </div>
+                        <div class="listItem">
+                            <img src="assets/images/icons/heavy4@2x.png" width="20" height="20" alt="Insurance">
+                            Insurance
                         </div>
                     </div>
                 </ng-container>
