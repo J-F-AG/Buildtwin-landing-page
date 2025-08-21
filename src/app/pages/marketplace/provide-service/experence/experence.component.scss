@@ -50,12 +50,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
+            justify-content: flex-end;
+            padding-bottom: 40px;
             background: #002e3b;
             position: relative;
             z-index: 3;
-            padding-top: 40px;
             font-weight: 400;
             &::after {
                 content: "";
@@ -68,38 +67,41 @@
             }
             
             .cursor-icon {
-                width: 80px;
-                height: 80px;
+                width: 120px;
+                height: 120px;
                 position: absolute;
-                top: -40px;
+                top: 50%;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translate(-50%, -50%);
                 z-index: 4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 
                 &::before {
                     content: '';
                     position: absolute;
-                    top: 0;
+                    top: 50%;
                     left: 50%;
-                    transform: translateX(-50%) rotate(-45deg);
+                    transform: translate(-50%, -50%) rotate(-45deg);
                     width: 0;
                     height: 0;
-                    border-left: 12px solid transparent;
-                    border-right: 12px solid transparent;
-                    border-bottom: 24px solid white;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    border-bottom: 40px solid white;
                 }
                 
                 &::after {
                     content: '';
                     position: absolute;
-                    top: 12px;
+                    top: 50%;
                     left: 50%;
-                    transform: translateX(-50%) rotate(-45deg);
+                    transform: translate(-50%, -50%) rotate(-45deg) translateY(8px);
                     width: 0;
                     height: 0;
-                    border-left: 9px solid transparent;
-                    border-right: 9px solid transparent;
-                    border-bottom: 18px solid #002e3b;
+                    border-left: 16px solid transparent;
+                    border-right: 16px solid transparent;
+                    border-bottom: 32px solid #002e3b;
                 }
             }
         }
