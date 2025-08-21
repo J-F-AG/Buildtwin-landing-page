@@ -149,8 +149,6 @@
     box-shadow: none;
     
     &:hover {
-        transform: translateY(-4px);
-        
         .kpi-icon {
             transform: scale(1.05);
             color: #0053fa;
@@ -210,9 +208,7 @@
         min-width: 140px;
         padding: 20px 16px;
         
-        &:hover {
-            transform: translateY(-4px);
-        }
+
     }
     
     .kpi-icon {
