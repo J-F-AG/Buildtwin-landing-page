@@ -6,17 +6,16 @@
     margin-top: 0;
     padding-top: 0;
 
-        // Hero Gradient Section - Exact Stripe styling
-    .hero-gradient-section {
+    // Hero Section - Very subtle, almost imperceptible background
+    .hero-section {
         background: linear-gradient(135deg, 
-            #fef7e0 0%, 
-            #fce4ec 20%, 
-            #e0f2fe 40%, 
-            #f0f9ff 60%, 
-            #f0fdf4 80%, 
-            #fefce8 100%);
+            #fafbfc 0%, 
+            #f8f9fa 25%, 
+            #fafbfc 50%, 
+            #fbfcfd 75%, 
+            #fafbfc 100%);
         min-height: auto;
-        padding: 160px 0 60px;
+        padding: 160px 0 80px;
         position: relative;
         overflow: visible;
 
@@ -28,42 +27,64 @@
             text-align: center;
             position: relative;
             z-index: 2;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+            }
         }
 
         .hero-title {
             font-size: 48px;
             font-weight: 600;
             color: #0a2540;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 60px auto;
             line-height: 1.2;
             letter-spacing: -0.02em;
             max-width: 700px;
             display: block;
             position: relative;
             z-index: 1;
+
+            @media (max-width: 768px) {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
         }
 
-        // Pricing Cards Container
+        // Pricing Cards Container - Wider size for better screen usage
         .pricing-cards-container {
             display: flex;
             gap: 24px;
-            max-width: 900px;
-            margin: 0 auto 50px;
+            max-width: 1000px;
+            margin: 0 auto;
             align-items: stretch;
             justify-content: center;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 20px;
+                padding: 0 20px;
+                max-width: 100%;
+            }
         }
 
         .pricing-card {
-            flex: 0 0 400px;
+            flex: 1;
+            max-width: 450px;
             border-radius: 12px;
-            padding: 32px 24px;
+            padding: 28px 20px;
             position: relative;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
 
+            @media (max-width: 768px) {
+                max-width: 100%;
+                padding: 24px 18px;
+            }
+
             &:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
             }
 
             &.standard-card {
@@ -72,126 +93,204 @@
             }
 
             &.custom-card {
-                background: #0a2540;
+                background: #0f4c75;
                 color: white;
+                display: flex;
+                flex-direction: column;
+
+                .custom-features {
+                    flex: 1;
+                    margin-bottom: 32px;
+
+                    .feature-item {
+                        font-size: 16px;
+                        color: inherit;
+                        margin-bottom: 16px;
+                        text-align: left;
+                        line-height: 1.4;
+                        padding: 12px 16px;
+                        background: rgba(255, 255, 255, 0.15);
+                        border-radius: 6px;
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        @media (max-width: 768px) {
+                            font-size: 15px;
+                            margin-bottom: 14px;
+                            padding: 10px 14px;
+                        }
+                    }
+                }
+
+                .contact-sales-btn {
+                    margin-top: auto;
+                }
             }
 
             .card-header {
-                margin-bottom: 24px;
+                margin-bottom: 28px;
 
                 h2 {
-                    font-size: 20px;
-                    font-weight: 600;
-                    margin-bottom: 12px;
+                    font-size: 26px;
+                    font-weight: 700;
+                    margin-bottom: 18px;
                     color: inherit;
+                    text-align: left;
+
+                    @media (max-width: 768px) {
+                        font-size: 22px;
+                        margin-bottom: 14px;
+                    }
                 }
 
                 p {
-        font-size: 14px;
-                    line-height: 1.5;
-        margin-bottom: 20px;
-                    opacity: 0.9;
+                    font-size: 15px;
+                    line-height: 1.6;
                     color: inherit;
-                }
+                    opacity: 0.8;
+                    text-align: left;
+                    margin: 0;
 
-                button {
-                    width: 100%;
-                    padding: 14px 20px;
-                    border-radius: 8px;
-                    font-size: 14px;
-            font-weight: 600;
-                    border: none;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 8px;
-
-                    .arrow-icon {
-                        width: 14px;
-                        height: 14px;
-                    }
-
-                    &.get-started-btn {
-                        background: #635bff;
-                        color: white;
-
-                        &:hover {
-                            background: #5a52f5;
-                            transform: translateY(-2px);
-                            box-shadow: 0 8px 25px rgba(99, 91, 255, 0.4);
-                        }
-                    }
-
-                    &.contact-sales-btn {
-                        background: #00d4ff;
-                        color: #0a2540;
-
-                        &:hover {
-                            background: #00c4ef;
-                            transform: translateY(-2px);
-                            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
-                        }
+                    @media (max-width: 768px) {
+                        font-size: 14px;
                     }
                 }
             }
 
             .pricing-details {
-                            .price-row {
-                    text-align: center;
-                margin-bottom: 16px;
-                padding: 0;
-                background: transparent;
-                border-radius: 0;
+                margin-bottom: 28px;
+
+                .price-row {
+                    margin-bottom: 16px;
+                    padding: 16px;
+                    background: #f8fafc;
+                    border-radius: 8px;
+                    border: 1px solid #e2e8f0;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
 
                     .price-main {
-                        font-size: 24px;
+                        font-size: 16px;
                         font-weight: 600;
                         color: #0a2540;
                         margin-bottom: 8px;
+                        text-align: left;
+
+                        @media (max-width: 768px) {
+                            font-size: 15px;
+                        }
                     }
 
                     .price-description {
-                        font-size: 13px;
-                        color: #6b7280;
+                        font-size: 14px;
+                        color: #64748b;
+                        text-align: left;
                         line-height: 1.4;
 
                         .highlight-blue {
-                            color: #635bff;
+                            color: #6366f1;
                             font-weight: 600;
+                        }
+
+                        &.quote-action {
+                            color: #6366f1;
+                            font-weight: 600;
+                            cursor: pointer;
+                            text-decoration: underline;
+                            
+                            &:hover {
+                                color: #5855eb;
+                            }
                         }
                     }
                 }
             }
 
             .custom-features {
+                margin-bottom: 28px;
+
                 .feature-item {
-                    padding: 12px 16px;
-                    margin-bottom: 8px;
-                    background: rgba(255, 255, 255, 0.12);
-                    border-radius: 8px;
-                    color: white;
-                    font-size: 13px;
-                    text-align: center;
-                    font-weight: 500;
-                    transition: all 0.2s ease;
+                    font-size: 15px;
+                    color: inherit;
+                    margin-bottom: 14px;
+                    text-align: left;
+                    line-height: 1.4;
+                    padding: 10px 14px;
+                    background: rgba(255, 255, 255, 0.15);
+                    border-radius: 6px;
+                    border: 1px solid rgba(255, 255, 255, 0.2);
 
-                    &:hover {
-                        background: rgba(255, 255, 255, 0.18);
-                        transform: translateY(-1px);
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                        margin-bottom: 12px;
+                        padding: 8px 12px;
+                    }
+                }
             }
 
-            &:last-child {
-                margin-bottom: 0;
+            // Button Styles - Exact reference design
+            .get-started-btn {
+                width: 100%;
+                background: #6366f1;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 20px;
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                text-transform: none;
+                letter-spacing: normal;
+
+                &:hover {
+                    background: #5855eb;
+                    transform: translateY(-1px);
+                }
+
+                @media (max-width: 768px) {
+                    padding: 12px 18px;
+                    font-size: 14px;
+                }
+            }
+
+            .contact-sales-btn {
+                width: 100%;
+                background: #00BCD4;
+                color: #1e293b;
+                border: none;
+                border-radius: 8px;
+                padding: 12px 20px;
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                text-transform: none;
+                letter-spacing: normal;
+
+                &:hover {
+                    background: #00acc1;
+                    transform: translateY(-1px);
+                }
+
+                @media (max-width: 768px) {
+                    padding: 12px 18px;
+                    font-size: 14px;
+                }
             }
         }
     }
-        }
 
-    }
-
-    // Sticky Navigation Tabs - Independent with BuildTwin Colors
+    // Sticky Navigation Tabs - Previous design
     .pricing-navigation {
         position: sticky;
         top: 0;
@@ -212,8 +311,14 @@
             margin: 0 auto;
             padding: 0 40px;
             position: relative;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+                flex-direction: column;
+                gap: 16px;
+            }
         }
-            
+
         .nav-tabs {
             display: flex;
             gap: 8px;
@@ -243,6 +348,11 @@
                     background: #f8fafc;
                     color: #0f4c75;
                 }
+
+                @media (max-width: 768px) {
+                    padding: 8px 16px;
+                    font-size: 12px;
+                }
             }
         }
 
@@ -264,10 +374,17 @@
                 transform: translateY(-1px);
                 box-shadow: 0 4px 12px rgba(15, 76, 117, 0.3);
             }
+
+            @media (max-width: 768px) {
+                position: static;
+                padding: 10px 20px;
+                font-size: 13px;
+                margin-top: 8px;
+            }
         }
     }
 
-    // Features Section - Exact Stripe grid
+    // Features Section - Previous design
     .features-section {
         padding: 60px 0;
         background: white;
@@ -276,6 +393,10 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 24px;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+            }
         }
 
         .features-title {
@@ -284,12 +405,27 @@
             color: #0a2540;
             text-align: center;
             margin-bottom: 40px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+                margin-bottom: 32px;
+            }
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
+
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
         }
 
         .feature-card {
@@ -304,6 +440,10 @@
                 transform: translateY(-2px);
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
                 border-color: #e2e8f0;
+            }
+
+            @media (max-width: 768px) {
+                padding: 16px 12px;
             }
 
             .feature-icon {
@@ -354,6 +494,17 @@
                     background: white;
                     border-radius: 4px;
                 }
+
+                @media (max-width: 768px) {
+                    width: 32px;
+                    height: 32px;
+                    margin-bottom: 16px;
+
+                    &::before {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
             }
 
             h3 {
@@ -362,6 +513,11 @@
                 color: #0a2540;
                 margin-bottom: 16px;
                 line-height: 1.3;
+
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    margin-bottom: 12px;
+                }
             }
 
             ul {
@@ -371,10 +527,12 @@
 
                 li {
                     padding: 6px 0;
+                    font-size: 13px;
                     color: #6b7280;
+                    margin-bottom: 8px;
+                    line-height: 1.4;
                     position: relative;
                     padding-left: 16px;
-                    font-size: 13px;
                     text-align: left;
 
                     &::before {
@@ -384,17 +542,24 @@
                         color: #10b981;
                         font-weight: 600;
                         font-size: 10px;
-            }
+                    }
 
-            &:last-child {
+                    &:last-child {
                         margin-bottom: 0;
+                    }
+
+                    @media (max-width: 768px) {
+                        font-size: 12px;
+                        padding: 4px 0;
+                        margin-bottom: 6px;
+                        padding-left: 14px;
                     }
                 }
             }
         }
     }
 
-        // Detailed Pricing Section
+    // Detailed Pricing Section - Exact Stripe design
     .detailed-pricing-section {
         padding: 80px 0;
         background: #f8fafc;
@@ -402,7 +567,11 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 40px;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+            }
         }
 
         .pricing-header {
@@ -410,56 +579,87 @@
             margin-bottom: 60px;
 
             .section-label {
-                color: #635bff;
-                font-size: 12px;
+                display: inline-block;
+                background: #e0f2fe;
+                color: #0f4c75;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 14px;
                 font-weight: 600;
+                margin-bottom: 20px;
                 text-transform: uppercase;
-                letter-spacing: 1px;
-                margin-bottom: 12px;
-                display: block;
+                letter-spacing: 0.5px;
             }
 
             .section-title {
-                font-size: 32px;
+                font-size: 36px;
                 font-weight: 600;
                 color: #0a2540;
-                margin-bottom: 12px;
-                line-height: 1.2;
+                margin-bottom: 20px;
+                line-height: 1.3;
+
+                @media (max-width: 768px) {
+                    font-size: 28px;
+                }
             }
 
             .section-subtitle {
-                font-size: 16px;
+                font-size: 18px;
                 color: #6b7280;
-                max-width: 500px;
+                max-width: 600px;
                 margin: 0 auto;
+                line-height: 1.6;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                }
             }
         }
 
         .pricing-content {
             display: flex;
-            gap: 0;
-            background: white;
-            border-radius: 12px;
-            padding: 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
+            gap: 60px;
+            align-items: flex-start;
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
+                gap: 40px;
+            }
         }
 
+        // Sidebar Navigation - Exact Stripe design
         .pricing-sidebar {
-            flex: 0 0 250px;
-            background: #f8fafc;
+            flex: 0 0 280px;
+            position: sticky;
+            top: 100px;
+            background: white;
+            border-radius: 12px;
             padding: 32px 24px;
-            border-radius: 12px 0 0 12px;
-            height: fit-content;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+
+            @media (max-width: 1024px) {
+                position: static;
+                flex: none;
+                width: 100%;
+            }
+
+            @media (max-width: 768px) {
+                padding: 24px 20px;
+            }
 
             .sidebar-section {
-                margin-bottom: 24px;
+                margin-bottom: 32px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
 
                 h3 {
-                    font-size: 14px;
+                    font-size: 16px;
                     font-weight: 600;
-                    color: #0a2540;
-                    margin-bottom: 12px;
+                    color: #374151;
+                    margin-bottom: 16px;
                     text-transform: uppercase;
                     letter-spacing: 0.5px;
                 }
@@ -470,101 +670,156 @@
                     margin: 0;
 
                     li {
-                        padding: 6px 0;
-                        font-size: 13px;
-                        color: #6b7280;
+                        padding: 12px 16px;
+                        margin-bottom: 8px;
+                        border-radius: 8px;
                         cursor: pointer;
-                        transition: color 0.2s ease;
+                        transition: all 0.2s ease;
+                        font-size: 15px;
+                        color: #6b7280;
+                        border: 1px solid transparent;
 
                         &:hover {
-                            color: #635bff;
+                            background: #f9fafb;
+                            color: #374151;
                         }
 
                         &.active {
-                            color: #635bff;
-                            font-weight: 500;
+                            background: #0f4c75;
+                            color: white;
+                            border-color: #0f4c75;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
                         }
                     }
                 }
             }
         }
 
+        // Main Content Area - Exact Stripe design
         .pricing-main-content {
             flex: 1;
-            padding: 32px;
+            min-width: 0;
 
             .product-section {
+                margin-bottom: 80px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
                 h2 {
-                    font-size: 20px;
+                    font-size: 32px;
                     font-weight: 600;
                     color: #0a2540;
-                    margin-bottom: 10px;
+                    margin-bottom: 16px;
+                    line-height: 1.3;
+
+                    @media (max-width: 768px) {
+                        font-size: 28px;
+                    }
                 }
 
                 > p {
-                    font-size: 13px;
+                    font-size: 18px;
                     color: #6b7280;
-                    margin-bottom: 24px;
-                    line-height: 1.4;
+                    margin-bottom: 40px;
+                    line-height: 1.6;
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        margin-bottom: 32px;
+                    }
                 }
 
                 .product-card {
-                    border: 1px solid #e2e8f0;
-                    border-radius: 8px;
-                    padding: 24px;
                     background: white;
-                    margin-bottom: 24px;
+                    border-radius: 12px;
+                    padding: 40px 32px;
+                    border: 1px solid #e5e7eb;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+                    @media (max-width: 768px) {
+                        padding: 32px 24px;
+                    }
 
                     .product-header {
                         display: flex;
-                        align-items: center;
-                        gap: 12px;
-                        margin-bottom: 20px;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        margin-bottom: 32px;
+                        gap: 24px;
+
+                        @media (max-width: 768px) {
+                            flex-direction: column;
+                            gap: 20px;
+                        }
 
                         .product-icon {
-                            width: 32px;
-                            height: 32px;
-                            background: linear-gradient(135deg, #635bff 0%, #3b82f6 100%);
-                            border-radius: 6px;
+                            width: 48px;
+                            height: 48px;
+                            background: #f3f4f6;
+                            border-radius: 8px;
+                            flex-shrink: 0;
+
+                            @media (max-width: 768px) {
+                                width: 40px;
+                                height: 40px;
+                            }
                         }
 
                         .product-info {
                             flex: 1;
 
                             h3 {
-                                font-size: 14px;
+                                font-size: 24px;
                                 font-weight: 600;
                                 color: #0a2540;
-                                margin-bottom: 2px;
+                                margin-bottom: 12px;
+                                line-height: 1.3;
+
+                                @media (max-width: 768px) {
+                                    font-size: 22px;
+                                }
                             }
 
                             p {
-                                font-size: 13px;
+                                font-size: 16px;
                                 color: #6b7280;
+                                line-height: 1.6;
                                 margin: 0;
                             }
                         }
 
                         .start-now-btn {
-                            background: #635bff;
+                            background: #6366f1;
                             color: white;
                             border: none;
-                            padding: 8px 16px;
-                            border-radius: 6px;
-                            font-size: 12px;
+                            border-radius: 8px;
+                            padding: 12px 24px;
+                            font-size: 16px;
                             font-weight: 600;
                             cursor: pointer;
                             transition: all 0.2s ease;
+                            white-space: nowrap;
 
                             &:hover {
-                                background: #5a52f5;
+                                background: #5855eb;
                                 transform: translateY(-1px);
+                            }
+
+                            @media (max-width: 768px) {
+                                padding: 14px 20px;
+                                font-size: 15px;
+                                width: 100%;
                             }
                         }
                     }
 
                     .product-features {
-                        margin-bottom: 24px;
+                        margin-bottom: 40px;
 
                         ul {
                             list-style: none;
@@ -572,56 +827,67 @@
                             margin: 0;
 
                             li {
-                                padding: 4px 0;
-                                font-size: 13px;
-                                color: #374151;
+                                font-size: 16px;
+                                color: #6b7280;
+                                margin-bottom: 12px;
+                                line-height: 1.5;
                                 position: relative;
-                                padding-left: 18px;
+                                padding-left: 20px;
 
-        &::before {
-                                    content: '✓';
+                                &:before {
+                                    content: "✓";
                                     position: absolute;
-                left: 0;
+                                    left: 0;
                                     color: #10b981;
-                                    font-weight: 600;
-                                    font-size: 11px;
+                                    font-weight: bold;
+                                }
+
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+
+                                @media (max-width: 768px) {
+                                    font-size: 15px;
+                                    margin-bottom: 10px;
                                 }
                             }
                         }
                     }
 
-                                        .pricing-details-section {
+                    .pricing-details-section {
                         .pricing-item {
-                            margin-bottom: 24px;
-                            padding-bottom: 20px;
+                            margin-bottom: 32px;
+                            padding-bottom: 24px;
                             border-bottom: 1px solid #f1f5f9;
 
                             &:last-child {
                                 border-bottom: none;
                                 margin-bottom: 0;
+                                padding-bottom: 0;
                             }
 
                             h4 {
-                                font-size: 14px;
+                                font-size: 18px;
                                 font-weight: 600;
                                 color: #0a2540;
-                                margin-bottom: 6px;
+                                margin-bottom: 12px;
+                                line-height: 1.3;
                             }
 
                             > p {
-                                font-size: 13px;
+                                font-size: 16px;
                                 color: #6b7280;
-                                margin-bottom: 12px;
-                                line-height: 1.4;
+                                margin-bottom: 16px;
+                                line-height: 1.6;
                             }
 
                             .learn-more-link {
-                                color: #635bff;
+                                color: #6366f1;
                                 text-decoration: none;
-                                font-size: 12px;
+                                font-size: 14px;
                                 font-weight: 500;
                                 display: block;
-                                margin-bottom: 16px;
+                                margin-bottom: 20px;
 
                                 &:hover {
                                     text-decoration: underline;
@@ -632,26 +898,26 @@
                                 display: flex;
                                 flex-wrap: wrap;
                                 gap: 8px;
-                                margin-bottom: 16px;
+                                margin-bottom: 20px;
 
                                 .logo-item {
                                     background: #f8fafc;
                                     border: 1px solid #e2e8f0;
-                                    border-radius: 4px;
-                                    padding: 4px 8px;
-                                    font-size: 10px;
+                                    border-radius: 6px;
+                                    padding: 6px 12px;
+                                    font-size: 12px;
                                     color: #6b7280;
                                     font-weight: 500;
                                 }
                             }
 
                             .see-more-link {
-                                color: #635bff;
+                                color: #6366f1;
                                 text-decoration: none;
-                                font-size: 12px;
+                                font-size: 14px;
                                 font-weight: 500;
                                 display: block;
-                                margin-top: 8px;
+                                margin-top: 12px;
 
                                 &:hover {
                                     text-decoration: underline;
@@ -662,7 +928,7 @@
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
-                                padding: 12px 0;
+                                padding: 16px 0;
                                 border-bottom: 1px solid #f1f5f9;
 
                                 &:last-child {
@@ -670,18 +936,19 @@
                                 }
 
                                 .price {
-                                    font-size: 15px;
+                                    font-size: 18px;
                                     font-weight: 600;
                                     color: #0a2540;
                                 }
 
                                 .price-desc {
-                                    font-size: 13px;
+                                    font-size: 14px;
                                     color: #6b7280;
                                     text-align: right;
+                                    max-width: 200px;
 
                                     .highlight {
-                                        color: #635bff;
+                                        color: #6366f1;
                                         font-weight: 500;
                                     }
                                 }
@@ -693,44 +960,395 @@
         }
     }
 
-    // FAQ Section - AI Capabilities Style
-    .faq-section {
+    // Detailed Pricing Section - Exact Stripe design
+    .detailed-pricing-section {
         padding: 80px 0;
-        background-color: #f8fafc;
+        background: #f8fafc;
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 40px;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+            }
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 60px;
+
+            .section-label {
+                display: inline-block;
+                background: #e0f2fe;
+                color: #0f4c75;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .section-title {
+                font-size: 36px;
+                font-weight: 600;
+                color: #0a2540;
+                margin-bottom: 20px;
+                line-height: 1.3;
+
+                @media (max-width: 768px) {
+                    font-size: 28px;
+                }
+            }
+
+            .section-subtitle {
+                font-size: 18px;
+                color: #6b7280;
+                max-width: 600px;
+                margin: 0 auto;
+                line-height: 1.6;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .pricing-content {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+
+        // Sidebar Navigation - Exact Stripe design
+        .pricing-sidebar {
+            flex: 0 0 280px;
+            position: sticky;
+            top: 100px;
+            background: white;
+            border-radius: 12px;
+            padding: 32px 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+
+            @media (max-width: 1024px) {
+                position: static;
+                flex: none;
+                width: 100%;
+            }
+
+            @media (max-width: 768px) {
+                padding: 24px 20px;
+            }
+
+            .sidebar-section {
+                margin-bottom: 32px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #374151;
+                    margin-bottom: 16px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        padding: 12px 16px;
+                        margin-bottom: 8px;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+                        font-size: 15px;
+                        color: #6b7280;
+                        border: 1px solid transparent;
+
+                        &:hover {
+                            background: #f9fafb;
+                            color: #374151;
+                        }
+
+                        &.active {
+                            background: #0f4c75;
+                            color: white;
+                            border-color: #0f4c75;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Main Content Area - New Capability Grid
+        .pricing-main-content {
+            flex: 1;
+            min-width: 0;
+
+            .capability-section {
+                margin-bottom: 80px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                h2 {
+                    font-size: 32px;
+                    font-weight: 600;
+                    color: #0a2540;
+                    margin-bottom: 16px;
+                    line-height: 1.3;
+
+                    @media (max-width: 768px) {
+                        font-size: 28px;
+                    }
+                }
+
+                > p {
+                    font-size: 18px;
+                    color: #6b7280;
+                    margin-bottom: 40px;
+                    line-height: 1.6;
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        margin-bottom: 32px;
+                    }
+                }
+
+                .capabilities-grid {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 24px;
+
+                    @media (max-width: 768px) {
+                        gap: 20px;
+                    }
+                }
+
+                .capability-item {
+                    background: white;
+                    border-radius: 12px;
+                    padding: 32px 24px;
+                    border: 1px solid #e5e7eb;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    }
+
+                    @media (max-width: 768px) {
+                        padding: 24px 20px;
+                    }
+
+                    .capability-info {
+                        margin-bottom: 24px;
+
+                        h3 {
+                            font-size: 24px;
+                            font-weight: 600;
+                            color: #0a2540;
+                            margin-bottom: 16px;
+                            line-height: 1.3;
+
+                            @media (max-width: 768px) {
+                                font-size: 22px;
+                                margin-bottom: 12px;
+                            }
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: #6b7280;
+                            line-height: 1.6;
+                            margin: 0;
+                        }
+                    }
+
+                    .automation-level {
+                        margin-bottom: 24px;
+
+                        .automation-tag {
+                            display: inline-block;
+                            padding: 8px 16px;
+                            border-radius: 20px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+
+                            &.fully-automated {
+                                background: #dcfce7;
+                                color: #166534;
+                                border: 1px solid #bbf7d0;
+                            }
+
+                            &.ai-human {
+                                background: #dbeafe;
+                                color: #1e40af;
+                                border: 1px solid #bfdbfe;
+                            }
+
+                            &.human-only {
+                                background: #fef3c7;
+                                color: #92400e;
+                                border: 1px solid #fde68a;
+                            }
+                        }
+                    }
+
+                    .video-section {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+
+                        @media (max-width: 768px) {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 12px;
+                        }
+
+                        .video-thumbnail {
+                            width: 80px;
+                            height: 60px;
+                            background: #f3f4f6;
+                            border-radius: 8px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #e5e7eb;
+                            position: relative;
+                            cursor: pointer;
+                            transition: all 0.2s ease;
+
+                            &:hover {
+                                background: #e5e7eb;
+                                transform: scale(1.05);
+                            }
+
+                            .play-button {
+                                font-size: 20px;
+                                color: #6366f1;
+                                font-weight: bold;
+                            }
+
+                            @media (max-width: 768px) {
+                                width: 70px;
+                                height: 52px;
+
+                                .play-button {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+
+                        .video-access {
+                            .access-type {
+                                font-size: 14px;
+                                font-weight: 600;
+                                padding: 6px 12px;
+                                border-radius: 6px;
+                                cursor: pointer;
+                                transition: all 0.2s ease;
+
+                                &.available {
+                                    background: #dcfce7;
+                                    color: #166534;
+                                    border: 1px solid #bbf7d0;
+
+                                    &:hover {
+                                        background: #bbf7d0;
+                                    }
+                                }
+
+                                &.register-required {
+                                    background: #fef3c7;
+                                    color: #92400e;
+                                    border: 1px solid #fde68a;
+
+                                    &:hover {
+                                        background: #fde68a;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // FAQ Section - Exact Stripe design
+    .faq-section {
+        padding: 80px 0;
+        background: #f8fafc;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+            }
         }
 
         .faq-header {
             text-align: center;
             margin-bottom: 60px;
-            
+
             h2 {
                 font-size: 36px;
-                font-weight: 700;
-                color: #1e293b;
+                font-weight: 600;
+                color: #0a2540;
                 margin-bottom: 16px;
-                font-family: inherit;
+                line-height: 1.3;
+
+                @media (max-width: 768px) {
+                    font-size: 28px;
+                }
             }
-            
+
             p {
                 font-size: 18px;
-                color: #64748b;
-                line-height: 1.6;
+                color: #6b7280;
                 max-width: 600px;
                 margin: 0 auto;
-                
+                line-height: 1.6;
+
                 a {
-                    color: #0053FA;
+                    color: #6366f1;
                     text-decoration: none;
                     font-weight: 600;
-                    
+
                     &:hover {
                         text-decoration: underline;
                     }
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
                 }
             }
         }
@@ -739,8 +1357,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 24px;
-            margin-bottom: 60px;
-            
+            margin-bottom: 40px;
+
             @media (max-width: 768px) {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -748,128 +1366,173 @@
         }
 
         .faq-card {
-            background: #ffffff;
+            background: white;
+            border: 1px solid #e5e7eb;
             border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            
+            padding: 32px 24px;
+            transition: all 0.3s ease;
+
             &:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
             }
-            
+
+            @media (max-width: 768px) {
+                padding: 24px 20px;
+            }
+
             h3 {
-                font-size: 20px;
-                font-weight: 700;
-                color: #1e293b;
-                margin-bottom: 16px;
-                line-height: 1.3;
-                font-family: inherit;
-            }
-            
-            p {
-                font-size: 16px;
-                color: #475569;
-                line-height: 1.6;
-                margin: 0;
-            }
-        }
-
-        .faq-footer {
-            text-align: center;
-            
-            p {
                 font-size: 18px;
-                color: #64748b;
-                margin-bottom: 24px;
-                font-weight: 500;
-            }
-            
-            .faq-cta-button {
-                display: inline-block;
-                background: #0f4c75;
-                color: #ffffff;
-                border: none;
-                border-radius: 6px;
-                padding: 12px 28px;
-                font-size: 14px;
-                font-weight: 600;
-                text-decoration: none;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                transition: background-color 0.2s ease;
-                
-                &:hover {
-                    background: #0a3d5f;
-                }
-            }
-        }
-    }
-
-    // CTA Section
-    .cta-section {
-        padding: 80px 0;
-        background: #f8fafc;
-        text-align: center;
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .cta-content {
-            h2 {
-                font-size: 28px;
                 font-weight: 600;
                 color: #0a2540;
                 margin-bottom: 16px;
-                line-height: 1.2;
+                line-height: 1.4;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    margin-bottom: 12px;
+                }
             }
 
             p {
                 font-size: 16px;
                 color: #6b7280;
-                margin-bottom: 32px;
-                line-height: 1.5;
+                line-height: 1.6;
+                margin: 0;
+
+                @media (max-width: 768px) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .faq-footer {
+            text-align: center;
+
+            p {
+                font-size: 18px;
+                color: #6b7280;
+                margin-bottom: 24px;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                }
+            }
+
+            .faq-cta-button {
+                display: inline-block;
+                background: #6366f1;
+                color: white;
+                text-decoration: none;
+                padding: 16px 32px;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    background: #5855eb;
+                    transform: translateY(-1px);
+                }
+
+                @media (max-width: 768px) {
+                    padding: 14px 28px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    // CTA Section - Exact Stripe design
+    .cta-section {
+        padding: 80px 0;
+        background: white;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+            }
+        }
+
+        .cta-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+
+            h2 {
+                font-size: 36px;
+                font-weight: 600;
+                color: #0a2540;
+                margin-bottom: 20px;
+                line-height: 1.3;
+
+                @media (max-width: 768px) {
+                    font-size: 28px;
+                }
+            }
+
+            p {
+                font-size: 18px;
+                color: #6b7280;
+                margin-bottom: 40px;
+                line-height: 1.6;
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                    margin-bottom: 32px;
+                }
             }
 
             .cta-buttons {
                 display: flex;
                 gap: 16px;
                 justify-content: center;
-                flex-wrap: wrap;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 12px;
+                }
 
                 .btn {
-                    padding: 12px 24px;
-                    border-radius: 6px;
-                    font-size: 14px;
+                    padding: 16px 32px;
+                    border-radius: 8px;
+                    font-size: 16px;
                     font-weight: 600;
-                    border: none;
                     cursor: pointer;
                     transition: all 0.2s ease;
                     text-decoration: none;
                     display: inline-block;
+                    text-align: center;
+
+                    @media (max-width: 768px) {
+                        padding: 14px 28px;
+                        font-size: 15px;
+                    }
 
                     &.btn-primary {
-                        background: #635bff;
+                        background: #6366f1;
                         color: white;
+                        border: none;
 
                         &:hover {
-                            background: #5a52f5;
+                            background: #5855eb;
                             transform: translateY(-1px);
                         }
                     }
 
                     &.btn-outline {
                         background: transparent;
-                        color: #635bff;
-                        border: 1px solid #635bff;
+                        color: #6366f1;
+                        border: 2px solid #6366f1;
 
                         &:hover {
-                            background: #635bff;
+                            background: #6366f1;
                             color: white;
+                            transform: translateY(-1px);
                         }
                     }
                 }
@@ -877,81 +1540,117 @@
         }
     }
 
-    // Customer Section
+    // Customer Section - Exact Stripe design
     .customer-section {
         padding: 80px 0;
-        background: white;
-        text-align: center;
+        background: #f8fafc;
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 40px;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+            }
         }
 
         .section-title {
-            font-size: 28px;
+            font-size: 36px;
             font-weight: 600;
             color: #0a2540;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+            }
         }
 
         .section-subtitle {
-            font-size: 16px;
+            font-size: 18px;
             color: #6b7280;
-            margin-bottom: 24px;
-            line-height: 1.5;
+            margin-bottom: 32px;
+            line-height: 1.6;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+                margin-bottom: 24px;
+            }
         }
 
         .learn-more-link {
             a {
-                color: #635bff;
+                color: #6366f1;
                 text-decoration: none;
-                font-size: 14px;
-                font-weight: 500;
+                font-size: 16px;
+                font-weight: 600;
 
                 &:hover {
                     text-decoration: underline;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 15px;
                 }
             }
         }
     }
 
-    // Documentation Section
+    // Documentation Section - Exact Stripe design
     .docs-section {
         padding: 80px 0;
-        background: #f8fafc;
-        text-align: center;
+        background: white;
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 40px;
+            text-align: center;
+
+            @media (max-width: 768px) {
+                padding: 0 20px;
+            }
         }
 
         .section-title {
-            font-size: 28px;
+            font-size: 36px;
             font-weight: 600;
             color: #0a2540;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+            }
         }
 
         .section-subtitle {
-            font-size: 16px;
+            font-size: 18px;
             color: #6b7280;
-            margin-bottom: 24px;
-            line-height: 1.5;
+            margin-bottom: 32px;
+            line-height: 1.6;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+                margin-bottom: 24px;
+            }
         }
 
         .learn-more-link {
             a {
-                color: #635bff;
+                color: #6366f1;
                 text-decoration: none;
-                font-size: 14px;
-                font-weight: 500;
+                font-size: 16px;
+                font-weight: 600;
 
                 &:hover {
                     text-decoration: underline;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 15px;
                 }
             }
         }
@@ -982,7 +1681,7 @@
 
 @media (max-width: 768px) {
     .stripe-pricing-container {
-        .hero-gradient-section {
+        .hero-section {
             padding: 60px 0 80px;
 
             .hero-title {
@@ -1044,7 +1743,7 @@
 
 @media (max-width: 480px) {
     .stripe-pricing-container {
-        .hero-gradient-section {
+        .hero-section {
             .hero-title {
                 font-size: 36px;
             }

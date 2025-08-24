@@ -497,3 +497,251 @@ img.lineSvg.active {
         }
     }
 }
+
+// BuildTwin AI Section Styles
+.buildtwinPro {
+    margin-bottom: 15px;
+    position: relative;
+    background: #f6f7f9;
+    padding: 60px 0;
+    
+    &:before {
+        content: '';
+        border-left: 32px transparent solid;
+        border-right: 32px transparent solid;
+        border-top: 28px #fff solid;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    
+    h2 {
+        span {
+            color: #0053fa;
+        }
+    }
+}
+
+.list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+    
+    .block {
+        width: 33.333%;
+        text-align: center;
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 70px;
+        
+        figure {
+            width: 190px;
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f6f7f9;
+            border-radius: 50%;
+            margin-bottom: 30px;
+        }
+        
+        h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0E0E28;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        
+        p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.5;
+        }
+    }
+}
+
+.flex-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.button-v2 {
+    display: inline-block;
+    background: #0053fa;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: #0041c7;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 83, 250, 0.3);
+    }
+}
+
+// AI Capabilities Section Styles
+.ai-capabilities-section {
+    padding: 80px 0;
+    background: #fff;
+    
+    .capabilities-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        
+        .capability-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-5px);
+            }
+            
+            h3 {
+                font-size: 24px;
+                font-weight: 700;
+                color: #0E0E28;
+                margin-bottom: 16px;
+            }
+            
+            p {
+                font-size: 16px;
+                color: #666;
+                line-height: 1.5;
+                margin-bottom: 30px;
+            }
+            
+            .btn-explore {
+                background: #0053fa;
+                color: white;
+                border: none;
+                padding: 14px 28px;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                
+                &:hover {
+                    background: #0041c7;
+                }
+            }
+        }
+    }
+}
+
+// BuildTwin AI Branding Section
+.buildtwin-ai-section {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+    
+    .branding-content {
+        max-width: 800px;
+        margin: 0 auto;
+        
+        .main-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #0E0E28;
+            margin-bottom: 24px;
+            
+            .ai-box {
+                background: #f0f0f0;
+                color: #0E0E28;
+                padding: 8px 16px;
+                border-radius: 8px;
+                margin-left: 8px;
+                font-size: 48px;
+                font-weight: 700;
+            }
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// Capability Statement Section
+.capability-statement-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+    text-align: center;
+    
+    .statement-content {
+        .buildtwin-tag {
+            background: #0053fa;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .statement-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0E0E28;
+            margin: 0;
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .ai-capabilities-section {
+        .capabilities-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0 20px;
+        }
+    }
+    
+    .buildtwin-ai-section {
+        .branding-content {
+            .main-title {
+                font-size: 36px;
+                
+                .ai-box {
+                    font-size: 36px;
+                }
+            }
+            
+            .subtitle {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+        }
+    }
+    
+    .capability-statement-section {
+        .statement-content {
+            .statement-title {
+                font-size: 28px;
+            }
+        }
+    }
+}
