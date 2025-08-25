@@ -76,8 +76,8 @@ selectedIndex: number = 0
   
   tabDetail: any =[
     {
-      icon:'assets/images/icons/manage-portfolio.png',
-      text:'Connectivity',
+      icon:'assets/images/icons/match.png',
+      text:'Collaborate with AI',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
@@ -92,8 +92,8 @@ selectedIndex: number = 0
       targetwebp2x: 'assets/images/for-seller/mange-portfolio@2x.webp',
     },
     {
-      icon:'assets/images/icons/match.png',
-      text:'Mark-UP and Collaboration',
+      icon:'assets/images/icons/manage-portfolio.png',
+      text:'Connectivity',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',

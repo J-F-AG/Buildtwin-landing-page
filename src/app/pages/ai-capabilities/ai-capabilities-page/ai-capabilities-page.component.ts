@@ -17,6 +17,9 @@ export class AiCapabilitiesPageComponent {
   // Category selection
   selectedCategory = 'ai-generation';
 
+  // Active section tracking for Capability Statement
+  activeSection = 'element-ga';
+
   // Popup states
   showPopup = false;
 
@@ -220,11 +223,48 @@ export class AiCapabilitiesPageComponent {
   
       }
     }
+
+    // Track active section for Capability Statement
+    this.updateActiveSection();
+  }
+
+  // Update active section based on scroll position
+  updateActiveSection() {
+    const sections = [
+      'element-ga',
+      'load-analysis', 
+      'foundation-designer',
+      'beam-optimizer',
+      'column-sizer',
+      'connection-detailer',
+      'code-compliance',
+      'material-estimator',
+      'seismic-design',
+      'rebar-layout'
+    ];
+
+    const scrollPosition = window.scrollY + 200; // Offset for better detection
+
+    for (const sectionId of sections) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          this.activeSection = sectionId;
+          break;
+        }
+      }
+    }
   }
 
   scrollToSection(sectionId: string) {
     const section = document.getElementById(sectionId);
     if (section) {
+      // Update active section
+      this.activeSection = sectionId;
+      
       // Scroll the section into view smoothly
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
       

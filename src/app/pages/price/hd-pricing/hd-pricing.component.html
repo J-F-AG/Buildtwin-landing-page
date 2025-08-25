@@ -1,10 +1,10 @@
 <!-- Stripe-style Pricing Page -->
 <div class="stripe-pricing-container">
-    <!-- Hero Section with Gradient Background -->
-    <div class="hero-gradient-section" id="hero">
+    <!-- Hero Section with Very Subtle Background -->
+    <div class="hero-section" id="hero">
         <div class="hero-content">
             <h1 class="hero-title">
-                Pricing built for businesses<br>of all sizes
+                Performance based pricing
             </h1>
             
             <!-- Pricing Cards Container -->
@@ -13,25 +13,27 @@
                 <div class="pricing-card standard-card">
                     <div class="card-header">
                         <h2>Standard</h2>
-                        <p>Access a complete payments platform with simple, pay-as-you-go pricing. No setup fees, monthly fees, or hidden fees.</p>
-                        <button class="get-started-btn">
-                            Get started
-                            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
-                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
+                        <p>Access a complete AI-powered platform with simple, pay-as-you-go pricing. No setup fees, monthly fees, or hidden fees.</p>
                     </div>
 
                     <div class="pricing-details">
                         <div class="price-row">
-                            <div class="price-main">1.5% + €0.25</div>
-                            <div class="price-description">for <span class="highlight-blue">standard European Economic Area cards</span></div>
+                            <div class="price-main">BT One</div>
+                            <div class="price-description">50€ / User</div>
                         </div>
                         <div class="price-row">
-                            <div class="price-main">2.5% + €0.25</div>
-                            <div class="price-description">for UK cards</div>
+                            <div class="price-main">AI QC - Standard Capability</div>
+                            <div class="price-description quote-action">Get Quote</div>
+                        </div>
+                        <div class="price-row">
+                            <div class="price-main">AI Drawings - Standard Capability</div>
+                            <div class="price-description quote-action">Get Quote</div>
                         </div>
                     </div>
+
+                    <button class="get-started-btn">
+                        Get started
+                    </button>
                 </div>
 
                 <!-- Custom Card -->
@@ -39,20 +41,19 @@
                     <div class="card-header">
                         <h2>Custom</h2>
                         <p>Design a custom package – available for businesses with large payments volume or unique business models.</p>
-                        <button class="contact-sales-btn">
-                            Contact sales
-                            <svg class="arrow-icon" width="14" height="14" viewBox="0 0 16 16" fill="none">
-                                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
                     </div>
 
                     <div class="custom-features">
-                        <div class="feature-item">IC+ pricing</div>
-                        <div class="feature-item">Volume discounts</div>
-                        <div class="feature-item">Multi-product discounts</div>
-                        <div class="feature-item">Country-specific rates</div>
+                        <div class="feature-item">Great ROI</div>
+                        <div class="feature-item">Custom trained capabilities</div>
+                        <div class="feature-item">Custom presentation & styles</div>
+                        <div class="feature-item">Guaranteed reliability</div>
+                        <div class="feature-item">Insured</div>
                     </div>
+
+                    <button class="contact-sales-btn">
+                        Contact sales
+                    </button>
                 </div>
             </div>
         </div>
@@ -62,8 +63,8 @@
     <div class="pricing-navigation">
         <div class="nav-container">
             <div class="nav-tabs">
-                <button class="nav-tab" [class.active]="activeTab === 'hero'" (click)="scrollToSection('hero')">Pricing</button>
-                <button class="nav-tab" [class.active]="activeTab === 'capability-statement'" (click)="scrollToSection('capability-statement')">Capabilities</button>
+                <button class="nav-tab" [class.active]="activeTab === 'hero'" (click)="scrollToSection('hero')">Standard pricing</button>
+                <button class="nav-tab" [class.active]="activeTab === 'capability-statement'" (click)="scrollToSection('capability-statement')">Custom pricing</button>
                 <button class="nav-tab" [class.active]="activeTab === 'faq'" (click)="scrollToSection('faq')">FAQs</button>
             </div>
             <button class="get-started-nav-btn">Get Started</button>
@@ -73,7 +74,7 @@
     <!-- Features Section -->
     <div class="features-section">
         <div class="container">
-            <h2 class="features-title">Features available out of the box:</h2>
+            <h2 class="features-title">Why to work with BuildTwin</h2>
             
             <div class="features-grid">
                 <!-- Global Access -->
@@ -100,10 +101,10 @@
                     </ul>
                 </div>
 
-                <!-- Tools to optimise checkout -->
+                <!-- Tools to optimize checkout -->
                 <div class="feature-card">
                     <div class="feature-icon optimize-checkout"></div>
-                    <h3>Tools to optimise your checkout</h3>
+                    <h3>Tools to optimize your checkout</h3>
                     <ul>
                         <li>Flexible UI components</li>
                         <li>Pre-built payment forms</li>
@@ -112,63 +113,15 @@
                     </ul>
                 </div>
 
-                <!-- Payments optimisations -->
+                <!-- Payments optimizations -->
                 <div class="feature-card">
                     <div class="feature-icon payment-optimizations"></div>
-                    <h3>Payments optimisations to boost revenue</h3>
+                    <h3>Payments optimizations to boost revenue</h3>
                     <ul>
                         <li>Real-time retries</li>
                         <li>Auto-updated cards</li>
                         <li>Customer authentication</li>
                         <li>Smart routing</li>
-                    </ul>
-                </div>
-
-                <!-- Embedded payments -->
-                <div class="feature-card">
-                    <div class="feature-icon embedded-payments"></div>
-                    <h3>Embedded payments for platforms & marketplaces</h3>
-                    <ul>
-                        <li>Instant onboarding</li>
-                        <li>Platform management</li>
-                        <li>Embedded components</li>
-                        <li>Risk tools</li>
-                    </ul>
-                </div>
-
-                <!-- Fast payouts -->
-                <div class="feature-card">
-                    <div class="feature-icon fast-payouts"></div>
-                    <h3>Fast, predictable payouts to your bank accounts</h3>
-                    <ul>
-                        <li>Flexible payout options</li>
-                        <li>Like-for-like settlement</li>
-                        <li>Payout transparency</li>
-                        <li>Real-time tracking</li>
-                    </ul>
-                </div>
-
-                <!-- Support -->
-                <div class="feature-card">
-                    <div class="feature-icon support"></div>
-                    <h3>Phone, chat, and email support</h3>
-                    <ul>
-                        <li>24x7 support</li>
-                        <li>Industry-leading documentation</li>
-                        <li>Technical support on Discord</li>
-                        <li>Developer resources</li>
-                    </ul>
-                </div>
-
-                <!-- Security -->
-                <div class="feature-card">
-                    <div class="feature-icon security"></div>
-                    <h3>Security, reliability and compliance</h3>
-                    <ul>
-                        <li>99.999% average historical uptime</li>
-                        <li>PCI compliant</li>
-                        <li>Regulatory licences globally</li>
-                        <li>Enterprise-grade security</li>
                     </ul>
                 </div>
             </div>
@@ -185,243 +138,247 @@
             </div>
                       
             <div class="pricing-content">
-                <!-- Sidebar Navigation -->
+                <!-- Sidebar Navigation - Updated with BuildTwin categories -->
                 <div class="pricing-sidebar">
                     <div class="sidebar-section">
-                        <h3>AI Delivery System (BT One)</h3>
+                        <h3>BuildTwin One - Delivery System</h3>
                         <ul>
-                            <li [class.active]="activeSection === 'payments'" (click)="scrollToSection('payments')">Payments</li>
-                            <li [class.active]="activeSection === 'payment-links'" (click)="scrollToSection('payment-links')">Payment Links</li>
-                            <li [class.active]="activeSection === 'checkout'" (click)="scrollToSection('checkout')">Checkout</li>
-                            <li [class.active]="activeSection === 'terminal'" (click)="scrollToSection('terminal')">Terminal</li>
-                            <li [class.active]="activeSection === 'radar'" (click)="scrollToSection('radar')">Radar</li>
+                            <li [class.active]="activeSection === 'element-ga'" (click)="scrollToSection('element-ga')">Element GA</li>
+                            <li [class.active]="activeSection === 'load-analysis'" (click)="scrollToSection('load-analysis')">Load Analysis Pro</li>
+                            <li [class.active]="activeSection === 'foundation-designer'" (click)="scrollToSection('foundation-designer')">Foundation Designer</li>
+                            <li [class.active]="activeSection === 'beam-optimizer'" (click)="scrollToSection('beam-optimizer')">Beam Optimizer</li>
                         </ul>
                     </div>
 
                     <div class="sidebar-section">
-                        <h3>AI Quality Control (BT Duett)</h3>
+                        <h3>BuildTwin Duett - AI QC</h3>
                         <ul>
-                            <li [class.active]="activeSection === 'connect'" (click)="scrollToSection('connect')">Connect</li>
-                            <li [class.active]="activeSection === 'issuing'" (click)="scrollToSection('issuing')">Issuing</li>
+                            <li [class.active]="activeSection === 'column-sizer'" (click)="scrollToSection('column-sizer')">Column Sizer</li>
+                            <li [class.active]="activeSection === 'connection-detailer'" (click)="scrollToSection('connection-detailer')">Connection Detailer</li>
+                            <li [class.active]="activeSection === 'code-compliance'" (click)="scrollToSection('code-compliance')">Code Compliance Checker</li>
                         </ul>
                     </div>
 
                     <div class="sidebar-section">
-                        <h3>AI Drawing Generation (BT Trio)</h3>
+                        <h3>BuildTwin Trio - AI Drawing Generation</h3>
                         <ul>
-                            <li [class.active]="activeSection === 'billing'" (click)="scrollToSection('billing')">Billing</li>
-                            <li [class.active]="activeSection === 'invoicing'" (click)="scrollToSection('invoicing')">Invoicing</li>
-                            <li [class.active]="activeSection === 'tax'" (click)="scrollToSection('tax')">Tax</li>
-                            <li [class.active]="activeSection === 'sigma'" (click)="scrollToSection('sigma')">Sigma</li>
-                            <li [class.active]="activeSection === 'data-pipeline'" (click)="scrollToSection('data-pipeline')">Data Pipeline</li>
-                            <li [class.active]="activeSection === 'revenue-recognition'" (click)="scrollToSection('revenue-recognition')">Revenue Recognition</li>
-                        </ul>
-                    </div>
-
-                    <div class="sidebar-section">
-                        <h3>More</h3>
-                        <ul>
-                            <li [class.active]="activeSection === 'financial-connections'" (click)="scrollToSection('financial-connections')">Financial Connections</li>
-                            <li [class.active]="activeSection === 'identity'" (click)="scrollToSection('identity')">Identity</li>
-                            <li [class.active]="activeSection === 'atlas'" (click)="scrollToSection('atlas')">Atlas</li>
-                            <li [class.active]="activeSection === 'climate'" (click)="scrollToSection('climate')">Climate</li>
+                            <li [class.active]="activeSection === 'material-estimator'" (click)="scrollToSection('material-estimator')">Material Estimator</li>
+                            <li [class.active]="activeSection === 'seismic-design'" (click)="scrollToSection('seismic-design')">Seismic Design Assistant</li>
+                            <li [class.active]="activeSection === 'rebar-layout'" (click)="scrollToSection('rebar-layout')">Rebar Layout Generator</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- Main Content Area -->
+                <!-- Main Content Area - New Capability Grid -->
                 <div class="pricing-main-content">
-                    <!-- AI Delivery System (BT One) Section -->
-                    <div class="product-section" id="payments">
-                        <h2>AI Delivery System (BT One)</h2>
-                        <p>Optimise checkout conversion, accept local payment methods, and increase acceptance rates.</p>
-
-                        <div class="product-card">
-                            <div class="product-header">
-                                <div class="product-icon"></div>
-                                <div class="product-info">
-                                    <h3>Payments</h3>
-                                    <p>An online payments platform engineered for growth.</p>
+                    <!-- BuildTwin One - Delivery System -->
+                    <div class="capability-section" id="element-ga">
+                        <h2>BuildTwin One - Delivery System</h2>
+                        <p>Advanced AI-powered delivery and automation capabilities for structural engineering workflows.</p>
+                        
+                        <div class="capabilities-grid">
+                            <!-- Element GA -->
+                            <div class="capability-item" id="element-ga">
+                                <div class="capability-info">
+                                    <h3>Element GA</h3>
+                                    <p>Automated generation of structural elements, optimizing design for efficiency and compliance. Streamlines the creation of beams, columns, and other structural components with AI-driven optimization.</p>
                                 </div>
-                                <button class="start-now-btn">Start now</button>
-                            </div>
-
-                            <div class="product-features">
-                                <ul>
-                                    <li>Increase customer acquisition with 100+ payment methods.</li>
-                                    <li>Improve conversion with Link - BuildTwin's accelerated checkout.</li>
-                                    <li>Reduce fraud and increase revenue with ML optimisations.</li>
-                                    <li>Save engineering time with pre-built UIs.</li>
-                                </ul>
-                            </div>
-
-                            <!-- Pricing Details -->
-                            <div class="pricing-details-section">
-                                <!-- Domestic Cards Pricing -->
-                                <div class="pricing-item">
-                                    <h4>Domestic cards</h4>
-                                    <p>Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued domestically.</p>
-                                    <a href="#" class="learn-more-link">Learn more about our different card types.</a>
-                                    
-                                    <!-- Payment Method Logos -->
-                                    <div class="payment-logos">
-                                        <div class="logo-item">Visa</div>
-                                        <div class="logo-item">Mastercard</div>
-                                        <div class="logo-item">American Express</div>
-                                        <div class="logo-item">UnionPay</div>
-                                        <div class="logo-item">Apple Pay</div>
-                                        <div class="logo-item">Google Pay</div>
-                                        <div class="logo-item">JCB</div>
-                                        <div class="logo-item">Discover</div>
-                                    </div>
-
-                                    <div class="price-display">
-                                        <div class="price">1.5% + €0.25</div>
-                                        <div class="price-desc">for <span class="highlight">standard European Economic Area cards</span></div>
-                                    </div>
-                                    <div class="price-display">
-                                        <div class="price">1.9% + €0.25</div>
-                                        <div class="price-desc">for <span class="highlight">premium European Economic Area cards</span></div>
-                                    </div>
+                                <div class="automation-level">
+                                    <span class="automation-tag fully-automated">Fully Automated</span>
                                 </div>
-
-                                <!-- International Cards Pricing -->
-                                <div class="pricing-item">
-                                    <h4>International cards</h4>
-                                    <p>Accept widely used credit and debit cards, prepaid cards, and digital wallets for cards issued internationally.</p>
-                                    
-                                    <div class="price-display">
-                                        <div class="price">2.5% + €0.25</div>
-                                        <div class="price-desc">for UK cards</div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
                                     </div>
-                                    <div class="price-display">
-                                        <div class="price">+ 2%</div>
-                                        <div class="price-desc">if currency conversion is required</div>
+                                    <div class="video-access">
+                                        <span class="access-type available">Watch Video</span>
                                     </div>
-                                    <div class="price-display">
-                                        <div class="price">3.25% + €0.25</div>
-                                        <div class="price-desc">for international cards</div>
-                                    </div>
-                                    <div class="price-display">
-                                        <div class="price">+ 2%</div>
-                                        <div class="price-desc">if currency conversion is required</div>
-                                    </div>
-                                </div>
-
-                                <!-- Link Pricing -->
-                                <div class="pricing-item">
-                                    <h4>Link</h4>
-                                    <p>Autofill your customers' preferred payment details to deliver a frictionless checkout experience.</p>
-                                    
-                                    <div class="price-display">
-                                        <div class="price">1.5% + €0.25</div>
-                                        <div class="price-desc">for <span class="highlight">standard European Economic Area cards</span></div>
-                                    </div>
-                                    <div class="price-display">
-                                        <div class="price">1.9% + €0.25</div>
-                                        <div class="price-desc">for <span class="highlight">premium European Economic Area cards</span></div>
-                                    </div>
-                                </div>
-
-                                <!-- Bank-based and other payment methods -->
-                                <div class="pricing-item">
-                                    <h4>Bank-based and other payment methods</h4>
-                                    <p>Offer bank debits, bank transfers, and other locally relevant payment methods.</p>
-                                    
-                                    <div class="price-display">
-                                        <div class="price">€0.35</div>
-                                        <div class="price-desc">SEPA Direct Debit</div>
-                                    </div>
-                                    <a href="#" class="see-more-link">See more payment methods</a>
-                                </div>
-
-                                <!-- Buy Now Pay Later -->
-                                <div class="pricing-item">
-                                    <h4>Buy Now Pay Later</h4>
-                                    <p>Let your customers buy something and pay for it in instalments over time.</p>
-                                    
-                                    <div class="price-display">
-                                        <div class="price">Starting at 2.99% + €0.35</div>
-                                        <div class="price-desc">per successful transaction for Klarna</div>
-                                    </div>
-                                    <a href="#" class="see-more-link">See more payment methods</a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <!-- AI Quality Control (BT Duett) Section -->
-                    <div class="product-section" id="connect">
-                        <h2>AI Quality Control (BT Duett)</h2>
-                        <p>Advanced AI-powered quality control system for structural engineering projects.</p>
-
-                        <div class="product-card">
-                            <div class="product-header">
-                                <div class="product-icon"></div>
-                                <div class="product-info">
-                                    <h3>Connect</h3>
-                                    <p>AI-powered platform for platform and marketplace payments.</p>
+                            <!-- Load Analysis Pro -->
+                            <div class="capability-item" id="load-analysis">
+                                <div class="capability-info">
+                                    <h3>Load Analysis Pro</h3>
+                                    <p>AI-powered load distribution and stress analysis, providing precise insights for structural integrity. Combines advanced algorithms with engineering expertise for comprehensive load assessment.</p>
                                 </div>
-                                <button class="start-now-btn">Start now</button>
+                                <div class="automation-level">
+                                    <span class="automation-tag ai-human">AI + Human</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type register-required">Register to Watch</span>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="product-features">
-                                <ul>
-                                    <li>Instant onboarding for your platform users.</li>
-                                    <li>Comprehensive platform management tools.</li>
-                                    <li>Embedded components for seamless integration.</li>
-                                    <li>Advanced risk management and fraud prevention.</li>
-                                </ul>
+                            <!-- Foundation Designer -->
+                            <div class="capability-item" id="foundation-designer">
+                                <div class="capability-info">
+                                    <h3>Foundation Designer</h3>
+                                    <p>AI-assisted design of foundation systems, ensuring stability and cost-effectiveness for various soil conditions. Optimizes foundation types and dimensions based on structural requirements.</p>
+                                </div>
+                                <div class="automation-level">
+                                    <span class="automation-tag ai-human">AI + Human</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type available">Watch Video</span>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- Pricing Details -->
-                            <div class="pricing-details-section">
-                                <div class="pricing-item">
-                                    <h4>Platform Fees</h4>
-                                    <p>Transparent pricing for platform transactions and marketplace operations.</p>
-                                    
-                                    <div class="price-display">
-                                        <div class="price">0.25% + €0.25</div>
-                                        <div class="price-desc">per successful transaction</div>
+                            <!-- Beam Optimizer -->
+                            <div class="capability-item" id="beam-optimizer">
+                                <div class="capability-info">
+                                    <h3>Beam Optimizer</h3>
+                                    <p>Optimizes beam dimensions for material efficiency and structural performance, reducing waste and costs. Uses AI algorithms to find the optimal balance between strength and economy.</p>
+                                </div>
+                                <div class="automation-level">
+                                    <span class="automation-tag fully-automated">Fully Automated</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type available">Watch Video</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- AI Drawing Generation (BT Trio) Section -->
-                    <div class="product-section" id="billing">
-                        <h2>AI Drawing Generation (BT Trio)</h2>
-                        <p>Automated drawing generation and management for structural engineering workflows.</p>
-
-                        <div class="product-card">
-                            <div class="product-header">
-                                <div class="product-icon"></div>
-                                <div class="product-info">
-                                    <h3>Billing</h3>
-                                    <p>Subscription and usage-based billing platform.</p>
+                    <!-- BuildTwin Duett - AI QC -->
+                    <div class="capability-section" id="column-sizer">
+                        <h2>BuildTwin Duett - AI QC</h2>
+                        <p>Intelligent quality control and validation systems powered by AI for structural engineering projects.</p>
+                        
+                        <div class="capabilities-grid">
+                            <!-- Column Sizer -->
+                            <div class="capability-item" id="column-sizer">
+                                <div class="capability-info">
+                                    <h3>Column Sizer</h3>
+                                    <p>Automatically sizes columns based on applied loads, material properties, and design codes. Ensures optimal column dimensions while maintaining safety factors and code compliance.</p>
                                 </div>
-                                <button class="start-now-btn">Start now</button>
+                                <div class="automation-level">
+                                    <span class="automation-tag fully-automated">Fully Automated</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type register-required">Register to Watch</span>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="product-features">
-                                <ul>
-                                    <li>Flexible subscription management.</li>
-                                    <li>Usage-based billing and metering.</li>
-                                    <li>Automated invoicing and payment collection.</li>
-                                    <li>Real-time billing analytics and reporting.</li>
-                                </ul>
+                            <!-- Connection Detailer -->
+                            <div class="capability-item" id="connection-detailer">
+                                <div class="capability-info">
+                                    <h3>Connection Detailer</h3>
+                                    <p>Generates detailed connection drawings for various structural components, ensuring constructability. Provides comprehensive connection details with proper specifications and annotations.</p>
+                                </div>
+                                <div class="automation-level">
+                                    <span class="automation-tag ai-human">AI + Human</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type available">Watch Video</span>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- Pricing Details -->
-                            <div class="pricing-details-section">
-                                <div class="pricing-item">
-                                    <h4>Billing Platform</h4>
-                                    <p>Comprehensive billing solution for modern businesses.</p>
-                                    
-                                    <div class="price-display">
-                                        <div class="price">0.4% + €0.25</div>
-                                        <div class="price-desc">per successful transaction</div>
+                            <!-- Code Compliance Checker -->
+                            <div class="capability-item" id="code-compliance">
+                                <div class="capability-info">
+                                    <h3>Code Compliance Checker</h3>
+                                    <p>Verifies designs against local and international building codes, flagging potential non-compliance issues. Ensures all structural elements meet regulatory requirements and safety standards.</p>
+                                </div>
+                                <div class="automation-level">
+                                    <span class="automation-tag ai-human">AI + Human</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type register-required">Register to Watch</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BuildTwin Trio - AI Drawing Generation -->
+                    <div class="capability-section" id="material-estimator">
+                        <h2>BuildTwin Trio - AI Drawing Generation</h2>
+                        <p>Advanced AI-powered drawing generation and material estimation for comprehensive project planning.</p>
+                        
+                        <div class="capabilities-grid">
+                            <!-- Material Estimator -->
+                            <div class="capability-item" id="material-estimator">
+                                <div class="capability-info">
+                                    <h3>Material Estimator</h3>
+                                    <p>Provides accurate material quantity take-offs and cost estimations for entire projects. Uses AI to analyze drawings and generate comprehensive material lists with pricing.</p>
+                                </div>
+                                <div class="automation-level">
+                                    <span class="automation-tag fully-automated">Fully Automated</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type available">Watch Video</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Seismic Design Assistant -->
+                            <div class="capability-item" id="seismic-design">
+                                <div class="capability-info">
+                                    <h3>Seismic Design Assistant</h3>
+                                    <p>AI guidance for designing seismic-resistant structures, incorporating advanced analysis techniques. Provides recommendations for seismic detailing and reinforcement requirements.</p>
+                                </div>
+                                <div class="automation-level">
+                                    <span class="automation-tag ai-human">AI + Human</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type available">Watch Video</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Rebar Layout Generator -->
+                            <div class="capability-item" id="rebar-layout">
+                                <div class="capability-info">
+                                    <h3>Rebar Layout Generator</h3>
+                                    <p>Automated generation of rebar placement and detailing, ensuring optimal reinforcement. Creates detailed rebar layouts with proper spacing, lap lengths, and anchorage details.</p>
+                                </div>
+                                <div class="automation-level">
+                                    <span class="automation-tag fully-automated">Fully Automated</span>
+                                </div>
+                                <div class="video-section">
+                                    <div class="video-thumbnail">
+                                        <div class="play-button">▶</div>
+                                    </div>
+                                    <div class="video-access">
+                                        <span class="access-type register-required">Register to Watch</span>
                                     </div>
                                 </div>
                             </div>

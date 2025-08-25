@@ -1,15 +1,13 @@
 <app-hd-navbar></app-hd-navbar>
 
-
-
 <app-ai-capabilities-banner></app-ai-capabilities-banner>
 <app-company-logos-slider></app-company-logos-slider>
 
-<!-- 3 reasons to get started NOW Section -->
+<!-- 3 AIs reporting for duty Section -->
 <app-get-started-block>
     <div class="heading center v2">
        <h2 class="title">
-        3 reasons to get started  <span>NOW</span>
+        3 AIs reporting for <span>duty</span>
        </h2> 
     </div>
     
@@ -119,46 +117,278 @@
     
 </app-get-started-block>
 
-<!-- AI Capabilities Carousel Section -->
+<!-- BuildTwin AI Section -->
 <div class="global-mb" id="ai-capabilities" style="margin-top: 60px;">
     <div class="container heading-sticky">
         <div class="heading center v2">
                 <h2 class="title">
-                    BuildTwin <span>AI Capabilities</span>
+                    BuildTwin <span>AI</span>
                 </h2>
                 <p class="small-title">
                     Discover how our AI-powered solutions streamline your engineering workflows and boost productivity
                 </p>
         </div>
-        
-        <!-- Category Selector -->
-        <div class="category-selector">
-            <div class="selector-tabs">
-                <button 
-                    class="selector-tab" 
-                    [class.active]="selectedCategory === 'ai-generation'"
-                    (click)="selectCategory('ai-generation')">
-                    AI Drawing Generation
-                </button>
-                <button 
-                    class="selector-tab" 
-                    [class.active]="selectedCategory === 'ai-quality-control'"
-                    (click)="selectCategory('ai-quality-control')">
-                    AI Quality Control
-                </button>
-                <button 
-                    class="selector-tab" 
-                    [class.active]="selectedCategory === 'ai-design-manager'"
-                    (click)="selectCategory('ai-design-manager')">
-                    AI Design Manager
-                </button>
+    </div>
+</div>
+
+<!-- Capability Statement Section -->
+<div class="detailed-pricing-section" id="capability-statement">
+    <div class="container">
+        <div class="pricing-header">
+            <span class="section-label">BuildTwin</span>
+            <h2 class="section-title">Capability Statement</h2>
+            <p class="section-subtitle">AI-powered structural engineering solutions, automated drawing generation, and quality control systems.</p>
+        </div>
+                  
+        <div class="pricing-content">
+            <!-- Sidebar Navigation - Updated with BuildTwin categories -->
+            <div class="pricing-sidebar">
+                <div class="sidebar-section">
+                    <h3>BuildTwin One - Delivery System</h3>
+                    <ul>
+                        <li [class.active]="activeSection === 'element-ga'" (click)="scrollToSection('element-ga')">Element GA</li>
+                        <li [class.active]="activeSection === 'load-analysis'" (click)="scrollToSection('load-analysis')">Load Analysis Pro</li>
+                        <li [class.active]="activeSection === 'foundation-designer'" (click)="scrollToSection('foundation-designer')">Foundation Designer</li>
+                        <li [class.active]="activeSection === 'beam-optimizer'" (click)="scrollToSection('beam-optimizer')">Beam Optimizer</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>BuildTwin Duett - AI QC</h3>
+                    <ul>
+                        <li [class.active]="activeSection === 'column-sizer'" (click)="scrollToSection('column-sizer')">Column Sizer</li>
+                        <li [class.active]="activeSection === 'connection-detailer'" (click)="scrollToSection('connection-detailer')">Connection Detailer</li>
+                        <li [class.active]="activeSection === 'code-compliance'" (click)="scrollToSection('code-compliance')">Code Compliance Checker</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>BuildTwin Trio - AI Drawing Generation</h3>
+                    <ul>
+                        <li [class.active]="activeSection === 'material-estimator'" (click)="scrollToSection('material-estimator')">Material Estimator</li>
+                        <li [class.active]="activeSection === 'seismic-design'" (click)="scrollToSection('seismic-design')">Seismic Design Assistant</li>
+                        <li [class.active]="activeSection === 'rebar-layout'" (click)="scrollToSection('rebar-layout')">Rebar Layout Generator</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content Area - New Capability Grid -->
+            <div class="pricing-main-content">
+                <!-- BuildTwin One - Delivery System -->
+                <div class="capability-section" id="element-ga">
+                    <h2>BuildTwin One - Delivery System</h2>
+                    <p>Advanced AI-powered delivery and automation capabilities for structural engineering workflows.</p>
+                    
+                    <div class="capabilities-grid">
+                        <!-- Element GA -->
+                        <div class="capability-item" id="element-ga">
+                            <div class="capability-info">
+                                <h3>Element GA</h3>
+                                <p>Automated generation of structural elements, optimizing design for efficiency and compliance. Streamlines the creation of beams, columns, and other structural components with AI-driven optimization.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Load Analysis Pro -->
+                        <div class="capability-item" id="load-analysis">
+                            <div class="capability-info">
+                                <h3>Load Analysis Pro</h3>
+                                <p>AI-powered load distribution and stress analysis, providing precise insights for structural integrity. Combines advanced algorithms with engineering expertise for comprehensive load assessment.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Foundation Designer -->
+                        <div class="capability-item" id="foundation-designer">
+                            <div class="capability-info">
+                                <h3>Foundation Designer</h3>
+                                <p>AI-assisted design of foundation systems, ensuring stability and cost-effectiveness for various soil conditions. Optimizes foundation types and dimensions based on structural requirements.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beam Optimizer -->
+                        <div class="capability-item" id="beam-optimizer">
+                            <div class="capability-info">
+                                <h3>Beam Optimizer</h3>
+                                <p>Optimizes beam dimensions for material efficiency and structural performance, reducing waste and costs. Uses AI algorithms to find the optimal balance between strength and economy.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BuildTwin Duett - AI QC -->
+                <div class="capability-section" id="column-sizer">
+                    <h2>BuildTwin Duett - AI QC</h2>
+                    <p>Intelligent quality control and validation systems powered by AI for structural engineering projects.</p>
+                    
+                    <div class="capabilities-grid">
+                        <!-- Column Sizer -->
+                        <div class="capability-item" id="column-sizer">
+                            <div class="capability-info">
+                                <h3>Column Sizer</h3>
+                                <p>Automatically sizes columns based on applied loads, material properties, and design codes. Ensures optimal column dimensions while maintaining safety factors and code compliance.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Connection Detailer -->
+                        <div class="capability-item" id="connection-detailer">
+                            <div class="capability-info">
+                                <h3>Connection Detailer</h3>
+                                <p>Generates detailed connection drawings for various structural components, ensuring constructability. Provides comprehensive connection details with proper specifications and annotations.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Code Compliance Checker -->
+                        <div class="capability-item" id="code-compliance">
+                            <div class="capability-info">
+                                <h3>Code Compliance Checker</h3>
+                                <p>Verifies designs against local and international building codes, flagging potential non-compliance issues. Ensures all structural elements meet regulatory requirements and safety standards.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BuildTwin Trio - AI Drawing Generation -->
+                <div class="capability-section" id="material-estimator">
+                    <h2>BuildTwin Trio - AI Drawing Generation</h2>
+                    <p>Advanced AI-powered drawing generation and material estimation for comprehensive project planning.</p>
+                    
+                    <div class="capabilities-grid">
+                        <!-- Material Estimator -->
+                        <div class="capability-item" id="material-estimator">
+                            <div class="capability-info">
+                                <h3>Material Estimator</h3>
+                                <p>Provides accurate material quantity take-offs and cost estimations for entire projects. Uses AI to analyze drawings and generate comprehensive material lists with pricing.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Seismic Design Assistant -->
+                        <div class="capability-item" id="seismic-design">
+                            <div class="capability-info">
+                                <h3>Seismic Design Assistant</h3>
+                                <p>AI guidance for designing seismic-resistant structures, incorporating advanced analysis techniques. Provides recommendations for seismic detailing and reinforcement requirements.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rebar Layout Generator -->
+                        <div class="capability-item" id="rebar-layout">
+                            <div class="capability-info">
+                                <h3>Rebar Layout Generator</h3>
+                                <p>Automated generation of rebar placement and detailing, ensuring optimal reinforcement. Creates detailed rebar layouts with proper spacing, lap lengths, and anchorage details.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-    </div>
-    <app-bottom-content [selectedCategory]="selectedCategory" (slideChanged)="onSlideChanged($event)"></app-bottom-content>
-    <div class="container">
-
     </div>
 </div>
 
@@ -170,6 +400,50 @@
 
 <!-- Case Studies Section -->
 <app-case-studies></app-case-studies>
+
+<!-- Statistics Section -->
+<div class="statistics-section">
+    <div class="container">
+        <div class="statistics-wrapper">
+            <div class="stat-block">
+                <div class="stat-number">
+                    95%
+                </div>
+                <p>
+                    accuracy improvement
+                </p>
+                <img src="assets/images/ser1.png" width="57" height="53" alt="Accuracy improvement">
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">
+                    80%
+                </div>
+                <p>
+                    time reduction
+                </p>
+                <img src="assets/images/ser2.png" width="57" height="53" alt="Time reduction">
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">
+                    10k+
+                </div>
+                <p>
+                    drawings processed
+                </p>
+                <img src="assets/images/ser3.png" width="57" height="53" alt="Drawings processed">
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">
+                    500+
+                </div>
+                <p>
+                    engineering firms
+                </p>
+                <img src="assets/images/ser4.png" width="57" height="53" alt="Engineering firms">
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- FAQ Section -->
 <div class="faq-section">

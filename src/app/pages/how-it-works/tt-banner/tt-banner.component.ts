@@ -11,10 +11,10 @@ export class TtBannerComponent implements OnInit, OnDestroy {
   
   // Dynamic text options
   dynamicTexts = [
-    'who worked on highrise pre-cast projects in UK with 25m beams ...',
-    'who specialized in pre-cast detailing for commercial buildings ...',
-    'who have experience with in-situ detailing for infrastructure projects ...',
-    'who provide AI QC for structural drawings and quality assurance ...'
+    'pre-cast drawings',
+    'in-situ drawings',
+    'AI quality control for structural drawings',
+    'Element GA'
   ];
   
   currentTextIndex = 0;

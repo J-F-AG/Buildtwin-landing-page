@@ -14,6 +14,7 @@ import { HdNavbarModule } from 'src/app/pages/includes/hd-navbar/hd-navbar.modul
 import { HdFooterModule } from 'src/app/pages/includes/hd-footer/hd-footer.module';
 import { ProjectListModule } from 'src/app/include-component/project-list/project-list.module';
 import { HIWCtaComponent } from '../hiwcta/hiwcta.component';
+import { EmFaqModule } from 'src/app/pages/includes/em-faq/em-faq.module';
 
 const routes: Routes = [
   {
@@ -40,6 +41,7 @@ const routes: Routes = [
     HdFooterModule,
     ProjectListModule,
     TtTestimonialsModule,
+    EmFaqModule,
     RouterModule.forChild(routes),
   ],
 })

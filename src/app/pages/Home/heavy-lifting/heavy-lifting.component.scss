@@ -1,6 +1,9 @@
 .heading {
     .small-title {
         line-height: 1.333;
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--lightTextColor);
     }
     
     .workflow-highlight {
@@ -12,83 +15,7 @@
     }
 }
 
-.workflow-navigation {
-    position: sticky;
-    top: 70px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #e5e7eb;
-    padding: 16px 0;
-    margin-bottom: 40px;
-    z-index: 100;
 
-    .nav-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-
-        .nav-tabs {
-            display: flex;
-            gap: 8px;
-
-            .nav-tab {
-                padding: 12px 24px;
-                background: transparent;
-                border: 1px solid #e5e7eb;
-                border-radius: 8px;
-                color: #374151;
-                font-weight: 500;
-                cursor: pointer;
-                transition: all 0.3s ease;
-
-                &:hover {
-                    background: #f9fafb;
-                    border-color: #d1d5db;
-                }
-
-                &.active {
-                    background: #0053FA;
-                    border-color: #0053FA;
-                    color: white;
-                    box-shadow: 0 4px 14px rgba(0, 83, 250, 0.25);
-                }
-            }
-        }
-
-        .get-started-nav-btn {
-            position: absolute;
-            right: 40px;
-            padding: 12px 24px;
-            background: #0053FA;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(0, 83, 250, 0.25);
-
-            &:hover {
-                background: #0041cc;
-                box-shadow: 0 6px 20px rgba(0, 83, 250, 0.35);
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .workflow-navigation {
-        .nav-container {
-            .get-started-nav-btn {
-                position: static;
-                margin-top: 16px;
-            }
-
-            flex-direction: column;
-        }
-    }
-}
 
 .list-wrapper {
     display: flex;
@@ -138,7 +65,147 @@
         }
     }
 
-    .list-wrapper {
+// KPI Cards Styling
+.kpi-cards-container {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.kpi-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    padding: 24px 20px;
+    min-width: 160px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    
+    &:hover {
+        .kpi-icon {
+            transform: scale(1.05);
+            color: #0053fa;
+        }
+        
+        .kpi-value {
+            color: #0053fa;
+        }
+    }
+}
+
+.kpi-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    transition: all 0.3s ease;
+    color: #0053fa;
+    
+    svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.kpi-content {
+    .kpi-value {
+        font-size: 32px;
+        font-weight: 600;
+        color: #0E0E28;
+        margin: 0 0 8px 0;
+        line-height: 1.2;
+        transition: all 0.3s ease;
+    }
+    
+    .kpi-label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #5c6a72;
+        margin: 0;
+        line-height: 1.4;
+    }
+}
+
+// Responsive design for KPI cards
+@media (max-width: 767px) {
+    .kpi-cards-container {
+        gap: 16px;
+        padding: 0 20px 40px;
+    }
+    
+    .kpi-card {
+        min-width: 140px;
+        padding: 20px 16px;
+    }
+    
+    .kpi-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 12px;
+        
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    
+    .kpi-content {
+        .kpi-value {
+            font-size: 28px;
+            font-weight: 600;
+            color: #0E0E28;
+        }
+        
+        .kpi-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #5c6a72;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .kpi-cards-container {
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 30px;
+    }
+    
+    .kpi-card {
+        min-width: 200px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        padding: 16px 20px;
+        
+        .kpi-icon {
+            margin: 0 16px 0 0;
+            flex-shrink: 0;
+        }
+        
+        .kpi-content {
+            flex: 1;
+            
+            .kpi-value {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+.list-wrapper {
         padding-bottom: 0;
         .block {
             figure {
