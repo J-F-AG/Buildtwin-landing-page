@@ -366,3 +366,159 @@ ul.partner li {
       }
     }
   }
+
+.testimonials-section {
+  .testimonial-carousel {
+    position: relative;
+    
+    // Ensure only one testimonial is visible at a time
+    ::ng-deep .owl-stage {
+      display: flex;
+    }
+    
+    ::ng-deep .owl-item {
+      width: 100% !important;
+      flex: 0 0 100% !important;
+    }
+    
+    // Navigation arrows styling
+    ::ng-deep .owl-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 10;
+      
+      button {
+        width: 40px;
+        height: 40px;
+        background: white !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 8px;
+        color: #6b7280 !important;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        transition: all 0.2s ease;
+        
+        &:hover {
+          background: #f9fafb !important;
+          border-color: #d1d5db !important;
+          color: #374151 !important;
+        }
+        
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+      }
+    }
+    
+    // Dots styling
+    ::ng-deep .owl-dots {
+      margin-top: 24px;
+      text-align: center;
+      
+      .owl-dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+        background: #d1d5db;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        
+        &.active {
+          background: #3b82f6;
+          transform: scale(1.2);
+        }
+        
+        &:hover {
+          background: #9ca3af;
+        }
+      }
+    }
+  }
+  
+  .testimonial-card-wrapper {
+    .layered-card {
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card {
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+        
+        .layered-card {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+  
+  .impact-stats {
+    .stats-grid {
+      .stat-item {
+        .stat-number {
+          transition: color 0.2s ease;
+        }
+        
+        .stat-description {
+          transition: color 0.2s ease;
+        }
+        
+        &:hover {
+          .stat-number {
+            color: #3b82f6;
+          }
+          
+          .stat-description {
+            color: #4b5563;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .testimonials-section {
+    .testimonial-carousel {
+      ::ng-deep .owl-nav {
+        button {
+          width: 36px;
+          height: 36px;
+          font-size: 14px;
+        }
+      }
+    }
+    
+    .impact-stats {
+      .stats-grid {
+        gap: 16px;
+        
+        .stat-item {
+          .stat-number {
+            font-size: 20px;
+          }
+          
+          .stat-description {
+            font-size: 11px;
+          }
+        }
+        
+        .stat-divider {
+          height: 24px;
+        }
+      }
+    }
+  }
+}
