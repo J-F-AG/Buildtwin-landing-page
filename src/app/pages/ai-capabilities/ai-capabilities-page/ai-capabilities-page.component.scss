@@ -641,6 +641,51 @@
                     &:last-child {
                         margin-bottom: 0;
                     }
+
+                    // Expand toggle styling
+                    &.expand-toggle {
+                        text-align: center;
+                        background: #f8fafc;
+                        border: 1px dashed #cbd5e1;
+                        color: #64748b;
+                        font-weight: 500;
+                        margin: 2px auto !important;
+                        border-radius: 8px;
+                        transition: all 0.3s ease;
+                        
+                        // Small mode (for "..." dots)
+                        padding: 4px 8px !important;
+                        width: 40px;
+                        
+                        .expand-dots {
+                            font-size: 10px;
+                            letter-spacing: 0.5px;
+                        }
+                        
+                        .collapse-text {
+                            font-size: 11px;
+                            text-transform: uppercase;
+                            letter-spacing: 0.4px;
+                            white-space: nowrap;
+                        }
+                        
+                        // Large mode (when showing "Show Less")
+                        &.collapse-mode {
+                            padding: 8px 16px !important;
+                            width: 100px;
+                            border-radius: 12px;
+                        }
+                        
+                        &:hover {
+                            background: #e2e8f0;
+                            border-color: #94a3b8;
+                            color: #475569;
+                        }
+                        
+                        &:active {
+                            transform: translateY(1px);
+                        }
+                    }
                 }
             }
         }
@@ -953,6 +998,328 @@
             &:hover {
                 background: #0041c7 !important;
             }
+        }
+    }
+
+    // Capability Details Styling
+    :host ::ng-deep .capability-details {
+        margin-top: 24px !important;
+        padding: 24px !important;
+        background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%) !important;
+        border-radius: 12px !important;
+        border: 1px solid #e2e8f0 !important;
+        box-shadow: 0 2px 8px rgba(15, 76, 117, 0.08) !important;
+        transition: all 0.3s ease !important;
+        
+        &:hover {
+            box-shadow: 0 4px 16px rgba(15, 76, 117, 0.12) !important;
+            transform: translateY(-1px) !important;
+        }
+        
+        h4 {
+            font-size: 18px !important;
+            font-weight: 600 !important;
+            color: #0f4c75 !important;
+            margin-bottom: 16px !important;
+            margin-top: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            
+            &::before {
+                content: "⚡" !important;
+                margin-right: 8px !important;
+                font-size: 20px !important;
+                color: #007bff !important;
+            }
+        }
+        
+        .capability-list {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            
+            li {
+                display: flex !important;
+                align-items: flex-start !important;
+                padding: 12px 16px !important;
+                margin-bottom: 8px !important;
+                background: #ffffff !important;
+                border-radius: 8px !important;
+                border: 1px solid #e9ecef !important;
+                transition: all 0.2s ease !important;
+                
+                &:hover {
+                    background: #f0f9ff !important;
+                    border-color: #007bff !important;
+                    transform: translateX(4px) !important;
+                }
+                
+                &:last-child {
+                    margin-bottom: 0 !important;
+                }
+                
+                .check-icon {
+                    color: #28a745 !important;
+                    font-weight: bold !important;
+                    margin-right: 12px !important;
+                    flex-shrink: 0 !important;
+                    margin-top: 1px !important;
+                    background: #d4edda !important;
+                    border-radius: 50% !important;
+                    width: 24px !important;
+                    height: 24px !important;
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    font-size: 14px !important;
+                }
+                
+                span:not(.check-icon) {
+                    color: #495057 !important;
+                    font-size: 15px !important;
+                    line-height: 1.6 !important;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+        
+        @media (max-width: 768px) {
+            padding: 20px;
+            margin-top: 20px;
+            
+            h4 {
+                font-size: 16px;
+                
+                &::before {
+                    font-size: 18px;
+                    margin-right: 6px;
+                }
+            }
+            
+            .capability-list li {
+                padding: 10px 12px;
+                margin-bottom: 6px;
+                
+                .check-icon {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+                
+                span:not(.check-icon) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+// Enhanced Capability Table Styles
+:host ::ng-deep .capability-table {
+    width: 100% !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #e5e7eb !important;
+    background: #ffffff !important;
+    margin-top: 16px !important;
+    
+    .table-row {
+        display: grid !important;
+        grid-template-columns: 120px 1fr 100px !important;
+        align-items: center !important;
+        border-bottom: 1px solid #f3f4f6 !important;
+        transition: all 0.2s ease !important;
+        
+        &:last-child {
+            border-bottom: none !important;
+        }
+        
+        &.header-row {
+            background: linear-gradient(135deg, #0f4c75 0%, #1e40af 100%) !important;
+            color: #ffffff !important;
+            font-weight: 600 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            font-size: 12px !important;
+            
+            .table-cell {
+                color: #ffffff !important;
+                font-weight: 600 !important;
+                padding: 16px 12px !important;
+            }
+        }
+        
+        &:not(.header-row):hover {
+            background: #f8fafc !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 2px 4px rgba(15, 76, 117, 0.08) !important;
+        }
+        
+        .table-cell {
+            padding: 14px 12px !important;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            
+            &.category-cell {
+                font-weight: 600 !important;
+                color: #374151 !important;
+                background: #f9fafb !important;
+                border-right: 1px solid #e5e7eb !important;
+                position: relative !important;
+                
+                &[data-category="Document"]::before { content: "📄"; margin-right: 6px; }
+                &[data-category="Project"]::before { content: "🏗️"; margin-right: 6px; }
+                &[data-category="Naming"]::before { content: "🏷️"; margin-right: 6px; }
+                &[data-category="Content"]::before { content: "📝"; margin-right: 6px; }
+                &[data-category="Tracking"]::before { content: "📊"; margin-right: 6px; }
+                &[data-category="Format"]::before { content: "📅"; margin-right: 6px; }
+                &[data-category="Metrics"]::before { content: "📏"; margin-right: 6px; }
+                &[data-category="Quantity"]::before { content: "🔢"; margin-right: 6px; }
+                &[data-category="Language"]::before { content: "🌐"; margin-right: 6px; }
+                &[data-category="General"]::before { content: "⚙️"; margin-right: 6px; }
+                &[data-category="TT-Slab"]::before { content: "🏗️"; margin-right: 6px; }
+                &[data-category="Sequence"]::before { content: "🔢"; margin-right: 6px; }
+                &[data-category="Labeling"]::before { content: "🏷️"; margin-right: 6px; }
+                &[data-category="Precast"]::before { content: "🏭"; margin-right: 6px; }
+                &[data-category="Erection"]::before { content: "🏗️"; margin-right: 6px; }
+                &[data-category="CoG"]::before { content: "⚖️"; margin-right: 6px; }
+                &[data-category="Columns"]::before { content: "🏛️"; margin-right: 6px; }
+                &[data-category="Geometry"]::before { content: "📐"; margin-right: 6px; }
+                &[data-category="Dimensions"]::before { content: "📏"; margin-right: 6px; }
+                &[data-category="Text"]::before { content: "📝"; margin-right: 6px; }
+                &[data-category="Annotations"]::before { content: "✏️"; margin-right: 6px; }
+                &[data-category="BBS"]::before { content: "📋"; margin-right: 6px; }
+                &[data-category="Steel"]::before { content: "🔩"; margin-right: 6px; }
+                &[data-category="Details"]::before { content: "🔍"; margin-right: 6px; }
+                &[data-category="References"]::before { content: "🔗"; margin-right: 6px; }
+                &[data-category="Views"]::before { content: "👁️"; margin-right: 6px; }
+                &[data-category="Surface"]::before { content: "🎨"; margin-right: 6px; }
+                &[data-category="Hatching"]::before { content: "🎨"; margin-right: 6px; }
+                &[data-category="Sections"]::before { content: "✂️"; margin-right: 6px; }
+                &[data-category="3D"]::before { content: "📦"; margin-right: 6px; }
+                &[data-category="Lines"]::before { content: "📏"; margin-right: 6px; }
+                &[data-category="Typography"]::before { content: "🔤"; margin-right: 6px; }
+            }
+            
+            &.checkpoint-cell {
+                color: #4b5563 !important;
+                font-weight: 400 !important;
+            }
+            
+            &.status-cell {
+                text-align: center !important;
+                
+                .status-badge {
+                    display: inline-block !important;
+                    padding: 6px 12px !important;
+                    border-radius: 20px !important;
+                    font-size: 11px !important;
+                    font-weight: 600 !important;
+                    text-transform: uppercase !important;
+                    letter-spacing: 0.5px !important;
+                    
+                    &.automated {
+                        background: #dcfce7 !important;
+                        color: #166534 !important;
+                        border: 1px solid #bbf7d0 !important;
+                        
+                        &::before {
+                            content: "✓" !important;
+                            margin-right: 4px !important;
+                            font-weight: bold !important;
+                        }
+                    }
+                    
+                    &.manual {
+                        background: #fef3c7 !important;
+                        color: #92400e !important;
+                        border: 1px solid #fde68a !important;
+                        
+                        &::before {
+                            content: "👤" !important;
+                            margin-right: 4px !important;
+                        }
+                    }
+                    
+                    &.hybrid {
+                        background: #dbeafe !important;
+                        color: #1e40af !important;
+                        border: 1px solid #bfdbfe !important;
+                        
+                        &::before {
+                            content: "🤖" !important;
+                            margin-right: 4px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // Responsive design for table
+    @media (max-width: 768px) {
+        .table-row {
+            grid-template-columns: 1fr !important;
+            gap: 8px !important;
+            padding: 8px !important;
+            
+            &.header-row {
+                display: none !important; // Hide header on mobile, use cards instead
+            }
+            
+            .table-cell {
+                padding: 8px 0 !important;
+                border-right: none !important;
+                
+                &.category-cell {
+                    background: transparent !important;
+                    font-weight: 700 !important;
+                    color: #0f4c75 !important;
+                    font-size: 16px !important;
+                    border-bottom: 2px solid #e5e7eb !important;
+                    padding-bottom: 4px !important;
+                }
+                
+                &.checkpoint-cell {
+                    font-size: 14px !important;
+                    margin: 4px 0 !important;
+                }
+                
+                &.status-cell {
+                    text-align: left !important;
+                    margin: 8px 0 !important;
+                }
+            }
+        }
+        
+        .table-row:not(.header-row) {
+            background: #ffffff !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 8px !important;
+            margin-bottom: 12px !important;
+            padding: 16px !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+            
+            &:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+            }
+        }
+    }
+    
+    @media (max-width: 480px) {
+        margin: 0 -10px !important;
+        border-radius: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+        
+        .table-row:not(.header-row) {
+            margin: 0 !important;
+            border-radius: 0 !important;
+            border-left: none !important;
+            border-right: none !important;
+            margin-bottom: 1px !important;
         }
     }
 }

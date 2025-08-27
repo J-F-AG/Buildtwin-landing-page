@@ -16,6 +16,7 @@ import { HubspotModule } from 'src/app/include-component/hubspot/hubspot.module'
 import { CompanyLogosSliderModule } from '../Home/company-logos-slider/company-logos-slider.module';
 import { TtFaqComponent } from './tt-faq/tt-faq.component';
 import { EmFaqModule } from '../includes/em-faq/em-faq.module';
+import { ArcadeContainerModule } from 'src/app/include-component/arcade-container/arcade-container.module';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
     HubspotModule,
     CompanyLogosSliderModule,
     EmFaqModule,
+    ArcadeContainerModule,
     RouterModule.forChild(routes),
     ProjectListModule
   ],

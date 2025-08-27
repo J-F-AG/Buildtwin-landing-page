@@ -202,16 +202,16 @@
                             <div class="block-section fullwidth">
                                 <div class="carousel-container">
                                     <!-- Navigation Arrows -->
-                                    <button class="carousel-nav prev" (click)="prevSlide()" [disabled]="!canGoPrev()">
+                                    <button class="carousel-nav prev" (click)="prevAISlide()" [disabled]="!canGoPrevAI()">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </button>
                                     
                                     <div class="carousel-wrapper">
-                                        <div class="block-box-wrapper" [style.transform]="'translateX(-' + (currentSlide * 25) + '%)'">
+                                        <div class="block-box-wrapper" [style.transform]="'translateX(-' + (currentAISlide * 25) + '%)'">
                                             <div class="block cursor" 
-                                                 *ngFor="let item of carouselItems; let i = index" 
+                                                 *ngFor="let item of buildTwinAICarouselItems; let i = index" 
                                                  (click)="onClickArcadeTrigger(item.id)"
                                                  [class.fade-out]="i >= 4 && i < 8">
                                                 <div class="content">
@@ -230,7 +230,7 @@
                                         </div>
                                         
                                         <!-- Overlay button for teasing more capabilities -->
-                                        <div class="teaser-overlay" *ngIf="currentSlide > 0">
+                                        <div class="teaser-overlay" *ngIf="currentAISlide > 0">
                                             <div class="teaser-content">
                                                 <h4>Discover More AI Capabilities</h4>
                                                 <p>Explore our complete suite of AI-powered solutions</p>
@@ -244,7 +244,7 @@
                                         </div>
                                     </div>
                                     
-                                    <button class="carousel-nav next" (click)="nextSlide()" [disabled]="!canGoNext()">
+                                    <button class="carousel-nav next" (click)="nextAISlide()" [disabled]="!canGoNextAI()">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
@@ -529,4 +529,11 @@
       </div>
     </div>
     <app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}"  (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+    
+    <!-- Arcade Lightbox Container -->
+    <app-arcade-container 
+      *ngIf="visibleArcade" 
+      [type]="arcadeType" 
+      (visibleTogggle)="onArcadeClose($event)">
+    </app-arcade-container>
 </div>
