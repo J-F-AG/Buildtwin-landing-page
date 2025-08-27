@@ -11,103 +11,132 @@
       </p>
     </div>
 
-    <!-- Layered Carousel Effect (Arcade Style) -->
-    <div class="testimonial-carousel" style="position: relative; max-width: 500px; margin: 0 auto; height: 320px;">
-      <!-- Background Card 1 (Left) -->
-      <div class="testimonial-card background-card left" style="position: absolute; top: 40px; left: -60px; background: white; border-radius: 20px; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06); padding: 32px; width: 440px; transform: scale(0.75); opacity: 0.3; z-index: 1; pointer-events: none;">
-        <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
-          „Thanks to BuildTwin, we as a German engineering firm have gained access to international, highly qualified teams. The collaboration works seamlessly and integrates effortlessly into our existing systems."
-        </div>
-        
-        <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
-          <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
-            <img src="assets/images/regina.png" alt="Regina Vögtle" style="width: 100%; height: 100%; object-fit: cover;">
+    <!-- Testimonial Slider -->
+    <div class="testimonial-slider-wrapper" style="position: relative; max-width: 600px; margin: 0 auto;" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+      <!-- Slider Container -->
+      <div class="testimonial-slider" style="position: relative; height: 280px; overflow: hidden;">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide" [class.active]="isActiveSlide(0)" data-slide="0" [style.top]="getSlidePosition(0)" [style.opacity]="getSlideOpacity(0)" style="position: absolute; left: 0; width: 100%; height: 100%; transition: all 0.5s ease-in-out;">
+          <!-- Background Cards Stack -->
+          <div class="testimonial-card background-card" style="position: absolute; top: 24px; left: 50%; transform: translateX(-50%); background: #f9fafb; border-radius: 20px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); padding: 32px; width: 480px; z-index: 1; pointer-events: none;">
+            <div style="height: 200px;"></div>
           </div>
-          <div class="profile-details">
-            <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
-              Regina Vögtle
-            </h4>
-            <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-              Lead Precast Detailing durchgeplant
-            </p>
+          <div class="testimonial-card background-card" style="position: absolute; top: 12px; left: 50%; transform: translateX(-50%); background: #fafbfc; border-radius: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10); padding: 32px; width: 490px; z-index: 2; pointer-events: none;">
+            <div style="height: 200px;"></div>
+          </div>
+          
+          <!-- Main Card -->
+          <div class="testimonial-card main-card" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); padding: 32px; width: 500px; z-index: 3;">
+            <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
+              „With BuildTwin, we seamlessly coordinate our partners and efficiently manage entire project workflows. The platform simplifies communication, optimizes collaboration, and ensures all stakeholders have access to up-to-date information."
+            </div>
+            
+            <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
+              <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/images/ravikanth.png" alt="Ravikanth" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div class="profile-details">
+                <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
+                  Ravikanth
+                </h4>
+                <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                  Technical CEO J&F TGA
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Background Card 2 (Right) -->
-      <div class="testimonial-card background-card right" style="position: absolute; top: 40px; right: -60px; background: white; border-radius: 20px; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06); padding: 32px; width: 440px; transform: scale(0.75); opacity: 0.3; z-index: 1; pointer-events: none;">
-        <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
-          „Through BuildTwin, we have gained access to relevant international projects and clients. At the same time, we can showcase our services transparently and ensure high-quality management with the support of AI."
-        </div>
-        
-        <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
-          <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
-            <img src="assets/images/kumar.png" alt="Kumar Sankaranarayanan" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- Slide 2 -->
+        <div class="testimonial-slide" [class.active]="isActiveSlide(1)" data-slide="1" [style.top]="getSlidePosition(1)" [style.opacity]="getSlideOpacity(1)" style="position: absolute; left: 0; width: 100%; height: 100%; transition: all 0.5s ease-in-out;">
+          <!-- Background Cards Stack -->
+          <div class="testimonial-card background-card" style="position: absolute; top: 24px; left: 50%; transform: translateX(-50%); background: #f9fafb; border-radius: 20px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); padding: 32px; width: 480px; z-index: 1; pointer-events: none;">
+            <div style="height: 200px;"></div>
           </div>
-          <div class="profile-details">
-            <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
-              Kumar Sankaranarayanan
-            </h4>
-            <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-              Director J&F India
-            </p>
+          <div class="testimonial-card background-card" style="position: absolute; top: 12px; left: 50%; transform: translateX(-50%); background: #fafbfc; border-radius: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10); padding: 32px; width: 490px; z-index: 2; pointer-events: none;">
+            <div style="height: 200px;"></div>
+          </div>
+          
+          <!-- Main Card -->
+          <div class="testimonial-card main-card" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); padding: 32px; width: 500px; z-index: 3;">
+            <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
+              „Thanks to BuildTwin, we've gained access to international, highly qualified teams. The collaboration works seamlessly and integrates effortlessly into our existing systems."
+            </div>
+            
+            <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
+              <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/images/regina.png" alt="Regina Vögtle" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div class="profile-details">
+                <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
+                  Regina Vögtle
+                </h4>
+                <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                  Lead Precast Detailing durchgeplant
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Main Card (Front) -->
-      <div class="testimonial-card main-card" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: white; border-radius: 20px; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12); padding: 32px; width: 500px; z-index: 2;">
-        <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
-          „With BuildTwin, we have the ability to seamlessly coordinate our partners and efficiently manage the entire project workflow. The platform simplifies communication, optimizes collaboration, and ensures that all stakeholders always have access to the most up-to-date information."
-        </div>
-        
-        <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
-          <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
-            <img src="assets/images/ravikanth.png" alt="Ravikanth" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- Slide 3 -->
+        <div class="testimonial-slide" [class.active]="isActiveSlide(2)" data-slide="2" [style.top]="getSlidePosition(2)" [style.opacity]="getSlideOpacity(2)" style="position: absolute; left: 0; width: 100%; height: 100%; transition: all 0.5s ease-in-out;">
+          <!-- Background Cards Stack -->
+          <div class="testimonial-card background-card" style="position: absolute; top: 24px; left: 50%; transform: translateX(-50%); background: #f9fafb; border-radius: 20px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); padding: 32px; width: 480px; z-index: 1; pointer-events: none;">
+            <div style="height: 200px;"></div>
           </div>
-          <div class="profile-details">
-            <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
-              Ravikanth
-            </h4>
-            <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-              Technical CEO J&F TGA
-            </p>
+          <div class="testimonial-card background-card" style="position: absolute; top: 12px; left: 50%; transform: translateX(-50%); background: #fafbfc; border-radius: 20px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10); padding: 32px; width: 490px; z-index: 2; pointer-events: none;">
+            <div style="height: 200px;"></div>
+          </div>
+          
+          <!-- Main Card -->
+          <div class="testimonial-card main-card" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); padding: 32px; width: 500px; z-index: 3;">
+            <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
+              „Through BuildTwin, we've gained access to relevant international projects and clients. We can showcase our services transparently and ensure high-quality management with AI support."
+            </div>
+            
+            <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
+              <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+                <img src="assets/images/kumar.png" alt="Kumar Sankaranarayanan" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div class="profile-details">
+                <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
+                  Kumar Sankaranarayanan
+                </h4>
+                <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                  Director J&F India
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Impact Statistics - Better Spacing -->
-    <div class="impact-stats" style="margin-top: 40px; text-align: center;">
-      <div class="stats-grid" style="display: inline-flex; align-items: center; gap: 40px;">
-        <div class="stat-item" style="text-align: center; min-width: 120px;">
-          <div class="stat-number" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-            5x
+    <div class="impact-stats" style="margin-top: 40px; text-align: center; transition: all 0.5s ease-in-out;">
+      <div class="stats-grid" style="display: inline-flex; align-items: flex-start; gap: 60px;">
+        <div class="stat-item" style="text-align: center; min-width: 150px;">
+          <div class="stat-number" style="font-size: 48px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1;">
+            {{getCurrentKPIs().first.number}}<span style="font-size: 20px; color: #6b7280; font-weight: 400; vertical-align: top; margin-left: 2px;">{{getCurrentKPIs().first.suffix}}</span>
           </div>
-          <div class="stat-description" style="font-size: 12px; color: #6b7280; line-height: 1.3; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-            More engagement vs traditional methods
-          </div>
-        </div>
-        
-        <div class="stat-divider" style="width: 1px; height: 30px; background: #e5e7eb; margin: 0 20px;"></div>
-        
-        <div class="stat-item" style="text-align: center; min-width: 120px;">
-          <div class="stat-number" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-            3x
-          </div>
-          <div class="stat-description" style="font-size: 12px; color: #6b7280; line-height: 1.3; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-            Faster project completion
+          <div class="stat-description" style="font-size: 14px; color: #6b7280; line-height: 1.4; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;" [innerHTML]="getCurrentKPIs().first.description">
           </div>
         </div>
         
-        <div class="stat-divider" style="width: 1px; height: 30px; background: #e5e7eb; margin: 0 20px;"></div>
-        
-        <div class="stat-item" style="text-align: center; min-width: 120px;">
-          <div class="stat-number" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-            90%
+        <div class="stat-item" style="text-align: center; min-width: 150px;">
+          <div class="stat-number" style="font-size: 48px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1;">
+            {{getCurrentKPIs().second.number}}<span style="font-size: 20px; color: #6b7280; font-weight: 400; vertical-align: top; margin-left: 2px;">{{getCurrentKPIs().second.suffix}}</span>
           </div>
-          <div class="stat-description" style="font-size: 12px; color: #6b7280; line-height: 1.3; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-            Cost reduction in project management
+          <div class="stat-description" style="font-size: 14px; color: #6b7280; line-height: 1.4; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;" [innerHTML]="getCurrentKPIs().second.description">
+          </div>
+        </div>
+        
+        <div class="stat-item" style="text-align: center; min-width: 150px;">
+          <div class="stat-number" style="font-size: 48px; font-weight: 600; color: #1a1a1a; margin-bottom: 8px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1;">
+            {{getCurrentKPIs().third.number}}<span style="font-size: 20px; color: #6b7280; font-weight: 400; vertical-align: top; margin-left: 2px;">{{getCurrentKPIs().third.suffix}}</span>
+          </div>
+          <div class="stat-description" style="font-size: 14px; color: #6b7280; line-height: 1.4; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;" [innerHTML]="getCurrentKPIs().third.description">
           </div>
         </div>
       </div>

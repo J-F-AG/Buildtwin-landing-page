@@ -367,158 +367,105 @@ ul.partner li {
     }
   }
 
-.testimonials-section {
-  .testimonial-carousel {
+/* Text-Based Scrollable Animation Styles */
+.scrollable-animation {
+  .animation-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+    
+    &.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animated-stats {
+    .stat-row {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: all 0.6s ease-out;
+      
+      &:nth-child(1) { transition-delay: 0.2s; }
+      &:nth-child(2) { transition-delay: 0.4s; }
+      &:nth-child(3) { transition-delay: 0.6s; }
+      
+      &.animate-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .cta-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+    transition-delay: 0.8s;
+    
+    &.animate-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .stat-highlight {
     position: relative;
+    overflow: hidden;
     
-    // Ensure only one testimonial is visible at a time
-    ::ng-deep .owl-stage {
-      display: flex;
-    }
-    
-    ::ng-deep .owl-item {
-      width: 100% !important;
-      flex: 0 0 100% !important;
-    }
-    
-    // Navigation arrows styling
-    ::ng-deep .owl-nav {
+    &::before {
+      content: '';
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 0;
+      left: -100%;
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      pointer-events: none;
-      z-index: 10;
-      
-      button {
-        width: 40px;
-        height: 40px;
-        background: white !important;
-        border: 1px solid #e5e7eb !important;
-        border-radius: 8px;
-        color: #6b7280 !important;
-        font-size: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        pointer-events: auto;
-        transition: all 0.2s ease;
-        
-        &:hover {
-          background: #f9fafb !important;
-          border-color: #d1d5db !important;
-          color: #374151 !important;
-        }
-        
-        &:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-      }
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+      transition: left 0.6s ease-out;
     }
     
-    // Dots styling
-    ::ng-deep .owl-dots {
-      margin-top: 24px;
-      text-align: center;
-      
-      .owl-dot {
-        width: 8px;
-        height: 8px;
-        margin: 0 4px;
-        background: #d1d5db;
-        border-radius: 50%;
-        transition: all 0.2s ease;
-        
-        &.active {
-          background: #3b82f6;
-          transform: scale(1.2);
-        }
-        
-        &:hover {
-          background: #9ca3af;
-        }
-      }
-    }
-  }
-  
-  .testimonial-card-wrapper {
-    .layered-card {
-      transition: all 0.3s ease;
-    }
-    
-    .testimonial-card {
-      transition: all 0.3s ease;
-      
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
-        
-        .layered-card {
-          transform: translateY(-2px);
-        }
-      }
-    }
-  }
-  
-  .impact-stats {
-    .stats-grid {
-      .stat-item {
-        .stat-number {
-          transition: color 0.2s ease;
-        }
-        
-        .stat-description {
-          transition: color 0.2s ease;
-        }
-        
-        &:hover {
-          .stat-number {
-            color: #3b82f6;
-          }
-          
-          .stat-description {
-            color: #4b5563;
-          }
-        }
-      }
+    &.animate-in::before {
+      left: 100%;
     }
   }
 }
 
-// Responsive adjustments
-@media (max-width: 768px) {
-  .testimonials-section {
-    .testimonial-carousel {
-      ::ng-deep .owl-nav {
-        button {
-          width: 36px;
-          height: 36px;
-          font-size: 14px;
-        }
-      }
-    }
+/* Enhanced testimonial cards with subtle animations */
+.testimonial-card {
+  transition: all 0.3s ease;
+  
+  &.background-card {
+    transition: all 0.5s ease;
     
-    .impact-stats {
-      .stats-grid {
-        gap: 16px;
-        
-        .stat-item {
-          .stat-number {
-            font-size: 20px;
-          }
-          
-          .stat-description {
-            font-size: 11px;
-          }
-        }
-        
-        .stat-divider {
-          height: 24px;
-        }
-      }
+    &:hover {
+      transform: scale(0.8) translateY(-5px);
+      opacity: 0.4;
+    }
+  }
+  
+  &.main-card {
+    transition: all 0.4s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Intersection Observer fallback for older browsers */
+@supports not (scroll-behavior: smooth) {
+  .scrollable-animation {
+    .animation-section,
+    .animated-stats .stat-row,
+    .cta-section {
+      opacity: 1;
+      transform: none;
     }
   }
 }
