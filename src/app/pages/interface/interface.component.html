@@ -1,0 +1,418 @@
+<div class="interface-container">
+  <!-- Left Sidebar -->
+  <div class="left-sidebar">
+    <div class="sidebar-header">
+      <h1 class="brand">BuildTwin</h1>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <div class="nav-item active" (click)="setActiveState(1)">
+        <i class="nav-icon folder"></i>
+        <span>Projects</span>
+      </div>
+      <div class="nav-item" (click)="setActiveState(2)">
+        <i class="nav-icon clipboard"></i>
+        <span>Specifications</span>
+      </div>
+      <div class="nav-item" (click)="setActiveState(3)">
+        <i class="nav-icon tsquare"></i>
+        <span>Rule Templates</span>
+      </div>
+    </nav>
+    
+    <div class="sidebar-footer">
+      <div class="nav-item">
+        <i class="nav-icon sun"></i>
+        <span>Light mode</span>
+      </div>
+      <div class="nav-item">
+        <i class="nav-icon info"></i>
+        <span>About</span>
+      </div>
+      <div class="nav-item">
+        <i class="nav-icon person"></i>
+        <span>username</span>
+      </div>
+      <div class="nav-item">
+        <i class="nav-icon arrow-left"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="project-context">
+        <div class="project-logo">B</div>
+        <span class="project-path">BuildTwin / Projects / Technology School</span>
+      </div>
+      
+      <div class="main-tabs">
+        <div class="tab" [class.active]="activeTab === 'studies'" (click)="setActiveTab('studies')">
+          <i class="tab-icon document"></i>
+          <span>Studies</span>
+        </div>
+        <div class="tab active" [class.active]="activeTab === 'solutions'" (click)="setActiveTab('solutions')">
+          <i class="tab-icon flow"></i>
+          <span>Solutions</span>
+        </div>
+        <div class="tab" [class.active]="activeTab === 'data'" (click)="setActiveTab('data')">
+          <i class="tab-icon database"></i>
+          <span>Data</span>
+        </div>
+      </div>
+      
+      <div class="global-actions">
+        <!-- Studies-specific actions -->
+        <div *ngIf="activeTab === 'studies'" class="studies-actions">
+          <button class="action-btn generating" disabled>
+            <i class="action-icon gear"></i>
+            <span>Generating</span>
+          </button>
+          <button class="action-btn" (click)="giveFeedback()">
+            <i class="action-icon chat"></i>
+            <span>Give Feedback</span>
+          </button>
+          <button class="action-btn validate" (click)="validateProject()">
+            <span>Validate</span>
+          </button>
+          <button class="action-btn generate" (click)="generateProject()">
+            <span>Generate</span>
+          </button>
+        </div>
+        
+        <!-- Solutions-specific actions -->
+        <div *ngIf="activeTab === 'solutions'" class="solutions-actions">
+          <button class="action-btn" (click)="giveFeedback()">
+            <i class="action-icon lightbulb"></i>
+            <span>Give Feedback</span>
+          </button>
+          <div class="action-icons">
+            <i class="action-icon info"></i>
+            <i class="action-icon squares"></i>
+            <i class="action-icon eye"></i>
+            <i class="action-icon triangle"></i>
+          </div>
+          <button class="action-btn export" (click)="exportSolution()">
+            <i class="action-icon download"></i>
+            <span>Export</span>
+            <i class="dropdown-arrow"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Studies View Area -->
+    <div class="studies-area" *ngIf="activeTab === 'studies'">
+      <div class="studies-layout">
+        <!-- Left Panel: Rule Navigation -->
+        <div class="rule-navigation-panel">
+          <div class="project-header">
+            <span class="project-title">{{ currentProject }}</span>
+            <button class="edit-btn">
+              <i class="edit-icon">✏️</i>
+            </button>
+          </div>
+          
+          <div class="validation-status">
+            <div class="status-item" *ngFor="let item of validationStatus | keyvalue">
+              <div class="status-indicator" [class]="item.value.status">
+                <i class="status-icon" [class]="item.value.status"></i>
+              </div>
+              <div class="status-content">
+                <span class="status-label">{{ item.value.label }}</span>
+                <span class="status-text">{{ item.value.text }}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="rule-tree">
+            <button class="all-rules-btn">All Rules</button>
+            
+            <div class="tree-section" *ngFor="let sectionKey of getSectionKeys()">
+              <div class="section-header" (click)="toggleRuleTreeSection(sectionKey)">
+                <i class="expand-icon" [class.expanded]="ruleTree[sectionKey]?.expanded">▶</i>
+                <span class="section-title">{{ sectionKey | titlecase }}</span>
+              </div>
+              
+              <div class="section-content" *ngIf="ruleTree[sectionKey]?.expanded">
+                <ng-container *ngIf="ruleTree[sectionKey]?.rules && ruleTree[sectionKey]?.rules.length > 0">
+                  <div class="rule-item" *ngFor="let rule of ruleTree[sectionKey]?.rules">
+                    <input type="checkbox" [checked]="rule === selectedRule" (change)="selectRule(rule)">
+                    <span class="rule-name" [class.selected]="rule === selectedRule">{{ rule }}</span>
+                  </div>
+                </ng-container>
+                
+                <!-- Nested children for routing section -->
+                <div class="nested-section" *ngIf="ruleTree[sectionKey]?.children">
+                  <div class="nested-item" *ngFor="let childKey of getChildKeys(ruleTree[sectionKey]?.children)">
+                    <div class="nested-header" (click)="toggleRuleTreeChild(sectionKey, childKey)">
+                      <i class="expand-icon" [class.expanded]="ruleTree[sectionKey]?.children[childKey]?.expanded">▶</i>
+                      <span class="nested-title">{{ childKey | titlecase }}</span>
+                    </div>
+                    
+                    <div class="nested-content" *ngIf="ruleTree[sectionKey]?.children[childKey]?.expanded">
+                      <ng-container *ngIf="ruleTree[sectionKey]?.children[childKey]?.rules && ruleTree[sectionKey]?.children[childKey]?.rules.length > 0">
+                        <div class="rule-item" *ngFor="let rule of ruleTree[sectionKey]?.children[childKey]?.rules">
+                          <input type="checkbox" [checked]="rule === selectedRule" (change)="selectRule(rule)">
+                          <span class="rule-name" [class.selected]="rule === selectedRule">{{ rule }}</span>
+                        </div>
+                      </ng-container>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Panel: Rule Configuration -->
+        <div class="rule-configuration-panel">
+          <div class="rule-header">
+            <h3 class="rule-title">{{ selectedRule }}</h3>
+            <div class="rule-actions">
+              <button class="edit-btn">
+                <i class="edit-icon">✏️</i>
+              </button>
+              <button class="delete-btn">Delete</button>
+            </div>
+          </div>
+          
+          <div class="rule-description">
+            <p>{{ ruleDescription }}</p>
+          </div>
+          
+          <div class="rule-config">
+            <div class="config-field">
+              <label>Scope</label>
+              <select [value]="ruleConfig.scope" (change)="updateRuleConfig('scope', $event)">
+                <option value="Entire Site">Entire Site</option>
+                <option value="Selected Areas">Selected Areas</option>
+                <option value="Specific Zones">Specific Zones</option>
+              </select>
+            </div>
+            
+            <div class="config-field">
+              <label>Systems</label>
+              <select [value]="ruleConfig.systems" (change)="updateRuleConfig('systems', $event)">
+                <option value="Please select">Please select</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Plumbing">Plumbing</option>
+              </select>
+            </div>
+            
+            <div class="clearances-section">
+              <h4>Clearances</h4>
+              
+              <div class="clearance-group">
+                <h5>Doors clearance:</h5>
+                <div class="clearance-item">
+                  <label>
+                    <input type="checkbox" 
+                           [checked]="ruleConfig.clearances.doors.beside.enabled"
+                           (change)="toggleClearance('doors', 'beside')">
+                    Minimum beside doors
+                  </label>
+                  <input type="text" 
+                         [value]="ruleConfig.clearances.doors.beside.value"
+                         (input)="updateClearanceValue('doors', 'beside', $event)"
+                         [disabled]="!ruleConfig.clearances.doors.beside.enabled">
+                </div>
+                
+                <div class="clearance-item">
+                  <label>
+                    <input type="checkbox" 
+                           [checked]="ruleConfig.clearances.doors.inFront.enabled"
+                           (change)="toggleClearance('doors', 'inFront')">
+                    Minimum in front of doors
+                  </label>
+                  <input type="text" 
+                         [value]="ruleConfig.clearances.doors.inFront.value"
+                         (input)="updateClearanceValue('doors', 'inFront', $event)"
+                         [disabled]="!ruleConfig.clearances.doors.inFront.enabled">
+                </div>
+                
+                <div class="clearance-diagram">
+                  <div class="door-representation">
+                    <div class="door"></div>
+                    <div class="raceway beside"></div>
+                    <div class="raceway in-front"></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="clearance-group">
+                <h5>Roof clearance:</h5>
+                <div class="clearance-item">
+                  <label>
+                    <input type="checkbox" 
+                           [checked]="ruleConfig.clearances.roof.below.enabled"
+                           (change)="toggleClearance('roof', 'below')">
+                    Minimum below roof
+                  </label>
+                  <input type="text" 
+                         [value]="ruleConfig.clearances.roof.below.value"
+                         (input)="updateClearanceValue('roof', 'below', $event)"
+                         [disabled]="!ruleConfig.clearances.roof.below.enabled">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D View Area -->
+    <div class="view-area" *ngIf="activeTab === 'solutions'">
+      <div class="view-header">
+        <button class="back-btn">
+          <i class="arrow-left"></i>
+        </button>
+        <div class="model-info">
+          <span class="model-name">{{ coordinationModel }}</span>
+          <div class="status-dot green"></div>
+        </div>
+        <div class="solution-selector">
+          <span>{{ currentSolution }}</span>
+          <i class="dropdown-arrow"></i>
+        </div>
+      </div>
+      
+      <div class="model-view">
+        <!-- 3D Model Placeholder -->
+        <div class="model-container">
+          <div class="wireframe-model">
+            <!-- Office floor plan wireframe representation -->
+            <div class="desk-grid">
+              <div class="desk" *ngFor="let desk of [1,2,3,4,5,6,7,8,9,10,11,12]"></div>
+            </div>
+            <div class="room-partitions">
+              <div class="partition horizontal"></div>
+              <div class="partition vertical"></div>
+            </div>
+            <!-- Green highlighted elements (conduits/piping) -->
+            <div class="highlighted-elements">
+              <div class="conduit horizontal"></div>
+              <div class="conduit vertical"></div>
+              <div class="conduit corner"></div>
+            </div>
+          </div>
+          
+          <!-- 3D View Controls -->
+          <div class="view-controls">
+            <div class="view-cube">
+              <div class="cube-face top">TOP</div>
+              <div class="cube-face front">FRONT</div>
+              <div class="cube-face right">RIGHT</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solution Details Panel -->
+    <div class="solution-details" [class.show]="showSolutionDetails">
+      <div class="panel-header">
+        <h3>Solution Details</h3>
+        <button class="close-btn" (click)="toggleSolutionDetails()">
+          <i class="close-icon">×</i>
+        </button>
+      </div>
+      
+      <div class="panel-tabs">
+        <div class="panel-tab">
+          <i class="tab-icon database"></i>
+          <span>Data</span>
+        </div>
+        <div class="panel-tab active">
+          <i class="tab-icon chart"></i>
+          <span>Stats</span>
+        </div>
+      </div>
+      
+      <div class="panel-content">
+        <!-- Conduit Section -->
+        <div class="stat-section" [class.expanded]="solutionStats.conduit.expanded">
+          <div class="section-header" (click)="toggleSection('conduit')">
+            <i class="expand-icon" [class.expanded]="solutionStats.conduit.expanded">✓</i>
+            <span>Conduit</span>
+          </div>
+          <div class="section-content" *ngIf="solutionStats.conduit.expanded">
+            <div class="stat-item">
+              <span class="stat-label">Total length:</span>
+              <span class="stat-value">{{ solutionStats.conduit.totalLength }}</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bends Section -->
+        <div class="stat-section" [class.expanded]="solutionStats.bends.expanded">
+          <div class="section-header" (click)="toggleSection('bends')">
+            <i class="expand-icon" [class.expanded]="solutionStats.bends.expanded">✓</i>
+            <span>Bends</span>
+          </div>
+          <div class="section-content" *ngIf="solutionStats.bends.expanded">
+            <div class="stat-item">
+              <span class="stat-label">Quantity:</span>
+              <span class="stat-value">{{ solutionStats.bends.quantity }}</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">°/foot:</span>
+              <span class="stat-value">{{ solutionStats.bends.degreesPerFoot }}</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Total Angle:</span>
+              <span class="stat-value">{{ solutionStats.bends.totalAngle }}</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Junctions Section -->
+        <div class="stat-section" [class.expanded]="solutionStats.junctions.expanded">
+          <div class="section-header" (click)="toggleSection('junctions')">
+            <i class="expand-icon" [class.expanded]="solutionStats.junctions.expanded">✓</i>
+            <span>Junctions</span>
+          </div>
+          <div class="section-content" *ngIf="solutionStats.junctions.expanded">
+            <div class="stat-item">
+              <span class="stat-label">Bodies:</span>
+              <span class="stat-value">{{ solutionStats.junctions.bodies }}</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Boxes:</span>
+              <span class="stat-value">{{ solutionStats.junctions.boxes }}</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Run ID Section -->
+        <div class="stat-section" [class.expanded]="solutionStats.runId.expanded">
+          <div class="section-header" (click)="toggleSection('runId')">
+            <i class="expand-icon" [class.expanded]="solutionStats.runId.expanded">▲</i>
+            <span>Run ID</span>
+          </div>
+        </div>
+        
+        <!-- Estimates Section -->
+        <div class="stat-section" [class.expanded]="solutionStats.estimates.expanded">
+          <div class="section-header" (click)="toggleSection('estimates')">
+            <i class="expand-icon" [class.expanded]="solutionStats.estimates.expanded">✓</i>
+            <span>Estimates</span>
+          </div>
+          <div class="section-content" *ngIf="solutionStats.estimates.expanded">
+            <div class="stat-item">
+              <span class="stat-label">Const. Time:</span>
+              <span class="stat-value">{{ solutionStats.estimates.constructionTime }}</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-label">Cost:</span>
+              <span class="stat-value">{{ solutionStats.estimates.cost }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

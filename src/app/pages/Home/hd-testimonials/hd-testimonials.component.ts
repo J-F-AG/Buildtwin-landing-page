@@ -1,7 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-import { LanguageService } from 'src/app/services/language.service';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-hd-testimonials',
@@ -10,44 +7,9 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class HdTestimonialsComponent {
 
-    testimonialsSlides: OwlOptions | null = null; 
-	isBrowser: boolean;
-	constructor(
-		public _languageService:LanguageService,
-	  @Inject(PLATFORM_ID) private platformId: Object
-	) {
-	  this.isBrowser = isPlatformBrowser(this.platformId);
-	}
-	ngOnInit(): void {
-	  this.sliderInit()
-	}
-	sliderInit() {
-		this.testimonialsSlides = {
-			items: 1,
-			nav: true,
-			margin: 25,
-			dots: true,
-			loop: true,
-			autoplay: false,
-			autoplayHoverPause: true,
-			responsive: {
-				0: {
-				items: 1
-				},
-				400: {
-				items: 1
-				},
-				740: {
-				items: 1
-				},
-				940: {
-				items: 1
-				}
-			},
-			navText: [
-				"<i class='ti ti-chevron-left'></i>",
-				"<i class='ti ti-chevron-right'></i>",
-			]
-		}
-	}
+    constructor() {}
+    
+    ngOnInit(): void {
+        // Simple initialization
+    }
 }

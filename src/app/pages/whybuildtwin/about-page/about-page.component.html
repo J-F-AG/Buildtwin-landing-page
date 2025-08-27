@@ -10,54 +10,21 @@
     </div>
 </div>
 
-<!-- Team Section -->
-<div class="container team-section">
-    <!-- Management Row -->
-    <div class="team-row management-row">
-        <h2 class="section-title">Management</h2>
-        <div class="team-grid">
-            <div class="team-member" *ngFor="let member of managementTeam">
-                <div class="member-photo">
-                    <img [src]="member.photo" [alt]="member.name" width="120" height="120">
-                </div>
-                <div class="member-info">
-                    <h3 class="member-name">{{ member.name }}</h3>
-                    <p class="member-role">{{ member.role }}</p>
-                    <div class="member-cv" [class.expanded]="member.isExpanded">
-                        <p class="cv-preview">{{ member.cvPreview }}</p>
-                        <div class="cv-full" *ngIf="member.isExpanded">
-                            <p>{{ member.fullCV }}</p>
-                        </div>
-                        <button class="expand-btn" (click)="toggleCV(member)">
-                            {{ member.isExpanded ? 'Show Less' : 'Read More' }}
-                        </button>
-                    </div>
-                </div>
+<!-- Leadership Team Section -->
+<div class="container leadership-section">
+    <h2 class="leadership-title">Leadership team</h2>
+    <div class="leadership-grid">
+        <div class="leadership-card" *ngFor="let member of leadershipTeam">
+            <div class="member-photo">
+                <div class="photo-placeholder">Photo</div>
             </div>
-        </div>
-    </div>
-
-    <!-- Advisors Row -->
-    <div class="team-row advisors-row">
-        <h2 class="section-title">Advisors</h2>
-        <div class="team-grid">
-            <div class="team-member" *ngFor="let advisor of advisorsTeam">
-                <div class="member-photo">
-                    <img [src]="advisor.photo" [alt]="advisor.name" width="120" height="120">
+            <div class="member-info">
+                <div class="member-header">
+                    <h3 class="member-name">{{ member.name }}</h3>
+                    <div class="expand-icon">+</div>
                 </div>
-                <div class="member-info">
-                    <h3 class="member-name">{{ advisor.name }}</h3>
-                    <p class="member-role">{{ advisor.role }}</p>
-                    <div class="member-cv" [class.expanded]="advisor.isExpanded">
-                        <p class="cv-preview">{{ advisor.cvPreview }}</p>
-                        <div class="cv-full" *ngIf="advisor.isExpanded">
-                            <p>{{ advisor.fullCV }}</p>
-                        </div>
-                        <button class="expand-btn" (click)="toggleCV(advisor)">
-                            {{ advisor.isExpanded ? 'Show Less' : 'Read More' }}
-                        </button>
-                    </div>
-                </div>
+                <p class="member-title">{{ member.title }}</p>
+                <a href="{{ member.linkedin }}" class="linkedin-link" target="_blank">LinkedIn</a>
             </div>
         </div>
     </div>
