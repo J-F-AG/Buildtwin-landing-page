@@ -644,42 +644,7 @@ img.lineSvg.active {
     }
 }
 
-// BuildTwin AI Branding Section
-.buildtwin-ai-section {
-    padding: 80px 0;
-    background: #fff;
-    text-align: center;
-    
-    .branding-content {
-        max-width: 800px;
-        margin: 0 auto;
-        
-        .main-title {
-            font-size: 48px;
-            font-weight: 700;
-            color: #0E0E28;
-            margin-bottom: 24px;
-            
-            .ai-box {
-                background: #f0f0f0;
-                color: #0E0E28;
-                padding: 8px 16px;
-                border-radius: 8px;
-                margin-left: 8px;
-                font-size: 48px;
-                font-weight: 700;
-            }
-        }
-        
-        .subtitle {
-            font-size: 20px;
-            color: #666;
-            line-height: 1.5;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    }
-}
+
 
 // Capability Statement Section
 .capability-statement-section {
@@ -720,22 +685,7 @@ img.lineSvg.active {
         }
     }
     
-    .buildtwin-ai-section {
-        .branding-content {
-            .main-title {
-                font-size: 36px;
-                
-                .ai-box {
-                    font-size: 36px;
-                }
-            }
-            
-            .subtitle {
-                font-size: 18px;
-                padding: 0 20px;
-            }
-        }
-    }
+
     
     .capability-statement-section {
         .statement-content {

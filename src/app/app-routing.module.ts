@@ -96,6 +96,7 @@ const routes: Routes = [
             canonical: 'https://www.buildtwin.com/provide-service'
         }
     },
+
     {
         path: 'pre-qualified',
         loadChildren: () => import('./pages/pre-qualified//provide-service.module').then(m => m.PreQualifiedModule),

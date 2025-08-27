@@ -1,406 +1,116 @@
 
-<div class="testimonial-container">
-  <!-- <section class="testimonial-container">
-      <h2 class="testimonial-title" data-aos="fade-up" data-aos-duration="500">What buyers are saying about BuildTwin</h2>
-      <p class="testimonial-text" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">
-       
-        Discover how BuildTwin is revolutionizing project management and collaboration in the construction industry. <br>Our platform empowers professionals with cutting-edge tools and insights, driving success and innovation.
-
+<div class="testimonials-section" style="background: #f8fafc; padding: 40px 0; margin: 20px 0;">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+      <h2 style="font-size: 36px; font-weight: 700; color: #1a1a1a; margin-bottom: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+        You're in great company.
+      </h2>
+      <p style="font-size: 16px; color: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+        How our customers use BuildTwin to drive impact
       </p>
-      <a mat-button routerLink="{{_languageService.currentLanguage}}/about" class="button-v2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">Get started now</a>  
-  </section> -->
-  <div class="main-head">
-    <div class="sectionHead" data-aos="fade-up" data-aos-duration="500">
-        <div class="main-title">Our testimonials</div>
-        <div class="heading">
-            <h2 class="title">What our customers says</h2>
-            <div class="subTitle">If there are any questions you want to ask, we will answer your questions</div>
-        </div>
     </div>
-    <button class="button-v2 align-self-end">Explore Case studies</button>
-  </div>
-  <div class="partnerWrap global-mb" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-      <ul class="partner"> 
-        <li>
-          <a routerLink="{{_languageService.currentLanguage}}/partners/gbc-engineers"><img src="assets/images/trustedBy-gbc.jpg" alt="GBC Engineers" width="86" height="60" loading="lazy"></a>
-        </li>
-        <li>
-          <a routerLink="{{_languageService.currentLanguage}}/partners/durchgeplant"><img src="assets/images/patner2.png" alt="Durchgeplant" width="191" height="80" loading="lazy"></a>
-        </li>
-        <li>
-          <a routerLink="{{_languageService.currentLanguage}}/partners/aarbee-structures-private-limited"><img src="assets/images/trustedBy-aarbee.jpg" alt="AARBEE" width="89" height="60" loading="lazy"></a>
-        </li>
-        <li>
-          <a routerLink="{{_languageService.currentLanguage}}/partners/j-f-india"><img src="assets/images/patner4.png" alt="J&F" width="191" height="80" loading="lazy"></a>
-        </li>
-        <li>
-          <a routerLink="{{_languageService.currentLanguage}}/partners/caldim-engineering"><img src="assets/images/trustedBy-caldim.jpg" alt="CALDIM" width="143" height="60" loading="lazy"></a>
-        </li>
-         
-      </ul>
-  </div>
-  </div>
-  <div class="container global-mb">
-  <div class="testimonial-slides">
-    <owl-carousel-o [options]="testimonialsSlides" *ngIf="isBrowser">
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Charles Brown</h3>
-                  <p class="testimonial-slides__profile--user--footer--org">Consultancy from Germany</p>
-                </div> -->
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              <!-- </div>
-              <p class="testimonial-slides__profile--user--description">
-                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.
-              </p>
-            </div>
+
+    <!-- Layered Carousel Effect (Arcade Style) -->
+    <div class="testimonial-carousel" style="position: relative; max-width: 500px; margin: 0 auto; height: 320px;">
+      <!-- Background Card 1 (Left) -->
+      <div class="testimonial-card background-card left" style="position: absolute; top: 40px; left: -60px; background: white; border-radius: 20px; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06); padding: 32px; width: 440px; transform: scale(0.75); opacity: 0.3; z-index: 1; pointer-events: none;">
+        <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
+          „Thanks to BuildTwin, we as a German engineering firm have gained access to international, highly qualified teams. The collaboration works seamlessly and integrates effortlessly into our existing systems."
         </div>
-      </ng-template> -->
-      <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Ravikanth</h3>
-                  <p class="testimonial-slides__profile--user--footer--org">Technical CEO J&F TGA</p>
-                </div>
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              </div>
-              <p class="testimonial-slides__profile--user--description">
-                „With BuildTwin, we have the ability to seamlessly coordinate our partners and efficiently manage the entire project workflow. The platform simplifies communication, optimizes collaboration, and ensures that all stakeholders always have access to the most up-to-date information. This allows us to save time and costs while significantly improving the quality and transparency of our projects.”
-              </p>
-            </div>
+        
+        <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
+          <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/regina.png" alt="Regina Vögtle" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="profile-details">
+            <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
+              Regina Vögtle
+            </h4>
+            <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              Lead Precast Detailing durchgeplant
+            </p>
+          </div>
         </div>
-      </ng-template>
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <img loading="lazy" src="assets/images/vid1.png"  class="testimonial-slides__profile--image" />
-            <div class="testimonial-slides__profile--user">
-              <p class="testimonial-slides__profile--user--description">
-                Engaging with BuildTwin's platform transformed how we approach project management. Their hands-on training was pivotal for our team, bridging the gap between theory and practice.
-              </p>
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Shweta Singh</h3>
-                  <p class="testimonial-slides__profile--user--footer--org">Business Consultancy from India</p>
-                </div>
-                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
-              </div>
-            </div>
+      </div>
+
+      <!-- Background Card 2 (Right) -->
+      <div class="testimonial-card background-card right" style="position: absolute; top: 40px; right: -60px; background: white; border-radius: 20px; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06); padding: 32px; width: 440px; transform: scale(0.75); opacity: 0.3; z-index: 1; pointer-events: none;">
+        <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
+          „Through BuildTwin, we have gained access to relevant international projects and clients. At the same time, we can showcase our services transparently and ensure high-quality management with the support of AI."
         </div>
-      </ng-template> -->
-      <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Regina Vögtle</h3>
-                  <p class="testimonial-slides__profile--user--footer--org">Lead Precast Detailing durchgeplant</p>
-                </div>
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              </div>
-              <p class="testimonial-slides__profile--user--description">
-                „Thanks to BuildTwin, we as a German engineering firm have gained access to international, highly qualified teams. The collaboration works seamlessly and integrates effortlessly into our existing systems. This has made our structures significantly more efficient and opened up new opportunities for us to plan large-scale projects.”
-              </p>
-            </div>
+        
+        <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
+          <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/kumar.png" alt="Kumar Sankaranarayanan" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="profile-details">
+            <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
+              Kumar Sankaranarayanan
+            </h4>
+            <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              Director J&F India
+            </p>
+          </div>
         </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Kumar Sankaranarayanan</h3>
-                  <p class="testimonial-slides__profile--user--footer--org">Director J&F India</p>
-                </div>
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              </div>
-              <p class="testimonial-slides__profile--user--description">
-                „Through BuildTwin, we have gained access to relevant international projects and clients. At the same time, we can showcase our services transparently and ensure high-quality management with the support of AI.”
-              </p>
-            </div>
+      </div>
+
+      <!-- Main Card (Front) -->
+      <div class="testimonial-card main-card" style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: white; border-radius: 20px; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12); padding: 32px; width: 500px; z-index: 2;">
+        <div class="testimonial-quote" style="font-size: 20px; line-height: 1.6; color: #1a1a1a; margin-bottom: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-weight: 700;">
+          „With BuildTwin, we have the ability to seamlessly coordinate our partners and efficiently manage the entire project workflow. The platform simplifies communication, optimizes collaboration, and ensures that all stakeholders always have access to the most up-to-date information."
         </div>
-      </ng-template>
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <img loading="lazy" src="assets/images/vid2.png"  class="testimonial-slides__profile--image" />
-            <div class="testimonial-slides__profile--user">
-              <p class="testimonial-slides__profile--user--description">
-                
-              </p>
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Winnower Plight </h3>
-                  <p class="testimonial-slides__profile--user--footer--org">Consultancy from Australia </p>
-                </div>
-                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
-              </div>
-            </div>
+        
+        <div class="profile-section" style="display: flex; align-items: center; gap: 12px;">
+          <div class="profile-image" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; flex-shrink: 0;">
+            <img src="assets/images/ravikanth.png" alt="Ravikanth" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="profile-details">
+            <h4 class="profile-name" style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin: 0 0 2px 0; font-family: 'Brush Script MT', 'Lucida Handwriting', 'Segoe Script', cursive; font-style: italic;">
+              Ravikanth
+            </h4>
+            <p class="profile-title" style="font-size: 14px; color: #6b7280; margin: 0; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              Technical CEO J&F TGA
+            </p>
+          </div>
         </div>
-      </ng-template> -->
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name"> Ming Li</h3>
-                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from Australia</p>
-                </div> -->
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              <!-- </div>
-              <p class="testimonial-slides__profile--user--description">
-                Attending the Innovation Campus event facilitated by BuildTwin opened doors to collaborations that were transformative for our business strategies.
-              </p>
-            </div>
+      </div>
+    </div>
+
+    <!-- Impact Statistics - Better Spacing -->
+    <div class="impact-stats" style="margin-top: 40px; text-align: center;">
+      <div class="stats-grid" style="display: inline-flex; align-items: center; gap: 40px;">
+        <div class="stat-item" style="text-align: center; min-width: 120px;">
+          <div class="stat-number" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            5x
+          </div>
+          <div class="stat-description" style="font-size: 12px; color: #6b7280; line-height: 1.3; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            More engagement vs traditional methods
+          </div>
         </div>
-      </ng-template> -->
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Parth Sinha </h3>
-                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from India</p>
-                </div> -->
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              <!-- </div>
-              <p class="testimonial-slides__profile--user--description">
-                BuildTwin's Accredited Software Training equipped our consultants with cutting-edge skills, giving us a competitive edge in the market.
-              </p>
-            </div>
+        
+        <div class="stat-divider" style="width: 1px; height: 30px; background: #e5e7eb; margin: 0 20px;"></div>
+        
+        <div class="stat-item" style="text-align: center; min-width: 120px;">
+          <div class="stat-number" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            3x
+          </div>
+          <div class="stat-description" style="font-size: 12px; color: #6b7280; line-height: 1.3; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            Faster project completion
+          </div>
         </div>
-      </ng-template> -->
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <img loading="lazy" src="assets/images/vid3.png"  class="testimonial-slides__profile--image" />
-            <div class="testimonial-slides__profile--user">
-              <p class="testimonial-slides__profile--user--description">
-                
-              </p>
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Martha Stewart </h3>
-                  <p class="testimonial-slides__profile--user--footer--org"> Zomato</p>
-                </div>
-                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
-              </div>
-            </div>
+        
+        <div class="stat-divider" style="width: 1px; height: 30px; background: #e5e7eb; margin: 0 20px;"></div>
+        
+        <div class="stat-item" style="text-align: center; min-width: 120px;">
+          <div class="stat-number" style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            90%
+          </div>
+          <div class="stat-description" style="font-size: 12px; color: #6b7280; line-height: 1.3; font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            Cost reduction in project management
+          </div>
         </div>
-      </ng-template> -->
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Aria Martinez </h3>
-                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from AUS</p>
-                </div> -->
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              <!-- </div>
-              <p class="testimonial-slides__profile--user--description">
-                BuildTwin's Innovation Campus gave us a competitive edge by connecting us directly with field experts and real-world tech challenges. It’s been instrumental in our approach to complex projects.
-              </p>
-            </div>
-        </div>
-      </ng-template> -->
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Jade Kong </h3>
-                  <p class="testimonial-slides__profile--user--footer--org"> Design Manager</p>
-                </div> -->
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              <!-- </div>
-              <p class="testimonial-slides__profile--user--description">
-                The Career Growth program has been a game-changer for our employees, providing them with clear pathways and strategies for professional advancement.
-              </p>
-            </div>
-        </div>
-      </ng-template> -->
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Raj Patel </h3>
-                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from India</p>
-                </div> -->
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              <!-- </div>
-              <p class="testimonial-slides__profile--user--description">
-                The Innovation Campus by BuildTwin was an incredible experience, filled with collaboration and learning from top field experts.
-              </p>
-            </div>
-        </div>
-      </ng-template> -->
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <img loading="lazy" src="assets/images/vid4.png"  class="testimonial-slides__profile--image" />
-            <div class="testimonial-slides__profile--user">
-              <p class="testimonial-slides__profile--user--description">
-                
-              </p>
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Liam Scott </h3>
-                  <p class="testimonial-slides__profile--user--footer--org"> Environmental Consultancy from the UK</p>
-                </div>
-                <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo">
-              </div>
-            </div>
-        </div>
-      </ng-template> -->
-      <!-- <ng-template carouselSlide>
-        <div class="testimonial-slides__profile">
-            <figure>
-              <img loading="lazy" src="assets/images/team-bg.png" alt="Team"  class="testimonial-slides__profile--image" />
-              <picture>
-                <source srcset="assets/images/vid-placeholder.webp" type="image/webp">
-                <source srcset="assets/images/vid-placeholder.png" type="image/png">
-                <img width="362" 
-                    height="425" 
-                    class="abs" 
-                    src="assets/images/vid-placeholder.png" 
-                    alt="Placeholder"
-                    loading="lazy">
-              </picture>
-            </figure>
-            <div class="testimonial-slides__profile--user">
-              <div class="testimonial-slides__profile--user--footer">
-                <div class="testimonial-slides__profile--user--footer__block">
-                  <h3 class="testimonial-slides__profile--user--footer--name">Amina Aziz </h3>
-                  <p class="testimonial-slides__profile--user--footer--org"> Consultancy from the UAE</p>
-                </div> -->
-                <!-- <img src="assets/images/home/logo.svg" alt="buildtwin" class="testimonial-slides__profile--user--logo"> -->
-              <!-- </div>
-              <p class="testimonial-slides__profile--user--description">
-                BuildTwin's Accredited Software program was comprehensive and tailored, equipping us with the skills to leverage technology for efficient project management.
-              </p>
-            </div>
-        </div>
-      </ng-template> -->
-    </owl-carousel-o>
+      </div>
+    </div>
   </div>
 </div>

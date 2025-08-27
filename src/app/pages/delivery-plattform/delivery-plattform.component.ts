@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
@@ -10,6 +10,8 @@ import { ArcadeService } from 'src/app/include-component/arcade-container/arcade
   styleUrl: './delivery-plattform.component.scss'
 })
 export class DeliveryPlattformComponent {
+  @ViewChild('popupOverlay', { static: false }) popupOverlay!: ElementRef;
+  
   marketPlace: number = 1;
   showPopup1=false;
   showPopup=false;
@@ -180,13 +182,51 @@ selectedIndex: number = 0
         }
 
     call(){
-      this.showPopup1 =true
+      this.showPopup1 = true;
+      console.log('Opening popup, showPopup1:', this.showPopup1);
       }
       closePopup1(){
-        this.showPopup1 =false
-      
+        this.showPopup1 = false;
+        console.log('Closing popup, showPopup1:', this.showPopup1);
         }
-  
+
+  // Improved method to handle background click
+  onPopupBackgroundClick(event: Event) {
+    // Get the target element that was clicked
+    const target = event.target as HTMLElement;
+    
+    console.log('Popup click event - Target:', target.tagName, target.className);
+    console.log('Target classes:', target.classList.toString());
+    
+    // Check if the click is on the background overlay (the popUP div itself)
+    // and not on any child elements like the coverPopup or its contents
+    if (target.classList.contains('popUP')) {
+      console.log('Background clicked, closing popup');
+      this.closePopup1();
+    } else {
+      console.log('Click was not on background, target:', target.tagName, target.className);
+    }
+  }
+
+  // Alternative method using mousedown event for better detection
+  onPopupMouseDown(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    
+    console.log('Popup mousedown event - Target:', target.tagName, target.className);
+    console.log('Target classes:', target.classList.toString());
+    
+    if (target.classList.contains('popUP')) {
+      console.log('Background mousedown, closing popup');
+      this.closePopup1();
+    } else {
+      console.log('Mousedown was not on background, target:', target.tagName, target.className);
+    }
+  }
+
+  // Method to handle clicks on popup content to prevent event bubbling
+  onPopupContentClick(event: Event) {
+    event.stopPropagation();
+  }
 
         callStatus(){
           this.showPopup =true
