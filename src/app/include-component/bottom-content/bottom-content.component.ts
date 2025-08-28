@@ -14,44 +14,8 @@ export class BottomContentComponent implements OnInit {
   visibleArcade: any = false;
   arcadeType: any = '';
   
-  // Carousel properties
-  currentSlide = 0;
-  itemsPerView = 4;
-  
-  // AI Capabilities data
-  aiCapabilities = [
-    {
-      id: 'track-submissions',
-      icon: 'assets/images/new-v2-icon1.png',
-      title: 'AI Quality Control for Structural Drawings',
-      description: 'Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.',
-      image: 'assets/images/new-v2-image1.png'
-    },
-    {
-      id: 'view-files-comment',
-      icon: 'assets/images/new-v2-icon2.png',
-      title: 'AI generated drawings',
-      description: 'Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.',
-      image: 'assets/images/new-v2-image2.png'
-    },
-    {
-      id: 'share-with-ease',
-      icon: 'assets/images/new-v2-icon3.png',
-      title: 'AI Design Manager',
-      description: 'Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.',
-      image: 'assets/images/new-v2-image3.png'
-    },
-    {
-      id: 'project-workflow',
-      icon: 'assets/images/new-v2-icon4.png',
-      title: 'Manage and track your delivery',
-      description: 'Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.',
-      image: 'assets/images/new-v2-image4.png'
-    }
-  ];
-  
-  // Create extended array with duplicates for carousel effect
-  carouselItems: any[] = [];
+  // Hover state management for Palantir-inspired design
+  hoveredSection: string | null = null;
   
   constructor(
     private _btWorkflowAssistanceService: BtWorkflowAssistanceService
@@ -60,12 +24,24 @@ export class BottomContentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Create extended array with duplicates for seamless carousel
-    this.carouselItems = [...this.aiCapabilities, ...this.aiCapabilities, ...this.aiCapabilities];
+    // Initialize component
   }
+
+  // Hover effect methods
+  setHoveredSection(sectionId: string) {
+    console.log('Setting hovered section:', sectionId);
+    this.hoveredSection = sectionId;
+  }
+
+  clearHoveredSection() {
+    console.log('Clearing hovered section');
+    this.hoveredSection = null;
+  }
+
   tabUpdated(index){
     this.currentTab = index;
   }
+
   accordionUpdated(index){
     if(this.currentAccordion == index){
       this.currentAccordion = null;
@@ -74,6 +50,7 @@ export class BottomContentComponent implements OnInit {
       this.currentAccordion = index;
     }
   }
+
   register() {
     let saveProjectData = localStorage.getItem("saveProjectData");
     console.log(saveProjectData)
@@ -94,43 +71,22 @@ export class BottomContentComponent implements OnInit {
       el.scrollIntoView({ behavior: 'smooth' });
     }
   }
-onClickArcadeTrigger(type){
-  this.arcadeType = type
-  this.visibleArcade = true;
-}
-visibleTogggle(status) {
-  if(status['type'] == 'close') {
-    this.visibleArcade = false;
+
+  onClickArcadeTrigger(type){
+    this.arcadeType = type
+    this.visibleArcade = true;
   }
-}
-ScheduleaDemo(){
-  this._btWorkflowAssistanceService.hubspotPopup.next({})
-}
+
+  visibleTogggle(status) {
+    if(status['type'] == 'close') {
+      this.visibleArcade = false;
+    }
+  }
+
+  ScheduleaDemo(){
+    this._btWorkflowAssistanceService.hubspotPopup.next({})
+  }
+
   ngOnDestroy() {
   }
-
-  // Carousel navigation methods
-  nextSlide() {
-    if (this.currentSlide < this.aiCapabilities.length) {
-      this.currentSlide++;
-      this.slideChanged.emit(this.currentSlide);
-    }
-  }
-  
-  prevSlide() {
-    if (this.currentSlide > 0) {
-      this.currentSlide--;
-      this.slideChanged.emit(this.currentSlide);
-    }
-  }
-  
-  // Check if navigation buttons should be disabled
-  canGoNext(): boolean {
-    return this.currentSlide < this.aiCapabilities.length;
-  }
-  
-  canGoPrev(): boolean {
-    return this.currentSlide > 0;
-  }
-
 }

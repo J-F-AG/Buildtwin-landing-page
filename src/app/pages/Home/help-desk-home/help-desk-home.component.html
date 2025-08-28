@@ -24,11 +24,10 @@
                 </p>
         </div>
     </div>
-    <app-bottom-content (slideChanged)="onSlideChanged($event)"></app-bottom-content>
+    <app-bottom-content></app-bottom-content>
     <div class="container">
         <div class="text-center" style="margin-top: 40px;">
-            <a [routerLink]="[_languageService.currentLanguage,'ai-capabilities']" class="button-v2" 
-               [style.display]="currentSlide > 0 ? 'none' : 'inline-block'">
+            <a [routerLink]="[_languageService.currentLanguage,'ai-capabilities']" class="button-v2">
                 View All AI Capabilities
             </a>
         </div>
