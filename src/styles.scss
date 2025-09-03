@@ -202,6 +202,7 @@ $buildtwin-theme: mat.define-light-theme(
 
 // Utilities CSS
 @import "./utilities";
+@import "aos/dist/aos.css";
 
 body {
   margin: 0;

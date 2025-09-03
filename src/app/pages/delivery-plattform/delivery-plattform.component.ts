@@ -37,33 +37,33 @@ navBar:any
 tabHead:any
 selectedIndex: number = 0
   
-  // AI Capabilities carousel data
+  // BuildTwin One capabilities carousel data
   aiCapabilities = [
     {
       id: 'track-submissions',
       icon: 'assets/images/new-v2-icon1.png',
-      title: 'AI Quality Control for Structural Drawings',
+      title: 'Track your<br>submissions',
       description: 'Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.',
       image: 'assets/images/new-v2-image1.png'
     },
     {
       id: 'view-files-comment',
       icon: 'assets/images/new-v2-icon2.png',
-      title: 'AI generated drawings',
+      title: 'View files and<br>comment',
       description: 'Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.',
       image: 'assets/images/new-v2-image2.png'
     },
     {
       id: 'share-with-ease',
       icon: 'assets/images/new-v2-icon3.png',
-      title: 'AI Design Manager',
+      title: 'Share<br>with ease',
       description: 'Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.',
       image: 'assets/images/new-v2-image3.png'
     },
     {
       id: 'project-workflow',
       icon: 'assets/images/new-v2-icon4.png',
-      title: 'Manage and track your delivery',
+      title: 'Filters and<br>Workflow in min.',
       description: 'Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.',
       image: 'assets/images/new-v2-image4.png'
     }
@@ -75,6 +75,48 @@ selectedIndex: number = 0
   // Carousel properties
   currentSlide = 0;
   itemsPerView = 4;
+  
+  // Arcade lightbox properties
+  visibleArcade: boolean = false;
+  arcadeType: string = '';
+  
+  // Second row - BuildTwin AI Capabilities (from homepage)
+  buildTwinAICapabilities = [
+    {
+      id: 'ai-quality-control',
+      icon: 'assets/images/new-v2-icon1.png',
+      title: 'AI Quality Control for Structural Drawings',
+      description: 'Assessment: This feature offers a centralized tracking system, likely replacing manual methods like spreadsheets, with robust search and filtering for efficiency.',
+      image: 'assets/images/new-v2-image1.png'
+    },
+    {
+      id: 'ai-generated-drawings',
+      icon: 'assets/images/new-v2-icon2.png',
+      title: 'AI generated drawings',
+      description: 'Facilitates collaborative review by allowing direct feedback on documents, reducing reliance on external communication tools.',
+      image: 'assets/images/new-v2-image2.png'
+    },
+    {
+      id: 'ai-design-manager',
+      icon: 'assets/images/new-v2-icon3.png',
+      title: 'AI Design Manager',
+      description: 'Streamlines file distribution with an intuitive interface, potentially eliminating the need for third-party services like WeTransfer.',
+      image: 'assets/images/new-v2-image3.png'
+    },
+    {
+      id: 'manage-track-delivery',
+      icon: 'assets/images/new-v2-icon4.png',
+      title: 'Manage and track your delivery',
+      description: 'Enhances task management by providing customizable views and quick access to critical information, minimizing workflow bottlenecks.',
+      image: 'assets/images/new-v2-image4.png'
+    }
+  ];
+  
+  // Create extended array for second carousel
+  buildTwinAICarouselItems: any[] = [];
+  
+  // Separate carousel properties for second row
+  currentAISlide = 0;
   
   tabDetail: any =[
     {
@@ -165,8 +207,11 @@ selectedIndex: number = 0
   ngOnInit(): void {
     this.initHubSpotForm();
     
-    // Initialize carousel items
+    // Initialize first carousel items (BuildTwin One)
     this.carouselItems = [...this.aiCapabilities, ...this.aiCapabilities, ...this.aiCapabilities];
+    
+    // Initialize second carousel items (BuildTwin AI Capabilities)
+    this.buildTwinAICarouselItems = [...this.buildTwinAICapabilities, ...this.buildTwinAICapabilities, ...this.buildTwinAICapabilities];
   }
 
 
@@ -275,10 +320,39 @@ selectedIndex: number = 0
     return this.currentSlide > 0;
   }
   
+  // Second carousel navigation methods
+  nextAISlide() {
+    if (this.currentAISlide < this.buildTwinAICapabilities.length) {
+      this.currentAISlide++;
+    }
+  }
+  
+  prevAISlide() {
+    if (this.currentAISlide > 0) {
+      this.currentAISlide--;
+    }
+  }
+  
+  // Check if AI carousel navigation buttons should be disabled
+  canGoNextAI(): boolean {
+    return this.currentAISlide < this.buildTwinAICapabilities.length;
+  }
+  
+  canGoPrevAI(): boolean {
+    return this.currentAISlide > 0;
+  }
+  
   // Arcade trigger method for carousel items
   onClickArcadeTrigger(type: string) {
-    // You can implement arcade functionality here if needed
     console.log(`Arcade triggered for: ${type}`);
+    this.arcadeType = type;
+    this.visibleArcade = true;
+  }
+  
+  // Handle arcade lightbox close
+  onArcadeClose(event: any) {
+    this.visibleArcade = false;
+    this.arcadeType = '';
   }
   
   ngOnDestroy() {

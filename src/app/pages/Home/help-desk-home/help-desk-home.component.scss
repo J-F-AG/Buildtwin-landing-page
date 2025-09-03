@@ -30,3 +30,13 @@
     padding-top: 30px !important;
 }
 }
+
+.results-heading-spacing {
+  margin-bottom: 100px !important;
+}
+
+@media (max-width: 768px) {
+  .results-heading-spacing {
+    margin-bottom: 60px !important;
+  }
+}

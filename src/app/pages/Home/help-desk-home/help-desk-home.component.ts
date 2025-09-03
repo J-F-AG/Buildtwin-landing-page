@@ -40,7 +40,7 @@ export class HelpDeskHomeComponent {
   scrollPosition: any
   
   // Carousel slide tracking
-  currentSlide = 0;
+
 
   // scrolled div 
 
@@ -128,10 +128,7 @@ export class HelpDeskHomeComponent {
     }
   }
   
-  // Handle carousel slide changes
-  onSlideChanged(slideIndex: number) {
-    this.currentSlide = slideIndex;
-  }
+
   // async loadHdNavbarComp(){
   //   if (this.HdNavbarComp) {
   //     this.HdNavbarComp.clear();

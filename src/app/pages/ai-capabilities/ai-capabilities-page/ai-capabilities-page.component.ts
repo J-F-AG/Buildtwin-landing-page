@@ -23,6 +23,13 @@ export class AiCapabilitiesPageComponent {
   // Popup states
   showPopup = false;
 
+  // Expandable sections state
+  expandedSections = {
+    one: false,
+    duett: false,
+    trio: false
+  };
+
   // AI Capabilities data for different categories
   aiCapabilitiesData = {
     'ai-generation': [
@@ -235,12 +242,16 @@ export class AiCapabilitiesPageComponent {
       'load-analysis', 
       'foundation-designer',
       'beam-optimizer',
-      'column-sizer',
-      'connection-detailer',
-      'code-compliance',
-      'material-estimator',
-      'seismic-design',
-      'rebar-layout'
+      'title-block-validation',
+      'element-positioning-checks',
+      'dimensional-accuracy',
+      'visual-standards-compliance',
+      'generate-precast',
+      'generate-insitu',
+      'revision-opening',
+      'revision-geometry',
+      'revision-dowel',
+      'revision-mep'
     ];
 
     const scrollPosition = window.scrollY + 200; // Offset for better detection
@@ -275,6 +286,21 @@ export class AiCapabilitiesPageComponent {
         window.scrollBy(0, desiredOffset);
       }, 100); // Adjust the delay if needed
     }
+  }
+
+  // Toggle section expansion
+  toggleSection(section: 'one' | 'duett' | 'trio') {
+    this.expandedSections[section] = !this.expandedSections[section];
+  }
+
+  // Check if a section has more than 3 items
+  hasMoreThanThreeItems(section: 'one' | 'duett' | 'trio'): boolean {
+    const itemCounts = {
+      one: 4,     // Currently has 4 items
+      duett: 4,   // Currently has 4 items  
+      trio: 6     // Currently has 6 items
+    };
+    return itemCounts[section] > 3;
   }
   // async loadHdNavbarComp(){
   //   if (this.HdNavbarComp) {
