@@ -53,15 +53,19 @@ export class HelpDeskHomeComponent {
 
     router.events.subscribe((val) => {
       setTimeout(() => {
-        this.scrollActivated = document.getElementById('scrollActivated');
-        if(this.scrollActivated){
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
-        } else {
-          // console.error('Element with ID scrollActivated not found');
+        try {
+          this.scrollActivated = document.getElementById('scrollActivated');
+          if(this.scrollActivated){
+            try {
+              this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
+              this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
+            } catch (error) {
+              console.error('getBoundingClientRect failed for scrollActivated (init):', error);
+            }
+          }
+        } catch (error) {
+          console.error('getElementById failed for scrollActivated (init):', error);
         }
-        
       }, 2000);
   });
   
@@ -88,43 +92,47 @@ export class HelpDeskHomeComponent {
 
   @HostListener('window:scroll', ['$event'])
   handleScroll(event: any) {
-    this.FixedDiv = document.getElementById('scrollActivated');
-    if(this.FixedDiv){
-      this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
-      let topscroll = this.scrollDivOffsettop - this.FixedDiv
-      let winH = window.innerHeight
-      console.log(winH);
-      
-      let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
-      this.fixedElement = document.getElementById('scrollActivated');
-  
-      // inside active 
-      if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
-        this.fixedElement.classList.add("fixed")
-        let activeELe = document.querySelectorAll('[data-ele]');
-        activeELe.forEach((item, index) => {
-          if (item.getBoundingClientRect().top < 500) {
-            this.activeState = index + 1;
-            item.classList.add("active")
-          }
-          else {
-            item.classList.remove("active")
-          }
-  
-        })
-  
+    try {
+      try { this.FixedDiv = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (scroll):', error); }
+      if(this.FixedDiv){
+        try { this.FixedDiv = this.FixedDiv.getBoundingClientRect().top; } catch (error) { console.error('getBoundingClientRect failed for FixedDiv (scroll):', error); }
+        let topscroll = this.scrollDivOffsettop - this.FixedDiv;
+        let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300;
+        try { this.fixedElement = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for fixedElement (scroll):', error); }
+        if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
+          try { this.fixedElement.classList.add("fixed"); } catch {}
+          let activeELe: NodeListOf<Element> = [] as any;
+          try { activeELe = document.querySelectorAll('[data-ele]'); } catch (error) { console.error('querySelectorAll failed for [data-ele] (scroll):', error); }
+          activeELe.forEach((item, index) => {
+            try {
+              if (item.getBoundingClientRect().top < 500) {
+                this.activeState = index + 1;
+                try { item.classList.add("active"); } catch {}
+              } else {
+                try { item.classList.remove("active"); } catch {}
+              }
+            } catch (error) {
+              console.error('getBoundingClientRect failed for data-ele item (scroll):', error);
+            }
+          });
+        } else {
+          try { this.fixedElement.classList.remove("fixed"); } catch {}
+        }
       }
-      else {
-        this.fixedElement.classList.remove("fixed")
-  
-      }
+    } catch (error) {
+      // ignore outer failures
     }
   }
 
   scrollToSection(sectionId: string) {
-    const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    try {
+      let el: HTMLElement | null = null;
+      try { el = document.getElementById(sectionId); } catch (error) { console.error('getElementById failed in scrollToSection for:', sectionId, error); }
+      if (el) {
+        try { el.scrollIntoView({ behavior: 'smooth' }); } catch (error) { console.error('scrollIntoView failed in scrollToSection for:', sectionId, error); }
+      }
+    } catch (error) {
+      // ignore outer failures
     }
   }
   

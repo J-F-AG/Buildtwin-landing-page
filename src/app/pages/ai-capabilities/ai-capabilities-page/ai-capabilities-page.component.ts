@@ -145,13 +145,18 @@ export class AiCapabilitiesPageComponent {
       setTimeout(() => {
         try {
           if (isPlatformBrowser(this.platformId)) {
-            this.scrollActivated = document.getElementById('scrollActivated');
+            try {
+              this.scrollActivated = document.getElementById('scrollActivated');
+            } catch (error) {
+              console.error('getElementById failed for scrollActivated (init):', error);
+            }
             if(this.scrollActivated){
-              this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-              this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-              console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
-            } else {
-              // console.error('Element with ID scrollActivated not found');
+              try {
+                this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
+                this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
+              } catch (error) {
+                console.error('getBoundingClientRect failed for scrollActivated (init):', error);
+              }
             }
           }
         } catch (error) {
@@ -213,30 +218,50 @@ export class AiCapabilitiesPageComponent {
   handleScroll(event: any) {
     try {
       if (isPlatformBrowser(this.platformId)) {
-        this.FixedDiv = document.getElementById('scrollActivated');
+        try {
+          this.FixedDiv = document.getElementById('scrollActivated');
+        } catch (error) {
+          console.error('getElementById failed for scrollActivated (scroll handler):', error);
+        }
         if(this.FixedDiv){
-          this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
-          let topscroll = this.scrollDivOffsettop - this.FixedDiv
-          let winH = window.innerHeight
-          console.log(winH);
-          let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
-          this.fixedElement = document.getElementById('scrollActivated');
-          // inside active 
-          if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
-            this.fixedElement.classList.add("fixed")
-            let activeELe = document.querySelectorAll('[data-ele]');
-            activeELe.forEach((item, index) => {
-              if (item.getBoundingClientRect().top < 500) {
-                this.activeState = index + 1;
-                item.classList.add("active")
-              }
-              else {
-                item.classList.remove("active")
-              }
-            })
+          try {
+            this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
+          } catch (error) {
+            console.error('getBoundingClientRect failed for FixedDiv (scroll handler):', error);
           }
-          else {
-            this.fixedElement.classList.remove("fixed")
+          let topscroll = this.scrollDivOffsettop - this.FixedDiv;
+          let winH = window.innerHeight;
+          let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300;
+          try {
+            this.fixedElement = document.getElementById('scrollActivated');
+          } catch (error) {
+            console.error('getElementById failed for scrollActivated fixedElement (scroll handler):', error);
+          }
+          if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
+            try {
+              this.fixedElement.classList.add("fixed");
+            } catch {}
+            let activeELe: NodeListOf<Element> = [] as any;
+            try {
+              activeELe = document.querySelectorAll('[data-ele]');
+            } catch (error) {
+              console.error('querySelectorAll failed for [data-ele]:', error);
+            }
+            activeELe.forEach((item, index) => {
+              try {
+                if (item.getBoundingClientRect().top < 500) {
+                  this.activeState = index + 1;
+                  item.classList.add("active");
+                }
+                else {
+                  item.classList.remove("active");
+                }
+              } catch (error) {
+                console.error('getBoundingClientRect failed for data-ele item:', error);
+              }
+            });
+          } else {
+            try { this.fixedElement.classList.remove("fixed"); } catch {}
           }
         }
       }
@@ -272,13 +297,22 @@ export class AiCapabilitiesPageComponent {
     try {
       if (isPlatformBrowser(this.platformId)) {
         for (const sectionId of sections) {
-          const section = document.getElementById(sectionId);
+          let section: HTMLElement | null = null;
+            try {
+              section = document.getElementById(sectionId);
+            } catch (error) {
+              console.error('getElementById failed for sectionId in updateActiveSection:', sectionId, error);
+            }
           if (section) {
-            const sectionTop = section.offsetTop;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-              this.activeSection = sectionId;
-              break;
+            try {
+              const sectionTop = section.offsetTop;
+              const sectionBottom = sectionTop + section.offsetHeight;
+              if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                this.activeSection = sectionId;
+                break;
+              }
+            } catch (error) {
+              console.error('Accessing offset metrics failed for section:', sectionId, error);
             }
           }
         }
@@ -291,18 +325,28 @@ export class AiCapabilitiesPageComponent {
   scrollToSection(sectionId: string) {
     try {
       if (isPlatformBrowser(this.platformId)) {
-        const section = document.getElementById(sectionId);
+        let section: HTMLElement | null = null;
+        try {
+          section = document.getElementById(sectionId);
+        } catch (error) {
+          console.error('getElementById failed in scrollToSection for:', sectionId, error);
+        }
         if (section) {
-          // Update active section
-          this.activeSection = sectionId;
-          // Scroll the section into view smoothly
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
-          setTimeout(() => {
-            const offsetTop = section.getBoundingClientRect().top;
-            const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
-            window.scrollBy(0, desiredOffset);
-          }, 100); // Adjust the delay if needed
+          try {
+            this.activeSection = sectionId;
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => {
+              try {
+                const offsetTop = section!.getBoundingClientRect().top;
+                const desiredOffset = offsetTop - 390;
+                window.scrollBy(0, desiredOffset);
+              } catch (error) {
+                console.error('getBoundingClientRect failed during scroll adjustment for:', sectionId, error);
+              }
+            }, 100);
+          } catch (error) {
+            console.error('scrollIntoView failed for:', sectionId, error);
+          }
         }
       }
     } catch (error) {

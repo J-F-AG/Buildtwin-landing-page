@@ -52,7 +52,8 @@ export class SubscribeComponent implements OnInit {
             }
     
             scrollToFaq() {
-              const hdFaqElement = document.getElementById('hdFaq');
+              try {
+                const hdFaqElement = document.getElementById('hdFaq');
               if (hdFaqElement) {
                   const topOffset = hdFaqElement.offsetTop;
                   const scrollPosition = topOffset - 100;
@@ -66,6 +67,9 @@ export class SubscribeComponent implements OnInit {
                   }
               } else {
                   console.error('Element with ID "hdFaq" not found.');
+              }
+              } catch (error) {
+                
               }
           }
 

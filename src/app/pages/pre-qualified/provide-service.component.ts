@@ -51,7 +51,8 @@ tabHead:any
 
 
   scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
+    try {
+      const section = document.getElementById(sectionId);
     if (section) {
       // Scroll the section into view smoothly
       section.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -62,6 +63,9 @@ tabHead:any
         const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
         window.scrollBy(0, desiredOffset);
       }, 100); // Adjust the delay if needed
+    }
+    } catch (error) {
+      
     }
   }
   

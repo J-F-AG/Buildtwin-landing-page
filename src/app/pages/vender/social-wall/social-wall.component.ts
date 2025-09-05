@@ -63,14 +63,44 @@ export class SocialWallComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   scroll() {
-    var targetPosition1: any = document.getElementById('socialWallFirst')?.offsetTop;
-    var targetPosition2: any = document.getElementById('socialWallSecond')?.offsetTop;
-    var targetPosition3: any = document.getElementById('socialWallThird')?.offsetTop;
+    let targetPosition1: any, targetPosition2: any, targetPosition3: any;
+    let video1: HTMLVideoElement | null, video2: HTMLVideoElement | null, video3: HTMLVideoElement | null, video4: HTMLVideoElement | null;
+    try {
+      targetPosition1 = document.getElementById('socialWallFirst')?.offsetTop;
+    } catch (error) {
+      console.error('getElementById failed for socialWallFirst:', error);
+    }
+    try {
+      targetPosition2 = document.getElementById('socialWallSecond')?.offsetTop;
+    } catch (error) {
+      console.error('getElementById failed for socialWallSecond:', error);
+    }
+    try {
+      targetPosition3 = document.getElementById('socialWallThird')?.offsetTop;
+    } catch (error) {
+      console.error('getElementById failed for socialWallThird:', error);
+    }
     var st = window.pageYOffset;
-    var video1 = <HTMLVideoElement>document.getElementById('video1');
-    var video2 = <HTMLVideoElement>document.getElementById('video2');
-    var video3 = <HTMLVideoElement>document.getElementById('video3');
-    var video4 = <HTMLVideoElement>document.getElementById('video4');
+    try {
+      video1 = <HTMLVideoElement>document.getElementById('video1');
+    } catch (error) {
+      console.error('getElementById failed for video1:', error);
+    }
+    try {
+      video2 = <HTMLVideoElement>document.getElementById('video2');
+    } catch (error) {
+      console.error('getElementById failed for video2:', error);
+    }
+    try {
+      video3 = <HTMLVideoElement>document.getElementById('video3');
+    } catch (error) {
+      console.error('getElementById failed for video3:', error);
+    }
+    try {
+      video4 = <HTMLVideoElement>document.getElementById('video4');
+    } catch (error) {
+      console.error('getElementById failed for video4:', error);
+    }
     if (st > targetPosition1 - 200) {
       video1.play();
     }

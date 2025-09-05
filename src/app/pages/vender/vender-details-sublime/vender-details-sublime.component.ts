@@ -296,31 +296,45 @@ aboutSlider: OwlOptions = {
 
 @HostListener('window:scroll', [])
 onWindowScroll() {
-  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  this.isSticky = scrollPosition >= 100;
+  try {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.isSticky = scrollPosition >= 100;
 
-  if (scrollPosition >= 200) {
-    document.body.classList.add('removeDefaultHeader');
-  } else {
-    // document.body.classList.remove('scrolled');
+    if (scrollPosition >= 200) {
+      document.body.classList.add('removeDefaultHeader');
+    } else {
+      // document.body.classList.remove('scrolled');
+    }
+  } catch (error) {
+    
   }
 
   // Determine active section
-  const sections = document.querySelectorAll('.scrollSection');
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const sectionId = section.getAttribute('id');
-    if (sectionTop <= 200 && sectionTop >= -100 && sectionId) { // Check if sectionId is not null
-      this.activeSection = sectionId;
-    }
-  });
+  let sections: NodeListOf<Element>;
+  try {
+    sections = document.querySelectorAll('.scrollSection');
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionId = section.getAttribute('id');
+      if (sectionTop <= 200 && sectionTop >= -100 && sectionId) { // Check if sectionId is not null
+        this.activeSection = sectionId;
+      }
+    });
+  } catch (error) {
+    console.error('querySelectorAll failed for .scrollSection:', error);
+  }
 }
 
 scrollToSection(sectionId: string) {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    const scrollOffset = section.getBoundingClientRect().top - 200; // Adjusted offset
-    window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
+  let section: HTMLElement | null;
+  try {
+    section = document.getElementById(sectionId);
+    if (section) {
+      const scrollOffset = section.getBoundingClientRect().top - 200; // Adjusted offset
+      window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
+    }
+  } catch (error) {
+    console.error('getElementById failed in scrollToSection:', error);
   }
 }
 

@@ -34,24 +34,38 @@ showPopup=false;
 
   youTubePopup: boolean = false;
   youTubeOpen() {
-    var src = this.sanitizer.bypassSecurityTrustResourceUrl(this.ytVideoUrl);
-    this.ytsrc = src;
-    this.youTubePopup = true;
+    try {
+      var src = this.sanitizer.bypassSecurityTrustResourceUrl(this.ytVideoUrl);
+      this.ytsrc = src;
+      this.youTubePopup = true;
+    } catch (error) {
+      console.error('youTubeOpen failed:', error);
+    }
   }
   videoClose() {
     this.youTubePopup = false;
   }
   playVideo() {
-   let video2 = <HTMLVideoElement>document.getElementById('video1');
-   if(video2){
-     video2.pause();
-     video2.play();
-   }
+    try {
+      let video2: HTMLVideoElement | null = null;
+      try { video2 = document.getElementById('video1') as HTMLVideoElement; } catch (error) { console.error('getElementById failed for video1 (playVideo):', error); }
+      if(video2){
+        try { video2.pause(); } catch (error) { console.error('pause failed for video1 (playVideo):', error); }
+        try { video2.play(); } catch (error) { console.error('play failed for video1 (playVideo):', error); }
+      }
+    } catch (error) {
+      // ignore outer failures
+    }
   }
   pauseVideo() {
-    let video2 = <HTMLVideoElement>document.getElementById('video1');
-    if(video2){
-      video2.pause();
+    try {
+      let video2: HTMLVideoElement | null = null;
+      try { video2 = document.getElementById('video1') as HTMLVideoElement; } catch (error) { console.error('getElementById failed for video1 (pauseVideo):', error); }
+      if(video2){
+        try { video2.pause(); } catch (error) { console.error('pause failed for video1 (pauseVideo):', error); }
+      }
+    } catch (error) {
+      // ignore outer failures
     }
   }   
     ngOnInit(): void {
@@ -94,20 +108,22 @@ private initHubSpotForm() {
         }
 
         scrollToFaq() {
-          const hdFaqElement = document.getElementById('hdFaq');
-          if (hdFaqElement) {
-              const topOffset = hdFaqElement.offsetTop;
-              const scrollPosition = topOffset - 100;
-              try {
-                window.scrollTo({
-                  top: scrollPosition,
-                  behavior: 'smooth' 
-              });
-              } catch (error) {
-                
-              }
-          } else {
-              console.error('Element with ID "hdFaq" not found.');
+          try {
+            let hdFaqElement: HTMLElement | null = null;
+            try { hdFaqElement = document.getElementById('hdFaq'); } catch (error) { console.error('getElementById failed for hdFaq (scrollToFaq):', error); }
+            if (hdFaqElement) {
+                try {
+                  const topOffset = hdFaqElement.offsetTop;
+                  const scrollPosition = topOffset - 100;
+                  try { window.scrollTo({ top: scrollPosition, behavior: 'smooth' }); } catch (error) { console.error('window.scrollTo failed (scrollToFaq):', error); }
+                } catch (error) {
+                  console.error('offsetTop access failed for hdFaq (scrollToFaq):', error);
+                }
+            } else {
+                // missing element silently ignored as earlier code suppressed errors
+            }
+          } catch (error) {
+            // ignore outer failures
           }
       }
 }

@@ -42,18 +42,26 @@ export class HdNavbarComponent {
     toggleClass() {
         this.classApplied = !this.classApplied;
 
-        document.getElementsByTagName('body')[0].classList.toggle('menuToggle')
+        try {
+          document.getElementsByTagName('body')[0].classList.toggle('menuToggle')
+        } catch (error) {
+          
+        }
     }
 
     // Navbar Sticky
     isSticky: boolean = false;
     @HostListener('window:scroll', ['$event'])
     checkScroll() {
-        const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        try {
+          const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if (scrollPosition >= 50) {
             this.isSticky = true;
         } else {
             this.isSticky = false;
+        }
+        } catch (error) {
+          
         }
     }
 
@@ -65,7 +73,11 @@ export class HdNavbarComponent {
       }
       manageToggle(event:any){
         this.showDropdownStatus = false
-        document.getElementsByTagName('body')[0].classList.remove('menuToggle')
+        try {
+          document.getElementsByTagName('body')[0].classList.remove('menuToggle')
+        } catch (error) {
+          
+        }
 
 
       }

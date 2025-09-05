@@ -47,16 +47,20 @@ private initHubSpotForm() {
         }
 
         scrollToFaq() {
-          const hdFaqElement = document.getElementById('hdFaq');
-          if (hdFaqElement) {
-              const topOffset = hdFaqElement.offsetTop;
-              const scrollPosition = topOffset - 100;
-              window.scrollTo({
-                  top: scrollPosition,
-                  behavior: 'smooth' 
-              });
-          } else {
-              console.error('Element with ID "hdFaq" not found.');
+          try {
+            let hdFaqElement: HTMLElement | null = null;
+            try { hdFaqElement = document.getElementById('hdFaq'); } catch (error) { console.error('getElementById failed for hdFaq (scrollToFaq):', error); }
+            if (hdFaqElement) {
+              try {
+                const topOffset = hdFaqElement.offsetTop;
+                const scrollPosition = topOffset - 100;
+                try { window.scrollTo({ top: scrollPosition, behavior: 'smooth' }); } catch (error) { console.error('window.scrollTo failed (scrollToFaq):', error); }
+              } catch (error) {
+                console.error('offsetTop access failed for hdFaq (scrollToFaq):', error);
+              }
+            }
+          } catch (error) {
+            // ignore outer failures
           }
       }
 }

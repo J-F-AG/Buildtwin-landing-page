@@ -271,27 +271,23 @@ export class FreeOfferFormComponent {
       //   firstInvalidControl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       // }
       setTimeout(() => {
-        const formContainer = document.getElementById('formContainer'); // The scrollable div
-        const topPart = document.querySelector('.topPart') as HTMLElement; // The fixed top part
-        
+        let formContainer: HTMLElement | null = null;
+        let topPart: HTMLElement | null = null;
+        try { formContainer = document.getElementById('formContainer'); } catch (error) { console.error('getElementById failed for formContainer (onSubmit invalid):', error); }
+        try { topPart = document.querySelector('.topPart') as HTMLElement; } catch (error) { console.error('querySelector failed for .topPart (onSubmit invalid):', error); }
         if (!formContainer) return;
-      
-        // Get the first element with class '.error-border' inside the formContainer
-        const firstInvalidControl = formContainer.querySelector('.error-border') as HTMLElement;
+        let firstInvalidControl: HTMLElement | null = null;
+        try { firstInvalidControl = formContainer.querySelector('.error-border') as HTMLElement; } catch (error) { console.error('querySelector failed for .error-border (onSubmit invalid):', error); }
         if (firstInvalidControl) {
-          const containerRect = formContainer.getBoundingClientRect();
-          const elementRect = firstInvalidControl.getBoundingClientRect();
-      
-          // Get height of '.topPart' (default to 0 if not found)
-          const topPartHeight = topPart ? topPart.offsetHeight : 0;
-      
-          // Calculate the scroll position relative to the formContainer, adjusting for topPart
-          const scrollTop = (formContainer.scrollTop + (elementRect.top - containerRect.top) - topPartHeight) - 20;
-      
-          formContainer.scrollTo({
-            top: scrollTop,
-            behavior: 'smooth',
-          });
+          try {
+            const containerRect = formContainer.getBoundingClientRect();
+            const elementRect = firstInvalidControl.getBoundingClientRect();
+            const topPartHeight = topPart ? topPart.offsetHeight : 0;
+            const scrollTop = (formContainer.scrollTop + (elementRect.top - containerRect.top) - topPartHeight) - 20;
+            try { formContainer.scrollTo({ top: scrollTop, behavior: 'smooth' }); } catch (error) { console.error('scrollTo failed for formContainer (onSubmit invalid):', error); }
+          } catch (error) {
+            console.error('getBoundingClientRect failed calculating scroll (onSubmit invalid):', error);
+          }
         }
       }, 100);
       

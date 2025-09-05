@@ -87,11 +87,15 @@ export class HdBannerNewComponent {
   // }
   
   goToSlide(index: number) {
-    const dots = document.querySelectorAll('#home-banner .owl-dot');
+    try {
+      const dots = document.querySelectorAll('#home-banner .owl-dot');
     if (dots.length > index) {
       (dots[index] as HTMLElement).click();
     } else {
       console.error('Invalid index:', index);
+    }
+    } catch (error) {
+      
     }
   }
   onTranslated(event: any): void {

@@ -25,19 +25,24 @@ export class HdPricingComponent implements OnInit, OnDestroy {
     scrollToSection(sectionId: string) {
         this.activeSection = sectionId;
         this.activeTab = sectionId;
-        const element = document.getElementById(sectionId);
+        try {
+            const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ 
                 behavior: 'smooth', 
                 block: 'start' 
             });
         }
+        } catch (error) {
+            
+        }
     }
 
     // Track scroll position to update active sidebar item and navigation tabs
     @HostListener('window:scroll', ['$event'])
     onWindowScroll() {
-        const sections = ['hero', 'capability-statement', 'faq'];
+        try {
+            const sections = ['hero', 'capability-statement', 'faq'];
         const scrollPosition = window.scrollY + 100; // Offset for better detection
         
         for (let i = sections.length - 1; i >= 0; i--) {
@@ -53,6 +58,9 @@ export class HdPricingComponent implements OnInit, OnDestroy {
                     break;
                 }
             }
+        }
+        } catch (error) {
+            
         }
     }
 }

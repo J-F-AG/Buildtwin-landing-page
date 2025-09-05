@@ -223,7 +223,8 @@ heroSlides: OwlOptions = {
 
 @HostListener('window:scroll', [])
 onWindowScroll() {
-  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  try {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
   this.isSticky = scrollPosition >= 100;
 
   if (scrollPosition >= 200) {
@@ -241,13 +242,20 @@ onWindowScroll() {
       this.activeSection = sectionId;
     }
   });
+  } catch (error) {
+    
+  }
 }
 
 scrollToSection(sectionId: string) {
-  const section = document.getElementById(sectionId);
+  try {
+    const section = document.getElementById(sectionId);
   if (section) {
     const scrollOffset = section.getBoundingClientRect().top - 200; // Adjusted offset
     window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
+  }
+  } catch (error) {
+    
   }
 }
 

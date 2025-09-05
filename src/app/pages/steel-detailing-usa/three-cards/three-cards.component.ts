@@ -14,7 +14,8 @@ export class SteelDetailingUsaThreeCardsComponent {
   }
 
   setupDropdownListeners() {
-    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+    try {
+      const dropdownMenus = document.querySelectorAll('.dropdown-menu');
     
     dropdownMenus.forEach(menu => {
       const summary = menu.querySelector('summary');
@@ -29,6 +30,9 @@ export class SteelDetailingUsaThreeCardsComponent {
         });
       });
     });
+    } catch (error) {
+      
+    }
   }
 
   dropdownText = "See more";

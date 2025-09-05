@@ -169,38 +169,45 @@ selectedIndex: number = 0
     this.titleService.setTitle('BuildTwin - Collaborate seamless with AI');
     router.events.subscribe((val) => {
       setTimeout(() => {
-      this.scrollActivated = document.getElementById('scrollActivated');
+        try {
+          this.scrollActivated = document.getElementById('scrollActivated');
+        } catch (error) {
+          console.error('getElementById failed for scrollActivated (init):', error);
+        }
         if(this.scrollActivated){
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop, this.scrolledDivHeight);
-        } else {
-          console.error('Element with ID scrollActivated not found');
+          try {
+            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
+            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
+          } catch (error) {
+            console.error('getBoundingClientRect failed for scrollActivated (init):', error);
+          }
         }
       }, 2000);
     });
-    try {
-      document.body.classList.add('white-show-wrapper');
-    } catch (error) {
-      
-    }
+    try { document.body.classList.add('white-show-wrapper'); } catch (error) { console.error('classList.add failed on body (constructor):', error); }
     
   }
 
 
 
   scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      // Scroll the section into view smoothly
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
-      setTimeout(() => {
-        const offsetTop = section.getBoundingClientRect().top;
-        const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
-        window.scrollBy(0, desiredOffset);
-      }, 100); // Adjust the delay if needed
+    try {
+      let section: HTMLElement | null = null;
+      try { section = document.getElementById(sectionId); } catch (error) { console.error('getElementById failed in scrollToSection for:', sectionId, error); }
+      if (section) {
+        try { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (error) { console.error('scrollIntoView failed in scrollToSection for:', sectionId, error); }
+        setTimeout(() => {
+          try {
+            const offsetTop = section!.getBoundingClientRect().top;
+            const desiredOffset = offsetTop - 390;
+            try { window.scrollBy(0, desiredOffset); } catch (error) { console.error('window.scrollBy failed in scrollToSection for:', sectionId, error); }
+          } catch (error) {
+            console.error('getBoundingClientRect failed during offset adjust in scrollToSection for:', sectionId, error);
+          }
+        }, 100);
+      }
+    } catch (error) {
+      // ignore outer failures
     }
   }
 
@@ -356,10 +363,6 @@ selectedIndex: number = 0
   }
   
   ngOnDestroy() {
-    try {
-      document.body.classList.remove('white-show-wrapper');
-    } catch (error) {
-      
-    }
+  try { document.body.classList.remove('white-show-wrapper'); } catch (error) { console.error('classList.remove failed on body (ngOnDestroy):', error); }
   }
 }

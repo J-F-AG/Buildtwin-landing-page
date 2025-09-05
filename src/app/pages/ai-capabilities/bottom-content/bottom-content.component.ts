@@ -147,9 +147,13 @@ export class BottomContentComponent implements OnInit, OnChanges {
 
   scrollToSection(sectionId: string) {
     this.currentTab = sectionId;
-    const el = document.getElementById(sectionId);
+    try {
+      const el = document.getElementById(sectionId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
+    }
+    } catch (error) {
+      
     }
   }
 onClickArcadeTrigger(type){
