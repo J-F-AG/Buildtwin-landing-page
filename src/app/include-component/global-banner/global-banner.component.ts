@@ -58,15 +58,19 @@ export class GlobalBannerComponent implements OnInit {
 
   ngOnDestroy() {
     functionList.unsubscribeAll(this.unsubscribe)
-    const tabList = document.querySelector("#banner-wrapper");
-    const mobDesign = document.querySelector("#mobDesign");
-    if(tabList){
-      tabList.classList.remove("fixed");
-      tabList.classList.remove("show");
-    }
-    if(mobDesign){
-      mobDesign.classList.remove("fixed");
-      mobDesign.classList.remove("show");
+    try {
+      const tabList = document.querySelector("#banner-wrapper");
+      const mobDesign = document.querySelector("#mobDesign");
+      if(tabList){
+        tabList.classList.remove("fixed");
+        tabList.classList.remove("show");
+      }
+      if(mobDesign){
+        mobDesign.classList.remove("fixed");
+        mobDesign.classList.remove("show");
+      }
+    } catch (error) {
+      // SSR/document not available
     }
   }
 

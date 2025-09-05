@@ -77,7 +77,11 @@ export class AppComponent {
         this.webpService.isWebpSupported().then((isSupported) => {
           const className = isSupported ? 'webp' : 'no-webp';
           if (isPlatformBrowser(this.platformId)) {
-            this.renderer.addClass(document.body, className);
+            try {
+              this.renderer.addClass(document.body, className);
+            } catch (error) {
+              console.error('Error adding class to body:', error);
+            }
           }
         });
       }

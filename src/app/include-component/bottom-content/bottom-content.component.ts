@@ -66,9 +66,13 @@ export class BottomContentComponent implements OnInit {
 
   scrollToSection(sectionId: string) {
     this.currentTab = sectionId;
-    const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    try {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } catch (error) {
+      console.error('Error scrolling to section:', error);
     }
   }
 

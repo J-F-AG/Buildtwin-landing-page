@@ -28,15 +28,19 @@ export class SectorCommercialBuildingComponent {
   }
 
   scrollToSection(sectionId: string): void {
-    let element = null;
-    if (isPlatformBrowser(this.platformId)) {
-      element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start' // Align the section at the top of the viewport
-        });
+    try {
+      let element = null;
+      if (isPlatformBrowser(this.platformId)) {
+        element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start' // Align the section at the top of the viewport
+          });
+        }
       }
+    } catch (error) {
+      // SSR/document not available
     }
   }
 }
