@@ -1,4 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-hd-testimonials',
@@ -35,14 +37,19 @@ export class HdTestimonialsComponent implements OnInit, OnDestroy {
     return this.kpiData[this.currentSlide];
   }
 
-  constructor() {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
-    this.startAutoPlay();
+    // Prevent infinite interval on the server which blocks Angular SSR stabilization.
+    if (isPlatformBrowser(this.platformId)) {
+      this.startAutoPlay();
+    }
   }
 
   ngOnDestroy(): void {
-    this.stopAutoPlay();
+    if (isPlatformBrowser(this.platformId)) {
+      this.stopAutoPlay();
+    }
   }
 
   nextTestimonial(): void {
@@ -88,10 +95,14 @@ export class HdTestimonialsComponent implements OnInit, OnDestroy {
   }
 
   onMouseEnter(): void {
-    this.stopAutoPlay();
+    if (isPlatformBrowser(this.platformId)) {
+      this.stopAutoPlay();
+    }
   }
 
   onMouseLeave(): void {
-    this.startAutoPlay();
+    if (isPlatformBrowser(this.platformId)) {
+      this.startAutoPlay();
+    }
   }
 }

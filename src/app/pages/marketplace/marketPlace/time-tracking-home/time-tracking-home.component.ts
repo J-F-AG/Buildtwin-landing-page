@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -39,13 +40,14 @@ export class TimeTrackingHomeComponent {
   }
   showPopup1=false;
   showPopup=false;
-    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
+    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService, @Inject(PLATFORM_ID) private platformId: Object) { 
 
-      router.events.subscribe((val) => {
+      router.events.subscribe(() => {
+        if (!isPlatformBrowser(this.platformId)) { return; }
         setTimeout(() => {
           try {
             this.scrollActivated = document.getElementById('scrollActivated');
-            if(this.scrollActivated){
+            if (this.scrollActivated) {
               try {
                 this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
                 this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
@@ -57,7 +59,7 @@ export class TimeTrackingHomeComponent {
             console.error('getElementById failed for scrollActivated (init):', error);
           }
         }, 2000);
-    });
+      });
     
     }
     
@@ -81,6 +83,7 @@ export class TimeTrackingHomeComponent {
     }
     @HostListener('window:scroll', ['$event'])
     handleScroll(event: any) {
+  if (!isPlatformBrowser(this.platformId)) { return; }
       try {
         try {
           this.FixedDiv = document.getElementById('scrollActivated');

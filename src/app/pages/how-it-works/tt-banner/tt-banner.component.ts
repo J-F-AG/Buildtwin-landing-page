@@ -1,4 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID } from '@angular/core';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -21,14 +23,17 @@ export class TtBannerComponent implements OnInit, OnDestroy {
   currentDynamicText = this.dynamicTexts[0];
   private textRotationInterval: any;
 
-  constructor(public _languageService: LanguageService) { }
+  constructor(public _languageService: LanguageService, @Inject(PLATFORM_ID) private platformId: Object) { }
 
   ngOnInit() {
-    this.startTextRotation();
+    // Avoid starting perpetual timers on the server – they keep the Angular app unstable and block prerender.
+    if (isPlatformBrowser(this.platformId)) {
+      this.startTextRotation();
+    }
   }
 
   ngOnDestroy() {
-    if (this.textRotationInterval) {
+    if (isPlatformBrowser(this.platformId) && this.textRotationInterval) {
       clearInterval(this.textRotationInterval);
     }
   }

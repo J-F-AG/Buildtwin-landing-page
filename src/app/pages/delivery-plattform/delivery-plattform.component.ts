@@ -1,4 +1,5 @@
-import { Component, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, HostListener, ViewChild, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
@@ -162,19 +163,21 @@ selectedIndex: number = 0
   ]
   constructor(
     private titleService: Title,
-    private router: Router,
+  private router: Router,
     public _languageService: LanguageService,
-    private arcadeService: ArcadeService
+  private arcadeService: ArcadeService,
+  @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.titleService.setTitle('BuildTwin - Collaborate seamless with AI');
-    router.events.subscribe((val) => {
+    router.events.subscribe(() => {
+      if (!isPlatformBrowser(this.platformId)) { return; }
       setTimeout(() => {
         try {
           this.scrollActivated = document.getElementById('scrollActivated');
         } catch (error) {
           console.error('getElementById failed for scrollActivated (init):', error);
         }
-        if(this.scrollActivated){
+        if (this.scrollActivated) {
           try {
             this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
             this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
@@ -184,7 +187,9 @@ selectedIndex: number = 0
         }
       }, 2000);
     });
-    try { document.body.classList.add('white-show-wrapper'); } catch (error) { console.error('classList.add failed on body (constructor):', error); }
+    if (isPlatformBrowser(this.platformId)) {
+      try { document.body.classList.add('white-show-wrapper'); } catch (error) { console.error('classList.add failed on body (constructor):', error); }
+    }
     
   }
 

@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
@@ -26,12 +27,13 @@ export class OnlineMeetingHomeFreelanceComponent {
     scrolledDivHeight: any
     fixedElement: any
 
-    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
+    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService, @Inject(PLATFORM_ID) private platformId: Object) { 
 
-      router.events.subscribe((val) => {
+      router.events.subscribe(() => {
+        if (!isPlatformBrowser(this.platformId)) { return; }
         setTimeout(() => {
           try { this.scrollActivated = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (init):', error); }
-          if(this.scrollActivated){
+          if (this.scrollActivated) {
             try {
               this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
               this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
@@ -53,6 +55,7 @@ export class OnlineMeetingHomeFreelanceComponent {
     }
     @HostListener('window:scroll', ['$event'])
     handleScroll(event: any) {
+  if (!isPlatformBrowser(this.platformId)) { return; }
       try { this.FixedDiv = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (scroll):', error); }
       try { this.FixedDiv = this.FixedDiv.getBoundingClientRect().top; } catch (error) { console.error('getBoundingClientRect failed for FixedDiv (scroll):', error); }
       let topscroll = this.scrollDivOffsettop - this.FixedDiv;

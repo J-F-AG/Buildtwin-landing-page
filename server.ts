@@ -10,7 +10,8 @@ import AppServerModule from './src/main.server';
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist');
+  // NOTE: Adjusted path to point to the browser build output folder so CommonEngine can locate index.html during prerender.
+  const distFolder = join(process.cwd(), 'dist', 'buildtwin', 'browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html'))
     ? join(distFolder, 'index.original.html')
     : join(distFolder, 'index.html');

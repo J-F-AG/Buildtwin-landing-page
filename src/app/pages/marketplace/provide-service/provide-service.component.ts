@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
@@ -76,11 +77,12 @@ selectedIndex: number = 0
       targetwebp2x: 'assets/images/for-seller/mange-portfolio@2x.webp',
     }
   ]
-  constructor(private titleService: Title, private router: Router, public _languageService:LanguageService) {
-    router.events.subscribe((val) => {
+  constructor(private titleService: Title, private router: Router, public _languageService:LanguageService, @Inject(PLATFORM_ID) private platformId: Object) {
+    router.events.subscribe(() => {
+      if (!isPlatformBrowser(this.platformId)) { return; }
       setTimeout(() => {
         try { this.scrollActivated = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (init):', error); }
-        if(this.scrollActivated){
+        if (this.scrollActivated) {
           try {
             this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
             this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
@@ -90,13 +92,15 @@ selectedIndex: number = 0
         }
       }, 2000);
     });
-    try { document.body.classList.add('white-show-wrapper'); } catch (error) { console.error('classList.add failed on body (constructor):', error); }
-    
+    if (isPlatformBrowser(this.platformId)) {
+      try { document.body.classList.add('white-show-wrapper'); } catch (error) { console.error('classList.add failed on body (constructor):', error); }
+    }
   }
 
 
 
   scrollToSection(sectionId: string) {
+  if (!isPlatformBrowser(this.platformId)) { return; }
     try {
       let section: HTMLElement | null = null;
       try { section = document.getElementById(sectionId); } catch (error) { console.error('getElementById failed in scrollToSection for:', sectionId, error); }

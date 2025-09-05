@@ -1,4 +1,5 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
@@ -93,12 +94,13 @@ export class OnlineMeetingHomeComponent {
 
     
 
-    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService) { 
+    constructor(private titleService: Title,private router: Router, public _languageService:LanguageService, @Inject(PLATFORM_ID) private platformId: Object) { 
 
-      router.events.subscribe((val) => {
+      router.events.subscribe(() => {
+        if (!isPlatformBrowser(this.platformId)) { return; }
         setTimeout(() => {
           try { this.scrollActivated = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (init 1):', error); }
-          if(this.scrollActivated){
+          if (this.scrollActivated) {
             try {
               this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
               this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
@@ -107,22 +109,23 @@ export class OnlineMeetingHomeComponent {
             }
           }
         }, 2000);
-    });
+      });
 
-    router.events.subscribe((val) => {
-      setTimeout(() => {
-        try { this.scrollActivated = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (init 2):', error); }
-        if (this.scrollActivated) {
-          try {
-            const rect = this.scrollActivated.getBoundingClientRect();
-            this.scrollDivOffsettop = rect.top;
-            this.scrolledDivHeight = rect.height;
-          } catch (error) {
-            console.error('getBoundingClientRect failed for scrollActivated (init 2):', error);
+      router.events.subscribe(() => {
+        if (!isPlatformBrowser(this.platformId)) { return; }
+        setTimeout(() => {
+          try { this.scrollActivated = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (init 2):', error); }
+          if (this.scrollActivated) {
+            try {
+              const rect = this.scrollActivated.getBoundingClientRect();
+              this.scrollDivOffsettop = rect.top;
+              this.scrolledDivHeight = rect.height;
+            } catch (error) {
+              console.error('getBoundingClientRect failed for scrollActivated (init 2):', error);
+            }
           }
-        }
-      }, 2000);
-    });
+        }, 2000);
+      });
 
     
 
@@ -151,6 +154,7 @@ export class OnlineMeetingHomeComponent {
 
       @HostListener('window:scroll', ['$event'])
       handleScroll(event: any) {
+  if (!isPlatformBrowser(this.platformId)) { return; }
         try { this.FixedDiv = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (scroll):', error); }
         if(this.FixedDiv){
           try { this.FixedDiv = this.FixedDiv.getBoundingClientRect().top; } catch (error) { console.error('getBoundingClientRect failed for FixedDiv (scroll):', error); }

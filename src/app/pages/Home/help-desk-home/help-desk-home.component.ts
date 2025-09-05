@@ -1,4 +1,5 @@
-import { Component, ComponentFactoryResolver, HostListener, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, ComponentFactoryResolver, HostListener, ViewChild, ViewContainerRef, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
@@ -49,13 +50,14 @@ export class HelpDeskHomeComponent {
   scrolledDivHeight: any
   fixedElement: any
 
-  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver, public _languageService: LanguageService) { 
-
-    router.events.subscribe((val) => {
+  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver, public _languageService: LanguageService, @Inject(PLATFORM_ID) private platformId: Object) { 
+    // Guard router DOM work for browser only (prevents "document is not defined" during prerender)
+    this.router.events.subscribe(() => {
+      if (!isPlatformBrowser(this.platformId)) { return; }
       setTimeout(() => {
         try {
           this.scrollActivated = document.getElementById('scrollActivated');
-          if(this.scrollActivated){
+          if (this.scrollActivated) {
             try {
               this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
               this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
@@ -67,8 +69,7 @@ export class HelpDeskHomeComponent {
           console.error('getElementById failed for scrollActivated (init):', error);
         }
       }, 2000);
-  });
-  
+    });
   }
 
   ngOnInit() {
@@ -92,6 +93,7 @@ export class HelpDeskHomeComponent {
 
   @HostListener('window:scroll', ['$event'])
   handleScroll(event: any) {
+  if (!isPlatformBrowser(this.platformId)) { return; }
     try {
       try { this.FixedDiv = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (scroll):', error); }
       if(this.FixedDiv){
@@ -125,6 +127,7 @@ export class HelpDeskHomeComponent {
   }
 
   scrollToSection(sectionId: string) {
+  if (!isPlatformBrowser(this.platformId)) { return; }
     try {
       let el: HTMLElement | null = null;
       try { el = document.getElementById(sectionId); } catch (error) { console.error('getElementById failed in scrollToSection for:', sectionId, error); }
