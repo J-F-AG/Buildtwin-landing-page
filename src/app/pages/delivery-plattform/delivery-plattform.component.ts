@@ -205,7 +205,7 @@ selectedIndex: number = 0
   }
 
   ngOnInit(): void {
-    this.initHubSpotForm();
+    // this.initHubSpotForm();
     
     // Initialize first carousel items (BuildTwin One)
     this.carouselItems = [...this.aiCapabilities, ...this.aiCapabilities, ...this.aiCapabilities];

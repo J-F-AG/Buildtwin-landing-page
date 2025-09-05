@@ -23,7 +23,7 @@ export class OmBannerFreelanceComponent {
   // // Initialize HubSpot form after the script is loaded
   // script.onload = () => {
   // };
-  this.initHubSpotForm();
+  // this.initHubSpotForm();
 }
 
 private initHubSpotForm() {

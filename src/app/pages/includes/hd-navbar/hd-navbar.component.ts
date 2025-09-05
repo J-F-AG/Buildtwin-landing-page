@@ -84,7 +84,7 @@ export class HdNavbarComponent {
       // script.onload = () => {
       // };
 
-      this.initHubSpotForm();
+      // this.initHubSpotForm();
     }
 
 

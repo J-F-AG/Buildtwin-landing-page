@@ -71,7 +71,7 @@ export class TimeTrackingHomeComponent {
         // // Initialize HubSpot form after the script is loaded
         // script.onload = () => {
         // };
-        this.initHubSpotForm();
+        // this.initHubSpotForm();
         
 
     }
