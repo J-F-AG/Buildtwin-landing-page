@@ -76,7 +76,9 @@ export class AppComponent {
       if (isPlatformBrowser(this.platformId)) {
         this.webpService.isWebpSupported().then((isSupported) => {
           const className = isSupported ? 'webp' : 'no-webp';
-          this.renderer.addClass(document.body, className);
+          if (isPlatformBrowser(this.platformId)) {
+            this.renderer.addClass(document.body, className);
+          }
         });
       }
         if (isPlatformBrowser(this.platformId)) {
@@ -159,15 +161,20 @@ export class AppComponent {
     // const jsonLdScriptTag = renderer.createElement('script');
     // jsonLdScriptTag.type = 'application/ld+json';
     // jsonLdScriptTag.text = JSON.stringify(faqSchema);
-    // // Append the script tag to the document head
-    // renderer.appendChild(document.head, jsonLdScriptTag);
+  // // Append the script tag to the document head
+  // if (isPlatformBrowser(this.platformId)) {
+  //   renderer.appendChild(document.head, jsonLdScriptTag);
+  // }
   }
     injectLang(){
       try {
-        const existingScripts = document.querySelectorAll('link[rel="alternate"]');
-        existingScripts.forEach(script => {
+        let existingScripts: NodeListOf<Element> = [] as any;
+        if (isPlatformBrowser(this.platformId)) {
+          existingScripts = document.querySelectorAll('link[rel="alternate"]');
+          existingScripts.forEach(script => {
             this.langHtml = this.sanitizer.bypassSecurityTrustHtml('');
-        });
+          });
+        }
       } catch (error) {
           
       }
@@ -209,12 +216,15 @@ export class AppComponent {
 injectBreadcrumbScript(url) {
     // First, remove all existing breadcrumb scripts
     try {
-        const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-        existingScripts.forEach(script => {
+        let existingScripts: NodeListOf<Element> = [] as any;
+        if (isPlatformBrowser(this.platformId)) {
+          existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
+          existingScripts.forEach(script => {
             this.breadcrumbSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
             this.faqSchemaHtml = this.sanitizer.bypassSecurityTrustHtml('');
             this.schemaCode = this.sanitizer.bypassSecurityTrustHtml('');
-        });
+          });
+        }
     } catch (error) {
         
     }
@@ -236,7 +246,9 @@ injectBreadcrumbScript(url) {
     //   jsonLdScriptTag.text = JSON.stringify(breadcrumbSchema);
       
       // Append new script to head
-    //   this.renderer.appendChild(document.head, jsonLdScriptTag);
+  //   if (isPlatformBrowser(this.platformId)) {
+  //     this.renderer.appendChild(document.head, jsonLdScriptTag);
+  //   }
     }
     if(this.router.url === '/'){
       const faqSchema = this._languageService.injectSchemaCodeForHomePage(this.renderer);

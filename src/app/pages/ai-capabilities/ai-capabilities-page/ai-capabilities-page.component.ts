@@ -1,4 +1,5 @@
-import { Component, ComponentFactoryResolver, HostListener, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, ComponentFactoryResolver, HostListener, ViewChild, ViewContainerRef, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
@@ -131,22 +132,28 @@ export class AiCapabilitiesPageComponent {
   scrolledDivHeight: any
   fixedElement: any
 
-  constructor(private titleService: Title,private router: Router, private resolver: ComponentFactoryResolver, public _languageService: LanguageService, private _btWorkflowAssistanceService: BtWorkflowAssistanceService) { 
-
+  constructor(
+    private titleService: Title,
+    private router: Router,
+    private resolver: ComponentFactoryResolver,
+    public _languageService: LanguageService,
+    private _btWorkflowAssistanceService: BtWorkflowAssistanceService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     router.events.subscribe((val) => {
       setTimeout(() => {
-        this.scrollActivated = document.getElementById('scrollActivated');
-        if(this.scrollActivated){
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
-        } else {
-          // console.error('Element with ID scrollActivated not found');
+        if (isPlatformBrowser(this.platformId)) {
+          this.scrollActivated = document.getElementById('scrollActivated');
+          if(this.scrollActivated){
+            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
+            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
+            console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
+          } else {
+            // console.error('Element with ID scrollActivated not found');
+          }
         }
-        
       }, 2000);
-  });
-    
+    });
   }
 
   ngOnInit() {
@@ -199,35 +206,32 @@ export class AiCapabilitiesPageComponent {
 
   @HostListener('window:scroll', ['$event'])
   handleScroll(event: any) {
-    this.FixedDiv = document.getElementById('scrollActivated');
-    if(this.FixedDiv){
-      this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
-      let topscroll = this.scrollDivOffsettop - this.FixedDiv
-      let winH = window.innerHeight
-      console.log(winH);
-      
-      let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
-      this.fixedElement = document.getElementById('scrollActivated');
-  
-      // inside active 
-      if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
-        this.fixedElement.classList.add("fixed")
-        let activeELe = document.querySelectorAll('[data-ele]');
-        activeELe.forEach((item, index) => {
-          if (item.getBoundingClientRect().top < 500) {
-            this.activeState = index + 1;
-            item.classList.add("active")
-          }
-          else {
-            item.classList.remove("active")
-          }
-  
-        })
-  
-      }
-      else {
-        this.fixedElement.classList.remove("fixed")
-  
+  if (isPlatformBrowser(this.platformId)) {
+      this.FixedDiv = document.getElementById('scrollActivated');
+      if(this.FixedDiv){
+        this.FixedDiv = this.FixedDiv.getBoundingClientRect().top;
+        let topscroll = this.scrollDivOffsettop - this.FixedDiv
+        let winH = window.innerHeight
+        console.log(winH);
+        let totalScroll = Number(this.scrollDivOffsettop + this.scrolledDivHeight) - 300
+        this.fixedElement = document.getElementById('scrollActivated');
+        // inside active 
+        if (this.FixedDiv < 200 && totalScroll > topscroll + 200) {
+          this.fixedElement.classList.add("fixed")
+          let activeELe = document.querySelectorAll('[data-ele]');
+          activeELe.forEach((item, index) => {
+            if (item.getBoundingClientRect().top < 500) {
+              this.activeState = index + 1;
+              item.classList.add("active")
+            }
+            else {
+              item.classList.remove("active")
+            }
+          })
+        }
+        else {
+          this.fixedElement.classList.remove("fixed")
+        }
       }
     }
 
@@ -256,35 +260,36 @@ export class AiCapabilitiesPageComponent {
 
     const scrollPosition = window.scrollY + 200; // Offset for better detection
 
-    for (const sectionId of sections) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-          this.activeSection = sectionId;
-          break;
+  if (isPlatformBrowser(this.platformId)) {
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            this.activeSection = sectionId;
+            break;
+          }
         }
       }
     }
   }
 
   scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      // Update active section
-      this.activeSection = sectionId;
-      
-      // Scroll the section into view smoothly
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      
-      // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
-      setTimeout(() => {
-        const offsetTop = section.getBoundingClientRect().top;
-        const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
-        window.scrollBy(0, desiredOffset);
-      }, 100); // Adjust the delay if needed
+  if (isPlatformBrowser(this.platformId)) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        // Update active section
+        this.activeSection = sectionId;
+        // Scroll the section into view smoothly
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
+        setTimeout(() => {
+          const offsetTop = section.getBoundingClientRect().top;
+          const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
+          window.scrollBy(0, desiredOffset);
+        }, 100); // Adjust the delay if needed
+      }
     }
   }
 
