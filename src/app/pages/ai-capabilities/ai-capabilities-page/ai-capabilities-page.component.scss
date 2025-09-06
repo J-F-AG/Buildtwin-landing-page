@@ -513,7 +513,7 @@
     background: #f8fafc;
 
     .container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
         padding: 0 40px;
 
@@ -566,7 +566,7 @@
 
     .pricing-content {
         display: flex;
-        gap: 60px;
+        gap: 30px;
         align-items: flex-start;
 
         @media (max-width: 1024px) {
@@ -1127,7 +1127,7 @@
     
     .table-row {
         display: grid !important;
-        grid-template-columns: 120px 1fr 100px !important;
+        grid-template-columns: 120px 1fr 120px !important;
         align-items: center !important;
         border-bottom: 1px solid #f3f4f6 !important;
         transition: all 0.2s ease !important;
@@ -1210,6 +1210,7 @@
             
             &.status-cell {
                 text-align: center !important;
+                min-width: 120px !important;
                 
                 .status-badge {
                     display: inline-block !important;
