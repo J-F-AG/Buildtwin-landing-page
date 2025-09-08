@@ -259,16 +259,25 @@ export class VenderDetailsAarbeeOldComponent {
   @HostListener('window:scroll', [])
   
   onWindowScroll() {
+    let sections: NodeListOf<Element>;
+    try {
+      sections = document.querySelectorAll('.scrollSection'); 
+    } catch (error) {
+      console.error('querySelectorAll failed for .scrollSection:', error);
+      sections = [] as any;
+    }
 
-    var sections= document.querySelectorAll('.scrollSection'); 
-
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    try {
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.isSticky = scrollPosition >= 100;
 
     if (scrollPosition >= 200) {
       document.body.classList.add('removeDefaultHeader');
     } else {
       // document.body.classList.remove('scrolled');
+    }
+    } catch (error) {
+      
     }
 
     sections.forEach(section => {
@@ -280,10 +289,14 @@ export class VenderDetailsAarbeeOldComponent {
     });
 
     let percentScrolled = this.getScrollPercentage();
-     var progressBar = document.getElementById('progress-bar');
+    try {
+      var progressBar = document.getElementById('progress-bar');
       if (progressBar !== null) {
         progressBar.style.width = percentScrolled + '%';
       }
+    } catch (error) {
+      console.error('getElementById failed for progress-bar:', error);
+    }
 
     // var sections2: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="section"]')); // Select all sections with IDs starting with "section"
     // var otherSections: HTMLElement[] = Array.from(document.querySelectorAll('div[id^="other-section"]')); // Select all other sections
@@ -363,18 +376,26 @@ export class VenderDetailsAarbeeOldComponent {
   }
 
   getScrollPercentage(): number {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    try {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight || 0;
     const clientHeight = document.documentElement.clientHeight || window.innerHeight || 0;
 
     return (scrollTop / (scrollHeight - clientHeight)) * 100;
+    } catch (error) {
+      return 0;
+    }
   }
 
   scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const scrollOffset = section.getBoundingClientRect().top - 200; // Adjusted offset
-      window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
+    try {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const scrollOffset = section.getBoundingClientRect().top - 200; // Adjusted offset
+        window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
+      }
+    } catch (error) {
+      console.error('getElementById failed in scrollToSection:', error);
     }
   }
 

@@ -6,8 +6,36 @@
     </svg>
     {{selectedLang}}
 </div>
-<nz-dropdown-menu #menu="nzDropdownMenu">
-    <ul nz-menu nzSelectable>
-      <li class="tt" nz-menu-item *ngFor="let item of _languageService.language" (click)="selecteLanguage(item)" [ngClass]="{'active': selectedLang == item['text']}"><span style="display: none;">-</span>{{item['text']}}</li>
-    </ul>
-  </nz-dropdown-menu>
+<nz-dropdown-menu #menu="nzDropdownMenu" class="language-dropdown-menu">
+    <div class="language-grid custom-language-grid">
+        <div class="region-column">
+            <h4>North America</h4>
+            <div class="country-item" *ngFor="let country of northAmericaCountries" (click)="selecteLanguage(country)" [ngClass]="{'active': selectedLang == country.text}">
+                <div class="country-name">{{country.name}}</div>
+                <div class="language">{{country.language}}</div>
+            </div>
+        </div>
+        <div class="region-column">
+            <h4>Asia Pacific</h4>
+            <div class="country-item" *ngFor="let country of asiaPacificCountries" (click)="selecteLanguage(country)" [ngClass]="{'active': selectedLang == country.text}">
+                <div class="country-name">{{country.name}}</div>
+                <div class="language">{{country.language}}</div>
+            </div>
+        </div>
+        <div class="region-column">
+            <h4>Europe</h4>
+            <div class="country-item" *ngFor="let country of europeCountries" (click)="selecteLanguage(country)" [ngClass]="{'active': selectedLang == country.text}">
+                <div class="country-name">{{country.name}}</div>
+                <div class="language">{{country.language}}</div>
+            </div>
+        </div>
+
+        <div class="region-column">
+            <h4>Middle-East</h4>
+            <div class="country-item" *ngFor="let country of middleEastCountries" (click)="selecteLanguage(country)" [ngClass]="{'active': selectedLang == country.text}">
+                <div class="country-name">{{country.name}}</div>
+                <div class="language">{{country.language}}</div>
+            </div>
+        </div>
+    </div>
+</nz-dropdown-menu>

@@ -1,0 +1,849 @@
+<app-hd-navbar></app-hd-navbar>
+
+<app-ai-capabilities-banner></app-ai-capabilities-banner>
+<app-company-logos-slider></app-company-logos-slider>
+
+<!-- Meet Your AI Team Section -->
+<app-get-started-block>
+    <div class="heading center v2">
+       <h2 class="title">
+        Meet Your <span>AI Team</span>
+       </h2> 
+    </div>
+    
+    <div class="block-wrapper-arrow">
+        <div class="block">
+            <img src="assets/images/seller1-arrow.png" alt="arrow" width="29" height="59">
+        </div>
+        <div class="block">
+            <img src="assets/images/seller2-arrow.png" alt="arrow" width="24" height="61">
+        </div>
+        <div class="block">
+            <img src="assets/images/seller3-arrow.png" alt="arrow" width="29" height="59">
+        </div>
+    </div>
+    <div class="block-wrapper">
+        <div class="block">
+            <div class="note">
+                try it for free
+            </div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer1@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer1.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer1@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer1.png" 
+                        alt="buyer1" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Design Manager <span style="color: #4285f4;">- the Manager</span></h3>
+                <p class="benefit-subtext">Optimize structural workflows for faster, more reliable delivery.</p>
+                <a href="javascript:void(0)" (click)="selectCategory('ai-generation'); scrollToSection('ai-capabilities')" class="button-v2">
+                    Explore AI Design Manager
+                </a>
+            </div>
+        </div>
+        <div class="block">
+            <div class="delivery-type-label ai-human">AI + Human Engineering</div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/buyer2@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/buyer2.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/buyer2@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/buyer2.png" 
+                        alt="buyer2" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Quality Control <span style="color: #4285f4;">- the Inspector</span></h3>
+                <p class="benefit-subtext">Catch issues early and ensure code compliance with confidence.</p>
+                <a href="javascript:void(0)" (click)="selectCategory('ai-quality-control'); scrollToSection('ai-capabilities')" class="button-v2 mark_page_explore_3_reason">
+                    Explore AI Quality Control
+                </a>
+            </div>
+        </div>
+        <div class="block">
+            <div class="delivery-type-label ai-human">AI + Human Engineering</div>
+            <figure>
+                <picture>
+                    <source 
+                        srcset="assets/images/sellers3@2x.webp" 
+                        type="image/webp" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <source 
+                        srcset="assets/images/sellers3.webp" 
+                        type="image/webp">
+                    <source 
+                        srcset="assets/images/sellers3@2x.png" 
+                        media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                    <img 
+                        src="assets/images/sellers3.png" 
+                        alt="sellers3" 
+                        width="388" 
+                        height="253">
+                </picture>
+            </figure>
+            <div class="content">
+                <h3>AI Drawing Generation <span style="color: #4285f4;">- the Creator</span></h3>
+                <p class="benefit-subtext">Produce structural drawings up to 3x faster with higher consistency.</p>
+                <a href="javascript:void(0)" (click)="selectCategory('ai-generation'); scrollToSection('ai-capabilities')" class="button-v2">
+                    Explore AI Drawing Generation
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</app-get-started-block>
+
+
+
+<!-- Capability Statement Section -->
+<div class="detailed-pricing-section" id="capability-statement">
+    <div class="container">
+        <div class="pricing-header">
+            <span class="section-label">BuildTwin</span>
+            <h2 class="section-title">Capability Statement</h2>
+            <p class="section-subtitle">AI-powered structural engineering solutions, automated drawing generation, and quality control systems.</p>
+        </div>
+                  
+        <div class="pricing-content">
+            <!-- Sidebar Navigation - Updated with BuildTwin categories -->
+            <div class="pricing-sidebar">
+                <div class="sidebar-section">
+                    <h3>BuildTwin One - Delivery System</h3>
+                    <ul>
+                        <li [class.active]="activeSection === 'element-ga'" (click)="scrollToSection('element-ga')">Element GA</li>
+                        <li [class.active]="activeSection === 'load-analysis'" (click)="scrollToSection('load-analysis')">Load Analysis Pro</li>
+                        <li [class.active]="activeSection === 'foundation-designer'" (click)="scrollToSection('foundation-designer')">Foundation Designer</li>
+                        <li *ngIf="expandedSections.one" [class.active]="activeSection === 'beam-optimizer'" (click)="scrollToSection('beam-optimizer')">Beam Optimizer</li>
+                        <li class="expand-toggle expand-mode" (click)="toggleSection('one')" *ngIf="!expandedSections.one && hasMoreThanThreeItems('one')">
+                            <span class="expand-dots">...</span>
+                        </li>
+                        <li class="expand-toggle collapse-mode" (click)="toggleSection('one')" *ngIf="expandedSections.one && hasMoreThanThreeItems('one')">
+                            <span class="collapse-text">Show Less</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>BuildTwin Duett - AI QC</h3>
+                    <ul>
+                        <li [class.active]="activeSection === 'title-block-validation'" (click)="scrollToSection('title-block-validation')">Title Block & Document Validation</li>
+                        <li [class.active]="activeSection === 'element-positioning-checks'" (click)="scrollToSection('element-positioning-checks')">Element Positioning & Numbering Checks</li>
+                        <li [class.active]="activeSection === 'dimensional-accuracy'" (click)="scrollToSection('dimensional-accuracy')">Dimensional Accuracy & Annotation Checks</li>
+                        <li [class.active]="activeSection === 'visual-standards-compliance'" (click)="scrollToSection('visual-standards-compliance')">Visual Standards & Drawing Compliance</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>BuildTwin Trio - AI Drawing Generation</h3>
+                    <ul>
+                        <li [class.active]="activeSection === 'generate-precast'" (click)="scrollToSection('generate-precast')">Generate Pre-Cast drawings</li>
+                        <li [class.active]="activeSection === 'generate-insitu'" (click)="scrollToSection('generate-insitu')">Generate In-Situ Drawings</li>
+                        <li [class.active]="activeSection === 'revision-opening'" (click)="scrollToSection('revision-opening')">Revision - Position of opening changed</li>
+                        <li *ngIf="expandedSections.trio" [class.active]="activeSection === 'revision-geometry'" (click)="scrollToSection('revision-geometry')">Revision - Geometry changed</li>
+                        <li *ngIf="expandedSections.trio" [class.active]="activeSection === 'revision-dowel'" (click)="scrollToSection('revision-dowel')">Revision - dowel coordinated with adjacent elements</li>
+                        <li *ngIf="expandedSections.trio" [class.active]="activeSection === 'revision-mep'" (click)="scrollToSection('revision-mep')">Revision - MEP information changing</li>
+                        <li class="expand-toggle expand-mode" (click)="toggleSection('trio')" *ngIf="!expandedSections.trio">
+                            <span class="expand-dots">...</span>
+                        </li>
+                        <li class="expand-toggle collapse-mode" (click)="toggleSection('trio')" *ngIf="expandedSections.trio">
+                            <span class="collapse-text">Show Less</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content Area - New Capability Grid -->
+            <div class="pricing-main-content">
+                <!-- BuildTwin One - Delivery System -->
+                <div class="capability-section" id="element-ga">
+                    <h2>BuildTwin One - Delivery System</h2>
+                    <p>Advanced AI-powered delivery and automation capabilities for structural engineering workflows.</p>
+                    
+                    <div class="capabilities-grid">
+                        <!-- Element GA -->
+                        <div class="capability-item" id="element-ga">
+                            <div class="capability-info">
+                                <h3>Element GA</h3>
+                                <p>Automated generation of structural elements, optimizing design for efficiency and compliance. Streamlines the creation of beams, columns, and other structural components with AI-driven optimization.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Load Analysis Pro -->
+                        <div class="capability-item" id="load-analysis">
+                            <div class="capability-info">
+                                <h3>Load Analysis Pro</h3>
+                                <p>AI-powered load distribution and stress analysis, providing precise insights for structural integrity. Combines advanced algorithms with engineering expertise for comprehensive load assessment.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Foundation Designer -->
+                        <div class="capability-item" id="foundation-designer">
+                            <div class="capability-info">
+                                <h3>Foundation Designer</h3>
+                                <p>AI-assisted design of foundation systems, ensuring stability and cost-effectiveness for various soil conditions. Optimizes foundation types and dimensions based on structural requirements.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beam Optimizer -->
+                        <div class="capability-item" id="beam-optimizer">
+                            <div class="capability-info">
+                                <h3>Beam Optimizer</h3>
+                                <p>Optimizes beam dimensions for material efficiency and structural performance, reducing waste and costs. Uses AI algorithms to find the optimal balance between strength and economy.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type available">Watch Video</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BuildTwin Duett - AI QC -->
+                <div class="capability-section" id="title-block-validation">
+                    <h2>BuildTwin Duett - AI QC</h2>
+                    <p>Intelligent quality control and validation systems powered by AI for structural engineering projects.</p>
+                    
+                    <div class="capabilities-grid">
+                        <!-- Title Block & Document Validation -->
+                        <div class="capability-item" id="title-block-validation">
+                            <div class="capability-info">
+                                <h3>Title Block & Document Validation</h3>
+                                <p>Validates project numbers, drawing nomenclature, revision tracking, date formats, volume/weight calculations, and German language compliance. Ensures complete title block information across all 12 validation points.</p>
+                                
+                                <div class="capability-details">
+                                    <h4>Validation Checkpoints:</h4>
+                                    <div class="capability-table">
+                                        <div class="table-row header-row">
+                                            <div class="table-cell category-cell">Checks</div>
+                                            <div class="table-cell checkpoint-cell">Validation Checkpoint</div>
+                                            <div class="table-cell status-cell">Status</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Document">Document</div>
+                                            <div class="table-cell checkpoint-cell">Check Type of Drawing</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Project">Project</div>
+                                            <div class="table-cell checkpoint-cell">Verify project number is added in title sheet</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Naming">Naming</div>
+                                            <div class="table-cell checkpoint-cell">Validate Drawing number follows agreed nomenclature</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Project">Project</div>
+                                            <div class="table-cell checkpoint-cell">Verify project stage and discipline correctness</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Content">Content</div>
+                                            <div class="table-cell checkpoint-cell">Validate Drawing Title data and production quantities</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Tracking">Tracking</div>
+                                            <div class="table-cell checkpoint-cell">Confirm revision/index exists in planindex log</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Format">Format</div>
+                                            <div class="table-cell checkpoint-cell">Verify correct Date format per factory standard</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Metrics">Metrics</div>
+                                            <div class="table-cell checkpoint-cell">Ensure Volume is mentioned in Title Block</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Metrics">Metrics</div>
+                                            <div class="table-cell checkpoint-cell">Validate Weight calculation (Volume x 2.5 tonnes)</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Quantity">Quantity</div>
+                                            <div class="table-cell checkpoint-cell">Verify Element Quantity matches drawing headings</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Language">Language</div>
+                                            <div class="table-cell checkpoint-cell">Ensure all texts are in German only</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Language">Language</div>
+                                            <div class="table-cell checkpoint-cell">Validate spelling of Headlines per standards</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Element Positioning & Numbering Checks -->
+                        <div class="capability-item" id="element-positioning-checks">
+                            <div class="capability-info">
+                                <h3>Element Positioning & Numbering Checks</h3>
+                                <p>Verifies position numbers, element sequences, lifting points, and geometric accuracy. Ensures proper element identification and positioning across all views with continuous numbering validation.</p>
+                                
+                                <div class="capability-details">
+                                    <h4>Positioning & Numbering Checks:</h4>
+                                    <div class="capability-table">
+                                        <div class="table-row header-row">
+                                            <div class="table-cell category-cell">Checks</div>
+                                            <div class="table-cell checkpoint-cell">Validation Checkpoint</div>
+                                            <div class="table-cell status-cell">Status</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="General">General</div>
+                                            <div class="table-cell checkpoint-cell">Verify Position Number is provided</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="TT-Slab">TT-Slab/Girder</div>
+                                            <div class="table-cell checkpoint-cell">Check Vorspannung oben/unten notation</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Sequence">Sequence</div>
+                                            <div class="table-cell checkpoint-cell">Validate continuous ascending numbering (no skips/duplicates)</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Labeling">Labeling</div>
+                                            <div class="table-cell checkpoint-cell">Ensure unique labels match naming convention</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Precast">Precast</div>
+                                            <div class="table-cell checkpoint-cell">Verify lifting/pickup points at specified coordinates</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Erection">Erection</div>
+                                            <div class="table-cell checkpoint-cell">Check Montagepunkt marked with filled circle</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="CoG">CoG</div>
+                                            <div class="table-cell checkpoint-cell">Verify Schwerpunkt marked with text & dimensions</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Columns">Columns</div>
+                                            <div class="table-cell checkpoint-cell">Confirm erection tube is provided</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Columns">Columns</div>
+                                            <div class="table-cell checkpoint-cell">Validate corbel details in separate views</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dimensional Accuracy & Annotation Checks -->
+                        <div class="capability-item" id="dimensional-accuracy">
+                            <div class="capability-info">
+                                <h3>Dimensional Accuracy & Annotation Checks</h3>
+                                <p>Validates all critical dimensions, prevents text overlaps, ensures proper labeling, and checks reinforcement schedules. Maintains drawing clarity and accuracy with comprehensive annotation validation.</p>
+                                
+                                <div class="capability-details">
+                                    <h4>Accuracy & Annotation Validation:</h4>
+                                    <div class="capability-table">
+                                        <div class="table-row header-row">
+                                            <div class="table-cell category-cell">Checks</div>
+                                            <div class="table-cell checkpoint-cell">Validation Checkpoint</div>
+                                            <div class="table-cell status-cell">Status</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Geometry">Geometry</div>
+                                            <div class="table-cell checkpoint-cell">Verify all critical geometry is dimensioned</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Dimensions">Dimensions</div>
+                                            <div class="table-cell checkpoint-cell">Check dimensions reference correct outermost points</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Text">Text Overlap</div>
+                                            <div class="table-cell checkpoint-cell">Prevent dimension text overlapping drawing content</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Annotations">Annotations</div>
+                                            <div class="table-cell checkpoint-cell">Scan for annotation collisions and illegible text</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="BBS">BBS Schedule</div>
+                                            <div class="table-cell checkpoint-cell">Validate bar position numbering (no skips/duplicates)</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual Standards & Drawing Compliance -->
+                        <div class="capability-item" id="visual-standards-compliance">
+                            <div class="capability-info">
+                                <h3>Visual Standards & Drawing Compliance</h3>
+                                <p>Enforces drawing standards including view symbols, surface markings, hatching patterns, line types, and 3D views. Ensures professional presentation quality across 11 visual compliance checks.</p>
+                                
+                                <div class="capability-details">
+                                    <h4>Visual Standards & Compliance Checks:</h4>
+                                    <div class="capability-table">
+                                        <div class="table-row header-row">
+                                            <div class="table-cell category-cell">Checks</div>
+                                            <div class="table-cell checkpoint-cell">Validation Checkpoint</div>
+                                            <div class="table-cell status-cell">Status</div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Steel">Steel Parts</div>
+                                            <div class="table-cell checkpoint-cell">Verify steel parts list and descriptions</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Details">Drawing Details</div>
+                                            <div class="table-cell checkpoint-cell">Check for missing details, angles, and schemas</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="References">References</div>
+                                            <div class="table-cell checkpoint-cell">Ensure all steel parts are included/referenced</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Views">View Symbols</div>
+                                            <div class="table-cell checkpoint-cell">Validate View A symbol placement (left side)</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Surface">Surface Marks</div>
+                                            <div class="table-cell checkpoint-cell">Check surface markings in View A & Sections</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Hatching">Hatching</div>
+                                            <div class="table-cell checkpoint-cell">Verify distinguished hatchings for insulations</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Sections">Section Marks</div>
+                                            <div class="table-cell checkpoint-cell">Validate section markings in ascending sequence</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="3D">3D View</div>
+                                            <div class="table-cell checkpoint-cell">Confirm 3D view is placed in drawing</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Lines">Line Types</div>
+                                            <div class="table-cell checkpoint-cell">Check steel parts in correct line types (firm/hidden)</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                        <div class="table-row">
+                                            <div class="table-cell category-cell" data-category="Typography">Typography</div>
+                                            <div class="table-cell checkpoint-cell">Verify formwork dimensions in bold font</div>
+                                            <div class="table-cell status-cell"><span class="status-badge automated">Automated</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BuildTwin Trio - AI Drawing Generation -->
+                <div class="capability-section" id="generate-precast">
+                    <h2>BuildTwin Trio - AI Drawing Generation</h2>
+                    <p>Advanced AI-powered drawing generation and revision capabilities for comprehensive structural engineering projects.</p>
+                    
+                    <div class="capabilities-grid">
+                        <!-- Generate Pre-Cast drawings -->
+                        <div class="capability-item" id="generate-precast">
+                            <div class="capability-info">
+                                <h3>Generate Pre-Cast drawings (Formworks + Rebar)</h3>
+                                <p>Generates comprehensive pre-cast concrete drawings including both formwork layouts and detailed rebar placement. Produces complete fabrication drawings with all necessary specifications and dimensions.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human Engineering</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Generate In-Situ Drawings -->
+                        <div class="capability-item" id="generate-insitu">
+                            <div class="capability-info">
+                                <h3>Generate In-Situ Drawings</h3>
+                                <p>Creates detailed in-situ concrete construction drawings with reinforcement details, construction joints, and casting sequences. Provides comprehensive documentation for on-site concrete placement.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag ai-human">AI + Human Engineering</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Revision - Position of opening changed -->
+                        <div class="capability-item" id="revision-opening">
+                            <div class="capability-info">
+                                <h3>Revision - Position of opening changed</h3>
+                                <p>Automatically updates drawings when opening positions are modified. Adjusts reinforcement around openings, updates dimensions, and ensures structural integrity is maintained.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Revision - Geometry changed -->
+                        <div class="capability-item" id="revision-geometry">
+                            <div class="capability-info">
+                                <h3>Revision - Geometry changed</h3>
+                                <p>Handles geometric modifications to structural elements automatically. Updates dimensions, reinforcement patterns, and connection details when element geometry is revised.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Revision - dowel coordinated with adjacent elements -->
+                        <div class="capability-item" id="revision-dowel">
+                            <div class="capability-info">
+                                <h3>Revision - dowel coordinated with adjacent elements</h3>
+                                <p>Automatically coordinates dowel positions and details with adjacent structural elements. Ensures proper connections and maintains structural continuity across element interfaces.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Revision - MEP information changing -->
+                        <div class="capability-item" id="revision-mep">
+                            <div class="capability-info">
+                                <h3>Revision - MEP information changing; specifically conduits in the slab</h3>
+                                <p>Updates structural drawings when MEP systems change, particularly conduit routing in slabs. Automatically adjusts reinforcement around new conduit paths and maintains structural integrity.</p>
+                            </div>
+                            <div class="automation-level">
+                                <span class="automation-tag fully-automated">Fully Automated</span>
+                            </div>
+                            <div class="video-section">
+                                <div class="video-thumbnail">
+                                    <div class="play-button">▶</div>
+                                </div>
+                                <div class="video-access">
+                                    <span class="access-type register-required">Register to Watch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BuildTwin Pro Section -->
+<app-heavy-lifting></app-heavy-lifting>
+
+<!-- Plug & Play Section -->
+<app-hd-integrations></app-hd-integrations>
+
+<!-- Case Studies Section -->
+<app-case-studies></app-case-studies>
+
+<!-- Statistics Section -->
+<div class="statistics-section">
+    <div class="container">
+        <div class="statistics-wrapper">
+            <div class="stat-block">
+                <div class="stat-number">
+                    95%
+                </div>
+                <p>
+                    accuracy improvement
+                </p>
+                <img src="assets/images/ser1.png" width="57" height="53" alt="Accuracy improvement">
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">
+                    80%
+                </div>
+                <p>
+                    time reduction
+                </p>
+                <img src="assets/images/ser2.png" width="57" height="53" alt="Time reduction">
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">
+                    10k+
+                </div>
+                <p>
+                    drawings processed
+                </p>
+                <img src="assets/images/ser3.png" width="57" height="53" alt="Drawings processed">
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">
+                    500+
+                </div>
+                <p>
+                    engineering firms
+                </p>
+                <img src="assets/images/ser4.png" width="57" height="53" alt="Engineering firms">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="faq-section">
+    <div class="container">
+        <div class="faq-header">
+            <h2>Good to know...</h2>
+            <p>AI capabilities can be complex, so we've made it simple. If you still have questions, you can <a href="https://www.buildtwin.com/contact" target="_blank">contact our team</a>.</p>
+        </div>
+        
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h3>What is AI Drawing Generation?</h3>
+                <p>Our AI automatically generates structural drawings including Element GA, Rebar drawings for both Pre-Cast and Insitu applications, and detailed construction documentation. The AI learns from your project requirements and building codes to deliver accurate, compliant drawings in minutes instead of hours.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How does AI Quality Control work?</h3>
+                <p>Our AI performs comprehensive quality checks including technical validation, presentation standards, and spelling verification. It automatically detects errors, missing details, and compliance issues before delivery, ensuring your drawings meet international standards and project specifications.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What is the AI Design Manager?</h3>
+                <p>The AI Design Manager automates your entire workflow from CDE management and RFI tracking to delivery platform coordination. It learns from your project patterns to optimize efficiency, provides intelligent suggestions, and ensures consistent quality across all deliverables.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How secure is my data with BuildTwin AI?</h3>
+                <p>Your data security is our top priority. We use enterprise-grade encryption, secure cloud infrastructure, and strict access controls. Your project files, designs, and sensitive information remain completely private and under your control at all times.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>Can I integrate AI capabilities with your existing tools?</h3>
+                <p>Absolutely! BuildTwin AI integrates seamlessly with your current CAD software, project management tools, and workflow systems. We support all major platforms including AutoCAD, Revit, Tekla, and more. Setup takes less than 5 minutes.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What if I need human expertise alongside AI?</h3>
+                <p>BuildTwin combines the best of both worlds. Our AI handles repetitive tasks and quality checks, while our global network of certified engineers provides human oversight, creative problem-solving, and specialized expertise when needed. You get AI efficiency with human intelligence.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How quickly can I see results with AI capabilities?</h3>
+                <p>Most users see immediate improvements in workflow efficiency within the first week. AI Drawing Generation typically reduces drawing time by 60-80%, while AI Quality Control catches 90% of common errors automatically. Full workflow optimization is usually achieved within 2-3 weeks.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What building codes and standards are supported?</h3>
+                <p>BuildTwin AI supports all major international building codes including Eurocodes, AISC, AS, BS, ISO standards, and regional variations. The AI automatically adapts to your project's specific code requirements and ensures compliance across all deliverables.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>How does AI handle complex structural calculations?</h3>
+                <p>Our AI uses advanced algorithms trained on thousands of engineering projects to perform complex structural calculations, load analysis, and design optimization. It automatically applies relevant building codes, safety factors, and engineering principles while maintaining accuracy and compliance standards.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>Can AI adapt to my company's specific drawing standards?</h3>
+                <p>Yes! BuildTwin AI learns from your existing drawings and company standards. It automatically adapts to your preferred drawing layouts, annotation styles, layer structures, and company-specific requirements. The more you use it, the better it becomes at matching your exact standards.</p>
+            </div>
+            
+            <div class="faq-card">
+                <h3>What happens if the AI makes an error?</h3>
+                <p>While our AI achieves 95%+ accuracy, we maintain human oversight for quality assurance. All AI-generated drawings are reviewed by certified engineers before delivery. If any issues are detected, they're automatically flagged for human review, ensuring your projects maintain the highest quality standards.</p>
+            </div>
+        </div>
+        
+        <div class="faq-footer">
+            <p>Didn't find what you were looking for?</p>
+            <a href="https://www.buildtwin.com/contact" target="_blank" class="faq-cta-button">Contact Our Team</a>
+        </div>
+    </div>
+</div>
+
+<!-- 5 Star Experience Section -->
+<!-- <app-hd-good-company [count]="5"></app-hd-good-company> -->
+
+<!-- Popup for Schedule Call -->
+<div class="popUP" [ngClass]="{'active':showPopup}">
+    <div class="popup-content">
+        <div class="popup-header">
+            <h3>Schedule a Call</h3>
+            <button class="close-btn" (click)="closePopupStatus($event)">
+                <i class="ti ti-x"></i>
+            </button>
+        </div>
+        <div class="popup-body">
+            <p>Our global Sales team is ready to help you grow with BuildTwin. Schedule a call to learn more about how we can fuel your growth.</p>
+            <div class="popup-actions">
+                <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2">
+                    Get Started
+                </a>
+                <button class="button-v2 border" (click)="closePopupStatus($event)">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-hd-footer></app-hd-footer>

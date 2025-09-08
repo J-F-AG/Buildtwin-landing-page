@@ -26,6 +26,7 @@ factorySlider: OwlOptions | null = null;
       serviceId: 10,
       color: "#C3EEFF",
       active: true,
+      deliveryType: 'AI + Human Engineering',
       // color: "#5c6a6e",
       // textColor: "#2f3739",
       description: "Discover skilled vendors for <strong>Rebar Detailing Services</strong> on BuildTwin. Get precise bar bending schedules, placement drawings, and material take-offs to ensure accuracy and compliance for efficient, cost-effective reinforcement projects."
@@ -38,6 +39,7 @@ factorySlider: OwlOptions | null = null;
       height: '137',
       serviceId: 9,
       color: "#C3EEFF",
+      deliveryType: 'AI + Human Engineering',
       // color: "#002e3b",
       // textColor: "#5395a7",
       description: "Find expert vendors for <strong>Precast Detailing Services</strong> on BuildTwin's marketplace. Access comprehensive and precise drawings for precast concrete components, ensuring seamless project execution with accurate fabrication details and international compliance."
@@ -51,6 +53,7 @@ factorySlider: OwlOptions | null = null;
       height: '137',
       serviceId: 12,
       color: "#FFE2E1",
+      deliveryType: 'AI + Human Engineering',
       // color: "#5dd8ad",
       // textColor: "#2e7159",
       description: "Connect with professional vendors offering <strong>Steel Detailing Services</strong> on BuildTwin. Obtain detailed shop and erection drawings for steel structures to enhance fabrication and installation efficiency, reducing errors and saving time on your projects."
@@ -63,6 +66,7 @@ factorySlider: OwlOptions | null = null;
       height: '137',
       serviceId: 16,
       color: "#dfffbc",
+      deliveryType: 'Human Only',
       // color: "#5dd8ad",
       // textColor: "#2e7159",
       description: "Connect with CAD Services providers on BuildTwin. Get accurate computer aided design deliverables – 2D and 3D modeling to detailed renderings to boost workflow, reduce errors and drive innovation across all phases of your project."
@@ -75,6 +79,7 @@ factorySlider: OwlOptions | null = null;
       width: '151',
       height: '137',
       color: "#FFE8CB",
+      deliveryType: 'AI + Human Engineering',
       // color: "#fcf477",
       // textColor: "#a8a23d",
       serviceId: 11,
@@ -87,6 +92,7 @@ factorySlider: OwlOptions | null = null;
       width: '151',
       height: '137',
       color: "#e0ffcc",
+      deliveryType: 'Human Only',
       // color: "#fcf477",
       // textColor: "#a8a23d",
       serviceId: 15,

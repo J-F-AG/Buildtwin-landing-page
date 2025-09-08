@@ -9,6 +9,30 @@ import { Title } from '@angular/platform-browser';
 export class AboutPageComponent {
 
     // title = 'BuildTwin - about the hub for engineering';
+    
+    // Leadership Team Data
+    leadershipTeam = [
+        {
+            name: 'Aaron Szymanski',
+            title: 'CPO',
+            linkedin: '#'
+        },
+        {
+            name: 'Anastasia Chodarcewicz',
+            title: 'VP Finance & Operations',
+            linkedin: '#'
+        },
+        {
+            name: 'Francesco Iorio',
+            title: 'CEO',
+            linkedin: '#'
+        },
+        {
+            name: 'Mark Tepper',
+            title: 'VP of Sales',
+            linkedin: '#'
+        }
+    ];
  
     constructor(private titleService:Title) {}
     

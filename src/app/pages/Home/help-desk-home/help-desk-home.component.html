@@ -2,7 +2,6 @@
 <!-- <div  #HdNavbarComp></div> -->
 <!-- <app-hd-banner-new></app-hd-banner-new>  -->
 <app-home-banner></app-home-banner>
-<app-company-logos-slider></app-company-logos-slider>
 <!-- <div  #HdBannerNewComp></div> -->
 <!-- <app-hd-banner-tabs></app-hd-banner-tabs> -->
 <!-- <app-hd-trusted-by></app-hd-trusted-by> -->
@@ -14,6 +13,64 @@
 <!-- <app-hd-providers></app-hd-providers>  -->
 <!-- <div  #HdProvidersComp></div> -->
 <!-- <app-hd-solution-provider></app-hd-solution-provider> -->
+<div class="global-mb" id="ai-capabilities">
+    <div class="container heading-sticky">
+        <div class="heading center v2">
+                <h2 class="title">
+                    BuildTwin <span class="ai-capabilities-highlight">AI Capabilities</span>
+                </h2>
+                <p class="small-title">
+                    Let AI handle the tedious, repetitive tasks—so your team can focus on what truly matters: engineering.
+                </p>
+        </div>
+    </div>
+    <app-bottom-content></app-bottom-content>
+    <div class="container">
+        <div class="text-center" style="margin-top: 40px;">
+            <a [routerLink]="[_languageService.currentLanguage,'ai-capabilities']" class="button-v2">
+                View All AI Capabilities
+            </a>
+        </div>
+    </div>
+</div>
+
+<app-heavy-lifting></app-heavy-lifting>
+<app-hd-integrations></app-hd-integrations>
+    <div class="global-mb">
+        <div class="container heading-sticky">
+            <div class="heading center v2 results-heading-spacing">
+                <h2 class="title">
+                    delivering <span>results</span> with BuildTwin
+                </h2>
+                <p class="small-title">
+                    End-to-End with fixed pricing, quality solved and nearly instant turnaround for detailing drawings -
+                    <br>insured and contracted in your local jurisdiction.
+                </p>
+            </div>
+        </div>
+        <app-service-list [hideTitle]="true"></app-service-list>
+    </div>
+<div class="global-mb">
+
+    
+    <!-- <div class="container heading-sticky">
+        <div class="heading center v2">
+            <h2 class="title">Find Structural Specialist & Solutions Provider</h2>
+            <span class="subTitle">Buildtwin connects you with expert providers for data centres, bridges, tunnels,
+                <br>
+                road, precast structures, industrial buildings, airports and hospitals.</span>
+        </div>  
+    </div> -->
+
+    <!-- 
+    <app-special-project [heading]="true"></app-special-project>
+    -->
+
+
+    
+</div>
+<app-hd-testimonials></app-hd-testimonials>
+<app-hd-good-company [count]="5"></app-hd-good-company>
 <div class="bg global-mb">
     <div class="container heading-sticky">
         <div class="heading center v2">
@@ -43,43 +100,6 @@ projects and connect with top-reated experts
         </div>
     </app-project-list>
 </div>
-
-<app-heavy-lifting></app-heavy-lifting>
-<app-hd-integrations></app-hd-integrations>
-<div class="global-mb">
-    <div class="container heading-sticky">
-        <div class="heading center v2">
-                <h2 class="title">
-                    Explore  <span>Engineering Services</span>
-                </h2>
-                <p class="small-title">
-                    Navigate services and connect with top professionals with ease
-                </p>
-        </div>
-    </div>
-    <app-service-list [hideTitle]="true"></app-service-list>
-</div>
-<div class="global-mb">
-
-    
-    <!-- <div class="container heading-sticky">
-        <div class="heading center v2">
-            <h2 class="title">Find Structural Specialist & Solutions Provider</h2>
-            <span class="subTitle">Buildtwin connects you with expert providers for data centres, bridges, tunnels,
-                <br>
-                road, precast structures, industrial buildings, airports and hospitals.</span>
-        </div>  
-    </div> -->
-
-    <!-- 
-    <app-special-project [heading]="true"></app-special-project>
-    -->
-
-
-    
-</div>
-<app-tt-testimonials></app-tt-testimonials>
-<app-hd-good-company [count]="5"></app-hd-good-company>
 <!-- <div  #HdGoodCompanyComp></div> -->
 <!-- <app-hd-why-buildtwin></app-hd-why-buildtwin> -->
 <!-- <div  #HdWhyBuildtwinComp></div> -->

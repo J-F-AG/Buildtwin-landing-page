@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/services/language.service';
@@ -36,8 +37,8 @@ tabHead:any
 selectedIndex: number = 0
   tabDetail: any =[
     {
-      icon:'assets/images/icons/manage-portfolio.png',
-      text:'manage Portfolio',
+      icon:'assets/images/icons/match.png',
+      text:'Collaborate with AI',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
@@ -45,15 +46,15 @@ selectedIndex: number = 0
     },
     {
       icon:'assets/images/icons/reach.png',
-      text:'Reach',
+      text:'Track with AI',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
       targetwebp2x: 'assets/images/for-seller/mange-portfolio@2x.webp',
     },
     {
-      icon:'assets/images/icons/match.png',
-      text:'Match',
+      icon:'assets/images/icons/manage-portfolio.png',
+      text:'Connectivity',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
@@ -69,53 +70,59 @@ selectedIndex: number = 0
     },
     {
       icon:'assets/images/icons/analyze.png',
-      text:'Analyze',
+      text:'Automated Documentation',
       target: 'assets/images/for-seller/mange-portfolio.jpg',
       target2x: 'assets/images/for-seller/mange-portfolio@2x.jpg',
       targetwebp: 'assets/images/for-seller/mange-portfolio.webp',
       targetwebp2x: 'assets/images/for-seller/mange-portfolio@2x.webp',
     }
   ]
-  constructor(private titleService: Title, private router: Router, public _languageService:LanguageService) {
-    router.events.subscribe((val) => {
+  constructor(private titleService: Title, private router: Router, public _languageService:LanguageService, @Inject(PLATFORM_ID) private platformId: Object) {
+    router.events.subscribe(() => {
+      if (!isPlatformBrowser(this.platformId)) { return; }
       setTimeout(() => {
-      this.scrollActivated = document.getElementById('scrollActivated');
-        if(this.scrollActivated){
-          this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-          this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-          console.log(this.scrollDivOffsettop, this.scrolledDivHeight);
-        } else {
-          console.error('Element with ID scrollActivated not found');
+        try { this.scrollActivated = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (init):', error); }
+        if (this.scrollActivated) {
+          try {
+            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
+            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
+          } catch (error) {
+            console.error('getBoundingClientRect failed for scrollActivated (init):', error);
+          }
         }
       }, 2000);
     });
-    try {
-      document.body.classList.add('white-show-wrapper');
-    } catch (error) {
-      
+    if (isPlatformBrowser(this.platformId)) {
+      try { document.body.classList.add('white-show-wrapper'); } catch (error) { console.error('classList.add failed on body (constructor):', error); }
     }
-    
   }
 
 
 
   scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      // Scroll the section into view smoothly
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-      // Adjust scroll position to maintain a 100-pixel gap from the top of the viewport
-      setTimeout(() => {
-        const offsetTop = section.getBoundingClientRect().top;
-        const desiredOffset = offsetTop - 390; // Adjust the desired offset as needed
-        window.scrollBy(0, desiredOffset);
-      }, 100); // Adjust the delay if needed
+  if (!isPlatformBrowser(this.platformId)) { return; }
+    try {
+      let section: HTMLElement | null = null;
+      try { section = document.getElementById(sectionId); } catch (error) { console.error('getElementById failed in scrollToSection for:', sectionId, error); }
+      if (section) {
+        try { section.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (error) { console.error('scrollIntoView failed in scrollToSection for:', sectionId, error); }
+        setTimeout(() => {
+          try {
+            const offsetTop = section!.getBoundingClientRect().top;
+            const desiredOffset = offsetTop - 390;
+            try { window.scrollBy(0, desiredOffset); } catch (error) { console.error('window.scrollBy failed in scrollToSection for:', sectionId, error); }
+          } catch (error) {
+            console.error('getBoundingClientRect failed during offset adjust in scrollToSection for:', sectionId, error);
+          }
+        }, 100);
+      }
+    } catch (error) {
+      // ignore outer failures
     }
   }
 
   ngOnInit(): void {
-    this.initHubSpotForm();
+    // this.initHubSpotForm();
 
 
 
@@ -157,10 +164,6 @@ selectedIndex: number = 0
     this.selectedIndex = index
   }
   ngOnDestroy() {
-    try {
-      document.body.classList.remove('white-show-wrapper');
-    } catch (error) {
-      
-    }
+  try { document.body.classList.remove('white-show-wrapper'); } catch (error) { console.error('classList.remove failed on body (ngOnDestroy):', error); }
   }
 }

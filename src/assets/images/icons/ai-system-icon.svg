@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield background -->
+  <path d="M24 4L42 12V24C42 32.8366 34.8366 40 26 40H22C13.1634 40 6 32.8366 6 24V12L24 4Z" stroke="#1E40AF" stroke-width="2" fill="none"/>
+  
+  <!-- Circuit pattern inside shield -->
+  <path d="M18 20H22M26 20H30M18 24H22M26 24H30M18 28H22M26 28H30" stroke="#1E40AF" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Central AI node -->
+  <circle cx="24" cy="24" r="3" stroke="#1E40AF" stroke-width="2" fill="none"/>
+  
+  <!-- Connection lines -->
+  <path d="M21 24L18 24M30 24L27 24M24 21L24 18M24 27L24 30" stroke="#1E40AF" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

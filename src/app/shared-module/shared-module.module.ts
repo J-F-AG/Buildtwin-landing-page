@@ -47,7 +47,7 @@ import { VideoPopupComponent } from '../pages/includes/video-popup/video-popup.c
 import { QualifiedComponent } from '../pages/marketplace/provide-service/qualified/qualified.component';
 import { MarketPlaceComponent } from '../pages/marketplace/provide-service/market-place/market-place.component';
 import { GetStarted1Component } from '../pages/includes/get-started1/get-started1.component';
-import { EmFaqComponent } from '../pages/includes/em-faq/em-faq.component';
+// import { EmFaqComponent } from '../pages/includes/em-faq/em-faq.component';
 import { TtPartnersComponent } from '../pages/marketplace/marketPlace/tt-partners/tt-partners.component';
 import { TaskManagementComponent } from '../pages/marketplace/marketPlace/task-management/task-management.component';
 import { CtaComponent } from '../pages/includes/cta/cta.component';
@@ -72,7 +72,7 @@ import { DrawingFreelancersComponent } from '../pages/services-new/drawing-freel
     QualifiedComponent,
     MarketPlaceComponent,
     GetStarted1Component,
-    EmFaqComponent, // provide-service, pricing-page, faq-page, faq-page,
+    // EmFaqComponent, // provide-service, pricing-page, faq-page, faq-page,
     TtPartnersComponent, // time-tracking-home, blog-page
     TaskManagementComponent, // time-tracking-home, online-meeting-home
     CtaComponent, // time-tracking-home, email-marketing-home
@@ -175,7 +175,7 @@ import { DrawingFreelancersComponent } from '../pages/services-new/drawing-freel
     QualifiedComponent,
     MarketPlaceComponent,
     GetStarted1Component,
-    EmFaqComponent,
+    // EmFaqComponent,
     TtPartnersComponent,
     TaskManagementComponent,
     CtaComponent,

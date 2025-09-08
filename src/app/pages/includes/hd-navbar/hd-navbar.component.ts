@@ -42,18 +42,26 @@ export class HdNavbarComponent {
     toggleClass() {
         this.classApplied = !this.classApplied;
 
-        document.getElementsByTagName('body')[0].classList.toggle('menuToggle')
+        try {
+          document.getElementsByTagName('body')[0].classList.toggle('menuToggle')
+        } catch (error) {
+          
+        }
     }
 
     // Navbar Sticky
     isSticky: boolean = false;
     @HostListener('window:scroll', ['$event'])
     checkScroll() {
-        const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        try {
+          const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if (scrollPosition >= 50) {
             this.isSticky = true;
         } else {
             this.isSticky = false;
+        }
+        } catch (error) {
+          
         }
     }
 
@@ -65,7 +73,11 @@ export class HdNavbarComponent {
       }
       manageToggle(event:any){
         this.showDropdownStatus = false
-        document.getElementsByTagName('body')[0].classList.remove('menuToggle')
+        try {
+          document.getElementsByTagName('body')[0].classList.remove('menuToggle')
+        } catch (error) {
+          
+        }
 
 
       }
@@ -84,7 +96,7 @@ export class HdNavbarComponent {
       // script.onload = () => {
       // };
 
-      this.initHubSpotForm();
+      // this.initHubSpotForm();
     }
 
 
@@ -106,15 +118,19 @@ export class HdNavbarComponent {
           this.showPopup1 =false
         
           }
-          isDropdownLinkActive(): boolean {
-            return this.currentUrl.includes('good-reason') || 
-                   this.currentUrl.includes('ai-project-management') || 
-                   this.currentUrl.includes('integrations') || 
-                   this.currentUrl.includes('use-cases') || 
-                   this.currentUrl.includes('faq') || 
-                   this.currentUrl.includes('contact') || 
-                   this.currentUrl.includes('about') || 
-                   this.currentUrl.includes('data-safety');
-          }
+              isDropdownLinkActive(): boolean {
+        return this.currentUrl.includes('good-reason') || 
+               this.currentUrl.includes('ai-project-management') || 
+               this.currentUrl.includes('integrations') || 
+               this.currentUrl.includes('use-cases') || 
+               this.currentUrl.includes('faq') || 
+               this.currentUrl.includes('contact') || 
+               this.currentUrl.includes('about') || 
+               this.currentUrl.includes('data-safety');
+    }
+
+    isAboutPage(): boolean {
+        return this.currentUrl.includes('about');
+    }
 
 }

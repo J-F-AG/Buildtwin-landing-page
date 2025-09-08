@@ -12,9 +12,31 @@
   .countryTraning {
     margin-bottom: 18px !important;
 }
+#ai-capabilities {
+  padding-top: 40px;
+  
+  .ai-capabilities-highlight {
+    background: #0053FA;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+}
+
 
 @media (max-width:767px){
  :host ::ng-deep .integrations-area.ptb-75 {
     padding-top: 30px !important;
 }
+}
+
+.results-heading-spacing {
+  margin-bottom: 100px !important;
+}
+
+@media (max-width: 768px) {
+  .results-heading-spacing {
+    margin-bottom: 60px !important;
+  }
 }

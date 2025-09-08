@@ -1,0 +1,250 @@
+:host ::ng-deep { 
+    .global-mb {
+        margin-bottom: 46px;
+    }
+    .head {
+        .pre-filled {
+            position: absolute;
+            left: calc(100% - 55px);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 175px;
+            height: 132px;
+            border-radius: 0 132px 132px 0;
+            background: #b0e020;
+            z-index: 1;
+            font-size: 16px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 36px;
+        }
+        width: 992px;
+        height: 184px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 23px;
+        font-weight: 600;
+        margin: 0 auto;
+        top: 29px;
+        margin-bottom: 165px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 92px;
+            background: url(/assets/images/for-seller/head-bg.jpg) no-repeat;
+            background-size: cover;
+            z-index: 2;
+        }
+        .center {
+            width: 246px;
+            height: 246px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 40px;
+            background: #002e3b;
+            position: relative;
+            z-index: 3;
+            font-weight: 400;
+            &::after {
+                content: "";
+                position: absolute;
+                left: -10px;
+                top: -10px;
+                bottom: -10px;
+                right: -10px;
+                background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='266' ry='266' stroke='black' stroke-width='1' stroke-dasharray='10%2c 15' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+            }
+            
+            .cursor-icon {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                    width: 0;
+                    height: 0;
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    border-bottom: 40px solid white;
+                }
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(-45deg) translateY(8px);
+                    width: 0;
+                    height: 0;
+                    border-left: 16px solid transparent;
+                    border-right: 16px solid transparent;
+                    border-bottom: 32px solid #002e3b;
+                }
+            }
+        }
+        span {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+            font-size: 23px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+    }
+
+    .info-container {
+        display: flex;
+        .rating-box {
+            flex: 1;
+            position: relative;
+            &::after {
+                background: linear-gradient(to bottom, #e3d9ff, #1b5cfa);
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 1px;
+                height: 100%;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+            .rating-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                padding: 6px 30px;
+                text-align: center;
+                .rating {
+                    font-size: 30px;
+                    color: #0053fa;
+                    font-weight: 600;
+                }
+                .rating-text {
+                    font-size: 16px;
+                }
+                .star {
+                    padding-top: 8px;
+                    padding-bottom: 6px;
+                }
+            }
+        }
+    }
+    .block-wrapper {
+        display: flex;
+        gap: 17px;
+        .block {
+            flex: 1;
+            width: calc(25% - 12.80px);
+            border: 1px solid #d5d9db;
+            border-radius: 23px;
+            padding: 39px 38px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 317px;
+            .count {
+                display: block;
+                font-size: 45px;
+                font-weight: 600;
+                color: #0053fa;
+                margin-bottom: 0;
+            }
+            p {
+                font-size: 16px;
+                color: #002e3b;
+                margin-bottom: 0;
+            }
+            img {
+                margin-top: auto;
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width : 900px) {
+    :host ::ng-deep .info-container {
+        flex-wrap: wrap;
+        .rating-box {
+            .rating-info {
+                padding: 6px 10px;
+                .rating {
+                    font-size: 20px;
+                }
+                .rating-text {
+                    font-size: 14px;
+                }
+                .star {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    :host ::ng-deep {
+        .info-container {
+            row-gap: 10px;
+            .rating-box {
+                flex: auto;
+                width: 50%;
+                max-width: 50%;
+            }
+        }
+        .head {
+            width: 350px;
+            flex-direction: column;
+            gap: 60px;
+            padding: 100px 0;
+            height: auto;
+            &::after {
+                border-radius: 262px;
+            }
+            .pre-filled {
+                left: 50%;
+                top: calc(100% - 30px);
+                transform: translateX(-50%);
+                border-radius: 0 0 132px 132px;
+                padding-left: 0;
+                padding-top: 30px;
+            }
+        }
+        .block-wrapper  {
+            flex-direction: column;
+            .block {
+                width: auto;
+                gap: 30px;
+            }
+        }
+    }
+}

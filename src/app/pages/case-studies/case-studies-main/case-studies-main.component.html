@@ -1,0 +1,95 @@
+<app-hd-navbar></app-hd-navbar>
+<div class="componentWrapper">
+    <div class="banner-global container">
+        <div class="banner-main">
+            <div class="banner-content">
+                <div>
+                    <h1>
+                        Get free competetive quotes from
+                        <span>100s of engineering providers</span>
+                    </h1>
+                    <p>
+                        With access to one of the <u>world's largest portfolios</u> of independent 
+                    <br>engineering consultants and prequalified providers.
+                    </p>
+                    <div>
+                        <form class="get-started-banner" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+                            <input 
+                            type="text" 
+                            formControlName="email" 
+                            placeholder="Enter your email ID" 
+                            [ngClass]="{'invalid': email.invalid && email.touched}"
+                            />
+                            <button class="button-v2 explore_page_get_started_for_free" type="submit" [disabled]="emailForm.invalid">
+                            Get started for FREE
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="banner-time">
+                    <figure>
+                        
+                    <picture>
+                        <!-- WebP format -->
+                        <source 
+                          srcset="assets/images/buildtwin-logo.webp, assets/images/buildtwin-logo@2x.webp 2x" 
+                          type="image/webp">
+                      
+                        <!-- Fallback to JPEG -->
+                        <source 
+                          srcset="assets/images/buildtwin-logo.png, assets/images/buildtwin-logo@2x.png 2x" 
+                          type="image/jpeg">
+                      
+                        <!-- Default img tag as fallback -->
+                        <img 
+                          src="assets/images/buildtwin-logo.png" 
+                          alt="Buildtwin" 
+                          width="46" 
+                          height="52">
+                      </picture>    
+                    </figure>
+                    <div class="banner-time-detail">
+                        <span class="label">
+                            Fast & Secure | with signed NDA
+                        </span>
+                        <span class="time">
+                            <5 minutes
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-image">
+                <figure>
+                    <a class="link-abs link1" target="_blank" [routerLink]="'/services/pre-cast-detailing-services'"></a>
+                    <a class="link-abs link2" target="_blank" [routerLink]="'/services/rebar-detailing-services'"></a>
+                    <a class="link-abs link3" target="_blank" [routerLink]="'/services/steel-detailing-services'"></a>
+                    <picture>
+                        <!-- WebP format -->
+                        <source 
+                          srcset="assets/images/explore-banner.webp, assets/images/explore-banner@2x.webp 2x" 
+                          type="image/webp">
+                      
+                        <!-- Fallback to JPEG -->
+                        <source 
+                          srcset="assets/images/explore-banner.jpg, assets/images/explore-banner@2x.jpg 2x" 
+                          type="image/jpeg">
+                      
+                        <!-- Default img tag as fallback -->
+                        <img 
+                          src="assets/images/explore-banner.jpg" 
+                          alt="Explore Banner" 
+                          width="659" 
+                          height="556">
+                      </picture>                      
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <app-project-list></app-project-list>
+    <app-company-list></app-company-list>
+    <app-service-list></app-service-list>
+    <app-global-standards></app-global-standards>
+  
+</div>
+<app-hd-footer></app-hd-footer>

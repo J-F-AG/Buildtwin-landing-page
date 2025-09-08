@@ -1,137 +1,209 @@
-.teamPage {
-    padding-top: 161px;
-    padding-bottom: 74px;
+// Hero Section Styles
+.hero-section {
+    background: var(--themeColor);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+    position: relative;
+}
 
-    h1 {
-        i {
-            color: var(--themeColor);
-            font-style: normal;
-        }
-    }
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-    .heading {
-        margin-bottom: 160px;
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    
+    .brand-text {
+        color: var(--themeColor);
+        font-weight: 800;
+        background: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-right: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        text-shadow: none;
     }
 }
 
-.aboutTeamBanner {
-    position: relative;
-
-    .imageBg {
-        img {
-            width: 100%;
-        }
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 0;
+    
+    u {
+        color: #ffffff;
+        text-decoration: underline;
+        text-decoration-color: #ffd700;
+        text-decoration-thickness: 3px;
     }
+}
 
-    .aboutBanner {
-        width: 41.004%;
-        position: absolute;
-        left: 50%;
-        top: -143px;
-        transform: translateX(-50%);
-        mix-blend-mode: darken;
-
-        img {
-            width: 100%;
-        }
-
-        .bt-thumb {
-            position: absolute;
-            width: 117px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -43%);
-        }
+// Responsive Hero
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        padding: 100px 20px 60px;
     }
-
-    [class^="leftImage-"],
-    [class^="rightImage-"] {
-        position: absolute;
-        margin-bottom: 0;
-
-        img {
-            border-radius: 5px;
-        }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
     }
-
-    .blueTick {
-        position: absolute;
-        margin-bottom: 0;
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
     }
+}
 
-    .leftImage-1 {
-        left: 70px;
-        top: -42px;
+// Leadership Team Section Styles
+.leadership-section {
+    margin-top: 80px;
+    margin-bottom: 100px;
+    padding-top: 60px;
+}
+
+.leadership-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--themeColor);
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.leadership-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member-photo {
+    margin-bottom: 20px;
+    
+    .photo-placeholder {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #f0f0f0;
+        border: 2px solid #e0e0e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+        font-size: 14px;
     }
+}
 
-    .leftImage-2 {
-        left: 269px;
-        top: -55px;
+.member-info {
+    background: var(--themeColor);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    text-align: left;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.member-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.member-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.expand-icon {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.member-title {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-weight: 500;
+}
+
+.linkedin-link {
+    color: white;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: right;
+    margin-top: auto;
+    transition: opacity 0.3s ease;
+    
+    &:hover {
+        opacity: 0.8;
     }
+}
 
-    .leftImage-3 {
-        left: 60px;
-        top: 30%;
+// Responsive Design
+@media (max-width: 1200px) {
+    .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 800px;
     }
+}
 
-    .leftImage-4 {
-        left: 198px;
-        top: 17%;
-
-        .blueTick {
-            right: -12px;
-            top: -12px;
-        }
+@media (max-width: 768px) {
+    .leadership-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+        text-align: center;
     }
-
-    .leftImage-5 {
-        left: 111px;
-        bottom: 8.8%;
-
-        .blueTick {
-            right: -7px;
-            top: -7px;
-        }
+    
+    .leadership-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+        max-width: 400px;
     }
-
-    .leftImage-6 {
-        left: 305px;
-        bottom: -23px;
+    
+    .member-photo .photo-placeholder {
+        width: 100px;
+        height: 100px;
     }
-
-    .rightImage-1 {
-        right: 243px;
-        top: 10.3%;
-
-        .blueTick {
-            right: -7px;
-            top: -7px;
-        }
+    
+    .member-name {
+        font-size: 1.2rem;
     }
-
-    .rightImage-2 {
-        right: 249px;
-        top: 44.8%;
-
-        .blueTick {
-            left: -11px;
-            bottom: -11px;
-        }
-    }
-
-    .rightImage-3 {
-        right: 22px;
-        top: -66px;
-    }
-
-    .rightImage-4 {
-        right: 100px;
-        top: 28.3%;
-    }
-
-    .rightImage-5 {
-        right: 78px;
-        bottom: 0;
+    
+    .member-title {
+        font-size: 0.9rem;
     }
 }
 
@@ -145,94 +217,6 @@
             h1 br {
                 display: none;
             }
-        }
-    }
-
-    .aboutTeamBanner {
-        background: #e8eff0;
-        border-radius: 15px;
-        padding: 430px 0 500px;
-        .imageBg {
-            display: none;
-        }
-
-        .aboutBanner {
-            position: relative;
-            left: auto;
-            top: 0;
-            width: 330px;
-            transform: none;
-            margin: 0 auto;
-
-            .bt-thumb {
-                width: 82px;
-            }
-        }
-
-        .leftImage-1 {
-            left: 50px;
-            top: -42px;
-        }
-
-        .leftImage-2 {
-            left: auto;
-            right: 41px;
-            top: 25px;
-        }
-
-        .leftImage-3 {
-            left: 40px;
-            top: 110px;
-        }
-
-        .leftImage-4 {
-            left: auto;
-            right: 35px;
-            top: 150px;
-        }
-
-        .leftImage-5 {
-            left: 20px;
-            bottom: auto;
-            top: 250px;
-        }
-
-        .leftImage-6 {
-            left: auto;
-            bottom: auto;
-            right: 30px;
-            top: 325px;
-        }
-
-        .rightImage-1 {
-            right: auto;
-            left: 50px;
-            top: auto;
-            bottom: 310px;
-        }
-
-        .rightImage-2 {
-            right: auto;
-            left: 20px;
-            top: auto;
-            bottom: 115px;
-        }
-
-        .rightImage-3 {
-            right: 25px;
-            top: auto;
-            bottom: 340px;
-        }
-
-        .rightImage-4 {
-            right: 50px;
-            top: auto;
-            bottom: 200px;
-        }
-
-        .rightImage-5 {
-            right: 30px;
-            bottom: 30px;
         }
     }
 }

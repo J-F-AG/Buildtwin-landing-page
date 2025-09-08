@@ -1,0 +1,120 @@
+.heading {
+    .small-title {
+        line-height: 1.333;
+    }
+}
+
+.list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 24px; /* reduced to tighten space above CTA */
+    .block {
+        width: 33.333%;
+        text-align: center;
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 36px; /* reduced to tighten vertical spacing */
+        position: relative;
+        figure {
+            width: 190px;
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f6f7f9;
+            border-radius: 50%;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 15px;
+            color: var(--lightTextColor);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: #0053fa;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0, 83, 250, 0.3);
+            z-index: 10;
+        }
+        
+        .time-label {
+            background: #FF6B35;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 15px 0;
+            display: inline-block;
+        }
+    }
+}
+
+.buildtwinPro {
+    margin-bottom: 15px;
+    position: relative;
+    &:before {
+        content: '';
+        border-left: 32px transparent solid;
+        border-right: 32px transparent solid;
+        border-top: 28px #fff solid;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+    h2 {
+        span {
+            color: #0053fa;
+        }
+    }
+
+    .list-wrapper {
+        padding-bottom: 0;
+        .block {
+            figure {
+                background: #fff;
+            }
+        }
+    }
+}
+
+.how-cta {
+    margin-top: 8px; /* tighten space above CTA */
+    margin-bottom: 56px; /* add breathing room before next section */
+}
+
+@media (max-width: 767px) {
+    .list-wrapper {
+        flex-direction: column;
+
+        .block {
+            width: auto;
+            padding-bottom: 50px;
+        }
+    }
+
+    .heading {
+        .small-title {
+            br {
+                display: none;
+            }
+        }
+    }
+}

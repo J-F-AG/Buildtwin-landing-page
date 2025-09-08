@@ -40,6 +40,118 @@ $buildtwin-theme: mat.define-light-theme(
 @include mat.all-component-themes($buildtwin-theme);
 
 /* You can add global styles to this file, and also import other style files */
+
+/* BuildTwin AI Section Global Styles */
+.buildtwin-ai-section {
+    padding: 80px 0 !important;
+    background: #ffffff !important;
+    text-align: center !important;
+    
+    .heading {
+        margin-bottom: 60px !important;
+        
+        .title {
+            font-size: 48px !important;
+            font-weight: 700 !important;
+            color: #0E0E28 !important;
+            margin-bottom: 24px !important;
+            
+            .ai-badge {
+                background: #f0f0f0 !important;
+                color: #0E0E28 !important;
+                padding: 8px 16px !important;
+                border-radius: 8px !important;
+                margin-left: 8px !important;
+                font-size: 48px !important;
+                font-weight: 700 !important;
+            }
+        }
+        
+        .small-title {
+            font-size: 20px !important;
+            color: #666 !important;
+            line-height: 1.5 !important;
+            max-width: 600px !important;
+            margin: 0 auto !important;
+        }
+    }
+    
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 40px !important;
+        margin-bottom: 50px !important;
+        
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr !important;
+            gap: 30px !important;
+        }
+        
+        .feature-item {
+            text-align: center !important;
+            
+            .feature-icon {
+                width: 80px !important;
+                height: 80px !important;
+                border: 2px solid #0E0E28 !important;
+                border-radius: 50% !important;
+                margin: 0 auto 20px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                position: relative !important;
+                background: white !important;
+                
+                .bt-logo {
+                    font-weight: bold !important;
+                    color: #0E0E28 !important;
+                    font-size: 18px !important;
+                    z-index: 2 !important;
+                }
+                
+                svg {
+                    position: absolute !important;
+                    top: 0 !important;
+                    left: 0 !important;
+                }
+            }
+            
+            h3 {
+                color: #0E0E28 !important;
+                margin-bottom: 15px !important;
+                font-size: 20px !important;
+                font-weight: 600 !important;
+            }
+            
+            p {
+                color: #666 !important;
+                line-height: 1.6 !important;
+                font-size: 14px !important;
+            }
+        }
+    }
+    
+    .cta-section {
+        text-align: center !important;
+        
+        .button-v2 {
+            background: #0053fa !important;
+            color: white !important;
+            border: none !important;
+            padding: 15px 30px !important;
+            border-radius: 8px !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            cursor: pointer !important;
+            transition: background-color 0.2s ease !important;
+            
+            &:hover {
+                background: #0041c7 !important;
+            }
+        }
+    }
+}
+
 :root {
   --fontFamily: "new-rubrik-edge", sans-serif;
   --archivoFontFamily: "new-rubrik-edge", sans-serif;
@@ -90,6 +202,7 @@ $buildtwin-theme: mat.define-light-theme(
 
 // Utilities CSS
 @import "./utilities";
+@import "aos/dist/aos.css";
 
 body {
   margin: 0;
@@ -204,7 +317,7 @@ h1 {
 .small-title {
   font-family: var(--fontFamily);
   margin-bottom: 7px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: inherit;
 }
@@ -1742,7 +1855,7 @@ display:flex;
   }
 }
 .popUP.active {
-  display: block;
+  display: flex !important;
   visibility: visible;
 }
 //   .popUP:after {

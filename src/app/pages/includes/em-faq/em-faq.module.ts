@@ -1,0 +1,18 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { EmFaqComponent } from './em-faq.component';
+
+@NgModule({
+  declarations: [
+    EmFaqComponent
+  ],
+  imports: [
+    CommonModule,
+    MatExpansionModule
+  ],
+  exports: [
+    EmFaqComponent
+  ]
+})
+export class EmFaqModule { }

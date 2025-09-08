@@ -1,0 +1,276 @@
+<div class="container">
+    <div class="our-specialisms">
+        <span>
+            Specialised on
+        </span>
+        <ul>
+            <li>
+                <img src="assets/images/for-buyer/icon1.jpg" width="34" height="37" alt="">
+                Data Center
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon2.jpg" width="34" height="37" alt="">
+                Pre-Cast
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon3.jpg" width="34" height="37" alt="">
+                High-rises
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon4.jpg" width="34" height="37" alt="">
+                Student Apartments
+            </li>
+            <li>
+                <img src="assets/images/for-buyer/icon5.jpg" width="34" height="37" alt="">
+                Infrastructure
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="group-image">
+    <a class="message" href="https://www.buildtwin.com/get-started" target="_blank">
+        <h3>
+            AI + Human Engineering
+        </h3>
+        <p>
+            Invite your supply-chain for free – and benefit from the BuildTwin delivery system
+        </p>
+    </a>
+    <!-- <img src="assets/images/for-buyer/group-image.jpg" width="1440" height="480" alt="Marketplace Banner"> -->
+    <picture>
+        <source srcset="assets/images/for-buyer/mobile-group-image.webp 1x, assets/images/for-buyer/mobile-group-image@2x.webp 767w" media="(max-width: 767px)" type="image/webp">
+        <source srcset="assets/images/for-buyer/group-image.webp 1x, assets/images/for-buyer/group-image@2x.webp 2x" type="image/webp">
+        <source srcset="assets/images/for-buyer/mobile-group-image.jpg 1x, assets/images/for-buyer/mobile-group-image@2x.jpg 767w" media="(max-width: 767px)">
+        <source srcset="assets/images/for-buyer/group-image.jpg 1x, assets/images/for-buyer/group-image@2x.jpg 2x">
+        <img src="assets/images/for-buyer/group-image.jpg" alt="Marketplace Banner" width="1440" height="480">
+    </picture>
+</div>
+<div class="container">
+
+<div class="task-management-area ptb-100">
+    <div class="heading center v2">
+<h2 class="title">The BuildTwin Delivery System</h2>
+<span class="small-title">
+    Procuring competent technical teams for complex projects, made easy.
+</span>
+</div>
+    <div class="tabbing">
+        <div class="line">
+            <span (click)="tabinbg(1)" [ngClass]="{'active':activeState >= 1}"><strong>1 </strong> <em>BuildTwin One</em></span>
+            <span (click)="tabinbg(2)" [ngClass]="{'active':activeState >= 2}"><strong>2 </strong> <em>BuildTwin Duett</em></span>
+            <span (click)="tabinbg(3)" [ngClass]="{'active':activeState >= 3}"><strong>3 </strong> <em>BuildTwin Trio</em></span>
+      <div class="svgFlex">
+        <img [ngClass]="{'active':activeState >= 2}" class="lineSvg" src="assets/images/line.svg" alt="Line">
+        <img [ngClass]="{'active':activeState >= 3}" class="lineSvg" src="assets/images/line.svg" alt="Line">
+      </div>
+        </div>
+     </div>  
+     
+     <div class="tabContent">
+                <div class="tab1" *ngIf="activeState===1">
+            <div class="blue-header">
+                <h2>BuildTwin One - the Delivery System</h2>
+            </div>
+
+            <p>
+                A single point of truth. BuildTwin consolidates CDEs, Models, E-Mails, MS-Teams and more into a single point of truth. 
+                Automate your workflow with our AI-powered delivery system that connects directly to your existing tools and processes.
+            </p>
+
+            <!-- Comparison Table -->
+            <div class="comparison-table">
+                <div class="table-header">
+                    <div class="offer-column">
+                        <div class="buildtwin-logo">buildtwin®</div>
+                        <div class="blue-bar"></div>
+                        <div class="icon-circle blue"></div>
+                        <div class="column-title">BuildTwin One - the Delivery System</div>
+                    </div>
+                    <div class="offer-column">
+                        <div class="buildtwin-logo">buildtwin®</div>
+                        <div class="blue-bar"></div>
+                        <div class="icon-circle dark-blue"></div>
+                        <div class="column-title">BuildTwin Duett - AI Quality Control</div>
+                    </div>
+                    <div class="offer-column">
+                        <div class="buildtwin-logo">buildtwin®</div>
+                        <div class="blue-bar"></div>
+                        <div class="icon-circle blue"></div>
+                        <div class="column-title">BuildTwin Trio - AI Generated Drawings</div>
+                    </div>
+                </div>
+                <div class="table-content">
+                    <div class="row">
+                        <div class="label">TIMELINE</div>
+                        <div class="cell">
+                            <div class="checkmark green">✓</div>
+                            <span>Meeting Timeline</span>
+                        </div>
+                        <div class="cell">
+                            <div class="checkmark red">✗</div>
+                            <span>Not Meeting Timeline</span>
+                        </div>
+                        <div class="cell">
+                            <div class="checkmark green">✓</div>
+                            <span>Meeting Timeline</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">LICENSE</div>
+                        <div class="cell">All Plan</div>
+                        <div class="cell">All Plan</div>
+                        <div class="cell">All Plan</div>
+                    </div>
+                    <div class="row">
+                        <div class="label">REGION</div>
+                        <div class="cell">India (GMT +5:30)</div>
+                        <div class="cell">Hong Kong (GMT +8:00)</div>
+                        <div class="cell">Hong Kong (GMT +8:00)</div>
+                    </div>
+                    <div class="row">
+                        <div class="label">RATING</div>
+                        <div class="cell">
+                            <div class="star-icon">★</div>
+                            <span>100% success</span>
+                        </div>
+                        <div class="cell">
+                            <div class="star-icon">★</div>
+                            <span>40% success</span>
+                        </div>
+                        <div class="cell">
+                            <div class="star-icon">★</div>
+                            <span>75% success</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">SKILLS</div>
+                        <div class="cell">
+                            <div class="skill-tags">
+                                <span class="tag">RGS Rebar</span>
+                                <span class="tag">AutoDesk</span>
+                                <span class="tag">BS Codes</span>
+                                <span class="tag">Concrete Drawings</span>
+                                <span class="tag more">+3 more</span>
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <div class="skill-tags">
+                                <span class="tag">RebarCAD</span>
+                                <span class="tag">ACI Codes</span>
+                                <span class="tag">BS Codes</span>
+                                <span class="tag">Formwork & Reinforcement Drawing</span>
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <div class="skill-tags">
+                                <span class="tag">RGS Rebar</span>
+                                <span class="tag">AutoDesk</span>
+                                <span class="tag">BS Codes</span>
+                                <span class="tag">Concrete Drawings</span>
+                                <span class="tag more">+1 more</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="label">TECHNICAL CONTACT</div>
+                        <div class="cell">
+                            <div class="contact-info">
+                                <div class="profile-pic"></div>
+                                <div class="blue-bar"></div>
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <div class="contact-info">
+                                <div class="profile-pic"></div>
+                                <div class="blue-bar"></div>
+                            </div>
+                        </div>
+                        <div class="cell">
+                            <div class="contact-info">
+                                <div class="profile-pic"></div>
+                                <div class="blue-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row actions">
+                        <div class="label"></div>
+                        <div class="cell">
+                            <button class="btn-review">Review</button>
+                            <button class="btn-approve">Approve</button>
+                        </div>
+                        <div class="cell">
+                            <button class="btn-review">Review</button>
+                            <button class="btn-approve">Approve</button>
+                        </div>
+                        <div class="cell">
+                            <button class="btn-review">Review</button>
+                            <button class="btn-approve">Approve</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+                  <div class="tab1" *ngIf="activeState===2">
+            <div class="blue-header">
+                <h2>BuildTwin Duett - AI Quality Control</h2>
+            </div>
+
+            <p>
+                Automated Quality Checklist customised for your needs. Our AI system provides audit trails, quality logs, 
+                and comprehensive reporting on quality issues to ensure superior quality and durability in every project.
+            </p>
+ 
+            <img src="assets/images/tab3.png" alt="tab3" width="" height="">
+         </div>
+                  <div class="tab1" *ngIf="activeState===3">
+            <div class="blue-header">
+                <h2>BuildTwin Trio - AI Generated Drawings</h2>
+            </div>
+
+            <p>
+                Accelerate drawing production from model to IFC. Our AI system automates sheets, enforces building codes, 
+                and enables real-time collaboration to deliver precise structural drawings with predictive submission dates.
+            </p>
+ 
+            <img  src="assets/images/tab4.png" alt="tab4" width="" height="">
+         </div>
+     </div>
+</div>
+</div>
+
+<!-- Three AI Capability Cards -->
+<div class="ai-capabilities-section">
+    <div class="container">
+        <div class="capabilities-grid">
+            <div class="capability-card">
+                <h3>AI Design Manager</h3>
+                <p>Optimize structural workflows for faster, more reliable delivery.</p>
+                <button class="btn-explore">Explore AI Design Manager</button>
+            </div>
+            <div class="capability-card">
+                <h3>AI Quality Control</h3>
+                <p>Catch issues early and ensure code compliance with confidence.</p>
+                <button class="btn-explore">Explore AI Quality Control</button>
+            </div>
+            <div class="capability-card">
+                <h3>AI Drawing Generation</h3>
+                <p>Produce structural drawings up to 3x faster with higher consistency.</p>
+                <button class="btn-explore">Explore AI Drawing Generation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Capability Statement Section -->
+<div class="capability-statement-section">
+    <div class="container">
+        <div class="statement-content">
+            <span class="buildtwin-tag">BUILDTWIN</span>
+            <h2 class="statement-title">Capability Statement</h2>
+        </div>
+    </div>
+</div>
+
+

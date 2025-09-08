@@ -57,7 +57,7 @@ export class ContactPageComponent {
         // // Initialize HubSpot form after the script is loaded
         // script.onload = () => {
         // };
-        // this.initHubSpotForm();
+        // // this.initHubSpotForm();
     }
     // private initHubSpotForm() {
     //     // Create the HubSpot form

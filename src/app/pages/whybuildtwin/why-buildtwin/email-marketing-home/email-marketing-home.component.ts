@@ -33,15 +33,15 @@ element:any
 
       router.events.subscribe((val) => {
         setTimeout(() => {
-          this.scrollActivated = document.getElementById('scrollActivated');
+          try { this.scrollActivated = document.getElementById('scrollActivated'); } catch (error) { console.error('getElementById failed for scrollActivated (init):', error); }
           if(this.scrollActivated){
-            this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top
-            this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height
-            console.log(this.scrollDivOffsettop,this.scrolledDivHeight);
-          } else {
-            console.error('Element with ID scrollActivated not found');
+            try {
+              this.scrollDivOffsettop = this.scrollActivated.getBoundingClientRect().top;
+              this.scrolledDivHeight = this.scrollActivated.getBoundingClientRect().height;
+            } catch (error) {
+              console.error('getBoundingClientRect failed for scrollActivated (init):', error);
+            }
           }
-          
         }, 2000);
     });
     }
@@ -55,7 +55,7 @@ element:any
     ngOnInit() {
         // this.titleService.setTitle(this.title);
         // this.isHeaderSticky = new Array(this.headerElements.length).fill(false);
-  this.element = document.getElementsByClassName('tableheader')
+  try { this.element = document.getElementsByClassName('tableheader'); } catch (error) { console.error('getElementsByClassName failed for tableheader (ngOnInit):', error); }
 
         
       }
@@ -127,9 +127,10 @@ element:any
       this.route.fragment.subscribe(fragment => {
           if (fragment) {
             setTimeout(() => {
-              const element = document.getElementById(fragment);
+              let element: HTMLElement | null = null;
+              try { element = document.getElementById(fragment); } catch (error) { console.error('getElementById failed for fragment target (ngAfterViewInit):', fragment, error); }
               if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                try { element.scrollIntoView({ behavior: 'smooth' }); } catch (error) { console.error('scrollIntoView failed for fragment target (ngAfterViewInit):', fragment, error); }
               }
             }, 2000); 
           }

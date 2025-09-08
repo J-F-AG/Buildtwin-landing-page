@@ -1,0 +1,254 @@
+// Palantir-inspired AI Capabilities Section
+.palantir-inspired-section {
+  padding: 120px 0 80px 0;
+  background: #ffffff;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.capabilities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.capability-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  min-height: 200px;
+  
+  &:hover {
+    background: rgba(128, 128, 128, 0.1);
+    padding: 40px 20px;
+    margin: 0 -20px;
+    
+    .section-title {
+      color: #0E0E28;
+      transform: translateX(20px);
+    }
+    
+    .section-identifier {
+      color: #0053FA;
+      transform: translateX(20px);
+    }
+    
+    .logo-text {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  
+  &.hovered {
+    background: rgba(128, 128, 128, 0.15);
+    padding: 40px 20px;
+    margin: 0 -20px;
+    
+    .section-content {
+      transform: translateX(20px);
+    }
+  }
+}
+
+.section-content {
+  flex: 1;
+  max-width: 35%;
+  z-index: 2;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #666666;
+  margin: 0 0 16px 0;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: -0.01em;
+  max-width: 280px;
+  white-space: normal;
+}
+
+.section-identifier {
+  font-size: 14px;
+  font-weight: 400;
+  color: #999999;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  letter-spacing: 0.02em;
+}
+
+.product-logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.logo-text {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0E0E28;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: -0.02em;
+  opacity: 0.9;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.screenshot-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 140px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeInCenter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+@keyframes fadeInCenter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+// Responsive design
+@media only screen and (max-width: 768px) {
+  .palantir-inspired-section {
+    padding: 80px 20px 60px 20px;
+    max-width: 100%;
+  }
+  
+  .capabilities-grid {
+    gap: 60px;
+  }
+  
+  .capability-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 0;
+    
+    &:hover {
+      background: rgba(128, 128, 128, 0.1);
+      padding: 30px 20px;
+      margin: 0 -20px;
+      
+      .section-title,
+      .section-identifier {
+        transform: translateX(0);
+      }
+    }
+    
+    &.hovered {
+      background: rgba(128, 128, 128, 0.15);
+      padding: 30px 20px;
+      margin: 0 -20px;
+      
+      .section-content {
+        transform: translateX(0);
+      }
+    }
+  }
+  
+  .section-content {
+    max-width: 100%;
+  }
+  
+  .section-title {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  
+  .section-identifier {
+    font-size: 12px;
+  }
+  
+  .product-logo {
+    align-self: flex-start;
+  }
+  
+  .logo-text {
+    font-size: 36px;
+  }
+  
+  .screenshot-overlay {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    height: 160px;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .palantir-inspired-section {
+    padding: 60px 20px 40px 20px;
+  }
+  
+  .capabilities-grid {
+    gap: 40px;
+  }
+  
+  .capability-section {
+    gap: 20px;
+    padding: 20px 0;
+    
+    &:hover {
+      background: rgba(128, 128, 128, 0.1);
+      padding: 20px 20px;
+      margin: 0 -20px;
+    }
+    
+    &.hovered {
+      background: rgba(128, 128, 128, 0.15);
+      padding: 20px 20px;
+      margin: 0 -20px;
+    }
+  }
+  
+  .section-title {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  
+  .section-identifier {
+    font-size: 10px;
+  }
+  
+  .logo-text {
+    font-size: 28px;
+  }
+  
+  .screenshot-overlay {
+    height: 120px;
+  }
+}

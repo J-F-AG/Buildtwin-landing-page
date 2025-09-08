@@ -1,0 +1,539 @@
+<div class="bg-blue">
+    <app-hd-navbar></app-hd-navbar>
+    
+    <app-om-banner-freelance2></app-om-banner-freelance2>
+    
+    <div class="tab-wrapper">
+        <div>
+            <ul class="tab-trigger-wrapper">
+                <li *ngFor="let item of tabDetail; let i = index" 
+                    [ngClass]="{active: selectedIndex === i}" 
+                    (click)="changeTab(i)">
+                    <img [src]="item.icon" width="29" height="29" alt="">
+                    {{ item.text }}
+                </li>
+            </ul>
+        </div>
+        <div class="tab-target-wrapper">
+            <!-- <img [src]="tabDetail[selectedIndex]?.target" width="1113" height="591" alt=""> -->
+             <picture>
+                <!-- WebP for mobile or smaller screens -->
+                <source 
+                    [attr.srcset]="tabDetail[selectedIndex]?.targetwebp + ' 1x, ' + tabDetail[selectedIndex]?.targetwebp2x + ' 2x'" 
+                    type="image/webp">
+
+                <!-- Fallback (JPG/PNG) for browsers that don't support WebP -->
+                <source 
+                    [attr.srcset]="tabDetail[selectedIndex]?.target + ' 1x, ' + tabDetail[selectedIndex]?.target2x + ' 2x'">
+
+                <!-- Actual <img> tag as fallback -->
+                <img 
+                    [src]="tabDetail[selectedIndex]?.target" 
+                    width="1113" 
+                    height="591" 
+                    alt="">
+            </picture>
+        </div>
+    </div>    
+  
+    <app-experence>
+        <div class="container">
+            <div class="heading center v2">
+                <h2 class="title">
+        
+                    Collaborate seamless with AI
+                    
+                </h2> 
+                <div class="subTitle">
+                    Intelligent automation for structural engineering drawings
+                    <br>Enhanced accuracy and efficiency in your design workflow 
+                </div>
+             </div>
+        </div>
+        <div class="head">
+            <div class="pre-filled">
+                AI Quality<br>
+                Control<br>
+                & Validation
+            </div>
+            <span class="human-engineering">
+                Human<br>
+                Engineering
+            </span>
+            <div class="center">
+                <div class="cursor-icon"></div>
+                BuildTwin<br>
+                One
+            </div>
+            <span>
+                AI<br>
+                Capabilities
+            </span>
+        </div>
+        
+        <!-- How it works Section -->
+        <div class="how-it-works-section">
+            <div class="container heading-sticky">
+                <div class="heading center v2">
+                    <h2 class="title">
+                        How it works
+                    </h2>
+                    <p class="small-title">Find out what makes BuildTwin the most trusted, efficient, and innovative marketplace
+                        <br>for finding and working with global talents.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="list-wrapper">
+                    <div class="block">
+                        <div class="step-number">1</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy6@2x.png"
+                                srcset="assets/images/icons/heavy6@2x.png 2x, assets/images/icons/heavy6.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>
+                            Set-up the AI<br>
+                            delivery system
+                        </h3>
+                        <div class="time-label">Takes less than 5 min</div>
+                        <p>Configure your AI delivery preferences and
+                            connect your existing tools for seamless
+                            integration with our platform.</p>
+                    </div>
+                    <div class="block">
+                        <div class="step-number">2</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy5@2x.png"
+                                srcset="assets/images/icons/heavy5@2x.png 2x, assets/images/icons/heavy5.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>
+                            Add AI<br>
+                            capabilities
+                        </h3>
+                        <p>Select from our comprehensive suite of
+                            AI-powered engineering tools and
+                            capabilities to enhance your workflow.</p>
+                    </div>
+                    <div class="block">
+                        <div class="step-number">3</div>
+                        <figure>
+                            <img src="assets/images/icons/heavy4@2x.png"
+                                srcset="assets/images/icons/heavy4@2x.png 2x, assets/images/icons/heavy4.png 1x" width="97"
+                                height="90" alt="image">
+                        </figure>
+                        <h3>Customized AI<br>
+                            Quality Control
+                        </h3>
+                        <p>Full control and visibility with industry-leading
+                            security protocols ensuring your data remains
+                            confidential and under your control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        </app-experence>
+        
+        <!-- What you can do at BuildTwin Section -->
+        <div class="what-you-can-do-section">
+            <div class="container">
+                <div class="heading center v2">
+                    <h2 class="title">What you can do with <span class="highlight">BuildTwin One</span></h2>
+                </div>
+                
+                <!-- Feature Cards Carousel -->
+                <div class="feature-cards-carousel">
+                    <div class="carousel-container">
+                        <!-- Navigation Arrows -->
+                        <button class="carousel-nav prev" (click)="prevSlide()" [disabled]="!canGoPrev()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        
+                        <div class="carousel-wrapper">
+                            <div class="block-box-wrapper" [style.transform]="'translateX(-' + (currentSlide * 25) + '%)'">
+                                <div class="block cursor" 
+                                     *ngFor="let item of carouselItems; let i = index" 
+                                     (click)="onClickArcadeTrigger(item.id)"
+                                     [class.fade-out]="i >= 4 && i < 8">
+                                    <div class="content">
+                                        <div class="icon-title">
+                                            <i>
+                                                <img [src]="item.icon" width="23" height="25" alt="">
+                                            </i>
+                                            <h3 [innerHTML]="item.title"></h3>
+                                        </div>
+                                        <p>{{ item.description }}</p>
+                                    </div>
+                                    <figure>
+                                        <img [src]="item.image" width="220" height="85" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="carousel-nav next" (click)="nextSlide()" [disabled]="!canGoNext()">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Middle Separator -->
+                <div class="ai-separator">
+                    <span>+ add</span>
+                    <div class="ai-badge">
+                        <span>AI Capabilities</span>
+                        <i class="star-icon">⭐</i>
+                        <i class="star-icon">⭐</i>
+                    </div>
+                </div>
+                
+                <!-- AI Capabilities Carousel Section -->
+                <div class="global-mb" id="ai-capabilities">
+                    
+                    <div class="container">
+                        <div class="how-it-work" id="next-section">
+                            <div class="block-section fullwidth">
+                                <div class="carousel-container">
+                                    <!-- Navigation Arrows -->
+                                    <button class="carousel-nav prev" (click)="prevAISlide()" [disabled]="!canGoPrevAI()">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div class="carousel-wrapper">
+                                        <div class="block-box-wrapper" [style.transform]="'translateX(-' + (currentAISlide * 25) + '%)'">
+                                            <div class="block cursor" 
+                                                 *ngFor="let item of buildTwinAICarouselItems; let i = index" 
+                                                 (click)="onClickArcadeTrigger(item.id)"
+                                                 [class.fade-out]="i >= 4 && i < 8">
+                                                <div class="content">
+                                                    <div class="icon-title">
+                                                        <i>
+                                                            <img [src]="item.icon" width="23" height="25" alt="">
+                                                        </i>
+                                                        <h3 [innerHTML]="item.title"></h3>
+                                                    </div>
+                                                    <p>{{ item.description }}</p>
+                                                </div>
+                                                <figure>
+                                                    <img [src]="item.image" width="220" height="85" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Overlay button for teasing more capabilities -->
+                                        <div class="teaser-overlay" *ngIf="currentAISlide > 0">
+                                            <div class="teaser-content">
+                                                <h4>Discover More AI Capabilities</h4>
+                                                <p>Explore our complete suite of AI-powered solutions</p>
+                                                <a [routerLink]="['ai-capabilities']" class="teaser-button">
+                                                    View All AI Capabilities
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="carousel-nav next" (click)="nextAISlide()" [disabled]="!canGoNextAI()">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- BuildTwin Pro Pricing Section -->
+        <div class="pricing-section">
+            <div class="container">
+                <div class="pricing-header">
+                    <h2 class="pricing-title">BuildTwin <span class="highlight">One</span> Pricing</h2>
+                    <p class="pricing-subtitle">Effortless sharing, real-time collaboration, and audit-ready tracking keep every stakeholder on the latest drawing—seamlessly integrated with your systems.</p>
+                </div>
+                
+                <div class="pricing-cards">
+                    <!-- Free Tier Card -->
+                    <div class="pricing-card free-tier">
+                        <div class="card-header">
+                            <h3>Sharing & Tracking</h3>
+                            <p class="card-subtitle">Free for every team—smart, zero-cost file sharing.</p>
+                        </div>
+                        
+                        <div class="price-section">
+                            <div class="price">$0<span class="period">/month</span></div>
+                            <div class="billing">Free forever</div>
+                        </div>
+                        
+                        <div class="features">
+                            <ul>
+                                <li>Link never expires</li>
+                                <li>Revision Control</li>
+                                <li>Manage Workflow & Dates</li>
+                                <li>Secured Storage Up to 100 GB</li>
+                                <li>Unlimited Projects</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cta-section">
+                            <button class="btn-primary">
+                                <i class="rocket-icon">🚀</i>
+                                Get started
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Pro Tier Card -->
+                    <div class="pricing-card pro-tier">
+                        <div class="pro-badge">
+                            <div class="bt-logo">bt</div>
+                            <div class="pro-label">PRO</div>
+                        </div>
+                        
+                        <div class="card-header">
+                            <h3>BuildTwin Pro</h3>
+                            <p class="card-subtitle">Design managers & structural teams</p>
+                        </div>
+                        
+                        <div class="price-section">
+                            <div class="price">$5<span class="period">/week</span></div>
+                            <div class="billing">Billed monthly</div>
+                        </div>
+                        
+                        <div class="features">
+                            <ul>
+                                <li>Everything in Starter, plus:</li>
+                                <li>View & Collaborate on PDF, IFC, DWG File</li>
+                                <li>Granular Permission Level for User & Customer</li>
+                                <li>Version History & Audit Trails</li>
+                                <li>Checklists, approvals, due-date reminders</li>
+                                <li>Unlimited Storage</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cta-section">
+                            <button class="btn-primary">14 day free trial</button>
+                        </div>
+                        
+                        <div class="free-trial-banner">
+                            <span>FREE Trial</span>
+                        </div>
+                        
+                        <div class="benefit-text">
+                            <p>Benefit from cutting edge best-practice and software in your industry and get pre-qualified for projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <app-company-logos-slider [bg]="false"></app-company-logos-slider>
+    <app-get-started-block>
+        <div class="heading center v2">
+           <h2 class="title">
+            Meet Your AI Team
+           </h2> 
+           <!-- <div class="subTitle">
+    
+           </div> -->
+        </div>
+        
+        <div class="block-wrapper-arrow">
+            <div class="block">
+                <img src="assets/images/seller1-arrow.png" alt="arrow" width="29" height="59">
+            </div>
+            <div class="block">
+                <img src="assets/images/seller2-arrow.png" alt="arrow" width="24" height="61">
+            </div>
+            <div class="block">
+                <img src="assets/images/seller3-arrow.png" alt="arrow" width="29" height="59">
+            </div>
+        </div>
+        <div class="block-wrapper">
+            <div class="block">
+                <div class="note">
+                    in less than 5 min.
+                </div>
+                <figure>
+                    <picture>
+                        <source 
+                            srcset="assets/images/sellers1@2x.webp" 
+                            type="image/webp" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <source 
+                            srcset="assets/images/sellers1.webp" 
+                            type="image/webp">
+                        <source 
+                            srcset="assets/images/sellers1@2x.png" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                            src="assets/images/sellers1.png" 
+                            alt="Sellers1" 
+                            width="388" 
+                            height="253">
+                    </picture>
+                </figure>
+                <div class="content">
+                    <h3>AI Generated 
+                        <br>Structural Drawings</h3>
+                    <p>Transform your design process with AI-powered structural drawing generation. 
+                        Create accurate, detailed drawings in minutes, not hours.</p>
+                    <a href="https://www.buildtwin.com/get-started" class="button-v2 provide_page_claim_now_3_reason" target="_blank">
+                        Try AI Drawing Tool
+                    </a>
+                </div>
+            </div>
+            <div class="block">
+                <figure>
+                    <picture>
+                        <source 
+                            srcset="assets/images/sellers2@2x.webp" 
+                            type="image/webp" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <source 
+                            srcset="assets/images/sellers2.webp" 
+                            type="image/webp">
+                        <source 
+                            srcset="assets/images/sellers2@2x.png" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                            src="assets/images/sellers2.png" 
+                            alt="Sellers2" 
+                            width="388" 
+                            height="253">
+                    </picture>
+                </figure>
+                <div class="content">
+                    <h3>AI QC for 
+                        <br>Structural Drawings
+                    </h3>
+                    <p>Ensure drawing accuracy and compliance with AI-powered quality control. 
+                        Automated validation and error detection for structural designs.</p>
+                    <a href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 cursor provide_page_get_started_3_reason">
+                        Start AI QC
+                    </a>
+                </div>
+            </div>
+            <div class="block">
+                <figure>
+                    <picture>
+                        <source 
+                            srcset="assets/images/sellers3@2x.webp" 
+                            type="image/webp" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <source 
+                            srcset="assets/images/sellers3.webp" 
+                            type="image/webp">
+                        <source 
+                            srcset="assets/images/sellers3@2x.png" 
+                            media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                        <img 
+                            src="assets/images/sellers3.png" 
+                            alt="Sellers3" 
+                            width="388" 
+                            height="253">
+                    </picture>
+                </figure>
+                <div class="content">
+                    <h3>Let’s talk growth! Our global Sales advisors are here for you</h3>
+                    <p>Schedule a call with our global Sales team to 
+                        see how BuildTwin can fuel your growth.</p>
+                    <a href="javascript:void(0)" (click)="callStatus()" class="button-v2 provide_page_schedule_call_3_reason">
+                        <picture class="normal">
+                            <source 
+                              srcset="assets/images/icons/call-white@2x.png" 
+                              media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                            <img 
+                              src="assets/images/icons/call-white.png" 
+                              alt="call" 
+                              width="21" 
+                              height="22">
+                          </picture>
+                        <picture class="hover">
+                            <source 
+                              srcset="assets/images/icons/call@2x.png" 
+                              media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)">
+                            <img 
+                              src="assets/images/icons/call.png" 
+                              alt="call" 
+                              width="21" 
+                              height="22">
+                          </picture>
+                        Schedule Call
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </app-get-started-block>
+    
+    
+            <app-tt-faq></app-tt-faq>
+    
+            
+         
+            
+            <app-get-started1>
+                <div class="startedData">
+                    <div class="content">
+                        <div class="heading">
+                            <h2 class="title">Get started NOW</h2>
+                            <p class="small-title">
+                                The BuildTwin Marketplace program not only covers our closed
+                                marketplace with clients from 10+ <br />
+                                countries - but gives you also access to Leads from open market.
+                            </p>
+                        </div>
+                    </div>
+                    <a  href="https://www.buildtwin.com/get-started" target="_blank" class="button-v2 provide_page_free_portfollo_Matching">Free Portfolio Matching</a>
+                </div>
+            </app-get-started1>
+            
+            
+            
+            
+            
+    
+    <app-hd-footer></app-hd-footer>
+    <div class="popUP" [ngClass]="{'active':showPopup1}" (click)="onPopupBackgroundClick($event)" (mousedown)="onPopupMouseDown($event)" #popupOverlay>
+        <div class="coverPopup" (click)="onPopupContentClick($event)">
+          <i class="closeIcon" (click)="closePopup1()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+              <g clip-path="url(#clip0_2773_11848aaa)">
+              <path d="M15.8334 5.84175L14.6584 4.66675L10 9.32508L5.34169 4.66675L4.16669 5.84175L8.82502 10.5001L4.16669 15.1584L5.34169 16.3334L10 11.6751L14.6584 16.3334L15.8334 15.1584L11.175 10.5001L15.8334 5.84175Z" fill="black"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_2773_11848">
+              <rect width="20" height="20" fill="white" transform="translate(0 0.5)"/>
+              </clipPath>
+              </defs>
+              </svg>
+          </i>
+          <div class="coverPopupData">
+       
+        <div id="hubspotFormContainer21"></div>
+      </div>
+      </div>
+    </div>
+    <app-hubspot *ngIf="showPopup" [ngClass]="{'active':showPopup}"  (closePopupStatus)="closePopupStatus($event)"></app-hubspot>
+    
+    <!-- Arcade Lightbox Container -->
+    <app-arcade-container 
+      *ngIf="visibleArcade" 
+      [type]="arcadeType" 
+      (visibleTogggle)="onArcadeClose($event)">
+    </app-arcade-container>
+</div>

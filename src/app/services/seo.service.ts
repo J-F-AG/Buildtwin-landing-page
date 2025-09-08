@@ -137,14 +137,18 @@ export class SeoService {
     }
   }
   updateCanonicalUrl(url: string) {
-    const existingLink = document.querySelector('link[rel="canonical"]');
-    if (existingLink) {
-      existingLink.setAttribute('href', url);
-    } else {
-      const link: HTMLLinkElement = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', url);
-      document.head.appendChild(link);
+    try {
+      const existingLink = document.querySelector('link[rel="canonical"]');
+      if (existingLink) {
+        existingLink.setAttribute('href', url);
+      } else {
+        const link: HTMLLinkElement = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        link.setAttribute('href', url);
+        document.head.appendChild(link);
+      }
+    } catch (error) {
+      console.error('querySelector failed for canonical link:', error);
     }
   }
   removeCanonicalURL() {

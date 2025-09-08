@@ -218,6 +218,7 @@ export class VenderDetailsAlliedComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    try {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     this.isSticky = scrollPosition >= 100;
 
@@ -228,21 +229,30 @@ export class VenderDetailsAlliedComponent {
     }
 
     // Determine active section
-    const sections = document.querySelectorAll('.scrollSection');
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const sectionId = section.getAttribute('id');
-      if (sectionTop <= 200 && sectionTop >= -100 && sectionId) { // Check if sectionId is not null
-        this.activeSection = sectionId;
-      }
-    });
+    let sections: NodeListOf<Element>;
+      sections = document.querySelectorAll('.scrollSection');
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionId = section.getAttribute('id');
+        if (sectionTop <= 200 && sectionTop >= -100 && sectionId) { // Check if sectionId is not null
+          this.activeSection = sectionId;
+        }
+      });
+    } catch (error) {
+      console.error('querySelectorAll failed for .scrollSection:', error);
+    }
   }
 
   scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const scrollOffset = section.getBoundingClientRect().top - 200; // Adjusted offset
-      window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
+    let section: HTMLElement | null;
+    try {
+      section = document.getElementById(sectionId);
+      if (section) {
+        const scrollOffset = section.getBoundingClientRect().top - 200; // Adjusted offset
+        window.scrollBy({ top: scrollOffset, behavior: 'smooth' });
+      }
+    } catch (error) {
+      console.error('getElementById failed in scrollToSection:', error);
     }
   }
 

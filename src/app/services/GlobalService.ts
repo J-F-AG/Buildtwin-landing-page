@@ -29,15 +29,19 @@ export class GlobalService {
   }
 
   scrollToSection(sectionId: string) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const topPos = element.getBoundingClientRect().top + window.scrollY - 100;
-      // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      try {
-        window.scrollTo({ top: topPos, behavior: 'smooth' });
-      } catch (error) {
-        
+    try {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const topPos = element.getBoundingClientRect().top + window.scrollY - 100;
+        // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        try {
+          window.scrollTo({ top: topPos, behavior: 'smooth' });
+        } catch (error) {
+          console.error('window.scrollTo failed in scrollToSection:', error);
+        }
       }
+    } catch (error) {
+      console.error('getElementById failed in scrollToSection:', error);
     }
     if(sectionId === 'formContainer'){
       this.triggerSidebarToggle();
@@ -46,9 +50,13 @@ export class GlobalService {
   triggerSidebarToggle(): void {
     if (isPlatformBrowser(this.platformId)) {
       // Ensure the code is only executed in the browser
-      const sidebarToggleButton = document.querySelector('.toggle-sidebar') as HTMLElement;
-      if (sidebarToggleButton) {
-        sidebarToggleButton.click(); // Safely call click() after typecasting
+      try {
+        const sidebarToggleButton = document.querySelector('.toggle-sidebar') as HTMLElement;
+        if (sidebarToggleButton) {
+          sidebarToggleButton.click(); // Safely call click() after typecasting
+        }
+      } catch (error) {
+        console.error('querySelector failed for .toggle-sidebar:', error);
       }
     }
   }

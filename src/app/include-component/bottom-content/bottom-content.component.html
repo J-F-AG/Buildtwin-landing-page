@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="palantir-inspired-section" id="next-section">
+        <div class="capabilities-grid">
+            <!-- Section 1: AI Design Manager -->
+            <div class="capability-section" 
+                 [class.hovered]="hoveredSection === 'ai-design-manager'"
+                 (mouseenter)="setHoveredSection('ai-design-manager')"
+                 (mouseleave)="clearHoveredSection()">
+                <div class="section-content">
+                    <h3 class="section-title">Automate operations, from the factory floor to the front lines</h3>
+                    <div class="section-identifier">/0.1</div>
+                </div>
+                
+                <div class="product-logo">
+                    <div class="logo-text">AI Design Manager</div>
+                </div>
+                
+                <div class="screenshot-overlay" *ngIf="hoveredSection === 'ai-design-manager'">
+                    <img src="assets/images/new-v2-image1.png" alt="AI Design Manager - Military Operations Interface">
+                </div>
+            </div>
+
+            <!-- Section 2: AI Inspector -->
+            <div class="capability-section" 
+                 [class.hovered]="hoveredSection === 'ai-inspector'"
+                 (mouseenter)="setHoveredSection('ai-inspector')"
+                 (mouseleave)="clearHoveredSection()">
+                <div class="section-content">
+                    <h3 class="section-title">Achieve AI-driven combat superiority, from space to mud</h3>
+                    <div class="section-identifier">/0.2</div>
+                </div>
+                
+                <div class="product-logo">
+                    <div class="logo-text">AI Inspector</div>
+                </div>
+                
+                <div class="screenshot-overlay" *ngIf="hoveredSection === 'ai-inspector'">
+                    <img src="assets/images/new-v2-image2.png" alt="AI Inspector - Military Command Interface">
+                </div>
+            </div>
+
+            <!-- Section 3: AI Creator -->
+            <div class="capability-section" 
+                 [class.hovered]="hoveredSection === 'ai-creator'"
+                 (mouseenter)="setHoveredSection('ai-creator')"
+                 (mouseleave)="clearHoveredSection()">
+                <div class="section-content">
+                    <h3 class="section-title">Build and manage intelligent workflows</h3>
+                    <div class="section-identifier">/0.3</div>
+                </div>
+                
+                <div class="product-logo">
+                    <div class="logo-text">AI Creator</div>
+                </div>
+                
+                <div class="screenshot-overlay" *ngIf="hoveredSection === 'ai-creator'">
+                    <img src="assets/images/new-v2-image3.png" alt="AI Creator - Workflow Management Interface">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-arcade-container *ngIf="visibleArcade" [type]="arcadeType" (visibleTogggle)="visibleTogggle($event)"></app-arcade-container>

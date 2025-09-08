@@ -26,12 +26,17 @@ export class SectorDefenseComponent {
   }
 
   scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start' // Align the section at the top of the viewport
-      });
+    let element: HTMLElement | null;
+    try {
+      element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start' // Align the section at the top of the viewport
+        });
+      }
+    } catch (error) {
+      console.error('getElementById failed in scrollToSection:', error);
     }
   }
 }

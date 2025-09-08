@@ -40,6 +40,21 @@ export class FreeOfferFormComponent {
   buildingCodeObj = {};
   serviceObj = {};
   sectorObj = {};
+  
+  // New dropdown options
+  contractorTypeOptions = [
+    { label: 'Contractor', value: 'contractor' },
+    { label: 'Consultant', value: 'consultant' },
+    { label: 'Client', value: 'client' },
+    { label: 'Investor', value: 'investor' }
+  ];
+  
+  serviceTypeOptions = [
+    { label: 'Get end-to-end service', value: 'end-to-end' },
+    { label: 'Buy particular capabilities', value: 'particular-capabilities' },
+    { label: 'Implement core capabilities', value: 'core-capabilities' },
+    { label: 'Partner', value: 'partner' }
+  ];
   payload: any = {
     "preQualified": false,
     "type": "get_quote", //static
@@ -56,11 +71,14 @@ export class FreeOfferFormComponent {
   }
   ngOnInit(): void {
     this.myForm = this.fb.group({
+      contractorType: [null, Validators.required], // New: I am a...
+      serviceType: [null, Validators.required], // New: Looking to...
       email: ['', [Validators.required, Validators.email]], // Email field validation
-      projectName: ['', Validators.required], // Project Name validation
-      selectedPrecastServices: [null], // Validation for selectedPrecastServices
-      buildingCodeId: [null], // Static building code
-      serviceId: [null], // New control for service ID
+      phone: ['', Validators.required], // New: Phone field
+      projectName: [''], // Project Name validation (conditional)
+      selectedPrecastServices: [null, Validators.required], // Sector validation
+      buildingCodeId: [null], // Building code (conditional)
+      serviceId: [null], // Service ID (conditional)
       description: [''], // Description validation
     });
     // this.route.queryParams.subscribe(params => {
@@ -104,14 +122,56 @@ export class FreeOfferFormComponent {
       
     }
   }
+  selectContractorType(selectedOption: any) {
+    this.myForm.get('contractorType')?.setValue(selectedOption); // Update the form control with the selected value
+  }
+  
+  selectServiceType(selectedOption: any) {
+    this.myForm.get('serviceType')?.setValue(selectedOption); // Update the form control with the selected value
+    // Reset conditional fields when service type changes
+    if (selectedOption !== 'end-to-end') {
+      this.myForm.get('serviceId')?.setValue(null);
+      this.myForm.get('buildingCodeId')?.setValue(null);
+      this.myForm.get('projectName')?.setValue(null);
+      // Update project name validation based on service type
+      this.updateProjectNameValidation();
+    } else {
+      // Update project name validation for end-to-end service
+      this.updateProjectNameValidation();
+    }
+  }
+  
+  updateProjectNameValidation() {
+    const projectNameControl = this.myForm.get('projectName');
+    if (this.myForm.get('serviceType')?.value === 'end-to-end') {
+      projectNameControl?.setValidators([Validators.required]);
+    } else {
+      projectNameControl?.clearValidators();
+    }
+    projectNameControl?.updateValueAndValidity();
+  }
+  
   selectSector(selectedOption: any) {
     this.myForm.get('selectedPrecastServices')?.setValue(selectedOption); // Update the form control with the selected value
   }
+  
   selectService(selectedOption: any) {
     this.myForm.get('serviceId')?.setValue(selectedOption); // Update the form control with the selected value
   }
+  
   selectBuildingCode(selectedOption: any) {
     this.myForm.get('buildingCodeId')?.setValue(selectedOption); // Update the form control with the selected value
+  }
+  
+  // Helper methods for template display
+  getContractorTypeLabel(value: any): string {
+    const option = this.contractorTypeOptions.find(opt => opt.value === value);
+    return option ? option.label : 'Select type';
+  }
+  
+  getServiceTypeLabel(value: any): string {
+    const option = this.serviceTypeOptions.find(opt => opt.value === value);
+    return option ? option.label : 'Select service type';
   }
 
   fetchData() {
@@ -162,10 +222,13 @@ export class FreeOfferFormComponent {
     if (this.myForm.valid) {
       this.payload = {
         ...this.payload, // Retain existing static properties
+        contractorType: this.myForm.get('contractorType')?.value,
+        serviceType: this.myForm.get('serviceType')?.value,
         buildingCodeId: this.myForm.get('buildingCodeId')?.value?Number(this.myForm.get('buildingCodeId')?.value):null, // Using form value
         serviceId: this.myForm.get('serviceId')?.value?Number(this.myForm.get('serviceId')?.value):null, // New service ID
         subServiceId: this.myForm.get('selectedPrecastServices')?.value?Number(this.myForm.get('selectedPrecastServices')?.value):null,
         user_email: this.myForm.get('email')?.value,
+        user_phone: this.myForm.get('phone')?.value,
         project_description: this.myForm.get('description')?.value,
         project_name: this.myForm.get('projectName')?.value
       };
@@ -208,27 +271,23 @@ export class FreeOfferFormComponent {
       //   firstInvalidControl.scrollIntoView({ behavior: 'smooth', block: 'center' });
       // }
       setTimeout(() => {
-        const formContainer = document.getElementById('formContainer'); // The scrollable div
-        const topPart = document.querySelector('.topPart') as HTMLElement; // The fixed top part
-        
+        let formContainer: HTMLElement | null = null;
+        let topPart: HTMLElement | null = null;
+        try { formContainer = document.getElementById('formContainer'); } catch (error) { console.error('getElementById failed for formContainer (onSubmit invalid):', error); }
+        try { topPart = document.querySelector('.topPart') as HTMLElement; } catch (error) { console.error('querySelector failed for .topPart (onSubmit invalid):', error); }
         if (!formContainer) return;
-      
-        // Get the first element with class '.error-border' inside the formContainer
-        const firstInvalidControl = formContainer.querySelector('.error-border') as HTMLElement;
+        let firstInvalidControl: HTMLElement | null = null;
+        try { firstInvalidControl = formContainer.querySelector('.error-border') as HTMLElement; } catch (error) { console.error('querySelector failed for .error-border (onSubmit invalid):', error); }
         if (firstInvalidControl) {
-          const containerRect = formContainer.getBoundingClientRect();
-          const elementRect = firstInvalidControl.getBoundingClientRect();
-      
-          // Get height of '.topPart' (default to 0 if not found)
-          const topPartHeight = topPart ? topPart.offsetHeight : 0;
-      
-          // Calculate the scroll position relative to the formContainer, adjusting for topPart
-          const scrollTop = (formContainer.scrollTop + (elementRect.top - containerRect.top) - topPartHeight) - 20;
-      
-          formContainer.scrollTo({
-            top: scrollTop,
-            behavior: 'smooth',
-          });
+          try {
+            const containerRect = formContainer.getBoundingClientRect();
+            const elementRect = firstInvalidControl.getBoundingClientRect();
+            const topPartHeight = topPart ? topPart.offsetHeight : 0;
+            const scrollTop = (formContainer.scrollTop + (elementRect.top - containerRect.top) - topPartHeight) - 20;
+            try { formContainer.scrollTo({ top: scrollTop, behavior: 'smooth' }); } catch (error) { console.error('scrollTo failed for formContainer (onSubmit invalid):', error); }
+          } catch (error) {
+            console.error('getBoundingClientRect failed calculating scroll (onSubmit invalid):', error);
+          }
         }
       }, 100);
       
